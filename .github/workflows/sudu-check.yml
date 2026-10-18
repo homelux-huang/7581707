@@ -5,6 +5,8 @@ on:
       - sudu/index.html
       - sudu/dashboard.js
       - sudu/dashboard.css
+      - sudu/workspace.js
+      - sudu/workspace.css
       - tests/sudu_dashboard_test.cjs
       - scripts/check_sudu.py
       - .github/workflows/sudu-check.yml
@@ -21,4 +23,5 @@ jobs:
           node-version: '22'
       - run: python scripts/check_sudu.py
       - run: node --check sudu/dashboard.js
+      - run: node --check sudu/workspace.js
       - run: node tests/sudu_dashboard_test.cjs
