@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - .github/workflows/tcte-full-import.yml
+      - scripts/tcte_auto.py
+      - scripts/tcte_manifest.py
   workflow_dispatch:
   schedule:
     - cron: '0 18 * * 0'
