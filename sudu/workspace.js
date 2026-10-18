@@ -14,13 +14,28 @@ function suduTheme(next){
  try{localStorage.setItem(SUDU_THEME_KEY,valid)}catch(e){}
  const b=document.getElementById("sudu-theme-button");
  if(b){b.textContent=valid==="dark"?"☀ 淺色":"☾ 深色";b.setAttribute("aria-label",valid==="dark"?"切換淺色主題":"切換深色主題");}
+ const menuTheme=document.getElementById("sudu-theme-in-menu");if(menuTheme)menuTheme.textContent=valid==="dark"?"☀ 切換淺色主題":"☾ 切換深色主題";
+}
+let suduMenuCloseTimer=null;
+function suduCancelMenuClose(){
+ if(suduMenuCloseTimer!==null){clearTimeout(suduMenuCloseTimer);suduMenuCloseTimer=null;}
 }
 function suduSetMenu(open){
  const panel=document.getElementById("sudu-floating-controls"),trigger=document.getElementById("sudu-controls-button");
  if(!panel||!trigger)return;
+ if(open)suduCancelMenuClose();
  panel.classList.toggle("open",Boolean(open));
  trigger.setAttribute("aria-expanded",String(Boolean(open)));
  panel.setAttribute("aria-hidden",String(!open));
+ panel.inert=!open;
+}
+function suduScheduleMenuClose(){
+ suduCancelMenuClose();
+ if(suduMenuPinned)return;
+ suduMenuCloseTimer=setTimeout(()=>{
+  suduMenuCloseTimer=null;
+  if(!suduMenuPinned)suduSetMenu(false);
+ },1000);
 }
 function suduWorkspaceInit(){
  suduReadLayout();
@@ -30,31 +45,61 @@ function suduWorkspaceInit(){
  const tabs=document.querySelector(".tabs");
  const wrap=document.querySelector(".wrap");
  if(!head||!filter||!tabs||!wrap)return;
- const old=document.getElementById("sudu-floating-controls");
- if(old)return;
+ if(document.getElementById("sudu-floating-controls"))return;
  const actions=document.createElement("div");actions.className="sudu-head-actions";
- actions.innerHTML='<span id="sudu-miniprofile">進入後自動恢復學習紀錄</span><button type="button" id="sudu-theme-button" aria-label="切換主題">☾ 深色</button><button type="button" class="sudu-controls-trigger" id="sudu-controls-button" aria-haspopup="true" aria-controls="sudu-floating-controls" aria-expanded="false">☰ 年度・科目・功能 ▾</button>';
+ actions.innerHTML='<span id="sudu-miniprofile">自動恢復學習紀錄</span><button type="button" id="sudu-theme-button" aria-label="切換主題">☾ 深色</button><button type="button" class="sudu-controls-trigger" id="sudu-controls-button" aria-haspopup="true" aria-controls="sudu-floating-controls" aria-expanded="false">選擇課程 <span aria-hidden="true">⌄</span></button>';
  head.append(actions);
- const float=document.createElement("div");float.id="sudu-floating-controls";float.setAttribute("aria-hidden","true");
+ const float=document.createElement("nav");float.id="sudu-floating-controls";float.setAttribute("aria-hidden","true");float.setAttribute("aria-label","統測速讀功能選單");float.inert=true;
  const inner=document.createElement("div");inner.className="floating-inner";
+ inner.innerHTML='<div class="sudu-mega-heading"><div><span class="mega-eyebrow">7581707 STUDY NAVIGATION</span><h2>選擇今天要學的內容</h2></div><button id="sudu-mega-close" class="sudu-mega-close" type="button" aria-label="收起選單">✕</button></div><div class="sudu-mega-grid"><section class="sudu-mega-col"><span class="mega-eyebrow">01 / 選擇試題</span><h3>學年度與科目</h3><div id="sudu-mega-filters"></div></section><section class="sudu-mega-col"><span class="mega-eyebrow">02 / 學習頁面</span><h3>快速前往</h3><div id="sudu-mega-pages"></div></section><section class="sudu-mega-col sudu-mega-personal"><span class="mega-eyebrow">03 / 個人設定</span><h3>我的學習空間</h3><p>保留學習進度與錯題，切換最適合閱讀的版面。</p><button id="sudu-theme-in-menu" type="button">☾ 深色主題</button><button id="sudu-menu-backup" type="button">↓ 備份學習紀錄</button><div class="mega-help">滑鼠移出選單後約 1 秒自動收起。手機可點按上方按鈕選擇。</div></section></div>';
  float.append(inner);
- inner.append(filter,tabs);
+ inner.querySelector("#sudu-mega-filters").append(filter);
+ inner.querySelector("#sudu-mega-pages").append(tabs);
  head.parentNode.insertAdjacentElement("afterend",float);
+ for(const tab of tabs.querySelectorAll("[data-tab]")){
+  const labels={learn:"01",dashboard:"02",clinic:"03",archive:"04",source:"05"};
+  tab.dataset.menuNumber=labels[tab.dataset.tab]||"";
+ }
  const workbar=document.createElement("div");workbar.id="sudu-workbar";
  workbar.innerHTML='<span class="work-current" id="sudu-current-selection">學習中</span><button type="button" id="sudu-toggle-drag" title="顯示排序手把">↕ 區塊排序</button><button type="button" id="sudu-reset-drag">恢復預設排序</button>';
  const intro=wrap.querySelector(".intro");if(intro)intro.insertAdjacentElement("afterend",workbar);else wrap.prepend(workbar);
  const trigger=document.getElementById("sudu-controls-button");
- trigger.addEventListener("click",e=>{e.stopPropagation();suduMenuPinned=!suduMenuPinned;suduSetMenu(suduMenuPinned)});
- trigger.addEventListener("mouseenter",()=>suduSetMenu(true));
- float.addEventListener("mouseenter",()=>suduSetMenu(true));
- const close=()=>{if(!suduMenuPinned)suduSetMenu(false)};
- trigger.addEventListener("mouseleave",e=>{if(!float.contains(e.relatedTarget))close()});
- float.addEventListener("mouseleave",e=>{if(e.relatedTarget!==trigger)close()});
- document.addEventListener("click",e=>{if(!float.contains(e.target)&&!trigger.contains(e.target)){suduMenuPinned=false;suduSetMenu(false)}});
- document.addEventListener("keydown",e=>{if(e.key==="Escape"){suduMenuPinned=false;suduSetMenu(false);trigger.focus()}});
- float.addEventListener("change",e=>{if(["year","paper","subject"].includes(e.target.id)){suduMenuPinned=false;suduSetMenu(false)}});
- float.addEventListener("click",e=>{if(e.target.closest("[data-tab]")){suduMenuPinned=false;suduSetMenu(false)}});
- document.getElementById("sudu-theme-button").addEventListener("click",()=>suduTheme(document.documentElement.dataset.suduTheme==="dark"?"light":"dark"));
+ const enter=()=>{suduCancelMenuClose();suduSetMenu(true)};
+ const immediateClose=()=>{suduMenuPinned=false;suduCancelMenuClose();suduSetMenu(false)};
+ trigger.addEventListener("mouseenter",enter);
+ float.addEventListener("mouseenter",enter);
+ trigger.addEventListener("mouseleave",suduScheduleMenuClose);
+ float.addEventListener("mouseleave",suduScheduleMenuClose);
+ trigger.addEventListener("focusin",enter);
+ float.addEventListener("focusin",enter);
+ // Touch/click toggles an explicit open state. Mouse hovering does not pin it.
+ trigger.addEventListener("click",e=>{
+  e.stopPropagation();
+  if(suduMenuPinned){immediateClose();return;}
+  suduMenuPinned=true;suduSetMenu(true);
+ });
+ float.addEventListener("focusout",e=>{
+  if(!float.contains(e.relatedTarget)&&e.relatedTarget!==trigger)suduScheduleMenuClose();
+ });
+ document.addEventListener("click",e=>{
+  if(!float.contains(e.target)&&!trigger.contains(e.target))immediateClose();
+ });
+ document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"&&float.classList.contains("open")){
+   immediateClose();trigger.focus();
+  }
+ });
+ float.addEventListener("change",e=>{
+  if(["year","paper","subject"].includes(e.target.id))immediateClose();
+ });
+ float.addEventListener("click",e=>{
+  if(e.target.closest("[data-tab]"))immediateClose();
+ });
+ inner.querySelector("#sudu-mega-close").addEventListener("click",immediateClose);
+ const toggleTheme=()=>suduTheme(document.documentElement.dataset.suduTheme==="dark"?"light":"dark");
+ document.getElementById("sudu-theme-button").addEventListener("click",toggleTheme);
+ inner.querySelector("#sudu-theme-in-menu").addEventListener("click",toggleTheme);
+ inner.querySelector("#sudu-menu-backup").addEventListener("click",()=>document.getElementById("export")?.click());
  document.getElementById("sudu-toggle-drag").addEventListener("click",()=>{
   const yes=document.body.classList.toggle("sudu-layout-edit");
   document.getElementById("sudu-toggle-drag").classList.toggle("active",yes);
