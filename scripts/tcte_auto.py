@@ -114,22 +114,9 @@ def legacy_links(html,url):
     return list(linked.values())
 
 def pdf_text(pdf_bytes):
-    doc=fitz.open(stream=pdf_bytes,filetype="pdf")
-    out=[]
-    ocr_pages=[]
-    for ix,page in enumerate(doc):
-        text=page.get_text(sort=True)
-        meaningful=re.sub(r"\s+","",text)
-        if len(meaningful)<30 and os.getenv("TCTE_ENABLE_OCR","1")=="1":
-            try:
-                from PIL import Image
-                import pytesseract,io
-                image=Image.open(io.BytesIO(page.get_pixmap(matrix=fitz.Matrix(2.3,2.3),alpha=False).tobytes("png")))
-                text=pytesseract.image_to_string(image,lang="chi_tra+eng")
-                ocr_pages.append(ix+1)
-            except Exception as exc:print(f"OCR_FAILURE page {ix+1}: {str(exc)[:120]}")
-        out.append(text)
-    return out,ocr_pages
+    """Read only an existing PDF text layer. Scanned pages are rendered as images, never OCR."""
+    with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
+        return [page.get_text(sort=True) for page in doc], []
 
 def clean(segment):
     segment=re.sub(r"(?m)^\s*(?:\d{2,3}\s*年四技|商業與管理群\s*專業科目|公告試題僅供參考|共\s*\d+\s*頁|第\s*\d+\s*頁)\s*$","",segment)
