@@ -256,6 +256,8 @@ def process_one(year,link,answer_link):
                   "source":link["url"],"official":True,"page":None,"issues":["OCR_missing_question"]})
             q.sort(key=lambda item:item["number"])
         entry["questions"]=q
+        if entry["expectedCount"] and entry["discoveredCount"]!=entry["expectedCount"]:
+            issues.append(f"OCR_extracted_{entry['discoveredCount']}_of_{entry['expectedCount']}")
         if not q:issues.append("no_readable_questions")
         if ocr:issues.append("ocr_pages_"+",".join(map(str,ocr)))
         if answer_link:
@@ -268,10 +270,11 @@ def process_one(year,link,answer_link):
             for item in q:
                 ans=answers.get(item["number"])
                 if ans is not None:
-                    item["answer"]="ABCD".index(ans)
-                    # Official answer verified as match to the standard-answer PDF by number.
-                    item["answerVerified"]=True
+                    item["officialAnswerCandidate"]=ans
                     item["answerSource"]=answer_link["url"]
+                    if len(item["options"])==4 and all(item["options"]) and "OCR_missing_question" not in item.get("issues",[]):
+                        item["answer"]="ABCD".index(ans)
+                        item["answerVerified"]=True
             if len(answers)<len(q):issues.append("incomplete_answer_pdf_extraction")
         else:issues.append("official_answer_pdf_not_identified")
         if entry["expectedCount"] is not None and len(q)!=entry["expectedCount"]:
