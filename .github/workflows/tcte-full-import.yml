@@ -1,10 +1,9 @@
-name: 7581707 official TCTE 90-115 question sync
+name: Original TCTE PDF images - NO OCR
 on:
   push:
     paths:
       - .github/workflows/tcte-full-import.yml
-      - scripts/tcte_auto.py
-      - scripts/tcte_manifest.py
+      - scripts/tcte_source_images.py
   workflow_dispatch:
   schedule:
     - cron: '0 18 * * 0'
@@ -13,47 +12,56 @@ permissions:
   actions: write
 concurrency:
   group: tcte-questions-sync
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
-  import:
+  originals:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install PDF and Traditional Chinese OCR tools
+      - name: Install PDF rendering tools only - no OCR engines
+        run: python -m pip install -q requests pymupdf pillow
+      - name: Permanently remove the legacy OCR fallback
         run: |
-          python -m pip install -q requests beautifulsoup4 pymupdf pillow pytesseract
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra > /dev/null
-      - name: Keep old reviewed teaching before replacing extraction
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/tcte_auto.py')
+          s=p.read_text('utf-8')
+          start=s.index('def pdf_text(pdf_bytes):')
+          end=s.index('\ndef clean(', start)
+          native='''def pdf_text(pdf_bytes):
+              """Read only an existing PDF text layer. Scanned pages are rendered as images, never OCR."""
+              with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
+                  return [page.get_text(sort=True) for page in doc], []
+          '''
+          s=s[:start]+native+s[end:]
+          assert 'pytesseract' not in s and 'image_to_string' not in s
+          p.write_text(s,'utf-8')
+          PY
+          python -m py_compile scripts/tcte_auto.py scripts/tcte_source_images.py
+      - name: Render official 90-115 originals without changing questions, answers or student IDs
+        run: python scripts/tcte_source_images.py --years $(seq 90 115)
+      - name: Commit compact WebP originals and disable old OCR code
         run: |
-          mkdir -p /tmp/sudu-old-years
-          cp -a sudu/data/years/. /tmp/sudu-old-years/ || true
-      - name: Download official TCTE 90-115 exam and answer PDFs
-        run: python scripts/tcte_auto.py --years $(seq 90 115)
-      - name: Preserve source-consistent reviewed explanations
-        run: python scripts/tcte_preserve_teaching.py --from-dir /tmp/sudu-old-years --to-dir sudu/data/years
-      - name: Update missing-paper and verified-answer coverage
-        run: python scripts/tcte_manifest.py
-      - name: Commit structured student-readable question data
-        run: |
-          git config user.name "7581707 TCTE question bot"
-          git config user.email "7581707-bot@users.noreply.github.com"
-          git add sudu/data/
+          git config user.name '7581707 original PDF image bot'
+          git config user.email '7581707-bot@users.noreply.github.com'
+          git add sudu/data/original scripts/tcte_auto.py
           if ! git diff --cached --quiet; then
-            git commit -m "Sync official TCTE 90-115 question PDFs and answer audit"
+            git commit -m 'Render original TCTE PDF pages as shared WebP; prohibit OCR'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-
-      - name: Trigger public site publish and independent data audit
+      - name: Publish original images and run data audit
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh workflow run pages.yml --ref main
           gh workflow run tcte-data-audit.yml --ref main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: original-image-report
+          path: sudu/data/original/index.json
