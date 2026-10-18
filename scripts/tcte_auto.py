@@ -68,22 +68,44 @@ def decoded_input_links(html,url):
     return list(matches.values())
 
 def legacy_links(html,url):
-    """Legacy 090-099 use links instead of downloader inputs. Do not label as modern 09."""
+    """Legacy 090-094 linked PDF directly; derive codes from official href, not neighboring group cells."""
     soup=BeautifulSoup(html,"html.parser")
-    links=[]
-    for a in soup.find_all("a",href=True):
-        href=urljoin(url,a["href"])
-        if urlparse(href).hostname not in DOMAIN or not href.lower().split("?")[0].endswith(".pdf"):continue
-        txt=(a.get_text(" ",strip=True)+" "+a.parent.get_text(" ",strip=True)).replace(" ","")
-        paper=None
-        if "商業類專一" in txt or "商業類專業科目(一)" in txt:paper="BIZ-1"
-        if "商業類專二" in txt or "商業類專業科目(二)" in txt:paper="BIZ-2"
-        if "共同科國文" in txt:paper="00-C"
-        if "共同科英文" in txt:paper="00-E"
-        if "共同科數學" in txt:paper="00-M-OLD"
+    linked={}
+    source_year=int(re.search(r"/(\d{3})_4y",url).group(1))
+    for item in soup.find_all("a",href=True):
+        href=urljoin(url,item["href"])
+        if urlparse(href).hostname not in DOMAIN:continue
+        base_name=urlparse(href).path.split("/")[-1].lower()
+        m=re.search(r"(?:\d{2,3}-4y-)(09|14)-([12])(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
+        paper=None;kind="exam"
+        if m:
+            code,part,suffix=m.groups()
+            if code=="09":paper="09-"+part
+            if code=="14" and source_year<=91:paper="BIZ-"+part
+            if suffix:kind="answer"
+        else:
+            m=re.search(r"(?:\d{2,3}-4y-)(00-[cem][a-z]?)(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
+            if m:
+                code,suffix=m.groups()
+                if code=="00-c":paper="00-C"
+                elif code=="00-e":paper="00-E"
+                elif code in ("00-mb","00-m-b"):paper="00-MB"
+                elif code=="00-m":paper="00-M-OLD"
+                if suffix:kind="answer"
+        # The 90 exam uses plain 14_1.pdf and contextual '商業類專一' text.
+        if not paper and source_year==90 and base_name.endswith(".pdf"):
+            label=re.sub(r"\s+","",item.parent.get_text(" ",strip=True))
+            if "商業類專一" in label or "商業類專業科目一" in label:paper="BIZ-1"
+            elif "商業類專二" in label or "商業類專業科目二" in label:paper="BIZ-2"
+            elif "共同科國文" in label:paper="00-C"
+            elif "共同科英文" in label:paper="00-E"
+            elif "共同科數學" in label:paper="00-M-OLD"
         if paper:
-            links.append({"filename":href.split("/")[-1],"url":href,"kind":"exam","paper":paper})
-    return list({(x["paper"],x["url"]):x for x in links}.values())
+            record={"filename":base_name,"url":href,"kind":kind,"paper":paper}
+            k=(paper,kind)
+            if k not in linked or "finalsolve" in base_name or "standard" in base_name:
+                linked[k]=record
+    return list(linked.values())
 
 def pdf_text(pdf_bytes):
     doc=fitz.open(stream=pdf_bytes,filetype="pdf")
