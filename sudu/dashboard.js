@@ -78,7 +78,7 @@ function suduSaveName(){
   suduMirrorSave();render();
 }
 function suduStudyQuestions(){
-  const checked=(ALL.officialQuestions||[]).filter(q=>q&&q.verified===true&&Number.isInteger(q.answer)&&Array.isArray(q.options)&&q.options.length===4&&q.question&&q.explanation);
+  const checked=(ALL.officialQuestions||[]).filter(q=>q&&q.answerVerified===true&&Number.isInteger(q.answer)&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(o=>typeof o==='string'&&o.trim())&&q.question&&!q.issues?.includes('OCR_missing_question'));
   return ALL.practice.concat(checked);
 }
 function suduQueryQuestions(year,subject){
@@ -124,7 +124,7 @@ function suduYearRows(subject){
 function suduLeaderRows(year,subject){
   const list=suduQueryQuestions(year,subject).map(q=>({q,n:suduWrongCount(q)})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n||a.q.id.localeCompare(b.q.id)).slice(0,12);
   if(!list.length)return '<p class="db-empty-state">目前沒有這個範圍的答錯紀錄。答題後會依實際答錯次數自動排序。</p>';
-  return list.map(({q,n},i)=>'<article class="db-leader"><div class="db-leader-header"><strong>第 '+(i+1)+' 名｜'+esc(q.subject)+'・'+esc(q.topic)+'</strong><span class="db-count">答錯 '+n+' 次</span></div>'+
+  return list.map(({q,n},i)=>'<article class="db-leader"><div class="db-leader-header"><strong>第 '+(i+1)+' 名｜'+esc(q.subject)+'・'+esc(q.topic||'正式卷題目')+'</strong><span class="db-count">答錯 '+n+' 次</span></div>'+
     '<p>'+esc(q.question)+'</p>'+
     '<p class="db-concept"><b>關鍵觀念：</b>'+keyHtml(q.explanation,q)+'</p>'+
     '<p class="db-source"><b>出處：</b>'+suduSourceInfo(q)+'；題目：'+esc(q.source||'來源待確認')+'</p>'+
