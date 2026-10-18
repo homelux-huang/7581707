@@ -46,6 +46,7 @@ def year_url(year):
 def decoded_input_links(html,url):
     """Official year page stores PDF filenames in base64 downloader.php?obj=."""
     matches={}
+    source_year=int(re.search(r"/(\d{2,3})_4y/",url).group(1))
     for tag in BeautifulSoup(html,"html.parser").select("input[onclick]"):
         onclick=tag.get("onclick","")
         m=re.search(r"downloader\.php\?obj=([A-Za-z0-9+/=]+)",onclick)
@@ -56,11 +57,16 @@ def decoded_input_links(html,url):
         if "-confirm" in fn.lower() or "-feature" in fn.lower() or "-guide" in fn.lower() or "-grade" in fn.lower():continue
         if any(s in fn.lower() for s in ["-answer","-standard","-ans"]):kind="answer"
         else:kind="exam"
-        # Match official 09 and all common subjects; older years may have another math code.
-        m2=re.search(r"(?:^|-4y-)(09-[12]|00-[A-Za-z0-9]+)(?:-standard|-answer|-ans)?\.pdf$",fn,re.I)
+        # Actual historical commerce group: 90-91 code 14, 92-99 code 13, 100+ code 09.
+        m2=re.search(r"(?:^|-4y-)(09-[12]|13-[12]|14-[12]|00-[A-Za-z0-9]+)(?:-standard|-answer|-ans)?\.pdf$",fn,re.I)
         if not m2:continue
         paper=m2.group(1).upper()
-        if paper not in OPTION_NAMES and not paper.startswith("00-M"):continue
+        if re.fullmatch(r"(09|13|14)-[12]",paper):
+            code,part=paper.split("-")
+            expected="14" if source_year<=91 else ("13" if source_year<=99 else "09")
+            if code!=expected:continue
+            if source_year<100:paper="BIZ-"+part
+        if paper not in OPTION_NAMES and paper not in {"BIZ-1","BIZ-2"} and not paper.startswith("00-M"):continue
         key=(paper,kind)
         if key in matches:continue
         full=urljoin(url,"downloader.php?obj="+m.group(1))
@@ -76,12 +82,12 @@ def legacy_links(html,url):
         href=urljoin(url,item["href"])
         if urlparse(href).hostname not in DOMAIN:continue
         base_name=urlparse(href).path.split("/")[-1].lower()
-        m=re.search(r"(?:\d{2,3}-4y-)(09|14)-([12])(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
+        m=re.search(r"(?:\d{2,3}-4y-)(09|13|14)-([12])(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
         paper=None;kind="exam"
         if m:
             code,part,suffix=m.groups()
-            if code=="09":paper="09-"+part
-            if code=="14" and source_year<=91:paper="BIZ-"+part
+            expected="14" if source_year<=91 else ("13" if source_year<=99 else "09")
+            if code==expected:paper=("BIZ-" if source_year<100 else "09-")+part
             if suffix:kind="answer"
         else:
             m=re.search(r"(?:\d{2,3}-4y-)(00-[cem][a-z]?)(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
@@ -338,9 +344,8 @@ def process_year(y):
         links=decoded_input_links(response.text,base)
         if not links:
             links=legacy_links(response.text,base)
-            entry["courseType"]="舊制商業類（非09商業與管理群）"
-        elif y<100:
-            entry["courseType"]="09商管群（舊課綱，科目不可照搬現制）"
+        if y<100:
+            entry["courseType"]="舊制商業類（90-91考科代碼14，92-99代碼13；非現制09商管群）"
         entry["discoveredPdfLinks"]=len(links)
         exams=[p for p in links if p["kind"]=="exam"]
         answers={p["paper"]:p for p in links if p["kind"]=="answer"}
