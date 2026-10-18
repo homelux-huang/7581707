@@ -21,7 +21,9 @@ jobs:
         with:
           python-version: '3.13'
       - name: Generate automatic HTML catalog
-        run: python scripts/build.py
+        run: |
+          node --test tests/share.test.cjs
+          python scripts/build.py
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

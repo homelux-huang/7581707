@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="7581707 學習工具集，線上開啟會計統測、模擬考與更多 HTML 學習工具。">
     <title>7581707｜學習工具集</title>
+    <link rel="stylesheet" href="assets/share.css">
+    <script src="assets/share.js" defer></script>
     <style>
       :root { color-scheme: light; --paper: #f7f7f0; --ink: #172e27; --muted: #596960; --green: #245b43; --line: #dce2d6; }
       * { box-sizing: border-box; }
@@ -98,7 +100,13 @@
           const link = document.createElement('a'); link.className = 'open';
           link.href = './' + tool.path.split('/').map(encodeURIComponent).join('/');
           link.textContent = '開啟工具'; link.setAttribute('aria-label', '開啟工具：' + tool.title);
-          card.append(top, title, path, link); list.append(card);
+          const share = document.createElement('button');
+          share.type = 'button'; share.className = 'share-button'; share.textContent = '↗ 分享';
+          share.style.marginTop = '16px';
+          share.dataset.shareUrl = 'https://homelux-huang.github.io/7581707/' + tool.path.split('/').map(encodeURIComponent).join('/');
+          share.dataset.shareTitle = tool.title;
+          share.setAttribute('aria-label', '分享：' + tool.title);
+          card.append(top, title, path, link, share); list.append(card);
         }
         document.getElementById('count').textContent = `${matches.length} / ${tools.length}`;
         document.getElementById('empty').hidden = matches.length > 0;
