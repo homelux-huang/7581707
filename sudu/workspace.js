@@ -80,7 +80,8 @@ function suduWorkspaceInit(){
  float.addEventListener("mouseenter",enter);
  trigger.addEventListener("mouseleave",suduScheduleMenuClose);
  float.addEventListener("mouseleave",suduScheduleMenuClose);
- trigger.addEventListener("focusin",enter);
+ let suduSuppressFocusReopen=false;
+ trigger.addEventListener("focusin",()=>{if(!suduSuppressFocusReopen)enter();});
  float.addEventListener("focusin",enter);
  // Touch/click toggles an explicit open state. Mouse hovering does not pin it.
  trigger.addEventListener("click",e=>{
@@ -96,7 +97,8 @@ function suduWorkspaceInit(){
  });
  document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&float.classList.contains("open")){
-   immediateClose();trigger.focus();
+   immediateClose();suduSuppressFocusReopen=true;
+   trigger.focus({preventScroll:true});suduSuppressFocusReopen=false;
   }
  });
  float.addEventListener("change",e=>{
