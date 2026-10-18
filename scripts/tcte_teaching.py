@@ -10,6 +10,11 @@ INSTRUCTION="""你是臺灣技術型高中統測商管群老師。請依正式�
 產生國小六年級也聽得懂的繁體中文白話詳解，不可以改寫原題或猜選項。題目可能是OCR未校對的文字，
 絕對不能填虛構的學校課本章名、頁碼、出版社、年度、法規現況。
 遇到法規或過時課綱要指出本題只適用原考試當年度。看不懂圖表公式或無法證明答案，設定unable=true且不要硬解。
+若科目為「會計學」，請用「高職會計老師」的專業角色教學：先指出重要的會計關鍵字與正確原理（會計要素、認列、借貸方向、計算公式、適用前提），
+再改用國小六年級能懂的生活例子解說，逐步列出題目數字如何代入公式或會計分錄，最後分析四個選項可能犯的觀念錯誤。
+反向練習要改變原題條件來考同一個觀念，提供完整選項、唯一可辨識的正解以及白話詳解。
+遇到原題文字缺失、數字不明、法規修訂、圖表無法判讀、官方答案無法用原理合理說明的情況，請設定 unable=true，不要配合標準答案硬湊解釋。
+「出處章節」只能引用有證據的實際課本章名與頁碼；若沒有證據，sourceNote 明確寫「彰化高商教材精確章節與頁碼待核實」，絕不可捏造。
 輸出純JSON物件：unable(bool), topic(string), explanation(string), principle(string), steps(string),
 wrongOptions(長度4字串陣列，說明每個選項理由；正確選項也要解釋), extension(string),
 practice(包含question、options四個選項字串、answerIndex為0..3、explanation字串),
@@ -24,7 +29,7 @@ def ask(q):
         "messages":[
           {"role":"system","content":INSTRUCTION},
           {"role":"user","content":json.dumps({
-            "year":q.get("year"),"paper":q.get("paper"),"questionNumber":q.get("number"),
+            "year":q.get("year"),"subject":q.get("subject"),"paper":q.get("paper"),"questionNumber":q.get("number"),
             "question":q.get("question"),"options":q.get("options"),
             "officialStandardAnswer":"ABCD"[q["answer"]],
             "sourceExamPdf":q.get("source"),
