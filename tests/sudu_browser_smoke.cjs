@@ -46,6 +46,15 @@ const assert=require('node:assert/strict');
  await menu.locator('[data-tab="learn"]').click();
  await page.locator('.option[data-answer]').first().click();
  await page.locator('.accounting-teacher').waitFor();
+ // The actual arrow navigation belongs directly after the explanation, not
+ // under the source block or in a second sticky toolbar.
+ const navBar=page.locator('#sudu-workspace > .sudu-inline-questionnav');
+ assert.equal(await navBar.count(),1,'one inline question navigator');
+ assert.equal(await navBar.evaluate(el=>el.previousElementSibling?.dataset.block),'explanation','navigator follows explanation block');
+ assert.equal(await page.locator('#bottom').isVisible(),false,'duplicate sticky question navigation is hidden');
+ assert(await navBar.locator('#next2').isVisible(),'next icon visible');
+ assert(await navBar.locator('#prev2').isVisible(),'previous icon visible');
+
  assert(await page.locator('.accounting-teacher').innerText().then(t=>t.includes('高職會計老師')&&t.includes('小學生白話')));
  assert(await page.locator('.accounting-teacher .concept-key').count()>0);
  await page.waitForTimeout(900);
@@ -56,6 +65,12 @@ const assert=require('node:assert/strict');
  await page.waitForTimeout(900);
  const questionTop=await page.locator('#sudu-workspace [data-block="question"]').evaluate(x=>x.getBoundingClientRect().top);
  assert(questionTop>=0&&questionTop<240,'return to question; actual='+questionTop);
+ // Inline navigation remains functional and follows explanation on every question.
+ await page.locator('#next2').click();
+ assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav').evaluate(el=>el.previousElementSibling?.dataset.block),'explanation');
+ assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'2 / 8');
+ await page.locator('#prev2').click();
+ assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'1 / 8');
  // Dark is truly black/charcoal and readable.
  await page.locator('#sudu-theme-button').click();
  assert.equal(await page.locator('html').getAttribute('data-sudu-theme'),'dark');

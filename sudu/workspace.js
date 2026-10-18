@@ -227,6 +227,15 @@ function suduWorkspaceApply(){
   outer.addEventListener("dragleave",()=>outer.classList.remove("sudu-drop-target"));
   outer.addEventListener("drop",e=>{e.preventDefault();const k=e.dataTransfer.getData("text/plain");if(k&&k!==key){suduArrange(k,key);suduSaveLayout();render()}});
  }
+ // Keep the actual previous/next controls immediately after the explanation
+ // section, even when the student reorders study sections.
+ const inlineNavigation=screen.querySelector(".questionnav");
+ const explanationSection=box.querySelector('[data-block="explanation"]');
+ if(inlineNavigation&&explanationSection){
+  inlineNavigation.classList.add("sudu-inline-questionnav");
+  inlineNavigation.setAttribute("aria-label","切換試題");
+  explanationSection.insertAdjacentElement("afterend",inlineNavigation);
+ }
  suduUpdateReturnButton();
 }
 function suduMoveBlock(key,delta){
