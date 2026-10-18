@@ -52,3 +52,33 @@ function suduPaperStats(year,paper){
   const qs=(ALL.officialQuestions||[]).filter(q=>String(q.year)===String(year)&&q.paper===paper);
   return {count:qs.length,withAnswers:qs.filter(q=>q.answerVerified).length,withTeaching:qs.filter(q=>q.teachingVerified).length};
 }
+
+/* Compact coverage index: no download of PDFs or manual student file import. */
+async function suduLoadOfficialIndex(){
+  suduEnsureOfficialData();
+  if(ALL.officialIndex)return ALL.officialIndex;
+  try{
+    const response=await fetch('./data/index.json',{cache:'no-store'});
+    if(!response.ok)throw Error('No official coverage index');
+    ALL.officialIndex=await response.json();
+    return ALL.officialIndex;
+  }catch(e){
+    ALL.officialIndex={years:[],warning:String(e)};
+    return ALL.officialIndex;
+  }
+}
+let suduAllYearsPromise=null;
+function suduLoadAllOfficialYears(){
+  if(suduAllYearsPromise)return suduAllYearsPromise;
+  suduAllYearsPromise=(async()=>{
+    await suduLoadOfficialIndex();
+    const years=ALL.archive.map(x=>String(x.year));
+    const chunks=[];
+    for(let i=0;i<years.length;i+=4)chunks.push(years.slice(i,i+4));
+    for(const group of chunks){
+      await Promise.all(group.map(y=>suduLoadOfficialYear(y)));
+    }
+    if(typeof ui!=='undefined'&&ui.tab==='dashboard')render();
+  })();
+  return suduAllYearsPromise;
+}
