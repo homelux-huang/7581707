@@ -1,7 +1,7 @@
 # 統測題庫完整度稽核
 
-產生時間：2026-10-18T17:25:33.415198+00:00。
-基準 commit：`50a731e1604fff2f188cc050882a6c7a8beeb11e`。資料指紋：`0b9e240510abe4ba2f1fe32022876e5aae7852e0e61a94ccd02cd1619909bd96`。
+產生時間：2026-10-18T17:30:39.387068+00:00。
+基準 commit：`b65ddf6dabfecaf492bcc1c61512f5dc723f4b61`。資料指紋：`46e60a2e33bf8954a2fe989d9da78bea31f450ee1ef1c80249d9fca87e7b884e`。
 
 重跑：`python scripts/check_tcte_corpus.py --decode-images --json sudu/data/corpus-audit.json --markdown docs/SUDU_CORPUS_AUDIT.md`。
 結構檢查通過只代表格式、索引及圖檔完整性，不表示所有原題、答案、教學或計分完成。
@@ -33,10 +33,10 @@
 | 年 | 卷數 | raw／範圍內 | 題數候選／未明卷 | 題幹核實 | 答案配對／覆核 | 原題 WebP／候選頁 | 答案 WebP | 草稿／選項理由 | 教學／教材核實 | 規則／可評分卷 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 90 | 4 | 141／141 | 0／4 | 0 | 139／0 | 141／141 | 0 | 0／0 | 0／0 | 0／0 |
-| 91 | 7 | 257／167 | 215／2 | 0 | 0／0 | 167／157 | 167 | 0／0 | 0／0 | 0／0 |
+| 91 | 7 | 257／167 | 215／2 | 0 | 0／0 | 167／158 | 167 | 0／0 | 0／0 | 0／0 |
 | 92 | 4 | 175／175 | 175／0 | 0 | 127／0 | 175／164 | 150 | 0／0 | 0／0 | 0／0 |
 | 93 | 7 | 227／207 | 205／2 | 0 | 29／0 | 207／20 | 200 | 0／0 | 0／0 | 0／0 |
-| 94 | 5 | 225／225 | 225／0 | 0 | 180／0 | 225／209 | 225 | 0／0 | 0／0 | 0／0 |
+| 94 | 5 | 225／225 | 225／0 | 0 | 180／0 | 225／210 | 225 | 0／0 | 0／0 | 0／0 |
 | 95 | 5 | 225／225 | 225／0 | 0 | 180／0 | 225／223 | 225 | 0／0 | 0／0 | 0／0 |
 | 96 | 5 | 215／215 | 215／0 | 0 | 179／0 | 215／215 | 215 | 0／0 | 0／0 | 0／0 |
 | 97 | 5 | 215／215 | 215／0 | 0 | 183／0 | 215／214 | 215 | 0／0 | 0／0 | 0／0 |
@@ -75,7 +75,7 @@
 | 90/BIZ-1 | 商管／共同科 | 50／待核實 | 49／0 | 7／50 | 0 | 0／0 | answer_webp_missing_or_incomplete；automatic_answer_pairing_requires_independent_review；ocr_pages_6,7；official_question_count_not_reviewed |
 | 91/00-C | 商管／共同科 | 7／待核實 | 0／0 | 8／7 | 1 | 0／0 | missing_nonconsecutive_questions；official_answer_pdf_not_identified；official_question_count_not_reviewed |
 | 91/00-E | 商管／共同科 | 35／待核實 | 0／0 | 8／34 | 1 | 0／1 | cover_instructions_misparsed_as_question；missing_nonconsecutive_questions；official_answer_pdf_not_identified；official_question_count_not_reviewed |
-| 91/00-M-OLD | 商管／共同科 | 25／25 | 0／0 | 8／22 | 1 | 1／2 | OCR_extracted_24_of_25；cover_instructions_misparsed_as_question；official_answer_pdf_not_identified |
+| 91/00-M-OLD | 商管／共同科 | 25／25 | 0／0 | 8／23 | 1 | 1／2 | OCR_extracted_24_of_25；cover_instructions_misparsed_as_question；official_answer_pdf_not_identified |
 | 91/BIZ-1 | 商管／共同科 | 50／50 | 0／0 | 8／47 | 1 | 0／3 | cover_instructions_misparsed_as_question；official_answer_pdf_not_identified |
 | 91/BIZ-2 | 商管／共同科 | 50／50 | 0／0 | 8／47 | 1 | 0／3 | cover_instructions_misparsed_as_question；official_answer_pdf_not_identified |
 | 91/09-1 | 歷史誤收保留 | 50／50 | 0／0 | 0／0 | 0 | 1／3 | OCR_extracted_49_of_50；cover_instructions_misparsed_as_question；official_answer_pdf_not_identified；old_09_engineering_record_preserved_not_commerce |
@@ -93,7 +93,7 @@
 | 93/BIZ-2 | 商管／共同科 | 50／50 | 0／0 | 8／0 | 1 | 0／0 | official_image_only_no_ocr；question_page_mapping_pending_review |
 | 94/00-C | 商管／共同科 | 50／50 | 46／0 | 8／47 | 1 | 0／3 | automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction |
 | 94/00-E | 商管／共同科 | 50／50 | 32／0 | 8／47 | 1 | 15／3 | OCR_extracted_35_of_50；automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction |
-| 94/00-MB | 商管／共同科 | 25／25 | 16／0 | 4／21 | 1 | 2／3 | OCR_extracted_23_of_25；automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction |
+| 94/00-MB | 商管／共同科 | 25／25 | 16／0 | 4／22 | 1 | 2／3 | OCR_extracted_23_of_25；automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction |
 | 94/BIZ-1 | 商管／共同科 | 50／50 | 40／0 | 8／47 | 1 | 0／3 | automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction |
 | 94/BIZ-2 | 商管／共同科 | 50／50 | 46／0 | 8／47 | 1 | 0／3 | automatic_answer_pairing_requires_independent_review；cover_instructions_misparsed_as_question；incomplete_answer_pdf_extraction；ocr_pages_8 |
 | 95/00-C | 商管／共同科 | 50／50 | 46／0 | 8／50 | 1 | 0／0 | automatic_answer_pairing_requires_independent_review；incomplete_answer_pdf_extraction |
