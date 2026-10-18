@@ -72,3 +72,7 @@ html[data-sudu-theme="dark"] .small,html[data-sudu-theme="dark"] .subtitle,html[
 html[data-sudu-theme="dark"] select,html[data-sudu-theme="dark"] input,html[data-sudu-theme="dark"] .tabs button,html[data-sudu-theme="dark"] .questionnav button,html[data-sudu-theme="dark"] .bottom button{background:#263e56!important;color:#f1f7ff!important;border-color:#55708d!important}
 html[data-sudu-theme="dark"] #sudu-workbar button,html[data-sudu-theme="dark"] .sudu-controls-trigger{background:#263f58!important;color:#eff6ff!important;border-color:#5b7189!important}
 html[data-sudu-theme="dark"] .concept-key{background:#050709!important;color:#fff!important}
+
+/* keep head controls usable at narrow handset widths */
+@media(max-width:600px){.header .head #export{display:none!important}.header .subtitle{display:none!important}.header .head{min-height:54px!important}.sudu-head-actions{flex-shrink:0}}
+@media(max-width:375px){.header .brand{font-size:13px!important}.sudu-head-actions button{padding:6px 6px!important;font-size:10px!important}}
