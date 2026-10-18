@@ -17,6 +17,10 @@ async function suduLoadOfficialYear(year){
     const data=await res.json();
     if(String(data.year)!==key||!Array.isArray(data.papers))throw Error('題庫格式不符合要求');
     const found=[];
+    // Old academic years are NOT the modern 09 group: their 09 code is engineering.
+    // Until imported from the historical commerce-category code 14, never show these as commerce questions.
+    const validPapers=data.papers.filter(p=>Number(key)>=100||p.paper==='BIZ-1'||p.paper==='BIZ-2'||String(p.paper||'').startsWith('00-'));
+    data.papers=validPapers;
     for(const paper of data.papers){
       if(!Array.isArray(paper.questions))continue;
       for(const q of paper.questions){
