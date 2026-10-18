@@ -241,6 +241,43 @@ def process_one(year,link,answer_link):
           and all(q["answerVerified"] and q["questionVerified"] and q["teachingVerified"] for q in entry["questions"]))
     return entry
 
+def legacy_answer_table(url):
+    """Extract old multi-subject HTML standard-answer table by its published column headers."""
+    try:
+        page=guarded_get(urljoin(url,"answer.htm")).text
+    except Exception:
+        return {}
+    soup=BeautifulSoup(page,"html.parser")
+    found={}
+    targets={"BIZ-1":["商業類（一）","商業類(一)","商業類一"],
+             "BIZ-2":["商業類（二）","商業類(二)","商業類二"],
+             "00-C":["國文"],"00-E":["英文"],"00-M-OLD":["數學商業類"]}
+    for table in soup.find_all("table"):
+        rows=table.find_all("tr")
+        for head_i,head in enumerate(rows):
+            cols=head.find_all(["td","th"],recursive=False)
+            headers=[re.sub(r"\s+","",cell.get_text(" ",strip=True)) for cell in cols]
+            if len(headers)<20 or not any("商業類" in x for x in headers):continue
+            mapping={}
+            for code,names in targets.items():
+                possible=[i for i,title in enumerate(headers) if title in names]
+                if len(possible)==1:mapping[code]=possible[0]
+            if not mapping:continue
+            for row in rows[head_i+1:]:
+                cells=row.find_all(["td","th"],recursive=False)
+                if len(cells)<len(headers)-2:continue
+                cells=[re.sub(r"\s+","",cell.get_text(" ",strip=True)) for cell in cells]
+                if not cells or not re.fullmatch(r"\d{1,3}",cells[0]):continue
+                no=int(cells[0])
+                for code,idx in mapping.items():
+                    if idx>=len(cells):continue
+                    val=cells[idx].upper()
+                    accepted=re.findall(r"[ABCD]",val)
+                    if 1<=no<=100 and accepted and len(accepted)<=4 and re.fullmatch(r"[ABCD](?:OR[ABCD])*",val,re.I):
+                        found.setdefault(code,{})[no]=list(dict.fromkeys(accepted))
+            if found:return found
+    return found
+
 def process_year(y):
     entry={"year":y,"courseType":"09商管群" if y>=100 else "舊制商業類（不可直接當作09商管群）",
            "sourceIndex":year_url(y),"generatedAt":stamp(),"pipelineVersion":VERSION,"papers":[],"errors":[]}
@@ -248,21 +285,33 @@ def process_year(y):
         base=year_url(y)
         response=guarded_get(base)
         # 90–99 old sites have direct links and often HTML answer keys, which require different parser.
-        if y<100:
+        links=decoded_input_links(response.text,base)
+        if not links:
             links=legacy_links(response.text,base)
-            if not links:
-                entry["errors"].append("舊制官網來源格式不同，需人工確認年份與商業類考卷的連結；未偽造09考卷。")
-            entry["discoveredPdfLinks"]=len(links)
-        else:
-            links=decoded_input_links(response.text,base)
-            entry["discoveredPdfLinks"]=len(links)
+            entry["courseType"]="舊制商業類（非09商業與管理群）"
+        elif y<100:
+            entry["courseType"]="09商管群（舊課綱，科目不可照搬現制）"
+        entry["discoveredPdfLinks"]=len(links)
         exams=[p for p in links if p["kind"]=="exam"]
         answers={p["paper"]:p for p in links if p["kind"]=="answer"}
         # Restrict to 09 professional and common subjects for this platform.
         exams=[e for e in exams if e["paper"] in OPTION_NAMES or (y<100 and e["paper"] in {"BIZ-1","BIZ-2","00-M-OLD"})]
         # Old math versions are distinct. Do not silently choose one among several.
+        legacy_keys=legacy_answer_table(base) if y<99 and any(x["paper"].startswith("BIZ-") for x in exams) else {}
         for x in exams:
-            entry["papers"].append(process_one(y,x,answers.get(x["paper"])))
+            paper=process_one(y,x,answers.get(x["paper"]))
+            official=legacy_keys.get(x["paper"],{})
+            if official:
+                for question in paper["questions"]:
+                    opts=official.get(question["number"])
+                    if opts and len(question["options"])==4:
+                        question["acceptedAnswers"]=["ABCD".index(c) for c in opts]
+                        question["answer"]=question["acceptedAnswers"][0]
+                        question["answerVerified"]=True
+                paper["answerCount"]=len(official)
+                paper["answerHtml"]=urljoin(base,"answer.htm")
+                paper["issues"]=[x for x in paper["issues"] if x!="official_answer_pdf_not_identified"]
+            entry["papers"].append(paper)
         if not exams:entry["errors"].append("未找到對應試題 PDF；官方來源版型或代碼需再擴充。")
     except Exception as exc:
         entry["errors"].append(type(exc).__name__+": "+str(exc)[:280])
