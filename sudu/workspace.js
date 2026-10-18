@@ -60,7 +60,17 @@ function suduWorkspaceInit(){
   const labels={learn:"01",dashboard:"02",clinic:"03",archive:"04",source:"05"};
   tab.dataset.menuNumber=labels[tab.dataset.tab]||"";
  }
- const workbar=document.createElement("div");workbar.id="sudu-workbar";
+ const returnButton=document.createElement("button");
+ returnButton.id="sudu-return-to-question";
+ returnButton.type="button";
+ returnButton.setAttribute("aria-label","回到目前題目");
+ returnButton.setAttribute("title","回到題目");
+ returnButton.innerHTML='<span class="return-icon" aria-hidden="true">↑</span><span class="return-label">回題目</span>';
+ returnButton.hidden=true;
+ returnButton.addEventListener("click",suduGoToQuestion);
+ document.body.append(returnButton);
+ window.addEventListener("scroll",suduUpdateReturnButton,{passive:true});
+  const workbar=document.createElement("div");workbar.id="sudu-workbar";
  workbar.innerHTML='<span class="work-current" id="sudu-current-selection">學習中</span><button type="button" id="sudu-toggle-drag" title="顯示排序手把">↕ 區塊排序</button><button type="button" id="sudu-reset-drag">恢復預設排序</button>';
  const intro=wrap.querySelector(".intro");if(intro)intro.insertAdjacentElement("afterend",workbar);else wrap.prepend(workbar);
  const trigger=document.getElementById("sudu-controls-button");
@@ -117,6 +127,7 @@ function suduUpdateMini(){
 }
 function suduWorkspaceApply(){
  suduUpdateMini();
+ suduUpdateReturnButton();
  if(typeof ui==="undefined"||ui.tab!=="learn")return;
  const screen=document.getElementById("screen");if(!screen)return;
  const raw=[...screen.children];
@@ -152,6 +163,7 @@ function suduWorkspaceApply(){
   outer.addEventListener("dragleave",()=>outer.classList.remove("sudu-drop-target"));
   outer.addEventListener("drop",e=>{e.preventDefault();const k=e.dataTransfer.getData("text/plain");if(k&&k!==key){suduArrange(k,key);suduSaveLayout();render()}});
  }
+ suduUpdateReturnButton();
 }
 function suduMoveBlock(key,delta){
  const all=[...document.querySelectorAll("#sudu-workspace > .study-section")].map(x=>x.dataset.block);
@@ -163,4 +175,39 @@ function suduArrange(source,target){
  const all=[...document.querySelectorAll("#sudu-workspace > .study-section")].map(x=>x.dataset.block);
  const i=all.indexOf(source),j=all.indexOf(target);if(i<0||j<0)return;
  all.splice(i,1);all.splice(j,0,source);suduLayoutOrder=all;
+}
+
+/* Scroll to the explanation immediately after a submitted, validated answer. */
+function suduScrollBehavior(){
+ return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+}
+function suduExplanationTarget(){
+ return document.querySelector('#sudu-workspace > [data-block="answer"]')
+     || document.querySelector('#sudu-workspace > [data-block="explanation"]')
+     || document.querySelector('#screen .section.orange');
+}
+function suduGoToExplanation(){
+ if(typeof ui!=="undefined"&&ui.tab!=="learn")return;
+ requestAnimationFrame(()=>{
+  const target=suduExplanationTarget();
+  if(!target)return;
+  target.scrollIntoView({behavior:suduScrollBehavior(),block:"start"});
+  suduUpdateReturnButton();
+ });
+}
+function suduGoToQuestion(){
+ if(typeof ui!=="undefined"&&ui.tab!=="learn")return;
+ const target=document.querySelector('#sudu-workspace > [data-block="question"]')
+   || document.querySelector('#screen .section.blue');
+ if(!target)return;
+ target.scrollIntoView({behavior:suduScrollBehavior(),block:"start"});
+}
+function suduUpdateReturnButton(){
+ const button=document.getElementById("sudu-return-to-question");
+ if(!button)return;
+ const target=document.querySelector('#sudu-workspace > [data-block="question"]')
+   || document.querySelector('#screen .section.blue');
+ const inStudy=typeof ui!=="undefined"&&ui.tab==="learn";
+ const pastQuestion=target&&target.getBoundingClientRect().bottom<Math.max(95,window.innerHeight*.22);
+ button.hidden=!(inStudy&&pastQuestion);
 }
