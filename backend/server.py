@@ -73,6 +73,39 @@ def load_question(id):
                 if q.get("id")==id:return q
     except (ValueError,OSError):pass
     return None
+def official_score(paper_key,entry):
+    """Compute only with archived full official questions, verified answers and a reviewed scoring rule."""
+    try:
+        m=re.fullmatch(r"(\d{2,3})/([A-Za-z0-9_-]{1,40})",paper_key)
+        if not m:return None
+        year,paper=m.groups()
+        exam=json.loads((ROOT/"sudu"/"data"/"years"/(year+".json")).read_text("utf-8"))
+        rules=json.loads((ROOT/"sudu"/"data"/"scoring-rules.json").read_text("utf-8"))
+        source=next(x for x in exam["papers"] if x.get("paper")==paper)
+        items=source.get("questions",[])
+        expected=source.get("expectedCount")
+        if not isinstance(expected,int) or expected<1 or len(items)!=expected:return None
+        if not all(q.get("answerVerified") is True and q.get("questionVerified") is True and
+                   isinstance(q.get("answer"),int) and len(q.get("options") or [])==4 for q in items):return None
+        rule=next(x for x in rules["rules"] if str(x.get("year"))==year and x.get("paper")==paper)
+        if rule.get("verified") is not True or rule.get("type")!="per-question" or rule.get("expectedCount")!=expected:return None
+        if not rule.get("reviewedBy") or not rule.get("reviewedAt") or not re.match(r"^https://(?:[^/]+\.)?tcte\.edu\.tw/",rule.get("sourceUrl") or ""):return None
+        weights=rule.get("points") or {}
+        choices=entry.get("choices") or {}
+        if len(choices)!=expected or len(weights)!=expected:return None
+        total=0.;maximum=0.
+        for q in items:
+            weight=weights.get(str(q["number"]))
+            choice=choices.get(q["id"])
+            if not isinstance(weight,(float,int)) or weight<0 or type(choice) is not int or not 0<=choice<=3:return None
+            maximum+=weight
+            accepted=q.get("acceptedAnswers") if q.get("acceptedAnswers") else [q["answer"]]
+            if choice in accepted:total+=weight
+        if maximum<=0 or abs(maximum-rule["maxScore"])>0.001:return None
+        return {"score":round(total,2),"maxScore":maximum,"source":rule["sourceUrl"]}
+    except (OSError,ValueError,KeyError,StopIteration,TypeError,ZeroDivisionError):
+        return None
+
 def summarize(student,db,include_details=False):
     st=json.loads(student["state_json"]);attempts=st.get("attempts") or {};submitted=st.get("examSubmissions") or {}
     count=sum(bool(v) for v in attempts.values() if isinstance(v,list))
@@ -90,9 +123,10 @@ def summarize(student,db,include_details=False):
     for key,entry in submitted.items():
         if not isinstance(entry,dict):continue
         correction=db.execute("SELECT new_score,reason,created,source FROM adjustments WHERE student_id=? AND paper_key=? ORDER BY id DESC LIMIT 1",(student["id"],key)).fetchone()
+        computed=official_score(key,entry)
         scores.append({"paper":key,"submittedAt":entry.get("submittedAt"),"startedAt":entry.get("startedAt"),"elapsedMs":entry.get("elapsedMs"),"questionCount":entry.get("questionCount"),
-                       "score":None,"scoreStatus":"正式配分規則待核實","adjustedScore":correction["new_score"] if correction else None,
-                       "adjustmentReason":correction["reason"] if correction else None,"isOfficialScore":False})
+                       "score":computed["score"] if computed else None,"scoreStatus":"官方規則計算" if computed else "正式配分規則待核實","adjustedScore":correction["new_score"] if correction else None,
+                       "adjustmentReason":correction["reason"] if correction else None,"isOfficialScore":bool(computed)})
     dates=[a.get("at") for log in attempts.values() if isinstance(log,list) for a in log if isinstance(a,dict) and a.get("at")]
     result={"id":student["id"],"nickname":student["nickname"],"updatedAt":stamp(student["updated"]),
             "answeredQuestions":count,"submittedPapers":len(submitted),"firstWrongCount":len(first_wrong),
@@ -108,12 +142,15 @@ def clean_state(data):
         if not isinstance(k,str) or len(k)>180 or not isinstance(v,list):continue
         out[k]=[{"choice":a.get("choice"),"correct":a.get("correct"),"at":str(a.get("at",""))[:40]}
          for a in v[-1200:] if isinstance(a,dict) and type(a.get("choice")) is int and 0<=a["choice"]<=3 and type(a.get("correct")) is bool]
+    raw_submissions=data.get("examSubmissions") or {}
+    if not isinstance(raw_submissions,dict) or len(raw_submissions)>300:raise ValueError("Invalid submissions")
     submissions={}
-    for k,v in (data.get("examSubmissions") or {}).items():
+    for k,v in raw_submissions.items():
         if not isinstance(k,str) or len(k)>60 or not isinstance(v,dict):continue
         submissions[k]={"year":str(v.get("year",""))[:4],"paper":str(v.get("paper",""))[:50],
          "startedAt":str(v.get("startedAt",""))[:40],"submittedAt":str(v.get("submittedAt",""))[:40],
-         "elapsedMs":max(0,min(10**10,int(v.get("elapsedMs") or 0))),"questionCount":max(0,min(2000,int(v.get("questionCount") or 0)))}
+         "elapsedMs":max(0,min(10**10,int(v.get("elapsedMs") or 0))),"questionCount":max(0,min(2000,int(v.get("questionCount") or 0))),
+         "choices":{key:choice for key,choice in list((v.get("choices") or {}).items())[:2000] if isinstance(key,str) and len(key)<=180 and type(choice) is int and 0<=choice<=3}}
     return {"attempts":out,"examSubmissions":submissions}
 class Handler(BaseHTTPRequestHandler):
     server_version="SUDUAdmin/1.0"

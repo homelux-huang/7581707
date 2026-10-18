@@ -73,9 +73,9 @@ const assert=require('node:assert/strict');
  // Inline navigation remains functional and follows explanation on every question.
  await page.locator('#next2').click();
  assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav').evaluate(el=>el.previousElementSibling?.dataset.block),'explanation');
- assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'2 / 8');
+ assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'2 / 64');
  await page.locator('#prev2').click();
- assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'1 / 8');
+ assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'1 / 64');
  // Dark is truly black/charcoal and readable.
  await page.locator('#sudu-theme-button').click();
  assert.equal(await page.locator('html').getAttribute('data-sudu-theme'),'dark');

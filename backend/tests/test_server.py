@@ -33,6 +33,8 @@ class TestPrivateAdmin(unittest.TestCase):
         self.assertNotIn("password",result)
         self.assertEqual(result["attempts"]["q1"][0]["choice"],1)
         self.assertEqual(result["examSubmissions"]["114/09-2"]["elapsedMs"],5000)
+    def test_official_score_requires_verified_rules(self):
+        self.assertIsNone(server.official_score("114/09-2",{"choices":{}}))
     def test_tokens_not_stored_in_plaintext(self):
         self.assertNotEqual(server.digest("temporary-token"),"temporary-token")
         self.assertNotEqual(server.digest("token-a"),server.digest("token-b"))
