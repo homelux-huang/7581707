@@ -1,9 +1,5 @@
 name: Import TCTE exam PDF data (smoke)
 on:
-  push:
-    paths:
-      - scripts/tcte_auto.py
-      - .github/workflows/tcte-auto-smoke.yml
   workflow_dispatch:
 permissions:
   contents: write
@@ -25,7 +21,7 @@ jobs:
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra > /dev/null
       - name: Download and parse real official PDFs
         run: python scripts/tcte_auto.py --years 114 100 90
-      - name: Commit import results
+      - name: Commit import results (manual smoke only)
         run: |
           git config user.name "7581707 TCTE import bot"
           git config user.email "7581707-bot@users.noreply.github.com"
