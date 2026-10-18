@@ -1,0 +1,30 @@
+name: Browser smoke test Sudu
+on:
+  push:
+    paths:
+      - sudu/workspace.js
+      - sudu/workspace.css
+      - sudu/index.html
+      - tests/sudu_browser_smoke.cjs
+      - .github/workflows/sudu-browser-test.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve and test UI
+        run: |
+          python3 -m http.server 8765 > /tmp/sudu-test-server.log 2>&1 &
+          sleep 2
+          node tests/sudu_browser_smoke.cjs
