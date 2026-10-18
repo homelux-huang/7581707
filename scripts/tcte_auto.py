@@ -138,7 +138,11 @@ def extract_questions(pages,year,paper,src,ocr_pages):
     offsets=[];full=""; 
     for i,text in enumerate(pages):
         offsets.append(len(full))
-        # Modern PDFs have a cover page with numbered instructions; those are NOT exam questions.\n        if i==0 and "考試開始鈴" in text and "試題本" in text:\n            full+="\n\n"\n        else:\n            full+=text+"\n\n"
+        # Modern PDFs have a cover page with numbered instructions; skip it.
+        if i == 0 and "考試開始鈴" in text and "試題本" in text:
+            full += "\n\n"
+        else:
+            full += text + "\n\n"
     markers=list(QSTART.finditer(full))
     if year==114 and paper=="09-2":
         print("DEBUG_HEAD",repr(full[:1100]),flush=True)
