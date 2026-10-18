@@ -1,0 +1,234 @@
+
+/* 7581707 Study Dashboard — local browser-profile identity, not biometric/device fingerprinting */
+const SUDU_DEVICE_KEY='sudu_device_profile_v1';
+let suduDevice=null;
+let suduDb=null;
+let suduMirrorReady=false;
+let suduHadSavedState=false;
+let suduHadDevice=false;
+
+function suduNewCode(){
+  let arr=new Uint8Array(12);
+  if(typeof crypto!=='undefined' && crypto.getRandomValues) crypto.getRandomValues(arr);
+  else throw new Error('瀏覽器無法產生安全的隨機學習代碼');
+  return 'SUDU-'+Array.from(arr,x=>x.toString(16).padStart(2,'0')).join('').toUpperCase();
+}
+function suduSetDevice(profile){
+  suduDevice={id:profile.id,created:profile.created||new Date().toISOString(),name:String(profile.name||'我的學習空間').slice(0,40)};
+  try{localStorage.setItem(SUDU_DEVICE_KEY,JSON.stringify(suduDevice));}catch(e){}
+}
+function suduBoot(){
+  suduHadSavedState=!!localStorage.getItem('sudu_sites_state');
+  suduHadDevice=!!localStorage.getItem(SUDU_DEVICE_KEY);
+  try{
+    const x=JSON.parse(localStorage.getItem(SUDU_DEVICE_KEY)||'null');
+    if(x && /^SUDU-[A-F0-9]{24}$/.test(x.id))suduSetDevice(x);
+  }catch(e){}
+  if(!suduDevice)suduSetDevice({id:suduNewCode(),created:new Date().toISOString(),name:'我的學習空間'});
+  state.visitCount=(Number(state.visitCount)||0)+1;
+  state.lastVisit=new Date().toISOString();
+  state.recentVisits=Array.isArray(state.recentVisits)?state.recentVisits:[];
+  state.recentVisits.unshift(state.lastVisit);
+  state.recentVisits=state.recentVisits.slice(0,60);
+  state.dashboard=state.dashboard||{year:'全部',subject:'全部科目'};
+  suduTryOpenMirror();
+}
+function suduTryOpenMirror(){
+  if(typeof indexedDB==='undefined'){suduMirrorReady=true;return;}
+  try{
+    const req=indexedDB.open('7581707-sudu-profile-backup',1);
+    req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('snapshots'))req.result.createObjectStore('snapshots');};
+    req.onerror=()=>{suduMirrorReady=true;};
+    req.onsuccess=()=>{
+      suduDb=req.result;
+      try{
+        const t=suduDb.transaction('snapshots','readonly').objectStore('snapshots').get('latest');
+        t.onsuccess=()=>{
+          const old=t.result;
+          if(!suduHadDevice && old?.profile?.id && /^SUDU-[A-F0-9]{24}$/.test(old.profile.id))suduSetDevice(old.profile);
+          if(!suduHadSavedState && old?.state?.attempts && Object.keys(state.attempts||{}).length===0){
+            const visitCount=state.visitCount,lastVisit=state.lastVisit;
+            state={...state,...old.state,visitCount:(Number(old.state.visitCount)||0)+1,lastVisit: lastVisit};
+            state.recentVisits=[lastVisit,...(old.state.recentVisits||[])].slice(0,60);
+            state.attempts=state.attempts||{};
+            state.reviewAnswers=state.reviewAnswers||{};
+            state.reviewHistory=state.reviewHistory||{};
+            state.extended=state.extended||{};
+            state.dashboard=state.dashboard||{year:'全部',subject:'全部科目'};
+            save();render();
+          }
+          suduMirrorReady=true;suduMirrorSave();
+        };
+        t.onerror=()=>{suduMirrorReady=true;suduMirrorSave();};
+      }catch(e){suduMirrorReady=true;}
+    };
+  }catch(e){suduMirrorReady=true;}
+}
+function suduMirrorSave(){
+  if(!suduMirrorReady||!suduDb)return;
+  try{
+    const tx=suduDb.transaction('snapshots','readwrite');
+    tx.objectStore('snapshots').put({profile:suduDevice,state:JSON.parse(JSON.stringify(state)),savedAt:new Date().toISOString()},'latest');
+  }catch(e){}
+}
+function suduSaveName(){
+  const el=document.getElementById('db-nickname');
+  if(!el)return;
+  suduSetDevice({...suduDevice,name:el.value.trim().slice(0,40)||'我的學習空間'});
+  suduMirrorSave();render();
+}
+function suduStudyQuestions(){
+  const checked=(ALL.officialQuestions||[]).filter(q=>q&&q.verified===true&&Number.isInteger(q.answer)&&Array.isArray(q.options)&&q.options.length===4&&q.question&&q.explanation);
+  return ALL.practice.concat(checked);
+}
+function suduQueryQuestions(year,subject){
+  return suduStudyQuestions().filter(q=>(year==='全部'||String(q.year)===String(year))&&(subject==='全部科目'||q.subject===subject));
+}
+function suduWrongCount(q){
+  const initial=(state.attempts?.[q.id]||[]).filter(a=>a.correct===false).length;
+  const reviews=(state.reviewHistory?.[q.id]||[]).filter(a=>a.correct===false).length;
+  const legacy=reviews?0:(state.reviewAnswers?.[q.id]?.correct===false?1:0);
+  return initial+reviews+legacy;
+}
+function suduStats(year,subject){
+  const qs=suduQueryQuestions(year,subject),done=qs.filter(q=>(state.attempts?.[q.id]||[]).length>0).length;
+  return {total:qs.length,done,remaining:qs.length-done,completed:qs.length?Math.round(done*100/qs.length):null,unfinished:qs.length?Math.round((qs.length-done)*100/qs.length):null};
+}
+function suduRate(x){return x===null?'—':String(x)+'%';}
+function suduBar(n){
+  return '<div class="db-progress-track"><div class="db-progress-fill" style="width:'+Math.max(0,Math.min(100,n||0))+'%"></div></div>';
+}
+function suduSourceInfo(q){
+  const chapter=q.textbook?.chapter;
+  if(chapter)return esc((q.textbook.publisher||'')+'《'+(q.textbook.title||'課本')+'》 '+chapter);
+  const b=ALL.books[q.subject];
+  return b?'彰商曾採用 '+esc(b.publisher)+'《'+esc(b.title)+'》；本題章節與頁碼尚未核實':'本題尚未核實課本章節，僅提供觀念及題目來源';
+}
+function suduYearRows(subject){
+  const years=['自編',...ALL.archive.map(a=>String(a.year)).sort((a,b)=>Number(b)-Number(a))];
+  function row(year){
+    const st=suduStats(year,subject),label=year==='自編'?'自編學習題':year+' 年';
+    return '<div class="db-year-row"><strong>'+esc(label)+'</strong><div>'+(
+      st.total?suduBar(st.completed)+'<span class="small">已完成 '+st.done+'/'+st.total+' 題（'+st.completed+'%），未完成 '+st.unfinished+'%</span>':
+      '<span class="db-empty-state">尚未收錄核實題目，無法計算完成率</span>')+
+      '</div><em>'+(st.total?suduRate(st.completed):'未建置')+'</em></div>';
+  }
+  const g=[
+    {title:'自編練習（目前可作答）',items:years.filter(x=>x==='自編'),open:true},
+    {title:'110～115 年',items:years.filter(x=>Number(x)>=110),open:true},
+    {title:'100～109 年',items:years.filter(x=>Number(x)>=100&&Number(x)<110),open:false},
+    {title:'90～99 年',items:years.filter(x=>Number(x)>=90&&Number(x)<100),open:false}
+  ];
+  return g.map(x=>'<details class="db-year-group" '+(x.open?'open':'')+'><summary>'+x.title+'</summary>'+x.items.map(row).join('')+'</details>').join('');
+}
+function suduLeaderRows(year,subject){
+  const list=suduQueryQuestions(year,subject).map(q=>({q,n:suduWrongCount(q)})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n||a.q.id.localeCompare(b.q.id)).slice(0,12);
+  if(!list.length)return '<p class="db-empty-state">目前沒有這個範圍的答錯紀錄。答題後會依實際答錯次數自動排序。</p>';
+  return list.map(({q,n},i)=>'<article class="db-leader"><div class="db-leader-header"><strong>第 '+(i+1)+' 名｜'+esc(q.subject)+'・'+esc(q.topic)+'</strong><span class="db-count">答錯 '+n+' 次</span></div>'+
+    '<p>'+esc(q.question)+'</p>'+
+    '<p class="db-concept"><b>關鍵觀念：</b>'+keyHtml(q.explanation,q)+'</p>'+
+    '<p class="db-source"><b>出處：</b>'+suduSourceInfo(q)+'；題目：'+esc(q.source||'來源待確認')+'</p>'+
+    '<button class="db-simple-btn" data-jump="'+esc(q.id)+'">再練這一題 →</button></article>').join('');
+}
+function suduSubjectReview(year,subject){
+  const subjects=[...new Set(ALL.practice.map(q=>q.subject))];
+  const visible=subject==='全部科目'?subjects:subjects.filter(s=>s===subject);
+  return visible.map((sub,i)=>{
+    const qs=suduQueryQuestions(year,sub),w=qs.filter(q=>suduWrongCount(q)>0);
+    const top=w.sort((a,b)=>suduWrongCount(b)-suduWrongCount(a));
+    let content=top.length?top.map(q=>
+      '<div class="db-topic"><b>'+esc(q.topic)+'</b> <span class="db-tag">錯 '+suduWrongCount(q)+' 次</span>'+
+      '<p><b>觀念：</b>'+keyHtml(q.explanation,q)+'</p>'+
+      '<p><b>計算／原理：</b>'+keyHtml(q.steps||'此題無步驟資料',q)+'</p>'+
+      '<p><b>教材：</b>'+suduSourceInfo(q)+'</p>'+
+      '<p><b>延伸：</b>'+keyHtml(q.extension||'延伸觀念待補',q)+'</p>'+
+      '<button class="db-simple-btn" data-jump="'+esc(q.id)+'">複習原題與延伸考題</button></div>').join('') :
+      '<p class="db-empty-state">目前沒有這一科的答錯題目。已收錄可作答 '+qs.length+' 題。</p>';
+    return '<details class="db-subject" '+((subject!=='全部科目'||i===0)?'open':'')+'><summary>'+esc(sub)+'｜'+w.length+' 題曾答錯</summary><div class="db-subject-inner">'+content+'</div></details>';
+  }).join('');
+}
+function dashboard(){
+  const d=state.dashboard||{year:'全部',subject:'全部科目'};
+  const years=['全部','自編',...ALL.archive.map(x=>String(x.year)).sort((a,b)=>Number(b)-Number(a))];
+  const subjects=['全部科目',...new Set(ALL.practice.map(q=>q.subject))];
+  if(!years.includes(String(d.year)))d.year='全部';
+  if(!subjects.includes(d.subject))d.subject='全部科目';
+  const stats=suduStats(d.year,d.subject);
+  const mistakes=suduQueryQuestions(d.year,d.subject).filter(q=>suduWrongCount(q)>0);
+  const totalWrong=mistakes.reduce((n,q)=>n+suduWrongCount(q),0);
+  const identity=suduDevice?.id||'學習代碼建立中';
+  let selYears=years.map(y=>'<option value="'+esc(y)+'" '+(String(d.year)===String(y)?'selected':'')+'>'+(y==='全部'?'全部年度':y==='自編'?'自編練習':y+' 年')+'</option>').join('');
+  let selSubjects=subjects.map(y=>'<option value="'+esc(y)+'" '+(d.subject===y?'selected':'')+'>'+esc(y)+'</option>').join('');
+  const top='<section class="db-welcome"><div class="db-top"><div><h2>你好，'+esc(suduDevice?.name||'同學')+' 👋</h2><p>歡迎回到你的個人學習 Dashboard。這個瀏覽器會自動找回之前的作答與錯題。</p></div><span class="db-badge">✓ 本機學習代碼已辨識</span></div>'+
+    '<div class="db-device"><span>本瀏覽器固定學習代碼： <strong>'+esc(identity)+'</strong></span></div>'+
+    '<div class="db-control"><label>年度範圍<select id="db-year">'+selYears+'</select></label><label>科目篩選<select id="db-subject">'+selSubjects+'</select></label></div></section>';
+  const n='<div class="db-summary"><div class="db-metric"><b>'+stats.done+'/'+stats.total+'</b><span>已完成／目前可作答題數</span></div>'+
+    '<div class="db-metric"><b>'+suduRate(stats.completed)+'</b><span>已完成比例</span></div>'+
+    '<div class="db-metric"><b>'+suduRate(stats.unfinished)+'</b><span>未完成比例</span></div>'+
+    '<div class="db-metric"><b>'+totalWrong+'</b><span>累計錯誤次數（'+mistakes.length+' 題）</span></div></div>';
+  const msg=stats.total===0?
+    '<div class="db-empty">目前這個年度／科目還沒有經核實且可作答的正式題庫，所以無法計算完成率。這不代表你沒有考試，也不會將缺題的年度算成 0% 或 100%。</div>':
+    '<p class="small">只以「目前已收錄且可作答」的題目計算完成率；尚未取得的正式歷年題目不會列入分母。</p>';
+  const yearCard='<section class="db-pane"><h3>📅 每一年考試完成度</h3>'+msg+suduYearRows(d.subject)+'</section>';
+  const mistakesCard='<section class="db-pane"><h3>🎯 答錯最多次的題目 TOP 12</h3>'+suduLeaderRows(d.year,d.subject)+'</section>';
+  const sourceCard='<section class="db-pane"><h3>📖 各科錯誤觀念複習（點開科目）</h3><p class="small">依你實際答錯的觀念整理；用黑底白字標示會計關鍵字。出處未核實時會誠實顯示，不會編造課本頁數。</p>'+suduSubjectReview(d.year,d.subject)+'</section>';
+  const device='<section class="db-pane"><h3>🔐 裝置與學習紀錄</h3><div class="db-device-panel"><p class="small">目前辨識的是 <b>此瀏覽器使用者設定檔</b>，不是手機型號、IP 或真正的身分驗證。同一瀏覽器重開會保留；不同瀏覽器／無痕模式是不同學習空間。</p>'+
+    '<p class="small"><b>固定學習代碼：</b><code>'+esc(identity)+'</code></p>'+
+    '<p class="small"><b>此瀏覽器已啟用次數：</b>'+Number(state.visitCount||0)+'　 <b>最近進入：</b>'+esc(state.lastVisit?new Date(state.lastVisit).toLocaleString('zh-TW'):'尚無')+'</p>'+
+    '<div class="db-control"><label>本機暱稱<input class="db-name" id="db-nickname" maxlength="40" value="'+esc(suduDevice?.name||'')+'" placeholder="例如：商一甲學生"></label><button id="db-save-name">儲存暱稱</button><button id="db-copy-code">複製學習代碼</button><button id="db-download">備份紀錄</button><button id="db-restore">還原備份</button><button id="db-persist">加強本機保留</button></div></div>'+
+    '<p class="db-footer-note">作答紀錄儲存在瀏覽器本機，也同步嘗試儲存至瀏覽器資料庫。正常關閉瀏覽器不會登出；但清除網站資料、裝置損壞、使用無痕模式時仍可能遺失。若要永久跨裝置保存，需另外建立有登入驗證的雲端帳號與資料庫。請定期下載備份，尤其在更換手機／電腦前。</p></section>';
+  return '<div class="db-page">'+top+n+'<div class="db-two">'+yearCard+mistakesCard+'</div>'+sourceCard+device+'</div>';
+}
+function suduWireDashboard(){
+  const y=document.getElementById('db-year'),sb=document.getElementById('db-subject');
+  if(y)y.onchange=()=>{state.dashboard=state.dashboard||{};state.dashboard.year=y.value;save();render();};
+  if(sb)sb.onchange=()=>{state.dashboard=state.dashboard||{};state.dashboard.subject=sb.value;save();render();};
+  const nm=document.getElementById('db-save-name');if(nm)nm.onclick=suduSaveName;
+  const cp=document.getElementById('db-copy-code');if(cp)cp.onclick=async()=>{
+    try{await navigator.clipboard.writeText(suduDevice.id);cp.textContent='已複製';}
+    catch(e){window.prompt('請複製學習代碼（不是登入密碼）',suduDevice.id);}
+  };
+  const bk=document.getElementById('db-download');if(bk)bk.onclick=suduExportBackup;
+  const rst=document.getElementById('db-restore');if(rst)rst.onclick=()=>document.getElementById('db-import-file')?.click();
+  const pst=document.getElementById('db-persist');if(pst)pst.onclick=async()=>{
+    if(!navigator.storage?.persist){window.alert('此瀏覽器不支援額外的本機資料保留要求，請改用備份功能。');return;}
+    const ok=await navigator.storage.persist();
+    window.alert(ok?'瀏覽器已同意盡量保留此網站資料。仍建議定期備份。':'瀏覽器未允許額外保留；現有本機學習紀錄不受影響。');
+  };
+}
+function suduExportBackup(){
+  const data={format:'sudu-backup-1',platform:'7581707統測速讀平台',savedAt:new Date().toISOString(),originalBrowserCode:suduDevice?.id||null,nickname:suduDevice?.name||'',state};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='7581707速讀學習紀錄備份.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1200);
+}
+async function suduImportBackup(file){
+  if(!file)return;
+  if(file.size>5*1024*1024){window.alert('備份檔案超過 5 MB，請確認是否選對檔案。');return;}
+  let data;try{data=JSON.parse(await file.text());}catch(e){window.alert('無法讀取 JSON 備份檔案。');return;}
+  const imported=data?.state;
+  if(!imported||!imported.attempts||typeof imported.attempts!=='object'||Array.isArray(imported.attempts)){
+    window.alert('不是受支援的 7581707 學習紀錄備份。');return;
+  }
+  const attemptRows=Object.entries(imported.attempts);
+  if(attemptRows.length>20000){window.alert('備份資料筆數過多，無法還原。');return;}
+  if(!window.confirm('將目前作答紀錄換成備份檔內的紀錄？這會覆蓋此瀏覽器的進度。建議先下載現有備份。'))return;
+  const cleaned=Object.create(null);
+  for(const [id,logs] of attemptRows){
+    if(id==='__proto__'||id==='constructor'||id.length>180||!Array.isArray(logs))continue;
+    cleaned[id]=logs.slice(0,1200).filter(a=>a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<=3&&typeof a.correct==='boolean')
+     .map(a=>({choice:a.choice,correct:a.correct,at:String(a.at||''),mastered:!!a.mastered}));
+  }
+  state.attempts=cleaned;
+  for(const field of ['reviewAnswers','reviewHistory','extended']){
+    if(imported[field]&&typeof imported[field]==='object'&&!Array.isArray(imported[field])){
+      state[field]=imported[field];
+    }
+  }
+  state.reviewFilter=['all','pending','mastered'].includes(imported.reviewFilter)?imported.reviewFilter:'all';
+  state.dashboard=imported.dashboard&&typeof imported.dashboard==='object'?imported.dashboard:{year:'全部',subject:'全部科目'};
+  if(data.nickname && window.confirm('是否也還原這份備份的學習暱稱？'))suduSetDevice({...suduDevice,name:String(data.nickname).slice(0,40)});
+  // The local browser keeps its own identifier; a backup never silently impersonates another browser.
+  save();ui.tab='dashboard';save();render();window.alert('已還原學習紀錄。此瀏覽器的獨立學習代碼維持不變。');
+}
