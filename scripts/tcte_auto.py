@@ -341,7 +341,8 @@ def legacy_91_answer_pdf(year_url):
     try:
         binary=guarded_get(target,45).content
         if not binary.startswith(b"%PDF"):return out
-        lines=fitz.open(stream=binary,filetype="pdf")[0].get_text(sort=True).splitlines()
+        document=fitz.open(stream=binary,filetype="pdf")
+        lines=document[0].get_text(sort=True).splitlines()
         for line in lines:
             line=line.strip()
             match=re.search(r"14商業類\s*\(\s*專\s*([一二])\s*\)\s*(.*)$",line)
