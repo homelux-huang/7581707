@@ -1,0 +1,62 @@
+name: Generate TCTE teaching drafts (requires approved API key)
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "ROC exam year to prepare (90-115)"
+        required: true
+        default: "114"
+      max_questions:
+        description: "Maximum billable model calls this run (1-30)"
+        required: true
+        default: "10"
+permissions:
+  contents: write
+concurrency:
+  group: tcte-teaching-drafts
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests
+      - name: Check year and spending cap
+        run: |
+          python - <<'PY'
+          import os
+          year=int(os.environ["EXAM_YEAR"])
+          qty=int(os.environ["QUESTION_CAP"])
+          if not (90<=year<=115 and 1<=qty<=30):
+              raise SystemExit("Only exam years 90-115 and 1-30 AI requests per run are accepted")
+          PY
+        env:
+          EXAM_YEAR: ${{ inputs.year }}
+          QUESTION_CAP: ${{ inputs.max_questions }}
+      - name: Require secret (no billable requests without key)
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY repository secret has not been configured."
+            echo "No explanation is generated; no costs incurred."
+            exit 1
+          fi
+      - name: Generate answer-anchored, source-labeled teaching drafts
+        run: python scripts/tcte_teaching.py --years ${{ inputs.year }} --max-questions ${{ inputs.max_questions }}
+      - name: Recalculate verified coverage (AI drafts are not verified)
+        run: python scripts/tcte_manifest.py
+      - name: Commit drafts without overwriting new code
+        run: |
+          git config user.name "7581707 teaching drafts bot"
+          git config user.email "7581707-bot@users.noreply.github.com"
+          git add sudu/data
+          if ! git diff --cached --quiet; then
+            git commit -m "Prepare source-labeled teaching drafts for year ${{ inputs.year }}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
