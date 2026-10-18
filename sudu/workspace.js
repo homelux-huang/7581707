@@ -241,6 +241,7 @@ function suduArrange(source,target){
  all.splice(i,1);all.splice(j,0,source);suduLayoutOrder=all;
 }
 
+let suduAnswerJumped=false;
 /* Scroll to the explanation immediately after a submitted, validated answer. */
 function suduScrollBehavior(){
  return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
@@ -252,6 +253,7 @@ function suduExplanationTarget(){
 }
 function suduGoToExplanation(){
  if(typeof ui!=="undefined"&&ui.tab!=="learn")return;
+ suduAnswerJumped=true;
  requestAnimationFrame(()=>{
   const target=suduExplanationTarget();
   if(!target)return;
@@ -261,6 +263,8 @@ function suduGoToExplanation(){
 }
 function suduGoToQuestion(){
  if(typeof ui!=="undefined"&&ui.tab!=="learn")return;
+ suduAnswerJumped=false;
+ suduUpdateReturnButton();
  const target=document.querySelector('#sudu-workspace > [data-block="question"]')
    || document.querySelector('#screen .section.blue');
  if(!target)return;
@@ -273,5 +277,5 @@ function suduUpdateReturnButton(){
    || document.querySelector('#screen .section.blue');
  const inStudy=typeof ui!=="undefined"&&ui.tab==="learn";
  const pastQuestion=target&&target.getBoundingClientRect().bottom<Math.max(95,window.innerHeight*.22);
- button.hidden=!(inStudy&&pastQuestion);
+ button.hidden=!(inStudy&&(pastQuestion||suduAnswerJumped));
 }
