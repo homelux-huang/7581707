@@ -10,6 +10,7 @@ on:
     - cron: '0 18 * * 0'
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: tcte-questions-sync
   cancel-in-progress: true
@@ -29,8 +30,14 @@ jobs:
           python -m pip install -q requests beautifulsoup4 pymupdf pillow pytesseract
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra > /dev/null
+      - name: Keep old reviewed teaching before replacing extraction
+        run: |
+          mkdir -p /tmp/sudu-old-years
+          cp -a sudu/data/years/. /tmp/sudu-old-years/ || true
       - name: Download official TCTE 90-115 exam and answer PDFs
         run: python scripts/tcte_auto.py --years $(seq 90 115)
+      - name: Preserve source-consistent reviewed explanations
+        run: python scripts/tcte_preserve_teaching.py --from-dir /tmp/sudu-old-years --to-dir sudu/data/years
       - name: Update missing-paper and verified-answer coverage
         run: python scripts/tcte_manifest.py
       - name: Commit structured student-readable question data
@@ -43,3 +50,10 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      - name: Trigger public site publish and independent data audit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run pages.yml --ref main
+          gh workflow run tcte-data-audit.yml --ref main
