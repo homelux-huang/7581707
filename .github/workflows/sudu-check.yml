@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - sudu/index.html
+      - sudu/dashboard.js
+      - sudu/dashboard.css
+      - tests/sudu_dashboard_test.cjs
       - scripts/check_sudu.py
       - .github/workflows/sudu-check.yml
   workflow_dispatch:
@@ -17,3 +20,5 @@ jobs:
         with:
           node-version: '22'
       - run: python scripts/check_sudu.py
+      - run: node --check sudu/dashboard.js
+      - run: node tests/sudu_dashboard_test.cjs
