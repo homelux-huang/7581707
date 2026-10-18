@@ -334,6 +334,29 @@ def legacy_answer_table(url):
             if found:return found
     return found
 
+def legacy_91_answer_pdf(year_url):
+    """Read 91 official one-page *multi-subject* final-answer PDF, by explicit 14商業類 rows."""
+    target=urljoin(year_url,"91-4y-answer-new.pdf")
+    out={}
+    try:
+        binary=guarded_get(target,45).content
+        if not binary.startswith(b"%PDF"):return out
+        lines=fitz.open(stream=binary,filetype="pdf")[0].get_text(sort=True).splitlines()
+        for line in lines:
+            line=line.strip()
+            match=re.search(r"14商業類\s*\(\s*專\s*([一二])\s*\)\s*(.*)$",line)
+            if not match:continue
+            paper="BIZ-1" if match.group(1)=="一" else "BIZ-2"
+            vals=re.findall(r"送分|[ABCD](?:或[ABCD])?",match.group(2))
+            if len(vals)<40:continue
+            accepted={}
+            for number,token in enumerate(vals[:50],start=1):
+                accepted[number]=list(dict.fromkeys(re.findall(r"[ABCD]",token))) if token!="送分" else list("ABCD")
+            out[paper]=accepted
+    except Exception as exc:
+        print("LEGACY91_ANSWER_ERROR",type(exc).__name__,str(exc)[:140],flush=True)
+    return out
+
 def process_year(y):
     entry={"year":y,"courseType":"09商管群" if y>=100 else "舊制商業類（不可直接當作09商管群）",
            "sourceIndex":year_url(y),"generatedAt":stamp(),"pipelineVersion":VERSION,"papers":[],"errors":[]}
@@ -352,17 +375,18 @@ def process_year(y):
         # Restrict to 09 professional and common subjects for this platform.
         exams=[e for e in exams if e["paper"] in OPTION_NAMES or (y<100 and e["paper"] in {"BIZ-1","BIZ-2","00-M-OLD"})]
         # Old math versions are distinct. Do not silently choose one among several.
-        legacy_keys=legacy_answer_table(base) if y<99 and any(x["paper"].startswith("BIZ-") for x in exams) else {}
+        legacy_keys=legacy_91_answer_pdf(base) if y==91 else (legacy_answer_table(base) if y==90 and any(x["paper"].startswith("BIZ-") for x in exams) else {})
         for x in exams:
             paper=process_one(y,x,answers.get(x["paper"]))
             official=legacy_keys.get(x["paper"],{})
             if official:
                 for question in paper["questions"]:
                     opts=official.get(question["number"])
-                    if opts and len(question["options"])==4:
+                    if opts and len(question["options"])==4 and all(question["options"]) and "OCR_missing_question" not in question.get("issues",[]):
                         question["acceptedAnswers"]=["ABCD".index(c) for c in opts]
                         question["answer"]=question["acceptedAnswers"][0]
                         question["answerVerified"]=True
+                        question["answerSource"]=urljoin(base,"91-4y-answer-new.pdf") if y==91 else urljoin(base,"answer.htm")
                 paper["answerCount"]=len(official)
                 paper["answerHtml"]=urljoin(base,"answer.htm")
                 paper["issues"]=[x for x in paper["issues"] if x!="official_answer_pdf_not_identified"]
