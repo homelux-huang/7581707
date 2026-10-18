@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="7581707 學習工具集，線上開啟會計統測、模擬考與更多 HTML 學習工具。">
+    <title>7581707｜學習工具集</title>
+    <style>
+      :root { color-scheme: light; --paper: #f7f7f0; --ink: #172e27; --muted: #596960; --green: #245b43; --line: #dce2d6; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; line-height: 1.7; }
+      a { color: inherit; text-underline-offset: 4px; }
+      button, input { font: inherit; }
+      :focus-visible { outline: 3px solid #bc622b; outline-offset: 5px; }
+      .wrap { width: min(1100px, calc(100% - 48px)); margin: auto; }
+      .skip { position: absolute; top: -100px; left: 20px; padding: 12px; background: white; }
+      .skip:focus { top: 10px; z-index: 2; }
+      header { border-bottom: 1px solid var(--line); }
+      nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 19px; font-weight: 750; }
+      .mark { background: var(--green); color: #fff; width: 39px; height: 39px; display: grid; place-items: center; border-radius: 12px; font-size: 23px; }
+      .repo { font-size: 14px; color: var(--muted); }
+      .hero { padding: 78px 0 56px; display: grid; grid-template-columns: 1fr 250px; align-items: center; gap: 40px; }
+      .eyebrow { font-size: 12px; font-weight: 750; letter-spacing: 3px; color: var(--green); }
+      h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.25; letter-spacing: -2px; margin: 18px 0; }
+      .intro { color: var(--muted); margin: 0; max-width: 560px; }
+      .illustration { position: relative; min-height: 190px; display: grid; place-items: center; }
+      .disc { position: absolute; width: 180px; height: 180px; background: #e3eacf; border-radius: 50%; }
+      .ledger { position: relative; width: 154px; padding: 22px; background: #fffef8; border: 1px solid #cad3c1; border-radius: 12px; transform: rotate(8deg); box-shadow: 9px 12px 0 #d3ddc8; }
+      .ledger strong { display: block; color: var(--green); font-size: 28px; line-height: 1; margin-bottom: 18px; }
+      .ledger span { display: block; height: 7px; background: #e7ebdf; margin-top: 10px; border-radius: 3px; }
+      .ledger span:nth-child(3) { width: 68%; background: #c4d4ad; }
+      .toolbar { padding: 25px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+      h2 { font-size: 22px; margin: 0; }
+      .count { display: inline-block; font-size: 13px; background: #e7eddf; color: #36573f; padding: 2px 10px; border-radius: 20px; margin-left: 10px; vertical-align: middle; font-weight: 600; }
+      .search { position: relative; width: min(100%, 330px); }
+      .search span { position: absolute; left: 14px; top: 10px; color: var(--muted); }
+      input { width: 100%; background: #fffef9; border: 1px solid #c9d3c5; border-radius: 9px; padding: 10px 14px 10px 42px; color: var(--ink); }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+      .card { background: #fffef9; border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; min-height: 240px; transition: border-color .2s, box-shadow .2s; }
+      .card:hover { border-color: #9db098; box-shadow: 0 8px 24px #263d2710; }
+      .card-top { display: flex; align-items: center; gap: 12px; }
+      .icon { width: 42px; height: 42px; display: grid; place-items: center; background: #eaf0e2; color: var(--green); font-size: 22px; border-radius: 10px; }
+      .tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--green); }
+      .card h3 { font-size: 21px; line-height: 1.55; margin: 20px 0 8px; overflow-wrap: anywhere; }
+      .path { color: var(--muted); font-size: 13px; margin: 0 0 24px; overflow-wrap: anywhere; }
+      .open { margin-top: auto; display: flex; align-items: center; justify-content: space-between; text-decoration: none; font-size: 14px; font-weight: 700; color: var(--green); border-top: 1px solid var(--line); padding-top: 18px; }
+      .open::after { content: "↗"; font-size: 21px; }
+      .empty { border: 1px dashed #b5c3ad; border-radius: 12px; padding: 30px; text-align: center; color: var(--muted); }
+      [hidden] { display: none !important; }
+      .note { background: #edf0e4; border-radius: 12px; margin: 42px 0 64px; padding: 22px 26px; color: var(--muted); font-size: 14px; }
+      .note strong { color: var(--ink); }
+      footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 12px; }
+      footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+      @media (max-width: 650px) { .wrap { width: calc(100% - 32px); } nav { min-height: 72px; } .hero { padding: 48px 0 35px; grid-template-columns: 1fr; gap: 10px; } .illustration { display: none; } .toolbar { align-items: stretch; flex-direction: column; gap: 14px; } .search { width: 100%; } .grid { grid-template-columns: 1fr; } .card { padding: 24px; } .repo { font-size: 12px; } }
+      @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#tools">跳至工具列表</a>
+    <header><nav class="wrap" aria-label="主導覽"><a class="brand" href="./"><span class="mark" aria-hidden="true">▤</span>7581707</a><a class="repo" href="https://github.com/homelux-huang/7581707">GitHub 倉庫 ↗</a></nav></header>
+    <main class="wrap">
+      <section class="hero" aria-labelledby="headline">
+        <div><div class="eyebrow">LEARN AT YOUR OWN PACE</div><h1 id="headline">每天練一點，<br>觀念更清楚。</h1><p class="intro">會計統測、歷屆試題與線上模擬考。<br>挑選一個工具，從今天的練習開始。</p></div>
+        <div class="illustration" aria-hidden="true"><div class="disc"></div><div class="ledger"><strong>＋ －</strong><span></span><span></span><span></span></div></div>
+      </section>
+      <section id="tools" aria-labelledby="tools-title">
+        <div class="toolbar"><h2 id="tools-title">所有學習工具<span class="count" id="count" aria-live="polite"></span></h2><div class="search"><label class="sr-only" for="search">搜尋工具名稱或檔案路徑</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋工具名稱或檔案…" autocomplete="off"></div></div>
+        <div class="grid" id="list"></div><p class="empty" id="empty" role="status" hidden>找不到符合的工具，請試試其他關鍵字。</p>
+        <noscript><p>請啟用 JavaScript 以使用搜尋與完整工具列表。目前的工具：<a href="gemini%20canvas%E6%9C%83%E8%A8%88%E7%B5%B1%E6%B8%AC%E7%A8%8B%E5%BC%8F.html">會計統測程式</a>、<a href="Gemini%20Canvas%E6%9C%83%E8%A8%88%E6%A8%A1%E6%93%AC%E8%80%83.html">會計模擬考</a>。</p></noscript>
+      </section>
+      <aside class="note"><strong>持續更新的工具集</strong><br>新上傳的 HTML 會在網站更新完成後自動加入列表。可搜尋名稱，也可以直接分享個別工具的網址。</aside>
+    </main>
+    <footer><div class="wrap"><span>7581707 · 學習工具集</span><span>自由瀏覽，隨時練習。</span></div></footer>
+    <script id="catalog" type="application/json">[{"title": "高職會計學歷屆模擬考 \u0026 白話解題助手", "path": "Gemini Canvas會計模擬考.html"}, {"title": "高職統測 會計學歷屆試題測驗系統", "path": "gemini canvas會計統測程式.html"}]</script>
+    <script>
+      'use strict';
+      const tools = JSON.parse(document.getElementById('catalog').textContent);
+      const list = document.getElementById('list');
+      const search = document.getElementById('search');
+      function render() {
+        const query = search.value.trim().normalize('NFKC').toLocaleLowerCase('zh-TW');
+        const matches = tools.filter(tool => `${tool.title} ${tool.path}`.normalize('NFKC').toLocaleLowerCase('zh-TW').includes(query));
+        list.replaceChildren();
+        for (const tool of matches) {
+          const card = document.createElement('article');
+          card.className = 'card';
+          const top = document.createElement('div');
+          top.className = 'card-top';
+          const icon = document.createElement('span');
+          icon.className = 'icon'; icon.textContent = '▤'; icon.setAttribute('aria-hidden', 'true');
+          const tag = document.createElement('span');
+          tag.className = 'tag'; tag.textContent = 'HTML · 線上工具';
+          top.append(icon, tag);
+          const title = document.createElement('h3'); title.textContent = tool.title;
+          const path = document.createElement('p'); path.className = 'path'; path.textContent = tool.path;
+          const link = document.createElement('a'); link.className = 'open';
+          link.href = './' + tool.path.split('/').map(encodeURIComponent).join('/');
+          link.textContent = '開啟工具'; link.setAttribute('aria-label', '開啟工具：' + tool.title);
+          card.append(top, title, path, link); list.append(card);
+        }
+        document.getElementById('count').textContent = `${matches.length} / ${tools.length}`;
+        document.getElementById('empty').hidden = matches.length > 0;
+      }
+      search.addEventListener('input', render);
+      render();
+    </script>
+  </body>
+</html>

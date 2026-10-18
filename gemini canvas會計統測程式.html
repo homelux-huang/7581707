@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高職統測 會計學歷屆試題測驗系統</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-indigo-700 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-[#ffffff] fa-calculator text-2xl text-indigo-200"></i>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight">統測會計學歷屆試題測驗</h1>
+            </div>
+            <div class="flex items-center space-x-2 text-xs sm:text-sm bg-indigo-800 px-3 py-1.5 rounded-lg border border-indigo-600">
+                <i class="fa-solid fa-[#ffffff] fa-clock text-amber-300"></i>
+                <span id="timer-display" class="font-mono font-bold text-amber-300">00:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+        <!-- Sidebar / Filter & Mode Panel -->
+        <aside class="lg:col-span-1 space-y-6">
+            <!-- Test Mode Selection Box -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <h2 class="text-lg font-bold text-slate-800 border-b pb-2 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-indigo-600"></i> 測驗模式與條件
+                </h2>
+
+                <!-- Exam Mode Selection -->
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">請選擇題目來源：</label>
+                    <select id="year-filter" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 text-sm">
+                        <option value="all">近5年綜合精選 (全題庫)</option>
+                        <option value="113">113 學年度統測</option>
+                        <option value="112">112 學年度統測</option>
+                        <option value="111">111 學年度統測</option>
+                        <option value="110">110 學年度統測</option>
+                        <option value="109">109 學年度統測</option>
+                    </select>
+                </div>
+
+                <!-- Topic Category Selection -->
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">試題主題分類：</label>
+                    <select id="category-filter" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 text-sm">
+                        <option value="all">所有章節與主題</option>
+                        <option value="存貨評價">存貨與期末評價</option>
+                        <option value="不動產廠房及設備">不動產廠房及設備 (折舊/處分)</option>
+                        <option value="應收帳款與備抵">應收帳款與壞帳估計</option>
+                        <option value="公司會計">公司會計與權益 (股票/股利)</option>
+                        <option value="調整與結帳">期末調整與結帳</option>
+                        <option value="現金與銀行存款調節">現金與銀行存款調節表</option>
+                    </select>
+                </div>
+
+                <!-- Mode Buttons -->
+                <div class="space-y-2 pt-2">
+                    <button id="btn-practice-mode" onclick="startQuiz('practice')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-graduation-cap"></i> 練習模式 (即時解析)
+                    </button>
+                    <button id="btn-exam-mode" onclick="startQuiz('exam')" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-medium py-2.5 px-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-stopwatch"></i> 模擬考試 (倒數計時)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress & Dashboard Summary -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-chart-pie text-indigo-600"></i> 本次測驗概況
+                </h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between items-center text-slate-600">
+                        <span>總題數：</span>
+                        <span id="stat-total" class="font-semibold text-slate-900">0</span>
+                    </div>
+                    <div class="flex justify-between items-center text-slate-600">
+                        <span>已回答：</span>
+                        <span id="stat-answered" class="font-semibold text-indigo-600">0</span>
+                    </div>
+                    <div class="flex justify-between items-center text-slate-600">
+                        <span>答對題數：</span>
+                        <span id="stat-correct" class="font-semibold text-emerald-600">0</span>
+                    </div>
+                    <div class="flex justify-between items-center text-slate-600">
+                        <span>預估得分：</span>
+                        <span id="stat-score" class="font-extrabold text-lg text-indigo-700">0 分</span>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mt-4">
+                    <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                        <div id="progress-bar" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Main Test Area -->
+        <section class="lg:col-span-3 flex flex-col space-y-6">
+
+            <!-- Quiz Status Card -->
+            <div id="quiz-container" class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-200 min-h-[400px] flex flex-col justify-between">
+                <!-- Content injected dynamically via JS -->
+                <div id="quiz-body">
+                    <div class="text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-book-open text-5xl mb-4 text-indigo-200"></i>
+                        <p class="text-lg font-medium text-slate-600">請從左側選擇篩選條件，並點擊「練習模式」或「模擬考試」開始測驗。</p>
+                    </div>
+                </div>
+
+                <!-- Action Controls Footer -->
+                <div id="quiz-footer" class="hidden border-t border-slate-100 pt-6 mt-6 flex flex-wrap justify-between items-center gap-4">
+                    <button id="btn-prev" onclick="navigateQuestion(-1)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium py-2 px-5 rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> 上一題
+                    </button>
+
+                    <div class="flex items-center gap-3">
+                        <button id="btn-submit" onclick="submitExam()" class="hidden bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-6 rounded-lg shadow-sm transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> 交卷計分
+                        </button>
+                        <button id="btn-next" onclick="navigateQuestion(1)" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-5 rounded-lg transition-colors flex items-center gap-2">
+                            下一題 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Score Summary & Detailed Review Container -->
+            <div id="result-container" class="hidden bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-200 space-y-6">
+                <!-- Injected dynamically on completion -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Comprehensive Question Database based on TVE Joint College Entrance Exam (高職統測 - 商業與管理群)
+        const questionBank = [
+            {
+                id: 1,
+                year: "113",
+                category: "存貨評價",
+                title: "113 年統測會計學試題 - 加權平均法與成本與淨變現價值比較",
+                question: "甲公司採永續存貨制，112年度存貨相關資料如下：<br>1月1日期初存貨 100 件，每件成本 $10；<br>5月10日進貨 200 件，每件成本 $13；<br>9月15日銷貨 150 件。<br>若甲公司採用「加權平均法」(期末一次計算)，且期末存貨之每件淨變現價值為 $11，則期末應計提之「存貨跌價損失」為多少？",
+                options: [
+                    "$0",
+                    "$150",
+                    "$300",
+                    "$450"
+                ],
+                correct: 1, // B ($150)
+                explanation: "💡 <b>白話文觀念解析：</b>加權平均就是把「全部貨物花多少錢」除以「總共有幾件」，算出平均每件成本。期末剩下的貨用這個平均成本算出來，如果比市面上的賣價（淨變現價值）還要高，代表價值縮水了，虧損的差額就是「存貨跌價損失」！<br><br><b>計算步驟：</b><br>1. 平均單位成本 = (100×$10 + 200×$13) ÷ (100 + 200) = ($1,000 + $2,600) ÷ 300 = $12。<br>2. 期末存貨數量 = 100（期初） + 200（進貨） - 150（銷貨） = 150 件。<br>3. 期末存貨總成本 = 150 件 × $12 = $1,800。<br>4. 期末存貨淨變現價值（市價） = 150 件 × $11 = $1,650。<br>5. 存貨跌價損失 = 成本 $1,800 - 淨變現價值 $1,650 = $150。"
+            },
+            {
+                id: 2,
+                year: "113",
+                category: "不動產廠房及設備",
+                title: "113 年統測會計學試題 - 直線法與變更耐用年限",
+                question: "乙公司於 110 年初以 $500,000 購入機器設備乙台，估計耐用年限 5 年，殘值 $50,000，採用直線法提列折舊。112 年初（使用2年後），公司評估該機器尚可使用 4 年，估計殘值變更為 $30,000。則 112 年度應提列之折舊費用為多少？",
+                options: [
+                    "$72,500",
+                    "$75,000",
+                    "$80,000",
+                    "$90,000"
+                ],
+                correct: 1, // B ($75,000)
+                explanation: "💡 <b>白話文觀念解析：</b>當機器使用到一半改變估計（耐用年限或殘值）時，以前年度的折舊不用去改它（會計上叫不追溯既往）。我們只需要看「現在還剩多少帳面價值」，扣掉「新的殘值」，然後除以「剩下的新耐用年限」重新出發即可！<br><br><b>計算步驟：</b><br>1. 前兩年每年折舊 = ($500,000 - $50,000) ÷ 5 = $90,000。<br>2. 110、111 兩年累計折舊 = $90,000 × 2 = $180,000。<br>3. 112 年初帳面金額 = $500,000 - $180,000 = $320,000。<br>4. 新年度折舊 = (新帳面金額 $320,000 - 新殘值 $30,000) ÷ 剩餘耐用年限 4 年 = $75,000。"
+            },
+            {
+                id: 3,
+                year: "112",
+                category: "應收帳款與備抵",
+                title: "112 年統測會計學試題 - 應收帳款與壞帳提列",
+                question: "丙公司 111 年底應收帳款餘額為 $400,000，調整前「備抵壞帳—應收帳款」為貸餘 $2,000。公司估計應收帳款之壞帳率為 5%。若 111 年中曾沖銷壞帳 $3,000，則 111 年底應提列之「壞帳費用」為多少？",
+                options: [
+                    "$18,000",
+                    "$20,000",
+                    "$22,000",
+                    "$23,000"
+                ],
+                correct: 0, // A ($18,000)
+                explanation: "💡 <b>白話文觀念解析：</b>期末我們希望備抵壞帳（預備要收不回來的錢）達到一定的目標金額。題目說期末應收帳款 400,000 的 5% 是 $20,000，這就是我們的目標。如果帳上本來就已經有 $2,000 餘額了，那我們只要再補足差額就好！<br><br><b>計算步驟：</b><br>1. 期末應有之備抵壞帳餘額（目標） = $400,000 × 5% = $20,000 (貸餘)。<br>2. 調整前帳上已有的備抵壞帳貸餘 = $2,000。<br>3. 本期應補提壞帳費用 = 目標餘額 $20,000 - 調整前已有 $2,000 = $18,000。<br>（註：年中沖銷壞帳 $3,000 已經在期中做過分錄，題目給的「調整前餘額」已包含其影響，計算期末提列時不需重複加減）。"
+            },
+            {
+                id: 4,
+                year: "112",
+                category: "公司會計",
+                title: "112 年統測會計學試題 - 庫藏股票處分",
+                question: "丁公司以每股 $15 買回面額 $10 之庫藏股 1,000 股。稍後以每股 $18 處分其中 600 股，再以每股 $12 處分其餘 400 股。假設此前無任何「資本公積—庫藏股票交易」餘額，則最後處分 400 股時之會計分錄應借記「保留盈餘」多少？",
+                options: [
+                    "$0",
+                    "$600",
+                    "$1,200",
+                    "$1,800"
+                ],
+                correct: 0, // A ($0)
+                explanation: "💡 <b>白話文觀念解析：</b>公司自己買回股票再賣掉。如果前面賣貴了賺了錢，會存放在「資本公積—庫藏股交易」這個撲滿裡。後面如果賣便宜了虧錢，要先用這個撲滿裡的錢來扣；撲滿夠用就不會扣到股東的保留盈餘！<br><br><b>計算步驟：</b><br>1. 前面處分 600 股賺了：(每股 $18 - 成本 $15) × 600 股 = 賺 $1,800，全數放入「資本公積—庫藏股交易」。<br>2. 後面處分 400 股賠了：(成本 $15 - 每股 $12) × 400 股 = 賠 $1,200。<br>3. 拿撲滿裡的 $1,800 來扣這 $1,200 的賠錢剛好夠用，所以完全不需要動到保留盈餘（金額為 $0）。"
+            },
+            {
+                id: 5,
+                year: "111",
+                category: "現金與銀行存款調節",
+                title: "111 年統測會計學試題 - 銀行存款調節表",
+                question: "戊公司 5 月底公司帳列現金餘額為 $85,000，經核對銀行對帳單，發現：未對現支票 $12,000，在途存款 $8,000，銀行代收票據 $5,000，銀行扣付手續費 $500，公司將付水電費支票 $3,600 誤記為 $6,300。則戊公司 5 月底正確之現金餘額應為多少？",
+                options: [
+                    "$87,200",
+                    "$92,200",
+                    "$94,800",
+                    "$96,000"
+                ],
+                correct: 1, // B ($92,200)
+                explanation: "💡 <b>白話文觀念解析：</b>銀行存款調節表分兩邊。我們要從「公司帳面餘額」出發去調整出正確金額。凡是銀行幫我們收了錢、扣了手續費，或是公司自己帳目記錯的，公司帳都要跟著修正！至於「未兌現支票」和「在途存款」是時間差造成的，屬於銀行端的調整，公司帳不用理它。<br><br><b>計算步驟：</b><br>1. 公司帳列餘額 = $85,000<br>2. 加上銀行幫忙代收的票據 +$5,000<br>3. 減掉銀行扣的手續費 -$500<br>4. 水電費支票 $3,600 記成 $6,300，代表公司帳上多扣了支出 $2,700，必須加回 +$2,700。<br>5. 正確現金餘額 = $85,000 + $5,000 - $500 + $2,700 = $92,200。"
+            },
+            {
+                id: 6,
+                year: "111",
+                category: "調整與結帳",
+                title: "111 年統測會計學試題 - 用費用法記帳之權責發生制調整",
+                question: "己公司 110 年 10 月 1 日預付一年保費 $24,000，當時以「保險費」科目入帳（先虛後實法）。110 年 12 月 31 日期末調整時，漏作調整分錄，對 110 年度財務報表之影響為何？",
+                options: [
+                    "費用少計 $18,000，資產少計 $18,000",
+                    "費用多計 $18,000，資產少計 $18,000",
+                    "費用多計 $6,000，資產少計 $6,000",
+                    "淨利多計 $18,000，資產多計 $18,000"
+                ],
+                correct: 1, // B
+                explanation: "💡 <b>白話文觀念解析：</b>「先虛後實法（費用法）」一開始把繳出去的錢全部當成當期費用。但到年底時，其中有 9 個月是還沒用到的（屬於明年的），應該轉成「預付保險費（資產）」。如果漏做這一步調整，費用就會多扣（多計），資產就會漏掉（少計）！<br><br><b>計算步驟：</b><br>1. 10/1 支付 1 年保費 $24,000，全數記為保險費（費用）。<br>2. 至 12/31 經過 3 個月（10~12月）是當期真正的費用；剩下 9 個月（$24,000 × 9/12 = $18,000）是未過期的預付費用。<br>3. 正確期末調整應借記「預付保險費」$18,000、貸記「保險費」$18,000。<br>4. 漏作此分錄導致：保險費（費用）沒有被沖減，故<b>費用多計 $18,000</b>；預付保險費（資產）沒有被建立，故<b>資產少計 $18,000</b>。"
+            },
+            {
+                id: 7,
+                year: "110",
+                category: "存貨評價",
+                title: "110 年統測會計學試題 - 零售價法估計期末存貨",
+                question: "庚公司採用平均成本零售價法估算期末存貨。109 年度相關資料如下：<br>期初存貨：成本 $20,000，零售價 $30,000；<br>進貨：成本 $130,000，零售價 $170,000；<br>銷貨收入：$160,000。<br>則估計之期末存貨成本為多少？",
+                options: [
+                    "$28,000",
+                    "$30,000",
+                    "$32,000",
+                    "$40,000"
+                ],
+                correct: 1, // B ($30,000)
+                explanation: "💡 <b>白話文觀念解析：</b>零售價法就是先算出全部貨品的「成本佔定價的比例（成本率）」。我們知道總共有多少定價的貨，扣掉賣掉的，剩下就是期末定價的貨，再乘以成本率就變成期末存貨成本了！<br><br><b>計算步驟：</b><br>1. 可供銷貨總額：成本合計 = $20,000 + $130,000 = $150,000；零售價合計 = $30,000 + $170,000 = $200,000。<br>2. 計算成本率 = 總成本 $150,000 ÷ 總零售價 $200,000 = 75%。<br>3. 期末存貨零售價 = 可供銷貨零售價 $200,000 - 銷貨收入 $160,000 = $40,000。<br>4. 期末存貨估計成本 = $40,000 × 75% = $30,000。"
+            },
+            {
+                id: 8,
+                year: "110",
+                category: "公司會計",
+                title: "110 年統測會計學試題 - 股利分配順序計算",
+                question: "辛公司有特別股 10,000 股（面額 $10，累積，5% 股息），普通股 20,000 股（面額 $10）。公司已積欠 1 年特別股股利。若今年公司宣佈發放總股利 $6,000，則普通股股東可獲得多少股利？",
+                options: [
+                    "$0",
+                    "$1,000",
+                    "$2,000",
+                    "$3,000"
+                ],
+                correct: 0, // A ($0)
+                explanation: "💡 <b>白話文觀念解析：</b>發放股利時，特別股就像大老闆，享有「優先分配」的權利（而且是累積型的，積欠的也要先補齊）。如果賺的錢不夠多，全部分給特別股都不夠了，普通股就只能拿 $0！<br><br><b>計算步驟：</b><br>1. 特別股每年應得股利 = 10,000 股 × $10 × 5% = $5,000。<br>2. 因為積欠 1 年，今年特別股必須先領：積欠 1 年 ($5,000) + 本年 ($5,000) = 總共 $10,000。<br>3. 公司今年宣佈發放的總股利只有 $6,000，全數拿去付給特別股還不夠，因此普通股股東分配到的金額為 $0。"
+            },
+            {
+                id: 9,
+                year: "109",
+                category: "不動產廠房及設備",
+                title: "109 年統測會計學試題 - 設備處分損益計算",
+                question: "壬公司於 106 年初購入車輛乙部，成本 $600,000，預計殘值 $60,000，耐用年限 5 年，採年數總合法提列折舊。108 年底（使用 3 年後）以 $200,000 售出該車輛，則處分資產損益為多少？",
+                options: [
+                    "處分利益 $32,000",
+                    "處分損失 $32,000",
+                    "處分利益 $8,000",
+                    "處分損失 $8,000"
+                ],
+                correct: 0, // A (利益 $32,000)
+                explanation: "💡 <b>白話文觀念解析：</b>賣車子賺還賠，公式很簡單：<b>賣多少錢（售價） - 當下這台車的殘餘價值（帳面金額） = 處分損益</b>。帳面金額 = 原始成本 - 前3年總共折舊的金額。<br><br><b>計算步驟：</b><br>1. 應折舊總額 = 成本 $600,000 - 殘值 $60,000 = $540,000。<br>2. 年數總和分母 = 5 + 4 + 3 + 2 + 1 = 15。<br>3. 前 3 年（106、107、108年）累計折舊比例 = (5 + 4 + 3) ÷ 15 = 12/15 = 80%。<br>4. 3 年累計折舊金額 = $540,000 × 80% = $432,000。<br>5. 108 年底處分時帳面金額 = $600,000 - $432,000 = $168,000。<br>6. 處分損益 = 售價 $200,000 - 帳面金額 $168,000 = <b>處分利益 $32,000</b>。"
+            },
+            {
+                id: 10,
+                year: "109",
+                category: "調整與結帳",
+                title: "109 年統測會計學試題 - 應計項目與現金流",
+                question: "癸公司 108 年支付利息費用 $15,000。已知 108 年初「應付利息」為 $2,000，108 年底「應付利息」為 $3,500，則 108 年綜合損益表上應列示之「利息費用」為多少？",
+                options: [
+                    "$13,500",
+                    "$15,000",
+                    "$16,500",
+                    "$18,500"
+                ],
+                correct: 2, // C ($16,500)
+                explanation: "💡 <b>白話文觀念解析：</b>付現的金額不等於真正的費用。權責發生制告訴我們：今年真正發生的費用，要把期末欠的加進來，把期初欠的（去年已經算過費用的）扣掉。<br><br><b>計算步驟：</b><br>1. 本期利息費用 = 本期付現利息 + 期末應付利息 - 期初應付利息。<br>2. 計算：$15,000（付現） + $3,500（年底欠的） - $2,000（年初欠的） = $16,500。"
+            }
+        ];
+
+        let currentQuestions = [];
+        let userAnswers = {};
+        let currentIdx = 0;
+        let mode = 'practice'; // 'practice' or 'exam'
+        let timerInterval = null;
+        let totalSeconds = 0;
+
+        function startQuiz(selectedMode) {
+            mode = selectedMode;
+            const yearVal = document.getElementById('year-filter').value;
+            const catVal = document.getElementById('category-filter').value;
+
+            // Filter questions
+            currentQuestions = questionBank.filter(q => {
+                const matchYear = (yearVal === 'all') || (q.year === yearVal);
+                const matchCat = (catVal === 'all') || (q.category === catVal);
+                return matchYear && matchCat;
+            });
+
+            if (currentQuestions.length === 0) {
+                alert("此篩選條件下無符合題目，請重新選擇條件！");
+                return;
+            }
+
+            // Reset States
+            userAnswers = {};
+            currentIdx = 0;
+
+            // Interface Toggles
+            document.getElementById('result-container').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-footer').classList.remove('hidden');
+
+            // Timer Initialization
+            clearInterval(timerInterval);
+            if (mode === 'exam') {
+                totalSeconds = currentQuestions.length * 150; // 2.5 minutes per question
+                startTimer();
+                document.getElementById('btn-submit').classList.remove('hidden');
+            } else {
+                totalSeconds = 0;
+                document.getElementById('timer-display').innerText = "練習模式";
+                document.getElementById('btn-submit').classList.add('hidden');
+            }
+
+            updateDashboard();
+            renderQuestion();
+        }
+
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    alert("考試時間到！系統將自動幫您交卷。");
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(totalSeconds / 60);
+            const secs = totalSeconds % 60;
+            document.getElementById('timer-display').innerText = 
+                `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function renderQuestion() {
+            const q = currentQuestions[currentIdx];
+            const quizBody = document.getElementById('quiz-body');
+
+            const isAnswered = userAnswers.hasOwnProperty(currentIdx);
+            const selectedOpt = userAnswers[currentIdx];
+
+            let html = `
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
+                            <i class="fa-solid fa-bookmark"></i> ${q.year} 學年度統測
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                            ${q.category}
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">題目 ${currentIdx + 1} / ${currentQuestions.length}</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 leading-snug">${q.title}</h3>
+                    <p class="text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border border-slate-200 text-base">
+                        ${q.question}
+                    </p>
+
+                    <div class="space-y-2.5 pt-2">
+            `;
+
+            const optionLabels = ['(A)', '(B)', '(C)', '(D)'];
+            q.options.forEach((opt, idx) => {
+                let btnStyle = "border-slate-200 hover:bg-indigo-50 hover:border-indigo-300 text-slate-700";
+                
+                if (isAnswered && selectedOpt === idx) {
+                    btnStyle = "bg-indigo-600 text-white border-indigo-600 font-medium";
+                }
+
+                html += `
+                    <button onclick="selectOption(${idx})" class="w-full text-left p-3.5 rounded-lg border transition-all flex items-start gap-3 ${btnStyle}">
+                        <span class="font-bold shrink-0">${optionLabels[idx]}</span>
+                        <span class="flex-1">${opt}</span>
+                    </button>
+                `;
+            });
+
+            html += `</div>`;
+
+            // Practice Mode Immediate Explanation Logic with Plain Language
+            if (mode === 'practice' && isAnswered) {
+                const isCorrect = (selectedOpt === q.correct);
+                html += `
+                    <div class="mt-6 p-4 rounded-lg border ${isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-rose-50 border-rose-200 text-rose-900'}">
+                        <div class="flex items-center gap-2 font-bold mb-2 text-base">
+                            <i class="fa-solid ${isCorrect ? 'fa-circle-check text-emerald-600' : 'fa-circle-xmark text-rose-600'}"></i>
+                            ${isCorrect ? '回答正確！' : `回答錯誤！正確答案為 ${optionLabels[q.correct]}`}
+                        </div>
+                        <div class="text-sm leading-relaxed border-t ${isCorrect ? 'border-emerald-200' : 'border-rose-200'} pt-2 mt-2">
+                            ${q.explanation}
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += `</div>`;
+            quizBody.innerHTML = html;
+
+            // Update Navigation Buttons State
+            document.getElementById('btn-prev').disabled = (currentIdx === 0);
+            document.getElementById('btn-prev').classList.toggle('opacity-50', currentIdx === 0);
+
+            if (currentIdx === currentQuestions.length - 1) {
+                document.getElementById('btn-next').classList.add('hidden');
+                document.getElementById('btn-submit').classList.remove('hidden');
+            } else {
+                document.getElementById('btn-next').classList.remove('hidden');
+                if (mode === 'practice') {
+                    document.getElementById('btn-submit').classList.add('hidden');
+                }
+            }
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentIdx] = optIdx;
+            updateDashboard();
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            const newIdx = currentIdx + direction;
+            if (newIdx >= 0 && newIdx < currentQuestions.length) {
+                currentIdx = newIdx;
+                renderQuestion();
+            }
+        }
+
+        function updateDashboard() {
+            const total = currentQuestions.length;
+            const answered = Object.keys(userAnswers).length;
+            
+            let correct = 0;
+            Object.keys(userAnswers).forEach(idx => {
+                if (userAnswers[idx] === currentQuestions[idx].correct) {
+                    correct++;
+                }
+            });
+
+            const score = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+            document.getElementById('stat-total').innerText = total;
+            document.getElementById('stat-answered').innerText = answered;
+            document.getElementById('stat-correct').innerText = correct;
+            document.getElementById('stat-score').innerText = `${score} 分`;
+
+            const percentage = total > 0 ? (answered / total) * 100 : 0;
+            document.getElementById('progress-bar').style.width = `${percentage}%`;
+        }
+
+        function submitExam() {
+            clearInterval(timerInterval);
+
+            const total = currentQuestions.length;
+            let correctCount = 0;
+
+            currentQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const score = Math.round((correctCount / total) * 100);
+
+            document.getElementById('quiz-container').classList.add('hidden');
+            const resultContainer = document.getElementById('result-container');
+            resultContainer.classList.remove('hidden');
+
+            let resultBadge = score >= 80 ? 'bg-emerald-100 text-emerald-800 border-emerald-300' :
+                              score >= 60 ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-rose-100 text-rose-800 border-rose-300';
+
+            let html = `
+                <div class="text-center border-b pb-6">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">測驗完成！結果結算</h2>
+                    <div class="inline-block my-3 px-6 py-3 rounded-2xl border ${resultBadge}">
+                        <span class="text-sm block font-medium">本次測驗得分</span>
+                        <span class="text-4xl font-extrabold">${score} <span class="text-lg">分</span></span>
+                    </div>
+                    <p class="text-sm text-slate-500">答對 ${correctCount} 題 / 共 ${total} 題</p>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-indigo-600"></i> 完整試題複習與白話文解析
+                    </h3>
+            `;
+
+            currentQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                const optionLabels = ['(A)', '(B)', '(C)', '(D)'];
+
+                html += `
+                    <div class="p-5 rounded-xl border ${isCorrect ? 'border-slate-200 bg-white' : 'border-rose-200 bg-rose-50/30'} space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <span class="font-bold text-slate-800 text-base">${idx + 1}. ${q.title}</span>
+                            <span class="px-2.5 py-1 rounded text-xs font-bold ${isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}">
+                                ${isCorrect ? '正確' : '錯誤'}
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm">${q.question}</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm pt-1">
+                            <div class="${userAns === 0 ? (q.correct === 0 ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold') : (q.correct === 0 ? 'text-emerald-700 font-bold' : 'text-slate-600')}">
+                                (A) ${q.options[0]} ${q.correct === 0 ? '✓' : ''} ${userAns === 0 && userAns !== q.correct ? '✗ (您的答案)' : ''}
+                            </div>
+                            <div class="${userAns === 1 ? (q.correct === 1 ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold') : (q.correct === 1 ? 'text-emerald-700 font-bold' : 'text-slate-600')}">
+                                (B) ${q.options[1]} ${q.correct === 1 ? '✓' : ''} ${userAns === 1 && userAns !== q.correct ? '✗ (您的答案)' : ''}
+                            </div>
+                            <div class="${userAns === 2 ? (q.correct === 2 ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold') : (q.correct === 2 ? 'text-emerald-700 font-bold' : 'text-slate-600')}">
+                                (C) ${q.options[2]} ${q.correct === 2 ? '✓' : ''} ${userAns === 2 && userAns !== q.correct ? '✗ (您的答案)' : ''}
+                            </div>
+                            <div class="${userAns === 3 ? (q.correct === 3 ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold') : (q.correct === 3 ? 'text-emerald-700 font-bold' : 'text-slate-600')}">
+                                (D) ${q.options[3]} ${q.correct === 3 ? '✓' : ''} ${userAns === 3 && userAns !== q.correct ? '✗ (您的答案)' : ''}
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg text-xs text-slate-700 mt-2 border border-slate-200">
+                            ${q.explanation}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                </div>
+                <div class="text-center pt-4">
+                    <button onclick="startQuiz(mode)" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition-colors">
+                        重新測驗
+                    </button>
+                </div>
+            `;
+
+            resultContainer.innerHTML = html;
+        }
+
+        // Initialize with default mode on load
+        window.onload = function() {
+            startQuiz('practice');
+        };
+    </script>
+</body>
+</html>
