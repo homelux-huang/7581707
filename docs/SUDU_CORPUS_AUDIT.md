@@ -1,7 +1,7 @@
 # 統測題庫完整度稽核
 
-產生時間：2026-10-18T17:30:39.387068+00:00。
-基準 commit：`b65ddf6dabfecaf492bcc1c61512f5dc723f4b61`。資料指紋：`46e60a2e33bf8954a2fe989d9da78bea31f450ee1ef1c80249d9fca87e7b884e`。
+產生時間：2026-10-18T20:31:50.956295+00:00。
+基準 commit：`74f2ff97f1494332564faeaade4a7f98c2687ed8`。資料指紋：`5ad31acaa9f9d0d572c2a4872bcd3d3ec11b8e88856bedc1370a6dc885259911`。
 
 重跑：`python scripts/check_tcte_corpus.py --decode-images --json sudu/data/corpus-audit.json --markdown docs/SUDU_CORPUS_AUDIT.md`。
 結構檢查通過只代表格式、索引及圖檔完整性，不表示所有原題、答案、教學或計分完成。
