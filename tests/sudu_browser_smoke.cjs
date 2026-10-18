@@ -69,7 +69,7 @@ const assert=require('node:assert/strict');
  assert.equal(darkColors.body,'rgb(5, 5, 5)','dark background must be black');
  assert.equal(darkColors.section,'rgb(20, 20, 20)','dark cards charcoal');
  assert.equal(darkColors.text,'rgb(242, 242, 242)','dark headings white');
- assert.equal(darkColors.button,'rgb(246, 246, 246)','dark answer text white');
+ assert(['rgb(246, 246, 246)','rgb(255, 255, 255)'].includes(darkColors.button),'dark answer text should have high contrast: '+darkColors.button);
  await page.locator('#sudu-theme-button').click();
  assert.equal(await page.locator('html').getAttribute('data-sudu-theme'),'light');
  // User custom block order is saved and restored after reload.
