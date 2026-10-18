@@ -1,0 +1,10 @@
+# Render Blueprint for the existing 7581707 static website.
+# Build the HTML catalog into _site before publishing.
+services:
+  - type: web
+    name: "7581707"
+    runtime: static
+    branch: main
+    buildCommand: python3 scripts/build.py
+    staticPublishPath: ./_site
+    autoDeployTrigger: commit
