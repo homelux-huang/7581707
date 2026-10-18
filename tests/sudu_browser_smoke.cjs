@@ -1,140 +1,130 @@
+/* Chromium integration checks using real data plus explicitly synthetic edge fixtures. */
 const {chromium}=require('playwright');
-const assert=require('node:assert/strict');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
+const output=process.env.SUDU_TEST_OUTPUT||'test-results';
 (async()=>{
- const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
- const page=await browser.newPage({viewport:{width:1260,height:850}});
- const errors=[];
- page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:8765/sudu/',{waitUntil:'domcontentloaded'});
- const trigger=kind=>page.locator('[data-sudu-menu-trigger="'+kind+'"]');
- const menu=page.locator('#sudu-floating-controls');
- await trigger('year').waitFor();
- assert.equal(await page.locator('.sudu-head-actions #export').count(),1,'export relocated to right action group');
- assert.equal(await page.locator('.sudu-head-actions #sudu-theme-button').count(),1,'theme icon relocated to right action group');
- assert.equal(await page.locator('#sudu-exam-panel').count(),1,'exam status always rendered');
- assert.equal(await page.locator('#sudu-exam-panel').innerText().then(t=>t.includes('自編練習不計入官方統測成績')),true);
+ fs.mkdirSync(output,{recursive:true});const results=[];
+ const browser=await chromium.launch({headless:true,args:['--no-sandbox'],...(process.env.SUDU_BROWSER_EXECUTABLE?{executablePath:process.env.SUDU_BROWSER_EXECUTABLE}:{})});
+ const context=await browser.newContext({viewport:{width:1280,height:900},reducedMotion:'reduce'});
+ const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const passed=(name,detail={})=>{results.push({name,status:'passed',...detail});console.log('PASS: '+name);};
+ const loadedImage=async locator=>{await locator.scrollIntoViewIfNeeded();await page.waitForFunction(img=>img.complete&&img.naturalWidth>0,await locator.elementHandle(),{timeout:15000});};
+ try{
+  await page.goto(base,{waitUntil:'domcontentloaded'});await page.locator('#sudu-question-dock').waitFor();
+  const first=await page.evaluate(()=>available()[0]);
+  await page.locator('[data-answer="'+first.answer+'"]').click();
+  assert.equal(await page.locator('.sudu-option-reasons > li').count(),first.options.length);
+  assert.equal(await page.locator('#sudu-workspace [data-block="answer"]').count(),1);
+  assert.equal(await page.evaluate(id=>state.attempts[id].at(-1).correct,first.id),true);
+  passed('answer saved and all option reasons rendered');
 
- assert.equal(await page.locator('[data-sudu-menu-trigger]').count(),3,'three independent buttons');
- assert.equal(await menu.getAttribute('aria-hidden'),'true');
- // All three menus open independently on desktop mouse hover.
- for(const kind of ['year','subject','functions']){
-   await trigger(kind).hover();
-   assert.equal(await menu.getAttribute('aria-hidden'),'false','hover must open '+kind);
-   assert.equal(await menu.getAttribute('data-active-menu'),kind,'correct menu for '+kind);
-   assert.equal(await page.locator('[data-sudu-menu-section="'+kind+'"]').isVisible(),true);
- }
- const bg=await menu.locator('.floating-inner').evaluate(x=>getComputedStyle(x).backgroundColor);
- assert.equal(bg,'rgb(16, 17, 19)','Apple-style near-black menu');
- const yearTitle=await trigger('year').innerText(),subjectTitle=await trigger('subject').innerText(),functionTitle=await trigger('functions').innerText();
- for(const word of ['年度','科目','功能'])assert([yearTitle,subjectTitle,functionTitle].some(x=>x.includes(word)),word);
- // Hover-out delay of 1000ms; re-entry should cancel it.
- await trigger('year').hover();
- await page.mouse.move(2,500);
- await page.waitForTimeout(450);
- assert.equal(await menu.getAttribute('aria-hidden'),'false','450ms should remain open');
- await page.waitForTimeout(850);
- assert.equal(await menu.getAttribute('aria-hidden'),'true','should close after one second');
- await trigger('subject').hover();
- await page.mouse.move(2,500);
- await page.waitForTimeout(350);
- await trigger('subject').hover();
- await page.waitForTimeout(850);
- assert.equal(await menu.getAttribute('aria-hidden'),'false','re-entering should cancel close');
- await page.keyboard.press('Escape');
- assert.equal(await menu.getAttribute('aria-hidden'),'true','Escape must close active menu');
- // Function list may switch to Dashboard, then back to Learning.
- await trigger('functions').hover();
- await menu.locator('[data-tab="dashboard"]').click();
- assert.equal(await menu.getAttribute('aria-hidden'),'true');
- assert.equal(await page.locator('.db-pane').count()>0,true,'dashboard must render');
- await trigger('functions').hover();
- await menu.locator('[data-tab="learn"]').click();
- await page.locator('.option[data-answer]').first().click();
- await page.locator('.accounting-teacher').waitFor();
- // The actual arrow navigation belongs directly after the explanation, not
- // under the source block or in a second sticky toolbar.
- const navBar=page.locator('#sudu-workspace > .sudu-inline-questionnav');
- assert.equal(await navBar.count(),1,'one inline question navigator');
- assert.equal(await navBar.evaluate(el=>el.previousElementSibling?.dataset.block),'explanation','navigator follows explanation block');
- assert.equal(await page.locator('#bottom').isVisible(),false,'duplicate sticky question navigation is hidden');
- assert(await navBar.locator('#next2').isVisible(),'next icon visible');
- assert(await navBar.locator('#prev2').isVisible(),'previous icon visible');
+  await page.evaluate(()=>{ui.subject='英文';ui.index=0;filters();render();});
+  const english=await page.evaluate(()=>available()[0]);
+  const englishTerm=page.locator('.sudu-option-content .sudu-hover-term').first();await englishTerm.waitFor();await englishTerm.click();
+  assert.equal(await page.locator('#sudu-hover-card').isVisible(),true);
+  assert.equal(await page.evaluate(id=>(state.attempts[id]||[]).length,english.id),0,'word click must not submit an answer');
+  assert((await page.locator('#sudu-hover-card').innerText()).includes('N/A'));
+  await page.keyboard.press('Escape');assert.equal(await page.locator('#sudu-hover-card').isVisible(),false);
+  await page.evaluate(()=>{ui.subject='國文';ui.index=0;filters();render();});
+  const chinese=await page.evaluate(()=>available()[0]);await page.locator('.sudu-option-content .sudu-hover-term').first().click();
+  assert.equal(await page.evaluate(id=>(state.attempts[id]||[]).length,chinese.id),0);
+  await page.locator('[data-hover-close]').click();
+  passed('Chinese and English option vocabulary is separate from answering; N/A and Escape work');
 
- assert(await page.locator('.accounting-teacher').innerText().then(t=>t.includes('高職會計老師')&&t.includes('小學生白話')));
- assert(await page.locator('.accounting-teacher .concept-key').count()>0);
- await page.waitForTimeout(900);
- const answerTop=await page.locator('#sudu-workspace [data-block="answer"]').evaluate(x=>x.getBoundingClientRect().top);
- assert(answerTop>=0&&answerTop<250,'clicking a choice should scroll to its answer; actual='+answerTop);
- assert.equal(await page.locator('#sudu-return-to-question').isVisible(),true);
- await page.locator('#sudu-return-to-question').click();
- await page.waitForTimeout(900);
- const questionTop=await page.locator('#sudu-workspace [data-block="question"]').evaluate(x=>x.getBoundingClientRect().top);
- assert(questionTop>=0&&questionTop<240,'return to question; actual='+questionTop);
- // Inline navigation remains functional and follows explanation on every question.
- await page.locator('#next2').click();
- assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav').evaluate(el=>el.previousElementSibling?.dataset.block),'explanation');
- assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'2 / 64');
- await page.locator('#prev2').click();
- assert.equal(await page.locator('#sudu-workspace > .sudu-inline-questionnav strong').innerText(),'1 / 64');
- // Dark is truly black/charcoal and readable.
- await page.locator('#sudu-theme-button').click();
- assert.equal(await page.locator('html').getAttribute('data-sudu-theme'),'dark');
- const darkColors=await page.evaluate(()=>{
-  const body=getComputedStyle(document.body).backgroundColor;
-  const section=getComputedStyle(document.querySelector('#screen .section')).backgroundColor;
-  const text=getComputedStyle(document.querySelector('#screen .section h2')).color;
-  const button=getComputedStyle(document.querySelector('.option')).color;
-  return {body,section,text,button};
- });
- assert.equal(darkColors.body,'rgb(5, 5, 5)','dark background must be black');
- assert.equal(darkColors.section,'rgb(20, 20, 20)','dark cards charcoal');
- assert.equal(darkColors.text,'rgb(242, 242, 242)','dark headings white');
- assert(['rgb(246, 246, 246)','rgb(255, 255, 255)'].includes(darkColors.button),'dark answer text should have high contrast: '+darkColors.button);
- await page.locator('#sudu-theme-button').click();
- assert.equal(await page.locator('html').getAttribute('data-sudu-theme'),'light');
- // User custom block order is saved and restored after reload.
- await page.locator('#sudu-toggle-drag').click();
- const blocks=page.locator('#sudu-workspace > .study-section');
- const before=await blocks.evaluateAll(xs=>xs.map(x=>x.dataset.block));
- assert(before.includes('question')&&before.includes('explanation')&&before.includes('source'));
- await page.locator('#sudu-workspace [data-block="source"] .sudu-move-up').click();
- const after=await blocks.evaluateAll(xs=>xs.map(x=>x.dataset.block));
- assert.notDeepEqual(after,before);
- await page.reload({waitUntil:'domcontentloaded'});
- await page.locator('#sudu-toggle-drag').click();
- const restored=await page.locator('#sudu-workspace > .study-section').evaluateAll(xs=>xs.map(x=>x.dataset.block));
- assert.deepEqual(restored,after);
- assert.equal(errors.length,0,'browser JS errors: '+errors.join('; '));
- // Touch + RWD: each page stays within viewport, and menus can be tapped.
- const mobile=await browser.newPage({viewport:{width:375,height:780},isMobile:true,hasTouch:true});
- mobile.on('pageerror',e=>errors.push(e.message));
- await mobile.goto('http://127.0.0.1:8765/sudu/',{waitUntil:'domcontentloaded'});
- const mobileMenu=mobile.locator('#sudu-floating-controls');
- for(const kind of ['year','subject','functions']){
-  await mobile.locator('[data-sudu-menu-trigger="'+kind+'"]').tap();
-  assert.equal(await mobileMenu.getAttribute('data-active-menu'),kind);
-  assert.equal(await mobileMenu.getAttribute('aria-hidden'),'false');
-  await mobile.locator('#sudu-mega-close').tap();
-  assert.equal(await mobileMenu.getAttribute('aria-hidden'),'true');
- }
- async function checkOverflow(name){
-  const values=await mobile.evaluate(()=>({w:document.documentElement.scrollWidth,viewport:window.innerWidth}));
-  assert(values.w<=values.viewport+3,name+' horizontal overflow '+JSON.stringify(values));
- }
- await checkOverflow('learning');
- for(const tab of ['dashboard','clinic','archive','source','learn']){
-  await mobile.locator('[data-sudu-menu-trigger="functions"]').tap();
-  await mobileMenu.locator('[data-tab="'+tab+'"]').tap();
-  await checkOverflow(tab);
- }
- await mobile.locator('[data-sudu-menu-trigger="functions"]').tap();
- await mobileMenu.locator('#sudu-theme-in-menu').tap();
- assert.equal(await mobile.locator('html').getAttribute('data-sudu-theme'),'dark');
- await checkOverflow('mobile dark');
- assert.equal(errors.length,0,'browser JS errors: '+errors.join('; '));
- // Root URL always enters learning platform.
- await page.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded'});
- await page.waitForURL('**/sudu/');
- console.log('PASS: split Year Subject Functions menus, hover delay, mobile, black theme, answer jump, all tabs RWD, persistence');
- await browser.close();
-})().catch(e=>{console.error(e.stack);process.exit(1)});
+  for(const width of [320,375,390,430,768,1024,1280,1440]){
+   await page.setViewportSize({width,height:900});
+   for(const theme of ['light','dark']){
+    await page.evaluate(t=>{suduTheme(t);ui.subject='英文';ui.index=0;filters();render();},theme);
+    await page.locator('.sudu-option-content .sudu-hover-term').first().click();
+    const card=await page.locator('#sudu-hover-card').boundingBox();
+    assert(card.x>=0&&card.y>=0&&card.x+card.width<=width+1&&card.y+card.height<=901,'hover card stays inside '+width+' '+theme);
+    await page.locator('[data-hover-close]').click();
+    assert.equal(await page.evaluate(id=>(state.attempts[id]||[]).length,english.id),0);
+   }
+  }
+  await page.setViewportSize({width:1280,height:900});await page.evaluate(()=>suduTheme('light'));
+  passed('hover cards fit all eight widths and both themes without intercepting answer choices');
+
+  await page.evaluate(async()=>{await suduLoadOfficialYear('115');ui.year='115';ui.paper='00-C';ui.subject='國文';ui.index=0;ui.tab='learn';filters();render();});
+  const original=page.locator('[data-image-role="question"] .sudu-image-open img').first();await original.waitFor();
+  await loadedImage(original);
+  const mapping=await original.evaluate(img=>({width:img.naturalWidth,src:img.getAttribute('src'),filter:getComputedStyle(img).filter}));assert(mapping.width>0&&mapping.src.endsWith('.webp'));assert.equal(mapping.filter,'none');
+  assert.equal(await page.locator('[data-image-role="answer"] img').count(),0,'answer sheet is absent before answer');
+  await page.locator('[data-image-role="question"] .sudu-image-open').first().click();assert.equal(await page.locator('#sudu-image-dialog').isVisible(),true);await page.keyboard.press('Escape');
+  await page.locator('[data-answer="0"]').click();
+  await page.locator('.sudu-answer-images').waitFor();assert.equal(await page.locator('.sudu-answer-images').getAttribute('open'),null);
+  assert.equal(await page.locator('.sudu-question-ball').first().getAttribute('data-status'),'pending');
+  await page.locator('.sudu-answer-images summary').click();const answerImage=page.locator('[data-image-role="answer"] img').first();await loadedImage(answerImage);
+  passed('real original and answer WebP, no inversion, zoom, pre-answer privacy and pending grade',mapping);
+  await page.setViewportSize({width:375,height:812});await page.locator('[data-image-role="question"] .sudu-image-open').first().click();
+  const modal=await page.locator('#sudu-image-dialog').boundingBox();assert(modal.x>=0&&modal.x+modal.width<=376&&modal.y>=0&&modal.y+modal.height<=813);
+  await page.locator('[data-image-zoom]').click();await page.locator('[data-image-close]').click();await page.setViewportSize({width:1280,height:900});
+  passed('mobile original WebP zoom and close fit the viewport');
+
+  await page.evaluate(()=>switchTab('dashboard'));await page.waitForFunction(()=>Object.keys(ALL.officialYearReports).length>=26);
+  const resume=page.locator('[data-resume-year="115"][data-resume-paper="00-C"]');await resume.first().click();
+  assert.equal(await page.evaluate(()=>ui.index),1,'resume goes to first unanswered real question');
+  const code=await page.evaluate(()=>localStorage.getItem('sudu_device_profile_v1'));
+  await page.evaluate(()=>switchTab('dashboard'));await page.locator('[data-resume-year="115"][data-resume-paper="00-C"]').nth(1).click();assert.equal(await page.evaluate(()=>ui.index),1);
+  assert.equal(await page.evaluate(()=>localStorage.getItem('sudu_device_profile_v1')),code);
+  passed('both annual paper name and progress status resume without erasing identity or answers');
+
+  const caseData=await page.evaluate(()=>{
+   const q=ALL.practice[0],answer=q.answer,wrong=q.options.findIndex((_,i)=>i!==answer);state.attempts[q.id]=[{choice:answer,correct:true,at:'2026-10-01T00:00:00Z'},{choice:wrong,correct:false,at:'2026-10-02T00:00:00Z'}];state.reviewHistory[q.id]=[{choice:wrong,correct:false,at:'2026-10-03T00:00:00Z'},{choice:answer,correct:true,at:'2026-10-04T00:00:00Z'}];state.dashboard={year:'全部',subject:'全部科目'};save();switchTab('dashboard');return {id:q.id,wrong};
+  });
+  await page.locator('#db-all-mistakes').click();assert.equal(await page.evaluate(()=>ui.tab),'mistakes');assert.equal(await page.locator('#review-'+caseData.id).count(),1);assert((await page.locator('#review-'+caseData.id).innerText()).includes('累計錯誤事件 2 次'));
+  await page.evaluate(()=>switchTab('clinic'));assert.equal(await page.locator('#review-'+caseData.id).count(),0,'first-attempt-wrong set is distinct');
+  await page.evaluate(()=>switchTab('mistakes'));await page.locator('#review-'+caseData.id+' [data-clinic-answer]').first().click();assert.equal(await page.evaluate(id=>state.attempts[id][0].correct,caseData.id),true);
+  passed('all-ever-wrong differs from initial-attempt-wrong; review history appends');
+
+  await page.evaluate(()=>{
+   const q={...ALL.practice[0],id:'fixture-multiple-accepted',year:'自編',official:false,acceptedAnswers:[0,1],answer:0,options:['測試接受A','測試接受B','測試錯C','測試錯D'],question:'僅在隔離測試頁使用的多個接受答案 fixture'};ALL.practice.push(q);ui.year='自編';ui.paper='自編';ui.subject=q.subject;filters();ui.index=available().findIndex(x=>x.id===q.id);ui.tab='learn';render();
+  });
+  await page.locator('[data-answer="1"]').click();assert.equal(await page.evaluate(()=>state.attempts['fixture-multiple-accepted'].at(-1).correct),true);assert((await page.locator('#sudu-workspace [data-block="answer"]').innerText()).includes('A／B'));assert.equal(await page.locator('.option.right').count(),2);
+  passed('multiple officially accepted choices never mark an accepted alternative wrong (synthetic fixture)');
+
+  await page.route('**/data/original/**/*.webp',route=>route.abort());
+  await page.evaluate(()=>{ui.year='115';ui.paper='00-MB';ui.subject='全部科目';ui.index=0;filters();render();});
+  await page.locator('[data-image-role="question"] .sudu-image-error:not([hidden])').first().waitFor();
+  assert(await page.locator('[data-image-retry]').first().isEnabled());await page.unroute('**/data/original/**/*.webp');
+  passed('offline image failure exposes clear retry instead of fabricated question');
+
+  await page.evaluate(()=>{ui.year='自編';ui.paper='自編';ui.subject='全部科目';ui.index=0;filters();render();window.suduTestOriginalSetItem=Storage.prototype.setItem;Storage.prototype.setItem=function(){throw new DOMException('synthetic quota failure','QuotaExceededError');};});
+  await page.locator('[data-answer="0"]').click();assert.equal(await page.locator('#sudu-save-warning').isVisible(),true);assert((await page.locator('#sudu-save-warning').innerText()).includes('本機儲存失敗'));
+  await page.evaluate(()=>{Storage.prototype.setItem=window.suduTestOriginalSetItem;delete window.suduTestOriginalSetItem;save();render();});assert.equal(await page.locator('#sudu-save-warning').count(),0);
+  passed('storage failure is explicit and in-memory answers can be saved again without clearing history');
+
+  // A corrupt UI preference must never prevent valid student state from loading.
+  // Seed a separate browser profile so the main integration scenario stays intact.
+  const paperSeed=await page.evaluate(()=>{
+   const qs=ALL.officialQuestions.filter(q=>String(q.year)==='115'&&q.paper==='00-C');
+   return {choices:Object.fromEntries(qs.map(q=>[q.id,0])),versions:Object.fromEntries(qs.map(q=>[q.id,SUDU_SCORING.fingerprint(q)]))};
+  });
+  const protectedProfile={id:'SUDU-0123456789ABCDEF01234567',created:'2025-01-01T00:00:00.000Z',name:'隔離回歸測試學習者'};
+  const protectedSubmission={id:'fixture-preserved-submission',year:'115',paper:'00-C',startedAt:'2026-10-01T00:00:00.000Z',submittedAt:'2026-10-01T00:10:00.000Z',elapsedMs:600000,activeMs:null,choices:paperSeed.choices,questionVersions:paperSeed.versions,questionCount:Object.keys(paperSeed.choices).length,ruleVersion:null};
+  const protectedState={attempts:{[first.id]:[{choice:first.options.findIndex((_,i)=>i!==first.answer),correct:false,at:'2026-10-01T00:00:00.000Z'},{choice:first.answer,correct:true,at:'2026-10-02T00:00:00.000Z'}]},reviewAnswers:{},reviewHistory:{},extended:{},examSubmissions:{'115/00-C':protectedSubmission},examSubmissionHistory:{'115/00-C':[{...protectedSubmission,id:'fixture-preserved-retake',submittedAt:'2026-10-03T00:10:00.000Z'}]}};
+  const damagedContext=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce',storageState:{cookies:[],origins:[{origin:new URL(base).origin,localStorage:[{name:'sudu_sites_ui',value:'{broken'},{name:'sudu_sites_state',value:JSON.stringify(protectedState)},{name:'sudu_device_profile_v1',value:JSON.stringify(protectedProfile)}]}]}});
+  try{
+   const damagedPage=await damagedContext.newPage(),damagedErrors=[];damagedPage.on('pageerror',e=>damagedErrors.push(e.message));
+   await damagedPage.goto(base,{waitUntil:'domcontentloaded'});await damagedPage.locator('#sudu-question-dock').waitFor();await damagedPage.waitForFunction(()=>suduMirrorReady===true);
+   const inspect=()=>damagedPage.evaluate(()=>({memory:{attempts:state.attempts,examSubmissions:state.examSubmissions,examSubmissionHistory:state.examSubmissionHistory},saved:JSON.parse(localStorage.getItem('sudu_sites_state')),profile:JSON.parse(localStorage.getItem('sudu_device_profile_v1'))}));
+   for(let load=0;load<2;load++){
+    const kept=await inspect();
+    for(const key of ['attempts','examSubmissions','examSubmissionHistory']){
+     assert.deepEqual(kept.memory[key],protectedState[key],'corrupt UI must preserve in-memory '+key);
+     assert.deepEqual(kept.saved[key],protectedState[key],'corrupt UI must preserve persisted '+key);
+    }
+    assert.deepEqual(kept.profile,protectedProfile,'corrupt UI must not replace the original browser identity');
+    if(load===0){await damagedPage.reload({waitUntil:'domcontentloaded'});await damagedPage.locator('#sudu-question-dock').waitFor();await damagedPage.waitForFunction(()=>suduMirrorReady===true);}
+   }
+   assert.deepEqual(damagedErrors,[]);
+  }finally{await damagedContext.close();}
+  passed('corrupt UI JSON preserves first error, all submitted snapshots and device identity across reload in an isolated profile');
+
+  const root=new URL('../',base).href;await page.goto(root,{waitUntil:'domcontentloaded'});await page.waitForURL('**/sudu/');await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});assert(new URL(page.url()).searchParams.get('tools')==='1');assert((await page.title()).length>0);
+  passed('root redirects to sudu and tools=1 keeps original toolkit');
+  assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
+ }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
+ finally{await browser.close();}
+})().catch(e=>{console.error(e.stack);process.exit(1);});

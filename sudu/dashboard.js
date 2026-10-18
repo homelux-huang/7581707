@@ -78,16 +78,17 @@ function suduSaveName(){
   suduMirrorSave();render();
 }
 function suduStudyQuestions(){
-  const checked=(ALL.officialQuestions||[]).filter(q=>q&&q.answerVerified===true&&Number.isInteger(q.answer)&&Array.isArray(q.options)&&q.options.length===4&&q.options.every(o=>typeof o==='string'&&o.trim())&&q.question&&!q.issues?.includes('OCR_missing_question'));
-  return ALL.practice.concat(checked);
+  const official=(ALL.officialQuestions||[]).filter(q=>q&&typeof q.id==='string'&&Number.isInteger(q.number));
+  return ALL.practice.concat(official);
 }
 function suduQueryQuestions(year,subject){
   return suduStudyQuestions().filter(q=>(year==='全部'||String(q.year)===String(year))&&(subject==='全部科目'||q.subject===subject));
 }
 function suduWrongCount(q){
   const initial=(state.attempts?.[q.id]||[]).filter(a=>a.correct===false).length;
-  const reviews=(state.reviewHistory?.[q.id]||[]).filter(a=>a.correct===false).length;
-  const legacy=reviews?0:(state.reviewAnswers?.[q.id]?.correct===false?1:0);
+  const history=Array.isArray(state.reviewHistory?.[q.id])?state.reviewHistory[q.id]:[];
+  const reviews=history.filter(a=>a.correct===false).length;
+  const legacy=history.length?0:(state.reviewAnswers?.[q.id]?.correct===false?1:0);
   return initial+reviews+legacy;
 }
 function suduStats(year,subject){
@@ -100,7 +101,7 @@ function suduBar(n){
 }
 function suduSourceInfo(q){
   const chapter=q.textbook?.chapter;
-  if(chapter)return esc((q.textbook.publisher||'')+'《'+(q.textbook.title||'課本')+'》 '+chapter);
+  if(chapter&&q.textbookVerified===true)return esc((q.textbook.publisher||'')+'《'+(q.textbook.title||'課本')+'》 '+chapter);
   const b=ALL.books[q.subject];
   return b?'彰商曾採用 '+esc(b.publisher)+'《'+esc(b.title)+'》；本題章節與頁碼尚未核實':'本題尚未核實課本章節，僅提供觀念及題目來源';
 }
@@ -110,7 +111,7 @@ function suduYearRows(subject){
     const st=suduStats(year,subject),label=year==='自編'?'自編學習題':year+' 年';
     return '<div class="db-year-row"><strong>'+esc(label)+'</strong><div>'+(
       st.total?suduBar(st.completed)+'<span class="small">已完成 '+st.done+'/'+st.total+' 題（'+st.completed+'%），未完成 '+st.unfinished+'%</span>':
-      '<span class="db-empty-state">尚未收錄核實題目，無法計算完成率</span>')+
+      '<span class="db-empty-state">尚未收錄可導覽题目，無法計算完成率</span>')+
       '</div><em>'+(st.total?suduRate(st.completed):'未建置')+'</em></div>';
   }
   const g=[
@@ -131,7 +132,7 @@ function suduLeaderRows(year,subject){
     '<button class="db-simple-btn" data-jump="'+esc(q.id)+'">再練這一題 →</button></article>').join('');
 }
 function suduSubjectReview(year,subject){
-  const subjects=[...new Set(ALL.practice.map(q=>q.subject))];
+  const subjects=[...new Set(suduStudyQuestions().map(q=>q.subject))];
   const visible=subject==='全部科目'?subjects:subjects.filter(s=>s===subject);
   return visible.map((sub,i)=>{
     const qs=suduQueryQuestions(year,sub),w=qs.filter(q=>suduWrongCount(q)>0);
@@ -148,24 +149,29 @@ function suduSubjectReview(year,subject){
   }).join('');
 }
 function suduScoreDashboard(){
- if(typeof SUDU_SCORING==="undefined")return "";
- const years=Object.keys(ALL.officialYearReports||{}).sort((a,b)=>Number(b)-Number(a));
- const cards=[];
- for(const year of years){
-  for(const paper of ALL.officialYearReports[year].papers||[]){
-   const info=SUDU_SCORING.paperStatus(ALL,state,year,paper.paper);
-   const name=esc(year+" 年 "+(typeof paperText!=="undefined"?paperText[paper.paper]||paper.paper:paper.paper));
-   const score=info.submitted?(info.score?.value===null?"已送出・正式分數待核實":info.score.value+" / "+info.score.max+" 分"):"未考完";
-   const time=info.submitted?'<div class="small">送出：'+esc(new Date(info.submittedAt).toLocaleString("zh-TW"))+'｜時間：'+esc(SUDU_SCORING.humanTime(info.elapsedMs))+'</div>':"";
-   cards.push('<div class="db-year-row"><strong>'+name+'</strong><div><b>'+esc(score)+'</b><p class="small">已作答 '+info.answered+'/'+(info.expected||"待核實")+' 題</p>'+time+'</div></div>');
-  }
- }
- return '<section class="db-pane"><h3>🧾 歷年試卷成績與送出狀態</h3><p class="small">未考完不顯示分數。正式試題／配分未核實只顯示狀態，不將答對率冒充原始分數。</p>'+(cards.join("")||'<p class="db-empty-state">正在載入年度題庫。</p>')+'</section>';
+ if(typeof SUDU_SCORING==='undefined')return '';
+ const years=Object.keys(ALL.officialYearReports||{}).sort((a,b)=>Number(b)-Number(a)),cards=[];
+ for(const year of years){for(const paper of ALL.officialYearReports[year].papers||[]){
+  const info=SUDU_SCORING.paperStatus(ALL,state,year,paper.paper);
+  const name=year+' 年 '+(typeof paperText!=='undefined'?paperText[paper.paper]||paper.paper:paper.paper);
+  const attrs=' data-resume-year="'+esc(year)+'" data-resume-paper="'+esc(paper.paper)+'"';
+  const validScore=info.submitted&&Number.isFinite(info.score?.value);
+  const result=validScore?info.score.value+' / '+info.score.max+' 分':info.label;
+  const time=info.submitted?'<p class="small">送出：'+esc(info.submittedAt?new Date(info.submittedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei'}):'N/A')+'｜經過時間：'+esc(SUDU_SCORING.humanTime(info.elapsedMs))+'</p>':'';
+  cards.push('<div class="db-year-row"><button type="button" class="db-resume-link"'+attrs+'>'+esc(name)+'</button><div><button type="button" class="db-resume-link"'+attrs+'>'+esc(result||'未考完')+' → '+(info.submitted?'檢視／複習':'繼續作答')+'</button><p class="small">已作答 '+info.answered+'／'+(info.expected||'待核實')+' 題</p>'+time+(info.score?.reason?'<p class="small">'+esc(info.score.reason)+'</p>':'')+'</div></div>');
+ }}
+ return '<section class="db-pane"><h3>🧾 我的學習空間｜年度試卷與續答</h3><p class="small">點試卷名稱或進度狀態，續答第一個未回答的題目。完成時進入檢視；數字成績只來自有效送出快照及核實配分。</p>'+(cards.join('')||'<p class="db-empty-state">正在載入年度卷別。</p>')+'</section>';
+}
+async function suduResumePaper(year,paper){
+ await suduLoadOfficialYear(year);
+ ui.year=String(year);ui.paper=paper;ui.subject='全部科目';ui.tab='learn';filters();
+ const qs=available();const index=qs.findIndex(q=>!Number.isInteger(typeof currentAttempt==='function'?currentAttempt(q)?.choice:(state.attempts?.[q.id]||[]).at(-1)?.choice));
+ ui.index=index>=0?index:0;save();render();if(typeof suduGoToQuestion==='function')suduGoToQuestion();
 }
 function dashboard(){
   const d=state.dashboard||{year:'全部',subject:'全部科目'};
   const years=['全部','自編',...ALL.archive.map(x=>String(x.year)).sort((a,b)=>Number(b)-Number(a))];
-  const subjects=['全部科目',...new Set(ALL.practice.map(q=>q.subject))];
+  const subjects=['全部科目',...new Set(suduStudyQuestions().map(q=>q.subject))];
   if(!years.includes(String(d.year)))d.year='全部';
   if(!subjects.includes(d.subject))d.subject='全部科目';
   const stats=suduStats(d.year,d.subject);
@@ -180,9 +186,9 @@ function dashboard(){
   const n='<div class="db-summary"><div class="db-metric"><b>'+stats.done+'/'+stats.total+'</b><span>已完成／目前可作答題數</span></div>'+
     '<div class="db-metric"><b>'+suduRate(stats.completed)+'</b><span>已完成比例</span></div>'+
     '<div class="db-metric"><b>'+suduRate(stats.unfinished)+'</b><span>未完成比例</span></div>'+
-    '<div class="db-metric"><b>'+totalWrong+'</b><span>累計錯誤次數（'+mistakes.length+' 題）</span></div></div>';
+    '<button type="button" class="db-metric" id="db-all-mistakes"><b>'+totalWrong+'</b><span>累計錯誤次數（'+mistakes.length+' 個不同錯題） · 查看全部 →</span></button></div>';
   const msg=stats.total===0?
-    '<div class="db-empty">目前這個年度／科目還沒有經核實且可作答的正式題庫，所以無法計算完成率。這不代表你沒有考試，也不會將缺題的年度算成 0% 或 100%。</div>':
+    '<div class="db-empty">目前這個年度／科目還沒有可導覽的正式題庫，所以無法計算完成率。這不代表你沒有考試，也不會將缺題的年度算成 0% 或 100%。</div>':
     '<p class="small">只以「目前已收錄且可作答」的題目計算完成率；尚未取得的正式歷年題目不會列入分母。</p>';
   const yearCard='<section class="db-pane"><h3>📅 每一年考試完成度</h3>'+msg+suduYearRows(d.subject)+'</section>';
   const mistakesCard='<section class="db-pane"><h3>🎯 答錯最多次的題目 TOP 12</h3>'+suduLeaderRows(d.year,d.subject)+'</section>';
@@ -195,6 +201,8 @@ function dashboard(){
   return '<div class="db-page">'+top+n+suduScoreDashboard()+'<div class="db-two">'+yearCard+mistakesCard+'</div>'+sourceCard+device+'</div>';
 }
 function suduWireDashboard(){
+  document.querySelectorAll('[data-resume-year]').forEach(b=>b.onclick=()=>suduResumePaper(b.dataset.resumeYear,b.dataset.resumePaper));
+  const allWrong=document.getElementById('db-all-mistakes');if(allWrong)allWrong.onclick=()=>{state.reviewSelection={year:state.dashboard?.year||'全部',subject:state.dashboard?.subject||'全部科目',paper:'全部'};switchTab('mistakes');};
  if(typeof SUDU_SYNC!=='undefined')SUDU_SYNC.controls();
   const y=document.getElementById('db-year'),sb=document.getElementById('db-subject');
   if(y)y.onchange=()=>{state.dashboard=state.dashboard||{};state.dashboard.year=y.value;save();render();};
@@ -213,38 +221,82 @@ function suduWireDashboard(){
   };
 }
 function suduExportBackup(){
-  const data={format:'sudu-backup-1',platform:'7581707統測速讀平台',savedAt:new Date().toISOString(),originalBrowserCode:suduDevice?.id||null,nickname:suduDevice?.name||'',state};
+  const data={format:'sudu-backup-1',schemaVersion:2,platform:'7581707統測速讀平台',savedAt:new Date().toISOString(),originalBrowserCode:suduDevice?.id||null,nickname:suduDevice?.name||'',ui:typeof ui!=='undefined'?ui:null,layout:localStorage.getItem('sudu_layout_order_v1'),theme:localStorage.getItem('sudu_theme_v1'),state};
   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url;a.download='7581707速讀學習紀錄備份.json';a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1200);
 }
+function suduMergeBackupState(current,imported){
+ const output={...current};
+ const safeKey=k=>typeof k==='string'&&!['__proto__','constructor','prototype'].includes(k)&&k.length<=200;
+ const clean=a=>a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<=3&&(typeof a.correct==='boolean'||a.correct===null);
+ const eventKey=a=>JSON.stringify([a?.at??null,a?.choice,a?.correct]);
+ // Preserve repeated legacy events with unknown dates. Re-importing the same
+ // backup keeps the maximum multiplicity in either history, not their sum.
+ const mergeEvents=(before,rows)=>{
+  const available=new Map();
+  for(const a of before){const key=eventKey(a);available.set(key,(available.get(key)||0)+1);}
+  const additions=[];
+  for(const a of rows.filter(clean)){
+   const key=eventKey(a),count=available.get(key)||0;
+   if(count)available.set(key,count-1);else additions.push({...a});
+  }
+  return before.concat(additions);
+ };
+ output.attempts={...(current.attempts||{})};
+ for(const [id,rows] of Object.entries(imported.attempts||{})){
+  if(!safeKey(id)||!Array.isArray(rows))continue;
+  output.attempts[id]=mergeEvents(Array.isArray(output.attempts[id])?output.attempts[id]:[],rows);
+ }
+ const reviews=(data,id)=>{
+  const history=Array.isArray(data.reviewHistory?.[id])?data.reviewHistory[id]:[];
+  const legacy=data.reviewAnswers?.[id];
+  // reviewAnswers is the latest-answer view. Its legacy event belongs in the
+  // permanent history unless the same event is already represented there.
+  return clean(legacy)&&!history.some(a=>eventKey(a)===eventKey(legacy))?history.concat({...legacy}):history;
+ };
+ output.reviewHistory={...(current.reviewHistory||{})};
+ const reviewIds=new Set([...Object.keys(current.reviewHistory||{}),...Object.keys(imported.reviewHistory||{}),...Object.keys(current.reviewAnswers||{}),...Object.keys(imported.reviewAnswers||{})]);
+ for(const id of reviewIds){
+  if(safeKey(id))output.reviewHistory[id]=mergeEvents(reviews(current,id),reviews(imported,id));
+ }
+ for(const field of ['reviewAnswers','extended','examSessions','firstWrong']){
+  output[field]={...(current[field]||{})};
+  for(const [id,value] of Object.entries(imported[field]||{}))if(safeKey(id)&&!(id in output[field]))output[field][id]=value;
+ }
+ output.examSubmissions={...(current.examSubmissions||{})};
+ output.examSubmissionHistory={...(current.examSubmissionHistory||{})};
+ const isSnapshot=item=>item&&typeof item==='object'&&!Array.isArray(item);
+ const snapshotKey=item=>item?.id?'id:'+item.id:'legacy:'+JSON.stringify(item);
+ const papers=new Set([...Object.keys(imported.examSubmissions||{}),...Object.keys(imported.examSubmissionHistory||{})]);
+ for(const paper of papers){
+  if(!safeKey(paper))continue;
+  const before=Array.isArray(output.examSubmissionHistory[paper])?output.examSubmissionHistory[paper]:[];
+  const seen=new Set(before.filter(isSnapshot).map(snapshotKey));
+  if(isSnapshot(output.examSubmissions[paper]))seen.add(snapshotKey(output.examSubmissions[paper]));
+  const history=Array.isArray(imported.examSubmissionHistory?.[paper])?imported.examSubmissionHistory[paper]:[];
+  const additions=[];
+  for(const item of [imported.examSubmissions?.[paper],...history]){
+   if(!isSnapshot(item))continue;
+   const key=snapshotKey(item);if(seen.has(key))continue;seen.add(key);
+   if(!isSnapshot(output.examSubmissions[paper]))output.examSubmissions[paper]=item;
+   else additions.push(item);
+  }
+  output.examSubmissionHistory[paper]=before.concat(additions);
+ }
+ return output;
+}
 async function suduImportBackup(file){
-  if(!file)return;
-  if(file.size>5*1024*1024){window.alert('備份檔案超過 5 MB，請確認是否選對檔案。');return;}
-  let data;try{data=JSON.parse(await file.text());}catch(e){window.alert('無法讀取 JSON 備份檔案。');return;}
-  const imported=data?.state;
-  if(!imported||!imported.attempts||typeof imported.attempts!=='object'||Array.isArray(imported.attempts)){
-    window.alert('不是受支援的 7581707 學習紀錄備份。');return;
-  }
-  const attemptRows=Object.entries(imported.attempts);
-  if(attemptRows.length>20000){window.alert('備份資料筆數過多，無法還原。');return;}
-  if(!window.confirm('將目前作答紀錄換成備份檔內的紀錄？這會覆蓋此瀏覽器的進度。建議先下載現有備份。'))return;
-  const cleaned=Object.create(null);
-  for(const [id,logs] of attemptRows){
-    if(id==='__proto__'||id==='constructor'||id.length>180||!Array.isArray(logs))continue;
-    cleaned[id]=logs.slice(0,1200).filter(a=>a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<=3&&typeof a.correct==='boolean')
-     .map(a=>({choice:a.choice,correct:a.correct,at:String(a.at||''),mastered:!!a.mastered}));
-  }
-  state.attempts=cleaned;
-  for(const field of ['reviewAnswers','reviewHistory','extended','examSessions','examSubmissions']){
-    if(imported[field]&&typeof imported[field]==='object'&&!Array.isArray(imported[field])){
-      state[field]=imported[field];
-    }
-  }
-  state.reviewFilter=['all','pending','mastered'].includes(imported.reviewFilter)?imported.reviewFilter:'all';
-  state.dashboard=imported.dashboard&&typeof imported.dashboard==='object'?imported.dashboard:{year:'全部',subject:'全部科目'};
-  if(data.nickname && window.confirm('是否也還原這份備份的學習暱稱？'))suduSetDevice({...suduDevice,name:String(data.nickname).slice(0,40)});
-  // The local browser keeps its own identifier; a backup never silently impersonates another browser.
-  save();ui.tab='dashboard';save();render();window.alert('已還原學習紀錄。此瀏覽器的獨立學習代碼維持不變。');
+ if(!file)return;if(file.size>25*1024*1024){window.alert('備份超過 25 MB，請確認檔案。');return;}
+ let data;try{data=JSON.parse(await file.text());}catch{window.alert('無法讀取 JSON 備份。');return;}
+ const imported=data?.state;
+ if(!imported?.attempts||typeof imported.attempts!=='object'||Array.isArray(imported.attempts)||Object.keys(imported.attempts).length>20000){window.alert('不是受支援的學習紀錄備份。');return;}
+ if(!window.confirm('將備份合併至目前紀錄？會先保存現況，既有首次作答、測驗快照與裝置代碼都保留。'))return;
+ const snapshot={savedAt:new Date().toISOString(),state,profile:suduDevice};
+ try{localStorage.setItem('sudu_backup_before_restore_v1',JSON.stringify(snapshot));}catch{window.alert('無法先備份目前紀錄；還原已取消，請先匯出備份並釋出空間。');return;}
+ if(suduDb)try{suduDb.transaction('snapshots','readwrite').objectStore('snapshots').put(snapshot,'before-restore-'+Date.now());}catch{}
+ state=suduMergeBackupState(state,imported);
+ if(typeof SUDU_SCORING!=='undefined')SUDU_SCORING.initial(state);
+ save();ui.tab='dashboard';save();render();window.alert('已合併學習紀錄。既有歷史與此瀏覽器的學習代碼保持不變。');
 }

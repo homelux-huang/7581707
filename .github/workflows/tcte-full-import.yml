@@ -11,7 +11,7 @@ permissions:
   contents: write
   actions: write
 concurrency:
-  group: tcte-questions-sync
+  group: tcte-corpus-update
   cancel-in-progress: false
 jobs:
   originals:
@@ -19,36 +19,32 @@ jobs:
     timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install PDF rendering tools only - no OCR engines
         run: python -m pip install -q requests pymupdf pillow
-      - name: Permanently remove the legacy OCR fallback
+      - name: Verify rendering stays free of OCR engines
         run: |
-          python - <<'PY'
+          python - <<'PYCODE'
           from pathlib import Path
-          p=Path('scripts/tcte_auto.py')
-          s=p.read_text('utf-8')
-          start=s.index('def pdf_text(pdf_bytes):')
-          end=s.index('\ndef clean(', start)
-          native='''def pdf_text(pdf_bytes):
-              """Read only an existing PDF text layer. Scanned pages are rendered as images, never OCR."""
-              with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
-                  return [page.get_text(sort=True) for page in doc], []
-          '''
-          s=s[:start]+native+s[end:]
-          assert 'pytesseract' not in s and 'image_to_string' not in s
-          p.write_text(s,'utf-8')
-          PY
+          source=Path('scripts/tcte_auto.py').read_text('utf-8')
+          assert 'pytesseract' not in source and 'image_to_string' not in source
+          PYCODE
           python -m py_compile scripts/tcte_auto.py scripts/tcte_source_images.py
       - name: Render official 90-115 originals without changing questions, answers or student IDs
         run: python scripts/tcte_source_images.py --years $(seq 90 115)
+      - name: Recompute corpus provenance and decode every referenced image
+        run: |
+          python scripts/tcte_manifest.py
+          python scripts/check_tcte_corpus.py --decode-images --json sudu/data/corpus-audit.json --markdown docs/SUDU_CORPUS_AUDIT.md
       - name: Commit compact WebP originals and disable old OCR code
         run: |
           git config user.name '7581707 original PDF image bot'
           git config user.email '7581707-bot@users.noreply.github.com'
-          git add sudu/data/original scripts/tcte_auto.py
+          git add sudu/data/original sudu/data/years sudu/data/index.json sudu/data/corpus-audit.json docs/SUDU_CORPUS_AUDIT.md
           if ! git diff --cached --quiet; then
             git commit -m 'Render original TCTE PDF pages as shared WebP; prohibit OCR'
             git pull --rebase origin main
@@ -58,7 +54,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh workflow run pages.yml --ref main
+          gh workflow run pages.yml --ref main -f target_sha="$(git rev-parse HEAD)"
           gh workflow run tcte-data-audit.yml --ref main
       - uses: actions/upload-artifact@v4
         if: always()

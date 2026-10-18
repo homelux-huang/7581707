@@ -21,7 +21,7 @@ YEAR_PATTERN=re.compile(r"(\d{2,3})-4y-(.+?)(?:-standard)?\.pdf$",re.I)
 GROUP_CODES={"09-1":"專業科目（一）","09-2":"專業科目（二）","00-C":"國文","00-E":"英文","00-MB":"數學 B"}
 OPTION_NAMES={"09-1","09-2","00-C","00-E","00-MB"}
 BOOK_NEEDS_REVIEW=re.compile(r"如[圖表]|表[（(]|圖[（(]|參[閱考]下[圖表]|依下[列圖表]|附[圖表]|附表|下圖|下表|依據.*圖|下列.*[圖表]|以下資料|矩陣|會計項目資訊如表")
-VERSION=3
+VERSION=4
 
 def stamp():return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 def guarded_get(url,timeout=35):
@@ -57,15 +57,15 @@ def decoded_input_links(html,url):
         if "-confirm" in fn.lower() or "-feature" in fn.lower() or "-guide" in fn.lower() or "-grade" in fn.lower():continue
         if any(s in fn.lower() for s in ["-answer","-standard","-ans"]):kind="answer"
         else:kind="exam"
-        # Actual historical commerce group: 90-91 code 14, 92-99 code 13, 100+ code 09.
+        # Actual historical commerce group: 90-91 code 14, 92-97 code 13, 98+ code 09 (official yearly indexes).
         m2=re.search(r"(?:^|-4y-)(09-[12]|13-[12]|14-[12]|00-[A-Za-z0-9]+)(?:-standard|-answer|-ans)?\.pdf$",fn,re.I)
         if not m2:continue
         paper=m2.group(1).upper()
         if re.fullmatch(r"(09|13|14)-[12]",paper):
             code,part=paper.split("-")
-            expected="14" if source_year<=91 else ("13" if source_year<=99 else "09")
+            expected="14" if source_year<=91 else ("13" if source_year<=97 else "09")
             if code!=expected:continue
-            if source_year<100:paper="BIZ-"+part
+            if source_year<98:paper="BIZ-"+part
         if paper not in OPTION_NAMES and paper not in {"BIZ-1","BIZ-2"} and not paper.startswith("00-M"):continue
         key=(paper,kind)
         if key in matches:continue
@@ -86,8 +86,8 @@ def legacy_links(html,url):
         paper=None;kind="exam"
         if m:
             code,part,suffix=m.groups()
-            expected="14" if source_year<=91 else ("13" if source_year<=99 else "09")
-            if code==expected:paper=("BIZ-" if source_year<100 else "09-")+part
+            expected="14" if source_year<=91 else ("13" if source_year<=97 else "09")
+            if code==expected:paper=("BIZ-" if source_year<98 else "09-")+part
             if suffix:kind="answer"
         else:
             m=re.search(r"(?:\d{2,3}-4y-)(00-[cem][a-z]?)(?:-(standard|solve|finalsolve))?\.pdf$",base_name)
@@ -185,6 +185,9 @@ def extract_questions(pages,year,paper,src,ocr_pages):
         if year==114 and paper=="09-2" and i<5: print("DEBUG_CANDIDATE",number,"pg",pg,"len",len(raw),"first",repr(raw[:250]),flush=True)
         stem,options,warnings=parse_question_options(raw)
         if not stem:continue
+        # Numbered cover instructions used to consume IDs 1-3 before the real
+        # questions. Keep searching for the real number; never publish this text.
+        if re.match(r"^(?:請先核對考試科目|本試題共|本試題均為|本試卷共|本試卷均為|請用.?2B|請依題號順序|本試題不可使用)", stem):continue
         if len(options)!=4:warnings.append("missing_complete_options")
         if pg in ocr_pages:warnings.append("ocr_not_manually_verified")
         if not options and number>2 and number not in found:continue
@@ -195,7 +198,7 @@ def extract_questions(pages,year,paper,src,ocr_pages):
             "subject":subject_from_source(year,paper,number,full[:m.start()]),
             "kind":"官方歷屆題（自動擷取、待審核）",
             "question":stem,"options":options,
-            "answer":None,"answerVerified":False,
+            "answer":None,"answerMatched":False,"answerVerified":False,
             "explanation":"","principle":"","steps":"","wrongOptions":[],
             "extension":"","practice":None,"textbook":None,"teachingVerified":False,
             "source":src,"official":True,"page":pg,
@@ -230,6 +233,7 @@ def process_one(year,link,answer_link):
     try:
         raw=guarded_get(link["url"],60).content
         if raw[:4]!=b"%PDF":raise ValueError("Official question response not PDF")
+        entry["questionPdfSha256"]=hashlib.sha256(raw).hexdigest()
         pages,ocr=pdf_text(raw)
         q=extract_questions(pages,year,code,link["url"],ocr)
         entry["expectedCount"]=expected_count_from_cover(pages)
@@ -244,7 +248,7 @@ def process_one(year,link,answer_link):
                 q.append({"id":f"{year}-{code}-{no:02d}","year":year,"paper":code,"number":no,
                   "subject":GROUP_CODES.get(code,code),"kind":"官方原卷 OCR 未辨識題",
                   "question":"本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-                  "options":[],"answer":None,"answerVerified":False,"questionVerified":False,
+                  "options":[],"answer":None,"answerMatched":False,"answerVerified":False,"questionVerified":False,
                   "explanation":"","steps":"","extension":"","practice":None,"textbook":None,"teachingVerified":False,
                   "source":link["url"],"official":True,"page":None,"issues":["OCR_missing_question"]})
             q.sort(key=lambda item:item["number"])
@@ -256,6 +260,7 @@ def process_one(year,link,answer_link):
         if answer_link:
             ar=guarded_get(answer_link["url"],60).content
             if ar[:4]!=b"%PDF":raise ValueError("Official answer response not PDF")
+            entry["answerPdfSha256"]=hashlib.sha256(ar).hexdigest()
             ap,ao=pdf_text(ar)
             answers,conflicts=parse_answers(ap)
             entry["answerCount"]=len(answers)
@@ -267,7 +272,8 @@ def process_one(year,link,answer_link):
                     item["answerSource"]=answer_link["url"]
                     if len(item["options"])==4 and all(item["options"]) and "OCR_missing_question" not in item.get("issues",[]):
                         item["answer"]="ABCD".index(ans)
-                        item["answerVerified"]=True
+                        item["answerMatched"]=True
+                        item["answerVerified"]=False
             if len(answers)<len(q):issues.append("incomplete_answer_pdf_extraction")
         else:issues.append("official_answer_pdf_not_identified")
         if entry["expectedCount"] is not None and len(q)!=entry["expectedCount"]:
@@ -279,6 +285,9 @@ def process_one(year,link,answer_link):
     except Exception as exc:
         entry["status"]="download_or_parse_failed"
         issues.append(type(exc).__name__+": "+str(exc)[:260])
+    for item in entry["questions"]:
+        item["sourceVersion"]={"questionPdfSha256":entry.get("questionPdfSha256"),
+                               "answerPdfSha256":entry.get("answerPdfSha256")}
     # Strictly complete means no missing questions AND all answer confirmations AND approved teaching.
     entry["complete"]=bool(entry["expectedCount"] and len(entry["questions"])==entry["expectedCount"]
           and all(q["answerVerified"] and q["questionVerified"] and q["teachingVerified"] for q in entry["questions"]))
@@ -346,7 +355,7 @@ def legacy_91_answer_pdf(year_url):
     return out
 
 def process_year(y):
-    entry={"year":y,"courseType":"09商管群" if y>=100 else "舊制商業類（不可直接當作09商管群）",
+    entry={"year":y,"courseType":"09商管群" if y>=98 else "舊制商業類（不可直接當作09商管群）",
            "sourceIndex":year_url(y),"generatedAt":stamp(),"pipelineVersion":VERSION,"papers":[],"errors":[]}
     try:
         base=year_url(y)
@@ -355,13 +364,13 @@ def process_year(y):
         links=decoded_input_links(response.text,base)
         if not links:
             links=legacy_links(response.text,base)
-        if y<100:
-            entry["courseType"]="舊制商業類（90-91考科代碼14，92-99代碼13；非現制09商管群）"
+        if y<98:
+            entry["courseType"]="舊制商業類（90-91考科代碼14，92-97代碼13；98起09商管群）"
         entry["discoveredPdfLinks"]=len(links)
         exams=[p for p in links if p["kind"]=="exam"]
         answers={p["paper"]:p for p in links if p["kind"]=="answer"}
         # Restrict to 09 professional and common subjects for this platform.
-        exams=[e for e in exams if e["paper"] in OPTION_NAMES or (y<100 and e["paper"] in {"BIZ-1","BIZ-2","00-M-OLD"})]
+        exams=[e for e in exams if e["paper"] in OPTION_NAMES or (y<98 and e["paper"] in {"BIZ-1","BIZ-2","00-M-OLD"})]
         # Old math versions are distinct. Do not silently choose one among several.
         legacy_keys=legacy_91_answer_pdf(base) if y==91 else (legacy_answer_table(base) if y==90 and any(x["paper"].startswith("BIZ-") for x in exams) else {})
         for x in exams:
@@ -373,7 +382,8 @@ def process_year(y):
                     if opts and len(question["options"])==4 and all(question["options"]) and "OCR_missing_question" not in question.get("issues",[]):
                         question["acceptedAnswers"]=["ABCD".index(c) for c in opts]
                         question["answer"]=question["acceptedAnswers"][0]
-                        question["answerVerified"]=True
+                        question["answerMatched"]=True
+                        question["answerVerified"]=False
                         question["answerSource"]=urljoin(base,"91-4y-answer-new.pdf") if y==91 else urljoin(base,"answer.htm")
                 paper["answerCount"]=len(official)
                 paper["answerHtml"]=urljoin(base,"answer.htm")
@@ -384,7 +394,7 @@ def process_year(y):
         entry["errors"].append(type(exc).__name__+": "+str(exc)[:280])
     entry["papersFound"]=len(entry["papers"])
     entry["questionsFound"]=sum(p.get("discoveredCount",0) for p in entry["papers"])
-    entry["officialAnswersMatched"]=sum(sum(bool(q["answerVerified"]) for q in p["questions"]) for p in entry["papers"])
+    entry["officialAnswersMatched"]=sum(sum(bool(q.get("answerMatched") or q.get("answerVerified")) for q in p["questions"]) for p in entry["papers"])
     entry["teachingReviewed"]=sum(sum(bool(q["teachingVerified"]) for q in p["questions"]) for p in entry["papers"])
     entry["fullyCompletedPapers"]=sum(p.get("complete",False) for p in entry["papers"])
     return entry

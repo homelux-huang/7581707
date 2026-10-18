@@ -1,56 +1,52 @@
-
-/* 7581707 Sudu dashboard: comfortable light-mode learning overview */
-.db-page{display:grid;gap:14px}
-.db-welcome{border:1px solid #d8eaf7;background:linear-gradient(110deg,#fff,#eaf7ff);border-radius:17px;padding:19px 21px;box-shadow:0 6px 17px #1a53760c}
-.db-welcome h2{font-size:22px;margin:0 0 8px;color:#254360}
-.db-welcome p{color:#718498;margin:5px 0;line-height:1.7}
-.db-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.db-device{display:flex;align-items:center;gap:7px;font-size:12px;background:#f6fbff;border:1px solid #d7eaf6;border-radius:10px;padding:7px 10px;color:#3b719b}
-.db-badge{background:#e9f7ed;color:#21794a;border-radius:30px;padding:5px 9px;font-size:11px;font-weight:700}
-.db-control{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-top:12px}
-.db-control label{display:grid;gap:4px;font-size:12px;color:#718498;font-weight:700;min-width:160px}
-.db-control select,.db-control input{min-height:40px;border:1px solid #d5e5f0;background:white;border-radius:9px;padding:8px 11px;color:#294362;max-width:220px}
-.db-control .db-name{min-width:160px}
-.db-control button,.db-simple-btn{padding:9px 12px;border:1px solid #cce2f3;border-radius:10px;background:#f5fbff;color:#2a7fb8;font-weight:700}
+/* Dashboard uses workspace theme tokens, including every nested card and control. */
+.db-page{display:grid;gap:14px;min-width:0}
+.db-welcome,.db-pane,.db-metric{background:var(--sudu-surface,#fff);color:var(--sudu-text,#22364c);border:1px solid var(--sudu-border,#c5d1df);border-radius:16px}
+.db-welcome{padding:19px 21px}.db-welcome h2{font-size:22px;margin:0 0 8px;color:var(--sudu-text)}
+.db-welcome p{color:var(--sudu-muted);margin:5px 0;line-height:1.7}
+.db-top,.db-leader-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.db-device{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:12px;background:var(--sudu-soft);border:1px solid var(--sudu-border);border-radius:10px;padding:7px 10px;color:var(--sudu-muted)}
+.db-badge,.db-tag,.db-count{display:inline-block;background:var(--sudu-soft);color:var(--sudu-text);border:1px solid var(--sudu-border);border-radius:30px;padding:4px 9px;font-size:11px;font-weight:700}
+.db-control{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-top:12px;min-width:0}
+.db-control label{display:grid;gap:4px;font-size:12px;color:var(--sudu-muted);font-weight:700;min-width:0;flex:1 1 160px}
+.db-control select,.db-control input{min-height:40px;border:1px solid var(--sudu-border);background:var(--sudu-surface);border-radius:9px;padding:8px 11px;color:var(--sudu-text);max-width:100%;min-width:0;width:100%}
+.db-control button,.db-simple-btn,.db-paper-link,.db-resume,.db-metric-link{padding:9px 12px;border:1px solid var(--sudu-border);border-radius:10px;background:var(--sudu-button);color:var(--sudu-button-text);font-weight:700;line-height:1.5}
+.db-control button:hover:not(:disabled),.db-simple-btn:hover:not(:disabled){background:var(--sudu-button-hover);color:var(--sudu-button-text)}
 .db-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
-.db-metric{background:#fff;border:1px solid #e1ecf4;border-radius:15px;padding:16px;box-shadow:0 3px 10px #28517d07}
-.db-metric b{display:block;color:#308ac6;font-size:26px;line-height:1.3}
-.db-metric span{display:block;color:#70849a;font-size:12px;line-height:1.6}
-.db-pane{background:white;border:1px solid #e0eaf3;border-radius:16px;padding:17px 20px;box-shadow:0 5px 18px #1f4b7509}
-.db-pane h3{margin:0 0 10px;font-size:17px;color:#2b4764}
-.db-pane h4{margin:9px 0 4px;font-size:15px}
-.db-pane p{line-height:1.75}
-.db-progress-track{height:9px;background:#e9f2f9;border-radius:99px;overflow:hidden}
-.db-progress-fill{height:100%;background:linear-gradient(90deg,#55b2e1,#2588c5);border-radius:99px}
-.db-year-group{border-top:1px solid #edf2f6;padding:8px 0}
-.db-year-group summary{cursor:pointer;list-style:none;color:#426583;font-weight:750;padding:8px 0;display:flex;justify-content:space-between;align-items:center}
-.db-year-group summary::after{content:'展開 ▾';color:#8da2b4;font-weight:500;font-size:12px}
+.db-metric{padding:16px;min-width:0}
+.db-metric b{display:block;color:var(--sudu-link);font-size:26px;line-height:1.3}
+.db-metric span{display:block;color:var(--sudu-muted);font-size:12px;line-height:1.6}
+button.db-metric{text-align:left;background:var(--sudu-button);color:var(--sudu-button-text)}
+button.db-metric b,button.db-metric span{color:var(--sudu-button-text)}
+.db-metric button{max-width:100%;text-align:left;white-space:normal}
+.db-pane{padding:17px 20px;min-width:0}
+.db-pane h3{margin:0 0 10px;font-size:17px;color:var(--sudu-text)}
+.db-pane h4{margin:9px 0 4px;font-size:15px;color:var(--sudu-text)}.db-pane p{line-height:1.75;color:var(--sudu-text)}
+.db-progress-track{height:9px;background:var(--sudu-soft);border-radius:99px;overflow:hidden}
+.db-progress-fill{height:100%;background:#2588c5;border-radius:99px}
+html[data-sudu-theme="dark"] .db-progress-fill{background:#8acbff}
+.db-year-group{border-top:1px solid var(--sudu-border);padding:8px 0}
+.db-year-group summary{cursor:pointer;list-style:none;color:var(--sudu-text);font-weight:750;padding:8px 0;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.db-year-group summary::after{content:'展開 ▾';color:var(--sudu-muted);font-weight:500;font-size:12px;white-space:nowrap}
 .db-year-group[open] summary::after{content:'收合 ▴'}
-.db-year-row{display:grid;grid-template-columns:82px 1fr 95px;gap:13px;padding:9px 4px;border-top:1px solid #f0f4f7;align-items:center;color:#536b82;font-size:13px}
-.db-year-row strong{color:#2e506d}
-.db-year-row em{font-style:normal;font-size:12px;color:#8a9caf;text-align:right}
-.db-empty{background:#fffaf0;border:1px solid #f4e8cc;padding:13px;border-radius:11px;color:#856d43;font-size:13px;line-height:1.75}
-.db-leader{border-top:1px solid #edf2f7;padding:12px 0}
-.db-leader:first-of-type{border-top:0}
-.db-leader-header{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.db-leader strong{color:#2c4a68}
-.db-count{color:#af4f32;background:#fff0e8;border-radius:20px;padding:3px 8px;font-size:12px;font-weight:800}
-.db-leader p{font-size:13px;margin:7px 0;color:#61758a}
-.db-leader .db-concept{background:#fff8ed;border:1px solid #f1e0c8;border-radius:10px;padding:9px 11px}
-.db-leader .db-source{background:#f5f4ff;border:1px solid #e7e3fa;border-radius:10px;padding:9px 11px}
-.db-subject{border:1px solid #ddebf4;border-radius:12px;margin:10px 0;background:#fbfdff}
-.db-subject>summary{padding:13px 14px;cursor:pointer;font-weight:750;color:#2c6188;list-style:none}
-.db-subject>summary::after{content:'展開觀念 ▾';float:right;color:#7fa5be;font-size:12px}
+.db-year-row{display:grid;grid-template-columns:82px minmax(0,1fr) 95px;gap:13px;padding:9px 4px;border-top:1px solid var(--sudu-border);align-items:center;color:var(--sudu-muted);font-size:13px}
+.db-year-row strong{color:var(--sudu-text)}.db-year-row em{font-style:normal;font-size:12px;color:var(--sudu-muted);text-align:right}
+.db-year-row button{font-size:12px;line-height:1.5;white-space:normal;text-align:left;padding:6px;border:1px solid var(--sudu-border);border-radius:8px;background:var(--sudu-button);color:var(--sudu-button-text)}
+.db-year-row:has(>.db-resume-link){grid-template-columns:minmax(100px,1fr) minmax(0,2fr)}
+.db-empty,.db-empty-state{background:var(--sudu-soft);border:1px solid var(--sudu-border);padding:13px;border-radius:11px;color:var(--sudu-muted);font-size:13px;line-height:1.75}
+.db-leader{border-top:1px solid var(--sudu-border);padding:12px 0}.db-leader:first-of-type{border-top:0}
+.db-leader strong{color:var(--sudu-text)}.db-leader p{font-size:13px;margin:7px 0;color:var(--sudu-muted)}
+.db-leader .db-concept{background:var(--sudu-explanation);border:1px solid var(--sudu-border);border-radius:10px;padding:9px 11px;color:var(--sudu-text)}
+.db-leader .db-source{background:var(--sudu-source);border:1px solid var(--sudu-border);border-radius:10px;padding:9px 11px;color:var(--sudu-text)}
+.db-subject{border:1px solid var(--sudu-border);border-radius:12px;margin:10px 0;background:var(--sudu-soft)}
+.db-subject>summary{padding:13px 14px;cursor:pointer;font-weight:750;color:var(--sudu-text);list-style:none}
+.db-subject>summary::after{content:'展開觀念 ▾';float:right;color:var(--sudu-muted);font-size:12px}
 .db-subject[open]>summary::after{content:'收合 ▴'}
-.db-subject-inner{padding:8px 14px 14px;border-top:1px solid #e9f0f5}
-.db-tag{display:inline-block;border-radius:20px;padding:3px 9px;background:#eef6fc;color:#4482a9;font-size:11px;font-weight:700}
-.db-topic{border-top:1px solid #edf2f7;padding:12px 0}
-.db-topic:last-child{padding-bottom:0}
-.db-topic p{margin:6px 0;font-size:13px;color:#65798e}
-.db-footer-note{font-size:12px;color:#7d8fa2;line-height:1.8}
-.db-device-panel{background:#f7fbfe;border:1px solid #e0edf6;border-radius:12px;padding:13px 14px}
-.db-device-panel code{font-family:ui-monospace,monospace;overflow-wrap:anywhere;color:#25445f}
-.db-empty-state{font-size:13px;color:#70849a;line-height:1.7}
-@media(min-width:850px){.db-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}}
-@media(max-width:750px){.db-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.db-welcome{padding:16px}.db-pane{padding:14px}.db-year-row{grid-template-columns:66px 1fr 70px;gap:7px}.db-control label{min-width:calc(50% - 6px)}.db-control select,.db-control input{width:100%;max-width:none}}
-@media(max-width:400px){.db-summary{gap:8px}.db-metric{padding:12px}.db-metric b{font-size:22px}}
+.db-subject-inner{padding:8px 14px 14px;border-top:1px solid var(--sudu-border)}
+.db-topic{border-top:1px solid var(--sudu-border);padding:12px 0}.db-topic:last-child{padding-bottom:0}
+.db-topic p{margin:6px 0;font-size:13px;color:var(--sudu-muted)}
+.db-footer-note{font-size:12px;color:var(--sudu-muted);line-height:1.8}
+.db-device-panel{background:var(--sudu-soft);border:1px solid var(--sudu-border);border-radius:12px;padding:13px 14px;min-width:0}
+.db-device-panel code{font-family:ui-monospace,monospace;overflow-wrap:anywhere;color:var(--sudu-text)}
+@media(min-width:850px){.db-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}}
+@media(max-width:750px){.db-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.db-welcome{padding:16px}.db-pane{padding:14px}.db-year-row{grid-template-columns:66px minmax(0,1fr) 78px;gap:7px}.db-control label{flex-basis:calc(50% - 6px)}}
+@media(max-width:400px){.db-summary{gap:8px}.db-metric{padding:12px}.db-metric b{font-size:22px}.db-control label{flex-basis:100%}.db-year-row{grid-template-columns:1fr 1fr}.db-year-row>strong{grid-column:1/-1}}

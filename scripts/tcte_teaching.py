@@ -20,9 +20,9 @@ wrongOptions(長度4字串陣列，說明每個選項理由；正確選項也要
 practice(包含question、options四個選項字串、answerIndex為0..3、explanation字串),
 sourceNote(string，必須說明正式試題來源和未核實的課本章節)。不得輸出Markdown。"""
 def eligible(q):
-    return q.get("answerVerified") and len(q.get("options") or [])==4 and all(q["options"]) \
+    return q.get("questionVerified") is True and q.get("answerVerified") is True and len(q.get("options") or [])==4 and all(q["options"]) \
        and not q.get("teachingVerified") and not q.get("teachingStatus") \
-       and not q.get("ocrUsed") and not any(i in q.get("issues",[]) for i in ["figure_or_table_recheck_pdf","missing_complete_options","missing_A_to_D_options"])
+       and not q.get("ocrUsed") and not any(i in q.get("issues",[]) for i in ["figure_or_table_recheck_pdf","missing_complete_options","missing_A_to_D_options","cover_instruction_extraction_suspected","OCR_missing_question"])
 def ask(q):
     payload={
         "model":MODEL,
@@ -84,12 +84,15 @@ def main():
                     q["wrongOptions"]=tutor["wrongOptions"]
                     q["extension"]=tutor["extension"]
                     p=tutor["practice"]
-                    q["practice"]={"question":p["question"],"options":p["options"],
+                    q["practice"]={"selfAuthored":True,"label":"自編延伸題（AI 草稿，待核實）","question":p["question"],"options":p["options"],
                                    "answer":p["options"][p["answerIndex"]],
                                    "answerIndex":p["answerIndex"],"explanation":p["explanation"]}
                     q["sourceNote"]=str(tutor.get("sourceNote") or "原題及答案以當年官方PDF為準；教材精確章節待核實。")
                     q["teachingStatus"]="ai_draft_needs_verification"
                     q["teachingVerified"]=False
+                    q["teachingSourceVersion"]=q.get("sourceVersion")
+                    q["teachingGeneratedBy"]={"type":"AI","model":MODEL}
+                    q.setdefault("textbookVerified",False)
                     q["teachingGeneratedAt"]=datetime.datetime.now(datetime.timezone.utc).isoformat()
                     changed=True;count+=1
                     print("DRAFT",year,paper.get("paper"),q.get("number"),flush=True)

@@ -25,7 +25,7 @@ jobs:
           node-version: '22'
       - name: Install Playwright Chromium
         run: |
-          npm install --no-save playwright@1.56.1
+          npm install --no-save playwright@1.51.1
           npx playwright install --with-deps chromium
       - name: Serve and test UI
         run: |

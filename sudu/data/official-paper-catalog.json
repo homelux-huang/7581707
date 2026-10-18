@@ -1,0 +1,1648 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-18T16:53:58.204103+00:00",
+  "method": "official_year_index_no_ocr",
+  "notice": "科別依官方年度目錄；未核對原卷封面與分題邊界時，不假設現行科目或按題號對半分科。",
+  "years": {
+    "90": {
+      "year": 90,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/090_4y/",
+      "sourceSha256": "1c3c337e6aaf49786082c14c0ddb7926aac6a3036a30c555f1f776c4222feca2",
+      "checkedAt": "2026-10-18T16:53:55.193831+00:00",
+      "officialCommerceCode": "14",
+      "groupLabel": "商業類（官方卷檔名代碼14）",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/090_4y/p_c.pdf"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/090_4y/p_e.pdf"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/090_4y/14_1.pdf"
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/090_4y/202114_2.pdf"
+        }
+      ]
+    },
+    "91": {
+      "year": 91,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/091_4y/",
+      "sourceSha256": "21a9b934ec0b4f122f800d523e6ee2d9981db62f9d1639a31df73ea9a636af2f",
+      "checkedAt": "2026-10-18T16:53:55.485300+00:00",
+      "officialCommerceCode": "14",
+      "groupLabel": "14商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-M-OLD",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-00-c.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-answer-new.pdf",
+          "answerImageScope": "multi_subject_full_page"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-00-e.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-answer-new.pdf",
+          "answerImageScope": "multi_subject_full_page"
+        },
+        {
+          "paper": "00-M-OLD",
+          "subjects": [
+            "數學（舊制共卷，分卷範圍待核實）"
+          ],
+          "subjectStatus": "official_index_requires_variant_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-00-m.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-answer-new.pdf",
+          "answerImageScope": "multi_subject_full_page"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-14-1.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-answer-new.pdf",
+          "answerImageScope": "multi_subject_full_page"
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-14-2.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/091_4y/91-4y-answer-new.pdf",
+          "answerImageScope": "multi_subject_full_page"
+        }
+      ]
+    },
+    "92": {
+      "year": 92,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/092_4y/",
+      "sourceSha256": "feceba885bd6b0dcafb4ee41a1498b847448eed598ff05edac2921bd8d141179",
+      "checkedAt": "2026-10-18T16:53:55.320651+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-M-OLD",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-00-c-solve.pdf"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-00-e.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-00-e-solve.pdf"
+        },
+        {
+          "paper": "00-M-OLD",
+          "subjects": [
+            "數學（舊制共卷，分卷範圍待核實）"
+          ],
+          "subjectStatus": "official_index_requires_variant_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-00-m.pdf"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-13-1.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-13-1-solve.pdf"
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-13-2.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/092_4y/92-4y-13-2-solve.pdf"
+        }
+      ]
+    },
+    "93": {
+      "year": 93,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/093_4y/",
+      "sourceSha256": "cd2c97d12d4cb26d4cdeade3f50c4e4709864ce6ea7e84ed83995766edee5919",
+      "checkedAt": "2026-10-18T16:53:55.792058+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-M-OLD",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-00-c.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-00-c-finalsolve.pdf"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-00-e.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-00-e-finalsolve.pdf"
+        },
+        {
+          "paper": "00-M-OLD",
+          "subjects": [
+            "數學（舊制共卷，分卷範圍待核實）"
+          ],
+          "subjectStatus": "official_index_requires_variant_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-00-m.pdf"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [
+            "計算機概論",
+            "商業概論"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-1.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-1-finalsolve.pdf",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-1.pdf",
+            "page": 1,
+            "pdfSha256": "7b0836a2815d0e84dbf6f1996342e1242dd74489aa4ac86a2d4f0faec913d176",
+            "image": null,
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [
+            "初級會計學",
+            "經濟學"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-2.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-2-finalsolve.pdf",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/093_4y/93-4y-13-2.pdf",
+            "page": 1,
+            "pdfSha256": "19c96c45ed585ce54f4396f5080f73baca4fa7ea15b07d1457e9ee9c48880f8b",
+            "image": null,
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        }
+      ]
+    },
+    "94": {
+      "year": 94,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/094_4y/",
+      "sourceSha256": "2652f8b0d7984d470a5f8c5991765894456bb166d64eb3b451cbd29bd6b25145",
+      "checkedAt": "2026-10-18T16:53:55.753001+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-c.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-c-standard.pdf"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-e.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-e-standard.pdf"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-mb.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-00-mb-standard.pdf"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-13-1.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-13-1-standard.pdf"
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-13-2.pdf",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/094_4y/94-4y-13-2-standard.pdf"
+        }
+      ]
+    },
+    "95": {
+      "year": 95,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/095_4y/",
+      "sourceSha256": "fb2bb000641dfa1a96ba6475674fdabb91480d5d2d663e40510f1a7da0b6ead9",
+      "checkedAt": "2026-10-18T16:53:55.817798+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtYy5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtYy1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtZS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtZS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtbWIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMDAtbWItc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMTMtMS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMTMtMS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMTMtMi5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/095_4y/downloader.php?obj=OTUtNHktMTMtMi1zdGFuZGFyZC5wZGY="
+        }
+      ]
+    },
+    "96": {
+      "year": 96,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/096_4y/",
+      "sourceSha256": "fbd6b47737f7686db31b24e89dd064e0ab61c293aecd7f31c9a96aa371af792c",
+      "checkedAt": "2026-10-18T16:53:55.933687+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtYy5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtYy1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtZS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtZS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtbWIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMDAtbWItc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMTMtMS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMTMtMS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMTMtMi5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/096_4y/downloader.php?obj=OTYtNHktMTMtMi1zdGFuZGFyZC5wZGY="
+        }
+      ]
+    },
+    "97": {
+      "year": 97,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/097_4y/",
+      "sourceSha256": "2b218daa4950b5fc6f54948b02568e47b1a5afa4f2ed0664339f2ae3d0191e1f",
+      "checkedAt": "2026-10-18T16:53:56.195664+00:00",
+      "officialCommerceCode": "13",
+      "groupLabel": "13商業類",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "BIZ-1",
+        "BIZ-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtYy5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtYy1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtZS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtZS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtbWIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMDAtbWItc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "BIZ-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMTMtMS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMTMtMS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "BIZ-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMTMtMi5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/097_4y/downloader.php?obj=OTctNHktMTMtMi1zdGFuZGFyZC5wZGY="
+        }
+      ]
+    },
+    "98": {
+      "year": 98,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/098_4y/",
+      "sourceSha256": "94b89f9370051715892a47cba3d62f40c2a01b3d4365f0f294ecf0ad53750fea",
+      "checkedAt": "2026-10-18T16:53:56.217552+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商管群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtYy5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtYy1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtZS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtZS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtbWIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDAtbWItc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-1",
+          "subjects": [
+            "經濟與商業環境"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMS1zdGFuZGFyZC5wZGY=",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMS5wZGY=",
+            "page": 1,
+            "pdfSha256": "336eb5387cd7c79b54a867dcf98051e6266fc09c26624f6d24fd5b02c6b9d85d",
+            "image": "data/original/98/09-1/p001-336eb5387c-v2-w1400-q66.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        },
+        {
+          "paper": "09-2",
+          "subjects": [
+            "會計學",
+            "計算機概論"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMi5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMi1zdGFuZGFyZC5wZGY=",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/098_4y/downloader.php?obj=OTgtNHktMDktMi5wZGY=",
+            "page": 1,
+            "pdfSha256": "dc47677a73802ce6c75ad56ec174b20d11d8bba3fcb454849f287cfa3fb2e4a1",
+            "image": "data/original/98/09-2/p001-dc47677a73-v2-w1400-q66.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        }
+      ]
+    },
+    "99": {
+      "year": 99,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/099_4y/",
+      "sourceSha256": "d0189d90736178af4d09f4cd08fe79919f62e26b5071bbabb5c54929f9bee232",
+      "checkedAt": "2026-10-18T16:53:56.209920+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商管群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtYy5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtYy1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtZS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtZS1zdGFuZGFyZC5wZGY="
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtbWIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDAtbWItc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-1",
+          "subjects": [
+            "經濟與商業環境"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMS5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMS1zdGFuZGFyZC5wZGY=",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMS5wZGY=",
+            "page": 1,
+            "pdfSha256": "c4701c1aee429d7b82d54c077fa7e5854253e44bacf24effbe2aecb7aad85145",
+            "image": "data/original/99/09-1/p001-c4701c1aee-v2-w1400-q66.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        },
+        {
+          "paper": "09-2",
+          "subjects": [
+            "會計學",
+            "計算機概論"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMi5wZGY=",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMi1zdGFuZGFyZC5wZGY=",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/099_4y/downloader.php?obj=OTktNHktMDktMi5wZGY=",
+            "page": 1,
+            "pdfSha256": "be8bb7f4a50ee5c0e4724abba7cd7e3f85ffb4ae220108410535060d82503b88",
+            "image": "data/original/99/09-2/p001-be8bb7f4a5-v2-w1400-q66.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        }
+      ]
+    },
+    "100": {
+      "year": 100,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/100_4y/",
+      "sourceSha256": "7a397d9ffcb50f438f9dbdc6063f06fb02795818b658a359fd90c551862501c7",
+      "checkedAt": "2026-10-18T16:53:56.358751+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商管群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/100_4y/downloader.php?obj=MTAwLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "101": {
+      "year": 101,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/101_4y/",
+      "sourceSha256": "a94f29a20ee64926f042a1b61d26574dbbd46871978558372bfff3ece75cd20a",
+      "checkedAt": "2026-10-18T16:53:56.554929+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商管群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/101_4y/downloader.php?obj=MTAxLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "102": {
+      "year": 102,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/102_4y/",
+      "sourceSha256": "eaefb560defd7aa377db4b24eec12f5851c96132c5123409e8257983d2b480c6",
+      "checkedAt": "2026-10-18T16:53:56.576615+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/102_4y/downloader.php?obj=MTAyLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "103": {
+      "year": 103,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/103_4y/",
+      "sourceSha256": "0255891124647ef49b818e292fd9da6086765d3bb29d70a81a9818826cf338a9",
+      "checkedAt": "2026-10-18T16:53:56.701908+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/103_4y/downloader.php?obj=MTAzLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "104": {
+      "year": 104,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/104_4y/",
+      "sourceSha256": "af70b5d32b43438f42fc653acf5fc5efb67d0850fe7d0e0dc97c09d3115469b0",
+      "checkedAt": "2026-10-18T16:53:56.877611+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/104_4y/downloader.php?obj=MTA0LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "105": {
+      "year": 105,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/105_4y/",
+      "sourceSha256": "05981984f704b4426dc376ded9f292cf55bd38c5b659fe7199b2a779c7a287aa",
+      "checkedAt": "2026-10-18T16:53:57.027299+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "106": {
+      "year": 106,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/106_4y/",
+      "sourceSha256": "a0bbdd0dce4d32133709bd4fde46b066bd8780d6cedd8f854309fd3ebee763af",
+      "checkedAt": "2026-10-18T16:53:57.142216+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "107": {
+      "year": 107,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/107_4y/",
+      "sourceSha256": "e0dc56eaa6d8a09d829b0477745cea9ebf700c7041f77053186f496645a332d8",
+      "checkedAt": "2026-10-18T16:53:57.242583+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "108": {
+      "year": 108,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/108_4y/",
+      "sourceSha256": "2a24b495dfe82e59dfe27a2c7a94a864bea6dd7910e4fc45b63076e3779a7195",
+      "checkedAt": "2026-10-18T16:53:57.376949+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "109": {
+      "year": 109,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/109_4y/",
+      "sourceSha256": "5f5470b953bcbaf8bb6ecccfbd43ed8f997d0f781bdf135ba03430425ed4bb10",
+      "checkedAt": "2026-10-18T16:53:57.540172+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/109_4y/downloader.php?obj=MTA5LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "110": {
+      "year": 110,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/110_4y/",
+      "sourceSha256": "4a34d7de2d1f4ab4a85cb3a3cecdc83977aaffb5723613d23acfbbb7e8935a3c",
+      "checkedAt": "2026-10-18T16:53:57.622209+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "111": {
+      "year": 111,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/111_4y/",
+      "sourceSha256": "4a7746a6e1f2b442a98fbc1b477ca1e2a0cf348357a56a3f9bef6be48de0feea",
+      "checkedAt": "2026-10-18T16:53:57.678517+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "112": {
+      "year": 112,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/112_4y/",
+      "sourceSha256": "a7f4061595a95d1189624522132d41ab1f00bbb66bef5af73c93a17f65d8e5db",
+      "checkedAt": "2026-10-18T16:53:57.855619+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/112_4y/downloader.php?obj=MTEyLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "113": {
+      "year": 113,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+      "sourceSha256": "7be76c4c1c0a70c52ad1896f70fa00a23f7631ee41450bb54f3f771c4742b8d2",
+      "checkedAt": "2026-10-18T16:53:58.055330+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/113_4y/downloader.php?obj=MTEzLTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "114": {
+      "year": 114,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "sourceSha256": "e6a44ca0fc8b2945924c6d6f553df19904784dadfd693263fe427c5fc94302e2",
+      "checkedAt": "2026-10-18T16:53:58.154397+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTEtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "09-2",
+          "subjects": [],
+          "subjectStatus": "pending_original_cover_review",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTItc3RhbmRhcmQucGRm"
+        }
+      ]
+    },
+    "115": {
+      "year": 115,
+      "sourceIndex": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "sourceSha256": "ce4d0b1c73d393c34f7a8e9409fcde3bc012739cbd36f700e5d7fdcfe046588c",
+      "checkedAt": "2026-10-18T16:53:58.203635+00:00",
+      "officialCommerceCode": "09",
+      "groupLabel": "09商業與管理群",
+      "allowedPaperCodes": [
+        "00-C",
+        "00-E",
+        "00-MB",
+        "09-1",
+        "09-2"
+      ],
+      "papers": [
+        {
+          "paper": "00-C",
+          "subjects": [
+            "國文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-E",
+          "subjects": [
+            "英文"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm"
+        },
+        {
+          "paper": "00-MB",
+          "subjects": [
+            "數學 B"
+          ],
+          "subjectStatus": "official_index",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLnBkZg==",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg=="
+        },
+        {
+          "paper": "09-1",
+          "subjects": [
+            "商業概論",
+            "數位科技概論",
+            "數位科技應用"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEucGRm",
+            "page": 1,
+            "pdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+            "image": "data/original/115/09-1/p001-db3f83aa79.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        },
+        {
+          "paper": "09-2",
+          "subjects": [
+            "會計學",
+            "經濟學"
+          ],
+          "subjectStatus": "official_cover_visual_checked",
+          "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTIucGRm",
+          "answerSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+          "questionSubjectMapping": "pending_individual_question_review",
+          "coverReview": {
+            "questionSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTIucGRm",
+            "page": 1,
+            "pdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+            "image": "data/original/115/09-2/p001-fc88e0109e.webp",
+            "checkedAt": "2026-10-18T16:58:30.990171+00:00",
+            "method": "assistant_visual_read_of_original_cover",
+            "expectedCount": 50,
+            "singleChoice": true,
+            "pointsEach": 2,
+            "maxScore": 100,
+            "wrongAnswerPenalty": 0,
+            "notice": "封面事實紀錄；非逐題答案或教學核實，精確科目分題範圍待核實。"
+          }
+        }
+      ]
+    }
+  },
+  "errors": []
+}

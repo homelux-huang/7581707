@@ -12,8 +12,9 @@ on:
         default: "10"
 permissions:
   contents: write
+  actions: write
 concurrency:
-  group: tcte-teaching-drafts
+  group: tcte-corpus-update
   cancel-in-progress: false
 jobs:
   prepare:
@@ -23,6 +24,8 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -60,3 +63,7 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Test, audit and publish the exact bot commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main -f target_sha="$(git rev-parse HEAD)"

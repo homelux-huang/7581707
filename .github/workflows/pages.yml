@@ -1,34 +1,42 @@
 name: Update HTML catalog and publish website
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
+    inputs:
+      target_sha:
+        description: 'Exact commit to test and publish (defaults to this dispatch commit)'
+        required: false
+        type: string
 permissions:
   contents: read
-
 concurrency:
   group: pages
   cancel-in-progress: false
-
 jobs:
+  verify:
+    uses: ./.github/workflows/sudu-release-checks.yml
+    with:
+      target_sha: ${{ inputs.target_sha || github.sha }}
   build:
+    needs: verify
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@v4
         with:
-          python-version: '3.13'
-      - name: Generate automatic HTML catalog
-        run: |
-          node --test tests/share.test.cjs
-          python scripts/build.py
+          ref: ${{ inputs.target_sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build only approved public files after every release gate passed
+        env:
+          SUDU_BUILD_SHA: ${{ inputs.target_sha || github.sha }}
+        run: python scripts/build.py
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
   deploy:
-    needs: build
+    needs: [verify, build]
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -37,6 +45,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Publish GitHub Pages
+      - name: Publish the tested GitHub Pages artifact
         id: deployment
         uses: actions/deploy-pages@v5

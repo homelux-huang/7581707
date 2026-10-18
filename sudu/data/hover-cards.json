@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "difficultyBasis": "本站教學分級：低=日常常用；中=一般閱讀；高=抽象/專門；非IELTS/TOEFL官方分級",
+  "english": {
+    "borrow": {
+      "translation": "借入：向別人暫時取得物品，之後歸還。此題問 borrow 的動詞意思。",
+      "ipa": "UK /ˈbɒr.əʊ/；US /ˈbɑːr.oʊ/",
+      "related": {
+        "low": [
+          "lend（借出；同一借貸關係的另一方，非一般反義字）"
+        ]
+      },
+      "example": "自編：May I borrow your pen?（我可以向你借筆嗎？）",
+      "sources": [
+        {
+          "title": "Cambridge Dictionary：borrow",
+          "url": "https://dictionary.cambridge.org/dictionary/english/borrow",
+          "checkedAt": "2026-10-19"
+        }
+      ]
+    }
+  },
+  "chinese": {
+    "畫蛇添足": {
+      "pronunciation": "ㄏㄨㄚˋ ㄕㄜˊ ㄊㄧㄢ ㄗㄨˊ",
+      "meaning": "做了多餘的事，反而破壞原本的成果。",
+      "origin": "《戰國策・齊策二》的畫蛇故事；參考教育部成語典。",
+      "synonyms": [
+        "多此一舉"
+      ],
+      "antonyms": {
+        "medium": [
+          "恰如其分",
+          "恰到好處"
+        ]
+      },
+      "example": "自編：這段結尾已很清楚，再添一句無關的笑話就畫蛇添足了。",
+      "sources": [
+        {
+          "title": "教育部成語典：畫蛇添足",
+          "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=23&la=0&webMd=1",
+          "checkedAt": "2026-10-19"
+        }
+      ]
+    }
+  }
+}
