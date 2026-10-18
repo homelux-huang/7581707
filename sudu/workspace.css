@@ -257,3 +257,213 @@ html[data-sudu-theme="dark"] .accounting-teacher .teacher-attribution{color:#c9b
  #sudu-workspace .study-section{scroll-margin-top:68px}
 }
 @media(prefers-reduced-motion:reduce){#sudu-return-to-question{transition:none!important}}
+
+
+/* V16: true black dark mode, compact reading, accessible contrast on all five views. */
+/* CJK: wrap at natural boundaries, never force splitting Latin words; isolate long links. */
+html{line-break:strict}
+html body,html #screen,html .section,html .section p,html .section h2,html .section h3,
+html .db-page,html .db-page p,html .db-pane,html .reviewitem,
+html .option span,html .archiveitem,html .teacher-attribution{
+  word-break:normal!important;overflow-wrap:break-word;line-break:strict;
+}
+html .section .textline,html .section .bodytext{word-break:normal!important;line-break:strict}
+html a,html code,html .db-device code{overflow-wrap:anywhere;word-break:break-word}
+html .option{min-width:0}
+html .option span{min-width:0;flex:1}
+html .meta{gap:5px;margin-bottom:5px}
+html .pill{padding:3px 8px;font-size:11px}
+html .wrap{max-width:1180px;padding-top:7px!important}
+html #sudu-workbar{padding:3px 2px 6px}
+html #sudu-workspace .study-section{margin-bottom:7px!important}
+html #screen .section{padding:11px 14px!important;border-radius:11px;margin:0 0 6px!important;box-shadow:none}
+html #screen .section h2{font-size:15px!important;margin-bottom:6px!important;line-height:1.5}
+html #screen .section h3{font-size:14px!important;margin:8px 0 4px!important}
+html #screen .bodytext{font-size:15px!important;line-height:1.6!important;margin:6px 0}
+html #screen .textline{font-size:14px!important;line-height:1.56!important;margin:4px 0}
+html #screen .option{padding:7px 10px!important;min-height:35px;margin-top:4px!important;
+ font-size:14px!important;line-height:1.48!important;border-radius:9px}
+html #screen .option b{width:25px;height:25px;min-width:25px}
+html #screen .hint{padding:7px 9px!important;margin:6px 0!important;line-height:1.55}
+html #screen .warning{padding:8px 9px!important;margin:6px 0!important;line-height:1.55}
+html #screen .meta{margin-bottom:5px}
+html #screen .divider{margin:7px 0!important}
+html #screen .subsection{margin:6px 0 3px}
+html #screen .accounting-teacher{padding:10px 12px!important;margin:8px 0!important}
+html #screen .accounting-teacher h3{font-size:14px!important;margin:0 0 5px!important}
+html #screen .accounting-teacher p{margin:4px 0!important;line-height:1.6!important}
+html #screen .questionnav{margin:7px 0 10px!important}
+html #screen .reviewitem{padding:10px;margin:7px 0}
+html #screen .clinic-quiz{padding:9px 10px!important;margin:6px 0!important}
+html #screen .clinic-feedback{padding:8px;margin-top:7px}
+html #screen .card,html #screen .archiveitem{padding:11px}
+html #screen .archivegrid{gap:8px}
+html .db-page{gap:9px}
+html .db-two{gap:9px}
+html .db-pane{padding:12px 14px}
+html .db-welcome{padding:13px 15px}
+html .db-metric{padding:11px}
+html .db-subject{margin:7px 0}
+html .db-subject>summary{padding:9px 11px}
+html #sudu-workspace .study-dragbar{margin:-5px -5px 3px}
+html .bottom{padding:6px 12px}
+html .bottom button{padding:7px 12px}
+@media(max-width:600px){
+ html .wrap{padding:6px 8px 86px!important}
+ html #screen .section{padding:9px 10px!important;border-radius:10px}
+ html #screen .section h2{font-size:14px!important;margin:0 0 5px!important}
+ html #screen .bodytext{font-size:14px!important;line-height:1.6!important}
+ html #screen .textline{font-size:13.5px!important;line-height:1.6!important}
+ html #screen .option{font-size:13.5px!important;padding:8px 9px!important}
+ html #screen .archivegrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ html .db-welcome{padding:10px 12px}
+ html .db-metric{padding:10px}
+ html .db-pane{padding:11px}
+}
+@media(max-width:350px){
+ html #screen .archivegrid{grid-template-columns:1fr}
+ html #screen .option{font-size:13px!important}
+ html .db-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* Override legacy deep-blue backgrounds with neutral black and charcoal surfaces. */
+html[data-sudu-theme="dark"]{
+ color-scheme:dark;
+ --ink:#f7f7f7;--sub:#c8c8c8;--line:#3c3c3c;
+ --blue:#131313;--orange:#151515;--green:#141414;--white:#111111;
+ --float-bg:#0d0d0d;--float-border:#3d3d3d;--float-text:#f0f0f0;
+ background:#050505!important;color:#f4f4f4!important
+}
+html[data-sudu-theme="dark"] body{
+ background:#050505!important;color:#f4f4f4!important
+}
+html[data-sudu-theme="dark"] .header,
+html[data-sudu-theme="dark"] .bottom{
+ background:#090909!important;color:#fff!important;border-color:#303030!important;box-shadow:none!important
+}
+html[data-sudu-theme="dark"] .brand,
+html[data-sudu-theme="dark"] .subtitle{color:#f5f5f5!important}
+html[data-sudu-theme="dark"] .wrap,
+html[data-sudu-theme="dark"] #screen{background:transparent!important;color:#f3f3f3!important}
+html[data-sudu-theme="dark"] .section,
+html[data-sudu-theme="dark"] .section.white,
+html[data-sudu-theme="dark"] .section.blue,
+html[data-sudu-theme="dark"] .section.orange,
+html[data-sudu-theme="dark"] .section.green,
+html[data-sudu-theme="dark"] .section.sourcebox,
+html[data-sudu-theme="dark"] .section.resultbox,
+html[data-sudu-theme="dark"] .section.sudu-answer-box,
+html[data-sudu-theme="dark"] .section.explainbox,
+html[data-sudu-theme="dark"] .db-page .db-pane,
+html[data-sudu-theme="dark"] .db-page .db-welcome,
+html[data-sudu-theme="dark"] .db-page .db-metric,
+html[data-sudu-theme="dark"] .db-subject,
+html[data-sudu-theme="dark"] .card,
+html[data-sudu-theme="dark"] .archiveitem,
+html[data-sudu-theme="dark"] .reviewitem{
+ background:#141414!important;color:#f2f2f2!important;
+ border-color:#414141!important;box-shadow:none!important
+}
+html[data-sudu-theme="dark"] .section.blue{border-left-color:#79c6ff!important}
+html[data-sudu-theme="dark"] .section.orange,
+html[data-sudu-theme="dark"] .section.explainbox{border-left-color:#ffc580!important}
+html[data-sudu-theme="dark"] .section.green{border-left-color:#86e2ad!important}
+html[data-sudu-theme="dark"] .section.sourcebox,
+html[data-sudu-theme="dark"] .section.sudu-answer-box{border-left-color:#bea0ff!important}
+html[data-sudu-theme="dark"] .section h2,
+html[data-sudu-theme="dark"] .section h3,
+html[data-sudu-theme="dark"] .section p,
+html[data-sudu-theme="dark"] .reviewitem h3,
+html[data-sudu-theme="dark"] .db-pane h3,
+html[data-sudu-theme="dark"] .db-welcome h2,
+html[data-sudu-theme="dark"] .db-year-group strong,
+html[data-sudu-theme="dark"] .db-topic b,
+html[data-sudu-theme="dark"] .db-leader strong,
+html[data-sudu-theme="dark"] .bodytext,
+html[data-sudu-theme="dark"] .textline{color:#f2f2f2!important}
+html[data-sudu-theme="dark"] .subtitle,
+html[data-sudu-theme="dark"] .small,
+html[data-sudu-theme="dark"] .status,
+html[data-sudu-theme="dark"] .footer,
+html[data-sudu-theme="dark"] .db-pane p,
+html[data-sudu-theme="dark"] .db-topic p,
+html[data-sudu-theme="dark"] .db-empty-state,
+html[data-sudu-theme="dark"] .archiveitem p,
+html[data-sudu-theme="dark"] .db-footer-note,
+html[data-sudu-theme="dark"] .db-metric span,
+html[data-sudu-theme="dark"] .db-device,
+html[data-sudu-theme="dark"] .subsection,
+html[data-sudu-theme="dark"] .topic{color:#cfcfcf!important}
+html[data-sudu-theme="dark"] a{color:#9ed8ff!important}
+html[data-sudu-theme="dark"] .option,
+html[data-sudu-theme="dark"] .hint,
+html[data-sudu-theme="dark"] .warning,
+html[data-sudu-theme="dark"] .pill,
+html[data-sudu-theme="dark"] .answerblock,
+html[data-sudu-theme="dark"] .clinic-quiz,
+html[data-sudu-theme="dark"] .clinic-feedback,
+html[data-sudu-theme="dark"] .clinic-detail,
+html[data-sudu-theme="dark"] .reviewitem .followup,
+html[data-sudu-theme="dark"] .reviewitem .readmore,
+html[data-sudu-theme="dark"] .db-device-panel,
+html[data-sudu-theme="dark"] .db-leader .db-concept,
+html[data-sudu-theme="dark"] .db-leader .db-source,
+html[data-sudu-theme="dark"] .db-empty,
+html[data-sudu-theme="dark"] .db-subject-inner,
+html[data-sudu-theme="dark"] .archiveitem,
+html[data-sudu-theme="dark"] .db-badge,
+html[data-sudu-theme="dark"] .db-tag{
+ background:#1f1f1f!important;color:#f6f6f6!important;border-color:#444!important
+}
+html[data-sudu-theme="dark"] .option:hover,
+html[data-sudu-theme="dark"] .option.chosen,
+html[data-sudu-theme="dark"] .option.right{background:#293b31!important;color:#fff!important;border-color:#70c99e!important}
+html[data-sudu-theme="dark"] .option.wrong{background:#492e2a!important;color:#fff!important;border-color:#ffac9f!important}
+html[data-sudu-theme="dark"] .option b{background:#333!important;color:#fff!important}
+html[data-sudu-theme="dark"] .concept-key,
+html[data-sudu-theme="dark"] #sudu-workspace .concept-key{background:#000!important;color:#fff!important;border:1px solid #767676!important}
+html[data-sudu-theme="dark"] .correct{color:#9cf5c4!important}
+html[data-sudu-theme="dark"] .incorrect{color:#ffb5a5!important}
+html[data-sudu-theme="dark"] .db-metric b,
+html[data-sudu-theme="dark"] .archiveitem b{color:#9fd9ff!important}
+html[data-sudu-theme="dark"] .db-subject>summary,
+html[data-sudu-theme="dark"] .db-year-group summary,
+html[data-sudu-theme="dark"] .reviewitem .tag,
+html[data-sudu-theme="dark"] .reviewitem .tag.warn{color:#e9e9e9!important}
+html[data-sudu-theme="dark"] .db-progress-track{background:#343434!important}
+html[data-sudu-theme="dark"] .db-progress-fill{background:#88caff!important}
+html[data-sudu-theme="dark"] .db-control label,
+html[data-sudu-theme="dark"] .sudu-dragbar button{color:#efefef!important}
+html[data-sudu-theme="dark"] button,
+html[data-sudu-theme="dark"] .btn,
+html[data-sudu-theme="dark"] .btn.light,
+html[data-sudu-theme="dark"] .questionnav button,
+html[data-sudu-theme="dark"] .bottom button,
+html[data-sudu-theme="dark"] .clinicfilter button,
+html[data-sudu-theme="dark"] #sudu-workbar button,
+html[data-sudu-theme="dark"] .db-control button,
+html[data-sudu-theme="dark"] .db-simple-btn,
+html[data-sudu-theme="dark"] .reviewitem .answer-option,
+html[data-sudu-theme="dark"] .study-dragbar button{
+ background:#292929!important;color:#fff!important;border:1px solid #696969!important;
+}
+html[data-sudu-theme="dark"] button:hover:not(:disabled),
+html[data-sudu-theme="dark"] .btn:hover:not(:disabled){background:#3f3f3f!important;color:#fff!important}
+html[data-sudu-theme="dark"] button:disabled{color:#d4d4d4!important;opacity:.55}
+html[data-sudu-theme="dark"] .clinicfilter button.active,
+html[data-sudu-theme="dark"] .tabs button.active{background:#22405a!important;color:#fff!important;border-color:#70b8f1!important}
+html[data-sudu-theme="dark"] select,
+html[data-sudu-theme="dark"] input,
+html[data-sudu-theme="dark"] textarea{background:#252525!important;color:#fff!important;border:1px solid #787878!important}
+html[data-sudu-theme="dark"] .db-welcome p{color:#d5d5d5!important}
+html[data-sudu-theme="dark"] #sudu-floating-controls .floating-inner{background:#0e0e0e!important;color:#fff!important;border-color:#393939!important}
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs button{background:transparent!important;color:#fff!important;border:0!important}
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs button.active{background:#273b4c!important;color:#fff!important}
+html[data-sudu-theme="dark"] #sudu-floating-controls .filterin select{background:#262626!important;color:#fff!important;border-color:#777!important}
+html[data-sudu-theme="dark"] .accounting-teacher,
+html[data-sudu-theme="dark"] .accounting-teacher.pending{
+ background:#222019!important;color:#fbefd9!important;border-color:#8f784f!important
+}
+html[data-sudu-theme="dark"] .accounting-teacher h3,
+html[data-sudu-theme="dark"] .accounting-teacher p,
+html[data-sudu-theme="dark"] .accounting-teacher .teacher-attribution{color:#fbefd9!important}
+html[data-sudu-theme="dark"] .bottom #count{color:#fff!important}
