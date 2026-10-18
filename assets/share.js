@@ -38,7 +38,8 @@
   document.addEventListener('click', async event => {
     const button = event.target.closest('button[data-share-url]');
     if (!button || button.disabled) return;
-    const url = new URL(button.dataset.shareUrl);
+    const pageUrl = window.location.href;
+    const url = new URL(button.dataset.shareUrl || pageUrl, pageUrl);
     url.search = '';
     url.hash = '';
     const title = button.dataset.shareTitle || document.title;

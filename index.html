@@ -103,7 +103,7 @@
           const share = document.createElement('button');
           share.type = 'button'; share.className = 'share-button'; share.textContent = '↗ 分享';
           share.style.marginTop = '16px';
-          share.dataset.shareUrl = 'https://homelux-huang.github.io/7581707/' + tool.path.split('/').map(encodeURIComponent).join('/');
+          share.dataset.shareUrl = link.href;
           share.dataset.shareTitle = tool.title;
           share.setAttribute('aria-label', '分享：' + tool.title);
           card.append(top, title, path, link, share); list.append(card);
