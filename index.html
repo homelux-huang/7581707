@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="zh-Hant">
   <head>
+    <script>
+      // Study-first entry; add ?tools=1 to access the existing tool catalog.
+      if (!new URLSearchParams(window.location.search).has('tools')) {
+        window.location.replace(new URL('./sudu/', window.location.href).href);
+      }
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="7581707 學習工具集，線上開啟會計統測、模擬考與更多 HTML 學習工具。">
