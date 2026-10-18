@@ -12,7 +12,7 @@ permissions:
   contents: write
 concurrency:
   group: tcte-questions-sync
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   import:
     runs-on: ubuntu-latest
