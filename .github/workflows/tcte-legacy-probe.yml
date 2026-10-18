@@ -1,0 +1,19 @@
+name: Probe old TCTE 091-099 download formats
+on:
+  push:
+    paths:
+      - scripts/tcte_legacy_probe.py
+      - .github/workflows/tcte-legacy-probe.yml
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4
+      - run: python scripts/tcte_legacy_probe.py
