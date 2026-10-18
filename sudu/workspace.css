@@ -76,3 +76,160 @@ html[data-sudu-theme="dark"] .concept-key{background:#050709!important;color:#ff
 /* keep head controls usable at narrow handset widths */
 @media(max-width:600px){.header .head #export{display:none!important}.header .subtitle{display:none!important}.header .head{min-height:54px!important}.sudu-head-actions{flex-shrink:0}}
 @media(max-width:375px){.header .brand{font-size:13px!important}.sudu-head-actions button{padding:6px 6px!important;font-size:10px!important}}
+
+
+/* V15 — Apple-inspired three-column dark navigation, light study canvas. */
+.sudu-controls-trigger,.header .head .sudu-controls-trigger{
+ background:#131519!important;color:#fff!important;border-color:#272a2e!important;
+ border-radius:11px!important;font-weight:740!important;letter-spacing:.02em!important;
+ padding:9px 15px!important;box-shadow:0 4px 12px #161b2730!important;
+}
+.sudu-controls-trigger:hover,.header .head .sudu-controls-trigger:hover{
+ background:#30343b!important;border-color:#434a55!important
+}
+#sudu-floating-controls{
+ top:58px;left:0;right:0;padding:0 14px;
+ opacity:0;visibility:hidden;pointer-events:none;
+ transform:translate3d(0,-18px,0) scale(.986);
+ transform-origin:top center;
+ transition:opacity .27s cubic-bezier(.25,.7,.25,1),
+   transform .33s cubic-bezier(.2,.8,.2,1), visibility 0s linear .33s;
+}
+#sudu-floating-controls:not(.open),
+#sudu-floating-controls:not(.open):hover,
+#sudu-floating-controls:not(.open):focus-within{
+ opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+ transform:translate3d(0,-18px,0) scale(.986)!important;
+}
+#sudu-floating-controls.open{
+ opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+ transform:translate3d(0,0,0) scale(1)!important;
+ transition-delay:0s!important;
+}
+#sudu-floating-controls .floating-inner,
+html[data-sudu-theme="dark"] #sudu-floating-controls .floating-inner{
+ max-width:1080px!important;min-height:270px;
+ margin:auto;padding:26px 30px 25px!important;
+ background:#101113!important;color:#f5f5f7!important;
+ border:1px solid #34363c!important;border-top:1px solid #27282d!important;
+ border-radius:0 0 22px 22px!important;
+ box-shadow:0 25px 50px #03050866,0 8px 25px #05060c30!important;
+ overflow-y:auto;max-height:calc(100dvh - 62px);
+}
+.sudu-mega-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+ border-bottom:1px solid #34363d;padding-bottom:20px;margin-bottom:22px}
+.sudu-mega-heading h2{margin:6px 0 0;color:#fff!important;font-size:24px!important;
+ letter-spacing:.01em;line-height:1.35;font-weight:730}
+.sudu-mega-close{display:grid;place-items:center;width:31px;height:31px;flex-shrink:0;
+ border:1px solid #3b3d43!important;border-radius:50%!important;
+ background:#2a2b31!important;color:#fff!important;font-size:12px}
+.sudu-mega-close:hover{background:#45464f!important}
+.mega-eyebrow{font-size:10px;color:#a6a8b3!important;font-weight:740;letter-spacing:.14em}
+.sudu-mega-grid{display:grid;grid-template-columns:minmax(220px,1.18fr) minmax(180px,1fr) minmax(190px,.93fr);
+ gap:25px}
+.sudu-mega-col{min-width:0;border-right:1px solid #2f3036;padding-right:25px}
+.sudu-mega-col:last-child{border-right:0;padding-right:0}
+.sudu-mega-col h3{color:#fafaff!important;font-size:17px;font-weight:750;margin:9px 0 18px;line-height:1.4}
+#sudu-floating-controls .filters,
+html[data-sudu-theme="dark"] #sudu-floating-controls .filters{
+ position:static!important;display:block;background:transparent!important;border:0!important;
+ padding:0!important;box-shadow:none!important;backdrop-filter:none!important
+}
+#sudu-floating-controls .filterin{
+ display:grid!important;grid-template-columns:1fr!important;
+ gap:11px!important;max-width:none!important;margin:0!important;padding:0!important
+}
+#sudu-floating-controls .filterin label,
+html[data-sudu-theme="dark"] #sudu-floating-controls .filterin label{
+ display:grid!important;width:100%!important;min-width:0!important;
+ margin:0!important;gap:6px!important;color:#d3d3da!important;
+ font-size:12px!important;font-weight:660!important
+}
+#sudu-floating-controls .filterin select,
+html[data-sudu-theme="dark"] #sudu-floating-controls .filterin select{
+ width:100%!important;max-width:none!important;min-width:0!important;height:43px!important;
+ color:#f5f5f7!important;background:#25262b!important;
+ border:1px solid #45464d!important;border-radius:10px!important;
+ padding:9px 11px!important;font-size:13px!important;
+}
+#sudu-floating-controls .filterin select:focus-visible{
+ outline:2px solid #79c1ff!important;outline-offset:2px;
+}
+#sudu-floating-controls .filterin option{color:#f5f5f7;background:#24252a}
+#sudu-floating-controls #status{
+ background:transparent!important;border:0!important;padding:4px 0 0!important;
+ color:#aeb2bd!important;font-size:11px!important;line-height:1.55;
+ white-space:normal;overflow-wrap:break-word;word-break:keep-all;
+}
+#sudu-floating-controls .tabs,
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs{
+ display:flex!important;flex-direction:column!important;grid-template-columns:none!important;
+ align-items:stretch!important;gap:4px!important;width:100%!important;max-height:none!important;
+ margin:0!important;padding:0!important;background:transparent!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important
+}
+#sudu-floating-controls .tabs button,
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs button{
+ position:relative;min-width:0!important;width:100%!important;flex:none!important;
+ display:flex!important;align-items:center!important;justify-content:space-between;
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ color:#f0f1f6!important;text-align:left!important;padding:11px 12px!important;
+ border-radius:10px!important;font-size:15px!important;line-height:1.45;
+ font-weight:620!important;transition:background .16s,color .16s;
+}
+#sudu-floating-controls .tabs button::after{
+ content:attr(data-menu-number);font-size:11px;letter-spacing:.08em;color:#8b8e97;
+}
+#sudu-floating-controls .tabs button:is(:hover,:focus-visible),
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs button:is(:hover,:focus-visible){
+ background:#2b2d33!important;color:#fff!important
+}
+#sudu-floating-controls .tabs button.active,
+html[data-sudu-theme="dark"] #sudu-floating-controls .tabs button.active{
+ background:#242e3b!important;color:#fff!important;border:0!important;
+ box-shadow:inset 3px 0 #71b9f5!important
+}
+.sudu-mega-personal p{color:#c0c3cb!important;font-size:13px;line-height:1.75;margin:0 0 16px}
+.sudu-mega-personal button{
+ display:block;width:100%;min-width:0;margin:8px 0;
+ padding:11px 12px;text-align:left;background:#25262b!important;
+ color:#f5f5f7!important;border:1px solid #45464d!important;
+ border-radius:11px;font-size:13px;font-weight:690;
+}
+.sudu-mega-personal button:hover{background:#34363e!important}
+.mega-help{font-size:11px;line-height:1.7;color:#aeb0ba;margin-top:19px}
+#sudu-floating-controls :focus-visible{outline:2px solid #8fcdff;outline-offset:2px}
+.accounting-teacher{
+ margin:12px 0 15px;padding:15px 17px;border-radius:12px;
+ background:#fff9ec;border:1px solid #e8d6b9;border-left:4px solid #d7a35d
+}
+.accounting-teacher h3{margin:0 0 8px!important;color:#553e1d!important;font-size:16px!important}
+.accounting-teacher p{margin:7px 0!important;line-height:1.7;color:#463f36}
+.accounting-teacher .teacher-attribution{color:#816f58;font-size:12px}
+.accounting-teacher.pending{border-color:#b8cbe2;background:#f4f8fc}
+html[data-sudu-theme="dark"] .accounting-teacher{
+ background:#333027!important;border-color:#68553f!important;color:#f6ebd9!important
+}
+html[data-sudu-theme="dark"] .accounting-teacher h3,
+html[data-sudu-theme="dark"] .accounting-teacher p{color:#f7ead5!important}
+html[data-sudu-theme="dark"] .accounting-teacher .teacher-attribution{color:#c9b89b!important}
+@media(max-width:840px){
+ #sudu-floating-controls .floating-inner{padding:19px!important}
+ .sudu-mega-grid{grid-template-columns:1fr 1fr;gap:18px}
+ .sudu-mega-personal{grid-column:1/-1;border-right:0;border-top:1px solid #34363d;padding-top:17px}
+ .sudu-mega-col:nth-child(2){border-right:0}
+}
+@media(max-width:600px){
+ #sudu-floating-controls{top:54px;padding:0 8px}
+ #sudu-floating-controls .floating-inner{border-radius:0 0 17px 17px!important;padding:17px!important;max-height:calc(100dvh - 58px)}
+ .sudu-mega-heading{margin-bottom:16px;padding-bottom:14px}
+ .sudu-mega-heading h2{font-size:19px!important}
+ .sudu-mega-grid{grid-template-columns:1fr;gap:18px}
+ .sudu-mega-col,.sudu-mega-col:nth-child(2){padding-right:0;border-right:0;border-bottom:1px solid #323339;padding-bottom:15px}
+ .sudu-mega-personal{grid-column:auto;border-top:0;border-bottom:0;padding:0}
+ .sudu-mega-col h3{margin:6px 0 10px}
+ #sudu-floating-controls .tabs button{padding:9px 11px!important;font-size:14px!important}
+ #sudu-floating-controls .filterin{grid-template-columns:1fr!important}
+ #sudu-floating-controls .filterin label{min-width:0!important;width:100%!important}
+}
+@media(prefers-reduced-motion:reduce){#sudu-floating-controls{transition:none!important;transform:none!important}}
