@@ -156,6 +156,16 @@ def parse_question_options(raw):
     if "\ufffd" in raw:warnings.append("replacement_character")
     return stem,opts,warnings
 
+def subject_from_source(year,paper,number,prefix):
+    if paper=="09-2" and year==114:
+        return "會計學" if number<=24 else "經濟學"
+    if paper=="BIZ-1" and year==90:
+        return "會計學" if number<=25 else "經濟學"
+    # Use explicit subject-section headings only; never infer per-question chapters.
+    h=re.findall(r"(?m)^[ \t]*(?:[壹貳參肆一二三四][、.．]\s*)?(會計學|經濟學|商業概論|數位科技概論|數位科技應用)\s*[:：]?\s*$",prefix)
+    if h and paper in {"09-1","09-2","BIZ-1","BIZ-2"}:return h[-1]
+    return GROUP_CODES.get(paper,paper)
+
 def extract_questions(pages,year,paper,src,ocr_pages):
     offsets=[];full=""; 
     for i,text in enumerate(pages):
@@ -189,7 +199,7 @@ def extract_questions(pages,year,paper,src,ocr_pages):
         # Never pretend a machine read is a confirmed textbook reference.
         found[number]={
             "id":qid,"year":year,"paper":paper,"number":number,
-            "subject":GROUP_CODES.get(paper,paper),
+            "subject":subject_from_source(year,paper,number,full[:m.start()]),
             "kind":"官方歷屆題（自動擷取、待審核）",
             "question":stem,"options":options,
             "answer":None,"answerVerified":False,
@@ -230,8 +240,22 @@ def process_one(year,link,answer_link):
         pages,ocr=pdf_text(raw)
         q=extract_questions(pages,year,code,link["url"],ocr)
         entry["expectedCount"]=expected_count_from_cover(pages)
-        entry["questions"]=q
         entry["discoveredCount"]=len(q)
+        # Create explicitly flagged navigation slots for missing OCR questions.
+        # These are NOT counted as successfully extracted question texts.
+        expected=entry["expectedCount"]
+        if expected and 1<=expected<=100:
+            found={item["number"] for item in q}
+            for no in range(1,expected+1):
+                if no in found:continue
+                q.append({"id":f"{year}-{code}-{no:02d}","year":year,"paper":code,"number":no,
+                  "subject":GROUP_CODES.get(code,code),"kind":"官方原卷 OCR 未辨識題",
+                  "question":"本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+                  "options":[],"answer":None,"answerVerified":False,"questionVerified":False,
+                  "explanation":"","steps":"","extension":"","practice":None,"textbook":None,"teachingVerified":False,
+                  "source":link["url"],"official":True,"page":None,"issues":["OCR_missing_question"]})
+            q.sort(key=lambda item:item["number"])
+        entry["questions"]=q
         if not q:issues.append("no_readable_questions")
         if ocr:issues.append("ocr_pages_"+",".join(map(str,ocr)))
         if answer_link:
@@ -247,6 +271,7 @@ def process_one(year,link,answer_link):
                     item["answer"]="ABCD".index(ans)
                     # Official answer verified as match to the standard-answer PDF by number.
                     item["answerVerified"]=True
+                    item["answerSource"]=answer_link["url"]
             if len(answers)<len(q):issues.append("incomplete_answer_pdf_extraction")
         else:issues.append("official_answer_pdf_not_identified")
         if entry["expectedCount"] is not None and len(q)!=entry["expectedCount"]:
@@ -338,7 +363,7 @@ def process_year(y):
     except Exception as exc:
         entry["errors"].append(type(exc).__name__+": "+str(exc)[:280])
     entry["papersFound"]=len(entry["papers"])
-    entry["questionsFound"]=sum(len(p["questions"]) for p in entry["papers"])
+    entry["questionsFound"]=sum(p.get("discoveredCount",0) for p in entry["papers"])
     entry["officialAnswersMatched"]=sum(sum(bool(q["answerVerified"]) for q in p["questions"]) for p in entry["papers"])
     entry["teachingReviewed"]=sum(sum(bool(q["teachingVerified"]) for q in p["questions"]) for p in entry["papers"])
     entry["fullyCompletedPapers"]=sum(p.get("complete",False) for p in entry["papers"])
