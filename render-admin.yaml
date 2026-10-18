@@ -1,0 +1,24 @@
+# Optional separate private admin API. Do not replace the existing static render.yaml.
+# Link as a separate Render Blueprint. Configure secrets in Render, not GitHub.
+services:
+  - type: web
+    name: 7581707-admin-api
+    runtime: python
+    branch: main
+    buildCommand: python3 -m compileall -q backend
+    startCommand: python3 backend/server.py
+    envVars:
+      - key: SUDU_ADMIN_INITIAL_PASSWORD
+        sync: false
+      - key: SUDU_ADMIN_USER
+        value: admin
+      - key: SUDU_ADMIN_PUBLIC_URL
+        sync: false
+      - key: SUDU_ALLOWED_ORIGINS
+        value: https://homelux-huang.github.io
+      - key: SUDU_DB_PATH
+        value: /var/data/private.sqlite3
+    disk:
+      name: sudu-private-db
+      mountPath: /var/data
+      sizeGB: 1

@@ -4,6 +4,12 @@ on:
     paths:
       - sudu/index.html
       - sudu/dashboard.js
+      - sudu/exam_scoring.js
+      - sudu/learning_sync.js
+      - sudu/data/scoring-rules.json
+      - backend/server.py
+      - backend/tests/test_server.py
+      - tests/sudu_scoring_test.cjs
       - sudu/dashboard.css
       - sudu/workspace.js
       - sudu/workspace.css
@@ -24,4 +30,9 @@ jobs:
       - run: python scripts/check_sudu.py
       - run: node --check sudu/dashboard.js
       - run: node --check sudu/workspace.js
+      - run: node --check sudu/exam_scoring.js
+      - run: node --check sudu/learning_sync.js
+      - run: python3 -m py_compile backend/server.py
+      - run: python3 -m unittest discover -s backend/tests -v
+      - run: node tests/sudu_scoring_test.cjs
       - run: node tests/sudu_dashboard_test.cjs

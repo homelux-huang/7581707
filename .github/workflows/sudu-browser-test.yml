@@ -5,6 +5,10 @@ on:
       - sudu/workspace.js
       - sudu/workspace.css
       - sudu/index.html
+      - sudu/exam_scoring.js
+      - sudu/learning_sync.js
+      - sudu/admin.html
+      - sudu/share.html
       - tests/sudu_browser_smoke.cjs
       - .github/workflows/sudu-browser-test.yml
   workflow_dispatch:

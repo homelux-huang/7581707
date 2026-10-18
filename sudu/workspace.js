@@ -78,7 +78,9 @@ function suduWorkspaceInit(){
   +'<button type="button" class="sudu-controls-trigger" data-sudu-menu-trigger="subject" aria-haspopup="true" aria-controls="sudu-floating-controls" aria-expanded="false">科目 <span aria-hidden="true">⌄</span></button>'
   +'<button type="button" class="sudu-controls-trigger" data-sudu-menu-trigger="functions" aria-haspopup="true" aria-controls="sudu-floating-controls" aria-expanded="false">功能 <span aria-hidden="true">⌄</span></button>'
   +'</div>';
+ const exportControl=head.querySelector("#export");
  head.append(actions);
+ if(exportControl)actions.insertBefore(exportControl,document.getElementById("sudu-theme-button"));
  const float=document.createElement("nav");
  float.id="sudu-floating-controls";
  float.setAttribute("aria-hidden","true");

@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>7581707｜學習分享報告</title><style>
+body{background:#0a0a0a;color:#f4f5f8;font:15px/1.7 system-ui,"Noto Sans TC",sans-serif;margin:0;padding:14px}main{max-width:850px;margin:auto}
+article,section{background:#1b1b1b;border:1px solid #4a4a4a;border-radius:12px;padding:16px;margin:12px 0;overflow-wrap:anywhere}a{color:#a9d5ff}h1{font-size:22px}h2{font-size:17px}p{margin:5px 0}
+</style></head><body><main><h1>7581707｜學生學習分享報告</h1><p>這是管理員建立的限期連結，不是公開搜尋頁面。未核實正式配分的試卷不顯示數字成績。</p><div id="report" role="status">檢查分享連結中…</div></main><script>
+function el(tag,text){const e=document.createElement(tag);e.textContent=text;return e}
+const panel=document.getElementById("report");const token=location.pathname.split("/").pop();
+fetch("/api/share/"+encodeURIComponent(token),{cache:"no-store"}).then(async r=>{const d=await r.json();if(!r.ok)throw Error(d.error);return d}).then(({report:r,expiresAt})=>{
+ panel.replaceChildren();const top=el("section","");top.append(el("h2",r.nickname),el("p","已回答 "+r.answeredQuestions+" 題，首次答錯 "+r.firstWrongCount+" 題"),el("p","分享截止："+new Date(expiresAt).toLocaleString("zh-TW")));panel.append(top);
+ for(const s of r.scores){const x=el("article","");x.append(el("h2",s.paper),el("p",s.scoreStatus),el("p","送出："+(s.submittedAt||"N/A")),el("p","花費時間："+(Number.isFinite(s.elapsedMs)?Math.round(s.elapsedMs/60000)+"分鐘（含離開頁面）":"N/A")));if(s.adjustedScore!==null)x.append(el("p","管理員調整分數（非官方）："+s.adjustedScore));panel.append(x)}
+ for(const q of r.firstWrong||[]){const x=el("article","");x.append(el("h2",q.subject+" · "+q.id),el("p","題目："+q.question),el("p","首次選錯："+("ABCD"[q.firstChoice]||"N/A")),el("p","解析："+q.explanation),el("p","教材："+q.chapter));if(typeof q.source==="string"&&q.source.startsWith("https://web1.tcte.edu.tw/")){const a=el("a","官方試題原卷");a.href=q.source;a.rel="noopener noreferrer";a.target="_blank";x.append(a)}panel.append(x)}
+}).catch(e=>panel.textContent=e.message);
+</script></body></html>

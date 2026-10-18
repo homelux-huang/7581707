@@ -610,3 +610,18 @@ html[data-sudu-theme="dark"] #sudu-workspace > .sudu-inline-questionnav strong{c
 @media(prefers-reduced-motion:reduce){
  #sudu-workspace > .sudu-inline-questionnav button{transition:none!important}
 }
+
+/* V19: right-aligned header tools, verified per-paper submissions. */
+.header .head{display:flex!important;align-items:center!important;gap:9px!important;max-width:none!important}
+.header .head>div:first-child{min-width:0}
+.header .sudu-head-actions{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;margin-left:auto!important;flex:1 1 auto;min-width:0}
+.header .sudu-header-triggers{margin-right:auto!important;order:2}
+.header .head #export,.header .head #sudu-theme-button{display:inline-flex!important;align-items:center;justify-content:center!important;white-space:nowrap;flex:0 0 auto;margin:0!important;min-height:36px;border-radius:11px!important}
+.header .head #export{order:3}.header .head #sudu-theme-button{order:4}.header #sudu-miniprofile{order:1}
+#sudu-exam-panel{margin:8px 0 14px}
+.sudu-exam-status{border:1px solid #bfd4e8!important;padding:12px 16px!important}
+.sudu-exam-status p{overflow-wrap:break-word}
+.sudu-submit-paper{background:#171717!important;color:#fff!important;border:1px solid #555!important;border-radius:10px;padding:10px 14px;font-weight:750}
+html[data-sudu-theme="dark"] .sudu-exam-status{border-color:#4d4d4d!important}
+@media(max-width:780px){.header .head{flex-wrap:wrap!important}.header .sudu-head-actions{order:2;flex-basis:100%!important;width:100%!important;gap:5px!important}.header .head #export,.header .head #sudu-theme-button{display:inline-flex!important;min-width:40px!important;padding:7px!important;font-size:12px!important}.header .sudu-header-triggers{flex:1 1 auto!important;min-width:0!important}}
+@media(max-width:420px){.header .head #export,.header .head #sudu-theme-button{min-width:36px!important;padding:5px!important;font-size:10px!important}.header .sudu-head-actions{gap:4px!important}}

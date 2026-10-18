@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>7581707｜管理後台</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif}*{box-sizing:border-box}
+body{background:#080808;color:#f8fafc;margin:0;line-height:1.6}header{background:#151515;border-bottom:1px solid #3d3d3d;padding:14px 22px;display:flex;justify-content:space-between;gap:10px;align-items:center}a{color:#9edaff}main{max-width:1160px;margin:22px auto;padding:0 16px}
+h1{font-size:23px;margin:0}h2{font-size:18px;margin:0 0 12px}h3{font-size:15px;margin:10px 0}p{margin:7px 0}
+.panel{background:#171717;border:1px solid #424242;border-radius:16px;padding:19px;margin-bottom:14px}
+input,button,select,textarea{font:inherit}input,textarea,select{background:#242424;border:1px solid #676767;color:#fff;border-radius:9px;padding:9px;min-width:0}
+input{max-width:100%}button{background:#26272b;color:#fff;border:1px solid #72747b;border-radius:9px;padding:9px 13px;cursor:pointer}
+button:hover{background:#42444e}button:focus-visible,input:focus-visible{outline:3px solid #9bd9ff;outline-offset:2px}
+label{display:flex;flex-direction:column;gap:5px;min-width:0}.formline{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.formline>*{flex:1 1 190px}.formline>button{flex:0 0 auto}.muted{color:#b9bdc6;font-size:13px}
+#messages{border-left:3px solid #74a4ca;padding:8px 11px;margin:12px 0;white-space:pre-wrap}#messages:empty{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.person{background:#252525;border:1px solid #505050;border-radius:12px;padding:13px}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{padding:9px;border-bottom:1px solid #414141;text-align:left;white-space:nowrap}
+.wrong{border-top:1px solid #454545;padding-top:12px;margin-top:12px;overflow-wrap:anywhere}
+.score{padding:10px;background:#27272d;border-radius:9px;margin:8px 0;overflow-wrap:anywhere}
+.hidden,[hidden]{display:none!important}.warning{color:#ffdba5}.small{font-size:12px;color:#cdd0d6;overflow-wrap:anywhere}
+@media(max-width:480px){header{padding:9px 12px}h1{font-size:18px}main{padding:0 9px}.panel{padding:13px}}
+</style></head><body><header><h1>7581707｜安全管理後台</h1><a href="/sudu/">← 學習平台</a></header><main>
+<section id="disabled" class="panel hidden"><h2>後台 API 尚未部署</h2><p>這個 GitHub Pages 頁面無法驗證密碼或集中讀取學生資料。請先依 <code>docs/SUDU_ADMIN_AND_SCORING.md</code> 部署獨立後台 API，再透過該 API 的 <code>/admin</code> 登入。</p><p>不會在公開網頁使用假登入或儲存 admin 密碼。</p></section>
+<section id="login" class="panel hidden"><h2>管理員登入</h2><form id="login-form" class="formline"><label>帳號<input name="username" autocomplete="username" value="admin" required></label><label>密碼<input name="password" type="password" autocomplete="current-password" required></label><button>登入</button></form><p class="muted">正式環境密碼由私密環境變數設定；初次登入須強制改密碼。admin/admin 僅適用本機測試模式。</p></section>
+<section id="change" class="panel hidden"><h2>首次登入必須變更密碼</h2><form id="change-form" class="formline"><label>目前密碼<input name="oldPassword" type="password" required></label><label>新密碼（至少12字）<input name="newPassword" type="password" minlength="12" required></label><button>更新密碼</button></form></section>
+<div id="messages" role="status" aria-live="polite"></div>
+<section id="dashboard" class="hidden">
+<div class="panel"><div class="formline"><h2>自願同步的學生清單</h2><button id="refresh" type="button">重新整理</button></div><p class="muted">僅顯示學生在學習端同意傳送的紀錄。尚未同步的學生不會出現。</p><div id="students" class="grid"></div></div>
+<div id="student-report" class="panel hidden"><h2 id="student-heading">學生詳情</h2><div id="student-meta"></div><h3>試卷／分數／作答時間</h3><div id="scores"></div><h3>第一次答錯的題目、解析與出處</h3><div id="first-wrong"></div>
+<div class="panel"><h3>人工修正分數（保留稽核紀錄，非官方分數）</h3><form id="adjust-form" class="formline"><label>試卷代碼<input name="paper" required placeholder="114/09-2"></label><label>新分數<input type="number" name="score" min="0" max="1000" step="0.01" required></label><label>修正理由<input name="reason" minlength="8" required placeholder="至少8字"></label><label>依據來源<input name="source" type="url" placeholder="https://..."></label><button>記錄分數修正</button></form></div>
+<div class="panel"><h3>分享學生學習報告</h3><p class="small">含作答紀錄、首次答錯與時間。僅在學生已同意同步的前提下，由管理員手動產生 7 天有效連結，請勿公開轉貼。</p><div class="formline"><label>限指定試卷（可留空）<input id="share-paper" placeholder="114/09-2"></label><button id="create-share" type="button">產生七天分享連結</button></div><div id="share-out" class="small"></div></div>
+</div>
+</section></main><script>
+"use strict";
+const $=id=>document.getElementById(id);let csrf="",currentId=null;
+function show(id){for(const name of ["login","change","dashboard"])$(name).classList.toggle("hidden",name!==id)}
+function msg(value){$("messages").textContent=String(value||"")}
+function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);if(cls)n.className=cls;return n}
+function line(parent,name,value){const p=el("p");p.append(el("b",name+"："),document.createTextNode(value===null||value===undefined?"N/A":String(value)));parent.append(p)}
+function niceDate(value){if(!value)return "N/A";const t=new Date(value);return Number.isNaN(t.getTime())?"N/A":t.toLocaleString("zh-TW")}
+function duration(ms){if(!Number.isFinite(ms))return "N/A";return Math.floor(ms/3600000)+"時 "+Math.floor(ms%3600000/60000)+"分 "+Math.floor(ms%60000/1000)+"秒（含離開頁面）"}
+async function api(path,data,needCsrf=false){
+ const opts={credentials:"same-origin",headers:{"Content-Type":"application/json"}};
+ if(data!==undefined){opts.method="POST";opts.body=JSON.stringify(data)}
+ if(needCsrf)opts.headers["X-CSRF-Token"]=csrf;
+ const response=await fetch(path,opts);let j;try{j=await response.json()}catch{throw Error("伺服器未回傳有效 JSON")}
+ if(!response.ok)throw Error(j.error||"請求失敗");return j;
+}
+async function boot(){try{const u=await api("/api/admin/me");csrf=u.csrf;show(u.mustChange?"change":"dashboard");if(!u.mustChange)refresh()}catch{show("login")}}
+$("login-form").onsubmit=async e=>{e.preventDefault();try{const f=new FormData(e.target);const p=await api("/api/admin/login",{username:f.get("username"),password:f.get("password")});csrf=p.csrf;msg("登入成功");show(p.mustChange?"change":"dashboard");if(!p.mustChange)refresh()}catch(err){msg(err.message)}};
+$("change-form").onsubmit=async e=>{e.preventDefault();try{const f=new FormData(e.target);await api("/api/admin/change-password",{oldPassword:f.get("oldPassword"),newPassword:f.get("newPassword")},true);msg("密碼已變更，請妥善保存。");show("dashboard");refresh()}catch(err){msg(err.message)}};
+async function refresh(){try{const data=await api("/api/admin/students");const dest=$("students");dest.replaceChildren();for(const row of data.students){const card=el("article",undefined,"person");card.append(el("b",row.nickname),el("p","已回答 "+row.answeredQuestions+" 題 · 第一次答錯 "+row.firstWrongCount+" 題"));card.append(el("p","已送出 "+row.submittedPapers+" 卷；最近紀錄 "+niceDate(row.updatedAt),"small"));const button=el("button","查看進度與題目");button.onclick=()=>openStudent(row.id);card.append(button);dest.append(card)}if(!data.students.length)dest.append(el("p","目前沒有學生同步資料。"))}catch(e){msg(e.message)}}
+$("refresh").onclick=refresh;
+async function openStudent(id){try{const data=await api("/api/admin/student?id="+encodeURIComponent(id));const p=data.student;currentId=p.id;$("student-report").classList.remove("hidden");$("student-heading").textContent=p.nickname+"｜學習報表";const meta=$("student-meta");meta.replaceChildren();line(meta,"學習進度",p.answeredQuestions+" 題已作答；"+p.submittedPapers+" 卷送出");line(meta,"最早作答",niceDate(p.firstAt));line(meta,"最近作答",niceDate(p.lastAt));line(meta,"同步時間",niceDate(p.updatedAt));
+const scores=$("scores");scores.replaceChildren();for(const sc of p.scores){const item=el("div",undefined,"score");item.append(el("strong",sc.paper));line(item,"狀態",sc.scoreStatus);line(item,"原始分數",sc.score===null?"正式分數待核實":sc.score);line(item,"管理員修正",sc.adjustedScore===null?"無":sc.adjustedScore+"（非官方）");if(sc.adjustmentReason)line(item,"修正理由",sc.adjustmentReason);line(item,"送出日期",niceDate(sc.submittedAt));line(item,"起始時間",niceDate(sc.startedAt));line(item,"花費時間",duration(sc.elapsedMs));scores.append(item)}if(!p.scores.length)scores.append(el("p","未考完或尚無正式送出紀錄；不顯示分數。"));
+const wrong=$("first-wrong");wrong.replaceChildren();for(const x of p.firstWrong||[]){const item=el("article",undefined,"wrong");item.append(el("b",x.subject+"｜"+x.id));line(item,"原題",x.question);line(item,"首次選錯",x.firstChoice===null?"N/A":"ABCD"[x.firstChoice]||"N/A");line(item,"首次答錯時間",niceDate(x.firstAt));line(item,"累積答錯次數",x.wrongCount);line(item,"白話解說",x.explanation);line(item,"教材章節",x.chapter);if(typeof x.source==="string"&&/^https:\/\/(?:[^/]+\.)?tcte\.edu\.tw\//.test(x.source)){const a=el("a","官方原卷出處 ↗");a.href=x.source;a.target="_blank";a.rel="noopener noreferrer";item.append(a)}wrong.append(item)}if(!wrong.children.length)wrong.append(el("p","目前沒有可核對的首次答錯題目。"));$("student-report").scrollIntoView({behavior:"smooth",block:"start"})}catch(err){msg(err.message)}}
+$("adjust-form").onsubmit=async e=>{e.preventDefault();if(!currentId)return;try{const f=new FormData(e.target);await api("/api/admin/adjust",{studentId:currentId,paper:f.get("paper"),score:Number(f.get("score")),reason:f.get("reason"),source:f.get("source")},true);msg("已留存管理員修正紀錄（非官方成績）");openStudent(currentId)}catch(err){msg(err.message)}};
+$("create-share").onclick=async()=>{if(!currentId)return;try{const data=await api("/api/admin/share",{studentId:currentId,paper:$("share-paper").value.trim()},true);$("share-out").replaceChildren();const url=data.url||location.origin+"/share/"+data.token;const a=el("a",url);a.href=url;a.target="_blank";a.rel="noopener noreferrer";$("share-out").append(a,el("p","有效至："+niceDate(data.expiresAt)))}catch(err){msg(err.message)}};
+if(location.pathname.includes("/sudu/")){$("disabled").classList.remove("hidden");}else{boot()}
+</script></body></html>

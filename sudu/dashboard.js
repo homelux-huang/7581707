@@ -147,6 +147,21 @@ function suduSubjectReview(year,subject){
     return '<details class="db-subject" '+((subject!=='全部科目'||i===0)?'open':'')+'><summary>'+esc(sub)+'｜'+w.length+' 題曾答錯</summary><div class="db-subject-inner">'+content+'</div></details>';
   }).join('');
 }
+function suduScoreDashboard(){
+ if(typeof SUDU_SCORING==="undefined")return "";
+ const years=Object.keys(ALL.officialYearReports||{}).sort((a,b)=>Number(b)-Number(a));
+ const cards=[];
+ for(const year of years){
+  for(const paper of ALL.officialYearReports[year].papers||[]){
+   const info=SUDU_SCORING.paperStatus(ALL,state,year,paper.paper);
+   const name=esc(year+" 年 "+(typeof paperText!=="undefined"?paperText[paper.paper]||paper.paper:paper.paper));
+   const score=info.submitted?(info.score?.value===null?"已送出・正式分數待核實":info.score.value+" / "+info.score.max+" 分"):"未考完";
+   const time=info.submitted?'<div class="small">送出：'+esc(new Date(info.submittedAt).toLocaleString("zh-TW"))+'｜時間：'+esc(SUDU_SCORING.humanTime(info.elapsedMs))+'</div>':"";
+   cards.push('<div class="db-year-row"><strong>'+name+'</strong><div><b>'+esc(score)+'</b><p class="small">已作答 '+info.answered+'/'+(info.expected||"待核實")+' 題</p>'+time+'</div></div>');
+  }
+ }
+ return '<section class="db-pane"><h3>🧾 歷年試卷成績與送出狀態</h3><p class="small">未考完不顯示分數。正式試題／配分未核實只顯示狀態，不將答對率冒充原始分數。</p>'+(cards.join("")||'<p class="db-empty-state">正在載入年度題庫。</p>')+'</section>';
+}
 function dashboard(){
   const d=state.dashboard||{year:'全部',subject:'全部科目'};
   const years=['全部','自編',...ALL.archive.map(x=>String(x.year)).sort((a,b)=>Number(b)-Number(a))];
@@ -176,10 +191,11 @@ function dashboard(){
     '<p class="small"><b>固定學習代碼：</b><code>'+esc(identity)+'</code></p>'+
     '<p class="small"><b>此瀏覽器已啟用次數：</b>'+Number(state.visitCount||0)+'　 <b>最近進入：</b>'+esc(state.lastVisit?new Date(state.lastVisit).toLocaleString('zh-TW'):'尚無')+'</p>'+
     '<div class="db-control"><label>本機暱稱<input class="db-name" id="db-nickname" maxlength="40" value="'+esc(suduDevice?.name||'')+'" placeholder="例如：商一甲學生"></label><button id="db-save-name">儲存暱稱</button><button id="db-copy-code">複製學習代碼</button><button id="db-download">備份紀錄</button><button id="db-restore">還原備份</button><button id="db-persist">加強本機保留</button></div></div>'+
-    '<p class="db-footer-note">作答紀錄儲存在瀏覽器本機，也同步嘗試儲存至瀏覽器資料庫。正常關閉瀏覽器不會登出；但清除網站資料、裝置損壞、使用無痕模式時仍可能遺失。若要永久跨裝置保存，需另外建立有登入驗證的雲端帳號與資料庫。請定期下載備份，尤其在更換手機／電腦前。</p></section>';
-  return '<div class="db-page">'+top+n+'<div class="db-two">'+yearCard+mistakesCard+'</div>'+sourceCard+device+'</div>';
+    '<div class="db-device-panel"><h3>選用：自願同步至私人管理後台</h3><p class="small">預設關閉。只有管理伺服器完成安全部署，且學生主動同意後，才會同步答題歷史、送出與作答時間。</p><div class="db-control"><label>管理 API HTTPS 網址<input type="url" id="sudu-sync-endpoint" placeholder="https://你的私人後台.onrender.com"></label><button type="button" id="sudu-sync-enable">同意並啟用同步</button><button type="button" id="sudu-sync-stop">停止同步</button></div><p id="sudu-sync-status" class="small" role="status"></p></div>'+'<p class="db-footer-note">作答紀錄儲存在瀏覽器本機，也同步嘗試儲存至瀏覽器資料庫。正常關閉瀏覽器不會登出；但清除網站資料、裝置損壞、使用無痕模式時仍可能遺失。若要永久跨裝置保存，需另外建立有登入驗證的雲端帳號與資料庫。請定期下載備份，尤其在更換手機／電腦前。</p></section>';
+  return '<div class="db-page">'+top+n+suduScoreDashboard()+'<div class="db-two">'+yearCard+mistakesCard+'</div>'+sourceCard+device+'</div>';
 }
 function suduWireDashboard(){
+ if(typeof SUDU_SYNC!=='undefined')SUDU_SYNC.controls();
   const y=document.getElementById('db-year'),sb=document.getElementById('db-subject');
   if(y)y.onchange=()=>{state.dashboard=state.dashboard||{};state.dashboard.year=y.value;save();render();};
   if(sb)sb.onchange=()=>{state.dashboard=state.dashboard||{};state.dashboard.subject=sb.value;save();render();};
@@ -221,7 +237,7 @@ async function suduImportBackup(file){
      .map(a=>({choice:a.choice,correct:a.correct,at:String(a.at||''),mastered:!!a.mastered}));
   }
   state.attempts=cleaned;
-  for(const field of ['reviewAnswers','reviewHistory','extended']){
+  for(const field of ['reviewAnswers','reviewHistory','extended','examSessions','examSubmissions']){
     if(imported[field]&&typeof imported[field]==='object'&&!Array.isArray(imported[field])){
       state[field]=imported[field];
     }

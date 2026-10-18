@@ -9,6 +9,11 @@ const assert=require('node:assert/strict');
  const trigger=kind=>page.locator('[data-sudu-menu-trigger="'+kind+'"]');
  const menu=page.locator('#sudu-floating-controls');
  await trigger('year').waitFor();
+ assert.equal(await page.locator('.sudu-head-actions #export').count(),1,'export relocated to right action group');
+ assert.equal(await page.locator('.sudu-head-actions #sudu-theme-button').count(),1,'theme icon relocated to right action group');
+ assert.equal(await page.locator('#sudu-exam-panel').count(),1,'exam status always rendered');
+ assert.equal(await page.locator('#sudu-exam-panel').innerText().then(t=>t.includes('自編練習不計入官方統測成績')),true);
+
  assert.equal(await page.locator('[data-sudu-menu-trigger]').count(),3,'three independent buttons');
  assert.equal(await menu.getAttribute('aria-hidden'),'true');
  // All three menus open independently on desktop mouse hover.
