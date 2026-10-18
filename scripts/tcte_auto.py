@@ -140,6 +140,9 @@ def extract_questions(pages,year,paper,src,ocr_pages):
         offsets.append(len(full))
         # Modern PDFs have a cover page with numbered instructions; those are NOT exam questions.\n        if i==0 and "考試開始鈴" in text and "試題本" in text:\n            full+="\n\n"\n        else:\n            full+=text+"\n\n"
     markers=list(QSTART.finditer(full))
+    if year==114 and paper=="09-2":
+        print("DEBUG_HEAD",repr(full[:1100]),flush=True)
+        print("DEBUG_MARKERS",len(markers),[(m.group(1),m.start()) for m in markers[:18]],flush=True)
     # Skip cover-page lists and normalize against ascending number sequence.
     found={}
     for i,m in enumerate(markers):
@@ -150,6 +153,7 @@ def extract_questions(pages,year,paper,src,ocr_pages):
         raw=full[m.end():end]
         pg=bisect.bisect_right(offsets,m.start())
         if len(raw)>7000 or len(raw)<12:continue
+        if year==114 and paper=="09-2" and i<5: print("DEBUG_CANDIDATE",number,"pg",pg,"len",len(raw),"first",repr(raw[:250]),flush=True)
         stem,options,warnings=parse_question_options(raw)
         if not stem:continue
         if len(options)!=4:warnings.append("missing_complete_options")
