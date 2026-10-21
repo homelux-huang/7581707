@@ -320,5 +320,37 @@ window.DEMO_LEARNING_CONFIG={
     "6|B": "③正確但漏掉①，因此「僅③」不完整。",
     "6|C": "①正確、②錯，而且漏掉③。",
     "6|D": "期初承接前期調整後貸餘；期末在非零損失率下調整後也應留下貸方備抵。"
+  },
+  "englishNewsExamples": {
+    "1": {
+      "examWord": "wet",
+      "highlight": "wet",
+      "en": "After heavy rain, many outdoor seats remained wet, so event staff dried them before visitors arrived.",
+      "zh": "大雨過後，許多戶外座位仍然是濕的，因此活動工作人員在訪客抵達前先把座位擦乾。"
+    },
+    "2": {
+      "examWord": "join",
+      "highlight": "joined",
+      "en": "More students joined AI and robotics clubs as schools expanded technology-related learning activities.",
+      "zh": "隨著學校擴大科技相關學習活動，更多學生加入了 AI 與機器人社團。"
+    },
+    "3": {
+      "examWord": "equally",
+      "highlight": "equally",
+      "en": "Public discussions about AI in education often ask whether new learning tools can be accessed equally by students.",
+      "zh": "教育界對 AI 的公共討論，常關注新的學習工具是否能讓學生平等取得。"
+    },
+    "4": {
+      "examWord": "suitable",
+      "highlight": "suitable",
+      "en": "Cities are redesigning public spaces to make them more suitable for pedestrians and older adults.",
+      "zh": "城市正重新設計公共空間，使它們更適合行人與高齡者使用。"
+    },
+    "5": {
+      "examWord": "attract",
+      "highlight": "attract",
+      "en": "New semiconductor and AI projects continue to attract engineers with specialized skills.",
+      "zh": "新的半導體與 AI 計畫持續吸引具專業技能的工程師。"
+    }
   }
 };
