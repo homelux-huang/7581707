@@ -117,6 +117,28 @@ html[data-theme="dark"][data-ui-variant="cards"]{--bg:#000;--card:#151225;--text
 html[data-theme="dark"][data-ui-variant="exam"]{--bg:#000;--card:#0b0b0b;--text:#fff;--muted:#c9c9c9;--line:#fff;--sticky-bg:#fff;--sticky-text:#000}
 @media(max-width:420px){.variant-picker{padding:0 14px 12px}.variant-panel{padding:10px}.variant-btn{font-size:14px;min-height:50px}.variant-note{font-size:12px}}
 
+/* 作答專注模式：題號／進度列預設隱藏，靠近頂部時滑出 */
+:root{--question-nav-h:0px}
+.nav-hover-zone{position:fixed;top:0;left:0;right:0;height:24px;z-index:76;display:flex;justify-content:center;pointer-events:auto}
+.nav-hover-zone::after{content:"題號";height:20px;min-width:82px;padding:1px 14px 0;border-radius:0 0 12px 12px;background:color-mix(in srgb,var(--blue) 88%,transparent);color:#fff;font-size:12px;font-weight:1000;line-height:18px;text-align:center;box-shadow:0 4px 14px rgba(47,91,234,.24);opacity:.78;transform:translateY(-13px);transition:transform .2s ease,opacity .2s ease}
+.nav-hover-zone:hover::after,html.nav-open .nav-hover-zone::after{transform:translateY(0);opacity:1}
+.progress-shell{position:fixed!important;top:0;left:0;right:0;z-index:75;transform:translateY(calc(-100% - 12px));transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .2s ease;box-shadow:0 16px 34px rgba(15,23,42,.16);will-change:transform}
+html.nav-open .progress-shell{transform:translateY(0)}
+.question-nav-toggle{position:fixed;right:14px;bottom:calc(94px + var(--safe-bottom));z-index:72;display:none;align-items:center;justify-content:center;min-height:52px;max-width:calc(100vw - 28px);padding:0 16px;border:2px solid color-mix(in srgb,var(--blue) 40%,var(--line));border-radius:999px;background:var(--card);color:var(--blue);font-size:16px;font-weight:1000;white-space:nowrap;box-shadow:0 10px 28px rgba(15,23,42,.18)}
+.question-nav-toggle[aria-expanded="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.detail-card,.learn-section,.formula{scroll-margin-top:calc(var(--question-nav-h) + var(--memory-sticky-h) + 18px)!important}
+.qcard{scroll-margin-top:16px}
+@media(hover:none),(pointer:coarse),(max-width:1024px){
+  .nav-hover-zone{display:none}
+  .question-nav-toggle{display:flex}
+  .progress-shell{max-height:min(72vh,620px);overflow:auto;padding-top:env(safe-area-inset-top,0px)}
+}
+@media(max-width:560px){
+  .question-nav-toggle{right:10px;bottom:calc(88px + var(--safe-bottom));min-height:50px;padding:0 14px;font-size:15px}
+}
+@media(max-width:360px){.question-nav-toggle{font-size:14px;padding:0 12px}}
+@media(prefers-reduced-motion:reduce){.progress-shell,.nav-hover-zone::after{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -132,7 +154,8 @@ html[data-theme="dark"][data-ui-variant="exam"]{--bg:#000;--card:#0b0b0b;--text:
     <div class="selectors"><select aria-label="年度"><option>115 年</option></select><select aria-label="科目"><option>會計學</option></select></div>
   </div>
 </div>
-<div class="progress-shell" id="progressShell">
+<div class="nav-hover-zone" id="navHoverZone" aria-hidden="true"></div>
+<div class="progress-shell" id="progressShell" aria-label="題號與作答進度">
   <div class="progress">
     <div class="progress-actions">
       <span class="label" id="progressLabel">已答 0/5 題</span>
@@ -142,6 +165,7 @@ html[data-theme="dark"][data-ui-variant="exam"]{--bg:#000;--card:#0b0b0b;--text:
     <div class="progress-chips" id="progressChips"></div>
   </div>
 </div>
+<button class="question-nav-toggle" id="questionNavToggle" aria-expanded="false" aria-controls="progressShell">題號 · 第 2 題</button>
 <main>
   <section class="qcard" id="questionCard"></section>
   <div class="memory-wrap" id="memoryWrap"><div class="memory" id="memoryCard"></div></div>
@@ -244,7 +268,7 @@ function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&am
 function renderProgress(){
  const box=el('progressChips');box.innerHTML='';let answered=0;
  IDS.forEach(id=>{const st=currentRound().status[id];if(st)answered++;const b=document.createElement('button');b.className='chip';b.dataset.q=id;b.textContent=String(id);if(st==='ok'){b.classList.add('ok');b.textContent=id+'✓'}if(st==='bad'){b.classList.add('bad');b.textContent=id+'×'}if(st==='ok'&&currentRound().wrong.includes(id))b.classList.add('recovered');if(id===currentQuestion().id)b.classList.add('current');b.setAttribute('aria-label',`第 ${id} 題${st==='ok'?'，最近答對':st==='bad'?'，最近答錯':'，尚未作答'}`);b.onclick=()=>goToQuestion(id);box.appendChild(b)});
- el('progressLabel').innerHTML=`已答 ${answered}/5 題 <span class="round">第 ${state.round} 輪</span>`;
+ el('progressLabel').innerHTML=`已答 ${answered}/5 題 <span class="round">第 ${state.round} 輪</span>`;const navToggle=el('questionNavToggle');if(navToggle)navToggle.textContent=`題號 · 第 ${currentQuestion().id} 題`;
  const first=IDS.find(id=>!currentRound().status[id]);const c=el('continueBtn');c.textContent=first?`續答第 ${first} 題 →`:'查看本輪錯題 →';c.onclick=()=>first?goToQuestion(first):showReview();
 }
 function renderQuestion(){
@@ -265,18 +289,30 @@ function renderReview(){
  el('reviewList').innerHTML=wrong.length?wrong.map(id=>{const q=qById(id),d=q.details[q.correct];return `<article class="review-item"><h3>第 ${id} 題｜${escapeHtml(q.topic)}</h3><p><b>正確答案：</b>${q.correct}　${escapeHtml(q.options[q.correct])}</p><p><b>一眼記住：</b>${q.memory}</p><p><b>核心觀念：</b>${escapeHtml(d.concept)}</p><div class="review-actions"><button data-review-q="${id}" data-mode="explain">看完整解說</button><button data-review-q="${id}" data-mode="retry">再答一次</button></div></article>`}).join(''):'<article class="review-item" style="border-color:var(--line)"><h3>目前沒有錯題</h3><p>本輪答錯的題目會自動出現在這裡。</p></article>';
  review.querySelectorAll('[data-review-q]').forEach(btn=>btn.onclick=()=>{goToQuestion(Number(btn.dataset.reviewQ));if(btn.dataset.mode==='explain')setTimeout(showExplain,80)});
 }
-function syncStickyOffsets(){const ph=Math.ceil(progressShell.getBoundingClientRect().height||0);const mh=memoryWrap.classList.contains('show')?Math.ceil(memoryCard.getBoundingClientRect().height||0):0;document.documentElement.style.setProperty('--progress-sticky-h',ph+'px');document.documentElement.style.setProperty('--memory-sticky-h',mh+'px')}
+function syncStickyOffsets(){const navOpen=document.documentElement.classList.contains('nav-open');const ph=navOpen?Math.ceil(progressShell.getBoundingClientRect().height||0):0;const mh=memoryWrap.classList.contains('show')?Math.ceil(memoryCard.getBoundingClientRect().height||0):0;document.documentElement.style.setProperty('--progress-sticky-h',ph+'px');document.documentElement.style.setProperty('--question-nav-h',ph+'px');document.documentElement.style.setProperty('--memory-sticky-h',mh+'px')}
 function scrollBelowMemory(target,behavior='smooth'){if(!target)return;syncStickyOffsets();const styles=getComputedStyle(document.documentElement);const ph=parseFloat(styles.getPropertyValue('--progress-sticky-h'))||0;const mh=parseFloat(styles.getPropertyValue('--memory-sticky-h'))||0;const mt=parseFloat(getComputedStyle(memoryWrap).top)||(ph+6);const top=window.scrollY+target.getBoundingClientRect().top-(mt+mh+10);window.scrollTo({top:Math.max(0,top),behavior})}
 function scrollCorrect(){const q=currentQuestion();requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>scrollBelowMemory(el(`detail-${q.id}-${q.correct}`)),35)))}
 function scrollLearning(kind,btn){const q=currentQuestion();showExplain(false);memoryCard.querySelectorAll('.memory-action').forEach(x=>x.classList.toggle('active',x===btn));const target=el(`${kind}-${q.id}-${q.correct}`);if(target){target.classList.remove('focus-flash');void target.offsetWidth;target.classList.add('focus-flash');scrollBelowMemory(target);setTimeout(()=>target.classList.remove('focus-flash'),950)}}
-function answer(ans){const q=currentQuestion();const ok=ans===q.correct;currentRound().selected[q.id]=ans;currentRound().status[q.id]=ok?'ok':'bad';if(!ok&&!currentRound().wrong.includes(q.id))currentRound().wrong.push(q.id);saveState();renderQuestion();renderMemory();renderExplain();showExplain(true)}
-function showQuestion(){activeView='question';review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');updateBottom();syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
+let navCloseTimer=null;
+function setQuestionNav(open){clearTimeout(navCloseTimer);document.documentElement.classList.toggle('nav-open',open);const toggle=el('questionNavToggle');if(toggle)toggle.setAttribute('aria-expanded',String(open));requestAnimationFrame(syncStickyOffsets)}
+function scheduleQuestionNavClose(){clearTimeout(navCloseTimer);navCloseTimer=setTimeout(()=>setQuestionNav(false),520)}
+function answer(ans){setQuestionNav(false);const q=currentQuestion();const ok=ans===q.correct;currentRound().selected[q.id]=ans;currentRound().status[q.id]=ok?'ok':'bad';if(!ok&&!currentRound().wrong.includes(q.id))currentRound().wrong.push(q.id);saveState();renderQuestion();renderMemory();renderExplain();showExplain(true)}
+function showQuestion(){setQuestionNav(false);activeView='question';review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');updateBottom();syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
 function showExplain(autoScroll=true){const q=currentQuestion();if(!currentRound().status[q.id]){alert('請先選擇答案，再查看解說。');return}activeView='explain';review.classList.remove('show');explain.classList.add('show');memoryWrap.classList.add('show');renderMemory();renderExplain();updateBottom();syncStickyOffsets();if(autoScroll)scrollCorrect()}
 function showReview(){activeView='review';explain.classList.remove('show');memoryWrap.classList.remove('show');review.classList.add('show');renderReview();updateBottom();syncStickyOffsets();review.scrollIntoView({behavior:'smooth',block:'start'})}
-function goToQuestion(id){const idx=IDS.indexOf(id);if(idx<0)return;currentIndex=idx;activeView='question';renderQuestion();renderMemory();renderExplain();review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
+function goToQuestion(id){const idx=IDS.indexOf(id);if(idx<0)return;setQuestionNav(false);currentIndex=idx;activeView='question';renderQuestion();renderMemory();renderExplain();review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
 function updateBottom(){el('prevBtn').disabled=currentIndex===0;el('nextBtn').disabled=currentIndex===QUESTIONS.length-1;el('qBtn').classList.toggle('active',activeView==='question');el('expBtn').classList.toggle('active',activeView==='explain');el('wrongBtn').classList.toggle('active',activeView==='review')}
 function resetPaper(){const ok=confirm(`重新作答會封存第 ${state.round} 輪，清空畫面上的答題狀態與錯題，並開始新一輪。舊紀錄仍保留在歷史資料中。\n\n確定重新作答嗎？`);if(!ok)return;const now=new Date().toISOString();state.history.push({round:state.round,status:{...currentRound().status},selected:{...currentRound().selected},wrong:[...currentRound().wrong],startedAt:currentRound().startedAt,endedAt:now});state.round++;state.current={status:blankStatus(),selected:blankSelected(),wrong:[],startedAt:now};saveState();currentIndex=0;renderQuestion();renderMemory();renderExplain();showQuestion();setTimeout(()=>alert(`已開始第 ${state.round} 輪。上一輪已封存，本輪錯題會重新記錄。`),220)}
 function updateCountdown(){const target=new Date('2027-04-24T00:00:00+08:00').getTime(),now=Date.now(),diff=Math.max(0,target-now),day=Math.floor(diff/86400000),hour=Math.floor(diff%86400000/3600000),min=Math.floor(diff%3600000/60000),sec=Math.floor(diff%60000/1000);el('countdown').textContent=`${day}天 ${hour}時 ${min}分 ${sec}秒`;el('nowTime').textContent=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' · 臺灣'}
+const navHoverZone=el('navHoverZone'),questionNavToggle=el('questionNavToggle');
+navHoverZone?.addEventListener('mouseenter',()=>setQuestionNav(true));
+progressShell.addEventListener('mouseenter',()=>setQuestionNav(true));
+progressShell.addEventListener('mouseleave',scheduleQuestionNavClose);
+progressShell.addEventListener('focusin',()=>setQuestionNav(true));
+progressShell.addEventListener('focusout',e=>{if(!progressShell.contains(e.relatedTarget))scheduleQuestionNavClose()});
+questionNavToggle?.addEventListener('click',()=>setQuestionNav(!document.documentElement.classList.contains('nav-open')));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setQuestionNav(false)});
+document.addEventListener('pointerdown',e=>{if(document.documentElement.classList.contains('nav-open')&&!progressShell.contains(e.target)&&e.target!==questionNavToggle&&!navHoverZone?.contains(e.target))setQuestionNav(false)});
 el('resetBtn').onclick=resetPaper;el('themeBtn').onclick=()=>{const root=document.documentElement,dark=root.dataset.theme==='dark';root.dataset.theme=dark?'':'dark';el('themeBtn').textContent=dark?'☾':'☀';setTimeout(syncStickyOffsets,40)};el('qBtn').onclick=showQuestion;el('expBtn').onclick=()=>showExplain(true);el('wrongBtn').onclick=showReview;el('prevBtn').onclick=()=>currentIndex>0&&goToQuestion(QUESTIONS[currentIndex-1].id);el('nextBtn').onclick=()=>currentIndex<QUESTIONS.length-1&&goToQuestion(QUESTIONS[currentIndex+1].id);
 document.addEventListener('keydown',e=>{const k=e.key.toUpperCase();if(['A','B','C','D'].includes(k)&&activeView==='question')answer(k)});
 if('ResizeObserver'in window){const ro=new ResizeObserver(syncStickyOffsets);ro.observe(progressShell);ro.observe(memoryCard)}window.addEventListener('resize',syncStickyOffsets,{passive:true});window.addEventListener('orientationchange',()=>setTimeout(syncStickyOffsets,120),{passive:true});
