@@ -1,69 +1,304 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-ui-variant="classic">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>速讀｜115會計第2–6題 Chat 部署測試</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>速讀｜115 統測會計學第 2～6 題完整測試版</title>
 <style>
-:root{--bg:#f5f7fb;--card:#fff;--text:#111827;--muted:#6b7280;--line:#dbe2ea;--blue:#2563eb;--green:#15803d;--red:#dc2626;--yellow:#facc15;--progress-h:0px;--memory-h:0px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
-button{font:inherit}.shell{width:min(920px,100%);margin:auto;padding:18px 16px 40px}.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.brand h1{font-size:clamp(24px,5vw,40px);line-height:1.12;margin:0}.badge{padding:7px 11px;border-radius:999px;background:#111;color:#fff;font-weight:900;font-size:13px;white-space:nowrap}
-.hover-zone{position:fixed;left:0;right:0;top:0;height:18px;z-index:70}
-.progress{position:fixed;z-index:80;left:50%;top:0;transform:translate(-50%,-110%);width:min(920px,100%);padding:10px 12px;background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:0 0 18px 18px;box-shadow:0 10px 30px rgba(0,0,0,.12);transition:.22s ease}
-.progress.show,.progress:hover,.progress:focus-within{transform:translate(-50%,0)}
-.progress-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.progress-row+.progress-row{margin-top:8px}.counter{font-weight:900}.reset,.resume,.nav-toggle{min-height:48px;border-radius:13px;border:1px solid var(--line);padding:0 14px;font-weight:900;background:#fff}.resume{background:#111;color:#fff;border-color:#111}.balls{display:flex;gap:8px;flex-wrap:wrap}.ball{width:46px;height:46px;border:2px solid var(--line);border-radius:50%;background:#fff;font-weight:1000}.ball.current{border-color:var(--blue);box-shadow:0 0 0 4px #dbeafe}.ball.ok{background:#dcfce7;border-color:#86efac;color:#166534}.ball.bad{background:#fee2e2;border-color:#fca5a5;color:#991b1b}
-.nav-toggle{display:none;position:fixed;right:14px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:85;background:#111;color:#fff;border-color:#111;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,30px);box-shadow:0 10px 32px rgba(15,23,42,.06)}.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--muted);font-weight:800}.qno{font-size:clamp(28px,7vw,50px);font-weight:1000;color:#111}.question{font-size:clamp(22px,4.5vw,31px);line-height:1.38;font-weight:900;margin:16px 0}.statement{font-size:19px;line-height:1.45;margin:8px 0}.options{display:grid;gap:12px;margin-top:20px}.opt{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center;text-align:left;width:100%;min-height:68px;padding:12px 14px;border:2px solid var(--line);border-radius:18px;background:#fff;color:#111;font-size:clamp(18px,3.8vw,22px);font-weight:800}.opt .letter{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#111;color:#fff}.opt.correct{border-color:#16a34a;background:#ecfdf5}.opt.wrong{border-color:#dc2626;background:#fef2f2}.result{margin-top:14px;font-size:20px;font-weight:1000}.good{color:var(--green)}.badtext{color:var(--red)}
-.memory{position:sticky;top:calc(var(--progress-h) + 8px);z-index:55;margin:16px 0 12px;background:#111;color:#fff;border-radius:20px;padding:16px 18px;box-shadow:0 12px 32px rgba(0,0,0,.18);display:none}.memory.show{display:block}.memory h2{margin:0 0 8px;font-size:20px}.memory p{margin:0;font-size:clamp(19px,4vw,24px);line-height:1.35;font-weight:1000}.memory .hi{color:var(--yellow);display:inline-block;white-space:nowrap}.memory-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.memory-tools button{min-height:60px;border:0;border-radius:15px;background:#fff;color:#111;font-weight:1000;font-size:16px}
-.answer{margin-top:12px;background:#fff;border:2px solid #86efac;border-radius:22px;padding:18px;display:none;scroll-margin-top:calc(var(--progress-h) + var(--memory-h) + 20px)}.answer.show{display:block}.answer h3{font-size:24px;margin:0 0 12px;color:#166534}.answer section{padding:12px 0;border-top:1px solid var(--line)}.answer section:first-of-type{border-top:0}.answer h4{margin:0 0 6px;font-size:19px}.answer p{margin:0;font-size:17px;line-height:1.45}
-.note{margin:16px 0 0;padding:12px 14px;border-radius:14px;background:#fff7ed;color:#9a3412;font-weight:800;line-height:1.4}
-.bottom{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.bottom button{min-height:54px;border:0;border-radius:14px;background:#eef2f7;font-weight:900}.bottom button.primary{background:#111;color:#fff}
-@media(max-width:700px){.hover-zone{display:none}.progress{left:8px;right:8px;width:auto;transform:translateY(-110%)}.progress.show{transform:translateY(0)}.nav-toggle{display:block}.shell{padding-top:10px}.brand{padding-right:98px}.memory{top:8px}.memory-tools button{font-size:15px;padding:6px}.bottom{grid-template-columns:repeat(5,minmax(0,1fr))}.bottom button{font-size:13px;padding:4px}}
+:root{
+  --bg:#f6f8fc;--card:#fff;--text:#101828;--muted:#667085;--line:#d9e0ec;
+  --blue:#2f5bea;--green:#13795b;--red:#b4233f;--purple:#7c3aed;--yellow:#ffe58f;
+  --sticky-bg:#111;--sticky-text:#fff;--safe-bottom:env(safe-area-inset-bottom,0px);
+  --progress-sticky-h:0px;--memory-sticky-h:0px;
+}
+[data-theme="dark"]{
+  --bg:#000;--card:#111;--text:#f7f7f8;--muted:#a7adbb;--line:#2f3036;
+  --sticky-bg:#fff;--sticky-text:#111;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;padding-bottom:110px;overflow-x:hidden}
+button,select{font:inherit}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.top{background:var(--bg);border-bottom:1px solid var(--line)}
+.header{display:flex;align-items:center;gap:14px;padding:22px 20px 15px;max-width:820px;margin:auto}
+.logo{width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#315df5,#6849e8);display:grid;place-items:center;color:#fff;font-weight:1000;font-size:21px;box-shadow:0 8px 20px rgba(47,91,234,.22)}
+.brand{font-size:35px;font-weight:1000;line-height:1;white-space:nowrap}.sub{font-size:19px;color:var(--muted);margin-left:8px;font-weight:700;white-space:nowrap}.grow{flex:1}
+.theme{width:58px;height:58px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:24px}
+.control-row{max-width:820px;margin:auto;padding:0 20px 19px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.count{background:var(--card);border:1px solid var(--line);border-radius:21px;padding:18px 20px;color:var(--muted);font-size:18px;font-weight:800;min-width:0}
+.count b{display:block;color:var(--text);font-size:27px;line-height:1.15;margin-top:5px;letter-spacing:.01em}
+.count time{display:block;font-size:14px;margin-top:5px}
+.selectors{display:flex;gap:8px}.selectors select{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:15px;padding:14px 16px;min-height:58px;font-size:18px;font-weight:900}
+.progress-shell{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.progress{max-width:820px;margin:auto;padding:8px 14px 9px;display:grid;grid-template-rows:auto auto;gap:5px}
+.progress-actions{display:grid;grid-template-columns:max-content max-content minmax(0,1fr);gap:8px;align-items:center;min-width:0}
+.progress .label{font-size:19px;font-weight:1000;line-height:1.1;white-space:nowrap}.round{font-size:13px;color:var(--muted);font-weight:800;white-space:nowrap}
+.reset{border:1px solid #f0b5bf;background:color-mix(in srgb,var(--red) 7%,var(--card));color:var(--red);border-radius:15px;padding:10px 13px;min-height:46px;font-size:16px;font-weight:1000;white-space:nowrap}
+.continue{justify-self:end;border:0;background:#edf1ff;color:var(--blue);border-radius:15px;padding:10px 14px;min-height:46px;font-size:16px;font-weight:1000;white-space:nowrap;max-width:100%}
+.progress-chips{display:grid;grid-template-columns:repeat(5,minmax(42px,1fr));gap:8px;align-items:center;min-width:0}
+.chip{width:100%;max-width:55px;justify-self:center;aspect-ratio:1/1;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--text);font-size:18px;font-weight:1000;line-height:1;white-space:nowrap}
+.chip.ok{border-color:var(--green);color:var(--green);background:color-mix(in srgb,var(--green) 9%,var(--card))}.chip.bad{border-color:var(--red);color:var(--red);background:color-mix(in srgb,var(--red) 8%,var(--card))}.chip.recovered{outline:3px solid color-mix(in srgb,var(--purple) 65%,transparent)}.chip.current{box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 60%,transparent)}
+main{max-width:820px;margin:auto;padding:18px 16px 34px}
+.qcard,.explain,.review{background:var(--card);border:1px solid var(--line);border-radius:25px;padding:24px;margin-bottom:14px;min-width:0}
+.qmeta{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:18px;font-weight:800;line-height:1.1}.qnum{font-size:41px;color:var(--blue);font-weight:1000}.pill{border:1px solid var(--line);border-radius:11px;padding:8px 12px;font-size:16px;white-space:nowrap}.source{margin-left:auto;border:0;background:transparent;color:var(--muted);font-weight:900;white-space:nowrap;padding:8px}
+h1{font-size:32px;line-height:1.2;margin:13px 0 12px;word-break:normal;overflow-wrap:break-word}.hl{background:var(--yellow);color:#3a2b00;padding:0 .12em;border-radius:.18em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.statement-list{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:5px;font-size:21px;line-height:1.26}.statement-list li{padding-left:1.7em;text-indent:-1.7em;overflow-wrap:break-word;word-break:normal}
+.option-list{display:grid;gap:9px}.opt{width:100%;display:flex;align-items:flex-start;gap:14px;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:19px;padding:16px 18px;font-size:22px;line-height:1.25;min-height:72px}.letter{flex:0 0 47px;height:47px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);font-size:21px;font-weight:1000}.opt>span:last-child{min-width:0;white-space:normal;word-break:normal;overflow-wrap:break-word}.opt.correct{border-color:var(--green);box-shadow:0 0 0 2px color-mix(in srgb,var(--green) 18%,transparent)}.opt.selected-wrong{border-color:var(--red);box-shadow:0 0 0 2px color-mix(in srgb,var(--red) 20%,transparent)}
+.result{display:none;margin-top:10px;font-size:20px;font-weight:1000}.result.show{display:block}.good{color:var(--green)}.badtxt{color:var(--red)}.source-note{font-size:15px;color:var(--muted);margin-top:11px;line-height:1.3}
+.memory-wrap{display:none;position:sticky;top:calc(var(--progress-sticky-h) + 6px);z-index:40;margin:0 0 10px;overflow:visible}.memory-wrap.show{display:block}.memory{background:var(--sticky-bg);color:var(--sticky-text);border:2px solid color-mix(in srgb,var(--sticky-text) 18%,transparent);border-radius:22px;padding:15px 18px 16px;box-shadow:0 10px 28px rgba(0,0,0,.22);overflow:visible;max-height:none}.memory small{display:block;opacity:.75;font-size:16px;font-weight:900;line-height:1.05;margin-bottom:4px}.memory strong{display:block;font-size:24px;line-height:1.12;white-space:normal;word-break:normal;overflow-wrap:break-word}.memory .kw{display:inline-block;white-space:nowrap;background:#ffd84d;color:#231a00;padding:0 .12em;border-radius:.18em;line-height:1.08}
+.memory-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid color-mix(in srgb,var(--sticky-text) 28%,transparent)}
+.memory-action{min-width:0;min-height:60px;display:flex;align-items:center;justify-content:center;gap:7px;padding:8px;border:2px solid var(--line);border-radius:15px;background:var(--card);color:var(--text);font-size:17px;font-weight:1000;line-height:1;text-align:center;white-space:nowrap;word-break:keep-all}.memory-action-icon{width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;border-radius:9px;background:var(--tone);color:#fff;font-size:17px}.memory-action.active{box-shadow:0 0 0 3px var(--tone) inset}
+.explain{display:none}.explain.show{display:block}.explain h2{font-size:28px;margin:0 0 11px;line-height:1.12}.detail-card{border:1px solid var(--line);border-radius:19px;padding:17px;margin:10px 0;scroll-margin-top:calc(var(--progress-sticky-h) + var(--memory-sticky-h) + 18px)}.detail-card.correct{border-color:var(--green)}.detail-card.wrong{border-color:var(--red)}.detail-card h3{font-size:25px;margin:0 0 8px;line-height:1.12}.detail-card p{font-size:19px;line-height:1.25;margin:5px 0;word-break:normal;overflow-wrap:break-word}.learn-section{border-radius:13px;padding:7px 9px;margin:3px -9px 5px;scroll-margin-top:calc(var(--progress-sticky-h) + var(--memory-sticky-h) + 16px)}.learn-section h4{font-size:20px;color:var(--blue);margin:0 0 3px;line-height:1.1}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:color-mix(in srgb,var(--blue) 6%,var(--card));border-radius:14px;padding:12px 13px;margin-top:7px;font-size:18px;line-height:1.22;white-space:normal;word-break:normal;overflow-wrap:break-word;scroll-margin-top:calc(var(--progress-sticky-h) + var(--memory-sticky-h) + 16px)}
+.review{display:none}.review.show{display:block}.review h2{font-size:28px;margin:0 0 9px}.review-summary{color:var(--muted);font-size:16px;margin-bottom:9px}.review-item{border:1px solid var(--red);border-radius:17px;padding:13px;margin:8px 0}.review-item h3{font-size:21px;margin:0 0 5px}.review-item p{font-size:18px;line-height:1.24;margin:4px 0}.review-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.review-actions button{border:0;border-radius:13px;background:#edf1ff;color:var(--blue);min-height:46px;padding:9px 12px;font-weight:1000;white-space:nowrap}
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:60;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:7px 7px calc(7px + var(--safe-bottom));display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.bottom button{min-height:74px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:19px;font-size:16px;font-weight:1000;line-height:1.1}.bottom button.active,.bottom button:last-child{color:var(--blue);border-color:#b9c5ff;background:#eef2ff}.bottom button:disabled{opacity:.4}
+.focus-flash{animation:focusFlash .9s ease}@keyframes focusFlash{0%,100%{box-shadow:none}40%{box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 34%,transparent)}}
+@media(max-width:560px){.control-row{grid-template-columns:1fr}.selectors{display:grid;grid-template-columns:1fr 1fr}.selectors select{width:100%}.progress .label{font-size:17px}.reset,.continue{font-size:15px}.memory-action{flex-direction:column;gap:3px;min-height:64px}}
+@media(max-width:420px){.header{padding:18px 14px 13px}.brand{font-size:31px}.sub{font-size:16px}.logo{width:56px;height:56px}.theme{width:54px;height:54px}.control-row{padding:0 14px 15px;gap:10px}.count{padding:16px}.count b{font-size:24px}.selectors select{font-size:17px;padding:12px;min-height:54px}.progress{padding:7px 9px 8px;gap:4px}.progress-actions{grid-template-columns:max-content max-content minmax(0,1fr);gap:6px}.progress .label{font-size:15px}.round{display:none}.reset,.continue{font-size:13.5px;padding:8px 9px;min-height:42px}.progress-chips{gap:6px}.chip{max-width:46px;font-size:15px}main{padding:14px 10px 28px}.qcard,.explain,.review{padding:20px;border-radius:22px}.qnum{font-size:37px}.qmeta{font-size:16px}.pill{font-size:14px;padding:7px 9px}h1{font-size:28px;line-height:1.17}.statement-list{font-size:19px;line-height:1.23}.opt{font-size:20px;padding:15px;min-height:68px}.letter{flex-basis:43px;height:43px;font-size:19px}.memory{padding:13px 14px 14px;border-radius:19px}.memory strong{font-size:20.5px;line-height:1.1}.memory-actions{gap:6px;margin-top:9px;padding-top:9px}.memory-action{font-size:15.5px;padding:6px 3px;min-height:60px}.memory-action-icon{width:27px;height:27px;flex-basis:27px}.detail-card{padding:14px}.detail-card h3{font-size:22px}.detail-card p{font-size:18px;line-height:1.22}.learn-section h4{font-size:19px}.formula{font-size:16.5px}.bottom button{min-height:69px;font-size:14px}}
+@media(max-width:360px){.sub{display:none}.progress-actions{grid-template-columns:1fr 1fr}.continue{grid-column:1/-1;justify-self:stretch;text-align:center}.progress-chips{gap:4px}.chip{max-width:42px;font-size:14px}.qcard,.explain,.review{padding:17px}h1{font-size:26px}.statement-list{font-size:18px}.opt{font-size:19px}.memory strong{font-size:19px}.memory-action{font-size:14px}.bottom button{font-size:13px;min-height:66px}}
+
+/* UI 版本比較器：經典大字／學習卡／考場專注 */
+.variant-picker{max-width:820px;margin:0 auto;padding:0 20px 15px}
+.variant-panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;display:grid;gap:9px;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+.variant-title{font-size:15px;font-weight:1000;color:var(--muted);line-height:1.1}
+.variant-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.variant-btn{min-width:0;min-height:52px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--text);font-size:16px;font-weight:1000;line-height:1.08;padding:8px 6px;white-space:normal;word-break:keep-all}
+.variant-btn[aria-pressed="true"]{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 10%,var(--card));color:var(--blue);box-shadow:0 0 0 2px color-mix(in srgb,var(--blue) 18%,transparent)}
+.variant-note{font-size:13px;color:var(--muted);line-height:1.25}
+
+/* B：學習卡動態版 */
+html[data-ui-variant="cards"]{
+  --bg:#f3f1ff;--card:#ffffff;--text:#17132b;--muted:#665f7a;--line:#d8d1ff;
+  --blue:#5b4ce8;--green:#0f8a68;--red:#c1254c;--purple:#8a3ffc;--yellow:#ffe57a;
+  --sticky-bg:#24184d;--sticky-text:#fff;
+}
+html[data-ui-variant="cards"] .top{background:linear-gradient(180deg,#faf9ff 0%,#f3f1ff 100%)}
+html[data-ui-variant="cards"] .logo{border-radius:22px;background:linear-gradient(135deg,#5b4ce8,#a855f7);box-shadow:0 12px 28px rgba(91,76,232,.28)}
+html[data-ui-variant="cards"] .count,
+html[data-ui-variant="cards"] .qcard,
+html[data-ui-variant="cards"] .explain,
+html[data-ui-variant="cards"] .review{box-shadow:0 14px 34px rgba(75,55,145,.10);border-color:#e0dbff}
+html[data-ui-variant="cards"] .qcard,
+html[data-ui-variant="cards"] .explain,
+html[data-ui-variant="cards"] .review{border-radius:31px}
+html[data-ui-variant="cards"] .opt{border-radius:23px;box-shadow:0 7px 18px rgba(75,55,145,.06);transition:transform .18s ease,box-shadow .18s ease}
+html[data-ui-variant="cards"] .opt:active{transform:scale(.985)}
+html[data-ui-variant="cards"] .memory{background:linear-gradient(135deg,#211846,#35206f);box-shadow:0 18px 40px rgba(45,31,98,.28)}
+html[data-ui-variant="cards"] .bottom button{border-radius:24px;box-shadow:0 6px 18px rgba(75,55,145,.08)}
+html[data-ui-variant="cards"] .chip{border-width:3px;box-shadow:0 4px 12px rgba(75,55,145,.08)}
+
+/* C：考場專注版 */
+html[data-ui-variant="exam"]{
+  --bg:#fffdf5;--card:#fff;--text:#090909;--muted:#4b5563;--line:#111;
+  --blue:#123ea8;--green:#006b4f;--red:#a90028;--purple:#5521a8;--yellow:#ffd83d;
+  --sticky-bg:#000;--sticky-text:#fff;
+}
+html[data-ui-variant="exam"] .top{background:#fffdf5;border-bottom:2px solid #111}
+html[data-ui-variant="exam"] .logo{background:#111;border-radius:12px;box-shadow:none}
+html[data-ui-variant="exam"] .count,
+html[data-ui-variant="exam"] .selectors select,
+html[data-ui-variant="exam"] .qcard,
+html[data-ui-variant="exam"] .explain,
+html[data-ui-variant="exam"] .review,
+html[data-ui-variant="exam"] .variant-panel{border:2px solid #111;box-shadow:none;border-radius:14px}
+html[data-ui-variant="exam"] .qcard,
+html[data-ui-variant="exam"] .explain,
+html[data-ui-variant="exam"] .review{border-radius:16px}
+html[data-ui-variant="exam"] .opt{border:2px solid #111;border-radius:12px;box-shadow:none}
+html[data-ui-variant="exam"] .opt.correct{border-width:4px}
+html[data-ui-variant="exam"] .opt.selected-wrong{border-width:4px}
+html[data-ui-variant="exam"] .memory{border:3px solid #000;border-radius:14px;box-shadow:0 8px 0 rgba(0,0,0,.18)}
+html[data-ui-variant="exam"] .bottom{border-top:2px solid #111;backdrop-filter:none;background:#fffdf5}
+html[data-ui-variant="exam"] .bottom button{border:2px solid #111;border-radius:12px;box-shadow:none}
+html[data-ui-variant="exam"] .chip{border:2px solid #111;box-shadow:none}
+html[data-ui-variant="exam"] .hl{border-radius:2px}
+
+html[data-theme="dark"][data-ui-variant="cards"]{--bg:#000;--card:#151225;--text:#faf9ff;--muted:#b9b3cc;--line:#3d355f;--sticky-bg:#fff;--sticky-text:#17132b}
+html[data-theme="dark"][data-ui-variant="exam"]{--bg:#000;--card:#0b0b0b;--text:#fff;--muted:#c9c9c9;--line:#fff;--sticky-bg:#fff;--sticky-text:#000}
+@media(max-width:420px){.variant-picker{padding:0 14px 12px}.variant-panel{padding:10px}.variant-btn{font-size:14px;min-height:50px}.variant-note{font-size:12px}}
+
 </style>
 </head>
 <body>
-<div class="hover-zone" id="hoverZone"></div>
-<div class="progress" id="progress" aria-label="題號選單">
-  <div class="progress-row"><span class="counter" id="counter">已答 0/5 題</span><button class="reset" id="resetBtn">↻ 重新作答</button><button class="resume" id="resumeBtn">續答第 2 題 →</button></div>
-  <div class="progress-row"><div class="balls" id="balls"></div></div>
+<div class="top">
+  <div class="header">
+    <div class="logo">速</div>
+    <div><span class="brand">速讀</span><span class="sub">統測學習卡</span></div>
+    <div class="grow"></div>
+    <button class="theme" id="themeBtn" aria-label="切換深淺色主題">☾</button>
+  </div>
+  <div class="control-row">
+    <div class="count">距 116 統測 <b id="countdown">計算中…</b><time id="nowTime"></time></div>
+    <div class="selectors"><select aria-label="年度"><option>115 年</option></select><select aria-label="科目"><option>會計學</option></select></div>
+  </div>
 </div>
-<button class="nav-toggle" id="navToggle">題號 · 第 2 題</button>
-<main class="shell">
-  <div class="brand"><div><span class="badge">GitHub Chat 部署測試</span><h1>速讀｜115 會計第 2–6 題</h1></div></div>
-  <article class="card" id="questionCard"></article>
-  <aside class="memory" id="memory"><h2>一眼記住</h2><p id="memoryText"></p><div class="memory-tools"><button data-section="concept">觀念</button><button data-section="extension">延伸觀念</button><button data-section="formula">公式</button></div></aside>
-  <article class="answer" id="answer"></article>
-  <div class="note">這個網址先用來確認 Chat → GitHub → GitHub Pages 的寫入、測試、部署鏈路。正式版的「每題單獨 WEBP 原題擷圖」會在確認部署鏈路正常後，於 Work 模式整合到原 Sites 專案。</div>
+<div class="progress-shell" id="progressShell">
+  <div class="progress">
+    <div class="progress-actions">
+      <span class="label" id="progressLabel">已答 0/5 題</span>
+      <button class="reset" id="resetBtn">↻ 重新作答</button>
+      <button class="continue" id="continueBtn">續答第 2 題 →</button>
+    </div>
+    <div class="progress-chips" id="progressChips"></div>
+  </div>
+</div>
+<main>
+  <section class="qcard" id="questionCard"></section>
+  <div class="memory-wrap" id="memoryWrap"><div class="memory" id="memoryCard"></div></div>
+  <section class="explain" id="explain"></section>
+  <section class="review" id="review"><h2>錯題快速複習</h2><div class="review-summary" id="reviewSummary"></div><div id="reviewList"></div></section>
 </main>
-<nav class="bottom">
-<button id="prevBtn">上題</button><button id="toQuestionBtn">題目</button><button id="toAnswerBtn">解說</button><button id="wrongBtn">錯題</button><button class="primary" id="nextBtn">下題</button>
+<nav class="bottom" aria-label="題目操作">
+  <button id="prevBtn">←<br>上題</button>
+  <button id="qBtn" class="active">▤<br>題目</button>
+  <button id="expBtn">▣<br>解說</button>
+  <button id="wrongBtn">☷<br>錯題</button>
+  <button id="nextBtn">→<br>下題</button>
 </nav>
 <script>
-const qs=[
-{id:2,correct:'D',title:'依據商業會計法，下列哪幾項應於年度決算程序辦理終了後，至少保存十年？',statements:['① 發票','② 傳票','③ 日記簿','④ 分類帳','⑤ 資產負債表','⑥ 綜合損益表'],options:{A:'僅①②③④',B:'僅①②⑤⑥',C:'僅②③④⑤',D:'僅③④⑤⑥'},memory:'憑證至少五年；帳簿、報表至少十年。',concept:'商業會計法第38條：會計憑證至少保存5年；會計帳簿及財務報表至少保存10年。',extension:'發票屬原始憑證、傳票屬記帳憑證，因此不是本題的10年項目。',formula:'憑證＝5；帳簿＋報表＝10。'},
-{id:3,correct:'C',title:'下列交易或事項之會計處理，何者正確？',statements:[],options:{A:'支付員工薪資為對內交易',B:'地震造成存貨損失為對外交易',C:'汽車經銷商購入汽車以供出售，應將汽車認列為存貨',D:'禮品買賣業購入商品而支付運費，應將運費認列為營業費用'},memory:'買來要賣的就是存貨；進貨運費跟著存貨成本走。',concept:'汽車經銷商購進待售汽車，目的在正常營業過程中出售，因此屬存貨。',extension:'支付薪資涉及員工，是對外交易；地震損失是內部會計事項；進貨運費屬取得存貨的成本。',formula:'待售商品 → 存貨；進貨必要支出 → 存貨成本。'},
-{id:4,correct:'B',title:'有關日記簿與分類帳之頁次登錄，下列何者正確？',statements:['① 作分錄時應填寫日記簿的日頁欄','② 過帳時將日記簿頁次轉記到分類帳的日頁欄','③ 過帳時將分類帳頁次記入日記簿的日頁欄'],options:{A:'僅①',B:'僅②',C:'僅①③',D:'僅②③'},memory:'日記簿填類頁；分類帳填日頁；互記對方頁碼。',concept:'過帳時，分類帳的日頁欄用來記錄日記簿頁次，所以②正確。',extension:'日記簿應填的是類頁欄，用來記分類帳頁次；不是日頁欄。',formula:'日記簿→類頁；分類帳→日頁。'},
-{id:5,correct:'B',title:'有關期末調整事項，下列何者正確？',statements:['① 預付項目調整借方一定為實帳戶','② 應付項目調整借方為虛帳戶','③ 記虛轉實法漏作預收調整會使淨利低估','④ 漏作應收項目調整會使淨利低估'],options:{A:'僅①②',B:'僅②④',C:'僅①③',D:'僅③④'},memory:'預付看起手式；應付補費用；預收未賺要扣回；應收已賺要補上。',concept:'應付項目期末要補認費用，因此借記費用；漏作應收項目則少認收益，所以淨利低估。',extension:'預收收入若尚未賺得卻未調整，收入會高估；預付項目借方是否實帳戶要看原始記錄法。',formula:'應付→借費用；應收→貸收益。'},
-{id:6,correct:'D',title:'有關備抵損失與應收帳款之敘述，下列何者正確？',statements:['X1年底應收帳款借餘500,000；X2年底600,000；不考慮預期信用損失率為0之特殊情況。','① X2年初備抵損失一定為貸餘','② X2年度中備抵損失一定維持貸餘','③ X2年底調整後備抵損失一定為貸餘'],options:{A:'僅①',B:'僅②',C:'僅②③',D:'僅①③'},memory:'期初承接上期調整；期中可能因沖銷變動；期末再調回應有貸餘。',concept:'前一期期末已依應收帳款估列備抵，所以次期期初承接貸餘；期末調整後，在非零損失率下仍應有貸餘。',extension:'年度中實際沖銷壞帳可能讓備抵降到0甚至短暫借餘，因此不能說全年任何時點都一定貸餘。',formula:'期末備抵＝期末應收帳款 × 預期損失率（概念式）。'}];
-let idx=0;
-const state=JSON.parse(localStorage.getItem('demo5-state')||'{}');
-function save(){localStorage.setItem('demo5-state',JSON.stringify(state))}
-const $=id=>document.getElementById(id);
-function answeredCount(){return Object.keys(state).filter(k=>state[k]?.selected).length}
-function measure(){document.documentElement.style.setProperty('--progress-h',$('progress').classList.contains('show')?$('progress').offsetHeight+'px':'0px');document.documentElement.style.setProperty('--memory-h',$('memory').classList.contains('show')?$('memory').offsetHeight+'px':'0px')}
-function renderNav(){const q=qs[idx];$('counter').textContent='已答 '+answeredCount()+'/5 題';$('resumeBtn').textContent='續答第 '+q.id+' 題 →';$('navToggle').textContent='題號 · 第 '+q.id+' 題';$('balls').innerHTML=qs.map((x,i)=>{const s=state[x.id];let c='ball'+(i===idx?' current':'');if(s?.selected)c+=s.selected===x.correct?' ok':' bad';return '<button class="'+c+'" data-i="'+i+'">'+x.id+(s?.selected?(s.selected===x.correct?' ✓':' ×'):'')+'</button>'}).join('');document.querySelectorAll('.ball').forEach(b=>b.onclick=()=>{idx=+b.dataset.i;render();hideNav()});}
-function render(){const q=qs[idx],s=state[q.id];$('questionCard').innerHTML='<div class="meta"><span class="qno">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="badge">單選題</span></div><div class="question">'+q.title+'</div>'+q.statements.map(t=>'<div class="statement">'+t+'</div>').join('')+'<div class="options">'+Object.entries(q.options).map(([k,v])=>{let cls='opt';if(s?.selected&&k===q.correct)cls+=' correct';if(s?.selected&&k===s.selected&&k!==q.correct)cls+=' wrong';return '<button class="'+cls+'" data-a="'+k+'"><span class="letter">'+k+'</span><span>'+v+'</span></button>'}).join('')+'</div><div class="result">'+(s?.selected?(s.selected===q.correct?'<span class="good">✓ 答對了</span>':'<span class="badtext">× 答錯了，正確答案是 '+q.correct+'</span>'):'')+'</div>';
-document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
-if(s?.selected){$('memory').classList.add('show');$('memoryText').textContent=q.memory;$('answer').classList.add('show');$('answer').innerHTML='<h3>'+q.correct+' ✅ 正確答案</h3><section id="concept"><h4>觀念</h4><p>'+q.concept+'</p></section><section id="extension"><h4>延伸觀念</h4><p>'+q.extension+'</p></section><section id="formula"><h4>公式／口訣</h4><p>'+q.formula+'</p></section>';}else{$('memory').classList.remove('show');$('answer').classList.remove('show');$('answer').innerHTML='';}
-renderNav();$('prevBtn').disabled=idx===0;$('nextBtn').textContent=idx===qs.length-1?'完成':'下題';requestAnimationFrame(measure);}
-function answer(a){const q=qs[idx];state[q.id]={selected:a,at:Date.now()};save();render();requestAnimationFrame(()=>{measure();setTimeout(()=>{$('answer').scrollIntoView({behavior:'smooth',block:'start'})},60)})}
-function showNav(){$('progress').classList.add('show');requestAnimationFrame(measure)}function hideNav(){$('progress').classList.remove('show');requestAnimationFrame(measure)}
-$('hoverZone').onmouseenter=showNav;$('progress').onmouseleave=()=>{if(innerWidth>700)setTimeout(hideNav,350)};$('navToggle').onclick=()=>{$('progress').classList.contains('show')?hideNav():showNav()};
-$('resumeBtn').onclick=()=>{hideNav();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};
-$('resetBtn').onclick=()=>{if(confirm('重新開始第2–6題？目前這一輪的進度會清空。')){Object.keys(state).forEach(k=>delete state[k]);save();idx=0;render();hideNav()}};
-$('prevBtn').onclick=()=>{if(idx>0){idx--;render();scrollTo({top:0,behavior:'smooth'})}};$('nextBtn').onclick=()=>{if(idx<qs.length-1){idx++;render();scrollTo({top:0,behavior:'smooth'})}else alert('5 題測試完成')};
-$('toQuestionBtn').onclick=()=>$('questionCard').scrollIntoView({behavior:'smooth',block:'start'});$('toAnswerBtn').onclick=()=>{if($('answer').classList.contains('show'))$('answer').scrollIntoView({behavior:'smooth',block:'start'})};$('wrongBtn').onclick=()=>{const wrong=qs.filter(q=>state[q.id]?.selected&&state[q.id].selected!==q.correct).map(q=>q.id);alert(wrong.length?'本輪錯題：'+wrong.join('、'):'目前沒有錯題')};
-document.querySelectorAll('.memory-tools button').forEach(b=>b.onclick=()=>{const n=document.getElementById(b.dataset.section);if(n)n.scrollIntoView({behavior:'smooth',block:'start'})});
-addEventListener('resize',measure);new ResizeObserver(measure).observe($('progress'));new ResizeObserver(measure).observe($('memory'));render();
+const QUESTIONS=[
+{
+ id:2,correct:'D',topic:'會計法規與資料保存',
+ title:'依據商業會計法，下列哪幾項應於年度決算程序辦理終了後，至少保存十年？',
+ statements:['① 發票','② 傳票','③ 日記簿','④ 分類帳','⑤ 資產負債表','⑥ 綜合損益表'],
+ options:{A:'僅①、②、③、④',B:'僅①、②、⑤、⑥',C:'僅②、③、④、⑤',D:'僅③、④、⑤、⑥'},
+ memory:'<span class="kw">憑證至少五年</span>；<span class="kw">帳簿、報表至少十年</span>。',
+ source:'115 年統測會計學第 2 題｜教材單元：會計法規與帳簿（彰化高商紙本章頁待核對）',
+ details:{
+  A:{ok:false,explain:'①發票與②傳票都屬會計憑證，一般最低保存年限是五年；而且這個組合漏掉⑤資產負債表與⑥綜合損益表。',concept:'先把資料分成「憑證、帳簿、財務報表」三類，再判斷最低保存年限。',extension:'自己多留幾年可以，但題目問的是法律規定的最低年限，不能因為可以多留就選進十年項目。',formula:'記憶式：憑證 5 年；帳簿＋財務報表 10 年。'},
+  B:{ok:false,explain:'⑤⑥選對了，但多選①②，也漏掉③日記簿與④分類帳。',concept:'日記簿與分類帳都是會計帳簿，因此至少保存十年。',extension:'題目若出現「發票、收據、傳票」，先想到會計憑證；若出現「日記簿、分類帳」，先想到會計帳簿。',formula:'分類：①②＝憑證；③④＝帳簿；⑤⑥＝財務報表。'},
+  C:{ok:false,explain:'③④⑤都應保存十年，但②傳票一般至少保存五年；同時漏了⑥綜合損益表。',concept:'傳票是記帳憑證，不是帳簿。',extension:'不要因為傳票上有記帳內容，就把它當成帳簿；它仍是用來證明及指示記帳的憑證。',formula:'錯一個或漏一個，組合題就整組錯。'},
+  D:{ok:true,explain:'③日記簿、④分類帳是會計帳簿；⑤資產負債表、⑥綜合損益表是財務報表，四項都至少保存十年。',concept:'會計帳簿及財務報表，於年度決算程序辦理終了後，原則上至少保存十年。',extension:'未結事項或依法需永久保存的資料另有規定；考試先依題目的一般情況判斷。',formula:'最短記憶：憑證 5；帳簿、報表 10。'}
+ }
+},
+{
+ id:3,correct:'C',topic:'會計基本概念、交易與存貨',
+ title:'關於會計基本概念之敘述，下列何者正確？',statements:[],
+ options:{A:'支付員工薪資為對內交易',B:'因地震造成的存貨損失為對外交易',C:'汽車經銷商購入汽車以供出售，應將汽車認列為存貨',D:'禮品買賣業購入商品而支付運費，應將運費認列為營業費用'},
+ memory:'看交易先看<span class="kw">有沒有外部對象</span>；分類資產要看<span class="kw">買來做什麼</span>；進貨運費<span class="kw">進成本</span>。',
+ source:'115 年統測會計學第 3 題｜教材單元：會計基本概念與存貨（彰化高商紙本章頁待核對）',
+ details:{
+  A:{ok:false,explain:'公司與員工是不同的會計個體。公司支付薪資，是公司和另一個人之間發生權利義務，因此屬對外交易。',concept:'「對內、對外」不是看員工人在公司裡還是外面，而是看是否涉及會計個體以外的人。',extension:'支付租金、向客戶收款、付員工薪資，都有外部對象，通常屬對外交易。',formula:'判斷式：有外部權利義務對象 → 對外交易。'},
+  B:{ok:false,explain:'地震讓商品受損，雖然資產變少，但沒有和另一個人交換或產生收付款權利義務，所以屬內部會計事項。',concept:'自然災害造成的資產損失，通常是企業內部資產價值變動。',extension:'不要把「外面的地震」誤認成「對外交易」；會計的對外是指外部交易對象。',formula:'沒有外部交易對象，但資產或損益發生變化 → 內部會計事項。'},
+  C:{ok:true,explain:'汽車經銷商買車是為了出售，所以這些汽車是商品，也就是存貨。',concept:'資產分類要看用途。同一台車，買來賣是存貨；買來長期自用則可能是運輸設備。',extension:'麵包店待售麵包、文具店待售鉛筆、汽車行待售汽車，都是存貨。',formula:'判斷式：正常營業中準備出售 → 存貨。'},
+  D:{ok:false,explain:'把購入商品運到目前地點所支付的進貨運費，是取得商品所必要的成本，應計入存貨成本，不是一般營業費用。',concept:'存貨成本包含買價與使商品到達目前地點、達到目前狀態的必要成本。',extension:'若是把商品送給顧客的銷貨運費，才較可能列為銷售相關費用；要分清楚進貨與銷貨。',formula:'存貨取得成本＝買價＋進貨運費＋其他必要成本－折扣。'}
+ }
+},
+{
+ id:4,correct:'B',topic:'日記簿、分類帳與過帳',
+ title:'關於日記簿及分類帳的記錄方式，下列哪幾項正確？',
+ statements:['① 作分錄時應填寫日記簿的日頁欄','② 過帳時將日記簿之頁次轉記到分類帳的日頁欄','③ 過帳時將分類帳之頁次記入日記簿的日頁欄'],
+ options:{A:'僅①',B:'僅②',C:'僅①、③',D:'僅②、③'},
+ memory:'日記簿填<span class="kw">類頁</span>；分類帳填<span class="kw">日頁</span>；兩本帳互記<span class="kw">對方頁碼</span>。',
+ source:'115 年統測會計學第 4 題｜教材單元：分錄、過帳與分類帳（彰化高商紙本章頁待核對）',
+ details:{
+  A:{ok:false,explain:'①錯在欄位名稱與時間。日記簿用的是「類頁欄」，而且要在過帳時才填分類帳頁碼，不是作分錄時就填。',concept:'日記簿的類頁欄，用來記錄該筆交易被過到分類帳的哪一頁。',extension:'尚未過帳前，還不知道或尚未完成分類帳位置，因此不能先把頁碼當成已完成。',formula:'日記簿 → 類頁欄 → 填分類帳頁碼。'},
+  B:{ok:true,explain:'過帳時，分類帳的日頁欄要填這筆資料來自日記簿的哪一頁，所以②正確。',concept:'分類帳的「日頁」就是日記簿頁碼的索引。',extension:'兩本帳互記頁碼，是為了讓查帳者能從日記簿找到分類帳，也能從分類帳回查日記簿。',formula:'分類帳 → 日頁欄 → 填日記簿頁碼。'},
+  C:{ok:false,explain:'①錯；③也錯。③雖然方向是把分類帳頁次寫回日記簿，但日記簿那個欄位叫「類頁欄」，不是日頁欄。',concept:'題目常用正確方向搭配錯誤欄位名稱來混淆。',extension:'看到「日記簿的日頁欄」通常要特別警覺，因為日記簿對應的是類頁欄。',formula:'欄位配對：日記簿＝類頁；分類帳＝日頁。'},
+  D:{ok:false,explain:'②正確，但③的欄位名稱錯誤，因此整組不能選。',concept:'組合題要每一個敘述都正確，不能只看其中一個正確。',extension:'如果③改成「記入日記簿的類頁欄」，才會正確。',formula:'正確組合只有②。'}
+ }
+},
+{
+ id:5,correct:'B',topic:'期末調整',
+ title:'關於調整之敘述，下列哪幾項正確？',
+ statements:['① 不論採記實轉虛法或記虛轉實法，期末預付項目的調整，借方一定為實帳戶','② 應計基礎下，期末應付項目的調整，借方一定為虛帳戶','③ 記虛轉實法下，期末漏作預收項目之調整分錄將導致淨利低估','④ 應計基礎下，期末漏作應收項目之調整分錄將導致淨利低估'],
+ options:{A:'僅①、③',B:'僅②、④',C:'僅①、②、④',D:'僅①、③、④'},
+ memory:'預付看<span class="kw">起手式</span>；應付<span class="kw">補費用</span>；預收<span class="kw">未賺要扣回</span>；應收<span class="kw">已賺要補上</span>。',
+ source:'115 年統測會計學第 5 題｜教材單元：期末調整（彰化高商紙本章頁待核對）',
+ details:{
+  A:{ok:false,explain:'①錯：預付項目的借方不一定是實帳戶，要看一開始採記實轉虛或記虛轉實。③錯：漏做預收調整會讓收入多算，淨利高估。',concept:'預付項目兩種記法的調整方向不同；不能看到預付就說借方一定是實帳戶。',extension:'記實轉虛：先記資產，期末借費用；記虛轉實：先記費用，期末借資產。',formula:'漏預收調整 → 收入高估 → 淨利高估。'},
+  B:{ok:true,explain:'②對：應付項目是費用已發生、錢還沒付，所以借方補費用。④對：應收項目是收入已賺得、錢還沒收，漏記會讓收入與淨利少算。',concept:'應計基礎重點是事情是否已發生，不是錢是否已收付。',extension:'看到「本期已發生但尚未付款」想應付費用；看到「本期已賺得但尚未收款」想應收收入。',formula:'應付：借 費用／貸 應付款；應收：借 應收款／貸 收入。'},
+  C:{ok:false,explain:'②④雖然正確，但多選了錯誤的①，所以整組錯。',concept:'組合題中，只要多選一個錯誤敘述，整組就錯。',extension:'先逐句判斷，再看選項組合，不要直接憑印象選。',formula:'正確敘述＝②＋④。'},
+  D:{ok:false,explain:'④正確，但①錯；③的高低估方向也相反，因此整組錯。',concept:'預收未調整代表尚未賺到的收入仍留在收入中，收入被高估。',extension:'收入多算使淨利高估；收入漏算使淨利低估。',formula:'預收漏調整＝高估；應收漏調整＝低估。'}
+ }
+},
+{
+ id:6,correct:'D',topic:'應收帳款與備抵損失',
+ title:'甲公司 X1 年底及 X2 年底之應收帳款分別為借餘 $500,000 及借餘 $600,000。關於 X2 年備抵損失之敘述，下列哪幾項正確？（排除預期信用減損損失率為零之特殊情況）',
+ statements:['① 於 X2 年會計年度開始日，備抵損失一定是貸餘','② 於 X2 年會計年度期間，備抵損失一定是貸餘','③ 於 X2 年會計年度終了日，調整後之備抵損失一定是貸餘'],
+ options:{A:'僅②',B:'僅③',C:'僅①、②',D:'僅①、③'},
+ memory:'年初<span class="kw">接前期</span>；年中<span class="kw">可能改變</span>；年底<span class="kw">調整後回貸餘</span>。',
+ source:'115 年統測會計學第 6 題｜教材單元：應收帳款與備抵損失（彰化高商紙本章頁待核對）',
+ details:{
+  A:{ok:false,explain:'②錯。年度期間若實際沖銷的呆帳超過原有備抵，備抵損失可能暫時出現借餘，因此不能說期間一定貸餘。',concept:'備抵損失正常餘額在貸方，但「正常」不等於年度中每一刻都一定在貸方。',extension:'沖銷時借記備抵損失，會減少原有貸餘；若沖銷過多，可能暫時變成借餘。',formula:'期間餘額＝期初貸餘－已沖銷金額＋其他變動。'},
+  B:{ok:false,explain:'③正確，但漏掉也正確的①，所以「僅③」不完整。',concept:'X2 年初承接 X1 年底調整後的備抵餘額。',extension:'資產、負債與抵減資產帳戶通常不會因跨年結帳而歸零；收入費用才會結清。',formula:'X2 期初餘額＝X1 期末調整後餘額。'},
+  C:{ok:false,explain:'①正確，但②錯。年中可能因沖銷而暫時出現零或借餘；同時此選項漏掉③。',concept:'要把期初、期間與期末調整後三個時間點分開。',extension:'題目出現「一定」時，要檢查是否有中途交易可能改變餘額方向。',formula:'時間點：期初接前期；期間會變；期末再調整。'},
+  D:{ok:true,explain:'①對：X2 年初承接 X1 年底調整後的貸餘。③對：X2 年底應收帳款仍有餘額且損失率非零，期末調整後需留下貸方備抵。',concept:'備抵損失是應收帳款的抵減帳戶，期末所需餘額通常在貸方。',extension:'若調整前是借餘，期末調整時需先補平借餘，再建立應有的貸餘，所以調整金額會更大。',formula:'調整金額＝期末應有貸餘－調整前餘額；若調整前為借餘，視為負數。'}
+ }
+}
+];
+const IDS=QUESTIONS.map(q=>q.id);
+const STORAGE_KEY='tvet-full-demo-115-accounting-v1';
+const blankStatus=()=>Object.fromEntries(IDS.map(id=>[id,null]));
+const blankSelected=()=>Object.fromEntries(IDS.map(id=>[id,null]));
+const defaultState=()=>({round:1,current:{status:blankStatus(),selected:blankSelected(),wrong:[],startedAt:new Date().toISOString()},history:[]});
+function loadState(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return defaultState();const parsed=JSON.parse(raw);if(!parsed.current)return defaultState();return parsed}catch(e){return defaultState()}}
+let state=loadState();let currentIndex=0;let activeView='question';
+const el=id=>document.getElementById(id);
+const questionCard=el('questionCard'),memoryWrap=el('memoryWrap'),memoryCard=el('memoryCard'),explain=el('explain'),review=el('review'),progressShell=el('progressShell');
+function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
+function currentRound(){return state.current}
+function qById(id){return QUESTIONS.find(q=>q.id===id)}
+function currentQuestion(){return QUESTIONS[currentIndex]}
+function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function renderProgress(){
+ const box=el('progressChips');box.innerHTML='';let answered=0;
+ IDS.forEach(id=>{const st=currentRound().status[id];if(st)answered++;const b=document.createElement('button');b.className='chip';b.dataset.q=id;b.textContent=String(id);if(st==='ok'){b.classList.add('ok');b.textContent=id+'✓'}if(st==='bad'){b.classList.add('bad');b.textContent=id+'×'}if(st==='ok'&&currentRound().wrong.includes(id))b.classList.add('recovered');if(id===currentQuestion().id)b.classList.add('current');b.setAttribute('aria-label',`第 ${id} 題${st==='ok'?'，最近答對':st==='bad'?'，最近答錯':'，尚未作答'}`);b.onclick=()=>goToQuestion(id);box.appendChild(b)});
+ el('progressLabel').innerHTML=`已答 ${answered}/5 題 <span class="round">第 ${state.round} 輪</span>`;
+ const first=IDS.find(id=>!currentRound().status[id]);const c=el('continueBtn');c.textContent=first?`續答第 ${first} 題 →`:'查看本輪錯題 →';c.onclick=()=>first?goToQuestion(first):showReview();
+}
+function renderQuestion(){
+ const q=currentQuestion();const selected=currentRound().selected[q.id];const status=currentRound().status[q.id];
+ const statements=q.statements.length?`<ul class="statement-list">${q.statements.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`:'';
+ questionCard.innerHTML=`<div class="qmeta"><span>第</span><span class="qnum">${String(q.id).padStart(2,'0')}</span><span>題</span><span class="pill">單選題</span><button class="source" id="sourceBtn">▣ 來源</button></div><h1>${escapeHtml(q.title).replace(/至少保存十年|正確|調整|備抵損失/g,m=>`<span class="hl">${m}</span>`)}</h1>${statements}<div class="option-list">${Object.entries(q.options).map(([key,text])=>{const cls=['opt'];if(status&&key===q.correct)cls.push('correct');if(status==='bad'&&key===selected)cls.push('selected-wrong');return `<button class="${cls.join(' ')}" data-answer="${key}"><span class="letter">${key}</span><span>${escapeHtml(text)}</span></button>`}).join('')}</div><div class="result${status?' show':''}" id="result">${status==='ok'?'<span class="good">✓ 答對了</span>':status==='bad'?`<span class="badtxt">× 這題答錯，正確答案是 ${q.correct}</span>`:''}</div><div class="source-note">${escapeHtml(q.source)}</div>`;
+ questionCard.querySelectorAll('.opt').forEach(btn=>btn.onclick=()=>answer(btn.dataset.answer));
+ el('sourceBtn').onclick=()=>alert(q.source);
+ renderProgress();updateBottom();
+}
+function renderMemory(){const q=currentQuestion();memoryCard.innerHTML=`<small>一眼記住｜第 ${q.id} 題</small><strong>${q.memory}</strong><div class="memory-actions" role="group" aria-label="快速查看解答重點"><button class="memory-action" data-kind="concept" style="--tone:#2563eb"><span class="memory-action-icon">◎</span><span>觀念</span></button><button class="memory-action" data-kind="extension" style="--tone:#7c3aed"><span class="memory-action-icon">↗</span><span>延伸觀念</span></button><button class="memory-action" data-kind="formula" style="--tone:#a15c00"><span class="memory-action-icon">ƒx</span><span>公式</span></button></div>`;memoryCard.querySelectorAll('.memory-action').forEach(btn=>btn.onclick=()=>scrollLearning(btn.dataset.kind,btn))}
+function renderExplain(){
+ const q=currentQuestion();
+ explain.innerHTML=`<h2>第 ${q.id} 題｜四個選項都弄懂</h2>${Object.entries(q.details).map(([key,d])=>`<article class="detail-card ${d.ok?'correct':'wrong'}" id="detail-${q.id}-${key}"><h3>${key} ${d.ok?'✅ 正確答案':'❌ 不正確'}</h3><p><b>為什麼：</b>${escapeHtml(d.explain)}</p><div class="learn-section" id="concept-${q.id}-${key}"><h4>觀念</h4><p>${escapeHtml(d.concept)}</p></div><div class="learn-section" id="extension-${q.id}-${key}"><h4>延伸觀念</h4><p>${escapeHtml(d.extension)}</p></div><div class="formula" id="formula-${q.id}-${key}"><b>公式／口訣</b><br>${escapeHtml(d.formula)}</div></article>`).join('')}`;
+}
+function renderReview(){
+ const wrong=currentRound().wrong;el('reviewSummary').textContent=`第 ${state.round} 輪共有 ${wrong.length} 題曾答錯；後來答對也會保留到重新作答為止。`;
+ el('reviewList').innerHTML=wrong.length?wrong.map(id=>{const q=qById(id),d=q.details[q.correct];return `<article class="review-item"><h3>第 ${id} 題｜${escapeHtml(q.topic)}</h3><p><b>正確答案：</b>${q.correct}　${escapeHtml(q.options[q.correct])}</p><p><b>一眼記住：</b>${q.memory}</p><p><b>核心觀念：</b>${escapeHtml(d.concept)}</p><div class="review-actions"><button data-review-q="${id}" data-mode="explain">看完整解說</button><button data-review-q="${id}" data-mode="retry">再答一次</button></div></article>`}).join(''):'<article class="review-item" style="border-color:var(--line)"><h3>目前沒有錯題</h3><p>本輪答錯的題目會自動出現在這裡。</p></article>';
+ review.querySelectorAll('[data-review-q]').forEach(btn=>btn.onclick=()=>{goToQuestion(Number(btn.dataset.reviewQ));if(btn.dataset.mode==='explain')setTimeout(showExplain,80)});
+}
+function syncStickyOffsets(){const ph=Math.ceil(progressShell.getBoundingClientRect().height||0);const mh=memoryWrap.classList.contains('show')?Math.ceil(memoryCard.getBoundingClientRect().height||0):0;document.documentElement.style.setProperty('--progress-sticky-h',ph+'px');document.documentElement.style.setProperty('--memory-sticky-h',mh+'px')}
+function scrollBelowMemory(target,behavior='smooth'){if(!target)return;syncStickyOffsets();const styles=getComputedStyle(document.documentElement);const ph=parseFloat(styles.getPropertyValue('--progress-sticky-h'))||0;const mh=parseFloat(styles.getPropertyValue('--memory-sticky-h'))||0;const mt=parseFloat(getComputedStyle(memoryWrap).top)||(ph+6);const top=window.scrollY+target.getBoundingClientRect().top-(mt+mh+10);window.scrollTo({top:Math.max(0,top),behavior})}
+function scrollCorrect(){const q=currentQuestion();requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>scrollBelowMemory(el(`detail-${q.id}-${q.correct}`)),35)))}
+function scrollLearning(kind,btn){const q=currentQuestion();showExplain(false);memoryCard.querySelectorAll('.memory-action').forEach(x=>x.classList.toggle('active',x===btn));const target=el(`${kind}-${q.id}-${q.correct}`);if(target){target.classList.remove('focus-flash');void target.offsetWidth;target.classList.add('focus-flash');scrollBelowMemory(target);setTimeout(()=>target.classList.remove('focus-flash'),950)}}
+function answer(ans){const q=currentQuestion();const ok=ans===q.correct;currentRound().selected[q.id]=ans;currentRound().status[q.id]=ok?'ok':'bad';if(!ok&&!currentRound().wrong.includes(q.id))currentRound().wrong.push(q.id);saveState();renderQuestion();renderMemory();renderExplain();showExplain(true)}
+function showQuestion(){activeView='question';review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');updateBottom();syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
+function showExplain(autoScroll=true){const q=currentQuestion();if(!currentRound().status[q.id]){alert('請先選擇答案，再查看解說。');return}activeView='explain';review.classList.remove('show');explain.classList.add('show');memoryWrap.classList.add('show');renderMemory();renderExplain();updateBottom();syncStickyOffsets();if(autoScroll)scrollCorrect()}
+function showReview(){activeView='review';explain.classList.remove('show');memoryWrap.classList.remove('show');review.classList.add('show');renderReview();updateBottom();syncStickyOffsets();review.scrollIntoView({behavior:'smooth',block:'start'})}
+function goToQuestion(id){const idx=IDS.indexOf(id);if(idx<0)return;currentIndex=idx;activeView='question';renderQuestion();renderMemory();renderExplain();review.classList.remove('show');explain.classList.remove('show');memoryWrap.classList.remove('show');syncStickyOffsets();questionCard.scrollIntoView({behavior:'smooth',block:'start'})}
+function updateBottom(){el('prevBtn').disabled=currentIndex===0;el('nextBtn').disabled=currentIndex===QUESTIONS.length-1;el('qBtn').classList.toggle('active',activeView==='question');el('expBtn').classList.toggle('active',activeView==='explain');el('wrongBtn').classList.toggle('active',activeView==='review')}
+function resetPaper(){const ok=confirm(`重新作答會封存第 ${state.round} 輪，清空畫面上的答題狀態與錯題，並開始新一輪。舊紀錄仍保留在歷史資料中。\n\n確定重新作答嗎？`);if(!ok)return;const now=new Date().toISOString();state.history.push({round:state.round,status:{...currentRound().status},selected:{...currentRound().selected},wrong:[...currentRound().wrong],startedAt:currentRound().startedAt,endedAt:now});state.round++;state.current={status:blankStatus(),selected:blankSelected(),wrong:[],startedAt:now};saveState();currentIndex=0;renderQuestion();renderMemory();renderExplain();showQuestion();setTimeout(()=>alert(`已開始第 ${state.round} 輪。上一輪已封存，本輪錯題會重新記錄。`),220)}
+function updateCountdown(){const target=new Date('2027-04-24T00:00:00+08:00').getTime(),now=Date.now(),diff=Math.max(0,target-now),day=Math.floor(diff/86400000),hour=Math.floor(diff%86400000/3600000),min=Math.floor(diff%3600000/60000),sec=Math.floor(diff%60000/1000);el('countdown').textContent=`${day}天 ${hour}時 ${min}分 ${sec}秒`;el('nowTime').textContent=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' · 臺灣'}
+el('resetBtn').onclick=resetPaper;el('themeBtn').onclick=()=>{const root=document.documentElement,dark=root.dataset.theme==='dark';root.dataset.theme=dark?'':'dark';el('themeBtn').textContent=dark?'☾':'☀';setTimeout(syncStickyOffsets,40)};el('qBtn').onclick=showQuestion;el('expBtn').onclick=()=>showExplain(true);el('wrongBtn').onclick=showReview;el('prevBtn').onclick=()=>currentIndex>0&&goToQuestion(QUESTIONS[currentIndex-1].id);el('nextBtn').onclick=()=>currentIndex<QUESTIONS.length-1&&goToQuestion(QUESTIONS[currentIndex+1].id);
+document.addEventListener('keydown',e=>{const k=e.key.toUpperCase();if(['A','B','C','D'].includes(k)&&activeView==='question')answer(k)});
+if('ResizeObserver'in window){const ro=new ResizeObserver(syncStickyOffsets);ro.observe(progressShell);ro.observe(memoryCard)}window.addEventListener('resize',syncStickyOffsets,{passive:true});window.addEventListener('orientationchange',()=>setTimeout(syncStickyOffsets,120),{passive:true});
+
+const UI_VARIANT_KEY='tvet-ui-variant-v1';
+const UI_VARIANT_NOTES={
+ classic:'A｜大字、留白充足，適合長時間閱讀與手機單手操作。',
+ cards:'B｜圓潤、層次與動態較明顯，接近互動學習卡的感覺。',
+ exam:'C｜黑白高對比、裝飾最少，適合模擬考場與快速判讀。'
+};
+function applyUiVariant(value){
+ const valid=['classic','cards','exam'].includes(value)?value:'classic';
+ document.documentElement.dataset.uiVariant=valid;
+ document.querySelectorAll('[data-variant]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.variant===valid)));
+ const note=document.getElementById('variantNote');if(note)note.textContent=UI_VARIANT_NOTES[valid];
+ localStorage.setItem(UI_VARIANT_KEY,valid);
+ setTimeout(syncStickyOffsets,60);
+}
+document.querySelectorAll('[data-variant]').forEach(btn=>btn.addEventListener('click',()=>applyUiVariant(btn.dataset.variant)));
+applyUiVariant('classic');
+
+renderQuestion();renderMemory();renderExplain();renderReview();syncStickyOffsets();updateCountdown();setInterval(updateCountdown,1000);if(document.fonts?.ready)document.fonts.ready.then(syncStickyOffsets).catch(()=>{});
 </script>
-</body></html>
+</body>
+</html>
