@@ -135,6 +135,19 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.locator('#subjectSel').selectOption({label:'英文'});
   await page.locator('.opt[data-a="A"]').click();
   await page.waitForTimeout(340);
+  assert.equal(await page.locator('#memoryWrap').isVisible(),true,'memory card appears automatically after answering');
+  assert.equal(await page.locator('.memory-actions button').count(),4,'memory card has four learning actions');
+  assert.equal(await page.locator('.memory-actions [data-go="出處"]').count(),1,'memory card includes source action');
+  const iconColors=await page.locator('.memory-action-icon').evaluateAll(nodes=>nodes.map(n=>getComputedStyle(n).backgroundColor));
+  assert.equal(new Set(iconColors).size,4,'four memory mini-diagrams use distinct high-contrast colors');
+  assert((await page.locator('#correctAnswer .option-detail').innerText()).includes('正確解答'),'correct option is labeled 正確解答');
+  await page.waitForTimeout(80);
+  const memoryBox=await page.locator('#memoryCard').boundingBox();
+  const correctBox=await page.locator('#correctAnswer').boundingBox();
+  assert(Math.abs(memoryBox.x-correctBox.x)<=2,'memory and correct answer left edges align');
+  assert(Math.abs(memoryBox.width-correctBox.width)<=3,'memory and correct answer widths align');
+  const answerGap=correctBox.y-(memoryBox.y+memoryBox.height);
+  assert(answerGap>=8&&answerGap<=12,'memory bottom and correct-answer top keep a safe 8-12px aligned gap; actual '+answerGap);
   assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-auto')),true,'question picker auto-hides after answering starts');
   assert.equal(await page.locator('.chip.bad').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(197, 44, 73)','wrong chip is red');
   let navBox=await page.locator('#progressShell').boundingBox();assert(navBox.y<0,'auto-hidden picker slides above viewport');
@@ -178,7 +191,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});
   assert(new URL(page.url()).searchParams.get('tools')==='1');
   assert((await page.title()).length>0);
-  passed('new 35-question demo is the GitHub entry; review lives in header; red/green/white question states, auto-hide/hover/mobile picker, sources, subject extensions and eight widths pass');
+  passed('new 35-question demo is the GitHub entry; post-answer memory auto-shows above aligned correct answer with four colored mini-diagrams including source; header review, question states, auto-hide/hover/mobile picker and eight widths pass');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}
