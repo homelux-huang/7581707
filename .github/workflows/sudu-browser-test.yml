@@ -5,6 +5,8 @@ on:
       - sudu/workspace.js
       - sudu/workspace.css
       - sudu/index.html
+      - index.html
+      - sudu/v4-115-multisubject-review-demo.html
       - sudu/exam_scoring.js
       - sudu/learning_sync.js
       - sudu/admin.html
