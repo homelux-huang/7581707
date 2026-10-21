@@ -315,7 +315,14 @@ function showMemory(){
  $('memoryWrap').classList.add('show');$('guideCard').classList.add('show');syncHeights();
 }
 function showGuide(){$('guideCard').classList.add('show');if(record(qnow()).status)$('memoryWrap').classList.add('show');syncHeights();}
-function syncHeights(){requestAnimationFrame(()=>{const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH',$('memoryWrap').classList.contains('show')?$('memoryWrap').getBoundingClientRect().height+'px':'0px')})}
+function alignMemoryToCorrectAnswer(){
+ const wrap=$('memoryWrap'),target=$('correctAnswer'),parent=wrap?.parentElement;
+ if(!wrap||!target||!parent||!wrap.classList.contains('show'))return;
+ const p=parent.getBoundingClientRect(),t=target.getBoundingClientRect();
+ wrap.style.marginLeft=Math.max(0,t.left-p.left)+'px';
+ wrap.style.marginRight=Math.max(0,p.right-t.right)+'px';
+}
+function syncHeights(){requestAnimationFrame(()=>{alignMemoryToCorrectAnswer();const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH',$('memoryWrap').classList.contains('show')?$('memoryWrap').getBoundingClientRect().height+'px':'0px')})}
 function scrollToCorrectAnswer(){
  const target=$('correctAnswer');if(!target||!$('memoryWrap').classList.contains('show'))return;
  const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;
