@@ -1,0 +1,85 @@
+{
+  "tested_at": "2026-10-21",
+  "target_project_id": "appgprj_6ad6317f47148191a6a88dc4b70925bc",
+  "target_url": "https://tvet-cards-7581707-q2.cusmed-acc-4049.chatgpt.site",
+  "source_ui": "V4 03_最終版面預覽.html",
+  "results": [
+    {
+      "size": "360x800",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.7,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "375x812",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.6,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "390x844",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.5,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "412x915",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.6,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "430x932",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.5,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "768x1024",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.4,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "1024x768",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.2,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    },
+    {
+      "size": "1440x900",
+      "horizontal_overflow": false,
+      "correct_gap_px": 10.2,
+      "memory_clipped": false,
+      "webp_ratio_ok": true,
+      "question_nav_ok": true,
+      "bottom_safe": true
+    }
+  ],
+  "notes": [
+    "No production Sites deployment performed.",
+    "No D1 write or migration performed.",
+    "No existing learner/attempt/history data deleted or modified."
+  ]
+}
