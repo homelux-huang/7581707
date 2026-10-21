@@ -1,5 +1,6 @@
 """Build the public site and embed a recursive HTML catalog into index.html."""
 
+import hashlib
 import json
 import os
 import re
@@ -86,6 +87,82 @@ def embed(template, entries):
     return result
 
 
+
+def generate_demo_question_crops(output):
+    """Generate single-question WebP assets from existing official page WebPs.
+
+    This is a pixel crop only: no OCR, redraw, interpolation, or content rewrite.
+    The crop map is reviewable in sudu/demo-question-crops.json.
+    """
+    config_path = ROOT / "sudu" / "demo-question-crops.json"
+    if not config_path.exists():
+        return []
+    try:
+        from PIL import Image
+    except ImportError as exc:
+        raise RuntimeError("Pillow is required to generate demo single-question WebPs") from exc
+
+    data = json.loads(config_path.read_text(encoding="utf-8"))
+    manifest = []
+    seen_outputs = set()
+    for item in data.get("crops", []):
+        source_rel = Path(item["source"])
+        output_rel = Path(item["output"])
+        if source_rel.suffix.lower() != ".webp" or output_rel.suffix.lower() != ".webp":
+            raise ValueError(f"Question crop must use WebP: {item}")
+        if output_rel.as_posix() in seen_outputs:
+            raise ValueError(f"Duplicate question crop output: {output_rel}")
+        seen_outputs.add(output_rel.as_posix())
+        if not output_rel.as_posix().startswith("sudu/questions/115/"):
+            raise ValueError(f"Unexpected crop output path: {output_rel}")
+
+        source = ROOT / source_rel
+        if not source.is_file() or source.is_symlink():
+            raise ValueError(f"Missing official source WebP: {source_rel}")
+        box = tuple(int(v) for v in item["box"])
+        if len(box) != 4:
+            raise ValueError(f"Invalid crop box: {item}")
+        left, top, right, bottom = box
+
+        with Image.open(source) as image:
+            width, height = image.size
+            if image.format != "WEBP":
+                raise ValueError(f"Official source is not WebP: {source_rel}")
+            if not (0 <= left < right <= width and 0 <= top < bottom <= height):
+                raise ValueError(f"Crop exceeds source bounds {width}x{height}: {item}")
+            crop_width, crop_height = right - left, bottom - top
+            # Reject accidental whole-page publication. q30 is the tallest because
+            # its official diagram is shared with q31, but the crop still excludes q31.
+            if crop_height >= int(height * 0.60) or crop_width < int(width * 0.70):
+                raise ValueError(f"Crop does not look like a single-question strip: {item}")
+            cropped = image.crop(box)
+            target = output / output_rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            cropped.save(target, format="WEBP", lossless=True, method=6)
+
+        digest = hashlib.sha256(target.read_bytes()).hexdigest()
+        manifest.append({
+            "subject": item["subject"],
+            "question": item["question"],
+            "source": source_rel.as_posix(),
+            "crop": list(box),
+            "sourceSize": [width, height],
+            "output": output_rel.as_posix(),
+            "outputSize": [crop_width, crop_height],
+            "sha256": digest,
+            "ocrPerformed": False,
+        })
+
+    manifest_path = output / "sudu" / "questions" / "115" / "crop-manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps({
+        "year": 115,
+        "generatedCount": len(manifest),
+        "rule": "single-question pixel crops from existing official WebP pages; no OCR",
+        "items": manifest,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return manifest
+
 def build():
     output = ROOT / "_site"
     # _site is always generated; never remove any source file.
@@ -105,6 +182,7 @@ def build():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
         copied += 1
+    crop_manifest = generate_demo_question_crops(output)
     entries = catalog(ROOT)
     template = (ROOT / "index.html").read_text(encoding="utf-8")
     (output / "index.html").write_text(embed(template, entries), encoding="utf-8")
@@ -112,7 +190,7 @@ def build():
     revision = os.environ.get("SUDU_BUILD_SHA", "")
     if revision and re.fullmatch(r"[0-9a-f]{40}", revision):
         (output / "sudu" / "release.json").write_text(json.dumps({"commit": revision, "testsRequired": True}) + "\n", encoding="utf-8")
-    print(f"PASS: public allowlist copied {copied} files; catalog generated for {len(entries)} HTML files")
+    print(f"PASS: public allowlist copied {copied} files; generated {len(crop_manifest)} single-question WebPs; catalog generated for {len(entries)} HTML files")
 
 
 if __name__ == "__main__":
