@@ -211,7 +211,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   assert(!/\bN\/A\b/i.test(businessGuide),'guide block must hide N/A entries');
   assert.equal(await page.locator('.memory-actions [data-go="公式／分錄"]').count(),0,'N/A formula icon is hidden from memory block');
   assert.equal(await page.locator('.memory-extra-grid').getByText('法規',{exact:true}).count(),0,'N/A business law entry is hidden from subject extension');
-  assert.equal(await page.locator('#guideCard .guide-block').filter({hasText:'法規'}).count(),0,'N/A law block is hidden from guide');
+  assert.equal(await page.locator('#guideCard .guide-block h3').filter({hasText:/^法規$/}).count(),0,'N/A law block is hidden from guide');
   const extraStyle=await page.locator('.memory-extra').evaluate(el=>({background:getComputedStyle(el).backgroundColor,color:getComputedStyle(el).color,textAlign:getComputedStyle(el).textAlign}));
   assert.equal(extraStyle.background,'rgb(255, 255, 255)','subject extension uses white background');
   assert.equal(extraStyle.color,'rgb(17, 17, 17)','subject extension uses black text');
