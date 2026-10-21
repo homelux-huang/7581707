@@ -158,13 +158,14 @@ function fmtTime(sec){sec=Math.round(sec||0);return sec<60?sec+' 秒':Math.floor
 function hasStudyValue(value){
  const s=String(value??'').trim();
  if(!s)return false;
- return !/^(?:n\/?a|na|none|null|unknown|不知道|未知|無資料|沒有資料|尚無資料|找不到|未找到|待補|待查|待核對|無)$/i.test(s)&&!/^(?:n\/?a|不知道|未知|無資料|沒有資料|尚無資料|找不到|未找到|待補|待查|待核對)\b/i.test(s);
+ return !/^(?:n\/?a|na|none|null|unknown|不知道|未知|無資料|沒有資料|尚無資料|找不到|未找到|待補|待查|待核對|無)$/i.test(s)&&!/^(?:n\/?a|na|none|null|unknown|不知道|未知|無資料|沒有資料|尚無資料|找不到|未找到|待補|待查|待核對)(?:\s|[：:（(]|$)/i.test(s);
 }
 function sourceInfo(q){
  const C=window.DEMO_LEARNING_CONFIG||{};
  const p=(C.bookProfile||{})[q.subject]||{};
  const ch=(C.chapterMap||{})[q.subject+'|'+q.id]||[];
- const info={school:(hasStudyValue(p.book)||hasStudyValue(ch[0])||hasStudyValue(ch[1]))?'國立彰化高商':'',book:p.book||'',chapter:ch[0]||'',name:ch[1]||'',page:'',evidence:p.evidence||''};
+ const page=((C.pageMap||{})[q.subject+'|'+q.id])||ch[2]||'';
+ const info={school:(hasStudyValue(p.book)||hasStudyValue(ch[0])||hasStudyValue(ch[1])||hasStudyValue(page))?'國立彰化高商':'',book:p.book||'',chapter:ch[0]||'',name:ch[1]||'',page,evidence:p.evidence||''};
  return info;
 }
 function sourceText(q){
