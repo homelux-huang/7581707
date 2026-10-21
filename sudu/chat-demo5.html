@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>速讀｜115會計第2–6題 Chat 部署測試</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#111827;--muted:#6b7280;--line:#dbe2ea;--blue:#2563eb;--green:#15803d;--red:#dc2626;--yellow:#facc15;--progress-h:0px;--memory-h:0px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+button{font:inherit}.shell{width:min(920px,100%);margin:auto;padding:18px 16px 40px}.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.brand h1{font-size:clamp(24px,5vw,40px);line-height:1.12;margin:0}.badge{padding:7px 11px;border-radius:999px;background:#111;color:#fff;font-weight:900;font-size:13px;white-space:nowrap}
+.hover-zone{position:fixed;left:0;right:0;top:0;height:18px;z-index:70}
+.progress{position:fixed;z-index:80;left:50%;top:0;transform:translate(-50%,-110%);width:min(920px,100%);padding:10px 12px;background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:0 0 18px 18px;box-shadow:0 10px 30px rgba(0,0,0,.12);transition:.22s ease}
+.progress.show,.progress:hover,.progress:focus-within{transform:translate(-50%,0)}
+.progress-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.progress-row+.progress-row{margin-top:8px}.counter{font-weight:900}.reset,.resume,.nav-toggle{min-height:48px;border-radius:13px;border:1px solid var(--line);padding:0 14px;font-weight:900;background:#fff}.resume{background:#111;color:#fff;border-color:#111}.balls{display:flex;gap:8px;flex-wrap:wrap}.ball{width:46px;height:46px;border:2px solid var(--line);border-radius:50%;background:#fff;font-weight:1000}.ball.current{border-color:var(--blue);box-shadow:0 0 0 4px #dbeafe}.ball.ok{background:#dcfce7;border-color:#86efac;color:#166534}.ball.bad{background:#fee2e2;border-color:#fca5a5;color:#991b1b}
+.nav-toggle{display:none;position:fixed;right:14px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:85;background:#111;color:#fff;border-color:#111;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,30px);box-shadow:0 10px 32px rgba(15,23,42,.06)}.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--muted);font-weight:800}.qno{font-size:clamp(28px,7vw,50px);font-weight:1000;color:#111}.question{font-size:clamp(22px,4.5vw,31px);line-height:1.38;font-weight:900;margin:16px 0}.statement{font-size:19px;line-height:1.45;margin:8px 0}.options{display:grid;gap:12px;margin-top:20px}.opt{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center;text-align:left;width:100%;min-height:68px;padding:12px 14px;border:2px solid var(--line);border-radius:18px;background:#fff;color:#111;font-size:clamp(18px,3.8vw,22px);font-weight:800}.opt .letter{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#111;color:#fff}.opt.correct{border-color:#16a34a;background:#ecfdf5}.opt.wrong{border-color:#dc2626;background:#fef2f2}.result{margin-top:14px;font-size:20px;font-weight:1000}.good{color:var(--green)}.badtext{color:var(--red)}
+.memory{position:sticky;top:calc(var(--progress-h) + 8px);z-index:55;margin:16px 0 12px;background:#111;color:#fff;border-radius:20px;padding:16px 18px;box-shadow:0 12px 32px rgba(0,0,0,.18);display:none}.memory.show{display:block}.memory h2{margin:0 0 8px;font-size:20px}.memory p{margin:0;font-size:clamp(19px,4vw,24px);line-height:1.35;font-weight:1000}.memory .hi{color:var(--yellow);display:inline-block;white-space:nowrap}.memory-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.memory-tools button{min-height:60px;border:0;border-radius:15px;background:#fff;color:#111;font-weight:1000;font-size:16px}
+.answer{margin-top:12px;background:#fff;border:2px solid #86efac;border-radius:22px;padding:18px;display:none;scroll-margin-top:calc(var(--progress-h) + var(--memory-h) + 20px)}.answer.show{display:block}.answer h3{font-size:24px;margin:0 0 12px;color:#166534}.answer section{padding:12px 0;border-top:1px solid var(--line)}.answer section:first-of-type{border-top:0}.answer h4{margin:0 0 6px;font-size:19px}.answer p{margin:0;font-size:17px;line-height:1.45}
+.note{margin:16px 0 0;padding:12px 14px;border-radius:14px;background:#fff7ed;color:#9a3412;font-weight:800;line-height:1.4}
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.bottom button{min-height:54px;border:0;border-radius:14px;background:#eef2f7;font-weight:900}.bottom button.primary{background:#111;color:#fff}
+@media(max-width:700px){.hover-zone{display:none}.progress{left:8px;right:8px;width:auto;transform:translateY(-110%)}.progress.show{transform:translateY(0)}.nav-toggle{display:block}.shell{padding-top:10px}.brand{padding-right:98px}.memory{top:8px}.memory-tools button{font-size:15px;padding:6px}.bottom{grid-template-columns:repeat(5,minmax(0,1fr))}.bottom button{font-size:13px;padding:4px}}
+</style>
+</head>
+<body>
+<div class="hover-zone" id="hoverZone"></div>
+<div class="progress" id="progress" aria-label="題號選單">
+  <div class="progress-row"><span class="counter" id="counter">已答 0/5 題</span><button class="reset" id="resetBtn">↻ 重新作答</button><button class="resume" id="resumeBtn">續答第 2 題 →</button></div>
+  <div class="progress-row"><div class="balls" id="balls"></div></div>
+</div>
+<button class="nav-toggle" id="navToggle">題號 · 第 2 題</button>
+<main class="shell">
+  <div class="brand"><div><span class="badge">GitHub Chat 部署測試</span><h1>速讀｜115 會計第 2–6 題</h1></div></div>
+  <article class="card" id="questionCard"></article>
+  <aside class="memory" id="memory"><h2>一眼記住</h2><p id="memoryText"></p><div class="memory-tools"><button data-section="concept">觀念</button><button data-section="extension">延伸觀念</button><button data-section="formula">公式</button></div></aside>
+  <article class="answer" id="answer"></article>
+  <div class="note">這個網址先用來確認 Chat → GitHub → GitHub Pages 的寫入、測試、部署鏈路。正式版的「每題單獨 WEBP 原題擷圖」會在確認部署鏈路正常後，於 Work 模式整合到原 Sites 專案。</div>
+</main>
+<nav class="bottom">
+<button id="prevBtn">上題</button><button id="toQuestionBtn">題目</button><button id="toAnswerBtn">解說</button><button id="wrongBtn">錯題</button><button class="primary" id="nextBtn">下題</button>
+</nav>
+<script>
+const qs=[
+{id:2,correct:'D',title:'依據商業會計法，下列哪幾項應於年度決算程序辦理終了後，至少保存十年？',statements:['① 發票','② 傳票','③ 日記簿','④ 分類帳','⑤ 資產負債表','⑥ 綜合損益表'],options:{A:'僅①②③④',B:'僅①②⑤⑥',C:'僅②③④⑤',D:'僅③④⑤⑥'},memory:'憑證至少五年；帳簿、報表至少十年。',concept:'商業會計法第38條：會計憑證至少保存5年；會計帳簿及財務報表至少保存10年。',extension:'發票屬原始憑證、傳票屬記帳憑證，因此不是本題的10年項目。',formula:'憑證＝5；帳簿＋報表＝10。'},
+{id:3,correct:'C',title:'下列交易或事項之會計處理，何者正確？',statements:[],options:{A:'支付員工薪資為對內交易',B:'地震造成存貨損失為對外交易',C:'汽車經銷商購入汽車以供出售，應將汽車認列為存貨',D:'禮品買賣業購入商品而支付運費，應將運費認列為營業費用'},memory:'買來要賣的就是存貨；進貨運費跟著存貨成本走。',concept:'汽車經銷商購進待售汽車，目的在正常營業過程中出售，因此屬存貨。',extension:'支付薪資涉及員工，是對外交易；地震損失是內部會計事項；進貨運費屬取得存貨的成本。',formula:'待售商品 → 存貨；進貨必要支出 → 存貨成本。'},
+{id:4,correct:'B',title:'有關日記簿與分類帳之頁次登錄，下列何者正確？',statements:['① 作分錄時應填寫日記簿的日頁欄','② 過帳時將日記簿頁次轉記到分類帳的日頁欄','③ 過帳時將分類帳頁次記入日記簿的日頁欄'],options:{A:'僅①',B:'僅②',C:'僅①③',D:'僅②③'},memory:'日記簿填類頁；分類帳填日頁；互記對方頁碼。',concept:'過帳時，分類帳的日頁欄用來記錄日記簿頁次，所以②正確。',extension:'日記簿應填的是類頁欄，用來記分類帳頁次；不是日頁欄。',formula:'日記簿→類頁；分類帳→日頁。'},
+{id:5,correct:'B',title:'有關期末調整事項，下列何者正確？',statements:['① 預付項目調整借方一定為實帳戶','② 應付項目調整借方為虛帳戶','③ 記虛轉實法漏作預收調整會使淨利低估','④ 漏作應收項目調整會使淨利低估'],options:{A:'僅①②',B:'僅②④',C:'僅①③',D:'僅③④'},memory:'預付看起手式；應付補費用；預收未賺要扣回；應收已賺要補上。',concept:'應付項目期末要補認費用，因此借記費用；漏作應收項目則少認收益，所以淨利低估。',extension:'預收收入若尚未賺得卻未調整，收入會高估；預付項目借方是否實帳戶要看原始記錄法。',formula:'應付→借費用；應收→貸收益。'},
+{id:6,correct:'D',title:'有關備抵損失與應收帳款之敘述，下列何者正確？',statements:['X1年底應收帳款借餘500,000；X2年底600,000；不考慮預期信用損失率為0之特殊情況。','① X2年初備抵損失一定為貸餘','② X2年度中備抵損失一定維持貸餘','③ X2年底調整後備抵損失一定為貸餘'],options:{A:'僅①',B:'僅②',C:'僅②③',D:'僅①③'},memory:'期初承接上期調整；期中可能因沖銷變動；期末再調回應有貸餘。',concept:'前一期期末已依應收帳款估列備抵，所以次期期初承接貸餘；期末調整後，在非零損失率下仍應有貸餘。',extension:'年度中實際沖銷壞帳可能讓備抵降到0甚至短暫借餘，因此不能說全年任何時點都一定貸餘。',formula:'期末備抵＝期末應收帳款 × 預期損失率（概念式）。'}];
+let idx=0;
+const state=JSON.parse(localStorage.getItem('demo5-state')||'{}');
+function save(){localStorage.setItem('demo5-state',JSON.stringify(state))}
+const $=id=>document.getElementById(id);
+function answeredCount(){return Object.keys(state).filter(k=>state[k]?.selected).length}
+function measure(){document.documentElement.style.setProperty('--progress-h',$('progress').classList.contains('show')?$('progress').offsetHeight+'px':'0px');document.documentElement.style.setProperty('--memory-h',$('memory').classList.contains('show')?$('memory').offsetHeight+'px':'0px')}
+function renderNav(){const q=qs[idx];$('counter').textContent='已答 '+answeredCount()+'/5 題';$('resumeBtn').textContent='續答第 '+q.id+' 題 →';$('navToggle').textContent='題號 · 第 '+q.id+' 題';$('balls').innerHTML=qs.map((x,i)=>{const s=state[x.id];let c='ball'+(i===idx?' current':'');if(s?.selected)c+=s.selected===x.correct?' ok':' bad';return '<button class="'+c+'" data-i="'+i+'">'+x.id+(s?.selected?(s.selected===x.correct?' ✓':' ×'):'')+'</button>'}).join('');document.querySelectorAll('.ball').forEach(b=>b.onclick=()=>{idx=+b.dataset.i;render();hideNav()});}
+function render(){const q=qs[idx],s=state[q.id];$('questionCard').innerHTML='<div class="meta"><span class="qno">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="badge">單選題</span></div><div class="question">'+q.title+'</div>'+q.statements.map(t=>'<div class="statement">'+t+'</div>').join('')+'<div class="options">'+Object.entries(q.options).map(([k,v])=>{let cls='opt';if(s?.selected&&k===q.correct)cls+=' correct';if(s?.selected&&k===s.selected&&k!==q.correct)cls+=' wrong';return '<button class="'+cls+'" data-a="'+k+'"><span class="letter">'+k+'</span><span>'+v+'</span></button>'}).join('')+'</div><div class="result">'+(s?.selected?(s.selected===q.correct?'<span class="good">✓ 答對了</span>':'<span class="badtext">× 答錯了，正確答案是 '+q.correct+'</span>'):'')+'</div>';
+document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
+if(s?.selected){$('memory').classList.add('show');$('memoryText').textContent=q.memory;$('answer').classList.add('show');$('answer').innerHTML='<h3>'+q.correct+' ✅ 正確答案</h3><section id="concept"><h4>觀念</h4><p>'+q.concept+'</p></section><section id="extension"><h4>延伸觀念</h4><p>'+q.extension+'</p></section><section id="formula"><h4>公式／口訣</h4><p>'+q.formula+'</p></section>';}else{$('memory').classList.remove('show');$('answer').classList.remove('show');$('answer').innerHTML='';}
+renderNav();$('prevBtn').disabled=idx===0;$('nextBtn').textContent=idx===qs.length-1?'完成':'下題';requestAnimationFrame(measure);}
+function answer(a){const q=qs[idx];state[q.id]={selected:a,at:Date.now()};save();render();requestAnimationFrame(()=>{measure();setTimeout(()=>{$('answer').scrollIntoView({behavior:'smooth',block:'start'})},60)})}
+function showNav(){$('progress').classList.add('show');requestAnimationFrame(measure)}function hideNav(){$('progress').classList.remove('show');requestAnimationFrame(measure)}
+$('hoverZone').onmouseenter=showNav;$('progress').onmouseleave=()=>{if(innerWidth>700)setTimeout(hideNav,350)};$('navToggle').onclick=()=>{$('progress').classList.contains('show')?hideNav():showNav()};
+$('resumeBtn').onclick=()=>{hideNav();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};
+$('resetBtn').onclick=()=>{if(confirm('重新開始第2–6題？目前這一輪的進度會清空。')){Object.keys(state).forEach(k=>delete state[k]);save();idx=0;render();hideNav()}};
+$('prevBtn').onclick=()=>{if(idx>0){idx--;render();scrollTo({top:0,behavior:'smooth'})}};$('nextBtn').onclick=()=>{if(idx<qs.length-1){idx++;render();scrollTo({top:0,behavior:'smooth'})}else alert('5 題測試完成')};
+$('toQuestionBtn').onclick=()=>$('questionCard').scrollIntoView({behavior:'smooth',block:'start'});$('toAnswerBtn').onclick=()=>{if($('answer').classList.contains('show'))$('answer').scrollIntoView({behavior:'smooth',block:'start'})};$('wrongBtn').onclick=()=>{const wrong=qs.filter(q=>state[q.id]?.selected&&state[q.id].selected!==q.correct).map(q=>q.id);alert(wrong.length?'本輪錯題：'+wrong.join('、'):'目前沒有錯題')};
+document.querySelectorAll('.memory-tools button').forEach(b=>b.onclick=()=>{const n=document.getElementById(b.dataset.section);if(n)n.scrollIntoView({behavior:'smooth',block:'start'})});
+addEventListener('resize',measure);new ResizeObserver(measure).observe($('progress'));new ResizeObserver(measure).observe($('memory'));render();
+</script>
+</body></html>
