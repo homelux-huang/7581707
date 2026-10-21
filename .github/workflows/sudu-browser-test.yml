@@ -1,4 +1,5 @@
 name: Browser smoke test Sudu
+# Acceptance coverage includes post-answer memory -> correct-answer alignment and icon contrast.
 on:
   push:
     paths:
