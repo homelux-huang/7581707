@@ -57,10 +57,16 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
 .source-priority{font-size:12px;color:var(--muted);margin-top:5px}
 @media(max-width:620px){.option-detail-grid,.memory-extra-grid{grid-template-columns:1fr}}
 .source-figure{margin:14px 0 16px;border:1px solid var(--line);border-radius:18px;padding:10px;background:var(--bg)} .source-figure img{width:100%;height:auto;display:block;border-radius:12px} .source-figure figcaption{font-size:13px;color:var(--muted);margin-top:8px}
-.memory-wrap{display:none;position:sticky;top:calc(var(--navH) + 7px);z-index:40;margin-bottom:11px} .memory-wrap.show{display:block}
-.memory{background:var(--sticky);color:var(--stickyText);border-radius:21px;padding:15px 17px;box-shadow:0 12px 30px rgba(0,0,0,.2)} .memory small{opacity:.72;font-weight:900} .memory strong{display:block;font-size:22px;line-height:1.16;margin-top:4px}
-.memory-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid color-mix(in srgb,var(--stickyText) 25%,transparent)}
-.memory-actions button{min-height:58px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:1000}
+.memory-wrap{display:none;position:sticky;top:calc(var(--navH) + 7px);z-index:40;margin:0 25px 10px} .memory-wrap.show{display:block}
+.memory{background:var(--sticky);color:var(--stickyText);border-radius:21px;padding:15px 17px 13px;box-shadow:0 12px 30px rgba(0,0,0,.2);border-bottom:4px solid var(--green)} .memory small{opacity:.76;font-weight:900} .memory strong{display:block;font-size:22px;line-height:1.16;margin-top:4px}
+.memory-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid color-mix(in srgb,var(--stickyText) 25%,transparent)}
+.memory-actions button{min-height:64px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:1000;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 10px;line-height:1.15}
+.memory-action-icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.memory-action-icon svg{width:23px;height:23px;display:block;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.memory-action-concept .memory-action-icon{background:#2563eb}.memory-action-extension .memory-action-icon{background:#7c3aed}.memory-action-formula .memory-action-icon{background:#b45309}.memory-action-source .memory-action-icon{background:#0f766e}
+.memory-action-label{min-width:0;overflow-wrap:anywhere}
+.option-wrap.correct-wrap>.opt.correct{border-color:var(--green);border-top-width:4px;box-shadow:0 0 0 2px rgba(19,121,91,.13)}
+.option-wrap.correct-wrap{scroll-margin-top:calc(var(--navH) + var(--memoryH) + 17px)}
 .guide{display:none} .guide.show{display:block} .guide-grid{display:grid;gap:10px}
 .guide-block{border:1px solid var(--line);border-radius:16px;padding:14px;scroll-margin-top:calc(var(--navH) + var(--memoryH) + 18px)} .guide-block h3{margin:0 0 6px;font-size:18px;color:var(--blue)} .guide-block p{margin:0;font-size:17px;line-height:1.5;white-space:pre-line}
 .review-view{display:none} .review-view.show{display:block}
@@ -77,7 +83,7 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
 @media(max-width:720px){
  .header{padding:14px 13px 10px;gap:10px;flex-wrap:wrap}.brand-block{flex:1;min-width:210px}.brand{font-size:28px}.sub{font-size:14px}.logo{width:52px;height:52px}.header-actions{width:100%;display:grid;grid-template-columns:1fr 1fr 54px;gap:8px}.review-head,.nav-toggle{min-height:50px;padding:9px 10px}.review-label-full{display:none}.review-label-short{display:inline}.nav-toggle{display:inline-flex}.theme{width:54px;height:50px;border-radius:15px}.control-row{grid-template-columns:1fr;padding:0 13px 13px}.selectors{display:grid;grid-template-columns:1fr 1fr}
  .progress-actions{grid-template-columns:1fr 1fr}.label{grid-column:1/2}.reset{grid-column:2/3}.continue{grid-column:1/3;justify-self:stretch}.nav-auto .progress-shell{transform:translateY(-100%)}.nav-auto.nav-open .progress-shell{transform:translateY(0)}.nav-auto .progress-shell::after{display:none}
- main{padding:13px 9px 30px}.card{padding:19px;border-radius:21px}h1{font-size:25px}.opt{font-size:18px;padding:14px}.memory strong{font-size:19px}.memory-actions button{font-size:14px}
+ main{padding:13px 9px 30px}.card{padding:19px;border-radius:21px}h1{font-size:25px}.opt{font-size:18px;padding:14px}.memory-wrap{margin-left:20px;margin-right:20px}.memory strong{font-size:19px}.memory-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.memory-actions button{font-size:14px;min-height:62px}.memory-action-icon{width:36px;height:36px;flex-basis:36px}
  .review-toolbar{grid-template-columns:1fr}.metrics{width:100%;margin-left:42px}.bottom button{min-height:66px;font-size:14px}
 }
 @media(max-width:390px){.sub{display:none}.brand-block{min-width:180px}.header-actions{grid-template-columns:1fr 1fr 48px}.review-head,.nav-toggle{font-size:13px;padding:7px}.theme{width:48px}.progress-chips{gap:5px}.chip{width:44px;height:44px;font-size:15px}.label{font-size:16px}.reset,.continue{font-size:14px;padding:8px}h1{font-size:23px}.wrong-card{padding:15px}}
@@ -101,8 +107,8 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
 </div>
 <main>
  <section id="studyView">
-  <article class="card" id="questionCard"></article>
   <div class="memory-wrap" id="memoryWrap"><div class="memory" id="memoryCard"></div></div>
+  <article class="card" id="questionCard"></article>
   <article class="card guide" id="guideCard"></article>
  </section>
  <section class="review-view" id="reviewView">
@@ -192,7 +198,7 @@ function optionSubjectEntries(q,L){
 }
 function renderOptionDetail(q,L){
  const entries=optionSubjectEntries(q,L);
- let html='<div class="option-detail '+(L===q.answer?'is-correct':'is-wrong')+'"><b>'+(L===q.answer?'✓ 正確選項':'× 選項檢查')+'</b><p>'+esc(optionReason(q,L))+'</p>';
+ let html='<div class="option-detail '+(L===q.answer?'is-correct':'is-wrong')+'"><b>'+(L===q.answer?'✓ 正確解答':'× 選項檢查')+'</b><p>'+esc(optionReason(q,L))+'</p>';
  if(entries.length){html+='<div class="option-detail-grid">'+entries.map(x=>'<span><em>'+esc(x[0])+'</em>'+esc(x[1])+'</span>').join('')+'</div>';}
  return html+'</div>';
 }
@@ -225,7 +231,7 @@ function renderQuestion(){
  let optionsHtml='';
  q.options.forEach((o,i)=>{
   const L=LETTERS[i]; let cls='opt'; if(r.status&&L===q.answer)cls+=' correct'; if(r.status==='bad'&&L===r.selected)cls+=' wrong';
-  optionsHtml+='<div class="option-wrap"><button class="'+cls+'" data-a="'+L+'"><span class="letter">'+L+'</span><span class="opt-body"><span class="opt-text">'+esc(o)+'</span></span></button>'+(r.status?renderOptionDetail(q,L):'')+'</div>';
+  const wrapCls='option-wrap'+(r.status&&L===q.answer?' correct-wrap':''); optionsHtml+='<div class="'+wrapCls+'"'+(r.status&&L===q.answer?' id="correctAnswer"':'')+'><button class="'+cls+'" data-a="'+L+'"><span class="letter">'+L+'</span><span class="opt-body"><span class="opt-text">'+esc(o)+'</span></span></button>'+(r.status?renderOptionDetail(q,L):'')+'</div>';
  });
  $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img+'<div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
@@ -236,7 +242,17 @@ function answer(sel){
  const q=qnow(),r=record(q),elapsed=Math.max(1,(performance.now()-startedAt)/1000);r.attempts++;r.lastElapsed=elapsed;r.selected=sel;
  if(sel===q.answer)r.status='ok';else{r.status='bad';r.wrongCount++;r.totalWrongSeconds+=elapsed;r.lastWrongAt=Date.now();}
  save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showMemory();
- setTimeout(()=>{const target=document.querySelector('.opt.correct');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},180);
+ requestAnimationFrame(()=>requestAnimationFrame(()=>syncHeights()));
+ setTimeout(scrollToCorrectAnswer,320);
+}
+function memoryIcon(kind){
+ const icons={
+  concept:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"></path></svg>',
+  extension:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18L18 5"></path><path d="M11 5h7v7"></path><path d="M5 7v11h11"></path></svg>',
+  formula:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10M7 20h10"></path><path d="M10 8l4 8M14 8l-4 8"></path></svg>',
+  source:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22z"></path><path d="M20 5.5A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22z"></path><path d="M7 7h2M15 7h2"></path></svg>'
+ };
+ return icons[kind]||'';
 }
 function renderGuide(){
  const q=qnow(); const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]];
@@ -245,7 +261,13 @@ function renderGuide(){
  const mem=subjectEntries(q);
  let memExtra='';
  if(mem.length){memExtra='<details class="memory-extra"><summary>科目重點延伸（'+mem.length+'）</summary><div class="memory-extra-grid">'+mem.map(x=>'<span><b>'+esc(x[0])+'</b>'+esc(x[1])+'</span>').join('')+'</div></details>';}
- $('memoryCard').innerHTML='<small>一眼記住｜'+esc(q.subject)+'第 '+q.id+' 題</small><strong>'+esc(q.memory)+'</strong>'+memExtra+'<div class="memory-actions"><button data-go="觀念">觀念</button><button data-go="延伸閱讀">延伸觀念</button><button data-go="公式／分錄">公式／分錄</button></div>';
+ const actions=[
+  ['觀念','concept','觀念'],
+  ['延伸閱讀','extension','延伸觀念'],
+  ['公式／分錄','formula','公式／分錄'],
+  ['出處','source','出處']
+ ];
+ $('memoryCard').innerHTML='<small>一眼記住｜'+esc(q.subject)+'第 '+q.id+' 題</small><strong>'+esc(q.memory)+'</strong>'+memExtra+'<div class="memory-actions">'+actions.map(a=>'<button class="memory-action memory-action-'+a[1]+'" data-go="'+a[0]+'"><span class="memory-action-icon">'+memoryIcon(a[1])+'</span><span class="memory-action-label">'+a[2]+'</span></button>').join('')+'</div>';
  $('memoryCard').querySelectorAll('button').forEach(b=>b.onclick=()=>{showGuide();const blocks=[...$('guideCard').querySelectorAll('.guide-block')];const t=blocks.find(x=>x.querySelector('h3')?.textContent===b.dataset.go);t?.scrollIntoView({behavior:'smooth',block:'start'})});
 }
 let navCloseTimer=0;
@@ -261,6 +283,14 @@ function showMemory(){
 }
 function showGuide(){$('guideCard').classList.add('show');if(record(qnow()).status)$('memoryWrap').classList.add('show');syncHeights();}
 function syncHeights(){requestAnimationFrame(()=>{const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH',$('memoryWrap').classList.contains('show')?$('memoryWrap').getBoundingClientRect().height+'px':'0px')})}
+function scrollToCorrectAnswer(){
+ const target=$('correctAnswer');if(!target||!$('memoryWrap').classList.contains('show'))return;
+ const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;
+ const memoryHeight=$('memoryWrap').getBoundingClientRect().height;
+ const desiredTop=navHeight+7+memoryHeight+10;
+ const delta=target.getBoundingClientRect().top-desiredTop;
+ window.scrollBy({top:delta,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
 function showStudy(){$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
  return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].concat(subjectEntries(q));
