@@ -10,9 +10,9 @@
  --bg:#f5f7fc;--card:#fff;--text:#111827;--muted:#667085;--line:#d8deea;
  --blue:#4a6fea;--blue-soft:#edf1ff;--red:#b4233f;--red-soft:#fff1f3;--green:#13795b;
  --yellow:#ffe58f;--purple:#5b32d6;--sticky:#111;--stickyText:#fff;--safe:env(safe-area-inset-bottom,0px);
- --nav-bg:#e7edf9;--question-bg:#eef4ff;--option-section:#f8faff;--option-bg:#fff;--option-hover:#e4edff;--option-hover-border:#315df5;--navH:0px;--memoryH:0px;
+ --nav-bg:#e7edf9;--question-bg:#eef4ff;--option-section:#fff6e6;--option-bg:#fff;--option-hover:#e4edff;--option-hover-border:#315df5;--navH:0px;--memoryH:0px;
 }
-html[data-theme="dark"]{--bg:#000;--card:#111;--text:#f8fafc;--muted:#adb5c4;--line:#30323a;--blue-soft:#151c38;--red-soft:#2a1118;--sticky:#fff;--stickyText:#111;--nav-bg:#171a22;--question-bg:#0d1424;--option-section:#090c12;--option-bg:#181b23;--option-hover:#202b47;--option-hover-border:#7c9cff}
+html[data-theme="dark"]{--bg:#000;--card:#111;--text:#f8fafc;--muted:#adb5c4;--line:#30323a;--blue-soft:#151c38;--red-soft:#2a1118;--sticky:#fff;--stickyText:#111;--nav-bg:#171a22;--question-bg:#0d1424;--option-section:#211a10;--option-bg:#181b23;--option-hover:#202b47;--option-hover-border:#7c9cff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;padding-bottom:104px;overflow-x:hidden}
@@ -36,7 +36,7 @@ button:focus-visible,select:focus-visible{outline:3px solid #7c9cff;outline-offs
 .chip{justify-self:center;width:52px;height:52px;border-radius:50%;border:2px solid #aeb8c9;background:#fff;color:#111;font-weight:1000;font-size:17px;box-shadow:0 2px 7px rgba(24,39,75,.08)}.chip.ok{border-color:#0e6048;background:#13795b;color:#fff}.chip.bad{border-color:#991c35;background:#c52c49;color:#fff}.chip.current{box-shadow:0 0 0 4px #86a3ff,0 3px 9px rgba(24,39,75,.12)}
 main{max-width:900px;margin:auto;padding:18px 14px 38px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;margin-bottom:14px;min-width:0}#questionCard{background:var(--question-bg);border-color:color-mix(in srgb,var(--blue) 32%,var(--line));box-shadow:0 10px 28px rgba(49,93,245,.06)}
-.qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
+#answerCard{background:var(--option-section);border-color:#c8a76b}#answerCard>h2{font-size:22px;margin-bottom:14px}.qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
 .pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:14px;background:var(--bg)}
 h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} h2{font-size:25px;margin:0 0 12px}
 .options{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:21px;background:var(--option-section)} .opt{width:100%;display:flex;gap:13px;align-items:flex-start;text-align:left;border:1px solid var(--line);background:var(--option-bg);color:var(--text);border-radius:18px;padding:15px 17px;min-height:66px;font-size:20px;line-height:1.28;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
@@ -60,7 +60,7 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
 .source-priority{font-size:12px;color:var(--muted);margin-top:5px}.news-en,.news-zh{display:block}.news-zh{margin-top:5px;color:var(--muted)}.exam-highlight{background:#ffe66d;color:#111;padding:0 .18em;border-radius:4px;font-weight:1000;box-decoration-break:clone;-webkit-box-decoration-break:clone}.level-vocab{font-weight:760;word-spacing:.04em}
 @media(max-width:620px){.option-detail-grid,.memory-extra-grid{grid-template-columns:1fr}}
 .source-figure{margin:14px 0 16px;border:1px solid color-mix(in srgb,var(--blue) 26%,var(--line));border-radius:18px;padding:10px;background:var(--option-bg);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--blue) 7%,transparent)} .source-figure img{width:100%;height:auto;display:block;border-radius:12px} .source-figure figcaption{font-size:13px;color:var(--muted);margin-top:8px}
-.memory-wrap{display:none;position:sticky;top:calc(var(--navH) + 7px);z-index:40;margin:0 25px 10px} .memory-wrap.show{display:block}
+.memory-wrap{display:none;position:sticky;top:calc(var(--navH) + 7px);z-index:40;margin:0 25px 10px} .memory-wrap.show{display:block}.memory-wrap:has(.memory-extra[open]){position:relative;top:auto}
 .memory{background:var(--sticky);color:var(--stickyText);border-radius:21px;padding:15px 17px 13px;box-shadow:0 12px 30px rgba(0,0,0,.2);border-bottom:4px solid var(--green)} .memory small{opacity:.76;font-weight:900} .memory strong{display:block;font-size:22px;line-height:1.16;margin-top:4px}
 .memory-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid color-mix(in srgb,var(--stickyText) 25%,transparent)}
 .memory-actions button{min-height:64px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:1000;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 10px;line-height:1.15}
@@ -112,6 +112,7 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
  <section id="studyView" data-demo-webp-coverage="35-of-35">
   <div class="memory-wrap" id="memoryWrap" data-flow="memory-to-correct-answer" aria-live="polite" aria-label="一眼記住"><div class="memory" id="memoryCard"></div></div>
   <article class="card" id="questionCard"></article>
+  <article class="card" id="answerCard" aria-label="答案選項"></article>
   <article class="card guide" id="guideCard"></article>
  </section>
  <section class="review-view" id="reviewView">
@@ -264,7 +265,8 @@ function renderQuestion(){
   const L=LETTERS[i]; let cls='opt'; if(r.status&&L===q.answer)cls+=' correct'; if(r.status==='bad'&&L===r.selected)cls+=' wrong';
   const wrapCls='option-wrap'+(r.status&&L===q.answer?' correct-wrap':''); optionsHtml+='<div class="'+wrapCls+'"'+(r.status&&L===q.answer?' id="correctAnswer"':'')+'><button class="'+cls+'" data-a="'+L+'"><span class="letter">'+L+'</span><span class="opt-body"><span class="opt-text">'+esc(o)+'</span></span></button>'+(r.status?renderOptionDetail(q,L):'')+'</div>';
  });
- $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img+'<div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
+ $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img;
+ $('answerCard').innerHTML='<h2>答案選項</h2><div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
  renderGuide();
  startedAt=performance.now();

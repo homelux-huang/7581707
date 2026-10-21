@@ -76,8 +76,10 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      const ratio=await img.evaluate(i=>{const r=i.getBoundingClientRect();return Math.abs(r.width/r.height-i.naturalWidth/i.naturalHeight)});
      assert(ratio<0.03,'undistorted image '+q.subject+q.id);
      await noOverflow('question overflow '+width+' '+q.subject+q.id);
-     const colors=await page.evaluate(()=>['#questionCard','.options'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));
+     const colors=await page.evaluate(()=>['#questionCard','#answerCard'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));
      assert.notEqual(colors[0],colors[1]);
+     assert.equal(await page.locator('#questionCard .opt').count(),0,'answers are in a separate card');
+     assert.equal(await page.locator('#answerCard .opt').count(),4);
      await page.locator('.opt').first().click();await settle();
      const geometry=await page.evaluate(()=>{
       const m=document.querySelector('#memoryCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
