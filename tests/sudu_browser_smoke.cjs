@@ -132,7 +132,42 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   assert.equal(await page.locator('.progress-actions #reviewTop').count(),0,'wrong-review entry must not remain in question picker');
   assert.equal(await page.locator('.chip').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)','unanswered question chip is white');
 
+  const cropManifest=await page.evaluate(async()=>{const r=await fetch('questions/115/crop-manifest.json');if(!r.ok)throw new Error('crop manifest '+r.status);return r.json()});
+  assert.equal(cropManifest.generatedCount,30,'30 non-accounting demo questions have generated single-question WebPs');
+  assert(cropManifest.items.every(x=>x.ocrPerformed===false),'question WebP generation must not perform OCR');
+  assert(cropManifest.items.every(x=>x.outputSize[0]>x.outputSize[1]),'generated crops must be single-question strips rather than portrait full pages');
+  const imageAudit=await page.evaluate(async()=>{
+   const qs=JSON.parse(document.getElementById('demoData').textContent).questions;
+   const rows=[];
+   for(const q of qs){
+    const row=await new Promise(resolve=>{
+     const img=new Image();
+     img.onload=()=>resolve({subject:q.subject,id:q.id,src:q.image||'',w:img.naturalWidth,h:img.naturalHeight,ok:true});
+     img.onerror=()=>resolve({subject:q.subject,id:q.id,src:q.image||'',w:0,h:0,ok:false});
+     img.src=q.image||'';
+    });
+    rows.push(row);
+   }
+   return rows;
+  });
+  assert.equal(imageAudit.length,35,'35 demo questions audited for single-question WebP');
+  assert(imageAudit.every(x=>x.ok&&x.w>0&&x.h>0),'every demo question image decodes');
+  assert(imageAudit.every(x=>x.w>x.h),'every displayed question image is a cropped question strip, not a full portrait exam page');
+  assert(imageAudit.filter(x=>x.subject!=='會計學').every(x=>!x.src.includes('/data/original/')),'non-accounting questions never point the UI at a full original page');
+
   await page.locator('#subjectSel').selectOption({label:'英文'});
+  const questionBg=await page.locator('#questionCard').evaluate(el=>getComputedStyle(el).backgroundColor);
+  const firstOption=page.locator('.opt').first();
+  const optionBg=await firstOption.evaluate(el=>getComputedStyle(el).backgroundColor);
+  assert.notEqual(questionBg,optionBg,'question block and answer option blocks use different backgrounds');
+  const hoverBefore=optionBg;
+  await firstOption.hover();await page.waitForTimeout(230);
+  const hoverAfter=await firstOption.evaluate(el=>getComputedStyle(el).backgroundColor);
+  assert.notEqual(hoverBefore,hoverAfter,'answer option hover animates to a different background');
+  const figureBox=await page.locator('.source-figure').boundingBox();
+  const optionsBox=await page.locator('.options').boundingBox();
+  assert(figureBox&&optionsBox&&figureBox.y<optionsBox.y,'single-question WebP appears below the question text and before answer options');
+
   await page.locator('.opt[data-a="A"]').click();
   await page.waitForTimeout(340);
   assert.equal(await page.locator('#memoryWrap').isVisible(),true,'memory card appears automatically after answering');
@@ -141,6 +176,11 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   const iconColors=await page.locator('.memory-action-icon').evaluateAll(nodes=>nodes.map(n=>getComputedStyle(n).backgroundColor));
   assert.equal(new Set(iconColors).size,4,'four memory mini-diagrams use distinct high-contrast colors');
   assert((await page.locator('#correctAnswer .option-detail').innerText()).includes('正確解答'),'correct option is labeled 正確解答');
+  const englishCorrectText=await page.locator('#correctAnswer .option-detail').innerText();
+  assert(englishCorrectText.includes('初級')&&englishCorrectText.includes('中級')&&englishCorrectText.includes('高級'),'English synonym/antonym levels use 初級／中級／高級');
+  assert(!/\blow\s*:|\bmid\s*:|\bhigh\s*:/i.test(englishCorrectText),'English detail no longer exposes low/mid/high labels');
+  assert(englishCorrectText.includes('中文：'),'English current-affairs example includes Chinese translation');
+  assert.equal(await page.locator('#correctAnswer .exam-highlight').count(),1,'tested English word is highlighted in the news example');
   await page.waitForTimeout(80);
   const memoryBox=await page.locator('#memoryCard').boundingBox();
   const correctBox=await page.locator('#correctAnswer').boundingBox();
@@ -191,7 +231,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});
   assert(new URL(page.url()).searchParams.get('tools')==='1');
   assert((await page.title()).length>0);
-  passed('new 35-question demo is the GitHub entry; post-answer memory auto-shows above aligned correct answer with four colored mini-diagrams including source; header review, question states, auto-hide/hover/mobile picker and eight widths pass');
+  passed('35-question demo: distinct question/answer blocks, animated answer hover, 35/35 single-question WebPs, bilingual highlighted English vocabulary/news, memory alignment, header review, auto-hide picker and eight widths pass');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}
