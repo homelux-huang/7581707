@@ -128,6 +128,25 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   assert((await page.title()).includes('115 全科'));
   assert.equal(await page.locator('#subjectSel option').count(),7);
   assert(await page.locator('#reviewTop').isVisible());
+  assert.equal(await page.locator('.header-actions #reviewTop').count(),1,'wrong-review entry must live in header');
+  assert.equal(await page.locator('.progress-actions #reviewTop').count(),0,'wrong-review entry must not remain in question picker');
+  assert.equal(await page.locator('.chip').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 255, 255)','unanswered question chip is white');
+
+  await page.locator('#subjectSel').selectOption({label:'英文'});
+  await page.locator('.opt[data-a="A"]').click();
+  await page.waitForTimeout(340);
+  assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-auto')),true,'question picker auto-hides after answering starts');
+  assert.equal(await page.locator('.chip.bad').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(197, 44, 73)','wrong chip is red');
+  let navBox=await page.locator('#progressShell').boundingBox();assert(navBox.y<0,'auto-hidden picker slides above viewport');
+  await page.mouse.move(640,5);await page.waitForTimeout(340);
+  assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-peek')),true,'desktop top hover reveals question picker');
+  navBox=await page.locator('#progressShell').boundingBox();assert(navBox.y>=-1,'hovered picker slides into view');
+  await page.mouse.move(640,500);await page.waitForTimeout(1050);
+
+  await page.locator('#subjectSel').selectOption({label:'國文'});
+  await page.locator('.opt[data-a="C"]').click();
+  assert.equal(await page.locator('.chip.ok').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(19, 121, 91)','correct chip is green');
+
   const demoSubjects=['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'];
   for(const subject of demoSubjects){
    await page.locator('#subjectSel').selectOption({label:subject});
@@ -137,7 +156,15 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
    assert(await page.locator('.option-detail').count()===4,subject+' should extend all four options after grading');
    if(subject!=='數位科技')assert(await page.locator('.memory-extra').count()===1,subject+' should show subject extension inside memory card');
   }
-  await page.locator('#subjectSel').selectOption({label:'英文'});
+
+  await page.setViewportSize({width:390,height:844});
+  assert(await page.locator('#navToggle').isVisible(),'mobile question-number trigger is visible');
+  await page.locator('#navToggle').click();await page.waitForTimeout(300);
+  assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-open')),true,'mobile trigger opens question picker');
+  navBox=await page.locator('#progressShell').boundingBox();assert(navBox.y>=-1,'mobile opened picker is visible');
+  await page.locator('.chip').nth(1).click();await page.waitForTimeout(80);
+  assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-open')),false,'selecting a question closes mobile picker');
+
   await page.locator('#reviewTop').click();
   assert(await page.locator('.wrong-card').count()>=1);
   assert((await page.locator('.wrong-card').first().innerText()).includes('出處'));
@@ -151,7 +178,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});
   assert(new URL(page.url()).searchParams.get('tools')==='1');
   assert((await page.title()).length>0);
-  passed('root redirects to V4 115 multi-subject demo; sources, subject extensions, four-option learning, review and eight widths pass; tools=1 keeps toolkit');
+  passed('new 35-question demo is the GitHub entry; review lives in header; red/green/white question states, auto-hide/hover/mobile picker, sources, subject extensions and eight widths pass');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}
