@@ -10,7 +10,10 @@ permissions:
 jobs:
   verify:
     name: Same-commit unit, corpus, privacy and Chromium tests
-    runs-on: ubuntu-latest
+    # Pin to an OS supported by Playwright 1.51.1.
+    # ubuntu-latest moved to Ubuntu 26.04 and caused browser installation to fail
+    # before any UI test could run.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
