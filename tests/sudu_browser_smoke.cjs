@@ -122,8 +122,36 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   }finally{await damagedContext.close();}
   passed('corrupt UI JSON preserves first error, all submitted snapshots and device identity across reload in an isolated profile');
 
-  const root=new URL('../',base).href;await page.goto(root,{waitUntil:'domcontentloaded'});await page.waitForURL('**/sudu/v4-115-multisubject-review-demo.html');assert((await page.title()).includes('115 全科'));assert.equal(await page.locator('#subjectSel option').count(),7);assert(await page.locator('#reviewTop').isVisible());await page.locator('#subjectSel').selectOption({label:'英文'});await page.locator('.opt[data-a="A"]').click();await page.locator('#reviewTop').click();assert(await page.locator('.wrong-card').count()>=1);const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,768],[1440,900]];for(const [width,height] of sizes){await page.setViewportSize({width,height});await page.waitForTimeout(30);const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);assert.equal(overflow,false,`horizontal overflow at ${width}x${height}`);}await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});assert(new URL(page.url()).searchParams.get('tools')==='1');assert((await page.title()).length>0);
-  passed('root redirects to V4 115 multi-subject demo; review, seven subjects and eight widths pass; tools=1 keeps toolkit');
+  const root=new URL('../',base).href;
+  await page.goto(root,{waitUntil:'domcontentloaded'});
+  await page.waitForURL('**/sudu/v4-115-multisubject-review-demo.html');
+  assert((await page.title()).includes('115 全科'));
+  assert.equal(await page.locator('#subjectSel option').count(),7);
+  assert(await page.locator('#reviewTop').isVisible());
+  const demoSubjects=['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'];
+  for(const subject of demoSubjects){
+   await page.locator('#subjectSel').selectOption({label:subject});
+   await page.locator('.opt').first().click();
+   assert((await page.locator('#guideCard').innerText()).includes('出處'),subject+' should show source');
+   assert((await page.locator('#guideCard').innerText()).includes('國立彰化高商'),subject+' source should prefer CHSC');
+   assert(await page.locator('.option-detail').count()===4,subject+' should extend all four options after grading');
+   if(subject!=='數位科技')assert(await page.locator('.memory-extra').count()===1,subject+' should show subject extension inside memory card');
+  }
+  await page.locator('#subjectSel').selectOption({label:'英文'});
+  await page.locator('#reviewTop').click();
+  assert(await page.locator('.wrong-card').count()>=1);
+  assert((await page.locator('.wrong-card').first().innerText()).includes('出處'));
+  const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,768],[1440,900]];
+  for(const [width,height] of sizes){
+   await page.setViewportSize({width,height});
+   await page.waitForTimeout(30);
+   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
+   assert.equal(overflow,false,`horizontal overflow at ${width}x${height}`);
+  }
+  await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});
+  assert(new URL(page.url()).searchParams.get('tools')==='1');
+  assert((await page.title()).length>0);
+  passed('root redirects to V4 115 multi-subject demo; sources, subject extensions, four-option learning, review and eight widths pass; tools=1 keeps toolkit');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}
