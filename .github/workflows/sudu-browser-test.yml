@@ -1,5 +1,5 @@
 name: Browser smoke test Sudu
-# Acceptance coverage includes memory/correct-answer alignment, N/A hiding, source visibility, subject-extension contrast, 35/35 single-question WebP and English highlights.
+# Acceptance coverage includes exact-heading N/A hiding, source visibility, subject-extension contrast, memory/correct-answer alignment, 35/35 single-question WebP and English highlights.
 on:
   push:
     paths:
