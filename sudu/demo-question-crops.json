@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "year": 115,
+  "rule": "Crop only the requested question number, prompt/figures, and A-D options from existing official WebP pages. No OCR.",
+  "crops": [
+    {
+      "subject": "國文",
+      "question": 1,
+      "source": "sudu/data/original/115/00-C/p002-6b454d6590-v2-w1400-q66.webp",
+      "box": [
+        90,
+        205,
+        1310,
+        330
+      ],
+      "output": "sudu/questions/115/chinese/q01.webp"
+    },
+    {
+      "subject": "國文",
+      "question": 2,
+      "source": "sudu/data/original/115/00-C/p002-6b454d6590-v2-w1400-q66.webp",
+      "box": [
+        90,
+        332,
+        1310,
+        562
+      ],
+      "output": "sudu/questions/115/chinese/q02.webp"
+    },
+    {
+      "subject": "國文",
+      "question": 3,
+      "source": "sudu/data/original/115/00-C/p002-6b454d6590-v2-w1400-q66.webp",
+      "box": [
+        90,
+        565,
+        1310,
+        845
+      ],
+      "output": "sudu/questions/115/chinese/q03.webp"
+    },
+    {
+      "subject": "國文",
+      "question": 7,
+      "source": "sudu/data/original/115/00-C/p003-6b454d6590-v2-w1400-q66.webp",
+      "box": [
+        90,
+        485,
+        1310,
+        685
+      ],
+      "output": "sudu/questions/115/chinese/q07.webp"
+    },
+    {
+      "subject": "國文",
+      "question": 9,
+      "source": "sudu/data/original/115/00-C/p003-6b454d6590-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1125,
+        1310,
+        1555
+      ],
+      "output": "sudu/questions/115/chinese/q09.webp"
+    },
+    {
+      "subject": "英文",
+      "question": 1,
+      "source": "sudu/data/original/115/00-E/p002-c13e298c3b-v2-w1400-q66.webp",
+      "box": [
+        90,
+        345,
+        1310,
+        432
+      ],
+      "output": "sudu/questions/115/english/q01.webp"
+    },
+    {
+      "subject": "英文",
+      "question": 2,
+      "source": "sudu/data/original/115/00-E/p002-c13e298c3b-v2-w1400-q66.webp",
+      "box": [
+        90,
+        434,
+        1310,
+        542
+      ],
+      "output": "sudu/questions/115/english/q02.webp"
+    },
+    {
+      "subject": "英文",
+      "question": 3,
+      "source": "sudu/data/original/115/00-E/p002-c13e298c3b-v2-w1400-q66.webp",
+      "box": [
+        90,
+        544,
+        1310,
+        650
+      ],
+      "output": "sudu/questions/115/english/q03.webp"
+    },
+    {
+      "subject": "英文",
+      "question": 4,
+      "source": "sudu/data/original/115/00-E/p002-c13e298c3b-v2-w1400-q66.webp",
+      "box": [
+        90,
+        652,
+        1310,
+        766
+      ],
+      "output": "sudu/questions/115/english/q04.webp"
+    },
+    {
+      "subject": "英文",
+      "question": 5,
+      "source": "sudu/data/original/115/00-E/p002-c13e298c3b-v2-w1400-q66.webp",
+      "box": [
+        90,
+        768,
+        1310,
+        888
+      ],
+      "output": "sudu/questions/115/english/q05.webp"
+    },
+    {
+      "subject": "數學 B",
+      "question": 1,
+      "source": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
+      "box": [
+        90,
+        505,
+        1310,
+        865
+      ],
+      "output": "sudu/questions/115/math-b/q01.webp"
+    },
+    {
+      "subject": "數學 B",
+      "question": 3,
+      "source": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1120,
+        1310,
+        1515
+      ],
+      "output": "sudu/questions/115/math-b/q03.webp"
+    },
+    {
+      "subject": "數學 B",
+      "question": 4,
+      "source": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1518,
+        1310,
+        1800
+      ],
+      "output": "sudu/questions/115/math-b/q04.webp"
+    },
+    {
+      "subject": "數學 B",
+      "question": 5,
+      "source": "sudu/data/original/115/00-MB/p003-e82e34d9cd-v2-w1400-q66.webp",
+      "box": [
+        90,
+        125,
+        1310,
+        555
+      ],
+      "output": "sudu/questions/115/math-b/q05.webp"
+    },
+    {
+      "subject": "數學 B",
+      "question": 6,
+      "source": "sudu/data/original/115/00-MB/p003-e82e34d9cd-v2-w1400-q66.webp",
+      "box": [
+        90,
+        558,
+        1310,
+        820
+      ],
+      "output": "sudu/questions/115/math-b/q06.webp"
+    },
+    {
+      "subject": "商業概論",
+      "question": 1,
+      "source": "sudu/data/original/115/09-1/p002-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        160,
+        1310,
+        455
+      ],
+      "output": "sudu/questions/115/business/q01.webp"
+    },
+    {
+      "subject": "商業概論",
+      "question": 3,
+      "source": "sudu/data/original/115/09-1/p002-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        675,
+        1310,
+        990
+      ],
+      "output": "sudu/questions/115/business/q03.webp"
+    },
+    {
+      "subject": "商業概論",
+      "question": 5,
+      "source": "sudu/data/original/115/09-1/p002-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1285,
+        1310,
+        1645
+      ],
+      "output": "sudu/questions/115/business/q05.webp"
+    },
+    {
+      "subject": "商業概論",
+      "question": 6,
+      "source": "sudu/data/original/115/09-1/p003-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        135,
+        1310,
+        460
+      ],
+      "output": "sudu/questions/115/business/q06.webp"
+    },
+    {
+      "subject": "商業概論",
+      "question": 7,
+      "source": "sudu/data/original/115/09-1/p003-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        463,
+        1310,
+        605
+      ],
+      "output": "sudu/questions/115/business/q07.webp"
+    },
+    {
+      "subject": "數位科技",
+      "question": 26,
+      "source": "sudu/data/original/115/09-1/p007-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1035,
+        1310,
+        1250
+      ],
+      "output": "sudu/questions/115/digital-tech/q26.webp"
+    },
+    {
+      "subject": "數位科技",
+      "question": 27,
+      "source": "sudu/data/original/115/09-1/p007-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1252,
+        1310,
+        1457
+      ],
+      "output": "sudu/questions/115/digital-tech/q27.webp"
+    },
+    {
+      "subject": "數位科技",
+      "question": 28,
+      "source": "sudu/data/original/115/09-1/p007-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1459,
+        1310,
+        1663
+      ],
+      "output": "sudu/questions/115/digital-tech/q28.webp"
+    },
+    {
+      "subject": "數位科技",
+      "question": 29,
+      "source": "sudu/data/original/115/09-1/p007-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1665,
+        1310,
+        1820
+      ],
+      "output": "sudu/questions/115/digital-tech/q29.webp"
+    },
+    {
+      "subject": "數位科技",
+      "question": 30,
+      "source": "sudu/data/original/115/09-1/p008-db3f83aa79-v2-w1400-q66.webp",
+      "box": [
+        90,
+        145,
+        1310,
+        870
+      ],
+      "output": "sudu/questions/115/digital-tech/q30.webp"
+    },
+    {
+      "subject": "經濟學",
+      "question": 25,
+      "source": "sudu/data/original/115/09-2/p006-fc88e0109e-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1365,
+        1310,
+        1695
+      ],
+      "output": "sudu/questions/115/economics/q25.webp"
+    },
+    {
+      "subject": "經濟學",
+      "question": 26,
+      "source": "sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
+      "box": [
+        90,
+        125,
+        1310,
+        260
+      ],
+      "output": "sudu/questions/115/economics/q26.webp"
+    },
+    {
+      "subject": "經濟學",
+      "question": 27,
+      "source": "sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
+      "box": [
+        90,
+        262,
+        1310,
+        742
+      ],
+      "output": "sudu/questions/115/economics/q27.webp"
+    },
+    {
+      "subject": "經濟學",
+      "question": 28,
+      "source": "sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
+      "box": [
+        90,
+        744,
+        1310,
+        1200
+      ],
+      "output": "sudu/questions/115/economics/q28.webp"
+    },
+    {
+      "subject": "經濟學",
+      "question": 29,
+      "source": "sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
+      "box": [
+        90,
+        1203,
+        1310,
+        1498
+      ],
+      "output": "sudu/questions/115/economics/q29.webp"
+    }
+  ]
+}
