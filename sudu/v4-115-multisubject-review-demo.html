@@ -255,7 +255,7 @@ function renderProgress(){
 }
 function renderQuestion(){
  const q=qnow(),r=record(q);
- const img=q.image?'<figure class="source-figure" data-single-question-webp="true"><img src="'+q.image+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題單題原圖"><figcaption>官方原始 WebP 的單題裁切：只保留本題題號、題目／必要圖表與答案選項；沒有重新 OCR。</figcaption></figure>':'';
+ const img=q.image?'<figure class="source-figure" data-single-question-webp="true"><img src="'+q.image+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題單題原圖"><figcaption>官方原始 WebP 單題裁切：只保留本題題號、題目／必要圖表與 A～D 選項；沒有重新 OCR。</figcaption></figure>':'';
  let optionsHtml='';
  q.options.forEach((o,i)=>{
   const L=LETTERS[i]; let cls='opt'; if(r.status&&L===q.answer)cls+=' correct'; if(r.status==='bad'&&L===r.selected)cls+=' wrong';
