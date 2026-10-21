@@ -217,6 +217,19 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   assert.equal(extraStyle.textAlign,'center','subject extension text is centered');
   const sourceText=await page.locator('#guideCard .guide-block').filter({hasText:'出處'}).innerText();
   assert(!sourceText.includes('待核對')&&!sourceText.includes('N/A'),'unverified/missing source fields are hidden');
+  const missingSource=await page.evaluate(()=>{
+   const C=window.DEMO_LEARNING_CONFIG,book=C.bookProfile['商業概論'],chapter=C.chapterMap['商業概論|3'];
+   delete C.bookProfile['商業概論'];delete C.chapterMap['商業概論|3'];renderAll();
+   const state={action:document.querySelectorAll('.memory-actions [data-go="出處"]').length,block:[...document.querySelectorAll('#guideCard .guide-block h3')].some(x=>x.textContent==='出處')};
+   C.bookProfile['商業概論']=book;C.chapterMap['商業概論|3']=chapter;renderAll();return state;
+  });
+  assert.equal(missingSource.action,0,'source icon is hidden when no valid source information exists');
+  assert.equal(missingSource.block,false,'source guide block is hidden when no valid source information exists');
+
+  await page.locator('#subjectSel').selectOption({label:'數位科技'});
+  await page.locator('.chip').filter({hasText:'27'}).first().click();
+  await page.locator('.opt').first().click();
+  assert.equal(await page.locator('.memory-extra').count(),0,'subject extension is hidden when subject-specific data is unavailable');
 
   const demoSubjects=['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'];
   for(const subject of demoSubjects){
