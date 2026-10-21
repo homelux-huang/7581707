@@ -90,7 +90,22 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
  .review-toolbar{grid-template-columns:1fr}.metrics{width:100%;margin-left:42px}.bottom button{min-height:66px;font-size:14px}
 }
 @media(max-width:390px){.sub{display:none}.brand-block{min-width:180px}.header-actions{grid-template-columns:1fr 1fr 48px}.review-head,.nav-toggle{font-size:13px;padding:7px}.theme{width:48px}.progress-chips{gap:5px}.chip{width:44px;height:44px;font-size:15px}.label{font-size:16px}.reset,.continue{font-size:14px;padding:8px}h1{font-size:23px}.wrong-card{padding:15px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Review is a distinct mode: the study question picker must never be present. */
+.review-mode .progress-shell,.review-mode #navToggle{display:none!important}
+.review-control{display:flex;align-items:center;gap:8px;border:1px solid;border-radius:14px;padding-left:12px;min-width:0}
+.review-control-icon{width:25px;height:25px;flex:0 0 25px;display:inline-flex;align-items:center;justify-content:center}
+.review-control-icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.review-toolbar .review-control select{width:100%;min-width:0;border:0;background:transparent;color:inherit;padding-left:0}
+.review-subject{background:#e8f0ff;color:#163a83;border-color:#90afe8}.review-sort{background:#f1eaff;color:#59328a;border-color:#b69adb}
+.review-toolbar #backStudy{display:flex;align-items:center;justify-content:center;gap:8px;background:#e4f5ec;color:#12553d;border-color:#7cbea1}
+.review-control:focus-within{outline:3px solid #7c9cff;outline-offset:2px}
+.wrong-card{--card:#fff;--bg:hsl(var(--review-hue) 65% 96%);--text:#17202e;--muted:#4b5563;--blue:#2849a2;--line:hsl(var(--review-hue) 30% 78%);background:hsl(var(--review-hue) 72% 95%);color:var(--text);border-color:hsl(var(--review-hue) 40% 72%);transition:background-color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.wrong-card .review-section{background:rgba(255,255,255,.7)}
+.wrong-card:focus-within{box-shadow:0 8px 24px rgba(30,50,80,.15)}
+@media(hover:hover) and (pointer:fine){.wrong-card:hover{background:hsl(var(--review-hue) 75% 90%);border-color:hsl(var(--review-hue) 55% 50%);transform:translateY(-3px);box-shadow:0 12px 28px rgba(30,50,80,.17)}}
+@media(max-width:720px){.review-mode .header-actions{grid-template-columns:1fr 54px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.opt,.wrong-card,.progress-shell{transition:none}.wrong-card:hover,.opt:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -121,9 +136,9 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
    <h2>答錯題重點復習</h2>
    <p style="color:var(--muted);line-height:1.6;margin-top:0">把「題目＋正解」放在一起，先看錯最多次，或改用「答錯且花費時間最多」排序。每科顯示不同的加強欄位。</p>
    <div class="review-toolbar">
-    <select id="reviewSubject" aria-label="復習科目"></select>
-    <select id="reviewSort" aria-label="錯題排序"><option value="count">錯最多次排前面</option><option value="time">答錯且花費最多時間排前面</option><option value="recent">最近答錯排前面</option></select>
-    <button id="backStudy">返回作答</button>
+    <label class="review-control review-subject"><span class="review-control-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 4h7l2 2 2-2h7v15h-7l-2 2-2-2H3zM12 6v15"/></svg></span><select id="reviewSubject" aria-label="復習科目"></select></label>
+    <label class="review-control review-sort"><span class="review-control-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h14M4 11h10M4 17h6M18 10v11m-4-4 4 4 4-4"/></svg></span><select id="reviewSort" aria-label="錯題排序"><option value="count">錯最多次排前面</option><option value="time">答錯且花費最多時間排前面</option><option value="recent">最近答錯排前面</option></select></label>
+    <button id="backStudy"><span class="review-control-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h11a7 7 0 0 1 7 7"/></svg></span><span>返回作答</span></button>
    </div>
    <div id="reviewList" class="review-list"></div>
   </article>
@@ -310,7 +325,7 @@ function renderGuide(){
 }
 let navCloseTimer=0;
 function questionNavStarted(){return list().some(q=>Boolean(record(q).status));}
-function questionNavExpanded(){return !document.body.classList.contains('nav-auto')||document.body.classList.contains('nav-peek')||document.body.classList.contains('nav-open');}
+function questionNavExpanded(){if(document.body.classList.contains('review-mode'))return false;return !document.body.classList.contains('nav-auto')||document.body.classList.contains('nav-peek')||document.body.classList.contains('nav-open');}
 function updateNavToggle(){if(!$('navToggle'))return;$('navToggle').setAttribute('aria-expanded',String(document.body.classList.contains('nav-open')));$('navToggleNum').textContent=qnow()?.id??'';}
 function setQuestionNavAutoHide(on){document.body.classList.toggle('nav-auto',Boolean(on));if(!on)document.body.classList.remove('nav-peek','nav-open');if(on&&!document.body.classList.contains('nav-open'))document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();}
 function openQuestionNav(mode='open'){clearTimeout(navCloseTimer);if(!document.body.classList.contains('nav-auto'))return;document.body.classList.add(mode==='peek'?'nav-peek':'nav-open');updateNavToggle();syncHeights();}
@@ -336,17 +351,17 @@ function scrollToCorrectAnswer(){
  const delta=target.getBoundingClientRect().top-desiredTop;
  window.scrollBy({top:delta,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
 }
-function showStudy(){$('studyView').style.display='block';$('reviewView').classList.remove('show');}
+function showStudy(){document.body.classList.remove('review-mode');$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
  return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1])).concat(subjectEntries(q));
 }
-function showReview(){closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
+function showReview(){document.body.classList.add('review-mode');closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
 function renderReview(){
  const subj=$('reviewSubject').value||'ALL',sort=$('reviewSort').value||'count';
  let rows=QUESTIONS.map(q=>({q,r:record(q)})).filter(x=>x.r.wrongCount>0&&(subj==='ALL'||x.q.subject===subj));
  rows.sort((a,b)=>sort==='time'?b.r.totalWrongSeconds-a.r.totalWrongSeconds:sort==='recent'?b.r.lastWrongAt-a.r.lastWrongAt:b.r.wrongCount-a.r.wrongCount||b.r.totalWrongSeconds-a.r.totalWrongSeconds);
  if(!rows.length){$('reviewList').innerHTML=`<div class="empty">目前沒有符合條件的答錯題。<br>先故意答錯幾題即可測試排序與科目分類。<br><button class="demo-seed" id="seedDemo">Demo：建立跨科錯題樣本</button></div>`;$('seedDemo').onclick=seedDemo;return;}
- $('reviewList').innerHTML=rows.map((x,idx)=>{const q=x.q,r=x.r,ans=q.options[LETTERS.indexOf(q.answer)];return `<article class="wrong-card"><div class="wrong-head"><span class="wrong-rank">${idx+1}</span><span class="pill">${esc(q.subject)}</span><span class="pill">第 ${q.id} 題</span><span class="metrics">答錯 ${r.wrongCount} 次｜答錯耗時 ${fmtTime(r.totalWrongSeconds)}</span></div><h3>${esc(q.question)}</h3><div class="answer-box"><b>正確答案 ${q.answer}</b>｜${esc(ans)}</div><div class="review-sections">${reviewFields(q).map(([k,v])=>`<div class="review-section"><b>${esc(k)}</b><span>${formatStudyValue(q,k,v)}</span></div>`).join('')}</div><button class="goto" data-key="${esc(key(q))}">回到這一題</button></article>`}).join('');
+ $('reviewList').innerHTML=rows.map((x,idx)=>{const q=x.q,r=x.r,ans=q.options[LETTERS.indexOf(q.answer)];return `<article class="wrong-card" style="--review-hue:${Math.round(QUESTIONS.indexOf(q)*137.508)%360}"><div class="wrong-head"><span class="wrong-rank">${idx+1}</span><span class="pill">${esc(q.subject)}</span><span class="pill">第 ${q.id} 題</span><span class="metrics">答錯 ${r.wrongCount} 次｜答錯耗時 ${fmtTime(r.totalWrongSeconds)}</span></div><h3>${esc(q.question)}</h3><div class="answer-box"><b>正確答案 ${q.answer}</b>｜${esc(ans)}</div><div class="review-sections">${reviewFields(q).map(([k,v])=>`<div class="review-section"><b>${esc(k)}</b><span>${formatStudyValue(q,k,v)}</span></div>`).join('')}</div><button class="goto" data-key="${esc(key(q))}">回到這一題</button></article>`}).join('');
  $('reviewList').querySelectorAll('.goto').forEach(b=>b.onclick=()=>{const [s,n]=b.dataset.key.split('|');currentSubject=s;currentIndex=listFor(s).findIndex(q=>String(q.id)===n);renderSelectors();showStudy();renderAll();window.scrollTo({top:0})});
 }
 function listFor(s){return QUESTIONS.filter(q=>q.subject===s)}

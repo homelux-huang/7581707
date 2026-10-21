@@ -92,6 +92,14 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
     }
     await page.screenshot({path:path.join(output,`demo-${width}x${height}-${theme}.png`)});
     await page.locator('#reviewTop').click();await noOverflow('review overflow '+width);
+    assert.equal(await page.locator('#progressShell').isVisible(),false,'review never shows study picker');
+    assert.equal(await page.locator('#navToggle').isVisible(),false);
+    const controls=await page.locator('.review-toolbar > *').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor));
+    assert.equal(new Set(controls).size,3,'three distinct control backgrounds');
+    assert.equal(await page.locator('.review-toolbar svg').count(),3);
+    const cards=await page.locator('.wrong-card').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor));
+    assert.equal(new Set(cards).size,cards.length,'each wrong question has a distinct light background');
+    await page.screenshot({path:path.join(output,`review-${width}x${height}-${theme}.png`)});
     report.rwd.push({width,height,theme,questions:35,status:'passed'});
    }
   }
