@@ -1,0 +1,6 @@
+/* V4 acceptance fix: preserve the locked visual layout and only add enough end-of-explanation scroll room so the correct-answer card can stop 8–12px below the dynamically measured sticky "一眼記住" card on tall viewports. */
+.explain.show::after{
+  content:"";
+  display:block;
+  height:max(220px,calc(100dvh - var(--question-nav-h) - var(--memory-sticky-h) - 80px));
+}
