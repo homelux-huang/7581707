@@ -9,6 +9,8 @@ on:
       - index.html
       - sudu/v4-115-multisubject-review-demo.html
       - sudu/demo-subject-learning.js
+      - sudu/demo-question-crops.json
+      - scripts/build.py
       - sudu/exam_scoring.js
       - sudu/learning_sync.js
       - sudu/admin.html
@@ -27,12 +29,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.51.1
           npx playwright install --with-deps chromium
-      - name: Serve and test UI
+      - name: Build single-question WebPs and test UI
         run: |
-          python3 -m http.server 8765 > /tmp/sudu-test-server.log 2>&1 &
+          python -m pip install -q pillow
+          SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py
+          python -m http.server 8765 --directory _site > /tmp/sudu-test-server.log 2>&1 &
           sleep 2
           node tests/sudu_browser_smoke.cjs
