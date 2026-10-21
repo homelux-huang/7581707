@@ -9,36 +9,31 @@
 :root{
  --bg:#f5f7fc;--card:#fff;--text:#111827;--muted:#667085;--line:#d8deea;
  --blue:#4a6fea;--blue-soft:#edf1ff;--red:#b4233f;--red-soft:#fff1f3;--green:#13795b;
- --yellow:#ffe58f;--purple:#7c3aed;--sticky:#111;--stickyText:#fff;--safe:env(safe-area-inset-bottom,0px);
- --navH:0px;--memoryH:0px;
+ --yellow:#ffe58f;--purple:#5b32d6;--sticky:#111;--stickyText:#fff;--safe:env(safe-area-inset-bottom,0px);
+ --nav-bg:#e7edf9;--navH:0px;--memoryH:0px;
 }
-html[data-theme="dark"]{--bg:#000;--card:#111;--text:#f8fafc;--muted:#adb5c4;--line:#30323a;--blue-soft:#151c38;--red-soft:#2a1118;--sticky:#fff;--stickyText:#111}
+html[data-theme="dark"]{--bg:#000;--card:#111;--text:#f8fafc;--muted:#adb5c4;--line:#30323a;--blue-soft:#151c38;--red-soft:#2a1118;--sticky:#fff;--stickyText:#111;--nav-bg:#171a22}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;padding-bottom:104px;overflow-x:hidden}
 button,select{font:inherit} button{touch-action:manipulation}
 button:focus-visible,select:focus-visible{outline:3px solid #7c9cff;outline-offset:3px}
 .top{border-bottom:1px solid var(--line);background:var(--bg)}
-.header{max-width:980px;margin:auto;display:flex;align-items:center;gap:14px;padding:20px 18px 13px}
+.header{max-width:980px;margin:auto;display:flex;align-items:center;gap:14px;padding:20px 18px 13px}.brand-block{min-width:0}
 .logo{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#315df5,#6849e8);display:grid;place-items:center;color:#fff;font-size:20px;font-weight:1000;box-shadow:0 10px 24px rgba(49,93,245,.2)}
 .brand{font-size:32px;font-weight:1000;line-height:1} .sub{font-size:16px;color:var(--muted);font-weight:750;margin-top:6px}
-.grow{flex:1} .theme{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:23px}
+.grow{flex:1}.header-actions{display:flex;align-items:center;gap:9px}.review-head,.nav-toggle{min-height:50px;border-radius:15px;border:0;font-weight:1000;padding:10px 14px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}.review-head{background:#5b32d6;color:#fff;box-shadow:0 8px 20px rgba(91,50,214,.24)}.review-head .badge{min-width:25px;height:25px;padding:0 7px;border-radius:999px;display:inline-grid;place-items:center;background:#fff;color:#4c25c4;font-size:12px}.review-label-short{display:none}.nav-toggle{display:none;background:#2148c7;color:#fff}.theme{width:54px;height:54px;border-radius:50%;border:2px solid #111;background:#111;color:#fff;font-size:23px}html[data-theme="dark"] .theme{border-color:#fff;background:#fff;color:#111}
 .control-row{max-width:980px;margin:auto;padding:0 18px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}
 .summary{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:15px 18px;color:var(--muted);font-weight:800}
 .summary b{display:block;color:var(--text);font-size:24px;margin-top:4px} .selectors{display:flex;gap:8px;align-items:stretch}
 .selectors select{min-height:56px;padding:11px 14px;border:1px solid var(--line);border-radius:15px;background:var(--card);color:var(--text);font-weight:900}
-.progress-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(14px)}
+.progress-shell{position:sticky;top:0;z-index:50;border-top:1px solid color-mix(in srgb,var(--blue) 28%,var(--line));border-bottom:1px solid color-mix(in srgb,var(--blue) 35%,var(--line));background:var(--nav-bg);box-shadow:0 10px 28px rgba(24,39,75,.12);transition:transform .26s ease,box-shadow .26s ease;will-change:transform}.progress-shell::after{content:"";position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:92px;height:6px;border-radius:999px;background:#315df5;opacity:0;transition:opacity .18s}.nav-auto .progress-shell{position:fixed;left:0;right:0;top:0;transform:translateY(calc(-100% + 14px));box-shadow:0 14px 34px rgba(24,39,75,.18)}.nav-auto .progress-shell::after{opacity:1}.nav-auto.nav-peek .progress-shell,.nav-auto.nav-open .progress-shell{transform:translateY(0)}.nav-auto.nav-peek .progress-shell::after,.nav-auto.nav-open .progress-shell::after{opacity:0}
 .progress{max-width:980px;margin:auto;padding:8px 12px 9px;display:grid;gap:7px}
 .progress-actions{display:grid;grid-template-columns:max-content max-content minmax(180px,1fr) max-content;gap:8px;align-items:center}
 .label{font-size:18px;font-weight:1000;white-space:nowrap} .round{font-size:12px;color:var(--muted)}
-.reset,.review-top,.continue{min-height:46px;border-radius:14px;padding:9px 12px;font-weight:1000;white-space:nowrap}
-.reset{border:1px solid #f0b5bf;background:var(--red-soft);color:var(--red)}
-.review-top{border:0;background:#eef1ff;color:var(--purple);justify-self:center;box-shadow:0 8px 20px rgba(124,58,237,.08)}
-.review-top .badge{margin-left:6px;background:var(--purple);color:white;border-radius:999px;padding:2px 7px;font-size:12px}
-.continue{border:0;background:var(--blue-soft);color:var(--blue);justify-self:end}
+.reset,.continue{min-height:46px;border-radius:14px;padding:9px 13px;font-weight:1000;white-space:nowrap}.reset{border:2px solid #c93855;background:#fff;color:#a61f3b}.continue{border:2px solid #2148c7;background:#315df5;color:#fff;justify-self:end;box-shadow:0 5px 14px rgba(49,93,245,.18)}html[data-theme="dark"] .reset{background:#fff;color:#9f1835}
 .progress-chips{display:grid;grid-template-columns:repeat(5,minmax(44px,1fr));gap:9px}
-.chip{justify-self:center;width:52px;height:52px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--text);font-weight:1000;font-size:17px}
-.chip.ok{border-color:var(--green);color:var(--green)} .chip.bad{border-color:var(--red);color:var(--red)} .chip.current{box-shadow:0 0 0 4px rgba(74,111,234,.25)}
+.chip{justify-self:center;width:52px;height:52px;border-radius:50%;border:2px solid #aeb8c9;background:#fff;color:#111;font-weight:1000;font-size:17px;box-shadow:0 2px 7px rgba(24,39,75,.08)}.chip.ok{border-color:#0e6048;background:#13795b;color:#fff}.chip.bad{border-color:#991c35;background:#c52c49;color:#fff}.chip.current{box-shadow:0 0 0 4px #86a3ff,0 3px 9px rgba(24,39,75,.12)}
 main{max-width:900px;margin:auto;padding:18px 14px 38px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;margin-bottom:14px;min-width:0}
 .qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
@@ -80,18 +75,18 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
 .bottom{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:7px 7px calc(7px + var(--safe));background:color-mix(in srgb,var(--bg) 95%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
 .bottom button{min-height:70px;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--text);font-weight:1000} .bottom button.active{color:var(--blue);border-color:#aebeff;background:var(--blue-soft)}
 @media(max-width:720px){
- .header{padding:17px 13px 11px} .brand{font-size:28px} .sub{font-size:14px} .logo{width:52px;height:52px} .control-row{grid-template-columns:1fr;padding:0 13px 13px} .selectors{display:grid;grid-template-columns:1fr 1fr}
- .progress-actions{grid-template-columns:1fr 1fr} .label{grid-column:1/2} .reset{grid-column:2/3} .review-top{grid-column:1/2;justify-self:stretch} .continue{grid-column:2/3;justify-self:stretch}
- main{padding:13px 9px 30px} .card{padding:19px;border-radius:21px} h1{font-size:25px} .opt{font-size:18px;padding:14px} .memory strong{font-size:19px} .memory-actions button{font-size:14px}
- .review-toolbar{grid-template-columns:1fr} .metrics{width:100%;margin-left:42px} .bottom button{min-height:66px;font-size:14px}
+ .header{padding:14px 13px 10px;gap:10px;flex-wrap:wrap}.brand-block{flex:1;min-width:210px}.brand{font-size:28px}.sub{font-size:14px}.logo{width:52px;height:52px}.header-actions{width:100%;display:grid;grid-template-columns:1fr 1fr 54px;gap:8px}.review-head,.nav-toggle{min-height:50px;padding:9px 10px}.review-label-full{display:none}.review-label-short{display:inline}.nav-toggle{display:inline-flex}.theme{width:54px;height:50px;border-radius:15px}.control-row{grid-template-columns:1fr;padding:0 13px 13px}.selectors{display:grid;grid-template-columns:1fr 1fr}
+ .progress-actions{grid-template-columns:1fr 1fr}.label{grid-column:1/2}.reset{grid-column:2/3}.continue{grid-column:1/3;justify-self:stretch}.nav-auto .progress-shell{transform:translateY(-100%)}.nav-auto.nav-open .progress-shell{transform:translateY(0)}.nav-auto .progress-shell::after{display:none}
+ main{padding:13px 9px 30px}.card{padding:19px;border-radius:21px}h1{font-size:25px}.opt{font-size:18px;padding:14px}.memory strong{font-size:19px}.memory-actions button{font-size:14px}
+ .review-toolbar{grid-template-columns:1fr}.metrics{width:100%;margin-left:42px}.bottom button{min-height:66px;font-size:14px}
 }
-@media(max-width:390px){.sub{display:none} .progress-chips{gap:5px} .chip{width:44px;height:44px;font-size:15px} .label{font-size:16px} .reset,.review-top,.continue{font-size:14px;padding:8px} h1{font-size:23px} .wrong-card{padding:15px}}
+@media(max-width:390px){.sub{display:none}.brand-block{min-width:180px}.header-actions{grid-template-columns:1fr 1fr 48px}.review-head,.nav-toggle{font-size:13px;padding:7px}.theme{width:48px}.progress-chips{gap:5px}.chip{width:44px;height:44px;font-size:15px}.label{font-size:16px}.reset,.continue{font-size:14px;padding:8px}h1{font-size:23px}.wrong-card{padding:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div class="top">
- <div class="header"><div class="logo">速讀</div><div><div class="brand">115 統測全科 LIVE DEMO</div><div class="sub">每科 5 題｜答錯題重點復習｜V4 大字大卡片介面</div></div><div class="grow"></div><button class="theme" id="themeBtn" aria-label="切換深淺主題">◐</button></div>
+ <div class="header"><div class="logo">速讀</div><div class="brand-block"><div class="brand">115 統測全科 LIVE DEMO</div><div class="sub">每科 5 題｜答錯題重點復習｜V4 大字大卡片介面</div></div><div class="grow"></div><div class="header-actions"><button class="review-head" id="reviewTop"><span aria-hidden="true">✦</span><span class="review-label"><span class="review-label-full">答錯題重點復習</span><span class="review-label-short">錯題復習</span></span><span class="badge" id="wrongBadge">0</span></button><button class="nav-toggle" id="navToggle" aria-controls="progressShell" aria-expanded="false">題號・第 <span id="navToggleNum">1</span> 題</button><button class="theme" id="themeBtn" aria-label="切換深淺主題">◐</button></div></div>
  <div class="control-row"><div class="summary" id="summary">目前科目<b>載入中…</b></div><div class="selectors"><select id="yearSel" aria-label="年度"><option>115</option></select><select id="subjectSel" aria-label="科目"></select></div></div>
 </div>
 <div class="progress-shell" id="progressShell">
@@ -99,7 +94,6 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
   <div class="progress-actions">
    <div class="label" id="progressLabel">已答 0/5 題</div>
    <button class="reset" id="resetBtn">↻ 重新作答</button>
-   <button class="review-top" id="reviewTop">答錯題重點復習 <span class="badge" id="wrongBadge">0</span></button>
    <button class="continue" id="continueBtn">續答 →</button>
   </div>
   <div class="progress-chips" id="progressChips"></div>
@@ -209,11 +203,21 @@ function renderSelectors(){
 function renderProgress(){
  const qs=list();let answered=0;let wrong=0;
  $('progressChips').innerHTML='';
- qs.forEach((q,i)=>{const r=record(q);if(r.status)answered++;if(r.wrongCount)wrong++;const b=document.createElement('button');b.className='chip'+(r.status==='ok'?' ok':r.status==='bad'?' bad':'')+(i===currentIndex?' current':'');b.textContent=q.id+(r.status==='ok'?'✓':r.status==='bad'?'×':'');b.setAttribute('aria-label',`${q.subject}第 ${q.id} 題`);b.onclick=()=>{currentIndex=i;showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})};$('progressChips').appendChild(b)});
- $('progressLabel').innerHTML=`已答 ${answered}/5 題 <span class="round">第 ${state.rounds[currentSubject]||1} 輪</span>`;
+ qs.forEach((q,i)=>{
+  const r=record(q);if(r.status)answered++;if(r.wrongCount)wrong++;
+  const b=document.createElement('button');
+  b.className='chip'+(r.status==='ok'?' ok':r.status==='bad'?' bad':'')+(i===currentIndex?' current':'');
+  b.textContent=q.id+(r.status==='ok'?'✓':r.status==='bad'?'×':'');
+  b.setAttribute('aria-label',q.subject+'第 '+q.id+' 題，'+(r.status==='ok'?'答對':r.status==='bad'?'答錯':'未回答'));
+  b.onclick=()=>{currentIndex=i;showStudy();renderAll();if(matchMedia('(max-width:720px)').matches)closeQuestionNav();window.scrollTo({top:0,behavior:'smooth'})};
+  $('progressChips').appendChild(b);
+ });
+ $('progressLabel').innerHTML='已答 '+answered+'/5 題 <span class="round">第 '+(state.rounds[currentSubject]||1)+' 輪</span>';
  const allWrong=Object.values(state.records).filter(r=>r.wrongCount>0).length;$('wrongBadge').textContent=allWrong;
- $('summary').innerHTML=`目前科目<b>${esc(currentSubject)}｜5 題 Demo</b>`;
- const first=qs.findIndex(q=>!record(q).status);$('continueBtn').textContent=first>=0?`續答第 ${qs[first].id} 題 →`:'本輪完成｜看錯題 →';$('continueBtn').onclick=()=>{if(first>=0){currentIndex=first;showStudy();renderAll()}else showReview();};
+ $('navToggleNum').textContent=qnow()?.id??'';
+ $('summary').innerHTML='目前科目<b>'+esc(currentSubject)+'｜5 題 Demo</b>';
+ const first=qs.findIndex(q=>!record(q).status);$('continueBtn').textContent=first>=0?'續答第 '+qs[first].id+' 題 →':'本輪完成｜看錯題 →';
+ $('continueBtn').onclick=()=>{if(first>=0){currentIndex=first;showStudy();renderAll();closeQuestionNav()}else showReview();};
 }
 function renderQuestion(){
  const q=qnow(),r=record(q);
@@ -231,8 +235,8 @@ function renderQuestion(){
 function answer(sel){
  const q=qnow(),r=record(q),elapsed=Math.max(1,(performance.now()-startedAt)/1000);r.attempts++;r.lastElapsed=elapsed;r.selected=sel;
  if(sel===q.answer)r.status='ok';else{r.status='bad';r.wrongCount++;r.totalWrongSeconds+=elapsed;r.lastWrongAt=Date.now();}
- save();renderProgress();renderQuestion();showMemory();
- setTimeout(()=>{const target=document.querySelector('.opt.correct');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},120);
+ save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showMemory();
+ setTimeout(()=>{const target=document.querySelector('.opt.correct');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},180);
 }
 function renderGuide(){
  const q=qnow(); const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]];
@@ -244,16 +248,24 @@ function renderGuide(){
  $('memoryCard').innerHTML='<small>一眼記住｜'+esc(q.subject)+'第 '+q.id+' 題</small><strong>'+esc(q.memory)+'</strong>'+memExtra+'<div class="memory-actions"><button data-go="觀念">觀念</button><button data-go="延伸閱讀">延伸觀念</button><button data-go="公式／分錄">公式／分錄</button></div>';
  $('memoryCard').querySelectorAll('button').forEach(b=>b.onclick=()=>{showGuide();const blocks=[...$('guideCard').querySelectorAll('.guide-block')];const t=blocks.find(x=>x.querySelector('h3')?.textContent===b.dataset.go);t?.scrollIntoView({behavior:'smooth',block:'start'})});
 }
+let navCloseTimer=0;
+function questionNavStarted(){return list().some(q=>Boolean(record(q).status));}
+function questionNavExpanded(){return !document.body.classList.contains('nav-auto')||document.body.classList.contains('nav-peek')||document.body.classList.contains('nav-open');}
+function updateNavToggle(){if(!$('navToggle'))return;$('navToggle').setAttribute('aria-expanded',String(document.body.classList.contains('nav-open')));$('navToggleNum').textContent=qnow()?.id??'';}
+function setQuestionNavAutoHide(on){document.body.classList.toggle('nav-auto',Boolean(on));if(!on)document.body.classList.remove('nav-peek','nav-open');if(on&&!document.body.classList.contains('nav-open'))document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();}
+function openQuestionNav(mode='open'){clearTimeout(navCloseTimer);if(!document.body.classList.contains('nav-auto'))return;document.body.classList.add(mode==='peek'?'nav-peek':'nav-open');updateNavToggle();syncHeights();}
+function closeQuestionNav(){clearTimeout(navCloseTimer);document.body.classList.remove('nav-peek','nav-open');updateNavToggle();syncHeights();}
+function scheduleQuestionNavClose(){clearTimeout(navCloseTimer);navCloseTimer=setTimeout(()=>{if($('progressShell').matches(':focus-within'))return;document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();},950);}
 function showMemory(){
  $('memoryWrap').classList.add('show');$('guideCard').classList.add('show');syncHeights();
 }
 function showGuide(){$('guideCard').classList.add('show');if(record(qnow()).status)$('memoryWrap').classList.add('show');syncHeights();}
-function syncHeights(){requestAnimationFrame(()=>{document.documentElement.style.setProperty('--navH',$('progressShell').getBoundingClientRect().height+'px');document.documentElement.style.setProperty('--memoryH',$('memoryWrap').classList.contains('show')?$('memoryWrap').getBoundingClientRect().height+'px':'0px')})}
+function syncHeights(){requestAnimationFrame(()=>{const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH',$('memoryWrap').classList.contains('show')?$('memoryWrap').getBoundingClientRect().height+'px':'0px')})}
 function showStudy(){$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
  return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].concat(subjectEntries(q));
 }
-function showReview(){$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
+function showReview(){closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
 function renderReview(){
  const subj=$('reviewSubject').value||'ALL',sort=$('reviewSort').value||'count';
  let rows=QUESTIONS.map(q=>({q,r:record(q)})).filter(x=>x.r.wrongCount>0&&(subj==='ALL'||x.q.subject===subj));
@@ -268,14 +280,19 @@ function seedDemo(){
  save();renderProgress();renderReview();
 }
 function move(delta){currentIndex=Math.max(0,Math.min(4,currentIndex+delta));showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})}
-function renderAll(){renderProgress();renderQuestion();const r=record(qnow());if(r.status)showMemory();else{$('memoryWrap').classList.remove('show');$('guideCard').classList.remove('show')};save();syncHeights();}
+function renderAll(){renderProgress();renderQuestion();const r=record(qnow());if(r.status)showMemory();else{$('memoryWrap').classList.remove('show');$('guideCard').classList.remove('show')};setQuestionNavAutoHide(questionNavStarted());save();syncHeights();}
 renderSelectors();document.documentElement.dataset.theme=state.theme||'light';renderAll();
 $('subjectSel').onchange=e=>{currentSubject=e.target.value;currentIndex=0;showStudy();renderAll()};
 $('reviewSubject').onchange=renderReview;$('reviewSort').onchange=renderReview;$('reviewTop').onclick=showReview;$('wrongBtn').onclick=showReview;$('backStudy').onclick=()=>{showStudy();renderAll()};
-$('resetBtn').onclick=()=>{if(!confirm('重新開始目前科目？本輪畫面進度會清空，但歷史答錯次數與重點復習紀錄保留。'))return;(state.rounds[currentSubject]||=1);state.rounds[currentSubject]++;for(const q of list()){const r=record(q);r.status=null;r.selected=null;}currentIndex=0;save();showStudy();renderAll()};
+$('resetBtn').onclick=()=>{if(!confirm('重新開始目前科目？本輪畫面進度會清空，但歷史答錯次數與重點復習紀錄保留。'))return;(state.rounds[currentSubject]||=1);state.rounds[currentSubject]++;for(const q of list()){const r=record(q);r.status=null;r.selected=null;}currentIndex=0;save();showStudy();setQuestionNavAutoHide(false);renderAll()};
 $('prevBtn').onclick=()=>move(-1);$('nextBtn').onclick=()=>move(1);$('questionBtn').onclick=()=>{showStudy();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};$('explainBtn').onclick=()=>{showStudy();showGuide();$('guideCard').scrollIntoView({behavior:'smooth',block:'start'})};
 $('themeBtn').onclick=()=>{state.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=state.theme;save();syncHeights()};
-addEventListener('resize',syncHeights);new ResizeObserver(syncHeights).observe($('progressShell'));new ResizeObserver(syncHeights).observe($('memoryWrap'));
+$('navToggle').onclick=()=>{if(!document.body.classList.contains('nav-auto'))return;document.body.classList.contains('nav-open')?closeQuestionNav():openQuestionNav('open')};
+$('progressShell').addEventListener('mouseenter',()=>{if(!matchMedia('(max-width:720px)').matches)openQuestionNav('peek')});
+$('progressShell').addEventListener('mouseleave',()=>{if(!matchMedia('(max-width:720px)').matches)scheduleQuestionNavClose()});
+$('progressShell').addEventListener('focusin',()=>openQuestionNav('peek'));
+$('progressShell').addEventListener('focusout',scheduleQuestionNavClose);
+addEventListener('resize',()=>{if(matchMedia('(min-width:721px)').matches)document.body.classList.remove('nav-open');updateNavToggle();syncHeights()});new ResizeObserver(syncHeights).observe($('progressShell'));new ResizeObserver(syncHeights).observe($('memoryWrap'));
 document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);if(['a','b','c','d','A','B','C','D'].includes(e.key)&&$('reviewView').classList.contains('show')===false){const L=e.key.toUpperCase();document.querySelector(`.opt[data-a="${L}"]`)?.click()}});
 </script>
 </body>
