@@ -161,6 +161,7 @@ img{max-width:100%;height:auto}
  box-sizing:border-box;padding:8px 12px calc(10px + env(safe-area-inset-bottom));border:1px solid var(--sudu-dock-border);
  border-bottom:0;border-radius:18px 18px 0 0;background:var(--sudu-dock-bg);color:var(--sudu-dock-text);
  box-shadow:0 -5px 20px #0003;max-height:calc(100dvh - var(--sudu-header-height) - 48px);overflow-y:auto;
+ scroll-padding-top:58px;scroll-padding-bottom:10px;
 }
 #sudu-question-dock .questionnav{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 5px;padding:0 0 3px;width:100%;max-width:420px;background:var(--sudu-dock-bg)}
 #sudu-question-dock .questionnav button{
