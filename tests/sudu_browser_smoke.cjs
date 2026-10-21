@@ -122,8 +122,8 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   }finally{await damagedContext.close();}
   passed('corrupt UI JSON preserves first error, all submitted snapshots and device identity across reload in an isolated profile');
 
-  const root=new URL('../',base).href;await page.goto(root,{waitUntil:'domcontentloaded'});await page.waitForURL('**/sudu/');await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});assert(new URL(page.url()).searchParams.get('tools')==='1');assert((await page.title()).length>0);
-  passed('root redirects to sudu and tools=1 keeps original toolkit');
+  const root=new URL('../',base).href;await page.goto(root,{waitUntil:'domcontentloaded'});await page.waitForURL('**/sudu/v4-5q.html');assert((await page.title()).includes('速讀'));assert(await page.locator('.source-figure img').first().isVisible());await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});assert(new URL(page.url()).searchParams.get('tools')==='1');assert((await page.title()).length>0);
+  passed('root redirects to V4 five-question trial and tools=1 keeps original toolkit');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}
