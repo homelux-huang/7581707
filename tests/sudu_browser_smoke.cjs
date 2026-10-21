@@ -207,17 +207,17 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.locator('.opt').first().click();
   const businessMemory=await page.locator('#memoryCard').innerText();
   const businessGuide=await page.locator('#guideCard').innerText();
-  assert(!/\bN\/A\b/i.test(businessMemory),'memory block must hide N/A subject-extension entries');
-  assert(!/\bN\/A\b/i.test(businessGuide),'guide block must hide N/A entries');
+  assert(/\bN\/A\b/i.test(await page.locator('.memory-extra-grid').textContent()),'business extension retains N/A for missing data');
+  assert(/\bN\/A\b/i.test(businessGuide),'business guide retains N/A');
   assert.equal(await page.locator('.memory-actions [data-go="公式／分錄"]').count(),0,'N/A formula icon is hidden from memory block');
-  assert.equal(await page.locator('.memory-extra-grid').getByText('法規',{exact:true}).count(),0,'N/A business law entry is hidden from subject extension');
-  assert.equal(await page.locator('#guideCard .guide-block h3').filter({hasText:/^法規$/}).count(),0,'N/A law block is hidden from guide');
+  assert.equal(await page.locator('.memory-extra-grid').getByText('法規',{exact:true}).count(),1,'missing business law is explicitly shown');
+  assert.equal(await page.locator('#guideCard .guide-block h3').filter({hasText:/^法規$/}).count(),1,'missing business law block is shown');
   const extraStyle=await page.locator('.memory-extra').evaluate(el=>({background:getComputedStyle(el).backgroundColor,color:getComputedStyle(el).color,textAlign:getComputedStyle(el).textAlign}));
   assert.equal(extraStyle.background,'rgb(255, 255, 255)','subject extension uses white background');
   assert.equal(extraStyle.color,'rgb(17, 17, 17)','subject extension uses black text');
   assert.equal(extraStyle.textAlign,'center','subject extension text is centered');
   const sourceText=await page.locator('#guideCard .guide-block').filter({hasText:'出處'}).innerText();
-  assert(!sourceText.includes('待核對')&&!sourceText.includes('N/A'),'unverified/missing source fields are hidden');
+  assert(sourceText.includes('頁數：待核對'),'unverified page number is explicitly marked 待核對');
   const missingSource=await page.evaluate(()=>{
    const C=window.DEMO_LEARNING_CONFIG,book=C.bookProfile['商業概論'],chapter=C.chapterMap['商業概論|3'];
    delete C.bookProfile['商業概論'];delete C.chapterMap['商業概論|3'];renderAll();
@@ -263,7 +263,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.goto(root+'?tools=1',{waitUntil:'domcontentloaded'});
   assert(new URL(page.url()).searchParams.get('tools')==='1');
   assert((await page.title()).length>0);
-  passed('35-question demo: N/A and unknown learning items are hidden; valid subject extensions are white/black/centered; distinct question/answer blocks, animated hover, 35/35 single-question WebPs, bilingual highlighted English, memory alignment and eight widths pass');
+  passed('35-question demo: business N/A and unverified source pages follow handoff requirements; valid subject extensions are white/black/centered; distinct question/answer blocks, animated hover, 35/35 single-question WebPs, bilingual highlighted English, memory alignment and eight widths pass');
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'passed',results,errors},null,2));console.log(JSON.stringify({status:'passed',checks:results.length,results},null,2));
  }catch(e){fs.writeFileSync(path.join(output,'sudu-browser-results.json'),JSON.stringify({status:'failed',results,error:e.stack,errors},null,2));await page.screenshot({path:path.join(output,'sudu-browser-failure.png'),fullPage:false});throw e;}
  finally{await browser.close();}

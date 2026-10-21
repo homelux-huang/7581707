@@ -54,6 +54,7 @@ jobs:
           python -m http.server 8765 --bind 127.0.0.1 --directory _site > /tmp/sudu-test-server.log 2>&1 &
           trap 'kill $!' EXIT
           node tests/sudu_browser_smoke.cjs
+          node tests/sudu_demo_acceptance.cjs
           node tests/sudu_workspace_test.cjs
           node tests/sudu_admin_browser.cjs
       - name: Retain test evidence

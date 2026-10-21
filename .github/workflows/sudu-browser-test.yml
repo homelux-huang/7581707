@@ -16,6 +16,7 @@ on:
       - sudu/admin.html
       - sudu/share.html
       - tests/sudu_browser_smoke.cjs
+      - tests/sudu_demo_acceptance.cjs
       - .github/workflows/sudu-browser-test.yml
   workflow_dispatch:
 permissions:
@@ -46,3 +47,10 @@ jobs:
           python -m http.server 8765 --directory _site > /tmp/sudu-test-server.log 2>&1 &
           sleep 2
           node tests/sudu_browser_smoke.cjs
+          node tests/sudu_demo_acceptance.cjs
+      - name: Retain demo acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sudu-demo-evidence-${{ github.sha }}
+          path: test-results/

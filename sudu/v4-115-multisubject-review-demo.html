@@ -38,21 +38,24 @@ main{max-width:900px;margin:auto;padding:18px 14px 38px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;margin-bottom:14px;min-width:0}#questionCard{background:var(--question-bg);border-color:color-mix(in srgb,var(--blue) 32%,var(--line));box-shadow:0 10px 28px rgba(49,93,245,.06)}
 .qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
 .pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:14px;background:var(--bg)}
-h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2{font-size:25px;margin:0 0 12px}
-.options{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:21px;background:var(--option-section)} .opt{width:100%;display:flex;gap:13px;align-items:flex-start;text-align:left;border:1px solid var(--line);background:var(--option-bg);color:var(--text);border-radius:18px;padding:15px 17px;min-height:66px;font-size:20px;line-height:1.28;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease} .opt:not(.correct):not(.wrong):hover{background:var(--option-hover);border-color:var(--option-hover-border);transform:translateY(-2px);box-shadow:0 9px 22px rgba(49,93,245,.16)} .opt:not(.correct):not(.wrong):hover .letter{border-color:var(--option-hover-border);background:color-mix(in srgb,var(--option-hover-border) 12%,var(--option-bg))}
+h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} h2{font-size:25px;margin:0 0 12px}
+.options{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:21px;background:var(--option-section)} .opt{width:100%;display:flex;gap:13px;align-items:flex-start;text-align:left;border:1px solid var(--line);background:var(--option-bg);color:var(--text);border-radius:18px;padding:15px 17px;min-height:66px;font-size:20px;line-height:1.28;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+@media(hover:hover) and (pointer:fine){ .opt:not(.correct):not(.wrong):hover{background:var(--option-hover);border-color:var(--option-hover-border);transform:translateY(-2px);box-shadow:0 9px 22px rgba(49,93,245,.16)} .opt:not(.correct):not(.wrong):hover .letter{border-color:var(--option-hover-border);background:color-mix(in srgb,var(--option-hover-border) 12%,var(--option-bg))}}
+
 .letter{flex:0 0 43px;height:43px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-weight:1000}
-.opt.correct{border-color:var(--green);box-shadow:0 0 0 2px rgba(19,121,91,.13)} .opt.wrong{border-color:var(--red);box-shadow:0 0 0 2px rgba(180,35,63,.13)}
+.opt.correct{background:#e5f5ed;color:#103d2e;border-color:var(--green);box-shadow:0 0 0 2px rgba(19,121,91,.13)} .opt.wrong{background:#ffebef;color:#761c30;border-color:var(--red);box-shadow:0 0 0 2px rgba(180,35,63,.13)}
+html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-theme="dark"] .opt.wrong{background:#4a1725;color:#fff0f3}
 .result{font-weight:1000;font-size:19px;margin-top:12px} .good{color:var(--green)} .bad{color:var(--red)}
-.opt-body{min-width:0;flex:1;display:block}.opt-text{display:block;overflow-wrap:anywhere}
+.opt-body{min-width:0;flex:1;display:block}.opt-text{display:block;overflow-wrap:break-word}
 .option-wrap{display:grid;gap:6px}.option-detail{border:1px solid var(--line);border-radius:15px;padding:11px 13px;background:var(--bg);font-size:15px;line-height:1.5}
 .option-detail.is-correct{border-color:color-mix(in srgb,var(--green) 55%,var(--line))}.option-detail.is-wrong{border-color:color-mix(in srgb,var(--red) 40%,var(--line))}
 .option-detail>p{margin:4px 0 8px}.option-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
-.option-detail-grid span{display:block;border:1px solid var(--line);border-radius:11px;padding:7px 9px;background:var(--card);overflow-wrap:anywhere}
+.option-detail-grid span{display:block;border:1px solid var(--line);border-radius:11px;padding:7px 9px;background:var(--card);overflow-wrap:break-word}
 .option-detail-grid em{display:block;color:var(--blue);font-style:normal;font-size:12px;font-weight:1000;margin-bottom:2px}
 .memory-extra{margin-top:10px;border:1px solid #d8deea;border-radius:13px;overflow:hidden;background:#fff;color:#111;text-align:center}
 .memory-extra summary{cursor:pointer;padding:10px 11px;font-weight:1000;list-style:none;background:#fff;color:#111;text-align:center}.memory-extra summary::-webkit-details-marker{display:none}
 .memory-extra-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:0 9px 9px;background:#fff;color:#111;text-align:center}
-.memory-extra-grid span{border:1px solid #e1e6ef;border-radius:10px;padding:8px;background:#fff;color:#111;font-size:13px;line-height:1.4;overflow-wrap:anywhere;text-align:center}
+.memory-extra-grid span{border:1px solid #e1e6ef;border-radius:10px;padding:8px;background:#fff;color:#111;font-size:13px;line-height:1.4;overflow-wrap:break-word;text-align:center}
 .memory-extra-grid b{display:block;font-size:11px;color:#315df5;margin-bottom:3px;text-align:center}
 .source-priority{font-size:12px;color:var(--muted);margin-top:5px}.news-en,.news-zh{display:block}.news-zh{margin-top:5px;color:var(--muted)}.exam-highlight{background:#ffe66d;color:#111;padding:0 .18em;border-radius:4px;font-weight:1000;box-decoration-break:clone;-webkit-box-decoration-break:clone}.level-vocab{font-weight:760;word-spacing:.04em}
 @media(max-width:620px){.option-detail-grid,.memory-extra-grid{grid-template-columns:1fr}}
@@ -64,7 +67,7 @@ h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:anywhere} h2
 .memory-action-icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
 .memory-action-icon svg{width:23px;height:23px;display:block;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .memory-action-concept .memory-action-icon{background:#2563eb}.memory-action-extension .memory-action-icon{background:#7c3aed}.memory-action-formula .memory-action-icon{background:#b45309}.memory-action-source .memory-action-icon{background:#0f766e}
-.memory-action-label{min-width:0;overflow-wrap:anywhere}
+.memory-action-label{min-width:0;overflow-wrap:break-word}
 .option-wrap.correct-wrap>.opt.correct{border-color:var(--green);border-top-width:4px;box-shadow:0 0 0 2px rgba(19,121,91,.13)}
 .option-wrap.correct-wrap{scroll-margin-top:calc(var(--navH) + var(--memoryH) + 17px)}
 .guide{display:none} .guide.show{display:block} .guide-grid{display:grid;gap:10px}
@@ -174,14 +177,14 @@ function sourceText(q){
  if(hasStudyValue(s.book))parts.push(s.book);
  if(hasStudyValue(s.chapter))parts.push('章節：'+s.chapter);
  if(hasStudyValue(s.name))parts.push('章節名稱：'+s.name);
- if(hasStudyValue(s.page))parts.push('頁數：'+s.page);
+ if(parts.length)parts.push('頁數：'+(hasStudyValue(s.page)?s.page:'待核對'));
  return parts.join('｜');
 }
 function subjectEntries(q){
  const C=window.DEMO_LEARNING_CONFIG||{}; const order=(C.extraOrder||{})[q.subject]||[]; const out=[];
  for(const raw of order){
   const key=raw==='文本出處'?'出處':raw; const v=(q.extra||{})[key];
-  if(!hasStudyValue(v))continue; out.push([raw,v]);
+  if(!hasStudyValue(v)){if(q.subject==='商業概論')out.push([raw,'N/A']);continue;} out.push([raw,v]);
  }
  return out;
 }
@@ -197,7 +200,7 @@ function formatStudyValue(q,key,value){
    const idx=term?sentence.toLowerCase().indexOf(term.toLowerCase()):-1;
    let en=esc(sentence);
    if(idx>=0) en=esc(sentence.slice(0,idx))+'<mark class="exam-highlight">'+esc(sentence.slice(idx,idx+term.length))+'</mark>'+esc(sentence.slice(idx+term.length));
-   return '<span class="news-en">'+en+'</span><span class="news-zh"><b>中文：</b>'+esc(news.zh||'')+'</span>';
+   return '<small class="news-note">AI 學習示例（非新聞原文）</small><span class="news-en">'+en+'</span><span class="news-zh"><b>中文：</b>'+esc(news.zh||'')+'</span>';
   }
  }
  return esc(text);
@@ -225,7 +228,7 @@ function optionSubjectEntries(q,L){
  const all=subjectEntries(q); return L===q.answer?all:all.filter(x=>prefer.includes(x[0]));
 }
 function renderOptionDetail(q,L){
- const entries=optionSubjectEntries(q,L).filter(x=>hasStudyValue(x[1]));
+ const entries=optionSubjectEntries(q,L);
  let html='<div class="option-detail '+(L===q.answer?'is-correct':'is-wrong')+'"><b>'+(L===q.answer?'✓ 正確解答':'× 選項檢查')+'</b><p>'+esc(optionReason(q,L))+'</p>';
  if(entries.length){html+='<div class="option-detail-grid">'+entries.map(x=>'<span><em>'+esc(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';}
  return html+'</div>';
@@ -285,9 +288,9 @@ function memoryIcon(kind){
 function renderGuide(){
  const q=qnow(); const source=sourceText(q);
  const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',source]].filter(x=>hasStudyValue(x[1]));
- const extra=subjectEntries(q).filter(x=>hasStudyValue(x[1]));
+ const extra=subjectEntries(q);
  const guideItems=common.concat(extra);
- const sourceNote=hasStudyValue(source)?'<div class="source-priority">出處優先順序：彰化高商採用教材 → 教育部審定常用技高教材；未核到的欄位自動隱藏，不填假資料。</div>':'';
+ const sourceNote=hasStudyValue(source)?'<div class="source-priority">出處優先順序：彰化高商採用教材 → 教育部審定常用技高教材；未核實的頁碼標示「待核對」，不填假資料。</div>':'';
  $('guideCard').innerHTML='<h2>'+esc(q.subject)+'解說重點</h2><div class="guide-grid">'+guideItems.map(x=>'<section class="guide-block"><h3>'+esc(x[0])+'</h3><p>'+formatStudyValue(q,x[0],x[1])+'</p></section>').join('')+'</div>'+sourceNote;
  const mem=extra;
  let memExtra='';
@@ -333,7 +336,7 @@ function scrollToCorrectAnswer(){
 }
 function showStudy(){$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
- return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].concat(subjectEntries(q)).filter(x=>hasStudyValue(x[1]));
+ return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1])).concat(subjectEntries(q));
 }
 function showReview(){closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
 function renderReview(){
