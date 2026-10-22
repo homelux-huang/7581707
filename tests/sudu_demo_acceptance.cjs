@@ -20,6 +20,11 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
  const noOverflow=async(label)=>{const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(layout.scrollWidth<=layout.width+1,label+' '+JSON.stringify(layout));};
  try{
   await page.goto(base+'v4-115-multisubject-review-demo.html');
+  const clockBefore=await page.locator('#examClock').innerText();
+  assert(/天.*時.*分.*秒/.test(clockBefore));
+  await page.waitForTimeout(1100);assert.notEqual(await page.locator('#examClock').innerText(),clockBefore,'countdown ticks each second');
+  const edges=await page.evaluate(()=>[countdownText(EXAM_DAY_START-1000),countdownText(EXAM_DAY_START),countdownText(EXAM_DAY_END)]);
+  assert.deepEqual(edges,['0天 00時 00分 01秒','統測考試期間，加油！','本屆統測已結束']);
   const qs=await page.evaluate(()=>JSON.parse(document.getElementById('demoData').textContent).questions);
   assert.equal(qs.length,35);
   for(const [subject,ids] of Object.entries(expected))assert.deepEqual(qs.filter(q=>q.subject===subject).map(q=>q.id),ids);
@@ -102,6 +107,13 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
      const joined=await page.evaluate(()=>{const m=document.querySelector('#memoryCard'),g=document.querySelector('#guideCard'),a=m.getBoundingClientRect(),b=g.getBoundingClientRect();return {adjacent:m.nextElementSibling===g,gap:b.top-a.bottom,left:Math.abs(a.left-b.left),width:Math.abs(a.width-b.width)};});
      assert(joined.adjacent&&Math.abs(joined.gap)<=1&&joined.left<=1&&joined.width<=1,'memory directly joins explanation '+JSON.stringify(joined));
+     if(['數學 B','經濟學','會計學'].includes(q.subject)){
+      assert((await page.locator('#correctAnswer .option-detail').innerText()).includes('考題計算式'));
+      assert(await page.locator('#correctAnswer .calculation-step').count()>=3);
+     }
+     if(q.subject==='國文'){
+      const t=await page.locator('#correctAnswer .option-detail').innerText();assert(!/(?:^|[｜／\n])(?:低|中|高)[：:]/.test(t));
+     }
      await noOverflow('answer overflow '+width+' '+q.subject+q.id);
     }
     await page.screenshot({path:path.join(output,`demo-${width}x${height}-${theme}.png`)});

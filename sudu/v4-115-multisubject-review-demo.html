@@ -117,11 +117,22 @@ body{padding-bottom:170px}.memory-extra summary::after{content:' ＋'}.memory-ex
 /* One continuous reading group: memory directly joins subject explanation. */
 .memory-wrap .memory{border-bottom-left-radius:0;border-bottom-right-radius:0;box-shadow:none}
 .memory-wrap #guideCard{margin:0;border-top:0;border-top-left-radius:0;border-top-right-radius:0}
+.calculation-steps,.calculation-step{display:block!important}.calculation-step{margin:8px 0;line-height:1.65;text-align:left;overflow-wrap:anywhere}.calculation-step b{display:block;color:var(--blue)}
+
+/* Compact header and picker; retain large reading text and touch targets. */
+.header{padding:10px 14px 7px;gap:10px}.brand{font-size:clamp(20px,2.8vw,28px)}.sub{font-size:13px;margin-top:3px}.logo{width:46px;height:46px;flex:0 0 46px;font-size:17px;border-radius:14px}
+.control-row{padding:0 14px 8px;gap:8px}.summary{padding:8px 12px;border-radius:14px;font-size:13px}.summary b{font-size:18px;margin-top:2px}.selectors select{min-height:46px;padding:8px 10px}
+.progress{padding:6px 12px 7px;gap:5px}.progress-chips{gap:7px}.chip{width:46px;height:46px}.progress-actions{gap:6px}.label{font-size:16px}
+.exam-countdown{max-width:952px;margin:0 auto 8px;padding:8px 12px;border-radius:12px;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;background:#b91c1c;color:#fff;font-weight:800}
+.exam-countdown strong{font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap}.exam-countdown a{color:#fff;font-size:12px;text-underline-offset:3px}
+@media(max-width:720px){.exam-countdown{margin:0 9px 7px;gap:4px 8px;padding:7px 9px}.exam-countdown strong{font-size:18px}.exam-countdown a{flex-basis:100%;text-align:center}.header{padding:9px}.control-row{padding:0 9px 8px}.summary b{font-size:17px}}
+.option-detail-grid .calculation-steps,.option-detail-grid .calculation-step{border:0;padding:0;background:transparent}
 </style>
 </head>
 <body>
 <div class="top">
  <div class="header"><div class="logo">速讀</div><div class="brand-block"><div class="brand">115 統測全科 LIVE DEMO</div><div class="sub">每科 5 題｜答錯題重點復習｜V4 大字大卡片介面</div></div><div class="grow"></div><div class="header-actions"><button class="review-head" id="reviewTop"><span aria-hidden="true">✦</span><span class="review-label"><span class="review-label-full">答錯題重點復習</span><span class="review-label-short">錯題復習</span></span><span class="badge" id="wrongBadge">0</span></button><button class="nav-toggle" id="navToggle" aria-controls="progressShell" aria-expanded="false">題號・第 <span id="navToggleNum">1</span> 題</button><button class="theme" id="themeBtn" aria-label="切換深淺主題">◐</button></div></div>
+ <div class="exam-countdown" id="examCountdown" role="timer" aria-live="off"><span>距 116 統測首日</span><strong id="examClock">計算中…</strong><a href="https://www.tcte.edu.tw/index.php?mod=TVETest/SelfSelectSubject" target="_blank" rel="noopener">4/24–4/25｜首日 00:00 起算</a></div>
  <div class="control-row"><div class="summary" id="summary">目前科目<b>載入中…</b></div><div class="selectors"><select id="yearSel" aria-label="年度"><option>115</option></select><select id="subjectSel" aria-label="科目"></select></div></div>
 </div>
 <div class="progress-shell" id="progressShell" role="region" aria-label="選題與作答進度">
@@ -215,10 +226,13 @@ function subjectEntries(q){
   const key=raw==='文本出處'?'出處':raw; const v=(q.extra||{})[key];
   if(!hasStudyValue(v)){if(q.subject==='商業概論')out.push([raw,'N/A']);continue;} out.push([raw,v]);
  }
+ const calc=(C.examCalculations||{})[q.subject+'|'+q.id];if(calc)out.push(['考題計算式',calc.lines.join('\n')]);
  return out;
 }
 function formatStudyValue(q,key,value){
  const text=String(value??'');
+ if(key==='考題計算式')return '<span class="calculation-steps">'+text.split('\n').map((line,i)=>'<span class="calculation-step"><b>步驟 '+(i+1)+'</b> '+esc(line)+'</span>').join('')+'</span>';
+ if(q.subject==='國文')return esc(text.replace(/(^|[｜／\n])低[：:]/g,'$1初級：').replace(/(^|[｜／\n])中[：:]/g,'$1中級：').replace(/(^|[｜／\n])高[：:]/g,'$1高級：'));
  if(q.subject==='英文'&&(key==='同意相關單字'||key==='反意相關單字')){
   return '<span class="level-vocab">'+esc(text.replace(/\blow\s*:/gi,'初級：').replace(/\bmid\s*:/gi,'中級：').replace(/\bhigh\s*:/gi,'高級：'))+'</span>';
  }
@@ -386,6 +400,16 @@ function seedDemo(){
 }
 function move(delta){currentIndex=Math.max(0,Math.min(4,currentIndex+delta));showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})}
 function renderAll(){$('prevBtn').disabled=currentIndex===0;$('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;renderProgress();renderQuestion();const r=record(qnow());hideMemory();if(!r.status)$('guideCard').classList.remove('show');setQuestionNavAutoHide(questionNavStarted());save();syncHeights();}
+const EXAM_DAY_START=Date.parse('2027-04-24T00:00:00+08:00');
+const EXAM_DAY_END=Date.parse('2027-04-26T00:00:00+08:00');
+function countdownText(now){
+ if(now>=EXAM_DAY_END)return '本屆統測已結束';
+ if(now>=EXAM_DAY_START)return '統測考試期間，加油！';
+ const total=Math.ceil((EXAM_DAY_START-now)/1000),d=Math.floor(total/86400),h=Math.floor(total%86400/3600),m=Math.floor(total%3600/60),s=total%60;
+ return d+'天 '+String(h).padStart(2,'0')+'時 '+String(m).padStart(2,'0')+'分 '+String(s).padStart(2,'0')+'秒';
+}
+function updateCountdown(){$('examClock').textContent=countdownText(Date.now());}
+updateCountdown();setInterval(updateCountdown,1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCountdown()});
 renderSelectors();document.documentElement.dataset.theme=state.theme||'light';renderAll();
 $('subjectSel').onchange=e=>{currentSubject=e.target.value;currentIndex=0;showStudy();renderAll()};
 $('reviewSubject').onchange=renderReview;$('reviewSort').onchange=renderReview;$('reviewTop').onclick=showReview;$('wrongBtn').onclick=showReview;$('backStudy').onclick=()=>{showStudy();renderAll()};
