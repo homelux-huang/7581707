@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "baselineMainSha": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+  "reviewedDate": "2026-10-22",
+  "method": "manual_visual_read_of_existing_official_webp",
+  "notice": "This file is a non-destructive overlay. Original 115.json, OCR extraction, teaching, Demo and student records are not modified. Visual transcription is not OCR. Review flags remain false pending independent second-pass textual and crop QA.",
+  "sharedMaterials": [
+    {
+      "sharedMaterialId": "115-00-E-SHARED-21-24",
+      "paperCode": "00-E",
+      "sourcePage": 5,
+      "sourceImage": "sudu/data/original/115/00-E/p005-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "reviewStatus": "second_pass_pending",
+      "text": "May 18 is International Day for Women in Maritime, which recognizes the importance of women in the ocean transport industry. The theme for 2025 was “An Ocean of Opportunities for Women.” In Taiwan, women represent only 4% of seafarers (航海人員). ____21____ the 260 women seafarers, many have proved that seafaring can be a rewarding career. One woman who shows the way is Huang Chao-ling (黃昭玲). Huang, who was a captain, is Taiwan’s first and only female harbor pilot. As a harbor pilot, she guides ships safely in and out of the port, which is a ____22____ job that requires taking risks, such as climbing onto a moving ship in big waves. Another front-runner is Lin Chia-ling (林嘉玲), Taiwan’s first woman oil tanker captain. Lin’s job is to ensure reliable delivery of oil to all ports in Taiwan, ____23____ the weather is terrible. Huang and Lin share a hard career path, given that women seafarers face various challenges, including insufficient onboard facilities. Today, the maritime industry is working to create a gender-friendly workplace ____24____. Such efforts are seeing results, with the number of Taiwanese women captains standing at 22 in 2024, up from 6 about ten years ago."
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-25-28",
+      "paperCode": "00-E",
+      "sourcePage": 5,
+      "sourceImage": "sudu/data/original/115/00-E/p005-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "reviewStatus": "second_pass_pending",
+      "text": "The Tamkang Bridge (淡江大橋) has been under construction since 2019 and is ready for use this year. It was built because the Tamsui (淡水) and Bali (八里) areas have grown quickly in recent years, and more people now commute between them. Once it opens, people can save about half an hour when traveling between the two places. Besides making ____25____ smooth, the bridge will also appeal to visitors with its special architectural style. It was designed by the world-famous architect Zaha Hadid. Being the first bridge in Taiwan ____26____ through an international design competition, the Tamkang Bridge will become the world’s longest single-tower asymmetric cable-stayed bridge (單塔不對稱斜張橋). Expressing a sense of art and beauty, the bridge’s 200-meter tower rises into the sky, ____27____ a dancer were lifting both hands in prayer. Moreover, the bridge’s shape goes well with the sunset over the Tamsui River, making the view much more eye-catching. Visitors can appreciate the riverside views here. With shorter travel time between Tamsui and Bali and its unique beauty, the Tamkang Bridge will play an important role in both ____28____. The bridge will definitely bring travel convenience and recreational benefits to the people of northern Taiwan."
+    }
+  ],
+  "corrections": {
+    "115-09-1-02": {
+      "question": "「島內散步旅行社股份有限公司」是一家提供深度導覽與在地故事體驗服務以推廣城市文化的社會企業，下列敘述何者正確？",
+      "options": [
+        "該公司出資人數應為兩人以上，且不具法人資格",
+        "公司在官網展示體驗活動影片，增加服務無形性",
+        "導覽行程和在地體驗活動屬於該公司的基本產品",
+        "導覽期間，該公司應為旅客投保公共意外責任險"
+      ],
+      "sourcePage": 2
+    },
+    "115-09-1-04": {
+      "question": "全家便利商店業者①總部統籌規劃連鎖賣場商品陳列及動線設計的環節，其涉及連鎖經營管理的範圍；以及②為了提高議價空間，向上整合發展成立物流中心，該物流中心的經營型態。關於上述情境，依序何者正確？",
+      "options": [
+        "①營業管理、②批發商型物流中心",
+        "①營業管理、②零售商型物流中心",
+        "①行銷管理、②批發商型物流中心",
+        "①行銷管理、②零售商型物流中心"
+      ],
+      "sourcePage": 2
+    },
+    "115-09-2-02": {
+      "question": "依據商業會計法，下列哪幾項應於年度決算程序辦理終了後，至少保存十年？\n①發票\n②傳票\n③日記簿\n④分類帳\n⑤資產負債表\n⑥綜合損益表",
+      "options": [
+        "僅①、②、③、④",
+        "僅①、②、⑤、⑥",
+        "僅②、③、④、⑤",
+        "僅③、④、⑤、⑥"
+      ],
+      "sourcePage": 2
+    },
+    "115-09-2-04": {
+      "question": "關於日記簿及分類帳的記錄方式，下列哪幾項正確？\n①作分錄時應填寫日記簿的日頁欄\n②過帳時將日記簿之頁次轉記到分類帳的日頁欄\n③過帳時將分類帳之頁次記入日記簿的日頁欄",
+      "options": [
+        "僅①",
+        "僅②",
+        "僅①、③",
+        "僅②、③"
+      ],
+      "sourcePage": 2
+    },
+    "115-00-MB-09": {
+      "question": "已知直線 L₁：4x+(a+5)y−10=0 通過點(a,1)，直線 L₂ 的斜率為 −1/2。若直線 L₃ 也通過點(a,1)，且與直線 L₂ 垂直，則 L₃ 的直線方程式為何？",
+      "options": [
+        "2x−y−1=0",
+        "2x+y+3=0",
+        "x−2y+1=0",
+        "x+2y−3=0"
+      ],
+      "sourcePage": 4,
+      "formulas": [
+        {
+          "readable": "L₁: 4x+(a+5)y−10=0",
+          "latex": "4x+(a+5)y-10=0"
+        },
+        {
+          "readable": "L₂ 斜率 −1/2",
+          "latex": "m_{L_2}=-\\frac{1}{2}"
+        }
+      ]
+    },
+    "115-00-MB-12": {
+      "question": "若 abc≠0，且二元一次聯立方程式 {2x+3y=4；ax+by=c} 有無限多組解，則下列何者正確？",
+      "options": [
+        "{2x+3y=4；1000ax+1000by=c} 有唯一解",
+        "{2x+3y=4；ax+by=1000c} 有唯一解",
+        "{2x+3y=4；1000ax+by=c} 無解",
+        "{2x+3y=4；1000ax+by=c} 有唯一解"
+      ],
+      "sourcePage": 4,
+      "formulas": [
+        {
+          "readable": "2x+3y=4, ax+by=c",
+          "latex": "\\begin{cases}2x+3y=4\\\\ax+by=c\\end{cases}"
+        }
+      ]
+    },
+    "115-00-E-21": {
+      "question": "第21題：依共用短文，選出第21個空格最適合的答案。",
+      "options": [
+        "Among",
+        "During",
+        "Near",
+        "Opposite"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-21-24"
+    },
+    "115-00-E-22": {
+      "question": "第22題：依共用短文，選出第22個空格最適合的答案。",
+      "options": [
+        "domestic",
+        "remote",
+        "simple",
+        "tough"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-21-24"
+    },
+    "115-00-E-23": {
+      "question": "第23題：依共用短文，選出第23個空格最適合的答案。",
+      "options": [
+        "even when",
+        "just where",
+        "or else",
+        "so that"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-21-24"
+    },
+    "115-00-E-24": {
+      "question": "第24題：依共用短文，選出第24個空格最適合的答案。",
+      "options": [
+        "to pose a career obstacle",
+        "to increase ocean-going ships",
+        "to improve women’s employment",
+        "to raise women’s work challenges"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-21-24"
+    },
+    "115-00-E-25": {
+      "question": "第25題：依共用短文，選出第25個空格最適合的答案。",
+      "options": [
+        "air quality",
+        "traffic flow",
+        "water safety",
+        "local culture"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-25-28"
+    },
+    "115-00-E-26": {
+      "question": "第26題：依共用短文，選出第26個空格最適合的答案。",
+      "options": [
+        "selected",
+        "selecting",
+        "is selected",
+        "to select"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-25-28"
+    },
+    "115-00-E-27": {
+      "question": "第27題：依共用短文，選出第27個空格最適合的答案。",
+      "options": [
+        "as if",
+        "in case",
+        "in order that",
+        "as long as"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-25-28"
+    },
+    "115-00-E-28": {
+      "question": "第28題：依共用短文，選出第28個空格最適合的答案。",
+      "options": [
+        "dance and design",
+        "art and competition",
+        "construction and religion",
+        "transportation and tourism"
+      ],
+      "sourcePage": 5,
+      "sharedMaterialId": "115-00-E-SHARED-25-28"
+    },
+    "115-09-2-28": {
+      "sourcePage": 7,
+      "tables": [
+        {
+          "label": "表（一）",
+          "columns": [
+            "數量",
+            "①蛋餅總效用",
+            "②豆沙包總效用",
+            "③三明治總效用"
+          ],
+          "rows": [
+            [
+              1,
+              20,
+              5,
+              15
+            ],
+            [
+              2,
+              24,
+              7,
+              21
+            ],
+            [
+              3,
+              25,
+              8,
+              18
+            ],
+            [
+              4,
+              23,
+              8,
+              12
+            ]
+          ]
+        }
+      ],
+      "recordNotes": [
+        "Official original text states prices 40, 50, 60 NTD; no budget amount stated. Do NOT infer or append NTD 250."
+      ]
+    }
+  },
+  "openIssues": [
+    {
+      "questionId": "115-00-C-02",
+      "note": "Demo summary omits the complete D phrase 元氣充然; legacy yearly original contains it."
+    },
+    {
+      "questionId": "115-00-C-09",
+      "note": "The yearly source includes all ①–⑤; preserve these and verify crop."
+    },
+    {
+      "questionId": "115-09-1-03",
+      "note": "Official image option D says 會增加經營風險; Demo currently says 不會增加."
+    },
+    {
+      "questionId": "115-09-1-07",
+      "note": "Answer sheet shows B. Independent search for any official revisions/objections not completed."
+    },
+    {
+      "questionId": "115-09-2-28",
+      "note": "No NTD 250 budget shown on official paper."
+    }
+  ]
+}
