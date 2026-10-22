@@ -47,7 +47,19 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   for(const [id,word] of [[1,'wet'],[2,'joined'],[3,'equally'],[4,'suitable'],[5,'attract']]){
    await choose('英文',id);
    await page.locator('.opt').first().click();await settle();
+   await page.locator('.memory-extra summary').scrollIntoViewIfNeeded();
+   const beforeExpand=await page.evaluate(()=>scrollY);
    await page.locator('.memory-extra summary').click();
+   await page.waitForTimeout(100);
+   assert(Math.abs(await page.evaluate(()=>scrollY)-beforeExpand)<3,'extension expands in place');
+   await page.locator('.memory-close').click();
+   assert.equal(await page.locator('#memoryWrap').isVisible(),false);
+   await page.locator('#explainBtn').click();await settle();
+   assert.equal(await page.locator('#memoryWrap').isVisible(),true);
+   await page.locator('#questionBtn').click();await settle();
+   assert.equal(await page.locator('#memoryWrap').isVisible(),false);
+   await page.locator('#explainBtn').click();await settle();
+
    for(const selector of ['#correctAnswer .option-detail','#guideCard','#memoryCard']){
     const text=await page.locator(selector).innerText();
     for(const label of ['初級','中級','高級','中文：'])assert(text.includes(label),id+' '+selector+' '+label);
@@ -83,11 +95,11 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      await page.locator('.opt').first().click();await settle();
      const geometry=await page.evaluate(()=>{
       const m=document.querySelector('#memoryCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
-      return {gap:c.top-m.bottom,left:Math.abs(c.left-m.left),width:Math.abs(c.width-m.width),memoryTop:m.top,memoryBottom:m.bottom,answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
+      return {gap:m.top-c.bottom,left:Math.abs(c.left-m.left),width:Math.abs(c.width-m.width),memoryTop:m.top,memoryBottom:m.bottom,answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
      });
      assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
      assert(geometry.left<=2&&geometry.width<=3);
-     assert(geometry.memoryTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
+     assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
      await noOverflow('answer overflow '+width+' '+q.subject+q.id);
     }
     await page.screenshot({path:path.join(output,`demo-${width}x${height}-${theme}.png`)});
