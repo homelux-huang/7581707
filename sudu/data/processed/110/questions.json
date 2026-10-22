@@ -5865,46 +5865,6 @@
     },
     {
       "schemaVersion": 1,
-      "questionId": "110-09-1-80",
-      "year": 110,
-      "paperCode": "09-1",
-      "originalQuestionNumber": 80,
-      "subject": "專業科目（一）",
-      "question": "10，若我們先將欄A 的數值由大到小排序，再將欄B 的數值由小到大排序，則排序\n  後儲存格B 2 的值為何？",
-      "options": [
-        "10",
-        "40",
-        "60",
-        "80"
-      ],
-      "answer": null,
-      "answerMatched": false,
-      "answerVerified": false,
-      "questionVerified": false,
-      "integrationReady": false,
-      "sharedMaterialIds": [],
-      "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
-      ],
-      "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
-      },
-      "source": {
-        "questionPdf": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTEucGRm",
-        "questionPdfSha256": "f342faa80266971f8086db9fd43f018a9f88ba3e9eacf29dafa17cf3684a2f95",
-        "answerPdf": "https://web1.tcte.edu.tw/EXAM/110_4y/downloader.php?obj=MTEwLTR5LTA5LTEtc3RhbmRhcmQucGRm",
-        "answerPdfSha256": "c0cb6d3c3566c6eae4bcd50ad9c4d1762077b86c4c23963c1cbd6c06280bae21"
-      },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
-      "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "schemaVersion": 1,
       "questionId": "110-09-2-01",
       "year": 110,
       "paperCode": "09-2",

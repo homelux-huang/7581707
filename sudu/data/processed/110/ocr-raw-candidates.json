@@ -2540,23 +2540,6 @@
       "qaStatus": "PENDING"
     },
     {
-      "questionId": "110-09-1-80",
-      "rawOcrText": null,
-      "rawOrigin": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "legacyQuestion": "10，若我們先將欄A 的數值由大到小排序，再將欄B 的數值由小到大排序，則排序\n  後儲存格B 2 的值為何？",
-      "legacyOptions": [
-        "10",
-        "40",
-        "60",
-        "80"
-      ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
-      "imageSha256": null,
-      "qaStatus": "PENDING"
-    },
-    {
       "questionId": "110-09-2-01",
       "rawOcrText": null,
       "rawOrigin": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",

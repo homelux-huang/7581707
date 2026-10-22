@@ -1,10 +1,7 @@
-# 110 年資料工程交接 — 僅候選，禁止平台正式接入
+# 110 年 staging corpus（僅候選）
 
-- 候選題號：205
-- 已產生候選單題 WebP：204
-- 逐張視覺驗收通過：0
-- PDF 自動答案候選相符：193
-- 官方最終答案與疑義更正逐題完成：0
-- SQLite 雙次匯入讀回：205
-- integrationReady = false
-- 參閱 docs/SUDU_QUESTION_BANK_QA_GATE_105_115.md
+- 官方 09-1 試卷封面證明總題數 50，舊擷取 110-09-1-80 已完整保存在 QUARANTINED_LEGACY_Q80.json。
+- 既有 sudu/data/years/110.json 原始資料未修改。
+- 本年候選正式試題 204 題，WebP 候選 204 題。
+- 所有單題 WebP 的逐題目視驗收仍為 0；最終官方答案／更正核對待辦。
+- SQLite 204 題重複導入讀回／SHA 待驗收；不得接入正式平台。

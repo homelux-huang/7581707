@@ -3083,26 +3083,6 @@
       "visualEvidence": null
     },
     {
-      "questionId": "110-09-1-80",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
-      "criteria": [
-        "official_number",
-        "whole_stem",
-        "all_four_options",
-        "all_figures_formulas_units",
-        "no_adjacent_question",
-        "no_header_footer",
-        "sharpness",
-        "original_and_output_sha256"
-      ],
-      "reviewer": null,
-      "visualEvidence": null
-    },
-    {
       "questionId": "110-09-2-01",
       "status": "PENDING",
       "sourcePage": 2,

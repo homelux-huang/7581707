@@ -51,48 +51,17 @@
       "legacyIdNumberGap": []
     },
     "09-1": {
-      "candidateRecords": 51,
+      "candidateRecords": 50,
       "numberedAnchors": 50,
       "imageDrafts": 50,
-      "unresolvedAnchorNumbers": [
-        80
-      ],
+      "unresolvedAnchorNumbers": [],
       "suspectedPageConflicts": [],
       "ambiguousAnchorNumbers": [],
       "officialAnswerTextKeys": 48,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": [
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79
-      ]
+      "legacyIdNumberGap": [],
+      "historicalFalsePositiveQuarantined": "110-09-1-80"
     },
     "09-2": {
       "candidateRecords": 50,
@@ -106,5 +75,8 @@
       "issues": [],
       "legacyIdNumberGap": []
     }
+  },
+  "officialCountExceptionsReviewed": {
+    "09-1": 50
   }
 }
