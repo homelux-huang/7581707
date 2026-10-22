@@ -79,7 +79,8 @@ def main():
           "cropCoordinates":asset["crop"],"outputSize":asset["outputSize"],
           "sha256":asset["sha256"],"processingVersion":asset["processingVersion"],
           "cropMethod":asset["cropMethod"],
-          "visualQa":"PENDING_INDIVIDUAL_VISUAL_QA"
+          "visualQa":"PASS" if asset.get("qaStatus")=="PASS" else "PENDING_INDIVIDUAL_VISUAL_QA",
+          "visualReviewEvidence":asset.get("visualReviewEvidence"),
         }
         q["questionProvenance"]["originalPageWebp"]=asset["source"]
         q["questionProvenance"]["sourcePage"]=asset["sourcePage"]
