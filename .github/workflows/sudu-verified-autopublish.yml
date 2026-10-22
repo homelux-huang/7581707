@@ -63,7 +63,26 @@ jobs:
           OLD="$(python -c 'import json;print(json.load(open("sudu/data/approved/progress.json")).get("provenance",{}).get("sourceTreeSignature",""))')"
           echo "signature=$SIGNATURE" >> "$GITHUB_OUTPUT"
           echo "commit=$(git -C _source_qa rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-          if [ "$SIGNATURE" = "$OLD" ]; then
+          # Re-run the admission importer after schema upgrades, even when
+          # the QA branch's 114/115 source subtree did not change.
+          HAS_PREVIEW="$(python - <<'PY'
+          import json
+          from pathlib import Path
+          try:
+              data=json.load(open("sudu/data/approved/progress.json"))
+              ready=all(
+                  isinstance(data["years"][str(year)].get("imagePreviewCount"),int)
+                  and Path(f"sudu/data/approved/preview/{year}.json").is_file()
+                  and json.load(open(f"sudu/data/approved/preview/{year}.json")).get("sourceSha")
+                      == data["provenance"].get("commit")
+                  for year in (114,115)
+              )
+          except (KeyError, OSError, TypeError, ValueError):
+              ready=False
+          print("yes" if ready else "no")
+          PY
+          )"
+          if [ "$SIGNATURE" = "$OLD" ] && [ "$HAS_PREVIEW" = "yes" ]; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
             echo "No relevant source-data change"
           else
