@@ -103,7 +103,7 @@ def main():
     qa_bytes=qa_file.read_bytes()
     qa_sha=digest(qa_bytes)
     reviewed=0
-    qa_regex=re.compile(r"^\\|\\s*([^|]+)\\s*\\|\\s*(\\d+)\\s*\\|[^|]*\\|[^|]*\\|\\s*PASS\\s*\\|\\s*`([a-f0-9]{64})`\\s*\\|")
+    qa_regex=re.compile(r"^\|\s*([^|]+)\s*\|\s*(\d+)\s*\|[^|]*\|[^|]*\|\s*PASS\s*\|\s*`([a-f0-9]{64})`\s*\|")
     for line in qa_bytes.decode("utf-8").splitlines():
         found=qa_regex.match(line)
         if not found:continue
