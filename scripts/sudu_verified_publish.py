@@ -502,7 +502,7 @@ def site_check(dest: Path):
         pictures=preview_file.get("questions")
         assert isinstance(pictures,list)
         assert preview_file["year"]==year and preview_file["expected"]==COUNT[year]
-        assert preview_file["imagePreviewCount"]==len(pictures)==status["years"][str(year)]["imagePreviewCount"]
+        assert preview_file["imagePreviewCount"]==len(pictures)==status["years"][str(year)].get("imagePreviewCount",0)
         seen_preview=set()
         for item in pictures:
             identity=item["canonicalId"]
