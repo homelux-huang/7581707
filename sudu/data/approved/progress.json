@@ -13,10 +13,10 @@
       "aiNotChecked": 205,
       "aiSolvedMatched": 0,
       "approvedCount": 0,
-      "approvedPercent": 0.0,
+      "approvedPercent": 0,
       "candidate": 205,
       "expected": 205,
-      "imageQaPercent": 0.0,
+      "imageQaPercent": 0,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
@@ -36,7 +36,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "國文": {
           "candidate": 38,
@@ -44,7 +45,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "數位科技": {
           "candidate": 25,
@@ -52,7 +54,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "數學 B": {
           "candidate": 25,
@@ -60,7 +63,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "會計學": {
           "candidate": 24,
@@ -68,7 +72,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "經濟學": {
           "candidate": 26,
@@ -76,7 +81,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         },
         "英文": {
           "candidate": 42,
@@ -84,19 +90,22 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 0,
+          "imagePreviewReady": 0
         }
       },
       "webpGenerated": 205,
       "webpQaPass": 0,
-      "year": 114
+      "year": 114,
+      "imagePreviewCount": 0,
+      "imagePreviewPercent": 0
     },
     "115": {
       "aiMismatch": 0,
       "aiNotChecked": 205,
       "aiSolvedMatched": 0,
       "approvedCount": 0,
-      "approvedPercent": 0.0,
+      "approvedPercent": 0,
       "candidate": 205,
       "expected": 205,
       "imageQaPercent": 64.9,
@@ -120,7 +129,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 5
+          "webpQaPass": 5,
+          "imagePreviewReady": 0
         },
         "國文": {
           "candidate": 38,
@@ -128,7 +138,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 7
+          "webpQaPass": 7,
+          "imagePreviewReady": 0
         },
         "數位科技": {
           "candidate": 25,
@@ -136,7 +147,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 7
+          "webpQaPass": 7,
+          "imagePreviewReady": 0
         },
         "數學 B": {
           "candidate": 25,
@@ -144,7 +156,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 25
+          "webpQaPass": 25,
+          "imagePreviewReady": 0
         },
         "會計學": {
           "candidate": 24,
@@ -152,7 +165,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 23
+          "webpQaPass": 23,
+          "imagePreviewReady": 0
         },
         "經濟學": {
           "candidate": 26,
@@ -160,7 +174,8 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 24
+          "webpQaPass": 24,
+          "imagePreviewReady": 0
         },
         "英文": {
           "candidate": 42,
@@ -168,12 +183,15 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 42
+          "webpQaPass": 42,
+          "imagePreviewReady": 0
         }
       },
       "webpGenerated": 205,
       "webpQaPass": 133,
-      "year": 115
+      "year": 115,
+      "imagePreviewCount": 0,
+      "imagePreviewPercent": 0
     }
   }
 }
