@@ -68,12 +68,22 @@ def main():
       ("115-09-1-SHARED-22-23","09-1",6,(90,162,1310,1184),[22,23]),
       ("115-09-1-SHARED-24-25","09-1",7,(90,163,1310,785),[24,25]),
       ("115-09-2-SHARED-23-24","09-2",6,(90,918,1310,1072),[23,24]),
+      # Chinese common reading material is separate from numbered question crops.
+      ("115-00-C-SHARED-11-15","00-C",4,(90,160,1310,1530),[11,12,13,14,15]),
+      ("115-00-C-SHARED-16-18","00-C",6,(90,161,1310,1049),[16,17,18]),
+      ("115-00-C-SHARED-19-22","00-C",7,(90,160,1310,1063),[19,20,21,22]),
+      ("115-00-C-SHARED-23-26","00-C",8,(90,161,1310,1230),[23,24,25,26]),
+      ("115-00-C-SHARED-27-30","00-C",9,(90,332,1310,1100),[27,28,29,30]),
+      ("115-00-C-SHARED-31-34","00-C",10,(90,162,1310,1033),[31,32,33,34]),
+      ("115-00-C-SHARED-35-38","00-C",11,(90,162,1310,1018),[35,36,37,38]),
     ]
     for group,paper,pg,box,nums in specs:
         current=shared.get(group)
         # Need official question anchor gap to prevent other question content.
         qstart=q[f"115-{paper}-{nums[0]:02d}"]["crop"][1]
-        if box[3]>=qstart:raise ValueError(f"Shared material overlaps {group} first question")
+        first_q=q[f"115-{paper}-{nums[0]:02d}"]
+        if first_q["sourcePage"]==pg and box[3]>=qstart:
+            raise ValueError(f"Shared material overlaps {group} first question")
         image=page(paper,pg)
         asset=write_original_crop(image,box,OUT/"webp-v3"/"shared"/(group+".webp"))
         value={**asset,"sharedMaterialId":group,"paperCode":paper,"sourcePage":pg,
