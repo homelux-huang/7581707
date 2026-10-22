@@ -86,6 +86,16 @@ class VerifiedPublicationTests(unittest.TestCase):
             v.dump(root/"sudu/data/approved/progress.json",{"years":{"114":{"approvedCount":0},"115":{"approvedCount":0}}})
             self.assertIsNotNone(v.site_check(root))
 
+    def test_114_115_aliases_and_cross_question_path_traversal(self):
+        self.assertEqual(v.image_sha({"assets":{"sha256":"e"*64}}),"e"*64)
+        self.assertEqual(v.pdf_sha({"questionProvenance":{"pdfSha256":"a"*64}},"question"),"a"*64)
+        self.assertTrue(v.asset_rel_ok("sudu/data/processed/115/webp-v2/09-2/115-09-2-27.webp",115,"115-09-2-27","single"))
+        self.assertFalse(v.asset_rel_ok("sudu/data/processed/115/webp-v2/09-2/115-09-2-28.webp",115,"115-09-2-27","single"))
+        self.assertFalse(v.asset_rel_ok("../../private/secrets.webp",115,"115-09-2-27","single"))
+        self.assertFalse(v.asset_rel_ok("sudu/data/processed/114/webp-v1/09-2/114-09-2-27.webp",115,"115-09-2-27","single"))
+        self.assertEqual(v.shared_material_ids({"sharedMaterialId":"115-00-C-SHARED-11-15"}),("115-00-C-SHARED-11-15",))
+        self.assertEqual(v.shared_material_ids({"assets":{"sharedMaterialIds":["114-09-2-SHARED-1-2"]}}),("114-09-2-SHARED-1-2",))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -64,25 +64,88 @@ def text_revision(q: dict, sha_webp: str) -> str:
     payload = {"question": q.get("question"), "options": q.get("options"), "singleQuestionWebpSha256": sha_webp}
     return digest(json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode())
 
-def image_proof(q: dict, item: dict, shared: dict, src: Path) -> bool:
+def shared_material_ids(q: dict) -> tuple[str, ...] | None:
+    """115 uses sharedMaterialId; 114 can use assets.sharedMaterialIds."""
+    values = [q.get("sharedMaterialId"), q.get("sharedMaterialIds"),
+              (q.get("assets") or {}).get("sharedMaterialIds")]
+    found = []
+    for value in values:
+        if value in (None, "", []):
+            continue
+        if isinstance(value, str):
+            ids = [value]
+        elif isinstance(value, list) and all(isinstance(x, str) for x in value):
+            ids = value
+        else:
+            return None
+        for item in ids:
+            if not item or item not in found:
+                if not item:
+                    return None
+                found.append(item)
+    return tuple(found)
+
+
+def asset_rel_ok(rel: object, year: int, name: str, kind: str) -> bool:
+    """Reject traversal and cross-question/cross-year WebP paths in QA data."""
+    if not isinstance(rel, str):
+        return False
+    path = Path(rel)
+    parts = path.parts
+    if path.is_absolute() or ".." in parts or len(parts) != 7 or path.suffix != ".webp":
+        return False
+    if parts[:4] != ("sudu","data","processed",str(year)):
+        return False
+    if not re.fullmatch(r"webp-v[1-9][0-9]*",parts[4]):
+        return False
+    if kind == "single":
+        match = QID.fullmatch(name)
+        return bool(match and parts[5] == match.group(2) and path.name == name + ".webp")
+    return parts[5] == "shared" and path.name == name + ".webp"
+
+
+def image_sha(q: dict) -> str:
+    return str((q.get("questionProvenance") or {}).get("webpSha256") or
+               (q.get("assets") or {}).get("sha256") or "")
+
+
+def pdf_sha(q: dict, kind: str) -> str:
+    p = q.get("answerProvenance") if kind == "answer" else q.get("questionProvenance")
+    return str((p or {}).get("officialPdfSha256") or (p or {}).get("pdfSha256") or "")
+
+
+def individual_image_proof(q: dict, item: dict, src: Path) -> bool:
     if not item or item.get("qaStatus") != "PASS":
         return False
     out = item.get("output")
     h = item.get("sha256")
     ev = item.get("visualReviewEvidence") or {}
-    if not isinstance(out, str) or not SHA.fullmatch(str(h)) or ev.get("reviewedSha256") != h or not ev.get("reference"):
+    year = int(q.get("year", 0))
+    if not asset_rel_ok(out,year,str(q.get("questionId","")),"single"):
         return False
-    if ((q.get("assets") or {}).get("singleQuestionWebp") != out or
-            (q.get("questionProvenance") or {}).get("webpSha256") != h):
+    if not SHA.fullmatch(str(h)) or ev.get("reviewedSha256") != h or not ev.get("reference"):
         return False
-    if not (src / out).is_file():
+    if (q.get("assets") or {}).get("singleQuestionWebp") != out or image_sha(q) != h:
         return False
-    for sid in q.get("sharedMaterialIds") or []:
+    file=src / out
+    return file.is_file() and not file.is_symlink() and file.resolve().is_relative_to(src.resolve())
+
+
+def image_proof(q: dict, item: dict, shared: dict, src: Path) -> bool:
+    if not individual_image_proof(q,item,src):
+        return False
+    ids=shared_material_ids(q)
+    if ids is None:
+        return False
+    for sid in ids:
         group = shared.get(sid)
         gev = (group or {}).get("visualReviewEvidence") or {}
         if not group or group.get("qaStatus") != "PASS" or gev.get("reviewedSha256") != group.get("sha256"):
             return False
-        if not isinstance(group.get("output"), str) or not (src / group["output"]).is_file():
+        if not asset_rel_ok(group.get("output"),int(q["year"]),sid,"shared"):
+            return False
+        file=src/group["output"]
+        if not file.is_file() or file.is_symlink() or not file.resolve().is_relative_to(src.resolve()):
             return False
     return True
 
@@ -98,17 +161,17 @@ def source_proof(q: dict, image_good: bool, db_good: bool, revision: str) -> tup
         and q.get("textQaStatus") == "PASS"
         and good(q.get("question")) and isinstance(options, list)
         and len(options) == 4 and all(good(x) for x in options)
-        and SHA.fullmatch(str(prov.get("officialPdfSha256"))) is not None
+        and SHA.fullmatch(pdf_sha(q,"question")) is not None
         and text.get("questionRevision") == revision
-        and text.get("sourceImageSha256") == prov.get("pixelSourceSha256")
+        and text.get("sourceImageSha256") == (prov.get("pixelSourceSha256") or (q.get("assets") or {}).get("sourceSha256"))
         and good(text.get("reviewer")) and good(text.get("reviewedAt"))
         and good(text.get("evidencePath"))
     )
     final_answer = (
         q.get("answerVerified") is True and q.get("officialCorrectionChecked") is True
         and str(q.get("officialFinalAnswer", "")).upper() in LETTERS
-        and SHA.fullmatch(str(ans.get("officialPdfSha256"))) is not None
-        and official.get("answerPdfSha256") == ans.get("officialPdfSha256")
+        and SHA.fullmatch(pdf_sha(q,"answer")) is not None
+        and official.get("answerPdfSha256") == pdf_sha(q,"answer")
         and official.get("finalCorrectionsReviewed") is True
         and good(official.get("reviewer")) and good(official.get("reviewedAt"))
         and good(official.get("evidencePath"))
@@ -168,7 +231,11 @@ def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
 
 def verify_bytes(source: Path, rel: str, expected: str) -> bool:
     try:
+        if not isinstance(rel,str) or ".." in Path(rel).parts or Path(rel).is_absolute():
+            return False
         file = source / rel
+        if not file.resolve().is_relative_to(source.resolve()):
+            return False
         if file.is_symlink() or any(x.is_symlink() for x in file.parents if x != source.parent):
             return False
         if not file.is_file() or digest(file.read_bytes()) != expected:
@@ -203,7 +270,7 @@ def certificates_complete(source: Path, q: dict, item: dict, shared: dict) -> bo
         (q.get("teachingQaEvidence") or {}, "evidencePath", "evidenceSha256"),
         (q.get("uiQaEvidence") or {}, "evidencePath", "evidenceSha256"),
     ]
-    for sid in q.get("sharedMaterialIds") or []:
+    for sid in shared_material_ids(q) or []:
         ev = shared[sid].get("visualReviewEvidence") or {}
         checks.append((ev, "reference", "referenceSha256"))
     return all(certificate_exists(source, evidence, field, hash_field)
@@ -233,7 +300,7 @@ def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
         "optionExplanations":t["optionExplanations"],
         "examCalculation":{"hasExamCalculation":bool(calc),"lines":lines} if calc else None,
         "image":image_path,
-        "imageSha256":(q.get("questionProvenance") or {}).get("webpSha256"),
+        "imageSha256":image_sha(q),
     }
 
 def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
@@ -261,7 +328,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         item = entries.get(qid)
         qa_per_subject[subject]["candidate"] += 1
         image_ok = image_proof(q, item, shared, src)
-        if image_ok:
+        if individual_image_proof(q,item,src):
             qa_per_subject[subject]["webpQaPass"] += 1
         revision = text_revision(q, item.get("sha256", "") if item else "")
         ocr_ok, official_ok = source_proof(q,image_ok,db_good,revision)
@@ -283,7 +350,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         if not verify_bytes(src,rel,item["sha256"]):
             blocked.append({"id":qid,"reason":"asset_sha_or_decode_failed"})
             continue
-        shared_ids = q.get("sharedMaterialIds") or []
+        shared_ids = shared_material_ids(q) or []
         if not all(verify_bytes(src,shared[s]["output"],shared[s]["sha256"]) for s in shared_ids):
             blocked.append({"id":qid,"reason":"shared_asset_sha_or_decode_failed"})
             continue
