@@ -85,7 +85,8 @@ def main():
             if (not e or e.get("reviewedSha256")!=m["sha256"]
                     or e.get("reference") not in {
                         "sudu/DEMO_VISUAL_QA.md",
-                        "sudu/data/processed/115/VISUAL_QA_2026-10-22.json"}
+                        "sudu/data/processed/115/VISUAL_QA_2026-10-22.json",
+                        "sudu/data/processed/115/VISUAL_QA_2026-10-22_B2.json"}
                     or not (ROOT/e["reference"]).is_file()
                     or digest(ROOT/e["reference"])!=e.get("referenceSha256")):
                 failure.append("unsubstantiated_visual_pass:"+id)
