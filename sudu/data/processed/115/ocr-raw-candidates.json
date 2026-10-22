@@ -1,13 +1,40 @@
 {
   "year": 115,
-  "count": 165,
+  "count": 193,
   "status": "unreviewed_raw_OCR_candidates",
   "items": [
+    {
+      "questionId": "115-00-C-01",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "1. 下列文句,何者有錯別字 ?\n(A) 依法究辦,杜絕弊實                  (B) 栽種莊家,烹茶品茗\n(C) BED SS > Bae ERE                  (D) 曉景朦朧,市聲沸騰\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-01.webp",
+      "correctedText": "下列文句，何者有錯別字？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-C-02",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "2. 依據下文兩個「然」的用法,下列敘述,何者正確?\n蘇子愀貞然,正襟危坐而問客量:「何為其@然也? |\n(A)「屋舍斂然、(「項王默然不應」的「然」,用法皆同於\n(B)「'奏刀點然」、「然鄭亡,子亦有不利理」的「然」,用法皆同於(0\n(C)「滿目蕭然」、「然臺煤雖富,年來開採仍不甚旺」的「然」,用法皆同於@\n(D)「他植者則不然」、「梯航萬國,能使帝京元氣充然」的「然」,用法皆同於@\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-02.webp",
+      "correctedText": "依據下文兩個「然」的用法，下列敘述，何者正確？\n  蘇子愀①然，正襟危坐而問客曰︰「何為其②然也？」",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-C-03",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "3. 下文敘述元始天尊因商朝將亡而召見姜子牙,依據文意,[LLJLI 內最適合填入的詞語\n依序為何?\n子牙忙至實殿座前行禮量:「弟子姜尚拜見。」天尊曰:「你上崑崙幾載了? FT\nBS: 「弟子三十二歲上山,如今虛度七十二歲了。」天尊曰:「你生來命薄,\nLU ],只可受人間之福。成湯數盡,周室將興。你與我代勞封神,下山L 中,\n身為將相,也不枉你上山修行四十年之功。」\n(A) 仙道難成/ 扶助明主               (B) 仙道難成/功高震主\n(C) 盛情難卻/ 扶助明主               (D) 盛情難卻/功高震主\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-03.webp",
+      "correctedText": "下文敘述元始天尊因商朝將亡而召見姜子牙，依據文意，□□□□內最適合填入的詞語\n  依序為何？\n  子牙忙至寶殿座前行禮曰：「弟子姜尚拜見。」天尊曰：「你上崑崙幾載了？」子牙\n 曰：「弟子三十二歲上山，如今虛度七十二歲了。」天尊曰：「你生來命薄，\n  □□□□，只可受人間之福。成湯數盡，周室將興。你與我代勞封神，下山□□□□，\n  身為將相，也不枉你上山修行四十年之功。」",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
     {
       "questionId": "115-00-C-04",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "4. 下框例句為「就一事物區分為兩個類別,呈現不同的功能或用途」。下列文句,何者也\n屬此一表述方式?\n(A) 道之所存,師之所存也                  OEZBE. SEER -     不同功能\n(B) 彼節者有間,而刀刃者無厚                林, EMR wp TO\n(C) 縱一葦之所如,凌萬項之茫然                  Saree\n(D) 凡鑑窒則照人面大,凸則照人面小           同一分類基準\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-04.webp",
       "correctedText": "下框例句為「就一事物區分為兩個類別，呈現不同的功能或用途」。下列文句，何者也\n  屬此一表述方式？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -16,7 +43,7 @@
       "questionId": "115-00-C-05",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "5. 現今中文常用詞語中,有些是日本新造詞,如「電話」;有些是日本將古代詞改了意\n義,如「交通」,在古代是〈桃花源記》「陸陌交通」的用法,現今則是「交通工具」\n的用法。依據下列資料,何者為明確可證的敘述 ?\n\n,                 和未見於清代以前的經史子集。\n一                      人可見於1873年的日本文獻。\n賴和〈一桿稱孖》,1926年\npe                                       人未見於清代以前的經史子集。\n=e                                             和可見於1885年的日本文獻。\n廖鴻基〈鬼頭刀》,1991年       和可見於梁啟超1920年的學術著作。\n(A)「取締」、「 電話」皆日本新造詞,「接觸」的詞義變化類似「交通」\n(B)「取締」、「接觸」二詞,皆無法追溯 18 世紀之前的古代詞義\n(C) 現今通行的中文裡,日本新造詞的數量已超過固有古代詞\n(D) 1920 年代,許多中文作者不認同日本新造詞,並排拒使用\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-05.webp",
       "correctedText": "現今中文常用詞語中，有些是日本新造詞，如「電話」；有些是日本將古代詞改了意\n  義，如「交通」，在古代是〈桃花源記〉「阡陌交通」的用法，現今則是「交通工具」\n  的用法。依據下列資料，何者為明確可證的敘述？\n\n\n                    〔取締〕一詞：      通在法的干涉、取締範圍中。\n                     ▲未見於清代以前的經史子集。\n                        ▲可見於1873年的日本文獻。\n        賴和〈一桿稱仔〉，1926年\n\n\n                       〔接觸〕一詞：      用兩種截然不同的方式跟漁人接觸。\n                        ▲未見於清代以前的經史子集。\n                           ▲可見於1885年的日本文獻。\n          廖鴻基〈鬼頭刀〉，1991年    ▲可見於梁啟超1920年的學術著作。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -25,25 +52,43 @@
       "questionId": "115-00-C-06",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "6. 下圖是某講解單元的內容摘要,此單元的名稱最可能為何 ?\na ee\n(       陽修說      ») Oz  - 2      7    a     y\n圖        /      歐陽修說:      \\ |     安石說 :                說:\n韓愈 ( 生於西元768年)            垢\n_        加        自唐以來,言文章者惟    柳文辛配韓以傳, |柳之醇正固不及韓,\n柳宗元 (生於西元773年) ie ? HEMT EHH 】 MARAT A 7\n(A) 韓愈、柳宗元的相識互動           (B)「韓、柳並稱」如何形成\n(C) 韓、柳對六朝騎文的態度          (D)「唐宋八大家」的代表作\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-06.webp",
       "correctedText": "下圖是某講解單元的內容摘要，此單元的名稱最可能為何？\n      唐代                   宋代\n\n               歐陽修說：     王安石說：     黃仲元說：\n 韓愈（生於西元768年）\n            自唐以來，言文章者惟  柳文卒配韓以傳， 柳之醇正固不及韓，\n 柳宗元（生於西元773年） 韓、柳。柳豈韓之徒哉？ 亦豪傑可畏者也。 柳之奇崛亦韓所不及。\n            真韓門之罪人也。",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-C-07",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "7. 「屆原既放,遊於江潭,行吟澤畔,顏色憔悴」,敘述者的視線是由整體 (屈原) 聚焦\n到局部(面容) 。下列文字,何者也運用類似的敘述方式?\n(A) 登斯樓也,則有心曠神怡,寵辱偕忘\n(B) 人群分而物異產,來往貿還,以成宇宙\n(C) 林盡水源,便得一山,山有小口,彷彿若有光\n(D) 雖無絲竹管弦之盛,一觸一詠,亦足以暢敘幽情\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-07.webp",
+      "correctedText": "「屈原既放，遊於江潭，行吟澤畔，顏色憔悴」，敘述者的視線是由整體 （屈原）聚焦\n  到局部（面容） 。下列文字，何者也運用類似的敘述方式？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-00-C-08",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "8. (ei TRAE) ASCH > Ae That ABR i RAR + (HERTS SEC)\nAYR > SDS Sehedatt WORK i | eee le 3 UR PAE > SCHCE + SER\n之所得,屬於何種聯想方式?\n\n聯想的方式\nL. 接近聯想:基於兩事物在時間或空間上緊密相鄰,如由「鼻子」想到「嘴巴」。\nIL. 相似聯想 : 基於兩事物有相似的特點,如由「流水不返」想到「時光飛逝」。\nIIL.對比聯想 : 基於兩事物有對比性質,如由「性善」想到「性惡」。\nIV.因果聯想:基於兩事物有因果關係,如由「要怎麼收獲」想到「先怎麼栽」。\n(A) 文惠君、問者皆屬於I         (B) SCRA > er Eg\n(C) 文惠君屬於1[,問者屬於IV     (D) 文惠君屬於LI,問者屬於I\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-08.webp",
       "correctedText": "〈庖丁解牛〉的文惠君，因庖丁闡述「游刃有餘」而「得養生焉」；〈種樹郭橐駝傳〉\n  的問者，因郭橐駝闡述「順木之天」而「得養人術」。依據下框，文惠君、問者因聽聞\n  之所得，屬於何種聯想方式？\n\n                  聯想的方式\n         I. 接近聯想：基於兩事物在時間或空間上緊密相鄰，如由「鼻子」想到「嘴巴」。\n        II. 相似聯想：基於兩事物有相似的特點，如由「流水不返」想到「時光飛逝」。\n  III.對比聯想：基於兩事物有對比性質，如由「性善」想到「性惡」。\n  IV.因果聯想：基於兩事物有因果關係，如由「要怎麼收獲」想到「先怎麼栽」。",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-C-09",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "9. 若要使下文的理路連貫有序,(D、G@、(39、d、G@最適當的排列應是 :\n在電視機逐漸普及的年代,黃俊雄繼承父親黃海岱的志業,首度將布袋戲搬上電視演\n出。1970 年,他將父親的《 忠勇孝義傳 》 改編為《 雲州大儒俠 》。在這部初試啼聲的\n作品中,\n山這些創新手法圈粉無數,\nG@他強調布偶的眼部神氣,\n3)電視臺為此增加每週播出集數,\nDEXA WARS UA E RGR?\nDSB VA TAT EAE ARAB ey RH OY >\n播出期間的收視率甚至曾高達 97%。\n(A) US)  (B)@GXTUDXG)  (C) O©OOD  (D) MOOD®\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-09.webp",
+      "correctedText": "若要使下文的理路連貫有序，①、②、③、④、⑤最適當的排列應是：\n  在電視機逐漸普及的年代，黃俊雄繼承父親黃海岱的志業，首度將布袋戲搬上電視演\n   出。1970 年，他將父親的 《 忠勇孝義傳 》 改編為 《 雲州大儒俠 》。在這部初試啼聲的\n  作品中，\n  ①這些創新手法圈粉無數，\n  ②他強調布偶的眼部神氣，\n  ③電視臺為此增加每週播出集數，\n  ④男女老幼都著迷於主角史豔文，\n  ⑤並以流行音樂取代傳統的鑼鼓嗩吶，\n   播出期間的收視率甚至曾高達97％。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-00-C-10",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "10. 下列對話           內應填入的是:\n(A) 陶淵明                         哇! RSA CRS, BEAM\n(B) 范仲淹             完全不像老街。          A i\n(CSA OI  人  「放五老」是我們越南古代的名將,能用漢文 eb\n(D) 曹操與諸葛亮           BH olde: “MRL RA? SRRER | | EK\n(\\R |B BRATASH ABABA 5 | UR\nad     BRAG QATAR ek 7\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-10.webp",
       "correctedText": "下列對話.      .內應填入的是：",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -52,7 +97,7 @@
       "questionId": "115-00-C-11",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "11. 關於甲、乙二文晚輩送終的敘述,何者正確?\n(A) 甲文「炎坤」認為粉娘的曾孫輩可免回家奔靈\n(B)乙文「我」在內心希記父親諒解世代觀念差異\n(C) 二文的子女均對長者是否返家離世有不同意見\n(D) 二文的子女均謹守長者離世前隨侍在側的傳統\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-11.webp",
       "correctedText": "關於甲、乙二文晚輩送終的敘述，何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -61,7 +106,7 @@
       "questionId": "115-00-C-12",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "12. 關於甲、乙二文寫作內容與手法的比較,何者正確?\n(A) 甲文的臨終者住院兩週後返家,乙文的臨終者住院六天後返家\n(B) 甲、乙二文均透過醫護人員在救護車上的作為,呈現照護的用心\n(C) 甲文主要寫臨終者返家後的情形,乙文主要寫送臨終者返家的路程\n(D) 甲、乙二文均藉親屬商議、宗教儀式規劃等細節,襯托治喪事宜繁雜\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-12.webp",
       "correctedText": "關於甲、乙二文寫作內容與手法的比較，何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -70,7 +115,7 @@
       "questionId": "115-00-C-13",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "13. 關於甲文LUX2)、世文(3)劃線文句的理解,何者最適當?\n(A) OBESE RFE HERE HELE a\n(B) QE HAA RAO AR\n(C) (3暗喻救護車因交通狀況延誤救治\n(D) @暗指內心雖有想法但只能聽天由人\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-13.webp",
       "correctedText": "關於甲文①②、乙文③④劃線文句的理解，何者最適當？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -79,7 +124,7 @@
       "questionId": "115-00-C-14",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "14. 依據下表解讀甲、乙二文,何者不適當?\n兩種敘述觀點\n【第一人稱敘述觀點】                             【第三人稱全知敘述觀點】\n由故事內的 我」敘述。容易讓讀 ,; 由故事外盡知一切的旁觀視角化\n者感覺親近,但也因受限於「我」 1 是 全太生全全放生全由選歸點\n的見聞,對周遭事物、他人心思無 」, 連。便於呈現所   sa at a:\n.                 及事、物的因果關係。\n法盡知。\n兩種敘述觀點皆可明示或暗示作者意圖。\n基於特定需要,某些作品會兩種敘述觀點並用。\n(A) 甲文的敘述者在故事外\n(B) 乙文兼採兩種敘述觀點\n(C) 甲文「對方想表示即時回去有困難,又不好直說」,即敘述者盡知一切的寫法\n(D)乙文「那另一面是什麼? 難道哈利路亞? 」,即敘述者受限於個人見聞的寫法\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-14.webp",
       "correctedText": "依據下表解讀甲、乙二文，何者不適當？\n\n                 兩種敘述觀點\n\n\n      【第一人稱敘述觀點】\n                       【第三人稱全知敘述觀點】\n\n   由故事內的「我」敘述，容易讓讀\n                   由故事外盡知一切的旁觀視角敘\n   者感覺親近，但也因受限於「我」\n                     述，便於呈現所有人物的內心世界\n   的見聞，對周遭事物、他人心思無\n                      及事、物的因果關係。\n   法盡知。\n\n\n  兩種敘述觀點皆可明示或暗示作者意圖。\n  基於特定需要，某些作品會兩種敘述觀點並用。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -88,7 +133,7 @@
       "questionId": "115-00-C-15",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "15. 若將甲文「會不會和上一次一樣? 」、乙文'名義上說」視為作者透露諷刺意圖的線索,\n甲、乙二文諷刺之事依序應是:\n(A) 人情淡薄/不知變通\n(B) 人情淡薄/徒具儀式\n(C) 拘泥禮法/徒具儀式\n(D) 拘泥禮法/不知弦通\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-15.webp",
       "correctedText": "若將甲文「會不會和上一次一樣？」、乙文「名義上說」視為作者透露諷刺意圖的線索，\n  甲、乙二文諷刺之事依序應是：",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -97,7 +142,7 @@
       "questionId": "115-00-C-16",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "16. 《紅樓夢》中的買府人口眾多,成員總會經歷程度不一的「社會情緒學習」。\n依據上文,何者最符合探春在事件中的經驗 ?                                Kens?\n(A) 知道自己非正室所生,故期待於當家時有所表現            hang ee\n(B) 認為買府生活開銷過於龐大,理應廢除喪葬補助               決策 行為\n(C) 同情生母在買府的處境,願意考慮她所提的要求            a) eae,\n(D) 為化解生母與嫡母間的衝突,打算辭去當家之職              Sade\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-16.webp",
       "correctedText": "《 紅樓夢 》 中的賈府人口眾多，成員總會經歷程度不一的「社會情緒學習」。\n  依據上文，何者最符合探春在事件中的經驗？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -106,7 +151,7 @@
       "questionId": "115-00-C-17",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "17. 上文中,趙姨娘提及襲人母親、皺綸母親,主要用意為何?\n(A) 指控二人驕奢任性,自己卻頻遭陜淩 “(B) 彰顯自己與二人年齡相近,應受禮遇\n(C) 指出並非無破例者,要探春彈性處理 。 (D) 明言恩賞全憑老祖宗,探春宜去討賞\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-17.webp",
       "correctedText": "上文中，趙姨娘提及襲人母親、鴛鴦母親，主要用意為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -115,7 +160,7 @@
       "questionId": "115-00-C-18",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "18. 上文趙姨娘為達到目的,利有用!我們是親人」發展兩項情緒勒索說辭,探春分別以何種\n方式回擊 ?\n[eae | EZ, | SRN . REBS:AtBES? |\nI ES | 國為我們是親人。,所以: ,d府裡人多踢雜。照顧必招問話。\n   LEE\n                             人人按禮守分,何須格外照顧。\n  二 RERED RE |, @您向來形象差,早已無面子可言。\n   人\n一一一一一一一4我若當家犯錯,才是讓您沒面子9\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-18.webp",
       "correctedText": "上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種\n  方式回擊？\n                趙姨娘的情勒術      探春思考：用什麼回擊？\n     回擊甲 回擊乙               因為我們是親人，所以：                           ①府裡人多嘴雜，照顧必招閒話。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -124,7 +169,7 @@
       "questionId": "115-00-C-19",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "19. 依據上文與右圖,何者最符合鄭國匠人的想法?      oes\n轉職前,他自認 | 他希望,轉職後     IE SS\n所做的工作屬於: |所做的工作屬於 :       ale\n 市場需求低      市場需求高\n  ”    @|@    加時\n     專用技能難以勝任\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-19.webp",
       "correctedText": "依據上文與右圖，何者最符合鄭國匠人的想法？\n                              專用技能足以勝任\n     轉職前，他自認  他希望，轉職後\n     所做的工作屬於： 所做的工作屬於：\n                              ② ①",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -133,7 +178,7 @@
       "questionId": "115-00-C-20",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "20. 依據上文所述的白圭從商經驗,他最可能提出哪句箴言 ?\n(A) 買賣虧損時,切忌賭徒式加碼求攤平\n(B) 市場氣氛低迷時,潛在的漲幅更可觀\n(C) 別想買在最低、賣在最高,要知足常樂\n(D) (ERIS FREES\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-20.webp",
       "correctedText": "依據上文所述的白圭從商經驗，他最可能提出哪句箴言？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -142,7 +187,7 @@
       "questionId": "115-00-C-21",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "21. 上文農會理事談「時間落後」,主要是想對「'與會人員」表達何種觀點?\n(A) 鄭國匠人僅是少數特例,勿以偏概全 (B) 個人造的業,無關老天,勿推論卸責\n(C) 難以當下訊息研判未來,勿後見之明 ”(D)學就有用,非有用才學,勿倒因為果\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-21.webp",
       "correctedText": "上文農會理事談「時間落後」，主要是想對「與會人員」表達何種觀點？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -151,7 +196,7 @@
       "questionId": "115-00-C-22",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "22. 依據上文,何者最可能是鄭國匠人的「可轉移技能」?\nDAA OsltA OAM OLRM OL eee\n(A) @®                  (B) O®                  (C) DOO               (D) @O®\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-22.webp",
       "correctedText": "依據上文，何者最可能是鄭國匠人的「可轉移技能」？\n  ①領導力 ②執行力 ③人際溝通 ④學習新知 ⑤工作流程優化",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -160,7 +205,7 @@
       "questionId": "115-00-C-23",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "23. 關於上文所述考古研究的取材、目的與成果,何者正確?\n(A) 研究所用化石都來自澎湖水道,主要目的皆為確認這些化石是否為更新世所遺留\n(B) 透過澎湖原人、古菱齒象的牙齒形狀,得知二者體型大小與經常攝取的食物種類\n(C) 將原先歸屬直立人的澎湖原人,經蛋白質分析而改歸屬為現代智人的丹尼索瓦人\n(D) 經由不同年齡的古蓁齒象化石,分別得知其飲食取向,並推斷食物所在地的環境\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-23.webp",
       "correctedText": "關於上文所述考古研究的取材、目的與成果，何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -169,7 +214,7 @@
       "questionId": "115-00-C-24",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "24. 有研究者推論丹尼索號人具有適應多種環境的能力」,依據上文,主要是基於何種事\n證提出這項推論 ?\n(A) 化石發現於不同緯度的地區                       (B) 與尼安德塔人有相同的祖先\n(C) PEAS HBA BIL                  (D) 能打製石器用於狩獵與雕刻\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-24.webp",
       "correctedText": "有研究者推論丹尼索瓦人「具有適應多種環境的能力」，依據上文，主要是基於何種事\n  證提出這項推論？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -178,7 +223,7 @@
       "questionId": "115-00-C-25",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "25. 下列指示 AI繪圖的文字,何者最符合由上文得知的更新世臺灣海峽生態地貌?\n(A) 澎湖原人身披獸皮,在結冰的海面上捕獵南恩避寒的古萎上聞象群\n(B) 澎湖原人駕駛小舟穿越海峽,沿海岸尋找尚未斷奶的古萎齒幼象\n(C) 澎湖原人足藏在廣闊草原,觀察古菱齒幼象跟隨母象到河邊喝水\n(D) 澎湖原人躲在潮濕陰暗的溫帶森林,獵捕獨自吃草的古萎齒幼象\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-25.webp",
       "correctedText": "下列指示AI 繪圖的文字，何者最符合由上文得知的更新世臺灣海峽生態地貌？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -187,7 +232,7 @@
       "questionId": "115-00-C-26",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "26. 依據上文,關於考古結合自然科學研究的1D、G@)敘述,最適當的研判是:\n\n山除了提取化石 DNA,古蛋白質體學也是有助解析史前人類演化的方法。\n\n@碳同位素分析、氧同位素分析結果,有助推測史前動物的食物、飲水來源。\n\n(A) 0D、G@皆正確 (B) 0D、G@2皆錯誤     (C) 0正確,G@錯誤 (D) 0上錯誤,(G@正確\nASEH PSC > EIS 27-30 題\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-26.webp",
       "correctedText": "依據上文，關於考古結合自然科學研究的①、②敘述，最適當的研判是：\n  ① 除了提取化石DNA，古蛋白質體學也是有助解析史前人類演化的方法。\n  ② 碳同位素分析、氧同位素分析結果，有助推測史前動物的食物、飲水來源。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -196,7 +241,7 @@
       "questionId": "115-00-C-27",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "27. 依據上文,右圖兩種指南魚若靜止於預設的方位,方位甲、乙依序為何?\n(A)南;北   (B) dt:   \\   —\n(©) His          (D)北;北              中「|乙女\n木刻魚子     Sa\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-27.webp",
       "correctedText": "依據上文，右圖兩種指南魚若靜止於預設的方位，方位甲、乙依序為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -205,7 +250,7 @@
       "questionId": "115-00-C-28",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "28. 依據上文,關於《事林廣記》的指南魚、指南龜,何者正確?\n(A) 二者皆如姆指大,釘於衛管上\n(B) 二者皆內飲磁石,且與磁針並用\n(C) 前者用於幻術表演,後者用於占卜問事\n(D) 前者以絲線懸於半空,後者以底座撐離桌面\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-28.webp",
       "correctedText": "依據上文，關於 《 事林廣記 》 的指南魚、指南龜，何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -214,7 +259,7 @@
       "questionId": "115-00-C-29",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "29. 依據上文所述′當代研究甚多」,這些研究的共同課題為何 ?\n(A) 是否任何材質所製成的密器,皆能讓鐵片磁化\n(B) 是否須選天然磁石所製成的鐵片 ,才能打造指南魚\n(C) 燒紅、冷卻、收入密器諸步驟中,何者影響鐵片磁化\n(D)《夢溪筆談》與《武經總要》,何者對鐵片磁化認識較深\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-29.webp",
       "correctedText": "依據上文所述「當代研究甚多」，這些研究的共同課題為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -223,7 +268,7 @@
       "questionId": "115-00-C-30",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "30. 依據上文,關於0、G@兩項推論,最適當的研判是 :\n崗古人連接子位和午位的直線,與現今將地球分為南北半球的赤道平行。\n@古人雖不明白地球磁場,但知道如何讓原本不帶磁性的物質獲得磁性。\n(A) dU、G@皆正確 (B) 0、G@皆錯誤 C) U正確,@ 錯誤 (D) OR OEE\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-30.webp",
       "correctedText": "依據上文，關於①、②兩項推論，最適當的研判是：\n  ①古人連接子位和午位的直線，與現今將地球分為南北半球的赤道平行。\n  ②古人雖不明白地球磁場，但知道如何讓原本不帶磁性的物質獲得磁性。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -232,7 +277,7 @@
       "questionId": "115-00-C-31",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "31. 投影片常減少文字,改用圖示。若甲的部分內容改為圖(一),主題【 】與項目號、\nGD Rea:\n建立偏鄉及離島無人機物資運補機制。” (G@無人機應用於交通里程碑 (9)商業驗證\n概念驗證與服務驗證 _@輔助橋梁檢測 (@)日常服務與緊急支援   救災應弦\neee een\nA] ® | @ | @ |                       7\ne | ® | © | @O\n     ae ae\nlo |] @ | © | © | ay Bey\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-31.webp",
       "correctedText": "投影片常減少文字，改用圖示。若甲的部分內容改為圖(一)，主題【 】與項目   、\n     最適合填入：\n\n  ①建立偏鄉及離島無人機物資運補機制  ②無人機應用於交通里程碑 ③商業驗證\n  ④概念驗證與服務驗證 ⑤輔助橋梁檢測 ⑥日常服務與緊急支援   ⑦救災應變\n\n     【 】\n                        主題                  【  】",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -241,7 +286,7 @@
       "questionId": "115-00-C-32",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "32. 綜括乙所列二點,該頁頂端               內最適合以何者為標題 ?\n(A) 降低技術門檻,有助推動無人機產業 。(B) 無人機亂象多,待政府部門制定法規\n(C) 從偏鄉物流起步,飛向無人機的未來 (D) 看見無人機商機,民間業者率先投人\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-32.webp",
       "correctedText": "綜括乙所列二點，該頁頂端______________內最適合以何者為標題？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -250,7 +295,7 @@
       "questionId": "115-00-C-33",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "33. 若於口述丙、丁後,扼要歸納「翔隆航太」、「娩壤科技」的異同,最適合的是 :\n(A) 青年創業相同,機器產地不同         (B) 青年創業相同,商用領域不同\n(C) 創新服務相同,機器產地不同          (D) 創新服務相同,商用領域不同\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-33.webp",
       "correctedText": "若於口述丙、丁後，扼要歸納「翔隆航太」、「擎壤科技」的異同，最適合的是：",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -259,7 +304,7 @@
       "questionId": "115-00-C-34",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "34. 有人建議:「這份簡報以報導者的立場,介紹無人機的政策方向、公司特色,不宜混和人\n帶有自我宣傳口吻的告示。 」依據此建議,哪一張投影片最應修改?\n(A) 皿                  (B)Z                   (OW                  (D) T\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-34.webp",
       "correctedText": "有人建議：「這份簡報以報導者的立場，介紹無人機的政策方向、公司特色，不宜混入\n  帶有自我宣傳口吻的告示。」依據此建議，哪一張投影片最應修改？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -268,7 +313,7 @@
       "questionId": "115-00-C-35",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "35. 上文             內,若要填人最符合表(一)的文句,應是:\n(A) 自發行後,每年銷售量均超越前一年\n(B) 銷售量如旋風般,於 2021 年已超過一億冊\n(C) 2023 年的銷售量出乎預期,直逼《進擊的巨人》\n(D)繼《 航海王 》 後,同為發行五年內銷售量突破一億冊\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-35.webp",
       "correctedText": "上文       .內，若要填入最符合表(一)的文句，應是：",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -277,7 +322,7 @@
       "questionId": "115-00-C-36",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "36. 依據右框,上文特許廳的主張、集英社的答辯,聚焦於何種商標識別性?\n(A) 二者皆為                                                      商標應具兩種識別性其中之一\n(B) 一者皆為                                                  先天識別性 : 構成商標的文\n(C) eT RAD > BH B®                                               字或圖形本身就有特殊性,\n(D) 特許廳為@,集英社為                               無須市場大量使用,消費者\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-36.webp",
       "correctedText": "依據右框，上文特許廳的主張、集英社的答辯，聚焦於何種商標識別性？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -286,7 +331,7 @@
       "questionId": "115-00-C-37",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "37. 關於《鬼滅之刃》的內容,何者最符合上文所述?      便能識別。\n(A) 官方礙於禁刀之令,只好暗中選派學生執行滅鬼任務| @後天識別性不具先天識別\n(B) 執行滅鬼任務的成員會隨任務異動,更換不同的羽織| |性的標識, 可透過銷售量、\n(©) 博門嵌治郎原本在學校研習藥學,故羽織內仍穿學蘭| 市占率等資料 ,證明足以讓\n(D) 滅鬼成員雖然不是武士,但隱然延續傳統的武士精神[消費者識別。\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-37.webp",
       "correctedText": "關於 《 鬼滅之刃 》 的內容，何者最符合上文所述？    便能識別。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -295,16 +340,61 @@
       "questionId": "115-00-C-38",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "38. 日治時的臺灣也經歷「大正時期」。下列建築樣貌,何者最能展現上文所述的當時風潮?\n(A) 街屋在仿巴洛克式的建築立面上,保留傳統匾額框,以鑰刻商行名號\n(B) 禮拜堂是英國維多利亞時期鄉村小教堂形式,尖從的屋頂上謾立十字架\n(C) 古厝的主要結構使用福州杉,設置迥廊是傳襲自福建安溪民宅的建築特色\n(D) 園林景牆輛漏窗,以計瓜、南瓜、晞桃、石榴為造形,象徵福、祿、壽、喜\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-38.webp",
       "correctedText": "日治時的臺灣也經歷「大正時期」。下列建築樣貌，何者最能展現上文所述的當時風潮？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-E-01",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "1. These clothes are still                 , So you need to hang them in the sun to remove the water.\n(A) bare                   (B) dry                    (C) thin                    (D) wet\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-01.webp",
+      "correctedText": "These clothes are still                     , so you need to hang them in the sun to remove the water.",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-E-02",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "2. Wang Guan-hong (王冠閱),Taiwan's “Butterfly King,” began his swimming journey in the third\ngrade when he                  the school’s swimming team.\n(A) blocked               (B) joined                  (C) pulled                  (D) rented\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-02.webp",
+      "correctedText": "Wang Guan-hong ( 王冠閎 ) , Taiwan’s “Butterfly King,” began his swimming journey in the third\n    grade when he             the school’s swimming team.",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-E-03",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "3. The teacher treats all her students            ,glving every student the same opportunity to\nsucceed.\n(A) carelessly           (B) equally              (C) instantly             (D) silently\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-03.webp",
+      "correctedText": "The teacher treats all her students                     , giving every student the same opportunity to\n    succeed.",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-E-04",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "4. With a calm, beautiful beach just within walking distance, this hotel is a              place to\nrelax.\n(A) difficult              (B) fearful                (C) rocky                 (D) suitable\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-04.webp",
+      "correctedText": "With a calm, beautiful beach just within walking distance, this hotel is a             place to\n    relax.",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-E-05",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "5. In order to                more customers, the bakery café offers a 20% discount on each cup of\ncoffee for three days.\n(A) attract                 (B) blame                 (C) excuse                (D) prevent\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-05.webp",
+      "correctedText": "In order to           more customers, the bakery café offers a 20 % discount on each cup of\n    coffee for three days.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-00-E-06",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "6. Weather forecasts for one or two days ahead are quite              , providing correct weather\ninformation most of the time.\n(A) accurate              (B) doubtful              (C) false                  (D) inferior\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-06.webp",
       "correctedText": "Weather forecasts for one or two days ahead are quite                     , providing correct weather\n    information most of the time.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -313,7 +403,7 @@
       "questionId": "115-00-E-07",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "7. Amy was certain that she had a high fever after measuring her body                 .\n(A) existence            (B) image                (C) structure             (D) temperature\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-07.webp",
       "correctedText": "Amy was certain that she had a high fever after measuring her body                     .",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -322,7 +412,7 @@
       "questionId": "115-00-E-08",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "8. When the award presenter                  Shu Qi (舒淇) as the winner of the Best Director Award\nat the 30th Busan International Film Festival ( 釜山影展 ), the audience stood up and clapped\ntheir hands.\n\n(A) announced           (B) circulated             (C) inspected             (D) preserved\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-08.webp",
       "correctedText": "When the award presenter           Shu Qi ( 舒淇 ) as the winner of the Best Director Award\n     at the 30th Busan International Film Festival ( 釜山影展 ) , the audience stood up and clapped\n     their hands.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -331,7 +421,7 @@
       "questionId": "115-00-E-09",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "9. When buying a car, those who want to save money will pick a used one because it is a more\naffordable option.\n(A) choice                (B) material               (C) quantity              (D) sample\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-09.webp",
       "correctedText": "When buying a car, those who want to save money will pick a used one because it is a more\n    affordable option.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -340,7 +430,7 @@
       "questionId": "115-00-E-10",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "10. Tim was extremely moved by the eight-part polyphony (八部合音) ofthe Bunun people (布農\n族), and he dreamed of singing with them on stage one day.\n(A) angrily                (B) bravely               (C) deeply                (D) openly\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-10.webp",
       "correctedText": "Tim was extremely moved by the eight-part polyphony ( 八部合音 ) of the Bunun people ( 布農\n  族 ) , and he dreamed of singing with them on stage one day.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -349,7 +439,7 @@
       "questionId": "115-00-E-11",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "11. Customer: Hi, do you sell phone chargers?\nClerk:       Yes, over there. Take a look, please.\nCustomer: Great, I’ll take this one. How much is it?\nClerk:          That’ ll be NT$ 350.\nCustomer: No, just the charger.\nClerk:       OK, got it.\n(A) Is that all?\n(B) Anything else?\n(C) Cash or credit card?\n(D) It works well, right?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-11.webp",
       "correctedText": "Customer:  Hi, do you sell phone chargers?\n    Clerk:     Yes, over there. Take a look, please.\n    Customer:  Great, I’ll take this one. How much is it?\n    Clerk:      That’ll be NT$ 350.                     .\n    Customer: No, just the charger.\n    Clerk:    OK, got it.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -358,7 +448,7 @@
       "questionId": "115-00-E-12",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "12. Jane: Did you go to the BLACKPINK concert?\nTom: Nope. I was busy preparing for a singing competition.\nJane: Oh! And did you go to the TWICE concert?\nTom:\nJane: Lucky you! You got the tickets! I wish I were there with you.\n(A) They’ll never come again.\n(B) I went with my classmates.\n(C) I’m not a fan of these two groups.\n(D) You sang very well with me last time.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-12.webp",
       "correctedText": "Jane: Did you go to the BLACKPINK concert?\n   Tom: Nope. I was busy preparing for a singing competition.\n    Jane: Oh! And did you go to the TWICE concert?\n   Tom:                      .\n    Jane: Lucky you! You got the tickets! I wish I were there with you.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -367,7 +457,7 @@
       "questionId": "115-00-E-13",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "13. Liz: I’m going to the supermarket to pick up two boxes of mandarin oranges. My mother ordered\n\nthem for Chinese New Year.\n\nJay:\n\nLiz: They are a symbol of good fortune. We eat them to bring good luck.\n\n(A) Since when?\n\n(B) Which supermarket?\n\n(C) Why mandarin oranges?\n\n(D) How many mandarin oranges?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-13.webp",
       "correctedText": "Liz:  I’m going to the supermarket to pick up two boxes of mandarin oranges. My mother ordered\n        them for Chinese New Year.\n    Jay:                       .\n    Liz: They are a symbol of good fortune. We eat them to bring good luck.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -376,7 +466,7 @@
       "questionId": "115-00-E-14",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "14. Brian: I heard you’re learning Spanish. Is it hard?\nLily: Yes, it is, but I like it.\nBrian: You're already 30.\nLily: No, not at all. Age is not a big deal.\n(A) How would you deal with it anyway?\n(B) Isn’t Spanish your favorite language?\n(C) When did you start learning Spanish?\n(D) Isn’t it too late to learn a new language?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-14.webp",
       "correctedText": "Brian:  I heard you’re learning Spanish. Is it hard?\n    Lily:   Yes, it is, but I like it.\n    Brian: You’re already 30.                     .\n    Lily:  No, not at all. Age is not a big deal.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -385,7 +475,7 @@
       "questionId": "115-00-E-15",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "15. Peter: Gosh. I left my bottled water on my bike.\nRose: For the whole afternoon? Then don’t drink it. It’s hot outside. The sun may have heated\nit up.\nPeter:\nRose: Chemicals from plastics may have got into the water. It’s not good for your health.\nPeter: I didn’t know that!\n(A) What’s wrong with that?\n(B) Where did I leave my bike?\n(C) When’s the sun going down?\n(D) Why did you bring that with you?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-15.webp",
       "correctedText": "Peter:  Gosh. I left my bottled water on my bike.\n    Rose:  For the whole afternoon? Then don’t drink it. It’s hot outside. The sun may have heated\n                 it up.\n    Peter:                       .\n    Rose:  Chemicals from plastics may have got into the water. It’s not good for your health.\n    Peter:  I didn’t know that!",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -394,7 +484,7 @@
       "questionId": "115-00-E-16",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "16. Mrs. Wu: I’m going shopping. Would you mind picking up Jimmy at the sports center?\nMr. Wu: I'd like to, but I’ll have an online meeting soon.\nMrs. Wu: We’re out of food for dinner. There’s nothing left in the fridge.\nMr. Wu:\nMrs. Wu: Great! You go book the restaurant now and I’ll get Jimmy.\n(A) Are you interested in sports?\n(B) Can I go shopping right now?\n(C) Then we can eat out tonight.\n(D) Let’s do online meeting together.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-16.webp",
       "correctedText": "Mrs. Wu: I’m going shopping. Would you mind picking up Jimmy at the sports center?\n   Mr. Wu:   I’d like to, but I’ll have an online meeting soon.\n    Mrs. Wu: We’re out of food for dinner. There’s nothing left in the fridge.\n   Mr. Wu:                        .\n    Mrs. Wu:  Great! You go book the restaurant now and I’ll get Jimmy.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -403,7 +493,7 @@
       "questionId": "115-00-E-17",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "17. Ming: Did you know the skills contest in Taipei last year?\nA-Mei: The Asian Skills Competition at Nangang Exhibition Center?\nMing: Yes. I was there. It was very impressive. The Taiwan team did a good job!\nA-Mei:\nMing: Twenty-two in total. We won the team title; we were the best in Asia!\n(A) Did we get any gold medals?\n(B) Did you go there by the Blue 22 bus?\n(C) Did you know anything about Car Painting?\n(D) Did we also enter the competition two years ago?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-17.webp",
       "correctedText": "Ming:  Did you know the skills contest in Taipei last year?\n   A-Mei: The Asian Skills Competition at Nangang Exhibition Center?\n   Ming:  Yes. I was there. It was very impressive. The Taiwan team did a good job!\n   A-Mei:                      .\n   Ming:  Twenty-two in total. We won the team title; we were the best in Asia!",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -412,7 +502,7 @@
       "questionId": "115-00-E-18",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "18. Ann: Hey, I’m writing my resume. What should I put first?\n\nBen: You can list your education first.\n\nAnn: What’s next?\n\nBen: Yes. My advice is that you list your past jobs going backwards in time, from your last job to\nyour first job.\n\n(A) Your job plan?\n\n(B) My work experience?\n\n(C) When to start working?\n\n(D) Why applying for this job?\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-18.webp",
       "correctedText": "Ann: Hey, I’m writing my resume. What should I put first?\n    Ben: You can list your education first.\n   Ann: What’s next?                     .\n    Ben:  Yes. My advice is that you list your past jobs going backwards in time, from your last job to\n          your first job.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -421,7 +511,7 @@
       "questionId": "115-00-E-19",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "19. Dave:         Grandma, you need to renew your driver’s license if you want to keep driving.\nGrandma: But I’m just 71. I thought only people over 75 had to do it.\nDave:        Not anymore. The new rules say people have to renew their licenses at 70 now.\nGrandma: That won’t be a problem. I’m very healthy.\nDave:       I totally agree, Grandma. I believe Ill still get rides from you.\n(A) Maybe I should sell my car right now.\n(B) Maybe it’s time for me to stop driving.\n(C) I’m sure I can get my license renewed.\n(D) Pll wait until I turn 70 to renew my license.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-19.webp",
       "correctedText": "Dave:     Grandma, you need to renew your driver’s license if you want to keep driving.\n   Grandma:  But I’m just 71. I thought only people over 75 had to do it.\n    Dave:     Not anymore. The new rules say people have to renew their licenses at 70 now.\n   Grandma:  That won’t be a problem. I’m very healthy.                     .\n    Dave:       I totally agree, Grandma. I believe I’ll still get rides from you.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -430,7 +520,7 @@
       "questionId": "115-00-E-20",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "20. Willy: Did you hear that Dr. Jane Goodall (珍古德博士) passed away last year?\nJoan: It’s so sad. She spent her whole life studying chimpanzees in Africa.\nWilly: Yes.                  So now we know better how chimpanzees behave in the wild.\n(A) She put a lot of effort into protecting the oceans.\n(B) She really helped people understand these animals.\n(C) She gave so much love to the poor children in Africa.\n(D) She truly encouraged people to take care of stray cats.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-20.webp",
       "correctedText": "Willy: Did you hear that Dr. Jane Goodall ( 珍古德博士 ) passed away last year?\n    Joan:   It’s so sad. She spent her whole life studying chimpanzees in Africa.\n    Willy:  Yes.          So now we know better how chimpanzees behave in the wild.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -439,7 +529,7 @@
       "questionId": "115-00-E-21",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "21. (A) Among                (B) During                (C) Near                   (D) Opposite\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-21.webp",
       "correctedText": "第21題：依共用短文，選出第21個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -448,7 +538,7 @@
       "questionId": "115-00-E-22",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "22. (A) domestic             (B) remote                (C) simple                (D) tough\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-22.webp",
       "correctedText": "第22題：依共用短文，選出第22個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -457,7 +547,7 @@
       "questionId": "115-00-E-23",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "23. (A) even when           (B) just where            (C) or else                 (D) so that\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-23.webp",
       "correctedText": "第23題：依共用短文，選出第23個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -466,7 +556,7 @@
       "questionId": "115-00-E-24",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "24. (A) to pose a career obstacle                          (B) to increase ocean-going ships\n(C) to improve women’s employment             (D) to raise women’s work challenges\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-24.webp",
       "correctedText": "第24題：依共用短文，選出第24個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -475,7 +565,7 @@
       "questionId": "115-00-E-25",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "25. (A) air quality            (B) traffic flow           (C) water safety          (D) local culture\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-25.webp",
       "correctedText": "第25題：依共用短文，選出第25個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -484,7 +574,7 @@
       "questionId": "115-00-E-26",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "26. (A) selected              (B) selecting             (C) is selected           (D) to select\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-26.webp",
       "correctedText": "第26題：依共用短文，選出第26個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -493,7 +583,7 @@
       "questionId": "115-00-E-27",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "27. (A) as if                   (B) in case                (C) in order that          (D) as long as\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-27.webp",
       "correctedText": "第27題：依共用短文，選出第27個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -502,7 +592,7 @@
       "questionId": "115-00-E-28",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "28. (A) dance and design                                (B) art and competition\n(C) construction and religion                        (D) transportation and tourism\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-28.webp",
       "correctedText": "第28題：依共用短文，選出第28個空格最適合的答案。",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -511,7 +601,7 @@
       "questionId": "115-00-E-29",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "29. What did Elsa post on her blog?\n(A) Family life                                         (B) Pasta menu\n(C) Movie reviews                                   (D) School activities\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-29.webp",
       "correctedText": "What did Elsa post on her blog?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -520,7 +610,7 @@
       "questionId": "115-00-E-30",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "30. According to the passage, what would Elsa probably do with her blog next?\n(A) Post her school activities.\n(B) Link to Aunt Nancy’s blog.\n(C) Link to movie review blogs.\n(D) Post her address and date of birth.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-30.webp",
       "correctedText": "According to the passage, what would Elsa probably do with her blog next?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -529,7 +619,7 @@
       "questionId": "115-00-E-31",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "31. According to the line chart, what is one trend in Taiwan’s energy supply from 2004 to 2024?\n(A) Energy generated by natural gas has gradually decreased for the last 20 years.\n(B) Nuclear energy has accounted for more than 10% of the energy supply since 2004.\n(C) Coal and coal products have been supplying about 30 % of the total energy since 2004.\n(D) Energy supplied by oil and petroleum products has steadily increased over the past 20 years.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-31.webp",
       "correctedText": "According to the line chart, what is one trend in Taiwan’s energy supply from 2004 to 2024?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -538,7 +628,7 @@
       "questionId": "115-00-E-32",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "32. According to the paragraph, which of the following are the challenges of solar energy?\n(A) House value and pollution concerns\n(B) Energy source and greenhouse gases\n(C) Energy costs and weather dependence\n(D) Energy storage and space requirements\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-32.webp",
       "correctedText": "According to the paragraph, which of the following are the challenges of solar energy?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -547,7 +637,7 @@
       "questionId": "115-00-E-33",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "33. According to the chart, which of the following is correct?\n(A) The revenue per store of the Cheesecake Factory is half of that of Din Tai Fung.\n(B) The revenue per store of Mastro’s Restaurants is higher than that of Nobu Restaurant.\n(C) Nobu Restaurant has higher revenue per store than Del Frisco’s Double Eagle Steak House.\n(D) Smith and Wollensky’s revenue per store is one million USD more than that of Din Tai Fung.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-33.webp",
       "correctedText": "According to the chart, which of the following is correct?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -556,7 +646,7 @@
       "questionId": "115-00-E-34",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "34. Which of the following is NOT mentioned as a reason that makes Din Tai Fung successful?\n(A) Every xiao long bao is folded 18 times and weighs 21 grams.\n(B) Din Tai Fung has 180 stores in 13 countries all over the world.\n(C) Customers can see chefs preparing food in glass-walled kitchens.\n(D) Customer service and taste of food are the same in any branch store.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-34.webp",
       "correctedText": "Which of the following is NOT mentioned as a reason that makes Din Tai Fung successful?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -565,7 +655,7 @@
       "questionId": "115-00-E-35",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "35. Which is the correct order about Din Tai Fung’s business history?\na. Starting to sell xiao long bao in 1972.\nb. Opening its first American branch store.\nc. Setting up a cooking oil business in Taiwan.\nd. Achieving the most revenue per store in the US.\n(A)a>bo>cod (B)a一d一c一b (C)c>a>bd (D)cm>d>b-a\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-35.webp",
       "correctedText": "Which is the correct order about Din Tai Fung’s business history?\n     a. Starting to sell xiao long bao in 1972.\n     b. Opening its first American branch store.\n     c. Setting up a cooking oil business in Taiwan.\n     d. Achieving the most revenue per store in the US.",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -574,7 +664,7 @@
       "questionId": "115-00-E-36",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "36. Which of the following is the best conclusion for the above passage?\n\n(A) In a phone-based world, teenagers will spend more time on digital technologies like virtual\nreality and online shopping. These technologies will help them solve problems effectively, so\ncompanies should develop new features to meet their needs.\n\n(B) To address these concerns, teenagers should be allowed to use social media for two reasons:\nto make new friends and to talk to people face to face. In this way, they will become more\nconfident about their future.\n\n(C) Smartphones have become part of everyday life. Teenagers cannot avoid using digital devices\nas apps become more interesting. Therefore, parents should help their children benefit from\ntechnology instead of strictly limiting their phone use.\n\n(D) To solve these problems, the following actions are suggested. First, children should spend\nmore time interacting with people face to face instead of communicating online. Also, schools\nshould provide more time and space for free, unsupervised play.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-36.webp",
       "correctedText": "Which of the following is the best conclusion for the above passage?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -583,7 +673,7 @@
       "questionId": "115-00-E-37",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "37. According to the passage, which of the following is true?\n(A) Too many free, unsupervised activities make it hard for teenagers to focus and sleep.\n(B) A lack of guidance from parents is a main reason causing teenagers’ mental health issues.\n(C) Growing up in a phone-based childhood helps teenagers develop new skills and make friends\neasily.\n(D) The loss of outdoor play in childhood and too much online time may cause teenagers’ anxiety\nproblems.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-37.webp",
       "correctedText": "According to the passage, which of the following is true?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -592,7 +682,7 @@
       "questionId": "115-00-E-38",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "38. According to the passage, what would happen to children when their parents overprotected them?\n(A) It would be easier for them to deal with problems on their own.\n(B) They would develop a strong sense of teamwork and risk-taking.\n(C) It would be harder for them to become confident and independent.\n(D) They would have no problem making friends in a new environment.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-38.webp",
       "correctedText": "According to the passage, what would happen to children when their parents overprotected them?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -601,7 +691,7 @@
       "questionId": "115-00-E-39",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "39. What is the passage mainly about?\n(A) Markets for Taiwan’s Al-related products\n(B) Progress of Taiwan’s electronics industry\n(C) Development of artificial intelligence industry\n(D) Examples of Taiwan’s electronics manufacturers\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-39.webp",
       "correctedText": "What is the passage mainly about?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -610,7 +700,7 @@
       "questionId": "115-00-E-40",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "40. According to the passage, which is NOT an important reason for the strength of Taiwan’s\nelectronics industry?\n(A) Labor pool                                         (B) Government support\n(C) Business network                                 (D) Product price\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-40.webp",
       "correctedText": "According to the passage, which is NOT an important reason for the strength of Taiwan’s\n    electronics industry?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -619,7 +709,7 @@
       "questionId": "115-00-E-41",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "41. Which is closest in meaning to “ride the wave of change” in paragraph 4?\n(A) let go of these new opportunities              (B) have trouble with making the change\n(C) end up with missing new opportunities       (D) take advantage of the new change\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-41.webp",
       "correctedText": "Which is closest in meaning to “ride the wave of change” in paragraph 4?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -628,7 +718,7 @@
       "questionId": "115-00-E-42",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "42. According to the passage, which of the following is true?\n(A) Ten Taiwanese companies are providing electronic manufacturing services.\n(B) Taiwan was the world’s largest market for Al-related products in the 1990s.\n(C) AI servers are selling better than smartphones for electronics manufacturers.\n(D) Contract manufacturers in the early days designed new products for customers.\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-42.webp",
       "correctedText": "According to the passage, which of the following is true?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -637,7 +727,7 @@
       "questionId": "115-00-MB-01",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "1. 如圖(一),下列哪一選項的向量與93-相等?\n(A) OA  y\n(B) OB                   BLUIs   4\n(COOc                   ae\n() OD            PTT TTT Tt\nTT or\n[Ett |\nC  {ttt fp\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-01.webp",
       "correctedText": "如圖（一），下列哪一選項的向量與 OS⃗−OT⃗ 相等？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -646,7 +736,7 @@
       "questionId": "115-00-MB-02",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "2. Gilat Be Bat PHla- BR x -8x+5(a—B)=OZ MIE > AlaB =?\n(A) 4\n(B)5\n(C)6\n(D)7\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-02.webp",
       "correctedText": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -655,7 +745,7 @@
       "questionId": "115-00-MB-03",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "3. BRI L, + 2xt3y=4 ESL, 相互平行。若選的 x 截距為 @,寬,的斜率為 m> Bl\n(a,m)=?\n(A) (2, =)\n(8) (2.2)\nOG.=)\n(4.4)\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-03.webp",
       "correctedText": "已知直線 L₁：2x+3y=4 與直線 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)＝？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -664,7 +754,7 @@
       "questionId": "115-00-MB-04",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "4. 若一元二次不等式 2r+7x+3<0 的解為4z<*<?,則下列何者正確?\n(A) a>-2\n(B) b<-\n(C) a RL\n(D) b Fate\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-04.webp",
       "correctedText": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -673,7 +763,7 @@
       "questionId": "115-00-MB-05",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "5. 在坐標平面上,若平行四邊形 ABCD 的四個頂點其坐標分別為 4(-1,0)、有(0,-5)\n、C(Cz,2)、2D(2,3),則下列何者為2C的中點坐標?\nG) G,防)\n(8) 2,子)\nOG. 2)\n0 3.2)\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-05.webp",
       "correctedText": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -682,16 +772,25 @@
       "questionId": "115-00-MB-06",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "6. BIBS f(x) = x4 —3x8 +. 2x7 — x +41 PREM (x1) (4-2) BRC Ray ?\n(A) x-1                                                加\n(B) x+1\n(C) -—x-1\n(D) -x+1\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-06.webp",
       "correctedText": "多項式 f ( x)  x 4  3x3  2 x 2 x 1 除以 ( x  1)( x  2) 的餘式為何？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-MB-07",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "7. 4 a Fy 2026° 的最大負同界角、?為-1157的最小正同界角,則點(tan(g一2),sin(d+Z))\n落在第幾象限?\n(A) 一\n(B) =\nQ=\n(D) 四\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-07.webp",
+      "correctedText": "若a 為2026° 的最大負同界角、b 為 – 115° 的最小正同界角，則點 ( tan ( a  b ) , sin (a  b ) )\n\n  落在第幾象限？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-00-MB-08",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "8. 已知4(0,0)、2(4,0)、C(C-2,2V3 )為坐標平面上三點,且六 LAC 的夾角為9?,則cos2\n之值為何?\na) 8\n2\nSi\nB) _¥?.\n@) >\noO;\no>\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-08.webp",
       "correctedText": "已知A ( 0 , 0 )、B ( 4 , 0 )、C ( – 2 , 2 3 ) 為坐標平面上三點，且 AB 與 AC 的夾角為 ，則 cos\n\n  之值為何？\n        3",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -700,16 +799,34 @@
       "questionId": "115-00-MB-09",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "9. CAI L, ¢ 4+(d+5)y~10=0通過點(gd,1), 直線了的斜率為二 。若直線/,也通過\n點(dz,1),且與直線了,垂直,則的直線方程式為何 ?\n(A) 2x一y一1=0\n(B) 2x+y+3=0\n(C) x-2y+1=0\n(D) x+2y-3=0\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-09.webp",
       "correctedText": "已知直線 L₁：4x+(a+5)y−10=0 通過點(a,1)，直線 L₂ 的斜率為 −1/2。若直線 L₃ 也通過點(a,1)，且與直線 L₂ 垂直，則 L₃ 的直線方程式為何？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-MB-10",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "10. 老師在一個籤筒中,只放入標示甲同學、乙同學、丙同學的三支籤。若每支籤被抽中的\n機率相等,且每次抽完一支籤後,都會把籤再放回去籤向,則老師連抽三次都沒有抽中\n甲同學的機率為何 ?\n\n4\n(A) 9\n\n5\n(B) 9\n\n8\n(C) 7\np) 2\n0) 27\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-10.webp",
+      "correctedText": "老師在一個籤筒中，只放入標示甲同學、乙同學、丙同學的三支籤。若每支籤被抽中的\n\n  機率相等，且每次抽完一支籤後，都會把籤再放回去籤筒，則老師連抽三次都沒有抽中\n\n  甲同學的機率為何？\n        4",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-00-MB-11",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "1. GR bv cs d 為實數。若兩多項式 /CG9=4Gr+2)+pCr+2):+c(Cx+2)+d 與\nB(x) =40° 43x? 42x41 HAE > All b+c=?\n(A) 14\n(B) 15\n(C) 16\n(D) 17\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-11.webp",
+      "correctedText": "已知b 、c 、d 為實數。若兩多項式  f ( x)  4( x  2)3  b ( x  2) 2  c ( x  2)  d 與\n   g ( x)  4 x3  3x 2  2 x 相等，則b1         + c ？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-00-MB-12",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "2x+3y =4\n12. Babe 0,且二元一次聯立方程式 ne _ 有無限多組解,則下列何者正確?\n2x+3y=4\n= | 1000ax+1000by =有中 用\n過  2x十3y 三4      ap\n®B) | ax+by =1000c 有唯一解\n2x+3y=4   he\na { 1000ax + by =o\n2x+3y=4\n™ 1 ad\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-12.webp",
       "correctedText": "若 abc≠0，且二元一次聯立方程式 {2x+3y=4；ax+by=c} 有無限多組解，則下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -718,7 +835,7 @@
       "questionId": "115-00-MB-13",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "—          . | 40X TLV S 2UL0\n13. 二元一次聯立不等          圖解為下列何者?\n3. 二元 次聯立不等式| 1 26y<2026 的圖解為下列1 者\n之                         y\n“ai                        300\n品8                        200\nrag’\n>                          100\n(A)  Yer    加      GB)\n97 六 ag. 300              00 oF foo 200-300-**\nWY)                     -100\n人                           y\n+                         200\n》                           200\n100\nCc                          D\n©  —_   ~      x      ®) 300 一       00300 300°\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-13.webp",
       "correctedText": "二元一次聯立不等式 {26x+15y≤2026；15x+26y≤2026} 的圖解為下列何者？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -727,7 +844,7 @@
       "questionId": "115-00-MB-14",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "14. 已知(z,)是一個等比數列,公比為 3。若 x、y、z 皆為正整數,且 xy、y、z 形成一個公差\n為2的等差數列,則d,、z,、4,的關係為下列何者?\n(A) 形成一個等差數列,公差為6\n(B) 形成一個等差數列,公差為8\n(C) 形成一個等比數列,公比為8\nCOD)形成一個等比數列,公比為9\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-14.webp",
       "correctedText": "已知 na 是一個等比數列，公比為3。若x、y、z 皆為正整數，且x、y、z 形成一個公差\n  為2 的等差數列，則 xa 、 ya 、 za 的關係為下列何者？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -736,7 +853,7 @@
       "questionId": "115-00-MB-15",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "15. 已知某飲品在常溫(20?C 到 35°C) 下的保鮮期會隨溫度變化,保鮮期 7(天)與溫度\nx(攝氏度) 滿足指數函數關係7CG9=10650x32 \"“。若溫度由原來 35°C 降到 27°C ,則\n保鮮期約為原來 355C 的多少倍?\n\n(A) 10\n(B) 12\n(C) 14\n(D) 16\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-15.webp",
       "correctedText": "已知某飲品在常溫（20 °C 到35 °C）下的保鮮期會隨溫度變化，保鮮期T（天）與溫度\n  x（攝氏度）滿足指數函數關係 T ( x)  10650  32  0.1x 。若溫度由原來35 °C 降到27 °C，則\n\n  保鮮期約為原來35 °C 的多少倍？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -745,7 +862,7 @@
       "questionId": "115-00-MB-16",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "16. 從國家發展委員會人口推估查詢系統可查詢到出生人數折線圖如圖( 二),2008 年到 2025\n年出生人數統計值如表(一)。根據圖(二)及表(一)中的數據,判斷下列選項何者錯誤 ?\n出生人數\nett eS A\n400000 eS\n3g0000$—__/f\" wi\n360000; oe FT eee\n340000; _|—_} | 1 yy eee eee\n3200001 | | IN INA ee\n300000. 和| |和和有|有| |了\n2800001 有 | fd ee\n2600001一| |\n240000二一| 一一一還ss\n2200001一一 |有AA\n300000} —__|_f |和\nigoo00{ | | (ii\nisooo0f_ —_| J |有 ysl\n1400001一一 |有\n1200001 __| J li |\naooooo1__I[--__ li ll ii li |\n1970 1973 1976 1979 1982 1985 1988 1991 1994 1997 2000 2003 2006 2009 2012 2015 2018 2021  2024 fe\n (=)\n     2008          2009          2010          2011           2012          2013\n出生人數| 198733 | 191310 | 166886 | 196627 | 229481 | 199113\n  2014    2015    2016    2017    2018    2019\n出生人數 | 210383 | 213598 | 208440 | 193844 | 181601 | 177767\n     2020          2021           2022          2023          2024          2025\n表(一)| 出生人數「 165249 | 153820 | 138986 | 135571 | 134856 | 107812\n(A) 1976 > 1988 > 2000 這三年(龍年)的出生人數相較於其前一年(兔年)、後一年(蛇年)來得多\n(B) 1970 年到 2025 年,出生人數的全距大於 30 萬人\n(C) 2008 年到2016 年,出生人數的中位數為 229481\n(D) 2017 年到 2025 年,每一年的出生人數逐年減少\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-16.webp",
       "correctedText": "從國家發展委員會人口推估查詢系統可查詢到出生人數折線圖如圖 ( 二 )，2008 年到2025\n\n  年出生人數統計值如表 ( 一 )。根據圖 ( 二 ) 及表 ( 一 ) 中的數據，判斷下列選項何者錯誤？\n\n    出生人數\n          440000\n          420000\n          400000\n          380000\n          360000\n          340000\n          320000\n          300000\n          280000\n          260000\n          240000\n          220000\n          200000\n          180000\n          160000\n          140000\n          120000\n          100000\n              1970  1973  1976  1979  1982  1985  1988  1991  1994  1997  2000  2003  2006  2009  2012  2015  2018  2021  2024 年\n  圖 ( 二 )\n        年度      2008      2009      2010      2011      2012      2013\n       出生人數   198733    191310    166886    196627    229481    199113\n        年度      2014      2015      2016      2017      2018      2019\n       出生人數   210383    213598    208440    193844    181601    177767\n        年度      2020      2021      2022      2023      2024      2025\n  表 ( 一 ) 出生人數   165249    153820    138986    135571    134856    107812",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -754,7 +871,7 @@
       "questionId": "115-00-MB-17",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "17. 小書把七段LED 燈條擺放在桌面上並固定,如圖(三)所示。若從這七段全暗的 LED 燈條\n中,任選不重複的兩段使其發亮 ,則最多可以呈現出幾種不同的明暗可能 (不考慮旋轉\n或翻面) ?\n\n(A) 42\n(B) 35                                                  _t\n(C) 21                                                加\n\n圖(三)\n(D) 14\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-17.webp",
       "correctedText": "小書把七段LED 燈條擺放在桌面上並固定，如圖 ( 三 ) 所示。若從這七段全暗的LED 燈條\n\n  中，任選不重複的兩段使其發亮，則最多可以呈現出幾種不同的明暗可能（不考慮旋轉\n\n  或翻面）？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -763,7 +880,7 @@
       "questionId": "115-00-MB-18",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "18. 小陸購買一張 50 元的遊樂場獎券,可能獲得頭獎到肆獎四種獎項之一或不中獎。已知\n獎券中頭獎一萬元的機率是千分之 1,中寺獎伍仟元的機率是千分之 2,中人釉獎壹仟元的\n機率是千分之5,以及中硅獎伍佰元的機率是百分之1,試問小陸購買這張獎券獲利的期單值\n是多少元?\n(A) 50\n(B) 20\n(C) -20\n(D) -50\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-18.webp",
       "correctedText": "小陸購買一張50 元的遊樂場獎券，可能獲得頭獎到肆獎四種獎項之一或不中獎。已知\n\n  獎券中頭獎一萬元的機率是千分之1，中貳獎伍仟元的機率是千分之2，中叄獎壹仟元的\n\n  機率是千分之5，以及中肆獎伍佰元的機率是百分之1，試問小陸購買這張獎券獲利的期望值\n\n  是多少元？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -772,7 +889,7 @@
       "questionId": "115-00-MB-19",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "19. 已知 tan(1847°) = 1.072 + tan(2126°)=—0.675 以及 tan(2205\")=1.000,則下列何者最可能\nAy tan (2026? )之近似值?\n(A) 1.073\n(B) 1.036\n(C) 0.999\n(D)-0.775\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-19.webp",
       "correctedText": "已知tan ( 1847° ) ≈ 1.072、tan ( 2126° ) ≈ – 0.675 以及tan ( 2205° ) = 1.000，則下列何者最可能\n\n   為tan ( 2026° ) 之近似值？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -781,7 +898,7 @@
       "questionId": "115-00-MB-20",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "20. 阿雄想測量農地裡一個稻草人 C 到工寮 4 的距離,如圖(四)所示。他先在4點和田垣上\n另一處58點拉出基準線,測得4、2兩點的距離為 100 公尺,接著測得角度 2 CAB=60° >\nDAR ZCBA=75° ° ADK A > C 兩點的距離為多少公尺?\n\n(A) 50(V3+1)                                                                           @\npity\n(B) 50(V3-1)                                                                            C\n(C) 20(¥3 +1)                          as\n(D) 20(V3-1)                            AN60°\n100m   Cy\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-20.webp",
       "correctedText": "阿雄想測量農地裡一個稻草人C 到工寮A 的距離，如圖 ( 四 ) 所示。他先在A 點和田埂上\n  另一處B 點拉出基準線，測得A、B 兩點的距離為100 公尺，接著測得角度∠CAB = 60°，\n\n  以及∠CBA = 75°。試求A、C 兩點的距離為多少公尺？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -790,7 +907,7 @@
       "questionId": "115-00-MB-21",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "21. 探勘人員為確認一個新的優良漁場 C 與港口的距離,從港口 4直線航行 8公里到漁場\nC,此時在C點經由儀器測定角度得知/4CZ=60”,且港口4與港口相距7公里,如圖\n(五)所示。若58、C的距離大於4公里,則8、C的距離約為多少公里 ?\n\n(A)5                                                       _—~                          .\n(B) 4.75          A          Tkm\n(©) 4.50\n(D) 4.25                                                                    8 km\nJc\n圖(五)\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-21.webp",
       "correctedText": "探勘人員為確認一個新的優良漁場C 與港口B 的距離，從港口A 直線航行8 公里到漁場\n  C，此時在C 點經由儀器測定角度得知∠ACB 60°，且港口A 與港口B 相距7 公里，如圖\n     ( 五 ) 所示。若B、C 的距離大於4 公里，則B、C 的距離約為多少公里？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -799,7 +916,7 @@
       "questionId": "115-00-MB-22",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "22. 程式設計師設計了一個'台語文字與拼音」抽卡片換裝品的遊戲,每次都抽五張卡丘 ,\n由左而右依序展現在螢幕上,上且每一張卡片只會顯示有 a Be RR be」。為了讓玩家\n都有獎勵,抽出的五張卡片中至少有一張會顯示有aa」,圖(六)僅為其中一種可能。\n試問螢幕上由左而右的五張卡片 ,總共有幾種顯示的可能 ?\n(A) 32\n:          EERE\n(C) 16                         圖(六) Gee Je 人x Jas\n(D) 5\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-22.webp",
       "correctedText": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，\n\n  由左而右依序展現在螢幕上，且每一張卡片只會顯示「有ū」或「無bô」。為了讓玩家\n  都有獎勵，抽出的五張卡片中至少有一張會顯示「有ū」，圖 ( 六 ) 僅為其中一種可能。\n\n  試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -808,7 +925,7 @@
       "questionId": "115-00-MB-23",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "23. 某旅行社推出兩種旅遊行程,其費用與優惠如表(二)。已知有兩名旅客預計結伴報名同\n一個行程,且兩人發現參加行程I的總費用等於參加行程廿的總費用,試求z=?\na ee ee: ee\n表(二)\n(A) 32000\n(B) 33000\n(C) 34000\n(D) 35000\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
       "correctedText": "某旅行社推出兩種旅遊行程，其費用與優惠如表 ( 二 )。已知有兩名旅客預計結伴報名同\n  一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求x？\n\n               原價            優惠\n\n      行程Ⅰ 每位收費x 元      兩人同行，其中一人減免3000 元\n\n  表 ( 二 ) 行程Ⅱ 每位收費 ( x + 2000 ) 元  兩人同行，其中一人打八折",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -817,7 +934,7 @@
       "questionId": "115-00-MB-24",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "24. 小仲跟阿慈投資一筆資金,以年利率 7%複利計算,並想瞭解本利和達到三倍本金需要\n幾年。小仲提間人工智慧得到快速估算值 4= Daya mi\n5一一2一,若/=8,且將4以無條件進位至整數C,有2以無條件進位至整數還,\n\nlogy [5]\n則下列何者正確?\n(A) D=C-1\n(B) D=C\n(C) D=C+1\n(D) D=C+2\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-24.webp",
       "correctedText": "小仲跟阿慈投資一筆資金，以年利率r % 複利計算，並想瞭解本利和達到三倍本金需要\n                                                110\n 幾年。小仲提問人工智慧得到快速估算值 A   ，阿慈用數學公式算出精確值\n                                                                r\n            log10 3   B        。若r8，且將A 以無條件進位至整數C，B 以無條件進位至整數D，\n                    r  \n        log10  1      \n                  100 \n\n  則下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -826,25 +943,43 @@
       "questionId": "115-00-MB-25",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "25. 小晏想在坐標平面中創作一個卡通人物,如圖(七)所示。已知 A> By P 為圖( 七)中的\n三點,直線工通過4、2兩點,點的坐標為(#,7),點和到直線民的距離為2 。若小旻\n要畫出以點 P 為圓心,並與直線 L 相切的圓,且此圓的方程式為立一8x+(Gy-7)* =a > Gill\nh+a=?\nei                                                  y            UL\n圖                                                                                  P Av\n(B)—16                                                      wy\n(D) 10                                                    a\nx\n圖(七) O\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-25.webp",
       "correctedText": "小晏想在坐標平面中創作一個卡通人物，如圖 ( 七 ) 所示。已知A、B、P 為圖 ( 七 ) 中的\n\n  三點，直線L 通過A、B 兩點，點P 的坐標為 ( h , 7 )，點P 到直線L 的距離為  2 。若小晏\n  要畫出以點P 為圓心，並與直線L 相切的圓，且此圓的方程式為 x 2  8 x  ( y  7) 2  a ，則\n   h + a？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-01",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "1. 我國環境部於 115 年正式徵收碳費,首波徵收對象包含台積電、中鋼等 500 家高碳排\n企業。企業若未達成自主減量目標,將面臨高額費率,恐引發營運成本上升與綠色\n通膨。根據此情境,關於企業社會責任之敘述,下列何者正確?\n\n山為了善盡法律責任 ,企業可積極辦理社區節能減碳巡迴講座\n@企業使用再生能源自主減量碳排,屬於承擔社會責任的表現\nG@)若引發企業營運成本上升,則恐危害企業最基本的倫理責任\n@若企業面臨高額費率導致股東利潤受損,即未善盡經濟責任\n(A) D+ @       (B)D+@       (C)@+@       (D)@+@\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-01.webp",
+      "correctedText": "我國環境部於 115 年正式徵收碳費，首波徵收對象包含台積電、中鋼等 500 家高碳排\n  企業。企業若未達成自主減量目標，將面臨高額費率，恐引發營運成本上升與綠色\n  通膨。根據此情境，關於企業社會責任之敘述，下列何者正確？\n  ① 為了善盡法律責任，企業可積極辦理社區節能減碳巡迴講座\n  ② 企業使用再生能源自主減量碳排，屬於承擔社會責任的表現\n  ③ 若引發企業營運成本上升，則恐危害企業最基本的倫理責任\n  ④ 若企業面臨高額費率導致股東利潤受損，即未善盡經濟責任",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-1-02",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "2. 「島內散步旅行社股份有限公司」是一家提供深度導覽與在地故事體驗服務以推廣城市\n文化的社會企業,下列敘述何者正確 ?\n(A) 該公司出資人數應為兩人以上,上且不具法人資格\n(B) 公司在官網展示體驗活動影片,增加服務無形性\n(C) 導覽行程和在地體驗活動屬於該公司的基本產品\n(D) 導覽期間,該公司應為旅客投保公共意外責任險\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-02.webp",
       "correctedText": "「島內散步旅行社股份有限公司」是一家提供深度導覽與在地故事體驗服務以推廣城市文化的社會企業，下列敘述何者正確？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-03",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "3. 小華創辦了一家提供個人化營養諮詢服務的新創 SOHO 工作室一'好食光」,並受邀參\n加新創企業博覽會,和其他創業者交流「好食光」的經營理念及服務。他認為臺灣高齡\n化社會所衍生出的保健營養商機,會讓'好食光」的諮詢服務成為現代人生活不可或缺\n的好夥伴。根據敘述,下列何者正確?\n\n(A) 好食光工作室屬於資訊SOHO工作型態\n\n(B) 好食光看中潛藏在災害風險的商業機會\n\n(C) 小華和其他創業者交流,屬於人際關係維繫者角色\n\n(D) 當其他企業推出類似服務,則會增加好食光的經營風險\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-03.webp",
+      "correctedText": "小華創辦了一家提供個人化營養諮詢服務的新創 SOHO 工作室—「好食光」，並受邀參\n  加新創企業博覽會，和其他創業者交流「好食光」的經營理念及服務。他認為臺灣高齡\n  化社會所衍生出的保健營養商機，會讓「好食光」的諮詢服務成為現代人生活不可或缺\n  的好夥伴。根據敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-1-04",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "4. 全家便利商店業者 崗總部統籌規劃連鎖賣場商品陳列及動線設計的環節,其涉及連鎖經\n營管理的範圍;以及@為了提高議價空間,向上整合發展成立物流中心,該物流中心的\n經營型態。關於上述情境,依序何者正確?\n\n(A) 0營業管理、@批發商型物流中心\n(B) 出營業管理、@ 零售商型物流中心\n(C) 山行銷管理、@批發商型物流中心\n(D) 行銷管理、@零售商型物流中心\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-04.webp",
       "correctedText": "全家便利商店業者①總部統籌規劃連鎖賣場商品陳列及動線設計的環節，其涉及連鎖經營管理的範圍；以及②為了提高議價空間，向上整合發展成立物流中心，該物流中心的經營型態。關於上述情境，依序何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -853,16 +988,34 @@
       "questionId": "115-09-1-05",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "5. 網路購物已成為相當普遍的購物管道。關於網路購物的商品型態,下列何者正確?\n透過人力銀行平台進行求職\n@從網路書店購買暢銷電子書\n在影音平台付費觀看世界棒球經典賽影片\n@透過旅遊訂房網站訂購便宜機票和飯店住宿\n(A)(D : 數位化商品、@ : 數位化商品\n(B) 0D:數位化商品、d0:數位化商品\n(C) @:數位化商品、(3):線上服務商品\n(D) @ : 數位化商品、(@ : 線上服務商品\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-05.webp",
       "correctedText": "網路購物已成為相當普遍的購物管道。關於網路購物的商品型態，下列何者正確？\n  ① 透過人力銀行平台進行求職\n  ② 從網路書店購買暢銷電子書\n  ③ 在影音平台付費觀看世界棒球經典賽影片\n  ④ 透過旅遊訂房網站訂購便宜機票和飯店住宿",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-06",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "6. 超人氣韓國女團TWICE 成團出道10年,於 114年11 月在高雄世運主場館舉辦兩場\n演唱會,吸引歌迷前往高雄參與,高雄市政府推出許多應援活動\nd崗歌迷憑演唱會門票,可至捷運站兌換50元商圈夜市優惠券\n@高雄市政府邀請網紅拍攝影片,在社群媒體上宣傳應援活動\nG)在捷運左營站設置演唱會主視覺看板,並舉辦歌迷打卡抽獎送好禮活動\n@串聯多家餐酒館推出應援特調飲品,並付費在雜誌宣傳以吸引歌迷關注\n關於以上應援活動的敘述,哪些屬於銷售推廣(sales promotion) ?\n(A) D> @       (B)D+@       (CO @、d       (D) (3)、d\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-06.webp",
+      "correctedText": "超人氣韓國女團 TWICE 成團出道 10 年，於 114 年 11 月在高雄世運主場館舉辦兩場\n  演唱會，吸引歌迷前往高雄參與，高雄市政府推出許多應援活動：\n  ① 歌迷憑演唱會門票，可至捷運站兌換 50 元商圈夜市優惠券\n  ② 高雄市政府邀請網紅拍攝影片，在社群媒體上宣傳應援活動\n  ③ 在捷運左營站設置演唱會主視覺看板，並舉辦歌迷打卡抽獎送好禮活動\n  ④ 串聯多家餐酒館推出應援特調飲品，並付費在雜誌宣傳以吸引歌迷關注\n  關於以上應援活動的敘述，哪些屬於銷售推廣(sales promotion)？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-07",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "7. 關於財務管理之敘述,下列何者正確?\n(A) 票據貼現屬於中期籌資之方式                   (B) 特別股無法發揮財務槓桿作用\n(C) 公司債的發行成本較特別股高               (D) 公司債的利息支出不具有節稅效果\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-07.webp",
+      "correctedText": "關於財務管理之敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-1-08",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "8. 甲公司2025年的流動比率為1.5,若該公司的流動負債為$100,000,應收帳款為$20,000,\n存貨為$15,000, 預付款項為$5,000 ; 乙公司 2025 年的銷貨收入$1,005,000,銷貨退回\n$5,000,銷貨成本$200,000,應收帳款週轉率為5次。上述0甲公司的酸性測驗比率、\n@乙公司的平均應收帳款,依序何者正確?\n\n(A)(D1.1、(2$160,000\n(B)(D1.1、(2$200,000\n(C) 0D1.3、(2$160,000\n(D) D1.3 » @$200,000\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-08.webp",
       "correctedText": "甲公司 2025 年的流動比率為 1.5，若該公司的流動負債為$100,000，應收帳款為$20,000，\n  存貨為$15,000，預付款項為$5,000；乙公司2025 年的銷貨收入$1,005,000，銷貨退回\n  $5,000，銷貨成本$200,000，應收帳款週轉率為5 次。上述①甲公司的酸性測驗比率、\n  ②乙公司的平均應收帳款，依序何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -871,7 +1024,7 @@
       "questionId": "115-09-1-09",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "9. 小平逛夜市買果汁時,人恰巧看到知名羔食 YouTuber' 西西」路過,開心地與對方握手。\n果汁店老闆也趁機拿出手機側拍兩人合照,並將照片張貼在店門口,宣稱'西西唯一\n推薦好喝果汁」,希麟增加銷售量。關於果汁店老闆此舉動, DU 可能的觸法行為與\n@相關法律,下列何者正確?\n\n(A) © : 擅自使用他人肖像、@ : 違反個人資料保護法\n(B) © : 擅自拍攝他人肖像、@ : 侵害創作人的著作權\n(C) 0 : 廣告不實宣傳引人誤信、(@ : 違反營業秘密法\n(D) @ : 廣告不實宣傳引人誤信、G@ : 違反商品標示法\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-09.webp",
       "correctedText": "小平逛夜市買果汁時，恰巧看到知名美食 YouTuber「西西」路過，開心地與對方握手。\n  果汁店老闆也趁機拿出手機側拍兩人合照，並將照片張貼在店門口，宣稱「西西唯一\n  推薦好喝果汁」，希望增加銷售量。關於果汁店老闆此舉動， ① 可能的觸法行為與\n  ② 相關法律，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -880,7 +1033,7 @@
       "questionId": "115-09-1-10",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "10. 小安參加創業法律講座,學習商業法律專業知識。關於商業法律的敘述,下列何者正確?\nd崗企業提供勞工不低於基本工資的薪資,以符合同工同酬原則\n@合法多層次傳銷接受消費者在一定期間內辦理商品無因退貨\n@股份有限公司普通股股東可依持股比例優先認購普通股新股\n@員工離職後,其在職期間創作影片的著作人格權也同時消滅\n@消費者保護法規定定型化契約應有30天以內的合理審閱期間\n(A)D>@+@   (B)D+@-@   (C)O-@-@   (D)@、(39、@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-10.webp",
       "correctedText": "小安參加創業法律講座，學習商業法律專業知識。關於商業法律的敘述，下列何者正確？\n  ① 企業提供勞工不低於基本工資的薪資，以符合同工同酬原則\n  ② 合法多層次傳銷接受消費者在一定期間內辦理商品無因退貨\n  ③ 股份有限公司普通股股東可依持股比例優先認購普通股新股\n  ④ 員工離職後，其在職期間創作影片的著作人格權也同時消滅\n  ⑤ 消費者保護法規定定型化契約應有 30 天以內的合理審閱期間",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -889,7 +1042,7 @@
       "questionId": "115-09-1-11",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "11. 某傳統銀行近年積極拓展!行動銀行」業務,讓銀行客戶可以透過銀行 App輕鬆完成查\n詢、轉帳等服務。關於該'行動銀行」的敘述,下列何者錯誤 ?\n(A) 行動銀行反映了銀行業結合實體與網路的業態多樣化趨勢\n(B) 行動銀行整合EOS 和 EDI 系統,大幅提高顧客使用便利性\n(C) 行動銀行所提供的數位金融服務,能改善服務的異質性問題\n(D) 該銀行開發App安全控制軟體取得新型專利,專利權期限10年\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-11.webp",
       "correctedText": "某傳統銀行近年積極拓展「行動銀行」業務，讓銀行客戶可以透過銀行 App 輕鬆完成查\n  詢、轉帳等服務。關於該「行動銀行」的敘述，下列何者錯誤？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -898,7 +1051,7 @@
       "questionId": "115-09-1-12",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "12. 頂級飯店引進某科技公司專為飯店客房所開發的 AI 智慧音箱,該產品鎖定旅宿市場的需\n求,除了提供旅客即時查詢服務,也能讓旅客在客房點餐,於退房時再至櫃台結帳。\n旅客透過 AI 智慧音箱的語音互動,皆轉化為旅客需求數據資料庫,讓飯店業者能做更精\n準的行銷、服務升級或設施規劃。關於此「AI智慧音箱」的敘述,下列何者正確?\n\n該商品屬於飯店顧客關係管理的一環\n@該商品銷售給頂級飯店,屬於B2C 商業模式\nG)該商品收集旅客住宿需求資訊,屬於POS人系統\n了該商品以飯店旅宿業為主,屬於利基行銷策略\n@飯店應為該商品投保產品責任險,以保障旅客安全\n(A) £2 > ©         (B) DO + @         (C) #@ > @         (D) &@ > @\n人閱讀下文,回答第 13-15 題\nALWeseesah fk oS   oS WW) 4 Be A oOo DW mae oO YM 2 Aa Smee eee oe UU HA OE Oe\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-12.webp",
       "correctedText": "頂級飯店引進某科技公司專為飯店客房所開發的 AI 智慧音箱，該產品鎖定旅宿市場的需\n  求，除了提供旅客即時查詢服務，也能讓旅客在客房點餐，於退房時再至櫃台結帳。\n  旅客透過 AI 智慧音箱的語音互動，皆轉化為旅客需求數據資料庫，讓飯店業者能做更精\n  準的行銷、服務升級或設施規劃。關於此「 AI 智慧音箱」的敘述，下列何者正確？\n  ① 該商品屬於飯店顧客關係管理的一環\n  ② 該商品銷售給頂級飯店，屬於 B2C 商業模式\n  ③ 該商品收集旅客住宿需求資訊，屬於 POS 系統\n  ④ 該商品以飯店旅宿業為主，屬於利基行銷策略\n  ⑤ 飯店應為該商品投保產品責任險，以保障旅客安全",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -907,7 +1060,7 @@
       "questionId": "115-09-1-13",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "13. 關於全聯業者 出申請專營電子支付業務的「全支付」,此業務的主管機關;以及@攜手\n無印良品推出「店中店」,其異業結盟的類型。關於上述情境,依序何者正確 ?\n(A) 金管會、@流通及通路型結盟\n(B) 經濟部、G@流通及通路型結盟\n(C)d金管會、G@行銷及售後服務型結盟\n(D) 經濟部、G@行銷及售後服務型結盟\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-13.webp",
       "correctedText": "關於全聯業者 ① 申請專營電子支付業務的「全支付」，此業務的主管機關；以及 ② 攜手\n  無印良品推出「店中店」，其異業結盟的類型。關於上述情境，依序何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -916,7 +1069,7 @@
       "questionId": "115-09-1-14",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "14. 關於全聯業者經營的敘述,下列何者正確?\n(A) 全聯的生鮮處理中心屬於零售業者\n(B) 全聯扮演替消費者採購商品的角色\n(C) 全聯商品價格設定在中價位,以出清商品為目的\n(D) 日常用品製造商採選擇型商流,選擇全聯來流通商品\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-14.webp",
       "correctedText": "關於全聯業者經營的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -925,7 +1078,7 @@
       "questionId": "115-09-1-15",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "15. 關於存貨管理及業者施行的ABC存貨控制法,下列敘述何者正確?\n(A) 對於業者而言,存貨是流動性最低的流動資產\n(B) 存貨管理的最高目標,是以最低成本來維持最高存量\n(C)A類存貨數量少、價值低,缺貨應立即補貨,避免缺貨\n(D)C類存貨數量多、價值高,採嚴格控管,避免資金積壓\n和閱讀下文,回答第 16-17題\n3一人 字 百生 「 ee Oe oe    三三\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-15.webp",
       "correctedText": "關於存貨管理及業者施行的 ABC 存貨控制法，下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -934,7 +1087,7 @@
       "questionId": "115-09-1-16",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "16. 關於第六市場的敘述,下列何者正確?\n(A) 該市場設立目標為促進城鄉均衡發展\n(B) 該市場一應俱全,以業態區分,屬於量販店\n(C) 該市場改善商店環境,以業種區分,屬於專業零售業\n(D) 在該市場買現磨咖啡粉,不適用消保法七日猶豫期的規範\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-16.webp",
       "correctedText": "關於第六市場的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -943,7 +1096,7 @@
       "questionId": "115-09-1-17",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "17. 小如和朋友討論在第六市場的消費經驗,下列何者的說法比較正確?\n(A) 小青:老闆用POS機讀取手機上的一維條碼,可儲存雲端發票\n(B) 皮皮:許多店家另成立網路專賣店,提供C2C的電子商務服務\n(C) 阿平:我在商場使用預付卡付款,可享受先消費後付款的便利\n(D) 小如:商場內草莓季產品試吃能刺激買氣,也能建立公共關係\n閱讀下文,回答第 18-19題\n> Hep PLA) ee OO oe /L Ue 已 oR oe, Ss 「 二評定      2 Of Ua ee ert A ATE BE OR Be\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-17.webp",
       "correctedText": "小如和朋友討論在第六市場的消費經驗，下列何者的說法比較正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -952,7 +1105,7 @@
       "questionId": "115-09-1-18",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "18. 此品牌在處理誤用摻有蘇丹紅原料事件之過程,關於 崗危機處理階段、@ 危機處理\n原則、(3)危機特性之間的對應關係,下列何者正確?\n(A) 0爆發期召開記者會,符合@真實性原則,以(3降低危機嚴重性\n(B) 解決期產品皆下架,符合@統一性原則,以(@避免危機雙面性\n(C) d山偵測期無條件退貨,符合@靈活性原則,以(9降低危機突發性\n(D) 0潛伏期配合查核原料,符合@積極性原則,以(3)因應危機急迫性\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-18.webp",
       "correctedText": "此品牌在處理誤用摻有蘇丹紅原料事件之過程，關於 ① 危機處理階段、② 危機處理\n  原則、③ 危機特性之間的對應關係，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -961,7 +1114,7 @@
       "questionId": "115-09-1-19",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "19. 0該公司以及@消費者,未來可透過哪些方式,降低類似事件所帶來的風險 ?\n(A) 投保高額產品責任險、@以公平交易法提起訴訟\n(B) 0投保高額產品責任險、@以消保法保障消費安全\n(C) 0投保高額商品災害保險、@以公平交易法提起訴訟\n(D) 0投保高額商品災害保險、@以消保法保障消費安全\n和閱讀下文,回答第 20-21 題\nSA se . OSM RET INA OC CCE LIGA AT. pon 4088209 Oo eS 2 AGE SAS Be ee Meee\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-19.webp",
       "correctedText": "① 該公司以及 ② 消費者，未來可透過哪些方式，降低類似事件所帶來的風險？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -970,7 +1123,7 @@
       "questionId": "115-09-1-20",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "20. 根據上述情境,下列敘述何者正確?\n(A) 自行編製的證照教材,不須註冊申請著作權保護\n(B) 設立蝦皮賣場販售證照教材與題庫屬於一階通路\n(C) 該賣場提供各項產品線上試閱,此屬於推式策略\n(D) 校園演講獲媒體報導建立專業形象屬於人員銷售\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-20.webp",
       "correctedText": "根據上述情境，下列敘述何者正確?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -979,7 +1132,7 @@
       "questionId": "115-09-1-21",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "21. 關於該賣場,下列敘述何者正確?\n(A) 賣場收入來源主要來自於成交手續費\n(B) 臉書社團的免費線上諮詢屬於售前服務\n(C) 買家可透過蝦皮代收代付的功能完成交易\n(D) 買家在三十天商品合理審閱期間內可退貨\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-21.webp",
       "correctedText": "關於該賣場，下列敘述何者正確?",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -988,7 +1141,7 @@
       "questionId": "115-09-1-22",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "22. 關於法芭蕾的行銷方式,下列何者正確 ?\n(A) 法芭蕾在電商平台上架販售,該平台為其經銷商\n(B) 小奕在電商平台進行直播宣傳商品,屬於人員銷售\n(C) 法芭蕾參加電商平台檔期促銷活動,屬於拉式策略\n(D) 法式甜點的香頌甜點禮盒包裝,屬於附加產品層次\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-22.webp",
       "correctedText": "關於法芭蕾的行銷方式，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -997,7 +1150,7 @@
       "questionId": "115-09-1-23",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "23. 關於法芭蕾的敘述,下列何者正確 ?\n(A) 法芭蕾賣場的產品組合為廣度3、長度9、深度4\n(B) 法芭蕾和法式 SPA店家合作,屬於流通及通路型結盟\n(C) 法芭蕾商品製作完成後,由開放型物流業者協助配送\n(D) 其他店家未經授權使用法芭蕾商標,恐侵犯其營業秘密\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-23.webp",
       "correctedText": "關於法芭蕾的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1006,7 +1159,7 @@
       "questionId": "115-09-1-24",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "24. 學歷要求碩士以上、@ 相關工作經驗 1年以上、(@ 工作地點在新竹、@ 工作內容包括\n進行驗證與量產維護、G@需配合出差。上述哪些屬於工作說明書的內容 ?\n(A)(0、@、@   (B)0、G@、d@   (C@、@、@   (D)(3、@、@)\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-24.webp",
       "correctedText": "① 學歷要求碩士以上、② 相關工作經驗 1 年以上、③ 工作地點在新竹、④ 工作內容包括\n  進行驗證與量產維護、⑤ 需配合出差。上述哪些屬於工作說明書的內容？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1015,16 +1168,43 @@
       "questionId": "115-09-1-25",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "25. 關於該公司的員工福利,下列敘述何者正確 ?\n(A) 三節禮金屬於教育性福利                    (B) 員工餐廳屬於經濟性福利\n(C) 員工旅遊屬於經濟性福利                   (D) 醫療小站屬於設施性福利\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-25.webp",
       "correctedText": "關於該公司的員工福利，下列敘述何者正確？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-26",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "26. 林同學使用電腦進行文書作業輸入特殊符號時,突然想到關於編碼系統的議題。下列\n敘述何者錯誤?\n(A) Big-5 是常用的英文編碼系統\n(B) Unicode 的編碼系統又稱萬國碼\n(C) ASCH 一個字元可由 8個位元所組成\n(D) 編碼系統可用來將文字轉換成二進制碼\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-26.webp",
+      "correctedText": "林同學使用電腦進行文書作業輸入特殊符號時，突然想到關於編碼系統的議題。下列\n  敘述何者錯誤？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-27",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "27. 某新創軟體開發公司將 Linux 作業系統進行特定功能開發。關於此新開發軟體產品之授\n權說明,下列何者正確?\n(A) 屬於自由軟體,可以銷售              (B) 屬於共享軟體,可長期使用\n(C) 屬於公用軟體,需要付費              (D) 屬於免費軟體,無著作權保護\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-27.webp",
+      "correctedText": "某新創軟體開發公司將Linux 作業系統進行特定功能開發。關於此新開發軟體產品之授\n  權說明，下列何者正確？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-28",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "28. 一般個人電腦在預設狀態下,下列何項敘述是屬於串列傳輸且全雙工通訊 ?\n(A) 鍵盤連接 PS/2 埠\n(B) 電腦經 VGA 線連接到螢幕\n(C) 筆電透過 HDMI 傳送簡報畫面到投影機\n(D) 主機板上網卡連接交換器進行同時傳送與接收資料\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-28.webp",
+      "correctedText": "一般個人電腦在預設狀態下，下列何項敘述是屬於串列傳輸且全雙工通訊？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-1-29",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "29. 小王的文創公司接了一個廣告圖案,設計完後的圖檔大小為 2MB,要傳送給客戶的時間\n要求在 15 秒內完成傳輸,下列網路頻寬何者符合需求 ?\n(A) 100Kbps            (B) 200Kbps            (C) IMbps              (D) 2Mbps\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-29.webp",
       "correctedText": "小王的文創公司接了一個廣告圖案，設計完後的圖檔大小為2MB，要傳送給客戶的時間\n  要求在15 秒內完成傳輸，下列網路頻寬何者符合需求？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1033,7 +1213,7 @@
       "questionId": "115-09-1-30",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "30. 李同學想要將電腦升級成一台 AI 主機,於是先增購一條 DRAM 記憶體及一張 PCI-Ex16\n獨立顯示卡,接下來新購的記憶體與顯示卡應該分別被安裝在下列何選項的插槽上?\n(A) 甲、乙     (B) As     (C)Z+T     (D)乙、戊\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-30.webp",
       "correctedText": "李同學想要將電腦升級成一台AI 主機，於是先增購一條DRAM 記憶體及一張PCI-Ex16\n  獨立顯示卡，接下來新購的記憶體與顯示卡應該分別被安裝在下列何選項的插槽上？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1042,16 +1222,25 @@
       "questionId": "115-09-1-31",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "31. 關於丙插槽的敘述,下列何者正確 ?\n(A) 可連接硬碟機或光碟機\n(B) 這個插槽沒有防呆裝置\n(C) 用來連接電源供應器的排線\n(D) 可連接機殼上的電源開關、燈號、多個 USB 插槽\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-31.webp",
       "correctedText": "關於丙插槽的敘述，下列何者正確？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-1-32",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "32. 全家一起規劃旅行時,希麟能隨時在手機、平板或筆電上查看並編輯景點標記與路線\n安排。下列哪一種做法最方便且具備即時性?\n(A) 將行程資訊即時發送到家人的 Email\n(B) 把各行程截圖存人相簿,再以相簿分享給全家\n(C) 把行程檔案上傳至雲端硬碟、權限設定,分享連結給家人\n(D) 透過藍牙將景點及路線檔案傳送至家人裝置,縮短傳遞時間\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-32.webp",
+      "correctedText": "全家一起規劃旅行時，希望能隨時在手機、平板或筆電上查看並編輯景點標記與路線\n  安排。下列哪一種做法最方便且具備即時性？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-1-33",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "33. 小方的理財計劃中投資了比特幣(Bitcoin),其相關的區垢鏈技術,下列敘述何者正確?\nd對於每筆交易經過驗證完成寫入帳本後,具有不可竄改性\n@在資料驗證過程中,用到複雜的加密技術來為資料加解密\n(透過金資中心進行各種跨行金融交易,以確保投資能夠具安全性及便捷性\n@為了資料安全、防止別人窺知,買賣雙方的交易紀錄驗證完只寫在自己的帳本\n(A)O>@       (B)(D、@       (0C) @、d       (D) (3)、d\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-33.webp",
       "correctedText": "小方的理財計劃中投資了比特幣(Bitcoin)，其相關的區塊鏈技術，下列敘述何者正確？\n  ①對於每筆交易經過驗證完成寫入帳本後，具有不可竄改性\n  ②在資料驗證過程中，用到複雜的加密技術來為資料加解密\n  ③透過金資中心進行各種跨行金融交易，以確保投資能夠具安全性及便捷性\n  ④為了資料安全、防止別人窺知，買賣雙方的交易紀錄驗證完只寫在自己的帳本",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1060,7 +1249,7 @@
       "questionId": "115-09-1-34",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "34. 張同學想要做一個物聯網相關的專題實作,思考關於物聯網中的通訊技術議題。下列敘\n述何者錯誤 ?\n(A)NFC 能用於行動支付                              (B) eTag 是一種 RFID 的應用\n(C) RFID 所需的 Tag 耗電量大                       (D) 4G LTE 傳輸距離比 ZigBee 距離長\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-34.webp",
       "correctedText": "張同學想要做一個物聯網相關的專題實作，思考關於物聯網中的通訊技術議題。下列敘\n  述何者錯誤？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1069,7 +1258,7 @@
       "questionId": "115-09-1-35",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "35. 在網路上傳送資料,會使用加解密技術保護資料,下列敘述何者正確?\n(A) 數位簽章在接收端使用發送端的公鑰解密\n(B) 數位簽章的運作流程中接收端是以發送端的私鑰解密\n(C) 公開金鑰加密法(Public key Cryptography)為對稱式加密法\n(D) 私密金鑰加密法(Secret key Cryptography)為非對稱式加密法\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-35.webp",
       "correctedText": "在網路上傳送資料，會使用加解密技術保護資料，下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1078,7 +1267,7 @@
       "questionId": "115-09-1-36",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "36. 關於電子商務的經營模式,下列敘述何者正確?\ndj小吳到線上拍賣網買日用品是屬於 C2C\n@老李在博客來網路商店購買辭典是屬於 B2C\nG陳老闆的公司利用網路向個人進行採購是屬於 B2B\n@林同學升級電腦後,將舊配備利用校內二手物品交易網進行銷售屬於 C2B\n(A) D> @       (B)@+@       (C)\\O*@       (D) D+ ®\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-36.webp",
       "correctedText": "關於電子商務的經營模式，下列敘述何者正確？\n  ①小吳到線上拍賣網買日用品是屬於C2C\n  ②老李在博客來網路商店購買辭典是屬於B2C\n  ③陳老闆的公司利用網路向個人進行採購是屬於B2B\n  ④林同學升級電腦後，將舊配備利用校內二手物品交易網進行銷售屬於C2B",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1087,7 +1276,7 @@
       "questionId": "115-09-1-37",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "37. 依 ASCIH 碼表,相關字元碼值 :A是41i、小寫a是A碼值加32i0、阿拉伯數字1是A碼\n值減10i 、符號@ 是A碼值減1,其他大小寫字母及數字的編碼值依序遞增,如小寫\ni是小寫a碼值加8成為105i0。若有一密碼為o6Lig@ftE,其ASCIH碼值以10進制表示為\n何?(註:為方便閱讀,在答案選項中各 ASCIH 碼值間增加「、」區隔)\n(A) 079、098、076、105、071、064、116、101\n(B) 079、098、108、105、071、064、116、069\n(C) 111、054、108、105、103、064、116、101\n(D) 111、054、076、105、103、064、116、069\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-37.webp",
       "correctedText": "依ASCII 碼表，相關字元碼值：A 是 4116 、小寫 a 是 A 碼值加 3210 、阿拉伯數字 1 是 A 碼\n  值減 1016 、符號 @ 是 A 碼值減 1，其他大小寫字母及數字的編碼值依序遞增，如小寫\n      i 是小寫 a 碼值加 8 成為 105 10 。若有一密碼為 o 6 Lig @ tE，其ASCII 碼值以 10 進制表示為\n  何？( 註：為方便閱讀，在答案選項中各ASCII 碼值間增加「、」區隔 )",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1096,7 +1285,7 @@
       "questionId": "115-09-1-38",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "38. 某甲要製作活動識別證,使用Word的啟動合併列印中標籤功能,設定所需表格及其版\n面大小(如 1x2)格式,合併列印的資料來源從 Excel 學員資料檔匯入。關於合併列印的敘\n述,下列何者正確?\n(A) 學員照片只能透過手動貼和人 Word 的表格中\n(B) 表格中所有儲存格都必須顯示所有框線,Word 才能辨識欄位\n(C) 必須先將 Excel 檔案轉存成 PDF,才能確保合併後維持原版面\n(D) 資料來源清單的第一列必須是標題列 (如編號、姓名及照片) ,才能呈現所有學員\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-38.webp",
       "correctedText": "某甲要製作活動識別證，使用Word 的啟動合併列印中標籤功能，設定所需表格及其版\n  面大小( 如1×2 )格式，合併列印的資料來源從Excel 學員資料檔匯入。關於合併列印的敘\n  述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1105,7 +1294,7 @@
       "questionId": "115-09-1-39",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "39. 在 Word 中的文字轉換為表格,分隔文字在逗號進行欄位區隔,文字如圖(三)所示,轉換\n後的表格為下列何者?\nBOZO ALT > eee\n圖(三) FORO eR Be\naN\n@)\nFL RL) ee\n© ADOT Roe\n Pie oF |\n©)\n 卯」辰已| 午 |\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-39.webp",
       "correctedText": "在Word 中的文字轉換為表格，分隔文字在逗號進行欄位區隔，文字如圖 ( 三 )所示，轉換\n  後的表格為下列何者？\n             甲□乙□,□丙□□丁□，□戊□己□,□庚\n        圖 ( 三 ) 子□丑□□寅□,□卯□□辰□巳□，□午\n\n    甲□乙□ □丙□ □丁□ □戊□己□ □庚",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1114,7 +1303,7 @@
       "questionId": "115-09-1-40",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "40. 為能順利呈現專題競賽活動的簡報設計,須在儲存簡報檔(*.pptx)時將使用到的字型內网\n於簡報內,操作過程中可點選「只內扣簡報中所使用的字元」,圖(四)為檔案另存新\n檔後操作步驟的部分示意圖面,圖(四 )乙右側圖面空白是故意刪除相關的內容。\n\n圖(四)甲:儲存選項、@一般選項,圖(四)乙:(9一般、@儲存、(%進階\n#RsBMANY: [RAW pp\n_                   皿      asian. |\n0儲存選項($)..\n“anne Q\nint 選項           終\n全一般 PowerPoint\n校訂\n@ tre        |\n印刷樣式 it\n圖(四)   Owe         一\n圖(四)甲到乙的操作步驟,下列何者正確?\n(A) O-@               (B) 一了               (C)@-@               (D) @-©\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-40.webp",
       "correctedText": "為能順利呈現專題競賽活動的簡報設計，須在儲存簡報檔(*.pptx)時將使用到的字型內嵌\n  於簡報內，操作過程中可點選「只內嵌簡報中所使用的字元」，圖 ( 四 )為檔案另存新\n  檔後操作步驟的部分示意圖面，圖 ( 四 )乙右側圖面空白是故意刪除相關的內容。\n  圖 ( 四 )甲：①儲存選項、②一般選項，圖 ( 四 )乙：③一般、④儲存、⑤進階\n\n\n\n\n\n      圖 ( 四 )\n  圖( 四 )甲到乙的操作步驟，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1123,7 +1312,7 @@
       "questionId": "115-09-1-41",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "41. 劉老師為鼓勵學生的學習,對平時成績擇優計算 ,於是在Excel儲存格中撰寫公式為:\n\"=ROUND(AVERAGE(LARGE(E4:N4, {1,2,3,4,5,6})),0) 」 。下列敘述何者正確?\n(註:本題中LARGE 函數是用來取得前6大的值)\n@ROUND 函數是用來取平均值\n@公式中的0讓AVERAGE 取整數\n(3資料範圍為 E4 到N4\n最後得到的值是整數\n(A) D> @       (B)O+@       (Ol@REC?)       (D)®+@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-41.webp",
       "correctedText": "劉老師為鼓勵學生的學習，對平時成績擇優計算，於是在Excel 儲存格中撰寫公式為：\n   「=ROUND(AVERAGE(LARGE(E4:N4,{1,2,3,4,5,6})),0)」。下列敘述何者正確？\n  (註：本題中LARGE 函數是用來取得前6 大的值)\n  ①ROUND 函數是用來取平均值\n  ②公式中的0 讓AVERAGE 取整數\n  ③資料範圍為E4 到N4\n  ④最後得到的值是整數",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1132,7 +1321,7 @@
       "questionId": "115-09-1-42",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "42. 關於雲端服務的敘述,下列何者正確?\n(A) Office 辦公室套裝軟體可開啟遠端朱面控制功能來啟動檔案總管,進行檔名瀏覽\n(B) 參加 Google Meet 線上網路視訊會議,可免除往返的交通時間\n(C) 行事曆可用 Dropbox 來建立不同的帳號,並管理不同的行事曆\n(D) 若要建立兩個 Google 日曆,一定要再申請另一個新的 Google 帳號\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-42.webp",
       "correctedText": "關於雲端服務的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1141,7 +1330,7 @@
       "questionId": "115-09-1-43",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "43. 尤工程師正在為公司設計網站標誌(Logo),並被要求將檔案儲存為 SVG(Scalable Vector\nGraphics)格式。關於 SVG 的敘述,下列何者正確 ?\n(A) 是一種能在 Logo 中的和人語音一起呈現的格式\n(B) 一旦儲存後,檔案很難被他人修改,安全性非常高\n(C) 這種圖檔最高可提供 24'種顏色,適合表現 Logo 的顏色細節\n(D) 是以文字描述影像的圖檔格式,能呈現向量圖形特性,且適用於網頁上\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-43.webp",
       "correctedText": "尤工程師正在為公司設計網站標誌(Logo)，並被要求將檔案儲存為SVG(Scalable Vector\n   Graphics)格式。關於SVG 的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1150,7 +1339,7 @@
       "questionId": "115-09-1-44",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "44. 關於 RGB 與 CMYK 之色彩模式,下列敘述何者錯誤 ?\n(A) RGB 的色彩橫式所能提供的顏色數量有 256?種\n(B) CMYK 的色彩橫式是彩色印刷時,常用的一種套色橫式\n(C)RGB 是使用加色法來產生顏色,適用於電腦螢幕使用\n(D) CMYK 是使用減色法來產生顏色,以#FFFFF 格式呈現於網頁上\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-44.webp",
       "correctedText": "關於RGB 與CMYK 之色彩模式，下列敘述何者錯誤？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1159,7 +1348,7 @@
       "questionId": "115-09-1-45",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "45. 在網頁設計中採用行內頁框可載和其他網頁的內容,其 HTML 程式碼如下,其中的內\n容應為下列何者?\n二 D_|src=\"48 4% html\" width=\"600\" height=\"400\">網頁提示<(_ 上\n(A) href                  (B) frame set             (C) form                  (D) iframe\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-45.webp",
       "correctedText": "在網頁設計中採用行內頁框可載入其他網頁的內容，其HTML 程式碼如下，其中①的內\n  容應為下列何者？\n\n         < ①  src=\"網頁檔名.html\" width=\"600\" height=\"400\">網頁提示</ ①  >",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1168,7 +1357,7 @@
       "questionId": "115-09-1-46",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "46. 在第三方電商平台上建立購物商店的優點,下列敘述何者正確?\n(A) 只需支付硬體架設費用即可開啟線上商店\n(B) 平台提供促銷活動、金流與物流等服務有益於開店\n(C) 雖無法自訂網域名稱,但可自行設定商店的專屬 IP 位址\n(D) 商家的商品價格特殊,顧客能透過商品價格直接找到該商店\n閱讀下文,回答第 47-48題\nme ese OPN Sa EO S88... Le DOO Te en et 6 FAC. ee\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-46.webp",
       "correctedText": "在第三方電商平台上建立購物商店的優點，下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1177,7 +1366,7 @@
       "questionId": "115-09-1-47",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "47. 下列何者符合網頁程式的顯示結果 ?\n(A) 網頁顯示所有文字均置中對齊\n(B) 網頁背景顏色以淡黃色 (lightyellow ) 顯示\n(C) 因未寫另一標籤</hr>,所以網頁未顯示水平線\n(D) 兩組文字「商業與管理群、外語群英語類、」與「外語群日語類」會顯示在不同列上\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-47.webp",
       "correctedText": "下列何者符合網頁程式的顯示結果？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1186,7 +1375,7 @@
       "questionId": "115-09-1-48",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "48. 甲同學展示的網頁程式有若干錯誤,這些錯誤導致網頁內容沒有完整顯示,該程式碼\n可能被誤植之處及其可修正的情境如下:\n@D &# 1 fF !doctype 應為!htmltype\n@ 第4行 UTF-8 EF, utf-8\n@)第7行 body應為#body\n@ 第7行 txt應為text\n® &# 8 77 IDname 應為 打Dname\n下列何者正確 ?\n(A) 0D、@       (B)(3)、@       (C @、@       (D) D> @\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-48.webp",
       "correctedText": "甲同學展示的網頁程式有若干錯誤，這些錯誤導致網頁內容沒有完整顯示，該程式碼\n  可能被誤植之處及其可修正的情境如下：\n  ① 第1 行!doctype 應為!htmltype\n  ② 第4 行UTF-8 應為utf-8\n  ③ 第7 行body 應為 #body\n  ④ 第7 行txt 應為text\n  ⑤ 第8 行 IDname 應為 #IDname\n  下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1195,7 +1384,7 @@
       "questionId": "115-09-1-49",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "49. 依頁獻點數對各員工計算其調薪百分比,先對儲存格 D2 計算百分比如圖(六)甲,再按該\n儲存格之填滿控點以拖曳至所有員工(D3:D7)如圖(六)乙。關於 D2 的公式,下列何者正\n確?\n(A) =IF(C2>=20,100%,IF(C2>=10,80%,60%))\n(B) =IF(C2>=20,100%,IF(C2<20&C2>=10,80%,60%))\n(C) =IF(C2>=20,100%,IF(C2<20&&C2>=10,80%,60%))\n(D) =IF(C2>=20, 100%, IF ((C2<20)AND(C2>=10),80%,60%))\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-49.webp",
       "correctedText": "依貢獻點數對各員工計算其調薪百分比，先對儲存格D2 計算百分比如圖(六)甲，再按該\n  儲存格之填滿控點以拖曳至所有員工(D3:D7)如圖(六)乙。關於D2 的公式，下列何者正\n  確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1204,7 +1393,7 @@
       "questionId": "115-09-1-50",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "50. 實調金額為最高調薪金額乘以百分比,先在儲存格 E2 輸入計算公式,再按儲存格的填滿\n控點拖曳涵蓋所有員工(E3:E7)如圖(六)乙。關於 E2 的公式,下列何者正確 ?\n(A) =$A2*D2            (B) =A$2*D2              (C) =&A2*D2             (D) =A&2* D2\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-1/115-09-1-50.webp",
       "correctedText": "實調金額為最高調薪金額乘以百分比，先在儲存格E2 輸入計算公式，再按儲存格的填滿\n  控點拖曳涵蓋所有員工(E3:E7)如圖(六)乙。關於E2 的公式，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1213,25 +1402,43 @@
       "questionId": "115-09-2-02",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "2. 依據商業會計法,下列哪幾項應於年度決算程序辦理終了後,至少保存十年?\nG@)日記簿\n分類帳\n@資產負債表\n@綜合損益表\n(A) #O+-@-+@-@          (B) {2D +@+@-@\n(C)#@>@>@-®          (D) &£® + @O-+O-O\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-02.webp",
       "correctedText": "依據商業會計法，下列哪幾項應於年度決算程序辦理終了後，至少保存十年？\n①發票\n②傳票\n③日記簿\n④分類帳\n⑤資產負債表\n⑥綜合損益表",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-03",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "3. 關於會計基本概念之敘述,下列何者正確 ?\n(A) 支付員工薪資為對內交易\n(B) 因地震造成的存貨損失為對外交易\n(C) 汽車經銷商購入汽車以供出售,應將汽車認列為存貨\n(D) 禮品買賣業購入商品而支付運費,應將運費認列為營業費用\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-03.webp",
+      "correctedText": "關於會計基本概念之敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-2-04",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "4. 關於日記簿及分類帳的記錄方式,下列哪幾項正確?\n0作分錄時應填寫日記簿的日頁欄\n@過帳時將日記簿之頁次轉記到分類帳的日頁欄\n過帳時將分類帳之頁次記入日記簿的日頁欄\n(A) (2M        (B) #2)        (C)/ {EM > @Q     (D) {#Q~-@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-04.webp",
       "correctedText": "關於日記簿及分類帳的記錄方式，下列哪幾項正確？\n①作分錄時應填寫日記簿的日頁欄\n②過帳時將日記簿之頁次轉記到分類帳的日頁欄\n③過帳時將分類帳之頁次記入日記簿的日頁欄",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-05",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "5. 關於調整之敘述,下列哪幾項正確 ?\n山會計基礎不論採權責發生基礎之記實轉虛法或記虛轉實法,期末預付項目的調整,\n借方一定為實帳戶\n@@應計基礎下,期末應付項目的調整,借方一定為虛帳戶\n@)權責發生基礎之記虛轉實法下,期末漏作預收項目之調整分錄將導致淨利低估\n@應計基礎下,期末漏作應收項目之調整分錄將導致淨利低估\n(A) 2D + @     (B) 僅@、     ©#DO-@-©@ _(D)僅0、@、d4\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-05.webp",
+      "correctedText": "關於調整之敘述，下列哪幾項正確？\n  ① 會計基礎不論採權責發生基礎之記實轉虛法或記虛轉實法，期末預付項目的調整，\n   借方一定為實帳戶\n  ② 應計基礎下，期末應付項目的調整，借方一定為虛帳戶\n  ③ 權責發生基礎之記虛轉實法下，期末漏作預收項目之調整分錄將導致淨利低估\n  ④ 應計基礎下，期末漏作應收項目之調整分錄將導致淨利低估",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-2-06",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "6. 甲公司 X1 年底及 X2 年底之應收帳款分別為借餘$500,000 及借餘$600,000。關於 X2 年\n備抵損失之敘述,下列哪幾項正確? (排除預期信用減損損失率為零之特殊情況)\n於 X2 年會計年度開始日,備抵損失一定是貸餘\n@於 X2 年會計年度期間,備抵損失一定是貸餘\nQW X2 年會計年度終了日,調整後之備抵損失一定是貸餘\n(A)僅人@         (B) 僅(3)         (©) 僅0D、@      (D) DO + @\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-06.webp",
       "correctedText": "甲公司X1 年底及X2 年底之應收帳款分別為借餘$500,000 及借餘$600,000。關於X2 年\n  備抵損失之敘述，下列哪幾項正確？ ( 排除預期信用減損損失率為零之特殊情況 )\n  ① 於X2 年會計年度開始日，備抵損失一定是貸餘\n  ② 於X2 年會計年度期間，備抵損失一定是貸餘\n  ③ 於X2 年會計年度終了日，調整後之備抵損失一定是貸餘",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1240,7 +1447,7 @@
       "questionId": "115-09-2-08",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "8. 甲公司 X5 年底負債總額較資產總額的三分之一少$250,000,權益總額為負債總額的\n2.5 倍。因應公司業務成長,公司規畫添購生產設備,並全數向銀行貸款以籌措資金,但\n權益總額不得低於負債總額的1.25 倍,則公司添購生產設備金額的上限為多少 ?\n\n(A) $500,000             (B) $625,000             (C) $1,500,000           (D) $1,875,000\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-08.webp",
       "correctedText": "甲公司 X5 年底負債總額較資產總額的三分之一少 $250,000，權益總額為負債總額的 2.5 倍。因應公司業務成長，公司規畫添購生產設備，並全數向銀行貸款以籌措資金，但權益總額不得低於負債總額的 1.25 倍，則公司添購生產設備金額的上限為多少？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1249,7 +1456,7 @@
       "questionId": "115-09-2-10",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "10. 關於我國營業稅之敘述,下列哪幾項錯誤 ?\nd進口貨物的營業稅納稅義務人,是進口貨物的收貨人或持有人\n@適用加值型營業稅的營業人,若無銷售額,則無須申報營業稅\nG)購買供業務人員拜訪客戶用的自用乘人小汽車之進項稅額不得扣抵銷項稅額\n適用加值型營業稅的營業人,不論是否有溢付稅額,均僅能於單數月申報營業稅\n@除營業稅法另有規定外,一般營業稅最高稅率10%,最低稅率5%,實際稅率由立法院\n核定\nALO.O-O@ BED OO (0)僅@、3、% (0D)僅@、d、@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-10.webp",
       "correctedText": "關於我國營業稅之敘述，下列哪幾項錯誤？\n  ① 進口貨物的營業稅納稅義務人，是進口貨物的收貨人或持有人\n  ② 適用加值型營業稅的營業人，若無銷售額，則無須申報營業稅\n  ③ 購買供業務人員拜訪客戶用的自用乘人小汽車之進項稅額不得扣抵銷項稅額\n  ④ 適用加值型營業稅的營業人，不論是否有溢付稅額，均僅能於單數月申報營業稅\n  ⑤ 除營業稅法另有規定外，一般營業稅最高稅率 10 %，最低稅率 5 %，實際稅率由立法院\n   核定",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1258,7 +1465,7 @@
       "questionId": "115-09-2-14",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "14. 甲公司銷貨皆採几銷方式,若 X1 年12月31日發生下列事項,應於本日認列應收帳款者\n有哪幾項?\n銷售商品予乙公司,採目的地交貨,本日已出貨,預計於 X2年1月5日送達乙公司\n人以分期付款方式銷售商品給信用良好的丙公司,於本日交付商品,餘款於 X2年底收齊\nG@與耳公司簽訂寄銷合約,請丁公司代銷商品,本日運交給丁公司一批商品\n@出售一商品給戊公司,安裝與測試為銷售合約重要之部份。本日運交該商品,預計於\n\nX2年1月5日安裝與測試\n\n(A) {£@        (B) 20> @      (C) 僅@、(@)      (D) {2D > @>@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-14.webp",
       "correctedText": "甲公司銷貨皆採賒銷方式，若X1 年 12 月 31 日發生下列事項，應於本日認列應收帳款者\n  有哪幾項？\n  ① 銷售商品予乙公司，採目的地交貨，本日已出貨，預計於X2 年 1 月 5 日送達乙公司\n  ② 以分期付款方式銷售商品給信用良好的丙公司，於本日交付商品，餘款於X2 年底收齊\n  ③ 與丁公司簽訂寄銷合約，請丁公司代銷商品，本日運交給丁公司一批商品\n  ④ 出售一商品給戊公司，安裝與測試為銷售合約重要之部份。本日運交該商品，預計於\n     X2 年 1 月 5 日安裝與測試",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1267,25 +1474,61 @@
       "questionId": "115-09-2-19",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "19. 甲公司有一筆10年期分次償還的銀行借款$10,000,000,該筆銀行借款的2成將於 X2 年\n6月 30 日到期,其餘 8成於 X3 年底之後陸續到期。該公司主動與銀行談妥並於 X1 年\n12 月 15 日簽訂協議,將該筆借款中應於 X2 年6月 30日償還的金額,展延至 X3年6月\n30 日才償還,則該筆$10,000,000 銀行借款在 X1 年底資產負債表上列為流動負債的金額\n(A) $0                     (B) $2,000,000           (C) $8,000,000           (D) $10,000,000\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-19.webp",
       "correctedText": "甲公司有一筆 10 年期分次償還的銀行借款$10,000,000，該筆銀行借款的2 成將於X2 年\n   6 月30 日到期，其餘8 成於X3 年底之後陸續到期。該公司主動與銀行談妥並於X1 年\n   12 月15 日簽訂協議，將該筆借款中應於X2 年6 月30 日償還的金額，展延至X3 年6 月\n   30 日才償還，則該筆$10,000,000 銀行借款在X1 年底資產負債表上列為流動負債的金額\n  為多少？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-22",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "22. 甲公司 X2 年6月6日股東會決議,稅後淨利於彌補虧損後,應先依公司法提撥法定盈餘\n公積,再依公司章程提列特別盈餘公積$40,000,以及發放現金股利$90,000。若該公司\nX1 年度稅後淨利為$350,000,且 X1 年初有累積虧損$50,000,則甲公司 X1 年度盈餘分配\n表中之可供分配盈餘為多少 ?\n(A) $140,000             (B) $225,000             (C) $230,000             (D) $280,000\n閱讀下文,回答第 23-24題\noo OP a eee Le eR ee Se 二之 er eR OS St et eee iw 人 A perme EEE RA. 人\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-22.webp",
+      "correctedText": "甲公司X2 年 6 月 6 日股東會決議，稅後淨利於彌補虧損後，應先依公司法提撥法定盈餘\n  公積，再依公司章程提列特別盈餘公積$40,000，以及發放現金股利$90,000。若該公司\n   X1 年度稅後淨利為$350,000，且X1 年初有累積虧損$50,000，則甲公司X1 年度盈餘分配\n  表中之可供分配盈餘為多少？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-23",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "23. 依據甲公司 XS 年底資產負債表所計算之速動資產及營運資金分別為多少?\n(A) $240,000,$600,000                   (B) $270,000 » $675,000\n(C) $390,000 » $975,000                   (D) $400,000 > $1,000,000\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-23.webp",
+      "correctedText": "依據甲公司X5 年底資產負債表所計算之速動資產及營運資金分別為多少？",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-24",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "24. 若X6 年發現,X5 年底漏作下列二項交易事項應作之調整分錄,則此錯誤對X5 年底流\n動比率及速動比率之影響分別為何 ?\nOX5 年6月1日出租設備9個月,預收9個月租金$27,000\n@X5 年9月1日預付一年期火災保險費$45,000\n(A) 流動比率低估,速動比率低估               (B) 流動比率低估,速動比率高條\n(C) 流動比率高估,速動比率低估               (D) 流動比率高估,速動比率高估\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-24.webp",
+      "correctedText": "若X6 年發現，X5 年底漏作下列二項交易事項應作之調整分錄，則此錯誤對X5 年底流\n  動比率及速動比率之影響分別為何？\n  ① X5 年 6 月 1 日出租設備 9 個月，預收 9 個月租金$27,000\n  ② X5 年 9 月 1 日預付一年期火災保險費$45,000",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-2-25",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "25. 林生規劃暑假活動,與家人討論後找到四個可行的選項,但僅能擇一參加,而林生的個人\n偏好為(3>(L>(G2>d。林生在家人遊說下最後參加郵輪之旅,則此決策的機會成本為何?\nd崗與家人一起進行郵輪之旅\n@擔任夏令營輔導志工,獲得300小時志工時數\nG@飲料店打工,業主支付最低工資及員工福利\n@參加第二外語特訓班,結訓後可獲證明\n(A) D                     (B)@                     (CO                     (D)d\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-25.webp",
       "correctedText": "林生規劃暑假活動，與家人討論後找到四個可行的選項，但僅能擇一參加，而林生的個人\n  偏好為 ③> ①> ②> ④。林生在家人遊說下最後參加郵輪之旅，則此決策的機會成本為何？\n  ① 與家人一起進行郵輪之旅\n  ② 擔任夏令營輔導志工，獲得 300 小時志工時數\n  ③ 飲料店打工，業主支付最低工資及員工福利\n  ④ 參加第二外語特訓班，結訓後可獲證明",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-26",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "26. 小葉為荔枝供給者,其供給函數為Qs==-10+20P。荔枝市場只有10家供給者且供給函數\n皆相同,已知市場均衡價格為5?,則市場供給量為何 ?\n(A)-100+20P         (B) 100+0.2P           (C) 90                   (D) 900\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-26.webp",
+      "correctedText": "小葉為荔枝供給者，其供給函數為 Q s＝– 10 + 20 P。荔枝市場只有 10 家供給者且供給函數\n  皆相同，已知市場均衡價格為 5，則市場供給量為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-2-27",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "27. 如圖(一)所示,點E與F位於供給曲線St;點G與了H位於供給曲線S$2,Si與S2皆通過原點。\n下列敘述何者正確?\n(A)E點供給彈性與G點相同             P\n(B)F點供給彈性大於E點\n(OH點供給彈性大於G點                      S:\n(D)E點供給彈性大於F點                          E\nS>\nE                  H\nG\n圖0一 °              Q\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-27.webp",
       "correctedText": "如圖 ( 一 ) 所示，點 E 與 F 位於供給曲線 S1；點 G 與 H 位於供給曲線 S2，S1與 S2皆通過原點。\n  下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1294,16 +1537,25 @@
       "questionId": "115-09-2-28",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "28. 小明消費蛋餅、豆沙包與三明治的效用如表(一)所示。已知d蛋餅、@豆沙包與@三明治\n每個售價分別為40元、50 元及60元,考慮財貨價格下,總效用最大之消費組合數量依序\n各為多少 ?\n\nEe\n數量\n>\n表(一)     3\nx\n(A)2、1、2    (B)1、1、1     (C) 4、2、1     (D)3、3、2\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-28.webp",
       "correctedText": "小明消費蛋餅、豆沙包與三明治的效用如表 ( 一 ) 所示。已知 ① 蛋餅、② 豆沙包與 ③ 三明治\n  每個售價分別為 40 元、50 元及 60 元，考慮財貨價格下，總效用最大之消費組合數量依序\n  各為多少？\n\n             品項         總效用\n         數量      ①蛋餅   ②豆沙包   ③三明治\n                       1            20            5            15\n                       2            24            7            21\n                       3            25            8            18\n                       4            23            8            12\n     表(一)",
+      "qaStatus": "NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "questionId": "115-09-2-29",
+      "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
+      "ocrRawText": "29. 甲公司為地方型產業園區的進駐廠商,而甲公司面臨生產上至少有一種關鍵生產要素\n投信量在三年內無法改變的限制。在持續生產的狀況下,該公司長期或短期的敘述,\n下列何者正確?\n(A) 短期是指三年以內                             (B) 短期是指超過三年\n(C) 長期是指一年以內                             (D) 長期是指二年以內\n",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
+      "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-29.webp",
+      "correctedText": "甲公司為地方型產業園區的進駐廠商，而甲公司面臨生產上至少有一種關鍵生產要素\n  投入量在三年內無法改變的限制。在持續生產的狀況下，該公司長期或短期的敘述，\n  下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
     },
     {
       "questionId": "115-09-2-30",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "30. 辰氏企業為自行車製造商。下列哪一項短期成本項目與產量無關?\n(A) 總固定成本         (B) 變動成本            (C) 平均固定成本 (D) 平均成本\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-30.webp",
       "correctedText": "辰氏企業為自行車製造商。下列哪一項短期成本項目與產量無關？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1312,7 +1564,7 @@
       "questionId": "115-09-2-31",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "31. 小張於市場販售當季農產品,惟提供相同農產品的販售者及買家眾多,難以凸顯產品差\n異,除了常常發現鄰近攤位業主轉換為新面孔。買家亦視每家販售的農產品可相互替\n代,由於小張與買家皆能充分掌握市場供需狀況及價格變化,小張不能隨意調整價格,\n僅能接受市場價格。關於市場結構及收益之敘述,下列何者正確 ?\n(A) 寡占,邊際收益為負斜率              (B) 獨占性競爭,無供給線\n(C) 完全競爭,總收益為倒U型            (D) 完全競爭,平均收益等於價格\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-31.webp",
       "correctedText": "小張於市場販售當季農產品，惟提供相同農產品的販售者及買家眾多，難以凸顯產品差\n  異，除了常常發現鄰近攤位業主轉換為新面孔。買家亦視每家販售的農產品可相互替\n  代，由於小張與買家皆能充分掌握市場供需狀況及價格變化，小張不能隨意調整價格，\n  僅能接受市場價格。關於市場結構及收益之敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1321,7 +1573,7 @@
       "questionId": "115-09-2-32",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "32. 關於完全競爭廠商長期與短期的經營決策,下列何者正確?\n(A) 當變動成本低於平均成本時短期應歇業\n(B) 當價格低於平均變動成本時短期應殲業\n(C) 當價格大於平均成本時,長期應退出市場、短期應軟業\n(D) 當平均收益大於平均成本時,長期應退出市場、短期可持續營業\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-32.webp",
       "correctedText": "關於完全競爭廠商長期與短期的經營決策，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1330,7 +1582,7 @@
       "questionId": "115-09-2-33",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "33. 當廠商擁有某一市場的產品價格絕對制訂權且在追求利潤極大化下,下列敘述何者正確?\n山廠商可根據短期供給曲線訂價\n@廠商會在需求彈性大於1的狀況下生產\n@廠商面對水平需求曲線,虧損發生時應歇業\n(A) 僅心       (B) 僅@@       (C) D> @     (D) #@ > @\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-33.webp",
       "correctedText": "當廠商擁有某一市場的產品價格絕對制訂權且在追求利潤極大化下，下列敘述何者正確？\n  ① 廠商可根據短期供給曲線訂價\n  ② 廠商會在需求彈性大於 1 的狀況下生產\n  ③ 廠商面對水平需求曲線，虧損發生時應歇業",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1339,7 +1591,7 @@
       "questionId": "115-09-2-34",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "34. 假設人工智慧(AT)伺服器的寡占市場中僅存在兩間廠商,下列敘述何者正確?\n(A) 兩廠商可能會採跟跌不跟漲的訂價策略\n(B) 邊際收益曲線會因寡占市場特性而呈現膨脹缺口\n(C) 對消費者來說,兩廠商設計的AI伺服器必定具備同質性\n(D) 價格僵固現象的原因為兩廠商面對同樣需求彈性的需求線\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-34.webp",
       "correctedText": "假設人工智慧 ( AI ) 伺服器的寡占市場中僅存在兩間廠商，下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1348,7 +1600,7 @@
       "questionId": "115-09-2-35",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "35. 依邊際生產力理論,假設要素市場為完全競爭市場,某廠商僱用每單位勞動的價格為\n新臺幣1,500 元,關於勞動的邊際生產收益(MRPL)之敘述,下列何者正確?\n(A) 當MRPr> 1,500元時,廠商會多僱用勞動\n(B) 當MRPr> 1,500元時,廠商會少僱用勞動\n(C) 當MRPr< 1,500元時,廠商可達利潤極大化\n(D) 當MRPr> 1,500元時,廠商可達利潤極大化\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-35.webp",
       "correctedText": "依邊際生產力理論，假設要素市場為完全競爭市場，某廠商僱用每單位勞動的價格為\n  新臺幣 1,500 元，關於勞動的邊際生產收益 ( MRP L ) 之敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1357,7 +1609,7 @@
       "questionId": "115-09-2-36",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "36. 如圖(二) ,甲面積為線段0ef及曲線0gf間所夾的半月型面積,乙面積為0fh的三角形\n面積減去甲面積。關於吉尼係數的敘述,下列何者正確?\n100%                       f\n所\n得\n累\n積\n百\n分\n比\n0一                   h\n圖(一)        家庭戶數累積百分比 100%\n(A) 若甲面積越小,則吉尼係數越大        (B) 若甲面積越小,則所得分配越平均\n(C) 若吉尼係數三0,則乙面積三0          (D) 若吉尼係數三1,則甲面積三乙面積\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-36.webp",
       "correctedText": "如圖 ( 二 ) ，甲面積為線段 0 ef 及曲線 0 gf 間所夾的半月型面積，乙面積為 0 fh 的三角形\n  面積減去甲面積。關於吉尼係數的敘述，下列何者正確？\n                        100%                                                                       f\n              所\n              得\n              累\n              積         e\n              百     甲\n              分              g\n              比                     乙\n                                                    h                              0\n                家庭戶數累積百分比 100%                 圖(二)",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1366,7 +1618,7 @@
       "questionId": "115-09-2-37",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "37. 王某原本為月薪 38,000 元的餐廳服務員,如今調整職涯發展,辭去餐廳服務員工作後\n從事自媒體工作,月收入40,000 元,下列敘述何者正確?\n(A) 王某的準但為負2,000 元        (B) 王某無法獲得任何經濟租\n(C) 王某的移轉賺額為38,000 元                           (D) 王某的移轉賺額為40,000 元\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-37.webp",
       "correctedText": "王某原本為月薪 38,000 元的餐廳服務員，如今調整職涯發展，辭去餐廳服務員工作後\n  從事自媒體工作，月收入 40,000 元，下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1375,7 +1627,7 @@
       "questionId": "115-09-2-38",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "38. 根據投資儲薯說,利率是儲苗的報酬及投資的成本,利率越高則儲蔡量越多,但投資量\n則越少。下列敘述何者正確?\n(A) 當儲落增加,投資減少時,均衡利率上升\n(B) 當投資增加,儲苗減少時,均衡利率下降\n(C) 當投資增加,儲蔓保持不變時,均衡利率上升\n(D) 當投資增加,儲苗保持不變時,均衡利率下降\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-38.webp",
       "correctedText": "根據投資儲蓄說，利率是儲蓄的報酬及投資的成本，利率越高則儲蓄量越多，但投資量\n  則越少。下列敘述何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1384,7 +1636,7 @@
       "questionId": "115-09-2-39",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "39. 政府為促使經濟成長,針對居留於國內居民皆發放消費券,下列何者為最有可能發生的\n影響?\n(A) 基本薪資調漲                                                        (B) 國民所得減少\n(C) 政府消費性支出減少                          (D) 國內支出毛額成長\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-39.webp",
       "correctedText": "政府為促使經濟成長，針對居留於國內居民皆發放消費券，下列何者為最有可能發生的\n  影響？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1393,7 +1645,7 @@
       "questionId": "115-09-2-40",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "40. 若當期年的實質 GDP 為 1,600 億元,基期年的實質 GDP 為 1,200 億元,且當期年相較\n於基期年的物價上汪20%,則GDP平減指數及當期年的名目GDP分別為何 ?\n(A) 80,1,440億元                     (B) 80,1,920億元\n(C) 120,1,440億元                   (D) 120,1,920億元\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-40.webp",
       "correctedText": "若當期年的實質 GDP 為 1,600 億元，基期年的實質 GDP 為 1,200 億元，且當期年相較\n  於基期年的物價上漲 20 %，則 GDP 平減指數及當期年的名目 GDP 分別為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1402,7 +1654,7 @@
       "questionId": "115-09-2-41",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "AL. 關於凱因斯(Keynes)投資乘數之敘述,下列何者正確?\ndd若邊際消費傾向三0.8時,則投資乘數為何 ?\n@當邊際消費傾向改變對投資乘數的影響為何 ?\n(A) (D1.25、G@邊了消費傾向越小,投資乘數不變\n(B) 0D1.25、G@邊了消費傾向越小,投資乘數越大\n(C) 05、G@邊了消費傾向越小,投資乘數越大\n(D) (05、@邊險消費傾向越大,投資乘數越大\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-41.webp",
       "correctedText": "關於凱因斯 ( Keynes ) 投資乘數之敘述，下列何者正確？\n  ① 若邊際消費傾向＝ 0.8 時，則投資乘數為何？\n  ② 當邊際消費傾向改變對投資乘數的影響為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1411,7 +1663,7 @@
       "questionId": "115-09-2-42",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "42. 加入政府部門的凱因斯(Keynes)橫型Y =C+1+G> C=20+0.6(Y-T) > #HFRT = 40 ~\nY為所得、投資I三120、政府支出G = 250 ,則該國政府減稅10,均衡所得如何變動?\n(A) 增加10               (B) 減少10               (C) 增加15               (D) 減少15\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-42.webp",
       "correctedText": "加入政府部門的凱因斯 ( Keynes ) 模型 Y ＝ C ＋ I ＋ G，C ＝ 20 ＋ 0.6 ( Y – T ) ，定額稅 T ＝ 40 、\n  Y 為所得、投資 I ＝ 120 、政府支出 G ＝ 250 ，則該國政府減稅 10 ，均衡所得如何變動？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1420,7 +1672,7 @@
       "questionId": "115-09-2-43",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "43. 在不同經濟狀況下,中央銀行可採行之貨幣政策的敘述,下列何者正確?\n|__| 經濟狀況 | 公開市場操作 | 法定準備率 |重貼現率|\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-43.webp",
       "correctedText": "在不同經濟狀況下，中央銀行可採行之貨幣政策的敘述，下列何者正確？\n\n     經濟狀況  公開市場操作  法定準備率 重貼現率",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1429,7 +1681,7 @@
       "questionId": "115-09-2-44",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "44. 因受美國加徵關稅影響,政府針對出口到美國市場的廠商提供紓困貸款,是屬於下列\n何種經濟政策 ?\n(A) 擴張性的財政政策                            (B) 緊縮性的財政政策\n(C) 擴張性的貨幣政策                             (D) 緊縮性的貨幣政策\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-44.webp",
       "correctedText": "因受美國加徵關稅影響，政府針對出口到美國市場的廠商提供紓困貸款，是屬於下列\n  何種經濟政策？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1438,7 +1690,7 @@
       "questionId": "115-09-2-45",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "45. 圖(三)為臺灣外匯市場,新臺幣與美元的兌換採應付匯率,假設台積電最新製程的良率\n由50%提升到75%,吸引美元資金大幅湧進我國外匯市場,下列敘述何者正確?\n匯\nD,     Si\nE, SK\n1\n|\n1\nm=) °    Q' 外匯數量Q\n(A) 需求曲線Di 右移,造成新臺幣升值,不利出口\n(B) 需求曲線Di左移,造成新臺幣貶值,有利進品\n(C) 供給曲線si右移,造成新臺幣升值,不利出口\n(D) 供給曲線Si左移,造成新臺幣貶值,有利進品\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-45.webp",
       "correctedText": "圖 ( 三 ) 為臺灣外匯市場，新臺幣與美元的兌換採應付匯率，假設台積電最新製程的良率\n  由 50 % 提升到 75 %，吸引美元資金大幅湧進我國外匯市場，下列敘述何者正確？\n\n               匯\n               率\n                          D 1               S1\n\n\n                           E 1\n\n\n\n\n                               0         Q1                         外匯數量Q                  圖(三)",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1447,7 +1699,7 @@
       "questionId": "115-09-2-46",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "46. 關於兩個國家在兩種商品貿易上的絕對利益與比較利益之敘述,下列何者正確?\ndd各自能生產兩種商品時,一國在兩種商品上都可能擁有絕對利益\n@各自能生產兩種商品時,一國在兩種商品上可同時擁有比較利益\nG@即使一方在生產兩種商品上均有絕對利益, 兩國仍能從貿易中獲益\n一國在兩種商品中擁有絕對利益,則該國在兩種商品上也會擁有比較利益\n(A) D> @       (B)O+@       (0 @、d       (D)@+@®\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-46.webp",
       "correctedText": "關於兩個國家在兩種商品貿易上的絕對利益與比較利益之敘述，下列何者正確？\n  ① 各自能生產兩種商品時，一國在兩種商品上都可能擁有絕對利益\n  ② 各自能生產兩種商品時，一國在兩種商品上可同時擁有比較利益\n  ③ 即使一方在生產兩種商品上均有絕對利益，兩國仍能從貿易中獲益\n  ④ 一國在兩種商品中擁有絕對利益，則該國在兩種商品上也會擁有比較利益",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1456,7 +1708,7 @@
       "questionId": "115-09-2-47",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "47. 關於經濟成長的敘述,下列何者正確?\n(A) 經濟成長率是以名目GDP的年增率衡量\n(B) 經濟成長率是以實質GDP的年增率衡量\n(C) 經濟成長率是以平均每人名目GDP的年增率衡量\n(D) 經濟成長是因技術進步造成整條生產可能曲線向內移動\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-47.webp",
       "correctedText": "關於經濟成長的敘述，下列何者正確？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1465,7 +1717,7 @@
       "questionId": "115-09-2-48",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "48. 下列敘述何者正確 ?\nd成本推動型通膨係因生產成本攀升,造成總需求減少,價格上升的通膨\n@痛苦指數是指失業率與物價上漲率造成社會大眾的痛苦程度\n@停滯性通膨說明高失業率與高物價上濃率同時並存的現象\n@需求拉動型通膨係因總需求增加,造成價格上揚的通膨\n(A) ED > @     (B) (2@ > @     (O#O-O@-O© O#LO-O-@\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-48.webp",
       "correctedText": "下列敘述何者正確？\n  ① 成本推動型通膨係因生產成本攀升，造成總需求減少，價格上升的通膨\n  ② 痛苦指數是指失業率與物價上漲率造成社會大眾的痛苦程度\n  ③ 停滯性通膨說明高失業率與高物價上漲率同時並存的現象\n  ④ 需求拉動型通膨係因總需求增加，造成價格上揚的通膨",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1474,7 +1726,7 @@
       "questionId": "115-09-2-49",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "49. 甲公司為適用加值型營業稅廠商,外銷出口適用零稅率。假設甲公司除外銷代工訂單\n外無其他交易,帳上亦無上期累積留抵稅額,在不考慮所得稅下,甲公司 X1 年全年之\n獲利金額與營業稅應退稅額分別為多少?\n\n(A) $172,000,000 ,$8,600,000\n(B) $172,000,000 » $600,000\n(C) $187,000,000 » $9,350,000\n(D) $187,000,000 » $600,000\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-49.webp",
       "correctedText": "甲公司為適用加值型營業稅廠商，外銷出口適用零稅率。假設甲公司除外銷代工訂單\n  外無其他交易，帳上亦無上期累積留抵稅額，在不考慮所得稅下，甲公司X1 年全年之\n  獲利金額與營業稅應退稅額分別為多少？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
@@ -1483,7 +1735,7 @@
       "questionId": "115-09-2-50",
       "engine": "Tesseract chi_tra+eng PSM6 (uncorrected candidate)",
       "ocrRawText": "50. 美國政府因急於改善對臺灣貿易逆差惡化的狀況下,在甲公司第三批貨物生產交貨完成\n前(X1 年9月29日)施壓臺灣,迫使新臺幣升值,使得X1年9月30日的匯率由原來預估\n的1:35下跌為實際交貨時的1:30。假設其他條件不變,當年度甲公司以新臺幣計價的\n實際與預估的外銷收和差異為何 ?\n\n(A) 增加15,000,000 元                              (B) 增加10,000,000 元\n(C) 減少15,000,000 元                                (D) 減少10,000,000 元\n",
-      "ocrDate": "2026-10-22T00:43:55.046158+00:00",
+      "ocrDate": "2026-10-22T00:49:52.878859+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/09-2/115-09-2-50.webp",
       "correctedText": "美國政府因急於改善對臺灣貿易逆差惡化的狀況下，在甲公司第三批貨物生產交貨完成\n  前 ( X1 年 9 月 29 日 ) 施壓臺灣，迫使新臺幣升值，使得 X1 年 9 月 30 日的匯率由原來預估\n  的 1 : 35 下跌為實際交貨時的 1 : 30。假設其他條件不變，當年度甲公司以新臺幣計價的\n  實際與預估的外銷收入差異為何？",
       "qaStatus": "NOT_VISUALLY_VERIFIED"
