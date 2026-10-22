@@ -161,7 +161,8 @@
       throw Error('題庫驗收清單格式不符');
     const verified=data.questions;
     if(!verified.length) {
-      empty('目前沒有通過「單題圖片、OCR、最終官方答案、獨立解題、四選項教學及計算式」全部驗收的題目。候選題不會提前供學生作答。');
+      empty('目前沒有通過全部驗收而可正式作答的題目。以下先提供已完成 WebP 目視 QA 的原題，完整解答後續逐題自動補入。');
+      showImagePreview().catch(e=>console.error('原圖預覽暫不可用',e));
       return;
     }
     const keyset=new Set();
@@ -241,6 +242,7 @@
     status('已通過全部驗收並開放 '+verified.length+' 題。老師會先說高職的解法，再用國小學生聽得懂的白話說明；需要計算的題目會列完整步驟，非計算題自動隱藏。');
     const statusCard=document.getElementById('verifiedStatus');
     if(statusCard)statusCard.style.marginBottom='14px';
+    showImagePreview(expectedIds).catch(e=>console.error('待教學原圖預覽暫不可用',e));
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
     empty('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
