@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>速讀｜題庫接入平台部署進度表</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f7fc;--fg:#131827;--card:#fff;--sub:#485263;--line:#ccd5e4;--blue:#355ff1;--soft:#e8ecf7;--good:#146a50;--warn:#a24d08}
+@media(prefers-color-scheme:dark){:root{--bg:#07090e;--fg:#f6f7fd;--card:#191e29;--sub:#c7d0df;--line:#394459;--soft:#30394b;--blue:#a7b9ff;--good:#64d6ad;--warn:#ffd28c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,'Noto Sans TC',sans-serif}main{max-width:1060px;padding:22px 16px 80px;margin:auto}
+h1{font-size:clamp(24px,5vw,35px);line-height:1.25;margin:5px 0 10px}h2{font-size:23px;margin:0 0 8px}p{margin:7px 0;color:var(--sub)}.intro{padding:20px;background:var(--card);border:1px solid var(--line);border-radius:22px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.nav a{color:var(--fg);background:var(--card);text-decoration:none;border:1px solid var(--line);border-radius:12px;min-height:46px;padding:9px 13px;display:inline-flex;align-items:center;font-weight:750}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin-top:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:18px;min-width:0}
+.numbers{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}.metric{flex:1;min-width:92px;border-radius:12px;padding:9px;background:var(--soft);text-align:center}.metric strong{display:block;font-size:24px}.metric span{font-size:13px;color:var(--sub)}
+.bar{height:12px;border-radius:99px;background:var(--soft);overflow:hidden;margin:7px 0 12px}.bar span{display:block;height:100%;background:var(--good);width:0%;border-radius:99px;transition:width .3s}.bar.image span{background:var(--blue)}
+.legend{display:flex;justify-content:space-between;gap:10px;font-weight:800}.warn{color:var(--warn)}.note{font-size:14px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px 6px;white-space:nowrap}td:not(:first-child),th:not(:first-child){text-align:right}
+footer{margin-top:22px;padding-top:13px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);overflow-wrap:anywhere}
+</style>
+</head>
+<body><main>
+<section class="intro"><h1>題庫接入平台部署進度表</h1><p>114 年與 115 年分開追蹤「原圖擷取、逐題 WebP 目視、OCR 校對、最終官方答案、AI 獨立解題、教學驗收、學生端正式開放」。綠色進度只計入完成全部關卡的題目。</p>
+<nav class="nav" aria-label="速讀學習入口"><a href="./v4-115-multisubject-review-demo.html">保留原 35 題 Demo</a><a href="./v4-115-multisubject-review-demo.html?year=115">115 年正式驗收題</a><a href="./v4-115-multisubject-review-demo.html?year=114">114 年正式驗收題</a></nav>
+<p id="liveSha" class="note" aria-live="polite">正式 LIVE 版本：讀取中…</p></section>
+<div class="grid" id="cards"><article class="card">正在讀取已發布的逐年 QA 快照…</article></div>
+<footer><strong>驗收定義：</strong>僅有裁圖／OCR／答案候選並不足以供學生作答。高職解題、國小白話逐選項說明，與適用的完整計算式同樣是發布必要條件。所有比例依最新已發布進度快照顯示，不把未通過 QA 視為完成。</footer>
+</main>
+<script>
+'use strict';
+const $$=(name,text,className)=>{const e=document.createElement(name);if(text!==undefined)e.textContent=String(text);if(className)e.className=className;return e};
+const pct=(n,total)=>total>0?(Math.round(1000*n/total)/10):0;
+fetch('./release.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(x=>{
+ document.getElementById('liveSha').textContent=x?.commit?'正式 LIVE 已發布版本：'+x.commit:'正式 LIVE SHA 未取得（請以 GitHub Pages Actions 再核對）';
+}).catch(()=>document.getElementById('liveSha').textContent='目前無法取得正式 LIVE 版次');
+function meter(card,label,num,den,kind){
+ const row=$$('div',undefined,'legend');row.append($$('span',label),$$('span',num+' / '+den+'（'+pct(num,den)+'%）'));
+ const bar=$$('div',undefined,'bar '+(kind||''));bar.setAttribute('role','progressbar');bar.setAttribute('aria-label',label);bar.setAttribute('aria-valuemin','0');bar.setAttribute('aria-valuemax',String(den));bar.setAttribute('aria-valuenow',String(num));
+ const fill=$$('span');fill.style.width=Math.min(100,pct(num,den))+'%';bar.append(fill);card.append(row,bar);
+}
+function render(year,r){
+ const card=$$('article',undefined,'card');card.append($$('h2',year+' 年度題庫'));
+ const m=$$('div',undefined,'numbers');
+ for(const [name,value] of [['候選題數',r.candidate],['單題 WebP',r.webpGenerated],['學生可用',r.approvedCount]]){
+  const box=$$('div',undefined,'metric');box.append($$('strong',value),$$('span',name));m.append(box)
+ }
+ card.append(m);
+ meter(card,'單題圖片逐題目視 QA',r.webpQaPass,r.expected,'image');
+ meter(card,'OCR 與題幹／選項 QA',r.ocrQaPass,r.expected);
+ meter(card,'最終官方答案與更正 QA',r.officialFinalQaPass,r.expected);
+ meter(card,'整題教學與獨立解題皆通過',r.approvedCount,r.expected);
+ card.append($$('p','AI 獨立解題：一致 '+r.aiSolvedMatched+'／不一致 '+r.aiMismatch+'／尚未核對 '+r.aiNotChecked,'note'));
+ card.append($$('p','共用材料圖片已驗收 '+r.sharedWebpQaPass+' / '+r.sharedWebpTotal+' 組；正式開放依驗收版本與 Pages CI 為準','note'));
+ const subjects=Object.entries(r.subjects||{});
+ if(subjects.length){
+  const wrap=$$('div',undefined,'table-wrap'),table=$$('table');
+  const top=$$('thead'),tr=$$('tr');
+  for(const label of ['科目','候選','圖片QA','已開放'])tr.append($$('th',label));
+  top.append(tr);table.append(top);const body=$$('tbody');
+  for(const [s,v] of subjects){
+   const tr=$$('tr');[s,v.candidate,v.webpQaPass,v.studentReady].forEach(x=>tr.append($$('td',x)));body.append(tr);
+  }table.append(body);wrap.append(table);card.append(wrap);
+ }
+ const action=$$('a','進入 '+year+' 年已驗收題庫');
+ action.href='./v4-115-multisubject-review-demo.html?year='+year;
+ action.style.cssText='font-weight:800;display:inline-block;min-height:44px;padding:10px 0;color:var(--blue)';
+ card.append(action);
+ return card;
+}
+fetch('./data/approved/progress.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{
+ const cards=document.getElementById('cards');cards.replaceChildren();
+ for(const year of ['115','114']){
+  if(!data.years?.[year])throw Error(year+' 年未有快照');
+  cards.append(render(year,data.years[year]));
+ }
+}).catch(e=>document.getElementById('cards').textContent='目前無法讀取年度 QA 進度，未宣稱已部署完成：'+e.message);
+</script>
+</body></html>

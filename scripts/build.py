@@ -17,6 +17,8 @@ PUBLIC_DATA_FILES = {
     "sudu/data/official-paper-catalog.json", "sudu/data/corpus-audit.json",
     "sudu/data/hover-cards.json", "sudu/data/exam-schedule.json",
     "sudu/data/original/index.json", "sudu/data/original/answers.json",
+    "sudu/data/approved/114.json", "sudu/data/approved/115.json",
+    "sudu/data/approved/progress.json",
 }
 PRIVATE_NAME = re.compile(r"(?:^|[-_.])(?:private|secret|credentials?|tokens?|students?|backups?|restore|sessions?|\.env)(?:$|[-_.])", re.I)
 
@@ -55,6 +57,8 @@ def included(path):
     if len(path.parts) == 2:
         return suffix in {".html", ".htm", ".js", ".css"}
     if text in PUBLIC_DATA_FILES:
+        return True
+    if re.fullmatch(r"sudu/data/approved/webp/(?:114|115)/(?:114|115)-(?:00-C|00-E|00-MB|09-1|09-2)-[0-9]{2}\.webp", text):
         return True
     if re.fullmatch(r"sudu/data/years/\d{2,3}\.json", text):
         return True
@@ -182,6 +186,17 @@ def build():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
         copied += 1
+    # Apply a progressive, QA-gated adapter to the existing V4 file at build
+    # time. The source HTML, embedded 35-question Demo, and its keys stay intact.
+    v4 = output / "sudu" / "v4-115-multisubject-review-demo.html"
+    if v4.is_file():
+        original_v4 = v4.read_text(encoding="utf-8")
+        needle = "</body>"
+        if original_v4.count(needle) != 1:
+            raise ValueError("Missing unique V4 closing body tag")
+        v4.write_text(original_v4.replace(needle,
+            '<script src="./verified-questions-runtime.js"></script>\n</body>'),
+            encoding="utf-8")
     crop_manifest = generate_demo_question_crops(output)
     entries = catalog(ROOT)
     template = (ROOT / "index.html").read_text(encoding="utf-8")

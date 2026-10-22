@@ -1,0 +1,99 @@
+name: Automatically synchronize QA-approved 114 and 115 questions
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - .github/workflows/sudu-verified-autopublish.yml
+  workflow_run:
+    workflows:
+      - Verify 7581707 official exam data quality
+      - 114 source-only WebP OCR answer and SQLite draft
+      - 115 data-only single-question WebP and OCR drafts
+    types: [completed]
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: sudu-verified-autopublish
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_repository.full_name == 'homelux-huang/7581707')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out latest production main without resetting user commits
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Read isolated 114/115 official QA data (no write)
+        uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          path: _source_qa
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/processed/115
+            sudu/DEMO_VISUAL_QA.md
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Decode WebP only when an entire question passed QA
+        run: python -m pip install -q pillow
+      - name: Pin source subtrees and skip updates unrelated to 114/115
+        id: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          TREE_114="$(git -C _source_qa rev-parse 'HEAD:sudu/data/processed/114')"
+          TREE_115="$(git -C _source_qa rev-parse 'HEAD:sudu/data/processed/115')"
+          SIGNATURE="$(printf '%s\n%s\n' "$TREE_114" "$TREE_115" | sha256sum | cut -d' ' -f1)"
+          OLD="$(python -c 'import json;print(json.load(open("sudu/data/approved/progress.json")).get("provenance",{}).get("sourceTreeSignature",""))')"
+          echo "signature=$SIGNATURE" >> "$GITHUB_OUTPUT"
+          echo "commit=$(git -C _source_qa rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          if [ "$SIGNATURE" = "$OLD" ]; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+            echo "No relevant source-data change"
+          else
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Release only SHA-pinned and independently verified question records
+        if: steps.snapshot.outputs.updated == 'true'
+        env:
+          SRC_COMMIT: ${{ steps.snapshot.outputs.commit }}
+          SRC_SIGNATURE: ${{ steps.snapshot.outputs.signature }}
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$SRC_COMMIT" --signature "$SRC_SIGNATURE"
+          python scripts/sudu_verified_publish.py check
+      - name: Non-force push and dispatch SAME official Pages release gate
+        if: steps.snapshot.outputs.updated == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git add -A sudu/data/approved
+          if git diff --cached --quiet; then
+            echo "No new approved-data or progress changes"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'sync: QA-approved 114/115 data and yearly progress'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          RELEASE_SHA="$(git rev-parse HEAD)"
+          # Existing pages.yml starts automatically on this main push. No duplicate dispatch.
+          echo "Main updated at $RELEASE_SHA; the mandatory Pages push gate now executes."
