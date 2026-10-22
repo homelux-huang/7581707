@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 import hashlib
 import io
 import json
+import re
 from pathlib import Path
 from PIL import Image
 
@@ -94,6 +95,41 @@ def main():
             current.update(value)
         else:
             data["sharedMaterialCrops"].append(value)
+    # Reuse the 30 already individually reviewed Demo crops ONLY if exact
+    # pixels match the documented 2026-10-21 visual-QA SHA-256 per image.
+    # This is evidence reuse, not a fresh new vision inspection. Accounting
+    # inline items have no 30-row SHA mapping and are not promoted here.
+    qa_file=ROOT/"sudu/DEMO_VISUAL_QA.md"
+    qa_bytes=qa_file.read_bytes()
+    qa_sha=digest(qa_bytes)
+    reviewed=0
+    qa_regex=re.compile(r"^\\|\\s*([^|]+)\\s*\\|\\s*(\\d+)\\s*\\|[^|]*\\|[^|]*\\|\\s*PASS\\s*\\|\\s*`([a-f0-9]{64})`\\s*\\|")
+    for line in qa_bytes.decode("utf-8").splitlines():
+        found=qa_regex.match(line)
+        if not found:continue
+        subject,num,hashvalue=found.group(1).strip(),int(found.group(2)),found.group(3)
+        possible=[entry for entry in data["items"]
+                  if entry["subject"].replace(" ","")==subject.replace(" ","")
+                  and entry["originalQuestionNumber"]==num]
+        if len(possible)!=1:
+            raise ValueError("QA subject/number ambiguous "+subject+str(num))
+        entry=possible[0]
+        if entry["sha256"]!=hashvalue:
+            raise ValueError("Previously visually reviewed pixel digest changed: "+entry["questionId"])
+        entry["qaStatus"]="PASS"
+        entry["visualReviewEvidence"]={
+          "reviewedAt":"2026-10-21",
+          "reviewMethod":"historical_individual_visual_QA_reused_by_exact_output_sha256",
+          "reference":"sudu/DEMO_VISUAL_QA.md",
+          "referenceSha256":qa_sha,
+          "reviewedSha256":hashvalue,
+          "freshReviewInThisRun":False,
+          "criteria":"original number, stem, 4 options, diagrams, no adjacent question or header/footer"
+        }
+        reviewed+=1
+    if reviewed!=30:
+        raise ValueError("Expected exactly 30 separately SHA-recorded Demo WebP reviews")
+    data["historicalVisualQaReused"]=reviewed
     data["refinements"]=data.get("refinements",[])+[{
         "revision":RULE,"timestamp":datetime.now(timezone.utc).isoformat(),
         "notes":"Q1 original maths diagram caption and professional shared material groups. Prior v1/v2 images retained for traceability.",
