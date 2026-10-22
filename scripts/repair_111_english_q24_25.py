@@ -22,7 +22,7 @@ def sha(b):return hashlib.sha256(b).hexdigest()
 def main():
     imbytes=SRC.read_bytes()
     with Image.open(io.BytesIO(imbytes)) as im:
-        assert im.format=="WEBP" and im.size==(1400,1981)
+        assert im.format=="WEBP" and im.size==(1400,1980)
     manifest=read("webp-manifest.json")
     corpus=read("questions.json")
     visual=read("VISUAL_QA.json")
