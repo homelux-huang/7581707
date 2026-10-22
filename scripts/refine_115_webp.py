@@ -58,6 +58,34 @@ def main():
         item["qaStatus"]="DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA"
         item["cropMethod"]="refined_source_pixel_crop_after_visual_QA_detection"
         item.setdefault("issues",[]).append("v2_clip_cut_off_figure_caption_fixed_by_new_candidate_crop")
+    # The 2026-10-22 visual crop QA found two independent defects that a
+    # filename/hash/decode-only audit did not catch. Source pages remain intact.
+    # Q13: option graphs C/D are cut off; Q20: figure IV lower edge/caption
+    # is clipped. Store corrected source-pixel-only drafts under a new version.
+    v5_question_repairs={
+        "115-00-MB-13":(5,(90,174,1310,933),
+                        "previous_candidate_missing_lower_C_D_option_graphs"),
+        "115-00-MB-20":(7,(90,469,1310,902),
+                        "previous_candidate_missing_figure_IV_lower_edge_and_caption"),
+    }
+    for qid,(page_num,box,reason) in v5_question_repairs.items():
+        item=q[qid]
+        nxt=q[f"115-00-MB-{item['originalQuestionNumber']+1:02d}"]
+        if nxt["sourcePage"]==page_num and box[3]>nxt["crop"][1]:
+            raise ValueError(f"Candidate crop overlaps next question: {qid}")
+        source=page("00-MB",page_num)
+        corrected=write_original_crop(source,box,OUT/"webp-v5"/"00-MB"/(qid+".webp"))
+        item.update(corrected)
+        item["processingVersion"]="v5-math-figure-boundary-repair-draft"
+        item["qaStatus"]="DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA"
+        item["cropMethod"]="original_pixel_replacement_after_explicit_visual_defect"
+        item.setdefault("issues",[]).append(reason)
+        item["visualDefectHistory"]={
+            "detectedOn":"2026-10-22",
+            "originalCandidateVersion":"webp-v2",
+            "finding":reason,
+            "repairStatus":"generated_pending_independent_visual_recheck",
+        }
     shared={e["sharedMaterialId"]:e for e in data["sharedMaterialCrops"]}
     specs=[
       # Correct English axis labels/last sentence without including first question.
@@ -147,8 +175,8 @@ def main():
     data["historicalVisualQaReused"]=reviewed
     data["refinements"]=data.get("refinements",[])+[{
         "revision":RULE,"timestamp":datetime.now(timezone.utc).isoformat(),
-        "notes":"Q1 original maths diagram caption and professional shared material groups. Prior v1/v2 images retained for traceability.",
-        "questionOverrides":["115-00-MB-01"],
+        "notes":"Q1 original maths diagram caption, Q13 lower graph options and Q20 lower figure IV corrected; material groups are source-only. Earlier versions retained.",
+        "questionOverrides":["115-00-MB-01","115-00-MB-13","115-00-MB-20"],
         "sharedMaterials":[x[0] for x in specs]
     }]
     MANIFEST.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
