@@ -1,64 +1,104 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "year": 115,
-  "branch": "data/115-full-year-question-assets",
-  "mainBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-  "scope": "JSON structural audit using exact GitHub-branch file; not crop visual QA and not SQLite execution",
-  "performed": "2026-10-22",
-  "checks": {
-    "canonicalIds": {
-      "status": "PASS",
-      "count": 205
+  "structuralStatus": "PASS",
+  "blockingFailures": [],
+  "webpImageVisualReview": "NOT_COMPLETE",
+  "officialAnswers": "SHA-pinned PDF textual agreement, independent review not complete",
+  "sqlite": "SQLITE_ROUNDTRIP_PASS",
+  "published": "NO",
+  "integration": "NO",
+  "stats": {
+    "國文": {
+      "officialExpectedQuestions": 38,
+      "candidateRecords": 38,
+      "generatedPerQuestionWebp": 38,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 38,
+      "nativePdfOrManualTextAvailable": 38,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 38,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 38,
+      "needsFullVisualReview": 33
     },
-    "uniqueIds": {
-      "status": "PASS",
-      "duplicates": 0
+    "英文": {
+      "officialExpectedQuestions": 42,
+      "candidateRecords": 42,
+      "generatedPerQuestionWebp": 42,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 42,
+      "nativePdfOrManualTextAvailable": 42,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 42,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 42,
+      "needsFullVisualReview": 37
     },
-    "paperCounts": {
-      "status": "PASS",
-      "counts": {
-        "00-C": 38,
-        "00-E": 42,
-        "00-MB": 25,
-        "09-1": 50,
-        "09-2": 50
-      }
+    "數學B": {
+      "officialExpectedQuestions": 25,
+      "candidateRecords": 25,
+      "generatedPerQuestionWebp": 25,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 25,
+      "nativePdfOrManualTextAvailable": 25,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 25,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 25,
+      "needsFullVisualReview": 20
     },
-    "noUnreviewedVerifiedFlags": {
-      "status": "PASS",
-      "violatingIds": []
+    "商業概論": {
+      "officialExpectedQuestions": 25,
+      "candidateRecords": 25,
+      "generatedPerQuestionWebp": 25,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 25,
+      "nativePdfOrManualTextAvailable": 25,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 25,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 25,
+      "needsFullVisualReview": 20
     },
-    "optionsComplete": {
-      "status": "INCOMPLETE",
-      "incompleteIds": [
-        "115-00-MB-02",
-        "115-00-MB-13",
-        "115-09-2-08"
-      ]
+    "數位科技": {
+      "officialExpectedQuestions": 25,
+      "candidateRecords": 25,
+      "generatedPerQuestionWebp": 25,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 25,
+      "nativePdfOrManualTextAvailable": 25,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 25,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 25,
+      "needsFullVisualReview": 20
     },
-    "officialAnswerLetterSyntax": {
-      "status": "PASS"
+    "會計學": {
+      "officialExpectedQuestions": 24,
+      "candidateRecords": 24,
+      "generatedPerQuestionWebp": 24,
+      "visualQaPass": 0,
+      "rawOcrEngineOutput": 12,
+      "nativePdfOrManualTextAvailable": 24,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 24,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 24,
+      "needsFullVisualReview": 24
     },
-    "officialAnswerIndependentVerification": {
-      "status": "NOT_DONE",
-      "count": 0
-    },
-    "singleQuestionCrops": {
-      "status": "NOT_DONE",
-      "existingDemoCropReferences": 30,
-      "committed115Crops": 0
-    },
-    "OCRVisualCorrection": {
-      "status": "PARTIAL",
-      "visualCorrectionOverlay": "sudu/data/processed/115/corrections.json"
-    },
-    "sqliteImportReadback": {
-      "status": "NOT_RUN",
-      "reason": "Local execution environment cannot access the GitHub repository over the network; scripts committed for execution in clone or CI."
-    },
-    "studentHistoryAndDemoRegression": {
-      "status": "NOT_RUN",
-      "reason": "No main UI or records changed; future main development session must validate after merge."
+    "經濟學": {
+      "officialExpectedQuestions": 26,
+      "candidateRecords": 26,
+      "generatedPerQuestionWebp": 26,
+      "visualQaPass": 5,
+      "rawOcrEngineOutput": 26,
+      "nativePdfOrManualTextAvailable": 26,
+      "questionVerified": 0,
+      "officialAnswerMatchedPdfText": 26,
+      "officialAnswerIndependentlyVerified": 0,
+      "sqliteRecordCount": 26,
+      "needsFullVisualReview": 21
     }
   }
 }
