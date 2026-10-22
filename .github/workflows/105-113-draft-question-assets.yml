@@ -51,6 +51,11 @@ jobs:
           failures=0
           for YEAR in 113 112 111 110 109 108 107 106 105; do
             echo "::group::TCTE year ${YEAR} DRAFT"
+            if [ -f "sudu/data/processed/${YEAR}/inventory.json" ]; then
+              echo "Existing year ${YEAR} draft preserved; no rebuild of prior QA or assets"
+              echo "::endgroup::"
+              continue
+            fi
             if python scripts/build_105_113_draft_assets.py --year "$YEAR"; then
               python - "$YEAR" <<'PY'
           import json,sys,hashlib,sqlite3
@@ -77,8 +82,20 @@ jobs:
               git add "sudu/data/processed/${YEAR}"
               if ! git diff --cached --quiet; then
                 git commit -m "data(${YEAR}): source-only WebP OCR answer candidates and isolated SQLite (NOT QA)"
-                git pull --rebase origin qa/114-115-official-visual-review
-                git push origin HEAD:qa/114-115-official-visual-review
+                pushed=0
+                for attempt in 1 2 3 4 5; do
+                  git pull --rebase origin qa/114-115-official-visual-review
+                  if git push origin HEAD:qa/114-115-official-visual-review; then
+                    pushed=1
+                    break
+                  fi
+                  echo "Concurrent commit; retrying safe non-forced push (attempt ${attempt})"
+                  sleep 3
+                done
+                if [ "$pushed" -ne 1 ]; then
+                  echo "::error::Could not safely push year ${YEAR}; refusing force-push"
+                  exit 1
+                fi
               fi
             else
               echo "::error::Year ${YEAR} draft build failed, continuing to inspect other years"
