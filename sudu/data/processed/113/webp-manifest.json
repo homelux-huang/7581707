@@ -15,7 +15,7 @@
       "officialQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "sourcePage": 2,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
@@ -34,7 +34,16 @@
         1220,
         126
       ],
-      "outputSha256": "a77adc362d482edc9e26aca943b4dd00f6cd97940a9ebf035a55db31b07a2f57"
+      "outputSha256": "a77adc362d482edc9e26aca943b4dd00f6cd97940a9ebf035a55db31b07a2f57",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/113/VISUAL_QA_BATCH_01_2026-10-22.json",
+        "reviewedSha256": "a77adc362d482edc9e26aca943b4dd00f6cd97940a9ebf035a55db31b07a2f57",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "note": "題1：錯別字，A–D 選項完整，無題2文字"
+      }
     },
     {
       "questionId": "113-00-C-02",
@@ -46,7 +55,7 @@
       "officialQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "sourcePage": 2,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
@@ -65,7 +74,16 @@
         1220,
         199
       ],
-      "outputSha256": "769248837ce6c6dedc522c3509ecff27c28c88c6cd9359625c4a8593efa4b5a3"
+      "outputSha256": "769248837ce6c6dedc522c3509ecff27c28c88c6cd9359625c4a8593efa4b5a3",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/113/VISUAL_QA_BATCH_01_2026-10-22.json",
+        "reviewedSha256": "769248837ce6c6dedc522c3509ecff27c28c88c6cd9359625c4a8593efa4b5a3",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "note": "題2：「如」用法，題幹與四項完整，不含題1/3"
+      }
     },
     {
       "questionId": "113-00-C-03",
@@ -77,7 +95,7 @@
       "officialQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "sourcePage": 2,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
@@ -96,7 +114,16 @@
         1220,
         235
       ],
-      "outputSha256": "c2164eeb97e760e557a7d40ddb94c45ef0aec9a30e5a3a81f4bc0dbd37a1db12"
+      "outputSha256": "c2164eeb97e760e557a7d40ddb94c45ef0aec9a30e5a3a81f4bc0dbd37a1db12",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/113/VISUAL_QA_BATCH_01_2026-10-22.json",
+        "reviewedSha256": "c2164eeb97e760e557a7d40ddb94c45ef0aec9a30e5a3a81f4bc0dbd37a1db12",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "note": "題3：修辭詞語，題幹分行及四項保留"
+      }
     },
     {
       "questionId": "113-00-C-04",
@@ -108,7 +135,7 @@
       "officialQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "sourcePage": 2,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
@@ -127,7 +154,16 @@
         1220,
         309
       ],
-      "outputSha256": "29bc1934a2fb5dff71c578355be203fa5529472584a60a3fc488c09e24f96cbb"
+      "outputSha256": "29bc1934a2fb5dff71c578355be203fa5529472584a60a3fc488c09e24f96cbb",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/113/VISUAL_QA_BATCH_01_2026-10-22.json",
+        "reviewedSha256": "29bc1934a2fb5dff71c578355be203fa5529472584a60a3fc488c09e24f96cbb",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "note": "題4：富都青年段落、方格與四組選項完整，無題5"
+      }
     },
     {
       "questionId": "113-00-C-05",
@@ -139,7 +175,7 @@
       "officialQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "sourcePage": 2,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
@@ -158,7 +194,16 @@
         1220,
         383
       ],
-      "outputSha256": "e32c1019905333492705c04e3f37b66d1b0ca8e1ce6fc28e75532bd02caf675d"
+      "outputSha256": "e32c1019905333492705c04e3f37b66d1b0ca8e1ce6fc28e75532bd02caf675d",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/113/VISUAL_QA_BATCH_01_2026-10-22.json",
+        "reviewedSha256": "e32c1019905333492705c04e3f37b66d1b0ca8e1ce6fc28e75532bd02caf675d",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "note": "題5：母親梳頭的文字引文與四個選項完整，無題6"
+      }
     },
     {
       "questionId": "113-00-C-06",
