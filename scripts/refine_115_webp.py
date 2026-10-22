@@ -78,7 +78,21 @@ def main():
       ("115-00-C-SHARED-31-34","00-C",10,(90,162,1310,1033),[31,32,33,34]),
       ("115-00-C-SHARED-35-38","00-C",11,(90,162,1310,1018),[35,36,37,38]),
     ]
+    # v4: source-image visual inspection found a previous option bleeding into
+    # business q18-19 material, and several shared last rows near cut boundaries.
+    # Never replace older v3 files; preserve SHA provenance and make v4 only for
+    # individually identified shared-material boundaries.
+    v4_fixes={
+      "115-09-1-SHARED-18-19":(90,365,1310,628),
+      "115-09-1-SHARED-24-25":(90,163,1310,793),
+      "115-00-C-SHARED-19-22":(90,160,1310,1071),
+      "115-00-C-SHARED-23-26":(90,161,1310,1237),
+      "115-00-C-SHARED-27-30":(90,332,1310,1108),
+      "115-00-C-SHARED-31-34":(90,162,1310,1041),
+      "115-00-C-SHARED-35-38":(90,162,1310,1026),
+    }
     for group,paper,pg,box,nums in specs:
+        box=v4_fixes.get(group,box)
         current=shared.get(group)
         # Need official question anchor gap to prevent other question content.
         qstart=q[f"115-{paper}-{nums[0]:02d}"]["crop"][1]
@@ -86,7 +100,8 @@ def main():
         if first_q["sourcePage"]==pg and box[3]>=qstart:
             raise ValueError(f"Shared material overlaps {group} first question")
         image=page(paper,pg)
-        asset=write_original_crop(image,box,OUT/"webp-v3"/"shared"/(group+".webp"))
+        version="webp-v4" if group in v4_fixes else "webp-v3"
+        asset=write_original_crop(image,box,OUT/version/"shared"/(group+".webp"))
         value={**asset,"sharedMaterialId":group,"paperCode":paper,"sourcePage":pg,
                "originalQuestionNumbers":nums,"processingVersion":RULE,
                "qaStatus":"DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
