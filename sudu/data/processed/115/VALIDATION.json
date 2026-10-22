@@ -3,7 +3,7 @@
   "year": 115,
   "structuralStatus": "PASS",
   "blockingFailures": [],
-  "webpImageVisualReview": "NOT_COMPLETE",
+  "webpImageVisualReview": "PARTIAL_ASSISTANT_VISUAL_QA",
   "officialAnswers": "SHA-pinned PDF textual agreement, independent review not complete",
   "sqlite": "SQLITE_ROUNDTRIP_PASS",
   "published": "NO",
@@ -13,40 +13,40 @@
       "officialExpectedQuestions": 38,
       "candidateRecords": 38,
       "generatedPerQuestionWebp": 38,
-      "visualQaPass": 5,
+      "visualQaPass": 7,
       "rawOcrEngineOutput": 38,
       "nativePdfOrManualTextAvailable": 38,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 38,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 38,
-      "needsFullVisualReview": 33
+      "needsFullVisualReview": 31
     },
     "英文": {
       "officialExpectedQuestions": 42,
       "candidateRecords": 42,
       "generatedPerQuestionWebp": 42,
-      "visualQaPass": 5,
+      "visualQaPass": 14,
       "rawOcrEngineOutput": 42,
       "nativePdfOrManualTextAvailable": 42,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 42,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 42,
-      "needsFullVisualReview": 37
+      "needsFullVisualReview": 28
     },
     "數學B": {
       "officialExpectedQuestions": 25,
       "candidateRecords": 25,
       "generatedPerQuestionWebp": 25,
-      "visualQaPass": 5,
+      "visualQaPass": 25,
       "rawOcrEngineOutput": 25,
       "nativePdfOrManualTextAvailable": 25,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 25,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 25,
-      "needsFullVisualReview": 20
+      "needsFullVisualReview": 0
     },
     "商業概論": {
       "officialExpectedQuestions": 25,
@@ -65,27 +65,27 @@
       "officialExpectedQuestions": 25,
       "candidateRecords": 25,
       "generatedPerQuestionWebp": 25,
-      "visualQaPass": 5,
+      "visualQaPass": 7,
       "rawOcrEngineOutput": 25,
       "nativePdfOrManualTextAvailable": 25,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 25,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 25,
-      "needsFullVisualReview": 20
+      "needsFullVisualReview": 18
     },
     "會計學": {
       "officialExpectedQuestions": 24,
       "candidateRecords": 24,
       "generatedPerQuestionWebp": 24,
-      "visualQaPass": 0,
+      "visualQaPass": 10,
       "rawOcrEngineOutput": 12,
       "nativePdfOrManualTextAvailable": 24,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 24,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 24,
-      "needsFullVisualReview": 24
+      "needsFullVisualReview": 14
     },
     "經濟學": {
       "officialExpectedQuestions": 26,
