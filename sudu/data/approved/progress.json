@@ -1,55 +1,179 @@
 {
-  "schemaVersion": 1,
   "dataStage": "qa_verified_only",
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
+    "commit": "747e853e7cda89ba0fb458e516e60b3b33465de8",
     "ref": "qa/114-115-official-visual-review",
-    "commit": "02735ec5e3c64933e0693427bafe050099a4b2c6"
+    "sourceTreeSignature": "8fd8050e965ba0fc31597cb8438ca17b1e8a533d12ad4234c69d3f0ab9373cfc"
   },
+  "schemaVersion": 1,
   "years": {
     "114": {
-      "year": 114,
-      "expected": 205,
+      "aiMismatch": 0,
+      "aiNotChecked": 205,
+      "aiSolvedMatched": 0,
+      "approvedCount": 0,
+      "approvedPercent": 0.0,
       "candidate": 205,
-      "webpGenerated": 205,
-      "webpQaPass": 0,
+      "expected": 205,
+      "imageQaPercent": 0.0,
+      "ocrCandidate": 205,
+      "ocrQaPass": 0,
+      "officialCandidateMatches": 205,
+      "officialFinalQaPass": 0,
+      "pending": 205,
+      "pendingReasonCounts": {
+        "image_pending": 205
+      },
+      "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "ocrCandidate": 205,
-      "ocrQaPass": 0,
-      "officialCandidateMatches": 205,
-      "officialFinalQaPass": 0,
-      "aiSolvedMatched": 0,
-      "aiMismatch": 0,
-      "aiNotChecked": 205,
-      "approvedCount": 0,
-      "imageQaPercent": 0,
-      "approvedPercent": 0,
-      "pending": 205,
-      "reviewStatus": "not_all_gates_passed",
-      "subjects": {}
+      "sourceSha": "747e853e7cda89ba0fb458e516e60b3b33465de8",
+      "subjects": {
+        "商業概論": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "國文": {
+          "candidate": 38,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "數位科技": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "數學 B": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "會計學": {
+          "candidate": 24,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "經濟學": {
+          "candidate": 26,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        },
+        "英文": {
+          "candidate": 42,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 0
+        }
+      },
+      "webpGenerated": 205,
+      "webpQaPass": 0,
+      "year": 114
     },
     "115": {
-      "year": 115,
-      "expected": 205,
+      "aiMismatch": 0,
+      "aiNotChecked": 205,
+      "aiSolvedMatched": 0,
+      "approvedCount": 0,
+      "approvedPercent": 0.0,
       "candidate": 205,
-      "webpGenerated": 205,
-      "webpQaPass": 133,
-      "sharedWebpQaPass": 3,
-      "sharedWebpTotal": 20,
+      "expected": 205,
+      "imageQaPercent": 64.9,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
       "officialFinalQaPass": 0,
-      "aiSolvedMatched": 0,
-      "aiMismatch": 0,
-      "aiNotChecked": 205,
-      "approvedCount": 0,
-      "imageQaPercent": 64.9,
-      "approvedPercent": 0,
       "pending": 205,
+      "pendingReasonCounts": {
+        "image_pending": 88,
+        "ocr_or_db_pending": 117
+      },
       "reviewStatus": "not_all_gates_passed",
-      "subjects": {}
+      "sharedWebpQaPass": 3,
+      "sharedWebpTotal": 20,
+      "sourceSha": "747e853e7cda89ba0fb458e516e60b3b33465de8",
+      "subjects": {
+        "商業概論": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 5
+        },
+        "國文": {
+          "candidate": 38,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 7
+        },
+        "數位科技": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 7
+        },
+        "數學 B": {
+          "candidate": 25,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 25
+        },
+        "會計學": {
+          "candidate": 24,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 23
+        },
+        "經濟學": {
+          "candidate": 26,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 24
+        },
+        "英文": {
+          "candidate": 42,
+          "expected": 0,
+          "finalAnswerQaPass": 0,
+          "ocrQaPass": 0,
+          "studentReady": 0,
+          "webpQaPass": 42
+        }
+      },
+      "webpGenerated": 205,
+      "webpQaPass": 133,
+      "year": 115
     }
   }
 }
