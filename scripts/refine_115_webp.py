@@ -105,6 +105,24 @@ def main():
         "finding":"Q22 D option followed by unrelated Q23-24 reading material",
         "repairStatus":"generated_pending_independent_visual_recheck",
     }
+    # Business Q12 and Q15 old single-question crop extends into the
+    # following independent reading-group heading. Trim before its marker.
+    for qid,rect,issue in (
+        ("115-09-1-12",(90,157,1310,558),"v2_contained_Q13_15_reading_group_heading"),
+        ("115-09-1-15",(90,1216,1310,1430),"v2_contained_Q16_17_reading_group_heading"),
+    ):
+        item=q[qid]
+        source=page("09-1",4)
+        corrected=write_original_crop(source,rect,OUT/"webp-v7"/"09-1"/(qid+".webp"))
+        item.update(corrected)
+        item["processingVersion"]="v7-business-no-next-group-text"
+        item["qaStatus"]="DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA"
+        item["cropMethod"]="source_pixel_retrim_before_next_shared_material"
+        item.setdefault("issues",[]).append(issue)
+        item["visualDefectHistory"]={
+            "detectedOn":"2026-10-22", "originalCandidateVersion":"webp-v2",
+            "finding":issue,"repairStatus":"generated_pending_visual_recheck",
+        }
     shared={e["sharedMaterialId"]:e for e in data["sharedMaterialCrops"]}
     specs=[
       # Correct English axis labels/last sentence without including first question.
