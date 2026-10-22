@@ -864,9 +864,20 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/VISUAL_QA_BATCH_03_2026-10-22.json",
+        "reviewedSha256": "f8517932c1ffa93cb3ef52f0e17ec8c93b895c5ca7092156a7591a289db47aa8",
+        "sourceSha256": "be4c5c00e949cdd696f6629127a2f1d23ff4f4aa5dbe92d7b0e8b92cef013335",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_visual_official_page_webp_against_each_question_webp",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "criteria": "number_stem_ABCD_figures_no_adjacent_no_header_legible",
+        "note": "Directly compared page 2 of official-question-page-derived WebP to current image; images and four choices complete."
+      }
     },
     {
       "schemaVersion": 1,
@@ -901,11 +912,22 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
       "issues": [
         "last_question_on_page_check_footer_and_continuation"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/VISUAL_QA_BATCH_03_2026-10-22.json",
+        "reviewedSha256": "c8b96c85679e3a865ae98325108a2d4a31e9317cfeffa8d3554a6b3f3df66abf",
+        "sourceSha256": "be4c5c00e949cdd696f6629127a2f1d23ff4f4aa5dbe92d7b0e8b92cef013335",
+        "reviewer": "ChatGPT assistant",
+        "method": "direct_visual_official_page_webp_against_each_question_webp",
+        "date": "2026-10-22",
+        "independentHumanReview": false,
+        "criteria": "number_stem_ABCD_figures_no_adjacent_no_header_legible",
+        "note": "Directly compared page 2 of official-question-page-derived WebP to current image; images and four choices complete."
+      }
     },
     {
       "schemaVersion": 1,

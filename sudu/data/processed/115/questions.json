@@ -1115,14 +1115,17 @@
         "sha256": "f8517932c1ffa93cb3ef52f0e17ec8c93b895c5ca7092156a7591a289db47aa8",
         "processingVersion": "115-draft-pixelcrop-v2",
         "cropMethod": "pixel_crop_of_official_page_webp",
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/VISUAL_QA_BATCH_03_2026-10-22.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
         "single_question_crop_not_yet_generated"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -1218,7 +1221,8 @@
         "sha256": "c8b96c85679e3a865ae98325108a2d4a31e9317cfeffa8d3554a6b3f3df66abf",
         "processingVersion": "115-draft-pixelcrop-v2",
         "cropMethod": "pixel_crop_of_official_page_webp",
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/VISUAL_QA_BATCH_03_2026-10-22.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -1227,7 +1231,9 @@
         "last_question_on_page_check_footer_and_continuation"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
