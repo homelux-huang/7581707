@@ -3,6 +3,33 @@
 基準 main SHA: `40ffa920d8efb8e7dc54471a62bb70ecb14ee096`. Branch: `data/115-full-year-question-assets`.
 本 PR **只有資料工程，不可被當作主平台已接入、全年題庫已公開、已做完整裁切或全部 OCR 完成**。
 
+## 單題 WebP 強制驗收契約（115 年全部 205 題）
+
+**此要求是硬性限制，不能以僅有檔案、裁切座標合法或 WebP 可解碼當作通過。** 每題必須保留 *官方原題號*、原始題幹全部文字及條件、完整 (A)(B)(C)(D) 選項、相關圖表/公式/單位，但 **WebP 絕不能包含整張試卷頁、前後題題幹選項、公告頁首、頁碼頁尾等非必要內容**。裁切圖來源只能是 `sudu/data/original/115/<paper>/p###-...webp` 官方原卷對應頁的真實像素；不可 AI 製圖、重新排版或在原卷中重寫題目。
+
+共用閱讀材料、跨頁內容必須 **獨立** 裁切成多張有順序的原圖並用 `sharedMaterialId` 關聯，不得把別題塞進當題圖，也不能只留下答案而缺共享閱讀材料。若跨頁需要兩張題圖，使用 `assets.parts[]` 及順序；每張都是真實原始官方頁面裁切。原始圖片和已通過歷史 QA 的會計第 2–6 題永久保留，不以未覆核裁切覆寫。
+
+生成圖片預設 `qaStatus=DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA`；只有逐張目視對比原卷並確認以下 10 項才可記錄 `qaStatus=PASS`，另需記錄審查者/審查日期/該圖片 SHA-256，避免改圖後仍顯示舊驗證：正確科目與題號、題幹完整、所有必要條件、A–D 四選項完整、共用圖/表/公式/單位與附註完整、無前題內容、無後題內容、無不必要頁首/頁尾、比例與小字清晰、WebP decode 及來源 SHA-256 正確。**任何一項無法確認就標記 `NEEDS_VISUAL_REVIEW`，不能標為 verified。**
+
+推薦每題原圖結構：
+```json
+{
+  "questionId":"115-09-2-28",
+  "paperCode":"09-2",
+  "originalQuestionNumber":28,
+  "source":"sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
+  "sourcePage":7,
+  "crop":[90,780,1310,1220],
+  "output":"sudu/data/processed/115/webp-v1/09-2/115-09-2-28.webp",
+  "sha256":"calculated_at_generation",
+  "qaStatus":"DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+  "issues":[]
+}
+```
+範例中的座標只是示意，**不得當成已測量、已製作或已通過 QA 的正式座標**。
+
+圖片產出、圖片真正逐張 QA 通過、原文 OCR 完成、答案候選配對、獨立核對官方答案、SQLite 寫入與讀回成功、平台接入與部署，都是**七種不同的驗收狀態**，不可混成同一個「已完成」數字。
+
 ## 本批已交付（2026-10-22）
 - `sudu/data/processed/115/questions.json`: 205 個 canonical ID 的**候選題庫**。保留 5 試卷原題號、科目索引、舊擷取文字、答案候選、來源 PDF SHA-256、原頁 WebP、問題清單與未覆核狀態。
 - `sudu/data/processed/115/corrections.json`: 15 筆人工視覺擷取的非破壞式修正，含數學公式、09-1/09-2 第 2、4 題封面說明錯配及英語 21-28 題；2 個英文共同材料。**人工轉錄不等於 OCR**。
