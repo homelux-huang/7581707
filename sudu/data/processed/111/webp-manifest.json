@@ -2303,7 +2303,7 @@
       "officialQuestionPdfSha256": "4fef5462029cfac637fd1f6a1728cbc25b11e5972bccec8740dbed6ba1646296",
       "sourcePage": 5,
       "generationVersion": "111-Q30-split-v2",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
         "OLD_V1_INCLUDED_UNRELATED_Q31_Q32_GRAPH"
@@ -2336,6 +2336,13 @@
           1554
         ],
         "visualFailure": "INCLUDED_SECTION_IV_AND_NEXT_Q31_Q32_GRAPH"
+      },
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/111/VISUAL_QA_111_EN_Q30_V2_2026-10-22.json",
+        "reviewedSha256": "44987b0328ac0f5fa412764b891b3d5259ae9af007eadb03a4ab43a1e20d487a",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-22",
+        "independentHumanReview": false
       }
     },
     {

@@ -1,6 +1,6 @@
 {
   "year": 111,
-  "passCount": 9,
+  "passCount": 10,
   "items": [
     {
       "questionId": "111-00-C-01",
@@ -1353,7 +1353,7 @@
     },
     {
       "questionId": "111-00-E-30",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 5,
       "sourceWebp": "sudu/data/original/111/00-E/p005-4fef546202-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/111/webp-v2/00-E/111-00-E-30.webp",
@@ -1368,8 +1368,9 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/111/VISUAL_QA_111_EN_Q30_V2_2026-10-22.json",
+      "reviewedWebpSha256": "44987b0328ac0f5fa412764b891b3d5259ae9af007eadb03a4ab43a1e20d487a"
     },
     {
       "questionId": "111-00-E-31",

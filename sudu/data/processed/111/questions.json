@@ -2597,7 +2597,8 @@
         "singleQuestionWebp": "sudu/data/processed/111/webp-v2/00-E/111-00-E-30.webp",
         "sourcePageWebp": "sudu/data/original/111/00-E/p005-4fef546202-v2-w1400-q66.webp",
         "sha256": "44987b0328ac0f5fa412764b891b3d5259ae9af007eadb03a4ab43a1e20d487a",
-        "sourcePage": 5
+        "sourcePage": 5,
+        "imageQaEvidence": "sudu/data/processed/111/VISUAL_QA_111_EN_Q30_V2_2026-10-22.json"
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/111_4y/downloader.php?obj=MTExLTR5LTAwLWUucGRm",
@@ -2606,7 +2607,7 @@
         "answerPdfSha256": "d36314ca343b6ff033780e72dee31412cea587e4167921cc481c2ce341b574dc"
       },
       "ocrStatus": "DRAFT_UNCORRECTED_OCR",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
