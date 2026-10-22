@@ -97,6 +97,9 @@ def main():
       ("115-09-1-SHARED-22-23","09-1",6,(90,162,1310,1184),[22,23]),
       ("115-09-1-SHARED-24-25","09-1",7,(90,163,1310,785),[24,25]),
       ("115-09-2-SHARED-23-24","09-2",6,(90,918,1310,1072),[23,24]),
+      # Economics 49/50 share the official factory batch/currency-rate table.
+      # Their question strips alone intentionally exclude this reading material.
+      ("115-09-2-SHARED-49-50","09-2",11,(90,160,1310,740),[49,50]),
       # Chinese common reading material is separate from numbered question crops.
       ("115-00-C-SHARED-11-15","00-C",4,(90,160,1310,1530),[11,12,13,14,15]),
       ("115-00-C-SHARED-16-18","00-C",6,(90,161,1310,1049),[16,17,18]),
