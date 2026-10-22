@@ -13175,8 +13175,8 @@
       "questionId": "115-09-2-25",
       "year": 115,
       "paperCode": "09-2",
-      "subject": "會計學",
-      "officialSubjectName": "會計學",
+      "subject": "經濟學",
+      "officialSubjectName": "經濟學",
       "originalQuestionNumber": 25,
       "legacySubject": "專業科目（二）",
       "question": "林生規劃暑假活動，與家人討論後找到四個可行的選項，但僅能擇一參加，而林生的個人\n  偏好為 ③> ①> ②> ④。林生在家人遊說下最後參加郵輪之旅，則此決策的機會成本為何？\n  ① 與家人一起進行郵輪之旅\n  ② 擔任夏令營輔導志工，獲得 300 小時志工時數\n  ③ 飲料店打工，業主支付最低工資及員工福利\n  ④ 參加第二外語特訓班，結訓後可獲證明",
@@ -13229,10 +13229,15 @@
       "formulas": [],
       "tables": [],
       "assets": {
-        "singleQuestionWebp": null,
+        "singleQuestionWebp": "sudu/questions/115/economics/q25.webp",
         "sourcePageWebp": "sudu/data/original/115/09-2/p006-fc88e0109e-v2-w1400-q66.webp",
         "sourcePage": 6,
-        "existingDemoCropBox": null,
+        "existingDemoCropBox": [
+          90,
+          1462,
+          1310,
+          1733
+        ],
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
