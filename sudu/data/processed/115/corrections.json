@@ -244,6 +244,110 @@
       "recordNotes": [
         "Official original text states prices 40, 50, 60 NTD; no budget amount stated. Do NOT infer or append NTD 250."
       ]
+    },
+    "115-00-MB-01": {
+      "question": "如圖（一），下列哪一選項的向量與 OS⃗−OT⃗ 相等？",
+      "options": [
+        "向量 OA⃗",
+        "向量 OB⃗",
+        "向量 OC⃗",
+        "向量 OD⃗"
+      ],
+      "sourcePage": 2,
+      "optionPresentation": "vector_formula_with_original_diagram",
+      "recordNotes": [
+        "Must render original plotted point geometry; text-only alternatives incomplete without original per-question WebP."
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
+    },
+    "115-00-MB-02": {
+      "question": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "sourcePage": 2,
+      "formulas": [
+        {
+          "readable": "x²−8x+5(α−β)=0",
+          "latex": "x^2-8x+5(\\alpha-\\beta)=0"
+        }
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
+    },
+    "115-00-MB-03": {
+      "question": "已知直線 L₁：2x+3y=4 與直線 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)＝？",
+      "options": [
+        "(2, −2/3)",
+        "(2, 2/3)",
+        "(4/3, −2/3)",
+        "(4/3, 2/3)"
+      ],
+      "sourcePage": 2,
+      "formulas": [
+        {
+          "readable": "L₁：2x+3y=4",
+          "latex": "2x+3y=4"
+        }
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
+    },
+    "115-00-MB-04": {
+      "question": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
+      "options": [
+        "a>−2",
+        "b<−1",
+        "a 為整數",
+        "b 為整數"
+      ],
+      "sourcePage": 2,
+      "formulas": [
+        {
+          "readable": "2x²+7x+3≤0",
+          "latex": "2x^2+7x+3\\leq0"
+        }
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
+    },
+    "115-00-MB-13": {
+      "question": "二元一次聯立不等式 {26x+15y≤2026；15x+26y≤2026} 的圖解為下列何者？",
+      "options": [
+        "（A）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（B）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（C）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（D）區域圖見官方題圖（圖形內容不以文字替代）"
+      ],
+      "optionPresentation": "image_only_FOUR_plots_are_original_pixels_not_OCR_text",
+      "sourcePage": 5,
+      "formulas": [
+        {
+          "readable": "26x+15y≤2026；15x+26y≤2026",
+          "latex": "\\begin{cases}26x+15y\\leq2026\\\\15x+26y\\leq2026\\end{cases}"
+        }
+      ],
+      "recordNotes": [
+        "A-D are geometrical drawings. Text label is an asset reference, NOT a verified option transcription; keep original high fidelity WebP in full."
+      ],
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
+    },
+    "115-09-2-08": {
+      "question": "甲公司 X5 年底負債總額較資產總額的三分之一少 $250,000，權益總額為負債總額的 2.5 倍。因應公司業務成長，公司規畫添購生產設備，並全數向銀行貸款以籌措資金，但權益總額不得低於負債總額的 1.25 倍，則公司添購生產設備金額的上限為多少？",
+      "options": [
+        "$500,000",
+        "$625,000",
+        "$1,500,000",
+        "$1,875,000"
+      ],
+      "sourcePage": 3,
+      "extractionMethod": "manual_visual_transcription",
+      "qaStatus": "requires_independent_second_pass"
     }
   },
   "openIssues": [
