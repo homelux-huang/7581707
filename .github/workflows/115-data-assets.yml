@@ -79,7 +79,7 @@ jobs:
             assert q["qaStatus"].startswith("DRAFT_") or (
             q["qaStatus"]=="PASS" and
             q.get("visualReviewEvidence",{}).get("reviewedSha256")==q["sha256"] and
-            q.get("visualReviewEvidence",{}).get("reference") in ("sudu/DEMO_VISUAL_QA.md", "sudu/data/processed/115/VISUAL_QA_2026-10-22.json")
+            q.get("visualReviewEvidence",{}).get("reference") in ("sudu/DEMO_VISUAL_QA.md", "sudu/data/processed/115/VISUAL_QA_2026-10-22.json", "sudu/data/processed/115/VISUAL_QA_2026-10-22_B2.json")
           ), q["questionId"]
           assert len(ids)==205
           assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
