@@ -17,7 +17,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   await page.evaluate(({subject,id})=>{currentSubject=subject;currentIndex=list().findIndex(q=>q.id===id);showStudy();renderAll();closeQuestionNav();window.scrollTo(0,0);},{subject,id});
  };
  const settle=()=>page.waitForTimeout(400);
- const noOverflow=async(label)=>assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label);
+ const noOverflow=async(label)=>{const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(layout.scrollWidth<=layout.width+1,label+' '+JSON.stringify(layout));};
  try{
   await page.goto(base+'v4-115-multisubject-review-demo.html');
   const qs=await page.evaluate(()=>JSON.parse(document.getElementById('demoData').textContent).questions);
