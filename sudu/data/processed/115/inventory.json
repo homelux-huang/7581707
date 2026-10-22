@@ -1,0 +1,1304 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "baselineMainSha": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+  "sourceRecords": 205,
+  "duplicateCanonicalIds": [],
+  "perSubject": {
+    "國文": {
+      "records": 38,
+      "matched": 38,
+      "verified": 0,
+      "missingOptions": 0,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 5
+    },
+    "英文": {
+      "records": 42,
+      "matched": 34,
+      "verified": 0,
+      "missingOptions": 0,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 5
+    },
+    "數學B": {
+      "records": 25,
+      "matched": 23,
+      "verified": 0,
+      "missingOptions": 2,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 5
+    },
+    "商業概論": {
+      "records": 25,
+      "matched": 24,
+      "verified": 0,
+      "missingOptions": 0,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 5
+    },
+    "數位科技": {
+      "records": 25,
+      "matched": 25,
+      "verified": 0,
+      "missingOptions": 0,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 5
+    },
+    "會計學": {
+      "records": 25,
+      "matched": 23,
+      "verified": 0,
+      "missingOptions": 1,
+      "pageUnresolved": 1,
+      "existingDemoCropsMapped": 0
+    },
+    "經濟學": {
+      "records": 25,
+      "matched": 25,
+      "verified": 0,
+      "missingOptions": 0,
+      "pageUnresolved": 0,
+      "existingDemoCropsMapped": 4
+    }
+  },
+  "officialPaperExpectedFromExistingCover": {
+    "00-C": 38,
+    "00-E": 42,
+    "00-MB": 25,
+    "09-1": 50,
+    "09-2": 50
+  },
+  "paperAnswerEvidence": {
+    "scope": "existing_official_answer_sheet_visual_sampled",
+    "caution": "No per-question independent second reviewer. Do not set answerVerified=true."
+  },
+  "newlyCorrectedRecords": 15,
+  "sharedTextItems": 2,
+  "pendingIssueCount": 162,
+  "pendingItems": [
+    {
+      "questionId": "115-00-C-04",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-05",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-06",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-08",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-10",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-11",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-12",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-13",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-14",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-15",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-16",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-17",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-18",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-19",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-20",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-21",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-22",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-23",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-24",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-25",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-26",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-27",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-28",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-29",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-30",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-31",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-32",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-33",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-34",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-35",
+      "subject": "國文",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-36",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-37",
+      "subject": "國文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-C-38",
+      "subject": "國文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-06",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-07",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-08",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-09",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-10",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-11",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-12",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-13",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-14",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-15",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-16",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-17",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-18",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-19",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-20",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-21",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-22",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-23",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-24",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-25",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-26",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-27",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-28",
+      "subject": "英文",
+      "issues": [
+        "OCR_missing_question",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-29",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-30",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-31",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-32",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-33",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-34",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-35",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-36",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-37",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-38",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-39",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-40",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-41",
+      "subject": "英文",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-E-42",
+      "subject": "英文",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-01",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-02",
+      "subject": "數學B",
+      "issues": [
+        "options_missing",
+        "missing_A_to_D_options",
+        "missing_complete_options",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-03",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-04",
+      "subject": "數學B",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-05",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-06",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-08",
+      "subject": "數學B",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-13",
+      "subject": "數學B",
+      "issues": [
+        "options_missing",
+        "blank_option",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-14",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-15",
+      "subject": "數學B",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-16",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-17",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-18",
+      "subject": "數學B",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-19",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-20",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-21",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-22",
+      "subject": "數學B",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-23",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-24",
+      "subject": "數學B",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-00-MB-25",
+      "subject": "數學B",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-02",
+      "subject": "商業概論",
+      "issues": [
+        "missing_A_to_D_options",
+        "missing_complete_options",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-04",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-05",
+      "subject": "商業概論",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-1-08",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-09",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-10",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-11",
+      "subject": "商業概論",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-12",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-13",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-14",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-15",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-16",
+      "subject": "商業概論",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-17",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-18",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-19",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-20",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-21",
+      "subject": "商業概論",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-22",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-23",
+      "subject": "商業概論",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-24",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-25",
+      "subject": "商業概論",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-29",
+      "subject": "數位科技",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-30",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-31",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-33",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-34",
+      "subject": "數位科技",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-1-35",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-36",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-37",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-38",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-39",
+      "subject": "數位科技",
+      "issues": [
+        "suspected_cover_or_footer",
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-40",
+      "subject": "數位科技",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-41",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-42",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-43",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-44",
+      "subject": "數位科技",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-45",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-46",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-47",
+      "subject": "數位科技",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-48",
+      "subject": "數位科技",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-49",
+      "subject": "數位科技",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-1-50",
+      "subject": "數位科技",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-02",
+      "subject": "會計學",
+      "issues": [
+        "missing_A_to_D_options",
+        "missing_complete_options"
+      ]
+    },
+    {
+      "questionId": "115-09-2-06",
+      "subject": "會計學",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-2-08",
+      "subject": "會計學",
+      "issues": [
+        "question_text_missing",
+        "options_missing",
+        "OCR_missing_question",
+        "source_page_unresolved"
+      ]
+    },
+    {
+      "questionId": "115-09-2-10",
+      "subject": "會計學",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-2-14",
+      "subject": "會計學",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-2-19",
+      "subject": "會計學",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-2-25",
+      "subject": "會計學",
+      "issues": [
+        "suspected_cover_or_footer"
+      ]
+    },
+    {
+      "questionId": "115-09-2-27",
+      "subject": "經濟學",
+      "issues": [
+        "figure_or_table_recheck_pdf"
+      ]
+    },
+    {
+      "questionId": "115-09-2-28",
+      "subject": "經濟學",
+      "issues": [
+        "figure_or_table_recheck_pdf"
+      ]
+    },
+    {
+      "questionId": "115-09-2-30",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-31",
+      "subject": "經濟學",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-32",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-33",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-34",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-35",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-36",
+      "subject": "經濟學",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-37",
+      "subject": "經濟學",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-38",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-39",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-40",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-41",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-42",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-43",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-44",
+      "subject": "經濟學",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-45",
+      "subject": "經濟學",
+      "issues": [
+        "figure_or_table_recheck_pdf",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-46",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-47",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-48",
+      "subject": "經濟學",
+      "issues": [
+        "suspected_cover_or_footer",
+        "long_option_or_broken_layout",
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-49",
+      "subject": "經濟學",
+      "issues": [
+        "single_question_crop_not_yet_generated"
+      ]
+    },
+    {
+      "questionId": "115-09-2-50",
+      "subject": "經濟學",
+      "issues": [
+        "suspected_cover_or_footer",
+        "single_question_crop_not_yet_generated"
+      ]
+    }
+  ],
+  "existingDemoCropsNotCommitted": true,
+  "sourcePagesOriginalPresent": 61
+}
