@@ -16,6 +16,8 @@
       "approvedPercent": 0.0,
       "candidate": 205,
       "expected": 205,
+      "imagePreviewCount": 9,
+      "imagePreviewPercent": 4.4,
       "imageQaPercent": 4.4,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
@@ -35,6 +37,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -43,6 +46,7 @@
           "candidate": 38,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 9,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 9
@@ -51,6 +55,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -59,6 +64,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -67,6 +73,7 @@
           "candidate": 24,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -75,6 +82,7 @@
           "candidate": 26,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -83,6 +91,7 @@
           "candidate": 42,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 0
@@ -100,6 +109,8 @@
       "approvedPercent": 0.0,
       "candidate": 205,
       "expected": 205,
+      "imagePreviewCount": 119,
+      "imagePreviewPercent": 58.0,
       "imageQaPercent": 65.9,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
@@ -119,6 +130,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 5,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 5
@@ -127,6 +139,7 @@
           "candidate": 38,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 9,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 9
@@ -135,6 +148,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 7,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 7
@@ -143,6 +157,7 @@
           "candidate": 25,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 25,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 25
@@ -151,6 +166,7 @@
           "candidate": 24,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 21,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 23
@@ -159,6 +175,7 @@
           "candidate": 26,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 24,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 24
@@ -167,6 +184,7 @@
           "candidate": 42,
           "expected": 0,
           "finalAnswerQaPass": 0,
+          "imagePreviewReady": 28,
           "ocrQaPass": 0,
           "studentReady": 0,
           "webpQaPass": 42
