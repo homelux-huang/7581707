@@ -93,7 +93,7 @@ def main():
                 cropstat["visualPass"]+=1
         else:pending.append(id)
     shared_ids={x["sharedMaterialId"] for x in original["sharedMaterials"]}
-    if len(shared_ids)!=19:failure.append("shared_material_duplicate_count")
+    if len(shared_ids)!=20:failure.append("shared_material_duplicate_count")
     shared_verified=0
     for asset in images["sharedMaterialCrops"]:
         if asset["sharedMaterialId"] not in shared_ids:failure.append("shared_material_orphan")
