@@ -86,6 +86,25 @@ def main():
             "finding":reason,
             "repairStatus":"generated_pending_independent_visual_recheck",
         }
+    # Accounting Q22 v2 extends below its D option into the standalone
+    # shared paragraph for Q23-24. A question WebP may never contain material
+    # for a different question group; preserve v2 for audit, create new v6.
+    qid="115-09-2-22"
+    item=q[qid]
+    source=page("09-2",6)
+    rect=(90,714,1310,910)  # all Q22 options, before Q23-24 shared heading
+    corrected=write_original_crop(source,rect,OUT/"webp-v6"/"09-2"/(qid+".webp"))
+    item.update(corrected)
+    item["processingVersion"]="v6-accounting-exclude-next-reading-material"
+    item["qaStatus"]="DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA"
+    item["cropMethod"]="original_pixel_crop_Q22_end_before_Q23-24_shared_text"
+    item.setdefault("issues",[]).append("v2_Q22_included_Q23_24_shared_reading_heading")
+    item["visualDefectHistory"]={
+        "detectedOn":"2026-10-22",
+        "originalCandidateVersion":"webp-v2",
+        "finding":"Q22 D option followed by unrelated Q23-24 reading material",
+        "repairStatus":"generated_pending_independent_visual_recheck",
+    }
     shared={e["sharedMaterialId"]:e for e in data["sharedMaterialCrops"]}
     specs=[
       # Correct English axis labels/last sentence without including first question.
