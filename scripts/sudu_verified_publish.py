@@ -180,6 +180,36 @@ def verify_bytes(source: Path, rel: str, expected: str) -> bool:
     except (OSError, ValueError, ImportError):
         return False
 
+def certificate_exists(source: Path, proof: dict, field: str, hash_field: str) -> bool:
+    """Reject synthetic PASS flags without the original SHA-pinned review document."""
+    relative = proof.get(field)
+    digest_expected = proof.get(hash_field)
+    if not isinstance(relative, str) or not relative or not SHA.fullmatch(str(digest_expected)):
+        return False
+    path = Path(relative)
+    if path.is_absolute() or ".." in path.parts or path.suffix.lower() not in {".json", ".md", ".txt"}:
+        return False
+    document = source / path
+    return document.is_file() and not document.is_symlink() and digest(document.read_bytes()) == digest_expected
+
+
+def certificates_complete(source: Path, q: dict, item: dict, shared: dict) -> bool:
+    """Source page, OCR, official final, independent solve and teaching audit all exist."""
+    checks = [
+        (item.get("visualReviewEvidence") or {}, "reference", "referenceSha256"),
+        (q.get("textQaEvidence") or {}, "evidencePath", "evidenceSha256"),
+        (q.get("officialFinalQaEvidence") or {}, "evidencePath", "evidenceSha256"),
+        (q.get("independentSolve") or {}, "auditEvidencePath", "auditEvidenceSha256"),
+        (q.get("teachingQaEvidence") or {}, "evidencePath", "evidenceSha256"),
+        (q.get("uiQaEvidence") or {}, "evidencePath", "evidenceSha256"),
+    ]
+    for sid in q.get("sharedMaterialIds") or []:
+        ev = shared[sid].get("visualReviewEvidence") or {}
+        checks.append((ev, "reference", "referenceSha256"))
+    return all(certificate_exists(source, evidence, field, hash_field)
+               for evidence, field, hash_field in checks)
+
+
 def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
     t = q["teaching"]
     calc = t["examCalculation"] if t["hasExamCalculation"] else None
@@ -203,6 +233,7 @@ def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
         "optionExplanations":t["optionExplanations"],
         "examCalculation":{"hasExamCalculation":bool(calc),"lines":lines} if calc else None,
         "image":image_path,
+        "imageSha256":(q.get("questionProvenance") or {}).get("webpSha256"),
     }
 
 def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
@@ -244,6 +275,9 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         if not (ocr_ok and official_ok and solve == "matched"
                 and teaching_complete(q,subject,str(q.get("officialFinalAnswer","")).upper())):
             blocked.append({"id":qid,"reason":reason})
+            continue
+        if not certificates_complete(src,q,item,shared):
+            blocked.append({"id":qid,"reason":"sha_pinned_qa_certificate_missing"})
             continue
         rel = item["output"]
         if not verify_bytes(src,rel,item["sha256"]):
@@ -293,10 +327,11 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         "sourceSha":source_sha,
     }
 
-def stage(source: Path, dest: Path, source_sha: str):
+def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = ""):
     report = { "schemaVersion":1, "dataStage":"qa_verified_only",
         "notYetLiveUntilPagesSuccess":True,
-        "provenance":{"ref":"qa/114-115-official-visual-review","commit":source_sha},
+        "provenance":{"ref":"qa/114-115-official-visual-review","commit":source_sha,
+                      "sourceTreeSignature":source_tree_signature or source_sha},
         "years":{}}
     for year in YEARS:
         report["years"][str(year)] = snapshot(source,dest,year,source_sha)
@@ -324,6 +359,7 @@ def site_check(dest: Path):
                 assert c["hasExamCalculation"] is True and len(c["lines"])>=5
             path=dest/"sudu"/q["image"]
             assert path.is_file() and path.suffix==".webp"
+            assert digest(path.read_bytes()) == q["imageSha256"], qid
     return status
 
 def main():
@@ -332,11 +368,12 @@ def main():
     parser.add_argument("--source",type=Path)
     parser.add_argument("--dest",type=Path,default=Path("."))
     parser.add_argument("--sha",default="unknown")
+    parser.add_argument("--signature",default="")
     a=parser.parse_args()
     if a.command=="stage":
         if a.source is None:
             parser.error("--source is required")
-        print(json.dumps(stage(a.source,a.dest,a.sha),ensure_ascii=False,indent=2))
+        print(json.dumps(stage(a.source,a.dest,a.sha,a.signature),ensure_ascii=False,indent=2))
     else:
         result=site_check(a.dest)
         print("PASS: only QA-released 114/115 records can enter the official Pages artifact:",{k:v["approvedCount"] for k,v in result["years"].items()})
