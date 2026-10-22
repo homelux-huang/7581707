@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "year": 115,
   "generatedFromMain": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-  "notice": "CANDIDATE DATA ONLY. No question or answer is independently verified. Demo crop paths are build products, not committed assets. No upload or platform deployment.",
+  "notice": "CANDIDATE 205 source questions with non-destructive visual transcription overlays, PDF-layer text pending shared-material extracts; no independent official verification or per-image QA certified.",
   "subjectBoundaryStatus": "provisional_grouped_by_existing_DEMO_and_official_section_transitions_not_full_page_review",
   "sharedMaterials": [
     {
@@ -34,6 +34,75 @@
       "extractionMethod": "manual_visual_transcription",
       "reviewStatus": "second_pass_pending",
       "text": "The Tamkang Bridge (淡江大橋) has been under construction since 2019 and is ready for use this year. It was built because the Tamsui (淡水) and Bali (八里) areas have grown quickly in recent years, and more people now commute between them. Once it opens, people can save about half an hour when traveling between the two places. Besides making ____25____ smooth, the bridge will also appeal to visitors with its special architectural style. It was designed by the world-famous architect Zaha Hadid. Being the first bridge in Taiwan ____26____ through an international design competition, the Tamkang Bridge will become the world’s longest single-tower asymmetric cable-stayed bridge (單塔不對稱斜張橋). Expressing a sense of art and beauty, the bridge’s 200-meter tower rises into the sky, ____27____ a dancer were lifting both hands in prayer. Moreover, the bridge’s shape goes well with the sunset over the Tamsui River, making the view much more eye-catching. Visitors can appreciate the riverside views here. With shorter travel time between Tamsui and Bali and its unique beauty, the Tamkang Bridge will play an important role in both ____28____. The bridge will definitely bring travel convenience and recreational benefits to the people of northern Taiwan."
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-29-30",
+      "paperCode": "00-E",
+      "sourcePage": 6,
+      "sourceImage": "sudu/data/original/115/00-E/p006-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        29,
+        30
+      ],
+      "extractionMethod": "pending_native_pdf_text_layer",
+      "reviewStatus": "second_pass_pending",
+      "text": null
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-31-32",
+      "paperCode": "00-E",
+      "sourcePage": 7,
+      "sourceImage": "sudu/data/original/115/00-E/p007-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        31,
+        32
+      ],
+      "extractionMethod": "pending_native_pdf_text_layer",
+      "reviewStatus": "second_pass_pending",
+      "text": null
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-33-35",
+      "paperCode": "00-E",
+      "sourcePage": 8,
+      "sourceImage": "sudu/data/original/115/00-E/p008-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        33,
+        34,
+        35
+      ],
+      "extractionMethod": "pending_native_pdf_text_layer",
+      "reviewStatus": "second_pass_pending",
+      "text": null
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-36-38",
+      "paperCode": "00-E",
+      "sourcePage": 9,
+      "sourceImage": "sudu/data/original/115/00-E/p009-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        36,
+        37,
+        38
+      ],
+      "extractionMethod": "pending_native_pdf_text_layer",
+      "reviewStatus": "second_pass_pending",
+      "text": null
+    },
+    {
+      "sharedMaterialId": "115-00-E-SHARED-39-42",
+      "paperCode": "00-E",
+      "sourcePage": 10,
+      "sourceImage": "sudu/data/original/115/00-E/p010-c13e298c3b-v2-w1400-q66.webp",
+      "questionNumbers": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "extractionMethod": "pending_native_pdf_text_layer",
+      "reviewStatus": "second_pass_pending",
+      "text": null
     }
   ],
   "questions": [
@@ -4375,7 +4444,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-21-24",
       "formulas": [],
@@ -4388,10 +4458,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4444,7 +4515,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-21-24",
       "formulas": [],
@@ -4457,10 +4529,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4513,7 +4586,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-21-24",
       "formulas": [],
@@ -4526,10 +4600,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4582,7 +4657,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-21-24",
       "formulas": [],
@@ -4595,10 +4671,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4651,7 +4728,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-25-28",
       "formulas": [],
@@ -4664,10 +4742,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4720,7 +4799,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-25-28",
       "formulas": [],
@@ -4733,10 +4813,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4789,7 +4870,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-25-28",
       "formulas": [],
@@ -4802,10 +4884,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4858,7 +4941,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": "115-00-E-SHARED-25-28",
       "formulas": [],
@@ -4871,10 +4955,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "OCR_missing_question",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -4934,7 +5019,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-29-30",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -4947,7 +5032,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5007,7 +5093,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-29-30",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5021,7 +5107,8 @@
       "correctionVersion": "legacy-unmodified",
       "issues": [
         "suspected_cover_or_footer",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5081,7 +5168,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-31-32",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5094,7 +5181,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5154,7 +5242,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-31-32",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5169,7 +5257,8 @@
       "issues": [
         "suspected_cover_or_footer",
         "long_option_or_broken_layout",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5229,7 +5318,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-33-35",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5242,7 +5331,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5302,7 +5392,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-33-35",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5315,7 +5405,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5375,7 +5466,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-33-35",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5390,7 +5481,8 @@
       "issues": [
         "suspected_cover_or_footer",
         "long_option_or_broken_layout",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5450,7 +5542,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-36-38",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5463,7 +5555,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5523,7 +5616,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-36-38",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5536,7 +5629,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5596,7 +5690,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-36-38",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5611,7 +5705,8 @@
       "issues": [
         "suspected_cover_or_footer",
         "long_option_or_broken_layout",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5671,7 +5766,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-39-42",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5684,7 +5779,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5744,7 +5840,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-39-42",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5757,7 +5853,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5817,7 +5914,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-39-42",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5830,7 +5927,8 @@
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5890,7 +5988,7 @@
         "correctionOverlay": null,
         "correctedAt": null
       },
-      "sharedMaterialId": null,
+      "sharedMaterialId": "115-00-E-SHARED-39-42",
       "formulas": [],
       "tables": [],
       "assets": {
@@ -5904,7 +6002,8 @@
       "correctionVersion": "legacy-unmodified",
       "issues": [
         "suspected_cover_or_footer",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "shared_reading_material_crop_requires_review"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -5918,12 +6017,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 1,
       "legacySubject": "數學 B",
-      "question": "如圖 ( 一 )，下列哪一選項的向量與 OS – OT 相等？\n                                                                y",
+      "question": "如圖（一），下列哪一選項的向量與 OS⃗−OT⃗ 相等？",
       "options": [
-        "OA",
-        "OB                                         B    S     A",
-        "OC\n                                                                           x",
-        "OD                                      O     T\n\n                                     C        D\n                        圖 ( 一 )"
+        "向量 OA⃗",
+        "向量 OB⃗",
+        "向量 OC⃗",
+        "向量 OD⃗"
       ],
       "answer": "B",
       "acceptedAnswers": [
@@ -5949,7 +6048,7 @@
         "originalPageWebp": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "f138ff439a862f9e5a848fbaa501b2d25fec1d78"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "如圖 ( 一 )，下列哪一選項的向量與 OS – OT 相等？\n                                                                y",
         "rawOptions": [
@@ -5961,8 +6060,9 @@
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -5975,13 +6075,15 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "figure_or_table_recheck_pdf",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "optionPresentation": "vector_formula_with_original_diagram"
     },
     {
       "schemaVersion": 1,
@@ -5992,8 +6094,13 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 2,
       "legacySubject": "數學 B",
-      "question": "∆ ABC 的正弦定理：                2 R ，R 為 ∆ ABC 外接圓的半徑\n                           sin A   sin B   sin C",
-      "options": [],
+      "question": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "answer": "A",
       "acceptedAnswers": [
         "A"
@@ -6018,18 +6125,24 @@
         "originalPageWebp": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "f138ff439a862f9e5a848fbaa501b2d25fec1d78"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "∆ ABC 的正弦定理：                2 R ，R 為 ∆ ABC 外接圓的半徑\n                           sin A   sin B   sin C",
         "rawOptions": [],
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
-      "formulas": [],
+      "formulas": [
+        {
+          "readable": "x²−8x+5(α−β)=0",
+          "latex": "x^2-8x+5(\\alpha-\\beta)=0"
+        }
+      ],
       "tables": [],
       "assets": {
         "singleQuestionWebp": null,
@@ -6039,12 +6152,12 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "options_missing",
         "missing_A_to_D_options",
         "missing_complete_options",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -6058,12 +6171,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 3,
       "legacySubject": "數學 B",
-      "question": "已知直線 L 1 ：2 x  3 y  4 與直線 L 2 相互平行。若 L 1 的x 截距為a， L 2 的斜率為m，則\n     ( a , m ) ？\n           2",
+      "question": "已知直線 L₁：2x+3y=4 與直線 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)＝？",
       "options": [
-        "( 2 ,      )\n           3\n           2",
-        "( 2 ,    )\n           3\n        4   2",
-        "(     ,      )\n        3   3\n         4  2",
-        "(     ,    )\n         3  3"
+        "(2, −2/3)",
+        "(2, 2/3)",
+        "(4/3, −2/3)",
+        "(4/3, 2/3)"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -6089,7 +6202,7 @@
         "originalPageWebp": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "f138ff439a862f9e5a848fbaa501b2d25fec1d78"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "已知直線 L 1 ：2 x  3 y  4 與直線 L 2 相互平行。若 L 1 的x 截距為a， L 2 的斜率為m，則\n     ( a , m ) ？\n           2",
         "rawOptions": [
@@ -6101,11 +6214,17 @@
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
-      "formulas": [],
+      "formulas": [
+        {
+          "readable": "L₁：2x+3y=4",
+          "latex": "2x+3y=4"
+        }
+      ],
       "tables": [],
       "assets": {
         "singleQuestionWebp": null,
@@ -6115,9 +6234,10 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -6131,12 +6251,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 4,
       "legacySubject": "數學 B",
-      "question": "若一元二次不等式 2 x 2  7 x 3  0 的解為 a  x  b ，則下列何者正確？",
+      "question": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
       "options": [
-        "a  –2",
-        "b  –1",
+        "a>−2",
+        "b<−1",
         "a 為整數",
-        "b 為整數\n\n\n\n\n-2-\n\n115 年四技                                              第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考"
+        "b 為整數"
       ],
       "answer": "C",
       "acceptedAnswers": [
@@ -6162,7 +6282,7 @@
         "originalPageWebp": "sudu/data/original/115/00-MB/p002-e82e34d9cd-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "f138ff439a862f9e5a848fbaa501b2d25fec1d78"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "若一元二次不等式 2 x 2  7 x 3  0 的解為 a  x  b ，則下列何者正確？",
         "rawOptions": [
@@ -6174,11 +6294,17 @@
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
-      "formulas": [],
+      "formulas": [
+        {
+          "readable": "2x²+7x+3≤0",
+          "latex": "2x^2+7x+3\\leq0"
+        }
+      ],
       "tables": [],
       "assets": {
         "singleQuestionWebp": null,
@@ -6188,10 +6314,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "suspected_cover_or_footer",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -6545,7 +6672,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [
@@ -6572,9 +6700,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
-      "issues": [],
-      "reviewStatus": "unverified",
+      "correctionVersion": "visual-overlay-v2",
+      "issues": [
+        "visual_transcription_requires_independent_second_pass"
+      ],
+      "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
     },
     {
@@ -6782,7 +6912,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [
@@ -6805,9 +6936,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
-      "issues": [],
-      "reviewStatus": "unverified",
+      "correctionVersion": "visual-overlay-v2",
+      "issues": [
+        "visual_transcription_requires_independent_second_pass"
+      ],
+      "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
     },
     {
@@ -6819,12 +6952,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 13,
       "legacySubject": "數學 B",
-      "question": "二元一次聯立不等式        的圖解為下列何者？\n                       15 x  26 y  2026",
+      "question": "二元一次聯立不等式 {26x+15y≤2026；15x+26y≤2026} 的圖解為下列何者？",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "（A）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（B）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（C）區域圖見官方題圖（圖形內容不以文字替代）",
+        "（D）區域圖見官方題圖（圖形內容不以文字替代）"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -6850,7 +6983,7 @@
         "originalPageWebp": "sudu/data/original/115/00-MB/p005-e82e34d9cd-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "0c2281a58892fb6dd054b639482f7dd236c63001"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "二元一次聯立不等式        的圖解為下列何者？\n                       15 x  26 y  2026",
         "rawOptions": [
@@ -6862,11 +6995,17 @@
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
-      "formulas": [],
+      "formulas": [
+        {
+          "readable": "26x+15y≤2026；15x+26y≤2026",
+          "latex": "\\begin{cases}26x+15y\\leq2026\\\\15x+26y\\leq2026\\end{cases}"
+        }
+      ],
       "tables": [],
       "assets": {
         "singleQuestionWebp": null,
@@ -6876,14 +7015,15 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "options_missing",
         "blank_option",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "optionPresentation": "image_only_FOUR_plots_are_original_pixels_not_OCR_text"
     },
     {
       "schemaVersion": 1,
@@ -7894,7 +8034,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -7907,11 +8048,12 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "missing_A_to_D_options",
         "missing_complete_options",
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -8045,7 +8187,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -8058,9 +8201,10 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "single_question_crop_not_yet_generated"
+        "single_question_crop_not_yet_generated",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -11584,7 +11728,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -11597,10 +11742,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
         "missing_A_to_D_options",
-        "missing_complete_options"
+        "missing_complete_options",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -11729,7 +11875,8 @@
         "ocrEngine": null,
         "ocrVersion": null,
         "correctionOverlay": "sudu/data/processed/115/corrections.json",
-        "correctedAt": "2026-10-22"
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -11742,9 +11889,11 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "visual-overlay-v1",
-      "issues": [],
-      "reviewStatus": "unverified",
+      "correctionVersion": "visual-overlay-v2",
+      "issues": [
+        "visual_transcription_requires_independent_second_pass"
+      ],
+      "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
     },
     {
@@ -11971,8 +12120,13 @@
       "officialSubjectName": "會計學",
       "originalQuestionNumber": 8,
       "legacySubject": "專業科目（二）",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "甲公司 X5 年底負債總額較資產總額的三分之一少 $250,000，權益總額為負債總額的 2.5 倍。因應公司業務成長，公司規畫添購生產設備，並全數向銀行貸款以籌措資金，但權益總額不得低於負債總額的 1.25 倍，則公司添購生產設備金額的上限為多少？",
+      "options": [
+        "$500,000",
+        "$625,000",
+        "$1,500,000",
+        "$1,875,000"
+      ],
       "answer": "C",
       "acceptedAnswers": [
         "C"
@@ -11992,38 +12146,37 @@
       },
       "questionProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTIucGRm",
-        "sourcePage": null,
+        "sourcePage": 3,
         "pdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
-        "originalPageWebp": null,
+        "originalPageWebp": "sudu/data/original/115/09-2/p003-fc88e0109e-v2-w1400-q66.webp",
         "originalPageGitBlobSha": null
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
         "rawOptions": [],
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
       "tables": [],
       "assets": {
         "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sourcePage": null,
+        "sourcePageWebp": "sudu/data/original/115/09-2/p003-fc88e0109e-v2-w1400-q66.webp",
+        "sourcePage": 3,
         "existingDemoCropBox": null,
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "question_text_missing",
-        "options_missing",
         "OCR_missing_question",
-        "source_page_unresolved"
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
@@ -13442,7 +13595,7 @@
         "originalPageWebp": "sudu/data/original/115/09-2/p007-fc88e0109e-v2-w1400-q66.webp",
         "originalPageGitBlobSha": "5d43c8b20d3b690c9c10c86654db9488e575e96d"
       },
-      "extractionMethod": "legacy_pdf_text_extraction",
+      "extractionMethod": "manual_visual_transcription",
       "extraction": {
         "rawQuestion": "小明消費蛋餅、豆沙包與三明治的效用如表 ( 一 ) 所示。已知 ① 蛋餅、② 豆沙包與 ③ 三明治\n  每個售價分別為 40 元、50 元及 60 元，考慮財貨價格下，總效用最大之消費組合數量依序\n  各為多少？\n\n             品項         總效用\n         數量      ①蛋餅   ②豆沙包   ③三明治\n                       1            20            5            15\n                       2            24            7            21\n                       3            25            8            18\n                       4            23            8            12\n     表(一)",
         "rawOptions": [
@@ -13454,8 +13607,9 @@
         "ocrPerformed": false,
         "ocrEngine": null,
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null
+        "correctionOverlay": "sudu/data/processed/115/corrections.json",
+        "correctedAt": "2026-10-22",
+        "manualCorrectionMethod": "assistant_visual_transcription_of_official_page_not_engine_OCR"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -13509,9 +13663,10 @@
         "generatedCropSha256": null,
         "visualQa": "not_verified_in_this_batch"
       },
-      "correctionVersion": "legacy-unmodified",
+      "correctionVersion": "visual-overlay-v2",
       "issues": [
-        "figure_or_table_recheck_pdf"
+        "figure_or_table_recheck_pdf",
+        "visual_transcription_requires_independent_second_pass"
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
