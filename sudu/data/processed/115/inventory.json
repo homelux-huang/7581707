@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "year": 115,
-  "generatedAt": "2026-10-22T09:15:32.713231+00:00",
+  "generatedAt": "2026-10-22T09:41:20.211034+00:00",
   "mainBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
   "notice": "Generated/decoded does not imply visual QA. Assistant-reviewed images are SHA-backed; independent external human recheck is still pending.",
   "perSubject": {
@@ -75,7 +75,7 @@
       "candidateRecords": 24,
       "generatedPerQuestionWebp": 24,
       "visualQaPass": 23,
-      "rawOcrEngineOutput": 12,
+      "rawOcrEngineOutput": 24,
       "nativePdfOrManualTextAvailable": 24,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 24,
@@ -111,7 +111,7 @@
   "webpShaPass": 205,
   "imageVisualQaPass": 133,
   "sharedMaterialWebp": 20,
-  "rawOcrRecords": 193,
+  "rawOcrRecords": 205,
   "imageOnlyOptionQuestions": 1,
   "sqlite": {
     "performed": true,
