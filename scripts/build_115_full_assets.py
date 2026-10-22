@@ -32,7 +32,7 @@ OUT = ROOT / "sudu/data/processed/115"
 ALLOWED = {"web1.tcte.edu.tw", "www.tcte.edu.tw", "tcte.edu.tw"}
 OPT = re.compile(r"[\(（]\s*([ABCD])\s*[\)）]", re.I)
 ANCHOR = re.compile(r"^(\d{1,2})[.．、](?:\S*)$")
-VERSION = "115-draft-pixelcrop-v1"
+VERSION = "115-draft-pixelcrop-v2"
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -204,6 +204,14 @@ def main():
         pdfbin=download_official(p["questionPdf"],expectedsha)
         with fitz.open(stream=pdfbin,filetype="pdf") as pdf:
             candidates, allwords=read_pdf_geometry(pdf,len(current))
+            if paper == "00-MB":
+                # Page 2 begins with numbered reference FORMULAS 1-4, not exam
+                # questions. Remove only their confirmed early anchors.
+                for refno in (1,2,3,4):
+                    candidates[refno] = [
+                        a for a in candidates.get(refno, [])
+                        if not (a["page"] == 2 and a["y0"] < 210)
+                    ]
             legacy={q["originalQuestionNumber"]:q["questionProvenance"]["sourcePage"] for q in current}
             chosen,missing,ambiguous=select_anchors(candidates,len(current),legacy)
             anchor_report[paper]={"pdfSource":p["questionPdf"],"pdfSha256":expectedsha,
@@ -249,7 +257,11 @@ def main():
                         with Image.open(source) as chk:
                             srcSize=chk.size
                         issues.append("reused_preexisting_demo_crop_coordinates")
-                path=OUT / "webp-v1" / paper / f"{qid}.webp"
+                if paper == "00-E" and n == 24:
+                    # Prevent next group heading leaking into question 24.
+                    box=(90,927,1310,1016)
+                    issues.append("reading_group_boundary_manually_measured_v2")
+                path=OUT / "webp-v2" / paper / f"{qid}.webp"
                 path.parent.mkdir(parents=True,exist_ok=True)
                 with Image.open(source) as original_image:
                     if original_image.format!="WEBP":
@@ -307,31 +319,40 @@ def main():
                 })
             summary[paper]={"expected":len(current),"anchorsFound":len(chosen),
                             "webpGenerated":successful,"ocrTriggered":ocrdone}
-    # Existing two English shared passages: preserve their entire source
-    # content in independent source-pixel crops; do not insert into each Q.
+    # Passage images MUST be independent source-pixel crops; never substitute
+    # a page image for a single question, or pack neighboring options together.
     shared=[]
-    for mat in record.get("sharedMaterials",[]):
-        if mat["sharedMaterialId"]=="115-00-E-SHARED-21-24":
-            box=(90,174,1310,558)
-        elif mat["sharedMaterialId"]=="115-00-E-SHARED-25-28":
-            box=(90,756,1310,1146)
-        else:
-            continue
-        source=ROOT/mat["sourceImage"]
+    groups=[
+      ("115-00-E-SHARED-21-24",5, (90,174,1310,759), list(range(21,25))),
+      ("115-00-E-SHARED-25-28",5, (90,1019,1310,1568), list(range(25,29))),
+      ("115-00-E-SHARED-29-30",6, (90,165,1310,1498), [29,30]),
+      ("115-00-E-SHARED-31-32",7, (90,166,1310,1328), [31,32]),
+      ("115-00-E-SHARED-33-35",8, (90,164,1310,1230), [33,34,35]),
+      ("115-00-E-SHARED-36-38",9, (90,164,1310,772), [36,37,38]),
+      ("115-00-E-SHARED-39-42",10,(90,166,1310,971), [39,40,41,42]),
+    ]
+    for group_id, page_no, box, numbers in groups:
+        source=page_asset("00-E",page_no)
+        if source is None:
+            raise ValueError(f"Missing official shared page for {group_id}")
         with Image.open(source) as im:
+            if not (0<=box[0]<box[2]<=im.width and 0<=box[1]<box[3]<=im.height):
+                raise ValueError("Common passage crop out of bounds")
             result=io.BytesIO()
             im.crop(box).save(result,"WEBP",lossless=True,method=6)
         payload=result.getvalue()
-        dest=OUT/"webp-v1"/"shared"/(mat["sharedMaterialId"]+".webp")
+        dest=OUT/"webp-v2"/"shared"/(group_id+".webp")
         dest.parent.mkdir(parents=True,exist_ok=True)
         if dest.exists() and dest.read_bytes()!=payload:
             raise ValueError("Refuse to overwrite prior shared crop")
         dest.write_bytes(payload)
-        shared.append({"sharedMaterialId":mat["sharedMaterialId"],"source":mat["sourceImage"],
-                       "sourcePage":mat["sourcePage"],"crop":list(box),
+        shared.append({"sharedMaterialId":group_id,"paperCode":"00-E",
+                       "originalQuestionNumbers":numbers,"source":source.relative_to(ROOT).as_posix(),
+                       "sourcePage":page_no,"crop":list(box),
                        "output":dest.relative_to(ROOT).as_posix(),
-                       "sha256":sha256(payload),
-                       "qaStatus":"DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA"})
+                       "sha256":sha256(payload),"sourceSha256":sha256(source.read_bytes()),
+                       "qaStatus":"DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+                       "issues":["shared_text_must_be_visually_reviewed_separately"]})
     done=sum(bool(item.get("output")) for item in manifest)
     allmanifest={"schemaVersion":1,"year":115,"processingVersion":VERSION,"generatedAt":run_ts,
                  "sourceRule":"Pixel crop from existing 115 official WebP; official SHA-pinned PDF accessed solely for coordinates.",
