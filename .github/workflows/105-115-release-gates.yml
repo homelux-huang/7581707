@@ -6,6 +6,11 @@ on:
       - scripts/audit_105_115_release_gates.py
       - .github/workflows/105-115-release-gates.yml
       - docs/SUDU_QUESTION_BANK_QA_GATE_105_115.md
+      - 'sudu/data/processed/**/inventory.json'
+      - 'sudu/data/processed/**/webp-manifest.json'
+      - 'sudu/data/processed/**/questions.json'
+      - 'sudu/data/processed/**/VISUAL_QA*.json'
+      - 'sudu/data/processed/**/release-manifest.json'
   workflow_dispatch:
 permissions:
   contents: read
