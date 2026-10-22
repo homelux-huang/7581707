@@ -19,6 +19,7 @@ PUBLIC_DATA_FILES = {
     "sudu/data/original/index.json", "sudu/data/original/answers.json",
     "sudu/data/approved/114.json", "sudu/data/approved/115.json",
     "sudu/data/approved/progress.json",
+    "sudu/data/approved/preview/114.json", "sudu/data/approved/preview/115.json",
 }
 PRIVATE_NAME = re.compile(r"(?:^|[-_.])(?:private|secret|credentials?|tokens?|students?|backups?|restore|sessions?|\.env)(?:$|[-_.])", re.I)
 
@@ -58,7 +59,7 @@ def included(path):
         return suffix in {".html", ".htm", ".js", ".css"}
     if text in PUBLIC_DATA_FILES:
         return True
-    if re.fullmatch(r"sudu/data/approved/webp/(?:114|115)/(?:114|115)-(?:00-C|00-E|00-MB|09-1|09-2)-[0-9]{2}\.webp", text):
+    if re.fullmatch(r"sudu/data/approved/webp/(?:114|115)/(?:114|115)-(?:00-C|00-E|00-MB|09-1|09-2)-(?:[0-9]{2}|SHARED-[0-9]{2}-[0-9]{2})\.webp", text):
         return True
     if re.fullmatch(r"sudu/data/years/\d{2,3}\.json", text):
         return True

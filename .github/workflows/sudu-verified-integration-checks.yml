@@ -68,6 +68,15 @@ jobs:
           python -m pip install -q pillow
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$(git -C _source_qa rev-parse HEAD)"
           python scripts/sudu_verified_publish.py check
+          python - <<'PY'
+          import json
+          for year in (114,115):
+              p=json.load(open(f"sudu/data/approved/preview/{year}.json"))
+              assert p["imagePreviewCount"] > 0, f"{year}: expected reviewed images"
+              for q in p["questions"]:
+                  assert not ({"answer","question","options","teaching"} & set(q))
+              print(f"{year} original WebP image-only preview staged: {p['imagePreviewCount']}")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: actual-114-115-qa-admission-preview
