@@ -231,18 +231,23 @@ def apply(year):
     db = folder / "question-bank.sqlite3"
     with sqlite3.connect(db) as cx:
         cols = {r[1] for r in cx.execute("PRAGMA table_info(questions)")}
-        assert {"question_id", "payload", "payload_sha256"} <= cols, cols
+        assert {"question_id", "payload_sha256"} <= cols, cols
+        # Historical 105-113 uses payload; 114 and 115 use payload_json.
+        # Reject any unrecognized schema rather than migrating student data.
+        payload_column = "payload" if "payload" in cols else "payload_json"
+        assert payload_column in cols, cols
+        assert "student_answers" not in cols
         for qid in sorted(modified_ids | blocked_ids):
             raw = json.dumps(byid[qid], ensure_ascii=False, sort_keys=True,
                              separators=(",", ":"))
             hx = hashlib.sha256(raw.encode("utf-8")).hexdigest()
             assert cx.execute(
-                "UPDATE questions SET payload=?, payload_sha256=? WHERE question_id=?",
+                f"UPDATE questions SET {payload_column}=?, payload_sha256=? WHERE question_id=?",
                 (raw, hx, qid)
             ).rowcount == 1
         assert cx.execute("SELECT COUNT(*) FROM questions").fetchone()[0] == 205
         for qid, raw, sha in cx.execute(
-            "SELECT question_id,payload,payload_sha256 FROM questions"
+            f"SELECT question_id,{payload_column},payload_sha256 FROM questions"
         ):
             assert hashlib.sha256(raw.encode("utf-8")).hexdigest() == sha
             assert json.loads(raw)["questionId"] == qid
