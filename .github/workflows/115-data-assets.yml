@@ -8,7 +8,7 @@ on:
       - scripts/build_115_question_bank.py
       - scripts/reconcile_115_answers.py
       - scripts/merge_115_assets.py
-      - scripts/refine_115_webp.py scripts/audit_115_processed.py
+      - scripts/refine_115_webp.py
       - scripts/audit_115_processed.py
       - .github/workflows/115-data-assets.yml
   workflow_dispatch:
