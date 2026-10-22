@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""115 original-photo crop refinement: preserve old drafts; create traceable v3.
+
+Fix visually identified Math B Q1 plot/caption cropping and English reading
+charts, then prepare separate professional-paper shared material crops.
+Only official source WebP pixels; no fake text, full-page substitute or OCR.
+"""
+from __future__ import annotations
+from datetime import datetime, timezone
+import hashlib
+import io
+import json
+from pathlib import Path
+from PIL import Image
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/"sudu/data/processed/115"
+MANIFEST=OUT/"webp-manifest.json"
+RULE="v3-visual-review-draft-source-pixel-only"
+def digest(b):return hashlib.sha256(b).hexdigest()
+def page(paper,pagenum):
+    choices=sorted((ROOT/"sudu/data/original/115"/paper).glob(f"p{pagenum:03d}-*-v2-w1400-q66.webp"))
+    if len(choices)!=1:raise ValueError(f"Ambiguous original page {paper} {pagenum}: {len(choices)}")
+    return choices[0]
+def write_original_crop(source,box,dest):
+    payload_source=source.read_bytes()
+    with Image.open(io.BytesIO(payload_source)) as im:
+        if im.format!="WEBP" or not (0<=box[0]<box[2]<=im.width and 0<=box[1]<box[3]<=im.height):
+            raise ValueError("Invalid original WebP crop bounds")
+        buf=io.BytesIO()
+        im.crop(box).save(buf,"WEBP",lossless=True,method=6)
+        size=[box[2]-box[0],box[3]-box[1]]
+        source_size=list(im.size)
+    payload=buf.getvalue()
+    with Image.open(io.BytesIO(payload)) as check:
+        check.load()
+        if check.format!="WEBP":raise ValueError("Invalid generated WebP")
+    dest.parent.mkdir(parents=True,exist_ok=True)
+    if dest.exists() and dest.read_bytes()!=payload:
+        raise ValueError("Versioned output changed: "+str(dest))
+    dest.write_bytes(payload)
+    return {"source":source.relative_to(ROOT).as_posix(),
+            "sourceSize":source_size,"sourceSha256":digest(payload_source),
+            "crop":list(box),"output":dest.relative_to(ROOT).as_posix(),
+            "outputSize":size,"sha256":digest(payload)}
+def main():
+    data=json.loads(MANIFEST.read_text(encoding="utf-8"))
+    if data["generated"]!=205:raise ValueError("Full draft manifest required")
+    q={e["questionId"]:e for e in data["items"]}
+    for qid in ("115-00-MB-01",):
+        item=q[qid]
+        official=page("00-MB",2)
+        rect=(90,503,1310,867)  # Q1 full diagram caption, Q2 starts lower.
+        asset=write_original_crop(official,rect,OUT/"webp-v3"/"00-MB"/(qid+".webp"))
+        item.update(asset)
+        item["processingVersion"]=RULE
+        item["qaStatus"]="DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA"
+        item["cropMethod"]="refined_source_pixel_crop_after_visual_QA_detection"
+        item.setdefault("issues",[]).append("v2_clip_cut_off_figure_caption_fixed_by_new_candidate_crop")
+    shared={e["sharedMaterialId"]:e for e in data["sharedMaterialCrops"]}
+    specs=[
+      # Correct English axis labels/last sentence without including first question.
+      ("115-00-E-SHARED-33-35","00-E",8,(90,164,1310,1238),[33,34,35]),
+      ("115-00-E-SHARED-39-42","00-E",10,(90,166,1310,978),[39,40,41,42]),
+      # Professional-paper materials are cropped independently from their questions.
+      ("115-09-1-SHARED-18-19","09-1",5,(90,340,1310,628),[18,19]),
+      ("115-09-1-SHARED-20-21","09-1",5,(90,1075,1310,1307),[20,21]),
+      ("115-09-1-SHARED-22-23","09-1",6,(90,162,1310,1184),[22,23]),
+      ("115-09-1-SHARED-24-25","09-1",7,(90,163,1310,785),[24,25]),
+      ("115-09-2-SHARED-23-24","09-2",6,(90,918,1310,1072),[23,24]),
+    ]
+    for group,paper,pg,box,nums in specs:
+        current=shared.get(group)
+        # Need official question anchor gap to prevent other question content.
+        qstart=q[f"115-{paper}-{nums[0]:02d}"]["crop"][1]
+        if box[3]>=qstart:raise ValueError(f"Shared material overlaps {group} first question")
+        image=page(paper,pg)
+        asset=write_original_crop(image,box,OUT/"webp-v3"/"shared"/(group+".webp"))
+        value={**asset,"sharedMaterialId":group,"paperCode":paper,"sourcePage":pg,
+               "originalQuestionNumbers":nums,"processingVersion":RULE,
+               "qaStatus":"DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+               "issues":["Visually compare entire shared passage against official full page."]}
+        if current is not None:
+            current.update(value)
+        else:
+            data["sharedMaterialCrops"].append(value)
+    data["refinements"]=data.get("refinements",[])+[{
+        "revision":RULE,"timestamp":datetime.now(timezone.utc).isoformat(),
+        "notes":"Q1 original maths diagram caption and professional shared material groups. Prior v1/v2 images retained for traceability.",
+        "questionOverrides":["115-00-MB-01"],
+        "sharedMaterials":[x[0] for x in specs]
+    }]
+    MANIFEST.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(json.dumps({"expected":data["expected"],"generated":data["generated"],
+                      "shared":len(data["sharedMaterialCrops"]),
+                      "refinedQuestion":"115-00-MB-01"},ensure_ascii=False))
+if __name__=="__main__":main()
