@@ -60,7 +60,7 @@ function render(year,r){
    const tr=$$('tr');[s,v.candidate,v.webpQaPass,v.imagePreviewReady||0,v.studentReady].forEach(x=>tr.append($$('td',x)));body.append(tr);
   }table.append(body);wrap.append(table);card.append(wrap);
  }
- const action=$('a','檢視 '+year+' 年已 QA 原題及可作答題目');
+ const action=$$('a','檢視 '+year+' 年已 QA 原題及可作答題目');
  action.href='./v4-115-multisubject-review-demo.html?year='+year;
  action.style.cssText='font-weight:800;display:inline-block;min-height:44px;padding:10px 0;color:var(--blue)';
  card.append(action);
