@@ -21,13 +21,7 @@
     "114-00-MB-08"
   ],
   "answerTextMatched": 200,
-  "answerUnmatchedIds": [
-    "114-00-C-15",
-    "114-00-E-15",
-    "114-00-MB-15",
-    "114-09-1-15",
-    "114-09-2-15"
-  ],
+  "answerUnmatchedIds": [],
   "answerIndependentlyVerified": 0,
   "questionIndependentlyVerified": 0,
   "perPaper": {
@@ -71,5 +65,8 @@
       "answerPdfConflicts": [],
       "ocrGapCandidates": 0
     }
-  }
+  },
+  "answerOfficialImageMatchedWithoutPdfText": 5,
+  "answerCandidatesMatchedAcrossTextAndImage": 205,
+  "officialCorrectionQaComplete": false
 }
