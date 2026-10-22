@@ -4,6 +4,7 @@ Runs after the unchanged same-commit release gate, production build and Pages de
 A successful upload is NOT a successful LIVE release until this script passes.
 """
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -49,7 +50,25 @@ def inspect_live(base, sha):
             raise ValueError(f"{year} LIVE year count and progress disagree")
         if stats.get("expected") != 205:
             raise ValueError(f"{year} wrong expected question count")
-        checked[y] = {"approved": count, "expected": stats["expected"]}
+        preview = json.loads(fetch(base, f"sudu/data/approved/preview/{y}.json", sha))
+        reviewed = preview.get("questions")
+        if (preview.get("year") != year or not isinstance(reviewed, list)
+                or len(reviewed) != preview.get("imagePreviewCount")
+                or len(reviewed) != stats.get("imagePreviewCount", 0)):
+            raise ValueError(f"{year} LIVE image-only QA preview counts disagree")
+        for q in reviewed[:2]:
+            if q.get("year") != year or q.get("reviewStage") != "image_qa_pass_only":
+                raise ValueError(f"{year} LIVE preview includes a non-approved image stage")
+            if any(field in q for field in ("answer", "question", "options", "teaching", "memory")):
+                raise ValueError(f"{year} LIVE preview leaked an unverified answer or OCR")
+            if not isinstance(q.get("image"), str) or not q["image"].startswith(f"data/approved/webp/{year}/"):
+                raise ValueError(f"{year} LIVE preview references another data area")
+            for image in [{"image": q["image"], "sha256": q.get("imageSha256")},
+                          *(q.get("sharedImages") or [])[:1]]:
+                payload = fetch(base, "sudu/" + image["image"], sha)
+                if hashlib.sha256(payload).hexdigest() != image["sha256"]:
+                    raise ValueError(f"{year} LIVE image content SHA did not match audited source")
+        checked[y] = {"approved": count, "imagePreviews": len(reviewed), "expected": stats["expected"]}
     return {"live": "VERIFIED", "sha": sha, "years": checked,
             "url": base.rstrip("/") + "/sudu/v4-115-multisubject-review-demo.html"}
 
