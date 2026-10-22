@@ -26,14 +26,14 @@
       "officialExpectedQuestions": 42,
       "candidateRecords": 42,
       "generatedPerQuestionWebp": 42,
-      "visualQaPass": 14,
+      "visualQaPass": 42,
       "rawOcrEngineOutput": 42,
       "nativePdfOrManualTextAvailable": 42,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 42,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 42,
-      "needsFullVisualReview": 28
+      "needsFullVisualReview": 0
     },
     "數學B": {
       "officialExpectedQuestions": 25,
@@ -78,27 +78,27 @@
       "officialExpectedQuestions": 24,
       "candidateRecords": 24,
       "generatedPerQuestionWebp": 24,
-      "visualQaPass": 10,
+      "visualQaPass": 23,
       "rawOcrEngineOutput": 12,
       "nativePdfOrManualTextAvailable": 24,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 24,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 24,
-      "needsFullVisualReview": 14
+      "needsFullVisualReview": 1
     },
     "經濟學": {
       "officialExpectedQuestions": 26,
       "candidateRecords": 26,
       "generatedPerQuestionWebp": 26,
-      "visualQaPass": 5,
+      "visualQaPass": 24,
       "rawOcrEngineOutput": 26,
       "nativePdfOrManualTextAvailable": 26,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 26,
       "officialAnswerIndependentlyVerified": 0,
       "sqliteRecordCount": 26,
-      "needsFullVisualReview": 21
+      "needsFullVisualReview": 2
     }
   }
 }
