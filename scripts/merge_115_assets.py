@@ -115,7 +115,8 @@ def main():
            "output":item["output"],"source":item["source"],
            "sourcePage":item["sourcePage"],"crop":item["crop"],
            "sha256":item["sha256"],"sourceSha256":item["sourceSha256"],
-           "qaStatus":"PENDING_INDIVIDUAL_VISUAL_QA"
+           "qaStatus":"PASS" if item.get("qaStatus")=="PASS" else "PENDING_INDIVIDUAL_VISUAL_QA",
+           "visualReviewEvidence":item.get("visualReviewEvidence")
         }
         # PDF-layer text is a DISTINCT extraction. Preserve any previously
         # transcribed/corrected original shared text instead of overwriting.
