@@ -9,6 +9,7 @@ on:
       - scripts/reconcile_115_answers.py
       - scripts/merge_115_assets.py
       - scripts/refine_115_webp.py
+      - scripts/apply_115_visual_qa.py
       - scripts/audit_115_processed.py
       - .github/workflows/115-data-assets.yml
   workflow_dispatch:
@@ -36,13 +37,15 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra tesseract-ocr-eng
       - name: Check source-only script syntax
-        run: python -m py_compile scripts/build_115_full_assets.py scripts/build_115_question_bank.py scripts/reconcile_115_answers.py scripts/merge_115_assets.py scripts/refine_115_webp.py
+        run: python -m py_compile scripts/build_115_full_assets.py scripts/build_115_question_bank.py scripts/reconcile_115_answers.py scripts/merge_115_assets.py scripts/refine_115_webp.py scripts/apply_115_visual_qa.py
       - name: Generate 115-only draft crops, source hashes and raw OCR candidates
         run: python scripts/build_115_full_assets.py
       - name: Correct source-only picture crops and prepare Chinese/professional shared materials
         run: python scripts/refine_115_webp.py
       - name: Reconcile every candidate answer with official SHA-pinned PDF text
         run: python scripts/reconcile_115_answers.py
+      - name: Apply exact-SHA source-page direct visual QA evidence
+        run: python scripts/apply_115_visual_qa.py
       - name: Attach source-true WebP crops, OCR raw results and English shared passages
         run: python scripts/merge_115_assets.py
       - name: Rebuild isolated question-bank SQLite twice and verify roundtrips
@@ -76,11 +79,20 @@ jobs:
             assert q["qaStatus"].startswith("DRAFT_") or (
             q["qaStatus"]=="PASS" and
             q.get("visualReviewEvidence",{}).get("reviewedSha256")==q["sha256"] and
-            q.get("visualReviewEvidence",{}).get("reference")=="sudu/DEMO_VISUAL_QA.md"
+            q.get("visualReviewEvidence",{}).get("reference") in ("sudu/DEMO_VISUAL_QA.md", "sudu/data/processed/115/VISUAL_QA_2026-10-22.json")
           ), q["questionId"]
           assert len(ids)==205
           assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
           assert len(j["sharedMaterialCrops"])==19, "19 source-pixel reading groups required"
+          import hashlib
+          qa_path=root/"sudu/data/processed/115/VISUAL_QA_2026-10-22.json"
+          qa_sha=hashlib.sha256(qa_path.read_bytes()).hexdigest()
+          for x in j["items"]+j["sharedMaterialCrops"]:
+            if x.get("qaStatus")!="PASS":continue
+            evidence=x.get("visualReviewEvidence")
+            assert evidence and evidence["reviewedSha256"]==x["sha256"], x.get("questionId",x.get("sharedMaterialId"))
+            if evidence["reference"]=="sudu/data/processed/115/VISUAL_QA_2026-10-22.json":
+              assert evidence["referenceSha256"]==qa_sha
           for q in j["items"]:
             if q.get("output"):
               assert q["outputSize"][1] < q["sourceSize"][1]*0.60, "full/oversized exam page crop: "+q["questionId"]
