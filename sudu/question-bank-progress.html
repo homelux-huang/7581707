@@ -18,7 +18,7 @@ footer{margin-top:22px;padding-top:13px;border-top:1px solid var(--line);font-si
 </style>
 </head>
 <body><main>
-<section class="intro"><h1>題庫接入平台部署進度表</h1><p>114 年與 115 年分開追蹤「原圖擷取、逐題 WebP 目視、OCR 校對、最終官方答案、AI 獨立解題、教學驗收、學生端正式開放」。綠色進度只計入完成全部關卡的題目。</p>
+<section class="intro"><h1>題庫接入平台部署進度表</h1><p>114 年與 115 年分開追蹤「原圖擷取、逐題 WebP 目視、OCR 校對、最終官方答案、AI 獨立解題、教學驗收、學生端正式開放」。原圖預覽和正式可作答是不同階段；綠色正式可作答進度只計入完成全部關卡的題目。</p>
 <nav class="nav" aria-label="速讀學習入口"><a href="./v4-115-multisubject-review-demo.html">保留原 35 題 Demo</a><a href="./v4-115-multisubject-review-demo.html?year=115">115 年正式驗收題</a><a href="./v4-115-multisubject-review-demo.html?year=114">114 年正式驗收題</a></nav>
 <p id="liveSha" class="note" aria-live="polite">正式 LIVE 版本：讀取中…</p></section>
 <div class="grid" id="cards"><article class="card">正在讀取已發布的逐年 QA 快照…</article></div>
@@ -39,11 +39,12 @@ function meter(card,label,num,den,kind){
 function render(year,r){
  const card=$$('article',undefined,'card');card.append($$('h2',year+' 年度題庫'));
  const m=$$('div',undefined,'numbers');
- for(const [name,value] of [['候選題數',r.candidate],['單題 WebP',r.webpGenerated],['學生可用',r.approvedCount]]){
+ for(const [name,value] of [['候選題數',r.candidate],['WebP 圖片 QA',r.webpQaPass],['原圖可預覽',r.imagePreviewCount||0],['可正式作答',r.approvedCount]]){
   const box=$$('div',undefined,'metric');box.append($$('strong',value),$$('span',name));m.append(box)
  }
  card.append(m);
  meter(card,'單題圖片逐題目視 QA',r.webpQaPass,r.expected,'image');
+ meter(card,'原圖已通過圖片及共用材料驗收，可先行預覽',r.imagePreviewCount||0,r.expected,'image');
  meter(card,'OCR 與題幹／選項 QA',r.ocrQaPass,r.expected);
  meter(card,'最終官方答案與更正 QA',r.officialFinalQaPass,r.expected);
  meter(card,'整題教學與獨立解題皆通過',r.approvedCount,r.expected);
@@ -53,13 +54,13 @@ function render(year,r){
  if(subjects.length){
   const wrap=$$('div',undefined,'table-wrap'),table=$$('table');
   const top=$$('thead'),tr=$$('tr');
-  for(const label of ['科目','候選','圖片QA','已開放'])tr.append($$('th',label));
+  for(const label of ['科目','候選','圖片QA','可預覽','已作答'])tr.append($$('th',label));
   top.append(tr);table.append(top);const body=$$('tbody');
   for(const [s,v] of subjects){
-   const tr=$$('tr');[s,v.candidate,v.webpQaPass,v.studentReady].forEach(x=>tr.append($$('td',x)));body.append(tr);
+   const tr=$$('tr');[s,v.candidate,v.webpQaPass,v.imagePreviewReady||0,v.studentReady].forEach(x=>tr.append($$('td',x)));body.append(tr);
   }table.append(body);wrap.append(table);card.append(wrap);
  }
- const action=$$('a','進入 '+year+' 年已驗收題庫');
+ const action=$$('a','檢視 '+year+' 年已 QA 原題及可作答題目');
  action.href='./v4-115-multisubject-review-demo.html?year='+year;
  action.style.cssText='font-weight:800;display:inline-block;min-height:44px;padding:10px 0;color:var(--blue)';
  card.append(action);

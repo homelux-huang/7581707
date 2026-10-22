@@ -60,3 +60,10 @@
 ## 2026-10-22 實際同步觸發修正
 
 GitHub Actions 使用內建 `GITHUB_TOKEN` 建立的 main 提交通常不會再觸發其他 `on: push` Actions。因此同步 job 在推送最新 approved QA 快照後，必須以 `actions: write` 權限明確執行 `gh workflow run pages.yml --ref main -f target_sha=<已提交 SHA>`。這不是繞過 release gate：它只觸發原本的 Pages 同 SHA verify/build/deploy/verify_live，所有檢查保持原樣。不能因 main 有新 commit 就假稱 Pages 已經部署。
+
+
+## 2026-10-22：逐題圖片 QA 完成即可先行部署
+
+已變更成漸進式兩段放行：圖片與所需共用材料逐題目視 QA、SHA、來源證據及 WebP 解碼都通過時，只將原始影像和題號、年度、科目公開到 sudu/data/approved/preview/ 年度 JSON，於既有 V4 題庫年度模式唯讀預覽；絕不包含未核實 OCR、官方答案、教學詳解或計分。只有後續官方最終答案、獨立解題、四選項高職老師與國小白話解說、適用完整計算式與 UI QA 全過，才升級為可正式作答。年度 100% 不再是單題放行前提。同步 workflow 會在資料 QA 變動或新預覽 schema 生效時，自動逐題補入，不需使用者確認；只在 Pages 完整 release gate、部署及 LIVE SHA 回讀成功時視為已發行。
+
+最新資料工程盤點：114 年 205 候選，9 題 WebP 圖片 QA PASS，可唯讀預覽 9 題；115 年 205 候選，135 題單題 WebP 圖片 QA PASS，經共用文章/圖表關聯確認可唯讀預覽 119 題。兩年度共 128 題可先展示原始 WebP；剩餘部分持續自動依 QA 補入。正式學生可作答仍 0 題，不能把只過圖片 QA 誤認為獨立解題或教學 QA 已過。

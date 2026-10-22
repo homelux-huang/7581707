@@ -11,7 +11,7 @@ spec.loader.exec_module(build)
 
 class PublicBuildPrivacy(unittest.TestCase):
     def test_public_allowlist(self):
-        for path in ["sudu/data/approved/114.json", "sudu/data/approved/115.json", "sudu/data/approved/progress.json", "sudu/data/approved/webp/115/115-09-2-27.webp", "index.html", "原工具.html", "assets/share.js", "sudu/admin.html", "sudu/data/years/115.json", "sudu/data/original/114/09-2/p001-abcd.webp", "sudu/data/original/answers/114/09-2/p001-abcd.webp"]:
+        for path in ["sudu/data/approved/114.json", "sudu/data/approved/115.json", "sudu/data/approved/progress.json", "sudu/data/approved/preview/114.json", "sudu/data/approved/preview/115.json", "sudu/data/approved/webp/115/115-09-2-27.webp", "sudu/data/approved/webp/115/115-00-E-SHARED-21-24.webp", "index.html", "原工具.html", "assets/share.js", "sudu/admin.html", "sudu/data/years/115.json", "sudu/data/original/114/09-2/p001-abcd.webp", "sudu/data/original/answers/114/09-2/p001-abcd.webp"]:
             self.assertTrue(build.included(Path(path)), path)
         for path in ["sudu/data/processed/115/questions.json", "sudu/data/processed/114/question-bank.sqlite3", "sudu/data/approved/webp/115/private.webp", "backend/private.sqlite3", "backend/private.sqlite3-wal", ".env", "render-admin.yaml", "tests/private.json", "sudu/student-backup.json", "sudu/data/student-backup.json", "sudu/data/years/secrets.json", "assets/private.json", "assets/.env", "sudu/data/original/private.sqlite3", "docs/SUDU_HANDOFF.md"]:
             self.assertFalse(build.included(Path(path)), path)

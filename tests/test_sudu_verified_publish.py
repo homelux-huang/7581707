@@ -78,12 +78,44 @@ class VerifiedPublicationTests(unittest.TestCase):
         self.q["teaching"]["optionExplanations"].pop("D")
         self.assertFalse(v.teaching_complete(self.q,"經濟學","B"))
 
+    def test_image_preview_certificate_is_not_answer_qa(self):
+        import hashlib, json
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            path=root/"sudu/data/processed/114/visual-review.json"
+            path.parent.mkdir(parents=True)
+            record={"questionId":"114-00-C-02","webpSha256":"f"*64,
+                    "webpPath":"sudu/data/processed/114/webp-v1/00-C/114-00-C-02.webp",
+                    "result":"PASS"}
+            path.write_text(json.dumps({"records":[record]}))
+            item={"sha256":"f"*64,"output":record["webpPath"],
+                  "visualReviewEvidence":{"reference":str(path.relative_to(root)),
+                                          "reviewedSha256":"f"*64}}
+            self.assertTrue(v.visual_certificate(root,item,record["questionId"]))
+            record["result"]="PENDING"
+            path.write_text(json.dumps({"records":[record]}))
+            self.assertFalse(v.visual_certificate(root,item,record["questionId"]))
+            record["result"]="PASS"
+            path.write_text(json.dumps({"records":[record]}))
+            item["visualReviewEvidence"]["referenceSha256"]=hashlib.sha256(path.read_bytes()).hexdigest()
+            self.assertTrue(v.visual_certificate(root,item,record["questionId"]))
+            item["visualReviewEvidence"]["referenceSha256"]="0"*64
+            self.assertFalse(v.visual_certificate(root,item,record["questionId"]))
+
     def test_zero_does_not_mean_year_complete(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for year in (114,115):
                 v.dump(root/f"sudu/data/approved/{year}.json",{"year":year,"expected":205,"questions":[],"approvedCount":0})
-            v.dump(root/"sudu/data/approved/progress.json",{"years":{"114":{"approvedCount":0},"115":{"approvedCount":0}}})
+            for year in (114,115):
+                v.dump(root/f"sudu/data/approved/preview/{year}.json",{
+                    "schemaVersion":1,"year":year,"expected":205,
+                    "imagePreviewCount":0,"questions":[]
+                })
+            v.dump(root/"sudu/data/approved/progress.json",{
+                "years":{"114":{"approvedCount":0,"imagePreviewCount":0},
+                         "115":{"approvedCount":0,"imagePreviewCount":0}}
+            })
             self.assertIsNotNone(v.site_check(root))
 
     def test_114_115_aliases_and_cross_question_path_traversal(self):

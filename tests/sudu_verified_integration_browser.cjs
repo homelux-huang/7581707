@@ -17,6 +17,16 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
    const yr=await page.request.get(base+'data/approved/'+year+'.json');assert(yr.ok());
    const data=await yr.json();
    assert.equal(data.year,+year);assert.equal(data.questions.length,data.approvedCount);
+   const imagePreview=await page.request.get(base+'data/approved/preview/'+year+'.json');
+   assert(imagePreview.ok(),'preview JSON not whitelisted');
+   const preview=await imagePreview.json();
+   assert.equal(preview.year,+year);
+   assert.equal(preview.imagePreviewCount,preview.questions.length);
+   for(const item of preview.questions){
+     assert.equal(item.reviewStage,'image_qa_pass_only');
+     for(const forbidden of ['answer','question','options','teaching','memory'])
+       assert.equal(Object.hasOwn(item,forbidden),false,'QA preview must not leak '+forbidden);
+   }
    for(const [width,height] of widths){
     await page.setViewportSize({width,height});
     await page.goto(base+'v4-115-multisubject-review-demo.html?year='+year);
@@ -24,6 +34,12 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     if(data.approvedCount===0){
      assert.match(await page.locator('#verifiedStatus').innerText(),/沒有通過|暫停/);
      assert.equal(await page.locator('#studyView').isVisible(),false);
+     await page.locator('#verifiedImagePreview').waitFor();
+     assert.match(await page.locator('#verifiedImagePreview').innerText(),/原題 WebP|原圖/);
+     if(preview.imagePreviewCount){
+       await page.locator('#verifiedImagePreview img').first().scrollIntoViewIfNeeded();
+       assert(await page.locator('#verifiedImagePreview img').first().evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
+     }
     }else{
      const subjects=await page.locator('#subjectSel option').allTextContents();
      assert(subjects.length>0);
