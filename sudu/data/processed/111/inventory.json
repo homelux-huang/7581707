@@ -4,7 +4,7 @@
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 205,
   "webpGeneratedDrafts": 205,
-  "visualQaPass": 0,
+  "visualQaPass": 9,
   "ocrGapCandidatesGenerated": 12,
   "ocrTextIndependentlyVerified": 0,
   "missingFourTextOptions": [
@@ -93,7 +93,7 @@
       "legacyIdNumberGap": []
     }
   },
-  "sharedMaterialsVerified": 0,
+  "sharedMaterialsVerified": 2,
   "sharedMaterialsReviewRequired": true,
   "sqlite": {
     "rows": 205,

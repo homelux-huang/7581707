@@ -1,7 +1,7 @@
 {
   "year": 111,
   "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
-  "imageVisualQaPass": 0,
+  "imageVisualQaPass": 9,
   "answerOfficialFinalVerified": 0,
   "ocrTextVerified": 0,
   "officialExpectedQuestionCountsConfirmed": false,
@@ -76,5 +76,5 @@
       "legacyIdNumberGap": []
     }
   },
-  "sharedMaterialsStatus": "DRAFT_INDIVIDUAL_VISUAL_QA_REQUIRED"
+  "sharedMaterialsStatus": "PARTIAL_ASSISTANT_DIRECT_VISUAL_2_PASS"
 }
