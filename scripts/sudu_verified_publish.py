@@ -277,6 +277,66 @@ def certificates_complete(source: Path, q: dict, item: dict, shared: dict) -> bo
                for evidence, field, hash_field in checks)
 
 
+def visual_certificate(source: Path, item: dict, identity: str) -> bool:
+    """Confirm the reviewed image SHA against an existing, versioned QA record.
+
+    Modern QA records contain referenceSha256. Older 114 image-only JSON
+    evidence instead must contain the same question ID, image SHA and PASS.
+    This is image QA only: it never verifies OCR, official answers or teaching.
+    """
+    evidence = item.get("visualReviewEvidence") or {}
+    rel = evidence.get("reference")
+    if evidence.get("reviewedSha256") != item.get("sha256"):
+        return False
+    if not isinstance(rel, str) or not rel:
+        return False
+    p = Path(rel)
+    if p.is_absolute() or ".." in p.parts or p.suffix not in {".json", ".md"}:
+        return False
+    record = source / p
+    if not record.resolve().is_relative_to(source.resolve()) or record.is_symlink() or not record.is_file():
+        return False
+    payload = record.read_bytes()
+    expected = evidence.get("referenceSha256")
+    if expected is not None:
+        return bool(SHA.fullmatch(str(expected)) and digest(payload) == expected)
+    if p.suffix != ".json":
+        return False
+    try:
+        parsed = json.loads(payload)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return False
+    # Older source does not have a file SHA claim. Validate the immutable Git
+    # source copy by matching a genuine per-question visual-QA record.
+    for row in parsed.get("records", []):
+        if (row.get("questionId") == identity and row.get("result") == "PASS"
+                and row.get("webpSha256") == item.get("sha256")
+                and row.get("webpPath") == item.get("output")):
+            return True
+    return False
+
+
+def certified_visual_assets(source: Path, q: dict, item: dict, shared: dict) -> list[tuple[str, str, str]] | None:
+    """Return original source path, destination basename and sha for review-only assets."""
+    if not image_proof(q, item, shared, source):
+        return None
+    qid = q["questionId"]
+    if not visual_certificate(source,item,qid):
+        return None
+    ids = shared_material_ids(q)
+    if ids is None:
+        return None
+    assets = [(item["output"], qid, item["sha256"])]
+    for sid in ids:
+        group = shared.get(sid)
+        if not group or not visual_certificate(source,group,sid):
+            return None
+        assets.append((group["output"], sid, group["sha256"]))
+    if not all(verify_bytes(source,rel,sha) for rel,_,sha in assets):
+        return None
+    return assets
+
+
 def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
     t = q["teaching"]
     calc = t["examCalculation"] if t["hasExamCalculation"] else None
@@ -313,8 +373,8 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
     db_good = bool((d/"question-bank.sqlite3").is_file()) and (
         (year == 115 and (d/"VALIDATION.json").is_file() and read(d/"VALIDATION.json").get("sqlite") == "SQLITE_ROUNDTRIP_PASS")
         or (year == 114 and bool(inventory.get("sqlite",{}).get("roundtripPass"))))
-    qa_per_subject = defaultdict(lambda:{"expected":0, "candidate":0,"webpQaPass":0,"ocrQaPass":0,"finalAnswerQaPass":0,"studentReady":0})
-    released, approved_files, blocked, ai = [], set(), [], Counter()
+    qa_per_subject = defaultdict(lambda:{"expected":0, "candidate":0,"webpQaPass":0,"imagePreviewReady":0,"ocrQaPass":0,"finalAnswerQaPass":0,"studentReady":0})
+    released, previewed, approved_files, blocked, ai = [], [], set(), [], Counter()
     seen=set()
     for q in questions:
         identity = stable(q, year)
@@ -330,6 +390,24 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         image_ok = image_proof(q, item, shared, src)
         if individual_image_proof(q,item,src):
             qa_per_subject[subject]["webpQaPass"] += 1
+        certified = certified_visual_assets(src,q,item,shared) if image_ok else None
+        if certified is not None:
+            image_list=[]
+            for source_rel,asset_id,asset_sha in certified:
+                destination_rel=f"data/approved/webp/{year}/{asset_id}.webp"
+                destination=output/"sudu"/destination_rel
+                destination.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copyfile(src/source_rel,destination)
+                approved_files.add(destination.resolve())
+                image_list.append({"image":destination_rel,"sha256":asset_sha})
+            previewed.append({
+                "canonicalId":qid,"year":year,"subject":subject,
+                "questionNumber":q["originalQuestionNumber"],
+                "image":image_list[0]["image"],"imageSha256":image_list[0]["sha256"],
+                "sharedImages":image_list[1:],
+                "reviewStage":"image_qa_pass_only",
+            })
+            qa_per_subject[subject]["imagePreviewReady"] += 1
         revision = text_revision(q, item.get("sha256", "") if item else "")
         ocr_ok, official_ok = source_proof(q,image_ok,db_good,revision)
         qa_per_subject[subject]["ocrQaPass"] += int(ocr_ok)
@@ -372,6 +450,12 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
     out = {"schemaVersion":1,"year":year,"sourceSha":source_sha,"expected":expected,
            "approvedCount":len(released),"questions":released}
     dump(output / f"sudu/data/approved/{year}.json",out)
+    # Public preview contains ONLY individually reviewed original WebP images.
+    # Never serialize draft OCR, answer candidates, option keys or teaching.
+    dump(output / f"sudu/data/approved/preview/{year}.json",{
+        "schemaVersion":1,"year":year,"expected":expected,"sourceSha":source_sha,
+        "imagePreviewCount":len(previewed),"questions":previewed
+    })
     shared_pass = sum(x.get("qaStatus") == "PASS" and
                       (x.get("visualReviewEvidence") or {}).get("reviewedSha256") == x.get("sha256")
                       for x in shared.values())
@@ -385,7 +469,8 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
                                               inventory.get("officialPdfTextAnswerMatched",0))),
         "officialFinalQaPass":sum(x["finalAnswerQaPass"] for x in qa_per_subject.values()),
         "aiSolvedMatched":ai["matched"],"aiMismatch":ai["mismatch"],"aiNotChecked":ai["not_checked"],
-        "approvedCount":len(released),
+        "approvedCount":len(released), "imagePreviewCount":len(previewed),
+        "imagePreviewPercent":round(100*len(previewed)/expected,1),
         "imageQaPercent":round(100*sum(x["webpQaPass"] for x in qa_per_subject.values())/expected,1),
         "approvedPercent":round(100*len(released)/expected,1),
         "subjects":dict(sorted(qa_per_subject.items())),
@@ -413,6 +498,24 @@ def site_check(dest: Path):
         assert p["year"]==year and p["expected"]==COUNT[year]
         assert len(qs)==p["approvedCount"]==status["years"][str(year)]["approvedCount"]
         seen=set()
+        preview_file=read(dest/f"sudu/data/approved/preview/{year}.json")
+        pictures=preview_file.get("questions")
+        assert isinstance(pictures,list)
+        assert preview_file["year"]==year and preview_file["expected"]==COUNT[year]
+        assert preview_file["imagePreviewCount"]==len(pictures)==status["years"][str(year)]["imagePreviewCount"]
+        seen_preview=set()
+        for item in pictures:
+            identity=item["canonicalId"]
+            assert identity not in seen_preview and QID.fullmatch(identity)
+            seen_preview.add(identity)
+            assert item["year"]==year and item["reviewStage"]=="image_qa_pass_only"
+            assert item["image"]==f"data/approved/webp/{year}/{identity}.webp"
+            assert digest((dest/"sudu"/item["image"]).read_bytes())==item["imageSha256"]
+            for shared_image in item["sharedImages"]:
+                assert shared_image["image"].startswith(f"data/approved/webp/{year}/{year}-")
+                assert digest((dest/"sudu"/shared_image["image"]).read_bytes())==shared_image["sha256"]
+            # Public image-only previews MUST NEVER leak answer candidates or OCR.
+            assert not ({"answer","question","options","teaching","memory","independentSolve"} & set(item))
         for q in qs:
             qid=q["canonicalId"]
             assert qid not in seen and QID.fullmatch(qid)
