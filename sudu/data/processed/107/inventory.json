@@ -1,0 +1,138 @@
+{
+  "year": 107,
+  "expectedFromLegacy": 204,
+  "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
+  "totalCandidateQuestions": 204,
+  "webpGeneratedDrafts": 185,
+  "visualQaPass": 0,
+  "ocrGapCandidatesGenerated": 18,
+  "ocrTextIndependentlyVerified": 0,
+  "missingFourTextOptions": [
+    "107-00-C-08",
+    "107-00-C-09",
+    "107-00-C-10",
+    "107-00-C-11",
+    "107-00-C-14",
+    "107-00-C-16",
+    "107-00-C-35",
+    "107-00-E-22",
+    "107-00-E-23",
+    "107-00-E-24",
+    "107-00-E-25",
+    "107-00-E-26",
+    "107-00-E-27",
+    "107-00-E-28",
+    "107-00-E-29",
+    "107-00-E-30",
+    "107-00-E-31",
+    "107-00-MB-01",
+    "107-00-MB-07",
+    "107-00-MB-08",
+    "107-00-MB-19",
+    "107-00-MB-21",
+    "107-00-MB-22",
+    "107-00-MB-23",
+    "107-00-MB-25",
+    "107-09-1-50"
+  ],
+  "answerPdfTextMatchedOnly": 204,
+  "answerOfficialFinalVerified": 0,
+  "sourcePaperStats": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        35,
+        36,
+        37,
+        38
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 38,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 41,
+      "numberedAnchors": 37,
+      "imageDrafts": 37,
+      "unresolvedAnchorNumbers": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 41,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 48,
+      "imageDrafts": 48,
+      "unresolvedAnchorNumbers": [
+        49,
+        50
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  },
+  "sharedMaterialsVerified": 0,
+  "sharedMaterialsReviewRequired": true,
+  "sqlite": {
+    "rows": 204,
+    "unique": 204,
+    "integrity": "ok",
+    "reimportCount": 2,
+    "shaMismatches": 0
+  },
+  "integrationReady": false
+}
