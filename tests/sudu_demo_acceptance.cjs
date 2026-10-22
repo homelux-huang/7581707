@@ -100,6 +100,8 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
      assert(geometry.left<=2&&geometry.width<=3);
      assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
+     const joined=await page.evaluate(()=>{const m=document.querySelector('#memoryCard'),g=document.querySelector('#guideCard'),a=m.getBoundingClientRect(),b=g.getBoundingClientRect();return {adjacent:m.nextElementSibling===g,gap:b.top-a.bottom,left:Math.abs(a.left-b.left),width:Math.abs(a.width-b.width)};});
+     assert(joined.adjacent&&Math.abs(joined.gap)<=1&&joined.left<=1&&joined.width<=1,'memory directly joins explanation '+JSON.stringify(joined));
      await noOverflow('answer overflow '+width+' '+q.subject+q.id);
     }
     await page.screenshot({path:path.join(output,`demo-${width}x${height}-${theme}.png`)});

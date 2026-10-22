@@ -114,6 +114,9 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
 .side-prev{left:max(4px,env(safe-area-inset-left))}.side-next{right:max(4px,env(safe-area-inset-right))}
 .side-arrow:disabled{opacity:.35}.review-mode .side-arrow{display:none}
 body{padding-bottom:170px}.memory-extra summary::after{content:' ＋'}.memory-extra[open] summary::after{content:' −'}
+/* One continuous reading group: memory directly joins subject explanation. */
+.memory-wrap .memory{border-bottom-left-radius:0;border-bottom-right-radius:0;box-shadow:none}
+.memory-wrap #guideCard{margin:0;border-top:0;border-top-left-radius:0;border-top-right-radius:0}
 </style>
 </head>
 <body>
@@ -352,6 +355,7 @@ function hideMemory(){$('memoryWrap').classList.remove('show');}
 function alignMemoryToCorrectAnswer(){
  const wrap=$('memoryWrap'),target=$('correctAnswer');
  if(target&&target.nextElementSibling!==wrap)target.after(wrap);
+ if($('guideCard').parentElement!==wrap)wrap.appendChild($('guideCard'));
 }
 function syncHeights(){requestAnimationFrame(()=>{alignMemoryToCorrectAnswer();const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH','0px')})}
 function scrollToCorrectAnswer(){
