@@ -129,6 +129,7 @@ html[data-theme="dark"] .opt.correct{background:#123c2d;color:#e4fff1}html[data-
   <article class="card" id="questionCard"></article>
   <article class="card" id="answerCard" aria-label="答案選項"></article>
   <article class="card guide" id="guideCard"></article>
+  <div id="answerScrollSpace" aria-hidden="true"></div>
  </section>
  <section class="review-view" id="reviewView">
   <article class="card">
@@ -273,6 +274,7 @@ function renderProgress(){
  $('continueBtn').onclick=()=>{if(first>=0){currentIndex=first;showStudy();renderAll();closeQuestionNav()}else showReview();};
 }
 function renderQuestion(){
+ $('answerScrollSpace').style.height='0px';
  const q=qnow(),r=record(q);
  const img=q.image?'<figure class="source-figure" data-single-question-webp="true"><img src="'+q.image+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題單題原圖"><figcaption>官方原始 WebP 單題裁切：只保留本題題號、題目／必要圖表與 A～D 選項；沒有重新 OCR。</figcaption></figure>':'';
  let optionsHtml='';
@@ -349,6 +351,12 @@ function scrollToCorrectAnswer(){
  const memoryHeight=$('memoryWrap').getBoundingClientRect().height;
  const desiredTop=navHeight+7+memoryHeight+10;
  const delta=target.getBoundingClientRect().top-desiredTop;
+ const maxScroll=Math.max(0,document.documentElement.scrollHeight-innerHeight);
+ const missingSpace=Math.max(0,scrollY+delta-maxScroll);
+ if(missingSpace>0){
+  const spacer=$('answerScrollSpace');
+  spacer.style.height=(spacer.getBoundingClientRect().height+Math.ceil(missingSpace))+'px';
+ }
  // Answer positioning is immediate: smooth scrolling can leave the answer moving
  // while the learner starts reading, especially after a long question image.
  window.scrollBy({top:delta,behavior:'instant'});

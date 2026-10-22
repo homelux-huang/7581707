@@ -83,7 +83,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      await page.locator('.opt').first().click();await settle();
      const geometry=await page.evaluate(()=>{
       const m=document.querySelector('#memoryCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
-      return {gap:c.top-m.bottom,left:Math.abs(c.left-m.left),width:Math.abs(c.width-m.width),memoryTop:m.top,memoryBottom:m.bottom,answerTop:c.top,bottomTop:b.top};
+      return {gap:c.top-m.bottom,left:Math.abs(c.left-m.left),width:Math.abs(c.width-m.width),memoryTop:m.top,memoryBottom:m.bottom,answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
      });
      assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
      assert(geometry.left<=2&&geometry.width<=3);
