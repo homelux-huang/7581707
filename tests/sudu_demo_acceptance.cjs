@@ -108,8 +108,11 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      const joined=await page.evaluate(()=>{const m=document.querySelector('#memoryCard'),g=document.querySelector('#guideCard'),a=m.getBoundingClientRect(),b=g.getBoundingClientRect();return {adjacent:m.nextElementSibling===g,gap:b.top-a.bottom,left:Math.abs(a.left-b.left),width:Math.abs(a.width-b.width)};});
      assert(joined.adjacent&&Math.abs(joined.gap)<=1&&joined.left<=1&&joined.width<=1,'memory directly joins explanation '+JSON.stringify(joined));
      if(['數學 B','經濟學','會計學'].includes(q.subject)){
-      assert((await page.locator('#correctAnswer .option-detail').innerText()).includes('考題計算式'));
-      assert(await page.locator('#correctAnswer .calculation-step').count()>=3);
+      const shouldCalculate=q.subject==='數學 B'||(q.subject==='經濟學'&&[26,27,28].includes(q.id));
+      assert.equal((await page.locator('#correctAnswer .option-detail').innerText()).includes('考題計算式'),shouldCalculate);
+      const count=await page.locator('#correctAnswer .calculation-step').count();assert(shouldCalculate?count>=3:count===0);
+      if(!shouldCalculate){assert.equal(await page.locator('#memoryCard .calculation-step').count(),0);assert.equal(await page.locator('#guideCard .calculation-step').count(),0);}
+
      }
      if(q.subject==='國文'){
       const t=await page.locator('#correctAnswer .option-detail').innerText();assert(!/(?:^|[｜／\n])(?:低|中|高)[：:]/.test(t));

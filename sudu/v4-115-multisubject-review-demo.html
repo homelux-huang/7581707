@@ -226,7 +226,7 @@ function subjectEntries(q){
   const key=raw==='文本出處'?'出處':raw; const v=(q.extra||{})[key];
   if(!hasStudyValue(v)){if(q.subject==='商業概論')out.push([raw,'N/A']);continue;} out.push([raw,v]);
  }
- const calc=(C.examCalculations||{})[q.subject+'|'+q.id];if(calc)out.push(['考題計算式',calc.lines.join('\n')]);
+ const calc=(C.examCalculations||{})[q.subject+'|'+q.id];if(calc?.hasExamCalculation&&calc.lines?.length)out.push(['考題計算式',calc.lines.join('\n')]);
  return out;
 }
 function formatStudyValue(q,key,value){
