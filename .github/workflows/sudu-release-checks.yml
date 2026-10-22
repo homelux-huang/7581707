@@ -30,6 +30,9 @@ jobs:
       - name: Validate syntax, student-history compatibility, scoring and privacy
         run: |
           python scripts/check_sudu.py
+          python scripts/sudu_verified_publish.py check
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          node --check sudu/verified-questions-runtime.js
           for file in sudu/*.js; do node --check "$file"; done
           node --test tests/share.test.cjs
           node tests/sudu_scoring_test.cjs
@@ -55,6 +58,7 @@ jobs:
           trap 'kill $!' EXIT
           node tests/sudu_browser_smoke.cjs
           node tests/sudu_demo_acceptance.cjs
+          node tests/sudu_verified_integration_browser.cjs
           node tests/sudu_workspace_test.cjs
           node tests/sudu_admin_browser.cjs
       - name: Retain test evidence
