@@ -4,6 +4,7 @@ on:
     branches:
       - integration/114-115-auto-verified-pages
       - feature/partial-qa-preview-114-115-20261022
+      - release/114-115-qa-incremental-20261022
   workflow_dispatch:
 permissions:
   contents: read
