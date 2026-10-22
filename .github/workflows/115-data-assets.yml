@@ -83,7 +83,7 @@ jobs:
           ), q["questionId"]
           assert len(ids)==205
           assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
-          assert len(j["sharedMaterialCrops"])==19, "19 source-pixel reading groups required"
+          assert len(j["sharedMaterialCrops"])==20, "20 source-pixel reading groups required"
           import hashlib
           qa_path=root/"sudu/data/processed/115/VISUAL_QA_2026-10-22.json"
           qa_sha=hashlib.sha256(qa_path.read_bytes()).hexdigest()
