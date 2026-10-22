@@ -79,10 +79,18 @@ def main():
         if q["assets"]["singleQuestionWebp"]!=m["output"] or q["assets"]["sha256"]!=m["sha256"]:
             failure.append("asset_contract_mismatch:"+id)
         if m.get("qaStatus")=="PASS":
-            # Only a documented separate per-question visual evidence can allow PASS
-            if not q.get("assets",{}).get("visualReviewEvidence"):
-                failure.append("false_visual_pass:"+id)
-            else:cropstat["visualPass"]+=1
+            # Exact current WebP, the recorded evidence, and the evidence file
+            # must all agree. Assistant page-visual QA is not external human QA.
+            e=q.get("assets",{}).get("visualReviewEvidence")
+            if (not e or e.get("reviewedSha256")!=m["sha256"]
+                    or e.get("reference") not in {
+                        "sudu/DEMO_VISUAL_QA.md",
+                        "sudu/data/processed/115/VISUAL_QA_2026-10-22.json"}
+                    or not (ROOT/e["reference"]).is_file()
+                    or digest(ROOT/e["reference"])!=e.get("referenceSha256")):
+                failure.append("unsubstantiated_visual_pass:"+id)
+            else:
+                cropstat["visualPass"]+=1
         else:pending.append(id)
     shared_ids={x["sharedMaterialId"] for x in original["sharedMaterials"]}
     if len(shared_ids)!=19:failure.append("shared_material_duplicate_count")
@@ -134,7 +142,7 @@ def main():
         }
     report={"schemaVersion":2,"year":115,"generatedAt":datetime.now(timezone.utc).isoformat(),
             "mainBaseline":"40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-            "notice":"Generator and decoder passing does NOT mean source content visually verified. All image QA drafts until independent visual review.",
+            "notice":"Generated/decoded does not imply visual QA. Assistant-reviewed images are SHA-backed; independent external human recheck is still pending.",
             "perSubject":stats,"sourcePaperCounts":PAPERS,
             "officialPdfTextAnswerMatched":len(matched),"officialAnswerIndependentVerified":0,
             "generatedWebp":cropstat["pixelGenerated"],"webpDecodePass":cropstat["decoded"],
@@ -149,7 +157,7 @@ def main():
         "schemaVersion":2,"year":115,
         "structuralStatus":"PASS" if not failure else "FAIL",
         "blockingFailures":failure,
-        "webpImageVisualReview":"NOT_COMPLETE",
+        "webpImageVisualReview":"PARTIAL_ASSISTANT_VISUAL_QA" if cropstat["visualPass"]<205 else "ASSISTANT_VISUAL_QA_COMPLETE_INDEPENDENT_HUMAN_REVIEW_PENDING",
         "officialAnswers":"SHA-pinned PDF textual agreement, independent review not complete",
         "sqlite":"SQLITE_ROUNDTRIP_PASS" if roundtrip["rows"]==205 and not roundtrip["shaMismatches"] else "FAILED",
         "published":"NO","integration":"NO",
