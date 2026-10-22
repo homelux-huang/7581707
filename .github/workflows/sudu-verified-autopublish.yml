@@ -95,5 +95,7 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           RELEASE_SHA="$(git rev-parse HEAD)"
-          # Existing pages.yml starts automatically on this main push. No duplicate dispatch.
-          echo "Main updated at $RELEASE_SHA; the mandatory Pages push gate now executes."
+          # A GITHUB_TOKEN bot push does NOT fire push-triggered GitHub Actions.
+          # Explicit workflow_dispatch is required to deploy this new exact SHA.
+          gh workflow run pages.yml --ref main -f target_sha="$RELEASE_SHA"
+          echo "Main updated at $RELEASE_SHA; dispatched mandatory Pages same-commit release gate."

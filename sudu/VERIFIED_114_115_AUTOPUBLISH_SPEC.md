@@ -56,3 +56,7 @@
 - 公式：年度圖片 QA 進度＝圖片逐題 PASS／預期題數；年度正式學生可用百分比＝當年度完整通過資料、AI 盲解、四選項雙層解說、計算及 UI QA 題數／預期題數。
 - 進度表 sudu/question-bank-progress.html 讀取 sudu/data/approved/progress.json：這是 Pages 正式部署後的快照，不因 GitHub 綠燈或候選檔案存在就宣告完成。
 - 105–113 未包含在這次自動開放規則中，其他分支的資料工程可繼續，但不得用未驗收資料覆蓋已核定題目。
+
+## 2026-10-22 實際同步觸發修正
+
+GitHub Actions 使用內建 `GITHUB_TOKEN` 建立的 main 提交通常不會再觸發其他 `on: push` Actions。因此同步 job 在推送最新 approved QA 快照後，必須以 `actions: write` 權限明確執行 `gh workflow run pages.yml --ref main -f target_sha=<已提交 SHA>`。這不是繞過 release gate：它只觸發原本的 Pages 同 SHA verify/build/deploy/verify_live，所有檢查保持原樣。不能因 main 有新 commit 就假稱 Pages 已經部署。
