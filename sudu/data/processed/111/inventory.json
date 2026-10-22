@@ -3,7 +3,7 @@
   "expectedFromLegacy": 205,
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 205,
-  "webpGeneratedDrafts": 204,
+  "webpGeneratedDrafts": 205,
   "visualQaPass": 0,
   "ocrGapCandidatesGenerated": 12,
   "ocrTextIndependentlyVerified": 0,
@@ -40,16 +40,15 @@
     "00-E": {
       "candidateRecords": 42,
       "numberedAnchors": 41,
-      "imageDrafts": 41,
-      "unresolvedAnchorNumbers": [
-        25
-      ],
+      "imageDrafts": 42,
+      "unresolvedAnchorNumbers": [],
       "suspectedPageConflicts": [],
       "ambiguousAnchorNumbers": [],
       "officialAnswerTextKeys": 42,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualAnchorRepair": "Q25 was visually located directly below Q24 on original page 4"
     },
     "00-MB": {
       "candidateRecords": 25,

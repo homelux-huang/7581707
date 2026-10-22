@@ -1032,14 +1032,14 @@
     },
     {
       "questionId": "111-00-E-25",
-      "rawOcrText": null,
-      "rawOrigin": "PENDING_NEEDS_OCR",
+      "rawOcrText": "25 (A) are (B) is (C) have (D) has\n",
+      "rawOrigin": "DRAFT_UNCORRECTED_OCR_111_EN_Q25_V2",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
       "correctedQuestion": null,
       "correctedOptions": null,
       "diff": null,
-      "imageSha256": null,
+      "imageSha256": "bef3d3e340186b892bc8b3ba9f94679f59c3159bba6a40a40bb35cf76529f6ad",
       "qaStatus": "PENDING"
     },
     {
