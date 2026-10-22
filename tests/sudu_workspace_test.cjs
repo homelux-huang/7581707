@@ -114,7 +114,14 @@ const record=(name,detail={})=>results.push({name,status:'passed',...detail});
    }
   }
   await page.setViewportSize({width:320,height:480});
-  await page.locator('.sudu-question-ball').last().evaluate(button=>button.scrollIntoView({block:'nearest'}));
+  // ResizeObserver updates header/dock geometry after a viewport resize.
+  // Wait for that layout before requesting the last ball, then wait for visibility.
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  await page.locator('.sudu-question-ball').last().evaluate(button=>button.scrollIntoView({block:'nearest',behavior:'instant'}));
+  await page.waitForFunction(()=>{
+   const dock=document.querySelector('#sudu-question-dock').getBoundingClientRect(),nav=document.querySelector('#sudu-question-dock .questionnav').getBoundingClientRect(),last=[...document.querySelectorAll('.sudu-question-ball')].at(-1).getBoundingClientRect();
+   return last.top>=nav.bottom&&last.bottom<=dock.bottom;
+  });
   const short=await page.evaluate(()=>{const dock=document.querySelector('#sudu-question-dock').getBoundingClientRect(),nav=document.querySelector('#sudu-question-dock .questionnav').getBoundingClientRect(),last=[...document.querySelectorAll('.sudu-question-ball')].at(-1).getBoundingClientRect();return {dock:{top:dock.top,bottom:dock.bottom},nav:{top:nav.top,bottom:nav.bottom},last:{top:last.top,bottom:last.bottom}};});
   assert(short.nav.top>=short.dock.top-2&&short.nav.bottom<=short.dock.bottom,'short viewport keeps primary navigator visible while balls scroll');
   assert(short.last.top>=short.nav.bottom&&short.last.bottom<=short.dock.bottom,'last ball is accessible in short viewport');
