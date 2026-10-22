@@ -6,6 +6,8 @@ on:
     paths:
       - scripts/build_115_full_assets.py
       - scripts/build_115_question_bank.py
+      - scripts/reconcile_115_answers.py
+      - scripts/merge_115_assets.py
       - .github/workflows/115-data-assets.yml
   workflow_dispatch:
 permissions:
@@ -32,9 +34,13 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra tesseract-ocr-eng
       - name: Check source-only script syntax
-        run: python -m py_compile scripts/build_115_full_assets.py scripts/build_115_question_bank.py
+        run: python -m py_compile scripts/build_115_full_assets.py scripts/build_115_question_bank.py scripts/reconcile_115_answers.py scripts/merge_115_assets.py
       - name: Generate 115-only draft crops, source hashes and raw OCR candidates
         run: python scripts/build_115_full_assets.py
+      - name: Reconcile every candidate answer with official SHA-pinned PDF text
+        run: python scripts/reconcile_115_answers.py
+      - name: Attach source-true WebP crops, OCR raw results and English shared passages
+        run: python scripts/merge_115_assets.py
       - name: Rebuild isolated question-bank SQLite twice and verify roundtrips
         run: |
           python scripts/build_115_question_bank.py
@@ -64,6 +70,15 @@ jobs:
             assert q["qaStatus"].startswith("DRAFT_")
           assert len(ids)==205
           assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
+          assert len(j["sharedMaterialCrops"])==7, "7 English source passage groups required"
+          for q in j["items"]:
+            if q.get("output"):
+              assert q["outputSize"][1] < q["sourceSize"][1]*0.60, "full/oversized exam page crop: "+q["questionId"]
+              assert q["source"].startswith("sudu/data/original/115/"), q["questionId"]
+          qbank=json.loads((root/"sudu/data/processed/115/questions.json").read_text(encoding="utf-8"))
+          assert len(qbank["questions"])==205
+          assert all(q["assets"]["singleQuestionWebp"] for q in qbank["questions"])
+          assert not any(q["questionVerified"] or q["answerVerified"] for q in qbank["questions"])
           assert not (root/"backend/private.sqlite3").exists()
           print("PASS: 205 canonical IDs, draft asset hashes, WebP decoding, no private SQLite")
           print("GENERATED:",j["generated"],"UNRESOLVED:",j["missing"])
@@ -91,3 +106,4 @@ jobs:
             sudu/data/processed/115/webp-manifest.json
             sudu/data/processed/115/anchor-report.json
             sudu/data/processed/115/ocr-raw-candidates.json
+            sudu/data/processed/115/official-answer-evidence.json
