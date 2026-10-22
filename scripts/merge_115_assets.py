@@ -100,6 +100,23 @@ def main():
             q["questionVerified"]=False
             q["reviewStatus"]="needs_review"
         q["answerVerified"]=False
+    # Economics questions 49-50 share a production / exchange-rate table
+    # on the official source page 11. Keep it independent of BOTH question
+    # strips to comply with original per-question-only photo requirements.
+    group="115-09-2-SHARED-49-50"
+    if not any(x["sharedMaterialId"]==group for x in src["sharedMaterials"]):
+        src["sharedMaterials"].append({
+            "sharedMaterialId":group,"paperCode":"09-2","sourcePage":11,
+            "sourceImage":"sudu/data/original/115/09-2/p011-fc88e0109e-v2-w1400-q66.webp",
+            "questionNumbers":[49,50],"text":"",
+            "extractionMethod":"pending_native_pdf_text_layer",
+            "reviewStatus":"second_pass_pending",
+        })
+    for n in (49,50):
+        q=byid[f"115-09-2-{n:02d}"]
+        if q.get("sharedMaterialId") not in (None,group):
+            raise ValueError(f"Shared material conflict for 09-2-{n}")
+        q["sharedMaterialId"]=group
     bycode={x["paper"]:x for x in original["papers"]}
     changed=0
     for mat in src["sharedMaterials"]:
