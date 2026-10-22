@@ -41,8 +41,8 @@ def main():
                     "115-00-MB-13","115-00-MB-20"}:
                 raise ValueError("Duplicate visual review: "+item["questionId"])
             good[item["questionId"]]=(item,reference,refsha)
-    if len(good)!=85:
-        raise ValueError(f"Unexpected number of visual reviews {len(good)} != 85")
+    if len(good)!=113:
+        raise ValueError(f"Unexpected number of visual reviews {len(good)} != 113")
     seen=set()
     promoted=0
     historical=0
@@ -108,7 +108,7 @@ def main():
             "criteria":"complete shared passage/chart, no neighboring numbered question stems/options"
         }
         accepted+=1
-    if promoted+historical!=85 or accepted!=3:
+    if promoted+historical!=113 or accepted!=3:
         raise ValueError("QA record count mismatch")
     data["qaDirectVisualComparison"]={
         "reviewed":len(good),"reusedHistoricalOfThose":historical,
