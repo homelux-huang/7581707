@@ -50,3 +50,21 @@ jobs:
       - name: Publish the tested GitHub Pages artifact
         id: deployment
         uses: actions/deploy-pages@v5
+
+  verify_live:
+    name: Verify LIVE Pages SHA and 114/115 student-safe datasets
+    needs: [verify, build, deploy]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.target_sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify production LIVE URL matches exact deployed artifact and QA progress
+        run: |
+          python scripts/check_live_release.py --url https://homelux-huang.github.io/7581707/ --expected-sha ${{ inputs.target_sha || github.sha }}

@@ -30,6 +30,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_public_build.py' -v
           python scripts/sudu_verified_publish.py check
           node --check sudu/verified-questions-runtime.js
+          python -m py_compile scripts/check_live_release.py
           python scripts/build.py
           python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/sudu-dev-test.log 2>&1 &
           trap 'kill $!' EXIT
