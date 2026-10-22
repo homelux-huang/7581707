@@ -41,3 +41,38 @@ jobs:
           name: verified-v4-staging-qa
           path: test-results/
           if-no-files-found: ignore
+
+  real_source_preview:
+    name: Stage current 114/115 QA branch without publishing
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          path: _source_qa
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/processed/115
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Read original QA evidence and independently fail closed
+        run: |
+          set -e
+          python -m pip install -q pillow
+          python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$(git -C _source_qa rev-parse HEAD)"
+          python scripts/sudu_verified_publish.py check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: actual-114-115-qa-admission-preview
+          path: sudu/data/approved/progress.json
+  full_release_gates:
+    name: Run complete same-SHA Pages release gate (no deployment)
+    uses: ./.github/workflows/sudu-release-checks.yml
+    with:
+      target_sha: ${{ github.sha }}

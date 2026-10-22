@@ -95,5 +95,5 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           RELEASE_SHA="$(git rev-parse HEAD)"
-          gh workflow run pages.yml --ref main -f target_sha="$RELEASE_SHA"
-          echo "Release gate started at commit $RELEASE_SHA; do not claim live SUCCESS yet."
+          # Existing pages.yml starts automatically on this main push. No duplicate dispatch.
+          echo "Main updated at $RELEASE_SHA; the mandatory Pages push gate now executes."
