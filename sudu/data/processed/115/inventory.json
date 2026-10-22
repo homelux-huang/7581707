@@ -46,20 +46,20 @@
       "existingDemoCropsMapped": 5
     },
     "會計學": {
-      "records": 25,
-      "matched": 23,
+      "records": 24,
+      "matched": 22,
       "verified": 0,
       "missingOptions": 1,
       "pageUnresolved": 1,
       "existingDemoCropsMapped": 0
     },
     "經濟學": {
-      "records": 25,
-      "matched": 25,
+      "records": 26,
+      "matched": 26,
       "verified": 0,
       "missingOptions": 0,
       "pageUnresolved": 0,
-      "existingDemoCropsMapped": 4
+      "existingDemoCropsMapped": 5
     }
   },
   "officialPaperExpectedFromExistingCover": {
@@ -1124,7 +1124,7 @@
     },
     {
       "questionId": "115-09-2-25",
-      "subject": "會計學",
+      "subject": "經濟學",
       "issues": [
         "suspected_cover_or_footer"
       ]
