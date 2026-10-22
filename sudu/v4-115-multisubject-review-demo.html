@@ -349,7 +349,14 @@ function scrollToCorrectAnswer(){
  const memoryHeight=$('memoryWrap').getBoundingClientRect().height;
  const desiredTop=navHeight+7+memoryHeight+10;
  const delta=target.getBoundingClientRect().top-desiredTop;
- window.scrollBy({top:delta,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+ // Answer positioning is immediate: smooth scrolling can leave the answer moving
+ // while the learner starts reading, especially after a long question image.
+ window.scrollBy({top:delta,behavior:'instant'});
+ requestAnimationFrame(()=>{
+  if(target!==$('correctAnswer')||!$('memoryWrap').classList.contains('show'))return;
+  const correction=target.getBoundingClientRect().top-$('memoryCard').getBoundingClientRect().bottom-10;
+  if(Math.abs(correction)>1)window.scrollBy({top:correction,behavior:'instant'});
+ });
 }
 function showStudy(){document.body.classList.remove('review-mode');$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
