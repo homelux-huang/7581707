@@ -4,7 +4,7 @@
   "session": "2026-10-22 qa batch 1",
   "reviewedAt": "2026-10-22",
   "reviewer": "ChatGPT assistant visually reviewed rendered images",
-  "claimBoundary": "Images directly inspected against their corresponding official page; not OCR/answer verification, not an independent external human audit.",
+  "claimBoundary": "Images directly inspected against their corresponding official page; not OCR/answer verification, not an independent external human audit. v2 failure entries are retained as history; the repaired v5 files have separate visual recheck evidence.",
   "paperQuestionCount": 205,
   "reviewedQuestionCount": 53,
   "passQuestionCount": 51,
@@ -1622,5 +1622,59 @@
       "newVersion": "webp-v5",
       "recheckRequired": true
     }
-  ]
+  ],
+  "repairRechecks": [
+    {
+      "questionId": "115-00-MB-13",
+      "reviewedAt": "2026-10-22",
+      "result": "PASS_ASSISTANT_VISUAL_QA",
+      "reviewer": "ChatGPT assistant",
+      "reviewMethod": "source_page_and_repaired_pixel_crop_visually_compared",
+      "source": "sudu/data/original/115/00-MB/p005-e82e34d9cd-v2-w1400-q66.webp",
+      "sourcePage": 5,
+      "sourceSha256": "43a7b28deb074c8e0430c0ce1e808971263d7ad4be11c14a0e55dfb73a39fc6f",
+      "asset": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-13.webp",
+      "assetSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
+      "crop": [
+        90,
+        174,
+        1310,
+        933
+      ],
+      "allFourOptionsComplete": true,
+      "allNecessaryDiagramRegionsComplete": true,
+      "noAdjacentQuestion": true,
+      "noWholePage": true,
+      "sourcePageHeaderExcluded": true,
+      "secondHumanReview": false,
+      "notes": "v5: 四張座標圖均完整，C/D 圖形下緣保留；下方未混入第14題。"
+    },
+    {
+      "questionId": "115-00-MB-20",
+      "reviewedAt": "2026-10-22",
+      "result": "PASS_ASSISTANT_VISUAL_QA",
+      "reviewer": "ChatGPT assistant",
+      "reviewMethod": "source_page_and_repaired_pixel_crop_visually_compared",
+      "source": "sudu/data/original/115/00-MB/p007-e82e34d9cd-v2-w1400-q66.webp",
+      "sourcePage": 7,
+      "sourceSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d",
+      "asset": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-20.webp",
+      "assetSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "crop": [
+        90,
+        469,
+        1310,
+        902
+      ],
+      "allFourOptionsComplete": true,
+      "allNecessaryDiagramRegionsComplete": true,
+      "noAdjacentQuestion": true,
+      "noWholePage": true,
+      "sourcePageHeaderExcluded": true,
+      "secondHumanReview": false,
+      "notes": "v5: 圖（四）保留 B 點、田地圖下緣、圖說；下方未混入第21題。"
+    }
+  ],
+  "currentVersionRecheckedPassCount": 53,
+  "currentVersionUnresolvedInReviewedBatch": 0
 }
