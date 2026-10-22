@@ -1,0 +1,345 @@
+"""Promote only fully audited 114/115 questions to the existing GitHub Pages UI.
+
+Reads the existing QA branch as DATA, never invokes its scripts or modifies any
+original OCR, WebP, SQLite, source, localStorage or student history.
+Import is per-question; audit/correction or teaching failures fail CLOSED.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import shutil
+from collections import Counter, defaultdict
+from pathlib import Path
+
+YEARS = (114, 115)
+PAPERS = {"00-C": "國文", "00-E": "英文", "00-MB": "數學 B"}
+COUNT = {114: 205, 115: 205}
+LETTERS = set("ABCD")
+SHA = re.compile(r"^[0-9a-f]{64}$")
+QID = re.compile(r"^(114|115)-(00-C|00-E|00-MB|09-1|09-2)-(\d{2})$")
+EMPTY = re.compile(r"^\s*(?:NA|N/A|待補|未完成|本題無金額計算)\s*$", re.I)
+
+def digest(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+def read(path: Path):
+    with path.open(encoding="utf-8") as file:
+        return json.load(file)
+
+def dump(path: Path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+
+def good(text):
+    return isinstance(text, str) and bool(text.strip()) and not EMPTY.fullmatch(text)
+
+def subject_for(year: int, code: str, n: int) -> str | None:
+    if code in PAPERS:
+        return PAPERS[code]
+    if code == "09-1":
+        return "商業概論" if n <= 25 else "數位科技"
+    if code == "09-2":
+        return "會計學" if n <= 24 else "經濟學"
+    return None
+
+def stable(q: dict, year: int) -> tuple[str, str] | None:
+    qid = q.get("questionId")
+    m = QID.fullmatch(qid) if isinstance(qid, str) else None
+    if not m or int(m.group(1)) != year or int(m.group(3)) < 1:
+        return None
+    number = int(m.group(3))
+    subject = subject_for(year, m.group(2), number)
+    if not subject or q.get("paperCode") != m.group(2) or q.get("originalQuestionNumber") != number:
+        return None
+    if q.get("subject") not in (subject, "數學B", "專業科目（一）", "專業科目(一)"):
+        return None
+    return qid, subject
+
+def text_revision(q: dict, sha_webp: str) -> str:
+    """Hash excludes answer so independent solving cannot derive the official key."""
+    payload = {"question": q.get("question"), "options": q.get("options"), "singleQuestionWebpSha256": sha_webp}
+    return digest(json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode())
+
+def image_proof(q: dict, item: dict, shared: dict, src: Path) -> bool:
+    if not item or item.get("qaStatus") != "PASS":
+        return False
+    out = item.get("output")
+    h = item.get("sha256")
+    ev = item.get("visualReviewEvidence") or {}
+    if not isinstance(out, str) or not SHA.fullmatch(str(h)) or ev.get("reviewedSha256") != h or not ev.get("reference"):
+        return False
+    if ((q.get("assets") or {}).get("singleQuestionWebp") != out or
+            (q.get("questionProvenance") or {}).get("webpSha256") != h):
+        return False
+    if not (src / out).is_file():
+        return False
+    for sid in q.get("sharedMaterialIds") or []:
+        group = shared.get(sid)
+        gev = (group or {}).get("visualReviewEvidence") or {}
+        if not group or group.get("qaStatus") != "PASS" or gev.get("reviewedSha256") != group.get("sha256"):
+            return False
+        if not isinstance(group.get("output"), str) or not (src / group["output"]).is_file():
+            return False
+    return True
+
+def source_proof(q: dict, image_good: bool, db_good: bool, revision: str) -> tuple[bool, bool]:
+    """Separate question/OCR and official-final-answer gates; no legacy flags."""
+    prov = q.get("questionProvenance") or {}
+    ans = q.get("answerProvenance") or {}
+    text = q.get("textQaEvidence") or {}
+    official = q.get("officialFinalQaEvidence") or {}
+    options = q.get("options")
+    correct_text = (
+        image_good and db_good and q.get("questionVerified") is True
+        and q.get("textQaStatus") == "PASS"
+        and good(q.get("question")) and isinstance(options, list)
+        and len(options) == 4 and all(good(x) for x in options)
+        and SHA.fullmatch(str(prov.get("officialPdfSha256"))) is not None
+        and text.get("questionRevision") == revision
+        and text.get("sourceImageSha256") == prov.get("pixelSourceSha256")
+        and good(text.get("reviewer")) and good(text.get("reviewedAt"))
+        and good(text.get("evidencePath"))
+    )
+    final_answer = (
+        q.get("answerVerified") is True and q.get("officialCorrectionChecked") is True
+        and str(q.get("officialFinalAnswer", "")).upper() in LETTERS
+        and SHA.fullmatch(str(ans.get("officialPdfSha256"))) is not None
+        and official.get("answerPdfSha256") == ans.get("officialPdfSha256")
+        and official.get("finalCorrectionsReviewed") is True
+        and good(official.get("reviewer")) and good(official.get("reviewedAt"))
+        and good(official.get("evidencePath"))
+    )
+    return correct_text, final_answer
+
+def independently_solved(q: dict, revision: str) -> str:
+    """No solve evidence = pending, NEVER copy q.answer into a second column."""
+    s = q.get("independentSolve") or {}
+    if not all((
+        s.get("solvedWithoutOfficialAnswer") is True,
+        s.get("officialAnswerHiddenDuringSolve") is True,
+        s.get("questionRevision") == revision,
+        good(s.get("solvedAt")), good(s.get("solver")),
+        good(s.get("reasoning")), good(s.get("auditEvidencePath")),
+        str(s.get("answer", "")).upper() in LETTERS,
+        str(q.get("officialFinalAnswer", "")).upper() in LETTERS,
+    )):
+        return "not_checked"
+    return "matched" if s["answer"].upper() == q["officialFinalAnswer"].upper() else "mismatch"
+
+def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
+    t = q.get("teaching") or {}
+    if not (q.get("teachingQaStatus") == "PASS" and q.get("uiQaStatus") == "PASS"
+            and q.get("studentReleaseApproved") is True
+            and good(t.get("teacherSummary")) and good(t.get("elementarySummary"))
+            and good(t.get("memory")) and good(t.get("concept")) and good(t.get("extension"))
+            and good(t.get("source"))):
+        return False
+    opts = t.get("optionExplanations") or {}
+    if not isinstance(opts, dict) or set(opts) != LETTERS:
+        return False
+    if not all(isinstance(opts[L], dict) and good(opts[L].get("teacher")) and good(opts[L].get("elementary"))
+               and good(opts[L].get("reason")) for L in LETTERS):
+        return False
+    if t.get("calculationReviewed") is not True or type(t.get("hasExamCalculation")) is not bool:
+        return False
+    if t["hasExamCalculation"]:
+        c = t.get("examCalculation") or {}
+        if not (isinstance(c.get("given"), list) and len(c["given"]) >= 1
+                and all(good(x) for x in c["given"])
+                and good(c.get("formulaUse"))
+                and isinstance(c.get("substitution"), list) and c["substitution"]
+                and all(good(x) for x in c["substitution"])
+                and isinstance(c.get("steps"), list) and c["steps"]
+                and all(good(x) for x in c["steps"])
+                and good(c.get("result"))
+                and c.get("option") == official_answer):
+            return False
+    elif t.get("examCalculation"):
+        # No irrelevant examples or "no amount" placeholders masquerading as a calculation.
+        return False
+    evidence = q.get("teachingQaEvidence") or {}
+    return bool(good(evidence.get("reviewer")) and good(evidence.get("reviewedAt"))
+                and good(evidence.get("evidencePath")) and evidence.get("allFourOptionsReviewed") is True
+                and evidence.get("calculationReviewed") is True)
+
+def verify_bytes(source: Path, rel: str, expected: str) -> bool:
+    try:
+        file = source / rel
+        if file.is_symlink() or any(x.is_symlink() for x in file.parents if x != source.parent):
+            return False
+        if not file.is_file() or digest(file.read_bytes()) != expected:
+            return False
+        from PIL import Image
+        with Image.open(file) as im:
+            im.load()
+            return im.format == "WEBP" and im.width > 0 and im.height > 0 and im.height < 2000
+    except (OSError, ValueError, ImportError):
+        return False
+
+def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
+    t = q["teaching"]
+    calc = t["examCalculation"] if t["hasExamCalculation"] else None
+    lines = []
+    if calc:
+        lines = (
+            ["已知條件："+x for x in calc["given"]]
+            + ["公式用途："+calc["formulaUse"]]
+            + ["代入："+x for x in calc["substitution"]]
+            + calc["steps"]
+            + ["結果："+calc["result"]+(("；單位："+calc["unit"]) if calc.get("unit") else ""),
+               "對應選項："+calc["option"]]
+        )
+    return {
+        "id": q["originalQuestionNumber"], "canonicalId":q["questionId"],
+        "year":year, "subject":subject, "topic":str(t.get("topic") or subject),
+        "question":q["question"], "options":q["options"], "answer":q["officialFinalAnswer"].upper(),
+        "memory":t["memory"],"concept":t["concept"],"extension":t["extension"],
+        "formula":str(t.get("formula") or ""),"sourceText":t["source"],"extra":t.get("extra") or {},
+        "teacherSummary":t["teacherSummary"], "elementarySummary":t["elementarySummary"],
+        "optionExplanations":t["optionExplanations"],
+        "examCalculation":{"hasExamCalculation":bool(calc),"lines":lines} if calc else None,
+        "image":image_path,
+    }
+
+def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
+    d = src / f"sudu/data/processed/{year}"
+    bank, manifest = read(d / "questions.json"), read(d / "webp-manifest.json")
+    inventory = read(d / "inventory.json")
+    questions = bank["questions"]
+    entries = {i["questionId"]:i for i in manifest["items"]}
+    shared = {i["sharedMaterialId"]:i for i in manifest.get("sharedMaterialCrops", [])}
+    db_good = bool((d/"question-bank.sqlite3").is_file()) and (
+        (year == 115 and (d/"VALIDATION.json").is_file() and read(d/"VALIDATION.json").get("sqlite") == "SQLITE_ROUNDTRIP_PASS")
+        or (year == 114 and bool(inventory.get("sqlite",{}).get("roundtripPass"))))
+    qa_per_subject = defaultdict(lambda:{"expected":0, "candidate":0,"webpQaPass":0,"ocrQaPass":0,"finalAnswerQaPass":0,"studentReady":0})
+    released, approved_files, blocked, ai = [], set(), [], Counter()
+    seen=set()
+    for q in questions:
+        identity = stable(q, year)
+        if not identity:
+            blocked.append({"id":str(q.get("questionId")),"reason":"invalid_id_mapping"})
+            continue
+        qid,subject = identity
+        if qid in seen:
+            raise ValueError(f"Duplicate stable question ID: {qid}")
+        seen.add(qid)
+        item = entries.get(qid)
+        qa_per_subject[subject]["candidate"] += 1
+        image_ok = image_proof(q, item, shared, src)
+        if image_ok:
+            qa_per_subject[subject]["webpQaPass"] += 1
+        revision = text_revision(q, item.get("sha256", "") if item else "")
+        ocr_ok, official_ok = source_proof(q,image_ok,db_good,revision)
+        qa_per_subject[subject]["ocrQaPass"] += int(ocr_ok)
+        qa_per_subject[subject]["finalAnswerQaPass"] += int(official_ok)
+        solve = independently_solved(q,revision)
+        ai[solve] += 1
+        reason = ("image_pending" if not image_ok else "ocr_or_db_pending" if not ocr_ok
+                  else "official_final_pending" if not official_ok else "ai_"+solve if solve != "matched"
+                  else "teaching_pending")
+        if not (ocr_ok and official_ok and solve == "matched"
+                and teaching_complete(q,subject,str(q.get("officialFinalAnswer","")).upper())):
+            blocked.append({"id":qid,"reason":reason})
+            continue
+        rel = item["output"]
+        if not verify_bytes(src,rel,item["sha256"]):
+            blocked.append({"id":qid,"reason":"asset_sha_or_decode_failed"})
+            continue
+        shared_ids = q.get("sharedMaterialIds") or []
+        if not all(verify_bytes(src,shared[s]["output"],shared[s]["sha256"]) for s in shared_ids):
+            blocked.append({"id":qid,"reason":"shared_asset_sha_or_decode_failed"})
+            continue
+        location = f"data/approved/webp/{year}/{qid}.webp"
+        target = output / "sudu" / location
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(src/rel,target)
+        approved_files.add(target.resolve())
+        released.append(public_question(q,year,subject,location))
+        qa_per_subject[subject]["studentReady"] += 1
+    expected = int(inventory.get("expected",manifest.get("expected",COUNT[year])))
+    if expected != COUNT[year] or len(questions) != expected or len(entries) != expected or len(seen) != expected:
+        raise ValueError(f"{year} mismatch expected/candidates/manifest/IDs: {expected}/{len(questions)}/{len(entries)}/{len(seen)}")
+    # Revoke obsolete public copies; originals in QA source branch remain untouched.
+    webp_dir = output / f"sudu/data/approved/webp/{year}"
+    for p in webp_dir.glob("*.webp") if webp_dir.exists() else []:
+        if p.resolve() not in approved_files:
+            p.unlink()
+    out = {"schemaVersion":1,"year":year,"sourceSha":source_sha,"expected":expected,
+           "approvedCount":len(released),"questions":released}
+    dump(output / f"sudu/data/approved/{year}.json",out)
+    shared_pass = sum(x.get("qaStatus") == "PASS" and
+                      (x.get("visualReviewEvidence") or {}).get("reviewedSha256") == x.get("sha256")
+                      for x in shared.values())
+    return {
+        "year":year,"expected":expected,"candidate":len(questions),
+        "webpGenerated":len(entries), "webpQaPass":sum(x["webpQaPass"] for x in qa_per_subject.values()),
+        "sharedWebpQaPass":shared_pass, "sharedWebpTotal":len(shared),
+        "ocrCandidate":int(inventory.get("rawOcrRecords",len(questions))),
+        "ocrQaPass":sum(x["ocrQaPass"] for x in qa_per_subject.values()),
+        "officialCandidateMatches":int(inventory.get("answerCandidatesMatchedAcrossTextAndImage",
+                                              inventory.get("officialPdfTextAnswerMatched",0))),
+        "officialFinalQaPass":sum(x["finalAnswerQaPass"] for x in qa_per_subject.values()),
+        "aiSolvedMatched":ai["matched"],"aiMismatch":ai["mismatch"],"aiNotChecked":ai["not_checked"],
+        "approvedCount":len(released),
+        "imageQaPercent":round(100*sum(x["webpQaPass"] for x in qa_per_subject.values())/expected,1),
+        "approvedPercent":round(100*len(released)/expected,1),
+        "subjects":dict(sorted(qa_per_subject.items())),
+        "pending":len(blocked), "pendingReasonCounts":dict(Counter(x["reason"] for x in blocked)),
+        "reviewStatus":"not_all_gates_passed" if len(released)<expected else "all_question_gates_passed",
+        "sourceSha":source_sha,
+    }
+
+def stage(source: Path, dest: Path, source_sha: str):
+    report = { "schemaVersion":1, "dataStage":"qa_verified_only",
+        "notYetLiveUntilPagesSuccess":True,
+        "provenance":{"ref":"qa/114-115-official-visual-review","commit":source_sha},
+        "years":{}}
+    for year in YEARS:
+        report["years"][str(year)] = snapshot(source,dest,year,source_sha)
+    dump(dest/"sudu/data/approved/progress.json",report)
+    return report
+
+def site_check(dest: Path):
+    status=read(dest/"sudu/data/approved/progress.json")
+    for year in YEARS:
+        p=read(dest/f"sudu/data/approved/{year}.json")
+        qs=p["questions"]
+        assert p["year"]==year and p["expected"]==COUNT[year]
+        assert len(qs)==p["approvedCount"]==status["years"][str(year)]["approvedCount"]
+        seen=set()
+        for q in qs:
+            qid=q["canonicalId"]
+            assert qid not in seen and QID.fullmatch(qid)
+            seen.add(qid)
+            assert q["year"]==year and q["answer"] in LETTERS
+            assert len(q["options"])==4 and all(good(x) for x in q["options"])
+            assert set(q["optionExplanations"])==LETTERS
+            assert all(good(q["optionExplanations"][l]["teacher"]) and good(q["optionExplanations"][l]["elementary"]) for l in LETTERS)
+            c=q.get("examCalculation")
+            if c is not None:
+                assert c["hasExamCalculation"] is True and len(c["lines"])>=5
+            path=dest/"sudu"/q["image"]
+            assert path.is_file() and path.suffix==".webp"
+    return status
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("command",choices=("stage","check"))
+    parser.add_argument("--source",type=Path)
+    parser.add_argument("--dest",type=Path,default=Path("."))
+    parser.add_argument("--sha",default="unknown")
+    a=parser.parse_args()
+    if a.command=="stage":
+        if a.source is None:
+            parser.error("--source is required")
+        print(json.dumps(stage(a.source,a.dest,a.sha),ensure_ascii=False,indent=2))
+    else:
+        result=site_check(a.dest)
+        print("PASS: only QA-released 114/115 records can enter the official Pages artifact:",{k:v["approvedCount"] for k,v in result["years"].items()})
+
+if __name__=="__main__":
+    main()

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dataStage": "qa_verified_only",
+  "notYetLiveUntilPagesSuccess": true,
+  "provenance": {
+    "ref": "qa/114-115-official-visual-review",
+    "commit": "02735ec5e3c64933e0693427bafe050099a4b2c6"
+  },
+  "years": {
+    "114": {
+      "year": 114,
+      "expected": 205,
+      "candidate": 205,
+      "webpGenerated": 205,
+      "webpQaPass": 0,
+      "sharedWebpQaPass": 0,
+      "sharedWebpTotal": 1,
+      "ocrCandidate": 205,
+      "ocrQaPass": 0,
+      "officialCandidateMatches": 205,
+      "officialFinalQaPass": 0,
+      "aiSolvedMatched": 0,
+      "aiMismatch": 0,
+      "aiNotChecked": 205,
+      "approvedCount": 0,
+      "imageQaPercent": 0,
+      "approvedPercent": 0,
+      "pending": 205,
+      "reviewStatus": "not_all_gates_passed",
+      "subjects": {}
+    },
+    "115": {
+      "year": 115,
+      "expected": 205,
+      "candidate": 205,
+      "webpGenerated": 205,
+      "webpQaPass": 133,
+      "sharedWebpQaPass": 3,
+      "sharedWebpTotal": 20,
+      "ocrCandidate": 205,
+      "ocrQaPass": 0,
+      "officialCandidateMatches": 205,
+      "officialFinalQaPass": 0,
+      "aiSolvedMatched": 0,
+      "aiMismatch": 0,
+      "aiNotChecked": 205,
+      "approvedCount": 0,
+      "imageQaPercent": 64.9,
+      "approvedPercent": 0,
+      "pending": 205,
+      "reviewStatus": "not_all_gates_passed",
+      "subjects": {}
+    }
+  }
+}
