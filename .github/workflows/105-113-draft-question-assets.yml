@@ -1,0 +1,104 @@
+name: 105-113 Historical Exam Assets (draft only, NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/build_105_113_draft_assets.py
+      - .github/workflows/105-113-draft-question-assets.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-105-113-draft-data-only
+  cancel-in-progress: false
+jobs:
+  build-historical:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official-PDF, pixel WebP, and gap-OCR dependencies
+        run: |
+          python -m pip install --quiet pymupdf pillow numpy requests pytesseract
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra tesseract-ocr-eng
+      - name: Syntax and safety preflight
+        run: |
+          python -m py_compile scripts/build_105_113_draft_assets.py
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          script=Path('scripts/build_105_113_draft_assets.py').read_text()
+          assert 'integrationReady' in script and 'official_pdf' in script
+          assert subprocess.check_output(['git','branch','--show-current'],text=True).strip()=='qa/114-115-official-visual-review'
+          PY
+      - name: Sequential 113 to 105 - commit per year, never main
+        shell: bash
+        run: |
+          set -u
+          git config user.name "Sudu historical draft assets"
+          git config user.email "7581707-data-bot@users.noreply.github.com"
+          failures=0
+          for YEAR in 113 112 111 110 109 108 107 106 105; do
+            echo "::group::TCTE year ${YEAR} DRAFT"
+            if python scripts/build_105_113_draft_assets.py --year "$YEAR"; then
+              python - "$YEAR" <<'PY'
+          import json,sys,hashlib,sqlite3
+          from pathlib import Path
+          y=int(sys.argv[1]); root=Path('sudu/data/processed')/str(y)
+          inv=json.loads((root/'inventory.json').read_text())
+          q=json.loads((root/'questions.json').read_text())
+          ma=json.loads((root/'webp-manifest.json').read_text())
+          assert len(q['questions'])==len(ma['items'])==inv['totalCandidateQuestions']
+          assert inv['visualQaPass']==0 and inv['answerOfficialFinalVerified']==0
+          assert not any(x['answerVerified'] or x['questionVerified'] or x['integrationReady'] for x in q['questions'])
+          assert not (root/'release-manifest.json').read_text().find('"integrationReady": false')==-1
+          for a in ma['items']:
+              if not a.get('output'): continue
+              source=Path(a['source']); out=Path(a['output'])
+              assert source.is_file() and out.is_file()
+              assert hashlib.sha256(source.read_bytes()).hexdigest()==a['sourcePageWebpSha256']
+              assert hashlib.sha256(out.read_bytes()).hexdigest()==a['outputSha256']
+          with sqlite3.connect(root/'question-bank.sqlite3') as db:
+              assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+              assert db.execute('SELECT COUNT(*) FROM questions').fetchone()[0]==len(q['questions'])
+          print(f"PASS structural-only {y}; QA not passed; release prohibited")
+          PY
+              git add "sudu/data/processed/${YEAR}"
+              if ! git diff --cached --quiet; then
+                git commit -m "data(${YEAR}): source-only WebP OCR answer candidates and isolated SQLite (NOT QA)"
+                git pull --rebase origin qa/114-115-official-visual-review
+                git push origin HEAD:qa/114-115-official-visual-review
+              fi
+            else
+              echo "::error::Year ${YEAR} draft build failed, continuing to inspect other years"
+              failures=$((failures + 1))
+              git reset --mixed HEAD
+            fi
+            echo "::endgroup::"
+          done
+          if [ "$failures" -gt 0 ]; then
+            echo "::error::Historical draft build failed for ${failures} years; see logs"
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 105-113-draft-status
+          if-no-files-found: ignore
+          retention-days: 30
+          path: |
+            sudu/data/processed/10*/inventory.json
+            sudu/data/processed/11*/inventory.json
+            sudu/data/processed/10*/VALIDATION.json
+            sudu/data/processed/11*/VALIDATION.json
