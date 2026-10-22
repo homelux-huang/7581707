@@ -32,7 +32,7 @@ def main():
     failure=[]
     if len(qs)!=205 or len(set(ids))!=205:failure.append("canonical_id_count_or_uniqueness")
     if len(images["items"])!=205 or images["generated"]!=205:failure.append("missing_single_question_crop")
-    if len(images["sharedMaterialCrops"])!=19:failure.append("missing_19_shared_materials")
+    if len(images["sharedMaterialCrops"])!=20:failure.append("missing_20_shared_materials")
     bysubject=defaultdict(list)
     bypaper=defaultdict(list)
     for q in qs:
