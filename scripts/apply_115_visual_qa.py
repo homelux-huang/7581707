@@ -59,6 +59,9 @@ def main():
             raise ValueError("Image SHA/path changed since visual review: "+qid)
         if item["source"]!=review["source"] or item["sourcePage"]!=review["sourcePage"]:
             raise ValueError("Source page changed since visual review: "+qid)
+        if (item.get("sourceSha256")!=review.get("sourceSha256") or
+                digest(ROOT/item["source"])!=review["sourceSha256"]):
+            raise ValueError("Reviewed original source page SHA mismatch: "+qid)
         actual=ROOT/item["output"]
         if digest(actual)!=review["assetSha256"]:
             raise ValueError("Reviewed WebP bytes missing or modified: "+qid)
@@ -98,7 +101,8 @@ def main():
         s,reference,refsha=shared_record
         if (s["result"]!="PASS_ASSISTANT_VISUAL_QA" or s["output"]!=asset["output"]
                 or s["sha256"]!=asset["sha256"] or s["source"]!=asset["source"]
-                or digest(ROOT/asset["output"])!=s["sha256"]):
+                or digest(ROOT/asset["output"])!=s["sha256"]
+                or digest(ROOT/asset["source"])!=asset["sourceSha256"]):
             raise ValueError("Shared source/WebP image review mismatch: "+asset["sharedMaterialId"])
         asset["qaStatus"]="PASS"
         asset["visualReviewEvidence"]={
