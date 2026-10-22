@@ -29,8 +29,12 @@ def main():
     answers=read("official-answer-evidence.json")
     ocr=read("ocr-raw-candidates.json")
     ids=[q["questionId"] for q in qs]
+    ocr_ids=[x["questionId"] for x in ocr.get("items",[])]
+    ocr_gap=sorted(set(ids)-set(ocr_ids))
     failure=[]
     if len(qs)!=205 or len(set(ids))!=205:failure.append("canonical_id_count_or_uniqueness")
+    if len(ocr_ids)!=205 or len(set(ocr_ids))!=205 or set(ocr_ids)!=set(ids):
+        failure.append("raw_ocr_205_coverage_or_uniqueness:"+",".join(ocr_gap))
     if len(images["items"])!=205 or images["generated"]!=205:failure.append("missing_single_question_crop")
     if len(images["sharedMaterialCrops"])!=20:failure.append("missing_20_shared_materials")
     bysubject=defaultdict(list)
@@ -150,7 +154,7 @@ def main():
             "webpShaPass":cropstat["hashVerified"],
             "imageVisualQaPass":cropstat["visualPass"],
             "sharedMaterialWebp":shared_verified,
-            "rawOcrRecords":ocr["count"],"imageOnlyOptionQuestions":cropstat["imageOnlyOptions"],
+            "rawOcrRecords":ocr["count"],"missingRawOcrIds":ocr_gap,"imageOnlyOptionQuestions":cropstat["imageOnlyOptions"],
             "sqlite":roundtrip,"pendingVisualReviewIds":pending,
             "blockingStructuralFailures":failure}
     write("inventory.json",report)
