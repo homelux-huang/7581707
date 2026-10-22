@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "branch": "data/115-full-year-question-assets",
+  "mainBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+  "scope": "JSON structural audit using exact GitHub-branch file; not crop visual QA and not SQLite execution",
+  "performed": "2026-10-22",
+  "checks": {
+    "canonicalIds": {
+      "status": "PASS",
+      "count": 205
+    },
+    "uniqueIds": {
+      "status": "PASS",
+      "duplicates": 0
+    },
+    "paperCounts": {
+      "status": "PASS",
+      "counts": {
+        "00-C": 38,
+        "00-E": 42,
+        "00-MB": 25,
+        "09-1": 50,
+        "09-2": 50
+      }
+    },
+    "noUnreviewedVerifiedFlags": {
+      "status": "PASS",
+      "violatingIds": []
+    },
+    "optionsComplete": {
+      "status": "INCOMPLETE",
+      "incompleteIds": [
+        "115-00-MB-02",
+        "115-00-MB-13",
+        "115-09-2-08"
+      ]
+    },
+    "officialAnswerLetterSyntax": {
+      "status": "PASS"
+    },
+    "officialAnswerIndependentVerification": {
+      "status": "NOT_DONE",
+      "count": 0
+    },
+    "singleQuestionCrops": {
+      "status": "NOT_DONE",
+      "existingDemoCropReferences": 30,
+      "committed115Crops": 0
+    },
+    "OCRVisualCorrection": {
+      "status": "PARTIAL",
+      "visualCorrectionOverlay": "sudu/data/processed/115/corrections.json"
+    },
+    "sqliteImportReadback": {
+      "status": "NOT_RUN",
+      "reason": "Local execution environment cannot access the GitHub repository over the network; scripts committed for execution in clone or CI."
+    },
+    "studentHistoryAndDemoRegression": {
+      "status": "NOT_RUN",
+      "reason": "No main UI or records changed; future main development session must validate after merge."
+    }
+  }
+}
