@@ -2,9 +2,9 @@
   "dataStage": "qa_verified_only",
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
-    "commit": "747e853e7cda89ba0fb458e516e60b3b33465de8",
+    "commit": "2966a282a74b50e4f15ee8df81e22f22f3276b80",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "8fd8050e965ba0fc31597cb8438ca17b1e8a533d12ad4234c69d3f0ab9373cfc"
+    "sourceTreeSignature": "c2c56e848dd29d137eeb04a0f051cea0a9b869a3078052ebd24e898cf3786eaf"
   },
   "schemaVersion": 1,
   "years": {
@@ -16,19 +16,20 @@
       "approvedPercent": 0.0,
       "candidate": 205,
       "expected": 205,
-      "imageQaPercent": 0.0,
+      "imageQaPercent": 4.4,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
       "officialFinalQaPass": 0,
       "pending": 205,
       "pendingReasonCounts": {
-        "image_pending": 205
+        "image_pending": 196,
+        "ocr_or_db_pending": 9
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "747e853e7cda89ba0fb458e516e60b3b33465de8",
+      "sourceSha": "2966a282a74b50e4f15ee8df81e22f22f3276b80",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -44,7 +45,7 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 9
         },
         "數位科技": {
           "candidate": 25,
@@ -88,7 +89,7 @@
         }
       },
       "webpGenerated": 205,
-      "webpQaPass": 0,
+      "webpQaPass": 9,
       "year": 114
     },
     "115": {
@@ -99,20 +100,20 @@
       "approvedPercent": 0.0,
       "candidate": 205,
       "expected": 205,
-      "imageQaPercent": 64.9,
+      "imageQaPercent": 65.9,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
       "officialFinalQaPass": 0,
       "pending": 205,
       "pendingReasonCounts": {
-        "image_pending": 88,
-        "ocr_or_db_pending": 117
+        "image_pending": 86,
+        "ocr_or_db_pending": 119
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 3,
       "sharedWebpTotal": 20,
-      "sourceSha": "747e853e7cda89ba0fb458e516e60b3b33465de8",
+      "sourceSha": "2966a282a74b50e4f15ee8df81e22f22f3276b80",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -128,7 +129,7 @@
           "finalAnswerQaPass": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 7
+          "webpQaPass": 9
         },
         "數位科技": {
           "candidate": 25,
@@ -172,7 +173,7 @@
         }
       },
       "webpGenerated": 205,
-      "webpQaPass": 133,
+      "webpQaPass": 135,
       "year": 115
     }
   }
