@@ -8,7 +8,8 @@ on:
       - scripts/build_115_question_bank.py
       - scripts/reconcile_115_answers.py
       - scripts/merge_115_assets.py
-      - scripts/refine_115_webp.py
+      - scripts/refine_115_webp.py scripts/audit_115_processed.py
+      - scripts/audit_115_processed.py
       - .github/workflows/115-data-assets.yml
   workflow_dispatch:
 permissions:
@@ -48,6 +49,8 @@ jobs:
         run: |
           python scripts/build_115_question_bank.py
           python scripts/build_115_question_bank.py
+      - name: Audit per-subject 205 record inventory and strict image provenance
+        run: python scripts/audit_115_processed.py
       - name: Verify every generated asset, manifest hash, canonical ID and student DB exclusion
         run: |
           python - <<'PY'
