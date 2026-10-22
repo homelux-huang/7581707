@@ -73,7 +73,11 @@ jobs:
             with Image.open(f) as im:
               im.load()
               assert im.format=="WEBP" and list(im.size)==q["outputSize"]
-            assert q["qaStatus"].startswith("DRAFT_")
+            assert q["qaStatus"].startswith("DRAFT_") or (
+            q["qaStatus"]=="PASS" and
+            q.get("visualReviewEvidence",{}).get("reviewedSha256")==q["sha256"] and
+            q.get("visualReviewEvidence",{}).get("reference")=="sudu/DEMO_VISUAL_QA.md"
+          ), q["questionId"]
           assert len(ids)==205
           assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
           assert len(j["sharedMaterialCrops"])==19, "19 source-pixel reading groups required"
