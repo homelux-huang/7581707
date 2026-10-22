@@ -1,0 +1,80 @@
+{
+  "year": 111,
+  "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
+  "imageVisualQaPass": 0,
+  "answerOfficialFinalVerified": 0,
+  "ocrTextVerified": 0,
+  "officialExpectedQuestionCountsConfirmed": false,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "sourceGaps": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 38,
+      "imageDrafts": 38,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 38,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 42,
+      "numberedAnchors": 41,
+      "imageDrafts": 41,
+      "unresolvedAnchorNumbers": [
+        25
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 42,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 49,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  }
+}
