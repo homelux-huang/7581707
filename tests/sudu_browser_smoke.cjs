@@ -210,7 +210,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   const businessGuide=await page.locator('#guideCard').innerText();
   assert(/\bN\/A\b/i.test(businessGuide),'business guide retains unavailable evidence as N/A');
   assert.equal(await page.locator('#guideCard .guide-block h3').filter({hasText:/^法規$/}).count(),1,'missing law has one guide section');
-  assert(/N\/A/.test(await page.locator('#guideCard .guide-block').filter({hasText:'法規'}).first().innerText()),'missing business law explicitly retains N/A');
+  assert(await page.evaluate(()=>[...document.querySelectorAll('#guideCard .guide-block')].some(el=>el.querySelector('h3')?.textContent==='法規' && /N\/A/.test(el.innerText))),'missing business law explicitly retains N/A');
   assert.equal(await page.locator('.memory-extra, .memory-actions').count(),0,'memory duplication removed');
   const sourceText=await page.locator('#guideCard .guide-block').filter({hasText:'出處'}).innerText();
   assert(sourceText.includes('頁數：待核對'),'unverified page number is explicitly marked 待核對');
