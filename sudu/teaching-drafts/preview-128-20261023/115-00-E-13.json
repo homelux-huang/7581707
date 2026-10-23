@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-13",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 13,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-13.webp",
+  "imageSha256": "169f1d9b84faa28c84d1a861e08a413e57c71789a8b4786578ff86de750a4c87",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題看原圖）",
+    "method": "目視原始單題 WebP，核對題號、對話前後句、A-D 各選項；確認無鄰題裁切或共用材料遺漏；對原圖 bytes 重算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先閱讀原圖並推論答案，再讀現有 OCR 候選資料；原官方網站 2026-05-08 最終確認公告可查，但英文科最終 PDF 與疑義確認說明仍待直接回讀，不能當完整驗收。",
+    "independentSolveScope": "本輪獨立看圖解答，非獨立第三方教學 QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Liz: I'm going to the supermarket to pick up two boxes of mandarin oranges. My mother ordered them for Chinese New Year. Jay: ____ Liz: They are a symbol of good fortune. We eat them to bring good luck.",
+    "keyConditions": [
+      "mandarin oranges",
+      "Chinese New Year",
+      "a symbol of good fortune",
+      "to bring good luck"
+    ],
+    "reasoningFromOriginalImage": "Liz 後一句說橘子象徵好運，回答的是『為什麼要橘子』，所以 Jay 應問 Why mandarin oranges?；既有兩箱資訊且後句沒報實際顆數，也不能問數量。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "判斷疑問詞要看**回答的資訊類型**。Liz 說橘子是 **a symbol of good fortune（好運象徵）**，農曆新年吃橘子是 **to bring good luck（祈求好運）**，這是**原因**，因此問 **Why mandarin oranges?** 最吻合；不是問時間、哪家超市、幾顆。",
+    "elementarySummary": "Jay 好奇『為什麼過年特別要買橘子？』Liz 回答『橘子象徵好運呀！』是在回答**為什麼**，不是說幾顆或去哪家店。",
+    "memory": "**Because / symbol / to bring good luck → Why?**；回答理由就問 Why。",
+    "concept": "**Why?** 問原因；**which?** 問哪一個；**how many?** 問可數數量；**since when?** 問從何時開始。**two boxes** 是箱數，不等於橘子的實際顆數。",
+    "extension": "反向思考：若 Liz 的答案改成『I bought 48 oranges』，Jay 才適合問 **How many mandarin oranges?**；若答『At the store near the station』，則問 **Which supermarket?**。",
+    "source": {
+      "originalExam": "115-00-E-13",
+      "originalImagePinnedSha256": "169f1d9b84faa28c84d1a861e08a413e57c71789a8b4786578ff86de750a4c87",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 公告確認標準答案；本題答案仍未直接對正式 PDF 核實",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "Why mandarin oranges?",
+      "symbol of good fortune",
+      "bring good luck"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**Since when?** 問從什麼時候開始；Liz 沒回答年份或時間，而是說象徵好運，因此不合。",
+        "elementary": "問『從什麼時候？』卻答『因為好運』，答錯方向。",
+        "reason": "**Since when?** 問從什麼時候開始；Liz 沒回答年份或時間，而是說象徵好運，因此不合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Which supermarket?** 問哪一間超市；Liz 後一句未提供店名、地址或超市位置。",
+        "elementary": "問哪家店，結果卻聽到橘子好運的故事。",
+        "reason": "**Which supermarket?** 問哪一間超市；Liz 後一句未提供店名、地址或超市位置。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "**Why mandarin oranges?** 問為什麼選橘子，後面正以好運象徵解釋文化原因，符合對話。",
+        "elementary": "為什麼是橘子？因為想討個好彩頭。",
+        "reason": "**Why mandarin oranges?** 問為什麼選橘子，後面正以好運象徵解釋文化原因，符合對話。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**How many mandarin oranges?** 問橘子顆數；前文只說兩箱，後文也沒有說數量，無法和答句連上。",
+        "elementary": "問幾顆橘子，卻沒有回答數字。",
+        "reason": "**How many mandarin oranges?** 問橘子顆數；前文只說兩箱，後文也沒有說數量，無法和答句連上。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Liz：我要去超市拿兩箱橘子，我媽媽為農曆新年訂的。Jay：為什麼是橘子？Liz：橘子象徵好運，我們吃橘子希望帶來好運。",
+      "testedWord": "why",
+      "answerWord": "why",
+      "pronunciationIPA": "/waɪ/",
+      "optionMeaningZh": {
+        "A": "從什麼時候開始？",
+        "B": "哪一間超市？",
+        "C": "為什麼是橘子？",
+        "D": "有幾顆橘子？"
+      },
+      "synonyms": {
+        "初級": [
+          "For what reason?（為什麼；較完整問法）"
+        ],
+        "中級": [
+          "How come?（怎麼會；口語詢問原因，語氣有別）"
+        ],
+        "高級": [
+          "What is the reason?（原因是什麼；正式問法）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（why 是疑問詞，無標準反義單字）"
+        ],
+        "中級": [
+          "N/A（what/when 是不同問題類型，並非反義詞）"
+        ],
+        "高級": [
+          "N/A（不可把 how many 當 why 的反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "orange（橘子）"
+        ],
+        "中級": [
+          "symbol（象徵）"
+        ],
+        "高級": [
+          "good fortune（好運）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義句或相關詞未必在每個語境可直接互換；N/A 不填造反義字。",
+      "exampleEnglish": "Why do people exchange gifts during this festival?",
+      "exampleChinese": "為什麼人們會在這個節日期間交換禮物？",
+      "exampleHighlightedSurfaceForm": "Why",
+      "exampleType": "自行撰寫的雙語教學例句，非新聞",
+      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
