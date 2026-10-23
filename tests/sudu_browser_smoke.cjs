@@ -217,6 +217,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
 
 
   await page.locator('#subjectSel').selectOption({label:'商業概論'});
+  await page.locator('#navHandle').click();
   await page.locator('.chip').filter({hasText:'3'}).first().click();
   await page.locator('.opt').first().click();
   const businessGuide=await page.locator('#guideCard').innerText();
@@ -234,6 +235,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   });
   assert.equal(missingSource,false,'source section hidden when source evidence is absent');
   await page.locator('#subjectSel').selectOption({label:'數位科技'});
+  await page.locator('#navHandle').click();
   await page.locator('.chip').filter({hasText:'27'}).first().click();
   await page.locator('.opt').first().click();
   assert.equal(await page.locator('#memoryWrap, .memory-extra').count(),0,'no separate memory extension frame');
