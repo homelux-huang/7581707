@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-10",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 10,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-10.webp",
+  "imageSha256": "b79ab2d5652e1fef2545561cc68896d663112d1b07e40aea51360fe825459b5e",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "GitHub 單題 WebP 實際目視；檢查題號、完整題幹與選項 A-D、畫線要求、無鄰題雜訊；重新計算 WebP bytes SHA256 與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有 OCR 候選 D 選項『openly』後混入下一頁頁首頁尾、對話題說明；原圖僅有 D openly，已按原圖理解，未覆寫來源。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先以圖片自行解題後才讀取候選；官網證實 2026-05-08 確認標準答案，但官方英文科最終 PDF 與疑義確認說明目前不能獨立回讀核實；不得計為官方最終核實或教學 QA 完成。",
+    "independentSolveScope": "本輪先讀圖自行推理，非獨立第三方教學複核",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "synonym-of-underlined-word",
+    "questionAsReadFromOriginalImage": "Tim was extremely moved by the eight-part polyphony (八部合音) of the Bunun people (布農族), and he dreamed of singing with them on stage one day. [Underlined word: extremely]",
+    "keyConditions": [
+      "underlined extremely",
+      "was ... moved",
+      "dreamed of singing with them one day"
+    ],
+    "reasoningFromOriginalImage": "句中 extremely 修飾 moved 表感動的程度很強。deeply moved 是自然英文搭配：深深感動；C deeply 可保留情感強度。其他選項是憤怒地、勇敢地、公開地，語義不合。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "題目是**畫線副詞 extremely 的語境同義題**，不是填空。**extremely moved（非常感動）** 在情緒表達中可換成 **deeply moved（深受感動）**，其中 deeply 強調情感深度；兩字在所有句子中不一定可直接互換。句末想與歌者同台顯示他很受觸動。",
+    "elementarySummary": "他聽到布農族八部合音，心裡非常感動，還夢想有天一起上台唱。**extremely moved** 這種很感動的感覺，也可以說 **deeply moved**。",
+    "memory": "**extremely moved ≈ deeply moved**（深深感動）；注意是情緒搭配。",
+    "concept": "**副詞 + 過去分詞形容詞** 可表情緒強度：extremely / deeply moved。在「感動」語境 deeply 合適，但不能把 deeply 套到所有 extremely 的句子。",
+    "extension": "反向思考：**extremely expensive** 可說 **very expensive**，一般不能照搬 deeply expensive；比較不同形容詞的自然搭配。",
+    "source": {
+      "originalExam": "115-00-E-10",
+      "originalImagePinnedSha256": "b79ab2d5652e1fef2545561cc68896d663112d1b07e40aea51360fe825459b5e",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 已確認各科標準答案；僅確認公告日期，尚未直接核實本題官方最終答案 PDF",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商使用之英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "extremely",
+      "deeply moved",
+      "eight-part polyphony"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**angrily** 表生氣地，用來描述說話或動作方式；angrily moved 在此不能同義表示被音樂深深感動。",
+        "elementary": "聽歌很感動不是很生氣。",
+        "reason": "**angrily** 表生氣地，用來描述說話或動作方式；angrily moved 在此不能同義表示被音樂深深感動。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**bravely** 表勇敢地，例如 bravely faced a challenge；不是情感程度的副詞，無法替代 extremely。",
+        "elementary": "勇敢是敢去做事，不是感動有多深。",
+        "reason": "**bravely** 表勇敢地，例如 bravely faced a challenge；不是情感程度的副詞，無法替代 extremely。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "**deeply** 可修飾 moved，**deeply moved** 是『深受感動』的自然搭配，與原句 extremely moved 最接近。",
+        "elementary": "就是打從心裡很感動，所以選 deeply。",
+        "reason": "**deeply** 可修飾 moved，**deeply moved** 是『深受感動』的自然搭配，與原句 extremely moved 最接近。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**openly** 表公開地、坦率地，描述公開程度；不等於 extremely 的『非常』，也不是此處 moved 的自然同義搭配。",
+        "elementary": "公開講出想法跟心裡很感動，是兩回事。",
+        "reason": "**openly** 表公開地、坦率地，描述公開程度；不等於 extremely 的『非常』，也不是此處 moved 的自然同義搭配。"
+      }
+    },
+    "english": {
+      "questionType": "synonym-of-underlined-word",
+      "sentenceTranslationZh": "Tim 深受布農族八部合音感動，夢想有一天能和他們在舞臺上一起歌唱。",
+      "testedWord": "extremely",
+      "answerWord": "deeply",
+      "pronunciationIPA": "/ˈdiːpli/",
+      "optionMeaningZh": {
+        "A": "生氣地",
+        "B": "勇敢地",
+        "C": "深深地",
+        "D": "公開地"
+      },
+      "synonyms": {
+        "初級": [
+          "very（非常；常見強調用語）"
+        ],
+        "中級": [
+          "highly（高度地；搭配對象不同）"
+        ],
+        "高級": [
+          "profoundly（深深地；對情緒用法近於 deeply）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "a little（稍微；程度相反的片語）"
+        ],
+        "中級": [
+          "slightly（略微地）"
+        ],
+        "高級": [
+          "marginally（僅略為；要依搭配使用）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "song（歌曲）"
+        ],
+        "中級": [
+          "moved（受感動的）"
+        ],
+        "高級": [
+          "polyphony（複音／多聲部音樂）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關詞不保證所有情境可以互換；N/A 欄位不應硬補。",
+      "exampleEnglish": "The listeners were deeply moved by the music.",
+      "exampleChinese": "聽眾深深被這段音樂感動。",
+      "exampleHighlightedSurfaceForm": "deeply",
+      "exampleType": "自編教學例句；非新聞來源",
+      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
