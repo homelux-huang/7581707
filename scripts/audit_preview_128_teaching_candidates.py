@@ -81,8 +81,13 @@ def assess_record(item, record, official, certificate, root=ROOT):
             or comparison.get("officialFinalCorrectionVerified") is not True
             or (qa.get("officialFinalEvidence") or {}).get("officialFinalCorrectionVerified") is not True):
         fail.append("official_final_evidence_pending")
-    if record.get("aiAnswer") != answer or comparison.get("conflictWarningRequired") is True:
-        fail.append("ai_official_dispute_unresolved")
+    # Separate literal wrong AI conclusions from the three historical
+    # first-pass differences that were corrected only after seeing the key.
+    # A non-boolean warning value is NOT proof of an independent clean solve.
+    if record.get("aiAnswer") != answer:
+        fail.append("ai_literal_official_disagreement")
+    elif comparison.get("conflictWarningRequired") is not False:
+        fail.append("historic_disagreement_or_unresolved_warning")
     if record.get("studentReleaseApproved") is not False or record.get("deploy") is not False:
         fail.append("draft_release_isolation_modified")
     teaching = record.get("teaching") or {}

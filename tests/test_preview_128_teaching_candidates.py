@@ -76,7 +76,15 @@ class PerQuestionReleaseSafety(unittest.TestCase):
 
     def test_ai_official_disagreement_is_isolated_even_with_certificate(self):
         self.record["aiAnswer"] = "D"
-        self.check("ai_official_dispute_unresolved")
+        self.check("ai_literal_official_disagreement")
+
+    def test_prior_changed_answer_still_blocks_even_if_now_matches(self):
+        self.record["answerComparison"]["conflictWarningRequired"] = True
+        self.check("historic_disagreement_or_unresolved_warning")
+
+    def test_malformed_warning_flag_not_falsely_accepted(self):
+        self.record["answerComparison"]["conflictWarningRequired"] = "false"
+        self.check("historic_disagreement_or_unresolved_warning")
 
     def test_teaching_change_invalidates_certificate_sha(self):
         self.teach["optionExplanations"]["B"]["teacher"] = "Changed after review"
