@@ -50,7 +50,10 @@ jobs:
               assert hashlib.sha256(f.read_bytes()).hexdigest()==row['v3CandidateSha256']
               assert row['imageQaStatus'].startswith('DRAFT_')
           inv=json.loads(pathlib.Path('sudu/data/processed/105/inventory.json').read_text())
-          assert inv['visualQaPass']==0 and inv['answerOfficialFinalVerified']==0 and not inv['integrationReady']
+          assert inv['visualQaPass']>=0 and inv['answerOfficialFinalVerified']==0 and not inv['integrationReady']
+          manifest=json.loads(pathlib.Path('sudu/data/processed/105/webp-manifest.json').read_text())
+          qa_count=sum(row.get('qaStatus')=='PASS' and row.get('visualReviewEvidence',{}).get('reviewedSha256')==(row.get('sha256') or row.get('outputSha256')) for row in manifest['items'])
+          assert inv['visualQaPass']==qa_count, 'Inventory G1 count must match SHA-bound manifest PASS, without promoting draft crops'
           print('PASS: 5 immutable v3 image drafts SHA verified, no QA promotion')
           PY
       - name: Commit only new immutable v3 drafts to QA branch
