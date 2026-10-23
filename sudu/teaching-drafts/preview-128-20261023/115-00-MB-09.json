@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-09",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 9,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-09.webp",
+  "imageSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題原圖目視）",
+    "method": "直接開啟既有單題 WebP，讀取題幹、符號、度數、三角函數、負號及四個選項，逐檔重新算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "L₁:4x+(a+5)y−10=0 經過 (a,1)，L₂ 斜率 −1/2，L₃ 也經過 (a,1) 並與 L₂ 垂直，求 L₃ 方程式。",
+    "keyConditions": [
+      "L₁:4x+(a+5)y−10=0 通過(a,1)",
+      "L₂斜率 m₂=−1/2",
+      "L₃過(a,1)，L₃⊥L₂"
+    ],
+    "reasoningFromOriginalImage": "先將 **(a,1)** 代入 L₁：**4a+(a+5)−10=0 ⇒5a−5=0 ⇒a=1**。所以 L₃ 經過 (1,1)。L₂ 斜率 −1/2，垂直線斜率 **m₃=−1/(−1/2)=2**。用點斜式 **y−1=2(x−1)** 整理 **2x−y−1=0**，選 A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "2x−y−1=0",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "先將 **(a,1)** 代入 L₁：**4a+(a+5)−10=0 ⇒5a−5=0 ⇒a=1**。所以 L₃ 經過 (1,1)。L₂ 斜率 −1/2，垂直線斜率 **m₃=−1/(−1/2)=2**。用點斜式 **y−1=2(x−1)** 整理 **2x−y−1=0**，選 A。",
+    "elementarySummary": "先把題目給的那個點放進第一條線，找出 a 是1。跟斜率−半的線成直角，另一條就應往右1、往上2。通過(1,1)，把式子寫好就是 A。",
+    "memory": "**代點求 a=1；垂直斜率 −1/2 → 2；y−1=2(x−1)**。",
+    "concept": "過點 (x₁,y₁) 的斜率 m 直線：**y−y₁=m(x−x₁)**；兩條非垂直線互相垂直則斜率乘積 **m₁m₂=−1**。",
+    "extension": "反向思考：如果 L₃ 與 L₂ 改成**平行**，斜率就同為 −1/2，應有 y−1=−(1/2)(x−1)，不能再選 A。",
+    "source": {
+      "originalExam": "115-00-MB-09",
+      "originalImagePinnedSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材之版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀"
+    },
+    "highlightTerms": [
+      "a=1",
+      "垂直斜率2",
+      "(a,1)=(1,1)",
+      "2x−y−1=0"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "2x−y−1=0 ⇒ y=2x−1，斜率2且經過 (1,1)，完全吻合。",
+        "elementary": "通過指定點、又和那條線成直角，選 A。",
+        "reason": "2x−y−1=0 ⇒ y=2x−1，斜率2且經過 (1,1)，完全吻合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "2x+y+3=0 ⇒ y=−2x−3，斜率−2，不是所求的+2，且不通過(1,1)。",
+        "elementary": "斜率往下，不是要的往上2。",
+        "reason": "2x+y+3=0 ⇒ y=−2x−3，斜率−2，不是所求的+2，且不通過(1,1)。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "x−2y+1=0 ⇒ y=(1/2)x+1/2，通過(1,1)但斜率+1/2，不垂直 L₂。",
+        "elementary": "這條有走過那個點，但坡度太平了。",
+        "reason": "x−2y+1=0 ⇒ y=(1/2)x+1/2，通過(1,1)但斜率+1/2，不垂直 L₂。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "x+2y−3=0 ⇒ y=−(1/2)x+3/2，斜率和 L₂ **平行**而非垂直。",
+        "elementary": "跟 L₂ 同方向，不是90度交叉。",
+        "reason": "x+2y−3=0 ⇒ y=−(1/2)x+3/2，斜率和 L₂ **平行**而非垂直。"
+      }
+    },
+    "math": {
+      "formula": "通過(x₁,y₁)的點斜式 y−y₁=m(x−x₁)；垂直 m₂m₃=−1",
+      "formulaUsage": "先求已知點，再用垂直的負倒數關係建立直線方程式。",
+      "workedExample": "例：經過(0,1)且垂直 y=(1/2)x 的直線為 y=−2x+1。",
+      "dailyApplication": "設計互相垂直的道路、座標圖表的法線。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "數學非金額運算也必須顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "L₁:4x+(a+5)y−10=0 通過(a,1)",
+        "L₂斜率 m₂=−1/2",
+        "L₃過(a,1)，L₃⊥L₂"
+      ],
+      "formula": "通過(x₁,y₁)的點斜式 y−y₁=m(x−x₁)；垂直 m₂m₃=−1",
+      "formulaPurpose": "先求已知點，再用垂直的負倒數關係建立直線方程式。",
+      "substitutionAndSteps": [
+        {
+          "formula": "4a+(a+5)(1)−10=0",
+          "why": "因(a,1)在L₁上，座標需滿足L₁方程式。"
+        },
+        {
+          "formula": "5a+5−10=0 ⇒ 5a−5=0 ⇒ a=1",
+          "why": "整理得點座標(1,1)。"
+        },
+        {
+          "formula": "(−1/2)×m₃=−1 ⇒ m₃=2",
+          "why": "垂直直線的斜率互為負倒數。"
+        },
+        {
+          "formula": "y−1=2(x−1)",
+          "why": "使用通過(1,1)、斜率2的點斜式。"
+        },
+        {
+          "formula": "y−1=2x−2 ⇒ y=2x−1 ⇒ 2x−y−1=0",
+          "why": "整理至題目選項中的一般式，得 A。"
+        }
+      ],
+      "result": "2x−y−1=0",
+      "unit": "無單位（座標軸單位未指定）",
+      "matchingOption": "A",
+      "commonMistake": "垂直誤用同斜率或正倒數；a=1 未先求就亂帶點。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
