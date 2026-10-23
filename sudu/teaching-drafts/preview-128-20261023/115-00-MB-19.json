@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-19",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 19,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-19.webp",
+  "imageSha256": "fc3e3cc5ae4aaa06eede83901c434769acda783a97051b0379f3e90973b1a9b4",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視）",
+    "method": "目視 GitHub 既有單題原始 WebP，完整題幹、圖表、年份、單位、選項 A-D；對 WebP 原始 bytes 重新計算 SHA256 並與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "已知tan1847°≈1.072、tan2126°≈−0.675、tan2205°=1.000，選最可能的tan2026°近似值。",
+    "keyConditions": [
+      "tan1847°≈1.072",
+      "tan2126°≈−0.675",
+      "tan2205°=1.000",
+      "求tan2026°最可能的選項"
+    ],
+    "reasoningFromOriginalImage": "正切函數**週期180°**，故 **tan2026°=tan46°**，又 **tan1847°=tan47°≈1.072**、**tan2205°=tan45°=1**。tan 在45°～47°單調遞增，因此 tan46° 位於1和1.072之間，且靠近中間，約 **1.036**，選B。中間值推估是近似，不能宣稱正切函數嚴格線性。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "約1.036",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "正切函數**週期180°**，故 **tan2026°=tan46°**，又 **tan1847°=tan47°≈1.072**、**tan2205°=tan45°=1**。tan 在45°～47°單調遞增，因此 tan46° 位於1和1.072之間，且靠近中間，約 **1.036**，選B。中間值推估是近似，不能宣稱正切函數嚴格線性。",
+    "elementarySummary": "tan 的角度每轉180度會得到一樣的數。題目要的2026度換成46度，而45度值是1、47度約1.072；46度在正中間，答案就大約是1.036。",
+    "memory": "**tan2026°=tan46°，介於tan45°=1與tan47°≈1.072→約1.036**。",
+    "concept": "**tan(θ+180°k)=tanθ**，且在45°至47°附近平滑遞增；要找『最可能近似』可用相鄰已知點與選項比對。",
+    "extension": "反向思考：若改問 **tan2126°**，換算成146° 在第二象限為負，已知≈−0.675；不能看到角度很大就判為正。",
+    "source": {
+      "originalExam": "115-00-MB-19",
+      "originalImagePinnedSha256": "fc3e3cc5ae4aaa06eede83901c434769acda783a97051b0379f3e90973b1a9b4",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B更正公告與最終解答待核對"
+    },
+    "highlightTerms": [
+      "180°週期",
+      "46°",
+      "tan45°=1",
+      "tan47°≈1.072",
+      "1.036"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "1.073 接近 tan47°=1.072，等於把目標46°誤用成47°，偏大。",
+        "elementary": "這比較像47度，不是46度。",
+        "reason": "1.073 接近 tan47°=1.072，等於把目標46°誤用成47°，偏大。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "1.036 在1.000與1.072之間，接近46°的值，符合角度在45°、47°中間的估計，正解。",
+        "elementary": "剛好在兩個已知值中間附近。",
+        "reason": "1.036 在1.000與1.072之間，接近46°的值，符合角度在45°、47°中間的估計，正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "0.999 比 tan45°=1 小，但46°在此區間tan必遞增，所以不可能小於1。",
+        "elementary": "46度比45度大，不能反而小於1。",
+        "reason": "0.999 比 tan45°=1 小，但46°在此區間tan必遞增，所以不可能小於1。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "−0.775 為負數，但46°是第一象限，tan應為正，故排除。",
+        "elementary": "46度向右上，tan是正的，不會是負。",
+        "reason": "−0.775 為負數，但46°是第一象限，tan應為正，故排除。"
+      }
+    },
+    "math": {
+      "formula": "tan(θ+180°k)=tanθ；在(−90°,90°)中tan單調遞增。",
+      "formulaUsage": "用正切週期和單調性對大角度三角函數做近似估算。",
+      "workedExample": "tan225°=tan45°=1，因正切每180°重複。",
+      "dailyApplication": "方向角與斜率估值，特殊角度的快速近似。",
+      "notes": "非金額數學運算仍要顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "tan1847°≈1.072",
+        "tan2126°≈−0.675",
+        "tan2205°=1.000",
+        "求tan2026°最可能的選項"
+      ],
+      "formula": "tan(θ+180°k)=tanθ；在(−90°,90°)中tan單調遞增。",
+      "formulaPurpose": "用正切週期和單調性對大角度三角函數做近似估算。",
+      "substitutionAndSteps": [
+        {
+          "formula": "2026°−11×180°=46° ⇒ tan2026°=tan46°",
+          "why": "利用180度週期減少大角度。"
+        },
+        {
+          "formula": "1847°−10×180°=47° ⇒ tan47°≈1.072",
+          "why": "取得較大的鄰近角度和已知值。"
+        },
+        {
+          "formula": "2205°−12×180°=45° ⇒ tan45°=1.000",
+          "why": "取得較小的鄰近角度和已知值。"
+        },
+        {
+          "formula": "tan45°<tan46°<tan47°，故1.000<tan46°<1.072",
+          "why": "正切在這個角度區間遞增。"
+        },
+        {
+          "formula": "46°介於45°與47°中間，附近估值≈(1.000+1.072)/2=1.036（插值估計）",
+          "why": "平滑函數的局部估計，非嚴格等式。"
+        },
+        {
+          "formula": "四選項最合理為B：1.036",
+          "why": "排除不在界內或符號錯的選項。"
+        }
+      ],
+      "result": "約1.036",
+      "unit": "無單位",
+      "matchingOption": "B",
+      "commonMistake": "誤把tan47的值直接當tan46；未做週期化簡。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
