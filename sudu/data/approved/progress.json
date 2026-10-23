@@ -2,9 +2,9 @@
   "dataStage": "qa_verified_only",
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
-    "commit": "23d1cf35bdaf34c220d8f5960c97ae5781897e3e",
+    "commit": "01ee52ecb8594dda59a39a8baa605244070596b1",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "a0aca1dad2e4bcce3bae38bcbddb36c83a7d654661fa38fc80dca026afad4fd9"
+    "sourceTreeSignature": "50493f9583a4c4eb8e381e4aa9810c9e32782778fac8fd4664b98c4c1e7f06c9"
   },
   "schemaVersion": 1,
   "years": {
@@ -31,7 +31,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "23d1cf35bdaf34c220d8f5960c97ae5781897e3e",
+      "sourceSha": "01ee52ecb8594dda59a39a8baa605244070596b1",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -124,7 +124,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 3,
       "sharedWebpTotal": 20,
-      "sourceSha": "23d1cf35bdaf34c220d8f5960c97ae5781897e3e",
+      "sourceSha": "01ee52ecb8594dda59a39a8baa605244070596b1",
       "subjects": {
         "商業概論": {
           "candidate": 25,
