@@ -76,10 +76,50 @@ jobs:
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$(git -C _source_qa rev-parse HEAD)"
           python scripts/sudu_verified_publish.py check
           PYTHONPATH=. python tests/sudu_staging_student_certificates.py
+          mkdir -p _qa_real_student_fixture
+          cp sudu/data/approved/115.json _qa_real_student_fixture/115.json
+          cp sudu/data/approved/progress.json _qa_real_student_fixture/progress.json
       - uses: actions/upload-artifact@v4
         with:
           name: actual-114-115-qa-admission-preview
           path: sudu/data/approved/progress.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: real-student-ui-fixture-ci-only
+          path: _qa_real_student_fixture/
+
+  verify_real_student_ui:
+    name: Browser test all 4 original math questions with actual audited answers
+    needs: [real_source_preview]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: real-student-ui-fixture-ci-only
+          path: _qa_real_student_fixture
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium headless and required image build dependencies
+        run: |
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Exercise actual per-question student UI against source QA records (CI only)
+        run: |
+          set -euo pipefail
+          cp _qa_real_student_fixture/115.json sudu/data/approved/115.json
+          cp _qa_real_student_fixture/progress.json sudu/data/approved/progress.json
+          python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/qa-real-ui-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          node tests/sudu_real_reviewed_browser.cjs
   full_release_gates:
     name: Run complete same-SHA Pages release gate (no deployment)
     uses: ./.github/workflows/sudu-release-checks.yml
