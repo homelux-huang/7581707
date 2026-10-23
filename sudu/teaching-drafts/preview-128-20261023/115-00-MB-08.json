@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-08",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 8,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-08.webp",
+  "imageSha256": "dcad64f776b9128299839aee37597d7509d4155c01a9bc81092fd30bad96aec6",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題原圖目視）",
+    "method": "直接開啟既有單題 WebP，讀取題幹、符號、度數、三角函數、負號及四個選項，逐檔重新算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有 OCR 把 C 的 2√3 與選項的分母分子拆散並混入下一頁頁首；已依原圖完整確認，不覆寫候選來源。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "A(0,0)、B(4,0)、C(−2,2√3)；AB 與 AC 夾角 θ，cosθ=?",
+    "keyConditions": [
+      "A=(0,0)",
+      "B=(4,0)",
+      "C=(−2,2√3)",
+      "θ 是 AB 與 AC 的夾角"
+    ],
+    "reasoningFromOriginalImage": "兩向量**AB=(4,0)**、**AC=(−2,2√3)**。內積 **AB·AC=4×(−2)+0×2√3=−8**；長度 |AB|=4、|AC|=√(4+12)=4。因此 **cosθ=(−8)/(4×4)=−1/2**，選 D。負餘弦表示夾角是鈍角。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "cosθ=−1/2",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "兩向量**AB=(4,0)**、**AC=(−2,2√3)**。內積 **AB·AC=4×(−2)+0×2√3=−8**；長度 |AB|=4、|AC|=√(4+12)=4。因此 **cosθ=(−8)/(4×4)=−1/2**，選 D。負餘弦表示夾角是鈍角。",
+    "elementarySummary": "B 在 A 的右邊，C 卻在左上方，所以兩支箭頭張開超過直角。超過90度的夾角，餘弦會是負的。照長度和內積算，正好是負二分之一。",
+    "memory": "**AB·AC=−8、|AB|=|AC|=4 ⇒ cosθ=−8/16=−1/2**。",
+    "concept": "**向量內積 u·v=|u||v|cosθ**；座標內積 uxvx+uyvy。內積負，兩向量夾角大於90度且小於180度。",
+    "extension": "反向思考：如果 C 改成 **(2,2√3)**，則 AB·AC=8、長度仍為4，cosθ=+1/2，對應選 C 而非 D。",
+    "source": {
+      "originalExam": "115-00-MB-08",
+      "originalImagePinnedSha256": "dcad64f776b9128299839aee37597d7509d4155c01a9bc81092fd30bad96aec6",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材之版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀"
+    },
+    "highlightTerms": [
+      "AB=(4,0)",
+      "AC=(−2,2√3)",
+      "內積=−8",
+      "cosθ=−1/2"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "√3/2 是正值，且代表約30°的銳角；本題 AB 右向、AC 左上，夾角是鈍角，cos 不為正。",
+        "elementary": "角張得很開，不能是正的√3/2。",
+        "reason": "√3/2 是正值，且代表約30°的銳角；本題 AB 右向、AC 左上，夾角是鈍角，cos 不為正。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "−√3/2 雖為負，但依長度與內積精算為−1/2，不能只看符號對就選。",
+        "elementary": "負號對了，但大小算錯。",
+        "reason": "−√3/2 雖為負，但依長度與內積精算為−1/2，不能只看符號對就選。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "1/2 是正數，與內積 AB·AC=−8 的負號矛盾。",
+        "elementary": "這題不是正二分之一。",
+        "reason": "1/2 是正數，與內積 AB·AC=−8 的負號矛盾。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "−1/2=−8/(4×4)，符合原圖兩向量內積與長度，正解。",
+        "elementary": "算出負8再除16，就是−1/2。",
+        "reason": "−1/2=−8/(4×4)，符合原圖兩向量內積與長度，正解。"
+      }
+    },
+    "math": {
+      "formula": "向量 AB·AC=|AB|×|AC|×cosθ；內積=uxvx+uyvy；向量長度 √(x²+y²)",
+      "formulaUsage": "內積可求兩向量夾角，尤其題目以座標而不是直角三角形給條件時。",
+      "workedExample": "例：u=(1,0)、v=(0,2)，內積0，cosθ=0，表示90°。",
+      "dailyApplication": "工程、動畫及 GIS 中比較兩個方向的夾角。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "數學非金額運算也必須顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "A=(0,0)",
+        "B=(4,0)",
+        "C=(−2,2√3)",
+        "θ 是 AB 與 AC 的夾角"
+      ],
+      "formula": "向量 AB·AC=|AB|×|AC|×cosθ；內積=uxvx+uyvy；向量長度 √(x²+y²)",
+      "formulaPurpose": "內積可求兩向量夾角，尤其題目以座標而不是直角三角形給條件時。",
+      "substitutionAndSteps": [
+        {
+          "formula": "AB=(4−0,0−0)=(4,0)",
+          "why": "求 A 指向 B 的向量。"
+        },
+        {
+          "formula": "AC=(−2−0,2√3−0)=(−2,2√3)",
+          "why": "求 A 指向 C 的向量。"
+        },
+        {
+          "formula": "AB·AC=4×(−2)+0×2√3=−8",
+          "why": "分量相乘後相加得到內積。"
+        },
+        {
+          "formula": "|AB|=√(4²+0²)=4",
+          "why": "使用畢氏定理得 AB 長度。"
+        },
+        {
+          "formula": "|AC|=√((−2)²+(2√3)²)=√(4+12)=4",
+          "why": "先平方 √3 項，2√3 平方=12。"
+        },
+        {
+          "formula": "cosθ=(AB·AC)/(|AB|×|AC|)=−8/(4×4)=−1/2",
+          "why": "將內積除兩向量長度乘積，得到選 D。"
+        }
+      ],
+      "result": "cosθ=−1/2",
+      "unit": "餘弦值無單位",
+      "matchingOption": "D",
+      "commonMistake": "錯把 (2√3)² 當作 4√3；或忽略 AB·AC 負號。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
