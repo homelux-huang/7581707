@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-17",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 17,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-17.webp",
+  "imageSha256": "f24acb687dfdd16a943ee1a87716c14320bd7bcd635ee8fe69e828a963794e24",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看 GitHub 對應的原始單題 WebP，核實第 17 題／題幹／A-D／對話上下文／無鄰題，重新計算文件 SHA256 與 progress 固定清單相符。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並留下自行解題結果，才比對候選答案；官網確認 2026-05-08 標準答案定案，但尚無法直接讀取英文最終答案 PDF 與試題／答案確認說明。",
+    "blindSolveStatus": "SELF_IMAGE_SOLVE_BEFORE_LOOKUP_NOT_INDEPENDENT_THIRD_PARTY",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Ming: Did you know the skills contest in Taipei last year? A-Mei: The Asian Skills Competition at Nangang Exhibition Center? Ming: Yes. I was there. It was very impressive. The Taiwan team did a good job! A-Mei: ____. Ming: Twenty-two in total. We won the team title; we were the best in Asia!",
+    "keyConditions": [
+      "Twenty-two in total",
+      "won the team title",
+      "Taiwan team",
+      "competition"
+    ],
+    "reasoningFromOriginalImage": "Ming 的回答 Twenty-two in total 指獎牌數量，並補充團體冠軍，因此前句應問是否拿到金牌。原題並無要求加減計算，22 是對話給定資訊。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "對話解題看 **數量回答的對象**。**Twenty-two in total** 回的是『總共幾面』，後面接團體冠軍，最適合前句 **Did we get any gold medals?**；不能把 22 誤解成 Blue 22 bus，因為後句談得獎，不是交通。",
+    "elementarySummary": "阿明說臺灣隊比得很棒。阿美問『有拿金牌嗎？』，阿明說『總共22面！我們還拿團體冠軍！』前後連得起來。",
+    "memory": "**22 in total + team title → gold medals**；先看數字代表什麼。",
+    "concept": "**in total**＝總計；**gold medal**＝金牌；**team title**＝團體冠軍。題中 22 已給出，沒有需要列算式的考題計算。",
+    "extension": "反向思考：如果 Ming 回答『I took the Blue 22 bus』，前句才適合問 **Did you go there by the Blue 22 bus?**；相同數字不一定是同一類資訊。",
+    "source": {
+      "originalExam": "115-00-E-17",
+      "originalImagePinnedSha256": "f24acb687dfdd16a943ee1a87716c14320bd7bcd635ee8fe69e828a963794e24",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 答案確認公告；該題最終 PDF 尚未獨立複核",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "Twenty-two in total",
+      "gold medals",
+      "team title"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**Did we get any gold medals?** 問是否獲得金牌，答 Twenty-two in total 並接團體奪冠，語義連貫。",
+        "elementary": "問金牌拿幾面，回答總共22面，正好。",
+        "reason": "**Did we get any gold medals?** 問是否獲得金牌，答 Twenty-two in total 並接團體奪冠，語義連貫。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Did you go there by the Blue 22 bus?** 問搭哪路公車，正常應答交通工具或 yes/no；Ming 接著說團體冠軍與獎牌數，沒回答公車。",
+        "elementary": "22 路公車跟22面金牌只碰巧有同一個數字。",
+        "reason": "**Did you go there by the Blue 22 bus?** 問搭哪路公車，正常應答交通工具或 yes/no；Ming 接著說團體冠軍與獎牌數，沒回答公車。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**Did you know anything about Car Painting?** 問是否知道汽車烤漆項目，答句卻不是介紹比賽項目，而是得獎枚數及團體成績。",
+        "elementary": "問烤漆比賽，卻回金牌有幾面，沒接上。",
+        "reason": "**Did you know anything about Car Painting?** 問是否知道汽車烤漆項目，答句卻不是介紹比賽項目，而是得獎枚數及團體成績。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**Did we also enter the competition two years ago?** 問兩年前是否參賽，答句應談兩年前的參賽事實，不該回答去年獲得22面金牌。",
+        "elementary": "問兩年前有沒有參加，卻回去年贏了多少，問答不同。",
+        "reason": "**Did we also enter the competition two years ago?** 問兩年前是否參賽，答句應談兩年前的參賽事實，不該回答去年獲得22面金牌。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Ming：你知道去年臺北的技能競賽嗎？阿美：在南港展覽館的亞洲技能競賽？Ming：對，我當時在場，很精彩，臺灣隊表現非常好！阿美：我們有拿到金牌嗎？Ming：總共22面！還拿到團體冠軍，我們是亞洲最佳！",
+      "testedWord": "gold medals",
+      "answerWord": "gold medals",
+      "pronunciationIPA": "/ɡoʊld ˈmedəlz/",
+      "optionMeaningZh": {
+        "A": "我們有拿到金牌嗎？",
+        "B": "你是搭藍色22路公車去的嗎？",
+        "C": "你知道汽車烤漆項目嗎？",
+        "D": "兩年前我們也參加比賽了嗎？"
+      },
+      "synonyms": {
+        "初級": [
+          "N/A（gold medal 通常無完全相同的常用單詞）"
+        ],
+        "中級": [
+          "first-place medals（第一名獎牌；近義描述）"
+        ],
+        "高級": [
+          "N/A（trophies 不等於 medals）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（金牌不是有語義反義詞的字）"
+        ],
+        "中級": [
+          "silver medals（銀牌；相關而非反義）"
+        ],
+        "高級": [
+          "bronze medals（銅牌；相關而非反義）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "win（贏得）"
+        ],
+        "中級": [
+          "competition（競賽）"
+        ],
+        "高級": [
+          "championship（冠軍賽／冠軍頭銜）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關或近義片語不能保證任何情況都完全可替換；非反義關係已註明。",
+      "exampleEnglish": "The student won two gold medals in the competition.",
+      "exampleChinese": "那名學生在比賽中贏得兩面金牌。",
+      "exampleHighlightedSurfaceForm": "gold medals",
+      "exampleType": "自編雙語教學例句，非新聞",
+      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
