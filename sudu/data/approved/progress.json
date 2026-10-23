@@ -3,10 +3,10 @@
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
     "certificationSchemaVersion": "student-reviewed-batch-v1",
-    "commit": "b7f6ad0116e60023e0e9c4fe0567c5880f368c30",
+    "commit": "6a71ac9da0c3724ee8dfc87209c84d43125f3421",
     "publisherCodeSha256": "877e5042632001f73c1f95890e93993825c913d0a62f535b08d6fe749bb41d47",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "650b7b586bbb2a3aaca81c23fbf44398a665737f64982c3cadd92b8e9c829884"
+    "sourceTreeSignature": "e265a7601f60dd9dd2e6f6aa8e06a8e7fe432e04a281f0ca0715e7258d26128f"
   },
   "schemaVersion": 1,
   "years": {
@@ -33,7 +33,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "b7f6ad0116e60023e0e9c4fe0567c5880f368c30",
+      "sourceSha": "6a71ac9da0c3724ee8dfc87209c84d43125f3421",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -126,7 +126,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 4,
       "sharedWebpTotal": 20,
-      "sourceSha": "b7f6ad0116e60023e0e9c4fe0567c5880f368c30",
+      "sourceSha": "6a71ac9da0c3724ee8dfc87209c84d43125f3421",
       "subjects": {
         "商業概論": {
           "candidate": 25,
