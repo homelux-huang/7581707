@@ -162,7 +162,7 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+    "blockingReason": "官方最終答案A已核實；115商管專一官網未列疑義，不等同技術敘述②嚴謹。雜湊不可逆、簽章驗證與加解密不同，需標註教材簡化表述並教學獨立QA。",
     "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
     "recheckFromOriginal20261023": {
       "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
@@ -212,6 +212,18 @@
       "aiMatchesOfficial": false,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "teachingConceptAdjudication20261023": {
+      "officialAnswerVerifiedPreviously": true,
+      "officialAnswer": "A",
+      "officialEvidence": "official-final-evidence-20261023.json",
+      "teachingDisposition": "BLOCKED_TEACHING_REVIEW",
+      "revisedReason": "官方最終答案A已核實；115商管專一官網未列疑義，不等同技術敘述②嚴謹。雜湊不可逆、簽章驗證與加解密不同，需標註教材簡化表述並教學獨立QA。",
+      "originalAiAnswerPreserved": true,
+      "firstPassHistoryPreserved": true,
+      "fullIndependentQaAccepted": false,
+      "studentReleaseApproved": false,
+      "auditDocument": "OFFICIAL_BLOCKER_TEACHING_ADJUDICATION_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

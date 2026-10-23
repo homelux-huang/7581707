@@ -165,7 +165,7 @@
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "ANSWER_CONCEPT_CONFLICT",
-    "blockingReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+    "blockingReason": "官方最終答案B已核實；不得再將「尚未取得官方答案」列為阻塞。保留廣義固定特別股股利槓桿效應與課程狹義舉債定義的教學歧義，需教材來源與四選項教學獨立複核。",
     "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
     "recheckFromOriginal20261023": {
       "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
@@ -215,6 +215,18 @@
       "aiMatchesOfficial": false,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "teachingConceptAdjudication20261023": {
+      "officialAnswerVerifiedPreviously": true,
+      "officialAnswer": "B",
+      "officialEvidence": "official-final-evidence-20261023.json",
+      "teachingDisposition": "BLOCKED_TEACHING_REVIEW",
+      "revisedReason": "官方最終答案B已核實；不得再將「尚未取得官方答案」列為阻塞。保留廣義固定特別股股利槓桿效應與課程狹義舉債定義的教學歧義，需教材來源與四選項教學獨立複核。",
+      "originalAiAnswerPreserved": true,
+      "firstPassHistoryPreserved": true,
+      "fullIndependentQaAccepted": false,
+      "studentReleaseApproved": false,
+      "auditDocument": "OFFICIAL_BLOCKER_TEACHING_ADJUDICATION_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

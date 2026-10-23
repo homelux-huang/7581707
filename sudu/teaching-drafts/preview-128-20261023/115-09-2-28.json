@@ -254,7 +254,7 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": "題幹未列預算但候選解以等邊際效用／價格相等認定A；未設預算下D總效用較高。需官方及教材檢視。",
+    "blockingReason": "官方最終答案A及115商管專二第28題確認說明已核實。官方採每元邊際效用相等作答；A花費250元只是計算結果，題幹未明示預算。保留原AI首次D與在無預算時TU54比較理由，待教材與完整教學QA，並非官方答案尚未查到。",
     "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
     "recheckFromOriginal20261023": {
       "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
@@ -313,6 +313,18 @@
       "aiMatchesOfficial": false,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "teachingConceptAdjudication20261023": {
+      "officialAnswerVerifiedPreviously": true,
+      "officialAnswer": "A",
+      "officialEvidence": "official-final-evidence-20261023.json",
+      "teachingDisposition": "BLOCKED_TEACHING_REVIEW",
+      "revisedReason": "官方最終答案A及115商管專二第28題確認說明已核實。官方採每元邊際效用相等作答；A花費250元只是計算結果，題幹未明示預算。保留原AI首次D與在無預算時TU54比較理由，待教材與完整教學QA，並非官方答案尚未查到。",
+      "originalAiAnswerPreserved": true,
+      "firstPassHistoryPreserved": true,
+      "fullIndependentQaAccepted": false,
+      "studentReleaseApproved": false,
+      "auditDocument": "OFFICIAL_BLOCKER_TEACHING_ADJUDICATION_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
