@@ -143,6 +143,7 @@ def main():
             or progress.get("scopeTotal") != 128):
         raise SystemExit("Invalid frozen 128 registry; NO RELEASE")
     counts = Counter()
+    blocker_ids = {}
     accepted = []
     for item in items:
         qid = item["questionId"]
@@ -150,6 +151,8 @@ def main():
         reasons = assess_record(item, record, official[qid], certs.get(qid))
         if reasons:
             counts.update(reasons)
+            for reason in reasons:
+                blocker_ids.setdefault(reason, []).append(qid)
         else:
             accepted.append(qid)
     if progress.get("fullyAccepted", 0) < len(accepted):
@@ -160,6 +163,11 @@ def main():
         "releaseEligibleQuestionIds": accepted,
         "blockedCount": 128 - len(accepted),
         "blockerCounts": dict(sorted(counts.items())),
+        "answerDisagreementIds": {
+            key: sorted(blocker_ids.get(key, []))
+            for key in ("ai_literal_official_disagreement",
+                        "historic_disagreement_or_unresolved_warning")
+        },
         "doesNotChangeAnyDraftOrApprovedData": True,
         "meaning": "Dry-run eligibility only, not automatic publication or full teaching QA"
     }

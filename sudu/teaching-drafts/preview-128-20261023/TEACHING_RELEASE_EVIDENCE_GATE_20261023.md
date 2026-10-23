@@ -27,7 +27,7 @@
 **實際阻塞分群（以本輪連續證據為準）：**
 
 - 真正 AI 與官方答案仍不同或未決 **3 題**：`115-09-1-07`、`115-09-1-33`、`115-09-2-28`。官方最終答案 B/A/A 均已確認，剩教材定義／教學裁決；上述警語和歷史不可刪。
-- 原 AI 首次判讀與公告不同、在看到候選後才更正成相符的 **3 題**：`115-09-2-06`、`115-09-2-12`、`115-09-2-15`。這三題現在 `aiAnswer` 與官方相等，但 `conflictWarningRequired=true`，**仍待獨立非事後驗證**；不可與上面三題的現行 AI 字母不符混為一談。
+- 已知原 AI 首次判讀與公告不同、看過候選後才改成相符的**至少3題**：`115-09-2-06`、`115-09-2-12`、`115-09-2-15`。這三題現在 `aiAnswer` 與官方相等，但 `conflictWarningRequired=true`，**仍待獨立非事後驗證**。最新實際 dry-run #39956497768 還揭露 **總共21題**「現行字母相同但仍有警示／旗標不是明確 false」；另18題不能擅自推斷皆屬首次錯答，應讀各題明細逐一審核。加上現行 AI 字母仍不同的3題，共 **24個非完整教學可放行案例**（沒有重複ID，未完成的完整內容/ UI證據另有128題），絕不可只看6題就把剩下122題視為合格。
 - 全部 128 題尚待獨立內容 QA、8×2 UI/互動 QA、逐題 SHA-bound 正式教學 release certificate；`releaseEligibleCount=0`。
 - 正式 V4 `sudu/v4-115-multisubject-review-demo.html` 與 `sudu/verified-questions-runtime.js` 目前只承接 `sudu/data/approved` 的已核准資料。公開 build allowlist 排除草稿，**目前沒有新128題正式 V4 教學快照的 UI 渲染／8×2證據**。草稿工作流程只在隔離環境跑既有 35題 Demo smoke，不能誤當這 128 題的個別 UI QA。
 
@@ -45,3 +45,9 @@
 3. 三題硬爭議與三題歷史初解差異保持阻塞，能確定教材與官方使用術語時才逐題核實；不為解鎖造數字或偷改 `aiAnswer`。
 4. 英文其餘6題若沒有真實新聞來源，保留自編；不把來源不足當成有新聞。各科精確課本版本章節頁數不足保持待核。
 5. 只有有單題真正合格的 certificate、QA source 合格且正式 public allowlist 僅增量加入時，建立非衝突 PR、同 SHA 全部 Playwright/browser/CI SUCCESS 後依最新授權安全 squash merge，最後檢查 Pages verify/build/deploy/verify_live 及 Live `release.json` SHA 一致。沒合格題目不可提交「空發布」冒充128已上線。
+
+
+## 最新修正後的同 SHA 驗證證據
+
+- [GitHub Actions #39956497768](https://github.com/homelux-huang/7581707/actions/runs/39956497768) 同一 commit `c5079f453968aebaa756a42ea06972d5d738f419`：日期檢查 6/6、個別發佈防偽回歸 11/11、官方資料及原圖整體結構檢查 PASS；dry-run releaseEligible **0/128**。
+- 稽核結果顯示真正字母不一致 **3**、其他相同字母但警示未清 **21**，分開統計不再含混。下次從新 CI 結果的 `answerDisagreementIds` 逐題檢查警示的原由與證據；不得僅因 AI 現在字母等於官方就清除首次推理分歧。
