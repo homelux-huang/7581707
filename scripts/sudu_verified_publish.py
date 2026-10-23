@@ -614,7 +614,8 @@ def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str 
     report = { "schemaVersion":1, "dataStage":"qa_verified_only",
         "notYetLiveUntilPagesSuccess":True,
         "provenance":{"ref":"qa/114-115-official-visual-review","commit":source_sha,
-                      "sourceTreeSignature":source_tree_signature or source_sha},
+                      "sourceTreeSignature":source_tree_signature or source_sha,
+                      "certificationSchemaVersion":"student-reviewed-batch-v1"},
         "years":{}}
     for year in YEARS:
         report["years"][str(year)] = snapshot(source,dest,year,source_sha)
