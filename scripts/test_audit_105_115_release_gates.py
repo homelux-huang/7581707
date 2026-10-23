@@ -20,11 +20,12 @@ class ReleaseGateRegression(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         gates.D = Path(self.temp.name)
+        gates.ROOT = gates.D
         self.base = gates.D / '114'
         self.base.mkdir()
         self.qid = '114-00-C-01'
-        self.sha = 'a' * 64
-        self.source_sha = 'b' * 64
+        self.sha = hashlib.sha256(b'fake-webp').hexdigest()
+        self.source_sha = hashlib.sha256(b'fake-source-page').hexdigest()
         self.answer_sha = 'c' * 64
         self.data = {
             'inventory.json': {'integrationReady': True, 'sqlite': {'reimportCount': 2, 'shaMismatches': 0}},
@@ -39,6 +40,7 @@ class ReleaseGateRegression(unittest.TestCase):
                 'qaStatus': 'PASS', 'sha256': self.sha,
                 'sourceSha256': self.source_sha, 'sourcePage': 2,
                 'crop': [0, 0, 10, 10], 'output': 'fixtures/q.webp',
+                'source': 'fixtures/source.webp',
                 'visualReviewEvidence': {'reviewedSha256': self.sha, 'reference': 'proof/visual.json'}
             }], 'sharedMaterialCrops': []},
             'VISUAL_QA.json': {'questions': [{
@@ -59,6 +61,9 @@ class ReleaseGateRegression(unittest.TestCase):
         self.write_files()
 
     def write_files(self):
+        (gates.ROOT / 'fixtures').mkdir(exist_ok=True)
+        (gates.ROOT / 'fixtures/q.webp').write_bytes(b'fake-webp')
+        (gates.ROOT / 'fixtures/source.webp').write_bytes(b'fake-source-page')
         for name, value in self.data.items():
             (self.base / name).write_text(json.dumps(value), encoding='utf-8')
         (self.base / 'REMAINING_QA.md').write_text('All resolved', encoding='utf-8')
@@ -137,6 +142,14 @@ class ReleaseGateRegression(unittest.TestCase):
     def test_duplicate_ledger_id_blocks(self):
         self.data['official-answer-evidence.json']['items'].append(self.data['official-answer-evidence.json']['items'][0].copy())
         self.check('duplicate_or_invalid_official_answer_ledger')
+
+    def test_file_output_sha_mismatch_blocks(self):
+        (gates.ROOT / 'fixtures/q.webp').write_bytes(b'changed')
+        self.assertIn('visual_qa_evidence_mismatch:' + self.qid, gates.audit(114)['blockers'])
+
+    def test_file_source_sha_mismatch_blocks(self):
+        (gates.ROOT / 'fixtures/source.webp').write_bytes(b'changed')
+        self.assertIn('visual_qa_evidence_mismatch:' + self.qid, gates.audit(114)['blockers'])
 
     def test_readonly_g5_report_failed_blocks(self):
         path = gates.D / '105-115-SQLITE_G5_READONLY_AUDIT.json'
