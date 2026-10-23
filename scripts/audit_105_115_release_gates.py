@@ -52,6 +52,25 @@ def audit(year):
     shared_pending=[s.get("sharedMaterialId") for s in shared if s.get("qaStatus")!="PASS"]
     if shared_pending:report["blockers"].append("shared_material_qa_pending:"+str(len(shared_pending)))
     if inv.get("integrationReady") is not True:report["blockers"].append("inventory_not_release_ready")
+    # G0-G6 evidence artifacts are mandatory even when the manifest says ready.
+    # File existence is a necessary condition, never sufficient for QA PASS.
+    for required in ("ocr-raw-candidates.json", "VISUAL_QA.json",
+                     "question-bank.sqlite3", "REMAINING_QA.md", "DATA_HANDOFF.md"):
+        if not (base/required).is_file():
+            report["blockers"].append("missing:"+required)
+    # Verify basic SQLite integrity without writing to any database.
+    dbfile=base/"question-bank.sqlite3"
+    if dbfile.is_file():
+        import sqlite3
+        try:
+            with sqlite3.connect("file:"+str(dbfile)+"?mode=ro", uri=True) as db:
+                if db.execute("PRAGMA integrity_check").fetchone()[0]!="ok":
+                    report["blockers"].append("sqlite_integrity_failure")
+                dbrows=db.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
+                if dbrows!=n:
+                    report["blockers"].append("sqlite_question_count_mismatch")
+        except (sqlite3.DatabaseError, OSError) as exc:
+            report["blockers"].append("sqlite_unreadable:"+type(exc).__name__)
     validation=load("VALIDATION.json")
     if validation and validation.get("integrationReady") is not True:
         report["blockers"].append("validation_not_release_ready")
