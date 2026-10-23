@@ -71,3 +71,16 @@ jobs:
           retention-days: 30
           if-no-files-found: ignore
           path: sudu/data/processed/105/qa-drafts/UNVERIFIED_105_GAPS_V3_20261023.json
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: 105-v3-visual-review-images
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp
+            sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp
+            sudu/data/processed/105/qa-drafts/webp-v2/**/*.webp
+            sudu/data/processed/105/qa-drafts/webp-v3/**/*.webp
+            sudu/data/processed/105/qa-drafts/UNVERIFIED_105_GAPS_V3_20261023.json
