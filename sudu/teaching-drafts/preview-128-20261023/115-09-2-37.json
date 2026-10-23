@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-37",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 37,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-37.webp",
+  "imageSha256": "5a85327b1c306c60f53e5c3268bdb927d3438fbc0ca768e6ddf34c3553a1107b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題目視）",
+    "method": "開啟 GitHub 既有單題 WebP 驗證題號／所有A-D／圖形灰白面積及數值，SHA256 重新比對凍結清單一致；OCR只供輔助。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有OCR的第37題D選項後帶入下一頁頁眉；依原圖不採用混入文字。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLVE_BEFORE_CANDIDATE_READ_NOT_THIRD_PARTY_QA",
+    "notice": "原圖目視獨立推理之後才核對既有候選答案；官方最後核實PDF與疑義公告尚未讀取。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-worked-problem",
+    "keyConditions": [
+      "原服務員月薪38,000元",
+      "轉任自媒體月收入40,000元",
+      "問移轉賺額及經濟租"
+    ],
+    "reasoningFromOriginalImage": "**移轉賺額（transfer earnings）**是勞動者為留在目前工作、放棄次佳工作必須獲得的最低報酬；題目唯一已知次佳工作是原服務員月薪38,000元，因此移轉賺額38,000，**經濟租＝現職40,000－移轉賺額38,000＝2,000元**，故C。題目未提供自媒體額外成本，依考題簡化只比較給定月收入。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**移轉賺額（transfer earnings）**是勞動者為留在目前工作、放棄次佳工作必須獲得的最低報酬；題目唯一已知次佳工作是原服務員月薪38,000元，因此移轉賺額38,000，**經濟租＝現職40,000－移轉賺額38,000＝2,000元**，故C。題目未提供自媒體額外成本，依考題簡化只比較給定月收入。",
+    "elementarySummary": "原本工作每月3萬8，現在自己做影片賺4萬。要讓他願意不回餐廳，至少得有跟原本3萬8差不多的收入，所以3萬8是移轉賺額；多出來2千是經濟租。",
+    "memory": "**移轉賺額＝次佳用途可賺到的報酬；經濟租＝現職報酬－移轉賺額**。",
+    "concept": "經濟租與準租不同；要素的移轉賺額衡量留在現有用途的機會成本。",
+    "extension": "反向題：如果原工作給42,000元而自媒體只賺40,000，在只看收入的前提下，他繼續自媒體是否有正經濟租？",
+    "source": {
+      "originalExam": "115-09-2-37",
+      "originalImagePinnedSha256": "5a85327b1c306c60f53e5c3268bdb927d3438fbc0ca768e6ddf34c3553a1107b",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正公告未核實"
+    },
+    "highlightTerms": [
+      "移轉賺額",
+      "經濟租",
+      "38,000",
+      "40,000",
+      "2,000"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A說準租負2,000元，這裡沒有短期專用資本或準租計算資訊；不能把收入差額直接稱準租。",
+        "elementary": "多出或少掉的收入，不是看到差額就叫準租。",
+        "reason": "A說準租負2,000元，這裡沒有短期專用資本或準租計算資訊；不能把收入差額直接稱準租。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說無任何經濟租；實際現收入40,000大於次佳工作的38,000，差額2,000是正經濟租，故錯。",
+        "elementary": "現在多賺兩千，所以不是沒有額外好處。",
+        "reason": "B說無任何經濟租；實際現收入40,000大於次佳工作的38,000，差額2,000是正經濟租，故錯。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C說移轉賺額38,000元，對應原工作這項次佳用途的報酬，正確。",
+        "elementary": "原本能賺3萬8，這就是捨棄工作的價值。",
+        "reason": "C說移轉賺額38,000元，對應原工作這項次佳用途的報酬，正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說移轉賺額40,000元，混淆目前工作實際收入與次佳用途的最低必要報酬。",
+        "elementary": "4萬是現在賺的，不是原本工作的那3萬8。",
+        "reason": "D說移轉賺額40,000元，混淆目前工作實際收入與次佳用途的最低必要報酬。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "原工作每月38,000元",
+        "新自媒體每月40,000元",
+        "沒有提供其他工資／成本數據"
+      ],
+      "formula": "經濟租＝現職報酬－移轉賺額",
+      "formulaPurpose": "從次佳工作推得留在新工作的最低必要報酬，再求超額部分。",
+      "substitutionAndSteps": [
+        {
+          "formula": "次佳用途＝原餐廳服務員",
+          "why": "唯一已知可替代工作是離職前的餐廳職位。"
+        },
+        {
+          "formula": "原餐廳報酬＝38,000元/月",
+          "why": "即留在當前工作時放棄的次佳可得報酬。"
+        },
+        {
+          "formula": "移轉賺額＝38,000元/月",
+          "why": "依題目簡化假設，保有現職至少需補償前職所得。"
+        },
+        {
+          "formula": "現職自媒體收入＝40,000元/月",
+          "why": "題目提供目前得到的月收入。"
+        },
+        {
+          "formula": "經濟租＝40,000－38,000＝2,000元/月",
+          "why": "目前報酬超過最低移轉需求部分。"
+        },
+        {
+          "formula": "選項C：移轉賺額38,000元/月",
+          "why": "不是把40,000目前收入誤稱移轉賺額。"
+        }
+      ],
+      "result": "移轉賺額38,000元／月；經濟租2,000元／月；選C",
+      "unit": "新臺幣元／月",
+      "matchingOption": "C",
+      "commonMistake": "把移轉賺額錯當目前收入40,000，或把2,000直接稱準租。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
