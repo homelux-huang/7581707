@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "year": 105,
+  "date": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "scope": "Direct visual comparison of SHA-pinned original source full pages against staged exact question/shared WebP; separate draft evidence; no release promotion",
+  "sourceReviewPages": [
+    "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+    "sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp"
+  ],
+  "records": [
+    {
+      "assetId": "105-00-C-24",
+      "result": "FAIL_ADJACENT_Q25_FRAGMENT",
+      "note": "bottom shows stray next-line pixels"
+    },
+    {
+      "assetId": "105-00-C-25",
+      "result": "VISUALLY_MATCHED",
+      "note": "full question A-D without next-question text"
+    },
+    {
+      "assetId": "105-00-C-26",
+      "result": "VISUALLY_MATCHED",
+      "note": "full question A-D without next-question text"
+    },
+    {
+      "assetId": "105-00-C-27",
+      "result": "FAIL_PREVIOUS_FRAGMENT",
+      "note": "top contains ending fragment of preceding passage/question"
+    },
+    {
+      "assetId": "105-09-2-48",
+      "result": "VISUALLY_MATCHED",
+      "note": "full stem and A-D; visually source-matched"
+    },
+    {
+      "assetId": "105-09-2-49",
+      "result": "FAIL_BOTTOM_CUT",
+      "note": "choice D clipped at bottom"
+    },
+    {
+      "assetId": "105-09-2-50",
+      "result": "FAIL_PREVIOUS_FRAGMENT",
+      "note": "top includes Q49 choice D"
+    },
+    {
+      "assetId": "105-00-C-SHARED-24-26",
+      "result": "VISUALLY_MATCHED",
+      "note": "full shared reading passage for Q24-Q26"
+    },
+    {
+      "assetId": "105-00-C-SHARED-27-29",
+      "result": "FAIL_BOTTOM_CUT",
+      "note": "shared reading passage last line cut at lower border"
+    }
+  ],
+  "visuallyMatched": 4,
+  "failed": 5,
+  "imageQaPassAdded": 0,
+  "answerVerifiedAdded": 0,
+  "integrationReady": false,
+  "warning": "Visual-only preliminary evidence. Original WebP draft and official manifest are not promoted. Need source/output SHA binding, revised crops for failed assets, proof in official ledger and independent remaining gates before platform use."
+}
