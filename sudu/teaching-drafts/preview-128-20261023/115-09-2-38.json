@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-38",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 38,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-38.webp",
+  "imageSha256": "f09b9e42e718f6ce1e2dd2886251704d4e663c32dbf24fd1e0eed61719b72657",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題目視）",
+    "method": "開啟 GitHub 既有單題 WebP 驗證題號／所有A-D／圖形灰白面積及數值，SHA256 重新比對凍結清單一致；OCR只供輔助。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLVE_BEFORE_CANDIDATE_READ_NOT_THIRD_PARTY_QA",
+    "notice": "原圖目視獨立推理之後才核對既有候選答案；官方最後核實PDF與疑義公告尚未讀取。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "投資需求與利率負相關",
+      "儲蓄供給與利率正相關",
+      "投資增加且儲蓄保持不變"
+    ],
+    "reasoningFromOriginalImage": "**可貸資金（投資儲蓄）市場**中，儲蓄形成供給、投資形成需求。投資增加表示在同一利率下借資金的人變多，投資需求曲線**右移**；儲蓄供給保持不變，均衡利率因此**上升**，符合C。投資增加又儲蓄減少會有兩股推升利率的力量；儲蓄增加投資減少則通常使利率下降。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**可貸資金（投資儲蓄）市場**中，儲蓄形成供給、投資形成需求。投資增加表示在同一利率下借資金的人變多，投資需求曲線**右移**；儲蓄供給保持不變，均衡利率因此**上升**，符合C。投資增加又儲蓄減少會有兩股推升利率的力量；儲蓄增加投資減少則通常使利率下降。",
+    "elementarySummary": "借錢開店的人變多，但願意存錢借出的人沒有增加，大家更搶借錢，利率就容易往上升。",
+    "memory": "**投資需求↑、儲蓄不變→均衡利率↑**。",
+    "concept": "利率是可貸資金的價格；儲蓄曲線通常往右上，投資需求曲線往右下，均衡由供需交點決定。",
+    "extension": "反向題：如果投資需求不變、儲蓄供給增加，均衡利率應升還是降？請畫需求不動、供給右移的示意圖。",
+    "source": {
+      "originalExam": "115-09-2-38",
+      "originalImagePinnedSha256": "f09b9e42e718f6ce1e2dd2886251704d4e663c32dbf24fd1e0eed61719b72657",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正公告未核實"
+    },
+    "highlightTerms": [
+      "可貸資金",
+      "投資增加",
+      "儲蓄不變",
+      "需求右移",
+      "均衡利率上升"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A儲蓄增加使供給右移、投資減少使需求左移，兩者都傾向讓利率下降，不是上升。",
+        "elementary": "借出的人更多、借錢的人更少，借錢價格通常變低。",
+        "reason": "A儲蓄增加使供給右移、投資減少使需求左移，兩者都傾向讓利率下降，不是上升。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B投資增加使需求右移、儲蓄減少使供給左移，兩者都傾向推升利率，不能說下降。",
+        "elementary": "借的人多、存的人少，通常利率變高。",
+        "reason": "B投資增加使需求右移、儲蓄減少使供給左移，兩者都傾向推升利率，不能說下降。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C投資增加需求右移、儲蓄供給不變，新交點在較高利率，符合題意。",
+        "elementary": "大家更想借，供應沒變，利率上升。",
+        "reason": "C投資增加需求右移、儲蓄供給不變，新交點在較高利率，符合題意。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D同樣投資增加、儲蓄不變，卻說利率下降，與供需移動方向相反。",
+        "elementary": "借錢需求增加，利率不會因此下降。",
+        "reason": "D同樣投資增加、儲蓄不變，卻說利率下降，與供需移動方向相反。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
