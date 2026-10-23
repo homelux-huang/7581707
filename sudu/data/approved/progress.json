@@ -2,9 +2,9 @@
   "dataStage": "qa_verified_only",
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
-    "commit": "62d746587bc82a773c054bb15dc6f280cee0e001",
+    "commit": "a2495650823663520fd0b612cc9a3455f1be5c0e",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "436f1dde7cc3b2a10347a974c4609d351123bb2f6ccec4796c66a5deb158cce0"
+    "sourceTreeSignature": "8edd534c20d17c3971ada68e8585a8b9e8b12e2b180bb224404358391e57b0e9"
   },
   "schemaVersion": 1,
   "years": {
@@ -18,20 +18,20 @@
       "expected": 205,
       "imagePreviewCount": 9,
       "imagePreviewPercent": 4.4,
-      "imageQaPercent": 4.4,
+      "imageQaPercent": 11.7,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
       "officialFinalQaPass": 0,
       "pending": 205,
       "pendingReasonCounts": {
-        "image_pending": 196,
-        "ocr_or_db_pending": 9
+        "image_pending": 181,
+        "ocr_or_db_pending": 24
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "62d746587bc82a773c054bb15dc6f280cee0e001",
+      "sourceSha": "a2495650823663520fd0b612cc9a3455f1be5c0e",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -94,11 +94,11 @@
           "imagePreviewReady": 0,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 0
+          "webpQaPass": 15
         }
       },
       "webpGenerated": 205,
-      "webpQaPass": 9,
+      "webpQaPass": 24,
       "year": 114
     },
     "115": {
@@ -124,7 +124,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 3,
       "sharedWebpTotal": 20,
-      "sourceSha": "62d746587bc82a773c054bb15dc6f280cee0e001",
+      "sourceSha": "a2495650823663520fd0b612cc9a3455f1be5c0e",
       "subjects": {
         "商業概論": {
           "candidate": 25,
