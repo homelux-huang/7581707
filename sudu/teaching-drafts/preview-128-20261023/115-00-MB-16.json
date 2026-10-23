@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-16",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 16,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-16.webp",
+  "imageSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視）",
+    "method": "目視 GitHub 既有單題原始 WebP，完整題幹、圖表、年份、單位、選項 A-D；對 WebP 原始 bytes 重新計算 SHA256 並與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "圖與表格需以原圖目視；候選OCR只給表格串字，無法取代原始折線與年份座標。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "依附圖1970～2025出生數折線圖及2008～2025出生數表，判斷A-D敘述何者錯誤。",
+    "keyConditions": [
+      "2008～2016九筆：198733,191310,166886,196627,229481,199113,210383,213598,208440",
+      "圖1970～2025全年出生數折線",
+      "2017～2025表格數字 193844,181601,177767,165249,153820,138986,135571,134856,107812"
+    ],
+    "reasoningFromOriginalImage": "題目要找**錯誤**敘述。2008～2016 共9筆，先按小到大排序：**166886、191310、196627、198733、199113、208440、210383、213598、229481**，中位數是**第5筆199113**，不是229481，故 **C錯誤**。A、B、D均可用原圖表核對：三個龍年比相鄰兩年高；全距大於30萬；2017～2025逐年下降。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "錯誤敘述 C；中位數=199113 人",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "題目要找**錯誤**敘述。2008～2016 共9筆，先按小到大排序：**166886、191310、196627、198733、199113、208440、210383、213598、229481**，中位數是**第5筆199113**，不是229481，故 **C錯誤**。A、B、D均可用原圖表核對：三個龍年比相鄰兩年高；全距大於30萬；2017～2025逐年下降。",
+    "elementarySummary": "要找說錯的那一句。九年的出生人數排隊，由小到大，第五個才是中間數199113。C說中間數是229481，那是最大的，所以C錯。",
+    "memory": "**9筆資料→排序第5筆=199113；C把最大值當中位數**。",
+    "concept": "**中位數**：奇數筆排序取正中一筆；**全距**：最大值減最小值；折線高低要以原圖年份逐點核對。",
+    "extension": "反向思考：若資料新增1筆成為**10筆**，中位數改取排序後第5、第6筆的平均，不能只選其中一筆。",
+    "source": {
+      "originalExam": "115-00-MB-16",
+      "originalImagePinnedSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B更正公告與最終解答待核對"
+    },
+    "highlightTerms": [
+      "9筆",
+      "中位數199113",
+      "229481最大值",
+      "錯誤選C"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "原圖1976、1988、2000的點皆高於前後相鄰年的點，這個敘述符合圖勢，故**不是錯誤項**。",
+        "elementary": "三個年份比旁邊兩年高，所以A說對。",
+        "reason": "原圖1976、1988、2000的點皆高於前後相鄰年的點，這個敘述符合圖勢，故**不是錯誤項**。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "圖上最高約43萬、2025約10.8萬，差約32.2萬，大於30萬，敘述正確。",
+        "elementary": "最高減最低超過30萬，所以B沒說錯。",
+        "reason": "圖上最高約43萬、2025約10.8萬，差約32.2萬，大於30萬，敘述正確。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "9筆的中位數是排序後第5筆**199113**；229481是這9筆的最大值，不是中位數，為錯誤敘述。",
+        "elementary": "C把最大值當中間值，錯在這裡。",
+        "reason": "9筆的中位數是排序後第5筆**199113**；229481是這9筆的最大值，不是中位數，為錯誤敘述。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "表中2017=193844、2018=181601、2019=177767、2020=165249、2021=153820、2022=138986、2023=135571、2024=134856、2025=107812，逐項嚴格遞減，敘述正確。",
+        "elementary": "2017以後每年數字都比前一年小，所以D對。",
+        "reason": "表中2017=193844、2018=181601、2019=177767、2020=165249、2021=153820、2022=138986、2023=135571、2024=134856、2025=107812，逐項嚴格遞減，敘述正確。"
+      }
+    },
+    "math": {
+      "formula": "n=9為奇數，中位數=排序後第(n+1)/2=5筆；全距=max−min。",
+      "formulaUsage": "排序求中位數、最大減最小求全距，並用時間序列逐點比對。",
+      "workedExample": "例：7、4、9、5、2 排序 2,4,5,7,9，中位數5。",
+      "dailyApplication": "業務銷量、年度出生數等統計表中的代表值分析。",
+      "notes": "非金額數學運算仍要顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "2008～2016九筆：198733,191310,166886,196627,229481,199113,210383,213598,208440",
+        "圖1970～2025全年出生數折線",
+        "2017～2025表格數字 193844,181601,177767,165249,153820,138986,135571,134856,107812"
+      ],
+      "formula": "n=9為奇數，中位數=排序後第(n+1)/2=5筆；全距=max−min。",
+      "formulaPurpose": "排序求中位數、最大減最小求全距，並用時間序列逐點比對。",
+      "substitutionAndSteps": [
+        {
+          "formula": "2008～2016共有2016−2008+1=9筆資料。",
+          "why": "含2008與2016兩端共有九年。"
+        },
+        {
+          "formula": "小到大排序：166886<191310<196627<198733<199113<208440<210383<213598<229481。",
+          "why": "中位數必須先排序，不能按年份原順序。"
+        },
+        {
+          "formula": "中位數位置=(9+1)/2=5，值=199113，不是229481。",
+          "why": "奇數筆取正中央一筆。"
+        },
+        {
+          "formula": "原折線約最高430000、最低107812，全距約322188>300000，B成立。",
+          "why": "全距是最大減最小，可由圖判超過30萬。"
+        },
+        {
+          "formula": "2017～2025依表193844>181601>177767>165249>153820>138986>135571>134856>107812，D成立。",
+          "why": "逐年下降須每一對相鄰年份比較。"
+        },
+        {
+          "formula": "圖上1976、1988、2000各自皆高於相鄰兩年，A成立；因此C錯誤。",
+          "why": "題問『何者錯誤』，前三項正確排除後為C。"
+        }
+      ],
+      "result": "錯誤敘述 C；中位數=199113 人",
+      "unit": "人",
+      "matchingOption": "C",
+      "commonMistake": "將最大值229481誤當中位數；或未將9筆按大小排序。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
