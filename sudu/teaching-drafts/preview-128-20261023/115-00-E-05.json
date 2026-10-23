@@ -209,6 +209,22 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "A",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/attract"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "in order to +原形動詞、20% discount旨在attract customers；blame、excuse、prevent語意不符；打折是目的不保證已實際成交。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

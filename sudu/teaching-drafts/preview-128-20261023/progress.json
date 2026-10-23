@@ -3244,5 +3244,27 @@
     "actualBookPages": "UNVERIFIED",
     "verifiedTextbookPageCount": 0,
     "releaseGate": "FAIL_CLOSED_FOR_TEXTBOOK_SPECIFIC_CITATIONS"
+  },
+  "partialEnglishLexicalReviewLedger": {
+    "questionIds": [
+      "115-00-E-01",
+      "115-00-E-02",
+      "115-00-E-03",
+      "115-00-E-04",
+      "115-00-E-05",
+      "115-00-E-06",
+      "115-00-E-07",
+      "115-00-E-08",
+      "115-00-E-09",
+      "115-00-E-10"
+    ],
+    "reviewedQuestionCount": 10,
+    "scopeEnglish": 28,
+    "reviewDate": "2026-10-23",
+    "referenceClass": "Cambridge dictionary + archived original question + official answer",
+    "sourceEvidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md",
+    "academicTextbookPageVerified": false,
+    "fullIndependentPedagogicalQaDelta": 0,
+    "releaseDelta": 0
   }
 }

@@ -209,6 +209,22 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "B",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/join"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "join the swimming team指加入組織/團隊，故事在過去，應用joined；blocked/pulled/rented沒有加入團體意思。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

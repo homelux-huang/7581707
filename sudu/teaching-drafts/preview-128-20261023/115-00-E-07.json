@@ -224,6 +224,22 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/temperature"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "測量人體熱度為body temperature，非抽象存在/existence、image或structure；沒有給攝氏數值，不能編造病人體溫。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -162,7 +162,14 @@
       "newsExampleSourceOrganization": "Jane Goodall Institute",
       "newsExampleSourceDate": "2025-10-10",
       "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
-      "newsExampleSourceScope": "Institute expresses great sadness and records Dr Goodall's death, October 1 2025; adverb deeply is newly written not a quote"
+      "newsExampleSourceScope": "Institute expresses great sadness and records Dr Goodall's death, October 1 2025; adverb deeply is newly written not a quote",
+      "testedWordPronunciationIPA": {
+        "UK": "/ɪkˈstriːm.li/",
+        "US": "/ɪkˈstriːm.li/"
+      },
+      "testedWordPronunciationSourceUrl": "https://dictionary.cambridge.org/dictionary/english/extremely",
+      "answerWordPronunciationSourceUrl": "https://dictionary.cambridge.org/dictionary/english/deeply",
+      "testedVsAnswerWordNote": "畫線 extremely 強調非常，最佳選項 deeply 組合 deeply moved；畫線字與選項字IPA各自不同。"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -226,6 +233,23 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/extremely",
+        "https://dictionary.cambridge.org/dictionary/english/deeply"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "extremely moved語境最接近deeply moved(深受感動)，不是angrily/bravely/openly；deeply強調情緒深度不等同所有extremely搭配，兩字IPA必須分開。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

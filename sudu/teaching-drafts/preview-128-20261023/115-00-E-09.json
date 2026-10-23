@@ -161,7 +161,14 @@
       "newsExampleSourceOrganization": "United Nations Statistics Division",
       "newsExampleSourceDate": "2026-07-07",
       "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
-      "newsExampleSourceScope": "The report states choices in coming years will affect progress toward 2030 goals; singular choice is a pedagogical paraphrase"
+      "newsExampleSourceScope": "The report states choices in coming years will affect progress toward 2030 goals; singular choice is a pedagogical paraphrase",
+      "testedWordPronunciationIPA": {
+        "UK": "/ˈɒp.ʃən/",
+        "US": "/ˈɑːp.ʃən/"
+      },
+      "testedWordPronunciationSourceUrl": "https://dictionary.cambridge.org/dictionary/english/option",
+      "answerWordPronunciationSourceUrl": "https://dictionary.cambridge.org/dictionary/english/choice",
+      "testedVsAnswerWordNote": "考題畫線為 option，字義最接近A choice；畫線字option的IPA不同於選項choice。不得用choice的IPA誤標option。"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -225,6 +232,23 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "A",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/option",
+        "https://dictionary.cambridge.org/dictionary/english/choice"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "原題畫線option=可供選擇的方案，在a more affordable option語境可換成choice；本題不是金融衍生品期權(也是option另一語義)。A choice/B material/C quantity/D sample，A最接近。IPA要區分畫線字option與選項choice。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

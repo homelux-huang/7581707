@@ -186,6 +186,22 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "dictionaryReferenceUrls": [
+        "https://dictionary.cambridge.org/us/dictionary/english/suitable"
+      ],
+      "scope": "Correct-answer rationale; all A-D reasons, level labels, IPA contextual distinction and pedagogical meaning",
+      "independentRecheckNotes": "suitable for/to relax = 對特定目的合適；題幹calm beach和walking distance支持；difficult/fearful不合，rocky無根據。",
+      "allFourOptionReasonsChecked": true,
+      "sourceDictionaryClass": "Cambridge online dictionary snippets; no school textbook evidence",
+      "verifiedTextbookEditionAndPage": false,
+      "initialAiBlindSolveNotRedone": true,
+      "qaIndependentTeachingReviewStillPending": true,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
