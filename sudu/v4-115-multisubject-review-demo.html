@@ -633,6 +633,9 @@ function showHome(){
  if($('homeYearSel').value && $('homeYearSel').value!==$('yearSel').value)
   $('homeYearSel').value=$('yearSel').value;
  refreshHomeSubjects();
+ // Returning home must allow the student to re-select the SAME subject and
+ // re-enter. A preselected option will not fire a change event when re-picked.
+ $('homeSubjectSel').value='';
  window.scrollTo({top:0,behavior:'instant'});
 }
 function reviewFields(q){
