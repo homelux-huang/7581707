@@ -12,7 +12,9 @@ permissions:
   contents: read
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Keep a started release alive while QA data or workflows receive newer commits.
+  # GitHub keeps only the newest queued request for this group.
+  cancel-in-progress: false
 jobs:
   verify:
     uses: ./.github/workflows/sudu-release-checks.yml
