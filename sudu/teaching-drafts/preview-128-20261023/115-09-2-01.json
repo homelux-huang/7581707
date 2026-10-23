@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-01",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 1,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-01.webp",
+  "imageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪逐題原圖）",
+    "method": "直接目視 GitHub 既有單題 WebP，題幹選項完整，核實四選項和題號，原始 WebP SHA256 重算一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先根據原圖自行解題再查候選；候選與解答一致但未直接回讀官方最終答案PDF和更正說明。",
+    "initialImageBasedAnswer": "C",
+    "correctedAfterCandidateReview": null,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "①現金流量表期間現金活動；②權益變動表期間權益；③綜合損益表期間績效；④資產負債表期間財務狀況，何者正確？",
+    "keyConditions": [
+      "A-D四選項或①②③④逐項判斷",
+      "正確表述由會計概念及原圖文字決定"
+    ],
+    "reasoningFromOriginalImage": "①**現金流量表**彙總特定期間的營業、投資、籌資現金流；②**權益變動表**說明期間權益變化；③**綜合損益表**描述期間經營績效；④前半句的會計要素雖對，**資產負債表呈現特定時點**的財務狀況，並非一段期間，所以①②③正確，選C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "①**現金流量表**彙總特定期間的營業、投資、籌資現金流；②**權益變動表**說明期間權益變化；③**綜合損益表**描述期間經營績效；④前半句的會計要素雖對，**資產負債表呈現特定時點**的財務狀況，並非一段期間，所以①②③正確，選C。",
+    "elementarySummary": "有的表像『這學期收支記錄』，是在講一段時間；但資產負債表像『今天拍一張財務照片』，只看某一天的樣子。第四句把今天說成一整段時間，所以錯。",
+    "memory": "**損益、現金流、權益變動看期間；資產負債表看時點。**",
+    "concept": "辨別**期間報表與時點報表**。資產=負債+權益是某日的財務狀況，綜合損益表反映一期間收益與費損。",
+    "extension": "反向思考：若④改成『資產負債表表示某年12月31日的財務狀況』，四句便都可能正確，題目選項就需要重設。",
+    "source": {
+      "originalExam": "115-09-2-01",
+      "originalImagePinnedSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學課本之版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學最終標準答案與更正說明待核實"
+    },
+    "highlightTerms": [
+      "特定期間",
+      "特定時點",
+      "①②③",
+      "資產負債表"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①本身正確，但②、③也正確，只選①不完整。",
+        "elementary": "不只現金流量表說對，還有兩句對。",
+        "reason": "①本身正確，但②、③也正確，只選①不完整。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "①②正確，但漏掉③綜合損益表呈現期間績效這個正確敘述。",
+        "elementary": "少選了第三句。",
+        "reason": "①②正確，但漏掉③綜合損益表呈現期間績效這個正確敘述。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "①、②、③均屬期間性財務報表描述，④將時點誤作期間，因此C最完整。",
+        "elementary": "前三個對，第四個日期講錯。",
+        "reason": "①、②、③均屬期間性財務報表描述，④將時點誤作期間，因此C最完整。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "雖含②③，但④錯在資產負債表不是期間報表，且漏掉正確的①。",
+        "elementary": "第四句說錯了，第一句反而沒選。",
+        "reason": "雖含②③，但④錯在資產負債表不是期間報表，且漏掉正確的①。"
+      }
+    },
+    "accounting": {
+      "principle": "現金流量、權益變動、損益為期間資訊，資產負債為特定時點資訊。",
+      "accounts": [
+        "資產",
+        "負債",
+        "權益",
+        "收入",
+        "費損",
+        "現金"
+      ],
+      "journalEntry": "N/A（財務報表辨認題，無交易分錄）",
+      "calculation": "N/A（本題無數值計算）",
+      "standardsStatus": "教材章節與企業適用會計準則版本待核對"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
