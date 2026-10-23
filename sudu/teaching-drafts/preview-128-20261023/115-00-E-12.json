@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-12",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 12,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-12.webp",
+  "imageSha256": "8176348a929a02a6c67fe2ab481fc5450295cba017bcaeeeb96b10a2d021fc01",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題看原圖）",
+    "method": "目視原始單題 WebP，核對題號、對話前後句、A-D 各選項；確認無鄰題裁切或共用材料遺漏；對原圖 bytes 重算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先閱讀原圖並推論答案，再讀現有 OCR 候選資料；原官方網站 2026-05-08 最終確認公告可查，但英文科最終 PDF 與疑義確認說明仍待直接回讀，不能當完整驗收。",
+    "independentSolveScope": "本輪獨立看圖解答，非獨立第三方教學 QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Jane: Did you go to the BLACKPINK concert? Tom: Nope. I was busy preparing for a singing competition. Jane: Oh! And did you go to the TWICE concert? Tom: ____ Jane: Lucky you! You got the tickets! I wish I were there with you.",
+    "keyConditions": [
+      "did you go to the TWICE concert?",
+      "Lucky you!",
+      "You got the tickets!",
+      "I wish I were there with you"
+    ],
+    "reasoningFromOriginalImage": "Jane 問 Tom 去沒去 TWICE 演唱會；她後面羨慕對方拿到票、希望自己也在現場，說明 Tom 確實去了，應答 I went with my classmates。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "本題關鍵是 **後一句反推前一句**：Jane 說 **Lucky you! You got the tickets!**，表示 Tom 的回答應是**確實有去演唱會**；選 **I went with my classmates**。Tom 先說沒去 BLACKPINK 演唱會，不代表後來也沒去 TWICE。**I wish I were there** 是表達與當時實際情況不同的願望。",
+    "elementarySummary": "Jane 問『你有去 TWICE 演唱會嗎？』，後來又說『你好幸運！你有買到票！』所以 Tom 一定說自己去了，而且和同學一起去。",
+    "memory": "**Lucky you! You got the tickets! → I went ...**；羨慕拿到票，表示有去。",
+    "concept": "對話題用**下一句的情緒反應**（羨慕、高興）推論空格答案。**I wish I were there** 表達實際未在場的遺憾，主語 I 也可用 were 表非事實願望。",
+    "extension": "反向思考：若 Jane 下一句變成『That's too bad! Maybe next time』，Tom 的回答就應該是沒去，例如『No, I couldn't get a ticket』，不該選去過的 B。",
+    "source": {
+      "originalExam": "115-00-E-12",
+      "originalImagePinnedSha256": "8176348a929a02a6c67fe2ab481fc5450295cba017bcaeeeb96b10a2d021fc01",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 公告確認標準答案；本題答案仍未直接對正式 PDF 核實",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "Lucky you!",
+      "got the tickets",
+      "I went with my classmates",
+      "I wish I were there"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**They'll never come again** 斷言演唱團體再也不會來，既沒回答 Tom 有沒有去，Jane 後面說他拿到票也缺乏依據。",
+        "elementary": "『他們再也不來』不能讓 Jane 知道你有買到票。",
+        "reason": "**They'll never come again** 斷言演唱團體再也不會來，既沒回答 Tom 有沒有去，Jane 後面說他拿到票也缺乏依據。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**I went with my classmates** 清楚回答 Tom 有去 TWICE 演唱會，也解釋 Jane 為何說他很幸運、希望一起去。",
+        "elementary": "說『我和同學一起去了』，Jane 才會羨慕。",
+        "reason": "**I went with my classmates** 清楚回答 Tom 有去 TWICE 演唱會，也解釋 Jane 為何說他很幸運、希望一起去。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**I'm not a fan of these two groups** 表示不喜歡兩個團體，不能配合 Jane 說他已拿到 TWICE 的票並參加。",
+        "elementary": "他若說根本不喜歡，Jane 卻突然恭喜拿到票，就很奇怪。",
+        "reason": "**I'm not a fan of these two groups** 表示不喜歡兩個團體，不能配合 Jane 說他已拿到 TWICE 的票並參加。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**You sang very well with me last time** 談上次一起唱歌，與這次 TWICE 演唱會門票無直接關係。",
+        "elementary": "上次唱得好，不等於這次去了演唱會。",
+        "reason": "**You sang very well with me last time** 談上次一起唱歌，與這次 TWICE 演唱會門票無直接關係。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Jane：你有去 BLACKPINK 演唱會嗎？Tom：沒有，我忙著準備歌唱比賽。Jane：那你有去 TWICE 演唱會嗎？Tom：我和同學一起去了。Jane：你好幸運，居然有票！真希望我當時能和你一起去。",
+      "testedWord": "classmates",
+      "answerWord": "classmates",
+      "pronunciationIPA": "/ˈklæsmeɪts/",
+      "optionMeaningZh": {
+        "A": "他們再也不會來了。",
+        "B": "我和同學一起去了。",
+        "C": "我不是這兩個團體的粉絲。",
+        "D": "上次你跟我一起唱得很好。"
+      },
+      "synonyms": {
+        "初級": [
+          "friends from class（同班朋友；不完全同義）"
+        ],
+        "中級": [
+          "fellow students（同學；範圍可能較廣）"
+        ],
+        "高級": [
+          "class peers（同班同儕；較書面）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（classmates 無固定詞彙反義詞）"
+        ],
+        "中級": [
+          "strangers（陌生人；概念對照）"
+        ],
+        "高級": [
+          "N/A（非標準反義配對）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "ticket（門票）"
+        ],
+        "中級": [
+          "concert（演唱會）"
+        ],
+        "高級": [
+          "competition（競賽）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義句或相關詞未必在每個語境可直接互換；N/A 不填造反義字。",
+      "exampleEnglish": "I went to the museum with my classmates.",
+      "exampleChinese": "我和同班同學一起去博物館。",
+      "exampleHighlightedSurfaceForm": "classmates",
+      "exampleType": "自行撰寫的雙語教學例句，非新聞",
+      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
