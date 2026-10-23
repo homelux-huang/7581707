@@ -35,6 +35,7 @@
     'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #answerScrollSpace,body.qa-image-mode .review-head,body.qa-image-mode #readingShortcuts{display:none!important}',
     'body.qa-image-mode.study-mode #studyView{display:block!important}',
     'body.qa-image-mode .side-arrow{bottom:24px}',
+    'body.qa-image-mode #resetBtn,body.qa-image-mode #continueBtn{display:none!important}',
     'body.qa-image-mode #questionCard .source-figure{margin:12px 0 4px}',
     'body.qa-image-mode #questionCard .source-figure img{max-width:100%;height:auto}',
     'body.qa-image-mode #questionCard .qa-caption{margin:8px 0 0;font-size:13px;color:var(--muted);font-weight:750}',
@@ -123,6 +124,7 @@
     SUBJECTS.splice(0,SUBJECTS.length);
     document.getElementById('answerCard').replaceChildren();
     document.getElementById('guideCard').replaceChildren();
+    document.getElementById('reviewSubject').innerHTML='<option value="ALL">全部科目</option>';
     const subjects=['全部科目',...new Set(items.map(q=>q.subject))];
     const filter=document.getElementById('subjectSel');
     filter.replaceChildren();
