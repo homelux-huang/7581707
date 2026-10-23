@@ -102,6 +102,47 @@ class VerifiedPublicationTests(unittest.TestCase):
             item["visualReviewEvidence"]["referenceSha256"]="0"*64
             self.assertFalse(v.visual_certificate(root,item,record["questionId"]))
 
+    def test_20261023_question_and_shared_batch_certificate_is_image_only(self):
+        import json
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            rel="sudu/data/processed/115/QA_115_VISUAL.json"
+            p=root/rel
+            p.parent.mkdir(parents=True)
+            qid="115-00-C-06"
+            shared_id="115-00-C-SHARED-11-15"
+            def record(identity, shared=False):
+                return {
+                    ("sharedMaterialId" if shared else "questionId"):identity,
+                    "result":"PASS","reviewedWebpSha256":"a"*64,
+                    "reviewedWebpPath":f"sudu/data/processed/115/webp-v2/{'shared' if shared else '00-C'}/{identity}.webp",
+                    "sourcePagePath":"sudu/data/original/115/00-C/page.webp",
+                    "sourcePageSha256":"b"*64,"cropPixels":[90,150,1310,480],
+                    "reviewedAt":"2026-10-23","reviewer":"ChatGPT assistant",
+                    "criteria":{"complete_stem":True,"no_neighboring_question":True}
+                }
+            q=record(qid)
+            shared=record(shared_id,True)
+            p.write_text(json.dumps({"year":115,"items":[q],"sharedMaterials":[shared]}))
+            def item(row):
+                return {"sha256":row["reviewedWebpSha256"],"output":row["reviewedWebpPath"],
+                        "source":row["sourcePagePath"],"sourceSha256":row["sourcePageSha256"],
+                        "crop":row["cropPixels"],"visualReviewEvidence":{
+                            "reference":rel,"reviewedSha256":row["reviewedWebpSha256"]}}
+            self.assertTrue(v.visual_certificate(root,item(q),qid))
+            self.assertTrue(v.visual_certificate(root,item(shared),shared_id))
+            self.assertFalse(v.visual_certificate(root,item(q),"115-00-C-07"))
+            wrong=item(q);wrong["sha256"]="f"*64
+            self.assertFalse(v.visual_certificate(root,wrong,qid))
+            wrong=item(q);wrong["crop"]=[91,150,1310,480]
+            self.assertFalse(v.visual_certificate(root,wrong,qid))
+            q["criteria"]["no_neighboring_question"]=False
+            p.write_text(json.dumps({"year":115,"items":[q],"sharedMaterials":[shared]}))
+            self.assertFalse(v.visual_certificate(root,item(q),qid))
+            self.assertTrue(v.visual_certificate(root,item(shared),shared_id))
+            p.write_text("null")
+            self.assertFalse(v.visual_certificate(root,item(q),qid))
+
     def test_importer_sha_revokes_stale_schema_snapshots(self):
         import hashlib
         provenance=v.publication_provenance("f"*40, "e"*64)
