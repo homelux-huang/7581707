@@ -418,7 +418,7 @@
     },
     {
       "questionId": "114-00-C-19",
-      "result": "PENDING",
+      "result": "BLOCKED",
       "asset": "sudu/data/processed/114/webp-v1/00-C/114-00-C-19.webp",
       "assetSha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
       "source": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
@@ -434,7 +434,10 @@
         "clarity",
         "input_output_sha256"
       ],
-      "evidenceReference": null
+      "evidenceReference": "sudu/data/processed/114/qa-drafts/OCR_VISUAL_114_C19_C23_20261023.json",
+      "failureReason": "Question 19 crop includes following independent shared passage for questions 20-23",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "114-00-C-20",
