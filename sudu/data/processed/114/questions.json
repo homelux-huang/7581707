@@ -496,7 +496,18 @@
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-11.webp",
-        "sharedMaterialIds": []
+        "sharedMaterialIds": [],
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "sha256": "6bdef9b6a13dc3a0a9327e79c69e92a968e38e250543170b6d9febff8530b1c0",
+        "sourcePage": 5,
+        "cropCoordinates": [
+          90,
+          156,
+          1310,
+          288
+        ],
+        "visualQa": "PASS_ASSISTANT_DIRECT_OFFICIAL_SOURCE"
       },
       "issues": [],
       "sourcePage": 5,
@@ -512,7 +523,9 @@
         "officialPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
         "extractMethod": "pymupdf_official_pdf_text",
         "independentVisualVerification": false
-      }
+      },
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -536,7 +549,18 @@
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-12.webp",
-        "sharedMaterialIds": []
+        "sharedMaterialIds": [],
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "sha256": "f1003ada024dda5c06f25cb8c1af78a0af13414d8383a56437fa8020e24337aa",
+        "sourcePage": 5,
+        "cropCoordinates": [
+          90,
+          288,
+          1310,
+          421
+        ],
+        "visualQa": "PASS_ASSISTANT_DIRECT_OFFICIAL_SOURCE"
       },
       "issues": [],
       "sourcePage": 5,
@@ -552,7 +576,9 @@
         "officialPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
         "extractMethod": "pymupdf_official_pdf_text",
         "independentVisualVerification": false
-      }
+      },
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -576,7 +602,18 @@
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-13.webp",
-        "sharedMaterialIds": []
+        "sharedMaterialIds": [],
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "sha256": "e960a359c055a6fe65f7df29f75d4eb3bda66751d4891de36efa867ac78cb515",
+        "sourcePage": 5,
+        "cropCoordinates": [
+          90,
+          421,
+          1310,
+          627
+        ],
+        "visualQa": "PASS_ASSISTANT_DIRECT_OFFICIAL_SOURCE"
       },
       "issues": [],
       "sourcePage": 5,
@@ -592,7 +629,9 @@
         "officialPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
         "extractMethod": "pymupdf_official_pdf_text",
         "independentVisualVerification": false
-      }
+      },
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -616,7 +655,18 @@
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-14.webp",
-        "sharedMaterialIds": []
+        "sharedMaterialIds": [],
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "sha256": "053bfc7577b36f02089438afb2c19b163744e614378d63332c9ee01700bb3306",
+        "sourcePage": 5,
+        "cropCoordinates": [
+          90,
+          628,
+          1310,
+          1413
+        ],
+        "visualQa": "PASS_ASSISTANT_DIRECT_OFFICIAL_SOURCE"
       },
       "issues": [],
       "sourcePage": 5,
@@ -632,7 +682,9 @@
         "officialPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
         "extractMethod": "pymupdf_official_pdf_text",
         "independentVisualVerification": false
-      }
+      },
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -656,7 +708,18 @@
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-15.webp",
-        "sharedMaterialIds": []
+        "sharedMaterialIds": [],
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+        "sha256": "ecbf29bef820456ecac591efa261d9f0cf200597678324be1159eacbb6c762fe",
+        "sourcePage": 5,
+        "cropCoordinates": [
+          90,
+          1411,
+          1310,
+          1750
+        ],
+        "visualQa": "PASS_ASSISTANT_DIRECT_OFFICIAL_SOURCE"
       },
       "issues": [
         "last_on_page_check_possible_continuation_or_footer"
@@ -678,7 +741,9 @@
         "officialAnswerPageWebp": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
         "officialAnswerPageWebpSha256": "7a0be40000064817a59aa8d049c783004f82d7fd13ee1e0de5b20a8ed9986331",
         "officialCorrectionsChecked": false
-      }
+      },
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
