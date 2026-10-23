@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-11",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 11,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-11.webp",
+  "imageSha256": "c2f2c57d0d65abc757c35e560f6ed8ce1114a452f9bae59e174e904fbb047f92",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "直接打開既有單題 WebP、核對題號、完整題幹、四選項、公式上下標、圖表及負號，原始 WebP SHA256 重算與固定清單吻合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "來源OCR將『g(x) 常數 +1』與『b+c』混接，且選項後混入下題，原圖已核對。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先以原始 WebP 自行解題，再查候選；官方最終標準答案 PDF 及確認更正說明尚未本輪獨立回讀。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "f(x)=4(x+2)³+b(x+2)²+c(x+2)+d，g(x)=4x³+3x²+2x+1，兩式相等求 b+c。",
+    "keyConditions": [
+      "f(x)=4(x+2)³+b(x+2)²+c(x+2)+d",
+      "g(x)=4x³+3x²+2x+1",
+      "f≡g"
+    ],
+    "reasoningFromOriginalImage": "以 **t=x+2** 換元，原來 x=t−2。將 g(t−2) 展開為 **4t³−21t²+38t−23**，對照 f(x)=4t³+bt²+ct+d，得 b=−21、c=38，故 **b+c=17**。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "17",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "以 **t=x+2** 換元，原來 x=t−2。將 g(t−2) 展開為 **4t³−21t²+38t−23**，對照 f(x)=4t³+bt²+ct+d，得 b=−21、c=38，故 **b+c=17**。",
+    "elementarySummary": "把『x+2』改叫 t，再把右邊改寫成 t 的算式，找到 t平方前是負21，t前是38，加起來17。",
+    "memory": "**g(t−2)=4t³−21t²+38t−23 ⇒ b+c=17**。",
+    "concept": "兩多項式恆等時，相同次方係數必相等；變數平移換元可避免誤認原本的x係數。",
+    "extension": "反向思考：若基準改為 (x−2)，需令 t=x−2、x=t+2；此題得到的 b、c 不可直接沿用。",
+    "source": {
+      "originalExam": "115-00-MB-11",
+      "originalImagePinnedSha256": "c2f2c57d0d65abc757c35e560f6ed8ce1114a452f9bae59e174e904fbb047f92",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B答案更正公告待核對"
+    },
+    "highlightTerms": [
+      "t=x+2",
+      "b=−21",
+      "c=38",
+      "b+c=17"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "14 不等於實際 b+c=−21+38=17，可能是展開立方式錯誤。",
+        "elementary": "算出來不是14，先檢查立方展開。",
+        "reason": "14 不等於實際 b+c=−21+38=17，可能是展開立方式錯誤。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "15 不等於換元後的係數和，不能只看原本x²和x的3、2。",
+        "elementary": "原式的3和2不能直接拿來用。",
+        "reason": "15 不等於換元後的係數和，不能只看原本x²和x的3、2。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "16 比正確值17少1，必須再核對一次項合併。",
+        "elementary": "少算1，t的項目請再加一次。",
+        "reason": "16 比正確值17少1，必須再核對一次項合併。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "b=−21、c=38，所以 b+c=17，符合選項D。",
+        "elementary": "38加負21得17。",
+        "reason": "b=−21、c=38，所以 b+c=17，符合選項D。"
+      }
+    },
+    "math": {
+      "formula": "設 t=x+2，x=t−2，展開 g(t−2)，按同次方比較係數。",
+      "formulaUsage": "換元後比較同次方係數。",
+      "workedExample": "x²=(x+1)²−2(x+1)+1。",
+      "dailyApplication": "代數模型變數平移；本題為純代數。",
+      "notes": "含數學非金額運算，必須完整顯示式子。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "f(x)=4(x+2)³+b(x+2)²+c(x+2)+d",
+        "g(x)=4x³+3x²+2x+1",
+        "f≡g"
+      ],
+      "formula": "設 t=x+2，x=t−2，展開 g(t−2)，按同次方比較係數。",
+      "formulaPurpose": "換元後比較同次方係數。",
+      "substitutionAndSteps": [
+        {
+          "formula": "設t=x+2 ⇒ x=t−2",
+          "why": "t 是將(x+2)視為單一變數。"
+        },
+        {
+          "formula": "g(t−2)=4(t−2)³+3(t−2)²+2(t−2)+1",
+          "why": "把g中的x一律換成t−2。"
+        },
+        {
+          "formula": "=4(t³−6t²+12t−8)+3(t²−4t+4)+2t−4+1",
+          "why": "完整展開立方與平方。"
+        },
+        {
+          "formula": "=4t³+(−24+3)t²+(48−12+2)t+(−32+12−4+1)",
+          "why": "依相同次方合併係數。"
+        },
+        {
+          "formula": "=4t³−21t²+38t−23 ⇒ b=−21、c=38",
+          "why": "恆等多項式相同次方係數一致。"
+        },
+        {
+          "formula": "b+c=−21+38=17（D）",
+          "why": "求題目指定的兩係數和。"
+        }
+      ],
+      "result": "17",
+      "unit": "無單位",
+      "matchingOption": "D",
+      "commonMistake": "漏展開立方的一次項或誤把原式3與2直接當b,c。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
