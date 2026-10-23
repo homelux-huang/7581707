@@ -22,6 +22,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# Cancel only obsolete PR/branch checks; never interrupt Pages releases.
+concurrency:
+  group: sudu-v4-integration-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04
