@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-01",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 1,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-01.webp",
+  "imageSha256": "0aaf917f21ae7dbd99ee088592350ee4cfa4096f4208e245f2a44f029e57db3d",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐張觀看 GitHub 原始單題 WebP；實際確認題號、完整題幹、A～D 與無鄰題／表格遺漏；重新計算 WebP SHA256 與固定清單一致",
+    "ocrIssues": [],
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "keyConditions": [
+      "still",
+      "hang them in the sun",
+      "remove the water"
+    ],
+    "reasoningFromOriginalImage": "「仍然」要曬太陽「去除水分」，可知衣服目前含水、尚未乾，因此形容詞選 wet。",
+    "formulaRequired": false,
+    "reasoningRecordedBeforeCandidateRead": true,
+    "officialFinalStatus": "PENDING_FINAL_PDF_AND_ISSUE_EXPLANATION"
+  },
+  "teaching": {
+    "teacherSummary": "**still** 表示狀態持續，後句以 **so** 說明因果：因為衣服仍是 **wet（濕的）**，才需要曬太陽 **remove the water（去除水分）**。空格需填描述衣服目前狀態的形容詞。",
+    "elementarySummary": "衣服摸起來還濕濕的，才需要拿去曬太陽。已經乾了就不用特地把水曬掉，所以選 **wet**。",
+    "memory": "**remove the water → wet**；要除水，表示現在還濕。",
+    "concept": "英文閱讀的**因果線索**：前半句給狀態，**so** 後面交代因應措施；四個選項要同時符合語法與整句意思。",
+    "extension": "反向思考：如果題幹改成「These clothes are already ___, so you can put them away」，而且完全沒有水分，應改選 **dry**；比較 already dry 與 still wet 的狀態差異。",
+    "source": {
+      "originalExam": "115-00-E-01",
+      "originalImagePinnedSha256": "0aaf917f21ae7dbd99ee088592350ee4cfa4096f4208e245f2a44f029e57db3d",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "still",
+      "wet",
+      "remove the water",
+      "so"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**bare** 是赤裸、沒有覆蓋物；可說 bare feet，但不表示衣服含水。句末明示要去掉水分，因此不合。",
+        "elementary": "bare 比較像光腳、沒遮住，不是衣服濕了。",
+        "reason": "**bare** 是赤裸、沒有覆蓋物；可說 bare feet，但不表示衣服含水。句末明示要去掉水分，因此不合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**dry** 是乾燥的，與後句要曬太陽去水相矛盾；若已乾，後面的必要性失去語意依據。",
+        "elementary": "衣服如果乾了，還要把水曬掉就很奇怪。",
+        "reason": "**dry** 是乾燥的，與後句要曬太陽去水相矛盾；若已乾，後面的必要性失去語意依據。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**thin** 表示薄，衣服可以薄卻同時是濕的；薄厚無法解釋句中的 remove the water。",
+        "elementary": "薄衣服也可能乾乾的，所以不能只看薄不薄。",
+        "reason": "**thin** 表示薄，衣服可以薄卻同時是濕的；薄厚無法解釋句中的 remove the water。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**wet** 是濕的，直接回應後句的 water；still wet 與 hang ... in the sun 構成合理因果。",
+        "elementary": "還是濕的，所以掛出去曬，意思剛好接起來。",
+        "reason": "**wet** 是濕的，直接回應後句的 water；still wet 與 hang ... in the sun 構成合理因果。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "這些衣服還是濕的，所以你需要把它們掛在陽光下晾曬，去除水分。",
+      "answerWord": "wet",
+      "pronunciationIPA": "/wet/",
+      "optionMeaningZh": {
+        "A": "赤裸的／未覆蓋的",
+        "B": "乾的",
+        "C": "薄的",
+        "D": "濕的"
+      },
+      "synonyms": {
+        "初級": [
+          "damp（微濕）"
+        ],
+        "中級": [
+          "moist（帶有濕氣）"
+        ],
+        "高級": [
+          "soaked（濕透的，程度更強）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "dry（乾的）"
+        ],
+        "中級": [
+          "dried（已被晾乾的）"
+        ],
+        "高級": [
+          "parched（乾得發燥；不用來直接形容一般衣物）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "exampleEnglish": "My jacket is still wet after the rain.",
+      "exampleChinese": "下雨後，我的外套還是濕的。",
+      "exampleHighlightedSurfaceForm": "wet",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
