@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 81,
-  "draftPercent": 63.3,
-  "visualRechecked": 81,
-  "candidateAnswerMatched": 79,
+  "draftWritten": 82,
+  "draftPercent": 64.1,
+  "visualRechecked": 82,
+  "candidateAnswerMatched": 80,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -91,13 +91,13 @@
     "115-09-2-07",
     "115-09-2-08",
     "115-09-2-09",
-    "115-09-2-10"
+    "115-09-2-10",
+    "115-09-1-06"
   ],
   "remainingIds": [
     "115-09-1-01",
     "115-09-1-03",
     "115-09-1-05",
-    "115-09-1-06",
     "115-09-1-07",
     "115-09-1-26",
     "115-09-1-27",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "115會計學第11～15題（另列第3、6題獨立複核）",
+  "nextSubject": "115商概第1、3、5、7題（需核對概念）",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -857,7 +857,7 @@
       "image": "data/approved/webp/115/115-09-1-06.webp",
       "imageSha256": "5e79e4e8730a1cce0358c9e5321db8fbdfe373b85e8aa8a2ad6ed32073ea8801",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-1-07",
