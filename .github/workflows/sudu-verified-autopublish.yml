@@ -72,7 +72,8 @@ jobs:
           try:
               data=json.load(open("sudu/data/approved/progress.json"))
               ready=all(
-                  isinstance(data["years"][str(year)].get("imagePreviewCount"),int)
+                  data.get("provenance",{}).get("certificationSchemaVersion") == "student-reviewed-batch-v1"
+                  and isinstance(data["years"][str(year)].get("imagePreviewCount"),int)
                   and Path(f"sudu/data/approved/preview/{year}.json").is_file()
                   and json.load(open(f"sudu/data/approved/preview/{year}.json")).get("sourceSha")
                       == data["provenance"].get("commit")
