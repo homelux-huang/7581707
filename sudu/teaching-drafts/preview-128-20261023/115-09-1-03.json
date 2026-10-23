@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-03",
+  "year": 115,
+  "subject": "商業概論",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-03.webp",
+  "imageSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始 WebP）",
+    "method": "逐張開啟既有 GitHub 單題 WebP 確認題號、題幹與四選項；逐檔 SHA256 已重新計算且與凍結清單相符",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_WITH_ALTERNATIVE_OPTION_CONCERN",
+    "officialFinalCorrectionVerified": false,
+    "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。D在一般競爭分析下也有合理可能，需核實出題者為何只認C。",
+    "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "conceptualIssue": "D在一般競爭分析下也有合理可能，需核實出題者為何只認C。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "commercial-management-concept",
+    "keyConditions": [
+      "個人化營養諮詢SOHO",
+      "新創博覽會和創業者交流",
+      "高齡化產生保健需求",
+      "競爭者推出類似服務"
+    ],
+    "reasoningFromOriginalImage": "SOHO工作型態要按**提供的服務類型**分類，好食光是營養諮詢，不是資訊SOHO。新創博覽會與其他創業者交流與建立聯繫符合Mintzberg管理**人際關係角色中的聯絡者**，所以候選C有明確依據。高齡化是人口社會變遷，不是災害。D『類似服務出現增加經營風險』在競爭分析中**可能**成立，因此不能草率說D完全沒道理；需核對命題定義與官方說明。",
+    "officialFinalStatus": "PENDING_OFFICIAL_RECHECK",
+    "hasExamCalculation": false
+  },
+  "teaching": {
+    "teacherSummary": "SOHO工作型態要按**提供的服務類型**分類，好食光是營養諮詢，不是資訊SOHO。新創博覽會與其他創業者交流與建立聯繫符合Mintzberg管理**人際關係角色中的聯絡者**，所以候選C有明確依據。高齡化是人口社會變遷，不是災害。D『類似服務出現增加經營風險』在競爭分析中**可能**成立，因此不能草率說D完全沒道理；需核對命題定義與官方說明。",
+    "elementarySummary": "這個小工作室教客人如何吃得健康，不是做電腦程式。小華在展覽和其他老闆聊天、交朋友，像公司對外聯絡的人。別家推出一樣的服務可能搶生意，但也要看整個市場有沒有變大。",
+    "memory": "**和外部創業者交流建立關係＝聯絡者角色**。",
+    "concept": "Mintzberg聯絡者屬人際角色；SOHO按業務分型；競爭風險需依市場資料判斷。",
+    "extension": "反向題：若小華接受媒體採訪、對外說明公司政策，應判為聯絡者還是發言者？競爭對手出現一定讓風險增加嗎？",
+    "source": {
+      "originalExam": "115-09-1-03",
+      "originalImagePinnedSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商商業概論教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "D在一般競爭分析下也有合理可能，需核實出題者為何只認C。"
+    },
+    "highlightTerms": [
+      "SOHO",
+      "營養諮詢",
+      "高齡化",
+      "人際關係維繫者",
+      "競爭風險"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A說資訊SOHO，但提供的是營養諮詢，不能因使用網路預約就改成資訊專業業務。",
+        "elementary": "用網站接預約不代表是在做電腦軟體工作。",
+        "reason": "A說資訊SOHO，但提供的是營養諮詢，不能因使用網路預約就改成資訊專業業務。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說災害風險商機；本題起因是人口高齡化和營養需求增加，非天然災害。",
+        "elementary": "老人變多不等於颱風地震。",
+        "reason": "B說災害風險商機；本題起因是人口高齡化和營養需求增加，非天然災害。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C指出小華跟外部創業者交流、維繫聯繫，符合管理者的人際**聯絡者**角色，為候選正解。",
+        "elementary": "和外面的老闆交朋友、建立聯絡，就是聯絡者。",
+        "reason": "C指出小華跟外部創業者交流、維繫聯繫，符合管理者的人際**聯絡者**角色，為候選正解。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說同業提供類似服務會增加經營風險；競爭有可能造成獲客成本上升，但題幹沒有足夠資料證明風險『必然』增加。因此不能直接抹除它的合理性，應列複核。",
+        "elementary": "新店可能分走客人，也可能吸引更多人來，不能一口咬定結果。",
+        "reason": "D說同業提供類似服務會增加經營風險；競爭有可能造成獲客成本上升，但題幹沒有足夠資料證明風險『必然』增加。因此不能直接抹除它的合理性，應列複核。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "conceptualReviewFlag": "POTENTIALLY_MULTIPLE_OPTIONS",
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
