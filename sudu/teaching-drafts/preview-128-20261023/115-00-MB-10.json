@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-10",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 10,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-10.webp",
+  "imageSha256": "3c06c677c7362cbf22e792cdcbd990a584129b929d25cd63efb98037a390b7c4",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題原圖目視）",
+    "method": "直接開啟既有單題 WebP，讀取題幹、符號、度數、三角函數、負號及四個選項，逐檔重新算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "籤筒中甲、乙、丙各一支等機率籤，抽後放回，連抽三次都沒有抽中甲的機率？",
+    "keyConditions": [
+      "籤筒甲、乙、丙各一支，等機率",
+      "每次抽後將籤放回",
+      "抽取三次，求三次全非甲"
+    ],
+    "reasoningFromOriginalImage": "每次抽中**不是甲**的籤有乙、丙兩支，概率 **2/3**。因題目寫明**抽完放回**，三次互不影響（獨立試驗），所以 **(2/3)×(2/3)×(2/3)=8/27**，選 C。不能把三次機率相加，也不能當作不放回抽樣。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "8/27",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "每次抽中**不是甲**的籤有乙、丙兩支，概率 **2/3**。因題目寫明**抽完放回**，三次互不影響（獨立試驗），所以 **(2/3)×(2/3)×(2/3)=8/27**，選 C。不能把三次機率相加，也不能當作不放回抽樣。",
+    "elementarySummary": "每次有3張籤，有2張不是甲，躲過甲的機會是三分之二。抽完還會放回，下一次又一樣。連續躲過三次，就把三分之二乘三次，得到二十七分之八。",
+    "memory": "**有放回＋連續都沒中甲 → (2/3)³=8/27**。",
+    "concept": "在**獨立事件**下 P(A∩B∩C)=P(A)P(B)P(C)；有放回抽取且機率固定，可乘三次；**至少一次**的補事件公式和本題**三次都沒中**不同。",
+    "extension": "反向思考：如果問『三次**至少一次**抽到甲』，用補事件 **1−(2/3)³=19/27**，會是本題選項 D，不能混淆。",
+    "source": {
+      "originalExam": "115-00-MB-10",
+      "originalImagePinnedSha256": "3c06c677c7362cbf22e792cdcbd990a584129b929d25cd63efb98037a390b7c4",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材之版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀"
+    },
+    "highlightTerms": [
+      "抽完放回",
+      "三次都沒有甲",
+      "2/3",
+      "(2/3)³=8/27"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "4/9=(2/3)²，代表只有**兩次**都未抽到甲，題目要求三次，少乘一次2/3。",
+        "elementary": "只算兩次的機會，漏了第三次。",
+        "reason": "4/9=(2/3)²，代表只有**兩次**都未抽到甲，題目要求三次，少乘一次2/3。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "5/9 不能由三次獨立的 (2/3)³ 得到，無對應的正確事件計算。",
+        "elementary": "三次都沒甲要一直乘，不會跑出5/9。",
+        "reason": "5/9 不能由三次獨立的 (2/3)³ 得到，無對應的正確事件計算。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "(2/3)³=8/27，三次皆非甲且有放回，計算正確。",
+        "elementary": "三次都躲過甲，就是8/27。",
+        "reason": "(2/3)³=8/27，三次皆非甲且有放回，計算正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "19/27=1−8/27，是**至少一次抽到甲**的機率，恰好是本題三次都沒甲的補事件。",
+        "elementary": "19/27 是有抽到甲至少一次，和題目相反。",
+        "reason": "19/27=1−8/27，是**至少一次抽到甲**的機率，恰好是本題三次都沒甲的補事件。"
+      }
+    },
+    "math": {
+      "formula": "P(單次非甲)=2/3；獨立三次全非甲=(2/3)³",
+      "formulaUsage": "有放回的等可能獨立抽樣，計算連續多次發生相同類型事件的機率。",
+      "workedExample": "例：擲公平硬幣3次全正面機率=(1/2)³=1/8。",
+      "dailyApplication": "用在抽獎、庫存抽樣及重複獨立品質測試的簡化機率模型。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "數學非金額運算也必須顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "籤筒甲、乙、丙各一支，等機率",
+        "每次抽後將籤放回",
+        "抽取三次，求三次全非甲"
+      ],
+      "formula": "P(單次非甲)=2/3；獨立三次全非甲=(2/3)³",
+      "formulaPurpose": "有放回的等可能獨立抽樣，計算連續多次發生相同類型事件的機率。",
+      "substitutionAndSteps": [
+        {
+          "formula": "非甲籤=乙、丙，共2支；總數=3支",
+          "why": "單次抽中非甲的有利結果2種，總可能3種。"
+        },
+        {
+          "formula": "P(單次沒有甲)=2/3",
+          "why": "每支籤被抽到的機率相等。"
+        },
+        {
+          "formula": "因每次抽後放回，三次獨立、每次機率維持2/3",
+          "why": "放回讓籤筒內容不變，事件機率可相乘。"
+        },
+        {
+          "formula": "P(三次皆非甲)=(2/3)×(2/3)×(2/3)=2³/3³=8/27",
+          "why": "三次『都』成立且獨立，取三事件機率乘積。"
+        },
+        {
+          "formula": "選 C；核對補事件 P(至少一次甲)=1−8/27=19/27",
+          "why": "辨識 D 是另一個事件，避免誤選。"
+        }
+      ],
+      "result": "8/27",
+      "unit": "機率（無單位）",
+      "matchingOption": "C",
+      "commonMistake": "把有放回當不放回；算兩次得4/9；用補事件19/27卻忘了題目問『都沒抽到甲』。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
