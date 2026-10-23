@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-21",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 21,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-21.webp",
+  "imageSha256": "50cb3ade513346aa98daa7587d4716cc68e1e0c28a2d675e0803bb0c126aae28",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+      "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖與共用文章實際目視）",
+    "method": "同時目視完整共用文章 WebP 與本題四選項單題 WebP，逐張核對 SHA256、句子上下文、題號與 A-D。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先讀共用文章與單題選項做出獨立解答，之後比對已有候選資料；2026-05-08 官方最終答案公告已見，但英文答案 PDF 與疑義確認說明未直接回讀，本題仍待官方最終核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "In Taiwan, women represent only 4% of seafarers. ____ the 260 women seafarers, many have proved that seafaring can be a rewarding career.",
+    "keyConditions": [
+      "260 women seafarers",
+      "many have proved",
+      "group membership"
+    ],
+    "reasoningFromOriginalImage": "Among the 260 women seafarers 是指在260位女性航海員之中；many 指該群中的很多人，故以 Among 表群體內部。During 接時間、Near 與 Opposite 表空間位置，都與 among a group 不合。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**Among + 複數人群** 表『在一群人之中』；後面的 **many** 指**260位女性航海員當中的許多人**。因此選 **Among**。文章提到 4% 與 260 是背景，不需要由題幹臆測總人數或進行數學推算。",
+    "elementarySummary": "有260位女航海員，『**在這260人當中**，有很多人證明這份工作很棒』。Among 就是『一群人裡面』。",
+    "memory": "**Among + people/group → 在某群人當中**。",
+    "concept": "among 指『在多個人或事物之中』；during 指『在一段時間內』，near/opposite 偏向位置。辨認空格後接的是人物群體還是時間／地點。",
+    "extension": "反向思考：若改為『___ the summer vacation, many students work part-time』，空格是時間，應選 **During**，不能套 Among。",
+    "source": {
+      "originalExam": "115-00-E-21",
+      "originalImagePinnedSha256": "50cb3ade513346aa98daa7587d4716cc68e1e0c28a2d675e0803bb0c126aae28",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+          "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待核實 PDF／疑義確認說明",
+      "textbook": "彰化高商英文教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "海事新聞背景與人數依原試題文章照錄；未驗證這些數字為2026最新統計。"
+    },
+    "highlightTerms": [
+      "Among",
+      "the 260 women seafarers",
+      "many have proved"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**Among** 能接複數群體 the 260 women seafarers，表示其中許多人表現出色，語法與語意都正確。",
+        "elementary": "在一群人當中，就是 Among。",
+        "reason": "**Among** 能接複數群體 the 260 women seafarers，表示其中許多人表現出色，語法與語意都正確。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**During** 常接期間，如 during the holiday；**the 260 women seafarers** 是人，不是時間段，因此不能用 during。",
+        "elementary": "可以說『在暑假期間』，不能說『在260位人期間』。",
+        "reason": "**During** 常接期間，如 during the holiday；**the 260 women seafarers** 是人，不是時間段，因此不能用 during。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**Near** 指在附近；near the 260 women 變成站在她們旁邊，不是她們之中某些人。",
+        "elementary": "靠近一群人和屬於這群人，是兩回事。",
+        "reason": "**Near** 指在附近；near the 260 women 變成站在她們旁邊，不是她們之中某些人。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**Opposite** 指位於對面；opposite the 260 women 表空間方位，不能自然連接 many of these women 的意思。",
+        "elementary": "站在她們對面，不等於說她們當中的人。",
+        "reason": "**Opposite** 指位於對面；opposite the 260 women 表空間方位，不能自然連接 many of these women 的意思。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "在這260位女性航海員當中，許多人證明航海可以是很有成就的職業。",
+      "passageTranslationZh": "5月18日是國際海事婦女日，肯定女性在海上運輸業的重要性。2025年的主題是『女性的海洋機會』。文章提到臺灣女性航海人員占比僅4%；在260位女性航海人員之中，許多人證明航海可成為有成就的職業。黃昭玲曾任船長，文章稱她是臺灣首位且當時唯一的女性引水人；她引導船舶安全進出港口，工作艱鉅，有時要在大浪中攀爬移動的船舶。另一位先驅林嘉玲是臺灣首位女性油輪船長，即使天候很差，也要確保石油可靠地送達各港口。兩人職涯辛苦，女性航海員仍面對船上設施不足等挑戰。海運業努力建立性別友善職場，改善女性就業。文中並指出，臺灣女性船長在2024年為22人，高於約十年前的6人。此處數字皆為題幹資訊，未額外驗證最新統計。",
+      "testedWord": "among",
+      "answerWord": "among",
+      "pronunciationIPA": "/əˈmʌŋ/",
+      "optionMeaningZh": {
+        "A": "在……之中",
+        "B": "在……期間",
+        "C": "在……附近",
+        "D": "在……對面"
+      },
+      "synonyms": {
+        "初級": [
+          "in a group of（在群體中；改寫片語）"
+        ],
+        "中級": [
+          "amongst（英式變體）"
+        ],
+        "高級": [
+          "amid（在……之中；常用於環境／事件，搭配不同）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "outside（在外部；位置概念對照）"
+        ],
+        "中級": [
+          "apart from（與……分開；不是直接語法反義）"
+        ],
+        "高級": [
+          "N/A（among 無固定詞彙反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "many（許多）"
+        ],
+        "中級": [
+          "seafarer（航海人員）"
+        ],
+        "高級": [
+          "representation（代表性／比例）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義與對比詞未必能直接替換；N/A 代表不亂湊反義。",
+      "exampleEnglish": "Among the team members, three work on weekends.",
+      "exampleChinese": "在隊員當中，有三人在週末工作。",
+      "exampleHighlightedSurfaceForm": "Among",
+      "exampleType": "自編非新聞教學例句",
+      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
