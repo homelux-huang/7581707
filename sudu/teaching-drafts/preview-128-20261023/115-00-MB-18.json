@@ -284,6 +284,29 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "originalWebpViewedInThisReview": true,
+      "sourcePinnedOriginalWebpSha256": "3e13e20fc9728a4541162a2de8dfa141f04650bd168d641c2d9173915d632013",
+      "independentlyRecomputedSteps": [
+        "獎金期望10000/1000=10、5000×2/1000=10、1000×5/1000=5、500×1/100=5",
+        "不中獎獎金0，不增加期望獎金",
+        "平均獎金30元，扣每張獎券成本50元→期望淨獲利−20元，官方C"
+      ],
+      "allFourOptionsTeacherAndElementaryLogicChecked": true,
+      "misconceptionNote": "題目問獲利而非獎金；B的正20漏負號，D的−50假設永遠不中獎。只做試題計算，不推薦實際賭博。",
+      "curriculumTopic": "離散機率分布與期望淨獲利",
+      "curriculumCodes": [
+        "D-11-7"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortTextbookPages": "UNVERIFIED",
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

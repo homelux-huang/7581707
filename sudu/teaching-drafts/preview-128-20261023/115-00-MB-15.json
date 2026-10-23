@@ -256,6 +256,29 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "originalWebpViewedInThisReview": true,
+      "sourcePinnedOriginalWebpSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
+      "independentlyRecomputedSteps": [
+        "T(27)/T(35)=32^(−2.7)/32^(−3.5)",
+        "指數相減−2.7+3.5=0.8=4/5",
+        "32^(4/5)=(2^5)^(4/5)=2^4=16，選D"
+      ],
+      "allFourOptionsTeacherAndElementaryLogicChecked": true,
+      "misconceptionNote": "10650是共同係數，求倍數應消去，不能單算溫差8就直接猜8倍或其他數；數學模型不等於飲品安全保鮮醫學建議。",
+      "curriculumTopic": "指數函數的倍率比較",
+      "curriculumCodes": [
+        "R-11-1"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortTextbookPages": "UNVERIFIED",
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

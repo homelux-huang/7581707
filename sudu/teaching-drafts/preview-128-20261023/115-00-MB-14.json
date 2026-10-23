@@ -246,6 +246,29 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "originalWebpViewedInThisReview": true,
+      "sourcePinnedOriginalWebpSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+      "independentlyRecomputedSteps": [
+        "等差索引y−x=z−y=2",
+        "原公比3，跨兩個索引的比值=3²=9",
+        "a_y/a_x=a_z/a_y=9→選D"
+      ],
+      "allFourOptionsTeacherAndElementaryLogicChecked": true,
+      "misconceptionNote": "A/B是錯把等比當等差；C比8沒有根據，不能用3²−1代替3²。",
+      "curriculumTopic": "等比數列的公比與索引跳項",
+      "curriculumCodes": [
+        "N-10-13"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortTextbookPages": "UNVERIFIED",
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

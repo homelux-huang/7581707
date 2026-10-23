@@ -269,6 +269,31 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "originalWebpViewedInThisReview": true,
+      "sourcePinnedOriginalWebpSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
+      "independentlyRecomputedSteps": [
+        "2008–2016共有9筆，排序為166886、191310、196627、198733、199113、208440、210383、213598、229481",
+        "中位數應取排序後第5筆199113，不是最高229481→C錯",
+        "2017–2025依表逐年下降；原圖1976/88/2000三個局部峰值均高於左右鄰年",
+        "全距由圖約43萬減2025的107812，大於30萬，其他敘述皆成立"
+      ],
+      "allFourOptionsTeacherAndElementaryLogicChecked": true,
+      "misconceptionNote": "題問的是『何者錯誤』，不能把C中的最大值229481當中位數；出生人數時序不等於排序值。",
+      "curriculumTopic": "統計中位數、全距與時間序列讀圖",
+      "curriculumCodes": [
+        "D-11-9",
+        "D-11-10"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortTextbookPages": "UNVERIFIED",
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
