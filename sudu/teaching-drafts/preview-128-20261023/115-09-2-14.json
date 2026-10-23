@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-14",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 14,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-14.webp",
+  "imageSha256": "fbac2676dbe415bd141cf10682969998065c82bdc127e4947b2469bb2b6a76d6",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際讀取WebP）",
+    "method": "逐題親自目視既有原始單題WebP、題號、四選項、分錄、表格；原始圖檔bytes SHA256已重算吻合固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選D後有下一頁頁首文字，原圖無混題。"
+    ]
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先依原圖解題才核對候選，官方最終答案PDF及更正公告仍未獨立核實。",
+    "initialImageBasedAnswer": "A",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_CANDIDATE_MATCH_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "賒銷商品的應收帳款認列：①目的地交貨本日出貨、下月到；②分期付款本日交貨；③寄銷送交代銷商；④安裝測試重大義務尚未完成。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "①目的地交貨，雖已出貨仍未到指定地點，通常尚未完成交貨；②**已交貨**且信用良好，分期付款仍有本日收款請求權，應認列應收帳款；③寄銷只是交由受託者代售，尚未實際出售；④安裝測試是合約重要履約項目，尚未完成。故**只有②可認列**，選A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "①目的地交貨，雖已出貨仍未到指定地點，通常尚未完成交貨；②**已交貨**且信用良好，分期付款仍有本日收款請求權，應認列應收帳款；③寄銷只是交由受託者代售，尚未實際出售；④安裝測試是合約重要履約項目，尚未完成。故**只有②可認列**，選A。",
+    "elementarySummary": "第二筆貨已交給客人，雖然客人以後才付完錢，但店家現在就能記『客人欠我錢』。另外幾筆還沒真正完成交貨或服務。",
+    "memory": "**②已交貨的分期賒銷有應收帳款；①目的地未到、③寄銷未售、④重大安裝未完。**",
+    "concept": "應收帳款認列依銷售是否完成與有無無條件收款權；寄銷和重大安裝有額外條件。",
+    "extension": "反向思考：若①改起運點交貨，且本日交運已轉移控制權，認列日是否提前？",
+    "source": {
+      "originalExam": "115-09-2-14",
+      "originalImagePinnedSha256": "fbac2676dbe415bd141cf10682969998065c82bdc127e4947b2469bb2b6a76d6",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學官方最終標準答案及更正待核對"
+    },
+    "highlightTerms": [
+      "目的地交貨",
+      "本日交付",
+      "寄銷",
+      "重大安裝",
+      "②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "只有②已交付商品且可請求餘款，應於本日認列應收帳款。",
+        "elementary": "第二筆已交貨，所以記欠款。",
+        "reason": "只有②已交付商品且可請求餘款，應於本日認列應收帳款。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "①目的地交貨尚未到達、④安裝測試重大部分尚未完成，兩者均不應本日認列。",
+        "elementary": "第一筆還沒到，第四筆還沒裝好。",
+        "reason": "①目的地交貨尚未到達、④安裝測試重大部分尚未完成，兩者均不應本日認列。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "②對，但③寄銷交給代售商不等於賣給終端客戶，不能認應收。",
+        "elementary": "寄賣不是賣掉。",
+        "reason": "②對，但③寄銷交給代售商不等於賣給終端客戶，不能認應收。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "①③④都尚未具備完整本日認列條件，反而漏②。",
+        "elementary": "那三筆尚未完成銷售條件。",
+        "reason": "①③④都尚未具備完整本日認列條件，反而漏②。"
+      }
+    },
+    "accounting": {
+      "principle": "應收帳款認列依銷售是否完成與有無無條件收款權；寄銷和重大安裝有額外條件。",
+      "accounts": [
+        "應收帳款",
+        "銷貨收入",
+        "存貨",
+        "寄銷商品"
+      ],
+      "journalEntry": "②本日交貨、賒銷：借『應收帳款』、貸『銷貨收入』，題目無金額不補數字。",
+      "calculation": "N/A（本題沒有計算要求）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
