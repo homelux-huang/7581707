@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-03",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-03.webp",
+  "imageSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "逐題打開 GitHub 既有單題 WebP，目視題號、全部條件與四選項；對第1題座標圖逐格檢視；重新以 WebP bytes 計算 SHA256 與固定清單一致",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+    "independentSolveScope": "先原圖獨立解題並留完整計算；未完成第三方教學QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "已知直線 L₁: 2x+3y=4 與 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)=?",
+    "keyConditions": [
+      "L₁: 2x+3y=4",
+      "L₁、L₂ 平行",
+      "x 截距令 y=0",
+      "斜率把方程改為 y=mx+b"
+    ],
+    "reasoningFromOriginalImage": "求 **x 截距**時，x 軸上 y=0，代入 **2x=4** 得 a=2。求斜率要整理成 **y=−(2/3)x+4/3**，所以 L₁ 斜率 −2/3；因 L₂ 平行 L₁，其斜率同為 −2/3，故 **(a,m)=(2,−2/3)**。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "(2, −2/3)",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "求 **x 截距**時，x 軸上 y=0，代入 **2x=4** 得 a=2。求斜率要整理成 **y=−(2/3)x+4/3**，所以 L₁ 斜率 −2/3；因 L₂ 平行 L₁，其斜率同為 −2/3，故 **(a,m)=(2,−2/3)**。",
+    "elementarySummary": "線碰到地上的 x 軸時，高度 y 是0，所以就知道碰在 x=2。線是往右走、往下斜，所以斜率是負的。平行的另一條線也一樣斜，答案 A。",
+    "memory": "**x 截距：y=0 ⇒ a=2；斜率：−A/B=−2/3；平行同斜率**。",
+    "concept": "一般式 Ax+By=C（B≠0），斜率 **m=−A/B**；x 截距令 y=0。**4/3 是 y 截距，不是 x 截距**。",
+    "extension": "反向思考：如果題目改問 **L₁ 的 y 截距**，需要設 x=0，得到 4/3；如果 L₂ 與 L₁ **垂直**，則斜率應 3/2，而非 −2/3。",
+    "source": {
+      "originalExam": "115-00-MB-03",
+      "originalImagePinnedSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀"
+    },
+    "highlightTerms": [
+      "x 截距",
+      "斜率",
+      "平行直線"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "a=2 且平行斜率 m=−2/3，兩個數字都吻合，正解。",
+        "elementary": "碰到 x 軸在2，線往下斜，所以是 A。",
+        "reason": "a=2 且平行斜率 m=−2/3，兩個數字都吻合，正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "a=2 正確，但 m=+2/3 符號錯；2x+3y=4 整理後 x 項係數為**負**2/3。",
+        "elementary": "斜率負號少了，線會往上走。",
+        "reason": "a=2 正確，但 m=+2/3 符號錯；2x+3y=4 整理後 x 項係數為**負**2/3。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "m=−2/3 正確，但 a=4/3 其實是 **y 截距**，誤把 x 截距當 y 截距。",
+        "elementary": "把碰到左邊直立 y 軸的地方誤當 x 軸。",
+        "reason": "m=−2/3 正確，但 a=4/3 其實是 **y 截距**，誤把 x 截距當 y 截距。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "a=4/3 取錯截距，m=+2/3 又取錯斜率正負，兩處都不合。",
+        "elementary": "兩個都放錯：軸錯、方向也錯。",
+        "reason": "a=4/3 取錯截距，m=+2/3 又取錯斜率正負，兩處都不合。"
+      }
+    },
+    "math": {
+      "formula": "x 截距令 y=0；Ax+By=C ⇒ y=−(A/B)x+C/B，斜率 m=−A/B；平行直線斜率相等",
+      "formulaUsage": "從一般式求斜率與截距，快速比較兩條直線方向。",
+      "workedExample": "例：3x+6y=12 的 x 截距為4，斜率−1/2。",
+      "dailyApplication": "座標圖中的成本趨勢線、道路坡度及商業圖表讀值。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "所有關鍵運算為原題數學式，非金額計算也必須顯示完整考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "L₁:2x+3y=4",
+        "L₂∥L₁",
+        "a=L₁的x截距，m=L₂斜率"
+      ],
+      "formula": "x 截距令 y=0；Ax+By=C ⇒ y=−(A/B)x+C/B，斜率 m=−A/B；平行直線斜率相等",
+      "formulaPurpose": "從一般式求斜率與截距，快速比較兩條直線方向。",
+      "substitutionAndSteps": [
+        {
+          "formula": "令 y=0：2a+3(0)=4 ⇒ 2a=4 ⇒ a=2",
+          "why": "x 軸上的所有點 y=0，與該軸交點之 x 就是截距。"
+        },
+        {
+          "formula": "2x+3y=4 ⇒ 3y=−2x+4 ⇒ y=−(2/3)x+4/3",
+          "why": "改寫成 y=mx+b 才能讀出 x 的係數為斜率。"
+        },
+        {
+          "formula": "m₁=−2/3；L₂∥L₁ ⇒ m=m₁=−2/3",
+          "why": "互相平行的非垂直直線斜率相同。"
+        },
+        {
+          "formula": "(a,m)=(2,−2/3)",
+          "why": "把剛算到的 x 截距和 L₂ 斜率依題目要求排序。"
+        }
+      ],
+      "result": "(2, −2/3)",
+      "unit": "截距為座標單位；斜率無單位",
+      "matchingOption": "A",
+      "commonMistake": "把 y 截距 4/3 當 x 截距；或漏掉 − 號。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
