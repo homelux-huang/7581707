@@ -94,7 +94,7 @@ def run(stage=False):
         row=records[qid];q=qs[qid];e=ev[qid]
         assert row["officialFinalAnswerReadDirectlyFromPublishedImage"]==letter
         assert row["officialCandidateExpected"]==letter
-        assert row["correctionStatus"]=="NO_OBJECTION_SUBMITTED_4_09_1"
+        assert row["correctionStatus"]=="NO_OBJECTION_SUBMITTED_4_00_MB"
         assert row["officialCorrectionChecked"] and row["answerVerified"]
         assert row["sourceOfficialAnswerPdfSha256"]==PDF_SHA and row["sourcePage"]==1
         assert q["answer"]==e["candidateValue"]==e["officialExtractedValue"]==letter
