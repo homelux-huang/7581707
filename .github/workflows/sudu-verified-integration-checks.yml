@@ -9,6 +9,16 @@ on:
       - fix/fast-chromium-qa-20261023
       - fix/v4-inline-webp-reader-20261023
       - fix/v4-single-question-only-20261023
+  pull_request:
+    branches: [main]
+    paths:
+      - sudu/v4-115-multisubject-review-demo.html
+      - sudu/verified-questions-runtime.js
+      - sudu/demo-subject-learning.js
+      - tests/sudu_demo_acceptance.cjs
+      - tests/sudu_certified_positive_browser.cjs
+      - tests/sudu_browser_smoke.cjs
+      - .github/workflows/sudu-verified-integration-checks.yml
   workflow_dispatch:
 permissions:
   contents: read
