@@ -30,20 +30,37 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
    for(const [width,height] of widths){
     await page.setViewportSize({width,height});
     await page.goto(base+'v4-115-multisubject-review-demo.html?year='+year);
-    await page.locator('#verifiedStatus').waitFor();
+    await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'));
+    assert.equal(await page.locator('#verifiedStatus').count(),0,'no large validation status card');
     if(data.approvedCount===0){
-     assert.match(await page.locator('#verifiedStatus').innerText(),/沒有通過|暫停/);
      assert.equal(await page.locator('#studyView').isVisible(),false);
-     await page.locator('#verifiedImagePreview').waitFor();
-     assert.match(await page.locator('#verifiedImagePreview').innerText(),/原題 WebP|原圖/);
+     assert.equal(await page.locator('#reviewView').isVisible(),false);
      if(preview.imagePreviewCount){
-       await page.locator('#verifiedImagePreview img').first().scrollIntoViewIfNeeded();
-       assert(await page.locator('#verifiedImagePreview img').first().evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
+      await page.locator('#verifiedImagePreview').waitFor({state:'visible'});
+      assert.equal(await page.locator('#verifiedImagePreview[data-qa-preview="read-only"]').count(),1);
+      assert.equal(await page.locator('#verifiedImagePreview .opt').count(),0,'preview cannot grade');
+      const src=await page.locator('#previewQuestionCard img').first().getAttribute('src');
+      const qid=await page.locator('#previewQuestionCard img').first().getAttribute('data-canonical-id');
+      assert(src.endsWith('/'+qid+'.webp'),'same question number must match its WebP');
+      assert(await page.locator('#previewQuestionCard img').first().evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
      }
     }else{
      const subjects=await page.locator('#subjectSel option').allTextContents();
      assert(subjects.length>0);
-     assert.match(await page.locator('#verifiedStatus').innerText(),/已通過全部驗收/);
+     assert.equal(await page.locator('#verifiedImagePreview').isVisible(),false,'gallery must not block practice');
+     await page.locator('#verifiedPreviewToggle').waitFor();
+     await page.locator('#verifiedPreviewToggle').click();
+     assert.equal(await page.locator('#verifiedImagePreview').isVisible(),true);
+     assert.equal(await page.locator('#studyView').isVisible(),false);
+     const item=preview.questions.find(q=>!data.questions.some(v=>v.canonicalId===q.canonicalId));
+     if(item){
+       const first=page.locator('#previewQuestionCard img').first();
+       assert.equal(await first.getAttribute('src'),'./'+item.image);
+       assert.equal(await first.getAttribute('data-canonical-id'),item.canonicalId);
+       assert.equal(Number(await page.locator('#previewQuestionNumber').innerText()),item.questionNumber);
+     }
+     await page.locator('#verifiedPreviewToggle').click();
+     assert.equal(await page.locator('#studyView').isVisible(),true);
     }
     for(const theme of ['light','dark']){
      await page.evaluate(mode=>document.documentElement.dataset.theme=mode,theme);

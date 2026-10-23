@@ -16,8 +16,10 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
       const page=await browser.newPage({viewport:{width,height}});
       try{
         await page.goto('http://127.0.0.1:8765/sudu/v4-115-multisubject-review-demo.html?year=115');
-        await page.locator('#verifiedStatus').waitFor({timeout:20000});
-        assert.match(await page.locator('#verifiedStatus').innerText(),/已通過全部驗收並開放 4 題/);
+        await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'),{timeout:20000});
+        await page.locator('#questionCard .qnum').waitFor();
+        assert.equal(await page.locator('#verifiedStatus').count(),0);
+        assert.equal(await page.locator('#verifiedImagePreview').isVisible(),false);
         assert.equal(await page.locator('#subjectSel option').count(),1);
         for(let i=0;i<4;i++){
           const expected=source.questions[i];
