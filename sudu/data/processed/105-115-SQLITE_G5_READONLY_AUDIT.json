@@ -1,0 +1,152 @@
+{
+  "scope": "105-115",
+  "sourceDatabasesModified": false,
+  "studentDataTouched": false,
+  "released": false,
+  "yearsG5Pass": 8,
+  "yearsReviewed": 11,
+  "years": [
+    {
+      "year": 105,
+      "g5Pass": false,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [
+        "on_disk_payload_or_SHA_mismatch"
+      ],
+      "jsonRows": 204,
+      "sqliteSha256": "06993e0c73addb60f2ec0f1e303e5239e9272386c9cb24cbfcfedf9faa5245e7",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 9,
+      "onDiskMismatchIdsFirst20": [
+        "105-00-C-24",
+        "105-00-C-25",
+        "105-00-C-26",
+        "105-00-C-27",
+        "105-00-C-28",
+        "105-00-C-29",
+        "105-09-2-48",
+        "105-09-2-49",
+        "105-09-2-50"
+      ]
+    },
+    {
+      "year": 106,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "2c86e04625417e3f5101c2eb27a5c0119a5ce46d9b88424bf338e782493af2b2",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 107,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "d504572756af137c5a0d938374e4eab94332b896bfcc0a847a29dd1f4f7e1a6d",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 108,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "06ec29eae92ce1881d2169706bdea4835658c932b4a89845ba306b83f9a8a4a6",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 109,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "6b88443eb905ed4ab78b673da4ba8b05a4f27393f14e86609e7a1815796a3b96",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 110,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "5b4da97c8209a4e95477ed68b18fb998b347853b1cc15097d9de8f7da65b8e3c",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 111,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "4de8f52408702f5138dcd275239ce6c829c9cd56b285ae043336efd9cf4ef68e",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 112,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "db41285575447bf09526bed1bbe83a9f5a6c93b787c1d9cf494685a91fddfd48",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 113,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "2ee3274e4e454e556305c13d1e84c0303eccacd4c962bb0980f7b4a6e0efedc3",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 114,
+      "g5Pass": false,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [
+        "on_disk_question_schema_missing_columns"
+      ],
+      "jsonRows": 205,
+      "sqliteSha256": "2c752077c6df5a8a85ebcaca097eb0a98c68a7664279449e1566c13ef38f27a4"
+    },
+    {
+      "year": 115,
+      "g5Pass": false,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [
+        "on_disk_question_schema_missing_columns"
+      ],
+      "jsonRows": 205,
+      "sqliteSha256": "f7db8ea38aaff4cf3da12845c4558597650b75468ee8d989e9cda357abba55b1"
+    }
+  ]
+}
