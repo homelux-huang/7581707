@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-04",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 4,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-04.webp",
+  "imageSha256": "d78ba6137913c629b215b80374cc5295d5d9f109d289e5283e9d3d756be512e4",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐張觀看 GitHub 原始單題 WebP；實際確認題號、完整題幹、A～D 與無鄰題／表格遺漏；重新計算 WebP SHA256 與固定清單一致",
+    "ocrIssues": [],
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "keyConditions": [
+      "calm, beautiful beach",
+      "within walking distance",
+      "a ... place to relax"
+    ],
+    "reasoningFromOriginalImage": "靠近平靜美麗的海灘，旅館適合放鬆，與情境及 to relax 搭配最佳的是 suitable。",
+    "formulaRequired": false,
+    "reasoningRecordedBeforeCandidateRead": true,
+    "officialFinalStatus": "PENDING_FINAL_PDF_AND_ISSUE_EXPLANATION"
+  },
+  "teaching": {
+    "teacherSummary": "題幹給兩個理由：附近有 **calm, beautiful beach**，且在 **walking distance** 之內，支持旅館是一個 **suitable place to relax（適合休息的地方）**。其他形容詞雖可修飾 place，卻不符合所提供的放鬆理由。",
+    "elementarySummary": "飯店附近走一走就到漂亮又平靜的海灘，當然是放鬆的好地方。所以空格是 **suitable**，意思是「很合適」。",
+    "memory": "**beach + relax → suitable place**；適合的。",
+    "concept": "**suitable + noun** 表合適的某物，也能用 **suitable for + 名詞**；**within walking distance** 表步行可達，提供判斷地點方便與否的線索。",
+    "extension": "反向思考：如果題幹改為飯店旁一直有施工噪音、無法安靜休息，還能直接說 suitable place to relax 嗎？需要重新評估題目條件，而不是記死 suitable。",
+    "source": {
+      "originalExam": "115-00-E-04",
+      "originalImagePinnedSha256": "d78ba6137913c629b215b80374cc5295d5d9f109d289e5283e9d3d756be512e4",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "calm",
+      "walking distance",
+      "suitable",
+      "relax"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**difficult** 是困難的；若說 a difficult place to relax，意味這裡不易放鬆，與平靜海灘的正面描述相反。",
+        "elementary": "附近很舒服，說這裡很難休息就不順了。",
+        "reason": "**difficult** 是困難的；若說 a difficult place to relax，意味這裡不易放鬆，與平靜海灘的正面描述相反。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**fearful** 多表示某人感到害怕，不適合描述題幹這座可供放鬆的旅館；也缺乏恐懼情境。",
+        "elementary": "題目沒有嚇人的事，而且 fearful 通常說人在害怕。",
+        "reason": "**fearful** 多表示某人感到害怕，不適合描述題幹這座可供放鬆的旅館；也缺乏恐懼情境。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**rocky** 表岩石多的；題幹沒有說海灘或飯店多石頭，不能從 beautiful beach 推出 rocky。",
+        "elementary": "漂亮海灘不一定滿地石頭，題目沒講不能亂猜。",
+        "reason": "**rocky** 表岩石多的；題幹沒有說海灘或飯店多石頭，不能從 beautiful beach 推出 rocky。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**suitable** 是適合的，直接與 **place to relax** 搭配，且有平靜海灘與步行可達的條件支持。",
+        "elementary": "有好風景又好走到，所以很適合休息。",
+        "reason": "**suitable** 是適合的，直接與 **place to relax** 搭配，且有平靜海灘與步行可達的條件支持。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "附近步行就能抵達一處平靜又美麗的海灘，因此這間旅館是個適合放鬆的地方。",
+      "answerWord": "suitable",
+      "pronunciationIPA": "/ˈsuːtəbl/",
+      "optionMeaningZh": {
+        "A": "困難的",
+        "B": "害怕的",
+        "C": "岩石多的",
+        "D": "適合的"
+      },
+      "synonyms": {
+        "初級": [
+          "good（好的；語意較廣）"
+        ],
+        "中級": [
+          "appropriate（適當的）"
+        ],
+        "高級": [
+          "well-suited（十分合適的）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "bad（不好的；較廣義）"
+        ],
+        "中級": [
+          "unsuitable（不適合的）"
+        ],
+        "高級": [
+          "inappropriate（不恰當的）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "exampleEnglish": "This quiet room is suitable for studying.",
+      "exampleChinese": "這間安靜的房間適合讀書。",
+      "exampleHighlightedSurfaceForm": "suitable",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
