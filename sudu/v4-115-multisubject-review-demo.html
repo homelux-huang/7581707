@@ -465,7 +465,11 @@ function guideEntries(q){
  const note=normalizeStudyText(q.memory);
  if(hasStudyValue(q.memory)&&!correctParagraphs.includes(note)&&!entries.some(x=>{
   const value=normalizeStudyText(x[1]);return value&&(value===note||value.includes(note));
- }))entries.splice(entries[0]?.[0]==='考題計算式'?1:0,0,['速記重點',q.memory]);
+ })){
+  const calcOffset=entries[0]?.[0]==='考題計算式'?1:0;
+  const englishOffset=q.subject==='英文'?entries.slice(calcOffset).filter(([title])=>englishTop.includes(title)).length:0;
+  entries.splice(calcOffset+englishOffset,0,['速記重點',q.memory]);
+ }
  return entries;
 }
 function renderGuide(){
