@@ -90,8 +90,23 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
     for(const q of qs){
      await choose(q.subject,q.id);await page.waitForTimeout(40);
      const img=page.locator('.source-figure img');await img.scrollIntoViewIfNeeded();
-     const ratio=await img.evaluate(i=>{const r=i.getBoundingClientRect();return Math.abs(r.width/r.height-i.naturalWidth/i.naturalHeight)});
-     assert(ratio<0.03,'undistorted image '+q.subject+q.id);
+     // A lazy-loaded WebP must finish decoding before geometry assertions.
+     // Keep the same strict ratio threshold: genuine distortion still fails CI.
+     await img.evaluate(async i=>{
+      await i.decode();
+      if(!i.complete||i.naturalWidth<=0||i.naturalHeight<=0)
+       throw Error('WebP was not decoded: '+i.getAttribute('src'));
+      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+     });
+     const imageGeometry=await img.evaluate(i=>{
+      const r=i.getBoundingClientRect();
+      return {renderedWidth:r.width,renderedHeight:r.height,
+       naturalWidth:i.naturalWidth,naturalHeight:i.naturalHeight,src:i.getAttribute('src')};
+     });
+     const ratio=Math.abs(imageGeometry.renderedWidth/imageGeometry.renderedHeight-
+                          imageGeometry.naturalWidth/imageGeometry.naturalHeight);
+     assert(Number.isFinite(ratio)&&ratio<0.03,
+      'undistorted decoded image '+q.subject+q.id+' '+JSON.stringify({ratio,imageGeometry}));
      await noOverflow('question overflow '+width+' '+q.subject+q.id);
      const colors=await page.evaluate(()=>['#questionCard','#answerCard'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));
      assert.notEqual(colors[0],colors[1]);
