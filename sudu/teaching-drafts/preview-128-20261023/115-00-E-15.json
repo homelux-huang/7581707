@@ -154,7 +154,16 @@
       "exampleChinese": "把瓶子放在太陽下有什麼不妥嗎？",
       "exampleHighlightedSurfaceForm": "What's wrong with",
       "exampleType": "自行撰寫的雙語教學例句，非新聞",
-      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "What's wrong with unused chargers? They add to electronic waste, a problem the EU's common-charger rules aim to reduce.",
+      "newsExampleChinese": "未使用的充電器有什麼問題？它們增加電子廢棄物，而歐盟共同充電器規則的目標之一就是減少這個問題。",
+      "newsExampleHighlightedSurfaceForm": "What's wrong with",
+      "newsExampleSourceUrl": "https://commission.europa.eu/news-and-media/news/eu-common-charger-rules-power-all-your-devices-single-charger-2024-12-28_en",
+      "newsExampleSourceTitle": "EU common charger rules: Power all your devices with a single charger",
+      "newsExampleSourceOrganization": "European Commission",
+      "newsExampleSourceDate": "2024-12-28",
+      "newsExampleKind": "依近三年官方新聞自行改寫的雙語教學句，非逐字引述；問答為教學設計。",
+      "newsExampleSourceScope": "Original question for language practice, not an official quotation; unrelated to the exam dialogue's bottled-water health claim."
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -217,6 +226,14 @@
       "highSchoolTextbookEditionAndPage": "UNVERIFIED",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
+    },
+    "newsContextSourceReview20261024": {
+      "status": "SOURCE_AND_BILINGUAL_PARAPHRASE_CHECKED_NOT_FULL_QA",
+      "retrievedAt": "2026-10-24",
+      "evidence": "ENGLISH_NEWS_FINAL_6_20261024.md",
+      "highlightSurfaceMatched": true,
+      "fullTeachingApproval": false,
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -136,7 +136,16 @@
       "exampleChinese": "下雨後，我的外套還是濕的。",
       "exampleHighlightedSurfaceForm": "wet",
       "exampleType": "自行撰寫的教學例句（非新聞）",
-      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "England had a very wet September in 2024, with ten counties setting September rainfall records.",
+      "newsExampleChinese": "英格蘭2024年9月非常多雨，其中十個郡創下各自的9月降雨紀錄。",
+      "newsExampleHighlightedSurfaceForm": "wet",
+      "newsExampleSourceUrl": "https://www.metoffice.gov.uk/blog/2024/review-of-2024-multiple-records-broken-in-a-year-of-mixed-weather",
+      "newsExampleSourceTitle": "Review of 2024: Multiple records broken in a year of mixed weather",
+      "newsExampleSourceOrganization": "Met Office",
+      "newsExampleSourceDate": "2024-12-23",
+      "newsExampleKind": "依近三年官方新聞自行改寫的雙語教學句，非逐字引述；問答為教學設計。",
+      "newsExampleSourceScope": "Source reports ten English counties' wettest September, not a claim about all UK locations."
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -202,6 +211,14 @@
       "qaIndependentTeachingReviewStillPending": true,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
+    },
+    "newsContextSourceReview20261024": {
+      "status": "SOURCE_AND_BILINGUAL_PARAPHRASE_CHECKED_NOT_FULL_QA",
+      "retrievedAt": "2026-10-24",
+      "evidence": "ENGLISH_NEWS_FINAL_6_20261024.md",
+      "highlightSurfaceMatched": true,
+      "fullTeachingApproval": false,
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

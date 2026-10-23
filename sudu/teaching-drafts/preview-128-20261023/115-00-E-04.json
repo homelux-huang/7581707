@@ -136,7 +136,16 @@
       "exampleChinese": "這間安靜的房間適合讀書。",
       "exampleHighlightedSurfaceForm": "suitable",
       "exampleType": "自行撰寫的教學例句（非新聞）",
-      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Students tested which crops were suitable for growing in conditions similar to those in spacecraft.",
+      "newsExampleChinese": "學生測試哪些作物適合在類似太空船的環境中生長。",
+      "newsExampleHighlightedSurfaceForm": "suitable",
+      "newsExampleSourceUrl": "https://science.nasa.gov/learning-resources/science-activation/10-years-of-students-helping-nasa-grow-space-food-with-growing-beyond-earth/",
+      "newsExampleSourceTitle": "10 Years of Students Helping NASA Grow Space Food with Growing Beyond Earth",
+      "newsExampleSourceOrganization": "NASA Science",
+      "newsExampleSourceDate": "2025-11-21",
+      "newsExampleKind": "依近三年官方新聞自行改寫的雙語教學句，非逐字引述；問答為教學設計。",
+      "newsExampleSourceScope": "NASA reports classroom plant-growth chambers that simulate spacecraft conditions; no claim all crops can already grow in space."
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -202,6 +211,14 @@
       "qaIndependentTeachingReviewStillPending": true,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_LEXICAL_AND_OPTION_REVIEW_20261023.md"
+    },
+    "newsContextSourceReview20261024": {
+      "status": "SOURCE_AND_BILINGUAL_PARAPHRASE_CHECKED_NOT_FULL_QA",
+      "retrievedAt": "2026-10-24",
+      "evidence": "ENGLISH_NEWS_FINAL_6_20261024.md",
+      "highlightSurfaceMatched": true,
+      "fullTeachingApproval": false,
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
