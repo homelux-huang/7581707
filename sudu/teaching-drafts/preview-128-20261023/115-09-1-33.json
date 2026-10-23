@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-33",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 33,
+  "status": "EXPLANATION_DRAFT_BLOCKED_OFFICIAL_REVIEW",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-33.webp",
+  "imageSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "UNDETERMINED",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "DISPUTED_CANDIDATE_BLOCKED",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+    "conflictWarningRequired": true,
+    "warningText": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "①驗證後難以竄改",
+      "②加密技術對資料加解密",
+      "③透過金資中心跨行金融交易",
+      "④只保存在買賣雙方自己的帳本"
+    ],
+    "reasoningFromOriginalImage": "①區塊鏈經驗證後的記錄有抗竄改性（實務上非數學上絕對不可能改）；③所稱金資中心作為所有區塊鏈交易中央節點不符典型公有鏈去中心化；④只寫雙方自己的帳本與分散式共識記帳相反。②若廣義把密碼學工具稱作『加密技術』有課本簡化空間，但比特幣核心運用雜湊與數位簽章，交易內容並不必然經『加密後解密』才驗證，語義不嚴謹。候選A含①②，待官方與教材確認，不可把②寫成技術必然。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "**區塊鏈**核心是**分散式帳本、雜湊鏈結、數位簽章、共識驗證**。①交易確認後具高度抗竄改性，通常視為對；③誤以中央金資中心辦所有交易；④誤以資料只存交易雙方，均不對。**②『資料加解密』是關鍵疑點**：雜湊是不可逆單向摘要，不是可解密的密文；簽章的驗證也不等於交易資料加解密。傳統課本若把這些統稱『加密技術』，出題可能認A，但專業區分必須保留，故本題 BLOCKED 待查。",
+    "elementarySummary": "區塊鏈像很多人都保存同一本記帳簿，想偷偷改其中一頁很難。確認身分會用特殊數學方法，但不表示每筆交易都先上鎖、再把鎖打開才算完成；『用密碼學』不一定等於『把資料加密又解密』。",
+    "memory": "**難以竄改、分散式帳本、雜湊與簽章**；『加解密』≠所有密碼學操作。",
+    "concept": "hash不可逆；digital signature用於簽署和驗證；encryption/decryption通常是保密通訊的可逆操作；區塊鏈不必依賴中央金融交換中心。",
+    "extension": "反向題：若有人取得區塊交易的SHA-256摘要，能把摘要直接『解密』還原原始交易內容嗎？為何簽章驗證和解密在數學目的上不同？",
+    "source": {
+      "originalExam": "115-09-1-33",
+      "originalImagePinnedSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。"
+    },
+    "highlightTerms": [
+      "區塊鏈",
+      "不可竄改性",
+      "雜湊",
+      "數位簽章",
+      "加解密",
+      "分散式帳本"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。",
+        "elementary": "①像大家共同存記帳簿不易改；②說每筆都加鎖又開鎖，有疑問。",
+        "reason": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B包含①③；③將比特幣區塊鏈誤認為依賴單一金資中心處理跨行交易，與分散式網路運作不合。",
+        "elementary": "很多人一起記帳，不是只找一個金融中心保管。",
+        "reason": "B包含①③；③將比特幣區塊鏈誤認為依賴單一金資中心處理跨行交易，與分散式網路運作不合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C包含②④；④認為只存在買賣兩人的私有帳本，與分散式共識帳本相反；無論②如何定義，此組不合。",
+        "elementary": "不是只有買家賣家各自藏一本帳。",
+        "reason": "C包含②④；④認為只存在買賣兩人的私有帳本，與分散式共識帳本相反；無論②如何定義，此組不合。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D包含③④，兩項分別把去中心化說成依賴金融中心、把分散式帳本說成只有兩個人的帳本，都不符合基本技術。",
+        "elementary": "不是中央銀行那邊保管，也不是只有兩個人記。",
+        "reason": "D包含③④，兩項分別把去中心化說成依賴金融中心、把分散式帳本說成只有兩個人的帳本，都不符合基本技術。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "BLOCKED_TERMINOLOGY_DISPUTE",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。"
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
