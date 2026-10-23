@@ -48,7 +48,25 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    assert.equal(await page.locator('.option-detail').count(),4);
    assert((await page.locator('#guideCard').innerText()).includes('頁數：待核對'));
   }
-  // All five English words and their actual inflections in all four required surfaces.
+    // Existing guide content wins, while unique source notes remain in the same section.
+  await choose('國文',1);
+  await page.locator('.opt').first().click();await settle();
+  const mergedSource=await page.evaluate(()=>{
+   const rows=[...document.querySelectorAll('#guideCard .guide-block')].filter(el=>el.querySelector('h3')?.textContent==='出處');
+   return {count:rows.length,text:rows[0]?.innerText||''};
+  });
+  assert.equal(mergedSource.count,1,'duplicate source headings are merged');
+  assert(mergedSource.text.includes('國立彰化高商')&&mergedSource.text.includes('115 年統測國文第 1 題'),
+   'guide retains textbook and official question source without duplicate panels');
+  const noDuplicate=await page.evaluate(()=>{
+   const q=qnow(),old=q.memory;
+   q.memory=q.concept;
+   const labels=guideEntries(q).map(x=>x[0]);
+   q.memory=old;
+   return {memo:labels.filter(x=>x==='速記重點').length,source:labels.filter(x=>x==='出處').length};
+  });
+  assert.deepEqual(noDuplicate,{memo:0,source:1},'duplicated quick memo is omitted');
+  // All five English words and their actual inflections in all three required surfaces.
   for(const [id,word] of [[1,'wet'],[2,'joined'],[3,'equally'],[4,'suitable'],[5,'attract']]){
    await choose('英文',id);
    await page.locator('.opt').first().click();await settle();
