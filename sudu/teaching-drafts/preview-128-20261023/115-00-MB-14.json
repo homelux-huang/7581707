@@ -200,7 +200,31 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_INDEPENDENT_RECOMPUTATION_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+      "imageMatchesFrozenManifest": true,
+      "imageOptionsChartOrTableAllVisible": true,
+      "sharedImages": "NONE_REQUIRED",
+      "recomputedReasoning": "原數列公比3，索引x、y、z間隔各2，取出的新數列公比3²=9。",
+      "partialStepReview": "PASS_MATH_SUBTASK_ONLY",
+      "officialFinalPdfActuallyRead": false,
+      "officialCorrectionStatementsRead": false,
+      "completeIndependentTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "MATHB_12_16_IMAGE_FORMULA_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_OFFICIAL_ANSWER_PAGE_MATCH_ONLY_NON_FINAL",
+      "paper": "115/00-MB",
+      "archivedAnswerVisible": "D",
+      "archivedWebp": "data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+      "archivedWebpShaActuallyVerified": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+      "originalPdfShaRecordedNotRedownloaded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
