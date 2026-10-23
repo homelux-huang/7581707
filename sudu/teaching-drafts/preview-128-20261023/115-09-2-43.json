@@ -93,7 +93,55 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-43",
+      "subject": "經濟學",
+      "questionNumber": 43,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "中央銀行貨幣政策；景氣熱絡／不景氣；公開市場買賣債券；法定準備率與重貼現率調整",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "公開市場操作影響準備貨幣與流動性；法定準備率和重貼現率調控放款誘因。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "景氣過熱時中央銀行可採**緊縮性貨幣政策**，**賣出債券**讓市場資金流回央行、**調高法定準備率**讓銀行可貸資金減少、**調高重貼現率**提高向央行融資成本，故三項同時吻合的是B。",
+          "why": "市場太熱像車子跑太快，央行想踩煞車：把債券賣出去收回錢、讓銀行多留準備金、提高向央行借錢的成本，錢就比較不容易到處流。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "景氣衰退時反向採買進債券、降低準備率與重貼現率以刺激借貸。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B景氣熱絡且賣出債券、提高準備率及重貼現率，三項均收緊資金供給與信用，是正確組合。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "51f12ac893ea05ccde28d477ef3b6bff84ce9f3039eb73e782b4f837b2719fc5",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -102,7 +150,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -4610,7 +4610,481 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|38": {
+      "questionId": "115-09-2-38",
+      "subject": "經濟學",
+      "questionNumber": 38,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "投資需求與利率負相關；儲蓄供給與利率正相關；投資增加且儲蓄保持不變",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "利率是可貸資金的價格；儲蓄曲線通常往右上，投資需求曲線往右下，均衡由供需交點決定。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**可貸資金（投資儲蓄）市場**中，儲蓄形成供給、投資形成需求。",
+          "why": "借錢開店的人變多，但願意存錢借出的人沒有增加，大家更搶借錢，利率就容易往上升。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "投資增加表示在同一利率下借資金的人變多，投資需求曲線**右移**；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "儲蓄供給保持不變，均衡利率因此**上升**，符合C。 投資增加又儲蓄減少會有兩股推升利率的力量； 儲蓄增加投資減少則通常使利率下降。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C投資增加需求右移、儲蓄供給不變，新交點在較高利率，符合題意。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "f09b9e42e718f6ce1e2dd2886251704d4e663c32dbf24fd1e0eed61719b72657",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|39": {
+      "questionId": "115-09-2-39",
+      "subject": "經濟學",
+      "questionNumber": 39,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "政府發國內居民消費券；促進經濟成長；何者最可能影響",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "支出面GDP常寫C+I+G+(X−M)，其中消費券主要刺激C，不等於政府自己買更多商品的G。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "消費券鼓勵**國內消費支出C增加**，在其他條件不變下推升**總需求／國內支出毛額**，故D。",
+          "why": "政府發給大家消費券，希望大家去買東西；店家有生意、工廠要補貨，整體國內花錢買東西的金額可能變多，所以D。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "政府發券屬政策移轉或支出安排，不能直接推定**政府消費G減少**；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "基本工資由制度政策決定，不會因發券自動調升； 也不能說國民所得最可能減少。 是否形成乘數、進口洩漏與物價效果需後續條件，但本題只問最有可能方向。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D國內支出毛額成長與居民使用消費券提高消費支出一致，最符合刺激國內需求的政策目的。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "fc4b82447e2ed3cd8c23a21279c489d36c107b237c2882adcbad09146f752dc9",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|40": {
+      "questionId": "115-09-2-40",
+      "subject": "經濟學",
+      "questionNumber": 40,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "當期實質GDP＝1,600億元；基期實質GDP＝1,200億元；本期物價相對基期上漲20%",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "GDP平減指數＝(名目GDP/實質GDP)×100；名目GDP＝實質GDP×平減指數/100",
+          "why": "先由相對物價求平減指數，再由本期實質GDP換算本期名目GDP。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "基期物價指數＝100",
+          "why": "平減指數以基期價格當100。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "當期平減指數＝100×(1+20%)＝120",
+          "why": "上漲20%要乘1.2，而非減20。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "名目GDP＝實質GDP×平減指數/100",
+          "why": "將實質產出依當期相對物價換算成名目產出。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "名目GDP＝1,600億元×120/100＝1,600×1.2＝1,920億元",
+          "why": "使用本期實質GDP1600，不誤用基期1200。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(120，1,920億元)⇒D",
+          "why": "同時核對指數與金額。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "GDP平減指數120；名目GDP1,920億元；單位：指數／新臺幣億元；選項：D",
+          "why": "把物價上漲20%當平減指數80，或用基期GDP1200代替當期1600。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "6c6f28d1a0a2c15b4be1f2e041aeff4c8d8d0c04c85fdf4e0120b5c3e83d10d7",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|41": {
+      "questionId": "115-09-2-41",
+      "subject": "經濟學",
+      "questionNumber": 41,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "MPC＝0.8；簡單凱因斯投資乘數模型",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "k＝1/(1−MPC)＝1/MPS，MPS＝1−MPC",
+          "why": "以邊際消費傾向求投資乘數及判斷MPC變動方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPS＝1−MPC＝1−0.8＝0.2",
+          "why": "每增加1元所得，0.8元消費，剩下0.2元儲蓄。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "k＝1/MPS＝1/0.2＝5",
+          "why": "將所得循環支出放大效果轉為乘數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC↑⇒1−MPC↓⇒k↑",
+          "why": "乘數分母縮小，放大效果變大。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC↓⇒1−MPC↑⇒k↓",
+          "why": "反向驗算，排除選項A/B/C的錯誤關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "①5；②MPC越大乘數越大⇒D",
+          "why": "核對複合選項的兩個部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "投資乘數5；MPC越大乘數越大；單位：倍（乘數無單位）；選項：D",
+          "why": "誤用1/MPC算成1.25；或把MPC變化方向看反。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|42": {
+      "questionId": "115-09-2-42",
+      "subject": "經濟學",
+      "questionNumber": 42,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "Y＝C＋I＋G；C＝20＋0.6(Y−T)；原T＝40，新T＝30；I＝120，G＝250",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "稅收乘數k_T＝−MPC/(1−MPC)；ΔY＝k_T×ΔT",
+          "why": "在定額稅模型中以邊際消費傾向求稅額變動帶來的均衡所得變化。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC＝0.6；MPS＝1−0.6＝0.4",
+          "why": "由消費函數C的所得係數求邊際消費傾向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "k_T＝−0.6/(1−0.6)＝−0.6/0.4＝−1.5",
+          "why": "算出定額稅的稅收乘數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "減稅10⇒ΔT＝−10",
+          "why": "政府減稅代表稅額下降，變化為負值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "ΔY＝k_T×ΔT＝(−1.5)×(−10)＝＋15",
+          "why": "兩個負號相乘為正，所得提高15。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "初始：Y＝20＋0.6(Y−40)＋120＋250 ⇒0.4Y＝366⇒Y＝915",
+          "why": "直接代入初始稅額驗算基礎均衡。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新值：Y＝20＋0.6(Y−30)＋120＋250⇒0.4Y＝372⇒Y＝930",
+          "why": "減稅後的消費增加使均衡所得上升。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "ΔY＝930−915＝＋15，選C",
+          "why": "與稅額乘數法完全相符。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "均衡所得增加15（915→930）；單位：題目未指定所得量的貨幣單位；選項：C",
+          "why": "把減稅當ΔT=＋10，或直接認為所得只增10、忽略稅收乘數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|43": {
+      "questionId": "115-09-2-43",
+      "subject": "經濟學",
+      "questionNumber": 43,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "中央銀行貨幣政策；景氣熱絡／不景氣；公開市場買賣債券；法定準備率與重貼現率調整",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "公開市場操作影響準備貨幣與流動性；法定準備率和重貼現率調控放款誘因。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "景氣過熱時中央銀行可採**緊縮性貨幣政策**，**賣出債券**讓市場資金流回央行、**調高法定準備率**讓銀行可貸資金減少、**調高重貼現率**提高向央行融資成本，故三項同時吻合的是B。",
+          "why": "市場太熱像車子跑太快，央行想踩煞車：把債券賣出去收回錢、讓銀行多留準備金、提高向央行借錢的成本，錢就比較不容易到處流。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "景氣衰退時反向採買進債券、降低準備率與重貼現率以刺激借貸。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B景氣熱絡且賣出債券、提高準備率及重貼現率，三項均收緊資金供給與信用，是正確組合。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "51f12ac893ea05ccde28d477ef3b6bff84ce9f3039eb73e782b4f837b2719fc5",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|44": {
+      "questionId": "115-09-2-44",
+      "subject": "經濟學",
+      "questionNumber": 44,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "美國加徵關稅衝擊出口廠商；政府提供紓困貸款；問財政／貨幣及擴張／緊縮",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。",
+          "why": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|45": {
+      "questionId": "115-09-2-45",
+      "subject": "經濟學",
+      "questionNumber": 45,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "外匯數量Q為美元數量；縱軸匯率，D1外匯需求、S1外匯供給；美元資金湧入臺灣外匯市場；新臺幣升值與出口競爭力",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "以外幣美元為交易標的時，美元供給增加使美元的台幣價格下降；台幣升值通常不利出口、相對有利進口（其他條件不變）。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "美元資金湧入臺灣外匯市場，表示市場上可供交換的美元增加，外匯供給S1向右移；",
+          "why": "很多人帶美金到臺灣換臺幣，市場上的美金就更多。美金變得比較不稀有，臺幣相對變值錢，這叫臺幣升值。外國人買臺灣東西時可能覺得比較貴，所以出口較不利。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "外匯匯率（每美元兌換的新臺幣）降低，等於新臺幣對美元升值。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "臺灣商品換算美元相對變貴，其他條件不變下不利出口。 故C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C說供給S1右移、台幣升值且不利出口，完整對應美元流入與外匯均衡變化，正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 71
+  "readyQuestionCount": 79
 };

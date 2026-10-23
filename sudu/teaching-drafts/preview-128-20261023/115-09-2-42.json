@@ -138,6 +138,84 @@
       "matchingOption": "C",
       "commonMistake": "把減稅當ΔT=＋10，或直接認為所得只增10、忽略稅收乘數。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-42",
+      "subject": "經濟學",
+      "questionNumber": 42,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "Y＝C＋I＋G；C＝20＋0.6(Y−T)；原T＝40，新T＝30；I＝120，G＝250",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "稅收乘數k_T＝−MPC/(1−MPC)；ΔY＝k_T×ΔT",
+          "why": "在定額稅模型中以邊際消費傾向求稅額變動帶來的均衡所得變化。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC＝0.6；MPS＝1−0.6＝0.4",
+          "why": "由消費函數C的所得係數求邊際消費傾向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "k_T＝−0.6/(1−0.6)＝−0.6/0.4＝−1.5",
+          "why": "算出定額稅的稅收乘數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "減稅10⇒ΔT＝−10",
+          "why": "政府減稅代表稅額下降，變化為負值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "ΔY＝k_T×ΔT＝(−1.5)×(−10)＝＋15",
+          "why": "兩個負號相乘為正，所得提高15。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "初始：Y＝20＋0.6(Y−40)＋120＋250 ⇒0.4Y＝366⇒Y＝915",
+          "why": "直接代入初始稅額驗算基礎均衡。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新值：Y＝20＋0.6(Y−30)＋120＋250⇒0.4Y＝372⇒Y＝930",
+          "why": "減稅後的消費增加使均衡所得上升。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "ΔY＝930−915＝＋15，選C",
+          "why": "與稅額乘數法完全相符。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "均衡所得增加15（915→930）；單位：題目未指定所得量的貨幣單位；選項：C",
+          "why": "把減稅當ΔT=＋10，或直接認為所得只增10、忽略稅收乘數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -147,7 +225,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

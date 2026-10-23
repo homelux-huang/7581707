@@ -94,7 +94,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-44",
+      "subject": "經濟學",
+      "questionNumber": 44,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "美國加徵關稅衝擊出口廠商；政府提供紓困貸款；問財政／貨幣及擴張／緊縮",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。",
+          "why": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -103,7 +157,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

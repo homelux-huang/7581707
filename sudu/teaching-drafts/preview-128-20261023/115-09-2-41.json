@@ -126,6 +126,72 @@
       "matchingOption": "D",
       "commonMistake": "誤用1/MPC算成1.25；或把MPC變化方向看反。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-41",
+      "subject": "經濟學",
+      "questionNumber": 41,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "MPC＝0.8；簡單凱因斯投資乘數模型",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "k＝1/(1−MPC)＝1/MPS，MPS＝1−MPC",
+          "why": "以邊際消費傾向求投資乘數及判斷MPC變動方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPS＝1−MPC＝1−0.8＝0.2",
+          "why": "每增加1元所得，0.8元消費，剩下0.2元儲蓄。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "k＝1/MPS＝1/0.2＝5",
+          "why": "將所得循環支出放大效果轉為乘數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC↑⇒1−MPC↓⇒k↑",
+          "why": "乘數分母縮小，放大效果變大。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MPC↓⇒1−MPC↑⇒k↓",
+          "why": "反向驗算，排除選項A/B/C的錯誤關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "①5；②MPC越大乘數越大⇒D",
+          "why": "核對複合選項的兩個部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "投資乘數5；MPC越大乘數越大；單位：倍（乘數無單位）；選項：D",
+          "why": "誤用1/MPC算成1.25；或把MPC變化方向看反。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -135,7 +201,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

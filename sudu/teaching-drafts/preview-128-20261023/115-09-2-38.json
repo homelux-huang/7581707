@@ -92,7 +92,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-38",
+      "subject": "經濟學",
+      "questionNumber": 38,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "投資需求與利率負相關；儲蓄供給與利率正相關；投資增加且儲蓄保持不變",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "利率是可貸資金的價格；儲蓄曲線通常往右上，投資需求曲線往右下，均衡由供需交點決定。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**可貸資金（投資儲蓄）市場**中，儲蓄形成供給、投資形成需求。",
+          "why": "借錢開店的人變多，但願意存錢借出的人沒有增加，大家更搶借錢，利率就容易往上升。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "投資增加表示在同一利率下借資金的人變多，投資需求曲線**右移**；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "儲蓄供給保持不變，均衡利率因此**上升**，符合C。 投資增加又儲蓄減少會有兩股推升利率的力量； 儲蓄增加投資減少則通常使利率下降。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C投資增加需求右移、儲蓄供給不變，新交點在較高利率，符合題意。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "f09b9e42e718f6ce1e2dd2886251704d4e663c32dbf24fd1e0eed61719b72657",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -101,7 +155,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

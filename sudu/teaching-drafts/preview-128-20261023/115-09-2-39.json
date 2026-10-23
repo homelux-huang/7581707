@@ -92,7 +92,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-39",
+      "subject": "經濟學",
+      "questionNumber": 39,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "政府發國內居民消費券；促進經濟成長；何者最可能影響",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "支出面GDP常寫C+I+G+(X−M)，其中消費券主要刺激C，不等於政府自己買更多商品的G。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "消費券鼓勵**國內消費支出C增加**，在其他條件不變下推升**總需求／國內支出毛額**，故D。",
+          "why": "政府發給大家消費券，希望大家去買東西；店家有生意、工廠要補貨，整體國內花錢買東西的金額可能變多，所以D。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "政府發券屬政策移轉或支出安排，不能直接推定**政府消費G減少**；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "基本工資由制度政策決定，不會因發券自動調升； 也不能說國民所得最可能減少。 是否形成乘數、進口洩漏與物價效果需後續條件，但本題只問最有可能方向。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D國內支出毛額成長與居民使用消費券提高消費支出一致，最符合刺激國內需求的政策目的。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "fc4b82447e2ed3cd8c23a21279c489d36c107b237c2882adcbad09146f752dc9",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -101,7 +155,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

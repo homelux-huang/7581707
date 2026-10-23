@@ -97,7 +97,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-45",
+      "subject": "經濟學",
+      "questionNumber": 45,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "外匯數量Q為美元數量；縱軸匯率，D1外匯需求、S1外匯供給；美元資金湧入臺灣外匯市場；新臺幣升值與出口競爭力",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "以外幣美元為交易標的時，美元供給增加使美元的台幣價格下降；台幣升值通常不利出口、相對有利進口（其他條件不變）。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "美元資金湧入臺灣外匯市場，表示市場上可供交換的美元增加，外匯供給S1向右移；",
+          "why": "很多人帶美金到臺灣換臺幣，市場上的美金就更多。美金變得比較不稀有，臺幣相對變值錢，這叫臺幣升值。外國人買臺灣東西時可能覺得比較貴，所以出口較不利。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "外匯匯率（每美元兌換的新臺幣）降低，等於新臺幣對美元升值。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "臺灣商品換算美元相對變貴，其他條件不變下不利出口。 故C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C說供給S1右移、台幣升值且不利出口，完整對應美元流入與外匯均衡變化，正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -106,7 +160,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
