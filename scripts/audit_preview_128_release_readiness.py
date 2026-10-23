@@ -38,6 +38,8 @@ def main():
     disagreement = []
     subjects = Counter()
     sourced_news = set()
+    checked_english_lexical = set()
+    checked_numeric_reasoning = set()
 
     def verify_asset(qid, year, relative, sha, kind):
         if not isinstance(relative, str) or not relative.startswith(
@@ -123,6 +125,26 @@ def main():
                 problems.append(f"{qid}: news falsely labeled source-verified without a URL")
 
         qa = record.get("qa") or {}
+        lexical_review = qa.get("lexicalAndFourOptionReview20261023")
+        if lexical_review:
+            checked_english_lexical.add(qid)
+            if record.get("subject") != "英文":
+                problems.append(f"{qid}: English lexical review incorrectly attached to another subject")
+            if not lexical_review.get("status", "").startswith("PARTIAL_"):
+                problems.append(f"{qid}: partial English review claims unsupported status")
+            if lexical_review.get("officialOption") != answer or not lexical_review.get("independentRecheckNotes"):
+                problems.append(f"{qid}: English semantic review has missing notes or mismatched official answer")
+            if lexical_review.get("releaseApproved") is True or lexical_review.get("studentReleaseApproved") is True:
+                problems.append(f"{qid}: partial English review must not approve publication")
+        numeric_review = qa.get("sourceLinkedCalculationRecheck20261023")
+        if numeric_review:
+            checked_numeric_reasoning.add(qid)
+            if record.get("subject") != "會計學" or numeric_review.get("officialAnswer") != answer:
+                problems.append(f"{qid}: numeric ledger has wrong subject or answer")
+            if "PARTIAL" in numeric_review.get("status", "") and numeric_review.get("fullTeachingQA") == "PASS":
+                problems.append(f"{qid}: partial numeric review misrepresented as full QA")
+            if not numeric_review.get("independentlyRecomputedSteps") or not numeric_review.get("evidenceFile"):
+                problems.append(f"{qid}: numeric review lacks actual recomputation evidence")
         pending_teaching += qa.get("independentTeachingReview") != "PASS"
         pending_ui += qa.get("uiReview") != "PASS"
 
@@ -131,6 +153,18 @@ def main():
         problems.append("Recorded English sourced-news IDs do not match source-bearing records")
     if news_ledger.get("sourcedExampleCount") != len(sourced_news):
         problems.append("English news-source count differs from verified records")
+
+    lexical_ledger = progress.get("partialEnglishLexicalReviewLedger") or {}
+    lexical_ids = lexical_ledger.get("questionIds", [])
+    if (len(lexical_ids) != len(set(lexical_ids))
+            or set(lexical_ids) != checked_english_lexical
+            or lexical_ledger.get("reviewedQuestionCount") != len(checked_english_lexical)):
+        problems.append("English partial QA count/IDs inconsistent with per-question evidence")
+    numeric_ledger = progress.get("partialTeachingReviewLedger") or {}
+    numeric_ids = numeric_ledger.get("reviewedQuestionIds", [])
+    if (len(numeric_ids) != len(set(numeric_ids))
+            or set(numeric_ids) != checked_numeric_reasoning):
+        problems.append("Numeric partial QA ID list inconsistent with per-question evidence")
 
     binary = progress.get("binaryRecheckedLatest") or {}
     if binary.get("recheckedDistinctQuestions", 0) > checked_visual:
@@ -157,6 +191,8 @@ def main():
         "pendingUiReview": pending_ui,
         "aiOfficialConflicts": disagreement,
         "newsContextExamplesWithSource": len(sourced_news),
+        "englishPartialSemanticReviews": len(checked_english_lexical),
+        "accountingPartialNumericReviews": len(checked_numeric_reasoning),
         "englishNewsUnverifiedCount": 28 - len(sourced_news),
         "fullyAcceptedPerManifest": progress.get("fullyAccepted"),
         "deployedPerManifest": progress.get("deployed"),
