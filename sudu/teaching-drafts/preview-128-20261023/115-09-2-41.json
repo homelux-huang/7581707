@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-41",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 41,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-41.webp",
+  "imageSha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐題打開 GitHub 既有單題 WebP，確認GDP數字、公式、央行政策表格、四個選項無缺漏；WebP SHA256重新驗算吻合凍結清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_READ",
+    "notice": "本輪先目視原圖解答，再比對候選；最終官方更正未獨立核實，完整教學QA待完成。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-step-by-step",
+    "keyConditions": [
+      "凱因斯簡單投資乘數",
+      "邊際消費傾向MPC＝0.8",
+      "MPC升降如何影響乘數"
+    ],
+    "reasoningFromOriginalImage": "簡單凱因斯**投資乘數k＝1/(1−MPC)**。題給MPC＝0.8，故k＝1/(0.2)＝**5**。當MPC增加，邊際儲蓄傾向1−MPC變小、乘數分母變小，因此乘數越大；選D。此結論以簡單模型且0＜MPC＜1、價格與供給限制未另外考慮為前提。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_OFFICIAL_FINAL_RECHECK"
+  },
+  "teaching": {
+    "teacherSummary": "簡單凱因斯**投資乘數k＝1/(1−MPC)**。題給MPC＝0.8，故k＝1/(0.2)＝**5**。當MPC增加，邊際儲蓄傾向1−MPC變小、乘數分母變小，因此乘數越大；選D。此結論以簡單模型且0＜MPC＜1、價格與供給限制未另外考慮為前提。",
+    "elementarySummary": "大家每多賺100元就花80元，再賺的錢還會繼續流出去消費，錢一圈圈轉，產生放大效果。花得越多、存得越少，放大倍數通常越大。0.8代入算得5倍。",
+    "memory": "**k＝1/(1−MPC)；MPC越大，乘數越大**。",
+    "concept": "邊際消費傾向MPC＋邊際儲蓄傾向MPS＝1；投資乘數k=1/MPS。",
+    "extension": "反向題：若MPC下降到0.5，乘數變多少？和原本5比較，原因是大家多存少花嗎？",
+    "source": {
+      "originalExam": "115-09-2-41",
+      "originalImagePinnedSha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案與更正說明尚未核實"
+    },
+    "highlightTerms": [
+      "邊際消費傾向MPC",
+      "投資乘數",
+      "k=1/(1−MPC)",
+      "0.8",
+      "5"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A寫乘數1.25，錯把1/(1−0.8)算成1.25，且聲稱MPC下降乘數不變，不合公式。",
+        "elementary": "0.8代進去不是1.25；花錢比例變了，倍數也會變。",
+        "reason": "A寫乘數1.25，錯把1/(1−0.8)算成1.25，且聲稱MPC下降乘數不變，不合公式。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B同樣把乘數錯算1.25，還說MPC越小乘數越大，方向也和1/(1−MPC)相反。",
+        "elementary": "不只算錯，方向也說反。",
+        "reason": "B同樣把乘數錯算1.25，還說MPC越小乘數越大，方向也和1/(1−MPC)相反。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C算乘數5是對的，但說MPC越小乘數越大；分母1−MPC會變大，乘數反而減少。",
+        "elementary": "第一半對，後半把花得少放得更大說反了。",
+        "reason": "C算乘數5是對的，但說MPC越小乘數越大；分母1−MPC會變大，乘數反而減少。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D乘數5正確，而且MPC越大、分母越小，投資乘數越大，兩項都成立。",
+        "elementary": "0.8算5倍；更愛花錢就更容易放大。",
+        "reason": "D乘數5正確，而且MPC越大、分母越小，投資乘數越大，兩項都成立。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "MPC＝0.8",
+        "簡單凱因斯投資乘數模型"
+      ],
+      "formula": "k＝1/(1−MPC)＝1/MPS，MPS＝1−MPC",
+      "formulaPurpose": "以邊際消費傾向求投資乘數及判斷MPC變動方向。",
+      "substitutionAndSteps": [
+        {
+          "formula": "MPS＝1−MPC＝1−0.8＝0.2",
+          "why": "每增加1元所得，0.8元消費，剩下0.2元儲蓄。"
+        },
+        {
+          "formula": "k＝1/MPS＝1/0.2＝5",
+          "why": "將所得循環支出放大效果轉為乘數。"
+        },
+        {
+          "formula": "MPC↑⇒1−MPC↓⇒k↑",
+          "why": "乘數分母縮小，放大效果變大。"
+        },
+        {
+          "formula": "MPC↓⇒1−MPC↑⇒k↓",
+          "why": "反向驗算，排除選項A/B/C的錯誤關係。"
+        },
+        {
+          "formula": "①5；②MPC越大乘數越大⇒D",
+          "why": "核對複合選項的兩個部分。"
+        }
+      ],
+      "result": "投資乘數5；MPC越大乘數越大",
+      "unit": "倍（乘數無單位）",
+      "matchingOption": "D",
+      "commonMistake": "誤用1/MPC算成1.25；或把MPC變化方向看反。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
