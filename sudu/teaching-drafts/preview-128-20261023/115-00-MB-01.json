@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-01",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 1,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-01.webp",
+  "imageSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "逐題打開 GitHub 既有單題 WebP，目視題號、全部條件與四選項；對第1題座標圖逐格檢視；重新以 WebP bytes 計算 SHA256 與固定清單一致",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+    "independentSolveScope": "先原圖獨立解題並留完整計算；未完成第三方教學QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "如圖（一），下列哪一選項的向量與向量 OS − 向量 OT 相等？",
+    "keyConditions": [
+      "O=(0,0)",
+      "S=(0,2)",
+      "T=(3,0)",
+      "B=(-3,2)",
+      "比較起點均為 O 的四個向量"
+    ],
+    "reasoningFromOriginalImage": "向量減法**逐個座標相減**。由圖格可讀出 **OS=(0,2)**、**OT=(3,0)**，故 **OS−OT=(−3,2)**。在 O 出發往左 3、上 2 的是 **OB**，所以選 B。向量是位移，不能只看線段長度。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "(−3,2)",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "向量減法**逐個座標相減**。由圖格可讀出 **OS=(0,2)**、**OT=(3,0)**，故 **OS−OT=(−3,2)**。在 O 出發往左 3、上 2 的是 **OB**，所以選 B。向量是位移，不能只看線段長度。",
+    "elementarySummary": "從 O 先想『往上2格』，再減掉『往右3格』，就像改成『往左3格、往上2格』。圖上到 B 剛好這樣走。",
+    "memory": "**OS−OT=(0,2)−(3,0)=(−3,2)=OB**。",
+    "concept": "向量座標以『終點−起點』求得；向量相等須方向與大小一致，座標分量相同。**負的 x** 向左、**正的 y** 向上。",
+    "extension": "反向思考：若改求 **OT−OS**，得到 **(3,−2)**，此時應改選哪一個選項？（答：OD。）比較減法交換順序會反向。",
+    "source": {
+      "originalExam": "115-00-MB-01",
+      "originalImagePinnedSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀"
+    },
+    "highlightTerms": [
+      "OS−OT",
+      "OB",
+      "(−3,2)"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "OA=(3,2)，x 分量 +3 是往右，但目標 x=−3 要往左，方向不符。",
+        "elementary": "A 在右上方，目標要左上方，不是它。",
+        "reason": "OA=(3,2)，x 分量 +3 是往右，但目標 x=−3 要往左，方向不符。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "OB=(−3,2)，與 OS−OT 計算結果的兩個分量完全相同，為正解。",
+        "elementary": "B 往左3格又往上2格，剛剛好。",
+        "reason": "OB=(−3,2)，與 OS−OT 計算結果的兩個分量完全相同，為正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "OC=(−3,−2)，y 分量是往下2格，但目標要往上2格。",
+        "elementary": "C 走到左下角，方向上下顛倒。",
+        "reason": "OC=(−3,−2)，y 分量是往下2格，但目標要往上2格。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "OD=(3,−2) 是 OT−OS 而不是 OS−OT；向量減法不能顛倒順序。",
+        "elementary": "D 跑去右下方，是把相減順序顛倒了。",
+        "reason": "OD=(3,−2) 是 OT−OS 而不是 OS−OT；向量減法不能顛倒順序。"
+      }
+    },
+    "math": {
+      "formula": "向量 PQ=(xQ−xP, yQ−yP)；向量相減 (u₁,u₂)−(v₁,v₂)=(u₁−v₁,u₂−v₂)",
+      "formulaUsage": "向量加減可描述平面上的位移，物流或地圖中用來表示從 A 點移動至 B 點的方向與距離。",
+      "workedExample": "例：向東4格的向量(4,0)減去向北1格(0,1)，得(4,−1)。",
+      "dailyApplication": "看地圖走位、模擬配送路線或物體位移。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "所有關鍵運算為原題數學式，非金額計算也必須顯示完整考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "圖格原點 O=(0,0)、S=(0,2)、T=(3,0)",
+        "A=(3,2)、B=(−3,2)、C=(−3,−2)、D=(3,−2)"
+      ],
+      "formula": "向量 PQ=(xQ−xP, yQ−yP)；向量相減 (u₁,u₂)−(v₁,v₂)=(u₁−v₁,u₂−v₂)",
+      "formulaPurpose": "向量加減可描述平面上的位移，物流或地圖中用來表示從 A 點移動至 B 點的方向與距離。",
+      "substitutionAndSteps": [
+        {
+          "formula": "OS=S−O=(0−0,2−0)=(0,2)",
+          "why": "向量從 O 指到 S，以終點減起點。"
+        },
+        {
+          "formula": "OT=T−O=(3−0,0−0)=(3,0)",
+          "why": "向量從 O 指到 T，同樣取座標差。"
+        },
+        {
+          "formula": "OS−OT=(0,2)−(3,0)=(0−3,2−0)=(−3,2)",
+          "why": "向量相減，x、y 分量分別相減。"
+        },
+        {
+          "formula": "OB=B−O=(−3−0,2−0)=(−3,2)",
+          "why": "圖上 B 的坐標和計算結果相同，因此就是 OB。"
+        }
+      ],
+      "result": "(−3,2)",
+      "unit": "座標單位（格）",
+      "matchingOption": "B",
+      "commonMistake": "把減法順序倒成 OT−OS 得到 (3,−2)，誤選 D；或只比較向量長度。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
