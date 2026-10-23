@@ -6,6 +6,8 @@ on:
     paths:
       - scripts/audit_preview_teaching_drafts.py
       - scripts/audit_preview_128_release_readiness.py
+      - scripts/audit_preview_128_teaching_candidates.py
+      - tests/test_preview_128_teaching_candidates.py
       - tests/test_preview_128_news_dates.py
       - sudu/teaching-drafts/preview-128-20261023/**
       - sudu/data/approved/webp/**
@@ -29,5 +31,9 @@ jobs:
         run: python scripts/audit_preview_128_release_readiness.py
       - name: Test source-backed news three-year dating rule
         run: python -m unittest discover -s tests -p 'test_preview_128_news_dates.py' -v
+      - name: Synthetic fail-closed individual release certificate regressions
+        run: python -m unittest discover -s tests -p 'test_preview_128_teaching_candidates.py' -v
+      - name: Dry-run per-question teaching release eligibility (no write)
+        run: python scripts/audit_preview_128_teaching_candidates.py
       - name: Check teaching steps JavaScript syntax
         run: node --check sudu/teaching-drafts/preview-128-20261023/solution-steps-128.js
