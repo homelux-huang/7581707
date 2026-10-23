@@ -25,7 +25,7 @@
     "notice": "官方確認說明已核對，按每元邊際效用相等選A；保留AI初解D及預算條件歧義，尚未通過教學裁決。",
     "blindSolveStatus": "IMAGE_REASONING_SAVED_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_QA",
     "conflictWarningRequired": true,
-    "warningText": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "warningText": "警示：官方最終答案 A、商管專二疑義確認說明已核實；原 AI 初解 D 與官方採用的 MU/P 均衡判準不同，且題目未提供總預算，教學 QA 待完成。",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
       "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
@@ -341,6 +341,23 @@
       "imageSha256": "914f28cf23ad62958e9a70e85b6e1cd27bf6b9f9b04849ec8b6f84fe99d6dbef",
       "reviewType": "POST_ANSWER_REVIEW_NOT_BLIND",
       "releaseApproved": false
+    },
+    "conceptSourceVerification20261023": {
+      "status": "TECHNICAL_SOURCES_REVIEWED_TEXTBOOK_AND_FULL_QA_PENDING",
+      "officialAnswer": "A",
+      "officialFinalEvidence": "official-final-evidence-20261023.json",
+      "externalReferenceSources": [
+        {
+          "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+          "scope": "115商管專二官方確認說明PDF，第28題，既有GitHub正式來源核實證據"
+        }
+      ],
+      "verifiedFinding": "A（2,1,2）最後單位MU/P為4/40、5/50、6/60，均0.10，符合官方教學解釋；D（3,3,2）總效用54而A為50是無明示預算之不同推導。A支出250元是計算結果，絕非題幹給定預算；保留原AI初解D。",
+      "originalWarningTextBeforeUpdate": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+      "originalAiAnswerPreserved": true,
+      "fullIndependentTeachingQa": "PENDING",
+      "releaseApproved": false,
+      "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

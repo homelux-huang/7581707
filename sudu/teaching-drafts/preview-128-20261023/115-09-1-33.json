@@ -25,7 +25,7 @@
     "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
     "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
     "conflictWarningRequired": true,
-    "warningText": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "warningText": "警示：官方最終答案 A 已確認；第②敘述將密碼學驗證概括為『資料加解密』，技術上需更精確解釋，尚未通過獨立教學 QA，不可正式發布。",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
       "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
@@ -231,6 +231,27 @@
       "officialAnswerAlreadyVerified": true,
       "remainingBlocker": "教科書用語與技術定義對照尚未解決",
       "releaseApproved": false
+    },
+    "conceptSourceVerification20261023": {
+      "status": "TECHNICAL_SOURCES_REVIEWED_TEXTBOOK_AND_FULL_QA_PENDING",
+      "officialAnswer": "A",
+      "officialFinalEvidence": "official-final-evidence-20261023.json",
+      "externalReferenceSources": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/blockchain",
+          "scope": "NIST區塊鏈定義為分散式、以密碼學簽署與鏈結的交易帳本；不等同所有交易資料都加密後解密"
+        },
+        {
+          "url": "https://developer.bitcoin.org/devguide/transactions.html",
+          "scope": "Bitcoin交易驗證使用簽章和雜湊，不能把摘要還原與保密加解密混稱"
+        }
+      ],
+      "verifiedFinding": "原題①交易難竄改屬典型區塊鏈特性；③中央金資中心、④僅雙方私帳皆錯；官方A包含①②，②字面『資料加解密』不等同單向雜湊/數位簽章。需教材術語釐清而非竄改官方答案。",
+      "originalWarningTextBeforeUpdate": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+      "originalAiAnswerPreserved": true,
+      "fullIndependentTeachingQa": "PENDING",
+      "releaseApproved": false,
+      "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

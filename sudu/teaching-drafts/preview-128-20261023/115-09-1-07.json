@@ -25,7 +25,7 @@
     "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
     "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
     "conflictWarningRequired": true,
-    "warningText": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "warningText": "警示：官方最終答案 B 已確認；本題特別股與財務槓桿定義存在教學爭議，尚未通過獨立教學 QA，不可正式發布。",
     "conceptualIssue": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
@@ -234,6 +234,27 @@
       "officialAnswerAlreadyVerified": true,
       "remainingBlocker": "教科書用語與技術定義對照尚未解決",
       "releaseApproved": false
+    },
+    "conceptSourceVerification20261023": {
+      "status": "TECHNICAL_SOURCES_REVIEWED_TEXTBOOK_AND_FULL_QA_PENDING",
+      "officialAnswer": "B",
+      "officialFinalEvidence": "official-final-evidence-20261023.json",
+      "externalReferenceSources": [
+        {
+          "url": "https://www.tej.com.tw/tejdoc/db-document/tw/wim4.html",
+          "scope": "TEJ說明財務槓桿與債券、特別股等固定財務成本關係；非高職教材定義"
+        },
+        {
+          "url": "https://www.managertoday.com.tw/articles/view/544",
+          "scope": "經理人財務管理文章說明公司債與特別股固定收益證券之槓桿效應；非115高職教科書"
+        }
+      ],
+      "verifiedFinding": "原題問『何者正確』，官方選B，但專業財務理論中固定特別股股利可能放大普通股EPS波動；選項B使用『無法』等絕對語詞。官方B不可修改，也不可將廣義理論簡化為錯誤；尚缺115年指定高職教材版本與命題原則佐證。",
+      "originalWarningTextBeforeUpdate": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+      "originalAiAnswerPreserved": true,
+      "fullIndependentTeachingQa": "PENDING",
+      "releaseApproved": false,
+      "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
