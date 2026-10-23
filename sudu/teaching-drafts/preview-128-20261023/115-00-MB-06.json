@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-06",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 6,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-06.webp",
+  "imageSha256": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題原圖目視）",
+    "method": "直接開啟既有單題 WebP，讀取題幹、符號、度數、三角函數、負號及四個選項，逐檔重新算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "來源 OCR 將四次多項式的負號及常數項合併成『−+x 1』且選項 C/D 負號混字；本題以原始 WebP 確認 f(x)=x⁴−3x³+2x²−x+1 和選項。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "多項式 f(x)=x⁴−3x³+2x²−x+1 除以 (x−1)(x−2) 的餘式為何？",
+    "keyConditions": [
+      "f(x)=x⁴−3x³+2x²−x+1",
+      "除式 g(x)=(x−1)(x−2)"
+    ],
+    "reasoningFromOriginalImage": "除式 **(x−1)(x−2)** 是二次式，餘式必為**一次或常數式**，令 **R(x)=mx+n**。在 x=1、x=2 時，除式為零，故 **R(1)=f(1)=0**、**R(2)=f(2)=−1**。由 m+n=0、2m+n=−1 求得 m=−1、n=1，餘式 **−x+1**，選 D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "R(x)=−x+1",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "除式 **(x−1)(x−2)** 是二次式，餘式必為**一次或常數式**，令 **R(x)=mx+n**。在 x=1、x=2 時，除式為零，故 **R(1)=f(1)=0**、**R(2)=f(2)=−1**。由 m+n=0、2m+n=−1 求得 m=−1、n=1，餘式 **−x+1**，選 D。",
+    "elementarySummary": "把很長的四次算式除掉一個二次的，剩下最多是『某個數乘 x 再加一個數』。讓 x 分別變成1和2，就能抓到剩下的規則，答案是『負x加1』。",
+    "memory": "**R(1)=0、R(2)=−1 → R(x)=−x+1**。",
+    "concept": "多項式除法 **f(x)=Q(x)g(x)+R(x)**，餘式次數小於除式次數。若 g(x)=(x−a)(x−b)，可用 R(a)=f(a)、R(b)=f(b) 決定線性餘式（a≠b）。",
+    "extension": "反向思考：如果除式改成單一的 **x−2**，餘式是常數 **f(2)=−1**；和原題的**一次式**餘式不同。",
+    "source": {
+      "originalExam": "115-00-MB-06",
+      "originalImagePinnedSha256": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材之版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀"
+    },
+    "highlightTerms": [
+      "餘式次數小於除式",
+      "R(1)=f(1)=0",
+      "R(2)=f(2)=−1",
+      "R(x)=−x+1"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "R(x)=x−1 雖在 x=1 時為0，但 R(2)=1，與實際 f(2)=−1 不一致。",
+        "elementary": "放2進去會變1，但題目剩下應該是−1。",
+        "reason": "R(x)=x−1 雖在 x=1 時為0，但 R(2)=1，與實際 f(2)=−1 不一致。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "R(x)=x+1 在 x=1 時得到2，不符合 f(1)=0。",
+        "elementary": "放1進去得2，不是0。",
+        "reason": "R(x)=x+1 在 x=1 時得到2，不符合 f(1)=0。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "R(x)=−x−1 在 x=1 時得到−2，不符合 f(1)=0；也不能只看 x 係數為負就選。",
+        "elementary": "負號雖像，但後面也減1，會錯。",
+        "reason": "R(x)=−x−1 在 x=1 時得到−2，不符合 f(1)=0；也不能只看 x 係數為負就選。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "R(x)=−x+1，R(1)=0、R(2)=−1，兩個必須滿足的餘式條件皆相符，正解。",
+        "elementary": "放1得0，放2得−1，兩個檢查都通過。",
+        "reason": "R(x)=−x+1，R(1)=0、R(2)=−1，兩個必須滿足的餘式條件皆相符，正解。"
+      }
+    },
+    "math": {
+      "formula": "f(x)=g(x)Q(x)+R(x)，deg R<deg g=2 ⇒ R=mx+n；R(1)=f(1)、R(2)=f(2)",
+      "formulaUsage": "用餘式定理與一次式待定係數，比長除法更快找二次除式的餘式。",
+      "workedExample": "例：f(x)=x² 除以 (x−1)(x−2)，餘式 R(1)=1、R(2)=4 ⇒ R=3x−2。",
+      "dailyApplication": "用代入測試多項式公式是否一致；本題是純代數，日常應用可視為 N/A。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "數學非金額運算也必須顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "f(x)=x⁴−3x³+2x²−x+1",
+        "除式 g(x)=(x−1)(x−2)"
+      ],
+      "formula": "f(x)=g(x)Q(x)+R(x)，deg R<deg g=2 ⇒ R=mx+n；R(1)=f(1)、R(2)=f(2)",
+      "formulaPurpose": "用餘式定理與一次式待定係數，比長除法更快找二次除式的餘式。",
+      "substitutionAndSteps": [
+        {
+          "formula": "g(1)=0、g(2)=0，令 R(x)=mx+n",
+          "why": "除式在1與2為零，代入除法恆等式可消去 g(x)Q(x)。"
+        },
+        {
+          "formula": "f(1)=1−3+2−1+1=0 ⇒ m+n=0",
+          "why": "算出餘式在1時的值。"
+        },
+        {
+          "formula": "f(2)=16−24+8−2+1=−1 ⇒ 2m+n=−1",
+          "why": "算出餘式在2時的值。"
+        },
+        {
+          "formula": "(2m+n)−(m+n)=−1−0 ⇒ m=−1",
+          "why": "將聯立兩式相減消去 n。"
+        },
+        {
+          "formula": "n=−m=1 ⇒ R(x)=−x+1",
+          "why": "回代求常數項，寫出完整餘式。"
+        }
+      ],
+      "result": "R(x)=−x+1",
+      "unit": "無單位",
+      "matchingOption": "D",
+      "commonMistake": "只有用 x=1 檢查而未檢查 x=2；或計算 f(2) 的負號錯。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
