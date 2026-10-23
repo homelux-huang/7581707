@@ -55,7 +55,10 @@ def audit(year):
     shared_pending=[s.get("sharedMaterialId") for s in shared if s.get("qaStatus")!="PASS"]
     if shared_pending:report["blockers"].append("shared_material_qa_pending:"+str(len(shared_pending)))
     if inv.get("integrationReady") is not True:report["blockers"].append("inventory_not_release_ready")
-    if len(set((q.get("year"),q.get("paperCode"),q.get("originalQuestionNumber")) for q in qs))!=n:
+    identities=[(q.get("year"),q.get("paperCode"),q.get("originalQuestionNumber")) for q in qs]
+    if any(y is None or not p or number is None for y,p,number in identities):
+        report["blockers"].append("missing_canonical_question_identity")
+    if len(set(identities))!=n:
         report["blockers"].append("duplicate_canonical_question_identity")
     # G0-G6 evidence artifacts are mandatory even when the manifest says ready.
     # File existence is a necessary condition, never sufficient for QA PASS.
