@@ -6,7 +6,7 @@
   "webpGeneratedDrafts": 188,
   "visualQaPass": 6,
   "ocrGapCandidatesGenerated": 20,
-  "ocrTextIndependentlyVerified": 0,
+  "ocrTextIndependentlyVerified": 6,
   "missingFourTextOptions": [
     "106-00-C-01",
     "106-00-C-02",
@@ -146,5 +146,6 @@
     "shaMismatches": 0
   },
   "integrationReady": false,
-  "directVisualQaEvidence106English": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_DIRECT_VISUAL_SHA_20261023.json"
+  "directVisualQaEvidence106English": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_DIRECT_VISUAL_SHA_20261023.json",
+  "textQaPass": 6
 }

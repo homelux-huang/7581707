@@ -1917,12 +1917,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 13,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Clerk: How can I help you?\nCustomer: Yes, this desk lamp was broken when I tried to turn it on at home.\nClerk: ________\nCustomer: Great, thanks for your assistance.",
+      "options": [
+        "Believe it or not, it’s just been bought.",
+        "I’m sorry, but I can replace it for you.",
+        "It seems you’re interested in the house.",
+        "The mechanic will fix your car in no time."
+      ],
       "answer": "B",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -1942,14 +1947,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
@@ -1958,12 +1966,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 14,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Fred: Oops! I left my workbook at home!\nJamie: ________ Ms. Kim reminded us just yesterday about it.\nFred: There isn’t much I can do. It’s too late for me to go back home now.\nJamie: Ms. Kim will be very upset.",
+      "options": [
+        "Salaries have not gone up.",
+        "You are in trouble, my friend.",
+        "He left the bookstore yesterday.",
+        "Consider the assignment done."
+      ],
       "answer": "B",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -1983,14 +1996,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
@@ -1999,12 +2015,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 15,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Zax: What are today’s headlines?\nClaire: Super Junior canceled tomorrow’s concert.\nZax: ________\nClaire: You bet. So many fans like me were very excited about seeing their show.",
+      "options": [
+        "It sounds like you’re not into music.",
+        "How many fans will be attending it?",
+        "Who are the members of the band?",
+        "You must feel terribly disappointed."
+      ],
       "answer": "D",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -2024,14 +2045,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
@@ -2040,12 +2064,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 16,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Dora: Where can I get that novel?\nDavid: I just ordered it online.\nDora: ________\nDavid: Anyone can! It’s so easy to use online bookstores nowadays.",
+      "options": [
+        "I’m amazed you can do that.",
+        "How’s the store’s service quality?",
+        "It’s actually about storytelling.",
+        "The system has a virus, doesn’t it?"
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -2065,14 +2094,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
@@ -2081,12 +2113,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 17,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Jill: When is your monthly test?\nLarry: Next Thursday. Oh, I’m running out of time!\nJill: Relax! There are still five more days to prepare.\nLarry: Easy for you to say. ________\nJill: I have confidence in you.",
+      "options": [
+        "I can’t believe he spoke to you this way.",
+        "I’m not sure if I can be ready by that time.",
+        "But it’s kind of dangerous to run here.",
+        "The monthly treatment takes too long."
+      ],
       "answer": "B",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -2106,14 +2143,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
@@ -2122,12 +2162,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 18,
       "subject": "英文",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "Operator: City Hall. How may I direct your call?\nCitizen: ________\nOperator: And the reason for your call?\nCitizen: Well, the park in our neighborhood looks terrible. I mean, there’s litter everywhere and nobody has picked it up.\nOperator: I see. One moment please.",
+      "options": [
+        "I’d like to speak to Environmental Services, please.",
+        "Yes, you may hand the problem to our department.",
+        "Read it before you hand it in to the director, please.",
+        "Please turn right at the next corner to find the center."
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -2147,14 +2192,17 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "0ee00ea745dafbabefc93bef9cf86ced58c7116b51b51d1666a63e26b7852cc4"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json"
     },
     {
       "schemaVersion": 1,
