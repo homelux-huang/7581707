@@ -39,7 +39,8 @@ jobs:
       - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.51.1
-          npx playwright install --with-deps chromium
+          npx playwright install --only-shell chromium
+          node -e "const p=require('playwright'); p.chromium.launch({headless:true,args:['--no-sandbox']}).then(b=>b.close())"
       - name: Build single-question WebPs and test UI
         run: |
           python -m pip install -q pillow
