@@ -313,6 +313,22 @@
       "studentReleaseApproved": false,
       "releaseApproved": false,
       "date": "2026-10-23"
+    },
+    "legacyCandidateTextRisk20261023": {
+      "status": "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE",
+      "legacyCorpus": "sudu/data/years/115.json",
+      "legacyCorpusGitBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+      "legacyQuestionId": "115-00-MB-24",
+      "riskType": "BROKEN_COMPOUND_LOG_FRACTION_LAYOUT",
+      "exactObservedProblem": "候選題幹把A=110/r及B=log_10 3 / log_10(1+r/100)跨行分裂並含無法正常呈現的特殊字碼。",
+      "mitigation": "必須以單題WebP顯示兩個分式和無條件進位條件；文字公式須對照原式再核准。",
+      "originalWebpPinnedSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+      "originalImageAlreadyQaPassed": true,
+      "textCandidateReExtractedOrReOcrThisRound": false,
+      "formalTextQaPass": false,
+      "studentReleaseApproved": false,
+      "deploy": false,
+      "report": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -1,3 +1,7 @@
+## 2026-10-23｜數學B20–25辨識現有文字候選污染，禁止未核文字直入學生UI
+- 與正式main同源 `sudu/data/years/115.json` 已有數學B20/21/22/25選項混入圖號頁尾或√符號失真，23題表格扁平、24題分式斷裂。已逐題在原教學JSON加入 `qa.legacyCandidateTextRisk20261023`，來源與原圖路徑可追溯，詳 `MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md`；未重新OCR或裁圖。
+- **正式文字版未核准前不得把候選原文字直接替代既有單題WebP**；原圖128/128與官方128/128既有證據不因污染候選而撤銷。這是文字QA風險，不代表原題不合格；教學完整QA與新增128發布仍0。
+
 ## 2026-10-23｜數學B25題已核官方證據的現行說明同步（保留歷史、不發布）
 - 已對 MathB01–25 的現行 `answerComparison.notice` / `teaching.source.officialIssueExplanation` 修正舊『答案待官方回讀』現在式。第02/03/04/09前次已處理，其餘21題本輪補齊，所有舊文字保留於個別 `qa.*` provenance；首次 `solution.officialFinalStatus` 不覆寫。見 `MATH_B_25_OFFICIAL_STATUS_NOTICE_RECONCILIATION_20261023.md`。
 - 此為**現在式文案與既有官方證據對齊**，非新PDF下載／官方核驗、非完整教學／UI QA，也不修改任何學生發布旗標。新只讀CI逐題檢查歷史保留與不誤稱尚未取得官方。

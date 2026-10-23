@@ -291,6 +291,22 @@
       "studentReleaseApproved": false,
       "releaseApproved": false,
       "date": "2026-10-23"
+    },
+    "legacyCandidateTextRisk20261023": {
+      "status": "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE",
+      "legacyCorpus": "sudu/data/years/115.json",
+      "legacyCorpusGitBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+      "legacyQuestionId": "115-00-MB-22",
+      "riskType": "OPTION_PAGE_HEADER_AND_CARD_DIAGRAM_SPILL",
+      "exactObservedProblem": "原文字候選A/B/C帶卡片「有／無」的圖中文字，D串入圖號、下一頁「第8頁／共8頁／公告試題僅供參考」。候選仍以原圖為準，不可合併另一題。",
+      "mitigation": "顯示單題WebP及五卡固定順序；選項32/31/16/5仍需從原圖核對。",
+      "originalWebpPinnedSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+      "originalImageAlreadyQaPassed": true,
+      "textCandidateReExtractedOrReOcrThisRound": false,
+      "formalTextQaPass": false,
+      "studentReleaseApproved": false,
+      "deploy": false,
+      "report": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

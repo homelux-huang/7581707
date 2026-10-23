@@ -314,6 +314,22 @@
       "studentReleaseApproved": false,
       "releaseApproved": false,
       "date": "2026-10-23"
+    },
+    "legacyCandidateTextRisk20261023": {
+      "status": "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE",
+      "legacyCorpus": "sudu/data/years/115.json",
+      "legacyCorpusGitBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+      "legacyQuestionId": "115-00-MB-23",
+      "riskType": "TABULAR_PRICE_LAYOUT_FLATTENED",
+      "exactObservedProblem": "原題行程I/II『原價／優惠』表格在候選文字中被展平成多行，雖四個金額選項乾淨，表格關係不得靠欄位拼接猜補。",
+      "mitigation": "必須顯示單題WebP中的完整表（二），不用未獨立核對的扁平文字替代表格。",
+      "originalWebpPinnedSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+      "originalImageAlreadyQaPassed": true,
+      "textCandidateReExtractedOrReOcrThisRound": false,
+      "formalTextQaPass": false,
+      "studentReleaseApproved": false,
+      "deploy": false,
+      "report": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
