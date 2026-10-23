@@ -98,15 +98,15 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
        throw Error('WebP was not decoded: '+i.getAttribute('src'));
       await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
      });
-     const geometry=await img.evaluate(i=>{
+     const imageGeometry=await img.evaluate(i=>{
       const r=i.getBoundingClientRect();
       return {renderedWidth:r.width,renderedHeight:r.height,
        naturalWidth:i.naturalWidth,naturalHeight:i.naturalHeight,src:i.getAttribute('src')};
      });
-     const ratio=Math.abs(geometry.renderedWidth/geometry.renderedHeight-
-                          geometry.naturalWidth/geometry.naturalHeight);
+     const ratio=Math.abs(imageGeometry.renderedWidth/imageGeometry.renderedHeight-
+                          imageGeometry.naturalWidth/imageGeometry.naturalHeight);
      assert(Number.isFinite(ratio)&&ratio<0.03,
-      'undistorted decoded image '+q.subject+q.id+' '+JSON.stringify({ratio,geometry}));
+      'undistorted decoded image '+q.subject+q.id+' '+JSON.stringify({ratio,imageGeometry}));
      await noOverflow('question overflow '+width+' '+q.subject+q.id);
      const colors=await page.evaluate(()=>['#questionCard','#answerCard'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));
      assert.notEqual(colors[0],colors[1]);
