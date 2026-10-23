@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-21",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 21,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-21.webp",
+  "imageSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視）",
+    "method": "開啟GitHub原始單題WebP，確認題號、全部A-D選項、原圖圖表／正負號／金額／條件完整；以原始WebP bytes重算 SHA256 比對凍結清單，僅以OCR輔助，不重擷取。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先依原圖自行求解，再讀候選答案；仍未直接核實官方最終PDF和更正。",
+    "blindSolveStatus": "IMAGE_REASONING_SAVED_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_QA",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "accounting-or-economics-calculation",
+    "keyConditions": [
+      "X2/12/1發現X1折舊費用多提$3,000",
+      "前期錯誤",
+      "不考慮所得稅",
+      "問X2發現錯誤時更正分錄"
+    ],
+    "reasoningFromOriginalImage": "**前期錯誤**不是本期折舊。X1折舊費用多提3,000元，表示前期費用高估、權益低估，同時**累計折舊高估3,000**。X2發現時須**借記累計折舊—機器設備3,000**（減少抵減資產），**貸記追溯適用及追溯重編之影響數3,000**（補回前期權益影響），而不是沖回本期折舊費用，因此選C。此為題目簡化且不考慮所得稅的分錄。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_AND_CORRECTION"
+  },
+  "teaching": {
+    "teacherSummary": "**前期錯誤**不是本期折舊。X1折舊費用多提3,000元，表示前期費用高估、權益低估，同時**累計折舊高估3,000**。X2發現時須**借記累計折舊—機器設備3,000**（減少抵減資產），**貸記追溯適用及追溯重編之影響數3,000**（補回前期權益影響），而不是沖回本期折舊費用，因此選C。此為題目簡化且不考慮所得稅的分錄。",
+    "elementarySummary": "去年機器算太多折舊，就像去年把設備『用壞的錢』寫太多了。今年發現錯誤，要把設備累計多扣掉的3,000元還回來，並修正以前年度的影響，不是把今年花費改少。",
+    "memory": "**前期折舊多提→借累計折舊、貸追溯重編影響數**。",
+    "concept": "更正前期重大差錯原則上涉及追溯重編／前期權益調整；題目未考所得稅且選項明示『追溯適用及追溯重編之影響數』科目。",
+    "extension": "反向題：如果今年X2本身的折舊費用多計3,000而非X1前期錯誤，分錄是否改為借累計折舊、貸本期折舊費用？為何會不同？",
+    "source": {
+      "originalExam": "115-09-2-21",
+      "originalImagePinnedSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正說明待核對"
+    },
+    "highlightTerms": [
+      "X1",
+      "X2",
+      "折舊費用多提",
+      "累計折舊",
+      "追溯適用及追溯重編之影響數",
+      "借記",
+      "貸記"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A借累計折舊方向正確，但貸折舊費用是把金額沖減**X2當期費用**；錯誤發生在X1前期，不能如此影響當期費用。",
+        "elementary": "左邊是改對了，但把去年錯誤算進今年花費不對。",
+        "reason": "A借累計折舊方向正確，但貸折舊費用是把金額沖減**X2當期費用**；錯誤發生在X1前期，不能如此影響當期費用。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B借折舊費用、貸累計折舊會使本期折舊費用及累計折舊更高，方向與『前期多提』完全相反。",
+        "elementary": "本來折舊算太多，這個選項反而又多加一次。",
+        "reason": "B借折舊費用、貸累計折舊會使本期折舊費用及累計折舊更高，方向與『前期多提』完全相反。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C借累計折舊減少過高餘額，貸前期追溯重編影響數修正以前年度權益，對應X1錯誤在X2發現的情況。",
+        "elementary": "把以前多扣的折舊拿掉，再把去年影響修正回去。",
+        "reason": "C借累計折舊減少過高餘額，貸前期追溯重編影響數修正以前年度權益，對應X1錯誤在X2發現的情況。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D借前期調整數、貸累計折舊，會增加本來已過高的累計折舊且減少前期權益，方向與需要修正相反。",
+        "elementary": "折舊已多算，這組卻讓它更多，方向錯。",
+        "reason": "D借前期調整數、貸累計折舊，會增加本來已過高的累計折舊且減少前期權益，方向與需要修正相反。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "X1年折舊費用高估$3,000",
+        "X2年12月1日始發現",
+        "不考慮所得稅"
+      ],
+      "formula": "前期累計折舊高估額＝前期折舊費用多提額＝$3,000",
+      "formulaPurpose": "判斷錯誤造成抵減資產科目及前期盈餘的高低，決定更正分錄的借貸方向。",
+      "substitutionAndSteps": [
+        {
+          "formula": "X1折舊費用多提＝$3,000",
+          "why": "題幹給定前期折舊高估金額。"
+        },
+        {
+          "formula": "X1累計折舊高估＝+$3,000",
+          "why": "多計折舊費用時同步多貸累計折舊。"
+        },
+        {
+          "formula": "X1前期損益與權益低估＝$3,000",
+          "why": "費用高估使以前年度盈餘偏低（題目不考所得稅）。"
+        },
+        {
+          "formula": "X2更正借：累計折舊—機器設備 $3,000",
+          "why": "借記抵減資產科目可減少原本過高的累計折舊。"
+        },
+        {
+          "formula": "X2更正貸：追溯適用及追溯重編之影響數 $3,000",
+          "why": "因錯誤屬X1前期，調整以前年度權益影響，而非沖本期費用。"
+        },
+        {
+          "formula": "借方$3,000＝貸方$3,000；對應選項C",
+          "why": "更正分錄借貸平衡。"
+        }
+      ],
+      "result": "借累計折舊$3,000／貸追溯適用及追溯重編之影響數$3,000",
+      "unit": "新臺幣元",
+      "matchingOption": "C",
+      "commonMistake": "把X1前期錯誤誤當X2當期折舊費用回轉，選A；或把方向顛倒選D。",
+      "display": true
+    },
+    "accounting": {
+      "accountTitles": [
+        "累計折舊—機器設備",
+        "追溯適用及追溯重編之影響數"
+      ],
+      "entries": [
+        {
+          "debit": "累計折舊—機器設備",
+          "debitAmount": 3000,
+          "credit": "追溯適用及追溯重編之影響數",
+          "creditAmount": 3000
+        }
+      ],
+      "ruleVersion": "適用財會準則及彰化高商教材版本待核對；不憑印象聲稱現行法條。"
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
