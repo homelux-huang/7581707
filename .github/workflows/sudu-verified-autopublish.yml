@@ -62,6 +62,10 @@ jobs:
           TREE_115="$(git -C _source_qa rev-parse 'HEAD:sudu/data/processed/115')"
           SIGNATURE="$(printf '%s\n%s\n' "$TREE_114" "$TREE_115" | sha256sum | cut -d' ' -f1)"
           OLD="$(python -c 'import json;print(json.load(open("sudu/data/approved/progress.json")).get("provenance",{}).get("sourceTreeSignature",""))')"
+          # A stricter admission importer MUST recheck every previously
+          # approved question, even with identical QA source subtrees.
+          PUBLISHER_SHA="$(sha256sum scripts/sudu_verified_publish.py | cut -d' ' -f1)"
+          OLD_PUBLISHER_SHA="$(python -c 'import json;print(json.load(open("sudu/data/approved/progress.json")).get("provenance",{}).get("publisherCodeSha256",""))')"
           echo "signature=$SIGNATURE" >> "$GITHUB_OUTPUT"
           echo "commit=$(git -C _source_qa rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           # Re-run the admission importer after schema upgrades, even when
@@ -84,7 +88,7 @@ jobs:
           print("yes" if ready else "no")
           PY
           )"
-          if [ "$SIGNATURE" = "$OLD" ] && [ "$HAS_PREVIEW" = "yes" ]; then
+          if [ "$SIGNATURE" = "$OLD" ] && [ "$PUBLISHER_SHA" = "$OLD_PUBLISHER_SHA" ] && [ "$HAS_PREVIEW" = "yes" ]; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
             echo "No relevant source-data change"
           else

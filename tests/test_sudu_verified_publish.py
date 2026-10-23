@@ -102,6 +102,14 @@ class VerifiedPublicationTests(unittest.TestCase):
             item["visualReviewEvidence"]["referenceSha256"]="0"*64
             self.assertFalse(v.visual_certificate(root,item,record["questionId"]))
 
+    def test_importer_sha_revokes_stale_schema_snapshots(self):
+        import hashlib
+        provenance=v.publication_provenance("f"*40, "e"*64)
+        self.assertEqual(provenance["commit"], "f"*40)
+        self.assertEqual(provenance["sourceTreeSignature"], "e"*64)
+        self.assertEqual(provenance["publisherCodeSha256"],
+                         hashlib.sha256(Path(v.__file__).read_bytes()).hexdigest())
+
     def test_zero_does_not_mean_year_complete(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
