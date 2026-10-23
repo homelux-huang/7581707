@@ -213,6 +213,9 @@ button,select,.nav-field,.home-choice{word-break:keep-all}
 body.home-mode .nav-handle,body.home-mode #readingShortcuts{display:none!important}
 body.qa-image-mode.study-mode #progressShell,body.qa-image-mode.study-mode #navHandle{display:grid}
 body.qa-image-mode.study-mode #progressShell{display:block}
+/* Keep the trigger under the cursor during a hover-open animation. A click pins
+   the drawer open, avoiding repeated flip-flop while the handle moves. */
+body.study-mode.nav-peek:not(.nav-open) .nav-handle{top:0!important}
 @media(max-width:720px){.progress-shell{max-height:65dvh}.nav-row .review-head .badge{right:-3px;top:-5px;margin:0}}
 
 </style>
@@ -736,7 +739,10 @@ $('themeBtn').onclick=()=>{
  save();syncHeights();
 };
 $('navToggle').onclick=toggleQuestionNav;
-$('navHandle').onclick=toggleQuestionNav;
+$('navHandle').onclick=()=>{
+ if(document.body.classList.contains('nav-open'))collapseQuestionNav();
+ else openQuestionNav('open');
+};
 $('navHandle').addEventListener('mouseenter',()=>{
  if(matchMedia('(hover:hover) and (pointer:fine)').matches)openQuestionNav('peek');
 });
