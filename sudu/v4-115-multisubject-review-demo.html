@@ -350,10 +350,13 @@ function optionReason(q,L){
  return '此選項不符合題幹條件。請用「'+q.memory+'」反向檢查。';
 }
 function optionSubjectEntries(q,L){
+ // Correct option must not repeat any subject-guide fields. Wrong options keep
+ // their individual vocabulary, rule, formula, and why-wrong teaching details.
+ if(L===q.answer)return [];
  const C=window.DEMO_LEARNING_CONFIG||{};
  if(q.subject==='英文'){
-  const m=(C.englishOptionMeta||{})[q.id+'|'+L]; const base=m?[['中文翻譯',m[0]],['發音',m[1]]].filter(x=>hasStudyValue(x[1])):[];
-  return L===q.answer?base.concat(subjectEntries(q).filter(x=>!['中文翻譯','發音','考題計算式'].includes(x[0]))):base;
+  const m=(C.englishOptionMeta||{})[q.id+'|'+L];
+  return m?[['中文翻譯',m[0]],['發音',m[1]]].filter(x=>hasStudyValue(x[1])):[];
  }
  const prefer={
   '國文':['讀音','文本出處','相關字詞'],
@@ -363,7 +366,7 @@ function optionSubjectEntries(q,L){
   '商業概論':['法規','原理','邏輯'],
   '數位科技':[]
  }[q.subject]||[];
- const all=subjectEntries(q).filter(x=>x[0]!=='考題計算式'); return L===q.answer?all:all.filter(x=>prefer.includes(x[0]));
+ return subjectEntries(q).filter(x=>x[0]!=='考題計算式'&&prefer.includes(x[0]));
 }
 function renderOptionDetail(q,L){
  const entries=optionSubjectEntries(q,L);
@@ -425,8 +428,12 @@ function guideEntries(q){
  // A calculation is always first, and absent conceptual calculations stay hidden.
  const extra=subjectEntries(q);
  const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
+ // English: move the vocabulary/news items from the correct option into the
+ // TOP of the subject guide, preserving their exact content and order.
+ const englishTop=['中文翻譯','發音','同意相關單字','反意相關單字','新聞時事例句','新聞時事中文翻譯'];
+ const firstEnglish=q.subject==='英文'?englishTop.flatMap(name=>extra.filter(([k])=>k===name)):[];
  const proposed=[...extra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
-                 ...common,...extra.filter(x=>x[0]!=='考題計算式')];
+                 ...firstEnglish,...common,...extra.filter(x=>x[0]!=='考題計算式'&&!(q.subject==='英文'&&englishTop.includes(x[0])))];
  const entries=[],positions=new Map(),contents=new Set();
  for(const [rawTitle,value] of proposed){
   const title=rawTitle==='文本出處'?'出處':rawTitle;
