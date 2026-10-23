@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-15",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 15,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-15.webp",
+  "imageSha256": "ec944c9633cb20dc0096d2c8e606f78fb097a8de274fe5517401d4efef24e03e",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題看原圖）",
+    "method": "目視原始單題 WebP，核對題號、對話前後句、A-D 各選項；確認無鄰題裁切或共用材料遺漏；對原圖 bytes 重算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有 OCR 候選選項 D 後混入下一頁頁首頁尾與頁碼；WebP 原圖 D 僅為 Why did you bring that with you?，不覆寫來源。"
+    ]
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先閱讀原圖並推論答案，再讀現有 OCR 候選資料；原官方網站 2026-05-08 最終確認公告可查，但英文科最終 PDF 與疑義確認說明仍待直接回讀，不能當完整驗收。",
+    "independentSolveScope": "本輪獨立看圖解答，非獨立第三方教學 QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Peter: Gosh. I left my bottled water on my bike. Rose: For the whole afternoon? Then don't drink it. It's hot outside. The sun may have heated it up. Peter: ____ Rose: Chemicals from plastics may have got into the water. It's not good for your health. Peter: I didn't know that!",
+    "keyConditions": [
+      "Then don't drink it",
+      "The sun may have heated it up",
+      "Chemicals from plastics may have got into the water"
+    ],
+    "reasoningFromOriginalImage": "Rose 提醒 Peter 不要喝被太陽曬熱的瓶裝水，Peter 追問『這樣哪裡有問題？』，Rose 才解釋她認為可能有塑膠相關物質進水的擔憂，故 A。句中 may have + 過去分詞表推測，不可說已證實這瓶水被污染。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**後一句是前一句的原因解釋**。Rose 先說 **don't drink it**，Peter 理應問 **What's wrong with that?（這有什麼不妥？）**，Rose 才回應她的健康疑慮。英文 **may have + p.p.** 是對過去事件的**可能性推測**，題目並未提供這瓶水實際受污染的檢測證據。",
+    "elementarySummary": "Rose 說『瓶裝水曬熱了，先別喝。』Peter 問『為什麼？這樣哪裡有問題？』Rose 才說她擔心瓶子裡的物質可能跑進水裡。這是對話人物的擔心，不代表每瓶曬過的水都一定出問題。",
+    "memory": "**Don't drink it → What's wrong with that? → 解釋原因**。",
+    "concept": "**What's wrong with ...?** 用來問『……有什麼問題？』；**may have heated / may have got into** 是推測過去可能發生的事，不是百分之百確認。聽力／閱讀選答案依對話證據，避免擴大成健康定論。",
+    "extension": "反向思考：若 Rose 下一句改成『At about six this evening』，Peter 才可能問 **When's the sun going down?**；若問健康疑慮才會接化學物質的說明。",
+    "source": {
+      "originalExam": "115-00-E-15",
+      "originalImagePinnedSha256": "ec944c9633cb20dc0096d2c8e606f78fb097a8de274fe5517401d4efef24e03e",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 公告確認標準答案；本題答案仍未直接對正式 PDF 核實",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "What's wrong with that?",
+      "don't drink it",
+      "may have",
+      "Chemicals from plastics"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**What's wrong with that?** 問『那樣有什麼問題？』，剛好引出 Rose 對瓶裝水受熱後可能有風險的說明。",
+        "elementary": "問『怎麼了？為什麼不能喝？』，朋友才會解釋。",
+        "reason": "**What's wrong with that?** 問『那樣有什麼問題？』，剛好引出 Rose 對瓶裝水受熱後可能有風險的說明。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Where did I leave my bike?** 問腳踏車放哪；Peter 已說水留在腳踏車上，Rose 回答的是水的健康疑慮而非停車地點。",
+        "elementary": "問車子在哪，別人卻講水能不能喝，不對題。",
+        "reason": "**Where did I leave my bike?** 問腳踏車放哪；Peter 已說水留在腳踏車上，Rose 回答的是水的健康疑慮而非停車地點。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**When's the sun going down?** 問太陽何時下山，應答傍晚時間，Rose 卻說可能的水質疑慮。",
+        "elementary": "問幾點日落，不該答塑膠和水。",
+        "reason": "**When's the sun going down?** 問太陽何時下山，應答傍晚時間，Rose 卻說可能的水質疑慮。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**Why did you bring that with you?** 問對方為何帶東西來；本段是 Peter 留瓶裝水在車上，不是在問 Rose 攜帶物品的原因。",
+        "elementary": "Peter 自己的水忘在車上，不是問 Rose 帶什麼來。",
+        "reason": "**Why did you bring that with you?** 問對方為何帶東西來；本段是 Peter 留瓶裝水在車上，不是在問 Rose 攜帶物品的原因。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Peter：哎呀，我把瓶裝水留在腳踏車上了。Rose：留了整個下午？那先別喝，外面很熱，太陽可能已把水曬熱。Peter：這有什麼問題嗎？Rose：她擔心水瓶塑膠的某些物質可能進到水裡，對健康不太好。Peter：原來如此，我不知道耶！",
+      "testedWord": "What's wrong with that",
+      "answerWord": "What's wrong with that",
+      "pronunciationIPA": "/wʌts rɔːŋ wɪð ðæt/",
+      "optionMeaningZh": {
+        "A": "那有什麼問題嗎？",
+        "B": "我把腳踏車停在哪裡？",
+        "C": "太陽何時下山？",
+        "D": "你為什麼把那個帶來？"
+      },
+      "synonyms": {
+        "初級": [
+          "What's the problem?（有什麼問題？）"
+        ],
+        "中級": [
+          "Why is that a problem?（為什麼那有問題？）"
+        ],
+        "高級": [
+          "What is the issue with that?（那有何疑慮？）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "That's fine.（沒問題；對比表達）"
+        ],
+        "中級": [
+          "Nothing is wrong.（沒什麼問題；對比表達）"
+        ],
+        "高級": [
+          "N/A（整句問句沒有固定字典反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "water（水）"
+        ],
+        "中級": [
+          "bottled water（瓶裝水）"
+        ],
+        "高級": [
+          "contamination（污染；並非證實已發生）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義句或相關詞未必在每個語境可直接互換；N/A 不填造反義字。",
+      "exampleEnglish": "What's wrong with leaving the bottle in the sun?",
+      "exampleChinese": "把瓶子放在太陽下有什麼不妥嗎？",
+      "exampleHighlightedSurfaceForm": "What's wrong with",
+      "exampleType": "自行撰寫的雙語教學例句，非新聞",
+      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
