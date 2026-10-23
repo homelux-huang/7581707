@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-23",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 23,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-23.webp",
+  "imageSha256": "b79e98edba696dac9c399ca813e9dcbbda515180f28fb388528018579456d18f",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+      "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖與共用文章實際目視）",
+    "method": "同時目視完整共用文章 WebP 與本題四選項單題 WebP，逐張核對 SHA256、句子上下文、題號與 A-D。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先讀共用文章與單題選項做出獨立解答，之後比對已有候選資料；2026-05-08 官方最終答案公告已見，但英文答案 PDF 與疑義確認說明未直接回讀，本題仍待官方最終核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "Lin's job is to ensure reliable delivery of oil to all ports in Taiwan, ____ the weather is terrible.",
+    "keyConditions": [
+      "ensure reliable delivery of oil",
+      "weather is terrible",
+      "despite difficulties"
+    ],
+    "reasoningFromOriginalImage": "原文表示即使天氣惡劣，也仍須確保送油。even when 帶出實際情境下的讓步條件；其餘 just where 強調位置、or else 表否則、so that 表目的，都不符合。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "前半句 **ensure reliable delivery**（確保可靠運送），後半句 **the weather is terrible**（天氣很差），兩者呈**讓步／逆境仍要執行**關係，故用 **even when（即使在……時）**。**so that** 是為了達成某目標，不可能把壞天氣當作送油的目的。",
+    "elementarySummary": "海上天氣很糟，船長還是要努力安全送油。『**即使**天氣很差』的『即使』就是 **even when**。",
+    "memory": "**still do a job + bad weather → even when**。",
+    "concept": "**even when + 子句** 表即使在某情況發生時；**even if** 較偏假設，兩者不能所有語境都直接互換。**so that** 表目的，**or else** 表否則。",
+    "extension": "反向思考：如果句子改成『Wear a helmet ___ you can stay safe』，就要用目的連接詞 **so that**，不能用 even when。",
+    "source": {
+      "originalExam": "115-00-E-23",
+      "originalImagePinnedSha256": "b79e98edba696dac9c399ca813e9dcbbda515180f28fb388528018579456d18f",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+          "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待核實 PDF／疑義確認說明",
+      "textbook": "彰化高商英文教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "海事新聞背景與人數依原試題文章照錄；未驗證這些數字為2026最新統計。"
+    },
+    "highlightTerms": [
+      "even when",
+      "reliable delivery",
+      "weather is terrible"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**even when** 導入惡劣天氣的讓步情境，與仍要確保送油的責任直接符合，為正解。",
+        "elementary": "就算天氣不好還是要完成任務。",
+        "reason": "**even when** 導入惡劣天氣的讓步情境，與仍要確保送油的責任直接符合，為正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**just where** 指正好在某地方；後面的 the weather is terrible 是情況而非地點，不能自然接。",
+        "elementary": "不是問在哪裡，而是在說天氣不好。",
+        "reason": "**just where** 指正好在某地方；後面的 the weather is terrible 是情況而非地點，不能自然接。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**or else** 通常表示『不然／否則』，如 hurry up, or else you'll be late；此處不是警告後果，而是即使壞天氣仍送油。",
+        "elementary": "不是『不然會怎樣』，是『即使很難也去做』。",
+        "reason": "**or else** 通常表示『不然／否則』，如 hurry up, or else you'll be late；此處不是警告後果，而是即使壞天氣仍送油。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**so that** 表目的，寫成 so that the weather is terrible 變成『為了讓天氣變差』，顯然不是船長目的。",
+        "elementary": "船長不是為了讓天氣變壞才送油。",
+        "reason": "**so that** 表目的，寫成 so that the weather is terrible 變成『為了讓天氣變差』，顯然不是船長目的。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "林船長要確保石油可靠地運抵臺灣各港口，即使天氣很差也一樣。",
+      "passageTranslationZh": "5月18日是國際海事婦女日，肯定女性在海上運輸業的重要性。2025年的主題是『女性的海洋機會』。文章提到臺灣女性航海人員占比僅4%；在260位女性航海人員之中，許多人證明航海可成為有成就的職業。黃昭玲曾任船長，文章稱她是臺灣首位且當時唯一的女性引水人；她引導船舶安全進出港口，工作艱鉅，有時要在大浪中攀爬移動的船舶。另一位先驅林嘉玲是臺灣首位女性油輪船長，即使天候很差，也要確保石油可靠地送達各港口。兩人職涯辛苦，女性航海員仍面對船上設施不足等挑戰。海運業努力建立性別友善職場，改善女性就業。文中並指出，臺灣女性船長在2024年為22人，高於約十年前的6人。此處數字皆為題幹資訊，未額外驗證最新統計。",
+      "testedWord": "even when",
+      "answerWord": "even when",
+      "pronunciationIPA": "/ˈiːvən wen/",
+      "optionMeaningZh": {
+        "A": "即使在……的時候",
+        "B": "正好在……的地方",
+        "C": "否則",
+        "D": "為了使……"
+      },
+      "synonyms": {
+        "初級": [
+          "even if（即使；較偏假設，不能無條件互換）"
+        ],
+        "中級": [
+          "although（雖然；句構要改寫）"
+        ],
+        "高級": [
+          "even under circumstances in which（即使處於……的情況；書面改寫）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "only when（只有當……時；邏輯對照）"
+        ],
+        "中級": [
+          "unless（除非；不是直接反義）"
+        ],
+        "高級": [
+          "N/A（讓步連接語通常沒有單一反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "weather（天氣）"
+        ],
+        "中級": [
+          "delivery（運送）"
+        ],
+        "高級": [
+          "concession（讓步關係）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義與對比詞未必能直接替換；N/A 代表不亂湊反義。",
+      "exampleEnglish": "The rescue team works even when the weather is bad.",
+      "exampleChinese": "即使天氣很差，救援隊仍然工作。",
+      "exampleHighlightedSurfaceForm": "even when",
+      "exampleType": "自編非新聞教學例句",
+      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
