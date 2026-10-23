@@ -163,7 +163,30 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "blockingReason": null,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_CONCEPTUAL_RECHECK_NOT_BLIND",
+      "originalImageSha256ActuallyCalculated": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+      "originalImageMatchesManifest": true,
+      "questionOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "conceptReviewFinding": "被動式RFID標籤可由讀取器電磁場取能，不能泛稱Tag耗電量大；C為錯誤敘述。NFC付款、eTag和4G比ZigBee傳距情境分別檢視。",
+      "allOptionDualLayerIndependentQA": "PENDING",
+      "officialFinalPdfRedownloaded": false,
+      "officialCorrectionsVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "BIZ_TECH_ACCOUNTING_5_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-1",
+      "printedAnswer": "C",
+      "archivedWebp": "data/original/115/09-1-answers/p001-b492e931f1-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "58b27b8b03e3a9a7fd7ed0edd9fcab916e51fa98d01c0509f74c38e2de4b37c9",
+      "originalPdfShaRecordedNotRedownloaded": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

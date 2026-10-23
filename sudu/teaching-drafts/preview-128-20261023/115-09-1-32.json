@@ -158,7 +158,30 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "blockingReason": null,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_CONCEPTUAL_RECHECK_NOT_BLIND",
+      "originalImageSha256ActuallyCalculated": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
+      "originalImageMatchesManifest": true,
+      "questionOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "conceptReviewFinding": "需求為跨裝置共同查看與即時編輯，雲端硬碟共用權限與連結比郵件附件、截圖及藍牙更合題意，C。",
+      "allOptionDualLayerIndependentQA": "PENDING",
+      "officialFinalPdfRedownloaded": false,
+      "officialCorrectionsVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "BIZ_TECH_ACCOUNTING_5_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-1",
+      "printedAnswer": "C",
+      "archivedWebp": "data/original/115/09-1-answers/p001-b492e931f1-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "58b27b8b03e3a9a7fd7ed0edd9fcab916e51fa98d01c0509f74c38e2de4b37c9",
+      "originalPdfShaRecordedNotRedownloaded": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

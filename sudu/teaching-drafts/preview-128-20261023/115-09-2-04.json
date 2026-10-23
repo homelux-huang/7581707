@@ -170,7 +170,30 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_CONCEPTUAL_RECHECK_NOT_BLIND",
+      "originalImageSha256ActuallyCalculated": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
+      "originalImageMatchesManifest": true,
+      "questionOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "conceptReviewFinding": "過帳時將日記簿頁碼記入分類帳『日頁』，分類帳頁碼回填日記簿『類頁』，因此②正確，B。",
+      "allOptionDualLayerIndependentQA": "PENDING",
+      "officialFinalPdfRedownloaded": false,
+      "officialCorrectionsVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "BIZ_TECH_ACCOUNTING_5_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-2",
+      "printedAnswer": "B",
+      "archivedWebp": "data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "originalPdfShaRecordedNotRedownloaded": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

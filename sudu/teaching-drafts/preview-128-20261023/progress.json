@@ -1341,7 +1341,16 @@
       "image": "data/approved/webp/115/115-09-1-32.webp",
       "imageSha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
+        "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+        "evidenceDocument": "BIZ_TECH_ACCOUNTING_5_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-1-33",
@@ -1365,7 +1374,16 @@
       "image": "data/approved/webp/115/115-09-1-34.webp",
       "imageSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+        "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+        "evidenceDocument": "BIZ_TECH_ACCOUNTING_5_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-01",
@@ -1374,7 +1392,16 @@
       "image": "data/approved/webp/115/115-09-2-01.webp",
       "imageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
+        "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+        "evidenceDocument": "BIZ_TECH_ACCOUNTING_5_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-02",
@@ -1383,7 +1410,16 @@
       "image": "data/approved/webp/115/115-09-2-02.webp",
       "imageSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
+        "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+        "evidenceDocument": "BIZ_TECH_ACCOUNTING_5_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-03",
@@ -1409,7 +1445,16 @@
       "image": "data/approved/webp/115/115-09-2-04.webp",
       "imageSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
+        "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+        "evidenceDocument": "BIZ_TECH_ACCOUNTING_5_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-05",
@@ -2298,6 +2343,27 @@
       "conceptualConcernsRemain": [
         "115-09-1-26 ASCII 7-bit vs 8-bit storage"
       ]
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "b1c13586cc8d0658961741f86ce0f46b57e7ca1a",
+      "batch": "DIGITAL32_34_ACC01_02_04",
+      "ids": [
+        "115-09-1-32",
+        "115-09-1-34",
+        "115-09-2-01",
+        "115-09-2-02",
+        "115-09-2-04"
+      ],
+      "newDistinctBinaryShaChecks": 5,
+      "cumulative": 67,
+      "archivedAnswerMatchesAdded": 5,
+      "archivedAnswerTotal": 49,
+      "mathBImagesRechecked": 25,
+      "allBusinessDigitalInFrozenScopeOriginalImageRechecked": true,
+      "officialFinalVerifiedChange": 0,
+      "fullyAcceptedChange": 0,
+      "releaseChange": 0
     }
   ],
   "chineseTeachingSupplement": {
@@ -2315,14 +2381,14 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 62,
+    "recheckedDistinctQuestions": 67,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Original GitHub WebP SHA256 and direct image visual recheck; Biz06 and DigitalTech26-29",
-    "notYetRecheckedThisCycle": 66
+    "source": "Direct SHA256 and visual of GitHub original WebP: Digital32/34 Accounting01/02/04",
+    "notYetRecheckedThisCycle": 61
   },
   "archivedAnswerImageCrossCheck": {
-    "count": 44,
+    "count": 49,
     "ids": [
       "115-09-1-01",
       "115-09-1-03",
@@ -2367,11 +2433,16 @@
       "115-09-1-26",
       "115-09-1-27",
       "115-09-1-28",
-      "115-09-1-29"
+      "115-09-1-29",
+      "115-09-1-32",
+      "115-09-1-34",
+      "115-09-2-01",
+      "115-09-2-02",
+      "115-09-2-04"
     ],
     "paperCounts": {
-      "115/09-1": 10,
-      "115/09-2": 9,
+      "115/09-1": 12,
+      "115/09-2": 12,
       "115/00-MB": 25
     },
     "kind": "ARCHIVED_WEBP_CANDIDATE_VISUAL_MATCH_NON_FINAL",

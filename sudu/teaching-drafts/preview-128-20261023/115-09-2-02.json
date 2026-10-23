@@ -179,7 +179,30 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_CONCEPTUAL_RECHECK_NOT_BLIND",
+      "originalImageSha256ActuallyCalculated": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
+      "originalImageMatchesManifest": true,
+      "questionOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "conceptReviewFinding": "依法的一般保存類別：日記簿與分類帳為帳簿、資產負債表與綜合損益表為財務報表，均歸至少10年；發票、傳票為會計憑證一般保存5年，例外依商業會計法第38條另論。候選D。法條完整現行版本仍需最終教材QA。",
+      "allOptionDualLayerIndependentQA": "PENDING",
+      "officialFinalPdfRedownloaded": false,
+      "officialCorrectionsVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "BIZ_TECH_ACCOUNTING_5_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-2",
+      "printedAnswer": "D",
+      "archivedWebp": "data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "originalPdfShaRecordedNotRedownloaded": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
