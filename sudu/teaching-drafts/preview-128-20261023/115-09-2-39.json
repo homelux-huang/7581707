@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-39",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 39,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-39.webp",
+  "imageSha256": "fc4b82447e2ed3cd8c23a21279c489d36c107b237c2882adcbad09146f752dc9",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題目視）",
+    "method": "開啟 GitHub 既有單題 WebP 驗證題號／所有A-D／圖形灰白面積及數值，SHA256 重新比對凍結清單一致；OCR只供輔助。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLVE_BEFORE_CANDIDATE_READ_NOT_THIRD_PARTY_QA",
+    "notice": "原圖目視獨立推理之後才核對既有候選答案；官方最後核實PDF與疑義公告尚未讀取。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "政府發國內居民消費券",
+      "促進經濟成長",
+      "何者最可能影響"
+    ],
+    "reasoningFromOriginalImage": "消費券鼓勵**國內消費支出C增加**，在其他條件不變下推升**總需求／國內支出毛額**，故D。政府發券屬政策移轉或支出安排，不能直接推定**政府消費G減少**；基本工資由制度政策決定，不會因發券自動調升；也不能說國民所得最可能減少。是否形成乘數、進口洩漏與物價效果需後續條件，但本題只問最有可能方向。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "消費券鼓勵**國內消費支出C增加**，在其他條件不變下推升**總需求／國內支出毛額**，故D。政府發券屬政策移轉或支出安排，不能直接推定**政府消費G減少**；基本工資由制度政策決定，不會因發券自動調升；也不能說國民所得最可能減少。是否形成乘數、進口洩漏與物價效果需後續條件，但本題只問最有可能方向。",
+    "elementarySummary": "政府發給大家消費券，希望大家去買東西；店家有生意、工廠要補貨，整體國內花錢買東西的金額可能變多，所以D。",
+    "memory": "**消費券→消費支出增加→國內支出可能成長**。",
+    "concept": "支出面GDP常寫C+I+G+(X−M)，其中消費券主要刺激C，不等於政府自己買更多商品的G。",
+    "extension": "反向題：如果消費券只能買大量進口產品，對國內生產與所得的乘數效果可能比買本國商品大還是小？",
+    "source": {
+      "originalExam": "115-09-2-39",
+      "originalImagePinnedSha256": "fc4b82447e2ed3cd8c23a21279c489d36c107b237c2882adcbad09146f752dc9",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正公告未核實"
+    },
+    "highlightTerms": [
+      "消費券",
+      "國內居民",
+      "消費支出",
+      "國內支出毛額",
+      "總需求"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A基本工資是否調漲取決於相關審議與政策，不是政府發消費券的直接必然結果。",
+        "elementary": "發券不等於法律規定老闆要馬上調薪。",
+        "reason": "A基本工資是否調漲取決於相關審議與政策，不是政府發消費券的直接必然結果。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說國民所得減少，與刺激需求、增加交易的預期方向相反，不能視為最可能直接影響。",
+        "elementary": "多買東西通常是想帶動店家生意，不是想讓大家總收入變少。",
+        "reason": "B說國民所得減少，與刺激需求、增加交易的預期方向相反，不能視為最可能直接影響。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說政府消費性支出減少，政府發券並不等於政府機關採購消費品的G一定減少，不能由題幹推定。",
+        "elementary": "政府發給民眾券，跟政府自己的消費支出不是同一件事。",
+        "reason": "C說政府消費性支出減少，政府發券並不等於政府機關採購消費品的G一定減少，不能由題幹推定。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D國內支出毛額成長與居民使用消費券提高消費支出一致，最符合刺激國內需求的政策目的。",
+        "elementary": "大家多消費，國內花出去的錢比較多。",
+        "reason": "D國內支出毛額成長與居民使用消費券提高消費支出一致，最符合刺激國內需求的政策目的。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
