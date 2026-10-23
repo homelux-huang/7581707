@@ -213,7 +213,31 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_INDEPENDENT_RECOMPUTATION_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+      "imageMatchesFrozenManifest": true,
+      "imageOptionsAndFiguresVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "mathRationaleRecomputed": "餘弦定理7²=8²+x²−2×8×x×cos60°，得(x−3)(x−5)=0，BC>4公里，選x=5公里（A）。圖形完整存在單題WebP。",
+      "partialMathStepsReview": "PASS_COMPUTATION_ONLY",
+      "officialFinalPdfActuallyRead": false,
+      "officialCorrectionStatementsRead": false,
+      "completeIndependentTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "MATHB_17_21_IMAGE_FORMULA_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_ONLY_NON_FINAL",
+      "paper": "115/00-MB",
+      "archivedAnswerVisible": "A",
+      "archivedWebp": "data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+      "archivedWebpShaActuallyVerified": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+      "originalPdfShaRecordedNotRedownloaded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
