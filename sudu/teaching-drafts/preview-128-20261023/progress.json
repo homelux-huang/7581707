@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 71,
-  "draftPercent": 55.5,
-  "visualRechecked": 71,
-  "candidateAnswerMatched": 71,
+  "draftWritten": 76,
+  "draftPercent": 59.4,
+  "visualRechecked": 76,
+  "candidateAnswerMatched": 75,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -81,7 +81,12 @@
     "115-00-MB-22",
     "115-00-MB-23",
     "115-00-MB-24",
-    "115-00-MB-25"
+    "115-00-MB-25",
+    "115-09-2-01",
+    "115-09-2-02",
+    "115-09-2-03",
+    "115-09-2-04",
+    "115-09-2-05"
   ],
   "remainingIds": [
     "115-09-1-01",
@@ -96,11 +101,6 @@
     "115-09-1-32",
     "115-09-1-33",
     "115-09-1-34",
-    "115-09-2-01",
-    "115-09-2-02",
-    "115-09-2-03",
-    "115-09-2-04",
-    "115-09-2-05",
     "115-09-2-06",
     "115-09-2-07",
     "115-09-2-08",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "115會計學第1～5題",
+  "nextSubject": "115會計學第6～10題；第3題需獨立內容複核",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -938,7 +938,7 @@
       "image": "data/approved/webp/115/115-09-2-01.webp",
       "imageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-02",
@@ -947,7 +947,7 @@
       "image": "data/approved/webp/115/115-09-2-02.webp",
       "imageSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-03",
@@ -956,7 +956,7 @@
       "image": "data/approved/webp/115/115-09-2-03.webp",
       "imageSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-04",
@@ -965,7 +965,7 @@
       "image": "data/approved/webp/115/115-09-2-04.webp",
       "imageSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-05",
@@ -974,7 +974,7 @@
       "image": "data/approved/webp/115/115-09-2-05.webp",
       "imageSha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-06",
