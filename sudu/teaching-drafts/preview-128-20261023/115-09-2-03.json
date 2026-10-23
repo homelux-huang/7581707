@@ -114,7 +114,61 @@
       "legalSource": "https://law.moea.gov.tw/LawContent.aspx?id=FL011301"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-03",
+      "subject": "會計學",
+      "questionNumber": 3,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "A-D四選項或①②③④逐項判斷；正確表述由會計概念及原圖文字決定",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "存貨是為正常營業過程出售而持有的資產；固定資產與存貨分類要看**持有目的**。進貨運費是使存貨達到當前地點與狀態的成本。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "本題正解是 **C：汽車經銷商購入汽車『以供出售』，屬正常營業過程中待售商品，應認列存貨**。",
+          "why": "車行買進來是**要賣給客人**的汽車，所以算店裡等待賣出的貨。買商品時把它運進倉庫的錢，通常也要算在這批貨的成本裡。題目不是說車行要把車拿去出租。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A支付員工薪資涉及對外的員工，非內部帳務調整；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B地震損失是非交易性資產損失，不能直接當作與外部對象交換的對外交易； D為使購入商品達到目前地點與狀態所需的進貨運費，通常納入**存貨成本**，而非立即作一般營業費用。 重要：本輪初看原圖曾將『出售』誤看成『出租』而推測 B，查候選後重新逐字目視確認原圖是『出售』，才改為 C； 不冒稱初次盲解正確，仍需獨立複核。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "**汽車經銷商買汽車以供出售**，目的就是待售商品，符合存貨定義。原圖明確為『出售』而非『出租』，故正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -124,7 +178,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "imageReadingFirstPassErrorNeedsIndependentReview": true
+    "imageReadingFirstPassErrorNeedsIndependentReview": true,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

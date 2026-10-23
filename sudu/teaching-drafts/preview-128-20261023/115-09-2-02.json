@@ -115,7 +115,61 @@
       "legalVersion": "依 2026-10-23 查得經濟部與法務部法規資料庫現行條文；仍以主管機關最新公布為準"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-02",
+      "subject": "會計學",
+      "questionNumber": 2,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "A-D四選項或①②③④逐項判斷；正確表述由會計概念及原圖文字決定",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "**憑證**記錄發生交易的證據；**帳簿**系統地記錄分錄；**財務報表**彙整財務狀況與績效。保存起算點按條文是**年度決算程序辦理終了後**。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "《商業會計法》第**38條**區分兩類：**會計憑證原則上至少五年**（不計依法永久保存或未結事項等例外）；",
+          "why": "發票和記帳傳票是憑證，通常至少留五年；記帳的本子和最後做出的財務報表，要至少留十年，所以選後面四項。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "**會計帳簿及財務報表至少十年**（條文另有未結事項例外）。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "①發票、②傳票屬會計憑證； ③日記簿、④分類帳屬帳簿； ⑤資產負債表、⑥綜合損益表屬財務報表。 故十年是**③④⑤⑥，選D**。 法源已由經濟部主管法規及全國法規資料庫第38條獨立核查； 但未直接比對考試最終答案PDF。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "③日記簿、④分類帳為帳簿；⑤資產負債表、⑥綜合損益表為財務報表，法定一般期間至少十年，選D。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -124,7 +178,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

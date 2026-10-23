@@ -106,7 +106,61 @@
       "standardsStatus": "記錄格式與教材版本待核對"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-04",
+      "subject": "會計學",
+      "questionNumber": 4,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "A-D四選項或①②③④逐項判斷；正確表述由會計概念及原圖文字決定",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "**分錄**先記交易；**過帳**把日記簿中的金額按科目轉到分類帳，並用相互頁碼方便追查來源。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "日記簿有供填分類帳頁數的**類頁**欄；",
+          "why": "一本先記每天發生的事（日記簿），另一本照會計科目整理（分類帳）。互相記『在哪一頁』，但日記簿的欄叫類頁、分類帳的欄叫日頁。第二句說對。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "分類帳有供填日記簿頁數的**日頁**欄。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "分錄時通常先記日期、科目、金額； 完成**過帳**後在**分類帳的日頁欄寫日記簿頁碼**，同時在**日記簿的類頁欄寫分類帳頁碼**。 所以只有②正確，選B。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "②把日記簿頁碼記到分類帳**日頁**欄，是過帳互相索引的正確方式；①③不正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -115,7 +169,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
