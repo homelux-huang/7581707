@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-07",
+  "year": 115,
+  "subject": "商業概論",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_BLOCKED_OFFICIAL_REVIEW",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-07.webp",
+  "imageSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始 WebP）",
+    "method": "逐張開啟既有 GitHub 單題 WebP 確認題號、題幹與四選項；逐檔 SHA256 已重新計算且與凍結清單相符",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "UNDETERMINED",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "DISPUTED_CANDIDATE_BLOCKED",
+    "officialFinalCorrectionVerified": false,
+    "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+    "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
+    "conflictWarningRequired": true,
+    "warningText": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "conceptualIssue": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "commercial-management-concept",
+    "keyConditions": [
+      "票據貼現的籌資期限",
+      "特別股是否可能產生財務槓桿",
+      "公司債相對特別股發行成本",
+      "公司債利息稅盾"
+    ],
+    "reasoningFromOriginalImage": "A票據貼現通常屬**短期融資**；C債券資金成本通常並不必然高於特別股；D符合規定的公司債利息一般可稅前扣除，存在**節稅效果**。候選B斷言**特別股無法發揮財務槓桿**，但財務理論中固定特別股股利可能使普通股EPS對EBIT變動更加敏感，廣義財務槓桿可包含此效果。某些高職課本可能將『舉債』當槓桿狹義定義；未確定教材與官方更正前不能說B在所有定義下正確。",
+    "officialFinalStatus": "PENDING_OFFICIAL_RECHECK",
+    "hasExamCalculation": false
+  },
+  "teaching": {
+    "teacherSummary": "A票據貼現通常屬**短期融資**；C債券資金成本通常並不必然高於特別股；D符合規定的公司債利息一般可稅前扣除，存在**節稅效果**。候選B斷言**特別股無法發揮財務槓桿**，但財務理論中固定特別股股利可能使普通股EPS對EBIT變動更加敏感，廣義財務槓桿可包含此效果。某些高職課本可能將『舉債』當槓桿狹義定義；未確定教材與官方更正前不能說B在所有定義下正確。",
+    "elementarySummary": "票據貼現是把快到期的票換成現金，不是長期借錢。公司債付的利息通常可能節稅。特別股優先分股利，有時也會放大普通股東剩下的獲利起伏，所以說它『完全不可能有槓桿』有問題。",
+    "memory": "**票據貼現短期；債息有稅盾；特別股固定股利的槓桿效果需看定義**。",
+    "concept": "財務槓桿狹義用舉債衡量，廣義可考慮具有固定股利的特別股對普通股盈餘的放大效果；此題候選解答與較廣義解釋存在定義歧義。",
+    "extension": "反向題：若企業營業利益變動，需先支付固定債息或特別股股利，普通股可分配利潤的波動是否可能放大？上述只是概念例子，不是本題另造數字計算。",
+    "source": {
+      "originalExam": "115-09-1-07",
+      "originalImagePinnedSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商商業概論教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+      "reviewResearch": "https://www.tej.com.tw/tejdoc/db-document/tw/wim1a.html"
+    },
+    "highlightTerms": [
+      "票據貼現",
+      "短期籌資",
+      "特別股",
+      "財務槓桿",
+      "公司債",
+      "節稅效果"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A票據貼現一般是利用短期票據提前取得現金，屬短期周轉籌資，不是中期籌資。",
+        "elementary": "快到期的票提早領錢是短期，並非借好幾年。",
+        "reason": "A票據貼現一般是利用短期票據提前取得現金，屬短期周轉籌資，不是中期籌資。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。",
+        "elementary": "它不是一般借錢，但要先分股利也會改變普通股能拿到多少，不能說完全沒有影響。",
+        "reason": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C籌資成本比較不可直接斷言公司債發行成本必然較特別股高；通常債務成本較低且利息有稅盾，故此敘述不可靠。",
+        "elementary": "兩種拿錢的方法花費不同，不能說債券一定比較貴。",
+        "reason": "C籌資成本比較不可直接斷言公司債發行成本必然較特別股高；通常債務成本較低且利息有稅盾，故此敘述不可靠。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D否認債券利息節稅；符合規定的利息通常可列費用抵減課稅所得，因此此說法與一般稅盾原理相反。",
+        "elementary": "公司付利息通常可以算成本，符合規定時就有機會少繳一些稅。",
+        "reason": "D否認債券利息節稅；符合規定的利息通常可列費用抵減課稅所得，因此此說法與一般稅盾原理相反。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "BLOCKED",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "conceptualReviewFlag": "ANSWER_CONCEPT_CONFLICT",
+    "blockingReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。"
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
