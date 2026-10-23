@@ -145,6 +145,78 @@
       "matchingOption": "B",
       "commonMistake": "把 B_y=−5、C_y=−2 的平均算成−5/2，或將 C 的 x 值求錯。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-05",
+      "subject": "數學 B",
+      "questionNumber": 5,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=(−1,0)；B=(0,−5)；D=(2,3)；ABCD 為依序平行四邊形",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "對邊向量 BC=AD=D−A；C=B+(D−A)；中點 M=((xB+xC)/2,(yB+yC)/2)",
+          "why": "中點公式求兩座標點正中央的位置；平行四邊形利用等向量求未知頂點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AD=D−A=(2−(−1),3−0)=(3,3)",
+          "why": "平行四邊形對邊向量相同，先求從 A 到 D 的位移。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "BC=AD=(3,3)",
+          "why": "依 A→B→C→D 順序，BC 與 AD 是方向與大小相同的對邊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C=B+BC=(0,−5)+(3,3)=(3,−2)",
+          "why": "由 B 位移(3,3)可以到 C，得到未知頂點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "Mx=(xB+xC)/2=(0+3)/2=3/2",
+          "why": "取線段兩端的水平座標平均。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "My=(yB+yC)/2=(−5+(−2))/2=−7/2",
+          "why": "取垂直座標平均，負負相加得−7。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "M=(3/2,−7/2)，選 B",
+          "why": "中點座標對應選項 B。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(3/2,−7/2)；單位：座標單位；選項：B",
+          "why": "把 B_y=−5、C_y=−2 的平均算成−5/2，或將 C 的 x 值求錯。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -154,7 +226,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

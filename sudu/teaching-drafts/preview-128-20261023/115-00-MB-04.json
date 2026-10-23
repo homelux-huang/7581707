@@ -135,6 +135,72 @@
       "matchingOption": "C",
       "commonMistake": "忘了含端點、負數大小比較顛倒、將 −1/2 誤判整數。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-04",
+      "subject": "數學 B",
+      "questionNumber": 4,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "2x²+7x+3≤0；解表示為 a≤x≤b",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "因式分解 (2x+1)(x+3)≤0；二次式係數為正時，乘積≤0 在兩個根之間（含端點）",
+          "why": "找出二次不等式成立的變數區間，亦可用符號表驗算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x²+7x+3=(2x+1)(x+3)",
+          "why": "展開為2x²+6x+x+3=2x²+7x+3，分解正確。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x+1=0 ⇒ x=−1/2；x+3=0 ⇒ x=−3",
+          "why": "讓兩個因式分別等於零，求臨界點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "−3 < −1/2；又二次項係數 2>0",
+          "why": "排列根的先後，判斷圖形開口向上。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(2x+1)(x+3)≤0 ⇒ −3≤x≤−1/2",
+          "why": "兩根之間異號，乘積非正；因等號也允許，包含兩端。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a=−3∈ℤ，b=−1/2∉ℤ ⇒ 選 C",
+          "why": "比較四選項需確認 a、b 的整數性與大小。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "a=−3，b=−1/2；選 C；單位：實數區間，無單位；選項：C",
+          "why": "忘了含端點、負數大小比較顛倒、將 −1/2 誤判整數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -144,7 +210,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

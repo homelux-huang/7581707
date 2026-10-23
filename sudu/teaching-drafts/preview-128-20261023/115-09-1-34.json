@@ -98,7 +98,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-34",
+      "subject": "數位科技",
+      "questionNumber": 34,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "題問錯誤；NFC 行動支付；eTag與RFID；RFID Tag耗電量；4G LTE與ZigBee距離",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "物聯網通訊比較要辨別距離、能耗、資料率、被動與主動標籤；不能將所有RFID標籤視為電池設備。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "NFC可用於感應行動支付，eTag是RFID技術應用；",
+          "why": "eTag過高速公路會感應、手機靠近也能付款。RFID小標籤有的根本不用裝電池，靠旁邊讀取機的訊號就能工作，所以不能說每種都很耗電。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "4G LTE常見蜂巢網路覆蓋距離比近距離ZigBee長。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "被動式RFID Tag不需要電池，靠讀取器電磁場取能，不可一概說Tag耗電量大，故C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C錯在『Tag耗電量大』過度概括。被動式RFID Tag常無電池、取能於讀取器，不能一律說耗電量大，因此本題選C。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -108,7 +162,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

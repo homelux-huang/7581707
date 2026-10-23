@@ -142,6 +142,78 @@
       "matchingOption": "A",
       "commonMistake": "未核對 α≠β 就約分；或把 α+β=5 誤作 αβ。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-02",
+      "subject": "數學 B",
+      "questionNumber": 2,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "α≠β，故 α−β≠0；r₁=α+β，r₂=α−β；方程式 x²−8x+5(α−β)=0",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "若 x²+bx+c=0 根為 r₁,r₂，則 r₁+r₂=−b、r₁r₂=c（韋達定理）",
+          "why": "韋達定理不用解出每個根，也能從二次式得到根的和與積。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(α+β)+(α−β)=−(−8)=8",
+          "why": "兩根相加等於 x 項係數相反數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2α=8 ⇒ α=4",
+          "why": "左右 β 抵消，只剩 2α。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(α+β)(α−β)=5(α−β)",
+          "why": "兩根相乘等於常數項。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "α−β≠0 ⇒ α+β=5",
+          "why": "因題目給 α≠β，可合法將兩側同除 α−β。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "β=5−α=5−4=1",
+          "why": "由根積關係求 β。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "αβ=4×1=4",
+          "why": "題目要的是 α 與 β 的乘積而非根和。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "4；單位：無單位；選項：A",
+          "why": "未核對 α≠β 就約分；或把 α+β=5 誤作 αβ。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -151,7 +223,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

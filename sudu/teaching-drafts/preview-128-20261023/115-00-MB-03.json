@@ -133,6 +133,66 @@
       "matchingOption": "A",
       "commonMistake": "把 y 截距 4/3 當 x 截距；或漏掉 − 號。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-03",
+      "subject": "數學 B",
+      "questionNumber": 3,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "L₁:2x+3y=4；L₂∥L₁；a=L₁的x截距，m=L₂斜率",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "x 截距令 y=0；Ax+By=C ⇒ y=−(A/B)x+C/B，斜率 m=−A/B；平行直線斜率相等",
+          "why": "從一般式求斜率與截距，快速比較兩條直線方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "令 y=0：2a+3(0)=4 ⇒ 2a=4 ⇒ a=2",
+          "why": "x 軸上的所有點 y=0，與該軸交點之 x 就是截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x+3y=4 ⇒ 3y=−2x+4 ⇒ y=−(2/3)x+4/3",
+          "why": "改寫成 y=mx+b 才能讀出 x 的係數為斜率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "m₁=−2/3；L₂∥L₁ ⇒ m=m₁=−2/3",
+          "why": "互相平行的非垂直直線斜率相同。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(a,m)=(2,−2/3)",
+          "why": "把剛算到的 x 截距和 L₂ 斜率依題目要求排序。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(2, −2/3)；單位：截距為座標單位；斜率無單位；選項：A",
+          "why": "把 y 截距 4/3 當 x 截距；或漏掉 − 號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -142,7 +202,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

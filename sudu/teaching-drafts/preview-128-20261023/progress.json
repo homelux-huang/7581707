@@ -1335,5 +1335,56 @@
       "sharedImages": [],
       "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     }
-  ]
+  ],
+  "stepByStep": {
+    "schemaVersion": 1,
+    "scopeTotal": 128,
+    "priorityLiveDemoTotal": 35,
+    "priorityLiveDemoProcessed": 35,
+    "priorityLiveDemoWithSteps": 25,
+    "priorityLiveDemoAutoHidden": 10,
+    "preparedQuestionIds": [
+      "115-00-MB-07",
+      "115-00-MB-09",
+      "115-00-MB-10",
+      "115-00-MB-11",
+      "115-00-MB-12",
+      "115-09-2-26",
+      "115-09-2-27",
+      "115-09-2-28",
+      "115-09-2-25",
+      "115-09-2-29",
+      "115-09-2-02",
+      "115-09-2-03",
+      "115-09-2-04",
+      "115-09-2-05",
+      "115-09-2-06",
+      "115-09-1-01",
+      "115-09-1-03",
+      "115-09-1-05",
+      "115-09-1-06",
+      "115-09-1-07",
+      "115-09-1-26",
+      "115-09-1-27",
+      "115-09-1-28",
+      "115-09-1-32",
+      "115-09-1-34",
+      "115-00-MB-01",
+      "115-00-MB-02",
+      "115-00-MB-03",
+      "115-00-MB-04",
+      "115-00-MB-05",
+      "115-00-MB-06"
+    ],
+    "preparedCount": 31,
+    "autoHiddenSubjects": [
+      "國文",
+      "英文"
+    ],
+    "teachingQAApproved": 0,
+    "officialFinalVerified": 0,
+    "deployed": false,
+    "doNotDeploy": true,
+    "note": "原解說初稿128/128仍不表示完整QA；正式頁35題中25題有逐步解題、10題沒有實際列式或推導步驟而自動隱藏。其餘草稿需持續補入。"
+  }
 }

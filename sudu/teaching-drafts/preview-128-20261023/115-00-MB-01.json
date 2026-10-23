@@ -133,6 +133,66 @@
       "matchingOption": "B",
       "commonMistake": "把減法順序倒成 OT−OS 得到 (3,−2)，誤選 D；或只比較向量長度。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-01",
+      "subject": "數學 B",
+      "questionNumber": 1,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "圖格原點 O=(0,0)、S=(0,2)、T=(3,0)；A=(3,2)、B=(−3,2)、C=(−3,−2)、D=(3,−2)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "向量 PQ=(xQ−xP, yQ−yP)；向量相減 (u₁,u₂)−(v₁,v₂)=(u₁−v₁,u₂−v₂)",
+          "why": "向量加減可描述平面上的位移，物流或地圖中用來表示從 A 點移動至 B 點的方向與距離。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OS=S−O=(0−0,2−0)=(0,2)",
+          "why": "向量從 O 指到 S，以終點減起點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OT=T−O=(3−0,0−0)=(3,0)",
+          "why": "向量從 O 指到 T，同樣取座標差。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OS−OT=(0,2)−(3,0)=(0−3,2−0)=(−3,2)",
+          "why": "向量相減，x、y 分量分別相減。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OB=B−O=(−3−0,2−0)=(−3,2)",
+          "why": "圖上 B 的坐標和計算結果相同，因此就是 OB。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(−3,2)；單位：座標單位（格）；選項：B",
+          "why": "把減法順序倒成 OT−OS 得到 (3,−2)，誤選 D；或只比較向量長度。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -142,7 +202,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

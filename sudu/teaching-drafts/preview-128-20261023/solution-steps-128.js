@@ -1388,7 +1388,511 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數位科技|32": {
+      "questionId": "115-09-1-32",
+      "subject": "數位科技",
+      "questionNumber": 32,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "家庭旅行共同排程；手機平板筆電同步查看和編輯；最方便且即時",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "即時協作和『傳送檔案給別人』不同；權限要給需要編輯者，而非全部公開。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "雲端硬碟共享行程文件、設定編輯權限後，一份行程能由家人在多裝置存取編輯；",
+          "why": "全家要一起改旅遊計畫，就把同一份檔案放雲端、給大家可以編輯的連結。不用每個人一直傳照片，不會搞不清楚哪份最新版。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "電郵、相簿圖片、藍牙檔案傳輸不能讓大家像共用檔案般即時協作。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "因此C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C上傳雲端並設定權限共享連結，可由手機、平板、筆電看同份檔案與共同修改，最符合需求。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數位科技|34": {
+      "questionId": "115-09-1-34",
+      "subject": "數位科技",
+      "questionNumber": 34,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "題問錯誤；NFC 行動支付；eTag與RFID；RFID Tag耗電量；4G LTE與ZigBee距離",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "物聯網通訊比較要辨別距離、能耗、資料率、被動與主動標籤；不能將所有RFID標籤視為電池設備。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "NFC可用於感應行動支付，eTag是RFID技術應用；",
+          "why": "eTag過高速公路會感應、手機靠近也能付款。RFID小標籤有的根本不用裝電池，靠旁邊讀取機的訊號就能工作，所以不能說每種都很耗電。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "4G LTE常見蜂巢網路覆蓋距離比近距離ZigBee長。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "被動式RFID Tag不需要電池，靠讀取器電磁場取能，不可一概說Tag耗電量大，故C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C錯在『Tag耗電量大』過度概括。被動式RFID Tag常無電池、取能於讀取器，不能一律說耗電量大，因此本題選C。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|1": {
+      "questionId": "115-00-MB-01",
+      "subject": "數學 B",
+      "questionNumber": 1,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "圖格原點 O=(0,0)、S=(0,2)、T=(3,0)；A=(3,2)、B=(−3,2)、C=(−3,−2)、D=(3,−2)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "向量 PQ=(xQ−xP, yQ−yP)；向量相減 (u₁,u₂)−(v₁,v₂)=(u₁−v₁,u₂−v₂)",
+          "why": "向量加減可描述平面上的位移，物流或地圖中用來表示從 A 點移動至 B 點的方向與距離。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OS=S−O=(0−0,2−0)=(0,2)",
+          "why": "向量從 O 指到 S，以終點減起點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OT=T−O=(3−0,0−0)=(3,0)",
+          "why": "向量從 O 指到 T，同樣取座標差。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OS−OT=(0,2)−(3,0)=(0−3,2−0)=(−3,2)",
+          "why": "向量相減，x、y 分量分別相減。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "OB=B−O=(−3−0,2−0)=(−3,2)",
+          "why": "圖上 B 的坐標和計算結果相同，因此就是 OB。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(−3,2)；單位：座標單位（格）；選項：B",
+          "why": "把減法順序倒成 OT−OS 得到 (3,−2)，誤選 D；或只比較向量長度。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|2": {
+      "questionId": "115-00-MB-02",
+      "subject": "數學 B",
+      "questionNumber": 2,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "α≠β，故 α−β≠0；r₁=α+β，r₂=α−β；方程式 x²−8x+5(α−β)=0",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "若 x²+bx+c=0 根為 r₁,r₂，則 r₁+r₂=−b、r₁r₂=c（韋達定理）",
+          "why": "韋達定理不用解出每個根，也能從二次式得到根的和與積。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(α+β)+(α−β)=−(−8)=8",
+          "why": "兩根相加等於 x 項係數相反數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2α=8 ⇒ α=4",
+          "why": "左右 β 抵消，只剩 2α。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(α+β)(α−β)=5(α−β)",
+          "why": "兩根相乘等於常數項。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "α−β≠0 ⇒ α+β=5",
+          "why": "因題目給 α≠β，可合法將兩側同除 α−β。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "β=5−α=5−4=1",
+          "why": "由根積關係求 β。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "αβ=4×1=4",
+          "why": "題目要的是 α 與 β 的乘積而非根和。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "4；單位：無單位；選項：A",
+          "why": "未核對 α≠β 就約分；或把 α+β=5 誤作 αβ。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|3": {
+      "questionId": "115-00-MB-03",
+      "subject": "數學 B",
+      "questionNumber": 3,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "L₁:2x+3y=4；L₂∥L₁；a=L₁的x截距，m=L₂斜率",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "x 截距令 y=0；Ax+By=C ⇒ y=−(A/B)x+C/B，斜率 m=−A/B；平行直線斜率相等",
+          "why": "從一般式求斜率與截距，快速比較兩條直線方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "令 y=0：2a+3(0)=4 ⇒ 2a=4 ⇒ a=2",
+          "why": "x 軸上的所有點 y=0，與該軸交點之 x 就是截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x+3y=4 ⇒ 3y=−2x+4 ⇒ y=−(2/3)x+4/3",
+          "why": "改寫成 y=mx+b 才能讀出 x 的係數為斜率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "m₁=−2/3；L₂∥L₁ ⇒ m=m₁=−2/3",
+          "why": "互相平行的非垂直直線斜率相同。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(a,m)=(2,−2/3)",
+          "why": "把剛算到的 x 截距和 L₂ 斜率依題目要求排序。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(2, −2/3)；單位：截距為座標單位；斜率無單位；選項：A",
+          "why": "把 y 截距 4/3 當 x 截距；或漏掉 − 號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|4": {
+      "questionId": "115-00-MB-04",
+      "subject": "數學 B",
+      "questionNumber": 4,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "2x²+7x+3≤0；解表示為 a≤x≤b",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "因式分解 (2x+1)(x+3)≤0；二次式係數為正時，乘積≤0 在兩個根之間（含端點）",
+          "why": "找出二次不等式成立的變數區間，亦可用符號表驗算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x²+7x+3=(2x+1)(x+3)",
+          "why": "展開為2x²+6x+x+3=2x²+7x+3，分解正確。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x+1=0 ⇒ x=−1/2；x+3=0 ⇒ x=−3",
+          "why": "讓兩個因式分別等於零，求臨界點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "−3 < −1/2；又二次項係數 2>0",
+          "why": "排列根的先後，判斷圖形開口向上。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(2x+1)(x+3)≤0 ⇒ −3≤x≤−1/2",
+          "why": "兩根之間異號，乘積非正；因等號也允許，包含兩端。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a=−3∈ℤ，b=−1/2∉ℤ ⇒ 選 C",
+          "why": "比較四選項需確認 a、b 的整數性與大小。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "a=−3，b=−1/2；選 C；單位：實數區間，無單位；選項：C",
+          "why": "忘了含端點、負數大小比較顛倒、將 −1/2 誤判整數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|5": {
+      "questionId": "115-00-MB-05",
+      "subject": "數學 B",
+      "questionNumber": 5,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=(−1,0)；B=(0,−5)；D=(2,3)；ABCD 為依序平行四邊形",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "對邊向量 BC=AD=D−A；C=B+(D−A)；中點 M=((xB+xC)/2,(yB+yC)/2)",
+          "why": "中點公式求兩座標點正中央的位置；平行四邊形利用等向量求未知頂點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AD=D−A=(2−(−1),3−0)=(3,3)",
+          "why": "平行四邊形對邊向量相同，先求從 A 到 D 的位移。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "BC=AD=(3,3)",
+          "why": "依 A→B→C→D 順序，BC 與 AD 是方向與大小相同的對邊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C=B+BC=(0,−5)+(3,3)=(3,−2)",
+          "why": "由 B 位移(3,3)可以到 C，得到未知頂點。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "Mx=(xB+xC)/2=(0+3)/2=3/2",
+          "why": "取線段兩端的水平座標平均。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "My=(yB+yC)/2=(−5+(−2))/2=−7/2",
+          "why": "取垂直座標平均，負負相加得−7。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "M=(3/2,−7/2)，選 B",
+          "why": "中點座標對應選項 B。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "(3/2,−7/2)；單位：座標單位；選項：B",
+          "why": "把 B_y=−5、C_y=−2 的平均算成−5/2，或將 C 的 x 值求錯。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|6": {
+      "questionId": "115-00-MB-06",
+      "subject": "數學 B",
+      "questionNumber": 6,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "f(x)=x⁴−3x³+2x²−x+1；除式 g(x)=(x−1)(x−2)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "f(x)=g(x)Q(x)+R(x)，deg R<deg g=2 ⇒ R=mx+n；R(1)=f(1)、R(2)=f(2)",
+          "why": "用餘式定理與一次式待定係數，比長除法更快找二次除式的餘式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "g(1)=0、g(2)=0，令 R(x)=mx+n",
+          "why": "除式在1與2為零，代入除法恆等式可消去 g(x)Q(x)。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "f(1)=1−3+2−1+1=0 ⇒ m+n=0",
+          "why": "算出餘式在1時的值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "f(2)=16−24+8−2+1=−1 ⇒ 2m+n=−1",
+          "why": "算出餘式在2時的值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(2m+n)−(m+n)=−1−0 ⇒ m=−1",
+          "why": "將聯立兩式相減消去 n。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "n=−m=1 ⇒ R(x)=−x+1",
+          "why": "回代求常數項，寫出完整餘式。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "R(x)=−x+1；單位：無單位；選項：D",
+          "why": "只有用 x=1 檢查而未檢查 x=2；或計算 f(2) 的負號錯。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 23
+  "readyQuestionCount": 31
 };

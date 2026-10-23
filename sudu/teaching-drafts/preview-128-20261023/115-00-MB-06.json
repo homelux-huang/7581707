@@ -137,6 +137,72 @@
       "matchingOption": "D",
       "commonMistake": "只有用 x=1 檢查而未檢查 x=2；或計算 f(2) 的負號錯。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-06",
+      "subject": "數學 B",
+      "questionNumber": 6,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "f(x)=x⁴−3x³+2x²−x+1；除式 g(x)=(x−1)(x−2)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "f(x)=g(x)Q(x)+R(x)，deg R<deg g=2 ⇒ R=mx+n；R(1)=f(1)、R(2)=f(2)",
+          "why": "用餘式定理與一次式待定係數，比長除法更快找二次除式的餘式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "g(1)=0、g(2)=0，令 R(x)=mx+n",
+          "why": "除式在1與2為零，代入除法恆等式可消去 g(x)Q(x)。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "f(1)=1−3+2−1+1=0 ⇒ m+n=0",
+          "why": "算出餘式在1時的值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "f(2)=16−24+8−2+1=−1 ⇒ 2m+n=−1",
+          "why": "算出餘式在2時的值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(2m+n)−(m+n)=−1−0 ⇒ m=−1",
+          "why": "將聯立兩式相減消去 n。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "n=−m=1 ⇒ R(x)=−x+1",
+          "why": "回代求常數項，寫出完整餘式。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "R(x)=−x+1；單位：無單位；選項：D",
+          "why": "只有用 x=1 檢查而未檢查 x=2；或計算 f(2) 的負號錯。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -146,7 +212,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
