@@ -865,8 +865,10 @@
       "sourcePdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
       "sourcePage": 7,
       "processingVersion": "114-source-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
-      "issues": [],
+      "qaStatus": "BLOCKED_VISUAL_NEIGHBOR_SHARED_PASSAGE",
+      "issues": [
+        "current_crop_includes_shared_article_for_114_00_C_20_to_23"
+      ],
       "source": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
       "sourceSize": [
         1400,
@@ -884,7 +886,8 @@
         1220,
         740
       ],
-      "sha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6"
+      "sha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
+      "blockingEvidenceReference": "sudu/data/processed/114/qa-drafts/OCR_VISUAL_114_C19_C23_20261023.json"
     },
     {
       "questionId": "114-00-C-20",
