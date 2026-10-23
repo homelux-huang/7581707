@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-09",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 9,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-09.webp",
+  "imageSha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看既有單題WebP、核對題號、所有選項與數字圖表，重新計算圖片位元組SHA256與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖先解題後讀候選；官方最終答案PDF及更正仍待直接核實。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_MATCHES_CANDIDATE_PENDING_FINAL_QA"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "銷售9000000（含外銷1500000）、進項8750000（含土地1350000、建物900000、設備350000、自用小車950000、員工旅遊餐18000與車資15000），稅率5%，前期留抵18000，流動比率1.5；判①②③④。",
+    "keyConditions": [
+      "總銷售9000000、外銷1500000",
+      "總進項8750000、土地2250000×60%",
+      "自用車950000、員工旅遊18000與15000",
+      "前期留抵18000、稅率5%、流動比率1.5"
+    ],
+    "reasoningFromOriginalImage": "銷項(9000000−1500000)×5%=375000。土地銷售免稅，自用乘人小車和員工旅遊不得扣抵；可扣進項基礎=8750000−1350000−950000−18000−15000=6417000，稅額320850，所以①343350錯。抵前期留抵18000後應納375000−320850−18000=36150元，沒有溢付可退，②錯、③期末留抵0對。結算銷項375000時，沖銷流動資產中的進項與留抵338850，流動負債淨減同額338850，原流動比率1.5>1使比率上升，④對；選D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "D（③④）；本期應納36150元",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "銷項(9000000−1500000)×5%=375000。土地銷售免稅，自用乘人小車和員工旅遊不得扣抵；可扣進項基礎=8750000−1350000−950000−18000−15000=6417000，稅額320850，所以①343350錯。抵前期留抵18000後應納375000−320850−18000=36150元，沒有溢付可退，②錯、③期末留抵0對。結算銷項375000時，沖銷流動資產中的進項與留抵338850，流動負債淨減同額338850，原流動比率1.5>1使比率上升，④對；選D。",
+    "elementarySummary": "國內營業稅先算37.5萬，再扣合法能扣的進項32.085萬和以前多繳的1.8萬，還要繳3.615萬，所以不是退稅。結帳後題目給的流動比率也會提高，第三和第四句對。",
+    "memory": "銷項375000−可扣進項320850−留抵18000=應納36150；③④。",
+    "concept": "出口適用零稅率、土地免稅；不得扣抵自用小車與員工旅遊進項；應納不等於溢付；流動比率=流動資產/流動負債。",
+    "extension": "反向思考：如果進項與前期留抵大於銷項，會有溢付，是否全部能退？須依營業稅法第39條判斷。",
+    "source": {
+      "originalExam": "115-09-2-09",
+      "originalImagePinnedSha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計教材版本、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核",
+      "independentlyCheckedLawSources": [
+        "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006082&kw=51-T",
+        "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=c7ec6ad0074f4bb2b08dc273921f5c4d"
+      ],
+      "lawVerificationScope": "法規與考試官方答案為不同的核實工作"
+    },
+    "highlightTerms": [
+      "零稅率",
+      "可扣進項320850",
+      "應納36150",
+      "期末留抵0",
+      "流動比率上升"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①320850而非343350、②本期應納稅非溢付退稅，兩項都錯。",
+        "elementary": "數字算錯，而且是要繳不是退。",
+        "reason": "①320850而非343350、②本期應納稅非溢付退稅，兩項都錯。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "④正確，但①可扣進項343350錯。",
+        "elementary": "第四句對，第一句不對。",
+        "reason": "④正確，但①可扣進項343350錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "③正確、②沒有本期可退溢付160000的事實，所以不成立。",
+        "elementary": "沒有留抵是真的，但不是退稅。",
+        "reason": "③正確、②沒有本期可退溢付160000的事實，所以不成立。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "③期末留抵0正確；④結算後資產負債等額減、原比率大於1使比率上升。",
+        "elementary": "第三和第四句才對。",
+        "reason": "③期末留抵0正確；④結算後資產負債等額減、原比率大於1使比率上升。"
+      }
+    },
+    "accounting": {
+      "principle": "出口適用零稅率、土地免稅；不得扣抵自用小車與員工旅遊進項；應納不等於溢付；流動比率=流動資產/流動負債。",
+      "accounts": [
+        "銷項稅額",
+        "進項稅額",
+        "累積留抵稅額",
+        "應付營業稅"
+      ],
+      "journalEntry": "結算：借銷項稅額375000；貸進項稅額320850、累積留抵稅額18000、應付營業稅36150。",
+      "calculation": "逐步見 examCalculation"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "總銷售9000000、外銷1500000",
+        "總進項8750000、土地2250000×60%",
+        "自用車950000、員工旅遊18000與15000",
+        "前期留抵18000、稅率5%、流動比率1.5"
+      ],
+      "formula": "銷項=國內課稅銷售×5%；可扣進項=允許扣抵交易×5%；應納=銷項−可扣進項−上期留抵；流動比率=CA/CL。",
+      "formulaPurpose": "出口適用零稅率、土地免稅；不得扣抵自用小車與員工旅遊進項；應納不等於溢付；流動比率=流動資產/流動負債。",
+      "substitutionAndSteps": [
+        {
+          "formula": "國內銷售=9000000−1500000=7500000；銷項=7500000×5%=375000",
+          "why": "出口按題設零稅率。"
+        },
+        {
+          "formula": "土地=2250000×60%=1350000；房屋900000",
+          "why": "土地免徵營業稅。"
+        },
+        {
+          "formula": "不得扣抵其他=950000+18000+15000=983000",
+          "why": "自用乘人小汽車及員工旅遊不得扣。"
+        },
+        {
+          "formula": "可扣進項基礎=8750000−1350000−983000=6417000",
+          "why": "排除免稅和不可扣項目。"
+        },
+        {
+          "formula": "可扣進項=6417000×5%=320850",
+          "why": "①錯誤。"
+        },
+        {
+          "formula": "應納=375000−320850−18000=36150>0",
+          "why": "本期應納而非溢付。"
+        },
+        {
+          "formula": "期末累積留抵=0元、無本期可退溢付",
+          "why": "③正確、②不成立。"
+        },
+        {
+          "formula": "結算分錄借銷項375000；貸進項320850、留抵18000、應付36150",
+          "why": "貸方三項合計375000。"
+        },
+        {
+          "formula": "流動資產減338850、流動負債淨減338850，原CA/CL=1.5>1 ⇒比率上升",
+          "why": "④正確，選D。"
+        }
+      ],
+      "result": "D（③④）；本期應納36150元",
+      "unit": "元及無單位流動比率",
+      "matchingOption": "D",
+      "commonMistake": "把土地、自用車、員工旅遊當可扣進項；將應納誤當退稅。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
