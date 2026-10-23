@@ -151,6 +151,84 @@
       "matchingOption": "A",
       "commonMistake": "把溢價攤銷方向和有效利息費用的方向混淆。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-20",
+      "subject": "會計學",
+      "questionNumber": 20,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "每年付息280000元；X5年底帳面5803274元；X6年底帳面5755405元；流通六年",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "溢價攤銷=現金付息−有效利息費用；有效利率=有效利息費用/期初帳面。",
+          "why": "有效利息法：利息費用=期初帳面價值×有效利率；付息=面額×票面利率；溢價攤銷=付息−利息費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "溢價攤銷=5803274−5755405=47869元",
+          "why": "帳面減少表示溢價攤銷。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X6利息費用=280000−47869=232131元",
+          "why": "現金利息扣溢價攤銷。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "有效利率≈232131/5803274≈4%",
+          "why": "低於票面利率，②對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "帳面餘額逐年降 ⇒利息費用=帳面×固定有效利率逐年降",
+          "why": "①對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "六年現金利息=280000×6=1680000元",
+          "why": "現金付息合計。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "溢價使有效利息費用合計低於現金付息合計",
+          "why": "③說大於錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現金利息固定、利息費用逐年下降 ⇒差額(溢價攤銷)逐年增加",
+          "why": "④說遞減錯；選A。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "A（①②）；單位：新臺幣元；有效利率約4%；選項：A",
+          "why": "把溢價攤銷方向和有效利息費用的方向混淆。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -160,7 +238,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

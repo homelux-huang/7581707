@@ -106,7 +106,61 @@
       "calculation": "N/A（本題沒有計算要求）"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-14",
+      "subject": "會計學",
+      "questionNumber": 14,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "賒銷商品的應收帳款認列：①目的地交貨本日出貨、下月到；②分期付款本日交貨；③寄銷送交代銷商；④安裝測試重大義務尚未完成。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "應收帳款認列依銷售是否完成與有無無條件收款權；寄銷和重大安裝有額外條件。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①目的地交貨，雖已出貨仍未到指定地點，通常尚未完成交貨；",
+          "why": "第二筆貨已交給客人，雖然客人以後才付完錢，但店家現在就能記『客人欠我錢』。另外幾筆還沒真正完成交貨或服務。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②**已交貨**且信用良好，分期付款仍有本日收款請求權，應認列應收帳款；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③寄銷只是交由受託者代售，尚未實際出售； ④安裝測試是合約重要履約項目，尚未完成。 故**只有②可認列**，選A。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "只有②已交付商品且可請求餘款，應於本日認列應收帳款。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "fbac2676dbe415bd141cf10682969998065c82bdc127e4947b2469bb2b6a76d6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -115,7 +169,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

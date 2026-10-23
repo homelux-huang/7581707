@@ -3548,7 +3548,583 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|14": {
+      "questionId": "115-09-2-14",
+      "subject": "會計學",
+      "questionNumber": 14,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "賒銷商品的應收帳款認列：①目的地交貨本日出貨、下月到；②分期付款本日交貨；③寄銷送交代銷商；④安裝測試重大義務尚未完成。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "應收帳款認列依銷售是否完成與有無無條件收款權；寄銷和重大安裝有額外條件。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①目的地交貨，雖已出貨仍未到指定地點，通常尚未完成交貨；",
+          "why": "第二筆貨已交給客人，雖然客人以後才付完錢，但店家現在就能記『客人欠我錢』。另外幾筆還沒真正完成交貨或服務。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②**已交貨**且信用良好，分期付款仍有本日收款請求權，應認列應收帳款；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③寄銷只是交由受託者代售，尚未實際出售； ④安裝測試是合約重要履約項目，尚未完成。 故**只有②可認列**，選A。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "只有②已交付商品且可請求餘款，應於本日認列應收帳款。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "fbac2676dbe415bd141cf10682969998065c82bdc127e4947b2469bb2b6a76d6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|15": {
+      "questionId": "115-09-2-15",
+      "subject": "會計學",
+      "questionNumber": 15,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": true,
+      "reviewReason": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "200+300−20可供售件數；銷280、銷退30；實盤210、每件50元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "可供售=期初+進貨−退貨；帳存=可供售−淨銷；盤虧=(帳存−實盤)×單位成本。",
+          "why": "定期盤存由實盤決定期末數並倒算成本；永續追蹤每次進銷貨，期末需按差額調整存貨盤虧與成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "可供售=200+300−20=480件",
+          "why": "總進貨扣進貨退出。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨銷售=280−30=250件",
+          "why": "銷貨退回加回存貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "帳面期末=480−250=230件",
+          "why": "永續盤存應有數量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "實盤210<帳230 ⇒盤虧20件×50=1000元",
+          "why": "非盤盈。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "定期成本=(480−210)×50=13500元",
+          "why": "以實盤期末直接推銷貨成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "永續平時銷貨成本=250×50=12500元",
+          "why": "出貨即結轉成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "依本題教學分類年終盤虧1000調整後成本12500+1000=13500元",
+          "why": "對比①；仍需確認教材之盤虧列報政策。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "兩制期末存貨=210×50=10500元",
+          "why": "期末資產按實盤數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "①②正確、③將盤虧誤作盤盈，選C",
+          "why": "與候選一致，但首次誤解已記錄。",
+          "kind": "formula"
+        },
+        {
+          "title": "比較不同推導並等待核對",
+          "content": "①②正確；銷貨成本13500元、存貨10500元、盤虧1000元；單位：新臺幣元；數量件；選項：C",
+          "why": "誤把盤虧當盤盈，或未處理年終盤虧調整。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|16": {
+      "questionId": "115-09-2-16",
+      "subject": "會計學",
+      "questionNumber": 16,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "購入5000股×30元，交易手續費100元；現金股利每股2元、股票股利4%；X1末每股40元；X2出售每股50元，交易費1000元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "X1淨利影響=股利收入+(期末FV−初始FV)−交易費；X2處分利益=出售淨價款−期初帳面金額。",
+          "why": "FVTPL公允價值變動列損益；股票股利增加股數但非現金收入；出售淨價款減上期帳面價值才是當期處分損益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "初始金融資產=5000×30=150000元",
+          "why": "FVTPL交易手續費100於X1費用化。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現金股利=5000×2=10000元",
+          "why": "領現金股利產生X1收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "股票股利=5000×4%=200股；新股數=5200股",
+          "why": "股票股利不產生X1現金收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1末公允價值=5200×40=208000元",
+          "why": "依期末股數乘公允價值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1評價利益=208000−150000=58000元",
+          "why": "FVTPL公允價值差入損益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1淨利影響=10000+58000−100=67900元",
+          "why": "加股利與評價收益，扣交易費。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2出售實收=5200×50−1000=259000元",
+          "why": "扣出售費用及交易稅。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2處分利益=259000−208000=51000元",
+          "why": "避免再扣原始150000形成跨期重覆認列。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(67900,51000)對應D",
+          "why": "按題目X1、X2順序填答。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D：X1 67900元、X2 51000元；單位：新臺幣元；選項：D",
+          "why": "把股票股利4%當現金股利，或用原始成本而非上年底公允價值作X2出售成本。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "bc4400fc6ce199f814e1811a2d4e3c211f34c83a908657b4af38144cc7d4ae0b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|17": {
+      "questionId": "115-09-2-17",
+      "subject": "會計學",
+      "questionNumber": 17,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "不動產、廠房及設備取得成本敘述何者正確：附條件政府贈地、自建廠房超可回收金額、拆舊屋改建、購入機器現金折扣。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "固定資產取得成本以必要支出和現金等值價為基礎；政府補助、自建資產減損、汰舊換新需分別依準則處理。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**D正確**：外購機器設備以**購價扣最大現金折扣後之淨額**作取得成本，未利用現金折扣依題目商科教材通常作營業外支出。",
+          "why": "買機器如果有最高現金折扣，成本應按扣掉折扣的價錢記。自己蓋廠房不是越花越多就能說賺錢；拆舊房和政府送地也有另外的會計規則。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A附條件政府補助需按是否具有合理保證及適用準則認列，不能一律延至條件完成時按當時市價入帳。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B成本高於可回收金額，應考慮減損，不可能照成本認列自建資產利益。 C已有舊屋要先按資產除列處理，不能一律認定拆除支出必屬新屋成本、不得認舊屋處分損益。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "外購機器按可取得最大現金折扣後淨額計成本，放棄折扣另列費用，符合本題原則。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|18": {
+      "questionId": "115-09-2-18",
+      "subject": "會計學",
+      "questionNumber": 18,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "成本500000、原殘值5000、耐用5年；前兩年X1與X2直線法；X3年初改估剩2年、殘值2000，改年數合計法",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "直線折舊=(成本−殘值)/年限；年數合計=剩餘年數總和；剩餘基礎×剩餘年數/年數合計。",
+          "why": "會計估計變動使用未來適用法，未來折舊以現有帳面減新殘值、按剩餘年限計，不追溯改前兩年折舊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原年折舊=(500000−5000)/5=99000元",
+          "why": "用直線法算X1與X2。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "兩年累計折舊=99000×2=198000元",
+          "why": "計入已使用兩年度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X3初帳面=500000−198000=302000元",
+          "why": "從原成本扣累折。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新可折舊基礎=302000−2000=300000元",
+          "why": "依剩餘估計，不重算過去。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "年數合計=2+1=3，X3折舊=300000×2/3=200000元",
+          "why": "新的兩年中第一年權數2。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X3末帳面=302000−200000=102000元",
+          "why": "選C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "102000元；單位：新臺幣元；選項：C",
+          "why": "把變更折舊方法追溯前兩年、忽略新殘值或把年數合計當直線。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "22e743c48472915b7d524d3263a88e8069f086cc086082248ce0140999053ceb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|19": {
+      "questionId": "115-09-2-19",
+      "subject": "會計學",
+      "questionNumber": 19,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "銀行借款10000000元；20%原X2/6/30到期；X1/12/15已簽展延協議至X3/6/30",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "一年內到期金額=10000000×20%=2000000；若報導日前已具可推遲超過12個月清償的權利則不列流動。",
+          "why": "負債流動與非流動分類要看報導日已具備的推遲清償權利與12個月時限，非單看最初借款合約。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原一年內到期本金=10000000×20%=2000000元",
+          "why": "原合約X2/6/30須還20%。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1/12/15簽延期協議在X1/12/31報導日前",
+          "why": "報導日已有有效展延安排。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新到期日X3/6/30距X1/12/31超過12個月",
+          "why": "200萬可列非流動。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "其餘8000000元均X3年底後到期",
+          "why": "其餘不屬流動。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1年底流動負債=0元，選A",
+          "why": "各部分到期日均超過12個月。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "0元；單位：新臺幣元；選項：A",
+          "why": "只看原X2到期額，不看報導日前已完成的有效展延。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5c5dcab67b6d0d6dbaf56771e9726a21e3f213f2136fe3c5e7166782ec5cf4b1",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|20": {
+      "questionId": "115-09-2-20",
+      "subject": "會計學",
+      "questionNumber": 20,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "每年付息280000元；X5年底帳面5803274元；X6年底帳面5755405元；流通六年",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "溢價攤銷=現金付息−有效利息費用；有效利率=有效利息費用/期初帳面。",
+          "why": "有效利息法：利息費用=期初帳面價值×有效利率；付息=面額×票面利率；溢價攤銷=付息−利息費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "溢價攤銷=5803274−5755405=47869元",
+          "why": "帳面減少表示溢價攤銷。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X6利息費用=280000−47869=232131元",
+          "why": "現金利息扣溢價攤銷。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "有效利率≈232131/5803274≈4%",
+          "why": "低於票面利率，②對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "帳面餘額逐年降 ⇒利息費用=帳面×固定有效利率逐年降",
+          "why": "①對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "六年現金利息=280000×6=1680000元",
+          "why": "現金付息合計。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "溢價使有效利息費用合計低於現金付息合計",
+          "why": "③說大於錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現金利息固定、利息費用逐年下降 ⇒差額(溢價攤銷)逐年增加",
+          "why": "④說遞減錯；選A。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "A（①②）；單位：新臺幣元；有效利率約4%；選項：A",
+          "why": "把溢價攤銷方向和有效利息費用的方向混淆。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|21": {
+      "questionId": "115-09-2-21",
+      "subject": "會計學",
+      "questionNumber": 21,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "X1年折舊費用高估$3,000；X2年12月1日始發現；不考慮所得稅",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "前期累計折舊高估額＝前期折舊費用多提額＝$3,000",
+          "why": "判斷錯誤造成抵減資產科目及前期盈餘的高低，決定更正分錄的借貸方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1折舊費用多提＝$3,000",
+          "why": "題幹給定前期折舊高估金額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1累計折舊高估＝+$3,000",
+          "why": "多計折舊費用時同步多貸累計折舊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1前期損益與權益低估＝$3,000",
+          "why": "費用高估使以前年度盈餘偏低（題目不考所得稅）。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2更正借：累計折舊—機器設備 $3,000",
+          "why": "借記抵減資產科目可減少原本過高的累計折舊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2更正貸：追溯適用及追溯重編之影響數 $3,000",
+          "why": "因錯誤屬X1前期，調整以前年度權益影響，而非沖本期費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "借方$3,000＝貸方$3,000；對應選項C",
+          "why": "更正分錄借貸平衡。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "借累計折舊$3,000／貸追溯適用及追溯重編之影響數$3,000；單位：新臺幣元；選項：C",
+          "why": "把X1前期錯誤誤當X2當期折舊費用回轉，選A；或把方向顛倒選D。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 55
+  "readyQuestionCount": 63
 };

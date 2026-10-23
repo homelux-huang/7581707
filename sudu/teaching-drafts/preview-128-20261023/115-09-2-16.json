@@ -160,6 +160,96 @@
       "matchingOption": "D",
       "commonMistake": "把股票股利4%當現金股利，或用原始成本而非上年底公允價值作X2出售成本。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-16",
+      "subject": "會計學",
+      "questionNumber": 16,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "購入5000股×30元，交易手續費100元；現金股利每股2元、股票股利4%；X1末每股40元；X2出售每股50元，交易費1000元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "X1淨利影響=股利收入+(期末FV−初始FV)−交易費；X2處分利益=出售淨價款−期初帳面金額。",
+          "why": "FVTPL公允價值變動列損益；股票股利增加股數但非現金收入；出售淨價款減上期帳面價值才是當期處分損益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "初始金融資產=5000×30=150000元",
+          "why": "FVTPL交易手續費100於X1費用化。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現金股利=5000×2=10000元",
+          "why": "領現金股利產生X1收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "股票股利=5000×4%=200股；新股數=5200股",
+          "why": "股票股利不產生X1現金收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1末公允價值=5200×40=208000元",
+          "why": "依期末股數乘公允價值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1評價利益=208000−150000=58000元",
+          "why": "FVTPL公允價值差入損益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1淨利影響=10000+58000−100=67900元",
+          "why": "加股利與評價收益，扣交易費。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2出售實收=5200×50−1000=259000元",
+          "why": "扣出售費用及交易稅。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2處分利益=259000−208000=51000元",
+          "why": "避免再扣原始150000形成跨期重覆認列。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(67900,51000)對應D",
+          "why": "按題目X1、X2順序填答。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D：X1 67900元、X2 51000元；單位：新臺幣元；選項：D",
+          "why": "把股票股利4%當現金股利，或用原始成本而非上年底公允價值作X2出售成本。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "bc4400fc6ce199f814e1811a2d4e3c211f34c83a908657b4af38144cc7d4ae0b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -169,7 +259,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -166,6 +166,96 @@
       "matchingOption": "C",
       "commonMistake": "誤把盤虧當盤盈，或未處理年終盤虧調整。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-15",
+      "subject": "會計學",
+      "questionNumber": 15,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": true,
+      "reviewReason": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "200+300−20可供售件數；銷280、銷退30；實盤210、每件50元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "可供售=期初+進貨−退貨；帳存=可供售−淨銷；盤虧=(帳存−實盤)×單位成本。",
+          "why": "定期盤存由實盤決定期末數並倒算成本；永續追蹤每次進銷貨，期末需按差額調整存貨盤虧與成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "可供售=200+300−20=480件",
+          "why": "總進貨扣進貨退出。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨銷售=280−30=250件",
+          "why": "銷貨退回加回存貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "帳面期末=480−250=230件",
+          "why": "永續盤存應有數量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "實盤210<帳230 ⇒盤虧20件×50=1000元",
+          "why": "非盤盈。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "定期成本=(480−210)×50=13500元",
+          "why": "以實盤期末直接推銷貨成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "永續平時銷貨成本=250×50=12500元",
+          "why": "出貨即結轉成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "依本題教學分類年終盤虧1000調整後成本12500+1000=13500元",
+          "why": "對比①；仍需確認教材之盤虧列報政策。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "兩制期末存貨=210×50=10500元",
+          "why": "期末資產按實盤數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "①②正確、③將盤虧誤作盤盈，選C",
+          "why": "與候選一致，但首次誤解已記錄。",
+          "kind": "formula"
+        },
+        {
+          "title": "比較不同推導並等待核對",
+          "content": "①②正確；銷貨成本13500元、存貨10500元、盤虧1000元；單位：新臺幣元；數量件；選項：C",
+          "why": "誤把盤虧當盤盈，或未處理年終盤虧調整。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -176,7 +266,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "firstPassErrorNeedsIndependentReview": true
+    "firstPassErrorNeedsIndependentReview": true,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -150,6 +150,78 @@
         }
       ],
       "ruleVersion": "適用財會準則及彰化高商教材版本待核對；不憑印象聲稱現行法條。"
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-21",
+      "subject": "會計學",
+      "questionNumber": 21,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "X1年折舊費用高估$3,000；X2年12月1日始發現；不考慮所得稅",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "前期累計折舊高估額＝前期折舊費用多提額＝$3,000",
+          "why": "判斷錯誤造成抵減資產科目及前期盈餘的高低，決定更正分錄的借貸方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1折舊費用多提＝$3,000",
+          "why": "題幹給定前期折舊高估金額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1累計折舊高估＝+$3,000",
+          "why": "多計折舊費用時同步多貸累計折舊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X1前期損益與權益低估＝$3,000",
+          "why": "費用高估使以前年度盈餘偏低（題目不考所得稅）。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2更正借：累計折舊—機器設備 $3,000",
+          "why": "借記抵減資產科目可減少原本過高的累計折舊。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "X2更正貸：追溯適用及追溯重編之影響數 $3,000",
+          "why": "因錯誤屬X1前期，調整以前年度權益影響，而非沖本期費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "借方$3,000＝貸方$3,000；對應選項C",
+          "why": "更正分錄借貸平衡。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "借累計折舊$3,000／貸追溯適用及追溯重編之影響數$3,000；單位：新臺幣元；選項：C",
+          "why": "把X1前期錯誤誤當X2當期折舊費用回轉，選A；或把方向顛倒選D。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -160,7 +232,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

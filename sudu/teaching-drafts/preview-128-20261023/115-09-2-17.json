@@ -104,7 +104,61 @@
       "calculation": "N/A（題目無數字計算）"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-17",
+      "subject": "會計學",
+      "questionNumber": 17,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "不動產、廠房及設備取得成本敘述何者正確：附條件政府贈地、自建廠房超可回收金額、拆舊屋改建、購入機器現金折扣。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "固定資產取得成本以必要支出和現金等值價為基礎；政府補助、自建資產減損、汰舊換新需分別依準則處理。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**D正確**：外購機器設備以**購價扣最大現金折扣後之淨額**作取得成本，未利用現金折扣依題目商科教材通常作營業外支出。",
+          "why": "買機器如果有最高現金折扣，成本應按扣掉折扣的價錢記。自己蓋廠房不是越花越多就能說賺錢；拆舊房和政府送地也有另外的會計規則。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A附條件政府補助需按是否具有合理保證及適用準則認列，不能一律延至條件完成時按當時市價入帳。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B成本高於可回收金額，應考慮減損，不可能照成本認列自建資產利益。 C已有舊屋要先按資產除列處理，不能一律認定拆除支出必屬新屋成本、不得認舊屋處分損益。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "外購機器按可取得最大現金折扣後淨額計成本，放棄折扣另列費用，符合本題原則。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -113,7 +167,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
