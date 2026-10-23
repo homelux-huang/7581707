@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-02",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 2,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-02.webp",
+  "imageSha256": "e62968113b52267811a43d63a85c40a58e5fbb307b053a132fe237f7055618c8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐張觀看 GitHub 原始單題 WebP；實際確認題號、完整題幹、A～D 與無鄰題／表格遺漏；重新計算 WebP SHA256 與固定清單一致",
+    "ocrIssues": [],
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "keyConditions": [
+      "began his swimming journey",
+      "in the third grade",
+      "the school's swimming team"
+    ],
+    "reasoningFromOriginalImage": "題目敘述三年級開始游泳歷程，搭配學校游泳隊，需要「加入隊伍」的及物動詞；加入團隊用 joined。",
+    "formulaRequired": false,
+    "reasoningRecordedBeforeCandidateRead": true,
+    "officialFinalStatus": "PENDING_FINAL_PDF_AND_ISSUE_EXPLANATION"
+  },
+  "teaching": {
+    "teacherSummary": "時間線是三年級開始游泳生涯；**join + team** 表示加入隊伍，不需要介系詞。由過去的 **began**、**when** 可知空格使用過去式 **joined**，表示當時成為學校游泳隊的一員。",
+    "elementarySummary": "他在小學三年級加入游泳隊，才開始練游泳。「加入隊伍」就是 **joined the team**，不是把隊伍擋住、拉走或租來。",
+    "memory": "**joined the team＝加入隊伍**；join 直接接團體。",
+    "concept": "**join** 可直接接 team/club；**join in** 常接活動。敘述過去的事件時，join 變成 **joined**。認識字義也要檢查動詞後面能否接該名詞。",
+    "extension": "反向思考：若句子改為「He ___ the swimming team after moving away」，表達『離開球隊』，動詞應選 **left** 或 **quit**，不是 joined。再比較 join a team 與 join in a race 的搭配。",
+    "source": {
+      "originalExam": "115-00-E-02",
+      "originalImagePinnedSha256": "e62968113b52267811a43d63a85c40a58e5fbb307b053a132fe237f7055618c8",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "began",
+      "joined",
+      "the school's swimming team",
+      "in the third grade"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**blocked** 表阻擋。blocked the team 表示妨礙整個隊伍，不等於成為隊員，也無法合理說明他開始游泳之旅。",
+        "elementary": "把隊伍擋住不會讓自己變成隊員。",
+        "reason": "**blocked** 表阻擋。blocked the team 表示妨礙整個隊伍，不等於成為隊員，也無法合理說明他開始游泳之旅。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**joined** 是 join 的過去式，**joined the school’s swimming team** 是自然搭配；加入游泳隊能說明開始游泳歷程。",
+        "elementary": "他報名、成了學校游泳隊的一員，就是加入。",
+        "reason": "**joined** 是 join 的過去式，**joined the school’s swimming team** 是自然搭配；加入游泳隊能說明開始游泳歷程。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**pulled** 是拉動；pulled the team 並非標準「加入隊伍」說法，常見 pull a rope 等要有可拉的物件。",
+        "elementary": "拉著隊伍走和參加隊伍，是不同的事。",
+        "reason": "**pulled** 是拉動；pulled the team 並非標準「加入隊伍」說法，常見 pull a rope 等要有可拉的物件。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**rented** 是租用；通常租借物品或空間，不會說租一支學校游泳隊來開始自己的游泳生涯。",
+        "elementary": "隊伍是加入的，不是像租腳踏車那樣租來的。",
+        "reason": "**rented** 是租用；通常租借物品或空間，不會說租一支學校游泳隊來開始自己的游泳生涯。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "有「臺灣蝶王」之稱的王冠閎，在小學三年級加入學校游泳隊時，開始了他的游泳之路。",
+      "answerWord": "joined",
+      "pronunciationIPA": "/dʒɔɪnd/",
+      "optionMeaningZh": {
+        "A": "阻擋了",
+        "B": "加入了",
+        "C": "拉動了",
+        "D": "租用了"
+      },
+      "synonyms": {
+        "初級": [
+          "entered（進入；部分語境近義）"
+        ],
+        "中級": [
+          "became a member of（成為成員）"
+        ],
+        "高級": [
+          "enrolled in（登記加入；視組織性質使用）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "left（離開）"
+        ],
+        "中級": [
+          "quit（退出）"
+        ],
+        "高級": [
+          "withdrew from（退出、撤離）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "exampleEnglish": "Mina joined the school robotics club last semester.",
+      "exampleChinese": "美娜上學期加入了學校的機器人社團。",
+      "exampleHighlightedSurfaceForm": "joined",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
