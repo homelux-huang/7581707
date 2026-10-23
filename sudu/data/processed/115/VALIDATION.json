@@ -4,7 +4,7 @@
   "structuralStatus": "PASS",
   "blockingFailures": [],
   "webpImageVisualReview": "PARTIAL_ASSISTANT_VISUAL_QA",
-  "officialAnswers": "SHA-pinned PDF textual agreement, independent review not complete",
+  "officialAnswers": "PARTIAL_6_SHA_BOUND_TCTE_FINAL_ANSWERS_ALL_OTHERS_PENDING",
   "sqlite": "SQLITE_ROUNDTRIP_PASS",
   "published": "NO",
   "integration": "NO",
@@ -18,7 +18,7 @@
       "nativePdfOrManualTextAvailable": 38,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 38,
-      "officialAnswerIndependentlyVerified": 0,
+      "officialAnswerIndependentlyVerified": 6,
       "sqliteRecordCount": 38,
       "needsFullVisualReview": 23
     },

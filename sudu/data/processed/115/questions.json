@@ -1256,7 +1256,7 @@
         "B"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -1339,7 +1339,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "B",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -1822,7 +1827,7 @@
         "D"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -1908,7 +1913,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -1931,7 +1941,7 @@
         "C"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -2017,7 +2027,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "C",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -2040,7 +2055,7 @@
         "D"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -2126,7 +2141,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -2149,7 +2169,7 @@
         "B"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -2236,7 +2256,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "B",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -2259,7 +2284,7 @@
         "B"
       ],
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
@@ -2348,7 +2373,12 @@
       ],
       "reviewStatus": "needs_review",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "B",
+      "officialCorrectionChecked": true,
+      "officialAnswerQaStatus": "PASS_FINAL_TCTE_PUBLISHED_ANSWER_AND_CONFIRMATION",
+      "answerQaEvidence": "sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,

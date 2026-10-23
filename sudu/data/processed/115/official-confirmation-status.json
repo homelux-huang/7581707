@@ -2,17 +2,23 @@
   "schemaVersion": 1,
   "year": 115,
   "source": "https://web1.tcte.edu.tw/EXAM/115_4y/",
-  "checkedOn": "2026-10-22",
+  "checkedOn": "2026-10-23",
   "notice": "Final standard answer confirmation meeting was held 2026-05-08 and standard answers released 17:00 that day. Source page says PDF is authoritative; Word variations are not authoritative.",
   "scope": "Only 115 four-year technological and vocational entrance examination",
   "confirmations": {
     "00-C": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "not_reviewed"
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+      "revisionDocumentSha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+      "revisionDocumentPages": 10,
+      "reviewedAt": "2026-10-23"
     },
     "00-E": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "not_reviewed"
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+      "revisionDocumentSha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+      "revisionDocumentPages": 2,
+      "reviewedAt": "2026-10-23"
     },
     "00-MB": {
       "officialStatus": "no_objection_submitted",
@@ -24,9 +30,13 @@
     },
     "09-2": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "not_reviewed"
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+      "revisionDocumentSha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+      "revisionDocumentPages": 3,
+      "reviewedAt": "2026-10-23"
     }
   },
-  "interpretation": "No objection is not independent per-question verification. All answerVerified flags stay false. 09-2 question-or-answer confirmation document must be read before declaring verified. PDF SHA-pinned evidence in each question record remains the answer source.",
-  "repositoryBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+  "interpretation": "All TCTE confirmation PDFs for 00-C 00-E 09-2 read; only six source-image-verified Chinese G3 answers promoted. Others remain unverified; no G2/G6 promotion.",
+  "repositoryBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+  "officialNoticeEvidencePath": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
 }

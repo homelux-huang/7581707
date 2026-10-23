@@ -14,7 +14,7 @@
       "nativePdfOrManualTextAvailable": 38,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 38,
-      "officialAnswerIndependentlyVerified": 0,
+      "officialAnswerIndependentlyVerified": 6,
       "sqliteRecordCount": 38,
       "needsFullVisualReview": 23
     },
@@ -105,7 +105,7 @@
     "09-2": 50
   },
   "officialPdfTextAnswerMatched": 205,
-  "officialAnswerIndependentVerified": 0,
+  "officialAnswerIndependentVerified": 6,
   "generatedWebp": 205,
   "webpDecodePass": 205,
   "webpShaPass": 205,
