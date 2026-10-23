@@ -3,7 +3,7 @@
   "expected": 205,
   "canonicalUnique": 205,
   "webpDrafts": 205,
-  "webpVisualQaPassed": 30,
+  "webpVisualQaPassed": 35,
   "missingImageIds": [],
   "missingFourTextOptionIds": [
     "114-00-C-30",
@@ -72,5 +72,6 @@
   "integrationReady": false,
   "ocrTextIndependentlyVerified": 1,
   "textQaPass": 1,
-  "lastImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json"
+  "lastImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+  "sharedMaterialVisualQaPassed": 1
 }
