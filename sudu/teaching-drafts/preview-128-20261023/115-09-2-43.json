@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-43",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 43,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-43.webp",
+  "imageSha256": "51f12ac893ea05ccde28d477ef3b6bff84ce9f3039eb73e782b4f837b2719fc5",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐題打開 GitHub 既有單題 WebP，確認GDP數字、公式、央行政策表格、四個選項無缺漏；WebP SHA256重新驗算吻合凍結清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_READ",
+    "notice": "本輪先目視原圖解答，再比對候選；最終官方更正未獨立核實，完整教學QA待完成。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "中央銀行貨幣政策",
+      "景氣熱絡／不景氣",
+      "公開市場買賣債券",
+      "法定準備率與重貼現率調整"
+    ],
+    "reasoningFromOriginalImage": "景氣過熱時中央銀行可採**緊縮性貨幣政策**，**賣出債券**讓市場資金流回央行、**調高法定準備率**讓銀行可貸資金減少、**調高重貼現率**提高向央行融資成本，故三項同時吻合的是B。景氣衰退時反向採買進債券、降低準備率與重貼現率以刺激借貸。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_OFFICIAL_FINAL_RECHECK"
+  },
+  "teaching": {
+    "teacherSummary": "景氣過熱時中央銀行可採**緊縮性貨幣政策**，**賣出債券**讓市場資金流回央行、**調高法定準備率**讓銀行可貸資金減少、**調高重貼現率**提高向央行融資成本，故三項同時吻合的是B。景氣衰退時反向採買進債券、降低準備率與重貼現率以刺激借貸。",
+    "elementarySummary": "市場太熱像車子跑太快，央行想踩煞車：把債券賣出去收回錢、讓銀行多留準備金、提高向央行借錢的成本，錢就比較不容易到處流。",
+    "memory": "**過熱緊縮：賣債、提高準備率、提高重貼現率；衰退則反向**。",
+    "concept": "公開市場操作影響準備貨幣與流動性；法定準備率和重貼現率調控放款誘因。",
+    "extension": "反向題：若景氣陷入衰退，央行想增加可貸資金，公開市場應買回還是賣出債券？準備率應調高還是調低？",
+    "source": {
+      "originalExam": "115-09-2-43",
+      "originalImagePinnedSha256": "51f12ac893ea05ccde28d477ef3b6bff84ce9f3039eb73e782b4f837b2719fc5",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案與更正說明尚未核實"
+    },
+    "highlightTerms": [
+      "公開市場操作",
+      "賣出債券",
+      "法定準備率調高",
+      "重貼現率調高",
+      "緊縮性貨幣政策"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A景氣熱絡卻**買回債券**（偏擴張）、調高準備率（緊縮）、調低重貼現率（擴張），方向混雜，不能視為一致的緊縮組合。",
+        "elementary": "要踩煞車，卻同時踩油門，不對。",
+        "reason": "A景氣熱絡卻**買回債券**（偏擴張）、調高準備率（緊縮）、調低重貼現率（擴張），方向混雜，不能視為一致的緊縮組合。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B景氣熱絡且賣出債券、提高準備率及重貼現率，三項均收緊資金供給與信用，是正確組合。",
+        "elementary": "三種方式都讓錢較少、借錢更難，符合降溫。",
+        "reason": "B景氣熱絡且賣出債券、提高準備率及重貼現率，三項均收緊資金供給與信用，是正確組合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C不景氣時買回債券與降低準備率屬擴張，但**提高重貼現率**會使銀行借款更貴，方向相反。",
+        "elementary": "前兩項加油門，最後一項卻踩煞車。",
+        "reason": "C不景氣時買回債券與降低準備率屬擴張，但**提高重貼現率**會使銀行借款更貴，方向相反。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D不景氣卻賣出債券、提高準備率、提高重貼現率，全部偏緊縮，可能讓景氣更冷。",
+        "elementary": "不景氣還把錢收得更緊，方向反了。",
+        "reason": "D不景氣卻賣出債券、提高準備率、提高重貼現率，全部偏緊縮，可能讓景氣更冷。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
