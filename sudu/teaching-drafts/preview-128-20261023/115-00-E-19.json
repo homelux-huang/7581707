@@ -153,7 +153,16 @@
       "exampleChinese": "我阿姨上個月辦好了駕照換發。",
       "exampleHighlightedSurfaceForm": "renewed",
       "exampleType": "自編雙語教學例句，非新聞",
-      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Under rules effective in May 2026, eligible Taiwanese drivers aged 70 to 74 can have their licenses renewed after health checks and safety training.",
+      "newsExampleChinese": "依2026年5月生效的新制，符合條件的臺灣70至74歲駕駛人在完成體檢與安全講習後，可辦理駕照換發。",
+      "newsExampleHighlightedSurfaceForm": "renewed",
+      "newsExampleSourceUrl": "https://www.motc.gov.tw/ch/app/data/view?id=1687&module=argue&serno=202511110001",
+      "newsExampleSourceTitle": "關於高齡駕駛人換照新制的正式澄清",
+      "newsExampleSourceOrganization": "交通部公路局",
+      "newsExampleSourceDate": "2025-11-11",
+      "newsExampleKind": "參照可查證新聞或主管機關公告自行撰寫的英文例句，非逐字新聞引述",
+      "newsExampleSourceScope": "主管機關2025-11-11公告2026年5月起採70歲分級關懷新制、體檢與講習；有緩衝及接通知辦理，非年滿70立刻不得開車"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -203,6 +212,28 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "referenceUrl": "https://www.motc.gov.tw/ch/app/data/view?id=1687&module=argue&serno=202511110001",
+      "sourcePublished": "2025-11-11",
+      "factGrounded": "主管機關2025-11-11公告2026年5月起採70歲分級關懷新制、體檢與講習；有緩衝及接通知辦理，非年滿70立刻不得開車",
+      "highlightWord": "renewed",
+      "highlightedWordInExample": true,
+      "translationProvided": true,
+      "sourceQuotedVerbatim": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
+    },
+    "currentTaiwanTrafficLawCrosscheck20261023": {
+      "status": "OFFICIAL_GOVERNMENT_SOURCE_VERIFIED_NOT_TEXTBOOK_REVIEW",
+      "authority": "交通部公路局",
+      "sourceUrl": "https://www.motc.gov.tw/ch/app/data/view?id=1687&module=argue&serno=202511110001",
+      "regulatoryEffectiveDate": "2026-05-31",
+      "scope": "70至74歲普通駕照換照之體檢及高齡交通安全講習；有通知及緩衝措施，不可解釋成所有70歲者立即不能開車",
+      "readingQuestionAnswerStill": "C",
+      "teachingAcceptance": "PENDING"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

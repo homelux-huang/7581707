@@ -165,7 +165,16 @@
       "exampleChinese": "這座雕塑看起來彷彿正在移動。",
       "exampleHighlightedSurfaceForm": "as if",
       "exampleType": "自編非新聞英文例句",
-      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Tamkang Bridge's tower looks as if it were dancing; a 2025 report linked its design to Cloud Gate Dance Theatre.",
+      "newsExampleChinese": "淡江大橋的橋塔彷彿在跳舞；2025年的報導指出其設計靈感與雲門舞集有關。",
+      "newsExampleHighlightedSurfaceForm": "as if",
+      "newsExampleSourceUrl": "https://www.taiwannews.com.tw/news/6201237",
+      "newsExampleSourceTitle": "New Taipei Tamkang Bridge final piece completed",
+      "newsExampleSourceOrganization": "Taiwan News",
+      "newsExampleSourceDate": "2025-09-16",
+      "newsExampleKind": "參照可查證新聞或主管機關公告自行撰寫的英文例句，非逐字新聞引述",
+      "newsExampleSourceScope": "2025年9月報導記載橋梁設計取材雲門舞集；前半句為教學比喻，非新聞引述"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -218,6 +227,19 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "referenceUrl": "https://www.taiwannews.com.tw/news/6201237",
+      "sourcePublished": "2025-09-16",
+      "factGrounded": "2025年9月報導記載橋梁設計取材雲門舞集；前半句為教學比喻，非新聞引述",
+      "highlightWord": "as if",
+      "highlightedWordInExample": true,
+      "translationProvided": true,
+      "sourceQuotedVerbatim": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -137,7 +137,16 @@
       "exampleChinese": "這家咖啡館在週末促銷期間吸引了更多來客。",
       "exampleHighlightedSurfaceForm": "attracted",
       "exampleType": "自行撰寫的教學例句（非新聞）",
-      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "At a May 2026 event, the IMO highlighted efforts to attract more women to maritime careers.",
+      "newsExampleChinese": "國際海事組織於2026年5月的活動中強調吸引更多女性投入海事職涯的努力。",
+      "newsExampleHighlightedSurfaceForm": "attract",
+      "newsExampleSourceUrl": "https://www.imo.org/en/mediacentre/pressbriefings/pages/international-day-for-women-in-maritime-2026-id4wim-mainstreaming-gender-equality.aspx",
+      "newsExampleSourceTitle": "International Day for Women in Maritime 2026",
+      "newsExampleSourceOrganization": "International Maritime Organization",
+      "newsExampleSourceDate": "2026-05-15",
+      "newsExampleKind": "參照可查證新聞或主管機關公告自行撰寫的英文例句，非逐字新聞引述",
+      "newsExampleSourceScope": "國際海事組織強調婦女參與海事、招聘留任及性別平等；attract為依該活動改寫的語境用詞"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -187,6 +196,19 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "referenceUrl": "https://www.imo.org/en/mediacentre/pressbriefings/pages/international-day-for-women-in-maritime-2026-id4wim-mainstreaming-gender-equality.aspx",
+      "sourcePublished": "2026-05-15",
+      "factGrounded": "國際海事組織強調婦女參與海事、招聘留任及性別平等；attract為依該活動改寫的語境用詞",
+      "highlightWord": "attract",
+      "highlightedWordInExample": true,
+      "translationProvided": true,
+      "sourceQuotedVerbatim": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

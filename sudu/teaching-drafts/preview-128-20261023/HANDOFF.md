@@ -1,3 +1,6 @@
+## 2026-10-23｜再補英文4題具來源新聞語境，附高齡換照法規核實（不發布）
+- E05、19、23、27新增近3年時事英文+中譯+highlight及URL/來源日期；E19查交通部2026年5月31日生效換照規則與緩衝，保留考題答案C。來源型新聞例句累計13/28，餘15題仍不得冒稱新聞。見 `ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md`。
+
 ## 2026-10-23｜英文詞彙／來源型新聞例句CI QA新增
 - 強化`audit_preview_128_release_readiness.py`：28題四選項中文、IPA、初中高級同反義字、自編例句/中譯/實際highlight；只有附URL及日期、標註paraphrase、highlight的才可稱來源型新聞。progress新聞集合須一致，目前9/28。詳見 `ENGLISH_NEWS_AND_VOCAB_AUTOMATED_GATES_20261023.md`。
 

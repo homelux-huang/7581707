@@ -165,7 +165,16 @@
       "exampleChinese": "即使天氣很差，救援隊仍然工作。",
       "exampleHighlightedSurfaceForm": "even when",
       "exampleType": "自編非新聞教學例句",
-      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Women at sea may continue working even when they face fatigue and isolation, as a May 2026 industry report described.",
+      "newsExampleChinese": "2026年5月的海事產業報導指出，女性航海員即使面對疲憊與孤立等壓力，仍可能持續工作。",
+      "newsExampleHighlightedSurfaceForm": "even when",
+      "newsExampleSourceUrl": "https://safety4sea.com/mhss-psychological-burnout-drives-women-out-of-seafaring-careers/",
+      "newsExampleSourceTitle": "MHSS: Psychological burnout drives women out of seafaring careers",
+      "newsExampleSourceOrganization": "SAFETY4SEA",
+      "newsExampleSourceDate": "2026-05-29",
+      "newsExampleKind": "參照可查證新聞或主管機關公告自行撰寫的英文例句，非逐字新聞引述",
+      "newsExampleSourceScope": "2026年5月報導海上女性面臨心理壓力、疲勞、孤立與長期合約等挑戰"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -218,6 +227,19 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "referenceUrl": "https://safety4sea.com/mhss-psychological-burnout-drives-women-out-of-seafaring-careers/",
+      "sourcePublished": "2026-05-29",
+      "factGrounded": "2026年5月報導海上女性面臨心理壓力、疲勞、孤立與長期合約等挑戰",
+      "highlightWord": "even when",
+      "highlightedWordInExample": true,
+      "translationProvided": true,
+      "sourceQuotedVerbatim": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
