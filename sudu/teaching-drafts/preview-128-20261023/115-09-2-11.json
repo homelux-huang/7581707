@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-11",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 11,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-11.webp",
+  "imageSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際讀取WebP）",
+    "method": "逐題親自目視既有原始單題WebP、題號、四選項、分錄、表格；原始圖檔bytes SHA256已重算吻合固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先依原圖解題才核對候選，官方最終答案PDF及更正公告仍未獨立核實。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_CANDIDATE_MATCH_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "定額零用金制度，問敘述錯誤者。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "零用金可依需求增減定額，屬現金內部移轉（A）；由出納等專人管理零星費用（C）；現金加未撥補費用憑證與定額不符，發生現金短溢（D）。**B錯在宣稱期末僅報銷未撥補，次期不得再撥補**；報銷費用與實際補足零用金是可跨期分離的作業。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "零用金可依需求增減定額，屬現金內部移轉（A）；由出納等專人管理零星費用（C）；現金加未撥補費用憑證與定額不符，發生現金短溢（D）。**B錯在宣稱期末僅報銷未撥補，次期不得再撥補**；報銷費用與實際補足零用金是可跨期分離的作業。",
+    "elementarySummary": "公司的小錢包花錢要留發票。這個月報帳但還沒補回錢，下個月仍可補，所以B說不行是錯的。",
+    "memory": "**零用金報銷與撥補可跨期；B錯。**",
+    "concept": "零用金定額制度：設立、支付、報銷、撥補、現金短溢。",
+    "extension": "反向思考：若期末只報銷費用未撥補，下期補款為何不能再記同筆費用？",
+    "source": {
+      "originalExam": "115-09-2-11",
+      "originalImagePinnedSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學官方最終標準答案及更正待核對"
+    },
+    "highlightTerms": [
+      "零用金",
+      "報銷",
+      "撥補",
+      "次期仍可撥補"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "內部由銀行／庫存現金移作零用金，現金及約當現金合計不變。",
+        "elementary": "只是大錢包換小錢包。",
+        "reason": "內部由銀行／庫存現金移作零用金，現金及約當現金合計不變。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "期末已報銷費用但未實際撥補，下期仍可補足定額；『不得再撥補』錯。",
+        "elementary": "下個月還能補零用金。",
+        "reason": "期末已報銷費用但未實際撥補，下期仍可補足定額；『不得再撥補』錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "日常零星支出以定額零用金設置，交由指定出納／保管人管理。",
+        "elementary": "小錢包有人專門管。",
+        "reason": "日常零星支出以定額零用金設置，交由指定出納／保管人管理。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "手存現金加支出憑證與定額不等則有短溢，可作其他收支處理。",
+        "elementary": "錢和發票總數對不起來，要查差額。",
+        "reason": "手存現金加支出憑證與定額不等則有短溢，可作其他收支處理。"
+      }
+    },
+    "accounting": {
+      "principle": "零用金定額制度：設立、支付、報銷、撥補、現金短溢。",
+      "accounts": [
+        "零用金",
+        "現金",
+        "銀行存款",
+        "現金短溢"
+      ],
+      "journalEntry": "設立：借『零用金』、貸『銀行存款』；憑證報銷與日後補款需避免費用重複記列。",
+      "calculation": "N/A（本題沒有計算要求）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
