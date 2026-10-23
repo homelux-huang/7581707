@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR把表格字詞混進選項。"
-    ]
+    ],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50",
+      "sha256": "de3aa6dc943acc5e086acdddf3a6922abd505d0eba99c9ece82dec7641e3bc20",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub contents Base64 bytes decoded and hashed; image displayed full resolution"
+    }
   },
   "aiAnswer": "C",
   "answerComparison": {
@@ -29,13 +37,18 @@
     "elementarySummary": "看一整群線索：江山刀劍比較雄壯，花和相思比較細膩。",
     "memory": "①③豪放；②④婉約",
     "concept": "依整組意象判風格：①江北劍、③人間風流偏豪放；②花愁鴛、④相逢相思偏婉約。不能只憑單一字判斷所有作品。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：若①「風江北／君古劍」改成含春花、相思的柔美詞句，而其餘三組維持原樣，①的詞風可能由豪放轉為哪一類？你如何只依整組意象，而不是看到一個「風」字就作答？",
     "source": {
       "originalExam": "114-00-C-07",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "①③豪放；②④婉約"
+      "江北",
+      "古劍",
+      "春花",
+      "相思",
+      "豪放",
+      "婉約"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +77,41 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "①「江北、古劍」呈現開闊、雄健的豪放意象",
+      "②「春花、憐鴛」偏抒情細緻的婉約意象",
+      "③「人間、西風、風流」偏豪放；④「相逢、相思」偏婉約，因此選C"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_EDU_DICT_AND_TEXTBOOK_REVIEW",
+      "category": "國文",
+      "relatedWordsByDifficulty": {
+        "豪放": {
+          "初級": [
+            "雄健"
+          ],
+          "中級": [
+            "奔放"
+          ],
+          "高級": [
+            "磅礴"
+          ]
+        },
+        "婉約": {
+          "初級": [
+            "細膩"
+          ],
+          "中級": [
+            "柔婉"
+          ],
+          "高級": [
+            "含蓄"
+          ]
+        }
+      },
+      "reminder": "分級為教學設計草稿，非已核實教材分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -72,8 +119,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

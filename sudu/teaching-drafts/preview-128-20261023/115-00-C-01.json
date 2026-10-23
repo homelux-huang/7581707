@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50",
+      "sha256": "f66f7f0ad0fac08c4bf6e3382a58160634a21b95ca6c3536b72f9b8b7b7739fe",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub contents Base64 bytes decoded and hashed; image displayed full resolution"
+    }
   },
   "aiAnswer": "C",
   "answerComparison": {
@@ -23,17 +31,33 @@
     "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
   },
   "teaching": {
-    "teacherSummary": "辨字須依詞義：揩是擦拭，春帷未打開應用揭；帷與扉分別是帷幕和門扇。",
-    "elementarySummary": "窗簾沒有拉開，是沒有「揭」開，不是沒有擦一擦。",
-    "memory": "帷幕要揭，污漬才揩",
-    "concept": "辨字須依詞義：揩是擦拭，春帷未打開應用揭；帷與扉分別是帷幕和門扇。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "teacherSummary": "從語義判斷錯字：原圖「春帷不揩」指春天的帷幕未被掀開，「揩」是擦抹，古語可用「搴」表揭起帷幕。原句C選項用字不合。",
+    "elementarySummary": "窗簾要「掀開」不是「擦一擦」。揩是擦，搴是把布簾拉起。",
+    "memory": "揩（ㄎㄞ）：擦；搴（ㄑㄧㄢ）：揭、撩",
+    "concept": "從語義判斷錯字：原圖「春帷不揩」指春天的帷幕未被掀開，「揩」是擦抹，古語可用「搴」表揭起帷幕。原句C選項用字不合。",
+    "extension": "反向題：把「春帷不揩」改成「以布揩拭桌面」，「揩」就合語境了嗎？若仍是帷幕尚未掀起，依教育部辭典「搴」有何意思？為什麼不能只憑兩字讀音相似就選字？",
     "source": {
       "originalExam": "115-00-C-01",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "dictionaryReferences": [
+        {
+          "title": "教育部《重編國語辭典修訂本》：搴",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6469&la=0&powerMode=0",
+          "verifiedMeaning": "揭、撩；引例「搴帷覽物華」"
+        },
+        {
+          "title": "教育部《重編國語辭典修訂本》：揩",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=4467&la=0&powerMode=0",
+          "verifiedMeaning": "擦、抹"
+        }
+      ]
     },
     "highlightTerms": [
-      "帷幕要揭，污漬才揩"
+      "春帷不揩",
+      "搴帷",
+      "揩",
+      "搴",
+      "揭、撩"
     ],
     "optionExplanations": {
       "A": {
@@ -50,9 +74,9 @@
       },
       "C": {
         "isCorrect": true,
-        "teacher": "「春帷不揩」的揩與開啟帷幕之義不合，應作揭，為本題所求錯別字。",
-        "elementary": "帷幕沒打開，要寫揭，不是擦東西的揩。",
-        "reason": "「春帷不揩」的揩與開啟帷幕之義不合，應作揭，為本題所求錯別字。"
+        "teacher": "原圖「春帷不揩」的「揩」專指擦拭，與帷幕未掀起的文意不合；教育部《重編國語辭典修訂本》載「搴」有揭、撩之義（如「搴帷覽物華」），可寫作「春帷不搴」。",
+        "elementary": "不是要把窗簾擦乾淨，是說窗簾還沒掀開，所以「揩」不對。",
+        "reason": "原圖「春帷不揩」的「揩」專指擦拭，與帷幕未掀起的文意不合；教育部《重編國語辭典修訂本》載「搴」有揭、撩之義（如「搴帷覽物華」），可寫作「春帷不搴」。"
       },
       "D": {
         "isCorrect": false,
@@ -62,7 +86,53 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "本題問「何者有錯別字」，必須看字在句中的動作意思，而不是只比字形",
+      "「揩」（ㄎㄞ）指擦拭；「搴」（ㄑㄧㄢ）有揭、撩之義，原句春帷未掀應以「搴」表義",
+      "A究辦/弊竇、B莊稼/品茗、D朦朧/沸騰字形依題文可成立；C「春帷不揩」用字不合，故選C"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_EDU_DICT_AND_TEXTBOOK_REVIEW",
+      "category": "國文",
+      "relatedWordsByDifficulty": {
+        "揩": {
+          "初級": [
+            "擦"
+          ],
+          "中級": [
+            "擦拭"
+          ],
+          "高級": [
+            "抹淨"
+          ]
+        },
+        "搴": {
+          "初級": [
+            "掀起"
+          ],
+          "中級": [
+            "揭開"
+          ],
+          "高級": [
+            "揭、撩"
+          ]
+        }
+      },
+      "reminder": "分級為教學設計草稿，非已核實教材分級",
+      "verifiedReadings": [
+        {
+          "word": "揩",
+          "bopomofo": "ㄎㄞ",
+          "source": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=4467&la=0&powerMode=0"
+        },
+        {
+          "word": "搴",
+          "bopomofo": "ㄑㄧㄢ",
+          "source": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6469&la=0&powerMode=0"
+        }
+      ]
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +140,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

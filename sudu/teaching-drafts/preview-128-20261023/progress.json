@@ -230,7 +230,14 @@
       "image": "data/approved/webp/114/114-00-C-07.webp",
       "imageSha256": "de3aa6dc943acc5e086acdddf3a6922abd505d0eba99c9ece82dec7641e3bc20",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "de3aa6dc943acc5e086acdddf3a6922abd505d0eba99c9ece82dec7641e3bc20",
+        "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "114-00-C-08",
@@ -239,7 +246,14 @@
       "image": "data/approved/webp/114/114-00-C-08.webp",
       "imageSha256": "94c4fcad6e68de1f36034df484ee6ffe09039f1f5a2d52dfe7eca82759a7f551",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "94c4fcad6e68de1f36034df484ee6ffe09039f1f5a2d52dfe7eca82759a7f551",
+        "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "114-00-C-09",
@@ -248,7 +262,14 @@
       "image": "data/approved/webp/114/114-00-C-09.webp",
       "imageSha256": "c49f150c96f564e63d8697937e40acf5b123a363db9b05fb4c8db09c30a5c2be",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "c49f150c96f564e63d8697937e40acf5b123a363db9b05fb4c8db09c30a5c2be",
+        "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "114-00-C-10",
@@ -257,7 +278,14 @@
       "image": "data/approved/webp/114/114-00-C-10.webp",
       "imageSha256": "a473292acea79bb8330de3ac7db947889ca24dfa52ec5027ad1e95ddbebeff64",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "a473292acea79bb8330de3ac7db947889ca24dfa52ec5027ad1e95ddbebeff64",
+        "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "115-00-C-01",
@@ -266,7 +294,14 @@
       "image": "data/approved/webp/115/115-00-C-01.webp",
       "imageSha256": "f66f7f0ad0fac08c4bf6e3382a58160634a21b95ca6c3536b72f9b8b7b7739fe",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "f66f7f0ad0fac08c4bf6e3382a58160634a21b95ca6c3536b72f9b8b7b7739fe",
+        "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "115-00-C-02",
@@ -1553,6 +1588,24 @@
       "candidateVsOfficial": "Official final per-question PDF still unavailable; all three disputed cases remain BLOCKED",
       "officialFinalCorrectionVerified": 0,
       "fullyAccepted": 0,
+      "releaseForbidden": true
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50",
+      "batch": "CHINESE_KEYPOINTS_1",
+      "ids": [
+        "114-00-C-07",
+        "114-00-C-08",
+        "114-00-C-09",
+        "114-00-C-10",
+        "115-00-C-01"
+      ],
+      "imageSha256Verified": 5,
+      "sharedImagesVerified": 0,
+      "subjectSpecificReverseQuestions": 5,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
       "releaseForbidden": true
     }
   ]

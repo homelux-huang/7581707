@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR末選項混入下一頁文章；原圖本題完整。"
-    ]
+    ],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50",
+      "sha256": "a473292acea79bb8330de3ac7db947889ca24dfa52ec5027ad1e95ddbebeff64",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub contents Base64 bytes decoded and hashed; image displayed full resolution"
+    }
   },
   "aiAnswer": "B",
   "answerComparison": {
@@ -29,13 +37,17 @@
     "elementarySummary": "一個說「我錯了，而且你也會受影響」；另一個說「是別人教我的」。",
     "memory": "鄭①⑥；劉②",
     "concept": "鄭文公說「寡人之過」是道歉，又說亡國對你不利以提醒共同利害；劉邦以「鯫生說我」把責任推給出主意者。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：鄭文公若只說「寡人之過也」，完全不提「然鄭亡，子亦有不利焉」，他還使用了哪種修護策略、少了哪種策略？劉邦若改說「我自己應負責」，還算②卸責嗎？",
     "source": {
       "originalExam": "114-00-C-10",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "鄭①⑥；劉②"
+      "寡人之過也",
+      "然鄭亡，子亦有不利焉",
+      "鯫生說我",
+      "道歉",
+      "卸責"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +76,41 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "鄭文公「寡人之過也」承認失誤，對應①道歉",
+      "「然鄭亡，子亦有不利焉」提醒燭之武自身利害，對應⑥切身相關",
+      "劉邦「鯫生說我」把想法歸給別人，屬②卸責，故答案B"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_EDU_DICT_AND_TEXTBOOK_REVIEW",
+      "category": "國文",
+      "relatedWordsByDifficulty": {
+        "卸責": {
+          "初級": [
+            "推給別人"
+          ],
+          "中級": [
+            "推諉責任"
+          ],
+          "高級": [
+            "轉嫁責任"
+          ]
+        },
+        "道歉": {
+          "初級": [
+            "認錯"
+          ],
+          "中級": [
+            "致歉"
+          ],
+          "高級": [
+            "承認過失"
+          ]
+        }
+      },
+      "reminder": "分級為教學設計草稿，非已核實教材分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -72,8 +118,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

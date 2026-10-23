@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR選項混入圖中標籤。"
-    ]
+    ],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "6de3f112da88310c96cedc85fb3b6e1ad9435e50",
+      "sha256": "c49f150c96f564e63d8697937e40acf5b123a363db9b05fb4c8db09c30a5c2be",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub contents Base64 bytes decoded and hashed; image displayed full resolution"
+    }
   },
   "aiAnswer": "A",
   "answerComparison": {
@@ -29,13 +37,17 @@
     "elementarySummary": "兩種人都沒有好好看作品：一種只聽大師名字，另一種只用摸的判好壞。",
     "memory": "中央共同點；兩側不同點",
     "concept": "雙氣泡圖中央放共同點、左右放各自特徵；兩種鑑定皆粗疏，耳鑒只聽名聲，揣骨聽聲偏憑表面感官。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：假設兩種鑑畫者都真正逐筆鑑定畫法和作者落款，圖中央還能放「鑑定粗糙」嗎？若某人只聽畫家名號便出高價，應歸「耳鑒」還是「揣骨聽聲」？請分別指出圖中央與兩側的判斷依據。",
     "source": {
       "originalExam": "114-00-C-09",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "中央共同點；兩側不同點"
+      "耳鑒",
+      "揣骨聽聲",
+      "鑑定粗糙",
+      "憑畫者名聲",
+      "憑視覺觸感"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +76,41 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "先讀雙氣泡圖規則：中央實線圈代表兩者共同點，左右虛線圈是各自特徵",
+      "「耳鑒」聽畫者名聲就爭售；「揣骨聽聲」以手摸、肉眼表象評畫",
+      "兩種鑑賞都欠缺深入鑑定，共同點選「鑑定粗糙」，答案A"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_EDU_DICT_AND_TEXTBOOK_REVIEW",
+      "category": "國文",
+      "relatedWordsByDifficulty": {
+        "耳鑒": {
+          "初級": [
+            "聽名字就評判"
+          ],
+          "中級": [
+            "憑名聲斷好壞"
+          ],
+          "高級": [
+            "以傳聞代鑑定"
+          ]
+        },
+        "揣骨聽聲": {
+          "初級": [
+            "摸一摸就判斷"
+          ],
+          "中級": [
+            "只憑表面感官"
+          ],
+          "高級": [
+            "以視觸表象代實證"
+          ]
+        }
+      },
+      "reminder": "分級為教學設計草稿，非已核實教材分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -72,8 +118,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
