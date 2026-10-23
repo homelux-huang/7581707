@@ -227,7 +227,31 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "POST_CANDIDATE_INDEPENDENT_RECOMPUTATION_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "shaMatchesFrozenManifest": true,
+      "imageAndOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "calculationReasoningRecomputed": "AD=(3,3)=BC；C=(3,−2)，BC中點=(3/2,−7/2)，對應B。",
+      "stepCalculationPartialReview": "PASS_COMPUTATION_AS_WRITTEN",
+      "officialFinalPdfActuallyRead": false,
+      "officialCorrectionReviewed": false,
+      "completeIndependentTeachingQaAccepted": false,
+      "studentReleaseApproved": false,
+      "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_WEBP_VISUAL_MATCH_NON_FINAL",
+      "paper": "115/00-MB",
+      "archivedAnswerVisible": "B",
+      "archivedWebp": "data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+      "archivedImageSha256Verified": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+      "originalPdfShaRecordedNotRedownloaded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

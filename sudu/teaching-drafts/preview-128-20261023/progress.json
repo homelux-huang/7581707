@@ -730,7 +730,16 @@
       "image": "data/approved/webp/115/115-00-MB-01.webp",
       "imageSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
+        "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+        "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-02",
@@ -739,7 +748,16 @@
       "image": "data/approved/webp/115/115-00-MB-02.webp",
       "imageSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+        "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+        "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-03",
@@ -748,7 +766,16 @@
       "image": "data/approved/webp/115/115-00-MB-03.webp",
       "imageSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+        "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+        "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-04",
@@ -757,7 +784,16 @@
       "image": "data/approved/webp/115/115-00-MB-04.webp",
       "imageSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+        "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+        "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-05",
@@ -766,7 +802,16 @@
       "image": "data/approved/webp/115/115-00-MB-05.webp",
       "imageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+        "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+        "evidenceDocument": "MATHB_01_05_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-06",
@@ -1915,6 +1960,26 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseChange": 0
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "ca84779711c7d03c7659b7922fe4ce9ba56f189e",
+      "batch": "MATH_B_01_05_ORIGINAL_AND_ARCHIVED_ANSWERS",
+      "ids": [
+        "115-00-MB-01",
+        "115-00-MB-02",
+        "115-00-MB-03",
+        "115-00-MB-04",
+        "115-00-MB-05"
+      ],
+      "newDistinctBinaryShaChecks": 5,
+      "cumulative": 38,
+      "arithmeticPostCandidateRechecked": 5,
+      "archivedAnswerMatchesAdded": 5,
+      "archivedTotal": 20,
+      "officialFinalVerifiedChange": 0,
+      "fullyAcceptedChange": 0,
+      "releaseChange": 0
     }
   ],
   "chineseTeachingSupplement": {
@@ -1932,14 +1997,14 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 33,
+    "recheckedDistinctQuestions": 38,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Actual GitHub WebP raw binary SHA256 with validated JS SHA-256 + model image viewing; 7 distinct added 2026-10-23, no sharedImages",
-    "notYetRecheckedThisCycle": 95
+    "source": "Actual GitHub WebP bytes SHA256 + displayed images; MathB01-05 added 2026-10-23",
+    "notYetRecheckedThisCycle": 90
   },
   "archivedAnswerImageCrossCheck": {
-    "count": 15,
+    "count": 20,
     "ids": [
       "115-09-1-01",
       "115-09-1-03",
@@ -1955,12 +2020,17 @@
       "115-09-2-27",
       "115-09-2-28",
       "115-09-2-29",
-      "115-00-MB-07"
+      "115-00-MB-07",
+      "115-00-MB-01",
+      "115-00-MB-02",
+      "115-00-MB-03",
+      "115-00-MB-04",
+      "115-00-MB-05"
     ],
     "paperCounts": {
       "115/09-1": 5,
       "115/09-2": 9,
-      "115/00-MB": 1
+      "115/00-MB": 6
     },
     "kind": "ARCHIVED_WEBP_CANDIDATE_VISUAL_MATCH_NON_FINAL",
     "sourceWebpSha256Verified": {
