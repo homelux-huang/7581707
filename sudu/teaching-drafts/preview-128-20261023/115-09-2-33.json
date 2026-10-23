@@ -128,6 +128,72 @@
       "matchingOption": "B",
       "commonMistake": "將獨占的需求曲線當水平線，或把虧損等同立即短期歇業。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-33",
+      "subject": "經濟學",
+      "questionNumber": 33,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "廠商具有獨占定價權；以利潤極大化為目標；一般邊際成本MC＞0（推導嚴格大於1的前提）",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "MR=P×(1−1/|Ed|)；MR=MC",
+          "why": "說明獨占廠商在正邊際成本下為何選在需求富彈性區段。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "利潤極大：MR=MC",
+          "why": "增加一件商品的收益與成本相等時是一般內部最適條件。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MC＞0，則MR＞0",
+          "why": "最適時MR等於正的邊際成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MR=P×(1−1/|Ed|)，且P＞0",
+          "why": "獨占者的邊際收益與需求彈性之關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1−1/|Ed|＞0 ⇒ |Ed|＞1",
+          "why": "MR為正須括號為正，需求須有彈性。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此②『需求彈性大於1』成立（指絕對值），候選B",
+          "why": "套用一般教材默認正邊際成本的獨占利潤最大化情境。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "|Ed|＞1，僅②（B）；單位：無單位（彈性係數）；選項：B",
+          "why": "將獨占的需求曲線當水平線，或把虧損等同立即短期歇業。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -137,7 +203,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -4124,7 +4124,493 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|30": {
+      "questionId": "115-09-2-30",
+      "subject": "經濟學",
+      "questionNumber": 30,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "辰氏企業自行車製造商；短期成本項目與產量Q無關",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "固定是總額固定，不是每單位固定；成本需區分總成本與平均成本。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "短期TFC總固定成本不會隨產量Q增減；",
+          "why": "工廠租金每個月先固定付，例如這個月多做或少做幾台車，這筆『總租金』不會因數量變；但把租金分給每一台車算，做越多台，每台分攤越少。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "TVC變動成本隨Q變，AFC=TFC/Q隨Q增加而下降，AC=TC/Q也依Q不同，故A。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A總固定成本TFC在短期相關產量範圍內與Q無關，直接符合題目要求。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "6978feb1ffc00354f8cf35383c25f48bcdc6194949677aed3ba6904105a0a9d8",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|31": {
+      "questionId": "115-09-2-31",
+      "subject": "經濟學",
+      "questionNumber": 31,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "市場有眾多同質農產品供需者；小張是價格接受者，市場價格P固定（沒有提供實際數字）",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "TR=P×Q；AR=TR/Q",
+          "why": "推導完全競爭廠商平均收益和市場價格相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "單位價格固定為P",
+          "why": "個別小攤是價格接受者，不能自行改價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "銷售Q單位，總收益TR=P×Q",
+          "why": "每個產品都按相同市場價格賣。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "平均收益AR=TR/Q",
+          "why": "用總收入除以賣出商品數量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AR=(P×Q)/Q=P（Q＞0）",
+          "why": "約掉Q，平均每單位收益等於售價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此D：完全競爭，平均收益等於價格",
+          "why": "四選項只有D同時市場型態與收益敘述正確。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "AR=P；單位：每單位貨幣收入（題目未定價）；選項：D",
+          "why": "把完全競爭廠商TR誤畫為倒U型；或混淆AR與MR。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "8b8d7d613f270a6a98f3fb6dbeef54f07ab0cdde68b21c5d569f014bd098c830",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|32": {
+      "questionId": "115-09-2-32",
+      "subject": "經濟學",
+      "questionNumber": 32,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "完全競爭廠商；長期與短期經營決策；比較P與AVC、AC",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "短期固定成本為沉沒或無法避免的成本；短期歇業和長期退出不是同一個決策。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論",
+          "content": "完全競爭短期若價格P低於平均變動成本AVC，收益連可避免的變動成本都無法回收，短期應歇業，B。",
+          "why": "賣一個東西收的錢，如果連做這個東西要用的材料工錢都不夠，越做越吃虧，短期先不要做比較好。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B說P低於AVC時短期歇業，連做出商品的變動成本都收不回，符合停產條件。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "f21892d4f83ad55e0d74b4f5fd1b26f7a3f592ccb1972900db8df01a12f3919c",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|33": {
+      "questionId": "115-09-2-33",
+      "subject": "經濟學",
+      "questionNumber": 33,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "廠商具有獨占定價權；以利潤極大化為目標；一般邊際成本MC＞0（推導嚴格大於1的前提）",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "MR=P×(1−1/|Ed|)；MR=MC",
+          "why": "說明獨占廠商在正邊際成本下為何選在需求富彈性區段。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "利潤極大：MR=MC",
+          "why": "增加一件商品的收益與成本相等時是一般內部最適條件。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MC＞0，則MR＞0",
+          "why": "最適時MR等於正的邊際成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "MR=P×(1−1/|Ed|)，且P＞0",
+          "why": "獨占者的邊際收益與需求彈性之關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1−1/|Ed|＞0 ⇒ |Ed|＞1",
+          "why": "MR為正須括號為正，需求須有彈性。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此②『需求彈性大於1』成立（指絕對值），候選B",
+          "why": "套用一般教材默認正邊際成本的獨占利潤最大化情境。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "|Ed|＞1，僅②（B）；單位：無單位（彈性係數）；選項：B",
+          "why": "將獨占的需求曲線當水平線，或把虧損等同立即短期歇業。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|34": {
+      "questionId": "115-09-2-34",
+      "subject": "經濟學",
+      "questionNumber": 34,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "AI伺服器市場僅兩間廠商；寡占／雙占；跟跌不跟漲；折彎需求與價格僵固",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "雙占是一種寡占；廠商相依、默契與競爭策略造成需求曲線折彎，非所有寡占都一定採同策略。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "寡占廠商在折彎需求模型中可能採『跟跌不跟漲』：競爭者降價會跟進，對方漲價則不跟，因而價格僵固。",
+          "why": "只有兩家大公司賣相似AI伺服器。一家降價，另一家怕客人跑掉也可能降；一家漲價，另一家可能先不漲，好讓客人來買，所以價錢不一定常常變。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A說可能，合理。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B『邊際收益膨脹缺口』混用術語，C說商品必定同質過度武斷，D說兩家面對相同需求彈性不符合折彎需求的彈性分段。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A用『可能』表示兩家公司可採跟跌不跟漲，符合寡占價格僵固模型的策略相依特徵，因此正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|35": {
+      "questionId": "115-09-2-35",
+      "subject": "經濟學",
+      "questionNumber": 35,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "市場每單位勞動工資W＝1,500元；MRP_L表示多雇一單位勞動增加的收益",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "增雇邊際利潤＝MRP_L－W；內部最適條件MRP_L＝W",
+          "why": "以增雇後多賺的收益與工資成本比較，判斷繼續雇用、減少雇用或達到最適。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "W＝1,500元",
+          "why": "題幹提供每單位勞動工資。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＞1,500，則MRP_L－1,500＞0",
+          "why": "新增員工帶來正的邊際利潤，應多雇用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＜1,500，則MRP_L－1,500＜0",
+          "why": "再雇人會使利潤下降，應少雇用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＝1,500，則MRP_L－1,500＝0",
+          "why": "在一般內部最適點，增雇的邊際利益與成本相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此A：MRP_L＞1,500元時多雇用勞動",
+          "why": "選項A與邊際利潤的正負一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "選項A（多雇用）；單位：新臺幣元／單位勞動；選項：A",
+          "why": "MRP_L＞W時錯認已達利潤極大；忘記邊際利潤還是正的。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "33c6184848bcb91c79f7238f5e9d99ec4b87113742c236dfa74b78dd2554a9c4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|36": {
+      "questionId": "115-09-2-36",
+      "subject": "經濟學",
+      "questionNumber": 36,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "甲＝對角線與洛倫茲曲線之間面積；乙＝對角線下三角形扣除甲；座標軸各自0～100%，可標準化為單位正方形",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "G＝甲/(甲＋乙)，甲＋乙＝(1×1)/2＝1/2",
+          "why": "以曲線與完全平均線的夾面積占比衡量所得分配不均程度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "甲＋乙＝1/2",
+          "why": "單位正方形對角線以下是面積為1/2的三角形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "G＝甲/(1/2)＝2甲",
+          "why": "分母固定，因此G與甲面積成正比。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "甲越小⇒G越小⇒越接近完全均等線",
+          "why": "曲線越貼近對角線，所得分配差異越小。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若G=0⇒甲=0、乙=1/2",
+          "why": "完全均等時沒有夾面積，剩餘三角形全部是乙。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若G=1⇒甲=1/2、乙=0",
+          "why": "極端不均時夾面積占滿下三角形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "故選B：甲面積越小，所得分配越平均",
+          "why": "與面積及G的單調關係一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "選B；甲越小G越小且所得越平均；單位：無單位（吉尼係數）；選項：B",
+          "why": "誤把甲變小視為不平等變大，或誤說G=0時乙=0。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "91d3a9865c9bab491e3e35fef0b94712588dd83df34ab4089a2da4f0437f17ab",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|37": {
+      "questionId": "115-09-2-37",
+      "subject": "經濟學",
+      "questionNumber": 37,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "原工作每月38,000元；新自媒體每月40,000元；沒有提供其他工資／成本數據",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "經濟租＝現職報酬－移轉賺額",
+          "why": "從次佳工作推得留在新工作的最低必要報酬，再求超額部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "次佳用途＝原餐廳服務員",
+          "why": "唯一已知可替代工作是離職前的餐廳職位。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原餐廳報酬＝38,000元/月",
+          "why": "即留在當前工作時放棄的次佳可得報酬。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "移轉賺額＝38,000元/月",
+          "why": "依題目簡化假設，保有現職至少需補償前職所得。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現職自媒體收入＝40,000元/月",
+          "why": "題目提供目前得到的月收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "經濟租＝40,000－38,000＝2,000元/月",
+          "why": "目前報酬超過最低移轉需求部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "選項C：移轉賺額38,000元/月",
+          "why": "不是把40,000目前收入誤稱移轉賺額。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "移轉賺額38,000元／月；經濟租2,000元／月；選C；單位：新臺幣元／月；選項：C",
+          "why": "把移轉賺額錯當目前收入40,000，或把2,000直接稱準租。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5a85327b1c306c60f53e5c3268bdb927d3438fbc0ca768e6ddf34c3553a1107b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 63
+  "readyQuestionCount": 71
 };

@@ -94,7 +94,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-34",
+      "subject": "經濟學",
+      "questionNumber": 34,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "AI伺服器市場僅兩間廠商；寡占／雙占；跟跌不跟漲；折彎需求與價格僵固",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "雙占是一種寡占；廠商相依、默契與競爭策略造成需求曲線折彎，非所有寡占都一定採同策略。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "寡占廠商在折彎需求模型中可能採『跟跌不跟漲』：競爭者降價會跟進，對方漲價則不跟，因而價格僵固。",
+          "why": "只有兩家大公司賣相似AI伺服器。一家降價，另一家怕客人跑掉也可能降；一家漲價，另一家可能先不漲，好讓客人來買，所以價錢不一定常常變。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A說可能，合理。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B『邊際收益膨脹缺口』混用術語，C說商品必定同質過度武斷，D說兩家面對相同需求彈性不符合折彎需求的彈性分段。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A用『可能』表示兩家公司可採跟跌不跟漲，符合寡占價格僵固模型的策略相依特徵，因此正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -103,7 +157,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

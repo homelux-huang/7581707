@@ -126,6 +126,72 @@
       "matchingOption": "A",
       "commonMistake": "MRP_L＞W時錯認已達利潤極大；忘記邊際利潤還是正的。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-35",
+      "subject": "經濟學",
+      "questionNumber": 35,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "市場每單位勞動工資W＝1,500元；MRP_L表示多雇一單位勞動增加的收益",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "增雇邊際利潤＝MRP_L－W；內部最適條件MRP_L＝W",
+          "why": "以增雇後多賺的收益與工資成本比較，判斷繼續雇用、減少雇用或達到最適。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "W＝1,500元",
+          "why": "題幹提供每單位勞動工資。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＞1,500，則MRP_L－1,500＞0",
+          "why": "新增員工帶來正的邊際利潤，應多雇用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＜1,500，則MRP_L－1,500＜0",
+          "why": "再雇人會使利潤下降，應少雇用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若MRP_L＝1,500，則MRP_L－1,500＝0",
+          "why": "在一般內部最適點，增雇的邊際利益與成本相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此A：MRP_L＞1,500元時多雇用勞動",
+          "why": "選項A與邊際利潤的正負一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "選項A（多雇用）；單位：新臺幣元／單位勞動；選項：A",
+          "why": "MRP_L＞W時錯認已達利潤極大；忘記邊際利潤還是正的。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "33c6184848bcb91c79f7238f5e9d99ec4b87113742c236dfa74b78dd2554a9c4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -135,7 +201,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

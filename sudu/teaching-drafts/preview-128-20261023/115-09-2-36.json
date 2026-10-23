@@ -134,6 +134,78 @@
       "matchingOption": "B",
       "commonMistake": "誤把甲變小視為不平等變大，或誤說G=0時乙=0。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-36",
+      "subject": "經濟學",
+      "questionNumber": 36,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "甲＝對角線與洛倫茲曲線之間面積；乙＝對角線下三角形扣除甲；座標軸各自0～100%，可標準化為單位正方形",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "G＝甲/(甲＋乙)，甲＋乙＝(1×1)/2＝1/2",
+          "why": "以曲線與完全平均線的夾面積占比衡量所得分配不均程度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "甲＋乙＝1/2",
+          "why": "單位正方形對角線以下是面積為1/2的三角形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "G＝甲/(1/2)＝2甲",
+          "why": "分母固定，因此G與甲面積成正比。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "甲越小⇒G越小⇒越接近完全均等線",
+          "why": "曲線越貼近對角線，所得分配差異越小。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若G=0⇒甲=0、乙=1/2",
+          "why": "完全均等時沒有夾面積，剩餘三角形全部是乙。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若G=1⇒甲=1/2、乙=0",
+          "why": "極端不均時夾面積占滿下三角形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "故選B：甲面積越小，所得分配越平均",
+          "why": "與面積及G的單調關係一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "選B；甲越小G越小且所得越平均；單位：無單位（吉尼係數）；選項：B",
+          "why": "誤把甲變小視為不平等變大，或誤說G=0時乙=0。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "91d3a9865c9bab491e3e35fef0b94712588dd83df34ab4089a2da4f0437f17ab",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -143,7 +215,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

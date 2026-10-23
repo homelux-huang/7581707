@@ -130,6 +130,72 @@
       "matchingOption": "D",
       "commonMistake": "把完全競爭廠商TR誤畫為倒U型；或混淆AR與MR。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-31",
+      "subject": "經濟學",
+      "questionNumber": 31,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "市場有眾多同質農產品供需者；小張是價格接受者，市場價格P固定（沒有提供實際數字）",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "TR=P×Q；AR=TR/Q",
+          "why": "推導完全競爭廠商平均收益和市場價格相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "單位價格固定為P",
+          "why": "個別小攤是價格接受者，不能自行改價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "銷售Q單位，總收益TR=P×Q",
+          "why": "每個產品都按相同市場價格賣。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "平均收益AR=TR/Q",
+          "why": "用總收入除以賣出商品數量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AR=(P×Q)/Q=P（Q＞0）",
+          "why": "約掉Q，平均每單位收益等於售價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因此D：完全競爭，平均收益等於價格",
+          "why": "四選項只有D同時市場型態與收益敘述正確。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "AR=P；單位：每單位貨幣收入（題目未定價）；選項：D",
+          "why": "把完全競爭廠商TR誤畫為倒U型；或混淆AR與MR。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "8b8d7d613f270a6a98f3fb6dbeef54f07ab0cdde68b21c5d569f014bd098c830",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -139,7 +205,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

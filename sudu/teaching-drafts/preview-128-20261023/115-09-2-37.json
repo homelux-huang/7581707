@@ -133,6 +133,78 @@
       "matchingOption": "C",
       "commonMistake": "把移轉賺額錯當目前收入40,000，或把2,000直接稱準租。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-37",
+      "subject": "經濟學",
+      "questionNumber": 37,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "原工作每月38,000元；新自媒體每月40,000元；沒有提供其他工資／成本數據",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "經濟租＝現職報酬－移轉賺額",
+          "why": "從次佳工作推得留在新工作的最低必要報酬，再求超額部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "次佳用途＝原餐廳服務員",
+          "why": "唯一已知可替代工作是離職前的餐廳職位。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原餐廳報酬＝38,000元/月",
+          "why": "即留在當前工作時放棄的次佳可得報酬。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "移轉賺額＝38,000元/月",
+          "why": "依題目簡化假設，保有現職至少需補償前職所得。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "現職自媒體收入＝40,000元/月",
+          "why": "題目提供目前得到的月收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "經濟租＝40,000－38,000＝2,000元/月",
+          "why": "目前報酬超過最低移轉需求部分。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "選項C：移轉賺額38,000元/月",
+          "why": "不是把40,000目前收入誤稱移轉賺額。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "移轉賺額38,000元／月；經濟租2,000元／月；選C；單位：新臺幣元／月；選項：C",
+          "why": "把移轉賺額錯當目前收入40,000，或把2,000直接稱準租。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5a85327b1c306c60f53e5c3268bdb927d3438fbc0ca768e6ddf34c3553a1107b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -142,7 +214,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
