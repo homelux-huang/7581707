@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-01",
+  "year": 115,
+  "subject": "商業概論",
+  "questionNumber": 1,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-01.webp",
+  "imageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始 WebP）",
+    "method": "逐張開啟既有 GitHub 單題 WebP 確認題號、題幹與四選項；逐檔 SHA256 已重新計算且與凍結清單相符",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_WITH_TEACHING_CAUTION",
+    "officialFinalCorrectionVerified": false,
+    "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。",
+    "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "conceptualIssue": "④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "commercial-management-concept",
+    "keyConditions": [
+      "①講座屬法定義務？",
+      "②自主減碳是否承擔社會責任？",
+      "③成本提升與倫理責任？",
+      "④股東利潤受損與經濟責任？"
+    ],
+    "reasoningFromOriginalImage": "辨別CSR的**經濟、法律、倫理、慈善**層次。①自願辦社區講座並不等於履行法律強制義務；②再生能源減碳是環境與社會責任；③營運成本上升首先關乎**經濟**面，而非最基本**倫理**責任。若沿用本考題將維護股東獲利列為經濟責任的簡化分類，④會被視為經濟面，因此候選答案D（②④）；但『利潤受損**即**未善盡』推論過強，仍須官方命題解釋。",
+    "officialFinalStatus": "PENDING_OFFICIAL_RECHECK",
+    "hasExamCalculation": false
+  },
+  "teaching": {
+    "teacherSummary": "辨別CSR的**經濟、法律、倫理、慈善**層次。①自願辦社區講座並不等於履行法律強制義務；②再生能源減碳是環境與社會責任；③營運成本上升首先關乎**經濟**面，而非最基本**倫理**責任。若沿用本考題將維護股東獲利列為經濟責任的簡化分類，④會被視為經濟面，因此候選答案D（②④）；但『利潤受損**即**未善盡』推論過強，仍須官方命題解釋。",
+    "elementarySummary": "公司要守法律、努力賺錢、也要顧地球。主動用乾淨能源是好的；辦講座不等於法律硬規定。少賺錢會影響股東，卻不能說只要少賺一次就一定不負責任。",
+    "memory": "**自主減碳→社會責任；股東獲利→經濟責任**。別把公益活動當成法定要求。",
+    "concept": "經濟、法律、倫理與慈善責任是不同層次；現實CSR不能僅憑一次利潤變動定論。",
+    "extension": "反向題：一家公司依法繳碳費又自願舉辦社區講座，兩者各有何種責任？若短期獲利下降、長期節能帶來競爭力，能否直接說它未善盡經濟責任？",
+    "source": {
+      "originalExam": "115-09-1-01",
+      "originalImagePinnedSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商商業概論教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。"
+    },
+    "highlightTerms": [
+      "再生能源",
+      "法律責任",
+      "倫理責任",
+      "經濟責任",
+      "股東利潤"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A為①③；①誤將自願講座視為法定義務，③把成本風險誤說成倫理責任，因此不成立。",
+        "elementary": "辦講座不是法律一定要你辦；成本高是錢的壓力。",
+        "reason": "A為①③；①誤將自願講座視為法定義務，③把成本風險誤說成倫理責任，因此不成立。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B為①④；即使④依試題框架可歸經濟面，①仍錯把講座當法律要求，故此組錯。",
+        "elementary": "後半句可能跟賺錢有關，但前半句把熱心說成法律強迫。",
+        "reason": "B為①④；即使④依試題框架可歸經濟面，①仍錯把講座當法律要求，故此組錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C為②③；②自主減碳為真，但③把成本上升與倫理責任直接畫等號，故不對。",
+        "elementary": "環保做對了，但成本變高不等於有道德問題。",
+        "reason": "C為②③；②自主減碳為真，但③把成本上升與倫理責任直接畫等號，故不對。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D為②④；依命題的責任層次分類，②屬社會責任、④與股東獲利的經濟責任相關，故與候選D一致；但『即未善盡』需要保留語義疑點。",
+        "elementary": "出題想問環保與賺錢兩種責任，但不能說少賺一定是壞公司。",
+        "reason": "D為②④；依命題的責任層次分類，②屬社會責任、④與股東獲利的經濟責任相關，故與候選D一致；但『即未善盡』需要保留語義疑點。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "conceptualReviewFlag": "CSR_CAUSAL_OVERGENERALIZATION",
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
