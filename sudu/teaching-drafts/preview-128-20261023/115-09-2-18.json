@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-18",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 18,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-18.webp",
+  "imageSha256": "22e743c48472915b7d524d3263a88e8069f086cc086082248ce0140999053ceb",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視WebP）",
+    "method": "逐張實際查看原始WebP題號、圖表、金額及A-D選項；圖檔SHA256重算與固定清單完全一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
+    "initialImageBasedAnswer": "C",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "X1年初機器成本500000、耐用5年、殘值5000，直線法；X3年初剩2年、殘值2000，改年數合計法，問X3年底帳面。",
+    "keyConditions": [
+      "成本500000、原殘值5000、耐用5年",
+      "前兩年X1與X2直線法",
+      "X3年初改估剩2年、殘值2000，改年數合計法"
+    ],
+    "reasoningFromOriginalImage": "前兩年採直線法，每年 **(500000−5000)/5=99000元**，兩年共折舊198000，X3年初帳面 **302000元**。依新估計剩2年、殘值2000，應折舊基礎300000，年數合計 2+1=3，首年折舊 **300000×2/3=200000**；X3年底帳面 **302000−200000=102000元**，選C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "102000元",
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "前兩年採直線法，每年 **(500000−5000)/5=99000元**，兩年共折舊198000，X3年初帳面 **302000元**。依新估計剩2年、殘值2000，應折舊基礎300000，年數合計 2+1=3，首年折舊 **300000×2/3=200000**；X3年底帳面 **302000−200000=102000元**，選C。",
+    "elementarySummary": "機器前兩年每年折舊99000，兩年後還值302000。現在估計還能用兩年，扣掉新的殘值後，按新方法第一年折舊200000，年底剩102000。",
+    "memory": "**原年折舊99000×2；X3初302000；新折舊200000；X3末102000。**",
+    "concept": "會計估計變動使用未來適用法，未來折舊以現有帳面減新殘值、按剩餘年限計，不追溯改前兩年折舊。",
+    "extension": "反向思考：若X3以後仍用直線法、剩2年殘值2000，X3年折舊會是150000，帳面將不同。",
+    "source": {
+      "originalExam": "115-09-2-18",
+      "originalImagePinnedSha256": "22e743c48472915b7d524d3263a88e8069f086cc086082248ce0140999053ceb",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實"
+    },
+    "highlightTerms": [
+      "直線法99000",
+      "帳面302000",
+      "年數合計法2/3",
+      "期末102000"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "69000錯；X3首年應折舊200000，而非按原五年年數合計重算。",
+        "elementary": "不能回頭改以前兩年的折舊。",
+        "reason": "69000錯；X3首年應折舊200000，而非按原五年年數合計重算。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "100000與正確102000差2000，可能忘記新殘值2000。",
+        "elementary": "還有殘值2000不能忘。",
+        "reason": "100000與正確102000差2000，可能忘記新殘值2000。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "302000−200000=102000，精確符合年數合計法的新估計，正解。",
+        "elementary": "年底剩102000元。",
+        "reason": "302000−200000=102000，精確符合年數合計法的新估計，正解。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "151000近似把可折舊基礎300000對半直線攤分，並非年數合計法。",
+        "elementary": "改成新方法後第一年折舊較多。",
+        "reason": "151000近似把可折舊基礎300000對半直線攤分，並非年數合計法。"
+      }
+    },
+    "accounting": {
+      "principle": "會計估計變動使用未來適用法，未來折舊以現有帳面減新殘值、按剩餘年限計，不追溯改前兩年折舊。",
+      "accounts": [
+        "機器設備",
+        "累計折舊",
+        "折舊費用"
+      ],
+      "journalEntry": "X3提折舊：借『折舊費用200000』、貸『累計折舊200000』。",
+      "calculation": "考題計算式完整逐步記錄"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "成本500000、原殘值5000、耐用5年",
+        "前兩年X1與X2直線法",
+        "X3年初改估剩2年、殘值2000，改年數合計法"
+      ],
+      "formula": "直線折舊=(成本−殘值)/年限；年數合計=剩餘年數總和；剩餘基礎×剩餘年數/年數合計。",
+      "formulaPurpose": "會計估計變動使用未來適用法，未來折舊以現有帳面減新殘值、按剩餘年限計，不追溯改前兩年折舊。",
+      "substitutionAndSteps": [
+        {
+          "formula": "原年折舊=(500000−5000)/5=99000元",
+          "why": "用直線法算X1與X2。"
+        },
+        {
+          "formula": "兩年累計折舊=99000×2=198000元",
+          "why": "計入已使用兩年度。"
+        },
+        {
+          "formula": "X3初帳面=500000−198000=302000元",
+          "why": "從原成本扣累折。"
+        },
+        {
+          "formula": "新可折舊基礎=302000−2000=300000元",
+          "why": "依剩餘估計，不重算過去。"
+        },
+        {
+          "formula": "年數合計=2+1=3，X3折舊=300000×2/3=200000元",
+          "why": "新的兩年中第一年權數2。"
+        },
+        {
+          "formula": "X3末帳面=302000−200000=102000元",
+          "why": "選C。"
+        }
+      ],
+      "result": "102000元",
+      "unit": "新臺幣元",
+      "matchingOption": "C",
+      "commonMistake": "把變更折舊方法追溯前兩年、忽略新殘值或把年數合計當直線。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
