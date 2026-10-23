@@ -1,0 +1,69 @@
+name: 115 official correction document URL audit (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/115-official-corrections-discovery-readonly.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet requests
+      - name: Capture official 115 correction links and public confirmation source HTML
+        run: |
+          set -euo pipefail
+          mkdir -p 115-confirmation-source-audit
+          python - <<'PY'
+          import datetime, hashlib, html, json, pathlib, re
+          from urllib.parse import urljoin, urlsplit
+          import requests
+          ROOT="https://web1.tcte.edu.tw/EXAM/115_4y/"
+          r=requests.get(ROOT,timeout=60,headers={"User-Agent":"7581707-official-confirmation-QA/1.0"})
+          r.raise_for_status()
+          assert r.url.startswith("https://web1.tcte.edu.tw/EXAM/115_4y/")
+          assert len(r.content) < 2000000 and b"<html" in r.content.lower()
+          root=pathlib.Path("115-confirmation-source-audit")
+          (root/"official-115-index.html").write_bytes(r.content)
+          decoded=r.content.decode(r.encoding or "utf8",errors="replace")
+          tokens=("4-00-C","4-00-E","4-00-MB","4-09-1","4-09-2",
+                  "115Confirm","Confirm","confirm","確認說明","downfile","downloader","onclick")
+          excerpts=[]
+          for word in tokens:
+              matches=list(re.finditer(re.escape(word),decoded,re.IGNORECASE))
+              excerpts.append({"token":word,"matches":len(matches),
+                              "snippets":[decoded[max(0,x.start()-180):min(len(decoded),x.end()+230)]
+                                          for x in matches[:12]]})
+          hrefs=[]
+          for match in re.finditer(r'(?:href|onclick|data-url|value)\s*=\s*["\\x27]([^"\\x27]{1,600})["\\x27]',decoded,re.IGNORECASE):
+              raw=html.unescape(match.group(1))
+              if any(z in raw.lower() for z in ("confirm","downfile","115-4","pdf","4-00-c","4-09-2","download")):
+                  hrefs.append(raw[:550])
+          result={"source":ROOT,"retrievedAtUtc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  "httpStatus":r.status_code,"sourceSha256":hashlib.sha256(r.content).hexdigest(),
+                  "snippets":excerpts,"candidateAttributes":sorted(set(hrefs))[:200],
+                  "verifiedFinalAnswerChange":False,"answerVerified":False,
+                  "note":"This is raw official-index link discovery only. Confirmation PDFs and corrections have NOT been reviewed."}
+          (root/"115-official-confirm-links.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf8")
+          print("Official site SHA",result["sourceSha256"])
+          for x in excerpts:print(x["token"],x["matches"])
+          print("candidateAttributes",len(result["candidateAttributes"]))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 115-official-confirmation-index-evidence
+          retention-days: 30
+          if-no-files-found: warn
+          path: 115-confirmation-source-audit/
