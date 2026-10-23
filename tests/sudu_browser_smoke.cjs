@@ -260,6 +260,7 @@ const output=process.env.SUDU_TEST_OUTPUT||'test-results';
   await page.locator('.chip').nth(1).click();await page.waitForTimeout(80);
   assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-open')),false,'selecting a question closes mobile picker');
 
+  await page.locator('#navHandle').click();
   await page.locator('#reviewTop').click();
   assert(await page.locator('.wrong-card').count()>=1);
   assert((await page.locator('.wrong-card').first().innerText()).includes('出處'));
