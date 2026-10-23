@@ -3,7 +3,7 @@
   "sourceDatabasesModified": false,
   "studentDataTouched": false,
   "released": false,
-  "yearsG5Pass": 8,
+  "yearsG5Pass": 9,
   "yearsReviewed": 11,
   "years": [
     {
@@ -29,6 +29,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 9,
       "onDiskMismatchIdsFirst20": [
@@ -64,6 +65,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -89,6 +91,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -114,6 +117,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -139,6 +143,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -164,6 +169,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -189,6 +195,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 205,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -214,6 +221,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 205,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -239,6 +247,7 @@
         "subject",
         "year"
       ],
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 205,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
@@ -249,7 +258,7 @@
       "originalDbReadOnly": true,
       "sandboxImportPasses": 2,
       "blockers": [
-        "on_disk_question_schema_missing_columns"
+        "on_disk_payload_or_SHA_mismatch"
       ],
       "jsonRows": 205,
       "sqliteSha256": "2c752077c6df5a8a85ebcaca097eb0a98c68a7664279449e1566c13ef38f27a4",
@@ -265,16 +274,39 @@
         "question_id",
         "subject",
         "year"
+      ],
+      "onDiskPayloadColumn": "payload_json",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 25,
+      "onDiskMismatchIdsFirst20": [
+        "114-00-C-11",
+        "114-00-C-12",
+        "114-00-C-13",
+        "114-00-C-14",
+        "114-00-C-15",
+        "114-00-C-19",
+        "114-00-C-20",
+        "114-00-C-21",
+        "114-00-C-22",
+        "114-00-C-23",
+        "114-00-E-06",
+        "114-00-E-07",
+        "114-00-E-08",
+        "114-00-E-09",
+        "114-00-E-10",
+        "114-00-E-11",
+        "114-00-E-12",
+        "114-00-E-13",
+        "114-00-E-14",
+        "114-00-E-15"
       ]
     },
     {
       "year": 115,
-      "g5Pass": false,
+      "g5Pass": true,
       "originalDbReadOnly": true,
       "sandboxImportPasses": 2,
-      "blockers": [
-        "on_disk_question_schema_missing_columns"
-      ],
+      "blockers": [],
       "jsonRows": 205,
       "sqliteSha256": "f7db8ea38aaff4cf3da12845c4558597650b75468ee8d989e9cda357abba55b1",
       "onDiskTables": [
@@ -296,7 +328,11 @@
         "schema_version",
         "subject",
         "year"
-      ]
+      ],
+      "onDiskPayloadColumn": "payload_json",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
     }
   ]
 }
