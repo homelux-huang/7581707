@@ -74,6 +74,7 @@ jobs:
           python -m pip install -q pillow
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$(git -C _source_qa rev-parse HEAD)"
           python scripts/sudu_verified_publish.py check
+          PYTHONPATH=. python tests/sudu_staging_student_certificates.py
       - uses: actions/upload-artifact@v4
         with:
           name: actual-114-115-qa-admission-preview
