@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-22",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 22,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-22.webp",
+  "imageSha256": "d6412daa205b2fbfbb264d7a83862f49dfc371eaa97bba283a93d3e361d3bca4",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+      "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖與共用文章實際目視）",
+    "method": "同時目視完整共用文章 WebP 與本題四選項單題 WebP，逐張核對 SHA256、句子上下文、題號與 A-D。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先讀共用文章與單題選項做出獨立解答，之後比對已有候選資料；2026-05-08 官方最終答案公告已見，但英文答案 PDF 與疑義確認說明未直接回讀，本題仍待官方最終核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "As a harbor pilot, she guides ships safely in and out of the port, which is a ____ job that requires taking risks, such as climbing onto a moving ship in big waves.",
+    "keyConditions": [
+      "taking risks",
+      "climbing onto a moving ship",
+      "big waves",
+      "harbor pilot"
+    ],
+    "reasoningFromOriginalImage": "引水人於浪大時登上行進中的船舶具有風險且困難，因此是一份 tough 艱鉅的工作，非 simple 簡單或 domestic 國內／家庭、remote 偏遠。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**requires taking risks** 和 **climbing onto a moving ship in big waves** 是關鍵：需要冒險、在大浪裡上移動船舶，顯示工作 **tough（艱鉅且辛苦）**。這題要把形容詞與後面的具體工作條件連結。",
+    "elementarySummary": "船還在動、浪又很大，船員要爬上去幫忙引導，聽起來很難也有危險，這份工作就是 **tough**。",
+    "memory": "**risky work + big waves → tough job**。",
+    "concept": "**tough** 可指艱難、要求高；**simple** 是簡單。形容詞要呼應後方的 **requires + V-ing** 和具體困難。",
+    "extension": "反向思考：如果題目改成『The job takes only one simple click, with no risk』，就可能用 **simple**，而非 tough。",
+    "source": {
+      "originalExam": "115-00-E-22",
+      "originalImagePinnedSha256": "d6412daa205b2fbfbb264d7a83862f49dfc371eaa97bba283a93d3e361d3bca4",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+          "sha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待核實 PDF／疑義確認說明",
+      "textbook": "彰化高商英文教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "海事新聞背景與人數依原試題文章照錄；未驗證這些數字為2026最新統計。"
+    },
+    "highlightTerms": [
+      "tough job",
+      "requires taking risks",
+      "big waves"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**domestic** 表國內的或家用的，文章沒有討論境內外工作範圍；也無法解釋冒險爬船。",
+        "elementary": "國內工作不代表就是很難或很危險。",
+        "reason": "**domestic** 表國內的或家用的，文章沒有討論境內外工作範圍；也無法解釋冒險爬船。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**remote** 指偏遠或遠距；即使港口位置遠，並不是段落用來形容工作危險的線索。",
+        "elementary": "遠不遠和爬上大浪中的船難不難是兩件事。",
+        "reason": "**remote** 指偏遠或遠距；即使港口位置遠，並不是段落用來形容工作危險的線索。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**simple** 表簡單，與 taking risks、moving ship、big waves 的艱難條件相反。",
+        "elementary": "這麼困難的工作不能說很簡單。",
+        "reason": "**simple** 表簡單，與 taking risks、moving ship、big waves 的艱難條件相反。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**tough** 表辛苦、艱難，正好說明在大浪中引導船舶的高難度工作。",
+        "elementary": "又難又辛苦，就是 tough。",
+        "reason": "**tough** 表辛苦、艱難，正好說明在大浪中引導船舶的高難度工作。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "引水人負責安全引導船舶進出港口，這份工作十分艱鉅，例如在大浪中攀上移動的船舶。",
+      "passageTranslationZh": "5月18日是國際海事婦女日，肯定女性在海上運輸業的重要性。2025年的主題是『女性的海洋機會』。文章提到臺灣女性航海人員占比僅4%；在260位女性航海人員之中，許多人證明航海可成為有成就的職業。黃昭玲曾任船長，文章稱她是臺灣首位且當時唯一的女性引水人；她引導船舶安全進出港口，工作艱鉅，有時要在大浪中攀爬移動的船舶。另一位先驅林嘉玲是臺灣首位女性油輪船長，即使天候很差，也要確保石油可靠地送達各港口。兩人職涯辛苦，女性航海員仍面對船上設施不足等挑戰。海運業努力建立性別友善職場，改善女性就業。文中並指出，臺灣女性船長在2024年為22人，高於約十年前的6人。此處數字皆為題幹資訊，未額外驗證最新統計。",
+      "testedWord": "tough",
+      "answerWord": "tough",
+      "pronunciationIPA": "/tʌf/",
+      "optionMeaningZh": {
+        "A": "國內的／家用的",
+        "B": "偏遠的／遠距的",
+        "C": "簡單的",
+        "D": "艱鉅的"
+      },
+      "synonyms": {
+        "初級": [
+          "hard（困難的）"
+        ],
+        "中級": [
+          "demanding（要求高的）"
+        ],
+        "高級": [
+          "arduous（艱鉅的）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "easy（容易的）"
+        ],
+        "中級": [
+          "simple（簡單的）"
+        ],
+        "高級": [
+          "effortless（不費力的）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "ship（船）"
+        ],
+        "中級": [
+          "risk（風險）"
+        ],
+        "高級": [
+          "harbor pilot（引水人）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義與對比詞未必能直接替換；N/A 代表不亂湊反義。",
+      "exampleEnglish": "Working at sea during a storm can be tough.",
+      "exampleChinese": "暴風雨期間在海上工作可能很艱辛。",
+      "exampleHighlightedSurfaceForm": "tough",
+      "exampleType": "自編非新聞教學例句",
+      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
