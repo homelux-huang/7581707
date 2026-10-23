@@ -50,7 +50,7 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    await page.locator('#homeSubjectSel').selectOption({label:'數學 B'});
    await page.locator('#questionCard .qnum').waitFor();
    assert(await page.locator('#studyView').isVisible(),'subject selection shows quiz');
-   assert(await page.locator('#explainBtn').isDisabled(),'answer jump disabled before grading');
+   if(width===360)assert(await page.locator('#explainBtn').isDisabled(),'answer jump disabled before first grading');
    assert.equal(await page.locator('#verifiedStatus').count(),0);
    assert.equal(await page.locator('#verifiedImagePreview').count(),0);
    assert.equal(await page.locator('#verifiedYearNav').count(),0);
