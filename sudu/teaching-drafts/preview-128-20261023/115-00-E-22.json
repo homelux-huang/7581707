@@ -242,6 +242,22 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_CONTEXTUAL_READING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "sharedReadingGroup": "21-24",
+      "sharedReadingImageSha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7",
+      "independentRecheckNotes": "大浪登上移動船舶、requires taking risks，應選tough；domestic是國內/家用、remote偏遠、simple為簡單，均無法說明高風險工作。",
+      "allFourOptionReasonsChecked": true,
+      "sharedPassageTranslationReviewed": true,
+      "sourceClass": "Archived original WebP + verified official final answer; supplementary news not textbook",
+      "newsNotTreatedAsProofOfBridgeRecordOrPolicyCausality": true,
+      "initialBlindSolveNotRecreated": true,
+      "textbookVersionAndPage": "UNVERIFIED",
+      "IPAAndGradedSynonymsFullAcceptance": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_READING_PEDAGOGY_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -240,6 +240,22 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_CONTEXTUAL_READING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "A",
+      "sharedReadingGroup": "21-24",
+      "sharedReadingImageSha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7",
+      "independentRecheckNotes": "reliable delivery even when weather is terrible是讓步，so that表目的（變成要天氣變壞）不合，just where為地點，or else為否則警告。",
+      "allFourOptionReasonsChecked": true,
+      "sharedPassageTranslationReviewed": true,
+      "sourceClass": "Archived original WebP + verified official final answer; supplementary news not textbook",
+      "newsNotTreatedAsProofOfBridgeRecordOrPolicyCausality": true,
+      "initialBlindSolveNotRecreated": true,
+      "textbookVersionAndPage": "UNVERIFIED",
+      "IPAAndGradedSynonymsFullAcceptance": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_READING_PEDAGOGY_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

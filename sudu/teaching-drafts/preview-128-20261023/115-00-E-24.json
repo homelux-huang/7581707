@@ -241,6 +241,22 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_CONTEXTUAL_READING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "sharedReadingGroup": "21-24",
+      "sharedReadingImageSha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7",
+      "independentRecheckNotes": "gender-friendly workplace to improve women's employment是目的＋不定詞，其他選項增加障礙、船隻或困難違反段落。6→22名女性船長是文章描述變化，不能從相關數字單獨證明特定職場政策的因果效果。",
+      "allFourOptionReasonsChecked": true,
+      "sharedPassageTranslationReviewed": true,
+      "sourceClass": "Archived original WebP + verified official final answer; supplementary news not textbook",
+      "newsNotTreatedAsProofOfBridgeRecordOrPolicyCausality": true,
+      "initialBlindSolveNotRecreated": true,
+      "textbookVersionAndPage": "UNVERIFIED",
+      "IPAAndGradedSynonymsFullAcceptance": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_READING_PEDAGOGY_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

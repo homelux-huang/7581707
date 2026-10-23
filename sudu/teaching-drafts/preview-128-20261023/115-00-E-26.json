@@ -241,6 +241,22 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_CONTEXTUAL_READING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "A",
+      "sharedReadingGroup": "25-28",
+      "sharedReadingImageSha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e",
+      "independentRecheckNotes": "a bridge selected through...以過去分詞被動修飾bridge，主句已有will become；selecting主動、is selected多一限定動詞、to select不對。世界最長的敘述是115年原題的未來敘述，不能當成2026實際紀錄已核實。",
+      "allFourOptionReasonsChecked": true,
+      "sharedPassageTranslationReviewed": true,
+      "sourceClass": "Archived original WebP + verified official final answer; supplementary news not textbook",
+      "newsNotTreatedAsProofOfBridgeRecordOrPolicyCausality": true,
+      "initialBlindSolveNotRecreated": true,
+      "textbookVersionAndPage": "UNVERIFIED",
+      "IPAAndGradedSynonymsFullAcceptance": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_READING_PEDAGOGY_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
