@@ -40,6 +40,7 @@ jobs:
           python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/sudu-dev-test.log 2>&1 &
           trap 'kill $!' EXIT
           node tests/sudu_verified_integration_browser.cjs
+          node tests/sudu_certified_positive_browser.cjs
           node tests/sudu_demo_acceptance.cjs
       - uses: actions/upload-artifact@v4
         if: always()

@@ -65,6 +65,7 @@ jobs:
           node tests/sudu_browser_smoke.cjs
           node tests/sudu_demo_acceptance.cjs
           node tests/sudu_verified_integration_browser.cjs
+          node tests/sudu_certified_positive_browser.cjs
           node tests/sudu_workspace_test.cjs
           node tests/sudu_admin_browser.cjs
       - name: Retain test evidence
