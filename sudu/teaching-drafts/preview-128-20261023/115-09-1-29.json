@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-29",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 29,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-29.webp",
+  "imageSha256": "743fd5cec07f8e87c0c21aaffd63af9eb50f419596c6be00e7fe54a75737f84b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選OCR之D選項後混入下一頁頁首／後續題文字；依原圖正確辨認本題D選項，不更動來源。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。題目未說明十進位MB或二進位MiB，兩種解法分別1.067/1.118 Mbps，均需選2Mbps。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "bandwidth-calculation",
+    "keyConditions": [
+      "檔案大小2MB",
+      "15秒以內",
+      "候選頻寬100Kbps、200Kbps、1Mbps、2Mbps"
+    ],
+    "reasoningFromOriginalImage": "2MB=2×10^6 byte，換成位元為2×10^6×8=16×10^6bit；速度至少16,000,000÷15≈1,066,667bps≈1.067Mbps。1Mbps傳16Mb需16秒不達要求；2Mbps僅需8秒，因此D。若採2MiB計法，需求約1.118Mbps，結論相同。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "重點是**MB與Mb不同**：1byte=8bit。2MB（按十進位）=16Mb；**最小頻寬＝資料量÷允許秒數**，所以需求>1Mbps。依各選項算傳輸時間：100Kbps→160s，200Kbps→80s，1Mbps→16s，2Mbps→8s。只有2Mbps能在15秒內完成（理想理論速率，實務另有協定開銷）。",
+    "elementarySummary": "2MB是檔案大小，要先換成1600萬個位元，再想15秒要送完，一秒至少送約107萬位元。1Mbps太慢要16秒，2Mbps8秒能送完，所以選D。",
+    "memory": "**大B＝Byte，1B＝8b；頻寬≥檔案位元數÷秒數**。",
+    "concept": "byte、bit、Mbps、Kbps單位換算；最慢符合門檻的選項，而不是隨便挑最快。",
+    "extension": "反向題：若時間改成20秒，1Mbps需16秒能符合，那最小可選頻寬會由D變成哪一項？若傳輸有10%協定開銷，實際至少要更快還是更慢？",
+    "source": {
+      "originalExam": "115-09-1-29",
+      "originalImagePinnedSha256": "743fd5cec07f8e87c0c21aaffd63af9eb50f419596c6be00e7fe54a75737f84b",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "題目未說明十進位MB或二進位MiB，兩種解法分別1.067/1.118 Mbps，均需選2Mbps。"
+    },
+    "highlightTerms": [
+      "2MB",
+      "15秒",
+      "1 byte = 8 bit",
+      "2 MB × 8",
+      "1.067 Mbps",
+      "2Mbps"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 100Kbps=0.1Mbps，16Mb÷0.1Mbps=160秒，超過15秒，不符。",
+        "elementary": "每秒只送一點點，要160秒，太慢。",
+        "reason": "A 100Kbps=0.1Mbps，16Mb÷0.1Mbps=160秒，超過15秒，不符。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 200Kbps=0.2Mbps，16Mb÷0.2Mbps=80秒，遠超過15秒。",
+        "elementary": "要80秒，不能15秒完成。",
+        "reason": "B 200Kbps=0.2Mbps，16Mb÷0.2Mbps=80秒，遠超過15秒。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 1Mbps傳16Mb要16秒，剛好超過15秒，因此不符，不可只看1比1.067接近就選。",
+        "elementary": "差1秒也不行，題目要15秒內。",
+        "reason": "C 1Mbps傳16Mb要16秒，剛好超過15秒，因此不符，不可只看1比1.067接近就選。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D 2Mbps傳16Mb要8秒，低於15秒，為四個候選中唯一符合的頻寬。",
+        "elementary": "只要8秒，比15秒快，所以符合。",
+        "reason": "D 2Mbps傳16Mb要8秒，低於15秒，為四個候選中唯一符合的頻寬。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "檔案容量2 MB",
+        "傳輸期限15秒內",
+        "選項A100Kbps、B200Kbps、C1Mbps、D2Mbps"
+      ],
+      "formula": "最低傳輸頻寬（bit/s）＝資料量（byte）×8（bit/byte）÷傳輸秒數",
+      "formulaPurpose": "用檔案資料總位元數除以時間，求每秒至少需送多少bit；比較候選頻寬與計算門檻。",
+      "substitutionAndSteps": [
+        {
+          "formula": "1 B（byte）＝8 b（bit）",
+          "why": "MB是百萬位元組，Mbps是每秒百萬位元；先統一單位才能比較。"
+        },
+        {
+          "formula": "2 MB＝2×1,000,000 B＝2,000,000 B",
+          "why": "先按網路速率常用十進位MB換算，題目未特別指定MiB。"
+        },
+        {
+          "formula": "2,000,000 B×8 b/B＝16,000,000 b＝16 Mb",
+          "why": "把檔案容量從byte轉成bit。"
+        },
+        {
+          "formula": "最低速度＝16,000,000 b÷15 s≈1,066,667 b/s≈1.067 Mbps",
+          "why": "15秒內要送完，必須每秒送至少約107萬bit。"
+        },
+        {
+          "formula": "A:16Mb÷0.1Mbps＝160s；B:16Mb÷0.2Mbps＝80s",
+          "why": "100Kbps與200Kbps傳得太慢。"
+        },
+        {
+          "formula": "C:16Mb÷1Mbps＝16s；D:16Mb÷2Mbps＝8s",
+          "why": "只有2Mbps能在15秒內完成。"
+        },
+        {
+          "formula": "若用2MiB＝2×1024² B，最低需求≈1.118 Mbps，仍為D",
+          "why": "不同容量慣例不影響候選答案。"
+        }
+      ],
+      "result": "至少1.067Mbps，選D 2Mbps（理想傳輸8秒）",
+      "unit": "Mbps（megabits per second）／秒",
+      "matchingOption": "D",
+      "commonMistake": "MB被當成Mb，少乘8；或選1Mbps而忽略需16秒，超過15秒。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
