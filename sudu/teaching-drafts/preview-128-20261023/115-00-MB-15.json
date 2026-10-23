@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-15",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 15,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-15.webp",
+  "imageSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "直接打開既有單題 WebP、核對題號、完整題幹、四選項、公式上下標、圖表及負號，原始 WebP SHA256 重算與固定清單吻合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有OCR將32^{−0.1x}的指數排版破壞，選項D後混入下一頁頁首；已依原圖核對。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先以原始 WebP 自行解題，再查候選；官方最終標準答案 PDF 及確認更正說明尚未本輪獨立回讀。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "T(x)=10650×32^{−0.1x}（天），35°C降到27°C，求新保鮮期相對原本倍率。",
+    "keyConditions": [
+      "T(x)=10650×32^{−0.1x}天",
+      "原35°C，新27°C"
+    ],
+    "reasoningFromOriginalImage": "倍數是 **T(27)/T(35)**。代入後消掉共同係數10650，得到 **32^{−2.7−(−3.5)}=32^{0.8}=32^{4/5}=(2⁵)^{4/5}=2⁴=16**，所以為原本16倍，選D。這僅為題目指定數學模型，不代表任何飲品實際安全保存天數。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "16倍",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "倍數是 **T(27)/T(35)**。代入後消掉共同係數10650，得到 **32^{−2.7−(−3.5)}=32^{0.8}=32^{4/5}=(2⁵)^{4/5}=2⁴=16**，所以為原本16倍，選D。這僅為題目指定數學模型，不代表任何飲品實際安全保存天數。",
+    "elementarySummary": "想知道變幾倍，用較冷的天數去除以較熱的天數。前面相同的大數會抵消，最後按指數的規則算出16倍。",
+    "memory": "**溫差8°C→指數多0.8→32^{0.8}=16倍**。",
+    "concept": "同底數相除指數相減；取倍數是新值除舊值。這是模型計算，非真實產品食安保證。",
+    "extension": "反向思考：若從27°C升回35°C，新舊比值會變成1/16，而不是16。",
+    "source": {
+      "originalExam": "115-00-MB-15",
+      "originalImagePinnedSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B答案更正公告待核對"
+    },
+    "highlightTerms": [
+      "T(27)/T(35)",
+      "32^{4/5}=16",
+      "16倍"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "10倍與32^{0.8}=16不同，不能直接從溫差猜。",
+        "elementary": "溫差8度不是直接變10倍。",
+        "reason": "10倍與32^{0.8}=16不同，不能直接從溫差猜。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "12倍不是本題指數運算結果；記得32=2⁵。",
+        "elementary": "把32拆成2的五次方才好算。",
+        "reason": "12倍不是本題指數運算結果；記得32=2⁵。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "14倍缺乏公式支持，須依 T(27)/T(35) 求倍率。",
+        "elementary": "不能因14接近16就選。",
+        "reason": "14倍缺乏公式支持，須依 T(27)/T(35) 求倍率。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "32^{4/5}=(2⁵)^{4/5}=16，正確。",
+        "elementary": "算出16倍，選D。",
+        "reason": "32^{4/5}=(2⁵)^{4/5}=16，正確。"
+      }
+    },
+    "math": {
+      "formula": "倍率=T(27)/T(35)，a^m/a^n=a^{m−n}。",
+      "formulaUsage": "以指數函數比值比較不同條件的倍率。",
+      "workedExample": "T(x)=2^{−x}，從x=3降到1時T(1)/T(3)=4。",
+      "dailyApplication": "僅為題設理論保鮮模型，真實保存以食品標示與安全檢測為準。",
+      "notes": "含數學非金額運算，必須完整顯示式子。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "T(x)=10650×32^{−0.1x}天",
+        "原35°C，新27°C"
+      ],
+      "formula": "倍率=T(27)/T(35)，a^m/a^n=a^{m−n}。",
+      "formulaPurpose": "以指數函數比值比較不同條件的倍率。",
+      "substitutionAndSteps": [
+        {
+          "formula": "T(27)=10650×32^{−2.7}天",
+          "why": "把27代入指數。"
+        },
+        {
+          "formula": "T(35)=10650×32^{−3.5}天",
+          "why": "把35代入指數。"
+        },
+        {
+          "formula": "T(27)/T(35)=32^{−2.7−(−3.5)}=32^{0.8}",
+          "why": "比值消去10650，指數相減。"
+        },
+        {
+          "formula": "32^{0.8}=32^{4/5}=(2⁵)^{4/5}=2⁴=16",
+          "why": "將32轉換成2的次方來化簡。"
+        },
+        {
+          "formula": "新保鮮期為原本16倍，選D",
+          "why": "題問倍數，因此只回比值。"
+        }
+      ],
+      "result": "16倍",
+      "unit": "倍（T的天數被相除）",
+      "matchingOption": "D",
+      "commonMistake": "將天數相減而非相除；忽略32^{−0.1x}中負指數。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
