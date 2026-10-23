@@ -192,6 +192,17 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "partialEconomicsAndImageQa20261023": {
+      "originalWebpBinarySha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
+      "questionImageVisuallyInspected": true,
+      "allFourOptionsPresent": true,
+      "sharedImages": "NONE",
+      "postCandidateReview": true,
+      "note": "一國可兩產品均具絕對利益，但比較利益依機會成本非兩品皆得，①③，官方B。",
+      "fullTeachingQA": "PENDING",
+      "releaseApproved": false,
+      "evidence": "ECONOMICS_40_48_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -257,6 +257,17 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "partialEconomicsAndImageQa20261023": {
+      "originalWebpBinarySha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
+      "questionImageVisuallyInspected": true,
+      "allFourOptionsPresent": true,
+      "sharedImages": "NONE",
+      "postCandidateReview": true,
+      "note": "MPC .6，減稅10使Y增加15，Y從915到930，官方C。",
+      "fullTeachingQA": "PENDING",
+      "releaseApproved": false,
+      "evidence": "ECONOMICS_40_48_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

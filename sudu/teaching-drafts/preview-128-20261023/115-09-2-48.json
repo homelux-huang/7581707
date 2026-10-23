@@ -193,6 +193,17 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "partialEconomicsAndImageQa20261023": {
+      "originalWebpBinarySha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
+      "questionImageVisuallyInspected": true,
+      "allFourOptionsPresent": true,
+      "sharedImages": "NONE",
+      "postCandidateReview": true,
+      "note": "成本通膨是AS減非AD減，失業+通膨為痛苦指數、停滯通膨、需求拉動AD增加，②③④，官方D。",
+      "fullTeachingQA": "PENDING",
+      "releaseApproved": false,
+      "evidence": "ECONOMICS_40_48_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

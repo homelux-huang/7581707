@@ -192,6 +192,17 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "partialEconomicsAndImageQa20261023": {
+      "originalWebpBinarySha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
+      "questionImageVisuallyInspected": true,
+      "allFourOptionsPresent": true,
+      "sharedImages": "NONE",
+      "postCandidateReview": true,
+      "note": "原題外匯供需圖完整，美元流入→供給S1右移、新台幣升值出口不利，官方C。",
+      "fullTeachingQA": "PENDING",
+      "releaseApproved": false,
+      "evidence": "ECONOMICS_40_48_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

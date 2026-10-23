@@ -233,6 +233,17 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "partialEconomicsAndImageQa20261023": {
+      "originalWebpBinarySha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
+      "questionImageVisuallyInspected": true,
+      "allFourOptionsPresent": true,
+      "sharedImages": "NONE",
+      "postCandidateReview": true,
+      "note": "MPC .8→簡單投資乘數5，MPC越大乘數越大，官方D。",
+      "fullTeachingQA": "PENDING",
+      "releaseApproved": false,
+      "evidence": "ECONOMICS_40_48_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
