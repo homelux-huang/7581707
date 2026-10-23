@@ -22,7 +22,7 @@
     "candidate": "A",
     "status": "MATCHES_CANDIDATE",
     "officialFinalCorrectionVerified": true,
-    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "notice": "已依官方現行證據 official-final-evidence-20261023.json 核對115年數學B最終標準答案A及確認欄「未提出疑義」。舊「當輪未直接回讀」記載是歷史階段資料，已存入 QA 覆核紀錄；指定教材版次與頁碼、完整教學與 UI 驗收仍待完成，不得因此公開本題草稿。",
     "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
@@ -61,7 +61,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀",
+      "officialIssueExplanation": "115年數學B最終官方答案A及確認欄「未提出疑義」已有逐題證據；完整教學、教材版次／頁碼、正式UI驗收仍待核實。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -259,6 +259,38 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathContentRecheck20261023": {
+      "status": "PARTIAL_MATH_ORIGINAL_IMAGE_AND_FOUR_OPTIONS_REVIEWED__FULL_TEACHING_QA_PENDING",
+      "scope": "本輪直接開啟既有單題原始WebP，先按題幹獨立列式，再與現有四選項草稿、官方紀錄比對；非第三方盲解、非全項教材與UI驗收",
+      "originalSingleQuestionWebp": "data/approved/webp/115/115-00-MB-09.webp",
+      "existingPinnedImageSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "sourcePaperPdfReopenedThisSession": false,
+      "actualBinarySha256RecomputedThisSession": false,
+      "originalQuestionImageVisuallyReadThisSession": true,
+      "mathWorkingIndependentlyReDerived": [
+        "(a,1) 代入 4x+(a+5)y−10=0 ⇒5a−5=0 ⇒a=1",
+        "L₂ 斜率 −1/2；L₃⊥L₂ ⇒ m₃=2",
+        "經 (1,1)：y−1=2(x−1) ⇒2x−y−1=0 ⇒ A"
+      ],
+      "allFourOptionsIndependentlyChecked": {
+        "A": "斜率2且過(1,1)",
+        "B": "斜率−2，不過(1,1)",
+        "C": "過(1,1)，但斜率1/2 非2",
+        "D": "斜率−1/2 與 L₂ 平行而非垂直"
+      },
+      "officialAnswerFromExistingVerifiedRegistry": "A",
+      "officialEvidenceDocument": "official-final-evidence-20261023.json",
+      "previousNotice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+      "previousOfficialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀",
+      "officialCurrentEvidenceNotConfusedWithHistoricalRound": true,
+      "textbookEditionChapterPageVerified": false,
+      "playwrightDraftExplanationUiVerified": false,
+      "fullIndependentTeachingReviewPassed": false,
+      "studentReleaseApproved": false,
+      "deploy": false,
+      "reviewEvidence": "MATH2_3_4_9_CONTENT_RECHECK_20261023.md",
+      "date": "2026-10-23"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

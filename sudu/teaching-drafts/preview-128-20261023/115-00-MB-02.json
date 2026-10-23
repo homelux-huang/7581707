@@ -22,7 +22,7 @@
     "candidate": "A",
     "status": "MATCHES_CANDIDATE",
     "officialFinalCorrectionVerified": true,
-    "notice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+    "notice": "已依官方現行證據 official-final-evidence-20261023.json 核對115年數學B最終標準答案A及確認欄「未提出疑義」。舊「當輪未直接回讀」記載是歷史階段資料，已存入 QA 覆核紀錄；指定教材版次與頁碼、完整教學與 UI 驗收仍待完成，不得因此公開本題草稿。",
     "independentSolveScope": "先原圖獨立解題並留完整計算；未完成第三方教學QA",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
@@ -62,7 +62,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀",
+      "officialIssueExplanation": "115年數學B最終官方答案A及確認欄「未提出疑義」已有逐題證據；完整教學、教材版次／頁碼、正式UI驗收仍待核實。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -270,6 +270,38 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathContentRecheck20261023": {
+      "status": "PARTIAL_MATH_ORIGINAL_IMAGE_AND_FOUR_OPTIONS_REVIEWED__FULL_TEACHING_QA_PENDING",
+      "scope": "本輪直接開啟既有單題原始WebP，先按題幹獨立列式，再與現有四選項草稿、官方紀錄比對；非第三方盲解、非全項教材與UI驗收",
+      "originalSingleQuestionWebp": "data/approved/webp/115/115-00-MB-02.webp",
+      "existingPinnedImageSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "sourcePaperPdfReopenedThisSession": false,
+      "actualBinarySha256RecomputedThisSession": false,
+      "originalQuestionImageVisuallyReadThisSession": true,
+      "mathWorkingIndependentlyReDerived": [
+        "(α+β)+(α−β)=8 ⇒ α=4",
+        "(α+β)(α−β)=5(α−β)，因 α≠β 可約去 α−β ⇒ α+β=5",
+        "β=5−4=1 ⇒ αβ=4 ⇒ A"
+      ],
+      "allFourOptionsIndependentlyChecked": {
+        "A": "α=4、β=1 ⇒ αβ=4",
+        "B": "5 是 α+β，不是 αβ",
+        "C": "6 與 αβ=4 不符",
+        "D": "7 與 αβ=4 不符"
+      },
+      "officialAnswerFromExistingVerifiedRegistry": "A",
+      "officialEvidenceDocument": "official-final-evidence-20261023.json",
+      "previousNotice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+      "previousOfficialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀",
+      "officialCurrentEvidenceNotConfusedWithHistoricalRound": true,
+      "textbookEditionChapterPageVerified": false,
+      "playwrightDraftExplanationUiVerified": false,
+      "fullIndependentTeachingReviewPassed": false,
+      "studentReleaseApproved": false,
+      "deploy": false,
+      "reviewEvidence": "MATH2_3_4_9_CONTENT_RECHECK_20261023.md",
+      "date": "2026-10-23"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -3033,6 +3033,26 @@
       "fullTeachingQaChange": 0,
       "releaseApprovedChange": 0,
       "evidenceDocument": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "1ba067df986daf826e11b03e761bcd89004f14f4",
+      "batch": "MATH2_3_4_9_INDEPENDENT_DIRECT_CALC_PARTIAL",
+      "ids": [
+        "115-00-MB-02",
+        "115-00-MB-03",
+        "115-00-MB-04",
+        "115-00-MB-09"
+      ],
+      "mathWorkedStepsAndOptionReasonsReviewed": 4,
+      "actualSingleWebpImagesOpened": 4,
+      "newOfficialAnswerVerifications": 0,
+      "newFullIndependentTeachingQaPass": 0,
+      "newUiQaPass": 0,
+      "newStudentReleaseApprovals": 0,
+      "sourcePdfReopened": false,
+      "actualSha256Recomputed": false,
+      "evidenceDocument": "MATH2_3_4_9_CONTENT_RECHECK_20261023.md"
     }
   ],
   "chineseTeachingSupplement": {

@@ -1,3 +1,8 @@
+## 2026-10-23｜數學B 02/03/04/09 直接看原題重新列式、修正現行官方證據用語（不發布）
+- 已由目前實際 WebP 題幹重新推導數學B 02=A、03=A、04=C、09=A，逐選項檢查並保存推算過程；未重做 OCR／裁圖，亦未重新計算本輪二進位 SHA 或直接重讀 TCTE PDF，沿用已有官方最終答案證據檔。
+- 修正4題 `answerComparison.notice` 與 `teaching.source.officialIssueExplanation` 舊『官方待回讀』現在式；先前文字完整保存於 `qa.mathContentRecheck20261023.previousNotice`、`previousOfficialIssueExplanation`，不改官方答案字母、原AI結論及 `stepByStep` bundle。
+- 本項是教學計算與四選項**局部內容QA**；指定高職教材版次頁碼和完整UI/RWD尚未覆核，仍 `independentTeachingReview=PENDING`、`uiReview=PENDING`、`fullyAccepted=0`、`deployed=0`。見 `MATH2_3_4_9_CONTENT_RECHECK_20261023.md`。
+
 ## 2026-10-23｜自動 QA 現會核對英文28/28與會計5題的逐題實證
 - 維護者不得僅修改進度數字：`audit_preview_128_release_readiness.py` 已檢查所有英文局部語義QA及會計局部算式QA的題號集合、唯一性、官方答案與證據文件，總計28和5，不會把局部PASS當獨立完整PASS。見 `PARTIAL_QA_EVIDENCE_LEDGER_CI_20261023.md`。
 
