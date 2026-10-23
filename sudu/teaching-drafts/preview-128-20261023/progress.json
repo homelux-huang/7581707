@@ -1463,7 +1463,16 @@
       "image": "data/approved/webp/115/115-09-2-05.webp",
       "imageSha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
+        "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+        "evidenceDocument": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-06",
@@ -1489,7 +1498,16 @@
       "image": "data/approved/webp/115/115-09-2-07.webp",
       "imageSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+        "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+        "evidenceDocument": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-08",
@@ -1498,7 +1516,16 @@
       "image": "data/approved/webp/115/115-09-2-08.webp",
       "imageSha256": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
+        "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+        "evidenceDocument": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-09",
@@ -1507,7 +1534,16 @@
       "image": "data/approved/webp/115/115-09-2-09.webp",
       "imageSha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
+        "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+        "evidenceDocument": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-10",
@@ -1516,7 +1552,16 @@
       "image": "data/approved/webp/115/115-09-2-10.webp",
       "imageSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
+        "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+        "evidenceDocument": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-11",
@@ -2364,6 +2409,26 @@
       "officialFinalVerifiedChange": 0,
       "fullyAcceptedChange": 0,
       "releaseChange": 0
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "31caa19a9691ac18c0c0ff0bfd736036477b18ae",
+      "batch": "ACCOUNTING_05_07_08_09_10_SHA_AND_CALC",
+      "ids": [
+        "115-09-2-05",
+        "115-09-2-07",
+        "115-09-2-08",
+        "115-09-2-09",
+        "115-09-2-10"
+      ],
+      "actualNewShaAndImageChecks": 5,
+      "cumulativeImageChecks": 72,
+      "archivedAnswerCellsAdded": 5,
+      "archivedCellsTotal": 54,
+      "officialFinalVerifiedChange": 0,
+      "teachingFullQaChange": 0,
+      "releaseChange": 0,
+      "yearSpecificLawsPending": true
     }
   ],
   "chineseTeachingSupplement": {
@@ -2381,14 +2446,14 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 67,
+    "recheckedDistinctQuestions": 72,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Direct SHA256 and visual of GitHub original WebP: Digital32/34 Accounting01/02/04",
-    "notYetRecheckedThisCycle": 61
+    "source": "Raw WebP SHA256 and direct original image review: accounting Q05/07/08/09/10",
+    "notYetRecheckedThisCycle": 56
   },
   "archivedAnswerImageCrossCheck": {
-    "count": 49,
+    "count": 54,
     "ids": [
       "115-09-1-01",
       "115-09-1-03",
@@ -2438,11 +2503,16 @@
       "115-09-1-34",
       "115-09-2-01",
       "115-09-2-02",
-      "115-09-2-04"
+      "115-09-2-04",
+      "115-09-2-05",
+      "115-09-2-07",
+      "115-09-2-08",
+      "115-09-2-09",
+      "115-09-2-10"
     ],
     "paperCounts": {
       "115/09-1": 12,
-      "115/09-2": 12,
+      "115/09-2": 17,
       "115/00-MB": 25
     },
     "kind": "ARCHIVED_WEBP_CANDIDATE_VISUAL_MATCH_NON_FINAL",

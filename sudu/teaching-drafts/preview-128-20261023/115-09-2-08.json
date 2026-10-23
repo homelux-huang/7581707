@@ -241,7 +241,32 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "AFTER_CANDIDATE_VISIBLE_PARTIAL_TEACHING_CHECK",
+      "rawWebpSha256ActuallyRecomputed": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
+      "shaMatchedManifest": true,
+      "imageAndOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "accountingLogicRecomputed": "A=3.5L、L=A/3−250000得負債1,500,000、權益3,750,000；權益≥1.25×(負債+x)得借款上限x=1,500,000元。",
+      "teacherAndElementaryOptionReview": "PENDING_FULL_SECOND_PASS",
+      "yearSpecificAccountingLaw": "PENDING_VERIFICATION",
+      "officialFinalPdfRedownloaded": false,
+      "officialFinalCorrectionsReviewed": false,
+      "fullTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "report": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-2",
+      "printedAnswer": "C",
+      "archivedWebp": "data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "originalPdfShaRecordedNotRedownloaded": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

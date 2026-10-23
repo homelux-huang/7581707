@@ -174,7 +174,32 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "AFTER_CANDIDATE_VISIBLE_PARTIAL_TEACHING_CHECK",
+      "rawWebpSha256ActuallyRecomputed": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
+      "shaMatchedManifest": true,
+      "imageAndOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "accountingLogicRecomputed": "應計應付費用借虛帳、應收收益漏列使淨利低估，②④正確；預付調整借方依記實/記虛方法非固定、預收漏調不會使淨利低估。",
+      "teacherAndElementaryOptionReview": "PENDING_FULL_SECOND_PASS",
+      "yearSpecificAccountingLaw": "PENDING_VERIFICATION",
+      "officialFinalPdfRedownloaded": false,
+      "officialFinalCorrectionsReviewed": false,
+      "fullTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "report": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-2",
+      "printedAnswer": "B",
+      "archivedWebp": "data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "originalPdfShaRecordedNotRedownloaded": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

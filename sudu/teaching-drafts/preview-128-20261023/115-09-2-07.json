@@ -277,7 +277,32 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckOriginal20261023": {
+      "reviewType": "AFTER_CANDIDATE_VISIBLE_PARTIAL_TEACHING_CHECK",
+      "rawWebpSha256ActuallyRecomputed": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+      "shaMatchedManifest": true,
+      "imageAndOptionsVisuallyChecked": true,
+      "sharedImages": "NONE_REQUIRED",
+      "accountingLogicRecomputed": "淨銷貨1,600,000；銷貨成本816,000；營業費用384,000；營業利益400,000；營業利益率25%。另利息費用16,000及稅率20%另計。",
+      "teacherAndElementaryOptionReview": "PENDING_FULL_SECOND_PASS",
+      "yearSpecificAccountingLaw": "PENDING_VERIFICATION",
+      "officialFinalPdfRedownloaded": false,
+      "officialFinalCorrectionsReviewed": false,
+      "fullTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "report": "ACCOUNTING_05_07_10_PARTIAL_QA_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "ARCHIVED_ANSWER_PAGE_MATCH_NON_FINAL",
+      "paper": "115/09-2",
+      "printedAnswer": "B",
+      "archivedWebp": "data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+      "archivedWebpSha256Verified": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "originalPdfShaRecordedNotRedownloaded": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialFinalCorrectionVerified": false,
+      "releaseApproved": false
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
