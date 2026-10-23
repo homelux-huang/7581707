@@ -48,8 +48,11 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
           assert.equal(await correct.count(),1);
           assert.match(await correct.innerText(),/高職生理解/);
           assert.match(await correct.innerText(),/國小學生也聽得懂/);
-          assert.match(await correct.innerText(),/考題計算式/);
-          assert.equal(await page.locator('#memoryWrap.show').count(),1);
+          await page.locator('#guideCard.show').waitFor();
+          assert.equal(await page.locator('#guideCard .guide-block h3').first().innerText(),'考題計算式','all four real math calculations lead the guide');
+          assert(await page.locator('#guideCard .calculation-step').count()>=5,'all original worked steps remain');
+          assert.equal(await correct.locator('.calculation-step').count(),0,'steps not duplicated inside correct option');
+          assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'no duplicate memory card');
           assert.equal(await page.locator('#nextBtn').isDisabled(),i===3);
           if(i<3)await page.locator('#nextBtn').click();
         }
