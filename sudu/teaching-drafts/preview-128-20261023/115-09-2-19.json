@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-19",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 19,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-19.webp",
+  "imageSha256": "5c5dcab67b6d0d6dbaf56771e9726a21e3f213f2136fe3c5e7166782ec5cf4b1",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視WebP）",
+    "method": "逐張實際查看原始WebP題號、圖表、金額及A-D選項；圖檔SHA256重算與固定清單完全一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "舊OCR在D選項後混入下一頁頁首，原圖單題選項完整。"
+    ]
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
+    "initialImageBasedAnswer": "A",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "十年期銀行借款10000000，原X2/6/30償還20%，餘額X3年底以後到期；X1/12/15已與銀行簽協議展延X2應還金額至X3/6/30，問X1年底流動負債。",
+    "keyConditions": [
+      "銀行借款10000000元",
+      "20%原X2/6/30到期",
+      "X1/12/15已簽展延協議至X3/6/30"
+    ],
+    "reasoningFromOriginalImage": "原本X2/6/30到期部分為 **10000000×20%=2000000元**，距X1年底不到12個月，本可能列流動。但**X1/12/15（報導日X1/12/31之前）已簽協議**，延期至**X3/6/30**，在X1年底超過12個月後才償還；其餘8000000亦在X3年底後陸續到期。因此該借款在X1年底可列流動負債 **0元**，選A。此判斷以前置於報導日的有效展延權利為前提，正式準則條文版本仍待複核。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "0元",
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "原本X2/6/30到期部分為 **10000000×20%=2000000元**，距X1年底不到12個月，本可能列流動。但**X1/12/15（報導日X1/12/31之前）已簽協議**，延期至**X3/6/30**，在X1年底超過12個月後才償還；其餘8000000亦在X3年底後陸續到期。因此該借款在X1年底可列流動負債 **0元**，選A。此判斷以前置於報導日的有效展延權利為前提，正式準則條文版本仍待複核。",
+    "elementarySummary": "原本有200萬快到期，但公司在年底前就和銀行簽好了延期，變成一年多以後才要還；其餘也更晚才還，所以年底沒有這筆要在一年內還的負債。",
+    "memory": "**年底前已簽有效展延、到期超過12個月→流動負債0。**",
+    "concept": "負債流動與非流動分類要看報導日已具備的推遲清償權利與12個月時限，非單看最初借款合約。",
+    "extension": "反向思考：若銀行直到X2年1月15日才同意展延，X1年12月31日是否仍可能有200萬流動負債？",
+    "source": {
+      "originalExam": "115-09-2-19",
+      "originalImagePinnedSha256": "5c5dcab67b6d0d6dbaf56771e9726a21e3f213f2136fe3c5e7166782ec5cf4b1",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實"
+    },
+    "highlightTerms": [
+      "X1/12/15簽協議",
+      "延期X3/6/30",
+      "報導日已有權利",
+      "流動0"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "有效延期協議在X1年底前完成，短期200萬已延至X3/6/30，其餘更晚，流動0元。",
+        "elementary": "一年內不用還，選0。",
+        "reason": "有效延期協議在X1年底前完成，短期200萬已延至X3/6/30，其餘更晚，流動0元。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "2000000是原排定X2年6月到期額，已於報導日前有效展延，不能再照原期列流動。",
+        "elementary": "那200萬已經延期。",
+        "reason": "2000000是原排定X2年6月到期額，已於報導日前有效展延，不能再照原期列流動。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "8000000本就是更晚到期，不屬X1年底12個月內應償還金額。",
+        "elementary": "這800萬本來就不用明年還。",
+        "reason": "8000000本就是更晚到期，不屬X1年底12個月內應償還金額。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "全部10000000都非短期內須付，不能列為流動負債。",
+        "elementary": "不是全部明年要還。",
+        "reason": "全部10000000都非短期內須付，不能列為流動負債。"
+      }
+    },
+    "accounting": {
+      "principle": "負債流動與非流動分類要看報導日已具備的推遲清償權利與12個月時限，非單看最初借款合約。",
+      "accounts": [
+        "長期銀行借款",
+        "一年內到期長期負債",
+        "流動負債",
+        "非流動負債"
+      ],
+      "journalEntry": "報導日依展延後清償權利列報全部為非流動銀行借款；屬財報重分類，不是另借款收款分錄。",
+      "calculation": "考題計算式完整逐步記錄"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "銀行借款10000000元",
+        "20%原X2/6/30到期",
+        "X1/12/15已簽展延協議至X3/6/30"
+      ],
+      "formula": "一年內到期金額=10000000×20%=2000000；若報導日前已具可推遲超過12個月清償的權利則不列流動。",
+      "formulaPurpose": "負債流動與非流動分類要看報導日已具備的推遲清償權利與12個月時限，非單看最初借款合約。",
+      "substitutionAndSteps": [
+        {
+          "formula": "原一年內到期本金=10000000×20%=2000000元",
+          "why": "原合約X2/6/30須還20%。"
+        },
+        {
+          "formula": "X1/12/15簽延期協議在X1/12/31報導日前",
+          "why": "報導日已有有效展延安排。"
+        },
+        {
+          "formula": "新到期日X3/6/30距X1/12/31超過12個月",
+          "why": "200萬可列非流動。"
+        },
+        {
+          "formula": "其餘8000000元均X3年底後到期",
+          "why": "其餘不屬流動。"
+        },
+        {
+          "formula": "X1年底流動負債=0元，選A",
+          "why": "各部分到期日均超過12個月。"
+        }
+      ],
+      "result": "0元",
+      "unit": "新臺幣元",
+      "matchingOption": "A",
+      "commonMistake": "只看原X2到期額，不看報導日前已完成的有效展延。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
