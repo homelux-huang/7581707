@@ -81,6 +81,30 @@ class MathBPartialQaTests(unittest.TestCase):
                     self.assertIs(record["studentReleaseApproved"], False)
                     self.assertIs(record["deploy"], False)
 
+    def test_current_official_answer_notice_does_not_repeat_historical_missing_pdf_status(self):
+        """The original first-pass solution status is history, not the current answer state."""
+        for qid in EXPECTED_IDS:
+            with self.subTest(qid=qid):
+                record = json.loads((BASE / f"{qid}.json").read_text(encoding="utf-8"))
+                qa = record["qa"]
+                self.assertTrue(qa["officialFinalEvidence"]["officialFinalCorrectionVerified"])
+                current_note = record["answerComparison"]["notice"]
+                source_note = record["teaching"]["source"]["officialIssueExplanation"]
+                self.assertIn("official-final-evidence-20261023.json", current_note)
+                self.assertIn("已核實", source_note)
+                self.assertNotIn("尚未直接回讀", current_note)
+                self.assertNotIn("尚未本輪獨立回讀", current_note)
+                self.assertNotIn("更正公告待", source_note)
+                prior = (qa.get("officialFinalNoticeSync20261023")
+                         or qa.get("mathContentRecheck20261023") or {})
+                previous_note = (prior.get("previousAnswerComparisonNotice")
+                                 or prior.get("previousNotice"))
+                self.assertTrue(previous_note, "prior-stage warning text must remain traceable")
+                self.assertEqual(record["solution"].get("officialFinalStatus"),
+                                 "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS")
+                self.assertEqual(qa["independentTeachingReview"], "PENDING")
+                self.assertIs(record["studentReleaseApproved"], False)
+
     def test_seven_new_questions_independently_derived_numeric_values(self):
         # Reference equations transcribed from each original WebP and rederived
         # separately from draft step strings. These check examples, NOT full QA.

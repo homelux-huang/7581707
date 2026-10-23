@@ -1,3 +1,7 @@
+## 2026-10-23｜數學B25題已核官方證據的現行說明同步（保留歷史、不發布）
+- 已對 MathB01–25 的現行 `answerComparison.notice` / `teaching.source.officialIssueExplanation` 修正舊『答案待官方回讀』現在式。第02/03/04/09前次已處理，其餘21題本輪補齊，所有舊文字保留於個別 `qa.*` provenance；首次 `solution.officialFinalStatus` 不覆寫。見 `MATH_B_25_OFFICIAL_STATUS_NOTICE_RECONCILIATION_20261023.md`。
+- 此為**現在式文案與既有官方證據對齊**，非新PDF下載／官方核驗、非完整教學／UI QA，也不修改任何學生發布旗標。新只讀CI逐題檢查歷史保留與不誤稱尚未取得官方。
+
 ## 2026-10-23｜數學B19–25直接原圖獨立重算，25題計算與選項局部QA已到齊
 - 本批實際開啟MB19–25原WebP，逐式重算 B/A/A/B/B/C/C，保留B19線性插值只是近似、B20正弦定理邊角配對、B21>4限定、B22補事件、B23只有一人折扣、B24上取整與B25半徑平方。四選項高中／國小原因逐題核對。詳 `MATH_B_19_25_INDEPENDENT_CALC_QA_20261023.md`。
 - 數學B固定25/25僅達**原題、算式與選項局部教學QA**，不是整題正式教學QA；彰化高商114學年度教材實際頁數待核、V4每題8尺寸×2主題未實測。全128題正式完整教學QA0、草稿新增部署0，未解鎖任何release旗標。
