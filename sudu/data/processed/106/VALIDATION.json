@@ -1,7 +1,7 @@
 {
   "year": 106,
   "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
-  "imageVisualQaPass": 0,
+  "imageVisualQaPass": 6,
   "answerOfficialFinalVerified": 0,
   "ocrTextVerified": 0,
   "officialExpectedQuestionCountsConfirmed": false,
@@ -41,20 +41,21 @@
       "candidateRecords": 41,
       "numberedAnchors": 35,
       "imageDrafts": 35,
-      "unresolvedAnchorNumbers": [
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 41,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": [],
+      "manualVisualAnchorRecoveredNumbers": [
         13,
         14,
         15,
         16,
         17,
         18
-      ],
-      "suspectedPageConflicts": [],
-      "ambiguousAnchorNumbers": [],
-      "officialAnswerTextKeys": 41,
-      "answerTextConflicts": [],
-      "issues": [],
-      "legacyIdNumberGap": []
+      ]
     },
     "00-MB": {
       "candidateRecords": 25,
