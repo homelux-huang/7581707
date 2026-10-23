@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-42",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 42,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-42.webp",
+  "imageSha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐題打開 GitHub 既有單題 WebP，確認GDP數字、公式、央行政策表格、四個選項無缺漏；WebP SHA256重新驗算吻合凍結清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_READ",
+    "notice": "本輪先目視原圖解答，再比對候選；最終官方更正未獨立核實，完整教學QA待完成。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-step-by-step",
+    "keyConditions": [
+      "Y＝C＋I＋G",
+      "C＝20＋0.6(Y−T)",
+      "T原40，減稅10變30",
+      "I＝120，G＝250",
+      "問均衡所得變動"
+    ],
+    "reasoningFromOriginalImage": "凱因斯含稅簡單模型**稅收乘數k_T＝−MPC/(1−MPC)**。MPC＝0.6，則k_T＝−0.6/0.4＝−1.5；政府**減稅10**即ΔT＝−10，故ΔY＝−1.5×(−10)＝**增加15**，選C。也可由Y＝20＋0.6(Y−T)＋120＋250直接求新舊均衡驗算。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_OFFICIAL_FINAL_RECHECK"
+  },
+  "teaching": {
+    "teacherSummary": "凱因斯含稅簡單模型**稅收乘數k_T＝−MPC/(1−MPC)**。MPC＝0.6，則k_T＝−0.6/0.4＝−1.5；政府**減稅10**即ΔT＝−10，故ΔY＝−1.5×(−10)＝**增加15**，選C。也可由Y＝20＋0.6(Y−T)＋120＋250直接求新舊均衡驗算。",
+    "elementarySummary": "政府少收10元稅，大家手上多10元，但通常先花其中60%，花出去的錢又讓別人賺到、繼續花。反覆帶動後，整體所得增加15。",
+    "memory": "**減稅→所得增加；稅額乘數＝−MPC/(1−MPC)**。",
+    "concept": "稅額乘數為負，代表增稅壓低所得、減稅提高所得；在簡單模型中稅收乘數絕對值通常小於支出乘數。",
+    "extension": "反向題：若相同條件下不是減稅10，而是增稅10，均衡所得會增加15還是減少15？",
+    "source": {
+      "originalExam": "115-09-2-42",
+      "originalImagePinnedSha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案與更正說明尚未核實"
+    },
+    "highlightTerms": [
+      "Y=C+I+G",
+      "MPC=0.6",
+      "減稅10",
+      "稅額乘數−1.5",
+      "所得增加15"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A增加10只把減稅額直接加到所得，忽略MPC＝0.6的後續連鎖消費與乘數，故不合。",
+        "elementary": "不是政府少收10元，總所得就一定只多10元。",
+        "reason": "A增加10只把減稅額直接加到所得，忽略MPC＝0.6的後續連鎖消費與乘數，故不合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B減少10方向相反；減稅提高可支配所得，通常帶動均衡所得上升。",
+        "elementary": "少繳稅一般讓人多消費，不是總收入減少。",
+        "reason": "B減少10方向相反；減稅提高可支配所得，通常帶動均衡所得上升。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C增加15，按稅額乘數−1.5×減稅−10正好為+15，正確。",
+        "elementary": "少收10元稅能帶動總收入多15元。",
+        "reason": "C增加15，按稅額乘數−1.5×減稅−10正好為+15，正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D減少15數量雖是15，卻忘記負負得正，減稅使所得增加而非減少。",
+        "elementary": "算出15卻把方向寫反。",
+        "reason": "D減少15數量雖是15，卻忘記負負得正，減稅使所得增加而非減少。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "Y＝C＋I＋G",
+        "C＝20＋0.6(Y−T)",
+        "原T＝40，新T＝30",
+        "I＝120，G＝250"
+      ],
+      "formula": "稅收乘數k_T＝−MPC/(1−MPC)；ΔY＝k_T×ΔT",
+      "formulaPurpose": "在定額稅模型中以邊際消費傾向求稅額變動帶來的均衡所得變化。",
+      "substitutionAndSteps": [
+        {
+          "formula": "MPC＝0.6；MPS＝1−0.6＝0.4",
+          "why": "由消費函數C的所得係數求邊際消費傾向。"
+        },
+        {
+          "formula": "k_T＝−0.6/(1−0.6)＝−0.6/0.4＝−1.5",
+          "why": "算出定額稅的稅收乘數。"
+        },
+        {
+          "formula": "減稅10⇒ΔT＝−10",
+          "why": "政府減稅代表稅額下降，變化為負值。"
+        },
+        {
+          "formula": "ΔY＝k_T×ΔT＝(−1.5)×(−10)＝＋15",
+          "why": "兩個負號相乘為正，所得提高15。"
+        },
+        {
+          "formula": "初始：Y＝20＋0.6(Y−40)＋120＋250 ⇒0.4Y＝366⇒Y＝915",
+          "why": "直接代入初始稅額驗算基礎均衡。"
+        },
+        {
+          "formula": "新值：Y＝20＋0.6(Y−30)＋120＋250⇒0.4Y＝372⇒Y＝930",
+          "why": "減稅後的消費增加使均衡所得上升。"
+        },
+        {
+          "formula": "ΔY＝930−915＝＋15，選C",
+          "why": "與稅額乘數法完全相符。"
+        }
+      ],
+      "result": "均衡所得增加15（915→930）",
+      "unit": "題目未指定所得量的貨幣單位",
+      "matchingOption": "C",
+      "commonMistake": "把減稅當ΔT=＋10，或直接認為所得只增10、忽略稅收乘數。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
