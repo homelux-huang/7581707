@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-32",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 32,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-32.webp",
+  "imageSha256": "f21892d4f83ad55e0d74b4f5fd1b26f7a3f592ccb1972900db8df01a12f3919c",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始單題圖）",
+    "method": "逐題打開 GitHub 原始 WebP；檢查全部題幹A-D、符號與文字，並比對原始檔SHA256符合progress固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLUTION_BEFORE_CANDIDATE_READ_NOT_EXTERNAL_QA",
+    "notice": "獨立依原始單題WebP解題後比對候選；尚未直接回讀官方最終答案PDF與更正公告。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "完全競爭廠商",
+      "長期與短期經營決策",
+      "比較P與AVC、AC"
+    ],
+    "reasoningFromOriginalImage": "完全競爭短期若價格P低於平均變動成本AVC，收益連可避免的變動成本都無法回收，短期應歇業，B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "完全競爭廠商**短期歇業點**在**P＜最低AVC**：生產所得連變動成本都支付不了，暫停生產可只承擔固定成本；若P在AVC與ATC之間，雖帳面虧損，短期繼續生產仍可分擔部分固定成本。長期若市場價格持續低於長期平均成本，才考慮退出。B『價格低於平均變動成本時短期應歇業』是此原則。",
+    "elementarySummary": "賣一個東西收的錢，如果連做這個東西要用的材料工錢都不夠，越做越吃虧，短期先不要做比較好。",
+    "memory": "**短期歇業：P＜AVC；長期退出：P＜長期平均成本**。",
+    "concept": "短期固定成本為沉沒或無法避免的成本；短期歇業和長期退出不是同一個決策。",
+    "extension": "反向題：若售價100元、AVC80元、平均總成本120元，短期即使虧損還要生產嗎？題目未給這些數字，僅作練習。",
+    "source": {
+      "originalExam": "115-09-2-32",
+      "originalImagePinnedSha256": "f21892d4f83ad55e0d74b4f5fd1b26f7a3f592ccb1972900db8df01a12f3919c",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案及更正公告仍待回讀"
+    },
+    "highlightTerms": [
+      "完全競爭",
+      "價格P",
+      "平均變動成本AVC",
+      "短期歇業",
+      "長期退出"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A比較『變動成本』與『平均成本』單位不一定相同；且短期歇業需比較**價格與AVC**，不是VC＜AC。",
+        "elementary": "一個是全部成本、一個是平均成本，直接比較不能判斷開不開工。",
+        "reason": "A比較『變動成本』與『平均成本』單位不一定相同；且短期歇業需比較**價格與AVC**，不是VC＜AC。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B說P低於AVC時短期歇業，連做出商品的變動成本都收不回，符合停產條件。",
+        "elementary": "賣得比材料等會多花的錢還少，就先別做。",
+        "reason": "B說P低於AVC時短期歇業，連做出商品的變動成本都收不回，符合停產條件。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說P＞AC卻長期退出、短期歇業；這是平均每件有正利潤的情況，不該因而退出或歇業。",
+        "elementary": "如果賣得比成本多，怎麼會因此想退出？",
+        "reason": "C說P＞AC卻長期退出、短期歇業；這是平均每件有正利潤的情況，不該因而退出或歇業。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說AR＞AC卻長期退出；完全競爭AR=P，大於成本表示獲利，長期退出判斷顛倒。",
+        "elementary": "每單位收入比成本高，是賺錢，不是離開市場。",
+        "reason": "D說AR＞AC卻長期退出；完全競爭AR=P，大於成本表示獲利，長期退出判斷顛倒。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
