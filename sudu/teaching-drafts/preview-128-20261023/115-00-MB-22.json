@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-22",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 22,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-22.webp",
+  "imageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "直接目視既有單題WebP完整題幹、圖形、表格、單位、四選項；重算原始 bytes SHA256 並與固定清單符合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "OCR混入卡片插圖和下一頁頁首，真實圖示已目視，以題目兩種卡片文字為準。"
+    ]
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖獨立解題後才讀既有候選答案；官方最終答案 PDF／更正公告尚未直接回讀，不計完整官方核實。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "五張卡片由左至右各顯示有ū或無bô，且至少一張為有ū，總共有幾種不同顯示？",
+    "keyConditions": [
+      "5張卡片依序排列",
+      "每張2種顯示：有/無",
+      "至少一張有"
+    ],
+    "reasoningFromOriginalImage": "五個位置各有 **2種** 狀態，全部排列為 **2⁵=32**。題目要求**至少一個『有』**，就用**補事件法**扣掉全部五個位置都是『無』的唯一一種，故 **32−1=31種**，選B。因由左至右展示，位置順序不同可形成不同畫面。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "31種",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "五個位置各有 **2種** 狀態，全部排列為 **2⁵=32**。題目要求**至少一個『有』**，就用**補事件法**扣掉全部五個位置都是『無』的唯一一種，故 **32−1=31種**，選B。因由左至右展示，位置順序不同可形成不同畫面。",
+    "elementarySummary": "五張卡，每張都能寫有或無，所以一共32種。但不准五張全寫無，那只有1種，要把它扣掉，剩31種。",
+    "memory": "**至少一個有=全部2⁵−全無1=31**。",
+    "concept": "二元選擇n個位置有2ⁿ種；**至少一個**通常容易用全部扣掉**全部都沒有**的補事件。",
+    "extension": "反向思考：如果改成『**恰有一張**顯示有』，只要選出哪一張，共5種，對應D而非B。",
+    "source": {
+      "originalExam": "115-00-MB-22",
+      "originalImagePinnedSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學 B 教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B最終更正公告待直接核實"
+    },
+    "highlightTerms": [
+      "2⁵=32",
+      "全無1種",
+      "至少一張有",
+      "31種"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "32是五張每張任意有／無的總數，**包含全無**這一種禁用情況，因此多算1種。",
+        "elementary": "全都無也算進去，沒扣掉。",
+        "reason": "32是五張每張任意有／無的總數，**包含全無**這一種禁用情況，因此多算1種。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "2⁵−1=31正好排除全無，符合至少一張為有，正解。",
+        "elementary": "32減1變31。",
+        "reason": "2⁵−1=31正好排除全無，符合至少一張為有，正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "16=2⁴只相當於4個自由位置的總數，題目有5個位置且僅限制不准全無。",
+        "elementary": "不是只有4張卡。",
+        "reason": "16=2⁴只相當於4個自由位置的總數，題目有5個位置且僅限制不准全無。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "5是恰好**一張有**的選法；本題允許兩張、三張甚至五張都有，故不只5種。",
+        "elementary": "可以很多張有，不能只算一張有。",
+        "reason": "5是恰好**一張有**的選法；本題允許兩張、三張甚至五張都有，故不只5種。"
+      }
+    },
+    "math": {
+      "formula": "乘法原理2⁵；補集合計數：至少一張有=全部組合−全無組合。",
+      "formulaUsage": "補事件枚舉二元排列的總數。",
+      "workedExample": "例：3盞燈每盞開關2種，至少一盞亮有2³−1=7種。",
+      "dailyApplication": "程式設計的二元狀態組合、介面顯示模式。",
+      "notes": "數學、折扣與複利考題運算全數保留完整過程"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "5張卡片依序排列",
+        "每張2種顯示：有/無",
+        "至少一張有"
+      ],
+      "formula": "乘法原理2⁵；補集合計數：至少一張有=全部組合−全無組合。",
+      "formulaPurpose": "補事件枚舉二元排列的總數。",
+      "substitutionAndSteps": [
+        {
+          "formula": "五個固定位置各2種 ⇒2×2×2×2×2=2⁵",
+          "why": "每個位置獨立決定顯示。"
+        },
+        {
+          "formula": "2⁵=32種，含所有排列",
+          "why": "全部狀態的計數。"
+        },
+        {
+          "formula": "全無只有『無無無無無』1種",
+          "why": "找出違反條件的唯一情況。"
+        },
+        {
+          "formula": "至少一張有=32−1=31種，選B",
+          "why": "全部扣掉違規情況得可用種數。"
+        }
+      ],
+      "result": "31種",
+      "unit": "種",
+      "matchingOption": "B",
+      "commonMistake": "選32忽略全無違規；或只算恰有1張為有而誤選5。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
