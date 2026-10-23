@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-35",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 35,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-35.webp",
+  "imageSha256": "33c6184848bcb91c79f7238f5e9d99ec4b87113742c236dfa74b78dd2554a9c4",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題目視）",
+    "method": "開啟 GitHub 既有單題 WebP 驗證題號／所有A-D／圖形灰白面積及數值，SHA256 重新比對凍結清單一致；OCR只供輔助。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLVE_BEFORE_CANDIDATE_READ_NOT_THIRD_PARTY_QA",
+    "notice": "原圖目視獨立推理之後才核對既有候選答案；官方最後核實PDF與疑義公告尚未讀取。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-worked-problem",
+    "keyConditions": [
+      "完全競爭要素市場",
+      "每單位勞動價格W＝NT$1,500",
+      "MRP_L與W的決策"
+    ],
+    "reasoningFromOriginalImage": "廠商多雇一單位勞動能增加的**邊際生產收益MRP_L**與多支付的**工資W=1,500元**比較。若MRP_L＞W，每多雇一人帶來的收入高於增加的工資成本，應繼續增雇，故A；MRP_L＜W時應減少雇用。一般內部利潤最大條件是**MRP_L=W**，因此MRP_L＞W時不是已達最適。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "廠商多雇一單位勞動能增加的**邊際生產收益MRP_L**與多支付的**工資W=1,500元**比較。若MRP_L＞W，每多雇一人帶來的收入高於增加的工資成本，應繼續增雇，故A；MRP_L＜W時應減少雇用。一般內部利潤最大條件是**MRP_L=W**，因此MRP_L＞W時不是已達最適。",
+    "elementarySummary": "再多請一個人，若能幫公司多賺的錢比付他的1,500元還多，那就值得再請；直到多賺的錢跟工資差不多，才是剛剛好。",
+    "memory": "**MRP_L＞W→增雇；MRP_L＝W→最適；MRP_L＜W→減雇**。",
+    "concept": "邊際生產收益是多一單位勞動帶來的收益；雇工按邊際收益與邊際工資成本比較。",
+    "extension": "反向題：若最後一位員工MRP_L只有1,200元，工資1,500元，廠商應增加還是減少雇用？這是反向練習，非原題額外條件。",
+    "source": {
+      "originalExam": "115-09-2-35",
+      "originalImagePinnedSha256": "33c6184848bcb91c79f7238f5e9d99ec4b87113742c236dfa74b78dd2554a9c4",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正公告未核實"
+    },
+    "highlightTerms": [
+      "MRP_L",
+      "新臺幣1,500元",
+      "MRP_L＞W",
+      "MRP_L＝W",
+      "利潤極大化"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A在MRP_L＞1,500元時多雇一人創造的收益高於增加成本，理性廠商應增加雇用，符合邊際生產力原理。",
+        "elementary": "員工帶來的錢比付他的多，可以再請人。",
+        "reason": "A在MRP_L＞1,500元時多雇一人創造的收益高於增加成本，理性廠商應增加雇用，符合邊際生產力原理。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B在MRP_L＞W時反而少雇人，會放棄仍可獲得的額外利潤，因此方向錯。",
+        "elementary": "還能多賺卻不請人，可能錯過機會。",
+        "reason": "B在MRP_L＞W時反而少雇人，會放棄仍可獲得的額外利潤，因此方向錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C在MRP_L＜W時表示多一位員工帶來的收益不夠支付工資，不可能是內部最適的MRP=W。",
+        "elementary": "多請人會虧錢，還沒到最好位置。",
+        "reason": "C在MRP_L＜W時表示多一位員工帶來的收益不夠支付工資，不可能是內部最適的MRP=W。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D在MRP_L＞W時表示增加勞動仍可提高利潤，尚未滿足MRP=W，不能聲稱已達利潤最大。",
+        "elementary": "還能多請人多賺，就還不是最高點。",
+        "reason": "D在MRP_L＞W時表示增加勞動仍可提高利潤，尚未滿足MRP=W，不能聲稱已達利潤最大。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "市場每單位勞動工資W＝1,500元",
+        "MRP_L表示多雇一單位勞動增加的收益"
+      ],
+      "formula": "增雇邊際利潤＝MRP_L－W；內部最適條件MRP_L＝W",
+      "formulaPurpose": "以增雇後多賺的收益與工資成本比較，判斷繼續雇用、減少雇用或達到最適。",
+      "substitutionAndSteps": [
+        {
+          "formula": "W＝1,500元",
+          "why": "題幹提供每單位勞動工資。"
+        },
+        {
+          "formula": "若MRP_L＞1,500，則MRP_L－1,500＞0",
+          "why": "新增員工帶來正的邊際利潤，應多雇用。"
+        },
+        {
+          "formula": "若MRP_L＜1,500，則MRP_L－1,500＜0",
+          "why": "再雇人會使利潤下降，應少雇用。"
+        },
+        {
+          "formula": "若MRP_L＝1,500，則MRP_L－1,500＝0",
+          "why": "在一般內部最適點，增雇的邊際利益與成本相等。"
+        },
+        {
+          "formula": "因此A：MRP_L＞1,500元時多雇用勞動",
+          "why": "選項A與邊際利潤的正負一致。"
+        }
+      ],
+      "result": "選項A（多雇用）",
+      "unit": "新臺幣元／單位勞動",
+      "matchingOption": "A",
+      "commonMistake": "MRP_L＞W時錯認已達利潤極大；忘記邊際利潤還是正的。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
