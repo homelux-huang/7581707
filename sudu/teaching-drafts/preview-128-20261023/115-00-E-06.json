@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-06",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 6,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-06.webp",
+  "imageSha256": "ff9ea99d6429f227548512bcea8e2f179ac37aea01bd47a9dfc1178dd83997f5",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "GitHub 單題 WebP 實際目視；檢查題號、完整題幹與選項 A-D、畫線要求、無鄰題雜訊；重新計算 WebP bytes SHA256 與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先以圖片自行解題後才讀取候選；官網證實 2026-05-08 確認標準答案，但官方英文科最終 PDF 與疑義確認說明目前不能獨立回讀核實；不得計為官方最終核實或教學 QA 完成。",
+    "independentSolveScope": "本輪先讀圖自行推理，非獨立第三方教學複核",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "fill-in-the-blank",
+    "questionAsReadFromOriginalImage": "Weather forecasts for one or two days ahead are quite _______, providing correct weather information most of the time.",
+    "keyConditions": [
+      "one or two days ahead",
+      "quite ___",
+      "providing correct weather information most of the time"
+    ],
+    "reasoningFromOriginalImage": "空格位於 are quite 之後，需要形容詞。後半句明確說天氣預報大部分時間提供正確天氣資訊，因此最能概括其品質的是 accurate（準確的），而非 doubtful、false 或 inferior。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "空格是 **be + quite + 形容詞** 的句型。**providing correct weather information most of the time** 是關鍵：大多時候資訊正確，表示預報 **accurate（準確）**。句子並沒有保證永遠正確，**most of the time** 也不是 always。",
+    "elementarySummary": "看天氣預報，如果它大部分時候都猜對今天晴天還是下雨，就叫做 **accurate（準確）**；並不是說它一次都不會錯。",
+    "memory": "**correct most of the time → accurate**，大部分時候正確，就是準確。",
+    "concept": "形容詞描述資訊的正確程度；**quite accurate** 表相當準確，**most of the time** 表多數時候，不能誇大成百分之百。",
+    "extension": "反向思考：如果題目改成「forecasts are often wrong and cannot be trusted」，原句 accurate 就不合適，可能需使用 **inaccurate** 或 **unreliable**；分辨 accurate 和 reliable 的差異。",
+    "source": {
+      "originalExam": "115-00-E-06",
+      "originalImagePinnedSha256": "ff9ea99d6429f227548512bcea8e2f179ac37aea01bd47a9dfc1178dd83997f5",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 已確認各科標準答案；僅確認公告日期，尚未直接核實本題官方最終答案 PDF",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商使用之英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "quite accurate",
+      "correct weather information",
+      "most of the time"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**accurate** 表內容與實際情況相符，正好呼應 correct weather information most of the time，屬本題正解。",
+        "elementary": "它大多說對，所以是準確的。",
+        "reason": "**accurate** 表內容與實際情況相符，正好呼應 correct weather information most of the time，屬本題正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**doubtful** 表令人懷疑或不確定，通常不能從『大多正確』直接推出，和句中肯定預報的線索矛盾。",
+        "elementary": "每次都很有疑問，跟常常猜對不一樣。",
+        "reason": "**doubtful** 表令人懷疑或不確定，通常不能從『大多正確』直接推出，和句中肯定預報的線索矛盾。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**false** 表錯誤的、不真實的，與後半句 correct 明顯矛盾；即使偶有失準也不能說大多正確的預報都是 false。",
+        "elementary": "後面說常常對，前面卻說假的，就打架了。",
+        "reason": "**false** 表錯誤的、不真實的，與後半句 correct 明顯矛盾；即使偶有失準也不能說大多正確的預報都是 false。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**inferior** 表品質較差、次等的，通常用在相對比較；題幹只說預報資訊正確，沒有較差的比較基準。",
+        "elementary": "這句是誇它報得準，不是拿它跟別的比誰較差。",
+        "reason": "**inferior** 表品質較差、次等的，通常用在相對比較；題幹只說預報資訊正確，沒有較差的比較基準。"
+      }
+    },
+    "english": {
+      "questionType": "fill-in-the-blank",
+      "sentenceTranslationZh": "提前一、兩天的天氣預報相當準確，大多數時候能提供正確的天氣資訊。",
+      "testedWord": "accurate",
+      "answerWord": "accurate",
+      "pronunciationIPA": "/ˈækjərət/",
+      "optionMeaningZh": {
+        "A": "準確的",
+        "B": "令人懷疑的／不確定的",
+        "C": "錯誤的",
+        "D": "較差的"
+      },
+      "synonyms": {
+        "初級": [
+          "correct（正確的；意義相近）"
+        ],
+        "中級": [
+          "precise（精確的；強調細節，語意有別）"
+        ],
+        "高級": [
+          "exact（確切的；語氣更強）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "wrong（錯的）"
+        ],
+        "中級": [
+          "inaccurate（不準確的）"
+        ],
+        "高級": [
+          "erroneous（錯誤的；較正式）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "weather（天氣）"
+        ],
+        "中級": [
+          "forecast（預報）"
+        ],
+        "高級": [
+          "meteorology（氣象學）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關詞不保證所有情境可以互換；N/A 欄位不應硬補。",
+      "exampleEnglish": "The weather forecast was accurate yesterday.",
+      "exampleChinese": "昨天的天氣預報很準確。",
+      "exampleHighlightedSurfaceForm": "accurate",
+      "exampleType": "自編教學例句；非新聞來源",
+      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
