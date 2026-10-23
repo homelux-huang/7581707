@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-04",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 4,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-04.webp",
+  "imageSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪逐題原圖）",
+    "method": "直接目視 GitHub 既有單題 WebP，題幹選項完整，核實四選項和題號，原始 WebP SHA256 重算一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先根據原圖自行解題再查候選；候選與解答一致但未直接回讀官方最終答案PDF和更正說明。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": null,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "日記簿與分類帳記錄方式：①作分錄時填日記簿的日頁欄；②過帳時日記簿頁次記至分類帳日頁欄；③過帳時分類帳頁次記至日記簿日頁欄。何者正確？",
+    "keyConditions": [
+      "A-D四選項或①②③④逐項判斷",
+      "正確表述由會計概念及原圖文字決定"
+    ],
+    "reasoningFromOriginalImage": "日記簿有供填分類帳頁數的**類頁**欄；分類帳有供填日記簿頁數的**日頁**欄。分錄時通常先記日期、科目、金額；完成**過帳**後在**分類帳的日頁欄寫日記簿頁碼**，同時在**日記簿的類頁欄寫分類帳頁碼**。所以只有②正確，選B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "日記簿有供填分類帳頁數的**類頁**欄；分類帳有供填日記簿頁數的**日頁**欄。分錄時通常先記日期、科目、金額；完成**過帳**後在**分類帳的日頁欄寫日記簿頁碼**，同時在**日記簿的類頁欄寫分類帳頁碼**。所以只有②正確，選B。",
+    "elementarySummary": "一本先記每天發生的事（日記簿），另一本照會計科目整理（分類帳）。互相記『在哪一頁』，但日記簿的欄叫類頁、分類帳的欄叫日頁。第二句說對。",
+    "memory": "**分類帳填『日頁』、日記簿填『類頁』；只有②對。**",
+    "concept": "**分錄**先記交易；**過帳**把日記簿中的金額按科目轉到分類帳，並用相互頁碼方便追查來源。",
+    "extension": "反向思考：若③改寫為『過帳時將分類帳之頁次記入日記簿的**類頁欄**』，③才是正確敘述。",
+    "source": {
+      "originalExam": "115-09-2-04",
+      "originalImagePinnedSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學課本之版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學最終標準答案與更正說明待核實"
+    },
+    "highlightTerms": [
+      "類頁",
+      "日頁",
+      "②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①在日記簿填『日頁』是欄名混淆；日記簿對應分類帳使用類頁欄，且分錄與過帳時機不同。",
+        "elementary": "日記簿要填類頁，第一句欄名錯。",
+        "reason": "①在日記簿填『日頁』是欄名混淆；日記簿對應分類帳使用類頁欄，且分錄與過帳時機不同。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "②把日記簿頁碼記到分類帳**日頁**欄，是過帳互相索引的正確方式；①③不正確。",
+        "elementary": "分類帳的日頁就是要填日記簿頁數。",
+        "reason": "②把日記簿頁碼記到分類帳**日頁**欄，是過帳互相索引的正確方式；①③不正確。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "此選項包含①與③，兩句都把日記簿的頁數欄位叫錯，沒有正確的②。",
+        "elementary": "兩句都把欄位名字叫錯了。",
+        "reason": "此選項包含①與③，兩句都把日記簿的頁數欄位叫錯，沒有正確的②。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "②是對的，但③錯在分類帳頁碼應回填日記簿**類頁**欄，不是日頁欄。",
+        "elementary": "第二句對，第三句那個欄名錯。",
+        "reason": "②是對的，但③錯在分類帳頁碼應回填日記簿**類頁**欄，不是日頁欄。"
+      }
+    },
+    "accounting": {
+      "principle": "日記簿與分類帳以類頁／日頁交互索引，並區分分錄和過帳時點。",
+      "accounts": [
+        "日記簿",
+        "分類帳",
+        "類頁欄",
+        "日頁欄"
+      ],
+      "journalEntry": "示意：日記簿記借『現金』、貸『業主資本』，過帳至兩科目的分類帳後互填頁碼；本題沒有任何金額。",
+      "calculation": "N/A（本題為帳簿程序）",
+      "standardsStatus": "記錄格式與教材版本待核對"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
