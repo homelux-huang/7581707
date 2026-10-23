@@ -1,0 +1,24 @@
+name: Verify automatic Pages release retry safety
+on:
+  push:
+    paths:
+      - scripts/sudu_pages_recovery.py
+      - tests/test_sudu_pages_recovery.py
+      - .github/workflows/sudu-verified-autopublish.yml
+      - .github/workflows/sudu-pages-recovery-test.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enforce no duplicate active releases and automatic recovery
+        run: python -m unittest discover -s tests -p 'test_sudu_pages_recovery.py' -v
+      - name: Reject syntax errors in release-decision script
+        run: python -m py_compile scripts/sudu_pages_recovery.py
