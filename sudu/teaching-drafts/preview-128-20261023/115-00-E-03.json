@@ -135,7 +135,16 @@
       "exampleChinese": "教練在練習時一視同仁地對待每位球員。",
       "exampleHighlightedSurfaceForm": "equally",
       "exampleType": "自行撰寫的教學例句（非新聞）",
-      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "In September 2026, UN Women called for decision-making power to be shared equally with women.",
+      "newsExampleChinese": "2026年9月，聯合國婦女署呼籲讓女性平等分享決策權。",
+      "newsExampleHighlightedSurfaceForm": "equally",
+      "newsExampleSourceUrl": "https://www.un.org/sustainabledevelopment/blog/2026/09/press-release-one-in-three-institutions-built-to-advance-gender-equality-stripped-of-power-in-just-two-years-new-un-report-reveals/",
+      "newsExampleSourceTitle": "Gender Snapshot 2026 press release",
+      "newsExampleSourceOrganization": "United Nations / UN Women",
+      "newsExampleSourceDate": "2026-09-17",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "UN/UN Women calls for political and economic decision-making power to be shared more equally"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -185,6 +194,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://www.un.org/sustainabledevelopment/blog/2026/09/press-release-one-in-three-institutions-built-to-advance-gender-equality-stripped-of-power-in-just-two-years-new-un-report-reveals/",
+      "sourceDate": "2026-09-17",
+      "sourceSupports": "UN/UN Women calls for political and economic decision-making power to be shared more equally",
+      "highlight": "equally",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -151,7 +151,16 @@
       "exampleChinese": "開始學新東西永遠不嫌晚。",
       "exampleHighlightedSurfaceForm": "too late",
       "exampleType": "自行撰寫的雙語教學例句，非新聞",
-      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A July 2026 UN report urged faster action so it would not be too late to make progress on global goals.",
+      "newsExampleChinese": "2026年7月的聯合國報告敦促各國加速採取行動，以免實現全球目標的進展為時已晚。",
+      "newsExampleHighlightedSurfaceForm": "too late",
+      "newsExampleSourceUrl": "https://unstats.un.org/sdgs/report/2026/",
+      "newsExampleSourceTitle": "The Sustainable Development Goals Report 2026",
+      "newsExampleSourceOrganization": "United Nations Statistics Division",
+      "newsExampleSourceDate": "2026-07-07",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "Report says progress insufficient and calls for decisive push; too late phrase is educational inference, not direct UN quotation"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -201,6 +210,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://unstats.un.org/sdgs/report/2026/",
+      "sourceDate": "2026-07-07",
+      "sourceSupports": "Report says progress insufficient and calls for decisive push; too late phrase is educational inference, not direct UN quotation",
+      "highlight": "too late",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

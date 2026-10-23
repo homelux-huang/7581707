@@ -152,7 +152,16 @@
       "exampleChinese": "對我來說，買一輛二手腳踏車是務實的選擇。",
       "exampleHighlightedSurfaceForm": "choice",
       "exampleType": "自編教學例句；非新聞來源",
-      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A July 2026 UN report warned that each policy choice could affect progress toward the 2030 goals.",
+      "newsExampleChinese": "2026年7月的聯合國報告提醒，各項政策選擇都可能影響2030年永續發展目標的進展。",
+      "newsExampleHighlightedSurfaceForm": "choice",
+      "newsExampleSourceUrl": "https://unstats.un.org/sdgs/report/2026/",
+      "newsExampleSourceTitle": "The Sustainable Development Goals Report 2026",
+      "newsExampleSourceOrganization": "United Nations Statistics Division",
+      "newsExampleSourceDate": "2026-07-07",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "The report states choices in coming years will affect progress toward 2030 goals; singular choice is a pedagogical paraphrase"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -202,6 +211,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://unstats.un.org/sdgs/report/2026/",
+      "sourceDate": "2026-07-07",
+      "sourceSupports": "The report states choices in coming years will affect progress toward 2030 goals; singular choice is a pedagogical paraphrase",
+      "highlight": "choice",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

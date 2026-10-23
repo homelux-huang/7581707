@@ -151,7 +151,16 @@
       "exampleChinese": "護理師量了我兩次體溫。",
       "exampleHighlightedSurfaceForm": "temperature",
       "exampleType": "自編教學例句；非新聞來源",
-      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "In July 2026, Taiwan's weather agency warned that the temperature could reach 38 degrees Celsius in some areas.",
+      "newsExampleChinese": "2026年7月，臺灣氣象機關警告部分地區氣溫可能達到攝氏38度。",
+      "newsExampleHighlightedSurfaceForm": "temperature",
+      "newsExampleSourceUrl": "https://focustaiwan.tw/society/202607020005",
+      "newsExampleSourceTitle": "Heat warnings issued Thursday for most of Taiwan; south under 'red' alert",
+      "newsExampleSourceOrganization": "Focus Taiwan / CNA",
+      "newsExampleSourceDate": "2026-07-02",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "CWA July 2 warnings projected 38 degrees in selected regions; not a measurement of body temperature"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -201,6 +210,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://focustaiwan.tw/society/202607020005",
+      "sourceDate": "2026-07-02",
+      "sourceSupports": "CWA July 2 warnings projected 38 degrees in selected regions; not a measurement of body temperature",
+      "highlight": "temperature",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

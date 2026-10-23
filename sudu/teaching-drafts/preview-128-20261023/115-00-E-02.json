@@ -136,7 +136,16 @@
       "exampleChinese": "美娜上學期加入了學校的機器人社團。",
       "exampleHighlightedSurfaceForm": "joined",
       "exampleType": "自行撰寫的教學例句（非新聞）",
-      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "More than 300 competitors joined the WorldSkills Asia event held in Taipei in November 2025.",
+      "newsExampleChinese": "超過300位選手參加了2025年11月在臺北舉行的亞洲技能競賽。",
+      "newsExampleHighlightedSurfaceForm": "joined",
+      "newsExampleSourceUrl": "https://worldskills.org/media/news/worldskills-asia-taipei-2025-showcases-regional-excellence-and-diversity/",
+      "newsExampleSourceTitle": "WorldSkills Asia Taipei 2025 showcases regional excellence and diversity",
+      "newsExampleSourceOrganization": "WorldSkills International",
+      "newsExampleSourceDate": "2025-12-12",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "Official report confirms more than 300 competitors took part in Taipei November 2025 event"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -186,6 +195,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://worldskills.org/media/news/worldskills-asia-taipei-2025-showcases-regional-excellence-and-diversity/",
+      "sourceDate": "2025-12-12",
+      "sourceSupports": "Official report confirms more than 300 competitors took part in Taipei November 2025 event",
+      "highlight": "joined",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

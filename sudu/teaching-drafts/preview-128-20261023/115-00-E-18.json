@@ -152,7 +152,16 @@
       "exampleChinese": "她在履歷中敘述了自己的工作經歷。",
       "exampleHighlightedSurfaceForm": "work experience",
       "exampleType": "自編雙語教學例句，非新聞",
-      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A 2026 World Economic Forum article said that many employers value work experience when hiring staff.",
+      "newsExampleChinese": "2026年世界經濟論壇文章指出，許多雇主在招募員工時重視工作經驗。",
+      "newsExampleHighlightedSurfaceForm": "work experience",
+      "newsExampleSourceUrl": "https://www.weforum.org/stories/education-and-skills/universities-prepare-students-entry-level-jobs",
+      "newsExampleSourceTitle": "Entry-level hiring is tougher than ever. How universities are adapting",
+      "newsExampleSourceOrganization": "World Economic Forum",
+      "newsExampleSourceDate": "2026-04-01",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "WEF article cites 81% of employers expecting to prioritize work experience in skills assessment"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -202,6 +211,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://www.weforum.org/stories/education-and-skills/universities-prepare-students-entry-level-jobs",
+      "sourceDate": "2026-04-01",
+      "sourceSupports": "WEF article cites 81% of employers expecting to prioritize work experience in skills assessment",
+      "highlight": "work experience",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

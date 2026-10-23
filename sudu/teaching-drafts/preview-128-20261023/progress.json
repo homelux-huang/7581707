@@ -3211,13 +3211,38 @@
       "115-00-E-05",
       "115-00-E-19",
       "115-00-E-23",
-      "115-00-E-27"
+      "115-00-E-27",
+      "115-00-E-02",
+      "115-00-E-03",
+      "115-00-E-06",
+      "115-00-E-07",
+      "115-00-E-09",
+      "115-00-E-10",
+      "115-00-E-14",
+      "115-00-E-16",
+      "115-00-E-18"
     ],
     "lastAudit": "2026-10-23",
     "scopeTotalEnglish": 28,
-    "sourcedExampleCount": 13,
-    "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md; ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md; ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md",
+    "sourcedExampleCount": 22,
+    "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md; ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md; ENGLISH_SOURCED_NEWS_4_ADDITIONAL_20261023.md; ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md",
     "fullEnglishTeachingQaPass": 0,
-    "meaning": "Only four explicit sourced news-context pedagogical paraphrases, not publisher quotations or total teaching QA"
+    "meaning": "Source-grounded pedagogical news-context paraphrases; not the original media's text, not a complete English teaching or textbook QA"
+  },
+  "textbookChronologyGate": {
+    "examCode": "115學年度四技二專統測",
+    "examDates": [
+      "2026-04-25",
+      "2026-04-26"
+    ],
+    "schoolAcademicYearInSession": "114學年度(2025-09至2026-08)",
+    "scope": "115學年度教科書通常自2026-09學期使用，發行時間晚於本屆統測，不得直接當作2026-04考生實際教材證據",
+    "examSource": "https://www.tcte.edu.tw/index.php?mod=TVETest/info4y",
+    "englishCurriculumOfficialNotice": "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001749",
+    "changhuaSchoolHomepage": "https://www.chsc.chc.edu.tw/",
+    "actualExamCohortTextbookVersion": "UNVERIFIED",
+    "actualBookPages": "UNVERIFIED",
+    "verifiedTextbookPageCount": 0,
+    "releaseGate": "FAIL_CLOSED_FOR_TEXTBOOK_SPECIFIC_CITATIONS"
   }
 }

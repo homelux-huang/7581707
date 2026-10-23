@@ -153,7 +153,16 @@
       "exampleChinese": "聽眾深深被這段音樂感動。",
       "exampleHighlightedSurfaceForm": "deeply",
       "exampleType": "自編教學例句；非新聞來源",
-      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "In October 2025, many conservationists were deeply saddened by the death of Jane Goodall.",
+      "newsExampleChinese": "2025年10月珍古德逝世，許多保育工作者深感悲傷。",
+      "newsExampleHighlightedSurfaceForm": "deeply",
+      "newsExampleSourceUrl": "https://janegoodall.org/news/dr-jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/",
+      "newsExampleSourceTitle": "Dr. Jane Goodall, Renowned Ethologist, Conservationist, and Animal Behavior Expert Passes Away at Age 91",
+      "newsExampleSourceOrganization": "Jane Goodall Institute",
+      "newsExampleSourceDate": "2025-10-10",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "Institute expresses great sadness and records Dr Goodall's death, October 1 2025; adverb deeply is newly written not a quote"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -203,6 +212,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://janegoodall.org/news/dr-jane-goodall-renowned-ethologist-conservationist-and-animal-behavior-expert-passes-away-at-age-91/",
+      "sourceDate": "2025-10-10",
+      "sourceSupports": "Institute expresses great sadness and records Dr Goodall's death, October 1 2025; adverb deeply is newly written not a quote",
+      "highlight": "deeply",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

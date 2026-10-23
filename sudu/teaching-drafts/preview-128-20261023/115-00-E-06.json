@@ -151,7 +151,16 @@
       "exampleChinese": "昨天的天氣預報很準確。",
       "exampleHighlightedSurfaceForm": "accurate",
       "exampleType": "自編教學例句；非新聞來源",
-      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "The WMO said in October 2025 that AI could help make weather forecasts more accurate.",
+      "newsExampleChinese": "世界氣象組織於2025年10月指出，人工智慧有助於讓天氣預報更準確。",
+      "newsExampleHighlightedSurfaceForm": "accurate",
+      "newsExampleSourceUrl": "https://wmo.int/media/news/world-meteorological-congress-endorses-actions-promote-ai-forecasts-and-warnings",
+      "newsExampleSourceTitle": "World Meteorological Congress endorses actions to promote AI for forecasts and warnings",
+      "newsExampleSourceOrganization": "World Meteorological Organization",
+      "newsExampleSourceDate": "2025-10-24",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "WMO identifies AI potential to improve accuracy, accessibility and reach of forecasts"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -201,6 +210,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://wmo.int/media/news/world-meteorological-congress-endorses-actions-promote-ai-forecasts-and-warnings",
+      "sourceDate": "2025-10-24",
+      "sourceSupports": "WMO identifies AI potential to improve accuracy, accessibility and reach of forecasts",
+      "highlight": "accurate",
+      "highlightInExample": true,
+      "chineseTranslationPresent": true,
+      "sourceQuotedVerbatim": false,
+      "ipaAndLevelReview": "PENDING",
+      "textbookPageVerified": false,
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
