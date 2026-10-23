@@ -2,6 +2,7 @@
 
 No real question record, student database, or QA PASS flag is modified.
 """
+import hashlib
 import json
 import sqlite3
 import tempfile
@@ -65,6 +66,12 @@ class ReleaseGateRegression(unittest.TestCase):
         with sqlite3.connect(self.base / 'question-bank.sqlite3') as con:
             con.execute('CREATE TABLE IF NOT EXISTS questions (questionId TEXT PRIMARY KEY)')
             con.execute('INSERT OR IGNORE INTO questions VALUES (?)', (self.qid,))
+        db_sha = hashlib.sha256((self.base / 'question-bank.sqlite3').read_bytes()).hexdigest()
+        report = {'sourceDatabasesModified': False, 'studentDataTouched': False,
+                  'released': False, 'years': [{
+                      'year': 114, 'g5Pass': True, 'sandboxImportPasses': 2,
+                      'jsonRows': 1, 'onDiskRows': 1, 'sqliteSha256': db_sha}]}
+        (gates.D / '105-115-SQLITE_G5_READONLY_AUDIT.json').write_text(json.dumps(report))
 
     def check(self, expected):
         self.write_files()
@@ -130,6 +137,24 @@ class ReleaseGateRegression(unittest.TestCase):
     def test_duplicate_ledger_id_blocks(self):
         self.data['official-answer-evidence.json']['items'].append(self.data['official-answer-evidence.json']['items'][0].copy())
         self.check('duplicate_or_invalid_official_answer_ledger')
+
+    def test_readonly_g5_report_failed_blocks(self):
+        path = gates.D / '105-115-SQLITE_G5_READONLY_AUDIT.json'
+        report = json.loads(path.read_text())
+        report['years'][0]['g5Pass'] = False
+        path.write_text(json.dumps(report))
+        self.assertIn('sqlite_readonly_g5_evidence_failed', gates.audit(114)['blockers'])
+
+    def test_readonly_g5_stale_db_sha_blocks(self):
+        path = gates.D / '105-115-SQLITE_G5_READONLY_AUDIT.json'
+        report = json.loads(path.read_text())
+        report['years'][0]['sqliteSha256'] = 'f' * 64
+        path.write_text(json.dumps(report))
+        self.assertIn('sqlite_readonly_g5_db_sha_stale', gates.audit(114)['blockers'])
+
+    def test_readonly_g5_missing_report_blocks(self):
+        (gates.D / '105-115-SQLITE_G5_READONLY_AUDIT.json').unlink()
+        self.assertIn('missing:105-115-SQLITE_G5_READONLY_AUDIT.json', gates.audit(114)['blockers'])
 
     def test_source_sha_evidence_mismatch_blocks(self):
         self.data['webp-manifest.json']['items'][0]['visualReviewEvidence']['sourceSha256'] = 'f' * 64
