@@ -45,7 +45,9 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    await page.locator('#questionCard .qnum').waitFor();
    await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'));
    assert.equal(await page.locator('#verifiedStatus').count(),0);
-   assert.equal(await page.locator('#verifiedImagePreview').isVisible(),false);
+   assert.equal(await page.locator('#verifiedImagePreview').count(),0);
+   assert.equal(await page.locator('#verifiedYearNav').count(),0);
+   assert.equal(await page.locator('#verifiedPreviewToggle').count(),0);
    assert.equal(await page.locator('#studyView .opt').count(),4);
    const img=page.locator('#questionCard img[data-mock-asset], #questionCard img').first();
    assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0}));

@@ -32,8 +32,9 @@ def inspect_live(base, sha):
     if 'id="demoData"' not in page or "verified-questions-runtime.js" not in page:
         raise ValueError("LIVE V4 does not contain the original Demo or verified runtime adapter")
     js = fetch(base, "sudu/verified-questions-runtime.js", sha)
-    if b"verifiedYearNav" not in js or b"data/approved" not in js:
-        raise ValueError("LIVE yearly adapter is missing or stale")
+    if (b"verifiedSingleQuestionWebp" not in js or b"data/approved" not in js
+            or b"verifiedYearNav" in js or b"verifiedImagePreview" in js):
+        raise ValueError("LIVE yearly adapter lacks inline WebP or contains obstructive QA blocks")
     dash = fetch(base, "sudu/question-bank-progress.html", sha).decode("utf-8")
     if "題庫接入平台部署進度表" not in dash:
         raise ValueError("LIVE progress dashboard missing")

@@ -19,7 +19,9 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
         await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'),{timeout:20000});
         await page.locator('#questionCard .qnum').waitFor();
         assert.equal(await page.locator('#verifiedStatus').count(),0);
-        assert.equal(await page.locator('#verifiedImagePreview').isVisible(),false);
+        assert.equal(await page.locator('#verifiedImagePreview').count(),0);
+        assert.equal(await page.locator('#verifiedYearNav').count(),0);
+        assert.equal(await page.locator('#verifiedPreviewToggle').count(),0);
         assert.equal(await page.locator('#subjectSel option').count(),1);
         for(let i=0;i<4;i++){
           const expected=source.questions[i];
