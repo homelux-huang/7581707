@@ -98,6 +98,46 @@ def audit(year):
         asset_cache[key] = valid
         return valid
 
+    def correction_proof_valid(q, answer):
+        """G3: checked correction PDF OR SHA-bound official no-objection index.
+
+        A subject for which nobody filed an objection has no correction PDF.
+        Its notice must be present in both the official-status ledger and
+        the source-index evidence ledger with matching SHA and URL.
+        """
+        pdf_sha = answer.get('officialCorrectionPdfSha256')
+        if isinstance(pdf_sha, str) and len(pdf_sha) == 64:
+            return True
+        page_sha = answer.get('officialCorrectionPageSha256')
+        page_url = answer.get('officialCorrectionPageUrl')
+        if not (isinstance(page_sha, str) and len(page_sha) == 64 and
+                isinstance(page_url, str) and page_url.startswith('https://')):
+            return False
+        expected = 'OFFICIAL_' + q.get('paperCode', '').replace('-', '_') + '_NO_OBJECTION_SUBMITTED'
+        if answer.get('officialCorrectionStatus') != expected:
+            return False
+        status_file = base / 'official-confirmation-status.json'
+        if not status_file.is_file():
+            return False
+        try:
+            status = json.loads(status_file.read_text(encoding='utf-8'))
+            papers = status.get('confirmations', {})
+            paper = papers.get(q.get('paperCode'), {})
+            relative = status.get('officialNoticeEvidencePath')
+            if (status.get('year') != year or
+                    paper.get('officialStatus') != 'no_objection_submitted' or
+                    not isinstance(relative, str)):
+                return False
+            notice_path = (ROOT / relative).resolve()
+            if not notice_path.is_relative_to(ROOT.resolve()):
+                return False
+            notice = json.loads(notice_path.read_text(encoding='utf-8'))
+            return (notice.get('year') == year and
+                    notice.get('sourceIndexSha256') == page_sha and
+                    notice.get('sourceIndexUrl') == page_url)
+        except (OSError, ValueError, TypeError, AttributeError):
+            return False
+
     image_pass = []
     for q in qs:
         qid = q['questionId']
@@ -149,7 +189,7 @@ def audit(year):
                 answer.get('officialCorrectionChecked') is not True or
                 not answer.get('qaEvidencePath') or
                 not (answer.get('officialSourceSha256') or answer.get('officialPdfSha256')) or
-                not answer.get('officialCorrectionPdfSha256')):
+                not correction_proof_valid(q, answer)):
                 blocks.append('official_answer_evidence_mismatch:' + qid)
         if answer.get('answerVerified') is True and q.get('answerVerified') is not True:
             blocks.append('official_answer_flag_mismatch:' + qid)
