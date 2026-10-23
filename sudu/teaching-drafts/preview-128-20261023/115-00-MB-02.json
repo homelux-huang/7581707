@@ -62,7 +62,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "115年數學B最終官方答案A及確認欄「未提出疑義」已有逐題證據；完整教學、教材版次／頁碼、正式UI驗收仍待核實。",
+      "officialIssueExplanation": "115年數學B第2題官方最終答案A及確認公告已核實（見 official-final-evidence-20261023.json 逐題證據）；完整教學、教科書版次與頁碼、正式V4介面RWD仍待驗收，不代表本題已核准公開。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -328,6 +328,16 @@
       "fullIndependentTeachingReview": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md"
+    },
+    "officialFinalNoticeWordingRefinement20261023": {
+      "reason": "Strict CI #39960244934 identified earlier text says 已有逐題證據 but lacks explicit 已核實",
+      "previousCurrentSourceIssueExplanation": "115年數學B最終官方答案A及確認欄「未提出疑義」已有逐題證據；完整教學、教材版次／頁碼、正式UI驗收仍待核實。",
+      "updatedCurrentSourceIssueExplanationStatus": "OFFICIAL_ANSWER_VERIFIED_TEACHING_QA_PENDING",
+      "verifiedEvidenceRegistry": "official-final-evidence-20261023.json",
+      "officialAnswer": "A",
+      "fullTeachingQa": "PENDING",
+      "releaseApproved": false,
+      "date": "2026-10-23"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
