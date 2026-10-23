@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 42,
-  "draftPercent": 32.8,
-  "visualRechecked": 42,
-  "candidateAnswerMatched": 42,
+  "draftWritten": 46,
+  "draftPercent": 35.9,
+  "visualRechecked": 46,
+  "candidateAnswerMatched": 46,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -52,13 +52,13 @@
     "115-00-E-21",
     "115-00-E-22",
     "115-00-E-23",
-    "115-00-E-24"
-  ],
-  "remainingIds": [
+    "115-00-E-24",
     "115-00-E-25",
     "115-00-E-26",
     "115-00-E-27",
-    "115-00-E-28",
+    "115-00-E-28"
+  ],
+  "remainingIds": [
     "115-00-MB-01",
     "115-00-MB-02",
     "115-00-MB-03",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "115英文第25～28題共用淡江大橋文章",
+  "nextSubject": "115數學B第1～5題（未完成；含公式完整計算）",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -554,7 +554,7 @@
           "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
         }
       ],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-26",
@@ -568,7 +568,7 @@
           "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
         }
       ],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-27",
@@ -582,7 +582,7 @@
           "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
         }
       ],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-28",
@@ -596,7 +596,7 @@
           "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
         }
       ],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-MB-01",
