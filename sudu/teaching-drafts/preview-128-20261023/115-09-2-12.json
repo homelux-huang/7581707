@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-12",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 12,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-12.webp",
+  "imageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪實際讀取WebP）",
+    "method": "逐題親自目視既有原始單題WebP、題號、四選項、分錄、表格；原始圖檔bytes SHA256已重算吻合固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [],
+    "correctionHistory": "初解D，讀候選答案A後重新看原圖與解題修正，保留首輪失誤，獨立QA待核實。"
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": "A",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": true,
+    "independentSolveScope": "FIRST_PASS_DIFFERENCE_NOT_BLIND_PASSED"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "銀行存款調節表①帳與原對帳單相同無須調節、②保付支票不需調節、③公司調整分錄後帳餘等於原對帳單餘額、④在途存款需公司借記存款、⑤上月在途本月對帳單出現。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "**②⑤正確，選A**。①錯：兩個未調餘額相同仍可能有互相抵銷未達帳。②保付支票銀行保證且已扣款，不列未兌現支票。③錯：公司調整後應與銀行**調節後正確餘額**相同，不必與**原始銀行對帳單**相同。④錯：在途存款已由公司記帳、銀行未入帳，要加在銀行側，不能公司重複借記。⑤上月在途款項進入本月對帳單通常成立。初次解D忽略③『原對帳單』，已保留待獨立複核。",
+    "reasoningRecordedBeforeCandidateLookup": false,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "**②⑤正確，選A**。①錯：兩個未調餘額相同仍可能有互相抵銷未達帳。②保付支票銀行保證且已扣款，不列未兌現支票。③錯：公司調整後應與銀行**調節後正確餘額**相同，不必與**原始銀行對帳單**相同。④錯：在途存款已由公司記帳、銀行未入帳，要加在銀行側，不能公司重複借記。⑤上月在途款項進入本月對帳單通常成立。初次解D忽略③『原對帳單』，已保留待獨立複核。",
+    "elementarySummary": "公司帳跟銀行帳即使剛好數字相同，也可能還有資料沒核對。公司月底存銀行但銀行下月才收到，應在銀行那邊調。正確的是第二、第五句。",
+    "memory": "**②保付支票無須調、⑤上月在途本月出現；③應比『調節後』而非原對帳單。**",
+    "concept": "在途存款加銀行側；未兌現支票減銀行側；銀行手續費或利息調整公司側。",
+    "extension": "反向思考：若③改成『公司帳調整後與銀行**調節後**正確餘額相同』，是否成立？",
+    "source": {
+      "originalExam": "115-09-2-12",
+      "originalImagePinnedSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學官方最終標準答案及更正待核對",
+      "relatedTextbookResearch": [
+        "https://pic.tasker.com.tw/file/1/339/1802535/1528899109177467114.pdf"
+      ]
+    },
+    "highlightTerms": [
+      "保付支票",
+      "原銀行對帳單",
+      "調節後正確餘額",
+      "②⑤"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "②與⑤皆正確；①、③、④均誤解調節對象或時間，故A。",
+        "elementary": "只有第二和第五句對。",
+        "reason": "②與⑤皆正確；①、③、④均誤解調節對象或時間，故A。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "①即使原始餘額相同仍可能需要調節；③不能直接與未調銀行餘額比較。",
+        "elementary": "表面數字碰巧一樣不代表不用調。",
+        "reason": "①即使原始餘額相同仍可能需要調節；③不能直接與未調銀行餘額比較。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "①錯，④在途存款應加銀行側，無需公司重複記，故C不對。",
+        "elementary": "已記的存款不能再記一次。",
+        "reason": "①錯，④在途存款應加銀行側，無需公司重複記，故C不對。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "②⑤對但混入錯誤③④，尤其③講『原銀行對帳單』並非『調節後銀行正確餘額』。",
+        "elementary": "銀行還沒調好的數字不能當最後答案。",
+        "reason": "②⑤對但混入錯誤③④，尤其③講『原銀行對帳單』並非『調節後銀行正確餘額』。"
+      }
+    },
+    "accounting": {
+      "principle": "在途存款加銀行側；未兌現支票減銀行側；銀行手續費或利息調整公司側。",
+      "accounts": [
+        "銀行存款",
+        "在途存款",
+        "未兌現支票",
+        "保付支票"
+      ],
+      "journalEntry": "在途存款只加銀行調節側、不作公司重複分錄；公司漏記手續費時借『手續費』貸『銀行存款』。",
+      "calculation": "N/A（本題沒有計算要求）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "firstPassErrorNeedsIndependentReview": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
