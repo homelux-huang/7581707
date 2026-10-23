@@ -1,0 +1,64 @@
+name: Preview 128 against latest main V4 (NO RELEASE)
+on:
+  push:
+    branches:
+      - draft/preview-128-explanations-20261023
+    paths:
+      - 'sudu/teaching-drafts/preview-128-20261023/**'
+      - 'tests/sudu_preview_128_current_main_ui.cjs'
+      - '.github/workflows/preview-128-current-main-ui.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: preview-128-current-main-v4
+  cancel-in-progress: true
+jobs:
+  latest_main_v4_preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: draft
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: current-main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare isolated current-main V4 and Playwright
+        run: |
+          set -eu
+          echo "DRAFT_SHA=$(git -C draft rev-parse HEAD)"
+          echo "CURRENT_MAIN_SHA=$(git -C current-main rev-parse HEAD)"
+          python -m pip install -q pillow
+          (cd current-main && SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py)
+          npm install --prefix draft --no-save playwright@1.51.1
+          (cd draft && npx playwright install --only-shell chromium)
+      - name: Real main V4 browser preflight with 7 unpublished draft Math B records
+        env:
+          SUDU_PREVIEW_ONLY: '1'
+          SUDU_TEST_URL: http://127.0.0.1:8777/sudu/
+          SUDU_QA_MAIN_CHECKOUT: current-main
+          SUDU_TEST_OUTPUT: preview-128-current-main-ui-results
+        run: |
+          set -eu
+          python -m http.server 8777 --bind 127.0.0.1 --directory current-main/_site >/tmp/current-main-v4-qa-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          sleep 2
+          node draft/tests/sudu_preview_128_current_main_ui.cjs
+      - name: Retain QA ONLY screenshots and both SHA without releasing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-current-main-v4-no-release
+          path: preview-128-current-main-ui-results/
+          retention-days: 7
