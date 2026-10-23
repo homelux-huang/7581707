@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'sudu/data/processed'
-NEEDED = {'question_id', 'year', 'paper_code', 'original_number', 'payload', 'payload_sha256'}
+NEEDED = {'question_id', 'year', 'paper_code', 'original_number', 'payload_sha256'}
 
 
 def digest(data):
@@ -53,10 +53,12 @@ def audit_year(year):
             report['onDiskTables'] = [row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")]
             cols = {r[1] for r in db.execute('PRAGMA table_info(questions)')}
             report['onDiskQuestionColumns'] = sorted(cols)
-            if not NEEDED <= cols:
+            payload_col = 'payload' if 'payload' in cols else ('payload_json' if 'payload_json' in cols else None)
+            if not NEEDED <= cols or payload_col is None:
                 report['blockers'].append('on_disk_question_schema_missing_columns')
             else:
-                stored = db.execute('SELECT question_id,year,paper_code,original_number,payload,payload_sha256 FROM questions').fetchall()
+                report['onDiskPayloadColumn'] = payload_col
+                stored = db.execute('SELECT question_id,year,paper_code,original_number,'+payload_col+',payload_sha256 FROM questions').fetchall()
                 report['onDiskRows'] = len(stored)
                 if len(stored) != n:
                     report['blockers'].append('on_disk_row_count_mismatch')
