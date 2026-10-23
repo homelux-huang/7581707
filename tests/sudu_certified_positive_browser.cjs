@@ -19,12 +19,14 @@ const reviewQ={
  optionExplanations:explanation,
  examCalculation:{hasExamCalculation:true,lines:['已知條件：2x+3y=4','公式用途：斜率和平行','代入：y=0',
    '步驟：2x=4，所以 x=2','步驟：y=−2x/3+4/3','結果：(a,m)=(2,−2/3)','對應選項：A']},
- image:'data/approved/webp/115/115-00-MB-03.webp'
+ image:'data/approved/webp/115/115-00-MB-03.webp',
+ imageSha256:'03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b'
 };
 const conceptual={...reviewQ,id:4,canonicalId:'115-00-MB-04',topic:'二次不等式',
  question:'下列關於二次不等式的觀念，何者正確？',
  options:['超過根外','永遠無解','兩根之間','不必計算'],
  answer:'C',examCalculation:null,image:'data/approved/webp/115/115-00-MB-04.webp',
+ imageSha256:'0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562',
  optionExplanations:Object.fromEntries('ABCD'.split('').map(k=>[k,{
   teacher:k==='C'?'開口向上，負值區在兩根間':'其他選項不符合條件',
   elementary:k==='C'?'U形碗的底部在兩根之間':'這個方向不符合形狀',
