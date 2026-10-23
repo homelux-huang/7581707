@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-44",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 44,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-44.webp",
+  "imageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐題打開 GitHub 既有單題 WebP，確認GDP數字、公式、央行政策表格、四個選項無缺漏；WebP SHA256重新驗算吻合凍結清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選OCR的第44題D選項後混入下一頁頁首頁尾；已依本題WebP原圖辨識正確D。"
+    ]
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_READ",
+    "notice": "本輪先目視原圖解答，再比對候選；最終官方更正未獨立核實，完整教學QA待完成。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "美國加徵關稅衝擊出口廠商",
+      "政府提供紓困貸款",
+      "問財政／貨幣及擴張／緊縮"
+    ],
+    "reasoningFromOriginalImage": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_OFFICIAL_FINAL_RECHECK"
+  },
+  "teaching": {
+    "teacherSummary": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+    "elementarySummary": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+    "memory": "**政府針對企業紓困→擴張財政；央行調利率／準備率→貨幣政策**。",
+    "concept": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
+    "extension": "反向題：如果改由中央銀行普遍降息、降低準備率而沒有指定政府紓困預算，政策應歸屬擴張性財政還是擴張性貨幣？",
+    "source": {
+      "originalExam": "115-09-2-44",
+      "originalImagePinnedSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案與更正說明尚未核實"
+    },
+    "highlightTerms": [
+      "關稅",
+      "紓困貸款",
+      "政府",
+      "擴張性財政政策",
+      "貨幣政策"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
+        "elementary": "政府拿政策資源幫工廠渡過難關，就是擴張支持。",
+        "reason": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B緊縮性財政政策通常是縮減支出或增加稅負以壓低總需求；提供紓困扶助與其方向相反。",
+        "elementary": "政府在幫忙，不是縮減支援。",
+        "reason": "B緊縮性財政政策通常是縮減支出或增加稅負以壓低總需求；提供紓困扶助與其方向相反。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C擴張性貨幣政策通常由**央行**降息、買進債券或降低準備率；本題強調政府特定對象紓困，不是央行一般性資金調節。",
+        "elementary": "不是央行調全國借錢利率，是政府幫特定廠商。",
+        "reason": "C擴張性貨幣政策通常由**央行**降息、買進債券或降低準備率；本題強調政府特定對象紓困，不是央行一般性資金調節。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D緊縮性貨幣政策既不符合題幹政府紓困主體，也與提供資金支持的擴張方向相反。",
+        "elementary": "既搞錯是誰做的，也把幫忙方向說反。",
+        "reason": "D緊縮性貨幣政策既不符合題幹政府紓困主體，也與提供資金支持的擴張方向相反。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
