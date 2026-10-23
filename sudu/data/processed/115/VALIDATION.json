@@ -4,7 +4,7 @@
   "structuralStatus": "PASS",
   "blockingFailures": [],
   "webpImageVisualReview": "PARTIAL_ASSISTANT_VISUAL_QA",
-  "officialAnswers": "PARTIAL_56_SHA_BOUND_TCTE_FINAL_ANSWERS_OTHERS_PENDING",
+  "officialAnswers": "PARTIAL_81_SHA_BOUND_TCTE_FINAL_ANSWERS_OTHERS_PENDING",
   "sqlite": "SQLITE_ROUNDTRIP_PASS",
   "published": "NO",
   "integration": "NO",
@@ -44,7 +44,7 @@
       "nativePdfOrManualTextAvailable": 25,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 25,
-      "officialAnswerIndependentlyVerified": 0,
+      "officialAnswerIndependentlyVerified": 25,
       "sqliteRecordCount": 25,
       "needsFullVisualReview": 0
     },
