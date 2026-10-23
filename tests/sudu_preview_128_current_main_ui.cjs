@@ -73,6 +73,10 @@ const report={kind:'CROSS_BRANCH_MAIN_V4_DRAFT_PREFLIGHT_ONLY_NO_RELEASE',
  mainSha,draftSha,pinnedImagesChecked:7,questionIds:fixtures.map(f=>f.canonicalId),
  actualReleaseApproved:false,formalContentUiQaGranted:false,
  browserOnlyApprovedJsonInterception:true,
+ browserInputModality:'KEYBOARD_ENTER_ACCESSIBILITY_PREFLIGHT_ONLY',
+ mousePointerClickStability:'PENDING_PRIOR_FAILED_RUN_39962743686',
+ touchActionability:'PENDING_NOT_TESTED',
+
  legacyTextReplacementsOnlyInQaFixture:[20,21,22,25],
  expectedViewportThemeCases:16,observations:[],errors:[]};
 fs.mkdirSync(out,{recursive:true});
@@ -110,7 +114,11 @@ fs.mkdirSync(out,{recursive:true});
       assert.equal(await page.locator('#answerCard .opt').count(),4,'4 options');
       assert.equal(await page.locator('#guideCard.show').count(),0,'hidden explanation before answer');
       const selected=n===19?'A':fixture.answer;
-      await page.locator('#answerCard .opt[data-a="'+selected+'"]').click();
+      // Real keyboard activation is an accessible user input, not JS .click()
+      // or Playwright force-click. Mouse pointer stability remains UNVERIFIED.
+      const answerButton=page.locator('#answerCard .opt[data-a="'+selected+'"]');
+      await answerButton.focus();
+      await page.keyboard.press('Enter');
       await page.locator('#correctAnswer').waitFor({state:'visible'});
       await page.locator('#guideCard.show').waitFor({state:'visible'});
       assert.equal(await page.locator('#guideCard .guide-block.calculation-first').count(),1,'exactly one math computation');
@@ -124,13 +132,15 @@ fs.mkdirSync(out,{recursive:true});
       assert(widthCheck.scroll<=widthCheck.client+1,'no horizontal overflow '+JSON.stringify(widthCheck));
       if(n===19){
        assert.equal(await page.locator('#answerCard .opt.wrong').count(),1,'wrong answer shown');
-       await page.locator('#questionBtn').click();
+       await page.locator('#questionBtn').focus();
+       await page.keyboard.press('Enter');
        assert.equal(await page.locator('#guideCard.show').count(),0,'hide explanation');
-       await page.locator('#explainBtn').click();
+       await page.locator('#explainBtn').focus();
+       await page.keyboard.press('Enter');
        assert.equal(await page.locator('#guideCard.show').count(),1,'restore explanation');
       }
       successes.push({questionId:fixture.canonicalId,decoded:true,optionsExplained:4,mathStepsShown:true,
-        noHorizontalOverflow:true});
+        noHorizontalOverflow:true,keyboardActivated:true});
      }
      await page.evaluate(()=>showReview());
      assert.equal(await page.locator('#reviewView.show').count(),1,'review UI');
