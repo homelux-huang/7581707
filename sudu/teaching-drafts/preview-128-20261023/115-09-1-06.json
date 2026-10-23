@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-06",
+  "year": 115,
+  "subject": "商業概論",
+  "questionNumber": 6,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-06.webp",
+  "imageSha256": "5e79e4e8730a1cce0358c9e5321db8fbdfe373b85e8aa8a2ad6ed32073ea8801",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接開啟 GitHub 單題 WebP，檢查題號、題幹①至④及四組選項，重新算出 WebP SHA256 與 progress.json 相同",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "既有候選答案已先曝光，這次不冒稱盲解；官方最新標準答案及疑義確認資料仍待直接核實。",
+    "independentSolveScope": "ANSWER_SEEN_BEFORE_REASONING_NOT_BLIND",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "marketing-sales-promotion-concept",
+    "keyConditions": [
+      "①持票兌換50元優惠券",
+      "②網紅拍影片在社群宣傳",
+      "③打卡抽獎送禮",
+      "④餐酒館特調並付費雜誌宣傳"
+    ],
+    "reasoningFromOriginalImage": "銷售推廣是短期給予消費者誘因以刺激購買或參與。①憑門票領50元優惠券屬折價券促銷，③打卡抽獎送好禮屬抽獎促銷；②網紅影片宣傳屬廣告／公關傳播，④付費雜誌宣傳屬廣告。故①③，B。",
+    "blindSolve": false,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_RECHECK"
+  },
+  "teaching": {
+    "teacherSummary": "判斷**銷售推廣 sales promotion** 的關鍵，是不是提供**短期、額外的購買／參與誘因**。①優惠券可直接抵用，③抽獎送好禮提供獎品誘因；②只是透過網紅在社群傳播消息，④雖有特調商品，題目明確說付費在雜誌宣傳，屬付費廣告，不能把所有應援活動都當促銷。",
+    "elementarySummary": "優惠券能少付50元、抽獎有機會拿禮物，這些都像『來參加就有好康』。拍宣傳影片、付錢登雜誌廣告，是告訴大家消息，不一定給參加者好處，所以選①和③。",
+    "memory": "**折價券、抽獎贈獎＝銷售推廣**；**付費雜誌宣傳＝廣告**。",
+    "concept": "促銷組合包括廣告、銷售推廣、公共關係、人員推銷、直接行銷等；本題以活動的主要手段判斷。即便整場活動可同時運用多種工具，**銷售推廣**的辨識重點仍是短期誘因。",
+    "extension": "反向思考：若②網紅影片不是只有介紹活動，還附上觀眾可用的限時折價碼，該部分可能同時包含銷售推廣；如何區分媒體傳播工具與實際提供的優惠？",
+    "source": {
+      "originalExam": "115-09-1-06",
+      "originalImagePinnedSha256": "5e79e4e8730a1cce0358c9e5321db8fbdfe373b85e8aa8a2ad6ed32073ea8801",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商商業概論教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "待核對；題目時事背景依原題說明，不冒稱現況核實"
+    },
+    "highlightTerms": [
+      "銷售推廣",
+      "短期誘因",
+      "50元優惠券",
+      "打卡抽獎",
+      "付費雜誌宣傳"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 選①②；①是50元優惠券，確屬銷售推廣；②僅描述網紅拍影片在社群宣傳，主要是宣傳／廣告性質，缺少直接優惠、抽獎或贈品，因此整組不正確。",
+        "elementary": "優惠券算好康，但拍影片只是讓大家知道，兩個不全是促銷。",
+        "reason": "A 選①②；①是50元優惠券，確屬銷售推廣；②僅描述網紅拍影片在社群宣傳，主要是宣傳／廣告性質，缺少直接優惠、抽獎或贈品，因此整組不正確。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B 選①③；①優惠券帶來價格誘因，③打卡抽獎送禮帶來中獎誘因，皆能短期鼓勵歌迷參與與消費，因此這組正確。",
+        "elementary": "拿優惠券和抽獎送禮，都有實際好康，所以選這組。",
+        "reason": "B 選①③；①優惠券帶來價格誘因，③打卡抽獎送禮帶來中獎誘因，皆能短期鼓勵歌迷參與與消費，因此這組正確。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 選②④；②社群宣傳和④付費雜誌廣告都著重資訊曝光、品牌溝通，缺乏題幹明確的抽獎或折價刺激，不能將兩者都歸類銷售推廣。",
+        "elementary": "拍影片、登雜誌都是宣傳，不等於抽獎或給折扣。",
+        "reason": "C 選②④；②社群宣傳和④付費雜誌廣告都著重資訊曝光、品牌溝通，缺乏題幹明確的抽獎或折價刺激，不能將兩者都歸類銷售推廣。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 選③④；③抽獎送禮符合銷售推廣，但④的『付費在雜誌宣傳』屬購買媒體版面做廣告；雖推出特調飲品，題幹沒說特調提供優惠或贈獎，因此整組不正確。",
+        "elementary": "打卡抽獎有好禮；雜誌上打廣告則是宣傳，不能一起算。",
+        "reason": "D 選③④；③抽獎送禮符合銷售推廣，但④的『付費在雜誌宣傳』屬購買媒體版面做廣告；雖推出特調飲品，題幹沒說特調提供優惠或贈獎，因此整組不正確。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
