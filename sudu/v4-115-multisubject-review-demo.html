@@ -207,6 +207,14 @@ button,select,.nav-field,.home-choice{word-break:keep-all}
 }
 @media(prefers-reduced-motion:reduce){.nav-handle,.progress-shell,.home-review{transition:none}}
 
+
+.progress-shell{max-height:min(72dvh,620px);overflow-y:auto;overscroll-behavior:contain}
+.nav-row .review-head{position:relative}
+body.home-mode .nav-handle,body.home-mode #readingShortcuts{display:none!important}
+body.qa-image-mode.study-mode #progressShell,body.qa-image-mode.study-mode #navHandle{display:grid}
+body.qa-image-mode.study-mode #progressShell{display:block}
+@media(max-width:720px){.progress-shell{max-height:65dvh}.nav-row .review-head .badge{right:-3px;top:-5px;margin:0}}
+
 </style>
 </head>
 <body class="home-mode">
@@ -662,19 +670,96 @@ function countdownText(now){
 }
 function updateCountdown(){$('examClock').textContent=countdownText(Date.now());}
 updateCountdown();setInterval(updateCountdown,1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCountdown()});
-renderSelectors();document.documentElement.dataset.theme=state.theme||'light';renderAll();
-$('subjectSel').onchange=e=>{currentSubject=e.target.value;currentIndex=0;showStudy();renderAll()};
-$('reviewSubject').onchange=renderReview;$('reviewSort').onchange=renderReview;$('reviewTop').onclick=showReview;$('wrongBtn').onclick=showReview;$('backStudy').onclick=()=>{showStudy();renderAll()};
-$('resetBtn').onclick=()=>{if(!confirm('重新開始目前科目？本輪畫面進度會清空，但歷史答錯次數與重點復習紀錄保留。'))return;(state.rounds[currentSubject]||=1);state.rounds[currentSubject]++;for(const q of list()){const r=record(q);r.status=null;r.selected=null;}currentIndex=0;save();showStudy();setQuestionNavAutoHide(false);renderAll()};
-$('prevBtn').onclick=()=>move(-1);$('nextBtn').onclick=()=>move(1);$('questionBtn').onclick=()=>{showStudy();hideGuide();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};$('explainBtn').onclick=()=>{showStudy();if(record(qnow()).status){showGuide();requestAnimationFrame(scrollToCorrectAnswer)}else{$('answerCard').scrollIntoView({behavior:'smooth',block:'start'})}};
-$('themeBtn').onclick=()=>{state.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=state.theme;save();syncHeights()};
-$('navToggle').onclick=()=>{if(!document.body.classList.contains('nav-auto'))return;document.body.classList.contains('nav-open')?closeQuestionNav():openQuestionNav('open')};
-$('progressShell').addEventListener('mouseenter',()=>{if(!matchMedia('(max-width:720px)').matches)openQuestionNav('peek')});
-$('progressShell').addEventListener('mouseleave',()=>{if(!matchMedia('(max-width:720px)').matches)scheduleQuestionNavClose()});
-$('progressShell').addEventListener('focusin',()=>openQuestionNav('peek'));
+renderSelectors();
+document.documentElement.dataset.theme=state.theme||'light';
+const entryYear=new URLSearchParams(location.search).get('year');
+if(['demo','114','115'].includes(entryYear))$('homeYearSel').value=entryYear;
+$('yearSel').value=pageYear();
+renderAll();
+showHome();
+$('homeYearSel').onchange=e=>{
+ const year=e.target.value;
+ $('homeSubjectSel').value='';
+ if(year&&year!==pageYear())changeYear(year);
+ else refreshHomeSubjects();
+};
+$('homeSubjectSel').onchange=e=>{
+ if(e.target.value)openSubjectFromHome(e.target.value);
+};
+$('homeReviewBtn').onclick=showReview;
+$('navHomeBtn').onclick=showHome;
+$('yearSel').onchange=e=>{
+ const year=e.target.value;
+ if(year!==pageYear())changeYear(year);
+ else showHome();
+};
+$('subjectSel').onchange=e=>{
+ if(document.body.classList.contains('qa-image-mode')){
+  if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(e.target.value);
+  return;
+ }
+ currentSubject=e.target.value;currentIndex=0;showStudy();renderAll();
+ collapseQuestionNav();
+};
+$('reviewSubject').onchange=renderReview;
+$('reviewSort').onchange=renderReview;
+$('reviewTop').onclick=showReview;
+$('backStudy').onclick=showHome;
+$('resetBtn').onclick=()=>{
+ if(!confirm('重新開始目前科目？本輪畫面進度會清空，但歷史答錯次數與重點復習紀錄保留。'))return;
+ state.rounds[currentSubject]=(state.rounds[currentSubject]||1)+1;
+ for(const q of list()){const r=record(q);r.status=null;r.selected=null;}
+ currentIndex=0;save();showStudy();setQuestionNavAutoHide(false);renderAll();
+};
+$('prevBtn').onclick=()=>move(-1);
+$('nextBtn').onclick=()=>move(1);
+$('questionBtn').onclick=()=>{
+ if(!document.body.classList.contains('study-mode'))return;
+ hideGuide();
+ $('questionCard').scrollIntoView({behavior:'smooth',block:'start'});
+};
+$('explainBtn').onclick=()=>{
+ if(!document.body.classList.contains('study-mode')||$('explainBtn').disabled)return;
+ showGuide();requestAnimationFrame(scrollToCorrectAnswer);
+};
+$('themeBtn').onclick=()=>{
+ state.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';
+ document.documentElement.dataset.theme=state.theme;
+ save();syncHeights();
+};
+$('navToggle').onclick=toggleQuestionNav;
+$('navHandle').onclick=toggleQuestionNav;
+$('navHandle').addEventListener('mouseenter',()=>{
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches)openQuestionNav('peek');
+});
+$('navHandle').addEventListener('mouseleave',scheduleQuestionNavClose);
+let startTouchY=0;
+$('navHandle').addEventListener('touchstart',e=>{startTouchY=e.changedTouches[0].clientY},{passive:true});
+$('navHandle').addEventListener('touchend',e=>{
+ const dy=e.changedTouches[0].clientY-startTouchY;
+ if(Math.abs(dy)<18)return;
+ e.preventDefault();
+ if(dy>0)openQuestionNav('open');else collapseQuestionNav();
+},{passive:false});
+$('progressShell').addEventListener('mouseenter',()=>{
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches)openQuestionNav('peek');
+});
+$('progressShell').addEventListener('mouseleave',scheduleQuestionNavClose);
+$('progressShell').addEventListener('focusin',()=>openQuestionNav('open'));
 $('progressShell').addEventListener('focusout',scheduleQuestionNavClose);
-addEventListener('resize',()=>{if(matchMedia('(min-width:721px)').matches)document.body.classList.remove('nav-open');updateNavToggle();syncHeights()});new ResizeObserver(syncHeights).observe($('progressShell'));new ResizeObserver(syncHeights).observe($('guideCard'));
-document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);if(['a','b','c','d','A','B','C','D'].includes(e.key)&&$('reviewView').classList.contains('show')===false){const L=e.key.toUpperCase();document.querySelector(`.opt[data-a="${L}"]`)?.click()}});
+addEventListener('resize',()=>{syncHeights()});
+new ResizeObserver(syncHeights).observe($('progressShell'));
+new ResizeObserver(syncHeights).observe($('guideCard'));
+document.addEventListener('keydown',e=>{
+ if(!document.body.classList.contains('study-mode')||
+    ['SELECT','INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;
+ if(e.key==='ArrowLeft')move(-1);
+ if(e.key==='ArrowRight')move(1);
+ if(['a','b','c','d','A','B','C','D'].includes(e.key)){
+  const L=e.key.toUpperCase();
+  document.querySelector('.opt[data-a="'+L+'"]')?.click();
+ }
+});
 </script>
 </body>
 </html>
