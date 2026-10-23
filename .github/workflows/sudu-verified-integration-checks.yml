@@ -5,6 +5,7 @@ on:
       - integration/114-115-auto-verified-pages
       - feature/partial-qa-preview-114-115-20261022
       - release/114-115-qa-incremental-20261022
+      - fix/fast-chromium-qa-20261023
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,7 +25,8 @@ jobs:
         run: |
           python -m pip install -q pillow
           npm install --no-save playwright@1.51.1
-          npx playwright install --with-deps chromium
+          npx playwright install --only-shell chromium
+          node -e "const p=require('playwright'); p.chromium.launch({headless:true,args:['--no-sandbox']}).then(b=>b.close())"
       - name: Test exact public allowlist, 35 Demo and 114/115 yearly UI
         run: |
           set -e
