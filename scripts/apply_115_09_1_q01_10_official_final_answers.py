@@ -37,7 +37,7 @@ def sha_bytes(data):
     return hashlib.sha256(data).hexdigest()
 
 def git_blob_sha(data):
-    return hashlib.sha1(("blob "+str(len(data))+"\\0").encode("ascii")+data).hexdigest()
+    return hashlib.sha1(("blob "+str(len(data))).encode("ascii")+bytes([0])+data).hexdigest()
 
 def idx(items):
     x={p["questionId"]:p for p in items}
