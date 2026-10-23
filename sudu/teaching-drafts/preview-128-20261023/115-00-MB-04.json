@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-04",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 4,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-04.webp",
+  "imageSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "逐題打開 GitHub 既有單題 WebP，目視題號、全部條件與四選項；對第1題座標圖逐格檢視；重新以 WebP bytes 計算 SHA256 與固定清單一致",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+    "independentSolveScope": "先原圖獨立解題並留完整計算；未完成第三方教學QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
+    "keyConditions": [
+      "2x²+7x+3≤0",
+      "左右端點含等號",
+      "係數2>0 開口向上",
+      "a≤x≤b"
+    ],
+    "reasoningFromOriginalImage": "先因式分解 **2x²+7x+3=(2x+1)(x+3)**，兩個零點為 **x=−3、x=−1/2**。係數 2>0 使拋物線開口向上，**≤0 落在兩根之間且包含兩端**，所以 **−3≤x≤−1/2**，a=−3 是整數、b=−1/2 不是，選 C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "a=−3，b=−1/2；選 C",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "先因式分解 **2x²+7x+3=(2x+1)(x+3)**，兩個零點為 **x=−3、x=−1/2**。係數 2>0 使拋物線開口向上，**≤0 落在兩根之間且包含兩端**，所以 **−3≤x≤−1/2**，a=−3 是整數、b=−1/2 不是，選 C。",
+    "elementarySummary": "拋物線像一個 U 型碗，碗底在 x 軸下方。題目找小於或等於0的位置，就是兩個碰到地面的點中間。左邊是−3，右邊是−半，所以左端是整數。",
+    "memory": "**(2x+1)(x+3)≤0 ⇒ −3≤x≤−1/2；a=−3 整數**。",
+    "concept": "二次不等式先找兩根，再看**開口方向＋不等號**。**≤** 要包含等號零點；若 **≥0**，開口向上的圖形通常取兩側區間。",
+    "extension": "反向思考：如果把題目改成 **2x²+7x+3≥0**，解集會變成 **x≤−3 或 x≥−1/2**，不再是中間區間。",
+    "source": {
+      "originalExam": "115-00-MB-04",
+      "originalImagePinnedSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀"
+    },
+    "highlightTerms": [
+      "(2x+1)(x+3)",
+      "−3≤x≤−1/2"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "a=−3，與 a>−2 比較，−3>−2 為假；注意負數越小越往左。",
+        "elementary": "−3 比 −2 小，不是大，所以 A 錯。",
+        "reason": "a=−3，與 a>−2 比較，−3>−2 為假；注意負數越小越往左。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "b=−1/2=−0.5，比 −1 大，故 b<−1 為假。",
+        "elementary": "−0.5 在−1右邊，它比較大不是比較小。",
+        "reason": "b=−1/2=−0.5，比 −1 大，故 b<−1 為假。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "a=−3 是整數，完全符合條件，為正解。",
+        "elementary": "−3 不帶小數或分數，是整數。",
+        "reason": "a=−3 是整數，完全符合條件，為正解。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "b=−1/2 是分數、非整數，D 錯。",
+        "elementary": "負二分之一不是一個完整整數。",
+        "reason": "b=−1/2 是分數、非整數，D 錯。"
+      }
+    },
+    "math": {
+      "formula": "因式分解 (2x+1)(x+3)≤0；二次式係數為正時，乘積≤0 在兩個根之間（含端點）",
+      "formulaUsage": "找出二次不等式成立的變數區間，亦可用符號表驗算。",
+      "workedExample": "例：x²−4≤0 ⇒ (x−2)(x+2)≤0 ⇒ −2≤x≤2。",
+      "dailyApplication": "用來找滿足成本、價格或可行條件的數值範圍。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "所有關鍵運算為原題數學式，非金額計算也必須顯示完整考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "2x²+7x+3≤0",
+        "解表示為 a≤x≤b"
+      ],
+      "formula": "因式分解 (2x+1)(x+3)≤0；二次式係數為正時，乘積≤0 在兩個根之間（含端點）",
+      "formulaPurpose": "找出二次不等式成立的變數區間，亦可用符號表驗算。",
+      "substitutionAndSteps": [
+        {
+          "formula": "2x²+7x+3=(2x+1)(x+3)",
+          "why": "展開為2x²+6x+x+3=2x²+7x+3，分解正確。"
+        },
+        {
+          "formula": "2x+1=0 ⇒ x=−1/2；x+3=0 ⇒ x=−3",
+          "why": "讓兩個因式分別等於零，求臨界點。"
+        },
+        {
+          "formula": "−3 < −1/2；又二次項係數 2>0",
+          "why": "排列根的先後，判斷圖形開口向上。"
+        },
+        {
+          "formula": "(2x+1)(x+3)≤0 ⇒ −3≤x≤−1/2",
+          "why": "兩根之間異號，乘積非正；因等號也允許，包含兩端。"
+        },
+        {
+          "formula": "a=−3∈ℤ，b=−1/2∉ℤ ⇒ 選 C",
+          "why": "比較四選項需確認 a、b 的整數性與大小。"
+        }
+      ],
+      "result": "a=−3，b=−1/2；選 C",
+      "unit": "實數區間，無單位",
+      "matchingOption": "C",
+      "commonMistake": "忘了含端點、負數大小比較顛倒、將 −1/2 誤判整數。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
