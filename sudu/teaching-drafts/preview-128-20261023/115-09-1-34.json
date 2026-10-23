@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-34",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 34,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-34.webp",
+  "imageSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選OCR之D選項後混入下一頁頁首／後續題文字；依原圖正確辨認本題D選項，不更動來源。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。Tag耗電須區分被動／主動式，不可視為所有標籤都耗電量大。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "題問錯誤",
+      "NFC 行動支付",
+      "eTag與RFID",
+      "RFID Tag耗電量",
+      "4G LTE與ZigBee距離"
+    ],
+    "reasoningFromOriginalImage": "NFC可用於感應行動支付，eTag是RFID技術應用；4G LTE常見蜂巢網路覆蓋距離比近距離ZigBee長。被動式RFID Tag不需要電池，靠讀取器電磁場取能，不可一概說Tag耗電量大，故C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "RFID標籤有**被動式**（靠讀取器電磁能量啟動，通常無自備電池）與**主動式**（有電池、可發射）等。題幹說RFID『所需的Tag耗電量大』一概而論，忽略被動式低功耗，是錯誤選項C。**NFC**是近場無線通訊，可用于感應支付；**eTag**使用RFID；**4G LTE**是遠距蜂巢通訊，通常覆蓋較ZigBee這類低功耗近距網路大。",
+    "elementarySummary": "eTag過高速公路會感應、手機靠近也能付款。RFID小標籤有的根本不用裝電池，靠旁邊讀取機的訊號就能工作，所以不能說每種都很耗電。",
+    "memory": "**被動式RFID Tag無需電池；NFC近距支付；4G比ZigBee遠**。",
+    "concept": "物聯網通訊比較要辨別距離、能耗、資料率、被動與主動標籤；不能將所有RFID標籤視為電池設備。",
+    "extension": "反向題：若RFID Tag要主動長距離定期發射訊號，可能需要什麼供電方式？這與被動式標籤有何不同？",
+    "source": {
+      "originalExam": "115-09-1-34",
+      "originalImagePinnedSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "Tag耗電須區分被動／主動式，不可視為所有標籤都耗電量大。"
+    },
+    "highlightTerms": [
+      "NFC",
+      "行動支付",
+      "eTag",
+      "RFID",
+      "被動式Tag",
+      "ZigBee"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A為真：NFC可供手機與收款終端進行近距離通訊，是行動感應支付常見技術，故不是題問錯誤。",
+        "elementary": "手機靠近刷卡機付款就是常見NFC。",
+        "reason": "A為真：NFC可供手機與收款終端進行近距離通訊，是行動感應支付常見技術，故不是題問錯誤。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B為真：eTag電子收費系統運用RFID辨識車輛，屬RFID應用範例。",
+        "elementary": "高速公路的eTag就像車子的無線辨識標籤。",
+        "reason": "B為真：eTag電子收費系統運用RFID辨識車輛，屬RFID應用範例。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C錯在『Tag耗電量大』過度概括。被動式RFID Tag常無電池、取能於讀取器，不能一律說耗電量大，因此本題選C。",
+        "elementary": "有的小標籤連電池都不需要，怎麼會每個都很耗電？",
+        "reason": "C錯在『Tag耗電量大』過度概括。被動式RFID Tag常無電池、取能於讀取器，不能一律說耗電量大，因此本題選C。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D一般為真：4G LTE蜂巢式網路適合較長距離覆蓋；ZigBee常用低功耗短距IoT，因此通常4G的覆蓋距離更長。",
+        "elementary": "手機基地台能連很遠；ZigBee常用在近距感測器。",
+        "reason": "D一般為真：4G LTE蜂巢式網路適合較長距離覆蓋；ZigBee常用低功耗短距IoT，因此通常4G的覆蓋距離更長。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
