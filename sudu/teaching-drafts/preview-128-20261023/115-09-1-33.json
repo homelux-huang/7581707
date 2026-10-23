@@ -95,7 +95,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-33",
+      "subject": "數位科技",
+      "questionNumber": 33,
+      "answerCandidate": "A",
+      "aiAnswer": "UNDETERMINED",
+      "needsReview": true,
+      "reviewReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①驗證後難以竄改；②加密技術對資料加解密；③透過金資中心跨行金融交易；④只保存在買賣雙方自己的帳本",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "hash不可逆；digital signature用於簽署和驗證；encryption/decryption通常是保密通訊的可逆操作；區塊鏈不必依賴中央金融交換中心。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①區塊鏈經驗證後的記錄有抗竄改性（實務上非數學上絕對不可能改）；",
+          "why": "區塊鏈像很多人都保存同一本記帳簿，想偷偷改其中一頁很難。確認身分會用特殊數學方法，但不表示每筆交易都先上鎖、再把鎖打開才算完成；『用密碼學』不一定等於『把資料加密又解密』。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "③所稱金資中心作為所有區塊鏈交易中央節點不符典型公有鏈去中心化；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "④只寫雙方自己的帳本與分散式共識記帳相反。 ②若廣義把密碼學工具稱作『加密技術』有課本簡化空間，但比特幣核心運用雜湊與數位簽章，交易內容並不必然經『加密後解密』才驗證，語義不嚴謹。 候選A含①②，待官方與教材確認，不可把②寫成技術必然。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對照候選及待查疑點",
+          "content": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+          "why": "本題待官方答案與教材獨立查核。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -105,7 +159,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。"
+    "blockingReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

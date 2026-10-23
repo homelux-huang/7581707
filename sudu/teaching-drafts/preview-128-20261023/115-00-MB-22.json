@@ -133,6 +133,66 @@
       "matchingOption": "B",
       "commonMistake": "選32忽略全無違規；或只算恰有1張為有而誤選5。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-22",
+      "subject": "數學 B",
+      "questionNumber": 22,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "5張卡片依序排列；每張2種顯示：有/無；至少一張有",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "乘法原理2⁵；補集合計數：至少一張有=全部組合−全無組合。",
+          "why": "補事件枚舉二元排列的總數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "五個固定位置各2種 ⇒2×2×2×2×2=2⁵",
+          "why": "每個位置獨立決定顯示。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2⁵=32種，含所有排列",
+          "why": "全部狀態的計數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "全無只有『無無無無無』1種",
+          "why": "找出違反條件的唯一情況。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "至少一張有=32−1=31種，選B",
+          "why": "全部扣掉違規情況得可用種數。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "31種；單位：種；選項：B",
+          "why": "選32忽略全無違規；或只算恰有1張為有而誤選5。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -142,7 +202,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

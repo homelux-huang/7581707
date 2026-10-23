@@ -137,6 +137,72 @@
       "matchingOption": "A",
       "commonMistake": "將C角60°對錯邊；或忘記x>4而答3公里。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-21",
+      "subject": "數學 B",
+      "questionNumber": 21,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "AB=7公里；AC=8公里；∠ACB=60°；BC=x>4公里",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "餘弦定理 AB²=AC²+BC²−2(AC)(BC)cos∠ACB",
+          "why": "兩邊和一個對角已知時，用餘弦定理求另一邊長度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "令BC=x公里，且x>4。",
+          "why": "把未知距離設為x並保留限制。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "7²=8²+x²−2×8×x×cos60°",
+          "why": "已知角C的對邊是AB，正確代入餘弦定理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "49=64+x²−16x×1/2=64+x²−8x",
+          "why": "cos60°=1/2並乘開。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x²−8x+15=0=(x−3)(x−5)",
+          "why": "移項後因式分解二次式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x=3或5；由x>4得x=5，選A",
+          "why": "利用附加條件排除x=3。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "5公里；單位：公里；選項：A",
+          "why": "將C角60°對錯邊；或忘記x>4而答3公里。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -146,7 +212,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

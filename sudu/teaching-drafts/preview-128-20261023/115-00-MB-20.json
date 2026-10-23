@@ -141,6 +141,78 @@
       "matchingOption": "A",
       "commonMistake": "將對角放錯；或在sin75°和角公式中誤用減號。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-20",
+      "subject": "數學 B",
+      "questionNumber": 20,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "AB=100公尺；∠A=60°；∠B=75°；AC為待求距離",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "正弦定理 AC/sinB=AB/sinC；sin(α+β)=sinαcosβ+cosαsinβ。",
+          "why": "知道一邊與另外兩角時，依正弦定理解三角形邊長。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "∠C=180°−60°−75°=45°",
+          "why": "三角形內角和是180°。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC/sin75°=AB/sin45°=100/sin45°",
+          "why": "以邊及其對角使用正弦定理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "sin75°=sin(45°+30°)=sin45cos30+cos45sin30",
+          "why": "75°拆成45°+30°運用和角公式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "=(√2/2)(√3/2)+(√2/2)(1/2)=(√6+√2)/4",
+          "why": "代入特殊角的正弦、餘弦值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "sin45°=√2/2",
+          "why": "取得分母確切值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC=100×[(√6+√2)/4]÷(√2/2)=100×(√3+1)/2=50(√3+1)公尺，選A",
+          "why": "化簡根號與分數得距離。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "50(√3+1) 公尺（約136.60公尺）；單位：公尺；選項：A",
+          "why": "將對角放錯；或在sin75°和角公式中誤用減號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +222,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

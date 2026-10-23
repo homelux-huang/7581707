@@ -139,6 +139,84 @@
       "matchingOption": "D",
       "commonMistake": "MB被當成Mb，少乘8；或選1Mbps而忽略需16秒，超過15秒。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-1-29",
+      "subject": "數位科技",
+      "questionNumber": 29,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "檔案容量2 MB；傳輸期限15秒內；選項A100Kbps、B200Kbps、C1Mbps、D2Mbps",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "最低傳輸頻寬（bit/s）＝資料量（byte）×8（bit/byte）÷傳輸秒數",
+          "why": "用檔案資料總位元數除以時間，求每秒至少需送多少bit；比較候選頻寬與計算門檻。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1 B（byte）＝8 b（bit）",
+          "why": "MB是百萬位元組，Mbps是每秒百萬位元；先統一單位才能比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2 MB＝2×1,000,000 B＝2,000,000 B",
+          "why": "先按網路速率常用十進位MB換算，題目未特別指定MiB。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2,000,000 B×8 b/B＝16,000,000 b＝16 Mb",
+          "why": "把檔案容量從byte轉成bit。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "最低速度＝16,000,000 b÷15 s≈1,066,667 b/s≈1.067 Mbps",
+          "why": "15秒內要送完，必須每秒送至少約107萬bit。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A:16Mb÷0.1Mbps＝160s；B:16Mb÷0.2Mbps＝80s",
+          "why": "100Kbps與200Kbps傳得太慢。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C:16Mb÷1Mbps＝16s；D:16Mb÷2Mbps＝8s",
+          "why": "只有2Mbps能在15秒內完成。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若用2MiB＝2×1024² B，最低需求≈1.118 Mbps，仍為D",
+          "why": "不同容量慣例不影響候選答案。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "至少1.067Mbps，選D 2Mbps（理想傳輸8秒）；單位：Mbps（megabits per second）／秒；選項：D",
+          "why": "MB被當成Mb，少乘8；或選1Mbps而忽略需16秒，超過15秒。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "743fd5cec07f8e87c0c21aaffd63af9eb50f419596c6be00e7fe54a75737f84b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -149,7 +227,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

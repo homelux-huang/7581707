@@ -141,6 +141,78 @@
       "matchingOption": "C",
       "commonMistake": "漏掉配方的−16；或錯把距離√2直接當半徑平方√2。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-25",
+      "subject": "數學 B",
+      "questionNumber": 25,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "P=(h,7)；P到L的距離√2；與L相切的圓式 x²−8x+(y−7)²=a",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "配方 x²−8x=(x−4)²−16；圓式 (x−h)²+(y−k)²=r²；相切時r=圓心到直線距離。",
+          "why": "圓方程配方、相切半徑與點線距離關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x²−8x+(y−7)²=a ⇒(x−4)²−16+(y−7)²=a",
+          "why": "對x配平方並維持等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "整理 (x−4)²+(y−7)²=a+16",
+          "why": "讀出圓的中心與半徑平方。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "圓心 P=(4,7) ⇒ h=4",
+          "why": "圓心和題目P一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "相切半徑 r=√2 ⇒ r²=(√2)²=2",
+          "why": "相切的最短距離等於半徑。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a+16=2 ⇒ a=−14",
+          "why": "由半徑平方解出a。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "h+a=4−14=−10，選C",
+          "why": "計算所求的h+a。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "−10；單位：無單位；選項：C",
+          "why": "漏掉配方的−16；或錯把距離√2直接當半徑平方√2。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +222,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

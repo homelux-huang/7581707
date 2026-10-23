@@ -142,6 +142,78 @@
       "matchingOption": "C",
       "commonMistake": "把四捨五入當無條件進位；14.27誤取14。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-24",
+      "subject": "數學 B",
+      "questionNumber": 24,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=110/r；B=log₁₀3 / log₁₀(1+r/100)；r=8%；C=⌈A⌉、D=⌈B⌉",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "複利三倍 (1+r/100)^t=3 ⇒ t=log3/log(1+r/100)；無條件進位⌈x⌉。",
+          "why": "對數求複利到達目標倍數的年數；估算與精確計算比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A=110/8=13.75",
+          "why": "代入r=8求快速估算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C=⌈13.75⌉=14",
+          "why": "14是首個不小於13.75的整數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "B=log₁₀3/log₁₀1.08=ln3/ln1.08",
+          "why": "換底公式同一比值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1.08¹⁴≈2.937<3，1.08¹⁵≈3.172>3 ⇒14<B<15",
+          "why": "連續複利倍數夾住3可判精確年數在哪個區間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D=⌈B⌉=15",
+          "why": "向上進位成完成倍數的整年。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D=15=14+1=C+1，選C",
+          "why": "比較D與C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D=C+1；C=14年、D=15年；單位：年；選項：C",
+          "why": "把四捨五入當無條件進位；14.27誤取14。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -151,7 +223,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

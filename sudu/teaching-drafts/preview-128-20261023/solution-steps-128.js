@@ -2456,7 +2456,553 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|20": {
+      "questionId": "115-00-MB-20",
+      "subject": "數學 B",
+      "questionNumber": 20,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "AB=100公尺；∠A=60°；∠B=75°；AC為待求距離",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "正弦定理 AC/sinB=AB/sinC；sin(α+β)=sinαcosβ+cosαsinβ。",
+          "why": "知道一邊與另外兩角時，依正弦定理解三角形邊長。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "∠C=180°−60°−75°=45°",
+          "why": "三角形內角和是180°。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC/sin75°=AB/sin45°=100/sin45°",
+          "why": "以邊及其對角使用正弦定理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "sin75°=sin(45°+30°)=sin45cos30+cos45sin30",
+          "why": "75°拆成45°+30°運用和角公式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "=(√2/2)(√3/2)+(√2/2)(1/2)=(√6+√2)/4",
+          "why": "代入特殊角的正弦、餘弦值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "sin45°=√2/2",
+          "why": "取得分母確切值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC=100×[(√6+√2)/4]÷(√2/2)=100×(√3+1)/2=50(√3+1)公尺，選A",
+          "why": "化簡根號與分數得距離。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "50(√3+1) 公尺（約136.60公尺）；單位：公尺；選項：A",
+          "why": "將對角放錯；或在sin75°和角公式中誤用減號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|21": {
+      "questionId": "115-00-MB-21",
+      "subject": "數學 B",
+      "questionNumber": 21,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "AB=7公里；AC=8公里；∠ACB=60°；BC=x>4公里",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "餘弦定理 AB²=AC²+BC²−2(AC)(BC)cos∠ACB",
+          "why": "兩邊和一個對角已知時，用餘弦定理求另一邊長度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "令BC=x公里，且x>4。",
+          "why": "把未知距離設為x並保留限制。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "7²=8²+x²−2×8×x×cos60°",
+          "why": "已知角C的對邊是AB，正確代入餘弦定理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "49=64+x²−16x×1/2=64+x²−8x",
+          "why": "cos60°=1/2並乘開。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x²−8x+15=0=(x−3)(x−5)",
+          "why": "移項後因式分解二次式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x=3或5；由x>4得x=5，選A",
+          "why": "利用附加條件排除x=3。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "5公里；單位：公里；選項：A",
+          "why": "將C角60°對錯邊；或忘記x>4而答3公里。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|22": {
+      "questionId": "115-00-MB-22",
+      "subject": "數學 B",
+      "questionNumber": 22,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "5張卡片依序排列；每張2種顯示：有/無；至少一張有",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "乘法原理2⁵；補集合計數：至少一張有=全部組合−全無組合。",
+          "why": "補事件枚舉二元排列的總數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "五個固定位置各2種 ⇒2×2×2×2×2=2⁵",
+          "why": "每個位置獨立決定顯示。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2⁵=32種，含所有排列",
+          "why": "全部狀態的計數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "全無只有『無無無無無』1種",
+          "why": "找出違反條件的唯一情況。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "至少一張有=32−1=31種，選B",
+          "why": "全部扣掉違規情況得可用種數。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "31種；單位：種；選項：B",
+          "why": "選32忽略全無違規；或只算恰有1張為有而誤選5。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|23": {
+      "questionId": "115-00-MB-23",
+      "subject": "數學 B",
+      "questionNumber": 23,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "行程I每人x元；同行其中一人減3000元；行程II每人(x+2000)元；同行其中一人打八折；兩行程兩人總價相同",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "總價I=2x−3000；總價II=(1+0.8)(x+2000)，兩者相等。",
+          "why": "使用一次方程描述兩種費用方案、折扣和總價比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "I費用=x+(x−3000)=2x−3000元",
+          "why": "只有一人減免，不能兩人都減3000。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "II費用=(x+2000)+0.8(x+2000)=1.8(x+2000)元",
+          "why": "只有一人八折，另一人付原價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "方程2x−3000=1.8x+3600",
+          "why": "依題目兩人總費用相等列式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x−1.8x=3600+3000 ⇒0.2x=6600",
+          "why": "整理移項並合併同類項。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x=6600/0.2=33000元",
+          "why": "除以0.2求未知原價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "驗算I=63000、II=63000，選B",
+          "why": "兩邊代回一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "33000元；單位：新臺幣元；選項：B",
+          "why": "把八折當成減八成，或兩個人都打折、都減免。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|24": {
+      "questionId": "115-00-MB-24",
+      "subject": "數學 B",
+      "questionNumber": 24,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=110/r；B=log₁₀3 / log₁₀(1+r/100)；r=8%；C=⌈A⌉、D=⌈B⌉",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "複利三倍 (1+r/100)^t=3 ⇒ t=log3/log(1+r/100)；無條件進位⌈x⌉。",
+          "why": "對數求複利到達目標倍數的年數；估算與精確計算比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A=110/8=13.75",
+          "why": "代入r=8求快速估算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C=⌈13.75⌉=14",
+          "why": "14是首個不小於13.75的整數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "B=log₁₀3/log₁₀1.08=ln3/ln1.08",
+          "why": "換底公式同一比值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1.08¹⁴≈2.937<3，1.08¹⁵≈3.172>3 ⇒14<B<15",
+          "why": "連續複利倍數夾住3可判精確年數在哪個區間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D=⌈B⌉=15",
+          "why": "向上進位成完成倍數的整年。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D=15=14+1=C+1，選C",
+          "why": "比較D與C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D=C+1；C=14年、D=15年；單位：年；選項：C",
+          "why": "把四捨五入當無條件進位；14.27誤取14。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|25": {
+      "questionId": "115-00-MB-25",
+      "subject": "數學 B",
+      "questionNumber": 25,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "P=(h,7)；P到L的距離√2；與L相切的圓式 x²−8x+(y−7)²=a",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "配方 x²−8x=(x−4)²−16；圓式 (x−h)²+(y−k)²=r²；相切時r=圓心到直線距離。",
+          "why": "圓方程配方、相切半徑與點線距離關係。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x²−8x+(y−7)²=a ⇒(x−4)²−16+(y−7)²=a",
+          "why": "對x配平方並維持等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "整理 (x−4)²+(y−7)²=a+16",
+          "why": "讀出圓的中心與半徑平方。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "圓心 P=(4,7) ⇒ h=4",
+          "why": "圓心和題目P一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "相切半徑 r=√2 ⇒ r²=(√2)²=2",
+          "why": "相切的最短距離等於半徑。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a+16=2 ⇒ a=−14",
+          "why": "由半徑平方解出a。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "h+a=4−14=−10，選C",
+          "why": "計算所求的h+a。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "−10；單位：無單位；選項：C",
+          "why": "漏掉配方的−16；或錯把距離√2直接當半徑平方√2。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數位科技|29": {
+      "questionId": "115-09-1-29",
+      "subject": "數位科技",
+      "questionNumber": 29,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "檔案容量2 MB；傳輸期限15秒內；選項A100Kbps、B200Kbps、C1Mbps、D2Mbps",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "最低傳輸頻寬（bit/s）＝資料量（byte）×8（bit/byte）÷傳輸秒數",
+          "why": "用檔案資料總位元數除以時間，求每秒至少需送多少bit；比較候選頻寬與計算門檻。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1 B（byte）＝8 b（bit）",
+          "why": "MB是百萬位元組，Mbps是每秒百萬位元；先統一單位才能比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2 MB＝2×1,000,000 B＝2,000,000 B",
+          "why": "先按網路速率常用十進位MB換算，題目未特別指定MiB。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2,000,000 B×8 b/B＝16,000,000 b＝16 Mb",
+          "why": "把檔案容量從byte轉成bit。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "最低速度＝16,000,000 b÷15 s≈1,066,667 b/s≈1.067 Mbps",
+          "why": "15秒內要送完，必須每秒送至少約107萬bit。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A:16Mb÷0.1Mbps＝160s；B:16Mb÷0.2Mbps＝80s",
+          "why": "100Kbps與200Kbps傳得太慢。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C:16Mb÷1Mbps＝16s；D:16Mb÷2Mbps＝8s",
+          "why": "只有2Mbps能在15秒內完成。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若用2MiB＝2×1024² B，最低需求≈1.118 Mbps，仍為D",
+          "why": "不同容量慣例不影響候選答案。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "至少1.067Mbps，選D 2Mbps（理想傳輸8秒）；單位：Mbps（megabits per second）／秒；選項：D",
+          "why": "MB被當成Mb，少乘8；或選1Mbps而忽略需16秒，超過15秒。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "743fd5cec07f8e87c0c21aaffd63af9eb50f419596c6be00e7fe54a75737f84b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數位科技|33": {
+      "questionId": "115-09-1-33",
+      "subject": "數位科技",
+      "questionNumber": 33,
+      "answerCandidate": "A",
+      "aiAnswer": "UNDETERMINED",
+      "needsReview": true,
+      "reviewReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①驗證後難以竄改；②加密技術對資料加解密；③透過金資中心跨行金融交易；④只保存在買賣雙方自己的帳本",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "hash不可逆；digital signature用於簽署和驗證；encryption/decryption通常是保密通訊的可逆操作；區塊鏈不必依賴中央金融交換中心。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①區塊鏈經驗證後的記錄有抗竄改性（實務上非數學上絕對不可能改）；",
+          "why": "區塊鏈像很多人都保存同一本記帳簿，想偷偷改其中一頁很難。確認身分會用特殊數學方法，但不表示每筆交易都先上鎖、再把鎖打開才算完成；『用密碼學』不一定等於『把資料加密又解密』。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "③所稱金資中心作為所有區塊鏈交易中央節點不符典型公有鏈去中心化；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "④只寫雙方自己的帳本與分散式共識記帳相反。 ②若廣義把密碼學工具稱作『加密技術』有課本簡化空間，但比特幣核心運用雜湊與數位簽章，交易內容並不必然經『加密後解密』才驗證，語義不嚴謹。 候選A含①②，待官方與教材確認，不可把②寫成技術必然。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對照候選及待查疑點",
+          "content": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+          "why": "本題待官方答案與教材獨立查核。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 39
+  "readyQuestionCount": 47
 };

@@ -143,6 +143,78 @@
       "matchingOption": "B",
       "commonMistake": "把八折當成減八成，或兩個人都打折、都減免。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-23",
+      "subject": "數學 B",
+      "questionNumber": 23,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "行程I每人x元；同行其中一人減3000元；行程II每人(x+2000)元；同行其中一人打八折；兩行程兩人總價相同",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "總價I=2x−3000；總價II=(1+0.8)(x+2000)，兩者相等。",
+          "why": "使用一次方程描述兩種費用方案、折扣和總價比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "I費用=x+(x−3000)=2x−3000元",
+          "why": "只有一人減免，不能兩人都減3000。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "II費用=(x+2000)+0.8(x+2000)=1.8(x+2000)元",
+          "why": "只有一人八折，另一人付原價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "方程2x−3000=1.8x+3600",
+          "why": "依題目兩人總費用相等列式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2x−1.8x=3600+3000 ⇒0.2x=6600",
+          "why": "整理移項並合併同類項。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x=6600/0.2=33000元",
+          "why": "除以0.2求未知原價。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "驗算I=63000、II=63000，選B",
+          "why": "兩邊代回一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "33000元；單位：新臺幣元；選項：B",
+          "why": "把八折當成減八成，或兩個人都打折、都減免。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -152,7 +224,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
