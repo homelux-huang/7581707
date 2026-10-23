@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-29",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 29,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-29.webp",
+  "imageSha256": "1ff70b0b7724f499ffe88fa9e37e624909ff0f6a61f7468a1beccac216606a06",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視）",
+    "method": "開啟GitHub原始單題WebP，確認題號、全部A-D選項、原圖圖表／正負號／金額／條件完整；以原始WebP bytes重算 SHA256 比對凍結清單，僅以OCR輔助，不重擷取。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先依原圖自行求解，再讀候選答案；仍未直接核實官方最終PDF和更正。",
+    "blindSolveStatus": "IMAGE_REASONING_SAVED_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_QA",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "至少一種關鍵生產投入",
+      "投入量三年內無法變動",
+      "持續生產",
+      "問長短期"
+    ],
+    "reasoningFromOriginalImage": "經濟學**短期／長期**不是固定用某個年數定義，而是看**至少一種投入是否仍固定**。題目特別指定某關鍵投入在三年內無法改變，故三年內屬短期，選A。**長期**則指所有投入都能調整；不可以直接把長期說成一年或兩年內。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_AND_CORRECTION"
+  },
+  "teaching": {
+    "teacherSummary": "經濟學**短期／長期**不是固定用某個年數定義，而是看**至少一種投入是否仍固定**。題目特別指定某關鍵投入在三年內無法改變，故三年內屬短期，選A。**長期**則指所有投入都能調整；不可以直接把長期說成一年或兩年內。",
+    "elementarySummary": "如果工廠有一種大機器三年內不能換，這三年裡總有東西動不了，就叫短期。長期是很多事情都能慢慢調整，不是規定一定要一年或兩年。",
+    "memory": "**短期：至少一種要素固定；長期：所有生產要素皆可調整**。",
+    "concept": "不同產業資本設備調整速度不同，短期可能是幾週或幾年，依題目約束。",
+    "extension": "反向題：一家手機軟體公司所有投入一個月內可調整，其長短期分界會與三年不能換關鍵機器的工廠相同嗎？",
+    "source": {
+      "originalExam": "115-09-2-29",
+      "originalImagePinnedSha256": "1ff70b0b7724f499ffe88fa9e37e624909ff0f6a61f7468a1beccac216606a06",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正說明待核對"
+    },
+    "highlightTerms": [
+      "短期",
+      "長期",
+      "固定生產要素",
+      "三年內",
+      "全部可調整"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A指出三年以內是短期；因題目說至少一項要素三年內固定，符合短期定義，是正解。",
+        "elementary": "還有一個不能改的東西，就算短期。",
+        "reason": "A指出三年以內是短期；因題目說至少一項要素三年內固定，符合短期定義，是正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說超過三年才是短期；三年內已存在固定投入限制，不能等三年過後才叫短期，與題幹相反。",
+        "elementary": "限制就在前三年，不是過了三年才出現。",
+        "reason": "B說超過三年才是短期；三年內已存在固定投入限制，不能等三年過後才叫短期，與題幹相反。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C把長期定為一年內，但一年內仍有關鍵投入固定，不符合所有投入可變的長期。",
+        "elementary": "一年時機器還不能換，當然不是長期。",
+        "reason": "C把長期定為一年內，但一年內仍有關鍵投入固定，不符合所有投入可變的長期。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說長期兩年內，同樣落在三年固定投入限制內，不符合長期的全部可調整定義。",
+        "elementary": "兩年還是不能換那項機器，所以不算長期。",
+        "reason": "D說長期兩年內，同樣落在三年固定投入限制內，不符合長期的全部可調整定義。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
