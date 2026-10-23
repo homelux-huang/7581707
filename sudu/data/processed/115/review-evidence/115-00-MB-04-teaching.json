@@ -58,7 +58,13 @@
       ],
       "result": "a 是整數，b 不是整數",
       "option": "C"
-    }
+    },
+    "highlights": [
+      "−3",
+      "−1/2",
+      "整數",
+      "兩根"
+    ]
   },
   "mathReviewedWithoutInventedInput": true,
   "sourceChapterPagePolicy": "彰化高商頁數未核對則寫待核對，不編造教材頁碼"
