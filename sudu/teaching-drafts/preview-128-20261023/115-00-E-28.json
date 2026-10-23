@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-28",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 28,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-28.webp",
+  "imageSha256": "486a14735f252bda4ea068e779a8337ce2f842c8736e3f3e11fe1478ccefb377",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接看原圖）",
+    "method": "同時打開本題 A-D 單題 WebP 及淡江大橋共用文章 WebP，逐張目視並重新核算 SHA256、無混題或缺少必要文章。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先據原圖與共用文章自行解題，再讀候選。原官方網站 2026-05-08 確認標準答案的公告已見，惟未直接回讀英文科最終標準答案 PDF 與疑義確認說明，仍待核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "With shorter travel time between Tamsui and Bali and its unique beauty, the Tamkang Bridge will play an important role in both ____. The bridge will definitely bring travel convenience and recreational benefits to the people of northern Taiwan.",
+    "keyConditions": [
+      "shorter travel time",
+      "unique beauty",
+      "travel convenience",
+      "recreational benefits"
+    ],
+    "reasoningFromOriginalImage": "shorter travel time、travel convenience 指交通運輸；unique beauty、recreational benefits 指觀光休閒，因此是 transportation and tourism。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "本題要把文章結論分成**兩個領域**：**shorter travel time / travel convenience** 屬交通（transportation），**unique beauty / recreational benefits** 屬觀光（tourism）。選項 D **transportation and tourism** 同時涵蓋兩者。不能只看到橋塔像舞者就選 dance。",
+    "elementarySummary": "橋讓大家去淡水、八里更快，是**交通**；橋又漂亮，吸引人來玩，是**觀光**。兩個好處一起說，選 D。",
+    "memory": "**faster travel → transportation；beautiful views → tourism**。",
+    "concept": "閱讀主旨整合題：**both A and B** 需要文章同時有支持 A 和 B 的線索；交通便利＋休閒觀光兩個好處不是相同概念。",
+    "extension": "反向思考：如果文章只有講橋的結構技術與設計比賽，未提縮短交通時間和遊客，就不能只因『橋』這個詞直接選 transportation and tourism。",
+    "source": {
+      "originalExam": "115-00-E-28",
+      "originalImagePinnedSha256": "486a14735f252bda4ea068e779a8337ce2f842c8736e3f3e11fe1478ccefb377",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+          "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待回讀PDF和疑義說明",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "淡江大橋建設年份、最長紀錄等依115學年度考題文本，不等於當下官方工程進度或最新紀錄。"
+    },
+    "highlightTerms": [
+      "shorter travel time",
+      "unique beauty",
+      "transportation and tourism",
+      "recreational benefits"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**dance and design** 中 design 能連到建築外觀，dance 只來自舞者比喻；文章結論重點是交通與休閒效益，非舞蹈產業。",
+        "elementary": "橋長得像舞者，不等於它主要拿來跳舞。",
+        "reason": "**dance and design** 中 design 能連到建築外觀，dance 只來自舞者比喻；文章結論重點是交通與休閒效益，非舞蹈產業。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**art and competition** 雖提藝術感及設計競賽，但結尾 travel convenience、recreational benefits 明確是交通與觀光，不是比賽本身。",
+        "elementary": "設計比賽只是背景，橋蓋好是讓人走和來玩。",
+        "reason": "**art and competition** 雖提藝術感及設計競賽，但結尾 travel convenience、recreational benefits 明確是交通與觀光，不是比賽本身。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**construction and religion** 建造橋梁屬建設，但 prayer 只是形容外型的比喻，並非宗教用途；與段落的休閒交通總結不符。",
+        "elementary": "像雙手祈禱，不是說橋用來做宗教活動。",
+        "reason": "**construction and religion** 建造橋梁屬建設，但 prayer 只是形容外型的比喻，並非宗教用途；與段落的休閒交通總結不符。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**transportation and tourism** 同時對應縮短往返時間和美景吸引遊客，兩項都在下一句有具體利益，為正解。",
+        "elementary": "走得快又好玩，就是交通和觀光。",
+        "reason": "**transportation and tourism** 同時對應縮短往返時間和美景吸引遊客，兩項都在下一句有具體利益，為正解。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "因為往返淡水八里更省時，又擁有獨特美景，文章說淡江大橋會同時在交通與觀光上發揮重要作用。",
+      "passageTranslationZh": "淡江大橋自2019年開始興建，文章說今年準備投入使用。淡水與八里近年快速發展，兩地往返通勤者增加，所以需要大橋。文中說通車後往返兩地可節省約半小時。大橋不只能使交通車流順暢，也會以特殊建築美感吸引遊客。設計者為知名建築師札哈・哈蒂。文章描述它是臺灣第一座經由國際設計競賽選出的橋，將成為世界最長的單塔不對稱斜張橋。高200公尺的橋塔向天空伸展，好像舞者雙手舉起祈禱；橋的形狀與淡水河日落相映，非常醒目。遊客可以欣賞河岸景色。由於縮短交通時間並兼具美感，淡江大橋對交通及觀光都有重要作用，並將帶來便利與休閒利益。建設狀態、最長紀錄與數字均依115學年度題幹敘述，未以2026年最新工程公告獨立核實。",
+      "testedWord": "tourism",
+      "answerWord": "tourism",
+      "pronunciationIPA": "/ˈtʊrɪzəm/",
+      "optionMeaningZh": {
+        "A": "舞蹈和設計",
+        "B": "藝術和競賽",
+        "C": "建設和宗教",
+        "D": "交通運輸和觀光"
+      },
+      "synonyms": {
+        "初級": [
+          "travel（旅遊；範圍較廣）"
+        ],
+        "中級": [
+          "sightseeing（觀光遊覽；活動而非整體產業）"
+        ],
+        "高級": [
+          "visitor economy（旅遊經濟；相關概念）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（tourism 名詞沒有直接詞彙反義）"
+        ],
+        "中級": [
+          "N/A（commuting 是不同旅行目的）"
+        ],
+        "高級": [
+          "N/A（不可把 industry / business 當反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "bridge（橋）"
+        ],
+        "中級": [
+          "transportation（交通運輸）"
+        ],
+        "高級": [
+          "recreation（休閒）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "部分為片語改寫或概念對照，不可當作所有語境可直接替換的完全同／反義詞。",
+      "exampleEnglish": "The new walking path may encourage tourism in the area.",
+      "exampleChinese": "新的步道可能促進這個地區的觀光。",
+      "exampleHighlightedSurfaceForm": "tourism",
+      "exampleType": "自編非新聞英文例句",
+      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
