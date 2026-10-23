@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-03",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-03.webp",
+  "imageSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪逐題原圖）",
+    "method": "直接目視 GitHub 既有單題 WebP，題幹選項完整，核實四選項和題號，原始 WebP SHA256 重算一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "本輪首次主觀目視曾把『供出售』誤讀成『供出租』；讀過候選答案後重新放大原圖確認為『出售』。保留首輪B與修正C的歷程，獨立解題QA仍需複核。"
+    ],
+    "correctionHistory": "最初目視誤將C『供出售』看成『供出租』；在候選答案揭露後重新目視原圖確認是『供出售』。不主張本題初次獨立盲解成功，需獨立教學複核。"
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪初次目視誤判B；讀到候選C後重新目視確認原圖為『供出售』，已保留錯誤與修正紀錄；獨立解答 QA 待重新由其他審查複核。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": "C",
+    "independentSolveScope": "NOT_BLIND_PASSED_CORRECTED_AFTER_CANDIDATE",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "會計基本概念何者正確？A支付員工薪資為對內交易，B地震致存貨損失為對外交易，C汽車經銷商買車供出售應列存貨，D禮品商購入商品付運費應列營業費用。",
+    "keyConditions": [
+      "A-D四選項或①②③④逐項判斷",
+      "正確表述由會計概念及原圖文字決定"
+    ],
+    "reasoningFromOriginalImage": "本題正解是 **C：汽車經銷商購入汽車『以供出售』，屬正常營業過程中待售商品，應認列存貨**。A支付員工薪資涉及對外的員工，非內部帳務調整；B地震損失是非交易性資產損失，不能直接當作與外部對象交換的對外交易；D為使購入商品達到目前地點與狀態所需的進貨運費，通常納入**存貨成本**，而非立即作一般營業費用。重要：本輪初看原圖曾將『出售』誤看成『出租』而推測 B，查候選後重新逐字目視確認原圖是『出售』，才改為 C；不冒稱初次盲解正確，仍需獨立複核。",
+    "reasoningRecordedBeforeCandidateLookup": false,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "本題正解是 **C：汽車經銷商購入汽車『以供出售』，屬正常營業過程中待售商品，應認列存貨**。A支付員工薪資涉及對外的員工，非內部帳務調整；B地震損失是非交易性資產損失，不能直接當作與外部對象交換的對外交易；D為使購入商品達到目前地點與狀態所需的進貨運費，通常納入**存貨成本**，而非立即作一般營業費用。重要：本輪初看原圖曾將『出售』誤看成『出租』而推測 B，查候選後重新逐字目視確認原圖是『出售』，才改為 C；不冒稱初次盲解正確，仍需獨立複核。",
+    "elementarySummary": "車行買進來是**要賣給客人**的汽車，所以算店裡等待賣出的貨。買商品時把它運進倉庫的錢，通常也要算在這批貨的成本裡。題目不是說車行要把車拿去出租。",
+    "memory": "**持有『供出售』→存貨；持有『供出租』→用途不同，可能是固定資產。**",
+    "concept": "存貨是為正常營業過程出售而持有的資產；固定資產與存貨分類要看**持有目的**。進貨運費是使存貨達到當前地點與狀態的成本。",
+    "extension": "反向思考：若汽車經銷商購入同一部車是**供公司出租或長期營運使用**，通常不應單純列存貨；想想目的不同如何改變分類。",
+    "source": {
+      "originalExam": "115-09-2-03",
+      "originalImagePinnedSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學課本之版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學最終標準答案與更正說明待核實",
+      "independentlyCheckedStatute": "https://law.moea.gov.tw/LawContent.aspx?id=FL011301",
+      "lawVerificationScope": "僅查主管機關法條內容，不等同官方考題答案核實"
+    },
+    "highlightTerms": [
+      "供出售",
+      "存貨",
+      "存貨成本",
+      "原圖『出售』"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "員工薪資支付是企業與員工間的款項支付，非企業內部僅作帳務分攤之調整，因此『對內交易』判斷不妥。",
+        "elementary": "真的付錢給員工，不只是店內換欄位。",
+        "reason": "員工薪資支付是企業與員工間的款項支付，非企業內部僅作帳務分攤之調整，因此『對內交易』判斷不妥。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "因地震而存貨受損，重點是認列損失；並非企業與對外交易對象買賣交換，因此不能按對外交易理解，相關教材交易定義仍待章節複核。",
+        "elementary": "地震破壞東西，不是跟外面的人買賣。",
+        "reason": "因地震而存貨受損，重點是認列損失；並非企業與對外交易對象買賣交換，因此不能按對外交易理解，相關教材交易定義仍待章節複核。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "**汽車經銷商買汽車以供出售**，目的就是待售商品，符合存貨定義。原圖明確為『出售』而非『出租』，故正確。",
+        "elementary": "車行買車要賣人，這是商品存貨。",
+        "reason": "**汽車經銷商買汽車以供出售**，目的就是待售商品，符合存貨定義。原圖明確為『出售』而非『出租』，故正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "禮品買賣業商品進貨的必要運費通常屬存貨的進貨成本，非直接列為一般營業費用。",
+        "elementary": "先把貨運回店裡的錢，要算進這批貨的成本。",
+        "reason": "禮品買賣業商品進貨的必要運費通常屬存貨的進貨成本，非直接列為一般營業費用。"
+      }
+    },
+    "accounting": {
+      "principle": "存貨分類按持有待售目的；必要購入運費通常構成存貨成本。",
+      "accounts": [
+        "存貨",
+        "現金",
+        "進貨運費",
+        "災害損失",
+        "薪資費用"
+      ],
+      "journalEntry": "示意：買進待售汽車，可借記『存貨』、貸記『現金／應付帳款』；未有題目金額，不編造數字。",
+      "calculation": "N/A（本題是概念判斷）",
+      "standardsStatus": "存貨分類原則可參見商業會計處理準則的存貨定義；具體教材版本／頁碼待核對",
+      "legalSource": "https://law.moea.gov.tw/LawContent.aspx?id=FL011301"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "imageReadingFirstPassErrorNeedsIndependentReview": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
