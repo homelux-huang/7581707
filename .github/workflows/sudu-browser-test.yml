@@ -18,11 +18,49 @@ on:
       - tests/sudu_browser_smoke.cjs
       - tests/sudu_demo_acceptance.cjs
       - .github/workflows/sudu-browser-test.yml
+      - sudu/verified-questions-runtime.js
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - tests/sudu_verified_integration_browser.cjs
+      - tests/sudu_certified_positive_browser.cjs
+      - tests/sudu_real_reviewed_browser.cjs
+      - .github/workflows/sudu-release-checks.yml
+      - .github/workflows/sudu-verified-integration-checks.yml
+      - .github/workflows/pages.yml
+      - .github/workflows/sudu-verified-autopublish.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - sudu/workspace.js
+      - sudu/workspace.css
+      - sudu/index.html
+      - index.html
+      - sudu/v4-115-multisubject-review-demo.html
+      - sudu/demo-subject-learning.js
+      - sudu/demo-question-crops.json
+      - scripts/build.py
+      - sudu/exam_scoring.js
+      - sudu/learning_sync.js
+      - sudu/admin.html
+      - sudu/share.html
+      - tests/sudu_browser_smoke.cjs
+      - tests/sudu_demo_acceptance.cjs
+      - .github/workflows/sudu-browser-test.yml
+      - sudu/verified-questions-runtime.js
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - tests/sudu_verified_integration_browser.cjs
+      - tests/sudu_certified_positive_browser.cjs
+      - tests/sudu_real_reviewed_browser.cjs
+      - .github/workflows/sudu-release-checks.yml
+      - .github/workflows/sudu-verified-integration-checks.yml
+      - .github/workflows/pages.yml
+      - .github/workflows/sudu-verified-autopublish.yml
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: sudu-browser-${{ github.ref }}
+  group: sudu-browser-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
   browser:
