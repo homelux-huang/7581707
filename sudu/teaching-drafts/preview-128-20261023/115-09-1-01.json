@@ -161,7 +161,22 @@
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "CSR_CAUSAL_OVERGENERALIZATION",
     "blockingReason": null,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "supplementalImageAndTeachingReview20261023": {
+      "status": "PARTIAL_POST_CANDIDATE_RECHECK",
+      "actualImageByteSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
+      "matchedFrozenManifest": true,
+      "questionAndOptionsVisuallyChecked": true,
+      "sharedImagesChecked": "NONE_REQUIRED",
+      "candidateAlreadyVisible": true,
+      "firstPassHistoryPreserved": true,
+      "teachingObservations": "原圖②自主使用再生能源減碳可列CSR；①社區講座非當然法定強制；③成本增加不自動等於最基本倫理違反；④『利潤受損即未善盡經濟責任』過於絕對。候選D(②④)的命題課程分類仍有概念疑義，不得標教學QA PASS。",
+      "reference": null,
+      "officialFinalPdfDirectlyVerified": false,
+      "independentTeachingReviewAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

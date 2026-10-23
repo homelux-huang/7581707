@@ -179,7 +179,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "imageReadingFirstPassErrorNeedsIndependentReview": true,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "supplementalImageAndTeachingReview20261023": {
+      "status": "PARTIAL_POST_CANDIDATE_RECHECK",
+      "actualImageByteSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
+      "matchedFrozenManifest": true,
+      "questionAndOptionsVisuallyChecked": true,
+      "sharedImagesChecked": "NONE_REQUIRED",
+      "candidateAlreadyVisible": true,
+      "firstPassHistoryPreserved": true,
+      "teachingObservations": "原圖C明確寫「購入汽車以供出售」而非「出租」。C為候選，符合存貨持有供出售定義；A薪資非純內部調整、B地震不構成對外交換交易、D必要進貨運費不能逕列一般營業費用。首次把出售讀成出租的歷史必須保留。",
+      "reference": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=J0080010",
+      "officialFinalPdfDirectlyVerified": false,
+      "independentTeachingReviewAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

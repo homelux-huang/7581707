@@ -169,7 +169,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "firstPassReasoningErrorNeedsIndependentReview": true,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "supplementalImageAndTeachingReview20261023": {
+      "status": "PARTIAL_POST_CANDIDATE_RECHECK",
+      "actualImageByteSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+      "matchedFrozenManifest": true,
+      "questionAndOptionsVisuallyChecked": true,
+      "sharedImagesChecked": "NONE_REQUIRED",
+      "candidateAlreadyVisible": true,
+      "firstPassHistoryPreserved": true,
+      "teachingObservations": "原圖X1與X2年末應收款分別為500,000／600,000。①前一年調整後貸餘結轉年初、②期間沖銷可能使餘額借餘、③依非零預期信用損失調整後一般貸餘，候選D有會計邏輯；仍需正式課本定義與最終答案。首次B→D修改歷史保留。",
+      "reference": null,
+      "officialFinalPdfDirectlyVerified": false,
+      "independentTeachingReviewAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

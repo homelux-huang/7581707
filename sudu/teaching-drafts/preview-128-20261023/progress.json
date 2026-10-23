@@ -955,7 +955,15 @@
       "image": "data/approved/webp/115/115-09-1-01.webp",
       "imageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
+        "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+        "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-1-03",
@@ -1093,7 +1101,15 @@
       "image": "data/approved/webp/115/115-09-2-03.webp",
       "imageSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
+        "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+        "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-04",
@@ -1120,7 +1136,15 @@
       "image": "data/approved/webp/115/115-09-2-06.webp",
       "imageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+        "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+        "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-07",
@@ -1174,7 +1198,15 @@
       "image": "data/approved/webp/115/115-09-2-12.webp",
       "imageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+        "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+        "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-13",
@@ -1201,7 +1233,15 @@
       "image": "data/approved/webp/115/115-09-2-15.webp",
       "imageSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+        "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+        "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-16",
@@ -1714,6 +1754,26 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseForbidden": true
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "b6b0771f3669c1522f22380dd8f675a22461fea3",
+      "batch": "ACCOUNTING_COMMERCIAL_RECHECK_5",
+      "ids": [
+        "115-09-2-03",
+        "115-09-2-06",
+        "115-09-2-12",
+        "115-09-2-15",
+        "115-09-1-01"
+      ],
+      "newDistinctBinaryImageSha256Matched": 5,
+      "cumulativeDistinctBinaryImageSha256Matched": 26,
+      "sharedImageCount": 0,
+      "candidateAlreadyVisible": true,
+      "fullIndependentTeachingQaChange": 0,
+      "officialFinalVerifiedChange": 0,
+      "releaseApprovedChange": 0,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
     }
   ],
   "chineseTeachingSupplement": {
@@ -1731,10 +1791,10 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 21,
+    "recheckedDistinctQuestions": 26,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Actual GitHub WebP bytes + displayed image, not manifest-only",
-    "notYetRecheckedThisCycle": 107
+    "source": "Actual GitHub WebP bytes + displayed images, independently computed SHA256 (5 new unique at 2026-10-23)",
+    "notYetRecheckedThisCycle": 102
   }
 }

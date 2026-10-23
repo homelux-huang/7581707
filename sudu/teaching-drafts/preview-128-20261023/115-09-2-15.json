@@ -267,7 +267,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "firstPassErrorNeedsIndependentReview": true,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "supplementalImageAndTeachingReview20261023": {
+      "status": "PARTIAL_POST_CANDIDATE_RECHECK",
+      "actualImageByteSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+      "matchedFrozenManifest": true,
+      "questionAndOptionsVisuallyChecked": true,
+      "sharedImagesChecked": "NONE_REQUIRED",
+      "candidateAlreadyVisible": true,
+      "firstPassHistoryPreserved": true,
+      "teachingObservations": "原圖①銷貨成本13500、②存貨10500、③聲稱『盤盈1000』。獨立重算可供售480件、淨售250件、帳存230件、實存210件、盤虧20件×50=1000元；期末存貨210×50=10500、定期成本(480-210)×50=13500；永續原銷貨成本250×50=12500，盤虧1000若併銷貨成本為13500。候選C有依據，但永續盤虧的列報方式須按教材獨立QA；初次D→C歷史保留。",
+      "reference": "https://0800280280.sme.gov.tw/accounting/run.php?file=detail&id=339&name=kw",
+      "officialFinalPdfDirectlyVerified": false,
+      "independentTeachingReviewAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

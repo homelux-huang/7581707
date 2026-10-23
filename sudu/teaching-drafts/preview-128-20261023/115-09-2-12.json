@@ -172,7 +172,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "firstPassErrorNeedsIndependentReview": true,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "supplementalImageAndTeachingReview20261023": {
+      "status": "PARTIAL_POST_CANDIDATE_RECHECK",
+      "actualImageByteSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+      "matchedFrozenManifest": true,
+      "questionAndOptionsVisuallyChecked": true,
+      "sharedImagesChecked": "NONE_REQUIRED",
+      "candidateAlreadyVisible": true,
+      "firstPassHistoryPreserved": true,
+      "teachingObservations": "原圖③要求調整後公司帳與『原銀行對帳單』相同，並非調節後正確餘額，因此③不成立。④在途存款應加銀行側，非公司重複借記；②保付支票一般已由銀行扣款、⑤上月在途款本月通常入銀行帳，候選A(②⑤)合理。初次D→A歷史保留。",
+      "reference": "https://pic.tasker.com.tw/file/1/339/1802535/1528899109177467114.pdf",
+      "officialFinalPdfDirectlyVerified": false,
+      "independentTeachingReviewAccepted": false,
+      "releaseApproved": false,
+      "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
