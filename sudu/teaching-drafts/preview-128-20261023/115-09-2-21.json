@@ -277,6 +277,28 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
+    },
+    "sourceLinkedCalculationRecheck20261023": {
+      "status": "PASS_ARITHMETIC_AND_OPTION_MAPPING__FULL_PEDAGOGY_PENDING",
+      "referenceCategory": "Curriculum and accounting standards, not school textbook",
+      "curriculumTopic": "前期折舊錯誤更正；尚未確認細目代碼",
+      "independentlyRecomputedSteps": [
+        "X1費用與累計折舊均高估3000",
+        "前期權益低估3000（題目不計所得稅）",
+        "X2借累計折舊3000；貸追溯重編影響數3000",
+        "借貸合計3000=3000，不沖減X2折舊費用"
+      ],
+      "wrongOptionReviewNote": "IAS8對重大前期錯誤採追溯重編；本題按指定商科簡化分錄處理，未提供重大性不能延伸為所有錯誤都須同做。",
+      "officialAnswer": "C",
+      "referenceUrls": [
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-8-basis-of-preparation-of-financial-statements/"
+      ],
+      "highSchoolTextbookEditionAndPage": "NOT_VERIFIED",
+      "optionTeacherAndElementaryReviewed": true,
+      "reviewAfterOfficialAnswerKnown": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidenceFile": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

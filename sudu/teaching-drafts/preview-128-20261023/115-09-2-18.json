@@ -92,9 +92,9 @@
       },
       "D": {
         "isCorrect": false,
-        "teacher": "151000近似把可折舊基礎300000對半直線攤分，並非年數合計法。",
-        "elementary": "改成新方法後第一年折舊較多。",
-        "reason": "151000近似把可折舊基礎300000對半直線攤分，並非年數合計法。"
+        "teacher": "D的151,000與正確102,000差49,000。151,000可能來自把新年度開始時的帳面302,000直接平分兩份，忽略殘值及新的年數合計法；本題正確X3折舊為200,000，帳面應餘102,000。",
+        "elementary": "不能把剩餘帳面金額直接切一半；這題改用新的折舊方法，第一年要多分一些。",
+        "reason": "D的151,000與正確102,000差49,000。151,000可能來自把新年度開始時的帳面302,000直接平分兩份，忽略殘值及新的年數合計法；本題正確X3折舊為200,000，帳面應餘102,000。"
       }
     },
     "accounting": {
@@ -270,6 +270,31 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
+    },
+    "sourceLinkedCalculationRecheck20261023": {
+      "status": "PASS_ARITHMETIC_AND_OPTION_MAPPING__FULL_PEDAGOGY_PENDING",
+      "referenceCategory": "Curriculum and accounting standards, not school textbook",
+      "curriculumTopic": "商管-專-會計-O-b（設備折舊與估計變動）",
+      "independentlyRecomputedSteps": [
+        "舊年折舊(500000−5000)÷5＝99000",
+        "兩年後帳面500000−2×99000＝302000",
+        "新基礎302000−2000＝300000",
+        "X3加速折舊300000×2/3＝200000",
+        "X3末帳面302000−200000＝102000"
+      ],
+      "wrongOptionReviewNote": "D的151000可能是錯把X3初帳面302000直接除二，而未用新的年數合計法；不能聲稱必然由此計得。",
+      "officialAnswer": "C",
+      "referenceUrls": [
+        "https://stv.naer.edu.tw/data/course_outline/477206323.pdf",
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-16-property-plant-and-equipment/",
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-8-basis-of-preparation-of-financial-statements/"
+      ],
+      "highSchoolTextbookEditionAndPage": "NOT_VERIFIED",
+      "optionTeacherAndElementaryReviewed": true,
+      "reviewAfterOfficialAnswerKnown": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidenceFile": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

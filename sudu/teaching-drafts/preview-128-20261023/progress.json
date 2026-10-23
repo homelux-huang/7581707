@@ -3170,5 +3170,31 @@
     "fullyAcceptedIncrement": 0,
     "method": "已知答案後複核，非第三方盲解；書目與UI仍待核對",
     "deploy": false
+  },
+  "partialTeachingReviewLedger": {
+    "reviewedQuestionIds": [
+      "115-09-2-13",
+      "115-09-2-16",
+      "115-09-2-18",
+      "115-09-2-20",
+      "115-09-2-21"
+    ],
+    "batches": [
+      {
+        "date": "2026-10-23",
+        "head": "bb217baa18565b6212599eb6966500820e9e783f",
+        "questionIds": [
+          "115-09-2-13",
+          "115-09-2-16",
+          "115-09-2-18",
+          "115-09-2-20",
+          "115-09-2-21"
+        ],
+        "evidence": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md",
+        "kind": "MATH_AND_OPTION_CAUSALITY_PARTIAL",
+        "textbookAndUIApproved": false,
+        "fullTeachingQaDelta": 0
+      }
+    ]
   }
 }

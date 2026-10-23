@@ -75,9 +75,9 @@
     "optionExplanations": {
       "A": {
         "isCorrect": false,
-        "teacher": "59900漏入現金股利或錯計手續費，且X2出售淨利應為51000不是49000。",
-        "elementary": "兩年數字都比正確的少。",
-        "reason": "59900漏入現金股利或錯計手續費，且X2出售淨利應為51000不是49000。"
+        "teacher": "A的X1金額59,900比正確67,900少8,000元，X2金額49,000比正確51,000少2,000元，兩年均與股票股利、現金股利、FVTPL評價和出售費用的完整計算不符。題目沒有提供這兩個差額的來源，不能直接斷言只是漏算10,000元現金股利。",
+        "elementary": "這組第一年少算8,000元、第二年少算2,000元，跟題目數字算出來的不一樣。",
+        "reason": "A的X1金額59,900比正確67,900少8,000元，X2金額49,000比正確51,000少2,000元，兩年均與股票股利、現金股利、FVTPL評價和出售費用的完整計算不符。題目沒有提供這兩個差額的來源，不能直接斷言只是漏算10,000元現金股利。"
       },
       "B": {
         "isCorrect": false,
@@ -304,6 +304,31 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
+    },
+    "sourceLinkedCalculationRecheck20261023": {
+      "status": "PASS_ARITHMETIC_AND_OPTION_MAPPING__FULL_PEDAGOGY_PENDING",
+      "referenceCategory": "Curriculum and accounting standards, not school textbook",
+      "curriculumTopic": "商管-專-會計-N-b（股票投資的會計處理）",
+      "independentlyRecomputedSteps": [
+        "初始5000×30＝150000；手續費100列費用",
+        "股票股利4%=200股，年末5200股",
+        "X1末評價利益5200×40−150000＝58000",
+        "X1損益10000＋58000−100＝67900",
+        "X2損益5200×50−1000−208000＝51000"
+      ],
+      "wrongOptionReviewNote": "X1選項59900比67900少8000；X2選項49000比51000少2000，無根據不可斷言漏算整筆10000股利。",
+      "officialAnswer": "D",
+      "referenceUrls": [
+        "https://stv.naer.edu.tw/data/course_outline/477206323.pdf",
+        "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+        "https://www.gov.uk/hmrc-internal-manuals/corporate-finance-manual/cfm21860"
+      ],
+      "highSchoolTextbookEditionAndPage": "NOT_VERIFIED",
+      "optionTeacherAndElementaryReviewed": true,
+      "reviewAfterOfficialAnswerKnown": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidenceFile": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
