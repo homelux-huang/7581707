@@ -30,7 +30,7 @@
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
       "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
-      "officialRevisionChecked": false
+      "officialRevisionChecked": true
     },
     "officialAnswer": "A",
     "officialEvidenceFile": "official-final-evidence-20261023.json"
@@ -44,14 +44,14 @@
     ],
     "reasoningFromOriginalImage": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
     "reasoningRecordedBeforeCandidateLookup": true,
-    "officialFinalStatus": "PENDING_OFFICIAL_FINAL_RECHECK"
+    "officialFinalStatus": "VERIFIED_CURRENT_OFFICIAL_PDF_AND_CONFIRMATION"
   },
   "teaching": {
-    "teacherSummary": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
-    "elementarySummary": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
-    "memory": "**政府針對企業紓困→擴張財政；央行調利率／準備率→貨幣政策**。",
+    "teacherSummary": "官方說明本題是**政府增加支出**所支援的紓困，銀行提供資金或利息補貼以配合政府政策，因此選 **A：擴張性財政政策**。判斷重點是**誰主導、用什麼工具、方向如何**，不能看到「貸款」就一律當作貨幣政策。央行對金融機構業務採寬鬆或嚴格限制的選擇性信用管制，才是另一類貨幣政策工具。",
+    "elementarySummary": "這題像政府拿出資源，請銀行幫受影響的工廠撐過難關，是**增加幫助**的財政政策。不是央行在調整銀行能借多少錢，所以選A。",
+    "memory": "**政府支出幫企業＝擴張財政；不能看到貸款就選貨幣政策**。",
     "concept": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
-    "extension": "反向題：如果改由中央銀行普遍降息、降低準備率而沒有指定政府紓困預算，政策應歸屬擴張性財政還是擴張性貨幣？",
+    "extension": "相反意思練習：若改成中央銀行調高政策利率以抑制借款需求，屬哪一類？答：緊縮性貨幣政策；主導者、工具、方向都和本題不同。",
     "source": {
       "originalExam": "115-09-2-44",
       "originalImagePinnedSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
@@ -60,7 +60,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "最終答案與更正說明尚未核實",
+      "officialIssueExplanation": "已直接核對115商管專二確認說明第3頁；官方答案A。詳 official-final-evidence-20261023.json。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -73,27 +73,27 @@
     "optionExplanations": {
       "A": {
         "isCorrect": true,
-        "teacher": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
-        "elementary": "政府拿政策資源幫工廠渡過難關，就是擴張支持。",
-        "reason": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。"
+        "teacher": "**擴張性財政政策**：本題由政府主導增加紓困支持，官方說明資金協助或利息補貼涉及政府支出，因此A正確。",
+        "elementary": "政府增加資源，幫受影響的工廠周轉，所以選A。",
+        "reason": "**擴張性財政政策**：本題由政府主導增加紓困支持，官方說明資金協助或利息補貼涉及政府支出，因此A正確。"
       },
       "B": {
         "isCorrect": false,
-        "teacher": "B緊縮性財政政策通常是縮減支出或增加稅負以壓低總需求；提供紓困扶助與其方向相反。",
-        "elementary": "政府在幫忙，不是縮減支援。",
-        "reason": "B緊縮性財政政策通常是縮減支出或增加稅負以壓低總需求；提供紓困扶助與其方向相反。"
+        "teacher": "**緊縮性財政**是減少支出或增加稅負等方向；本題增加紓困支持，方向相反。",
+        "elementary": "這題在加幫助，不是在把幫助收回。",
+        "reason": "**緊縮性財政**是減少支出或增加稅負等方向；本題增加紓困支持，方向相反。"
       },
       "C": {
         "isCorrect": false,
-        "teacher": "C擴張性貨幣政策通常由**央行**降息、買進債券或降低準備率；本題強調政府特定對象紓困，不是央行一般性資金調節。",
-        "elementary": "不是央行調全國借錢利率，是政府幫特定廠商。",
-        "reason": "C擴張性貨幣政策通常由**央行**降息、買進債券或降低準備率；本題強調政府特定對象紓困，不是央行一般性資金調節。"
+        "teacher": "**擴張性貨幣**通常由央行運用貨幣或信用工具；本題是政府紓困支出，不能因為看到貸款就選貨幣政策。",
+        "elementary": "先看誰在做、怎麼做，不能看到借錢兩個字就選它。",
+        "reason": "**擴張性貨幣**通常由央行運用貨幣或信用工具；本題是政府紓困支出，不能因為看到貸款就選貨幣政策。"
       },
       "D": {
         "isCorrect": false,
-        "teacher": "D緊縮性貨幣政策既不符合題幹政府紓困主體，也與提供資金支持的擴張方向相反。",
-        "elementary": "既搞錯是誰做的，也把幫忙方向說反。",
-        "reason": "D緊縮性貨幣政策既不符合題幹政府紓困主體，也與提供資金支持的擴張方向相反。"
+        "teacher": "**緊縮性貨幣**在主導工具與政策方向都不符：本題既非央行收緊信用，也不是減少支持。",
+        "elementary": "出手的人與幫助方向都判錯了。",
+        "reason": "**緊縮性貨幣**在主導工具與政策方向都不符：本題既非央行收緊信用，也不是減少支持。"
       }
     },
     "hasExamCalculation": false,
@@ -111,40 +111,28 @@
       "title": "解題步驟",
       "steps": [
         {
-          "title": "整理題意",
-          "content": "美國加徵關稅衝擊出口廠商；政府提供紓困貸款；問財政／貨幣及擴張／緊縮",
-          "why": "避免只看選項猜答案。",
-          "kind": "given"
-        },
-        {
-          "title": "確定適用觀念",
-          "content": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
-          "why": "由課程定義判斷，而非憑直覺。",
-          "kind": "concept"
-        },
-        {
-          "title": "依題目推論（1）",
-          "content": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。",
-          "why": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+          "title": "找政策主導者",
+          "content": "題幹是**政府**對出口廠商提供紓困。",
+          "why": "先區分政府財政措施與央行貨幣工具。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（2）",
-          "content": "若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "確認本題政策工具",
+          "content": "官方確認說明指出資金協助或利息補貼由政府支出支持。",
+          "why": "不能把所有貸款都一概歸為貨幣政策。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（3）",
-          "content": "現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "判斷方向",
+          "content": "增加紓困支持，屬**擴張**方向。",
+          "why": "不是減少支出或收緊資金。",
           "kind": "reasoning"
         },
         {
-          "title": "核對答案選項",
-          "content": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
-          "why": "與其餘選項的差異可對照 A-D 個別解說。",
-          "kind": "answer"
+          "title": "組合答案",
+          "content": "**財政＋擴張 → A**。",
+          "why": "B方向錯；C工具錯；D兩者都錯。",
+          "kind": "reasoning"
         }
       ],
       "originalImageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
@@ -202,6 +190,21 @@
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     },
+    "contentReview20261023": {
+      "status": "PASS_LIMITED_CORE_EXPLANATION",
+      "scope": "原圖題意、四選項老師與小學生說明、官方確認說明、逐步推論、無計算自動隱藏",
+      "method": "同一AI已知答案後複核，不是第三方盲解",
+      "textbookAndUiReview": "PENDING",
+      "releaseApproved": false
+    },
+    "officialExplanationIntegration": {
+      "status": "INTEGRATED_DRAFT",
+      "checkedAt": "2026-10-23",
+      "sourcePage": 3,
+      "imageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+      "reviewType": "POST_ANSWER_REVIEW_NOT_BLIND",
+      "releaseApproved": false
+    },
     "partialEconomicsAndImageQa20261023": {
       "originalWebpBinarySha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
       "questionImageVisuallyInspected": true,
@@ -215,5 +218,82 @@
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
-  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60",
+  "revisionHistory": [
+    {
+      "date": "2026-10-23",
+      "reason": "官方確認說明整合到主解說；保留舊解說及答案，不宣稱重新盲解",
+      "previousTeacherSummary": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+      "previousElementarySummary": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+      "previousStepByStep": {
+        "questionId": "115-09-2-44",
+        "subject": "經濟學",
+        "questionNumber": 44,
+        "answerCandidate": "A",
+        "aiAnswer": "A",
+        "needsReview": false,
+        "reviewReason": null,
+        "hasSteps": true,
+        "hasExamCalculation": false,
+        "title": "解題步驟",
+        "steps": [
+          {
+            "title": "整理題意",
+            "content": "美國加徵關稅衝擊出口廠商；政府提供紓困貸款；問財政／貨幣及擴張／緊縮",
+            "why": "避免只看選項猜答案。",
+            "kind": "given"
+          },
+          {
+            "title": "確定適用觀念",
+            "content": "財政政策透過政府預算、補助、稅負及特定紓困措施影響總需求；貨幣政策以央行調控貨幣及信用條件為核心。",
+            "why": "由課程定義判斷，而非憑直覺。",
+            "kind": "concept"
+          },
+          {
+            "title": "依題目推論（1）",
+            "content": "題目強調**政府**對受關稅衝擊的特定出口廠商提供**紓困貸款**，是透過公共政策資源支持企業營運、避免信用壓力擴散，依此命題分類屬**擴張性的財政政策**，所以A。",
+            "why": "國外加稅讓工廠生意難做，政府出面提供紓困貸款幫它周轉，就像政府幫忙撐過困難。題目重點是政府的財政協助，不是央行調整全國利率。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "依題目推論（2）",
+            "content": "若是中央銀行買賣債券、變更準備率或政策利率，才是典型貨幣政策。",
+            "why": "承接前一個判斷，繼續驗證題幹條件。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "依題目推論（3）",
+            "content": "現實中紓困貸款可能由財政補貼、信保或金融機構承作，政策歸類須依具體制度，不能把所有貸款一概視為央行擴張。",
+            "why": "承接前一個判斷，繼續驗證題幹條件。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "核對答案選項",
+            "content": "A政府對受衝擊出口商提供資金援助，依試題設定屬增加支持措施的擴張性財政政策，正解。",
+            "why": "與其餘選項的差異可對照 A-D 個別解說。",
+            "kind": "answer"
+          }
+        ],
+        "originalImageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
+        "independentTeachingQA": "PENDING",
+        "officialFinalVerified": true,
+        "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+      },
+      "previousAnswerComparison": {
+        "candidate": "A",
+        "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+        "officialFinalCorrectionVerified": true,
+        "blindSolveStatus": "IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_READ",
+        "notice": "本輪先目視原圖解答，再比對候選；最終官方更正未獨立核實，完整教學QA待完成。",
+        "conflictWarningRequired": false,
+        "candidateProvenance": {
+          "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+          "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+          "officialRevisionChecked": false
+        },
+        "officialAnswer": "A",
+        "officialEvidenceFile": "official-final-evidence-20261023.json"
+      }
+    }
+  ]
 }

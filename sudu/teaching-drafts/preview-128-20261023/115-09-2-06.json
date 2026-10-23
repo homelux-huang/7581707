@@ -29,7 +29,7 @@
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
       "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
-      "officialRevisionChecked": false
+      "officialRevisionChecked": true
     },
     "conflictWarningRequired": true,
     "independentSolveScope": "FIRST_PASS_DIFFERED_PENDING_ADJUDICATION",
@@ -44,14 +44,14 @@
     "reasoningFromOriginalImage": "①正確：X1年終調整後的備抵貸餘承接至X2年初。②錯：年度中若核銷壞帳，備抵可變借餘。③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。因此①③、選D。首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
     "reasoningRecordedBeforeCandidateLookup": false,
     "mathematicalResult": null,
-    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+    "officialFinalStatus": "VERIFIED_CURRENT_OFFICIAL_PDF_AND_CONFIRMATION"
   },
   "teaching": {
-    "teacherSummary": "①正確：X1年終調整後的備抵貸餘承接至X2年初。②錯：年度中若核銷壞帳，備抵可變借餘。③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。因此①③、選D。首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
-    "elementarySummary": "去年年底預留了可能收不回的款項，新年一開始會沿用。中間可能用掉一些，到年終再重新計算。第一句和第三句對。",
-    "memory": "①期初延續貸餘；②年度中未必；③期末調整貸餘。",
-    "concept": "備抵損失為應收帳款抵銷科目；核銷借記備抵、估列貸記備抵。",
-    "extension": "反向思考：若年中核銷超過期初備抵，未調整前備抵可否出現借餘？",
+    "teacherSummary": "**年度開始日**指新年度交易發生前的期初時點，承接上一年度期末調整後的備抵貸餘；不要把它當作年中任意一天。因此①正確。年中核銷會借記備抵，餘額可能變成借餘，所以②不保證。期末依題目非零信用損失率調整後為貸餘，③正確，選 **D（①、③）**。",
+    "elementarySummary": "想像昨天收店已經把帳整理好，今天剛開門、還沒做生意，就接著昨天的帳。做到一半可能改變，年底整理完又重新算。所以**第一句、第三句對**。",
+    "memory": "**期初接上年、年中會變動、期末看調整**。",
+    "concept": "**備抵損失**是應收帳款的抵銷科目，不是另外放在銀行的一筆錢。估列時貸記備抵，核銷時借記備抵；判斷餘額要先分清**期初、年度中、期末調整後**。",
+    "extension": "相反意思練習：如果說「年中備抵一定是借餘」對嗎？也不對。年中可能貸餘、借餘或零，須看核銷及估列情況。",
     "source": {
       "originalExam": "115-09-2-06",
       "originalImagePinnedSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
@@ -61,7 +61,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核",
+      "officialIssueExplanation": "已直接核對115商管專二確認說明第1頁；官方答案D。詳 official-final-evidence-20261023.json。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -73,27 +73,27 @@
     "optionExplanations": {
       "A": {
         "isCorrect": false,
-        "teacher": "僅②不成立，核銷壞帳可使備抵在年度中借餘。",
-        "elementary": "準備金可能在年中被用掉。",
-        "reason": "僅②不成立，核銷壞帳可使備抵在年度中借餘。"
+        "teacher": "**②不一定成立**：年度中核銷壞帳會借記備抵損失，可能把原有貸餘用完而成借餘，不能說一定貸餘。",
+        "elementary": "帳在年中會變動，不能說整年都長一樣。",
+        "reason": "**②不一定成立**：年度中核銷壞帳會借記備抵損失，可能把原有貸餘用完而成借餘，不能說一定貸餘。"
       },
       "B": {
         "isCorrect": false,
-        "teacher": "僅③漏掉①，X2年初承接X1年終調整後貸餘；首輪B誤判已記錄。",
-        "elementary": "新年剛開始，還是接著去年年底的帳。",
-        "reason": "僅③漏掉①，X2年初承接X1年終調整後貸餘；首輪B誤判已記錄。"
+        "teacher": "**③正確，但漏了①**：新年度開始日尚未發生本年度交易，會接續上年底調整後的貸餘。",
+        "elementary": "只選年底那句，漏了新年剛開始那句。",
+        "reason": "**③正確，但漏了①**：新年度開始日尚未發生本年度交易，會接續上年底調整後的貸餘。"
       },
       "C": {
         "isCorrect": false,
-        "teacher": "①雖正確，但②並非整年保證貸餘，而且漏掉③。",
-        "elementary": "中間那句不一定對。",
-        "reason": "①雖正確，但②並非整年保證貸餘，而且漏掉③。"
+        "teacher": "**①正確、②不一定正確**，而且漏掉正確的③，所以這組不成立。",
+        "elementary": "第一句對，但第二句不能保證，還少了第三句。",
+        "reason": "**①正確、②不一定正確**，而且漏掉正確的③，所以這組不成立。"
       },
       "D": {
         "isCorrect": true,
-        "teacher": "①和③均是期初／期末調整後狀態，②年度中不保證，故選D。",
-        "elementary": "第一和第三句才對。",
-        "reason": "①和③均是期初／期末調整後狀態，②年度中不保證，故選D。"
+        "teacher": "**①、③正確**：期初承接上年期末，期末看調整後餘額；②是年度中，不保證一直貸餘。",
+        "elementary": "剛開年接著去年整理好的帳，年底再重新整理，所以第一、第三句對。",
+        "reason": "**①、③正確**：期初承接上年期末，期末看調整後餘額；②是年度中，不保證一直貸餘。"
       }
     },
     "accounting": {
@@ -121,40 +121,34 @@
       "title": "解題步驟",
       "steps": [
         {
-          "title": "整理題意",
-          "content": "X1、X2年末應收帳款借餘500000與600000；排除信用損失率為零，問X2年初、年度中、期末調整後的備抵損失餘額方向。",
-          "why": "避免只看選項猜答案。",
-          "kind": "given"
-        },
-        {
-          "title": "確定適用觀念",
-          "content": "備抵損失為應收帳款抵銷科目；核銷借記備抵、估列貸記備抵。",
-          "why": "由課程定義判斷，而非憑直覺。",
-          "kind": "concept"
-        },
-        {
-          "title": "依題目推論（1）",
-          "content": "①正確：X1年終調整後的備抵貸餘承接至X2年初。",
-          "why": "去年年底預留了可能收不回的款項，新年一開始會沿用。中間可能用掉一些，到年終再重新計算。第一句和第三句對。",
+          "title": "先分三個時點",
+          "content": "①期初；②年度中；③期末調整後。",
+          "why": "同一科目在不同時點，餘額可能不同。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（2）",
-          "content": "②錯：年度中若核銷壞帳，備抵可變借餘。",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "判斷①",
+          "content": "期初承接上一年底調整後的備抵貸餘，①正確。",
+          "why": "官方說明開始日是本年度交易發生前的時點。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（3）",
-          "content": "③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。 因此①③、選D。 首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "判斷②",
+          "content": "核銷壞帳借記備抵，年度中不保證一直貸餘，②不成立。",
+          "why": "別把通常餘額誤當成任何時間都一定如此。",
           "kind": "reasoning"
         },
         {
-          "title": "對照候選及待查疑點",
-          "content": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
-          "why": "本題待官方答案與教材獨立查核。",
-          "kind": "answer"
+          "title": "判斷③",
+          "content": "排除損失率為零，期末調整後備抵為貸餘，③正確。",
+          "why": "原題已限定期末調整後，並排除零損失率。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對應選項",
+          "content": "**①、③ → D**。",
+          "why": "A含錯誤②；B漏①；C含②且漏③。",
+          "kind": "reasoning"
         }
       ],
       "originalImageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
@@ -242,8 +236,103 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "contentReview20261023": {
+      "status": "PASS_LIMITED_CORE_EXPLANATION",
+      "scope": "原圖題意、四選項老師與小學生說明、官方確認說明、逐步推論、無計算自動隱藏",
+      "method": "同一AI已知答案後複核，不是第三方盲解",
+      "textbookAndUiReview": "PENDING",
+      "releaseApproved": false
+    },
+    "officialExplanationIntegration": {
+      "status": "INTEGRATED_DRAFT",
+      "checkedAt": "2026-10-23",
+      "sourcePage": 1,
+      "imageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+      "reviewType": "POST_ANSWER_REVIEW_NOT_BLIND",
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
-  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60",
+  "revisionHistory": [
+    {
+      "date": "2026-10-23",
+      "reason": "官方確認說明整合到主解說；保留舊解說及答案，不宣稱重新盲解",
+      "previousTeacherSummary": "①正確：X1年終調整後的備抵貸餘承接至X2年初。②錯：年度中若核銷壞帳，備抵可變借餘。③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。因此①③、選D。首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
+      "previousElementarySummary": "去年年底預留了可能收不回的款項，新年一開始會沿用。中間可能用掉一些，到年終再重新計算。第一句和第三句對。",
+      "previousStepByStep": {
+        "questionId": "115-09-2-06",
+        "subject": "會計學",
+        "questionNumber": 6,
+        "answerCandidate": "D",
+        "aiAnswer": "D",
+        "needsReview": true,
+        "reviewReason": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
+        "hasSteps": true,
+        "hasExamCalculation": false,
+        "title": "解題步驟",
+        "steps": [
+          {
+            "title": "整理題意",
+            "content": "X1、X2年末應收帳款借餘500000與600000；排除信用損失率為零，問X2年初、年度中、期末調整後的備抵損失餘額方向。",
+            "why": "避免只看選項猜答案。",
+            "kind": "given"
+          },
+          {
+            "title": "確定適用觀念",
+            "content": "備抵損失為應收帳款抵銷科目；核銷借記備抵、估列貸記備抵。",
+            "why": "由課程定義判斷，而非憑直覺。",
+            "kind": "concept"
+          },
+          {
+            "title": "依題目推論（1）",
+            "content": "①正確：X1年終調整後的備抵貸餘承接至X2年初。",
+            "why": "去年年底預留了可能收不回的款項，新年一開始會沿用。中間可能用掉一些，到年終再重新計算。第一句和第三句對。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "依題目推論（2）",
+            "content": "②錯：年度中若核銷壞帳，備抵可變借餘。",
+            "why": "承接前一個判斷，繼續驗證題幹條件。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "依題目推論（3）",
+            "content": "③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。 因此①③、選D。 首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
+            "why": "承接前一個判斷，繼續驗證題幹條件。",
+            "kind": "reasoning"
+          },
+          {
+            "title": "對照候選及待查疑點",
+            "content": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
+            "why": "本題待官方答案與教材獨立查核。",
+            "kind": "answer"
+          }
+        ],
+        "originalImageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+        "independentTeachingQA": "PENDING",
+        "officialFinalVerified": true,
+        "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+      },
+      "previousAnswerComparison": {
+        "candidate": "D",
+        "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
+        "officialFinalCorrectionVerified": true,
+        "notice": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
+        "initialImageBasedAnswer": "B",
+        "correctedAfterCandidateReview": "D",
+        "candidateProvenance": {
+          "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+          "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+          "officialRevisionChecked": false
+        },
+        "conflictWarningRequired": true,
+        "independentSolveScope": "FIRST_PASS_DIFFERED_PENDING_ADJUDICATION",
+        "pendingWarning": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+        "officialAnswer": "D",
+        "officialEvidenceFile": "official-final-evidence-20261023.json"
+      }
+    }
+  ]
 }

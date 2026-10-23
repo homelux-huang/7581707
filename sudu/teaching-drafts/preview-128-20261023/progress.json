@@ -2833,5 +2833,26 @@
       "115-09-2-28"
     ],
     "note": "官方來源核對完成不等於完整教學驗收；保留所有既有教學疑點、警示與禁止部署。"
+  },
+  "officialExplanationIntegration20261023": {
+    "integratedIds": [
+      "115-09-2-06",
+      "115-09-2-28",
+      "115-09-2-44"
+    ],
+    "coreContentLimitedPassIds": [
+      "115-09-2-06",
+      "115-09-2-44"
+    ],
+    "disputeRetainedIds": [
+      "115-09-1-07",
+      "115-09-1-33",
+      "115-09-2-28"
+    ],
+    "integrityAuditQuestionCount": 128,
+    "integrityAuditErrors": 0,
+    "fullyAcceptedIncrement": 0,
+    "method": "已知答案後複核，非第三方盲解；書目與UI仍待核對",
+    "deploy": false
   }
 }

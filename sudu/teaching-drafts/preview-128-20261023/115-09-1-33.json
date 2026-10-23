@@ -60,7 +60,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+      "officialIssueExplanation": "官方現行答案已核實，商管專一公告未提出疑義；剩餘阻塞為教材定義及教學解釋，非缺少官方答案。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -224,6 +224,13 @@
       "fullIndependentQaAccepted": false,
       "studentReleaseApproved": false,
       "auditDocument": "OFFICIAL_BLOCKER_TEACHING_ADJUDICATION_20261023.md"
+    },
+    "disputeResearch20261023": {
+      "url": "https://developer.bitcoin.org/devguide/transactions.html",
+      "finding": "Bitcoin交易文件以簽章腳本與公鑰驗證描述交易授權；不可將雜湊還原誤稱解密。",
+      "officialAnswerAlreadyVerified": true,
+      "remainingBlocker": "教科書用語與技術定義對照尚未解決",
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

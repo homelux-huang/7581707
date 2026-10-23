@@ -61,7 +61,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+      "officialIssueExplanation": "官方現行答案已核實，商管專一公告未提出疑義；剩餘阻塞為教材定義及教學解釋，非缺少官方答案。",
       "reviewResearch": "https://www.tej.com.tw/tejdoc/db-document/tw/wim1a.html",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
@@ -227,6 +227,13 @@
       "fullIndependentQaAccepted": false,
       "studentReleaseApproved": false,
       "auditDocument": "OFFICIAL_BLOCKER_TEACHING_ADJUDICATION_20261023.md"
+    },
+    "disputeResearch20261023": {
+      "url": "https://www.tej.com.tw/tejdoc/db-document/tw/wim4.html",
+      "finding": "TEJ財務槓桿欄位說明納入特別股相關固定成本；仍需高職教材定義。",
+      "officialAnswerAlreadyVerified": true,
+      "remainingBlocker": "教科書用語與技術定義對照尚未解決",
+      "releaseApproved": false
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
