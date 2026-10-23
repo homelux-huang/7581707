@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "year": 115,
   "generatedAt": "2026-10-23",
-  "status": "UI_INTEGRATION_PENDING",
+  "status": "FOUR_115_MATH_B_STUDENT_QA_APPROVED",
   "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key.",
   "items": [
     {
       "year": 115,
       "questionId": "115-00-MB-02",
-      "status": "QA_PENDING_UI",
+      "status": "STUDENT_QA_APPROVED",
       "questionBeforeReview": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
       "optionsBeforeReview": [
         "4",
@@ -31,7 +31,7 @@
     {
       "year": 115,
       "questionId": "115-00-MB-03",
-      "status": "QA_PENDING_UI",
+      "status": "STUDENT_QA_APPROVED",
       "questionBeforeReview": "已知直線 L₁：2x+3y=4 與直線 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)＝？",
       "optionsBeforeReview": [
         "(2, −2/3)",
@@ -54,7 +54,7 @@
     {
       "year": 115,
       "questionId": "115-00-MB-04",
-      "status": "QA_PENDING_UI",
+      "status": "STUDENT_QA_APPROVED",
       "questionBeforeReview": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
       "optionsBeforeReview": [
         "a>−2",
@@ -77,7 +77,7 @@
     {
       "year": 115,
       "questionId": "115-00-MB-09",
-      "status": "QA_PENDING_UI",
+      "status": "STUDENT_QA_APPROVED",
       "questionBeforeReview": "已知直線 L₁：4x+(a+5)y−10=0 通過點(a,1)，直線 L₂ 的斜率為 −1/2。若直線 L₃ 也通過點(a,1)，且與直線 L₂ 垂直，則 L₃ 的直線方程式為何？",
       "optionsBeforeReview": [
         "2x−y−1=0",
@@ -97,5 +97,13 @@
         "ui": "sudu/data/processed/115/review-evidence/115-00-MB-09-ui.json"
       }
     }
-  ]
+  ],
+  "approvalEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/39896725974",
+  "approvedQuestionIds": [
+    "115-00-MB-02",
+    "115-00-MB-03",
+    "115-00-MB-04",
+    "115-00-MB-09"
+  ],
+  "approvedAt": "2026-10-23"
 }
