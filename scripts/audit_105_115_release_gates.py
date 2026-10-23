@@ -71,6 +71,13 @@ def audit(year):
                     report["blockers"].append("sqlite_question_count_mismatch")
         except (sqlite3.DatabaseError, OSError) as exc:
             report["blockers"].append("sqlite_unreadable:"+type(exc).__name__)
+    # G5: a passing SQLite integrity check is not a two-pass import test.
+    # Require separately recorded idempotent import and SHA comparison evidence.
+    db_evidence=inv.get("sqlite") if isinstance(inv.get("sqlite"),dict) else {}
+    if db_evidence.get("reimportCount",0)<2:
+        report["blockers"].append("sqlite_idempotent_reimport_not_evidenced")
+    if db_evidence.get("shaMismatches") not in ([],0):
+        report["blockers"].append("sqlite_sha_mismatch_or_unverified")
     validation=load("VALIDATION.json")
     if validation and validation.get("integrationReady") is not True:
         report["blockers"].append("validation_not_release_ready")
