@@ -22,7 +22,7 @@
     "candidate": "B",
     "status": "MATCHES_CANDIDATE",
     "officialFinalCorrectionVerified": true,
-    "notice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+    "notice": "依既有官方現行最終標準答案與確認說明證據（official-final-evidence-20261023.json）已核實115年數學B第19題官方答案B；舊『未回讀』字樣屬當時歷史輪次，原文已留存QA修訂欄。本題教學完整QA、教材版次頁碼、實際V4 UI／RWD仍待驗收，尚未核准本批發布。",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
       "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
@@ -61,7 +61,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "數學B更正公告與最終解答待核對",
+      "officialIssueExplanation": "115年數學B第19題官方答案B與確認公告已核實（詳官方證據登錄），但獨立完整教學、教材版本頁碼及正式V4 UI驗收未完成。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -300,6 +300,19 @@
       "uiReview": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "MATH_B_19_25_INDEPENDENT_CALC_QA_20261023.md"
+    },
+    "officialFinalNoticeSync20261023": {
+      "status": "CURRENT_WORDING_CORRECTED_HISTORICAL_ROUND_PRESERVED",
+      "previousAnswerComparisonNotice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+      "previousSourceIssueExplanation": "數學B更正公告與最終解答待核對",
+      "historicalSolutionOfficialFinalStatusUnchanged": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS",
+      "verifiedRegistry": "official-final-evidence-20261023.json",
+      "officialAnswer": "B",
+      "sourcePdfDirectlyReDownloadedInThisBatch": false,
+      "teachingAndUiFullQa": "PENDING",
+      "studentReleaseApproved": false,
+      "releaseApproved": false,
+      "date": "2026-10-23"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
