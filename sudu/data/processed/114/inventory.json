@@ -3,7 +3,7 @@
   "expected": 205,
   "canonicalUnique": 205,
   "webpDrafts": 205,
-  "webpVisualQaPassed": 9,
+  "webpVisualQaPassed": 24,
   "missingImageIds": [],
   "missingFourTextOptionIds": [
     "114-00-C-30",
@@ -68,5 +68,6 @@
   },
   "answerOfficialImageMatchedWithoutPdfText": 5,
   "answerCandidatesMatchedAcrossTextAndImage": 205,
-  "officialCorrectionQaComplete": false
+  "officialCorrectionQaComplete": false,
+  "integrationReady": false
 }
