@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-25",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 25,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-25.webp",
+  "imageSha256": "c35665f575c84b35391ebeaf1e782e639754c419f0c9b35027e3b57c5373d51b",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接看原圖）",
+    "method": "同時打開本題 A-D 單題 WebP 及淡江大橋共用文章 WebP，逐張目視並重新核算 SHA256、無混題或缺少必要文章。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先據原圖與共用文章自行解題，再讀候選。原官方網站 2026-05-08 確認標準答案的公告已見，惟未直接回讀英文科最終標準答案 PDF 與疑義確認說明，仍待核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "Besides making ____ smooth, the bridge will also appeal to visitors with its special architectural style.",
+    "keyConditions": [
+      "commute between Tamsui and Bali",
+      "save about half an hour",
+      "making ___ smooth",
+      "visitors with architectural style"
+    ],
+    "reasoningFromOriginalImage": "橋梁改善兩地通勤，可讓交通流暢，故 making traffic flow smooth。其餘 air quality、water safety、local culture 雖是名詞，不能在此直接表示橋梁讓其『順暢』。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "段落前面說淡水與八里往返增加，大橋可節省通勤時間；**make + 受詞 + 形容詞** 的 **make traffic flow smooth（讓交通車流順暢）** 符合橋梁功能。後半句又說建築美感吸引遊客，代表文章在談**交通便利＋觀光吸引**兩個效益。",
+    "elementarySummary": "橋蓋好後，車子過河比較方便，不會那麼卡，這叫 **traffic flow smooth**，就是車流更順。它還很好看，能吸引遊客。",
+    "memory": "**commute + save travel time → smooth traffic flow**。",
+    "concept": "**traffic flow** 是車流，**smooth** 表順暢。句型 **make + object + adjective**：make traffic flow smooth＝讓車流順暢。不要因為空氣或文化同樣重要，就忽視上下文。",
+    "extension": "反向思考：如果文章在講裝淨水設備、改善河水品質，而不是通勤，才可能談 **water safety**，但也必須改寫為 improve water safety，不能直接用 make water safety smooth。",
+    "source": {
+      "originalExam": "115-00-E-25",
+      "originalImagePinnedSha256": "c35665f575c84b35391ebeaf1e782e639754c419f0c9b35027e3b57c5373d51b",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+          "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待回讀PDF和疑義說明",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "淡江大橋建設年份、最長紀錄等依115學年度考題文本，不等於當下官方工程進度或最新紀錄。"
+    },
+    "highlightTerms": [
+      "traffic flow",
+      "making ... smooth",
+      "save about half an hour"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**air quality** 是空氣品質，不是前文的跨河通勤主題；而且 make air quality smooth 也不是自然英文搭配。",
+        "elementary": "橋可以讓車好走，但不會說讓『空氣品質很順』。",
+        "reason": "**air quality** 是空氣品質，不是前文的跨河通勤主題；而且 make air quality smooth 也不是自然英文搭配。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**traffic flow** 車流，與通勤、節省旅行時間密切連結；making traffic flow smooth 意為讓交通順暢，正解。",
+        "elementary": "車子比較順，就是車流變順暢。",
+        "reason": "**traffic flow** 車流，與通勤、節省旅行時間密切連結；making traffic flow smooth 意為讓交通順暢，正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**water safety** 是用水或水域安全，與 make ... smooth 的搭配不合，也不是段落強調的效果。",
+        "elementary": "水安不安全不是這句在說的車流。",
+        "reason": "**water safety** 是用水或水域安全，與 make ... smooth 的搭配不合，也不是段落強調的效果。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**local culture** 是地方文化，能成為觀光主題，但『讓文化順暢』並非本文 bridge 的交通功能。",
+        "elementary": "文化可以有特色，但不是車子行駛順不順。",
+        "reason": "**local culture** 是地方文化，能成為觀光主題，但『讓文化順暢』並非本文 bridge 的交通功能。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "這座大橋除了讓交通更順暢，也會以特殊的建築風格吸引遊客。",
+      "passageTranslationZh": "淡江大橋自2019年開始興建，文章說今年準備投入使用。淡水與八里近年快速發展，兩地往返通勤者增加，所以需要大橋。文中說通車後往返兩地可節省約半小時。大橋不只能使交通車流順暢，也會以特殊建築美感吸引遊客。設計者為知名建築師札哈・哈蒂。文章描述它是臺灣第一座經由國際設計競賽選出的橋，將成為世界最長的單塔不對稱斜張橋。高200公尺的橋塔向天空伸展，好像舞者雙手舉起祈禱；橋的形狀與淡水河日落相映，非常醒目。遊客可以欣賞河岸景色。由於縮短交通時間並兼具美感，淡江大橋對交通及觀光都有重要作用，並將帶來便利與休閒利益。建設狀態、最長紀錄與數字均依115學年度題幹敘述，未以2026年最新工程公告獨立核實。",
+      "testedWord": "traffic flow",
+      "answerWord": "traffic flow",
+      "pronunciationIPA": "/ˈtræfɪk floʊ/",
+      "optionMeaningZh": {
+        "A": "空氣品質",
+        "B": "交通車流",
+        "C": "用水／水域安全",
+        "D": "地方文化"
+      },
+      "synonyms": {
+        "初級": [
+          "cars moving（車輛行進；粗略描述）"
+        ],
+        "中級": [
+          "movement of traffic（交通流動）"
+        ],
+        "高級": [
+          "vehicular circulation（車流運行；技術性）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "traffic jam（塞車；相關對照）"
+        ],
+        "中級": [
+          "congestion（交通壅塞）"
+        ],
+        "高級": [
+          "gridlock（嚴重交通癱瘓）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "car（汽車）"
+        ],
+        "中級": [
+          "commute（通勤）"
+        ],
+        "高級": [
+          "infrastructure（基礎建設）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "部分為片語改寫或概念對照，不可當作所有語境可直接替換的完全同／反義詞。",
+      "exampleEnglish": "The new road helps traffic flow more smoothly.",
+      "exampleChinese": "這條新道路能幫助車流行進得更順暢。",
+      "exampleHighlightedSurfaceForm": "traffic flow",
+      "exampleType": "自編非新聞英文例句",
+      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
