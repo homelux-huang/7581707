@@ -98,7 +98,61 @@
     },
     "relatedFormulaNotPartOfExamCalculation": "痛苦指數通常＝通膨率＋失業率；題目沒有實際百分比數據，屬概念判斷，hasExamCalculation=false。",
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-48",
+      "subject": "經濟學",
+      "questionNumber": 48,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①成本推動應是總供給減少，不是總需求減少；②痛苦指數由通膨率與失業率組合；③停滯性通膨高失業與高通膨並存；④需求拉動為總需求增加",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "AS總供給與AD總需求方向須區分；stagflation包含高通膨與高失業，不能混為景氣很好。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①說生產成本升高會造成總需求減少並推升物價，將成本推動的總供給AS左移誤寫成總需求AD減少，錯。",
+          "why": "工廠原料突然變貴，做東西更難，賣價可能提高，這是供給變少，不是大家突然不想買。痛苦指數看失業跟漲價；經濟不景氣又很會漲價叫停滯性通膨；大家搶著買、東西跟不上而漲價叫需求拉動。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②痛苦指數常由通膨率和失業率加總表示，對。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③停滯性通膨即高失業與高通膨並存，對。 ④需求拉動型通膨由總需求右移推升物價，對。 ②③④，故D。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D是②③④，三項均符合經濟學定義，且排除錯誤的①，故正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -107,7 +161,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

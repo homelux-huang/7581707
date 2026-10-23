@@ -96,7 +96,61 @@
     },
     "relatedFormulaNotPartOfExamCalculation": "實質GDP成長率＝(本年實質GDP－上年實質GDP)÷上年實質GDP×100%；原題無數據計算要求，hasExamCalculation=false。",
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-47",
+      "subject": "經濟學",
+      "questionNumber": 47,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "名目GDP受價格影響；實質GDP剔除物價變化；每人名目GDP與總實質GDP不同；技術進步與PPF曲線位移",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "實質GDP排除價格變動，名目GDP可能含通膨；PPF向外表示經濟生產能力擴張。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "經濟成長率衡量實際生產量成長，通常用實質GDP年增率而非受通膨影響的名目GDP；",
+          "why": "如果去年麵包100個、今年還是100個，但每個價錢變貴，收到的錢變多，不代表做了更多麵包。要比較經濟真的有沒有長大，應去掉漲價影響，看實質GDP。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "每人名目GDP又混入人口及物價因素。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "技術進步提高生產能力會讓生產可能曲線向外移，不是向內。 故B。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B以實質GDP年增率衡量，排除價格波動，較能呈現經濟實際產出變化，正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "09ae5d9666fb473f87aa693e197988fb0cc385aa607345e1b596d3df2debfb6b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -105,7 +159,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

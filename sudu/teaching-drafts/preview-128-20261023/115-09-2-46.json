@@ -97,7 +97,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-46",
+      "subject": "經濟學",
+      "questionNumber": 46,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "兩國兩商品；①兩種商品皆有絕對利益；②兩種商品皆有比較利益；③雙方仍可能貿易互利；④絕對利益是否推出雙重比較利益",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "李嘉圖比較利益原理與相對機會成本；生產力全面領先不等於所有商品都有相對優勢。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "絕對利益以生產效率或同樣資源的產量比較，一國可能兩種商品都較有效率，①對。",
+          "why": "甲國做麵包和衣服都比乙國快，表示甲國兩樣都做得有效率。但如果甲國做衣服時會少做很多麵包，而乙國做衣服犧牲的麵包比較少，兩邊各做自己放棄較少的東西，交換後仍可能都受益。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "比較利益看兩商品間的相對機會成本，在兩國兩商品且機會成本不同時，一國最多能在其中一商品有嚴格比較利益，②錯。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "即使一國兩項均有絕對利益，雙方仍可按比較利益分工互利，③對。 絕對利益不必然帶來所有商品的比較利益，④錯。 ①③→B。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B是①③。①一國可在兩項都有絕對利益，③兩國仍可按機會成本互相交換而獲益，兩者均正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -106,7 +160,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -5084,7 +5084,169 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|46": {
+      "questionId": "115-09-2-46",
+      "subject": "經濟學",
+      "questionNumber": 46,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "兩國兩商品；①兩種商品皆有絕對利益；②兩種商品皆有比較利益；③雙方仍可能貿易互利；④絕對利益是否推出雙重比較利益",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "李嘉圖比較利益原理與相對機會成本；生產力全面領先不等於所有商品都有相對優勢。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "絕對利益以生產效率或同樣資源的產量比較，一國可能兩種商品都較有效率，①對。",
+          "why": "甲國做麵包和衣服都比乙國快，表示甲國兩樣都做得有效率。但如果甲國做衣服時會少做很多麵包，而乙國做衣服犧牲的麵包比較少，兩邊各做自己放棄較少的東西，交換後仍可能都受益。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "比較利益看兩商品間的相對機會成本，在兩國兩商品且機會成本不同時，一國最多能在其中一商品有嚴格比較利益，②錯。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "即使一國兩項均有絕對利益，雙方仍可按比較利益分工互利，③對。 絕對利益不必然帶來所有商品的比較利益，④錯。 ①③→B。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B是①③。①一國可在兩項都有絕對利益，③兩國仍可按機會成本互相交換而獲益，兩者均正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|47": {
+      "questionId": "115-09-2-47",
+      "subject": "經濟學",
+      "questionNumber": 47,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "名目GDP受價格影響；實質GDP剔除物價變化；每人名目GDP與總實質GDP不同；技術進步與PPF曲線位移",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "實質GDP排除價格變動，名目GDP可能含通膨；PPF向外表示經濟生產能力擴張。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "經濟成長率衡量實際生產量成長，通常用實質GDP年增率而非受通膨影響的名目GDP；",
+          "why": "如果去年麵包100個、今年還是100個，但每個價錢變貴，收到的錢變多，不代表做了更多麵包。要比較經濟真的有沒有長大，應去掉漲價影響，看實質GDP。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "每人名目GDP又混入人口及物價因素。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "技術進步提高生產能力會讓生產可能曲線向外移，不是向內。 故B。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "B以實質GDP年增率衡量，排除價格波動，較能呈現經濟實際產出變化，正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "09ae5d9666fb473f87aa693e197988fb0cc385aa607345e1b596d3df2debfb6b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "經濟學|48": {
+      "questionId": "115-09-2-48",
+      "subject": "經濟學",
+      "questionNumber": 48,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①成本推動應是總供給減少，不是總需求減少；②痛苦指數由通膨率與失業率組合；③停滯性通膨高失業與高通膨並存；④需求拉動為總需求增加",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "AS總供給與AD總需求方向須區分；stagflation包含高通膨與高失業，不能混為景氣很好。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①說生產成本升高會造成總需求減少並推升物價，將成本推動的總供給AS左移誤寫成總需求AD減少，錯。",
+          "why": "工廠原料突然變貴，做東西更難，賣價可能提高，這是供給變少，不是大家突然不想買。痛苦指數看失業跟漲價；經濟不景氣又很會漲價叫停滯性通膨；大家搶著買、東西跟不上而漲價叫需求拉動。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②痛苦指數常由通膨率和失業率加總表示，對。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③停滯性通膨即高失業與高通膨並存，對。 ④需求拉動型通膨由總需求右移推升物價，對。 ②③④，故D。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D是②③④，三項均符合經濟學定義，且排除錯誤的①，故正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 79
+  "readyQuestionCount": 82
 };
