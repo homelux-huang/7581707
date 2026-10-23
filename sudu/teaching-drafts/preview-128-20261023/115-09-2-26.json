@@ -133,6 +133,78 @@
       "matchingOption": "D",
       "commonMistake": "只得90忘乘10，或市場函數未將20P係數乘10。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-26",
+      "subject": "經濟學",
+      "questionNumber": 26,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "每家 Qs＝−10＋20P；同樣廠商數 N＝10；市場價格 P＝5",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "Q_市場＝N×Qs(P)＝10×(−10＋20P)",
+          "why": "將相同價格下各家廠商的供給量水平加總，求整體市場供給。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "每家 Qs＝−10＋20×5",
+          "why": "以題目給定市場價格5代入單一家供給函數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "20×5＝100",
+          "why": "先計算價格變動項。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "每家 Qs＝−10＋100＝90",
+          "why": "每家在P=5下供給90單位。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "Q_市場＝90×10＝900",
+          "why": "市場有十家同樣供給者，加總其數量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "亦可 Q_市場＝10(−10＋20P)＝−100＋200P",
+          "why": "整條市場供給函數由每家函數水平加總。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "P=5 ⇒ Q_市場＝−100＋200×5＝900",
+          "why": "用市場函數再次驗算數值一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "900；單位：荔枝供給數量單位（題幹未明訂斤／公斤）；選項：D",
+          "why": "只得90忘乘10，或市場函數未將20P係數乘10。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "5b4426ed72ed5fa16e65625976465dcfc771d1c34dd3dab012e3eaf5b7cf5cbb",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -143,7 +215,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

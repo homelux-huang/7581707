@@ -141,6 +141,78 @@
       "matchingOption": "D",
       "commonMistake": "漏展開立方的一次項或誤把原式3與2直接當b,c。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-11",
+      "subject": "數學 B",
+      "questionNumber": 11,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "f(x)=4(x+2)³+b(x+2)²+c(x+2)+d；g(x)=4x³+3x²+2x+1；f≡g",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "設 t=x+2，x=t−2，展開 g(t−2)，按同次方比較係數。",
+          "why": "換元後比較同次方係數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "設t=x+2 ⇒ x=t−2",
+          "why": "t 是將(x+2)視為單一變數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "g(t−2)=4(t−2)³+3(t−2)²+2(t−2)+1",
+          "why": "把g中的x一律換成t−2。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "=4(t³−6t²+12t−8)+3(t²−4t+4)+2t−4+1",
+          "why": "完整展開立方與平方。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "=4t³+(−24+3)t²+(48−12+2)t+(−32+12−4+1)",
+          "why": "依相同次方合併係數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "=4t³−21t²+38t−23 ⇒ b=−21、c=38",
+          "why": "恆等多項式相同次方係數一致。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "b+c=−21+38=17（D）",
+          "why": "求題目指定的兩係數和。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "17；單位：無單位；選項：D",
+          "why": "漏展開立方的一次項或誤把原式3與2直接當b,c。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "c2f2c57d0d65abc757c35e560f6ed8ce1114a452f9bae59e174e904fbb047f92",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +222,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

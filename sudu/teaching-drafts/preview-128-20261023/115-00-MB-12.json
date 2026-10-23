@@ -136,6 +136,78 @@
       "matchingOption": "D",
       "commonMistake": "把只調整左邊當成等式兩邊都乘1000。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-12",
+      "subject": "數學 B",
+      "questionNumber": 12,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "abc≠0；2x+3y=4、ax+by=c有無限多組解",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "無限解 ⇒ (a,b,c)=k(2,3,4)，k≠0；代回變更後聯立式，檢查相交/平行。",
+          "why": "利用聯立式的線性相依性與消元判斷解數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a=2k，b=3k，c=4k，k≠0",
+          "why": "無限解代表同一直線且k不為零。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A：1000k(2x+3y)=4k ⇒2x+3y=0.004，平行無解",
+          "why": "左側倍數與右側不相同。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "B：k(2x+3y)=4000k ⇒2x+3y=4000，平行無解",
+          "why": "右側倍數與左側不相同。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C/D：1000(2k)x+(3k)y=4k ⇒2000x+3y=4",
+          "why": "只有x係數增加1000倍。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "與2x+3y=4相減：1998x=0 ⇒x=0",
+          "why": "兩條不平行線的消元可求出唯一x。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "3y=4 ⇒ y=4/3，唯一解，D正確",
+          "why": "代回求y，證明是唯一解。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D；唯一解 (0,4/3)；單位：座標無單位；選項：D",
+          "why": "把只調整左邊當成等式兩邊都乘1000。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "ee793a1135e53ef1080af2b67724d9672f74028372f7ba5b607525886a621cb2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -145,7 +217,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

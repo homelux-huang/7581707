@@ -136,6 +136,78 @@
       "matchingOption": "A",
       "commonMistake": "誤把斜率陡峭程度或點的高度直接當彈性；忽略直線過原點的特性。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-27",
+      "subject": "經濟學",
+      "questionNumber": 27,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "S1、S2皆為通過原點的正斜率直線；E、F屬S1；G、H屬S2；縱軸P、橫軸Q",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "Es＝(dQ/dP)×(P/Q)",
+          "why": "點彈性比較數量與價格的相對變化，與曲線是否通過原點有關。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "通過原點的直線供給：P＝kQ，k＞0",
+          "why": "價格與數量成正比，k表示圖上正斜率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "將式子改寫：Q＝P/k",
+          "why": "彈性公式需要數量對價格的變動率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "dQ/dP＝1/k",
+          "why": "Q對P求導得到固定斜率倒數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "P/Q＝k",
+          "why": "由P=kQ，非原點正數處兩側除Q可得。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "Es＝(1/k)×k＝1",
+          "why": "無論是S1或S2，也不論點在哪，彈性都為1。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "Es(E)=Es(F)=Es(G)=Es(H)=1 ⇒ A",
+          "why": "四點皆單位彈性，因此E與G相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "四點供給彈性均為1，選A；單位：無單位（彈性係數）；選項：A",
+          "why": "誤把斜率陡峭程度或點的高度直接當彈性；忽略直線過原點的特性。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3c13bf5dc3ed5f81b7d8c0e667f5596f5a169ead9df78360ae82451e8a1e79c4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -146,7 +218,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

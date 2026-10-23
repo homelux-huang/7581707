@@ -146,6 +146,84 @@
       "matchingOption": "B",
       "commonMistake": "把 2026° 的 226° 當負同界角；或忽略 tan(a−b) 的負號。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-07",
+      "subject": "數學 B",
+      "questionNumber": 7,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "a 為 2026° 最大負同界角；b 為 −115° 最小正同界角；點座標 (tan(a−b),sin(a+b))",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "同界角 θ+360°k；由角所在象限判斷三角函數正負：tan第二、第四象限負，sin第二象限正",
+          "why": "同界角縮減與正負判斷，不須查實際 tan/sin 小數值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2026°−5×360°=226°",
+          "why": "先把 2026 度減去完整的五圈。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a=226°−360°=−134°",
+          "why": "在所有負同界角中，−134° 最大（最接近0）。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "b=−115°+360°=245°",
+          "why": "在所有正同界角中，245° 最小。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a−b=−134°−245°=−379°；−379°+360°=−19°",
+          "why": "化成便於判斷符號的同界角。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "tan(−19°)<0",
+          "why": "−19° 位於第四象限，正切值為負。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a+b=−134°+245°=111°；sin111°>0",
+          "why": "111° 位於第二象限，正弦值為正。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(tan(a−b),sin(a+b))=(負,正)，第二象限",
+          "why": "套用座標象限正負定義。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "第二象限；單位：角度單位 °；座標三角函數值無單位；選項：B",
+          "why": "把 2026° 的 226° 當負同界角；或忽略 tan(a−b) 的負號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -155,7 +233,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

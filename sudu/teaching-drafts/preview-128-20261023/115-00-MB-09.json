@@ -137,6 +137,72 @@
       "matchingOption": "A",
       "commonMistake": "垂直誤用同斜率或正倒數；a=1 未先求就亂帶點。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-09",
+      "subject": "數學 B",
+      "questionNumber": 9,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "L₁:4x+(a+5)y−10=0 通過(a,1)；L₂斜率 m₂=−1/2；L₃過(a,1)，L₃⊥L₂",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "通過(x₁,y₁)的點斜式 y−y₁=m(x−x₁)；垂直 m₂m₃=−1",
+          "why": "先求已知點，再用垂直的負倒數關係建立直線方程式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "4a+(a+5)(1)−10=0",
+          "why": "因(a,1)在L₁上，座標需滿足L₁方程式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "5a+5−10=0 ⇒ 5a−5=0 ⇒ a=1",
+          "why": "整理得點座標(1,1)。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(−1/2)×m₃=−1 ⇒ m₃=2",
+          "why": "垂直直線的斜率互為負倒數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "y−1=2(x−1)",
+          "why": "使用通過(1,1)、斜率2的點斜式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "y−1=2x−2 ⇒ y=2x−1 ⇒ 2x−y−1=0",
+          "why": "整理至題目選項中的一般式，得 A。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "2x−y−1=0；單位：無單位（座標軸單位未指定）；選項：A",
+          "why": "垂直誤用同斜率或正倒數；a=1 未先求就亂帶點。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -146,7 +212,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

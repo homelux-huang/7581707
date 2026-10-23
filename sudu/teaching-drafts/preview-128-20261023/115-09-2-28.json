@@ -140,6 +140,84 @@
       "matchingOption": "UNRESOLVED_D_VS_A",
       "commonMistake": "未說明預算就把『MU/P相等』當全域最大；或只找個別總效用峰值卻忽略題目『考慮價格』的命題暗示。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-28",
+      "subject": "經濟學",
+      "questionNumber": 28,
+      "answerCandidate": "A",
+      "aiAnswer": "D",
+      "needsReview": true,
+      "reviewReason": "題幹未列預算但候選解以等邊際效用／價格相等認定A；未設預算下D總效用較高。需官方及教材檢視。",
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "蛋餅價格40元，總效用20、24、25、23；豆沙包價格50元，總效用5、7、8、8；三明治價格60元，總效用15、21、18、12；原題未給總預算金額",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "MU_n＝TU_n−TU_(n−1)；等邊際原則 MU蛋餅/40＝MU豆沙包/50＝MU三明治/60（通常需預算約束）",
+          "why": "將總效用換成邊際效用，比較每元效用；同時檢查缺少預算約束時的總效用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "蛋餅 MU1=20，MU2=24−20=4，MU3=25−24=1，MU4=23−25=−2",
+          "why": "同商品每增加一份的效用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "豆沙包 MU1=5，MU2=7−5=2，MU3=8−7=1，MU4=8−8=0",
+          "why": "先算出各單位的新增效用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "三明治 MU1=15，MU2=21−15=6，MU3=18−21=−3，MU4=12−18=−6",
+          "why": "第3份之後效用變低。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A(2,1,2)：4/40＝5/50＝6/60＝0.10",
+          "why": "候選A滿足等邊際效用／價格比例相等，符合常見消費均衡題意。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A花費2×40+1×50+2×60＝250元；TU=24+5+21=50",
+          "why": "檢查A的總花費和總效用，但250元並非題目提供預算，不可當成已知。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D(3,3,2)：TU=25+8+21=54；花費3×40+3×50+2×60=390元",
+          "why": "若無預算上限，D在表列數量中各商品TU均為最大或不降低，總TU54高於A50。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "D最後MU/P＝1/40=0.025、1/50=0.02、6/60=0.10",
+          "why": "D不是等邊際比例相等；因此兩種答案分歧源於是否預設受限預算與均衡原則。",
+          "kind": "formula"
+        },
+        {
+          "title": "比較不同推導並等待核對",
+          "content": "原圖初解D（無預算TU最大54）；候選A（每元MU比率均0.10）有教科書均衡解釋，待官方／教材核對；單位：效用單位（題幹未定義）／新臺幣元；選項：UNRESOLVED_D_VS_A",
+          "why": "未說明預算就把『MU/P相等』當全域最大；或只找個別總效用峰值卻忽略題目『考慮價格』的命題暗示。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "914f28cf23ad62958e9a70e85b6e1cd27bf6b9f9b04849ec8b6f84fe99d6dbef",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +228,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "blockingReason": "題幹未列預算但候選解以等邊際效用／價格相等認定A；未設預算下D總效用較高。需官方及教材檢視。"
+    "blockingReason": "題幹未列預算但候選解以等邊際效用／價格相等認定A；未設預算下D總效用較高。需官方及教材檢視。",
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

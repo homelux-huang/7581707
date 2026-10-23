@@ -137,6 +137,72 @@
       "matchingOption": "C",
       "commonMistake": "把有放回當不放回；算兩次得4/9；用補事件19/27卻忘了題目問『都沒抽到甲』。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-10",
+      "subject": "數學 B",
+      "questionNumber": 10,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "籤筒甲、乙、丙各一支，等機率；每次抽後將籤放回；抽取三次，求三次全非甲",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "P(單次非甲)=2/3；獨立三次全非甲=(2/3)³",
+          "why": "有放回的等可能獨立抽樣，計算連續多次發生相同類型事件的機率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "非甲籤=乙、丙，共2支；總數=3支",
+          "why": "單次抽中非甲的有利結果2種，總可能3種。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "P(單次沒有甲)=2/3",
+          "why": "每支籤被抽到的機率相等。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "因每次抽後放回，三次獨立、每次機率維持2/3",
+          "why": "放回讓籤筒內容不變，事件機率可相乘。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "P(三次皆非甲)=(2/3)×(2/3)×(2/3)=2³/3³=8/27",
+          "why": "三次『都』成立且獨立，取三事件機率乘積。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "選 C；核對補事件 P(至少一次甲)=1−8/27=19/27",
+          "why": "辨識 D 是另一個事件，避免誤選。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "8/27；單位：機率（無單位）；選項：C",
+          "why": "把有放回當不放回；算兩次得4/9；用補事件19/27卻忘了題目問『都沒抽到甲』。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3c06c677c7362cbf22e792cdcbd990a584129b929d25cd63efb98037a390b7c4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -146,7 +212,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
