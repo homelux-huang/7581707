@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-15",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 15,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-15.webp",
+  "imageSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪實際讀取WebP）",
+    "method": "逐題親自目視既有原始單題WebP、題號、四選項、分錄、表格；原始圖檔bytes SHA256已重算吻合固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [],
+    "correctionHistory": "初解D，讀候選答案C後重新看原圖與解題修正，保留首輪失誤，獨立QA待核實。"
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": "C",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": true,
+    "independentSolveScope": "FIRST_PASS_DIFFERENCE_NOT_BLIND_PASSED"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "單位成本50元、期初200件、進貨300件、退貨20件、銷280件、銷退30件，期末實盤210件；判①兩制銷貨成本13500②期末存貨10500③永續才記盤『盈』1000。",
+    "keyConditions": [
+      "200+300−20可供售件數",
+      "銷280、銷退30",
+      "實盤210、每件50元"
+    ],
+    "reasoningFromOriginalImage": "可供售480件、售出淨250件、帳存230件，但實盤210件，差額20件是**盤虧**，不是題目③的**盤盈**，所以③錯。定期盤存銷貨成本=(480−210)×50=**13500元**；永續平時銷貨成本250×50=12500，依本題高中課程的期末盤虧調整1000後合計**13500元**。期末存貨兩制均210×50=**10500元**。因此①②正確、選C。首輪誤讀③『盤盈』並未將盤虧歸入本題最終成本，初解D，讀候選後修正，教材盤虧結轉方式仍待獨立QA。",
+    "reasoningRecordedBeforeCandidateLookup": false,
+    "mathematicalResult": "①②正確；銷貨成本13500元、存貨10500元、盤虧1000元",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "可供售480件、售出淨250件、帳存230件，但實盤210件，差額20件是**盤虧**，不是題目③的**盤盈**，所以③錯。定期盤存銷貨成本=(480−210)×50=**13500元**；永續平時銷貨成本250×50=12500，依本題高中課程的期末盤虧調整1000後合計**13500元**。期末存貨兩制均210×50=**10500元**。因此①②正確、選C。首輪誤讀③『盤盈』並未將盤虧歸入本題最終成本，初解D，讀候選後修正，教材盤虧結轉方式仍待獨立QA。",
+    "elementarySummary": "照帳應有230件，實際只有210件，少20件就是盤虧不是盤盈。用每件50元算，短少1000元。按這題的年終處理，成本是13500，還留在店裡的貨是10500。",
+    "memory": "**帳230、實210→盤虧1000；兩制期末存貨10500，成本13500；①②。**",
+    "concept": "定期盤存由實盤決定期末數並倒算成本；永續追蹤每次進銷貨，期末需按差額調整存貨盤虧與成本。",
+    "extension": "反向思考：若實盤由210變250件，與帳面230比較會是盤盈還是盤虧？",
+    "source": {
+      "originalExam": "115-09-2-15",
+      "originalImagePinnedSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學官方最終標準答案及更正待核對",
+      "relatedTextbookResearch": [
+        "https://0800280280.sme.gov.tw/accounting/run.php?file=detail&id=339&name=kw",
+        "https://www.pntcv.ntct.edu.tw/ischool/public/resource_view/open.php?file=31D188B78C66A4D125B335B4E7E8C59D.pdf"
+      ]
+    },
+    "highlightTerms": [
+      "可供售480件",
+      "帳存230件",
+      "實存210件",
+      "盤虧1000",
+      "期末存貨10500",
+      "①②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①依本題年終盤虧調整成立，但還漏②期末存貨都10500元。",
+        "elementary": "還有第二句也算對。",
+        "reason": "①依本題年終盤虧調整成立，但還漏②期末存貨都10500元。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "③稱盤盈1000，但實際是盤虧1000，不能選。",
+        "elementary": "少貨不是多貨。",
+        "reason": "③稱盤盈1000，但實際是盤虧1000，不能選。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "①兩制按題目期末成本處理均13500、②均10500；③盤盈方向錯，故C。",
+        "elementary": "第一、二句對。",
+        "reason": "①兩制按題目期末成本處理均13500、②均10500；③盤盈方向錯，故C。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "②對但③錯在盤盈／盤虧顛倒；初解D已保留待複核。",
+        "elementary": "第三句把少20件說成多20件。",
+        "reason": "②對但③錯在盤盈／盤虧顛倒；初解D已保留待複核。"
+      }
+    },
+    "accounting": {
+      "principle": "定期盤存由實盤決定期末數並倒算成本；永續追蹤每次進銷貨，期末需按差額調整存貨盤虧與成本。",
+      "accounts": [
+        "存貨",
+        "進貨",
+        "進貨退出",
+        "銷貨成本",
+        "存貨盤虧"
+      ],
+      "journalEntry": "永續盤存銷出淨250件時借銷貨成本12500貸存貨12500；期末實盤少20件，借『盤虧損失／成本調整1000』貸存貨1000。具體列報或成本歸類依採用教材版本複核。",
+      "calculation": "逐步見考題計算式"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "200+300−20可供售件數",
+        "銷280、銷退30",
+        "實盤210、每件50元"
+      ],
+      "formula": "可供售=期初+進貨−退貨；帳存=可供售−淨銷；盤虧=(帳存−實盤)×單位成本。",
+      "formulaPurpose": "定期盤存由實盤決定期末數並倒算成本；永續追蹤每次進銷貨，期末需按差額調整存貨盤虧與成本。",
+      "substitutionAndSteps": [
+        {
+          "formula": "可供售=200+300−20=480件",
+          "why": "總進貨扣進貨退出。"
+        },
+        {
+          "formula": "淨銷售=280−30=250件",
+          "why": "銷貨退回加回存貨。"
+        },
+        {
+          "formula": "帳面期末=480−250=230件",
+          "why": "永續盤存應有數量。"
+        },
+        {
+          "formula": "實盤210<帳230 ⇒盤虧20件×50=1000元",
+          "why": "非盤盈。"
+        },
+        {
+          "formula": "定期成本=(480−210)×50=13500元",
+          "why": "以實盤期末直接推銷貨成本。"
+        },
+        {
+          "formula": "永續平時銷貨成本=250×50=12500元",
+          "why": "出貨即結轉成本。"
+        },
+        {
+          "formula": "依本題教學分類年終盤虧1000調整後成本12500+1000=13500元",
+          "why": "對比①；仍需確認教材之盤虧列報政策。"
+        },
+        {
+          "formula": "兩制期末存貨=210×50=10500元",
+          "why": "期末資產按實盤數。"
+        },
+        {
+          "formula": "①②正確、③將盤虧誤作盤盈，選C",
+          "why": "與候選一致，但首次誤解已記錄。"
+        }
+      ],
+      "result": "①②正確；銷貨成本13500元、存貨10500元、盤虧1000元",
+      "unit": "新臺幣元；數量件",
+      "matchingOption": "C",
+      "commonMistake": "誤把盤虧當盤盈，或未處理年終盤虧調整。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "firstPassErrorNeedsIndependentReview": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
