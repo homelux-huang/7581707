@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-05",
+  "year": 115,
+  "subject": "商業概論",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-05.webp",
+  "imageSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始 WebP）",
+    "method": "逐張開啟既有 GitHub 單題 WebP 確認題號、題幹與四選項；逐檔 SHA256 已重新計算且與凍結清單相符",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_WITH_TEACHING_CAUTION",
+    "officialFinalCorrectionVerified": false,
+    "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。串流影音有不同電子商務分類方法，此題按考試教材的數位內容分類解釋。",
+    "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "conceptualIssue": "串流影音有不同電子商務分類方法，此題按考試教材的數位內容分類解釋。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "commercial-management-concept",
+    "keyConditions": [
+      "①人力銀行求職媒合",
+      "②電子書下載購買",
+      "③影音平台付費觀看比賽影片",
+      "④網路訂機票與飯店住宿"
+    ],
+    "reasoningFromOriginalImage": "判斷電子商務**數位化商品**與**線上服務商品**，不要只看交易在網路發生。②電子書與③付費影音主要交付數位內容；①人力銀行做媒合、④訂票訂房做預約交易，主要屬線上服務。D把③列數位化商品、④列線上服務，符合此考題分類；部分串流商業模式也兼具服務性，這是課程分類界線而非普世法規。",
+    "officialFinalStatus": "PENDING_OFFICIAL_RECHECK",
+    "hasExamCalculation": false
+  },
+  "teaching": {
+    "teacherSummary": "判斷電子商務**數位化商品**與**線上服務商品**，不要只看交易在網路發生。②電子書與③付費影音主要交付數位內容；①人力銀行做媒合、④訂票訂房做預約交易，主要屬線上服務。D把③列數位化商品、④列線上服務，符合此考題分類；部分串流商業模式也兼具服務性，這是課程分類界線而非普世法規。",
+    "elementarySummary": "花錢讀電子書、看線上影片，是拿到手機裡的內容；用求職網站、訂飯店網站，是請網站幫忙找機會或訂服務。因此③和④這一組配對對。",
+    "memory": "**電子書／付費影片＝數位內容；求職媒合／訂票訂房＝線上服務**。",
+    "concept": "數位化商品著重內容本身；線上服務提供搜尋、媒合、預訂；依課程主要交易標的分類。",
+    "extension": "反向題：在線上訂一個實體行李箱，是否買了『數位化商品』？付費使用雲端編輯軟體應依內容或服務歸類？",
+    "source": {
+      "originalExam": "115-09-1-05",
+      "originalImagePinnedSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商商業概論教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "串流影音有不同電子商務分類方法，此題按考試教材的數位內容分類解釋。"
+    },
+    "highlightTerms": [
+      "數位化商品",
+      "線上服務商品",
+      "電子書",
+      "影音平台",
+      "求職媒合",
+      "機票和飯店"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A把①、②都列數位化商品；②電子書沒問題，但①求職媒合是線上服務而非商品電子檔，故錯。",
+        "elementary": "電子書是內容；找工作網站是幫忙配對。",
+        "reason": "A把①、②都列數位化商品；②電子書沒問題，但①求職媒合是線上服務而非商品電子檔，故錯。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B把①與④列數位化商品；兩者都是網路上完成媒合或預訂，不能因用網路就叫數位化商品。",
+        "elementary": "線上訂旅館不是住在手機裡。",
+        "reason": "B把①與④列數位化商品；兩者都是網路上完成媒合或預訂，不能因用網路就叫數位化商品。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C把②列數位化商品合理，卻把③付費觀看影片歸為線上服務；本題把影音內容列數位化商品，因此配對不合。",
+        "elementary": "這題看的是買影片內容，不是請平台代訂。",
+        "reason": "C把②列數位化商品合理，卻把③付費觀看影片歸為線上服務；本題把影音內容列數位化商品，因此配對不合。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D把③付費影片列數位化商品，④機票飯店網路訂購列線上服務，兩者均符合命題分類。",
+        "elementary": "手機看影片是買電子內容，訂票訂房是網站幫忙辦事。",
+        "reason": "D把③付費影片列數位化商品，④機票飯店網路訂購列線上服務，兩者均符合命題分類。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "conceptualReviewFlag": "CLASSIFICATION_DEPENDS_ON_TEXTBOOK",
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
