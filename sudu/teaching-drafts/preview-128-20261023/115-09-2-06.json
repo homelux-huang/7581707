@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-06",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 6,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-06.webp",
+  "imageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看既有單題WebP、核對題號、所有選項與數字圖表，重新計算圖片位元組SHA256與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [],
+    "correctionHistory": "初次B，候選D，補看X1年末備抵貸餘延續X2年初後修正D，首輪獨立解答不能計PASS。"
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": "D",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": true,
+    "independentSolveScope": "FIRST_PASS_DIFFERED_PENDING_ADJUDICATION",
+    "pendingWarning": "警示：AI 解答與題庫官方解答不一致，本題待核對。"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "X1、X2年末應收帳款借餘500000與600000；排除信用損失率為零，問X2年初、年度中、期末調整後的備抵損失餘額方向。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "①正確：X1年終調整後的備抵貸餘承接至X2年初。②錯：年度中若核銷壞帳，備抵可變借餘。③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。因此①③、選D。首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
+    "reasoningRecordedBeforeCandidateLookup": false,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "①正確：X1年終調整後的備抵貸餘承接至X2年初。②錯：年度中若核銷壞帳，備抵可變借餘。③正確：X2期末重新依非零預期信用損失率調整後應為貸餘。因此①③、選D。首次只想到年度中不一定貸餘而漏掉上年底餘額結轉，初解B，候選提示後改D，須獨立複核。",
+    "elementarySummary": "去年年底預留了可能收不回的款項，新年一開始會沿用。中間可能用掉一些，到年終再重新計算。第一句和第三句對。",
+    "memory": "①期初延續貸餘；②年度中未必；③期末調整貸餘。",
+    "concept": "備抵損失為應收帳款抵銷科目；核銷借記備抵、估列貸記備抵。",
+    "extension": "反向思考：若年中核銷超過期初備抵，未調整前備抵可否出現借餘？",
+    "source": {
+      "originalExam": "115-09-2-06",
+      "originalImagePinnedSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計教材版本、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核"
+    },
+    "highlightTerms": [
+      "期初承接",
+      "年度中核銷",
+      "年終調整",
+      "①③"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "僅②不成立，核銷壞帳可使備抵在年度中借餘。",
+        "elementary": "準備金可能在年中被用掉。",
+        "reason": "僅②不成立，核銷壞帳可使備抵在年度中借餘。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "僅③漏掉①，X2年初承接X1年終調整後貸餘；首輪B誤判已記錄。",
+        "elementary": "新年剛開始，還是接著去年年底的帳。",
+        "reason": "僅③漏掉①，X2年初承接X1年終調整後貸餘；首輪B誤判已記錄。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "①雖正確，但②並非整年保證貸餘，而且漏掉③。",
+        "elementary": "中間那句不一定對。",
+        "reason": "①雖正確，但②並非整年保證貸餘，而且漏掉③。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "①和③均是期初／期末調整後狀態，②年度中不保證，故選D。",
+        "elementary": "第一和第三句才對。",
+        "reason": "①和③均是期初／期末調整後狀態，②年度中不保證，故選D。"
+      }
+    },
+    "accounting": {
+      "principle": "備抵損失為應收帳款抵銷科目；核銷借記備抵、估列貸記備抵。",
+      "accounts": [
+        "應收帳款",
+        "備抵損失",
+        "預期信用減損損失"
+      ],
+      "journalEntry": "估列損失借『預期信用減損損失』貸『備抵損失』；實際核銷則借『備抵損失』貸『應收帳款』。",
+      "calculation": "N/A（沒有題目要求的數值運算）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "firstPassReasoningErrorNeedsIndependentReview": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
