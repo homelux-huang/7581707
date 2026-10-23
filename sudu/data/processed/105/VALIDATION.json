@@ -1,7 +1,7 @@
 {
   "year": 105,
   "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
-  "imageVisualQaPass": 0,
+  "imageVisualQaPass": 7,
   "answerOfficialFinalVerified": 0,
   "ocrTextVerified": 0,
   "officialExpectedQuestionCountsConfirmed": false,
@@ -77,5 +77,6 @@
       "issues": [],
       "legacyIdNumberGap": []
     }
-  }
+  },
+  "directVisualQaNote": "7 image WebP and 2 shared WebP directly inspected; source SHA and crop pixels verified; OCR, final answers and DB association still pending."
 }
