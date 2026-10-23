@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-12",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 12,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-12.webp",
+  "imageSha256": "ee793a1135e53ef1080af2b67724d9672f74028372f7ba5b607525886a621cb2",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "直接打開既有單題 WebP、核對題號、完整題幹、四選項、公式上下標、圖表及負號，原始 WebP SHA256 重算與固定清單吻合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先以原始 WebP 自行解題，再查候選；官方最終標準答案 PDF 及確認更正說明尚未本輪獨立回讀。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "abc≠0 且 {2x+3y=4；ax+by=c} 有無限多解，判斷選項更改第二式後的解數。",
+    "keyConditions": [
+      "abc≠0",
+      "2x+3y=4、ax+by=c有無限多組解"
+    ],
+    "reasoningFromOriginalImage": "原方程組無限多解代表**同一直線**，令 (a,b,c)=k(2,3,4)，k≠0。A只乘左邊1000、B只乘右邊1000，產生平行無解。C、D的第二式變成 **2000x+3y=4**；與第一式相減得x=0、y=4/3，**唯一解**，所以D正確。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "D；唯一解 (0,4/3)",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "原方程組無限多解代表**同一直線**，令 (a,b,c)=k(2,3,4)，k≠0。A只乘左邊1000、B只乘右邊1000，產生平行無解。C、D的第二式變成 **2000x+3y=4**；與第一式相減得x=0、y=4/3，**唯一解**，所以D正確。",
+    "elementarySummary": "原本兩條線黏在一起，答案很多。A、B讓它們平行分開，碰不到。C、D的新線和舊線只碰一個點，所以說『有唯一解』的D對。",
+    "memory": "**重合→無限；平行異線→無；交一點→唯一**。",
+    "concept": "方程係數與常數同倍縮放仍是相同直線；只改一側倍數或某係數會改變解的情況。",
+    "extension": "反向思考：若第二式改為1000ax+1000by=1000c，兩邊同乘1000，仍重合並且無限多解。",
+    "source": {
+      "originalExam": "115-00-MB-12",
+      "originalImagePinnedSha256": "ee793a1135e53ef1080af2b67724d9672f74028372f7ba5b607525886a621cb2",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B答案更正公告待核對"
+    },
+    "highlightTerms": [
+      "(a,b,c)=k(2,3,4)",
+      "2000x+3y=4",
+      "唯一解"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "1000ax+1000by=c 變成2x+3y=4/1000，與原線平行且不同，無解而非唯一解。",
+        "elementary": "改左邊不改右邊，線移開了。",
+        "reason": "1000ax+1000by=c 變成2x+3y=4/1000，與原線平行且不同，無解而非唯一解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "ax+by=1000c 化為2x+3y=4000，與2x+3y=4平行不同，無解。",
+        "elementary": "新線變成另一條平行線，不會交。",
+        "reason": "ax+by=1000c 化為2x+3y=4000，與2x+3y=4平行不同，無解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "1000ax+by=c 化為2000x+3y=4，與原式相交有唯一解；宣稱無解錯。",
+        "elementary": "有一個交點，不能說沒有。",
+        "reason": "1000ax+by=c 化為2000x+3y=4，與原式相交有唯一解；宣稱無解錯。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "兩式相減1998x=0，求x=0、y=4/3，確實唯一解。",
+        "elementary": "只有(0,4/3)這一個交點。",
+        "reason": "兩式相減1998x=0，求x=0、y=4/3，確實唯一解。"
+      }
+    },
+    "math": {
+      "formula": "無限解 ⇒ (a,b,c)=k(2,3,4)，k≠0；代回變更後聯立式，檢查相交/平行。",
+      "formulaUsage": "利用聯立式的線性相依性與消元判斷解數。",
+      "workedExample": "x+y=2和2x+2y=4重合；改成2x+2y=5平行無解。",
+      "dailyApplication": "資源條件同時成立時是否有唯一規劃。",
+      "notes": "含數學非金額運算，必須完整顯示式子。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "abc≠0",
+        "2x+3y=4、ax+by=c有無限多組解"
+      ],
+      "formula": "無限解 ⇒ (a,b,c)=k(2,3,4)，k≠0；代回變更後聯立式，檢查相交/平行。",
+      "formulaPurpose": "利用聯立式的線性相依性與消元判斷解數。",
+      "substitutionAndSteps": [
+        {
+          "formula": "a=2k，b=3k，c=4k，k≠0",
+          "why": "無限解代表同一直線且k不為零。"
+        },
+        {
+          "formula": "A：1000k(2x+3y)=4k ⇒2x+3y=0.004，平行無解",
+          "why": "左側倍數與右側不相同。"
+        },
+        {
+          "formula": "B：k(2x+3y)=4000k ⇒2x+3y=4000，平行無解",
+          "why": "右側倍數與左側不相同。"
+        },
+        {
+          "formula": "C/D：1000(2k)x+(3k)y=4k ⇒2000x+3y=4",
+          "why": "只有x係數增加1000倍。"
+        },
+        {
+          "formula": "與2x+3y=4相減：1998x=0 ⇒x=0",
+          "why": "兩條不平行線的消元可求出唯一x。"
+        },
+        {
+          "formula": "3y=4 ⇒ y=4/3，唯一解，D正確",
+          "why": "代回求y，證明是唯一解。"
+        }
+      ],
+      "result": "D；唯一解 (0,4/3)",
+      "unit": "座標無單位",
+      "matchingOption": "D",
+      "commonMistake": "把只調整左邊當成等式兩邊都乘1000。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
