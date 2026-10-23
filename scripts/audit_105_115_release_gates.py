@@ -1,121 +1,220 @@
 #!/usr/bin/env python3
-"""Read-only release eligibility gate for 105-115 TCTE corpus.
+"""Read-only, fail-closed G0-G6 release audit for 105-115 TCTE data.
 
-CI intentionally passes when a year is NOT ready, while writing explicit blockers.
---require-ready changes the exit status to failure if even one year remains blocked.
-Never rewrites QA flags or student records.
+Normal CI reports blocked years without failing; --require-ready exits nonzero.
+This auditor never modifies QA flags, source assets, or student records.
 """
 import argparse
 import json
+import sqlite3
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[1]
-D=ROOT/"sudu/data/processed"
+ROOT = Path(__file__).resolve().parents[1]
+D = ROOT / 'sudu/data/processed'
+
 
 def audit(year):
-    base=D/str(year)
-    report={"year":year,"integrationReady":False,"gates":{},"blockers":[]}
+    base = D / str(year)
+    report = {'year': year, 'integrationReady': False, 'gates': {}, 'blockers': []}
+    blocks = report['blockers']
+
     def load(name):
-        p=base/name
+        p = base / name
         if not p.is_file():
-            report["blockers"].append("missing:"+name)
+            blocks.append('missing:' + name)
             return None
-        return json.loads(p.read_text(encoding="utf-8"))
-    inv=load("inventory.json")
-    manifest=load("webp-manifest.json")
-    bank=load("questions.json")
-    answer=load("official-answer-evidence.json")
-    if not inv or not manifest or not bank or not answer:
-        return report
-    qs=bank.get("questions",[])
-    ids=[x.get("questionId") for x in qs]
-    n=len(ids)
-    if n==0 or len(set(ids))!=n:
-        report["blockers"].append("invalid_unique_question_inventory")
-    images={x.get("questionId"):x for x in manifest.get("items",[])}
-    if len(images)!=n or set(ids)!=set(images):
-        report["blockers"].append("image_manifest_mismatch")
-    image_pass=[]
-    for qid in ids:
-        x=images.get(qid,{})
-        evidence=x.get("visualReviewEvidence") or {}
-        if not isinstance(evidence,dict): evidence={}
-        output_sha=x.get("sha256") or x.get("outputSha256")
-        if x.get("qaStatus")=="PASS" and output_sha and evidence.get("reviewedSha256")==output_sha and evidence.get("reference"):
-            image_pass.append(qid)
-    pending=sorted(set(ids)-set(image_pass))
-    if pending: report["blockers"].append("image_visual_qa_pending:"+str(len(pending)))
-    qa_answers=sum(q.get("answerVerified") is True for q in qs)
-    qa_questions=sum(q.get("questionVerified") is True for q in qs)
-    if any(q.get("integrationReady") is not True for q in qs):
-        report["blockers"].append("question_level_integration_not_ready")
-    if qa_answers!=n:report["blockers"].append("official_final_answer_qa_pending:"+str(n-qa_answers))
-    if qa_questions!=n:report["blockers"].append("question_text_qa_pending:"+str(n-qa_questions))
-    shared=manifest.get("sharedMaterialCrops",[])
-    shared_pending=[s.get("sharedMaterialId") for s in shared if s.get("qaStatus")!="PASS"]
-    if shared_pending:report["blockers"].append("shared_material_qa_pending:"+str(len(shared_pending)))
-    if inv.get("integrationReady") is not True:report["blockers"].append("inventory_not_release_ready")
-    identities=[(q.get("year"),q.get("paperCode"),q.get("originalQuestionNumber")) for q in qs]
-    if any(y is None or not p or number is None for y,p,number in identities):
-        report["blockers"].append("missing_canonical_question_identity")
-    if len(set(identities))!=n:
-        report["blockers"].append("duplicate_canonical_question_identity")
-    # G0-G6 evidence artifacts are mandatory even when the manifest says ready.
-    # File existence is a necessary condition, never sufficient for QA PASS.
-    for required in ("ocr-raw-candidates.json", "VISUAL_QA.json",
-                     "question-bank.sqlite3", "REMAINING_QA.md", "DATA_HANDOFF.md"):
-        if not (base/required).is_file():
-            report["blockers"].append("missing:"+required)
-    # Verify basic SQLite integrity without writing to any database.
-    dbfile=base/"question-bank.sqlite3"
-    if dbfile.is_file():
-        import sqlite3
         try:
-            with sqlite3.connect("file:"+str(dbfile)+"?mode=ro", uri=True) as db:
-                if db.execute("PRAGMA integrity_check").fetchone()[0]!="ok":
-                    report["blockers"].append("sqlite_integrity_failure")
-                dbrows=db.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
-                if dbrows!=n:
-                    report["blockers"].append("sqlite_question_count_mismatch")
-        except (sqlite3.DatabaseError, OSError) as exc:
-            report["blockers"].append("sqlite_unreadable:"+type(exc).__name__)
-    # G5: a passing SQLite integrity check is not a two-pass import test.
-    # Require separately recorded idempotent import and SHA comparison evidence.
-    db_evidence=inv.get("sqlite") if isinstance(inv.get("sqlite"),dict) else {}
-    if not isinstance(db_evidence.get("reimportCount"),int) or db_evidence["reimportCount"]<2:
-        report["blockers"].append("sqlite_idempotent_reimport_not_evidenced")
-    if db_evidence.get("shaMismatches") not in ([],0):
-        report["blockers"].append("sqlite_sha_mismatch_or_unverified")
-    validation=load("VALIDATION.json")
-    if validation and validation.get("integrationReady") is not True:
-        report["blockers"].append("validation_not_release_ready")
-    release=load("release-manifest.json")
-    if release and release.get("integrationReady") is not True:
-        report["blockers"].append("release_manifest_not_release_ready")
-    report.update({"candidateQuestions":n,"webpVisualPass":len(image_pass),
-                   "pendingImageIds":pending,"answerVerified":qa_answers,
-                   "questionVerified":qa_questions,"sharedMaterialsPending":shared_pending,
-                   "integrationReady":not report["blockers"]})
-    report["gates"]={"webp":len(image_pass)==n,"answer":qa_answers==n,
-                       "text":qa_questions==n,"shared":not shared_pending,
-                       "databaseAndRelease":not any(s.startswith(("missing:","inventory_","validation_","release_manifest_","sqlite_")) for s in report["blockers"])}
+            value = json.loads(p.read_text(encoding='utf-8'))
+        except (ValueError, UnicodeError, OSError):
+            blocks.append('invalid_json:' + name)
+            return None
+        if not isinstance(value, dict):
+            blocks.append('invalid_schema:' + name)
+            return None
+        return value
+
+    inv = load('inventory.json')
+    manifest = load('webp-manifest.json')
+    bank = load('questions.json')
+    answers = load('official-answer-evidence.json')
+    visual = load('VISUAL_QA.json')
+    if any(v is None for v in (inv, manifest, bank, answers, visual)):
+        return report
+
+    qs = bank.get('questions')
+    images_list = manifest.get('items')
+    answers_list = answers.get('items')
+    visual_list = visual.get('questions', visual.get('items'))
+    shared = manifest.get('sharedMaterialCrops', [])
+    if any(not isinstance(a, list) or any(not isinstance(v, dict) for v in a)
+           for a in (qs, images_list, answers_list, visual_list, shared)):
+        blocks.append('invalid_ledger_schema')
+        return report
+
+    ids = [q.get('questionId') for q in qs]
+    n = len(ids)
+    if not n or any(not isinstance(qid, str) or not qid for qid in ids) or len(set(ids)) != n:
+        blocks.append('invalid_unique_question_inventory')
+        return report
+
+    def index(rows, key, label):
+        raw = [v.get(key) for v in rows]
+        if any(not isinstance(k, str) or not k for k in raw) or len(set(raw)) != len(raw):
+            blocks.append('duplicate_or_invalid_' + label)
+        if len(rows) != n or set(raw) != set(ids):
+            blocks.append(label + '_mismatch')
+        return {v.get(key): v for v in rows}
+
+    images = index(images_list, 'questionId', 'image_manifest')
+    answer_by_id = index(answers_list, 'questionId', 'official_answer_ledger')
+    visual_by_id = index(visual_list, 'questionId', 'visual_qa_ledger')
+    identities = [(q.get('year'), q.get('paperCode'), q.get('originalQuestionNumber')) for q in qs]
+    if any(y != year or not p or not isinstance(number, int) or isinstance(number, bool)
+           or number <= 0 for y, p, number in identities):
+        blocks.append('missing_or_wrong_canonical_question_identity')
+    if len(set(identities)) != n:
+        blocks.append('duplicate_canonical_question_identity')
+
+    image_pass = []
+    for q in qs:
+        qid = q['questionId']
+        im = images.get(qid, {})
+        vi = visual_by_id.get(qid, {})
+        evidence = im.get('visualReviewEvidence') or {}
+        if not isinstance(evidence, dict):
+            evidence = {}
+        sha = im.get('sha256') or im.get('outputSha256')
+        vsha = (vi.get('webpSha256') or vi.get('assetSha256') or
+                vi.get('reviewedWebpSha256') or vi.get('candidateSha256'))
+        vpass = vi.get('status', vi.get('result')) == 'PASS'
+        claimed_pass = im.get('qaStatus') == 'PASS'
+        good = (claimed_pass and isinstance(sha, str) and len(sha) == 64
+                and evidence.get('reviewedSha256') == sha
+                and bool(evidence.get('reference')) and vpass and vsha == sha)
+        if good:
+            image_pass.append(qid)
+        elif claimed_pass or vpass:
+            blocks.append('visual_qa_evidence_mismatch:' + qid)
+        # G4: when known, both identity and source/output SHA must agree.
+        if im.get('paperCode') is not None and im['paperCode'] != q.get('paperCode'):
+            blocks.append('image_paper_mismatch:' + qid)
+        if im.get('originalQuestionNumber') is not None and im['originalQuestionNumber'] != q.get('originalQuestionNumber'):
+            blocks.append('image_number_mismatch:' + qid)
+        qp = q.get('questionProvenance') or {}
+        if isinstance(qp, dict) and qp.get('webpSha256') and qp['webpSha256'] != sha:
+            blocks.append('question_webp_sha_mismatch:' + qid)
+        qa = q.get('assets') or {}
+        if isinstance(qa, dict) and qa.get('sha256') and qa['sha256'] != sha:
+            blocks.append('question_asset_sha_mismatch:' + qid)
+        # G3: only a matching, independently evidenced final answer counts.
+        answer = answer_by_id.get(qid, {})
+        if q.get('answerVerified') is True:
+            if (answer.get('answerVerified') is not True or
+                answer.get('officialFinalAnswer') != q.get('answer') or
+                answer.get('officialCorrectionChecked') is not True or
+                not answer.get('qaEvidencePath') or
+                not (answer.get('officialSourceSha256') or answer.get('officialPdfSha256')) or
+                not answer.get('officialCorrectionPdfSha256')):
+                blocks.append('official_answer_evidence_mismatch:' + qid)
+        if answer.get('answerVerified') is True and q.get('answerVerified') is not True:
+            blocks.append('official_answer_flag_mismatch:' + qid)
+    pending = sorted(set(ids) - set(image_pass))
+    if pending:
+        blocks.append('image_visual_qa_pending:' + str(len(pending)))
+
+    qa_answers = sum(q.get('answerVerified') is True for q in qs)
+    qa_questions = sum(q.get('questionVerified') is True for q in qs)
+    if any(q.get('integrationReady') is not True for q in qs):
+        blocks.append('question_level_integration_not_ready')
+    if qa_answers != n:
+        blocks.append('official_final_answer_qa_pending:' + str(n - qa_answers))
+    if qa_questions != n:
+        blocks.append('question_text_qa_pending:' + str(n - qa_questions))
+
+    shared_pending = []
+    ids_set = set(ids)
+    for item in shared:
+        sid = item.get('sharedMaterialId')
+        evidence = item.get('visualReviewEvidence') or {}
+        sha = item.get('sha256') or item.get('outputSha256')
+        if item.get('qaStatus') != 'PASS':
+            shared_pending.append(sid)
+        elif (not isinstance(evidence, dict) or not sha or
+              evidence.get('reviewedSha256') != sha or not evidence.get('reference')):
+            blocks.append('shared_material_evidence_missing:' + str(sid))
+        links = item.get('questionIds')
+        if isinstance(links, list) and any(qid not in ids_set for qid in links):
+            blocks.append('shared_material_unknown_question:' + str(sid))
+    if shared_pending:
+        blocks.append('shared_material_qa_pending:' + str(len(shared_pending)))
+    if inv.get('integrationReady') is not True:
+        blocks.append('inventory_not_release_ready')
+
+    for required in ('ocr-raw-candidates.json', 'question-bank.sqlite3',
+                     'REMAINING_QA.md', 'DATA_HANDOFF.md'):
+        if not (base / required).is_file():
+            blocks.append('missing:' + required)
+    dbfile = base / 'question-bank.sqlite3'
+    if dbfile.is_file():
+        try:
+            with sqlite3.connect(dbfile.as_uri() + '?mode=ro', uri=True) as db:
+                if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
+                    blocks.append('sqlite_integrity_failure')
+                count = db.execute('SELECT COUNT(*) FROM questions').fetchone()[0]
+                if count != n:
+                    blocks.append('sqlite_question_count_mismatch')
+        except (sqlite3.DatabaseError, OSError, ValueError):
+            blocks.append('sqlite_unreadable')
+    db_evidence = inv.get('sqlite') if isinstance(inv.get('sqlite'), dict) else {}
+    reimports = db_evidence.get('reimportCount')
+    if type(reimports) is not int or reimports < 2:
+        blocks.append('sqlite_idempotent_reimport_not_evidenced')
+    mismatches = db_evidence.get('shaMismatches')
+    if not (type(mismatches) is int and mismatches == 0 or
+            type(mismatches) is list and len(mismatches) == 0):
+        blocks.append('sqlite_sha_mismatch_or_unverified')
+
+    validation = load('VALIDATION.json')
+    release = load('release-manifest.json')
+    if validation is None or validation.get('integrationReady') is not True:
+        blocks.append('validation_not_release_ready')
+    if release is None or release.get('integrationReady') is not True:
+        blocks.append('release_manifest_not_release_ready')
+    if release is None or release.get('releaseAllowed') is not True:
+        blocks.append('release_not_allowed')
+
+    report.update({'candidateQuestions': n, 'webpVisualPass': len(image_pass),
+                   'pendingImageIds': pending, 'answerVerified': qa_answers,
+                   'questionVerified': qa_questions, 'sharedMaterialsPending': shared_pending,
+                   'integrationReady': not blocks})
+    report['gates'] = {
+        'webp': len(image_pass) == n,
+        'answer': qa_answers == n and not any(b.startswith('official_answer_') for b in blocks),
+        'text': qa_questions == n,
+        'shared': not shared_pending and not any(b.startswith('shared_material_') for b in blocks),
+        'databaseAndRelease': not any(b.startswith((
+            'missing:', 'invalid_', 'inventory_', 'validation_', 'release_', 'sqlite_',
+            'image_', 'question_', 'duplicate_', 'visual_qa_', 'official_answer_')) for b in blocks)
+    }
     return report
 
+
 def main():
-    p=argparse.ArgumentParser()
-    p.add_argument("--require-ready",action="store_true")
-    args=p.parse_args()
-    records=[audit(year) for year in range(105,116)]
-    total=sum(x.get("candidateQuestions",0) for x in records)
-    done=sum(x.get("webpVisualPass",0) for x in records)
-    summary={"scope":"105-115","readOnly":True,"candidateQuestions":total,
-             "imageVisualQaPass":done,"imageVisualQaPending":total-done,
-             "yearsReady":sum(x["integrationReady"] for x in records),
-             "allYearsReady":all(x["integrationReady"] for x in records),
-             "years":records}
-    print(json.dumps(summary,ensure_ascii=False,indent=2))
-    if args.require_ready and not summary["allYearsReady"]:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--require-ready', action='store_true')
+    args = parser.parse_args()
+    years = [audit(year) for year in range(105, 116)]
+    total = sum(x.get('candidateQuestions', 0) for x in years)
+    passed = sum(x.get('webpVisualPass', 0) for x in years)
+    summary = {'scope': '105-115', 'readOnly': True, 'candidateQuestions': total,
+               'imageVisualQaPass': passed, 'imageVisualQaPending': total - passed,
+               'yearsReady': sum(x['integrationReady'] for x in years),
+               'allYearsReady': all(x['integrationReady'] for x in years),
+               'years': years}
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    if args.require_ready and not summary['allYearsReady']:
         raise SystemExit(1)
 
-if __name__=="__main__":
+
+if __name__ == '__main__':
     main()
