@@ -36,6 +36,8 @@ class ReleaseGateRegression(unittest.TestCase):
             'webp-manifest.json': {'items': [{
                 'questionId': self.qid, 'paperCode': '00-C', 'originalQuestionNumber': 1,
                 'qaStatus': 'PASS', 'sha256': self.sha,
+                'sourceSha256': self.source_sha, 'sourcePage': 2,
+                'crop': [0, 0, 10, 10], 'output': 'fixtures/q.webp',
                 'visualReviewEvidence': {'reviewedSha256': self.sha, 'reference': 'proof/visual.json'}
             }], 'sharedMaterialCrops': []},
             'VISUAL_QA.json': {'questions': [{
@@ -128,6 +130,23 @@ class ReleaseGateRegression(unittest.TestCase):
     def test_duplicate_ledger_id_blocks(self):
         self.data['official-answer-evidence.json']['items'].append(self.data['official-answer-evidence.json']['items'][0].copy())
         self.check('duplicate_or_invalid_official_answer_ledger')
+
+    def test_source_sha_evidence_mismatch_blocks(self):
+        self.data['webp-manifest.json']['items'][0]['visualReviewEvidence']['sourceSha256'] = 'f' * 64
+        self.check('visual_qa_evidence_mismatch:')
+
+    def test_question_source_sha_mismatch_blocks(self):
+        self.data['questions.json']['questions'][0]['questionProvenance']['pixelSourceSha256'] = 'f' * 64
+        self.check('question_source_sha_mismatch:')
+
+    def test_question_official_pdf_sha_mismatch_blocks(self):
+        self.data['questions.json']['questions'][0]['questionProvenance']['officialPdfSha256'] = 'f' * 64
+        self.data['webp-manifest.json']['items'][0]['sourcePdfSha256'] = 'e' * 64
+        self.check('question_official_pdf_sha_mismatch:')
+
+    def test_answer_source_sha_mismatch_blocks(self):
+        self.data['questions.json']['questions'][0]['answerProvenance'] = {'officialPdfSha256': 'f' * 64}
+        self.check('official_answer_source_sha_mismatch:')
 
     def test_missing_sqlite_blocks(self):
         (self.base / 'question-bank.sqlite3').unlink()
