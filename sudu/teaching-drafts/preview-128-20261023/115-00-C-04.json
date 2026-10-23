@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-04",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 4,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-04.webp",
+  "imageSha256": "f8517932c1ffa93cb3ef52f0e17ec8c93b895c5ca7092156a7591a289db47aa8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "題目要求同一事物按同一標準分兩類，再比較作用；鏡依凹凸分兩類，成像大小不同。",
+    "elementarySummary": "把同一種東西分兩組，再說兩組各有什麼效果。",
+    "memory": "同一事物＋分類標準＋作用差異",
+    "concept": "題目要求同一事物按同一標準分兩類，再比較作用；鏡依凹凸分兩類，成像大小不同。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-04",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "同一事物＋分類標準＋作用差異"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "說明道與師的關係，沒有將同一物分成兩類。",
+        "elementary": "它沒有分成兩組。",
+        "reason": "說明道與師的關係，沒有將同一物分成兩類。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "骨節與刀刃是兩種事物，非同一物依共同標準分類。",
+        "elementary": "骨頭和刀本來就不是同一種東西。",
+        "reason": "骨節與刀刃是兩種事物，非同一物依共同標準分類。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "描寫泛舟行進與廣闊水面，沒有分類功能。",
+        "elementary": "是在描述風景和動作。",
+        "reason": "描寫泛舟行進與廣闊水面，沒有分類功能。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "鏡依凹凸分類，分別使人面顯大或顯小，符合。",
+        "elementary": "都是鏡子，形狀不同，照出來大小不同。",
+        "reason": "鏡依凹凸分類，分別使人面顯大或顯小，符合。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

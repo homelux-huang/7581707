@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-07",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-07.webp",
+  "imageSha256": "de3aa6dc943acc5e086acdddf3a6922abd505d0eba99c9ece82dec7641e3bc20",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR把表格字詞混進選項。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "依整組意象判風格：①江北劍、③人間風流偏豪放；②花愁鴛、④相逢相思偏婉約。不能只憑單一字判斷所有作品。",
+    "elementarySummary": "看一整群線索：江山刀劍比較雄壯，花和相思比較細膩。",
+    "memory": "①③豪放；②④婉約",
+    "concept": "依整組意象判風格：①江北劍、③人間風流偏豪放；②花愁鴛、④相逢相思偏婉約。不能只憑單一字判斷所有作品。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-07",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "①③豪放；②④婉約"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①②及③④均與整組詞意象相反。",
+        "elementary": "把雄壯和柔情兩組都顛倒了。",
+        "reason": "①②及③④均與整組詞意象相反。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "③④符合，但①②互換錯誤。",
+        "elementary": "後半對了，前半仍放錯。",
+        "reason": "③④符合，但①②互換錯誤。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "豪放／婉約／豪放／婉約符合四組整體特徵。",
+        "elementary": "兩組像看江山，兩組像說心事。",
+        "reason": "豪放／婉約／豪放／婉約符合四組整體特徵。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "①②符合，但③④被互換。",
+        "elementary": "前半對了，後半顛倒。",
+        "reason": "①②符合，但③④被互換。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

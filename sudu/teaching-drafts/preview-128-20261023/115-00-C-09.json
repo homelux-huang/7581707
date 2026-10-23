@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-09",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 9,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-09.webp",
+  "imageSha256": "94e6ee5f999e0bf360181a45439e1a3ad52dde642979ace4549e7a8f849497bd",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "②⑤先列眼神與配樂兩項創新，①以「這些」回指，④描述著迷結果，③再說電視臺加播。",
+    "elementarySummary": "先說改了什麼，再說大家喜歡，最後才加播節目。",
+    "memory": "創新②⑤→圈粉①④→加播③",
+    "concept": "②⑤先列眼神與配樂兩項創新，①以「這些」回指，④描述著迷結果，③再說電視臺加播。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-09",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "創新②⑤→圈粉①④→加播③"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①的這些缺乏前項說明，且加播③宜接迷戀④之後。",
+        "elementary": "還沒介紹做法，就說這些做法。",
+        "reason": "①的這些缺乏前項說明，且加播③宜接迷戀④之後。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "②⑤①④③兼顧並、這些、為此三個承接線索。",
+        "elementary": "每個指來指去的詞，都找得到前面的事情。",
+        "reason": "②⑤①④③兼顧並、這些、為此三個承接線索。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "③為此缺乏已交代原因，④又先於創新說明。",
+        "elementary": "還沒講受歡迎，就先說因此加播。",
+        "reason": "③為此缺乏已交代原因，④又先於創新說明。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "④先說迷戀後才介紹創新，不如從②開始符合因果和指代。",
+        "elementary": "應先講怎麼做，再講大家喜歡。",
+        "reason": "④先說迷戀後才介紹創新，不如從②開始符合因果和指代。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

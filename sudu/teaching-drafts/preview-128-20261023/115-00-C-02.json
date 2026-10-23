@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-02",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 2,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-02.webp",
+  "imageSha256": "ff9119c069bced508200d661a8d9adfc794f5c2c14d9a6913c59924c341bfa88",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "①愀然的然是形容狀態的詞尾；②其然的然是「這樣」。另有句首然表示然而，不能混用。",
+    "elementarySummary": "同一個然，有時是「的樣子」，有時是「這樣」，還可能是「可是」。",
+    "memory": "①樣子；②這樣",
+    "concept": "①愀然的然是形容狀態的詞尾；②其然的然是「這樣」。另有句首然表示然而，不能混用。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-02",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "①樣子；②這樣"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "儼然、默然均以然表狀態詞尾，與愀然相同。",
+        "elementary": "整齊的樣子、沉默的樣子，都和①同組。",
+        "reason": "儼然、默然均以然表狀態詞尾，與愀然相同。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "騞然是聲音狀態，但然鄭亡的然表轉折，兩者並非都同①。",
+        "elementary": "前半可以，後半是「可是」。",
+        "reason": "騞然是聲音狀態，但然鄭亡的然表轉折，兩者並非都同①。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "蕭然表狀態，然臺煤表轉折，均不等於②的這樣。",
+        "elementary": "一個說樣子，一個說可是，都不是②。",
+        "reason": "蕭然表狀態，然臺煤表轉折，均不等於②的這樣。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "不然的然是這樣，但充然表充足狀態，並非兩者都同②。",
+        "elementary": "只有前半同組，後半不同。",
+        "reason": "不然的然是這樣，但充然表充足狀態，並非兩者都同②。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

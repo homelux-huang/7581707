@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-07",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-07.webp",
+  "imageSha256": "0475bf588049dbc45da398f28ebcb69666d506d569ac6cf36f5645d371540f62",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "聚焦是視線由大範圍或整體縮到局部；山再縮到山的小口，正是整體到局部。",
+    "elementarySummary": "像相機先拍一座山，再放大拍山上的小洞。",
+    "memory": "整體→局部",
+    "concept": "聚焦是視線由大範圍或整體縮到局部；山再縮到山的小口，正是整體到局部。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-07",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "整體→局部"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "由登樓轉入心理感受，非視線縮到物體局部。",
+        "elementary": "是在說心情，不是鏡頭拉近。",
+        "reason": "由登樓轉入心理感受，非視線縮到物體局部。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "敘述人群貿易形成世界的關係，沒有局部聚焦。",
+        "elementary": "是在講人們怎樣交易。",
+        "reason": "敘述人群貿易形成世界的關係，沒有局部聚焦。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "先出現整座山，再注意山上的小口，符合聚焦。",
+        "elementary": "先看大山，再看小洞。",
+        "reason": "先出現整座山，再注意山上的小口，符合聚焦。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "從宴飲活動說抒情作用，並非觀看物體局部。",
+        "elementary": "講喝酒作詩的感受，沒有放大看一角。",
+        "reason": "從宴飲活動說抒情作用，並非觀看物體局部。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

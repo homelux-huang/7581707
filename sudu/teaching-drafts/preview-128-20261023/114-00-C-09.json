@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-09",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 9,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-09.webp",
+  "imageSha256": "c49f150c96f564e63d8697937e40acf5b123a363db9b05fb4c8db09c30a5c2be",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR選項混入圖中標籤。"
+    ]
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "雙氣泡圖中央放共同點、左右放各自特徵；兩種鑑定皆粗疏，耳鑒只聽名聲，揣骨聽聲偏憑表面感官。",
+    "elementarySummary": "兩種人都沒有好好看作品：一種只聽大師名字，另一種只用摸的判好壞。",
+    "memory": "中央共同點；兩側不同點",
+    "concept": "雙氣泡圖中央放共同點、左右放各自特徵；兩種鑑定皆粗疏，耳鑒只聽名聲，揣骨聽聲偏憑表面感官。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-09",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "中央共同點；兩側不同點"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "鑑定粗糙是共同點，②名聲、③感官判斷與文意相符。",
+        "elementary": "中間寫共同毛病，左右寫各自怎麼判。",
+        "reason": "鑑定粗糙是共同點，②名聲、③感官判斷與文意相符。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "文中沒有用年代鑑定，且③不是名聲。",
+        "elementary": "文章沒說靠畫有多老來選。",
+        "reason": "文中沒有用年代鑑定，且③不是名聲。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "「爭售」表示競相購買，沒有吝出高價的依據。",
+        "elementary": "大家搶著買，不能說他們捨不得出錢。",
+        "reason": "「爭售」表示競相購買，沒有吝出高價的依據。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "共同點、名聲與年代三項均與文意不符。",
+        "elementary": "這些標籤和故事對不起來。",
+        "reason": "共同點、名聲與年代三項均與文意不符。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

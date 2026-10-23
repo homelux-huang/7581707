@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-05",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-05.webp",
+  "imageSha256": "c8b96c85679e3a865ae98325108a2d4a31e9317cfeffa8d3554a6b3f3df66abf",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR圖文順序混亂；原圖資料框完整。"
+    ]
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "資料判讀只能推論證據支持的範圍；兩詞缺乏清代以前出處，不能擴推所有新詞數量或作者態度。",
+    "elementarySummary": "只用表格真的有寫的線索，沒寫的事情不要自己猜。",
+    "memory": "有證據才下結論",
+    "concept": "資料判讀只能推論證據支持的範圍；兩詞缺乏清代以前出處，不能擴推所有新詞數量或作者態度。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-05",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "有證據才下結論"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "資料未提供接觸的古義變化，不能比照交通。",
+        "elementary": "沒有古時候的意思，不能說它改過意思。",
+        "reason": "資料未提供接觸的古義變化，不能比照交通。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "依題給資料，兩詞均未見清以前出處，不能追溯18世紀之前古義。",
+        "elementary": "表格沒有提供那麼早的用法，這句最守證據。",
+        "reason": "依題給資料，兩詞均未見清以前出處，不能追溯18世紀之前古義。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "沒有新詞與古詞的數量統計，不能判斷誰較多。",
+        "elementary": "只看到幾個例子，不能說全部哪種多。",
+        "reason": "沒有新詞與古詞的數量統計，不能判斷誰較多。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "梁啟超等使用例證不能證明普遍排拒，資料亦未給態度調查。",
+        "elementary": "有人真的用了這些詞，不能說大家都拒絕。",
+        "reason": "梁啟超等使用例證不能證明普遍排拒，資料亦未給態度調查。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

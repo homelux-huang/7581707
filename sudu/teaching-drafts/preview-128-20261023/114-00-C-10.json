@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-10",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 10,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-10.webp",
+  "imageSha256": "a473292acea79bb8330de3ac7db947889ca24dfa52ec5027ad1e95ddbebeff64",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR末選項混入下一頁文章；原圖本題完整。"
+    ]
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "鄭文公說「寡人之過」是道歉，又說亡國對你不利以提醒共同利害；劉邦以「鯫生說我」把責任推給出主意者。",
+    "elementarySummary": "一個說「我錯了，而且你也會受影響」；另一個說「是別人教我的」。",
+    "memory": "鄭①⑥；劉②",
+    "concept": "鄭文公說「寡人之過」是道歉，又說亡國對你不利以提醒共同利害；劉邦以「鯫生說我」把責任推給出主意者。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-10",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "鄭①⑥；劉②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "鄭未主張自己行為本來正當；劉是在卸責，不是攻擊張良。",
+        "elementary": "承認錯誤不是說自己本來就對。",
+        "reason": "鄭未主張自己行為本來正當；劉是在卸責，不是攻擊張良。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "鄭文公道歉加利害提醒，劉邦卸責，皆有原句支持。",
+        "elementary": "把每句話翻白話，就能找到這組。",
+        "reason": "鄭文公道歉加利害提醒，劉邦卸責，皆有原句支持。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "鄭不是卸責，劉也沒有道歉或歸因不可控制外力。",
+        "elementary": "兩人的說法都被認錯了。",
+        "reason": "鄭不是卸責，劉也沒有道歉或歸因不可控制外力。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "鄭未抨擊燭之武，劉未提醒張良切身利害。",
+        "elementary": "故事裡沒有這些話。",
+        "reason": "鄭未抨擊燭之武，劉未提醒張良切身利害。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

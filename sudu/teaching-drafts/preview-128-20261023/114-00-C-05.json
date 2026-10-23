@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-05",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-05.webp",
+  "imageSha256": "9791124eb82655a379b09da6fb7b7bbaab89061c51c9a4110b0897ffdcbfb651",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "先組合「不僅①、更⑤」交代成功的兩層原因，再用「既④、也③」展開文化表現，②緊接純真形象形成對比。",
+    "elementarySummary": "先講為什麼成功，再舉兩個做法，最後說可愛娃娃和殘酷遊戲差很多。",
+    "memory": "①⑤／④③／③②",
+    "concept": "先組合「不僅①、更⑤」交代成功的兩層原因，再用「既④、也③」展開文化表現，②緊接純真形象形成對比。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-05",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "①⑤／④③／③②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①後未接⑤，④⑤又打斷「既、也」的配對。",
+        "elementary": "成對的連接詞被拆散了。",
+        "reason": "①後未接⑤，④⑤又打斷「既、也」的配對。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "①⑤④③②同時符合遞進、並列和對比的承接。",
+        "elementary": "每句都接得上前一句。",
+        "reason": "①⑤④③②同時符合遞進、並列和對比的承接。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "④後接②，沒有先介紹純真形象，對比對象不清。",
+        "elementary": "還沒說娃娃很純真，就說形成對比。",
+        "reason": "④後接②，沒有先介紹純真形象，對比對象不清。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "④⑤③破壞既、也配對，②①也不能形成順暢收束。",
+        "elementary": "句子像積木放錯順序。",
+        "reason": "④⑤③破壞既、也配對，②①也不能形成順暢收束。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

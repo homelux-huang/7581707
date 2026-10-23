@@ -1,0 +1,52 @@
+# 128 題已上線原圖預覽｜解說草稿續作（不部署）
+
+## 最新任務優先
+使用者要求：驗收已上線原圖預覽，逐題根據原圖解題、寫四選項高職程度與國小白話解說；計算題完整算式；完成後先不部署，回報進度條。不得沿用較早的自動發布授權來公開本批草稿。
+
+Repository: homelux-huang/7581707
+草稿 branch: draft/preview-128-explanations-20261023
+本目錄: sudu/teaching-drafts/preview-128-20261023/
+正式 UI: sudu/v4-115-multisubject-review-demo.html
+只在草稿分支保存，不合併 main，不觸發 Pages，不寫入 approved，不設定 studentReleaseApproved=true。
+
+## 固定範圍與證據
+2026-10-23 從 LIVE 的 sudu/data/approved/preview/114.json 與 115.json 讀取，固定 128 題，快照已附。以 progress.json.items 和兩份 live-preview JSON 的題號、圖檔 SHA、sharedImages 為準。不要因後續 LIVE 增加題數而偷偷改分母。
+- 114 國文9
+- 115 國文9、英文28、數學B25、商業概論5、數位科技7、會計學21、經濟學24
+- 原圖可在 main commit ca2b4637dc783f8527a78c20e3f665db3084ef60 的 sudu/data/approved/webp/ 讀取，也在本草稿分支起點。
+- OCR候選來源commit 5b8cf76cab16e0121d819a5654473c5c1e9f3678；source-candidates-114/115.json 是既有資料的範圍子集，未重做OCR、未校正。裡面有候選答案，不能稱為盲解輸入。
+
+## 已完成與待補
+已逐張打開閱讀並完成四選項雙層解說初稿18題：
+114-00-C-02～10；115-00-C-01、02、03、04、05、07、08、09、10。
+18題既有候選答案比對一致，但官方最終更正尚未驗證，完整教學驗收0題，部署0題。
+初稿含兩層摘要、一眼記住、觀念、四選項正誤理由；有OCR混入圖表/下一頁文字者記在 visualReview.ocrIssues。
+尚待每題專屬延伸問題／反向題（目前 extension 是共用提示，不算完成）、國文讀音與相關詞分級、可確認來源、重點粗體與highlight渲染、獨立教學QA。
+先接續115英文28題，再數學25、會計21、經濟24、商概5、數科7；最後補齊已寫18題的待補欄位。
+只讀所需題目資料，不以候選答案反推解說。已見過答案必須如實記錄，不得補造盲解時間或PASS證據。
+
+## 每題工作順序
+1. 讀progress.json，取未完成題號及imageSha256，打開既有單題WebP；有sharedImages必須同讀。
+2. 目視檢查題號、題幹、A-D、表格與符號完整，無鄰題或裁切；原圖比對雜湊。只見manifest或decode不算目視。
+3. OCR僅輔助，有混字以原圖解題，另記問題；不重做OCR、裁圖或改來源檔。有看不清/缺條件者標BLOCKED，不猜。
+4. 自行解題，留下aiAnswer、理由及計算，再與官方來源核對。候選答案匹配不等於最終公告核實。
+5. 寫A-D每個選項：teacher（商科高職生可理解的知識/原理/理由）、elementary（國小生口語具體比喻/短句），不只寫「符合/不符合題意」。
+6. 寫teacherSummary、elementarySummary、memory、concept、專屬extension/反向題、source、highlightTerms。重要字詞與算式須能呈現粗體及高對比highlight，不能整段全標。
+7. 計算題：已知、公式用途、代入、每步算式、結果、單位、對應選項，檢查中間值與四選項。不補題目沒有的金額、利率或預算。無計算題hasExamCalculation=false，後續UI整欄隱藏；數學非金額計算仍保留。
+8. 英文補中文翻譯、發音、同反義初級/中級/高級、例句中英及實際單字變化形highlight。若稱新聞時事例句需可核實來源，不編造新聞。國文級別同樣初級/中級/高級。教材頁數未確認寫待核對。
+9. 官方最終答案/更正公告有證據才記verified；AI不一致保留雙方答案與大字警示需求，不能偷偷改官方答案。
+10. 每題保存獨立JSON並更新progress，完成5題左右就commit到同一草稿分支；先核對遠端HEAD，避免覆蓋其他session。
+
+## 中斷與續作
+每批checkpoint必須包含：完成ID、未完ID、blocked理由、來源SHA/圖SHA、下一題、最新commit、修改檔案。
+若context/token接近上限，先保存已完成成果與進度再回報，不等最後才存。新session讀取最新branch及本MD即可續作，不重寫已完成題目，除非發現具體錯誤。
+不要聲稱會在對話結束後持續運作；持續性由GitHub上的checkpoint保障。
+只回報實際完成。分別報：原圖目視、解說初稿、最終答案核實、完整教學驗收；不要混成100%。
+
+## 回報格式
+解說初稿：18/128（14.1%）
+原圖本輪重驗：18/128（14.1%）
+官方最終更正核實：0/128
+完整教學驗收：0/128
+本批部署：0（依使用者指示禁止部署）
+列各科完成數、待核對問題、分支/commit連結、下一批題號。

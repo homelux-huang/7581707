@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-03",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-03.webp",
+  "imageSha256": "728a96a170e8d07ad9ce20e02c668dad0cf13942e4f9de6764a755bd8703e8a8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "「類出國」表示類似出國；要找表示「像」的類，而不是種類或同類。",
+    "elementarySummary": "像出國一樣的旅行，重點是「像」，不是把東西分組。",
+    "memory": "類＝像／種類不同",
+    "concept": "「類出國」表示類似出國；要找表示「像」的類，而不是種類或同類。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-03",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "類＝像／種類不同"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "「之類」指蔬菜稻作等種類，非相似。",
+        "elementary": "這是「這一類東西」。",
+        "reason": "「之類」指蔬菜稻作等種類，非相似。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "「品類」指萬物的種類。",
+        "elementary": "在數世界上有多少種東西。",
+        "reason": "「品類」指萬物的種類。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "「群類」指同類群體。",
+        "elementary": "是在說和自己同一群的人。",
+        "reason": "「群類」指同類群體。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "「有類橐駝」指樣子像駱駝，與類出國的「像」相同。",
+        "elementary": "彎著背走路很像駱駝，所以選它。",
+        "reason": "「有類橐駝」指樣子像駱駝，與類出國的「像」相同。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

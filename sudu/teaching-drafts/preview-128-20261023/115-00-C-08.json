@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-08",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 8,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-08.webp",
+  "imageSha256": "b8c74de7e32cd62dae4e4b7131709d37fd15b43bbfb7533fa4878a74eac3a2d6",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "由解牛順應肌理推養生、由種樹順性推治理，都是跨領域抓共同道理的相似聯想。",
+    "elementarySummary": "切肉要順著縫，種樹要順著樹的需要；做人做事也別硬來，大家的道理很像。",
+    "memory": "不同事情，共同道理→相似聯想",
+    "concept": "由解牛順應肌理推養生、由種樹順性推治理，都是跨領域抓共同道理的相似聯想。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-08",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "不同事情，共同道理→相似聯想"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "兩者均由順應事物本性聯想到處世或治理，都是Ⅱ。",
+        "elementary": "兩個故事都在說「原來這個方法也用得上」。",
+        "reason": "兩者均由順應事物本性聯想到處世或治理，都是Ⅱ。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "並非由相反性質聯想到另一事物，非對比。",
+        "elementary": "不是想到完全相反的事情。",
+        "reason": "並非由相反性質聯想到另一事物，非對比。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "解牛與養生不因時空接近，種樹也非治理的直接原因。",
+        "elementary": "不是靠得近，也不是種樹就直接管好人民。",
+        "reason": "解牛與養生不因時空接近，種樹也非治理的直接原因。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "文惠君判為Ⅱ正確，但問者也應為Ⅱ。",
+        "elementary": "前半對，後半也要選相似。",
+        "reason": "文惠君判為Ⅱ正確，但問者也應為Ⅱ。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

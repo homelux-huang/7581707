@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-03",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-03.webp",
+  "imageSha256": "0992ee68b0b87bb38747374ce9d9fe260c15a65d0d0c8027aa7fa57026c5b0ce",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "由「只可受人間之福」推得難成仙；由周室將興、身為將相推得下山輔佐明主。",
+    "elementarySummary": "老師說你當不了神仙，但可以下山幫助好君王、做大事。",
+    "memory": "人間之福→仙道難成；周興→扶助明主",
+    "concept": "由「只可受人間之福」推得難成仙；由周室將興、身為將相推得下山輔佐明主。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-03",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "人間之福→仙道難成；周興→扶助明主"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "兩詞分別對應不能成仙及輔佐周室的前後文。",
+        "elementary": "兩個空格都能接得通。",
+        "reason": "兩詞分別對應不能成仙及輔佐周室的前後文。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "功高震主是功勞大到使君主忌憚，不是天尊交付的使命。",
+        "elementary": "不是叫他下山嚇到國王。",
+        "reason": "功高震主是功勞大到使君主忌憚，不是天尊交付的使命。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "盛情難卻指難推辭厚意，不能承接命薄與人間之福。",
+        "elementary": "這裡沒有在說不好意思拒絕邀請。",
+        "reason": "盛情難卻指難推辭厚意，不能承接命薄與人間之福。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "前詞不合修行結果，後詞不合輔佐使命。",
+        "elementary": "兩個詞都不是老師要說的。",
+        "reason": "前詞不合修行結果，後詞不合輔佐使命。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

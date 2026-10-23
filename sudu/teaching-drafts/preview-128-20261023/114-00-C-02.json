@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-02",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 2,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-02.webp",
+  "imageSha256": "f156e266648642110226ccd4acafb7df028107685b27af91e06cca6332de0274",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR將右側定義混入選項；依原圖解讀。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "判斷「把」字句時，先看主語是否有意識地處置事物；船身沒有意志，白浪是船行造成的結果。",
+    "elementarySummary": "人可以故意倒飯、剪頭髮；船身自己不會想事情，只是碰到海水而產生白浪。",
+    "memory": "有意處置／無意導致",
+    "concept": "判斷「把」字句時，先看主語是否有意識地處置事物；船身沒有意志，白浪是船行造成的結果。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-02",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "有意處置／無意導致"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "演出岳飛精神是演員有目的的表演，屬處置。",
+        "elementary": "演員是故意把角色演好的。",
+        "reason": "演出岳飛精神是演員有目的的表演，屬處置。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "倒飯是余燕翼主動進行的動作，屬處置。",
+        "elementary": "他自己決定把飯倒回去。",
+        "reason": "倒飯是余燕翼主動進行的動作，屬處置。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "船身造成海水翻浪，船身本身無意識，符合導致。",
+        "elementary": "船碰到水，水就翻起來，不是船身在想要做浪。",
+        "reason": "船身造成海水翻浪，船身本身無意識，符合導致。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "母親主動剪去頭髮，屬處置。",
+        "elementary": "媽媽拿剪刀剪，是有目的的動作。",
+        "reason": "母親主動剪去頭髮，屬處置。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-10",
+  "year": 115,
+  "subject": "國文",
+  "questionNumber": 10,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-C-10.webp",
+  "imageSha256": "bc81559bf0b8ec19ed37ba7ad9b825d89f19443128372a2843db928b8d23d3e9",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": [
+      "OCR末選項混入下一頁文章；使用原圖對話。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "「橫槊」聯想到曹操橫槊賦詩，「武侯」指諸葛亮；須同時對應兩處典故。",
+    "elementarySummary": "抓兩個名字暗號：拿長矛吟詩的曹操，還有被稱作武侯的諸葛亮。",
+    "memory": "橫槊曹操；武侯諸葛亮",
+    "concept": "「橫槊」聯想到曹操橫槊賦詩，「武侯」指諸葛亮；須同時對應兩處典故。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "115-00-C-10",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "橫槊曹操；武侯諸葛亮"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "陶淵明與歸隱田園相關，無法同時對應橫槊與武侯。",
+        "elementary": "這不是陶淵明種田歸隱的暗號。",
+        "reason": "陶淵明與歸隱田園相關，無法同時對應橫槊與武侯。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "范仲淹雖姓范，但詩中典故不靠作者同姓判斷。",
+        "elementary": "不能看到姓范就選姓范的人。",
+        "reason": "范仲淹雖姓范，但詩中典故不靠作者同姓判斷。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "劉邦與項羽的楚漢典故並非橫槊、武侯所指。",
+        "elementary": "這兩個線索不是在講楚漢爭霸。",
+        "reason": "劉邦與項羽的楚漢典故並非橫槊、武侯所指。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "曹操與諸葛亮分別對應橫槊與武侯。",
+        "elementary": "兩個暗號都找到了對的人。",
+        "reason": "曹操與諸葛亮分別對應橫槊與武侯。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}

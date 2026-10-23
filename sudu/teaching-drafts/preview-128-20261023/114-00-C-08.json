@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "questionId": "114-00-C-08",
+  "year": 114,
+  "subject": "國文",
+  "questionNumber": 8,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/114/114-00-C-08.webp",
+  "imageSha256": "94c4fcad6e68de1f36034df484ee6ffe09039f1f5a2d52dfe7eca82759a7f551",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "Codex",
+    "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+  },
+  "teaching": {
+    "teacherSummary": "「街頭巷尾」修飾攤販夜市的普遍分布；「互別苗頭」表達彼此較量廚藝。",
+    "elementarySummary": "到處都吃得到炒米粉，家裡的廚師也會比比誰炒得好。",
+    "memory": "街頭巷尾＝到處；互別苗頭＝較量",
+    "concept": "「街頭巷尾」修飾攤販夜市的普遍分布；「互別苗頭」表達彼此較量廚藝。",
+    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "source": {
+      "originalExam": "114-00-C-08",
+      "textbook": "教材版本、章節及頁數待核對"
+    },
+    "highlightTerms": [
+      "街頭巷尾＝到處；互別苗頭＝較量"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "街頭巷尾合適，但一知半解指理解不深，不是比廚藝。",
+        "elementary": "地方說對了，煮菜的人不是只懂一點點。",
+        "reason": "街頭巷尾合適，但一知半解指理解不深，不是比廚藝。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "地點與主婦較量手藝的語境都吻合。",
+        "elementary": "到處有賣，大家還會比誰炒得香。",
+        "reason": "地點與主婦較量手藝的語境都吻合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "前呼後擁指許多人簇擁，一知半解也不合此處。",
+        "elementary": "不是前後擠滿隨從，也不是只懂一點。",
+        "reason": "前呼後擁指許多人簇擁，一知半解也不合此處。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "互別苗頭合適，但前呼後擁不能表達攤販遍布。",
+        "elementary": "比手藝對了，前半應是到處都有。",
+        "reason": "互別苗頭合適，但前呼後擁不能表達攤販遍布。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "PENDING",
+    "extensionNeedsQuestionSpecificRevision": true
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
