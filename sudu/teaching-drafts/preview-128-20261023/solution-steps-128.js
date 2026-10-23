@@ -3002,7 +3002,553 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|1": {
+      "questionId": "115-09-2-01",
+      "subject": "會計學",
+      "questionNumber": 1,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "A-D四選項或①②③④逐項判斷；正確表述由會計概念及原圖文字決定",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "辨別**期間報表與時點報表**。資產=負債+權益是某日的財務狀況，綜合損益表反映一期間收益與費損。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①**現金流量表**彙總特定期間的營業、投資、籌資現金流；",
+          "why": "有的表像『這學期收支記錄』，是在講一段時間；但資產負債表像『今天拍一張財務照片』，只看某一天的樣子。第四句把今天說成一整段時間，所以錯。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②**權益變動表**說明期間權益變化；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③**綜合損益表**描述期間經營績效； ④前半句的會計要素雖對，**資產負債表呈現特定時點**的財務狀況，並非一段期間，所以①②③正確，選C。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "①、②、③均屬期間性財務報表描述，④將時點誤作期間，因此C最完整。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|7": {
+      "questionId": "115-09-2-07",
+      "subject": "會計學",
+      "questionNumber": 7,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "銷貨收入1650000、折讓50000；進貨800000、退出14000、存貨減少30000；薪資300000、折舊80000、信用減損4000；利息16000、所得稅率20%",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "淨銷貨=銷貨−折讓；銷貨成本=淨進貨+存貨減少；營業利益率=營業利益/淨銷貨×100%。",
+          "why": "營業利益與稅前淨利不同，利息費用屬營業外；營業利益率分母是淨銷貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨銷貨=1650000−50000=1600000",
+          "why": "銷貨折讓減少銷貨收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨進貨=800000−14000=786000",
+          "why": "進貨退出抵減進貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "銷貨成本=786000+30000=816000",
+          "why": "存貨減少代表多耗用30000的存貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "毛利=1600000−816000=784000",
+          "why": "收入扣銷貨成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業費用=300000+80000+4000=384000",
+          "why": "三項為營業費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業利益=784000−384000=400000",
+          "why": "利息不屬營業費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業利益率=400000/1600000×100%=25%",
+          "why": "正解為B。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業成本率=816000/1600000×100%=51%",
+          "why": "核對A錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "稅前淨利=400000−16000=384000",
+          "why": "扣營業外利息。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "所得稅=384000×20%=76800；稅後淨利=384000−76800=307200",
+          "why": "核對C、D錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "營業利益率25%；單位：金額新臺幣元；比率%；選項：B",
+          "why": "錯把進貨退出當銷貨折讓、將利息計入營業費用、漏扣所得稅。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|8": {
+      "questionId": "115-09-2-08",
+      "subject": "會計學",
+      "questionNumber": 8,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "L=A/3−250000；E=2.5L；A=L+E；E≥1.25(L+x)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "A=L+E；E=2.5L；借款後L'=L+x，E不變。",
+          "why": "資產=負債+權益；貸款買設備同時增加資產、負債，權益不立即變動。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A=L+2.5L=3.5L",
+          "why": "把權益表示成負債的倍數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L=(3.5L)/3−250000",
+          "why": "代入負債與資產比例。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L−7L/6=−250000 ⇒−L/6=−250000 ⇒L=1500000",
+          "why": "解原負債額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E=2.5×1500000=3750000",
+          "why": "求原權益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L'=1500000+x，E'=3750000",
+          "why": "借款購設備使負債增加。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "3750000≥1.25(1500000+x) ⇒3000000≥1500000+x",
+          "why": "以權益最低比例建立不等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x≤1500000，驗算3750000/3000000=1.25",
+          "why": "求上限並核對，選C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "1500000元；單位：新臺幣元；選項：C",
+          "why": "把資產的三分之一讀成三分之二或把借款當成股東增資。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|9": {
+      "questionId": "115-09-2-09",
+      "subject": "會計學",
+      "questionNumber": 9,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "總銷售9000000、外銷1500000；總進項8750000、土地2250000×60%；自用車950000、員工旅遊18000與15000；前期留抵18000、稅率5%、流動比率1.5",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "銷項=國內課稅銷售×5%；可扣進項=允許扣抵交易×5%；應納=銷項−可扣進項−上期留抵；流動比率=CA/CL。",
+          "why": "出口適用零稅率、土地免稅；不得扣抵自用小車與員工旅遊進項；應納不等於溢付；流動比率=流動資產/流動負債。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "國內銷售=9000000−1500000=7500000；銷項=7500000×5%=375000",
+          "why": "出口按題設零稅率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "土地=2250000×60%=1350000；房屋900000",
+          "why": "土地免徵營業稅。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "不得扣抵其他=950000+18000+15000=983000",
+          "why": "自用乘人小汽車及員工旅遊不得扣。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "可扣進項基礎=8750000−1350000−983000=6417000",
+          "why": "排除免稅和不可扣項目。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "可扣進項=6417000×5%=320850",
+          "why": "①錯誤。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "應納=375000−320850−18000=36150>0",
+          "why": "本期應納而非溢付。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "期末累積留抵=0元、無本期可退溢付",
+          "why": "③正確、②不成立。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "結算分錄借銷項375000；貸進項320850、留抵18000、應付36150",
+          "why": "貸方三項合計375000。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "流動資產減338850、流動負債淨減338850，原CA/CL=1.5>1 ⇒比率上升",
+          "why": "④正確，選D。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "D（③④）；本期應納36150元；單位：元及無單位流動比率；選項：D",
+          "why": "把土地、自用車、員工旅遊當可扣進項；將應納誤當退稅。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|10": {
+      "questionId": "115-09-2-10",
+      "subject": "會計學",
+      "questionNumber": 10,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "判我國營業稅敘述何者錯誤：①進口收貨人/持有人納稅；②無銷售額免申報；③自用乘人小車不得抵進項；④只能單數月申報；⑤5-10%由立法院核定。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "《加值型及非加值型營業稅法》第2、10、19、35條，以及申報規則的例外。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①依營業稅法第2條正確。",
+          "why": "就算公司當期沒賣東西也要依法申報；有出口的公司可申請每個月報；定實際稅率的是行政院。第二、第四、第五句才錯。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②第35條規定一般營業人不論有無銷售額均須申報，錯。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③第19條自用乘人小汽車不得扣抵進項，對。 ④零稅率外銷可申請按月申報，非只能單數月，錯。 ⑤第10條徵收率由行政院定之而非立法院，錯。 題目問錯的，因此②④⑤、選D。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "②、④、⑤都違反第35、10條的申報與核定規則，是全部錯誤項。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|11": {
+      "questionId": "115-09-2-11",
+      "subject": "會計學",
+      "questionNumber": 11,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "定額零用金制度，問敘述錯誤者。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "零用金定額制度：設立、支付、報銷、撥補、現金短溢。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "零用金可依需求增減定額，屬現金內部移轉（A）；",
+          "why": "公司的小錢包花錢要留發票。這個月報帳但還沒補回錢，下個月仍可補，所以B說不行是錯的。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "由出納等專人管理零星費用（C）；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "現金加未撥補費用憑證與定額不符，發生現金短溢（D）。 **B錯在宣稱期末僅報銷未撥補，次期不得再撥補**； 報銷費用與實際補足零用金是可跨期分離的作業。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "期末已報銷費用但未實際撥補，下期仍可補足定額；『不得再撥補』錯。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|12": {
+      "questionId": "115-09-2-12",
+      "subject": "會計學",
+      "questionNumber": 12,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": true,
+      "reviewReason": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "銀行存款調節表①帳與原對帳單相同無須調節、②保付支票不需調節、③公司調整分錄後帳餘等於原對帳單餘額、④在途存款需公司借記存款、⑤上月在途本月對帳單出現。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "在途存款加銀行側；未兌現支票減銀行側；銀行手續費或利息調整公司側。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**②⑤正確，選A**。",
+          "why": "公司帳跟銀行帳即使剛好數字相同，也可能還有資料沒核對。公司月底存銀行但銀行下月才收到，應在銀行那邊調。正確的是第二、第五句。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "①錯：兩個未調餘額相同仍可能有互相抵銷未達帳。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "②保付支票銀行保證且已扣款，不列未兌現支票。 ③錯：公司調整後應與銀行**調節後正確餘額**相同，不必與**原始銀行對帳單**相同。 ④錯：在途存款已由公司記帳、銀行未入帳，要加在銀行側，不能公司重複借記。 ⑤上月在途款項進入本月對帳單通常成立。 初次解D忽略③『原對帳單』，已保留待獨立複核。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對照候選及待查疑點",
+          "content": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+          "why": "本題待官方答案與教材獨立查核。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "會計學|13": {
+      "questionId": "115-09-2-13",
+      "subject": "會計學",
+      "questionNumber": 13,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "面額50000元，不附息；發票2月1日，九個月到期；貼現率6%年率，實收49000元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "貼現息=到期值×貼現率×貼現期間(年)。",
+          "why": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "到期日=2月1日+9個月=11月1日",
+          "why": "依題目票據九個月到期。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "到期值=50000元",
+          "why": "不附息票據不另計到期利息。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "貼現息=50000−49000=1000元",
+          "why": "到期值與銀行實收差額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "期間=1000÷(50000×0.06)=1/3年=4個月",
+          "why": "用貼現公式反算時間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "貼現日=11月1日往前4個月=7月1日",
+          "why": "以到期日倒推。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "7月1日；單位：日期（貼現率為年率，金額為新臺幣元）；選項：D",
+          "why": "將九個月到期算錯，或直接用實收金額做貼現公式。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 47
+  "readyQuestionCount": 55
 };

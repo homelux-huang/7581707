@@ -107,7 +107,61 @@
       "calculation": "N/A（本題沒有計算要求）"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-12",
+      "subject": "會計學",
+      "questionNumber": 12,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": true,
+      "reviewReason": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "銀行存款調節表①帳與原對帳單相同無須調節、②保付支票不需調節、③公司調整分錄後帳餘等於原對帳單餘額、④在途存款需公司借記存款、⑤上月在途本月對帳單出現。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "在途存款加銀行側；未兌現支票減銀行側；銀行手續費或利息調整公司側。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "**②⑤正確，選A**。",
+          "why": "公司帳跟銀行帳即使剛好數字相同，也可能還有資料沒核對。公司月底存銀行但銀行下月才收到，應在銀行那邊調。正確的是第二、第五句。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "①錯：兩個未調餘額相同仍可能有互相抵銷未達帳。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "②保付支票銀行保證且已扣款，不列未兌現支票。 ③錯：公司調整後應與銀行**調節後正確餘額**相同，不必與**原始銀行對帳單**相同。 ④錯：在途存款已由公司記帳、銀行未入帳，要加在銀行側，不能公司重複借記。 ⑤上月在途款項進入本月對帳單通常成立。 初次解D忽略③『原對帳單』，已保留待獨立複核。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對照候選及待查疑點",
+          "content": "已保留首次答案差異，後續修正不冒充獨立盲解通過。",
+          "why": "本題待官方答案與教材獨立查核。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -117,7 +171,8 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "firstPassErrorNeedsIndependentReview": true
+    "firstPassErrorNeedsIndependentReview": true,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

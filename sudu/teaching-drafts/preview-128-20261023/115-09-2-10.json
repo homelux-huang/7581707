@@ -109,7 +109,61 @@
       "calculation": "N/A（沒有題目要求的數值運算）"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-10",
+      "subject": "會計學",
+      "questionNumber": 10,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "判我國營業稅敘述何者錯誤：①進口收貨人/持有人納稅；②無銷售額免申報；③自用乘人小車不得抵進項；④只能單數月申報；⑤5-10%由立法院核定。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "《加值型及非加值型營業稅法》第2、10、19、35條，以及申報規則的例外。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "①依營業稅法第2條正確。",
+          "why": "就算公司當期沒賣東西也要依法申報；有出口的公司可申請每個月報；定實際稅率的是行政院。第二、第四、第五句才錯。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②第35條規定一般營業人不論有無銷售額均須申報，錯。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "③第19條自用乘人小汽車不得扣抵進項，對。 ④零稅率外銷可申請按月申報，非只能單數月，錯。 ⑤第10條徵收率由行政院定之而非立法院，錯。 題目問錯的，因此②④⑤、選D。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "②、④、⑤都違反第35、10條的申報與核定規則，是全部錯誤項。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -118,7 +172,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

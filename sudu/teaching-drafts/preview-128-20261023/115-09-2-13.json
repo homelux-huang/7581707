@@ -141,6 +141,72 @@
       "matchingOption": "D",
       "commonMistake": "將九個月到期算錯，或直接用實收金額做貼現公式。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-13",
+      "subject": "會計學",
+      "questionNumber": 13,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "面額50000元，不附息；發票2月1日，九個月到期；貼現率6%年率，實收49000元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "貼現息=到期值×貼現率×貼現期間(年)。",
+          "why": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "到期日=2月1日+9個月=11月1日",
+          "why": "依題目票據九個月到期。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "到期值=50000元",
+          "why": "不附息票據不另計到期利息。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "貼現息=50000−49000=1000元",
+          "why": "到期值與銀行實收差額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "期間=1000÷(50000×0.06)=1/3年=4個月",
+          "why": "用貼現公式反算時間。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "貼現日=11月1日往前4個月=7月1日",
+          "why": "以到期日倒推。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "7月1日；單位：日期（貼現率為年率，金額為新臺幣元）；選項：D",
+          "why": "將九個月到期算錯，或直接用實收金額做貼現公式。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +216,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

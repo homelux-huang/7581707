@@ -153,6 +153,84 @@
       "matchingOption": "C",
       "commonMistake": "把資產的三分之一讀成三分之二或把借款當成股東增資。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-08",
+      "subject": "會計學",
+      "questionNumber": 8,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "L=A/3−250000；E=2.5L；A=L+E；E≥1.25(L+x)",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "A=L+E；E=2.5L；借款後L'=L+x，E不變。",
+          "why": "資產=負債+權益；貸款買設備同時增加資產、負債，權益不立即變動。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "A=L+2.5L=3.5L",
+          "why": "把權益表示成負債的倍數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L=(3.5L)/3−250000",
+          "why": "代入負債與資產比例。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L−7L/6=−250000 ⇒−L/6=−250000 ⇒L=1500000",
+          "why": "解原負債額。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E=2.5×1500000=3750000",
+          "why": "求原權益。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "L'=1500000+x，E'=3750000",
+          "why": "借款購設備使負債增加。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "3750000≥1.25(1500000+x) ⇒3000000≥1500000+x",
+          "why": "以權益最低比例建立不等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "x≤1500000，驗算3750000/3000000=1.25",
+          "why": "求上限並核對，選C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "1500000元；單位：新臺幣元；選項：C",
+          "why": "把資產的三分之一讀成三分之二或把借款當成股東增資。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -162,7 +240,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -171,6 +171,102 @@
       "matchingOption": "B",
       "commonMistake": "錯把進貨退出當銷貨折讓、將利息計入營業費用、漏扣所得稅。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-09-2-07",
+      "subject": "會計學",
+      "questionNumber": 7,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "銷貨收入1650000、折讓50000；進貨800000、退出14000、存貨減少30000；薪資300000、折舊80000、信用減損4000；利息16000、所得稅率20%",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "淨銷貨=銷貨−折讓；銷貨成本=淨進貨+存貨減少；營業利益率=營業利益/淨銷貨×100%。",
+          "why": "營業利益與稅前淨利不同，利息費用屬營業外；營業利益率分母是淨銷貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨銷貨=1650000−50000=1600000",
+          "why": "銷貨折讓減少銷貨收入。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "淨進貨=800000−14000=786000",
+          "why": "進貨退出抵減進貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "銷貨成本=786000+30000=816000",
+          "why": "存貨減少代表多耗用30000的存貨。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "毛利=1600000−816000=784000",
+          "why": "收入扣銷貨成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業費用=300000+80000+4000=384000",
+          "why": "三項為營業費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業利益=784000−384000=400000",
+          "why": "利息不屬營業費用。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業利益率=400000/1600000×100%=25%",
+          "why": "正解為B。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "營業成本率=816000/1600000×100%=51%",
+          "why": "核對A錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "稅前淨利=400000−16000=384000",
+          "why": "扣營業外利息。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "所得稅=384000×20%=76800；稅後淨利=384000−76800=307200",
+          "why": "核對C、D錯。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "營業利益率25%；單位：金額新臺幣元；比率%；選項：B",
+          "why": "錯把進貨退出當銷貨折讓、將利息計入營業費用、漏扣所得稅。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -180,7 +276,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

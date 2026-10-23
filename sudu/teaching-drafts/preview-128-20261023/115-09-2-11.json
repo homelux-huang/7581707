@@ -103,7 +103,61 @@
       "calculation": "N/A（本題沒有計算要求）"
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-11",
+      "subject": "會計學",
+      "questionNumber": 11,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "定額零用金制度，問敘述錯誤者。",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "零用金定額制度：設立、支付、報銷、撥補、現金短溢。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "零用金可依需求增減定額，屬現金內部移轉（A）；",
+          "why": "公司的小錢包花錢要留發票。這個月報帳但還沒補回錢，下個月仍可補，所以B說不行是錯的。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "由出納等專人管理零星費用（C）；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "現金加未撥補費用憑證與定額不符，發生現金短溢（D）。 **B錯在宣稱期末僅報銷未撥補，次期不得再撥補**； 報銷費用與實際補足零用金是可跨期分離的作業。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "期末已報銷費用但未實際撥補，下期仍可補足定額；『不得再撥補』錯。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -112,7 +166,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
