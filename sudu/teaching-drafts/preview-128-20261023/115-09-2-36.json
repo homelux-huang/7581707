@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-36",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 36,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-36.webp",
+  "imageSha256": "91d3a9865c9bab491e3e35fef0b94712588dd83df34ab4089a2da4f0437f17ab",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題目視）",
+    "method": "開啟 GitHub 既有單題 WebP 驗證題號／所有A-D／圖形灰白面積及數值，SHA256 重新比對凍結清單一致；OCR只供輔助。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLVE_BEFORE_CANDIDATE_READ_NOT_THIRD_PARTY_QA",
+    "notice": "原圖目視獨立推理之後才核對既有候選答案；官方最後核實PDF與疑義公告尚未讀取。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-worked-problem",
+    "keyConditions": [
+      "洛倫茲曲線0gf",
+      "完全平均線0ef",
+      "甲為完全平均線與洛倫茲曲線之間面積",
+      "乙為對角線以下三角形扣掉甲",
+      "問吉尼係數"
+    ],
+    "reasoningFromOriginalImage": "吉尼係數 **G＝甲/(甲＋乙)**，其中甲是完全平均線與洛倫茲曲線之間面積，甲＋乙是單位正方形的下三角形面積**1/2**。若甲縮小，洛倫茲曲線越靠近對角線，所得分配越平均、G越小，所以B正確。極端平均G＝0時甲＝0、乙＝1/2；極端不平均G接近1時甲接近1/2、乙接近0。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "吉尼係數 **G＝甲/(甲＋乙)**，其中甲是完全平均線與洛倫茲曲線之間面積，甲＋乙是單位正方形的下三角形面積**1/2**。若甲縮小，洛倫茲曲線越靠近對角線，所得分配越平均、G越小，所以B正確。極端平均G＝0時甲＝0、乙＝1/2；極端不平均G接近1時甲接近1/2、乙接近0。",
+    "elementarySummary": "對角線代表大家分到錢完全平均，真正的曲線離對角線越近、夾在中間的甲區越小，就代表分配越公平。",
+    "memory": "**吉尼係數越小→分配越平均；G＝甲/(甲＋乙)**。",
+    "concept": "洛倫茲曲線與完全均等線的夾面積決定Gini係數，圖中整個下三角形面積是0.5。",
+    "extension": "反向題：若甲占下三角形面積的四分之一，G應是多少？要記得G是比率而非直接看圖形寬度。",
+    "source": {
+      "originalExam": "115-09-2-36",
+      "originalImagePinnedSha256": "91d3a9865c9bab491e3e35fef0b94712588dd83df34ab4089a2da4f0437f17ab",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正公告未核實"
+    },
+    "highlightTerms": [
+      "洛倫茲曲線",
+      "甲面積",
+      "乙面積",
+      "吉尼係數",
+      "G=甲/(甲＋乙)",
+      "所得分配越平均"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A說甲越小G越大；由G=甲/(甲＋乙)且分母固定可知甲越小G越小，與敘述相反。",
+        "elementary": "兩條線越靠近，越平均，G不會變大。",
+        "reason": "A說甲越小G越大；由G=甲/(甲＋乙)且分母固定可知甲越小G越小，與敘述相反。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B說甲面積越小所得越平均；曲線接近完全均等線，G下降，正確。",
+        "elementary": "陰影越薄，代表大家分到的差距越小。",
+        "reason": "B說甲面積越小所得越平均；曲線接近完全均等線，G下降，正確。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說G=0時乙=0；其實G=0需甲=0，三角形甲＋乙仍是1/2，因此乙=1/2不會是0。",
+        "elementary": "沒有不平等的陰影，剩下的三角形還在。",
+        "reason": "C說G=0時乙=0；其實G=0需甲=0，三角形甲＋乙仍是1/2，因此乙=1/2不會是0。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說G=1時甲=乙；此時甲占滿下三角形1/2、乙=0，不會兩者相等。",
+        "elementary": "差距最大時是甲很大、乙幾乎沒有，不是各一半。",
+        "reason": "D說G=1時甲=乙；此時甲占滿下三角形1/2、乙=0，不會兩者相等。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "甲＝對角線與洛倫茲曲線之間面積",
+        "乙＝對角線下三角形扣除甲",
+        "座標軸各自0～100%，可標準化為單位正方形"
+      ],
+      "formula": "G＝甲/(甲＋乙)，甲＋乙＝(1×1)/2＝1/2",
+      "formulaPurpose": "以曲線與完全平均線的夾面積占比衡量所得分配不均程度。",
+      "substitutionAndSteps": [
+        {
+          "formula": "甲＋乙＝1/2",
+          "why": "單位正方形對角線以下是面積為1/2的三角形。"
+        },
+        {
+          "formula": "G＝甲/(1/2)＝2甲",
+          "why": "分母固定，因此G與甲面積成正比。"
+        },
+        {
+          "formula": "甲越小⇒G越小⇒越接近完全均等線",
+          "why": "曲線越貼近對角線，所得分配差異越小。"
+        },
+        {
+          "formula": "若G=0⇒甲=0、乙=1/2",
+          "why": "完全均等時沒有夾面積，剩餘三角形全部是乙。"
+        },
+        {
+          "formula": "若G=1⇒甲=1/2、乙=0",
+          "why": "極端不均時夾面積占滿下三角形。"
+        },
+        {
+          "formula": "故選B：甲面積越小，所得分配越平均",
+          "why": "與面積及G的單調關係一致。"
+        }
+      ],
+      "result": "選B；甲越小G越小且所得越平均",
+      "unit": "無單位（吉尼係數）",
+      "matchingOption": "B",
+      "commonMistake": "誤把甲變小視為不平等變大，或誤說G=0時乙=0。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
