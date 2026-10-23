@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-20",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 20,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-20.webp",
+  "imageSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視WebP）",
+    "method": "逐張實際查看原始WebP題號、圖表、金額及A-D選項；圖檔SHA256重算與固定清單完全一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
+    "initialImageBasedAnswer": "A",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "六年期公司債每年付息280000，X5與X6年底帳面金額5803274、5755405，問①利息費用每年遞減②有效利率低於票面利率③六年費用總額大於1680000④費用與現金利息差額每年遞減，正確哪幾項。",
+    "keyConditions": [
+      "每年付息280000元",
+      "X5年底帳面5803274元",
+      "X6年底帳面5755405元",
+      "流通六年"
+    ],
+    "reasoningFromOriginalImage": "帳面金額 **5803274→5755405**，減少 **47869元**，代表公司債按溢價發行而有效利息法逐年攤銷。X6年認列利息費用 **280000−47869=232131元**，以期初帳面5803274計 **有效利率約4%**，低於票面利率，②正確。溢價攤銷使帳面逐年下降，有效利息費用也逐年**遞減**，①正確；支付六年票面利息=**280000×6=1680000元**，溢價公司債費用總額**小於**票面支付總額，③『大於』錯。每年**現金利息−利息費用**的溢價攤銷反而逐年增加，④『遞減』錯。故①②正確，選A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "A（①②）",
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "帳面金額 **5803274→5755405**，減少 **47869元**，代表公司債按溢價發行而有效利息法逐年攤銷。X6年認列利息費用 **280000−47869=232131元**，以期初帳面5803274計 **有效利率約4%**，低於票面利率，②正確。溢價攤銷使帳面逐年下降，有效利息費用也逐年**遞減**，①正確；支付六年票面利息=**280000×6=1680000元**，溢價公司債費用總額**小於**票面支付總額，③『大於』錯。每年**現金利息−利息費用**的溢價攤銷反而逐年增加，④『遞減』錯。故①②正確，選A。",
+    "elementarySummary": "公司每年付出去的利息都是28萬，但債券帳面金額慢慢變少，所以帳上按利率算出的利息費用也慢慢變少。兩個數的差會越來越大，不是越來越小，所以只有第一、二句對。",
+    "memory": "**溢價公司債：帳面降→有效利息費用降→溢價攤銷差額升；①②。**",
+    "concept": "有效利息法：利息費用=期初帳面價值×有效利率；付息=面額×票面利率；溢價攤銷=付息−利息費用。",
+    "extension": "反向思考：若改為**折價**公司債，帳面與有效利息費用的逐年方向和溢價債有何不同？",
+    "source": {
+      "originalExam": "115-09-2-20",
+      "originalImagePinnedSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實"
+    },
+    "highlightTerms": [
+      "帳面減47869",
+      "利息費用232131",
+      "有效利率約4%",
+      "①②"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "①利息費用隨帳面下降，②有效利率低於票面利率，兩句皆對；③④錯，選A。",
+        "elementary": "第一和第二句說對。",
+        "reason": "①利息費用隨帳面下降，②有效利率低於票面利率，兩句皆對；③④錯，選A。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "③稱六年費用總額大於現金票面利息，與溢價債費用低於現金付息相反；④也反。",
+        "elementary": "利息費用總數不會比發出去的現金利息多。",
+        "reason": "③稱六年費用總額大於現金票面利息，與溢價債費用低於現金付息相反；④也反。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "包含對的①②，但多加入錯的④：溢價攤銷差額應遞增，不是遞減。",
+        "elementary": "差額會愈來愈大。",
+        "reason": "包含對的①②，但多加入錯的④：溢價攤銷差額應遞增，不是遞減。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "包含②正確，但③④都錯，且漏正確①。",
+        "elementary": "第三和第四句不能選。",
+        "reason": "包含②正確，但③④都錯，且漏正確①。"
+      }
+    },
+    "accounting": {
+      "principle": "有效利息法：利息費用=期初帳面價值×有效利率；付息=面額×票面利率；溢價攤銷=付息−利息費用。",
+      "accounts": [
+        "應付公司債",
+        "公司債溢價",
+        "利息費用",
+        "現金"
+      ],
+      "journalEntry": "X6年付息分錄：借『利息費用232131』、借『公司債溢價47869』、貸『現金280000』（實際依教材債券帳列方式）。",
+      "calculation": "考題計算式完整逐步記錄"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "每年付息280000元",
+        "X5年底帳面5803274元",
+        "X6年底帳面5755405元",
+        "流通六年"
+      ],
+      "formula": "溢價攤銷=現金付息−有效利息費用；有效利率=有效利息費用/期初帳面。",
+      "formulaPurpose": "有效利息法：利息費用=期初帳面價值×有效利率；付息=面額×票面利率；溢價攤銷=付息−利息費用。",
+      "substitutionAndSteps": [
+        {
+          "formula": "溢價攤銷=5803274−5755405=47869元",
+          "why": "帳面減少表示溢價攤銷。"
+        },
+        {
+          "formula": "X6利息費用=280000−47869=232131元",
+          "why": "現金利息扣溢價攤銷。"
+        },
+        {
+          "formula": "有效利率≈232131/5803274≈4%",
+          "why": "低於票面利率，②對。"
+        },
+        {
+          "formula": "帳面餘額逐年降 ⇒利息費用=帳面×固定有效利率逐年降",
+          "why": "①對。"
+        },
+        {
+          "formula": "六年現金利息=280000×6=1680000元",
+          "why": "現金付息合計。"
+        },
+        {
+          "formula": "溢價使有效利息費用合計低於現金付息合計",
+          "why": "③說大於錯。"
+        },
+        {
+          "formula": "現金利息固定、利息費用逐年下降 ⇒差額(溢價攤銷)逐年增加",
+          "why": "④說遞減錯；選A。"
+        }
+      ],
+      "result": "A（①②）",
+      "unit": "新臺幣元；有效利率約4%",
+      "matchingOption": "A",
+      "commonMistake": "把溢價攤銷方向和有效利息費用的方向混淆。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
