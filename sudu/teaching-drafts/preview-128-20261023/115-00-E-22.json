@@ -166,7 +166,16 @@
       "exampleChinese": "暴風雨期間在海上工作可能很艱辛。",
       "exampleHighlightedSurfaceForm": "tough",
       "exampleType": "自編非新聞教學例句",
-      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A May 2026 report described the tough working conditions faced by many women at sea.",
+      "newsExampleChinese": "2026年5月的一則報導描述了許多女性航海員面對的艱困工作條件。",
+      "newsExampleHighlightedSurfaceForm": "tough",
+      "newsExampleSourceUrl": "https://safety4sea.com/mhss-psychological-burnout-drives-women-out-of-seafaring-careers/",
+      "newsExampleSourceTitle": "MHSS: Psychological burnout drives women out of seafaring careers",
+      "newsExampleSourceOrganization": "SAFETY4SEA",
+      "newsExampleSourceDate": "2026-05-29",
+      "newsExampleKind": "根據具體新聞／官方公告自行改寫的英文教學句，非新聞逐字引述",
+      "newsExampleSourceScope": "2026-05-29海事媒體報導女性航海員職場壓力、疲勞與長時間工作"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -219,6 +228,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://safety4sea.com/mhss-psychological-burnout-drives-women-out-of-seafaring-careers/",
+      "sourcePublished": "2026-05-29",
+      "factChecked": "2026-05-29海事媒體報導女性航海員職場壓力、疲勞與長時間工作",
+      "highlight": "tough",
+      "highlightInText": true,
+      "bilingual": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsVerified": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -166,7 +166,16 @@
       "exampleChinese": "這條新道路能幫助車流行進得更順暢。",
       "exampleHighlightedSurfaceForm": "traffic flow",
       "exampleType": "自編非新聞英文例句",
-      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A 2026 public-media report said Tamkang Bridge could improve traffic flow near Tamsui and Bali.",
+      "newsExampleChinese": "2026年公視報導指出，淡江大橋可望改善淡水與八里附近的交通流量。",
+      "newsExampleHighlightedSurfaceForm": "traffic flow",
+      "newsExampleSourceUrl": "https://news.pts.org.tw/article/803794",
+      "newsExampleSourceTitle": "Jembatan Tamkang dibuka bulan Mei, waktu tempuh jam sibuk berkurang 25 menit",
+      "newsExampleSourceOrganization": "公視新聞網 PNN",
+      "newsExampleSourceDate": "2026-04-15",
+      "newsExampleKind": "根據具體新聞／官方公告自行改寫的英文教學句，非新聞逐字引述",
+      "newsExampleSourceScope": "2026-04-15印尼語報導引用公路局預估大橋減少壅塞、改善車流"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -219,6 +228,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://news.pts.org.tw/article/803794",
+      "sourcePublished": "2026-04-15",
+      "factChecked": "2026-04-15印尼語報導引用公路局預估大橋減少壅塞、改善車流",
+      "highlight": "traffic flow",
+      "highlightInText": true,
+      "bilingual": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsVerified": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -165,7 +165,16 @@
       "exampleChinese": "由評審選出的設計獲得獎項。",
       "exampleHighlightedSurfaceForm": "selected",
       "exampleType": "自編非新聞英文例句",
-      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "A 2025 report said the Tamkang Bridge design by Zaha Hadid was selected through an international design competition.",
+      "newsExampleChinese": "2025年報導指出，由札哈・哈蒂設計的淡江大橋方案，是經國際設計競賽選出。",
+      "newsExampleHighlightedSurfaceForm": "selected",
+      "newsExampleSourceUrl": "https://www.taiwannews.com.tw/news/6201237",
+      "newsExampleSourceTitle": "New Taipei Tamkang Bridge final piece completed",
+      "newsExampleSourceOrganization": "Taiwan News",
+      "newsExampleSourceDate": "2025-09-16",
+      "newsExampleKind": "根據具體新聞／官方公告自行改寫的英文教學句，非新聞逐字引述",
+      "newsExampleSourceScope": "2025-09-16新聞報導明指淡江大橋方案由臺灣首場國際橋梁競賽選出"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -218,6 +227,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://www.taiwannews.com.tw/news/6201237",
+      "sourcePublished": "2025-09-16",
+      "factChecked": "2025-09-16新聞報導明指淡江大橋方案由臺灣首場國際橋梁競賽選出",
+      "highlight": "selected",
+      "highlightInText": true,
+      "bilingual": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsVerified": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

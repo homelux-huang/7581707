@@ -3202,12 +3202,17 @@
       "115-00-E-08",
       "115-00-E-20",
       "115-00-E-21",
-      "115-00-E-28"
+      "115-00-E-28",
+      "115-00-E-17",
+      "115-00-E-22",
+      "115-00-E-24",
+      "115-00-E-25",
+      "115-00-E-26"
     ],
     "lastAudit": "2026-10-23",
     "scopeTotalEnglish": 28,
-    "sourcedExampleCount": 4,
-    "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md",
+    "sourcedExampleCount": 9,
+    "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md; ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md",
     "fullEnglishTeachingQaPass": 0,
     "meaning": "Only four explicit sourced news-context pedagogical paraphrases, not publisher quotations or total teaching QA"
   }

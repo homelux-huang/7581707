@@ -152,7 +152,16 @@
       "exampleChinese": "那名學生在比賽中贏得兩面金牌。",
       "exampleHighlightedSurfaceForm": "gold medals",
       "exampleType": "自編雙語教學例句，非新聞",
-      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Taiwan won 22 gold medals at the 2025 WorldSkills Asia competition in Taipei.",
+      "newsExampleChinese": "臺灣在2025年臺北舉行的亞洲技能競賽中奪得22面金牌。",
+      "newsExampleHighlightedSurfaceForm": "gold medals",
+      "newsExampleSourceUrl": "https://www.wda.gov.tw/News_Content.aspx?n=31&s=18562",
+      "newsExampleSourceTitle": "臺灣主辦2025第三屆亞洲技能競賽圓滿落幕",
+      "newsExampleSourceOrganization": "勞動部勞動力發展署",
+      "newsExampleSourceDate": "2025-11-30",
+      "newsExampleKind": "根據具體新聞／官方公告自行改寫的英文教學句，非新聞逐字引述",
+      "newsExampleSourceScope": "2025-11-30官方新聞稿證實臺灣獲22金及總冠軍"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -202,6 +211,20 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "sourceUrl": "https://www.wda.gov.tw/News_Content.aspx?n=31&s=18562",
+      "sourcePublished": "2025-11-30",
+      "factChecked": "2025-11-30官方新聞稿證實臺灣獲22金及總冠軍",
+      "highlight": "gold medals",
+      "highlightInText": true,
+      "bilingual": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsVerified": false,
+      "textbookPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
