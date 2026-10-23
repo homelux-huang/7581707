@@ -306,13 +306,46 @@ def visual_certificate(source: Path, item: dict, identity: str) -> bool:
         parsed = json.loads(payload)
     except (json.JSONDecodeError, UnicodeDecodeError):
         return False
+    if not isinstance(parsed, dict):
+        return False
     # Older source does not have a file SHA claim. Validate the immutable Git
     # source copy by matching a genuine per-question visual-QA record.
-    for row in parsed.get("records", []):
-        if (row.get("questionId") == identity and row.get("result") == "PASS"
+    for row in parsed.get("records", []) if isinstance(parsed.get("records"), list) else []:
+        if (isinstance(row, dict) and row.get("questionId") == identity
+                and row.get("result") == "PASS"
                 and row.get("webpSha256") == item.get("sha256")
                 and row.get("webpPath") == item.get("output")):
             return True
+
+    # The 2026-10-23 visual-QA batches use "items" for single questions and
+    # "sharedMaterials" for passages. Do not require a fresh OCR/answer/teaching
+    # review for an IMAGE-ONLY preview, but never infer QA from PASS alone:
+    # bind the proof to this exact ID, source page, pixel crop and WebP SHA.
+    if parsed.get("year") not in YEARS or not identity.startswith(f"{parsed['year']}-"):
+        return False
+    for collection, identity_field in (("items", "questionId"),
+                                       ("sharedMaterials", "sharedMaterialId")):
+        rows = parsed.get(collection, [])
+        if not isinstance(rows, list):
+            continue
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            criteria = row.get("criteria")
+            if (row.get(identity_field) == identity
+                    and row.get("result") == "PASS"
+                    and row.get("reviewedWebpSha256") == item.get("sha256")
+                    and row.get("reviewedWebpPath") == item.get("output")
+                    and row.get("sourcePagePath") == item.get("source")
+                    and row.get("sourcePageSha256") == item.get("sourceSha256")
+                    and row.get("cropPixels") == item.get("crop")
+                    and isinstance(criteria, dict) and bool(criteria)
+                    and all(v is True for v in criteria.values())
+                    and good(row.get("reviewedAt") or row.get("qaReviewedAt")
+                             or parsed.get("reviewedAt"))
+                    and good(row.get("reviewer") or row.get("qaReviewer")
+                             or parsed.get("reviewer"))):
+                return True
     return False
 
 
