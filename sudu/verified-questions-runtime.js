@@ -32,7 +32,7 @@
   const viewStyles=document.createElement('style');
   viewStyles.textContent=[
     'body.verified-year-loading #studyView,body.verified-year-loading #reviewView,body.verified-year-loading #progressShell,body.verified-year-loading .bottom{display:none!important}',
-    'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #memoryWrap,body.qa-image-mode #answerScrollSpace,body.qa-image-mode #reviewView,body.qa-image-mode #progressShell,body.qa-image-mode .bottom,body.qa-image-mode .review-head,body.qa-image-mode #navToggle{display:none!important}',
+    'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #answerScrollSpace,body.qa-image-mode #reviewView,body.qa-image-mode #progressShell,body.qa-image-mode .bottom,body.qa-image-mode .review-head,body.qa-image-mode #navToggle{display:none!important}',
     'body.qa-image-mode #studyView{display:block!important}',
     'body.qa-image-mode .side-arrow{bottom:24px}',
     'body.qa-image-mode #questionCard .source-figure{margin:12px 0 4px}',
@@ -286,7 +286,7 @@
       let html='<div class="option-detail '+color+'"><b>'+header+'</b>'+
         rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(x[1],keywords)+'</p>').join('');
       if(L===q.answer){
-        const extra=subjectEntries(q);
+        const extra=subjectEntries(q).filter(([name])=>name!=='考題計算式');
         if(extra.length)html+='<div class="option-detail-grid">'+extra.map(x=>
           '<span><em>'+escapeHtml(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';
       }

@@ -48,30 +48,42 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    assert.equal(await page.locator('.option-detail').count(),4);
    assert((await page.locator('#guideCard').innerText()).includes('頁數：待核對'));
   }
-  // All five English words and their actual inflections in all four required surfaces.
+    // Existing guide content wins, while unique source notes remain in the same section.
+  await choose('國文',1);
+  await page.locator('.opt').first().click();await settle();
+  const mergedSource=await page.evaluate(()=>{
+   const rows=[...document.querySelectorAll('#guideCard .guide-block')].filter(el=>el.querySelector('h3')?.textContent==='出處');
+   return {count:rows.length,text:rows[0]?.innerText||''};
+  });
+  assert.equal(mergedSource.count,1,'duplicate source headings are merged');
+  assert(mergedSource.text.includes('國立彰化高商')&&mergedSource.text.includes('115 年統測國文第 1 題'),
+   'guide retains textbook and official question source without duplicate panels');
+  const noDuplicate=await page.evaluate(()=>{
+   const q=qnow(),old=q.memory;
+   q.memory=q.concept;
+   const labels=guideEntries(q).map(x=>x[0]);
+   q.memory=old;
+   return {memo:labels.filter(x=>x==='速記重點').length,source:labels.filter(x=>x==='出處').length};
+  });
+  assert.deepEqual(noDuplicate,{memo:0,source:1},'duplicated quick memo is omitted');
+  // All five English words and their actual inflections in all three required surfaces.
   for(const [id,word] of [[1,'wet'],[2,'joined'],[3,'equally'],[4,'suitable'],[5,'attract']]){
    await choose('英文',id);
    await page.locator('.opt').first().click();await settle();
-   await page.locator('.memory-extra summary').scrollIntoViewIfNeeded();
-   const beforeExpand=await page.evaluate(()=>scrollY);
-   await page.locator('.memory-extra summary').click();
-   await page.waitForTimeout(100);
-   assert(Math.abs(await page.evaluate(()=>scrollY)-beforeExpand)<3,'extension expands in place');
-   await page.locator('.memory-close').click();
-   assert.equal(await page.locator('#memoryWrap').isVisible(),false);
-   await page.locator('#explainBtn').click();await settle();
-   assert.equal(await page.locator('#memoryWrap').isVisible(),true);
-   await page.locator('#questionBtn').click();await settle();
-   assert.equal(await page.locator('#memoryWrap').isVisible(),false);
-   await page.locator('#explainBtn').click();await settle();
-
-   for(const selector of ['#correctAnswer .option-detail','#guideCard','#memoryCard']){
-    const text=await page.locator(selector).innerText();
-    for(const label of ['初級','中級','高級','中文：'])assert(text.includes(label),id+' '+selector+' '+label);
-    assert(!/\b(low|mid|high)\s*:/i.test(text));
-    assert.equal((await page.locator(selector+' .exam-highlight').innerText()).toLowerCase(),word);
-   }
-   // Deliberately choose a wrong option so this isolated profile has a review card.
+   assert.equal(await page.locator('#memoryWrap, #memoryCard, .memory-extra').count(),0,'removed duplicate memory UI');
+    const oldNote=await page.evaluate(()=>qnow().memory);
+    assert((await page.locator('#guideCard').innerText()).includes(oldNote),'unique quick-memory content survives inside the subject guide');
+    await page.locator('#questionBtn').click();await settle();
+    assert.equal(await page.locator('#guideCard').isVisible(),false,'question button focuses the question');
+    await page.locator('#explainBtn').click();await settle();
+    assert.equal(await page.locator('#guideCard').isVisible(),true,'explanation button reopens guide');
+    for(const selector of ['#correctAnswer .option-detail','#guideCard']){
+     const detail=await page.locator(selector).innerText();
+     for(const label of ['初級','中級','高級','中文：'])assert(detail.includes(label),id+' '+selector+' '+label);
+     assert(!/\b(low|mid|high)\s*:/i.test(detail));
+     assert.equal((await page.locator(selector+' .exam-highlight').innerText()).toLowerCase(),word);
+    }
+    // Deliberately choose a wrong option so this isolated profile has a review card.
    const wrong=await page.evaluate(()=>LETTERS.find(x=>x!==qnow().answer));
    await page.locator('.opt[data-a="'+wrong+'"]').click();await settle();
    await page.locator('#reviewTop').click();
@@ -80,7 +92,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    const text=await card.innerText();
    for(const label of ['初級','中級','高級','中文：'])assert(text.includes(label));
    assert(!/\b(low|mid|high)\s*:/i.test(text));
-   report.english.push({question:id,highlight:word,surfaces:4,status:'passed'});
+   report.english.push({question:id,highlight:word,surfaces:3,status:'passed'});
   }
   // Every question in both themes at all requested dimensions, with genuine scroll geometry.
   for(const [width,height] of sizes){
@@ -114,22 +126,22 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      assert.equal(await page.locator('#answerCard .opt').count(),4);
      await page.locator('.opt').first().click();await settle();
      const geometry=await page.evaluate(()=>{
-      const m=document.querySelector('#memoryCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
-      return {gap:m.top-c.bottom,left:Math.abs(c.left-m.left),width:Math.abs(c.width-m.width),memoryTop:m.top,memoryBottom:m.bottom,answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
-     });
-     assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
-     assert(geometry.left<=2&&geometry.width<=3);
-     assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
-     const joined=await page.evaluate(()=>{const m=document.querySelector('#memoryCard'),g=document.querySelector('#guideCard'),a=m.getBoundingClientRect(),b=g.getBoundingClientRect();return {adjacent:m.nextElementSibling===g,gap:b.top-a.bottom,left:Math.abs(a.left-b.left),width:Math.abs(a.width-b.width)};});
-     assert(joined.adjacent&&Math.abs(joined.gap)<=1&&joined.left<=1&&joined.width<=1,'memory directly joins explanation '+JSON.stringify(joined));
-     if(['數學 B','經濟學','會計學'].includes(q.subject)){
+       const guide=document.querySelector('#guideCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
+       return {gap:guide.top-c.bottom,left:Math.abs(c.left-guide.left),width:Math.abs(c.width-guide.width),answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
+      });
+      assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
+      assert(geometry.left<=2&&geometry.width<=3);
+      assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
+      assert.equal(await page.locator('#correctAnswer + #guideCard').count(),1,'guide is the only block after the correct option');
+      assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'memory block removed at every viewport');
+      if(['數學 B','經濟學','會計學'].includes(q.subject)){
       const shouldCalculate=q.subject==='數學 B'||(q.subject==='經濟學'&&[26,27,28].includes(q.id));
-      assert.equal((await page.locator('#correctAnswer .option-detail').innerText()).includes('考題計算式'),shouldCalculate);
-      const count=await page.locator('#correctAnswer .calculation-step').count();assert(shouldCalculate?count>=3:count===0);
-      if(!shouldCalculate){assert.equal(await page.locator('#memoryCard .calculation-step').count(),0);assert.equal(await page.locator('#guideCard .calculation-step').count(),0);}
-
-     }
-     if(q.subject==='國文'){
+      assert.equal(await page.locator('#correctAnswer .calculation-step').count(),0,'calculation steps only in subject guide');
+       assert.equal(await page.locator('#guideCard .guide-block h3').first().innerText()==='考題計算式',shouldCalculate,'calculation is first when applicable');
+       const count=await page.locator('#guideCard .calculation-step').count();assert(shouldCalculate?count>=3:count===0);
+       assert.equal((await page.locator('#guideCard .guide-block h3').allTextContents()).filter(x=>x==='考題計算式').length,shouldCalculate?1:0,'calculation appears exactly once');
+      }
+      if(q.subject==='國文'){
       const t=await page.locator('#correctAnswer .option-detail').innerText();assert(!/(?:^|[｜／\n])(?:低|中|高)[：:]/.test(t));
      }
      await noOverflow('answer overflow '+width+' '+q.subject+q.id);

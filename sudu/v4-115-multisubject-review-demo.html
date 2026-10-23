@@ -10,7 +10,7 @@
  --bg:#f5f7fc;--card:#fff;--text:#111827;--muted:#667085;--line:#d8deea;
  --blue:#4a6fea;--blue-soft:#edf1ff;--red:#b4233f;--red-soft:#fff1f3;--green:#13795b;--correct-bg:#e5f5ed;--correct-text:#103d2e;
  --yellow:#ffe58f;--purple:#5b32d6;--sticky:#111;--stickyText:#fff;--safe:env(safe-area-inset-bottom,0px);
- --nav-bg:#e7edf9;--question-bg:#eef4ff;--option-section:#fff6e6;--option-bg:#fff;--option-hover:#e4edff;--option-hover-border:#315df5;--navH:0px;--memoryH:0px;
+ --nav-bg:#e7edf9;--question-bg:#eef4ff;--option-section:#fff6e6;--option-bg:#fff;--option-hover:#e4edff;--option-hover-border:#315df5;--navH:0px;
 }
 html[data-theme="dark"]{--correct-bg:#123c2d;--correct-text:#e4fff1;--bg:#000;--card:#111;--text:#f8fafc;--muted:#adb5c4;--line:#30323a;--blue-soft:#151c38;--red-soft:#2a1118;--sticky:#fff;--stickyText:#111;--nav-bg:#171a22;--question-bg:#0d1424;--option-section:#211a10;--option-bg:#181b23;--option-hover:#202b47;--option-hover-border:#7c9cff}
 *{box-sizing:border-box}
@@ -52,26 +52,13 @@ html[data-theme="dark"] .opt.correct{background:var(--correct-bg);color:var(--co
 .option-detail>p{margin:4px 0 8px}.option-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
 .option-detail-grid span{display:block;border:1px solid var(--line);border-radius:11px;padding:7px 9px;background:var(--card);overflow-wrap:break-word}
 .option-detail-grid em{display:block;color:var(--blue);font-style:normal;font-size:12px;font-weight:1000;margin-bottom:2px}
-.memory-extra{margin-top:10px;border:1px solid #d8deea;border-radius:13px;overflow:hidden;background:#fff;color:#111;text-align:center}
-.memory-extra summary{cursor:pointer;padding:16px 11px;min-height:48px;font-weight:1000;list-style:none;background:#fff;color:#111;text-align:center}.memory-extra summary::-webkit-details-marker{display:none}
-.memory-extra-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:0 9px 9px;background:#fff;color:#111;text-align:center}
-.memory-extra-grid span{border:1px solid #e1e6ef;border-radius:10px;padding:8px;background:#fff;color:#111;font-size:13px;line-height:1.4;overflow-wrap:break-word;text-align:center}
-.memory-extra-grid b{display:block;font-size:11px;color:#315df5;margin-bottom:3px;text-align:center}
 .source-priority{font-size:12px;color:var(--muted);margin-top:5px}.news-en,.news-zh{display:block}.news-zh{margin-top:5px;color:var(--muted)}.exam-highlight{background:#ffe66d;color:#111;padding:0 .18em;border-radius:4px;font-weight:1000;box-decoration-break:clone;-webkit-box-decoration-break:clone}.level-vocab{font-weight:760;word-spacing:.04em}
-@media(max-width:620px){.option-detail-grid,.memory-extra-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.option-detail-grid{grid-template-columns:1fr}}
 .source-figure{margin:14px 0 16px;border:1px solid color-mix(in srgb,var(--blue) 26%,var(--line));border-radius:18px;padding:10px;background:var(--option-bg);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--blue) 7%,transparent)} .source-figure img{width:100%;height:auto;display:block;border-radius:12px} .source-figure figcaption{font-size:13px;color:var(--muted);margin-top:8px}
-.memory-wrap{display:none;position:relative;margin:0;min-width:0;overflow-anchor:none} .memory-wrap.show{display:block}.memory-wrap:has(.memory-extra[open]){position:relative;top:auto}
-.memory-close{float:right;min-width:44px;min-height:44px;border:1px solid #777;border-radius:12px;background:#111;color:#fff;font-size:26px}.memory{background:var(--correct-bg);color:var(--correct-text);border-radius:21px;padding:15px 17px 13px;box-shadow:0 12px 30px rgba(0,0,0,.2);border-bottom:4px solid var(--green)} .memory small{opacity:.76;font-weight:900} .memory strong{display:block;font-size:22px;line-height:1.16;margin-top:4px}
-.memory-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid color-mix(in srgb,var(--correct-text) 25%,transparent)}
-.memory-actions button{min-height:64px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:1000;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 10px;line-height:1.15}
-.memory-action-icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
-.memory-action-icon svg{width:23px;height:23px;display:block;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.memory-action-concept .memory-action-icon{background:#2563eb}.memory-action-extension .memory-action-icon{background:#7c3aed}.memory-action-formula .memory-action-icon{background:#b45309}.memory-action-source .memory-action-icon{background:#0f766e}
-.memory-action-label{min-width:0;overflow-wrap:break-word}
 .option-wrap.correct-wrap>.opt.correct{border-color:var(--green);border-top-width:4px;box-shadow:0 0 0 2px rgba(19,121,91,.13)}
-.option-wrap.correct-wrap{scroll-margin-top:calc(var(--navH) + var(--memoryH) + 17px)}
-.guide{display:none} .guide.show{display:block} .guide-grid{display:grid;gap:10px}
-.guide-block{border:1px solid var(--line);border-radius:16px;padding:14px;scroll-margin-top:calc(var(--navH) + var(--memoryH) + 18px)} .guide-block h3{margin:0 0 6px;font-size:18px;color:var(--blue)} .guide-block p{margin:0;font-size:17px;line-height:1.5;white-space:pre-line}
+.option-wrap.correct-wrap{scroll-margin-top:calc(var(--navH) + 17px)}
+.guide{display:none} .guide.show{display:block} .guide-grid{display:grid;gap:10px}#guideCard{margin:0;padding:15px;border:2px solid color-mix(in srgb,var(--green) 46%,var(--line));background:var(--card)}#guideCard h2{font-size:21px}.guide-block.calculation-first{background:color-mix(in srgb,var(--blue) 9%,var(--card));border:2px solid color-mix(in srgb,var(--blue) 46%,var(--line))}
+.guide-block{border:1px solid var(--line);border-radius:16px;padding:14px;scroll-margin-top:calc(var(--navH) + 18px)} .guide-block h3{margin:0 0 6px;font-size:18px;color:var(--blue)} .guide-block p{margin:0;font-size:17px;line-height:1.5;white-space:pre-line}
 .review-view{display:none} .review-view.show{display:block}
 .review-toolbar{display:grid;grid-template-columns:1fr 1fr auto;gap:9px;margin-bottom:14px} .review-toolbar select,.review-toolbar button{min-height:50px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--text);padding:9px 12px;font-weight:850}
 .review-list{display:grid;grid-template-columns:minmax(0,1fr);gap:13px} .wrong-card{border:1px solid var(--line);border-radius:21px;background:var(--card);padding:19px}
@@ -86,7 +73,7 @@ html[data-theme="dark"] .opt.correct{background:var(--correct-bg);color:var(--co
 @media(max-width:720px){
  .header{padding:14px 13px 10px;gap:10px;flex-wrap:wrap}.brand-block{flex:1;min-width:210px}.brand{font-size:28px}.sub{font-size:14px}.logo{width:52px;height:52px}.header-actions{width:100%;display:grid;grid-template-columns:1fr 1fr 54px;gap:8px}.review-head,.nav-toggle{min-height:50px;padding:9px 10px}.review-label-full{display:none}.review-label-short{display:inline}.nav-toggle{display:inline-flex}.theme{width:54px;height:50px;border-radius:15px}.control-row{grid-template-columns:1fr;padding:0 13px 13px}.selectors{display:grid;grid-template-columns:1fr 1fr}
  .progress-actions{grid-template-columns:1fr 1fr}.label{grid-column:1/2}.reset{grid-column:2/3}.continue{grid-column:1/3;justify-self:stretch}.nav-auto .progress-shell{transform:translateY(-100%)}.nav-auto.nav-open .progress-shell{transform:translateY(0)}.nav-auto .progress-shell::after{display:none}
- main{padding:13px 9px 30px}.card{padding:19px;border-radius:21px}h1{font-size:25px}.opt{font-size:18px;padding:14px}.memory-wrap{margin-left:0;margin-right:0}.memory strong{font-size:19px}.memory-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.memory-actions button{font-size:14px;min-height:62px}.memory-action-icon{width:36px;height:36px;flex-basis:36px}
+ main{padding:13px 9px 30px}.card{padding:19px;border-radius:21px}h1{font-size:25px}.opt{font-size:18px;padding:14px}
  .review-toolbar{grid-template-columns:1fr}.metrics{flex-basis:100%;min-width:0;margin-left:0;padding-left:42px;overflow-wrap:break-word}.bottom button{min-height:66px;font-size:14px}
 }
 @media(max-width:390px){.sub{display:none}.brand-block{min-width:180px}.header-actions{grid-template-columns:1fr 1fr 48px}.review-head,.nav-toggle{font-size:13px;padding:7px}.theme{width:48px}.progress-chips{gap:5px}.chip{width:44px;height:44px;font-size:15px}.label{font-size:16px}.reset,.continue{font-size:14px;padding:8px}h1{font-size:23px}.wrong-card{padding:15px}}
@@ -113,10 +100,7 @@ html[data-theme="dark"] .opt.correct{background:var(--correct-bg);color:var(--co
 .side-arrow{position:fixed;bottom:calc(98px + var(--safe));z-index:59;width:52px;height:52px;border:2px solid #fff;border-radius:50%;background:#000;color:#fff;font-size:30px;box-shadow:0 3px 12px #0004;touch-action:manipulation}
 .side-prev{left:max(4px,env(safe-area-inset-left))}.side-next{right:max(4px,env(safe-area-inset-right))}
 .side-arrow:disabled{opacity:.35}.review-mode .side-arrow{display:none}
-body{padding-bottom:170px}.memory-extra summary::after{content:' ＋'}.memory-extra[open] summary::after{content:' −'}
-/* One continuous reading group: memory directly joins subject explanation. */
-.memory-wrap .memory{border-bottom-left-radius:0;border-bottom-right-radius:0;box-shadow:none}
-.memory-wrap #guideCard{margin:0;border-top:0;border-top-left-radius:0;border-top-right-radius:0}
+body{padding-bottom:170px}
 .calculation-steps,.calculation-step{display:block!important}.calculation-step{margin:8px 0;line-height:1.65;text-align:left;overflow-wrap:anywhere}.calculation-step b{display:block;color:var(--blue)}
 
 /* Compact header and picker; retain large reading text and touch targets. */
@@ -126,7 +110,7 @@ body{padding-bottom:170px}.memory-extra summary::after{content:' ＋'}.memory-ex
 .exam-countdown{max-width:952px;margin:0 auto 8px;padding:8px 12px;border-radius:12px;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;background:#b91c1c;color:#fff;font-weight:800}
 .exam-countdown strong{font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap}.exam-countdown a{color:#fff;font-size:12px;text-underline-offset:3px}
 @media(max-width:720px){.exam-countdown{margin:0 9px 7px;gap:4px 8px;padding:7px 9px}.exam-countdown strong{font-size:18px}.exam-countdown a{flex-basis:100%;text-align:center}.header{padding:9px}.control-row{padding:0 9px 8px}.summary b{font-size:17px}}
-.option-detail-grid .calculation-steps,.option-detail-grid .calculation-step{border:0;padding:0;background:transparent}
+.guide-block .calculation-steps,.guide-block .calculation-step{border:0;padding:0;background:transparent}
 </style>
 </head>
 <body>
@@ -147,7 +131,6 @@ body{padding-bottom:170px}.memory-extra summary::after{content:' ＋'}.memory-ex
 </div>
 <main>
  <section id="studyView" data-demo-webp-coverage="35-of-35">
-  <div class="memory-wrap" id="memoryWrap" data-flow="correct-answer-to-memory" aria-live="polite" aria-label="一眼記住"><div class="memory" id="memoryCard"></div></div>
   <article class="card" id="questionCard"></article>
   <article class="card" id="answerCard" aria-label="答案選項"></article>
   <article class="card guide" id="guideCard"></article>
@@ -258,7 +241,7 @@ function optionSubjectEntries(q,L){
  const C=window.DEMO_LEARNING_CONFIG||{};
  if(q.subject==='英文'){
   const m=(C.englishOptionMeta||{})[q.id+'|'+L]; const base=m?[['中文翻譯',m[0]],['發音',m[1]]].filter(x=>hasStudyValue(x[1])):[];
-  return L===q.answer?base.concat(subjectEntries(q).filter(x=>!['中文翻譯','發音'].includes(x[0]))):base;
+  return L===q.answer?base.concat(subjectEntries(q).filter(x=>!['中文翻譯','發音','考題計算式'].includes(x[0]))):base;
  }
  const prefer={
   '國文':['讀音','文本出處','相關字詞'],
@@ -268,7 +251,7 @@ function optionSubjectEntries(q,L){
   '商業概論':['法規','原理','邏輯'],
   '數位科技':[]
  }[q.subject]||[];
- const all=subjectEntries(q); return L===q.answer?all:all.filter(x=>prefer.includes(x[0]));
+ const all=subjectEntries(q).filter(x=>x[0]!=='考題計算式'); return L===q.answer?all:all.filter(x=>prefer.includes(x[0]));
 }
 function renderOptionDetail(q,L){
  const entries=optionSubjectEntries(q,L);
@@ -300,7 +283,7 @@ function renderProgress(){
  $('continueBtn').onclick=()=>{if(first>=0){currentIndex=first;showStudy();renderAll();closeQuestionNav()}else showReview();};
 }
 function renderQuestion(){
- $('studyView').appendChild($('memoryWrap'));hideMemory();
+ $('studyView').appendChild($('guideCard'));hideGuide();
  $('answerScrollSpace').style.height='0px';
  const q=qnow(),r=record(q);
  const img=q.image?'<figure class="source-figure" data-single-question-webp="true"><img src="'+q.image+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題單題原圖"><figcaption>官方原始 WebP 單題裁切：只保留本題題號、題目／必要圖表與 A～D 選項；沒有重新 OCR。</figcaption></figure>':'';
@@ -318,40 +301,45 @@ function renderQuestion(){
 function answer(sel){
  const q=qnow(),r=record(q),elapsed=Math.max(1,(performance.now()-startedAt)/1000);r.attempts++;r.lastElapsed=elapsed;r.selected=sel;
  if(sel===q.answer)r.status='ok';else{r.status='bad';r.wrongCount++;r.totalWrongSeconds+=elapsed;r.lastWrongAt=Date.now();}
- save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showMemory();
+ save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showGuide();
  requestAnimationFrame(()=>requestAnimationFrame(()=>syncHeights()));
  setTimeout(scrollToCorrectAnswer,320);
 }
-function memoryIcon(kind){
- const icons={
-  concept:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"></path></svg>',
-  extension:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18L18 5"></path><path d="M11 5h7v7"></path><path d="M5 7v11h11"></path></svg>',
-  formula:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10M7 20h10"></path><path d="M10 8l4 8M14 8l-4 8"></path></svg>',
-  source:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22z"></path><path d="M20 5.5A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22z"></path><path d="M7 7h2M15 7h2"></path></svg>'
- };
- return icons[kind]||'';
+function normalizeStudyText(value){
+ return String(value??'').normalize('NFKC').toLowerCase().replace(/\s+/g,'').replace(/[，、。；;：:！!？?（）()]/g,'');
+}
+function guideEntries(q){
+ // Existing guide fields win; only truly new memory content is transferred.
+ // A calculation is always first, and absent conceptual calculations stay hidden.
+ const extra=subjectEntries(q);
+ const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
+ const proposed=[...extra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
+                 ...common,...extra.filter(x=>x[0]!=='考題計算式')];
+ const entries=[],positions=new Map(),contents=new Set();
+ for(const [rawTitle,value] of proposed){
+  const title=rawTitle==='文本出處'?'出處':rawTitle;
+  if(!hasStudyValue(value)&&String(value??'').trim()!=='N/A')continue;
+  const text=normalizeStudyText(value);
+  if(text!=='n/a'&&contents.has(text))continue;
+  if(positions.has(title)){
+   // Preserve additional, non-duplicate details in the original guide field.
+   // The main calculation is singular and must never be doubled.
+   if(title!=='考題計算式')entries[positions.get(title)][1]+='\n'+String(value);
+  }else{
+   positions.set(title,entries.length);entries.push([title,value]);
+  }
+  if(text!=='n/a')contents.add(text);
+ }
+ const note=normalizeStudyText(q.memory);
+ if(hasStudyValue(q.memory)&&!entries.some(x=>{
+  const value=normalizeStudyText(x[1]);return value&&(value===note||value.includes(note));
+ }))entries.splice(entries[0]?.[0]==='考題計算式'?1:0,0,['速記重點',q.memory]);
+ return entries;
 }
 function renderGuide(){
- const q=qnow(); const source=sourceText(q);
- const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',source]].filter(x=>hasStudyValue(x[1]));
- const extra=subjectEntries(q);
- const guideItems=common.concat(extra);
+ const q=qnow(),source=sourceText(q),items=guideEntries(q);
  const sourceNote=hasStudyValue(source)?'<div class="source-priority">出處優先順序：彰化高商採用教材 → 教育部審定常用技高教材；未核實的頁碼標示「待核對」，不填假資料。</div>':'';
- $('guideCard').innerHTML='<h2>'+esc(q.subject)+'解說重點</h2><div class="guide-grid">'+guideItems.map(x=>'<section class="guide-block"><h3>'+esc(x[0])+'</h3><p>'+formatStudyValue(q,x[0],x[1])+'</p></section>').join('')+'</div>'+sourceNote;
- const mem=extra;
- let memExtra='';
- if(mem.length){memExtra='<details class="memory-extra"><summary>科目重點延伸（'+mem.length+'）</summary><div class="memory-extra-grid">'+mem.map(x=>'<span><b>'+esc(x[0])+'</b>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div></details>';}
- const actions=[
-  ['觀念','concept','觀念',q.concept],
-  ['延伸閱讀','extension','延伸觀念',q.extension],
-  ['公式／分錄','formula','公式／分錄',q.formula],
-  ['出處','source','出處',source]
- ].filter(a=>hasStudyValue(a[3]));
- const actionHtml=actions.length?'<div class="memory-actions">'+actions.map(a=>'<button class="memory-action memory-action-'+a[1]+'" data-go="'+a[0]+'"><span class="memory-action-icon">'+memoryIcon(a[1])+'</span><span class="memory-action-label">'+a[2]+'</span></button>').join('')+'</div>':'';
- const memoryText=hasStudyValue(q.memory)?'<strong>'+esc(q.memory)+'</strong>':'';
- $('memoryCard').innerHTML='<button class="memory-close" aria-label="關閉一眼記住" type="button">×</button><small>一眼記住｜'+esc(q.subject)+'第 '+q.id+' 題</small>'+memoryText+memExtra+actionHtml;
- $('memoryCard').querySelector('.memory-close').onclick=hideMemory;
- $('memoryCard').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{showGuide();const blocks=[...$('guideCard').querySelectorAll('.guide-block')];const t=blocks.find(x=>x.querySelector('h3')?.textContent===b.dataset.go);t?.scrollIntoView({behavior:'smooth',block:'start'})});
+ $('guideCard').innerHTML='<h2>'+esc(q.subject)+'解說重點</h2><div class="guide-grid">'+items.map(x=>'<section class="guide-block'+(x[0]==='考題計算式'?' calculation-first':'')+'"><h3>'+esc(x[0])+'</h3><p>'+formatStudyValue(q,x[0],x[1])+'</p></section>').join('')+'</div>'+sourceNote;
 }
 let navCloseTimer=0;
 function questionNavStarted(){return list().some(q=>Boolean(record(q).status));}
@@ -361,19 +349,15 @@ function setQuestionNavAutoHide(on){document.body.classList.toggle('nav-auto',Bo
 function openQuestionNav(mode='open'){clearTimeout(navCloseTimer);if(!document.body.classList.contains('nav-auto'))return;document.body.classList.add(mode==='peek'?'nav-peek':'nav-open');updateNavToggle();syncHeights();}
 function closeQuestionNav(){clearTimeout(navCloseTimer);document.body.classList.remove('nav-peek','nav-open');updateNavToggle();syncHeights();}
 function scheduleQuestionNavClose(){clearTimeout(navCloseTimer);navCloseTimer=setTimeout(()=>{if($('progressShell').matches(':focus-within'))return;document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();},950);}
-function showMemory(){
- $('memoryWrap').classList.add('show');$('guideCard').classList.add('show');syncHeights();
+function showGuide(){$('guideCard').classList.add('show');syncHeights();}
+function hideGuide(){$('guideCard').classList.remove('show');}
+function alignGuideToCorrectAnswer(){
+ const target=$('correctAnswer'),guide=$('guideCard');
+ if(target&&target.nextElementSibling!==guide)target.after(guide);
 }
-function showGuide(){$('guideCard').classList.add('show');if(record(qnow()).status)$('memoryWrap').classList.add('show');syncHeights();}
-function hideMemory(){$('memoryWrap').classList.remove('show');}
-function alignMemoryToCorrectAnswer(){
- const wrap=$('memoryWrap'),target=$('correctAnswer');
- if(target&&target.nextElementSibling!==wrap)target.after(wrap);
- if($('guideCard').parentElement!==wrap)wrap.appendChild($('guideCard'));
-}
-function syncHeights(){requestAnimationFrame(()=>{alignMemoryToCorrectAnswer();const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px');document.documentElement.style.setProperty('--memoryH','0px')})}
+function syncHeights(){requestAnimationFrame(()=>{alignGuideToCorrectAnswer();const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px')})}
 function scrollToCorrectAnswer(){
- const target=$('correctAnswer');if(!target||!$('memoryWrap').classList.contains('show'))return;
+ const target=$('correctAnswer');if(!target||!$('guideCard').classList.contains('show'))return;
  const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;
  const delta=target.getBoundingClientRect().top-navHeight-20;
  const missingSpace=Math.max(0,scrollY+delta-(document.documentElement.scrollHeight-innerHeight));
@@ -382,7 +366,7 @@ function scrollToCorrectAnswer(){
 }
 function showStudy(){document.body.classList.remove('review-mode');$('studyView').style.display='block';$('reviewView').classList.remove('show');}
 function reviewFields(q){
- return [['一眼記住',q.memory],['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1])).concat(subjectEntries(q));
+ return guideEntries(q);
 }
 function showReview(){document.body.classList.add('review-mode');closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
 function renderReview(){
@@ -399,7 +383,7 @@ function seedDemo(){
  save();renderProgress();renderReview();
 }
 function move(delta){currentIndex=Math.max(0,Math.min(4,currentIndex+delta));showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})}
-function renderAll(){$('prevBtn').disabled=currentIndex===0;$('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;renderProgress();renderQuestion();const r=record(qnow());hideMemory();if(!r.status)$('guideCard').classList.remove('show');setQuestionNavAutoHide(questionNavStarted());save();syncHeights();}
+function renderAll(){$('prevBtn').disabled=currentIndex===0;$('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;renderProgress();renderQuestion();const r=record(qnow());if(r.status)showGuide();else hideGuide();setQuestionNavAutoHide(questionNavStarted());save();syncHeights();}
 const EXAM_DAY_START=Date.parse('2027-04-24T00:00:00+08:00');
 const EXAM_DAY_END=Date.parse('2027-04-26T00:00:00+08:00');
 function countdownText(now){
@@ -414,14 +398,14 @@ renderSelectors();document.documentElement.dataset.theme=state.theme||'light';re
 $('subjectSel').onchange=e=>{currentSubject=e.target.value;currentIndex=0;showStudy();renderAll()};
 $('reviewSubject').onchange=renderReview;$('reviewSort').onchange=renderReview;$('reviewTop').onclick=showReview;$('wrongBtn').onclick=showReview;$('backStudy').onclick=()=>{showStudy();renderAll()};
 $('resetBtn').onclick=()=>{if(!confirm('重新開始目前科目？本輪畫面進度會清空，但歷史答錯次數與重點復習紀錄保留。'))return;(state.rounds[currentSubject]||=1);state.rounds[currentSubject]++;for(const q of list()){const r=record(q);r.status=null;r.selected=null;}currentIndex=0;save();showStudy();setQuestionNavAutoHide(false);renderAll()};
-$('prevBtn').onclick=()=>move(-1);$('nextBtn').onclick=()=>move(1);$('questionBtn').onclick=()=>{showStudy();hideMemory();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};$('explainBtn').onclick=()=>{showStudy();if(record(qnow()).status){showMemory();requestAnimationFrame(scrollToCorrectAnswer)}else{$('answerCard').scrollIntoView({behavior:'smooth',block:'start'})}};
+$('prevBtn').onclick=()=>move(-1);$('nextBtn').onclick=()=>move(1);$('questionBtn').onclick=()=>{showStudy();hideGuide();$('questionCard').scrollIntoView({behavior:'smooth',block:'start'})};$('explainBtn').onclick=()=>{showStudy();if(record(qnow()).status){showGuide();requestAnimationFrame(scrollToCorrectAnswer)}else{$('answerCard').scrollIntoView({behavior:'smooth',block:'start'})}};
 $('themeBtn').onclick=()=>{state.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=state.theme;save();syncHeights()};
 $('navToggle').onclick=()=>{if(!document.body.classList.contains('nav-auto'))return;document.body.classList.contains('nav-open')?closeQuestionNav():openQuestionNav('open')};
 $('progressShell').addEventListener('mouseenter',()=>{if(!matchMedia('(max-width:720px)').matches)openQuestionNav('peek')});
 $('progressShell').addEventListener('mouseleave',()=>{if(!matchMedia('(max-width:720px)').matches)scheduleQuestionNavClose()});
 $('progressShell').addEventListener('focusin',()=>openQuestionNav('peek'));
 $('progressShell').addEventListener('focusout',scheduleQuestionNavClose);
-addEventListener('resize',()=>{if(matchMedia('(min-width:721px)').matches)document.body.classList.remove('nav-open');updateNavToggle();syncHeights()});new ResizeObserver(syncHeights).observe($('progressShell'));new ResizeObserver(syncHeights).observe($('memoryWrap'));
+addEventListener('resize',()=>{if(matchMedia('(min-width:721px)').matches)document.body.classList.remove('nav-open');updateNavToggle();syncHeights()});new ResizeObserver(syncHeights).observe($('progressShell'));new ResizeObserver(syncHeights).observe($('guideCard'));
 document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);if(['a','b','c','d','A','B','C','D'].includes(e.key)&&$('reviewView').classList.contains('show')===false){const L=e.key.toUpperCase();document.querySelector(`.opt[data-a="${L}"]`)?.click()}});
 </script>
 </body>
