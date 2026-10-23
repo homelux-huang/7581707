@@ -209,7 +209,7 @@ button,select,.nav-field,.home-choice{word-break:keep-all}
 
 </style>
 </head>
-<body>
+<body class="home-mode">
 
 <div class="progress-shell" id="progressShell" role="region" aria-label="可滑出年度科目與題號選單">
  <div class="progress">
@@ -347,7 +347,7 @@ function optionReason(q,L){
  const C=window.DEMO_LEARNING_CONFIG||{};
  if(q.subject==='會計學'&&(C.accountingOptionReason||{})[q.id+'|'+L])return C.accountingOptionReason[q.id+'|'+L];
  if(L===q.answer)return '符合本題核心：'+q.concept;
- return '此選項不符合題幹條件。請用「'+q.memory+'」反向檢查。';
+ return '此選項不符合題幹條件。請用「'+q.memory+'」的相反意思來判斷。';
 }
 function optionSubjectEntries(q,L){
  // Correct option must not repeat any subject-guide fields. Wrong options keep
@@ -370,13 +370,14 @@ function optionSubjectEntries(q,L){
 }
 function renderOptionDetail(q,L){
  const entries=optionSubjectEntries(q,L);
- let html='<div class="option-detail '+(L===q.answer?'is-correct':'is-wrong')+'"><b>'+(L===q.answer?'✓ 正確解答':'× 選項檢查')+'</b><p>'+esc(optionReason(q,L))+'</p>';
+ let html='<div class="option-detail '+(L===q.answer?'is-correct':'is-wrong')+'"><b>'+(L===q.answer?'✓ 正確解答':'× 選項檢查')+'</b><p>'+esc(optionReason(q,L).replace(/反向檢查/g,'相反意思'))+'</p>';
  if(entries.length){html+='<div class="option-detail-grid">'+entries.map(x=>'<span><em>'+esc(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';}
  return html+'</div>';
 }
 function renderSelectors(){
  $('subjectSel').innerHTML=SUBJECTS.map(s=>`<option ${s===currentSubject?'selected':''}>${esc(s)}</option>`).join('');
  $('reviewSubject').innerHTML='<option value="ALL">全部科目</option>'+SUBJECTS.map(s=>`<option>${esc(s)}</option>`).join('');
+ refreshHomeSubjects();
 }
 function renderProgress(){
  const qs=list();let answered=0;let wrong=0;
@@ -392,7 +393,7 @@ function renderProgress(){
  });
  $('progressLabel').innerHTML='已答 '+answered+'/5 題 <span class="round">第 '+(state.rounds[currentSubject]||1)+' 輪</span>';
  const allWrong=Object.values(state.records).filter(r=>r.wrongCount>0).length;$('wrongBadge').textContent=allWrong;
- $('navToggleNum').textContent=qnow()?.id??'';
+ if($('navToggleNum'))$('navToggleNum').textContent=qnow()?.id??'';
  $('summary').innerHTML='目前科目<b>'+esc(currentSubject)+'｜5 題 Demo</b>';
  const first=qs.findIndex(q=>!record(q).status);$('continueBtn').textContent=first>=0?'續答第 '+qs[first].id+' 題 →':'本輪完成｜看錯題 →';
  $('continueBtn').onclick=()=>{if(first>=0){currentIndex=first;showStudy();renderAll();closeQuestionNav()}else showReview();};
@@ -416,7 +417,7 @@ function renderQuestion(){
 function answer(sel){
  const q=qnow(),r=record(q),elapsed=Math.max(1,(performance.now()-startedAt)/1000);r.attempts++;r.lastElapsed=elapsed;r.selected=sel;
  if(sel===q.answer)r.status='ok';else{r.status='bad';r.wrongCount++;r.totalWrongSeconds+=elapsed;r.lastWrongAt=Date.now();}
- save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showGuide();
+ save();renderProgress();renderQuestion();setQuestionNavAutoHide(true);showGuide();updateJumpButtons();
  requestAnimationFrame(()=>requestAnimationFrame(()=>syncHeights()));
  setTimeout(scrollToCorrectAnswer,320);
 }
@@ -483,16 +484,50 @@ function scrollToCorrectAnswer(){
  if(missingSpace>0)$('answerScrollSpace').style.height=Math.ceil(missingSpace)+'px';
  window.scrollBy({top:delta,behavior:'instant'});
 }
-function showStudy(){document.body.classList.remove('review-mode');$('studyView').style.display='block';$('reviewView').classList.remove('show');}
+function showStudy(){
+ document.body.classList.remove('home-mode','review-mode');
+ document.body.classList.add('study-mode');
+ $('homeView').hidden=true;
+ $('studyView').style.display='block';
+ $('reviewView').classList.remove('show');
+ updateJumpButtons();
+ syncHeights();
+}
+function showHome(){
+ document.body.classList.remove('study-mode','review-mode','nav-peek','nav-open');
+ document.body.classList.add('home-mode');
+ $('homeView').hidden=false;
+ $('studyView').style.display='none';
+ $('reviewView').classList.remove('show');
+ hideGuide();
+ if($('homeYearSel').value && $('homeYearSel').value!==$('yearSel').value)
+  $('homeYearSel').value=$('yearSel').value;
+ refreshHomeSubjects();
+ window.scrollTo({top:0,behavior:'instant'});
+}
 function reviewFields(q){
  return guideEntries(q);
 }
-function showReview(){document.body.classList.add('review-mode');closeQuestionNav();$('studyView').style.display='none';$('reviewView').classList.add('show');renderReview();window.scrollTo({top:0,behavior:'smooth'})}
+function showReview(){
+ document.body.classList.remove('study-mode','home-mode');
+ document.body.classList.add('review-mode');
+ $('homeView').hidden=true;
+ closeQuestionNav();
+ $('studyView').style.display='none';
+ $('reviewView').classList.add('show');
+ renderReview();
+ window.scrollTo({top:0,behavior:'smooth'});
+}
 function renderReview(){
  const subj=$('reviewSubject').value||'ALL',sort=$('reviewSort').value||'count';
  let rows=QUESTIONS.map(q=>({q,r:record(q)})).filter(x=>x.r.wrongCount>0&&(subj==='ALL'||x.q.subject===subj));
  rows.sort((a,b)=>sort==='time'?b.r.totalWrongSeconds-a.r.totalWrongSeconds:sort==='recent'?b.r.lastWrongAt-a.r.lastWrongAt:b.r.wrongCount-a.r.wrongCount||b.r.totalWrongSeconds-a.r.totalWrongSeconds);
- if(!rows.length){$('reviewList').innerHTML=`<div class="empty">目前沒有符合條件的答錯題。<br>先故意答錯幾題即可測試排序與科目分類。<br><button class="demo-seed" id="seedDemo">Demo：建立跨科錯題樣本</button></div>`;$('seedDemo').onclick=seedDemo;return;}
+ if(!rows.length){
+ const demoOnly=new URLSearchParams(location.search).get('year')!=='114'&&new URLSearchParams(location.search).get('year')!=='115';
+ $('reviewList').innerHTML='<div class="empty">目前沒有符合條件的錯題紀錄。'+(demoOnly?'<button class="demo-seed" id="seedDemo">Demo：建立跨科錯題樣本</button>':'')+'</div>';
+ if(demoOnly)$('seedDemo').onclick=seedDemo;
+ return;
+}
  $('reviewList').innerHTML=rows.map((x,idx)=>{const q=x.q,r=x.r,ans=q.options[LETTERS.indexOf(q.answer)];return `<article class="wrong-card" style="--review-hue:${Math.round(QUESTIONS.indexOf(q)*137.508)%360}"><div class="wrong-head"><span class="wrong-rank">${idx+1}</span><span class="pill">${esc(q.subject)}</span><span class="pill">第 ${q.id} 題</span><span class="metrics">答錯 ${r.wrongCount} 次｜答錯耗時 ${fmtTime(r.totalWrongSeconds)}</span></div><h3>${esc(q.question)}</h3><div class="answer-box"><b>正確答案 ${q.answer}</b>｜${esc(ans)}</div><div class="review-sections">${reviewFields(q).map(([k,v])=>`<div class="review-section"><b>${esc(k)}</b><span>${formatStudyValue(q,k,v)}</span></div>`).join('')}</div><button class="goto" data-key="${esc(key(q))}">回到這一題</button></article>`}).join('');
  $('reviewList').querySelectorAll('.goto').forEach(b=>b.onclick=()=>{const [s,n]=b.dataset.key.split('|');currentSubject=s;currentIndex=listFor(s).findIndex(q=>String(q.id)===n);renderSelectors();showStudy();renderAll();window.scrollTo({top:0})});
 }
@@ -502,7 +537,16 @@ function seedDemo(){
  save();renderProgress();renderReview();
 }
 function move(delta){currentIndex=Math.max(0,Math.min(4,currentIndex+delta));showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})}
-function renderAll(){$('prevBtn').disabled=currentIndex===0;$('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;renderProgress();renderQuestion();const r=record(qnow());if(r.status)showGuide();else hideGuide();setQuestionNavAutoHide(questionNavStarted());save();syncHeights();}
+function renderAll(){
+ $('prevBtn').disabled=currentIndex===0;
+ $('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;
+ renderProgress();renderQuestion();
+ const r=record(qnow());
+ if(r.status)showGuide();else hideGuide();
+ updateJumpButtons();
+ setQuestionNavAutoHide(questionNavStarted());
+ save();syncHeights();
+}
 const EXAM_DAY_START=Date.parse('2027-04-24T00:00:00+08:00');
 const EXAM_DAY_END=Date.parse('2027-04-26T00:00:00+08:00');
 function countdownText(now){
