@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-26",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 26,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-26.webp",
+  "imageSha256": "d60fe5fe2573515efd40bf92aa6ad56448e57e92471f155ac68ea3ef0bd8617f",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接看原圖）",
+    "method": "同時打開本題 A-D 單題 WebP 及淡江大橋共用文章 WebP，逐張目視並重新核算 SHA256、無混題或缺少必要文章。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先據原圖與共用文章自行解題，再讀候選。原官方網站 2026-05-08 確認標準答案的公告已見，惟未直接回讀英文科最終標準答案 PDF 與疑義確認說明，仍待核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "Being the first bridge in Taiwan ____ through an international design competition, the Tamkang Bridge will become the world's longest single-tower asymmetric cable-stayed bridge.",
+    "keyConditions": [
+      "first bridge in Taiwan ___ through an international design competition",
+      "the Tamkang Bridge will become",
+      "bridge receives selection"
+    ],
+    "reasoningFromOriginalImage": "bridge 是經由國際設計競賽**被選出**，需過去分詞 selected 作後置修飾，省略 which was；而 selecting 表橋主動挑選，is selected 形成不合構式的獨立謂語。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "看 **the first bridge in Taiwan ____ through an international design competition**：橋是**被挑選**，因此填 **selected**（過去分詞），可理解為省略 **which was selected** 的被動關係子句。句子主要動詞已經有 **will become**，空格不能再直接塞入 is selected。",
+    "elementarySummary": "不是橋自己去挑選東西，是大家在國際設計比賽中選中了橋的設計，所以要用 **selected**，意思是『被選中的』。",
+    "memory": "**bridge (which was) selected → 過去分詞修飾被選中的橋**。",
+    "concept": "**past participle + noun relationship**：a bridge selected through a competition＝a bridge that was selected through a competition。**selecting** 多表主動進行挑選，不能混淆動作方向。",
+    "extension": "反向思考：如果主詞換成『the committee』而委員會是主動選設計者，則可說 **the committee selecting the design**；反過來若強調橋被選，用 **selected**。",
+    "source": {
+      "originalExam": "115-00-E-26",
+      "originalImagePinnedSha256": "d60fe5fe2573515efd40bf92aa6ad56448e57e92471f155ac68ea3ef0bd8617f",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+          "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待回讀PDF和疑義說明",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "淡江大橋建設年份、最長紀錄等依115學年度考題文本，不等於當下官方工程進度或最新紀錄。"
+    },
+    "highlightTerms": [
+      "selected",
+      "through an international design competition",
+      "Being the first bridge"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**selected** 是過去分詞，表示橋的設計被國際競賽選出，與 Taiwan bridge 的被動語義及後置修飾結構都符合。",
+        "elementary": "橋是被選上的，不是它去選，選 selected。",
+        "reason": "**selected** 是過去分詞，表示橋的設計被國際競賽選出，與 Taiwan bridge 的被動語義及後置修飾結構都符合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**selecting** 是現在分詞，通常表示主動挑選；橋本身不是負責挑選競賽設計的行動者。",
+        "elementary": "橋沒有自己去當評審挑別人。",
+        "reason": "**selecting** 是現在分詞，通常表示主動挑選；橋本身不是負責挑選競賽設計的行動者。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**is selected** 包含限定動詞 is，放在 Being the first bridge in Taiwan ... 的名詞修飾位置，句構不成立；要用 selected 作縮減關係子句。",
+        "elementary": "句子主要動詞已在後面，這裡不要多放一個 is。",
+        "reason": "**is selected** 包含限定動詞 is，放在 Being the first bridge in Taiwan ... 的名詞修飾位置，句構不成立；要用 selected 作縮減關係子句。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**to select** 為不定詞，常表示目的或尚待進行的選擇，不能直接表達橋『已被選出』的過去分詞修飾。",
+        "elementary": "要說已經被挑選好，不是『橋要去選』。",
+        "reason": "**to select** 為不定詞，常表示目的或尚待進行的選擇，不能直接表達橋『已被選出』的過去分詞修飾。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "身為臺灣首座透過國際設計競賽選出的橋樑，文章說淡江大橋將成為全球最長的單塔不對稱斜張橋。",
+      "passageTranslationZh": "淡江大橋自2019年開始興建，文章說今年準備投入使用。淡水與八里近年快速發展，兩地往返通勤者增加，所以需要大橋。文中說通車後往返兩地可節省約半小時。大橋不只能使交通車流順暢，也會以特殊建築美感吸引遊客。設計者為知名建築師札哈・哈蒂。文章描述它是臺灣第一座經由國際設計競賽選出的橋，將成為世界最長的單塔不對稱斜張橋。高200公尺的橋塔向天空伸展，好像舞者雙手舉起祈禱；橋的形狀與淡水河日落相映，非常醒目。遊客可以欣賞河岸景色。由於縮短交通時間並兼具美感，淡江大橋對交通及觀光都有重要作用，並將帶來便利與休閒利益。建設狀態、最長紀錄與數字均依115學年度題幹敘述，未以2026年最新工程公告獨立核實。",
+      "testedWord": "selected",
+      "answerWord": "selected",
+      "pronunciationIPA": "/sɪˈlektɪd/",
+      "optionMeaningZh": {
+        "A": "被選出的",
+        "B": "正在挑選的",
+        "C": "被選出（完整謂語，位置不合）",
+        "D": "去挑選／為了挑選"
+      },
+      "synonyms": {
+        "初級": [
+          "chosen（被選中的）"
+        ],
+        "中級": [
+          "picked（被挑選的；較口語）"
+        ],
+        "高級": [
+          "designated（被指定的；不一定是競賽選出）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "not chosen（未被選中）"
+        ],
+        "中級": [
+          "rejected（遭拒絕／未獲選）"
+        ],
+        "高級": [
+          "excluded（被排除；語境有別）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "bridge（橋）"
+        ],
+        "中級": [
+          "competition（競賽）"
+        ],
+        "高級": [
+          "passive voice（被動語態）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "部分為片語改寫或概念對照，不可當作所有語境可直接替換的完全同／反義詞。",
+      "exampleEnglish": "The design selected by the judges won the award.",
+      "exampleChinese": "由評審選出的設計獲得獎項。",
+      "exampleHighlightedSurfaceForm": "selected",
+      "exampleType": "自編非新聞英文例句",
+      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
