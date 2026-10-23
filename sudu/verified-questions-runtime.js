@@ -289,10 +289,9 @@
     sourceText=function(q){return q.sourceText||originalSource(q)};
     subjectEntries=function(q){
       if(q.year!==Number(activeYear))return originalSubjectEntries(q);
-      const parts=[
-        ['高職老師解題',q.teacherSummary],['國小學生白話',q.elementarySummary],
-        ...Object.entries(q.extra||{})
-      ].filter(x=>useful(x[1]));
+      // The correct answer retains both teaching levels, while extra notes and
+      // full worked steps occur exactly once in the subject guide.
+      const parts=Object.entries(q.extra||{}).filter(x=>useful(x[1]));
       const calc=q.examCalculation;
       if(calc&&calc.hasExamCalculation===true&&Array.isArray(calc.lines)&&calc.lines.length)
         parts.push(['考題計算式',calc.lines.join('\n')]);
@@ -310,12 +309,8 @@
         ['此選項正確／錯誤原因',detail.reason]
       ].filter(x=>useful(x[1]));
       let html='<div class="option-detail '+color+'"><b>'+header+'</b>'+
-        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(x[1],keywords)+'</p>').join('');
-      if(L===q.answer){
-        const extra=subjectEntries(q).filter(([name])=>name!=='考題計算式');
-        if(extra.length)html+='<div class="option-detail-grid">'+extra.map(x=>
-          '<span><em>'+escapeHtml(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';
-      }
+        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(String(x[1]).replace(/反向檢查/g,'相反意思'),keywords)+'</p>').join('');
+      // Unique subject metadata and calculations belong in the guide only.
       return html+'</div>';
     };
     renderProgress=function(){
@@ -329,8 +324,11 @@
       showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'});
     };
     document.title='速讀｜'+activeYear+' 正式題庫｜教學解說';
-    renderSelectors();showStudy();renderAll();
+    document.body.dataset.verifiedReadyYear=activeYear;
     document.body.classList.remove('verified-year-loading','qa-image-mode');
+    renderSelectors();renderAll();refreshHomeSubjects();showHome();
+    const requestedSubject=new URLSearchParams(location.search).get('subject');
+    if(requestedSubject&&SUBJECTS.includes(requestedSubject))openSubjectFromHome(requestedSubject);
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
     showError('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
