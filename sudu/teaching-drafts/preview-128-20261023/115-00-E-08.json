@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-08",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 8,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-08.webp",
+  "imageSha256": "5939346b4af8996ff5db93f2936e665b0dd0a8dad17364069628a91cea372d34",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "GitHub 單題 WebP 實際目視；檢查題號、完整題幹與選項 A-D、畫線要求、無鄰題雜訊；重新計算 WebP bytes SHA256 與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先以圖片自行解題後才讀取候選；官網證實 2026-05-08 確認標準答案，但官方英文科最終 PDF 與疑義確認說明目前不能獨立回讀核實；不得計為官方最終核實或教學 QA 完成。",
+    "independentSolveScope": "本輪先讀圖自行推理，非獨立第三方教學複核",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "fill-in-the-blank",
+    "questionAsReadFromOriginalImage": "When the award presenter ______ Shu Qi (舒淇) as the winner of the Best Director Award at the 30th Busan International Film Festival, the audience stood up and clapped their hands.",
+    "keyConditions": [
+      "award presenter",
+      "as the winner",
+      "audience stood up and clapped"
+    ],
+    "reasoningFromOriginalImage": "頒獎人在典禮現場宣布得獎者，固定語義搭配 announced [name] as the winner；後面觀眾起立鼓掌亦吻合宣布結果之後的反應。題幹提供典禮背景，但本題無須另外推論新聞事實。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**announce + 人名 + as the winner** 表『宣布某人為得獎者』。題幹主語 **award presenter** 是頒獎人；聽眾起立鼓掌是宣布結果後的反應，所以選 **announced（宣布）**。這裡選過去式，也符合 stood up、clapped 的敘事時態。",
+    "elementarySummary": "頒獎的人打開名單，說『今年得獎的是舒淇！』，這個公開說出結果的動作叫做 **announced**，觀眾才會站起來鼓掌。",
+    "memory": "**presenter + winner → announced**；頒獎人宣布得主。",
+    "concept": "**announce ... as ...** 是宣布某人為某身分；**clap one's hands** 是拍手，**stood up** 是 stand up 的過去式，能幫助理解事件順序。",
+    "extension": "反向思考：如果句子改成『The staff carefully ___ the trophy for damage』，主語和受詞改變，便可能用 **inspected**（檢查）；不能把宣布和檢查互換。",
+    "source": {
+      "originalExam": "115-00-E-08",
+      "originalImagePinnedSha256": "5939346b4af8996ff5db93f2936e665b0dd0a8dad17364069628a91cea372d34",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 已確認各科標準答案；僅確認公告日期，尚未直接核實本題官方最終答案 PDF",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商使用之英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "award presenter",
+      "announced",
+      "as the winner",
+      "stood up and clapped"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**announced** 為公開宣布，**announced Shu Qi as the winner** 結構完整，與頒獎場景及觀眾鼓掌符合。",
+        "elementary": "公布誰拿獎，就是 announced。",
+        "reason": "**announced** 為公開宣布，**announced Shu Qi as the winner** 結構完整，與頒獎場景及觀眾鼓掌符合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**circulated** 指流通、傳閱或散播資訊；可以 circulate a notice，卻不自然說 circulated someone as the winner。",
+        "elementary": "傳紙條或消息在大家間流傳，不等於頒獎人宣布名字。",
+        "reason": "**circulated** 指流通、傳閱或散播資訊；可以 circulate a notice，卻不自然說 circulated someone as the winner。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**inspected** 是仔細檢查；inspected Shu Qi as the winner 不能表示她得獎，且與觀眾鼓掌的反應無關。",
+        "elementary": "檢查獎盃，不是公布得獎者。",
+        "reason": "**inspected** 是仔細檢查；inspected Shu Qi as the winner 不能表示她得獎，且與觀眾鼓掌的反應無關。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**preserved** 表保存、保護；preserved someone as the winner 並非典禮上宣布結果的用法。",
+        "elementary": "保存東西跟喊出得獎人的名字不一樣。",
+        "reason": "**preserved** 表保存、保護；preserved someone as the winner 並非典禮上宣布結果的用法。"
+      }
+    },
+    "english": {
+      "questionType": "fill-in-the-blank",
+      "sentenceTranslationZh": "當頒獎人在第 30 屆釜山國際影展宣布舒淇獲得最佳導演獎時，觀眾起立鼓掌。",
+      "testedWord": "announced",
+      "answerWord": "announced",
+      "pronunciationIPA": "/əˈnaʊnst/",
+      "optionMeaningZh": {
+        "A": "宣布了",
+        "B": "傳播／流通了",
+        "C": "檢查了",
+        "D": "保存了"
+      },
+      "synonyms": {
+        "初級": [
+          "said（說出；較廣）"
+        ],
+        "中級": [
+          "declared（正式宣布）"
+        ],
+        "高級": [
+          "proclaimed（鄭重宣布）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "hid（隱藏；相反情境）"
+        ],
+        "中級": [
+          "concealed（隱瞞）"
+        ],
+        "高級": [
+          "withheld（保留不公開）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "winner（得獎者）"
+        ],
+        "中級": [
+          "presenter（頒獎人）"
+        ],
+        "高級": [
+          "accolade（榮譽、獎項）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關詞不保證所有情境可以互換；N/A 欄位不應硬補。",
+      "exampleEnglish": "The host announced the name of the winner.",
+      "exampleChinese": "主持人宣布了得獎者的名字。",
+      "exampleHighlightedSurfaceForm": "announced",
+      "exampleType": "自編教學例句；非新聞來源",
+      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
