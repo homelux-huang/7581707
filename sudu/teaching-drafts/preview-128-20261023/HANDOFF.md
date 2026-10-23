@@ -1,3 +1,6 @@
+## 2026-10-23｜新增草稿分支唯讀CI（無正式發布）
+- `.github/workflows/preview-128-draft-qa.yml` 僅在128草稿或audit-script更新時對草稿分支觸發：執行現有全128題WebP SHA、資料一致性與發布隔離稽核、逐步解題JS語法、隔離Chromium兩套既有UI smoke。只授權 `contents: read`；不使用workflow_dispatch、Pages或main變更。CI PASS不得冒稱獨立完整教學內容QA通過。
+
 ## 2026-10-23｜三道爭議題技術來源補核、警示精確化（不發布）
 - 商概07與數位33補TEJ/財務管理及NIST/Bitcoin技術來源；經濟28沿用官方專二疑義確認。官方選項B/A/A已核實，更新提示避免誤稱官方尚待核對。教材版次與完整教學QA仍待查，原AI初解照舊保留，三題BLOCKED。證據 `BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md`。
 

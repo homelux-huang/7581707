@@ -1,0 +1,79 @@
+name: Audit 128 teaching drafts (no release)
+on:
+  push:
+    branches:
+      - draft/preview-128-explanations-20261023
+    paths:
+      - 'sudu/teaching-drafts/preview-128-20261023/**'
+      - 'scripts/audit_preview_teaching_drafts.py'
+      - '.github/workflows/preview-128-draft-qa.yml'
+permissions:
+  contents: read
+concurrency:
+  group: preview-128-draft-qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  draft_integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check 128 original images, options, answer evidence and isolation
+        run: python scripts/audit_preview_teaching_drafts.py
+      - name: Check frozen manifest and separate all QA counters
+        run: |
+          python - <<'PY_AUDIT'
+          import json
+          from pathlib import Path
+          d = json.loads(Path('sudu/teaching-drafts/preview-128-20261023/progress.json').read_text())
+          assert d['scopeTotal'] == 128 and len(d['items']) == 128
+          assert len({q['questionId'] for q in d['items']}) == 128
+          assert d['draftWritten'] == 128
+          assert d['officialFinalCorrectionVerified'] == 128
+          assert d['binaryRecheckedLatest']['recheckedDistinctQuestions'] == 128
+          assert d['binaryRecheckedLatest']['notYetRecheckedThisCycle'] == 0
+          assert d['binaryRecheckedLatest']['verifiedSharedImageFiles'] == 2
+          assert d['binaryRecheckedLatest']['allRequiredSharedImageSha256Matched'] is True
+          assert d['fullyAccepted'] == 0 and d['deployed'] == 0
+          assert d['deploymentForbidden'] is True
+          for q in d['items']:
+              assert len(q['imageSha256']) == 64
+              assert q.get('supplementalImageQa', {}).get('status') in ('PASS_SHA256_AND_VISUAL', 'PASS_QUESTION_AND_SHARED_SHA256_VISUAL')
+          print('frozen manifest=128, image and shared SHA=PASS, official=128, full teaching QA=0, deployed=0')
+          PY_AUDIT
+      - name: Verify JavaScript teaching step syntax
+        run: node --check sudu/teaching-drafts/preview-128-20261023/solution-steps-128.js
+
+  browser_smoke:
+    needs: draft_integrity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated test dependencies
+        run: |
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Run Chromium UI smoke without deploy
+        run: |
+          set -eu
+          SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site > /tmp/preview-128-browser.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          sleep 2
+          node tests/sudu_browser_smoke.cjs
+          node tests/sudu_demo_acceptance.cjs
