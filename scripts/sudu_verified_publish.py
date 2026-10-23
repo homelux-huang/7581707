@@ -363,11 +363,139 @@ def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
         "imageSha256":image_sha(q),
     }
 
+def reviewed_student_batches(source: Path, year: int) -> dict[str, dict]:
+    """Additive, SHA-anchored certificates without rewriting huge OCR/DB sources."""
+    file = source / f"sudu/data/processed/{year}/verified-student-batch.json"
+    if not file.exists():
+        return {}
+    data = read(file)
+    if data.get("schemaVersion") != 1 or data.get("year") != year:
+        raise ValueError(f"{year} invalid verified-student-batch header")
+    result = {}
+    for item in data.get("items", []):
+        qid = item.get("questionId")
+        if not isinstance(qid,str) or not QID.fullmatch(qid) or not qid.startswith(str(year)+"-"):
+            raise ValueError(f"{year} wrong student certificate ID")
+        if qid in result:
+            raise ValueError(f"Duplicate student certificate {qid}")
+        result[qid] = item
+    return result
+
+
+def review_document(source: Path, year: int, rel: object, qid: str) -> tuple[dict, str] | None:
+    """Proof is versioned in source commit; SHA is pinned to its actual bytes."""
+    if not isinstance(rel,str):
+        return None
+    prefix=f"sudu/data/processed/{year}/review-evidence/"
+    if not rel.startswith(prefix) or Path(rel).is_absolute() or ".." in Path(rel).parts or not rel.endswith(".json"):
+        return None
+    path=source/rel
+    if not path.resolve().is_relative_to(source.resolve()) or path.is_symlink() or not path.is_file():
+        return None
+    raw=path.read_bytes()
+    data=json.loads(raw)
+    if data.get("questionId") != qid or data.get("year") != year or data.get("schemaVersion") != 1:
+        return None
+    return data,digest(raw)
+
+
+def apply_independently_certified_review(source: Path, year: int, q: dict, manifest: dict,
+                                        audit: dict | None) -> dict:
+    """Fail closed: a source or answer change invalidates the entire certificate.
+
+    Never changes original QID, answer candidate, OCR source, crop or SQLite.
+    OCR and answer review are separately evidenced; blind-solve doc does not
+    contain the official key and is checked only after the independent solve.
+    """
+    if audit is None or audit.get("status") != "STUDENT_QA_APPROVED":
+        return q
+    qid=q["questionId"]
+    if (audit.get("questionId") != qid or audit.get("year") != year
+            or audit.get("questionBeforeReview") != q.get("question")
+            or audit.get("optionsBeforeReview") != q.get("options")
+            or audit.get("webpSha256") != (manifest or {}).get("sha256")
+            or audit.get("officialPdfSha256") != pdf_sha(q,"answer")
+            or audit.get("questionPdfSha256") != pdf_sha(q,"question")
+            or audit.get("originalAnswerCandidate") != q.get("answer")
+            or q.get("answerMatched") is not True):
+        return q
+    docs={}
+    for key in ("ocr","official","blind","teaching","ui"):
+        value=review_document(source,year,(audit.get("evidence") or {}).get(key),qid)
+        if value is None:
+            return q
+        docs[key]=value
+    ocr,off,blind,teach,ui=[docs[key][0] for key in ("ocr","official","blind","teaching","ui")]
+    revision=text_revision(q,manifest["sha256"])
+    if not all((
+        ocr.get("questionRevision") == revision,
+        ocr.get("webpSha256") == manifest["sha256"],
+        ocr.get("question") == q.get("question"),
+        ocr.get("options") == q.get("options"),
+        ocr.get("visualTextCompared") is True,
+        off.get("officialPdfSha256") == pdf_sha(q,"answer"),
+        off.get("finalAnswer") == q.get("answer"),
+        off.get("correctionNoticeReviewed") is True,
+        off.get("officialPage") == "https://web1.tcte.edu.tw/EXAM/115_4y/",
+        off.get("noObjectionForPaper") is True,
+        blind.get("questionRevision") == revision,
+        blind.get("webpSha256") == manifest["sha256"],
+        blind.get("officialAnswerHiddenDuringSolve") is True,
+        blind.get("solvedWithoutOfficialAnswer") is True,
+        blind.get("blindReasoning") and blind.get("answer") in LETTERS,
+        "officialAnswer" not in blind and "officialPdfSha256" not in blind,
+        teach.get("questionRevision") == revision,
+        teach.get("allFourOptionsReviewed") is True,
+        teach.get("calculationReviewed") is True,
+        isinstance(teach.get("content"),dict),
+        ui.get("testedQuestionRevision") == revision,
+        ui.get("browserSmokePassed") is True,
+        ui.get("rwdPassed") is True,
+        ui.get("verifiedYearQaMode") is True,
+        isinstance(ui.get("ciRunUrl"),str) and ui["ciRunUrl"].startswith(
+            "https://github.com/homelux-huang/7581707/actions/runs/"),
+    )):
+        return q
+    reviewer=ocr.get("reviewer")
+    date=ocr.get("reviewedAt")
+    if not good(reviewer) or not good(date):
+        return q
+    def ev(key: str) -> dict:
+        return {"reviewer":docs[key][0].get("reviewer") or reviewer,
+                "reviewedAt":docs[key][0].get("reviewedAt") or date,
+                "evidencePath":audit["evidence"][key],"evidenceSha256":docs[key][1]}
+    reviewed=dict(q)
+    reviewed.update({
+        "questionVerified":True,"textQaStatus":"PASS",
+        "textQaEvidence":{**ev("ocr"),"questionRevision":revision,
+            "sourceImageSha256":(q.get("questionProvenance") or {}).get("pixelSourceSha256")
+                or (q.get("assets") or {}).get("sourceSha256")},
+        "officialFinalAnswer":off["finalAnswer"],"answerVerified":True,
+        "officialCorrectionChecked":True,
+        "officialFinalQaEvidence":{**ev("official"),"answerPdfSha256":pdf_sha(q,"answer"),
+                                    "finalCorrectionsReviewed":True},
+        "independentSolve":{
+            **ev("blind"),"answer":blind["answer"],"reasoning":blind["blindReasoning"],
+            "questionRevision":revision,"officialAnswerHiddenDuringSolve":True,
+            "solvedWithoutOfficialAnswer":True,"solver":blind.get("solver") or reviewer,
+            "solvedAt":blind.get("solvedAt") or date,
+            "auditEvidencePath":audit["evidence"]["blind"],
+            "auditEvidenceSha256":docs["blind"][1]},
+        "teaching":teach["content"],"teachingQaStatus":"PASS",
+        "teachingQaEvidence":{**ev("teaching"),"allFourOptionsReviewed":True,
+                              "calculationReviewed":True},
+        "uiQaStatus":"PASS",
+        "uiQaEvidence":ev("ui"),"studentReleaseApproved":True
+    })
+    return reviewed
+
+
 def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
     d = src / f"sudu/data/processed/{year}"
     bank, manifest = read(d / "questions.json"), read(d / "webp-manifest.json")
     inventory = read(d / "inventory.json")
     questions = bank["questions"]
+    certified_reviews = reviewed_student_batches(src,year)
     entries = {i["questionId"]:i for i in manifest["items"]}
     shared = {i["sharedMaterialId"]:i for i in manifest.get("sharedMaterialCrops", [])}
     db_good = bool((d/"question-bank.sqlite3").is_file()) and (
@@ -386,6 +514,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
             raise ValueError(f"Duplicate stable question ID: {qid}")
         seen.add(qid)
         item = entries.get(qid)
+        q = apply_independently_certified_review(src,year,q,item,certified_reviews.get(qid))
         qa_per_subject[subject]["candidate"] += 1
         image_ok = image_proof(q, item, shared, src)
         if individual_image_proof(q,item,src):
