@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-16",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 16,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-16.webp",
+  "imageSha256": "bc4400fc6ce199f814e1811a2d4e3c211f34c83a908657b4af38144cc7d4ae0b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視WebP）",
+    "method": "逐張實際查看原始WebP題號、圖表、金額及A-D選項；圖檔SHA256重算與固定清單完全一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
+    "initialImageBasedAnswer": "D",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "FVTPL金融資產：X1年初每股30元購5000股、手續費100、每股現金股利2元與4%股票股利，X1末股價40元；X2初全數每股50賣出，交易費1000。求X1、X2稅前淨利增額。",
+    "keyConditions": [
+      "購入5000股×30元，交易手續費100元",
+      "現金股利每股2元、股票股利4%",
+      "X1末每股40元",
+      "X2出售每股50元，交易費1000元"
+    ],
+    "reasoningFromOriginalImage": "分類**透過損益按公允價值衡量 FVTPL**，原買入5000×30=150000；手續費100於X1認列費用。X1年中現金股利5000×2=10000；**股票股利4%=200股**使股數增為5200股，總成本不因配股增加。X1末公允價值5200×40=208000，比初始150000增加58000列當期損益。故X1稅前淨利影響**10000+58000−100=67900元**。X2年初出售實收5200×50−1000=259000，比上期帳面208000多**51000元**，選D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "D：X1 67900元、X2 51000元",
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "分類**透過損益按公允價值衡量 FVTPL**，原買入5000×30=150000；手續費100於X1認列費用。X1年中現金股利5000×2=10000；**股票股利4%=200股**使股數增為5200股，總成本不因配股增加。X1末公允價值5200×40=208000，比初始150000增加58000列當期損益。故X1稅前淨利影響**10000+58000−100=67900元**。X2年初出售實收5200×50−1000=259000，比上期帳面208000多**51000元**，選D。",
+    "elementarySummary": "先買5000股，後來公司多給4%股票，所以變5200股。第一年拿到現金股利一萬、股票漲價賺五萬八、付手續費一百，共賺67900。第二年賣掉後比上一年底的價值多51000。",
+    "memory": "**FVTPL交易費即期費用；5000股＋4%=5200股；X1 67900、X2 51000。**",
+    "concept": "FVTPL公允價值變動列損益；股票股利增加股數但非現金收入；出售淨價款減上期帳面價值才是當期處分損益。",
+    "extension": "反向思考：若誤將股票股利當現金收入，X1收益會高估多少？若是FVOCI權益工具，公允價值變動會在哪個報表項目？",
+    "source": {
+      "originalExam": "115-09-2-16",
+      "originalImagePinnedSha256": "bc4400fc6ce199f814e1811a2d4e3c211f34c83a908657b4af38144cc7d4ae0b",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實"
+    },
+    "highlightTerms": [
+      "4%股票股利",
+      "5200股",
+      "X1 67900",
+      "X2 51000"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "59900漏入現金股利或錯計手續費，且X2出售淨利應為51000不是49000。",
+        "elementary": "兩年數字都比正確的少。",
+        "reason": "59900漏入現金股利或錯計手續費，且X2出售淨利應為51000不是49000。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "X2的51000正確，但X1應含10000股利、58000評價利益、扣100費用，共67900。",
+        "elementary": "第二年對，第一年少算股利等。",
+        "reason": "X2的51000正確，但X1應含10000股利、58000評價利益、扣100費用，共67900。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "X1 67900正確，但X2出售實收扣交易費後259000，減前期帳面208000應為51000，不是49000。",
+        "elementary": "第一年對，第二年少算2000。",
+        "reason": "X1 67900正確，但X2出售實收扣交易費後259000，減前期帳面208000應為51000，不是49000。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "X1 67900且X2 51000皆由FVTPL股利、評價與出售淨額計算一致。",
+        "elementary": "兩年都對，選D。",
+        "reason": "X1 67900且X2 51000皆由FVTPL股利、評價與出售淨額計算一致。"
+      }
+    },
+    "accounting": {
+      "principle": "FVTPL公允價值變動列損益；股票股利增加股數但非現金收入；出售淨價款減上期帳面價值才是當期處分損益。",
+      "accounts": [
+        "透過損益按公允價值衡量之金融資產",
+        "手續費",
+        "股利收入",
+        "公允價值評價損益",
+        "處分金融資產損益"
+      ],
+      "journalEntry": "X1購入：借FVTPL資產150000、借交易費用100、貸現金150100；現金股利借現金10000貸股利收入10000；X1評價借FVTPL資產58000貸評價利益58000；X2出售借現金259000貸FVTPL資產208000貸處分利益51000。",
+      "calculation": "考題計算式完整逐步記錄"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "購入5000股×30元，交易手續費100元",
+        "現金股利每股2元、股票股利4%",
+        "X1末每股40元",
+        "X2出售每股50元，交易費1000元"
+      ],
+      "formula": "X1淨利影響=股利收入+(期末FV−初始FV)−交易費；X2處分利益=出售淨價款−期初帳面金額。",
+      "formulaPurpose": "FVTPL公允價值變動列損益；股票股利增加股數但非現金收入；出售淨價款減上期帳面價值才是當期處分損益。",
+      "substitutionAndSteps": [
+        {
+          "formula": "初始金融資產=5000×30=150000元",
+          "why": "FVTPL交易手續費100於X1費用化。"
+        },
+        {
+          "formula": "現金股利=5000×2=10000元",
+          "why": "領現金股利產生X1收入。"
+        },
+        {
+          "formula": "股票股利=5000×4%=200股；新股數=5200股",
+          "why": "股票股利不產生X1現金收入。"
+        },
+        {
+          "formula": "X1末公允價值=5200×40=208000元",
+          "why": "依期末股數乘公允價值。"
+        },
+        {
+          "formula": "X1評價利益=208000−150000=58000元",
+          "why": "FVTPL公允價值差入損益。"
+        },
+        {
+          "formula": "X1淨利影響=10000+58000−100=67900元",
+          "why": "加股利與評價收益，扣交易費。"
+        },
+        {
+          "formula": "X2出售實收=5200×50−1000=259000元",
+          "why": "扣出售費用及交易稅。"
+        },
+        {
+          "formula": "X2處分利益=259000−208000=51000元",
+          "why": "避免再扣原始150000形成跨期重覆認列。"
+        },
+        {
+          "formula": "(67900,51000)對應D",
+          "why": "按題目X1、X2順序填答。"
+        }
+      ],
+      "result": "D：X1 67900元、X2 51000元",
+      "unit": "新臺幣元",
+      "matchingOption": "D",
+      "commonMistake": "把股票股利4%當現金股利，或用原始成本而非上年底公允價值作X2出售成本。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
