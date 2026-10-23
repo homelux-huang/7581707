@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-09",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 9,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-09.webp",
+  "imageSha256": "1892de5b1da92e28d02aeb457efae4628c617d4461058d55684a0399916c0689",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "GitHub 單題 WebP 實際目視；檢查題號、完整題幹與選項 A-D、畫線要求、無鄰題雜訊；重新計算 WebP bytes SHA256 與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先以圖片自行解題後才讀取候選；官網證實 2026-05-08 確認標準答案，但官方英文科最終 PDF 與疑義確認說明目前不能獨立回讀核實；不得計為官方最終核實或教學 QA 完成。",
+    "independentSolveScope": "本輪先讀圖自行推理，非獨立第三方教學複核",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "synonym-of-underlined-word",
+    "questionAsReadFromOriginalImage": "When buying a car, those who want to save money will pick a used one because it is a more affordable option. [Underlined word: option]",
+    "keyConditions": [
+      "the underlined word is option",
+      "pick a used one",
+      "more affordable option"
+    ],
+    "reasoningFromOriginalImage": "題目要求為劃線字 option 選同義字，不是填空。語境中『較負擔得起的一種選擇』＝ a more affordable choice，故 A choice。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "本題**不是填空**，是判斷畫線的 **option** 在句中意思。**a more affordable option** 是『比較負擔得起的選擇』，可自然替換成 **a more affordable choice**。material 是材料、quantity 是數量、sample 是樣品，概念各不同。",
+    "elementarySummary": "買車想省錢，會考慮二手車，因為這是比較便宜的一種**選擇**。option 就像『你想選哪一個？』，跟 **choice** 意思一樣。",
+    "memory": "**option＝choice（選擇）**；不是材質、數量或樣品。",
+    "concept": "**option**、**choice** 在很多『選擇／可選方案』語境相近；**affordable** 是價格可以負擔，並不代表所有二手車一定便宜，僅依題幹敘述判斷。",
+    "extension": "反向思考：如果題幹改成『The car is made from recycled ___』，題目問製成物品的材料，此時應考慮 **material**，不能用 option；再比較 affordable option 與 limited choices。",
+    "source": {
+      "originalExam": "115-00-E-09",
+      "originalImagePinnedSha256": "1892de5b1da92e28d02aeb457efae4628c617d4461058d55684a0399916c0689",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 已確認各科標準答案；僅確認公告日期，尚未直接核實本題官方最終答案 PDF",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商使用之英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "option",
+      "choice",
+      "affordable",
+      "used one"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**choice** 是選擇、可選項目，可用於 **an affordable choice**，與原句畫線的 option 語意最接近。",
+        "elementary": "兩個都像在說『這是你能挑的一個方法』。",
+        "reason": "**choice** 是選擇、可選項目，可用於 **an affordable choice**，與原句畫線的 option 語意最接近。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**material** 是材質、材料，例如 car seat material；題幹在比較購車方案，不是在談車的材質。",
+        "elementary": "材料像鐵、塑膠；這裡不是問車子用什麼做。",
+        "reason": "**material** 是材質、材料，例如 car seat material；題幹在比較購車方案，不是在談車的材質。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**quantity** 是數量，例如 quantity of cars，不能取代購車的『方案／選擇』。",
+        "elementary": "幾台車是數量；買哪種車才是選擇。",
+        "reason": "**quantity** 是數量，例如 quantity of cars，不能取代購車的『方案／選擇』。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**sample** 是樣品、範本；二手車作為價格較低的選項，並不是送來檢驗的樣品。",
+        "elementary": "樣品是拿來看一看或試一試的，不等於做選擇。",
+        "reason": "**sample** 是樣品、範本；二手車作為價格較低的選項，並不是送來檢驗的樣品。"
+      }
+    },
+    "english": {
+      "questionType": "synonym-of-underlined-word",
+      "sentenceTranslationZh": "買車時，想省錢的人會挑二手車，因為那是較負擔得起的選擇。",
+      "testedWord": "option",
+      "answerWord": "choice",
+      "pronunciationIPA": "/tʃɔɪs/",
+      "optionMeaningZh": {
+        "A": "選擇",
+        "B": "材料",
+        "C": "數量",
+        "D": "樣品"
+      },
+      "synonyms": {
+        "初級": [
+          "choice（選擇；本題正解）"
+        ],
+        "中級": [
+          "alternative（替代方案；不一定完全等同）"
+        ],
+        "高級": [
+          "selection（選擇／挑選結果；語境相近）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（option 這個名詞沒有穩定的單詞反義詞）"
+        ],
+        "中級": [
+          "no choice（別無選擇；對比概念）"
+        ],
+        "高級": [
+          "obligation（必須履行的義務；是概念對照，不是字典反義字）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "car（汽車）"
+        ],
+        "中級": [
+          "affordable（負擔得起的）"
+        ],
+        "高級": [
+          "cost-effective（划算的）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關詞不保證所有情境可以互換；N/A 欄位不應硬補。",
+      "exampleEnglish": "Buying a used bicycle is a practical choice for me.",
+      "exampleChinese": "對我來說，買一輛二手腳踏車是務實的選擇。",
+      "exampleHighlightedSurfaceForm": "choice",
+      "exampleType": "自編教學例句；非新聞來源",
+      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
