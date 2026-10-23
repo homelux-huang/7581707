@@ -27,8 +27,10 @@
   "answerComparison": {
     "candidate": "D",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
-    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+    "officialFinalCorrectionVerified": true,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成",
+    "officialAnswer": "D",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "teaching": {
     "teacherSummary": "題目要求同一事物按同一標準分兩類，再比較作用；鏡依凹凸分兩類，成像大小不同。",
@@ -38,7 +40,8 @@
     "extension": "反向題：若原框由「長者為槐，短者為梲」改成「槐樹很高大，天氣也炎熱」，還有使用同一分類標準把同一物分成兩類嗎？再比較「凹鏡／凸鏡」何以符合此題的分類＋用途結構。",
     "source": {
       "originalExam": "115-00-C-04",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "長者為槐，短者為梲",
@@ -113,10 +116,41 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

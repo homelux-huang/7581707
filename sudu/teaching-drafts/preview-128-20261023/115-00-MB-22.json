@@ -23,14 +23,16 @@
   "answerComparison": {
     "candidate": "B",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "原圖獨立解題後才讀既有候選答案；官方最終答案 PDF／更正公告尚未直接回讀，不計完整官方核實。",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
       "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
       "officialRevisionChecked": false
     },
-    "conflictWarningRequired": false
+    "conflictWarningRequired": false,
+    "officialAnswer": "B",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "math-calculation",
@@ -60,7 +62,8 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "數學B最終更正公告待直接核實"
+      "officialIssueExplanation": "數學B最終更正公告待直接核實",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "2⁵=32",
@@ -191,7 +194,7 @@
       ],
       "originalImageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
@@ -199,7 +202,7 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
@@ -227,6 +230,25 @@
       "originalPdfShaRecordedNotRedownloaded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
       "officialFinalCorrectionVerified": false,
       "releaseApproved": false
+    },
+    "officialFinalEvidence": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

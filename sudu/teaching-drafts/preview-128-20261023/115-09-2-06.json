@@ -22,7 +22,7 @@
   "answerComparison": {
     "candidate": "D",
     "status": "INITIAL_AI_DIFFERED_REVIEWED_AFTER_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "初解B後才讀候選D並發現漏掉上一年末結轉；修正D但須獨立複核。",
     "initialImageBasedAnswer": "B",
     "correctedAfterCandidateReview": "D",
@@ -33,7 +33,9 @@
     },
     "conflictWarningRequired": true,
     "independentSolveScope": "FIRST_PASS_DIFFERED_PENDING_ADJUDICATION",
-    "pendingWarning": "警示：AI 解答與題庫官方解答不一致，本題待核對。"
+    "pendingWarning": "警示：AI 解答與題庫官方解答不一致，本題待核對。",
+    "officialAnswer": "D",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "accounting-concepts",
@@ -59,7 +61,8 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核"
+      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "期初承接",
@@ -156,15 +159,27 @@
       ],
       "originalImageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "officialConfirmationSupplement": {
+      "page": 1,
+      "teacher": "**年度開始日**指新年度交易發生前的期初時點，承接上一年度期末調整後的備抵貸餘；不要把它當作年中任意一天。因此①正確。年中核銷會借記備抵，餘額可能變成借餘，所以②不保證。期末依題目非零信用損失率調整後為貸餘，③正確，選 **D（①、③）**。",
+      "elementary": "想像昨天收店已經把帳整理好，今天剛開門、還沒做生意，就接著昨天的帳。做到一半可能改變，年底整理完又重新算。所以**第一句、第三句對**。",
+      "memory": "**期初接上年、年中會變動、期末看調整**。",
+      "calculationRequired": false,
+      "status": "OFFICIAL_INTERPRETATION_SUPPLEMENT_REVIEW_PENDING",
+      "source": "115-4y-09-2-confirm.pdf",
+      "sourceEvidence": "official-final-evidence-20261023.json",
+      "doesNotReplaceInitialAiAnswer": true,
+      "studentReleaseApproved": false
     }
   },
   "qa": {
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
@@ -199,6 +214,34 @@
       "fullTeachingQaAccepted": false,
       "releaseApproved": false,
       "evidence": "ARCHIVED_ANSWER_IMAGE_09-2_A_5_20261023.md"
+    },
+    "officialFinalEvidence": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": true,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

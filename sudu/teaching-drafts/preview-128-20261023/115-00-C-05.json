@@ -29,8 +29,10 @@
   "answerComparison": {
     "candidate": "B",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
-    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+    "officialFinalCorrectionVerified": true,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成",
+    "officialAnswer": "B",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "teaching": {
     "teacherSummary": "資料判讀只能推論證據支持的範圍；兩詞缺乏清代以前出處，不能擴推所有新詞數量或作者態度。",
@@ -40,7 +42,8 @@
     "extension": "反向題：若有一篇明確早於清代的原始史料也使用「接觸」或「取締」，選項B中「依此資料無法回溯古義」的判斷還能保留嗎？為什麼單憑兩例不能推出新造詞數量比古詞多，或說當時作者一概反對日語新詞？",
     "source": {
       "originalExam": "115-00-C-05",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "取締",
@@ -116,10 +119,41 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

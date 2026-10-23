@@ -1,0 +1,3321 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-23",
+  "scopeTotal": 128,
+  "method": "直接回讀官方現行標準答案PDF，渲染答案表目視題號與答案；讀確認說明全文，商管專二三頁另逐頁目視。非OCR，非盲解，非完整教學驗收。",
+  "sources": [
+    {
+      "name": "115-4y-00-c-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+      "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+      "bytes": 163372
+    },
+    {
+      "name": "115-4y-00-e-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "bytes": 89152
+    },
+    {
+      "name": "115-4y-00-mb-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "bytes": 88843
+    },
+    {
+      "name": "115-4y-09-1-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "bytes": 185693
+    },
+    {
+      "name": "115-4y-09-2-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "bytes": 165618
+    },
+    {
+      "name": "115-4y-00-C-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+      "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+      "bytes": 2497215
+    },
+    {
+      "name": "115-4y-00-E-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+      "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+      "bytes": 732877
+    },
+    {
+      "name": "115-4y-09-2-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+      "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+      "bytes": 588223
+    },
+    {
+      "name": "114-4y-00-c-standard.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+      "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+      "bytes": 106423
+    },
+    {
+      "name": "114-4y-00-C-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+      "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+      "bytes": 2426865
+    }
+  ],
+  "portals": {
+    "114": {
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "htmlSha256": "e6a44ca0fc8b2945924c6d6f553df19904784dadfd693263fe427c5fc94302e2",
+      "finalAnnouncementDate": "2025-05-09 17:00"
+    },
+    "115": {
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "htmlSha256": "ce4d0b1c73d393c34f7a8e9409fcde3bc012739cbd36f700e5d7fdcfe046588c",
+      "finalAnnouncementDate": "2026-05-08 17:00"
+    }
+  },
+  "questions": {
+    "114-00-C-02": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-03": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-04": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-05": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-06": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-07": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-08": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-09": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "114-00-C-10": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-01": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-02": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-03": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-04": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-05": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-07": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-08": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-09": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-C-10": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-01": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-02": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-03": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-04": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-05": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-06": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-07": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-08": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-09": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-10": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-11": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-12": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-13": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-14": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-15": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-16": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-17": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-18": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-19": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-20": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-21": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-22": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-23": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-24": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-25": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-26": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-27": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-E-28": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-01": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-02": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-03": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-04": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-05": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-06": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-07": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-08": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-09": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-10": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-11": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-12": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-13": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-14": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-15": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-16": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-17": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-18": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-19": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-20": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-21": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-22": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-23": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-24": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-00-MB-25": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-00-mb-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+        "sha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "bytes": 88843
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-01": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-03": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-05": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-06": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-07": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "UNDETERMINED",
+      "aiMatchesOfficial": false,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-26": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-27": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-28": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-29": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-32": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-33": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "UNDETERMINED",
+      "aiMatchesOfficial": false,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-1-34": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-01": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-02": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-03": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-04": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-05": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-06": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": true,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-07": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-08": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-09": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-10": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-11": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-12": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-13": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-14": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-15": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-16": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-17": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-18": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-19": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-20": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-21": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-25": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-26": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-27": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-28": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": true,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": false,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-29": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-30": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-31": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-32": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-33": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-34": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-35": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-36": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-37": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-38": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-39": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-40": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-41": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-42": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-43": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-44": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": true,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-45": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-46": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-47": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "B",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "115-09-2-48": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
+  },
+  "deploy": false,
+  "verifiedCount": 128,
+  "aiLiteralMatchCount": 125,
+  "aiUnresolvedIds": [
+    "115-09-1-07",
+    "115-09-1-33",
+    "115-09-2-28"
+  ]
+}

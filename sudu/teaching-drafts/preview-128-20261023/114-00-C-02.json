@@ -29,8 +29,10 @@
   "answerComparison": {
     "candidate": "C",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
-    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+    "officialFinalCorrectionVerified": true,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成",
+    "officialAnswer": "C",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "teaching": {
     "teacherSummary": "判斷「把」字句時，先看主語是否有意識地處置事物；船身沒有意志，白浪是船行造成的結果。",
@@ -40,7 +42,8 @@
     "extension": "反向思考：將「船身把墨藍海水掘犁成翻花的白浪」改寫成「船長把船駛過浪區」。哪一句主語有意識地處置受事者？如果主語由船長換回船身，判斷為何不同？",
     "source": {
       "originalExam": "114-00-C-02",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "把門打開了",
@@ -123,10 +126,39 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "C",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "C",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

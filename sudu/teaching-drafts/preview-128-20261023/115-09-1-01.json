@@ -21,7 +21,7 @@
   "answerComparison": {
     "candidate": "D",
     "status": "MATCHES_CANDIDATE_WITH_TEACHING_CAUTION",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。",
     "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
     "conflictWarningRequired": false,
@@ -31,7 +31,9 @@
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
       "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
       "officialRevisionChecked": false
-    }
+    },
+    "officialAnswer": "D",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "commercial-management-concept",
@@ -59,7 +61,8 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。"
+      "officialIssueExplanation": "④『利潤受損即未善盡經濟責任』過於絕對；應補官方命題詮釋。",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "再生能源",
@@ -147,7 +150,7 @@
       ],
       "originalImageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
@@ -155,7 +158,7 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
@@ -191,6 +194,25 @@
       "fullTeachingQaAccepted": false,
       "releaseApproved": false,
       "evidence": "ARCHIVED_ANSWER_IMAGE_09-1_5_20261023.md"
+    },
+    "officialFinalEvidence": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

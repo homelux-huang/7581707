@@ -28,7 +28,7 @@
   "answerComparison": {
     "candidate": "D",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "本輪先讀共用文章與單題選項做出獨立解答，之後比對已有候選資料；2026-05-08 官方最終答案公告已見，但英文答案 PDF 與疑義確認說明未直接回讀，本題仍待官方最終核實。",
     "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
     "candidateProvenance": {
@@ -36,7 +36,9 @@
       "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
       "officialRevisionChecked": false
     },
-    "conflictWarningRequired": false
+    "conflictWarningRequired": false,
+    "officialAnswer": "D",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "cloze-shared-reading",
@@ -74,7 +76,8 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "articleDataNote": "海事新聞背景與人數依原試題文章照錄；未驗證這些數字為2026最新統計。"
+      "articleDataNote": "海事新聞背景與人數依原試題文章照錄；未驗證這些數字為2026最新統計。",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "tough job",
@@ -172,10 +175,36 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "115-4y-00-e-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+        "sha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+        "bytes": 89152
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-E-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+        "sha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+        "bytes": 732877
+      },
+      "confirmationQuestionNumbers": [
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

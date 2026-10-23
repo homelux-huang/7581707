@@ -21,7 +21,7 @@
   "answerComparison": {
     "candidate": "A",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
     "initialImageBasedAnswer": "A",
     "candidateProvenance": {
@@ -30,7 +30,9 @@
       "officialRevisionChecked": false
     },
     "conflictWarningRequired": false,
-    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING",
+    "officialAnswer": "A",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "accounting-calculation",
@@ -61,7 +63,8 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "官方最終標準答案與更正公告待核實"
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "帳面減47869",
@@ -227,7 +230,7 @@
       ],
       "originalImageSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
@@ -235,11 +238,39 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "officialFinalEvidence": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

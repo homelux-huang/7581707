@@ -27,8 +27,10 @@
   "answerComparison": {
     "candidate": "A",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
-    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+    "officialFinalCorrectionVerified": true,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成",
+    "officialAnswer": "A",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "teaching": {
     "teacherSummary": "由解牛順應肌理推養生、由種樹順性推治理，都是跨領域抓共同道理的相似聯想。",
@@ -38,7 +40,8 @@
     "extension": "反向題：如果有人說「因為庖丁切牛，文惠君當天才突然能長壽」，這把故事誤判成哪種聯想（因果／相似）？請說明為何「順著骨節用刀」與「順應自然養生」是性質相似，而不是甲直接造成乙。",
     "source": {
       "originalExam": "115-00-C-08",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "游刃有餘",
@@ -114,10 +117,41 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+        "bytes": 163372
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+        "bytes": 2497215
+      },
+      "confirmationQuestionNumbers": [
+        12,
+        16,
+        18,
+        23,
+        24,
+        34
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "A",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

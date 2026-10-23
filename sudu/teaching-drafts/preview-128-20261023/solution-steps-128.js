@@ -78,7 +78,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|9": {
@@ -144,7 +144,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|10": {
@@ -210,7 +210,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "3c06c677c7362cbf22e792cdcbd990a584129b929d25cd63efb98037a390b7c4",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|11": {
@@ -282,7 +282,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "c2f2c57d0d65abc757c35e560f6ed8ce1114a452f9bae59e174e904fbb047f92",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|12": {
@@ -354,7 +354,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "ee793a1135e53ef1080af2b67724d9672f74028372f7ba5b607525886a621cb2",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|26": {
@@ -426,7 +426,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5b4426ed72ed5fa16e65625976465dcfc771d1c34dd3dab012e3eaf5b7cf5cbb",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|27": {
@@ -498,7 +498,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "3c13bf5dc3ed5f81b7d8c0e667f5596f5a169ead9df78360ae82451e8a1e79c4",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|28": {
@@ -576,7 +576,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "914f28cf23ad62958e9a70e85b6e1cd27bf6b9f9b04849ec8b6f84fe99d6dbef",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|25": {
@@ -630,7 +630,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "ec7abde20dc64ede40c066a1b20483db3b320479b5480a778e7495366d261a34",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|29": {
@@ -684,7 +684,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "1ff70b0b7724f499ffe88fa9e37e624909ff0f6a61f7468a1beccac216606a06",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|2": {
@@ -738,7 +738,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|3": {
@@ -792,7 +792,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "16e5634a17680ca04fc76d82f72ef1e76c423aa5e5ed80062c0cec63b7c05163",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|4": {
@@ -846,7 +846,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "3b1493b56ac9296369fdbdf8771bf20dcfb86b90b74810324ad6ec22aba9123d",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|5": {
@@ -900,7 +900,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|6": {
@@ -954,7 +954,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "260ff739935f3ac116b51e4b81f3c0397c4dfcb142e50a60002a4861fca2c900",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "商業概論|1": {
@@ -1008,7 +1008,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "商業概論|3": {
@@ -1062,7 +1062,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "商業概論|5": {
@@ -1116,7 +1116,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "商業概論|6": {
@@ -1170,7 +1170,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5e79e4e8730a1cce0358c9e5321db8fbdfe373b85e8aa8a2ad6ed32073ea8801",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "商業概論|7": {
@@ -1224,7 +1224,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|26": {
@@ -1278,7 +1278,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "1121850558b92aeb994fa355456b31dc0ae03cc7e087458b78de6e58741338fb",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|27": {
@@ -1332,7 +1332,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "a3b18d6faabb4321b1fc3bec4592f136190ce831432bccc7ab4ee13f5f4ffce8",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|28": {
@@ -1386,7 +1386,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "406eaa84ccc681598d20d6e2bdbb1726c97ee9cf5b6b44f2418a85cccc702487",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|32": {
@@ -1440,7 +1440,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|34": {
@@ -1494,7 +1494,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "e4b9be479dda5b2ed41563bbf944eedc1d1ea1086ecde8691af24ebe5aa359b6",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|1": {
@@ -1554,7 +1554,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5735eef691797736d38a82597852739a9d122e11064e36c896afd18dbb011be7",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|2": {
@@ -1626,7 +1626,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|3": {
@@ -1686,7 +1686,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|4": {
@@ -1752,7 +1752,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|5": {
@@ -1824,7 +1824,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|6": {
@@ -1890,7 +1890,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|8": {
@@ -1962,7 +1962,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "dcad64f776b9128299839aee37597d7509d4155c01a9bc81092fd30bad96aec6",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|13": {
@@ -2040,7 +2040,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|14": {
@@ -2100,7 +2100,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|15": {
@@ -2166,7 +2166,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|16": {
@@ -2238,7 +2238,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|17": {
@@ -2304,7 +2304,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "8c55964cf7cec4143310da4282e1ed2c4b6e4d95c8327c3e9ef159998b4a26ab",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|18": {
@@ -2382,7 +2382,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "3e13e20fc9728a4541162a2de8dfa141f04650bd168d641c2d9173915d632013",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|19": {
@@ -2454,7 +2454,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "fc3e3cc5ae4aaa06eede83901c434769acda783a97051b0379f3e90973b1a9b4",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|20": {
@@ -2526,7 +2526,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|21": {
@@ -2592,7 +2592,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|22": {
@@ -2652,7 +2652,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|23": {
@@ -2724,7 +2724,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|24": {
@@ -2796,7 +2796,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數學 B|25": {
@@ -2868,7 +2868,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|29": {
@@ -2946,7 +2946,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "743fd5cec07f8e87c0c21aaffd63af9eb50f419596c6be00e7fe54a75737f84b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "數位科技|33": {
@@ -3000,7 +3000,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|1": {
@@ -3054,7 +3054,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|7": {
@@ -3150,7 +3150,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|8": {
@@ -3228,7 +3228,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "2f9348b1e5a99ed36ab8d5055ec8e05deaae37ae0eaba386e3915d462149afe2",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|9": {
@@ -3318,7 +3318,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "7f019c27728fcf07060d0d4b6bcabf02283c622a9774bb63d3cb8d5d7a790a85",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|10": {
@@ -3372,7 +3372,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|11": {
@@ -3426,7 +3426,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|12": {
@@ -3480,7 +3480,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|13": {
@@ -3546,7 +3546,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|14": {
@@ -3600,7 +3600,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "fbac2676dbe415bd141cf10682969998065c82bdc127e4947b2469bb2b6a76d6",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|15": {
@@ -3690,7 +3690,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "6a9840a517f22334743662035ce9553f77b5ab3e062fbfe5b66766d18b6b00fb",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|16": {
@@ -3780,7 +3780,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "bc4400fc6ce199f814e1811a2d4e3c211f34c83a908657b4af38144cc7d4ae0b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|17": {
@@ -3834,7 +3834,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|18": {
@@ -3906,7 +3906,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "22e743c48472915b7d524d3263a88e8069f086cc086082248ce0140999053ceb",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|19": {
@@ -3972,7 +3972,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5c5dcab67b6d0d6dbaf56771e9726a21e3f213f2136fe3c5e7166782ec5cf4b1",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|20": {
@@ -4050,7 +4050,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "63ab6226b25babdeff478eefd3763a01ba1ce8c18de8210ce3423e3e7c55e389",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "會計學|21": {
@@ -4122,7 +4122,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|30": {
@@ -4170,7 +4170,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "6978feb1ffc00354f8cf35383c25f48bcdc6194949677aed3ba6904105a0a9d8",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|31": {
@@ -4236,7 +4236,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "8b8d7d613f270a6a98f3fb6dbeef54f07ab0cdde68b21c5d569f014bd098c830",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|32": {
@@ -4278,7 +4278,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "f21892d4f83ad55e0d74b4f5fd1b26f7a3f592ccb1972900db8df01a12f3919c",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|33": {
@@ -4344,7 +4344,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|34": {
@@ -4398,7 +4398,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|35": {
@@ -4464,7 +4464,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "33c6184848bcb91c79f7238f5e9d99ec4b87113742c236dfa74b78dd2554a9c4",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|36": {
@@ -4536,7 +4536,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "91d3a9865c9bab491e3e35fef0b94712588dd83df34ab4089a2da4f0437f17ab",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|37": {
@@ -4608,7 +4608,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "5a85327b1c306c60f53e5c3268bdb927d3438fbc0ca768e6ddf34c3553a1107b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|38": {
@@ -4662,7 +4662,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "f09b9e42e718f6ce1e2dd2886251704d4e663c32dbf24fd1e0eed61719b72657",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|39": {
@@ -4716,7 +4716,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "fc4b82447e2ed3cd8c23a21279c489d36c107b237c2882adcbad09146f752dc9",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|40": {
@@ -4782,7 +4782,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "6c6f28d1a0a2c15b4be1f2e041aeff4c8d8d0c04c85fdf4e0120b5c3e83d10d7",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|41": {
@@ -4848,7 +4848,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "9eef6271885b6f7dc630db57ee29e9267a826283e77fb882aa40ad41bc44dddd",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|42": {
@@ -4926,7 +4926,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "68bc9a39a1ad55be4eca9c5b187f4c043d0b9fc5dcf8a3456dde8f949fcaa1ea",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|43": {
@@ -4974,7 +4974,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "51f12ac893ea05ccde28d477ef3b6bff84ce9f3039eb73e782b4f837b2719fc5",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|44": {
@@ -5028,7 +5028,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "a5352c687572ff5aff8a4c9f71db4b52e878eb716ac37397e2a9c51e0d3f126f",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|45": {
@@ -5082,7 +5082,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|46": {
@@ -5136,7 +5136,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|47": {
@@ -5190,7 +5190,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "09ae5d9666fb473f87aa693e197988fb0cc385aa607345e1b596d3df2debfb6b",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     },
     "經濟學|48": {
@@ -5244,7 +5244,7 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       ],
       "originalImageSha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },

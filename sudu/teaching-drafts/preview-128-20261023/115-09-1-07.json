@@ -21,7 +21,7 @@
   "answerComparison": {
     "candidate": "B",
     "status": "DISPUTED_CANDIDATE_BLOCKED",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "候選答案已在先前對話露出，本次不聲稱盲解。官方最終答案 PDF 和更正尚未獨立回讀。候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
     "blindSolveStatus": "NOT_BLIND_CANDIDATE_PREVIOUSLY_KNOWN",
     "conflictWarningRequired": true,
@@ -31,7 +31,9 @@
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
       "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
       "officialRevisionChecked": false
-    }
+    },
+    "officialAnswer": "B",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "commercial-management-concept",
@@ -60,7 +62,8 @@
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
       "officialIssueExplanation": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
-      "reviewResearch": "https://www.tej.com.tw/tejdoc/db-document/tw/wim1a.html"
+      "reviewResearch": "https://www.tej.com.tw/tejdoc/db-document/tw/wim1a.html",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "票據貼現",
@@ -149,7 +152,7 @@
       ],
       "originalImageSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
@@ -157,7 +160,7 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "BLOCKED",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
@@ -193,6 +196,25 @@
       "fullTeachingQaAccepted": false,
       "releaseApproved": false,
       "evidence": "ARCHIVED_ANSWER_IMAGE_09-1_5_20261023.md"
+    },
+    "officialFinalEvidence": {
+      "officialAnswer": "B",
+      "standardPdf": {
+        "name": "115-4y-09-1-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+        "sha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+        "bytes": 185693
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "NO_OBJECTIONS_LISTED_BY_OFFICIAL_PORTAL",
+      "confirmationPdf": null,
+      "confirmationQuestionNumbers": [],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "UNDETERMINED",
+      "aiMatchesOfficial": false,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

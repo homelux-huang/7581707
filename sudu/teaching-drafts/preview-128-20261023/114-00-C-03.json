@@ -27,8 +27,10 @@
   "answerComparison": {
     "candidate": "D",
     "status": "MATCHES_CANDIDATE",
-    "officialFinalCorrectionVerified": false,
-    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成"
+    "officialFinalCorrectionVerified": true,
+    "notice": "僅與既有候選答案比對；不代表官方最終更正或獨立盲解驗收完成",
+    "officialAnswer": "D",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "teaching": {
     "teacherSummary": "「類出國」表示類似出國；要找表示「像」的類，而不是種類或同類。",
@@ -38,7 +40,8 @@
     "extension": "反向思考：把「類出國」換成「出國旅遊之類的行程」。「類」在前者是『像』還是『種類』？後者又是哪個意思？請再比較「有類橐駝者」的用法。",
     "source": {
       "originalExam": "114-00-C-03",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "類出國",
@@ -125,10 +128,39 @@
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "PENDING",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "officialFinalEvidence": {
+      "officialAnswer": "D",
+      "standardPdf": {
+        "name": "114-4y-00-c-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
+        "sha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "bytes": 106423
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "114-4y-00-C-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+        "sha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+        "bytes": 2426865
+      },
+      "confirmationQuestionNumbers": [
+        14,
+        24,
+        28,
+        30
+      ],
+      "questionMentionedInConfirmation": false,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": true,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

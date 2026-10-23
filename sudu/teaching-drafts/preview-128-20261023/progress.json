@@ -6,7 +6,7 @@
   "draftPercent": 100,
   "visualRechecked": 128,
   "candidateAnswerMatched": 121,
-  "officialFinalCorrectionVerified": 0,
+  "officialFinalCorrectionVerified": 128,
   "fullyAccepted": 0,
   "deployed": 0,
   "deploymentForbidden": true,
@@ -2038,7 +2038,7 @@
       "英文"
     ],
     "teachingQAApproved": 0,
-    "officialFinalVerified": 0,
+    "officialFinalVerified": 82,
     "deployed": false,
     "doNotDeploy": true,
     "note": "原解說初稿128/128仍不表示完整QA；正式頁35題中25題有逐步解題、10題沒有實際列式或推導步驟而自動隱藏。其餘草稿需持續補入。",
@@ -2081,7 +2081,7 @@
         "hidden": 0
       }
     },
-    "next": "官方最終標準答案、更正公告、教材版本、逐題獨立內容及 UI QA；不在本批部署"
+    "next": "官方說明的教學整合、教材版本、逐題獨立內容及 UI QA；不在本批部署"
   },
   "supplementalReviewCheckpoints": [
     {
@@ -2530,5 +2530,17 @@
       "ARCHIVED_ANSWER_IMAGE_LAST_5_20261023.md"
     ],
     "notice": "Verifiable archived official answer-sheet page rendered WebPs; original PDFs NOT re-downloaded during this round; correction explanation documents NOT reviewed; 15 matches only."
+  },
+  "officialFinalEvidence": {
+    "file": "official-final-evidence-20261023.json",
+    "verifiedCount": 128,
+    "candidateMatchesOfficialCount": 128,
+    "aiLiteralMatchesOfficialCount": 125,
+    "unresolvedIds": [
+      "115-09-1-07",
+      "115-09-1-33",
+      "115-09-2-28"
+    ],
+    "note": "官方來源核對完成不等於完整教學驗收；保留所有既有教學疑點、警示與禁止部署。"
   }
 }

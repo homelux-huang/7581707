@@ -21,7 +21,7 @@
   "answerComparison": {
     "candidate": "A",
     "status": "MISMATCH_PENDING_OFFICIAL_AND_TEXTBOOK_REVIEW",
-    "officialFinalCorrectionVerified": false,
+    "officialFinalCorrectionVerified": true,
     "notice": "先依未設預算的各商品總效用計算推得D；讀候選A後另算出等邊際效用/價格比率皆0.10，但題幹未給預算；原AI答案D完整保留，待官方與教材核對，不為配合候選而竄改初解。",
     "blindSolveStatus": "IMAGE_REASONING_SAVED_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_QA",
     "conflictWarningRequired": true,
@@ -31,7 +31,9 @@
       "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
       "officialRevisionChecked": false
     },
-    "reassessmentAfterCandidateLookup": "選項A滿足MU/P均為0.10、D在未給預算時總效用54高於A50，需核實是否省略預算條件。"
+    "reassessmentAfterCandidateLookup": "選項A滿足MU/P均為0.10、D在未給預算時總效用54高於A50，需核實是否省略預算條件。",
+    "officialAnswer": "A",
+    "officialEvidenceFile": "official-final-evidence-20261023.json"
   },
   "solution": {
     "questionType": "accounting-or-economics-calculation",
@@ -59,7 +61,8 @@
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
       "officialIssueExplanation": "第28題候選A與原圖未設預算的總效用比較有解題條件歧義。",
-      "principleReference": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices"
+      "principleReference": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
       "總效用",
@@ -216,15 +219,38 @@
       ],
       "originalImageSha256": "914f28cf23ad62958e9a70e85b6e1cd27bf6b9f9b04849ec8b6f84fe99d6dbef",
       "independentTeachingQA": "PENDING",
-      "officialFinalVerified": false,
+      "officialFinalVerified": true,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "officialConfirmationSupplement": {
+      "page": 2,
+      "teacher": "官方將**考慮財貨價格**解讀為比較**每元邊際效用 MU/P**。先算多買一份增加多少效用，再除以單價。A 的蛋餅第二份是 (24−20)/40＝0.10；豆沙包第一份是 (5−0)/50＝0.10；三明治第二份是 (21−15)/60＝0.10，三者相等，故官方選 **A（2、1、2）**。D 的總效用雖是54，但每元邊際效用不相等，未符合官方採用的均衡判準。**250元是A的花費，不是題目給定預算**；仍保留原AI初解D與官方A的差異，等待教學複核。",
+      "elementary": "多買一份早餐會多開心一點，但每樣價格不同，不能只比開心總分。先算**多花一元能多多少快樂**。選A時三樣都算出0.1，這就是官方要比的條件。",
+      "memory": "**先算新增快樂，再除價格：4÷40＝5÷50＝6÷60＝0.10，官方選A**。",
+      "calculationRequired": true,
+      "steps": [
+        "蛋餅：MU₁＝20−0＝20；MU₂＝24−20＝4；MU₃＝25−24＝1；MU₄＝23−25＝−2。",
+        "豆沙包：MU₁＝5−0＝5；MU₂＝7−5＝2；MU₃＝8−7＝1；MU₄＝8−8＝0。",
+        "三明治：MU₁＝15−0＝15；MU₂＝21−15＝6；MU₃＝18−21＝−3；MU₄＝12−18＝−6。",
+        "A（2、1、2）：4÷40＝5÷50＝6÷60＝0.10，符合官方等邊際判準。",
+        "B（1、1、1）：20÷40＝0.50、5÷50＝0.10、15÷60＝0.25，不相等。",
+        "C（4、2、1）：−2÷40＝−0.05、2÷50＝0.04、15÷60＝0.25，不相等。",
+        "D（3、3、2）：1÷40＝0.025、1÷50＝0.02、6÷60＝0.10，不相等。",
+        "A費用＝2×40＋1×50＋2×60＝250元；A總效用＝24＋5＋21＝50。此250元是算出的支出，不能冒充題幹預算。",
+        "D費用＝3×40＋3×50＋2×60＝390元；D總效用＝25＋8＋21＝54。此比較只說明原AI初解的理由，並非官方選D。"
+      ],
+      "status": "OFFICIAL_INTERPRETATION_SUPPLEMENT_REVIEW_PENDING",
+      "source": "115-4y-09-2-confirm.pdf",
+      "sourceEvidence": "official-final-evidence-20261023.json",
+      "doesNotReplaceInitialAiAnswer": true,
+      "studentReleaseApproved": false
     }
   },
   "qa": {
     "explanationWritten": true,
     "independentTeachingReview": "PENDING",
     "uiReview": "PENDING",
-    "officialFinalReview": "BLOCKED_AI_CANDIDATE_MISMATCH",
+    "officialFinalReview": "VERIFIED_SOURCE_AND_CONFIRMATION_NOT_TEACHING_ACCEPTANCE",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
@@ -259,6 +285,34 @@
       "fullTeachingQaAccepted": false,
       "releaseApproved": false,
       "evidence": "ARCHIVED_ANSWER_IMAGE_LAST_5_20261023.md"
+    },
+    "officialFinalEvidence": {
+      "officialAnswer": "A",
+      "standardPdf": {
+        "name": "115-4y-09-2-standard.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+        "sha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+        "bytes": 165618
+      },
+      "portal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "confirmationStatus": "CONFIRMATION_PDF_READ",
+      "confirmationPdf": {
+        "name": "115-4y-09-2-confirm.pdf",
+        "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+        "sha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+        "bytes": 588223
+      },
+      "confirmationQuestionNumbers": [
+        6,
+        28,
+        44
+      ],
+      "questionMentionedInConfirmation": true,
+      "officialFinalCorrectionVerified": true,
+      "aiAnswerAtReview": "D",
+      "aiMatchesOfficial": false,
+      "releaseApproved": false,
+      "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
