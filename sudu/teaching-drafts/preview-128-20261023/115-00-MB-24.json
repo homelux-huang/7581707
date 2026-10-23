@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-24",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 24,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-24.webp",
+  "imageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "直接目視既有單題WebP完整題幹、圖形、表格、單位、四選項；重算原始 bytes SHA256 並與固定清單符合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖獨立解題後才讀既有候選答案；官方最終答案 PDF／更正公告尚未直接回讀，不計完整官方核實。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "複利三倍本金估算A=110/r，精確B=log₁₀3/log₁₀(1+r/100)，r=8，A向上進位C、B向上進位D，比較D和C。",
+    "keyConditions": [
+      "A=110/r",
+      "B=log₁₀3 / log₁₀(1+r/100)",
+      "r=8%",
+      "C=⌈A⌉、D=⌈B⌉"
+    ],
+    "reasoningFromOriginalImage": "代 r=8：**A=110/8=13.75**，無條件進位 **C=14**。精確值 **B=log3/log1.08**，可由 **1.08¹⁴≈2.937<3**、**1.08¹⁵≈3.172>3**，所以 **14<B<15**，向上進位 **D=15**。故 **D=C+1**，選C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "D=C+1；C=14年、D=15年",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "代 r=8：**A=110/8=13.75**，無條件進位 **C=14**。精確值 **B=log3/log1.08**，可由 **1.08¹⁴≈2.937<3**、**1.08¹⁵≈3.172>3**，所以 **14<B<15**，向上進位 **D=15**。故 **D=C+1**，選C。",
+    "elementarySummary": "一個是很快估算，大約13.75年，往上取整年是14。另一個較精確，超過14年、但還沒到15年，整年要算15。兩個差1年。",
+    "memory": "**A=13.75→C=14；B≈14.27→D=15；D=C+1**。",
+    "concept": "**無條件進位 ceiling** 是任何非整數向上取整。複利本利和=本金(1+r/100)^t；達三倍需 (1+r/100)^t=3，對數求 t。",
+    "extension": "反向思考：若兩個原始數值都在13～14之間，向上取整會相同。**數值有差異**不代表向上進位後一定差1。",
+    "source": {
+      "originalExam": "115-00-MB-24",
+      "originalImagePinnedSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學 B 教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B最終更正公告待直接核實"
+    },
+    "highlightTerms": [
+      "A=13.75",
+      "C=14",
+      "14<B<15",
+      "D=15",
+      "D=C+1"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "D=C−1需D=13，但精確B>14，D應15，不合。",
+        "elementary": "精確值不會變13。",
+        "reason": "D=C−1需D=13，但精確B>14，D應15，不合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "D=C需D=14，但B≈14.27不是整數，無條件進位為15。",
+        "elementary": "超過14一點也得算15。",
+        "reason": "D=C需D=14，但B≈14.27不是整數，無條件進位為15。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C=14、D=15，故 D=C+1，正確。",
+        "elementary": "15就是14再加1。",
+        "reason": "C=14、D=15，故 D=C+1，正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D=C+2需D=16，但B在14和15之間，進位不會到16。",
+        "elementary": "只需要15年，不是16。",
+        "reason": "D=C+2需D=16，但B在14和15之間，進位不會到16。"
+      }
+    },
+    "math": {
+      "formula": "複利三倍 (1+r/100)^t=3 ⇒ t=log3/log(1+r/100)；無條件進位⌈x⌉。",
+      "formulaUsage": "對數求複利到達目標倍數的年數；估算與精確計算比較。",
+      "workedExample": "(1.10)^t=2 ⇒t=ln2/ln1.1≈7.27，按完整年度向上進位需8年。",
+      "dailyApplication": "投資複利與儲蓄目標規劃（僅數學模型、不構成報酬保證）。",
+      "notes": "數學、折扣與複利考題運算全數保留完整過程"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "A=110/r",
+        "B=log₁₀3 / log₁₀(1+r/100)",
+        "r=8%",
+        "C=⌈A⌉、D=⌈B⌉"
+      ],
+      "formula": "複利三倍 (1+r/100)^t=3 ⇒ t=log3/log(1+r/100)；無條件進位⌈x⌉。",
+      "formulaPurpose": "對數求複利到達目標倍數的年數；估算與精確計算比較。",
+      "substitutionAndSteps": [
+        {
+          "formula": "A=110/8=13.75",
+          "why": "代入r=8求快速估算。"
+        },
+        {
+          "formula": "C=⌈13.75⌉=14",
+          "why": "14是首個不小於13.75的整數。"
+        },
+        {
+          "formula": "B=log₁₀3/log₁₀1.08=ln3/ln1.08",
+          "why": "換底公式同一比值。"
+        },
+        {
+          "formula": "1.08¹⁴≈2.937<3，1.08¹⁵≈3.172>3 ⇒14<B<15",
+          "why": "連續複利倍數夾住3可判精確年數在哪個區間。"
+        },
+        {
+          "formula": "D=⌈B⌉=15",
+          "why": "向上進位成完成倍數的整年。"
+        },
+        {
+          "formula": "D=15=14+1=C+1，選C",
+          "why": "比較D與C。"
+        }
+      ],
+      "result": "D=C+1；C=14年、D=15年",
+      "unit": "年",
+      "matchingOption": "C",
+      "commonMistake": "把四捨五入當無條件進位；14.27誤取14。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
