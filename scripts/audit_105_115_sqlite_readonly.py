@@ -50,7 +50,9 @@ def audit_year(year):
             db.execute('PRAGMA query_only=ON')
             if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
                 report['blockers'].append('on_disk_integrity_check_failed')
+            report['onDiskTables'] = [row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")]
             cols = {r[1] for r in db.execute('PRAGMA table_info(questions)')}
+            report['onDiskQuestionColumns'] = sorted(cols)
             if not NEEDED <= cols:
                 report['blockers'].append('on_disk_question_schema_missing_columns')
             else:
