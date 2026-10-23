@@ -84,11 +84,17 @@ def audit(year):
         if not isinstance(evidence, dict):
             evidence = {}
         sha = im.get('sha256') or im.get('outputSha256')
+        source_sha = im.get('sourceSha256') or im.get('sourcePageWebpSha256')
+        reviewed_source_sha = evidence.get('sourceSha256') or evidence.get('sourcePageSha256')
+        source_ok = (isinstance(source_sha, str) and len(source_sha) == 64
+                     and bool(im.get('sourcePage')) and bool(im.get('crop') or im.get('cropPixels'))
+                     and bool(im.get('output'))
+                     and (not reviewed_source_sha or reviewed_source_sha == source_sha))
         vsha = (vi.get('webpSha256') or vi.get('assetSha256') or
                 vi.get('reviewedWebpSha256') or vi.get('candidateSha256'))
         vpass = vi.get('status', vi.get('result')) == 'PASS'
         claimed_pass = im.get('qaStatus') == 'PASS'
-        good = (claimed_pass and isinstance(sha, str) and len(sha) == 64
+        good = (claimed_pass and source_ok and isinstance(sha, str) and len(sha) == 64
                 and evidence.get('reviewedSha256') == sha
                 and bool(evidence.get('reference')) and vpass and vsha == sha)
         if good:
@@ -103,6 +109,11 @@ def audit(year):
         qp = q.get('questionProvenance') or {}
         if isinstance(qp, dict) and qp.get('webpSha256') and qp['webpSha256'] != sha:
             blocks.append('question_webp_sha_mismatch:' + qid)
+        if isinstance(qp, dict) and qp.get('pixelSourceSha256') and qp['pixelSourceSha256'] != source_sha:
+            blocks.append('question_source_sha_mismatch:' + qid)
+        pdf_sha = im.get('sourcePdfSha256') or im.get('officialQuestionPdfSha256')
+        if isinstance(qp, dict) and qp.get('officialPdfSha256') and pdf_sha and qp['officialPdfSha256'] != pdf_sha:
+            blocks.append('question_official_pdf_sha_mismatch:' + qid)
         qa = q.get('assets') or {}
         if isinstance(qa, dict) and qa.get('sha256') and qa['sha256'] != sha:
             blocks.append('question_asset_sha_mismatch:' + qid)
@@ -118,6 +129,13 @@ def audit(year):
                 blocks.append('official_answer_evidence_mismatch:' + qid)
         if answer.get('answerVerified') is True and q.get('answerVerified') is not True:
             blocks.append('official_answer_flag_mismatch:' + qid)
+        ap = q.get('answerProvenance') or {}
+        answer_pdf_sha = (answer.get('officialSourceSha256') or answer.get('officialPdfSha256')
+                          or answer.get('officialAnswerPdfSha256'))
+        if (q.get('answerVerified') is True and isinstance(ap, dict)
+                and ap.get('officialPdfSha256') and answer_pdf_sha
+                and ap['officialPdfSha256'] != answer_pdf_sha):
+            blocks.append('official_answer_source_sha_mismatch:' + qid)
     pending = sorted(set(ids) - set(image_pass))
     if pending:
         blocks.append('image_visual_qa_pending:' + str(len(pending)))
@@ -142,6 +160,12 @@ def audit(year):
         elif (not isinstance(evidence, dict) or not sha or
               evidence.get('reviewedSha256') != sha or not evidence.get('reference')):
             blocks.append('shared_material_evidence_missing:' + str(sid))
+        shared_source_sha = item.get('sourceSha256') or item.get('sourcePageWebpSha256')
+        evidence_source_sha = (evidence.get('sourceSha256') or evidence.get('sourcePageSha256')
+                               if isinstance(evidence, dict) else None)
+        if (item.get('qaStatus') == 'PASS' and shared_source_sha and evidence_source_sha
+                and shared_source_sha != evidence_source_sha):
+            blocks.append('shared_material_source_sha_mismatch:' + str(sid))
         links = item.get('questionIds')
         if isinstance(links, list) and any(qid not in ids_set for qid in links):
             blocks.append('shared_material_unknown_question:' + str(sid))
