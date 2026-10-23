@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-46",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 46,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-46.webp",
+  "imageSha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視原圖）",
+    "method": "從 GitHub 草稿分支取出單題 WebP 並實際觀看題幹、全部四選項、圖形及文字；重算圖片 bytes SHA256 與凍結 progress 清單一致。不重新裁切、不重做OCR。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_REVIEW",
+    "notice": "已先按原圖推理，再對照既有候選答案；官方最終標準答案、試題疑義及更正公告仍未直接核實。候選一致不等於正式答案核實。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "questionAsReadFromOriginalImage": "關於兩個國家在兩種商品貿易上的絕對利益與比較利益之敘述，下列何者正確？①一國可在兩種商品皆有絕對利益；②一國可同時在兩商品皆有比較利益；③即使一國在兩種商品均有絕對利益，兩國仍可貿易獲益；④一國兩種商品均有絕對利益，必然兩者都有比較利益。",
+    "keyConditions": [
+      "兩國兩商品",
+      "①兩種商品皆有絕對利益",
+      "②兩種商品皆有比較利益",
+      "③雙方仍可能貿易互利",
+      "④絕對利益是否推出雙重比較利益"
+    ],
+    "reasoningFromOriginalImage": "絕對利益以生產效率或同樣資源的產量比較，一國可能兩種商品都較有效率，①對。比較利益看兩商品間的相對機會成本，在兩國兩商品且機會成本不同時，一國最多能在其中一商品有嚴格比較利益，②錯。即使一國兩項均有絕對利益，雙方仍可按比較利益分工互利，③對。絕對利益不必然帶來所有商品的比較利益，④錯。①③→B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**絕對利益 absolute advantage** 看誰做一件商品用較少投入；同一國可能兩種商品生產效率都勝出，①成立。**比較利益 comparative advantage** 看放棄另一商品的**機會成本**，兩國生產兩商品時，一國不會同時在兩種商品都有嚴格較低的相對機會成本，因此②不成立。即使高生產力國兩種都比別國快，仍應依機會成本分工交易，③成立；所以④『絕對利益等於兩種都有比較利益』是錯誤推論。正解 **B（①③）**。",
+    "elementarySummary": "甲國做麵包和衣服都比乙國快，表示甲國兩樣都做得有效率。但如果甲國做衣服時會少做很多麵包，而乙國做衣服犧牲的麵包比較少，兩邊各做自己放棄較少的東西，交換後仍可能都受益。",
+    "memory": "**絕對利益看效率；比較利益看機會成本；兩國仍可互利**。",
+    "concept": "李嘉圖比較利益原理與相對機會成本；生產力全面領先不等於所有商品都有相對優勢。",
+    "extension": "反向題：甲做一件衣服須放棄2個麵包，乙只須放棄1個麵包，誰在衣服有比較利益？即使甲的絕對生產量較多，結果可能如何？這是延伸例子，不是本題提供的數字。",
+    "source": {
+      "originalExam": "115-09-2-46",
+      "originalImagePinnedSha256": "d55128daeb7b8dbbec8e1abcfac00f2390a85fd5364167973efb6859707b1c19",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案PDF／疑義確認及更正公告仍待核實"
+    },
+    "highlightTerms": [
+      "絕對利益",
+      "比較利益",
+      "機會成本",
+      "①",
+      "③",
+      "貿易互利"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A是①②。①絕對利益可同時出現在兩項商品沒有問題；②將**相對機會成本**誤以為可以兩項同時都嚴格較低，故整組錯。",
+        "elementary": "一國可以兩樣都做得快，但比較『犧牲什麼』不能兩邊都贏。",
+        "reason": "A是①②。①絕對利益可同時出現在兩項商品沒有問題；②將**相對機會成本**誤以為可以兩項同時都嚴格較低，故整組錯。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B是①③。①一國可在兩項都有絕對利益，③兩國仍可按機會成本互相交換而獲益，兩者均正確。",
+        "elementary": "有國家兩樣都做得好，還是能靠分工互相幫忙。",
+        "reason": "B是①③。①一國可在兩項都有絕對利益，③兩國仍可按機會成本互相交換而獲益，兩者均正確。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C是②④。②說一國兩種都有比較利益，④把絕對優勢直接推出兩種比較優勢，皆忽略相對機會成本，因此錯。",
+        "elementary": "不能把『做得快』直接當成『做任何東西都比較划算』。",
+        "reason": "C是②④。②說一國兩種都有比較利益，④把絕對優勢直接推出兩種比較優勢，皆忽略相對機會成本，因此錯。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D是③④。③比較利益貿易仍可互利是對的；④絕對利益不必然同時帶來雙商品比較利益，整組有一項錯。",
+        "elementary": "交換可能互利是對的，但做得快不代表兩樣都最值得自己做。",
+        "reason": "D是③④。③比較利益貿易仍可互利是對的；④絕對利益不必然同時帶來雙商品比較利益，整組有一項錯。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
