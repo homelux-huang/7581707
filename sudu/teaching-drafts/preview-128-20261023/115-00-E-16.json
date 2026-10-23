@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-16",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 16,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-16.webp",
+  "imageSha256": "02cca9c69a01d1c6d9d884376c51d6372a949aacb598a903ddf7464ba03c769c",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看 GitHub 對應的原始單題 WebP，核實第 16 題／題幹／A-D／對話上下文／無鄰題，重新計算文件 SHA256 與 progress 固定清單相符。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並留下自行解題結果，才比對候選答案；官網確認 2026-05-08 標準答案定案，但尚無法直接讀取英文最終答案 PDF 與試題／答案確認說明。",
+    "blindSolveStatus": "SELF_IMAGE_SOLVE_BEFORE_LOOKUP_NOT_INDEPENDENT_THIRD_PARTY",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Mrs. Wu: I'm going shopping. Would you mind picking up Jimmy at the sports center? Mr. Wu: I'd like to, but I'll have an online meeting soon. Mrs. Wu: We're out of food for dinner. There's nothing left in the fridge. Mr. Wu: ____. Mrs. Wu: Great! You go book the restaurant now and I'll get Jimmy.",
+    "keyConditions": [
+      "out of food for dinner",
+      "nothing left in the fridge",
+      "book the restaurant",
+      "I'll get Jimmy"
+    ],
+    "reasoningFromOriginalImage": "冰箱沒剩食物，太太接下來建議立刻預訂餐廳，推知先生在空格提議『今晚去外面吃飯』，因此 C Then we can eat out tonight。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "先看**問題—解法—採取行動**。**There's nothing left in the fridge** 表示家裡沒晚餐食材，先生提議 **eat out tonight（今晚外食）**，太太才能說 **book the restaurant**。前面的接 Jimmy、線上會議只是情境，不能把主題誤轉為運動或開會。",
+    "elementarySummary": "冰箱空空的，晚餐沒東西煮。爸爸說『那今晚去外面吃吧！』，媽媽才說『好，你先訂餐廳，我去接 Jimmy。』",
+    "memory": "**no food in the fridge → eat out → book the restaurant**。",
+    "concept": "**eat out**＝外出用餐；**be out of**＝用完、缺少某物；**book a restaurant** 在此指訂位／預約餐廳，前後都是同一個晚餐安排。",
+    "extension": "反向思考：如果太太接著說『I'll cook when I return』，先生回答 **Then we can eat out tonight** 就未必是唯一合理安排；須重新對照對話。",
+    "source": {
+      "originalExam": "115-00-E-16",
+      "originalImagePinnedSha256": "02cca9c69a01d1c6d9d884376c51d6372a949aacb598a903ddf7464ba03c769c",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 答案確認公告；該題最終 PDF 尚未獨立複核",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "nothing left in the fridge",
+      "eat out tonight",
+      "book the restaurant"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**Are you interested in sports?** 問運動興趣，只連到 sports center，卻無法使妻子接著安排訂餐廳，與缺乏晚餐食物的線索無關。",
+        "elementary": "媽媽在煩惱晚餐，你卻問喜不喜歡運動，話題跳掉了。",
+        "reason": "**Are you interested in sports?** 問運動興趣，只連到 sports center，卻無法使妻子接著安排訂餐廳，與缺乏晚餐食物的線索無關。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Can I go shopping right now?** 問自己能否現在購物；後面妻子要求訂餐廳，而不是同意購物，且她原本就說要去購物。",
+        "elementary": "問能不能出門買東西，下一句卻要你訂餐廳，不順。",
+        "reason": "**Can I go shopping right now?** 問自己能否現在購物；後面妻子要求訂餐廳，而不是同意購物，且她原本就說要去購物。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "**Then we can eat out tonight** 是用外食解決沒食物的問題，下一句的 book the restaurant 是直接行動，因此為正解。",
+        "elementary": "冰箱沒食物，所以外面吃，訂餐廳很合理。",
+        "reason": "**Then we can eat out tonight** 是用外食解決沒食物的問題，下一句的 book the restaurant 是直接行動，因此為正解。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**Let's do online meeting together** 是邀請一起開會；前文先生已有自己的線上會議，但與妻子緊接安排晚餐訂位無關。",
+        "elementary": "兩個人一起開會不能解決晚餐沒東西吃。",
+        "reason": "**Let's do online meeting together** 是邀請一起開會；前文先生已有自己的線上會議，但與妻子緊接安排晚餐訂位無關。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "吳太太：我要去購物，你介意去體育中心接 Jimmy 嗎？吳先生：我很想，但我等一下有線上會議。吳太太：晚餐食材都沒了，冰箱什麼都不剩。吳先生：那今晚去外面吃吧！吳太太：太好了，你先訂餐廳，我去接 Jimmy。",
+      "testedWord": "eat out",
+      "answerWord": "eat out",
+      "pronunciationIPA": "/iːt aʊt/",
+      "optionMeaningZh": {
+        "A": "你對運動有興趣嗎？",
+        "B": "我現在可以去購物嗎？",
+        "C": "那我們今晚出去吃飯吧。",
+        "D": "我們一起參加線上會議吧。"
+      },
+      "synonyms": {
+        "初級": [
+          "go out to eat（出去吃飯）"
+        ],
+        "中級": [
+          "dine out（外出用餐）"
+        ],
+        "高級": [
+          "have a meal at a restaurant（在餐廳用餐）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "eat at home（在家吃）"
+        ],
+        "中級": [
+          "cook at home（在家做飯）"
+        ],
+        "高級": [
+          "dine in（在店內用餐；在餐飲語境需區分與居家用餐）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "dinner（晚餐）"
+        ],
+        "中級": [
+          "reservation（預約）"
+        ],
+        "高級": [
+          "dining arrangement（用餐安排）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關或近義片語不能保證任何情況都完全可替換；非反義關係已註明。",
+      "exampleEnglish": "We decided to eat out because no one had time to cook.",
+      "exampleChinese": "因為大家都沒時間做飯，我們決定外出用餐。",
+      "exampleHighlightedSurfaceForm": "eat out",
+      "exampleType": "自編雙語教學例句，非新聞",
+      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
