@@ -1109,7 +1109,16 @@
       "image": "data/approved/webp/115/115-00-MB-22.webp",
       "imageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+        "sourceHead": "e9707a6ca3f9cfe9e49081916d9ccbdfa5891771",
+        "evidenceDocument": "MATHB_22_25_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-23",
@@ -1118,7 +1127,16 @@
       "image": "data/approved/webp/115/115-00-MB-23.webp",
       "imageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+        "sourceHead": "e9707a6ca3f9cfe9e49081916d9ccbdfa5891771",
+        "evidenceDocument": "MATHB_22_25_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-24",
@@ -1127,7 +1145,16 @@
       "image": "data/approved/webp/115/115-00-MB-24.webp",
       "imageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+        "sourceHead": "e9707a6ca3f9cfe9e49081916d9ccbdfa5891771",
+        "evidenceDocument": "MATHB_22_25_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-25",
@@ -1136,7 +1163,16 @@
       "image": "data/approved/webp/115/115-00-MB-25.webp",
       "imageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+        "sourceHead": "e9707a6ca3f9cfe9e49081916d9ccbdfa5891771",
+        "evidenceDocument": "MATHB_22_25_IMAGE_FORMULA_QA_20261023.md",
+        "sharedImages": [],
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-1-01",
@@ -2175,6 +2211,26 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseChange": 0
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "e9707a6ca3f9cfe9e49081916d9ccbdfa5891771",
+      "batch": "MATH_B_22_25_FINAL_IMAGE_FORMULA",
+      "ids": [
+        "115-00-MB-22",
+        "115-00-MB-23",
+        "115-00-MB-24",
+        "115-00-MB-25"
+      ],
+      "newDistinctBinaryShaChecks": 4,
+      "cumulative": 57,
+      "mathCalculationPartialPass": 4,
+      "archivedAnswerMatchesAdded": 4,
+      "archiveCrossCheckTotal": 39,
+      "mathBInScopeAll25ImagesActuallySHAVisuallyRechecked": true,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
+      "releaseChange": 0
     }
   ],
   "chineseTeachingSupplement": {
@@ -2192,14 +2248,14 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 53,
+    "recheckedDistinctQuestions": 57,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "GitHub original WebP binary SHA256 plus direct visual check: MathB17-21 added",
-    "notYetRecheckedThisCycle": 75
+    "source": "Actual original GitHub question WebP bytes SHA256 and visual QA; MathB22-25 finished",
+    "notYetRecheckedThisCycle": 71
   },
   "archivedAnswerImageCrossCheck": {
-    "count": 35,
+    "count": 39,
     "ids": [
       "115-09-1-01",
       "115-09-1-03",
@@ -2235,12 +2291,16 @@
       "115-00-MB-18",
       "115-00-MB-19",
       "115-00-MB-20",
-      "115-00-MB-21"
+      "115-00-MB-21",
+      "115-00-MB-22",
+      "115-00-MB-23",
+      "115-00-MB-24",
+      "115-00-MB-25"
     ],
     "paperCounts": {
       "115/09-1": 5,
       "115/09-2": 9,
-      "115/00-MB": 21
+      "115/00-MB": 25
     },
     "kind": "ARCHIVED_WEBP_CANDIDATE_VISUAL_MATCH_NON_FINAL",
     "sourceWebpSha256Verified": {
