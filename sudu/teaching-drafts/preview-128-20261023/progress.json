@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 109,
-  "draftPercent": 85.2,
-  "visualRechecked": 109,
-  "candidateAnswerMatched": 102,
+  "draftWritten": 114,
+  "draftPercent": 89.1,
+  "visualRechecked": 114,
+  "candidateAnswerMatched": 107,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -119,14 +119,14 @@
     "115-09-2-26",
     "115-09-2-27",
     "115-09-2-28",
-    "115-09-2-29"
-  ],
-  "remainingIds": [
+    "115-09-2-29",
     "115-09-2-30",
     "115-09-2-31",
     "115-09-2-32",
     "115-09-2-33",
-    "115-09-2-34",
+    "115-09-2-34"
+  ],
+  "remainingIds": [
     "115-09-2-35",
     "115-09-2-36",
     "115-09-2-37",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "115經濟學 remainingIds 最新題目",
+  "nextSubject": "115年經濟學第35～39題",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -1172,7 +1172,7 @@
       "image": "data/approved/webp/115/115-09-2-30.webp",
       "imageSha256": "6978feb1ffc00354f8cf35383c25f48bcdc6194949677aed3ba6904105a0a9d8",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-31",
@@ -1181,7 +1181,7 @@
       "image": "data/approved/webp/115/115-09-2-31.webp",
       "imageSha256": "8b8d7d613f270a6a98f3fb6dbeef54f07ab0cdde68b21c5d569f014bd098c830",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-32",
@@ -1190,7 +1190,7 @@
       "image": "data/approved/webp/115/115-09-2-32.webp",
       "imageSha256": "f21892d4f83ad55e0d74b4f5fd1b26f7a3f592ccb1972900db8df01a12f3919c",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-33",
@@ -1199,7 +1199,7 @@
       "image": "data/approved/webp/115/115-09-2-33.webp",
       "imageSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-34",
@@ -1208,7 +1208,7 @@
       "image": "data/approved/webp/115/115-09-2-34.webp",
       "imageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-2-35",
