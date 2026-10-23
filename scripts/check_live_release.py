@@ -32,6 +32,9 @@ def inspect_live(base, sha):
     if 'id="demoData"' not in page or "verified-questions-runtime.js" not in page:
         raise ValueError("LIVE V4 does not contain the original Demo or verified runtime adapter")
     js = fetch(base, "sudu/verified-questions-runtime.js", sha)
+    adapter_revision = hashlib.sha256(js).hexdigest()[:12]
+    if f'verified-questions-runtime.js?v={adapter_revision}' not in page:
+        raise ValueError("LIVE HTML references a stale/cached yearly runtime")
     if (b"verifiedSingleQuestionWebp" not in js or b"data/approved" not in js
             or b"verifiedYearNav" in js or b"verifiedImagePreview" in js):
         raise ValueError("LIVE yearly adapter lacks inline WebP or contains obstructive QA blocks")
