@@ -3,9 +3,9 @@
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
     "certificationSchemaVersion": "student-reviewed-batch-v1",
-    "commit": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
+    "commit": "779557a24ae37574b16865717ae6d44f30070530",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "836834c7a0ca660b8e917e8cb7f1ca0a59dec4ae7fa82721c15545e5f53561d8"
+    "sourceTreeSignature": "0baa09421d9a30454c203d1b7dd0abee93225aa5411ad909f118aeea4b90d702"
   },
   "schemaVersion": 1,
   "years": {
@@ -32,7 +32,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
+      "sourceSha": "779557a24ae37574b16865717ae6d44f30070530",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -104,28 +104,28 @@
     },
     "115": {
       "aiMismatch": 0,
-      "aiNotChecked": 205,
-      "aiSolvedMatched": 0,
-      "approvedCount": 0,
-      "approvedPercent": 0.0,
+      "aiNotChecked": 201,
+      "aiSolvedMatched": 4,
+      "approvedCount": 4,
+      "approvedPercent": 2.0,
       "candidate": 205,
       "expected": 205,
       "imagePreviewCount": 119,
       "imagePreviewPercent": 58.0,
       "imageQaPercent": 68.8,
       "ocrCandidate": 205,
-      "ocrQaPass": 0,
+      "ocrQaPass": 4,
       "officialCandidateMatches": 205,
-      "officialFinalQaPass": 0,
-      "pending": 205,
+      "officialFinalQaPass": 4,
+      "pending": 201,
       "pendingReasonCounts": {
         "image_pending": 80,
-        "ocr_or_db_pending": 125
+        "ocr_or_db_pending": 121
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 4,
       "sharedWebpTotal": 20,
-      "sourceSha": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
+      "sourceSha": "779557a24ae37574b16865717ae6d44f30070530",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -157,10 +157,10 @@
         "數學 B": {
           "candidate": 25,
           "expected": 0,
-          "finalAnswerQaPass": 0,
+          "finalAnswerQaPass": 4,
           "imagePreviewReady": 25,
-          "ocrQaPass": 0,
-          "studentReady": 0,
+          "ocrQaPass": 4,
+          "studentReady": 4,
           "webpQaPass": 25
         },
         "會計學": {
