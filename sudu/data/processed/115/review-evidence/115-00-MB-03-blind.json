@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-03",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "ca22881177ea237464044c3390aae43b58517e28e20f5a8cfb9f17efbd0b2653",
+  "webpSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-23",
+  "solver": "GPT-6 independent calculation before retrieving answer key",
+  "blindReasoning": "不看標準答案，直線 2x+3y=4 的 x 截距令 y=0，x=2。斜率由 y=(-2/3)x+4/3 得 -2/3；平行線斜率相同，所以 (a,m)=(2,-2/3)。",
+  "answer": "A",
+  "method": "由已 QA 原圖獨立推導後，才另行讀取既有官方候選答案並核對。"
+}

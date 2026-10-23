@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-04",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "二次不等式｜因式分解與符號判斷",
+    "teacherSummary": "因式分解 2x²+7x+3=(2x+1)(x+3)。兩根是 −3 與 −1/2，因二次項係數正且 ≤0，解介於兩根之間且含端點。",
+    "elementarySummary": "想成一個往上開口的 U 形碗，碗底在橫線下面的範圍，從 −3 到 −1/2；起點 −3 是整數。",
+    "memory": "**(2x+1)(x+3)≤0** → **−3≤x≤−1/2**，a＝−3 是整數。",
+    "concept": "二次不等式係數為正時，小於等於 0 的解通常在兩個實根之間（包含根）。",
+    "extension": "反向思考：若題目改成 ≥0，解就會變成 x≤−3 或 x≥−1/2。",
+    "source": "115 年四技二專統測數學(B)第 4 題；高職數學(B)二次不等式；彰化高商教材頁數待核對。",
+    "formula": "(2x+1)(x+3)≤0 → −3≤x≤−1/2。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "錯誤：a=−3，−3>−2 為假。",
+        "elementary": "−3 在 −2 左邊，不是更大。",
+        "reason": "負數比較大小的方向錯誤。"
+      },
+      "B": {
+        "teacher": "錯誤：b=−1/2，−1/2<−1 為假。",
+        "elementary": "−0.5 比 −1 更靠右，所以比較大。",
+        "reason": "將負的分數大小判反。"
+      },
+      "C": {
+        "teacher": "正確：a=−3，整數包含負整數。",
+        "elementary": "−3 沒有小數點，是整數。",
+        "reason": "正確的左端點是整數。"
+      },
+      "D": {
+        "teacher": "錯誤：b=−1/2 不是整數。",
+        "elementary": "負的半個不是整顆。",
+        "reason": "右端點是分數而非整數。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "2x²+7x+3≤0",
+        "解的端點定為 a≤x≤b"
+      ],
+      "formulaUse": "因式分解求兩根，再用開口方向判斷不等式區間。",
+      "substitution": [
+        "2x²+7x+3=(2x+1)(x+3)",
+        "(2x+1)(x+3)≤0"
+      ],
+      "steps": [
+        "2x+1=0 → x=−1/2",
+        "x+3=0 → x=−3",
+        "二次項係數 2>0，兩根之間函數 ≤0",
+        "−3≤x≤−1/2 → a=−3、b=−1/2"
+      ],
+      "result": "a 是整數，b 不是整數",
+      "option": "C"
+    }
+  },
+  "mathReviewedWithoutInventedInput": true,
+  "sourceChapterPagePolicy": "彰化高商頁數未核對則寫待核對，不編造教材頁碼"
+}

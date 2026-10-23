@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-03",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "ca22881177ea237464044c3390aae43b58517e28e20f5a8cfb9f17efbd0b2653",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "直線方程式｜截距與斜率",
+    "teacherSummary": "x 截距是直線與 x 軸的交點，令 y＝0；斜率要把直線整理成 y＝mx+b，且平行直線斜率相同。",
+    "elementarySummary": "把一條斜線想成斜坡。它碰到地上的 x 軸時 y 就是 0；兩條平行的斜坡一樣陡，所以斜率一樣。",
+    "memory": "**求 x 截距令 y＝0**；**平行線斜率相同**；答案 (2, −2/3)。",
+    "concept": "2x+3y=4 → y=−(2/3)x+4/3；一般式 Ax+By=C 的斜率為 −A/B（B≠0）。",
+    "extension": "反向思考：若 L₂ 與 L₁ 垂直而非平行，它的斜率會變成 3/2，而不是 −2/3。",
+    "source": "115 年四技二專統測數學(B)第 3 題；高職數學(B)直線方程式、平行線；彰化高商教材頁數待核對。",
+    "formula": "Ax+By=C → y=(−A/B)x+C/B；平行斜率相同。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確：a=2，m=−2/3；截距及平行線斜率均吻合。",
+        "elementary": "交點在 2，斜坡是往右往下的 −2/3。",
+        "reason": "兩個數值都對。"
+      },
+      "B": {
+        "teacher": "錯誤：x 截距 2 正確，但 m 應為 −2/3，不是 +2/3。",
+        "elementary": "斜坡往右走會下降，不能是正數。",
+        "reason": "忽略斜率的負號。"
+      },
+      "C": {
+        "teacher": "錯誤：斜率 −2/3 正確，但 4/3 是 y 截距不是 x 截距。",
+        "elementary": "把上面碰到的點當成地板的交點了。",
+        "reason": "混淆 x 截距與 y 截距。"
+      },
+      "D": {
+        "teacher": "錯誤：4/3 是 y 截距，且斜率符號也錯。",
+        "elementary": "兩個地方都看錯了。",
+        "reason": "截距及斜率均不符合題意。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "L₁:2x+3y=4",
+        "L₁ 與 L₂ 平行"
+      ],
+      "formulaUse": "x 截距令 y=0；將一般式改成斜截式求斜率。",
+      "substitution": [
+        "2x+3(0)=4",
+        "3y=−2x+4"
+      ],
+      "steps": [
+        "2x=4 → x=2，所以 a=2",
+        "y=−(2/3)x+4/3，所以 L₁ 的斜率 −2/3",
+        "L₂ 與 L₁ 平行 → m=−2/3"
+      ],
+      "result": "(a,m)=(2,−2/3)",
+      "option": "A"
+    }
+  },
+  "mathReviewedWithoutInventedInput": true,
+  "sourceChapterPagePolicy": "彰化高商頁數未核對則寫待核對，不編造教材頁碼"
+}

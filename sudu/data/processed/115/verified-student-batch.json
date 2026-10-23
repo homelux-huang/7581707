@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "generatedAt": "2026-10-23",
+  "status": "UI_INTEGRATION_PENDING",
+  "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key.",
+  "items": [
+    {
+      "year": 115,
+      "questionId": "115-00-MB-02",
+      "status": "QA_PENDING_UI",
+      "questionBeforeReview": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
+      "optionsBeforeReview": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "webpSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+      "originalAnswerCandidate": "A",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-00-MB-02-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-00-MB-02-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-00-MB-02-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-02-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-00-MB-02-ui.json"
+      }
+    },
+    {
+      "year": 115,
+      "questionId": "115-00-MB-03",
+      "status": "QA_PENDING_UI",
+      "questionBeforeReview": "已知直線 L₁：2x+3y=4 與直線 L₂ 相互平行。若 L₁ 的 x 截距為 a，L₂ 的斜率為 m，則 (a,m)＝？",
+      "optionsBeforeReview": [
+        "(2, −2/3)",
+        "(2, 2/3)",
+        "(4/3, −2/3)",
+        "(4/3, 2/3)"
+      ],
+      "webpSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+      "originalAnswerCandidate": "A",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-00-MB-03-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-00-MB-03-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-00-MB-03-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-03-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-00-MB-03-ui.json"
+      }
+    },
+    {
+      "year": 115,
+      "questionId": "115-00-MB-04",
+      "status": "QA_PENDING_UI",
+      "questionBeforeReview": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
+      "optionsBeforeReview": [
+        "a>−2",
+        "b<−1",
+        "a 為整數",
+        "b 為整數"
+      ],
+      "webpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+      "originalAnswerCandidate": "C",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-00-MB-04-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-00-MB-04-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-00-MB-04-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-04-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-00-MB-04-ui.json"
+      }
+    },
+    {
+      "year": 115,
+      "questionId": "115-00-MB-09",
+      "status": "QA_PENDING_UI",
+      "questionBeforeReview": "已知直線 L₁：4x+(a+5)y−10=0 通過點(a,1)，直線 L₂ 的斜率為 −1/2。若直線 L₃ 也通過點(a,1)，且與直線 L₂ 垂直，則 L₃ 的直線方程式為何？",
+      "optionsBeforeReview": [
+        "2x−y−1=0",
+        "2x+y+3=0",
+        "x−2y+1=0",
+        "x+2y−3=0"
+      ],
+      "webpSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+      "originalAnswerCandidate": "A",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-00-MB-09-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-00-MB-09-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-00-MB-09-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-09-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-00-MB-09-ui.json"
+      }
+    }
+  ]
+}

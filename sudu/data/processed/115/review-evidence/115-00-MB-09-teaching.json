@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-09",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "354a437dac1b26c8eb290262948c72eee72b649a685e8bf448ee59b3df58b9e7",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "直線方程式｜點斜式與垂直斜率",
+    "teacherSummary": "先把 (a,1) 代入 L₁ 解 a。已知 L₂ 斜率 −1/2，與它垂直的 L₃ 斜率為 2；利用 L₃ 過 (1,1) 的點斜式求直線方程式。",
+    "elementarySummary": "先找到地圖上的點 (1,1)。一條路每往右走 2 格會下降 1 格，與它成直角的新路要每往右走 1 格上升 2 格。",
+    "memory": "**先代點求 a=1**；**垂直斜率相乘為 −1**；L₃：2x−y−1=0。",
+    "concept": "若兩非鉛直線互相垂直，斜率 m₁m₂=−1；過點 (x₀,y₀) 的點斜式為 y−y₀=m(x−x₀)。",
+    "extension": "反向思考：若題目要求 L₃ 與 L₂ 平行，斜率仍會是 −1/2，不能用 2。",
+    "source": "115 年四技二專統測數學(B)第 9 題；高職數學(B)直線方程式、垂直線；彰化高商教材頁數待核對。",
+    "formula": "垂直斜率 m₁×m₂=−1；點斜式 y−y₀=m(x−x₀)。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確：代入得 a=1；垂直斜率為 2，過 (1,1) 即 2x−y−1=0。",
+        "elementary": "坡度和通過的位置都符合。",
+        "reason": "同時符合通過指定點與垂直條件。"
+      },
+      "B": {
+        "teacher": "錯誤：把 (1,1) 代入 2x+y+3，得到 6≠0，連指定點都沒通過。",
+        "elementary": "把位置放進去，算出來不是 0。",
+        "reason": "不通過題目指定的點。"
+      },
+      "C": {
+        "teacher": "錯誤：x−2y+1=0 過 (1,1)，但斜率是 +1/2，不是垂直斜率 +2。",
+        "elementary": "方向比較平，沒有轉成直角。",
+        "reason": "雖經過點，斜率卻錯。"
+      },
+      "D": {
+        "teacher": "錯誤：x+2y−3=0 雖過 (1,1)，斜率是 −1/2，與 L₂ 平行而非垂直。",
+        "elementary": "只是走同方向，不是交成直角。",
+        "reason": "混淆平行和垂直。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "L₁:4x+(a+5)y−10=0 過 (a,1)",
+        "L₂ 斜率 −1/2",
+        "L₃ 與 L₂ 垂直、也過 (a,1)"
+      ],
+      "formulaUse": "點代入直線方程式、垂直斜率乘積為 −1、點斜式。",
+      "substitution": [
+        "4a+(a+5)(1)−10=0",
+        "m₃×(−1/2)=−1",
+        "y−1=2(x−1)"
+      ],
+      "steps": [
+        "5a−5=0 → a=1",
+        "m₃=2",
+        "y−1=2x−2 → y=2x−1",
+        "移項得 2x−y−1=0"
+      ],
+      "result": "L₃:2x−y−1=0",
+      "option": "A"
+    }
+  },
+  "mathReviewedWithoutInventedInput": true,
+  "sourceChapterPagePolicy": "彰化高商頁數未核對則寫待核對，不編造教材頁碼"
+}

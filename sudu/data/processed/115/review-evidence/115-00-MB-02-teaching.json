@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-02",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "e773c34c83007af4bac0e1567262acfd0a5369b1c7be21bfdc14b44ac13c4459",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "一元二次方程式｜韋達定理（根與係數）",
+    "teacherSummary": "用韋達定理：兩根之和為 8、根之積為 5(α−β)。先解 α，再利用 α≠β 才能除以 α−β，求出 β。",
+    "elementarySummary": "想像兩個數，合起來剛好可以算出 α；題目告訴我們 α、β 不一樣，所以可以把相同的那一份約掉，最後算出 4×1＝4。",
+    "memory": "**根和＝8** 得 α＝4；**α≠β 才能約掉 α−β**；最後 αβ＝4。",
+    "concept": "一元二次式 x²−8x+5(α−β)=0，根和是 8，根積是 5(α−β)；除法先確認除數不為 0。",
+    "extension": "反向想一想：若 α＝β，就不能直接除以 α−β；這題特別寫 α≠β 正是避免除以零。",
+    "source": "115 年四技二專統測數學(B)第 2 題；高職數學(B)一元二次方程式／根與係數關係；彰化高商教材頁數待核對。",
+    "formula": "若 x²−Sx+P=0 兩根為 r₁,r₂，則 r₁+r₂=S，r₁r₂=P。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確：根和 2α=8 得 α=4，根積化簡得 α+β=5，所以 β=1，αβ=4。",
+        "elementary": "4 個一組再乘上 1 組，得到 4。",
+        "reason": "符合全部方程式條件。"
+      },
+      "B": {
+        "teacher": "錯誤：若 αβ=5，不符合已由根和、根積推得的 αβ=4。",
+        "elementary": "算出來是 4，不會是 5。",
+        "reason": "與根和及根積推出的唯一結果不符。"
+      },
+      "C": {
+        "teacher": "錯誤：αβ=6 與 α=4、β=1 不符。",
+        "elementary": "4×1 不是 6。",
+        "reason": "代回已求得的 α、β 無法成立。"
+      },
+      "D": {
+        "teacher": "錯誤：αβ=7 與 α=4、β=1 不符。",
+        "elementary": "4×1 不是 7。",
+        "reason": "代回已求得的 α、β 無法成立。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "兩根為 α+β 與 α−β",
+        "方程式 x²−8x+5(α−β)=0",
+        "α≠β"
+      ],
+      "formulaUse": "韋達定理：根和＝8；根積＝5(α−β)。",
+      "substitution": [
+        "(α+β)+(α−β)=8",
+        "(α+β)(α−β)=5(α−β)"
+      ],
+      "steps": [
+        "2α=8 → α=4",
+        "α≠β ⇒ α−β≠0，可以兩邊同除 α−β",
+        "α+β=5 → β=5−4=1",
+        "αβ=4×1=4"
+      ],
+      "result": "αβ=4",
+      "option": "A"
+    }
+  },
+  "mathReviewedWithoutInventedInput": true,
+  "sourceChapterPagePolicy": "彰化高商頁數未核對則寫待核對，不編造教材頁碼"
+}
