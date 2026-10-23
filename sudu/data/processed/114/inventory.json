@@ -69,5 +69,7 @@
   "answerOfficialImageMatchedWithoutPdfText": 5,
   "answerCandidatesMatchedAcrossTextAndImage": 205,
   "officialCorrectionQaComplete": false,
-  "integrationReady": false
+  "integrationReady": false,
+  "ocrTextIndependentlyVerified": 1,
+  "textQaPass": 1
 }

@@ -159,6 +159,27 @@
       "difference": null,
       "imageSha256": "89c3199dc9e3c012d748de663733a5b0932ccedcca74e3674c904f9ec75ead13",
       "reviewStatus": "PENDING_MANUAL_CORRECTION"
+    },
+    {
+      "questionId": "114-00-C-02",
+      "engine": "legacy native PDF text (not OCR engine)",
+      "rawText": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為\n  ②的例句？\n                     ①處置：例如「我把門打開了」，「打\n妳要把岳飛的精神演出來        開門」是「我」有意識的處置行為。\n余燕翼把盛好的半碗飯倒回鍋裡    ②導致：例如「樹把路擋住了」，「擋\n船身把墨藍海水掘犁成翻花的白浪    住路」是「樹」所導致，但非有意識\n母親只好把稀稀疏疏的幾根短髮剪去   的行為。",
+      "rawOrigin": "existing questions.json before correction",
+      "correctedText": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為②的例句？\n【右框】\n①處置：例如「我把門打開了」，「打開門」是「我」有意識的處置行為。\n②導致：例如「樹把路擋住了」，「擋住路」是「樹」所導致，但非有意識的行為。",
+      "correctedOptions": [
+        "妳要把岳飛的精神演出來",
+        "余燕翼把盛好的半碗飯倒回鍋裡",
+        "船身把墨藍海水掘犁成翻花的白浪",
+        "母親只好把稀稀疏疏的幾根短髮剪去"
+      ],
+      "difference": "--- legacy_native_pdf_text\n+++ direct_original_image_corrected\n@@ -1,7 +1,8 @@\n-「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為\n-  ②的例句？\n-                     ①處置：例如「我把門打開了」，「打\n-妳要把岳飛的精神演出來        開門」是「我」有意識的處置行為。\n-余燕翼把盛好的半碗飯倒回鍋裡    ②導致：例如「樹把路擋住了」，「擋\n-船身把墨藍海水掘犁成翻花的白浪    住路」是「樹」所導致，但非有意識\n-母親只好把稀稀疏疏的幾根短髮剪去   的行為。+「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為②的例句？\n+【右框】\n+①處置：例如「我把門打開了」，「打開門」是「我」有意識的處置行為。\n+②導致：例如「樹把路擋住了」，「擋住路」是「樹」所導致，但非有意識的行為。\n+妳要把岳飛的精神演出來\n+余燕翼把盛好的半碗飯倒回鍋裡\n+船身把墨藍海水掘犁成翻花的白浪\n+母親只好把稀稀疏疏的幾根短髮剪去",
+      "imageSha256": "f156e266648642110226ccd4acafb7df028107685b27af91e06cca6332de0274",
+      "reviewStatus": "PASS_DIRECT_ORIGINAL_IMAGE",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-23",
+      "qaEvidencePath": "sudu/data/processed/114/qa-drafts/OCR_114_00_C_02_DIRECT_REVIEW_20261023.json",
+      "answerVerified": false,
+      "integrationReady": false
     }
   ]
 }

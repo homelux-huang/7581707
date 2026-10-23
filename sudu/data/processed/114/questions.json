@@ -54,18 +54,18 @@
       "paperCode": "00-C",
       "originalQuestionNumber": 2,
       "subject": "國文",
-      "question": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為\n  ②的例句？\n                     ①處置：例如「我把門打開了」，「打",
+      "question": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為②的例句？\n【右框】\n①處置：例如「我把門打開了」，「打開門」是「我」有意識的處置行為。\n②導致：例如「樹把路擋住了」，「擋住路」是「樹」所導致，但非有意識的行為。",
       "options": [
-        "妳要把岳飛的精神演出來        開門」是「我」有意識的處置行為。",
-        "余燕翼把盛好的半碗飯倒回鍋裡    ②導致：例如「樹把路擋住了」，「擋",
-        "船身把墨藍海水掘犁成翻花的白浪    住路」是「樹」所導致，但非有意識",
-        "母親只好把稀稀疏疏的幾根短髮剪去   的行為。"
+        "妳要把岳飛的精神演出來",
+        "余燕翼把盛好的半碗飯倒回鍋裡",
+        "船身把墨藍海水掘犁成翻花的白浪",
+        "母親只好把稀稀疏疏的幾根短髮剪去"
       ],
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "questionVerified": true,
+      "reviewStatus": "text_reviewed_image_pass_answer_pending",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-02.webp",
@@ -88,7 +88,28 @@
         "independentVisualVerification": false
       },
       "imageQaStatus": "PASS",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為\n  ②的例句？\n                     ①處置：例如「我把門打開了」，「打",
+      "legacyUnverifiedOptions": [
+        "妳要把岳飛的精神演出來        開門」是「我」有意識的處置行為。",
+        "余燕翼把盛好的半碗飯倒回鍋裡    ②導致：例如「樹把路擋住了」，「擋",
+        "船身把墨藍海水掘犁成翻花的白浪    住路」是「樹」所導致，但非有意識",
+        "母親只好把稀稀疏疏的幾根短髮剪去   的行為。"
+      ],
+      "questionStemOnly": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為②的例句？",
+      "stemSupplementalBox": [
+        {
+          "label": "①處置",
+          "text": "例如「我把門打開了」，「打開門」是「我」有意識的處置行為。"
+        },
+        {
+          "label": "②導致",
+          "text": "例如「樹把路擋住了」，「擋住路」是「樹」所導致，但非有意識的行為。"
+        }
+      ],
+      "textQaEvidence": "sudu/data/processed/114/qa-drafts/OCR_114_00_C_02_DIRECT_REVIEW_20261023.json",
+      "textQaStatus": "PASS_DIRECT_ORIGINAL_IMAGE",
+      "ocrSource": "legacy_native_pdf_text_cross_column_contamination"
     },
     {
       "schemaVersion": 1,
