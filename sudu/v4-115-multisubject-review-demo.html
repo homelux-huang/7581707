@@ -208,6 +208,12 @@ button,select,.nav-field,.home-choice{word-break:keep-all}
 @media(prefers-reduced-motion:reduce){.nav-handle,.progress-shell,.home-review{transition:none}}
 
 
+/* Prevent implicit min-content widths from enlarging cards on 360px mobile.
+   Preserve Chinese glyphs; only unbreakable formulas/URLs may wrap. */
+.options,.option-wrap,.guide-grid,.review-sections{min-width:0;grid-template-columns:minmax(0,1fr)}
+.guide-block,.guide-block p,.option-detail,.option-wrap{min-width:0;max-width:100%}
+.guide-block p{overflow-wrap:anywhere;word-break:normal}
+.options .guide{max-width:100%}
 .progress-shell{max-height:min(72dvh,620px);overflow-y:auto;overscroll-behavior:contain}
 .nav-row .review-head{position:relative}
 body.home-mode .nav-handle,body.home-mode #readingShortcuts{display:none!important}
