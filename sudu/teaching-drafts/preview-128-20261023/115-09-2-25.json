@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-25",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 25,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-25.webp",
+  "imageSha256": "ec7abde20dc64ede40c066a1b20483db3b320479b5480a778e7495366d261a34",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視）",
+    "method": "開啟GitHub原始單題WebP，確認題號、全部A-D選項、原圖圖表／正負號／金額／條件完整；以原始WebP bytes重算 SHA256 比對凍結清單，僅以OCR輔助，不重擷取。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選OCR在選項或圖形附近混入頁面／圖表文字；已用實際WebP辨認，不覆寫來源。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先依原圖自行求解，再讀候選答案；仍未直接核實官方最終PDF和更正。",
+    "blindSolveStatus": "IMAGE_REASONING_SAVED_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_QA",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "只能四選一",
+      "喜好順序③>①>②>④",
+      "最後選①郵輪",
+      "問機會成本"
+    ],
+    "reasoningFromOriginalImage": "**機會成本**不是把全部放棄方案加起來，而是選擇方案時**放棄的最佳替代選項**。林生偏好排名③>①>②>④，但最後選①郵輪，因此放棄選項中的最高偏好是③**飲料店打工**，選C。雖③有最低工資與福利，題目沒有數字，不能憑空算成金額。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_AND_CORRECTION"
+  },
+  "teaching": {
+    "teacherSummary": "**機會成本**不是把全部放棄方案加起來，而是選擇方案時**放棄的最佳替代選項**。林生偏好排名③>①>②>④，但最後選①郵輪，因此放棄選項中的最高偏好是③**飲料店打工**，選C。雖③有最低工資與福利，題目沒有數字，不能憑空算成金額。",
+    "elementarySummary": "只能選一個活動，雖然他最想打工③，但最後去郵輪①。他因此失去的最好機會就是打工，所以③是機會成本。",
+    "memory": "**機會成本＝放棄的最佳選項，不是所有選項總和**。",
+    "concept": "決策的隱含代價用主觀價值較高的放棄用途衡量；不是只看金錢。",
+    "extension": "反向題：若林生改選③飲料店打工，依同樣喜好排名，放棄的最佳選項會是哪個？會不會是①郵輪？",
+    "source": {
+      "originalExam": "115-09-2-25",
+      "originalImagePinnedSha256": "ec7abde20dc64ede40c066a1b20483db3b320479b5480a778e7495366d261a34",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案及更正說明待核對"
+    },
+    "highlightTerms": [
+      "機會成本",
+      "③＞①＞②＞④",
+      "郵輪之旅",
+      "最佳替代選項"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A是已選擇的①郵輪，本題問的是**因選它而失去**的最好方案，不能把實際參加活動當成機會成本。",
+        "elementary": "已經坐上郵輪了，它不是被放棄的選擇。",
+        "reason": "A是已選擇的①郵輪，本題問的是**因選它而失去**的最好方案，不能把實際參加活動當成機會成本。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B志工②雖有300小時時數，但偏好排序②低於③，並非放棄中的最好方案；不可把300當作價值最高的證據。",
+        "elementary": "志工很棒，但他心中更想去打工。",
+        "reason": "B志工②雖有300小時時數，但偏好排序②低於③，並非放棄中的最好方案；不可把300當作價值最高的證據。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C打工③是林生偏好第一名，卻因選郵輪而放棄，所以是最佳替代方案，也就是機會成本。",
+        "elementary": "他最想要但沒去做的打工，就是放棄的最好機會。",
+        "reason": "C打工③是林生偏好第一名，卻因選郵輪而放棄，所以是最佳替代方案，也就是機會成本。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D外語訓練④是偏好最低，無論有證明與否均非此決策放棄的最佳選項。",
+        "elementary": "他本來就排最後，不是最心痛放棄的那個。",
+        "reason": "D外語訓練④是偏好最低，無論有證明與否均非此決策放棄的最佳選項。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
