@@ -3196,5 +3196,19 @@
         "fullTeachingQaDelta": 0
       }
     ]
+  },
+  "partialEnglishNewsSourceLedger": {
+    "questionIds": [
+      "115-00-E-08",
+      "115-00-E-20",
+      "115-00-E-21",
+      "115-00-E-28"
+    ],
+    "lastAudit": "2026-10-23",
+    "scopeTotalEnglish": 28,
+    "sourcedExampleCount": 4,
+    "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md",
+    "fullEnglishTeachingQaPass": 0,
+    "meaning": "Only four explicit sourced news-context pedagogical paraphrases, not publisher quotations or total teaching QA"
   }
 }

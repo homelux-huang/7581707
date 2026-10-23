@@ -153,7 +153,16 @@
       "exampleChinese": "看這部紀錄片幫助我了解動物行為。",
       "exampleHighlightedSurfaceForm": "understand",
       "exampleType": "自編雙語教學例句，非新聞",
-      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "In October 2025, the United Nations remembered how Jane Goodall's work helped people understand chimpanzees.",
+      "newsExampleChinese": "聯合國於2025年10月追念珍古德，肯定她的研究幫助人們更了解黑猩猩。",
+      "newsExampleHighlightedSurfaceForm": "understand",
+      "newsExampleSourceUrl": "https://www.un.org/en/messengers-peace/messenger-peace-dr-jane-goodall-1934-2025",
+      "newsExampleSourceTitle": "The UN family mourn the passing of Dr. Jane Goodall",
+      "newsExampleSourceOrganization": "United Nations",
+      "newsExampleSourceDate": "2025-10-01",
+      "newsExampleKind": "根據官方新聞／新聞報導自行改寫的英文教學句，非媒體原文引述",
+      "newsExampleSourceScope": "UN公告提及Goodall於2025年10月逝世，以及她研究黑猩猩改變人類對自然世界的理解"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -203,6 +212,21 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "date": "2025-10-01",
+      "url": "https://www.un.org/en/messengers-peace/messenger-peace-dr-jane-goodall-1934-2025",
+      "sourceOrganization": "United Nations",
+      "sourceSupportsEvent": "UN公告提及Goodall於2025年10月逝世，以及她研究黑猩猩改變人類對自然世界的理解",
+      "highlightWord": "understand",
+      "highlightPresentInEnglish": true,
+      "chineseTranslationWritten": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsIndependentlyReviewed": false,
+      "textbookChapterAndPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

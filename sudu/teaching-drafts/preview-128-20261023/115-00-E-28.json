@@ -167,7 +167,16 @@
       "exampleChinese": "新的步道可能促進這個地區的觀光。",
       "exampleHighlightedSurfaceForm": "tourism",
       "exampleType": "自編非新聞英文例句",
-      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "New sightseeing bus routes near Tamkang Bridge in 2026 could make tourism around Tamsui and Bali more convenient.",
+      "newsExampleChinese": "2026年淡江大橋周邊的新觀光巴士路線，可望讓淡水與八里的旅遊更加便利。",
+      "newsExampleHighlightedSurfaceForm": "tourism",
+      "newsExampleSourceUrl": "https://news.pts.org.tw/article/803794",
+      "newsExampleSourceTitle": "Jembatan Tamkang dibuka bulan Mei, waktu tempuh jam sibuk berkurang 25 menit",
+      "newsExampleSourceOrganization": "公視新聞網 PNN（印尼語報導）",
+      "newsExampleSourceDate": "2026-04-15",
+      "newsExampleKind": "根據官方新聞／新聞報導自行改寫的英文教學句，非媒體原文引述",
+      "newsExampleSourceScope": "2026年4月15日報導含公路局公布新觀光公車路線串聯淡水八里等景點"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -220,6 +229,21 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "date": "2026-04-15",
+      "url": "https://news.pts.org.tw/article/803794",
+      "sourceOrganization": "公視新聞網 PNN（印尼語報導）",
+      "sourceSupportsEvent": "2026年4月15日報導含公路局公布新觀光公車路線串聯淡水八里等景點",
+      "highlightWord": "tourism",
+      "highlightPresentInEnglish": true,
+      "chineseTranslationWritten": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsIndependentlyReviewed": false,
+      "textbookChapterAndPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

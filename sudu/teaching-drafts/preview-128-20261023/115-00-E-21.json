@@ -165,7 +165,16 @@
       "exampleChinese": "在隊員當中，有三人在週末工作。",
       "exampleHighlightedSurfaceForm": "Among",
       "exampleType": "自編非新聞教學例句",
-      "newsExampleStatus": "無獨立新聞例句來源，不稱新聞時事"
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "Among the goals highlighted by the IMO in May 2026 was advancing gender equality in maritime work.",
+      "newsExampleChinese": "國際海事組織於2026年5月強調的目標之一，是促進海事職場的性別平等。",
+      "newsExampleHighlightedSurfaceForm": "Among",
+      "newsExampleSourceUrl": "https://www.imo.org/en/mediacentre/pressbriefings/pages/international-day-for-women-in-maritime-2026-id4wim-mainstreaming-gender-equality.aspx",
+      "newsExampleSourceTitle": "International Day for Women in Maritime 2026: Mainstreaming gender equality in shipping",
+      "newsExampleSourceOrganization": "International Maritime Organization",
+      "newsExampleSourceDate": "2026-05-15",
+      "newsExampleKind": "根據官方新聞／新聞報導自行改寫的英文教學句，非媒體原文引述",
+      "newsExampleSourceScope": "官方2026年5月15日專題明言促進海事業界性別平等"
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -218,6 +227,21 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
+    },
+    "newsContextSourceCrosscheck20261023": {
+      "status": "REFERENCE_GROUNDED_PARAPHRASE_VERIFIED__FULL_ENGLISH_QA_PENDING",
+      "date": "2026-05-15",
+      "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/international-day-for-women-in-maritime-2026-id4wim-mainstreaming-gender-equality.aspx",
+      "sourceOrganization": "International Maritime Organization",
+      "sourceSupportsEvent": "官方2026年5月15日專題明言促進海事業界性別平等",
+      "highlightWord": "Among",
+      "highlightPresentInEnglish": true,
+      "chineseTranslationWritten": true,
+      "verbatimQuote": false,
+      "pronunciationAndWordLevelsIndependentlyReviewed": false,
+      "textbookChapterAndPageVerified": false,
+      "releaseApproved": false,
+      "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_4_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
