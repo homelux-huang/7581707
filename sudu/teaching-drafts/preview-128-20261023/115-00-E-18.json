@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-18",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 18,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-18.webp",
+  "imageSha256": "64e15867eaa91fb35e756672f34ba358cc834fb33a09e20f0fe4967416c136ac",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看 GitHub 對應的原始單題 WebP，核實第 18 題／題幹／A-D／對話上下文／無鄰題，重新計算文件 SHA256 與 progress 固定清單相符。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並留下自行解題結果，才比對候選答案；官網確認 2026-05-08 標準答案定案，但尚無法直接讀取英文最終答案 PDF 與試題／答案確認說明。",
+    "blindSolveStatus": "SELF_IMAGE_SOLVE_BEFORE_LOOKUP_NOT_INDEPENDENT_THIRD_PARTY",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Ann: Hey, I'm writing my resume. What should I put first? Ben: You can list your education first. Ann: What's next? ____. Ben: Yes. My advice is that you list your past jobs going backwards in time, from your last job to your first job.",
+    "keyConditions": [
+      "writing my resume",
+      "What should I put first",
+      "list your past jobs going backwards in time"
+    ],
+    "reasoningFromOriginalImage": "Ann 問履歷教育之後放什麼，Ben 回答列過去做過的工作，正是 work experience（工作經歷）；若問職涯規劃、何時開始工作或應徵動機，後句不會教排列過去工作。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "履歷 **resume** 常包含 education（學歷）與 **work experience（工作經歷）**。Ben 說 **list your past jobs ... from your last job to your first**，是在建議按**逆時間順序**寫過往工作，因此空格最適合 **My work experience?**。這只是對話中的建議，非所有履歷都必須先列學歷。",
+    "elementarySummary": "Ann 在寫履歷，先寫上學的資料，再問『接下來寫我以前做過的工作嗎？』Ben 說『對，先寫最近一份工作，再寫更早的。』",
+    "memory": "**past jobs → work experience**；最近一份工作先寫，叫逆時間順序。",
+    "concept": "**resume**＝履歷；**work experience**＝工作經歷；**reverse chronological order**＝由最近到最早列出。英語對話的 **Yes** 是同意前一句提議。",
+    "extension": "反向思考：若 Ben 回答『Tell the employer why you want this position』，Ann 更可能問 **Why am I applying for this job?**；看下一句重點是工作經驗或應徵原因。",
+    "source": {
+      "originalExam": "115-00-E-18",
+      "originalImagePinnedSha256": "64e15867eaa91fb35e756672f34ba358cc834fb33a09e20f0fe4967416c136ac",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 答案確認公告；該題最終 PDF 尚未獨立複核",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "resume",
+      "work experience",
+      "past jobs",
+      "last job to your first job"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**Your job plan?** 是職涯計畫，問未來想做什麼；Ben 談的是已經做過的 past jobs，不是未來規劃。",
+        "elementary": "未來想當什麼和以前做過什麼，是兩回事。",
+        "reason": "**Your job plan?** 是職涯計畫，問未來想做什麼；Ben 談的是已經做過的 past jobs，不是未來規劃。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**My work experience?** 是問是否接著列自己的工作經歷；Ben 先說 Yes，再說如何把以前工作由近到遠列出，直接呼應。",
+        "elementary": "問是不是寫工作經驗，回答『對，最近的工作先寫』，很合理。",
+        "reason": "**My work experience?** 是問是否接著列自己的工作經歷；Ben 先說 Yes，再說如何把以前工作由近到遠列出，直接呼應。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**When to start working?** 是問何時上班／開始工作，Ben 應答時間，而不是教如何排列過往工作。",
+        "elementary": "問哪天開始上班，不會答先寫哪份工作。",
+        "reason": "**When to start working?** 是問何時上班／開始工作，Ben 應答時間，而不是教如何排列過往工作。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**Why applying for this job?** 在此指求職動機；Ben 沒談應徵原因，只談工作紀錄的列法。",
+        "elementary": "為什麼想找這份工作，不等於履歷中的以前工作清單。",
+        "reason": "**Why applying for this job?** 在此指求職動機；Ben 沒談應徵原因，只談工作紀錄的列法。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Ann：我在寫履歷，第一項該放什麼？Ben：你可以先列學歷。Ann：然後呢？我的工作經歷嗎？Ben：對，我建議你把以前的工作按時間由近到遠排列，從最近那一份寫到第一份。",
+      "testedWord": "work experience",
+      "answerWord": "work experience",
+      "pronunciationIPA": "/wɝːk ɪkˈspɪriəns/",
+      "optionMeaningZh": {
+        "A": "你的職涯計畫？",
+        "B": "我的工作經歷？",
+        "C": "什麼時候開始工作？",
+        "D": "為什麼應徵這份工作？"
+      },
+      "synonyms": {
+        "初級": [
+          "past jobs（以前的工作；較口語）"
+        ],
+        "中級": [
+          "employment history（就業經歷）"
+        ],
+        "高級": [
+          "professional background（專業背景；範圍較廣）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（工作經歷沒有標準詞彙反義）"
+        ],
+        "中級": [
+          "no prior experience（沒有先前經驗；情況對照）"
+        ],
+        "高級": [
+          "N/A（career plan 是不同時間方向，不是反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "job（工作）"
+        ],
+        "中級": [
+          "resume（履歷）"
+        ],
+        "高級": [
+          "reverse chronological order（逆時間順序）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關或近義片語不能保證任何情況都完全可替換；非反義關係已註明。",
+      "exampleEnglish": "She described her work experience in her resume.",
+      "exampleChinese": "她在履歷中敘述了自己的工作經歷。",
+      "exampleHighlightedSurfaceForm": "work experience",
+      "exampleType": "自編雙語教學例句，非新聞",
+      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
