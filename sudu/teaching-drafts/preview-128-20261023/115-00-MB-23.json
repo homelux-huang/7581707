@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-23",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 23,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-23.webp",
+  "imageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "直接目視既有單題WebP完整題幹、圖形、表格、單位、四選項；重算原始 bytes SHA256 並與固定清單符合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖獨立解題後才讀既有候選答案；官方最終答案 PDF／更正公告尚未直接回讀，不計完整官方核實。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "行程I每人x元，兩人同行其中一人減3000元；行程II每人x+2000元，兩人同行其中一人八折，兩人總價相同，求x。",
+    "keyConditions": [
+      "行程I每人x元",
+      "同行其中一人減3000元",
+      "行程II每人(x+2000)元",
+      "同行其中一人打八折",
+      "兩行程兩人總價相同"
+    ],
+    "reasoningFromOriginalImage": "行程I兩人費用 **2x−3000**。行程II一人原價 x+2000，另一人八折 **0.8(x+2000)**，總共 **1.8(x+2000)=1.8x+3600**。兩行程同價：**2x−3000=1.8x+3600 ⇒0.2x=6600 ⇒x=33000元**，選B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "33000元",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "行程I兩人費用 **2x−3000**。行程II一人原價 x+2000，另一人八折 **0.8(x+2000)**，總共 **1.8(x+2000)=1.8x+3600**。兩行程同價：**2x−3000=1.8x+3600 ⇒0.2x=6600 ⇒x=33000元**，選B。",
+    "elementarySummary": "第一團兩人都要付x元，但其中一人少付3000。第二團兩人都比x多2000元，其中一人打八折。把兩團的總價算成一樣，就知道x是33000。",
+    "memory": "**2x−3000=1.8(x+2000) ⇒x=33000元**。",
+    "concept": "兩人同行**只有其中一人**享優惠；八折是付80%而不是減80%，需分別算個人再合成兩人總費用。",
+    "extension": "反向思考：若**兩人都打八折**，行程II會變 **1.6(x+2000)**，方程式與x便會改變，不可照抄本題。",
+    "source": {
+      "originalExam": "115-00-MB-23",
+      "originalImagePinnedSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學 B 教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B最終更正公告待直接核實"
+    },
+    "highlightTerms": [
+      "2x−3000",
+      "1.8(x+2000)",
+      "0.2x=6600",
+      "33000元"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "32000元代入兩行程不相等：I=61000、II=61200，差200元，故錯。",
+        "elementary": "兩邊差200，沒有一樣貴。",
+        "reason": "32000元代入兩行程不相等：I=61000、II=61200，差200元，故錯。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "x=33000時 I=66000−3000=63000；II=1.8×35000=63000，符合條件。",
+        "elementary": "兩團都是63000，正確。",
+        "reason": "x=33000時 I=66000−3000=63000；II=1.8×35000=63000，符合條件。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "34000時 I=65000、II=64800，兩團差200元，不符合。",
+        "elementary": "第一團比第二團多200。",
+        "reason": "34000時 I=65000、II=64800，兩團差200元，不符合。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "35000時 I=67000、II=66600，相差400元，不是同價。",
+        "elementary": "兩團差400，不能選。",
+        "reason": "35000時 I=67000、II=66600，相差400元，不是同價。"
+      }
+    },
+    "math": {
+      "formula": "總價I=2x−3000；總價II=(1+0.8)(x+2000)，兩者相等。",
+      "formulaUsage": "使用一次方程描述兩種費用方案、折扣和總價比較。",
+      "workedExample": "兩件各100元，其中一件八折，總價100+80=180元。",
+      "dailyApplication": "團購、旅遊報價與折扣比較。",
+      "notes": "數學、折扣與複利考題運算全數保留完整過程"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "行程I每人x元",
+        "同行其中一人減3000元",
+        "行程II每人(x+2000)元",
+        "同行其中一人打八折",
+        "兩行程兩人總價相同"
+      ],
+      "formula": "總價I=2x−3000；總價II=(1+0.8)(x+2000)，兩者相等。",
+      "formulaPurpose": "使用一次方程描述兩種費用方案、折扣和總價比較。",
+      "substitutionAndSteps": [
+        {
+          "formula": "I費用=x+(x−3000)=2x−3000元",
+          "why": "只有一人減免，不能兩人都減3000。"
+        },
+        {
+          "formula": "II費用=(x+2000)+0.8(x+2000)=1.8(x+2000)元",
+          "why": "只有一人八折，另一人付原價。"
+        },
+        {
+          "formula": "方程2x−3000=1.8x+3600",
+          "why": "依題目兩人總費用相等列式。"
+        },
+        {
+          "formula": "2x−1.8x=3600+3000 ⇒0.2x=6600",
+          "why": "整理移項並合併同類項。"
+        },
+        {
+          "formula": "x=6600/0.2=33000元",
+          "why": "除以0.2求未知原價。"
+        },
+        {
+          "formula": "驗算I=63000、II=63000，選B",
+          "why": "兩邊代回一致。"
+        }
+      ],
+      "result": "33000元",
+      "unit": "新臺幣元",
+      "matchingOption": "B",
+      "commonMistake": "把八折當成減八成，或兩個人都打折、都減免。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
