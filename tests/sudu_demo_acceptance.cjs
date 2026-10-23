@@ -20,6 +20,10 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
  const noOverflow=async(label)=>{const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(layout.scrollWidth<=layout.width+1,label+' '+JSON.stringify(layout));};
  try{
   await page.goto(base+'v4-115-multisubject-review-demo.html');
+  assert(await page.locator('#homeView').isVisible(),'home is the initial view');
+  assert.equal(await page.locator('#studyView').isVisible(),false,'no question visible on home');
+  assert.equal(await page.locator('.home-actions > *').count(),3,'three home actions');
+  assert(await page.locator('#homeSubjectSel').isDisabled(),'pick year before subject');
   const clockBefore=await page.locator('#examClock').innerText();
   assert(/天.*時.*分.*秒/.test(clockBefore));
   await page.waitForTimeout(1100);assert.notEqual(await page.locator('#examClock').innerText(),clockBefore,'countdown ticks each second');
@@ -28,6 +32,10 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   const qs=await page.evaluate(()=>JSON.parse(document.getElementById('demoData').textContent).questions);
   assert.equal(qs.length,35);
   for(const [subject,ids] of Object.entries(expected))assert.deepEqual(qs.filter(q=>q.subject===subject).map(q=>q.id),ids);
+  await page.locator('#homeYearSel').selectOption('demo');
+  await page.locator('#homeSubjectSel').selectOption({label:'英文'});
+  assert(await page.locator('#studyView').isVisible(),'year and subject enter study');
+  assert(await page.locator('#explainBtn').isDisabled(),'answer shortcut locked until answering');
   const manifestResponse=await context.request.get(base+'questions/115/crop-manifest.json');
   assert(manifestResponse.ok());const manifest=await manifestResponse.json();
   assert.equal(manifest.generatedCount,30);assert.equal(manifest.items.length,30);
@@ -77,15 +85,18 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
     assert.equal(await page.locator('#guideCard').isVisible(),false,'question button focuses the question');
     await page.locator('#explainBtn').click();await settle();
     assert.equal(await page.locator('#guideCard').isVisible(),true,'explanation button reopens guide');
-    for(const selector of ['#correctAnswer .option-detail','#guideCard']){
-     const detail=await page.locator(selector).innerText();
-     for(const label of ['初級','中級','高級','中文：'])assert(detail.includes(label),id+' '+selector+' '+label);
-     assert(!/\b(low|mid|high)\s*:/i.test(detail));
-     assert.equal((await page.locator(selector+' .exam-highlight').innerText()).toLowerCase(),word);
-    }
+    const vocab=await page.locator('#guideCard').innerText();
+    for(const label of ['初級','中級','高級','中文：'])assert(vocab.includes(label),id+' guide '+label);
+    assert(!/\b(low|mid|high)\s*:/i.test(vocab));
+    assert.equal((await page.locator('#guideCard .exam-highlight').innerText()).toLowerCase(),word);
+    assert.equal(await page.locator('#correctAnswer .option-detail-grid').count(),0,'no English subject metadata repeated in correct option');
+    const labels=await page.locator('#guideCard .guide-block h3').allTextContents();
+    assert.deepEqual(labels.slice(0,5),['中文翻譯','發音','同意相關單字','反意相關單字','新聞時事例句'],'English vocabulary leads guide');
+    assert.equal(labels.filter(x=>x==='新聞時事中文翻譯').length,0,'bilingual example does not copy translation twice');
     // Deliberately choose a wrong option so this isolated profile has a review card.
    const wrong=await page.evaluate(()=>LETTERS.find(x=>x!==qnow().answer));
    await page.locator('.opt[data-a="'+wrong+'"]').click();await settle();
+   await page.locator('#navHandle').click();
    await page.locator('#reviewTop').click();
    const card=page.locator('.wrong-card').filter({has:page.locator('[data-key="英文|'+id+'"]')});
    assert.equal((await card.locator('.exam-highlight').innerText()).toLowerCase(),word);
@@ -126,12 +137,12 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      assert.equal(await page.locator('#answerCard .opt').count(),4);
      await page.locator('.opt').first().click();await settle();
      const geometry=await page.evaluate(()=>{
-       const guide=document.querySelector('#guideCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect(),b=document.querySelector('.bottom').getBoundingClientRect();
-       return {gap:guide.top-c.bottom,left:Math.abs(c.left-guide.left),width:Math.abs(c.width-guide.width),answerTop:c.top,bottomTop:b.top,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
+       const guide=document.querySelector('#guideCard').getBoundingClientRect(),c=document.querySelector('#correctAnswer').getBoundingClientRect();
+       return {gap:guide.top-c.bottom,left:Math.abs(c.left-guide.left),width:Math.abs(c.width-guide.width),answerTop:c.top,viewportHeight:innerHeight,scrollY,maxScroll:document.documentElement.scrollHeight-innerHeight,spacer:document.querySelector('#answerScrollSpace').getBoundingClientRect().height};
       });
       assert(geometry.gap>=8&&geometry.gap<=12,JSON.stringify({width,height,theme,subject:q.subject,id:q.id,geometry}));
       assert(geometry.left<=2&&geometry.width<=3);
-      assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.bottomTop,'answer visible above bottom bar '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
+      assert(geometry.answerTop>=-1&&geometry.answerTop+44<geometry.viewportHeight,'answer visible in viewport '+JSON.stringify({width,height,subject:q.subject,id:q.id,geometry}));
       assert.equal(await page.locator('#correctAnswer + #guideCard').count(),1,'guide is the only block after the correct option');
       assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'memory block removed at every viewport');
       if(['數學 B','經濟學','會計學'].includes(q.subject)){
@@ -147,7 +158,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
      await noOverflow('answer overflow '+width+' '+q.subject+q.id);
     }
     await page.screenshot({path:path.join(output,`demo-${width}x${height}-${theme}.png`)});
-    await page.locator('#reviewTop').click();await noOverflow('review overflow '+width);
+    await page.locator('#navHandle').click();await page.locator('#reviewTop').click();await noOverflow('review overflow '+width);
     assert.equal(await page.locator('#progressShell').isVisible(),false,'review never shows study picker');
     assert.equal(await page.locator('#navToggle').isVisible(),false);
     const controls=await page.locator('.review-toolbar > *').evaluateAll(es=>es.map(e=>getComputedStyle(e).backgroundColor));
@@ -162,14 +173,16 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   // Touch context has no hover effect; grading colors retain precedence under mouse hover.
   const touch=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});
   const mobile=await touch.newPage();await mobile.goto(base+'v4-115-multisubject-review-demo.html');
+  await mobile.locator('#homeYearSel').selectOption('demo');
+  await mobile.locator('#homeSubjectSel').selectOption({label:'英文'});
   const before=await mobile.locator('.opt').first().evaluate(e=>getComputedStyle(e).backgroundColor);
   await mobile.locator('.opt').first().hover();await mobile.waitForTimeout(230);
   assert.equal(await mobile.locator('.opt').first().evaluate(e=>getComputedStyle(e).backgroundColor),before);
   await mobile.locator('.opt').first().tap();await mobile.waitForTimeout(400);
-  await mobile.locator('#navToggle').click();await mobile.waitForTimeout(300);
-  assert.equal(await mobile.locator('#navToggle').getAttribute('aria-expanded'),'true');
+  await mobile.locator('#navHandle').click();await mobile.waitForTimeout(300);
+  assert.equal(await mobile.locator('#navHandle').getAttribute('aria-expanded'),'true');
   await mobile.locator('.chip').nth(1).click();
-  assert.equal(await mobile.locator('#navToggle').getAttribute('aria-expanded'),'false');
+  assert.equal(await mobile.locator('#navHandle').getAttribute('aria-expanded'),'false');
   await touch.close();
   await page.setViewportSize({width:1440,height:900});await choose('英文',1);
   await page.locator('.opt[data-a="A"]').click();await settle();

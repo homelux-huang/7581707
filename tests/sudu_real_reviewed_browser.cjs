@@ -17,6 +17,9 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
       try{
         await page.goto('http://127.0.0.1:8765/sudu/v4-115-multisubject-review-demo.html?year=115');
         await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'),{timeout:20000});
+        assert(await page.locator('#homeView').isVisible(),'real approved year opens home');
+        await page.locator('#homeSubjectSel').selectOption({label:'數學 B'});
+        assert(await page.locator('#studyView').isVisible(),'real subject selection opens quiz');
         await page.locator('#questionCard .qnum').waitFor();
         assert.equal(await page.locator('#verifiedStatus').count(),0);
         assert.equal(await page.locator('#verifiedImagePreview').count(),0);
@@ -52,6 +55,7 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
           assert.equal(await page.locator('#guideCard .guide-block h3').first().innerText(),'考題計算式','all four real math calculations lead the guide');
           assert(await page.locator('#guideCard .calculation-step').count()>=5,'all original worked steps remain');
           assert.equal(await correct.locator('.calculation-step').count(),0,'steps not duplicated inside correct option');
+          assert.equal(await correct.locator('.option-detail-grid').count(),0,'real approved correct answer has no duplicated guide metadata');
           assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'no duplicate memory card');
           assert.equal(await page.locator('#nextBtn').isDisabled(),i===3);
           if(i<3)await page.locator('#nextBtn').click();

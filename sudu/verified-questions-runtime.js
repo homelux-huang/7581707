@@ -32,13 +32,14 @@
   const viewStyles=document.createElement('style');
   viewStyles.textContent=[
     'body.verified-year-loading #studyView,body.verified-year-loading #reviewView,body.verified-year-loading #progressShell,body.verified-year-loading .bottom{display:none!important}',
-    'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #answerScrollSpace,body.qa-image-mode #reviewView,body.qa-image-mode #progressShell,body.qa-image-mode .bottom,body.qa-image-mode .review-head,body.qa-image-mode #navToggle{display:none!important}',
-    'body.qa-image-mode #studyView{display:block!important}',
+    'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #answerScrollSpace,body.qa-image-mode .review-head,body.qa-image-mode #readingShortcuts{display:none!important}',
+    'body.qa-image-mode.study-mode #studyView{display:block!important}',
     'body.qa-image-mode .side-arrow{bottom:24px}',
+    'body.qa-image-mode #resetBtn,body.qa-image-mode #continueBtn{display:none!important}',
     'body.qa-image-mode #questionCard .source-figure{margin:12px 0 4px}',
     'body.qa-image-mode #questionCard .source-figure img{max-width:100%;height:auto}',
     'body.qa-image-mode #questionCard .qa-caption{margin:8px 0 0;font-size:13px;color:var(--muted);font-weight:750}',
-    'body.qa-error-mode #studyView,body.qa-error-mode #reviewView,body.qa-error-mode #progressShell,body.qa-error-mode .bottom,body.qa-error-mode #prevBtn,body.qa-error-mode #nextBtn{display:none!important}'
+    'body.qa-error-mode #studyView,body.qa-error-mode #reviewView,body.qa-error-mode #progressShell,body.qa-error-mode .bottom,body.qa-error-mode #prevBtn,body.qa-error-mode #nextBtn,body.qa-error-mode #navHandle,body.qa-error-mode #readingShortcuts{display:none!important}'
   ].join('');
   document.head.append(viewStyles);
   document.body.classList.add('verified-year-loading');
@@ -123,6 +124,7 @@
     SUBJECTS.splice(0,SUBJECTS.length);
     document.getElementById('answerCard').replaceChildren();
     document.getElementById('guideCard').replaceChildren();
+    document.getElementById('reviewSubject').innerHTML='<option value="ALL">全部科目</option>';
     const subjects=['全部科目',...new Set(items.map(q=>q.subject))];
     const filter=document.getElementById('subjectSel');
     filter.replaceChildren();
@@ -177,11 +179,34 @@
       summary.append(title,count);
       document.getElementById('prevBtn').disabled=index===0;
       document.getElementById('nextBtn').disabled=index===rows.length-1;
+      // Visible single-question IDs are the existing QA-approved image snapshots.
+      const chips=document.getElementById('progressChips');
+      chips.replaceChildren();
+      rows.forEach((entry,i)=>{
+        const button=document.createElement('button');
+        button.className='chip'+(i===index?' current':'');
+        button.textContent=entry.questionNumber;
+        button.setAttribute('aria-label',entry.subject+'第 '+entry.questionNumber+' 題唯讀原圖');
+        button.onclick=()=>{index=i;render(true);collapseQuestionNav();};
+        chips.append(button);
+      });
+      document.getElementById('progressLabel').textContent='原圖唯讀｜'+(index+1)+' / '+rows.length+' 題';
+      syncHeights();
       if(scroll)card.scrollIntoView({behavior:'smooth',block:'start'});
     };
     const changeSubject=()=>{
       rows=filter.value==='全部科目'?items:items.filter(q=>q.subject===filter.value);
       index=0;render(true);
+    };
+    window.suduOpenImageSubject=subject=>{
+      if(!subjects.includes(subject)||subject==='全部科目')return;
+      filter.value=subject;
+      rows=items.filter(q=>q.subject===subject);
+      index=0;
+      showStudy();
+      render();
+      setQuestionNavAutoHide(false);
+      window.scrollTo({top:0,behavior:'instant'});
     };
     filter.onchange=changeSubject;
     move=function(delta){
@@ -191,7 +216,10 @@
     document.title='速讀｜'+activeYear+' 年單題 WebP 原圖';
     document.body.classList.remove('verified-year-loading','qa-error-mode');
     document.body.classList.add('qa-image-mode');
+    document.body.dataset.verifiedReadyYear=activeYear;
     render();
+    refreshHomeSubjects();
+    showHome();
   }
 
   function htmlWithActualHighlights(value,terms) {
@@ -263,10 +291,9 @@
     sourceText=function(q){return q.sourceText||originalSource(q)};
     subjectEntries=function(q){
       if(q.year!==Number(activeYear))return originalSubjectEntries(q);
-      const parts=[
-        ['高職老師解題',q.teacherSummary],['國小學生白話',q.elementarySummary],
-        ...Object.entries(q.extra||{})
-      ].filter(x=>useful(x[1]));
+      // The correct answer retains both teaching levels, while extra notes and
+      // full worked steps occur exactly once in the subject guide.
+      const parts=Object.entries(q.extra||{}).filter(x=>useful(x[1]));
       const calc=q.examCalculation;
       if(calc&&calc.hasExamCalculation===true&&Array.isArray(calc.lines)&&calc.lines.length)
         parts.push(['考題計算式',calc.lines.join('\n')]);
@@ -284,12 +311,8 @@
         ['此選項正確／錯誤原因',detail.reason]
       ].filter(x=>useful(x[1]));
       let html='<div class="option-detail '+color+'"><b>'+header+'</b>'+
-        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(x[1],keywords)+'</p>').join('');
-      if(L===q.answer){
-        const extra=subjectEntries(q).filter(([name])=>name!=='考題計算式');
-        if(extra.length)html+='<div class="option-detail-grid">'+extra.map(x=>
-          '<span><em>'+escapeHtml(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';
-      }
+        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(String(x[1]).replace(/反向檢查/g,'相反意思'),keywords)+'</p>').join('');
+      // Unique subject metadata and calculations belong in the guide only.
       return html+'</div>';
     };
     renderProgress=function(){
@@ -303,8 +326,11 @@
       showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'});
     };
     document.title='速讀｜'+activeYear+' 正式題庫｜教學解說';
-    renderSelectors();showStudy();renderAll();
+    document.body.dataset.verifiedReadyYear=activeYear;
     document.body.classList.remove('verified-year-loading','qa-image-mode');
+    renderSelectors();renderAll();refreshHomeSubjects();showHome();
+    const requestedSubject=new URLSearchParams(location.search).get('subject');
+    if(requestedSubject&&SUBJECTS.includes(requestedSubject))openSubjectFromHome(requestedSubject);
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
     showError('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);

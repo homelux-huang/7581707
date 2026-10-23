@@ -44,8 +44,13 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
   for(const [width,height] of sizes){
    await page.setViewportSize({width,height});
    await page.goto(base+'v4-115-multisubject-review-demo.html?year=115');
-   await page.locator('#questionCard .qnum').waitFor();
    await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'));
+   assert(await page.locator('#homeView').isVisible(),'115 approved year opens home');
+   assert(await page.locator('#homeSubjectSel').isEnabled());
+   await page.locator('#homeSubjectSel').selectOption({label:'數學 B'});
+   await page.locator('#questionCard .qnum').waitFor();
+   assert(await page.locator('#studyView').isVisible(),'subject selection shows quiz');
+   if(width===360)assert(await page.locator('#explainBtn').isDisabled(),'answer jump disabled before first grading');
    assert.equal(await page.locator('#verifiedStatus').count(),0);
    assert.equal(await page.locator('#verifiedImagePreview').count(),0);
    assert.equal(await page.locator('#verifiedYearNav').count(),0);
@@ -60,6 +65,8 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    assert.match(await page.locator('#answerCard').innerText(),/國小學生也聽得懂/);
    assert.equal(await page.locator('#guideCard .guide-block h3').first().innerText(),'考題計算式','worked math is first in guide');
    assert.equal(await page.locator('#correctAnswer .calculation-step').count(),0,'calculation no longer duplicates correct option');
+   assert.equal(await page.locator('#correctAnswer .option-detail-grid').count(),0,'approved option not duplicated in subject guide');
+   assert(await page.locator('#explainBtn').isEnabled(),'answer jump enabled after grading');
    assert(await page.locator('#guideCard .calculation-step').count()>=5,'full worked steps retained');
    assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'no memory card in approved year');
    const wrong=await page.locator('#studyView .opt.wrong').count();

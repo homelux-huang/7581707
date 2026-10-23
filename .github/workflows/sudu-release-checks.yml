@@ -14,7 +14,11 @@ jobs:
     # ubuntu-latest moved to Ubuntu 26.04 and caused browser installation to fail
     # before any UI test could run.
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # The official Noto CJK package is 61.2 MB. Ubuntu mirrors have taken
+    # ~16 minutes to deliver it; keep Chinese text coverage and all QA gates.
+    # A longer runner cap prevents the asset-download step from falsely
+    # cancelling valid 35-question/114-115 Chromium release verification.
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:

@@ -10,6 +10,8 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
   await page.goto(base+'v4-115-multisubject-review-demo.html');
   assert.equal(await page.locator('#verifiedYearNav').count(),0,'no obstructive four-link navigation');
   assert.deepEqual(await page.locator('#yearSel option').evaluateAll(xs=>xs.map(x=>x.value)),['demo','115','114']);
+  assert(await page.locator('#homeView').isVisible(),'root loads home');
+  assert.equal(await page.locator('#studyView').isVisible(),false,'no questions on home');
   assert.equal(await page.locator('.opt').count(),4);
   assert.equal(await page.evaluate(()=>JSON.parse(document.getElementById('demoData').textContent).questions.length),35);
   const r=await page.request.get(base+'data/approved/progress.json');assert(r.ok());
@@ -37,22 +39,30 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     assert.equal(await page.locator('#verifiedPreviewToggle').count(),0,'no preview toggle bar');
     assert.equal(await page.locator('#verifiedYearNav').count(),0,'no four-link bar');
     assert.equal(await page.locator('#yearSel').inputValue(),year);
+    assert(await page.locator('#homeView').isVisible(),year+' starts on home');
+    assert.equal(await page.locator('#studyView').isVisible(),false,'year alone cannot expose question');
+    assert.equal(await page.locator('#homeYearSel').inputValue(),year);
+    assert(await page.locator('#homeSubjectSel').isEnabled(),year+' has verified subjects');
+    const chosenSubject=data.approvedCount?data.questions[0].subject:preview.questions[0].subject;
+    await page.locator('#homeSubjectSel').selectOption({label:chosenSubject});
+    assert(await page.locator('#studyView').isVisible(),year+' subject begins study');
     if(data.approvedCount===0){
      if(preview.imagePreviewCount){
       await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
       assert.equal(await page.locator('#studyView').isVisible(),true);
       assert.equal(await page.locator('#answerCard').isVisible(),false);
       assert.equal(await page.locator('#studyView .opt').count(),0,'image-only never exposes grading');
-      const first=preview.questions[0];
+      const rows=preview.questions.filter(item=>item.subject===chosenSubject);
+      const first=rows[0];
       assert.equal(Number(await page.locator('#questionCard .qnum').innerText()),first.questionNumber);
       assert.equal(await page.locator('#questionCard').getAttribute('data-canonical-id'),first.canonicalId);
       const img=page.locator('#questionCard img').first();
       assert.equal(await img.getAttribute('src'),'./'+first.image);
       assert.equal(await img.getAttribute('data-canonical-id'),first.canonicalId);
       assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
-      if(preview.questions.length>1){
+      if(rows.length>1){
        await page.locator('#nextBtn').click();
-       const second=preview.questions[1];
+       const second=rows[1];
        assert.equal(Number(await page.locator('#questionCard .qnum').innerText()),second.questionNumber);
        assert.equal(await page.locator('#questionCard img').first().getAttribute('src'),'./'+second.image);
       }
@@ -76,6 +86,10 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
   // 115 original-image audit is available ONLY as a single-question view in
   // the existing question card, without an extra top block or answer leak.
   await page.goto(base+'v4-115-multisubject-review-demo.html?year=115&view=images');
+  await page.locator('body.qa-image-mode').waitFor();
+  assert(await page.locator('#homeView').isVisible(),'image preview starts from home');
+  const snapshot=await (await page.request.get(base+'data/approved/preview/115.json')).json();
+  await page.locator('#homeSubjectSel').selectOption({label:snapshot.questions[0].subject});
   await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
   assert.equal(await page.locator('#verifiedYearNav').count(),0);
   assert.equal(await page.locator('#verifiedImagePreview').count(),0);
