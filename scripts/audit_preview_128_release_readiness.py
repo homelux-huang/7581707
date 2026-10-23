@@ -2,6 +2,9 @@
 """Read-only 128-question draft QA ledger. NEVER grants student release approval."""
 import hashlib
 import json
+import re
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from collections import Counter
 from pathlib import Path
 
@@ -16,6 +19,22 @@ def load(path):
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def is_recent_news_iso_date(value, today=None):
+    """Source-backed news must be dated within three calendar years, never future."""
+    if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+        return False
+    try:
+        published = date.fromisoformat(value)
+        reference = today if today is not None else datetime.now(ZoneInfo("Asia/Taipei")).date()
+        try:
+            cutoff = reference.replace(year=reference.year - 3)
+        except ValueError:
+            cutoff = reference.replace(year=reference.year - 3, day=28)
+        return cutoff <= published <= reference
+    except (ValueError, TypeError, AttributeError):
+        return False
 
 
 def main():
@@ -117,8 +136,11 @@ def main():
                     problems.append(f"{qid}: source-backed news example or Chinese translation incomplete")
                 if not news_surface or news_surface.casefold() not in news_sentence.casefold():
                     problems.append(f"{qid}: sourced news highlight absent from sentence")
-                if not english.get("newsExampleSourceDate") or not english.get("newsExampleSourceTitle"):
+                news_date = english.get("newsExampleSourceDate")
+                if not news_date or not english.get("newsExampleSourceTitle"):
                     problems.append(f"{qid}: news source publication date or title missing")
+                elif not is_recent_news_iso_date(news_date):
+                    problems.append(f"{qid}: source-backed news date is invalid, future, or outside the last 3 years")
                 if "PARAPHRASE" not in (english.get("newsExampleStatus") or ""):
                     problems.append(f"{qid}: news must be clearly labeled a paraphrase rather than a direct quote")
             elif "SOURCE_VERIFIED" in (english.get("newsExampleStatus") or ""):

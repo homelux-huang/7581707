@@ -6,6 +6,7 @@ on:
     paths:
       - scripts/audit_preview_teaching_drafts.py
       - scripts/audit_preview_128_release_readiness.py
+      - tests/test_preview_128_news_dates.py
       - sudu/teaching-drafts/preview-128-20261023/**
       - sudu/data/approved/webp/**
       - .github/workflows/sudu-preview-128-readiness.yml
@@ -26,5 +27,7 @@ jobs:
         run: python scripts/audit_preview_teaching_drafts.py
       - name: Verify all original WebPs, shared passages and explicit release gates
         run: python scripts/audit_preview_128_release_readiness.py
+      - name: Test source-backed news three-year dating rule
+        run: python -m unittest discover -s tests -p 'test_preview_128_news_dates.py' -v
       - name: Check teaching steps JavaScript syntax
         run: node --check sudu/teaching-drafts/preview-128-20261023/solution-steps-128.js
