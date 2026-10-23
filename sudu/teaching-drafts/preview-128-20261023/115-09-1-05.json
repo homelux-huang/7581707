@@ -96,7 +96,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-05",
+      "subject": "商業概論",
+      "questionNumber": 5,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①人力銀行求職媒合；②電子書下載購買；③影音平台付費觀看比賽影片；④網路訂機票與飯店住宿",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "數位化商品著重內容本身；線上服務提供搜尋、媒合、預訂；依課程主要交易標的分類。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "判斷電子商務**數位化商品**與**線上服務商品**，不要只看交易在網路發生。",
+          "why": "花錢讀電子書、看線上影片，是拿到手機裡的內容；用求職網站、訂飯店網站，是請網站幫忙找機會或訂服務。因此③和④這一組配對對。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "②電子書與③付費影音主要交付數位內容；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "①人力銀行做媒合、④訂票訂房做預約交易，主要屬線上服務。 D把③列數位化商品、④列線上服務，符合此考題分類； 部分串流商業模式也兼具服務性，這是課程分類界線而非普世法規。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D把③付費影片列數位化商品，④機票飯店網路訂購列線上服務，兩者均符合命題分類。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -107,7 +161,8 @@
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "CLASSIFICATION_DEPENDS_ON_TEXTBOOK",
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

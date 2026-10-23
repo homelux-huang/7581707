@@ -95,7 +95,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-01",
+      "subject": "商業概論",
+      "questionNumber": 1,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "①講座屬法定義務？；②自主減碳是否承擔社會責任？；③成本提升與倫理責任？；④股東利潤受損與經濟責任？",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "經濟、法律、倫理與慈善責任是不同層次；現實CSR不能僅憑一次利潤變動定論。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "辨別CSR的**經濟、法律、倫理、慈善**層次。",
+          "why": "公司要守法律、努力賺錢、也要顧地球。主動用乾淨能源是好的；辦講座不等於法律硬規定。少賺錢會影響股東，卻不能說只要少賺一次就一定不負責任。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "①自願辦社區講座並不等於履行法律強制義務；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "②再生能源減碳是環境與社會責任； ③營運成本上升首先關乎**經濟**面，而非最基本**倫理**責任。 若沿用本考題將維護股東獲利列為經濟責任的簡化分類，④會被視為經濟面，因此候選答案D（②④）； 但『利潤受損**即**未善盡』推論過強，仍須官方命題解釋。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "D為②④；依命題的責任層次分類，②屬社會責任、④與股東獲利的經濟責任相關，故與候選D一致；但『即未善盡』需要保留語義疑點。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -106,7 +160,8 @@
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "CSR_CAUSAL_OVERGENERALIZATION",
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

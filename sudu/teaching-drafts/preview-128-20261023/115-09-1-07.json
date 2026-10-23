@@ -97,7 +97,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-07",
+      "subject": "商業概論",
+      "questionNumber": 7,
+      "answerCandidate": "B",
+      "aiAnswer": "UNDETERMINED",
+      "needsReview": true,
+      "reviewReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "票據貼現的籌資期限；特別股是否可能產生財務槓桿；公司債相對特別股發行成本；公司債利息稅盾",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "財務槓桿狹義用舉債衡量，廣義可考慮具有固定股利的特別股對普通股盈餘的放大效果；此題候選解答與較廣義解釋存在定義歧義。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "A票據貼現通常屬**短期融資**；",
+          "why": "票據貼現是把快到期的票換成現金，不是長期借錢。公司債付的利息通常可能節稅。特別股優先分股利，有時也會放大普通股東剩下的獲利起伏，所以說它『完全不可能有槓桿』有問題。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "C債券資金成本通常並不必然高於特別股；",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "D符合規定的公司債利息一般可稅前扣除，存在**節稅效果**。 候選B斷言**特別股無法發揮財務槓桿**，但財務理論中固定特別股股利可能使普通股EPS對EBIT變動更加敏感，廣義財務槓桿可包含此效果。 某些高職課本可能將『舉債』當槓桿狹義定義； 未確定教材與官方更正前不能說B在所有定義下正確。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "對照候選及待查疑點",
+          "content": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+          "why": "本題待官方答案與教材獨立查核。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -108,7 +162,8 @@
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "ANSWER_CONCEPT_CONFLICT",
-    "blockingReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。"
+    "blockingReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

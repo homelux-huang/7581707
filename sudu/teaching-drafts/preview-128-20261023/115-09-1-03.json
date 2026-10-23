@@ -95,7 +95,61 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-1-03",
+      "subject": "商業概論",
+      "questionNumber": 3,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "個人化營養諮詢SOHO；新創博覽會和創業者交流；高齡化產生保健需求；競爭者推出類似服務",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "Mintzberg聯絡者屬人際角色；SOHO按業務分型；競爭風險需依市場資料判斷。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "SOHO工作型態要按**提供的服務類型**分類，好食光是營養諮詢，不是資訊SOHO。",
+          "why": "這個小工作室教客人如何吃得健康，不是做電腦程式。小華在展覽和其他老闆聊天、交朋友，像公司對外聯絡的人。別家推出一樣的服務可能搶生意，但也要看整個市場有沒有變大。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "新創博覽會與其他創業者交流與建立聯繫符合Mintzberg管理**人際關係角色中的聯絡者**，所以候選C有明確依據。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "高齡化是人口社會變遷，不是災害。 D『類似服務出現增加經營風險』在競爭分析中**可能**成立，因此不能草率說D完全沒道理； 需核對命題定義與官方說明。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "C指出小華跟外部創業者交流、維繫聯繫，符合管理者的人際**聯絡者**角色，為候選正解。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -106,7 +160,8 @@
     "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "POTENTIALLY_MULTIPLE_OPTIONS",
-    "blockingReason": null
+    "blockingReason": null,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
