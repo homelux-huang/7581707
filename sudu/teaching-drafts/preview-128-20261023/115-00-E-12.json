@@ -203,6 +203,19 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "B",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "Lucky you! You got the tickets! 倒推出先前Tom確實有去TWICE表演；沒有去BLACKPINK不代表兩場都沒去，A/C/D不能解釋票券。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

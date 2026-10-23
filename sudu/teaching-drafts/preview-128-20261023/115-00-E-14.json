@@ -224,6 +224,19 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "already 30與No, not at all; Age is not a big deal承接too late之負問句，其他選項問處理方式、喜好與時間皆與回覆不合。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

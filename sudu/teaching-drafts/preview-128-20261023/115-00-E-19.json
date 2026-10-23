@@ -234,6 +234,19 @@
       "scope": "70至74歲普通駕照換照之體檢及高齡交通安全講習；有通知及緩衝措施，不可解釋成所有70歲者立即不能開車",
       "readingQuestionAnswerStill": "C",
       "teachingAcceptance": "PENDING"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "71歲奶奶說健康而且沒問題，孫子仍預期搭她車→有信心renew license，其他選項否定繼續駕車或忽視已71歲事實。換照法規需與題目情境分開核實，不能認定滿70立刻不能開車。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

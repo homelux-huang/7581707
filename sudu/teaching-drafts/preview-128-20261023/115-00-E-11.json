@@ -201,6 +201,19 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "B",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "收銀員問「還需要其他東西嗎」對應顧客回答No, just the charger；若問Is that all通常回答Yes, that's all，故A不合。NT$350只提供背景價錢，沒有折扣或找零。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

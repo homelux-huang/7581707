@@ -225,6 +225,19 @@
       "textbookPageVerified": false,
       "studentReleaseApproved": false,
       "evidence": "ENGLISH_NEWS_CONTEXT_9_EXTRA_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "B",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "past jobs backwards in time指resume上的work experience逆時間順序，與職涯計畫、何時開始工作、應徵動機不同；只是情境中建議，不是所有履歷一律學歷先列。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

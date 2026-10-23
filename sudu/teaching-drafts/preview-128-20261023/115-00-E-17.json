@@ -161,7 +161,14 @@
       "newsExampleSourceOrganization": "勞動部勞動力發展署",
       "newsExampleSourceDate": "2025-11-30",
       "newsExampleKind": "根據具體新聞／官方公告自行改寫的英文教學句，非新聞逐字引述",
-      "newsExampleSourceScope": "2025-11-30官方新聞稿證實臺灣獲22金及總冠軍"
+      "newsExampleSourceScope": "2025-11-30官方新聞稿證實臺灣獲22金及總冠軍",
+      "medalCountOfficialContext": {
+        "goldMedalsTotal": 22,
+        "seniorYouth": 17,
+        "junior": 5,
+        "sourceUrl": "https://www.wda.gov.tw/News_Content.aspx?n=31&s=18562",
+        "classification": "此處22為青年17+青少年5的合計，非單一組別；新聞脈絡補充不改原試題答案"
+      }
     },
     "hasExamCalculation": false,
     "examCalculation": null
@@ -225,6 +232,19 @@
       "textbookPageVerified": false,
       "releaseApproved": false,
       "evidence": "ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md"
+    },
+    "lexicalAndFourOptionReview20261023": {
+      "status": "PARTIAL_SEMANTIC_REASONING_PASS__FULL_TEACHING_QA_PENDING",
+      "officialOption": "A",
+      "scope": "Dialogue comprehension, contextual grammar, all A-D teacher/elementary explanations, misleading interpretation control",
+      "independentRecheckNotes": "Twenty-two in total+team title回答有幾面金牌不是公車班次/比賽項目/兩年前參賽；勞動部官方成績青年組17金+青少年組5金=合計22金。",
+      "originalWebpAndOfficialAnswerFromPinnedRegistry": true,
+      "initialBlindSolveNotRecreated": true,
+      "newsFactSourcesNotTreatedAsTextbook": true,
+      "fullIPAAndSynonymLevelQA": "PENDING",
+      "highSchoolTextbookEditionAndPage": "UNVERIFIED",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_LEXICAL_AND_OPTION_REVIEW_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
