@@ -125,6 +125,57 @@ class ReleaseGateRegression(unittest.TestCase):
         self.data['official-answer-evidence.json']['items'][0].pop('officialCorrectionPdfSha256')
         self.check('official_answer_evidence_mismatch:')
 
+    def set_no_objection(self):
+        row = self.data['official-answer-evidence.json']['items'][0]
+        row.pop('officialCorrectionPdfSha256', None)
+        official_url = 'https://web1.tcte.edu.tw/EXAM/114_4y/'
+        row.update({
+            'officialCorrectionStatus': 'OFFICIAL_00_C_NO_OBJECTION_SUBMITTED',
+            'officialCorrectionPageUrl': official_url,
+            'officialCorrectionPageSha256': self.source_sha
+        })
+        self.data['official-confirmation-status.json'] = {
+            'year': 114,
+            'confirmations': {'00-C': {'officialStatus': 'no_objection_submitted'}},
+            'officialNoticeEvidencePath': '114/notice.json'
+        }
+        self.data['notice.json'] = {
+            'year': 114,
+            'sourceIndexUrl': official_url,
+            'sourceIndexSha256': self.source_sha
+        }
+
+    def test_no_objection_official_index_sha_passes(self):
+        self.set_no_objection()
+        self.write_files()
+        got = gates.audit(114)
+        self.assertTrue(got['integrationReady'], got)
+
+    def test_no_objection_index_sha_mismatch_blocks(self):
+        self.set_no_objection()
+        self.data['notice.json']['sourceIndexSha256'] = 'e' * 64
+        self.check('official_answer_evidence_mismatch:')
+
+    def test_no_objection_paper_status_mismatch_blocks(self):
+        self.set_no_objection()
+        self.data['official-confirmation-status.json']['confirmations']['00-C']['officialStatus'] = 'question_or_answer_confirmation_document_exists'
+        self.check('official_answer_evidence_mismatch:')
+
+    def test_no_objection_official_url_mismatch_blocks(self):
+        self.set_no_objection()
+        self.data['notice.json']['sourceIndexUrl'] = 'https://example.invalid/not-official/'
+        self.check('official_answer_evidence_mismatch:')
+
+    def test_no_objection_unavailable_ledger_blocks(self):
+        self.set_no_objection()
+        self.data['official-confirmation-status.json']['officialNoticeEvidencePath'] = '114/missing.json'
+        self.check('official_answer_evidence_mismatch:')
+
+    def test_no_objection_forged_status_flag_blocks(self):
+        self.set_no_objection()
+        self.data['official-answer-evidence.json']['items'][0]['officialCorrectionStatus'] = 'UNVERIFIED'
+        self.check('official_answer_evidence_mismatch:')
+
     def test_answer_value_mismatch_blocks(self):
         self.data['official-answer-evidence.json']['items'][0]['officialFinalAnswer'] = 'B'
         self.check('official_answer_evidence_mismatch:')
