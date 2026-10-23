@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-05",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-05.webp",
+  "imageSha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪逐題原圖）",
+    "method": "直接目視 GitHub 既有單題 WebP，題幹選項完整，核實四選項和題號，原始 WebP SHA256 重算一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先根據原圖自行解題再查候選；候選與解答一致但未直接回讀官方最終答案PDF和更正說明。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": null,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "期末調整四個敘述：①預付項目借方一定實帳；②應付項目借方一定虛帳；③記虛轉實的預收漏調淨利低估；④應收漏調淨利低估。哪些正確？",
+    "keyConditions": [
+      "A-D四選項或①②③④逐項判斷",
+      "正確表述由會計概念及原圖文字決定"
+    ],
+    "reasoningFromOriginalImage": "①錯：預付若起初記資產（記實轉虛），期末**借費用（虛）貸預付資產（實）**；若起初記費用（記虛轉實），才可能借預付（實），所以非一定借實。②對：應計應付費用應**借費用（虛）、貸應付（實）**。③錯：預收起初記收益（虛），漏做調整會使應轉負債的部分**收入與淨利高估**，不是低估。④對：應收收入漏調會使應認列收入未入帳，**淨利低估**。故②④正確，選B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "①錯：預付若起初記資產（記實轉虛），期末**借費用（虛）貸預付資產（實）**；若起初記費用（記虛轉實），才可能借預付（實），所以非一定借實。②對：應計應付費用應**借費用（虛）、貸應付（實）**。③錯：預收起初記收益（虛），漏做調整會使應轉負債的部分**收入與淨利高估**，不是低估。④對：應收收入漏調會使應認列收入未入帳，**淨利低估**。故②④正確，選B。",
+    "elementarySummary": "預付像先付下一季房租，有時先記成資產、有時先記成費用，所以調整的借方不一定都一樣。應付是已花但還沒付，借費用；應收是已賺但還沒收，漏記會少算收入。",
+    "memory": "**預付借方不固定；應付借費用；漏調預收→利潤高估；漏調應收→利潤低估。**",
+    "concept": "**實帳戶**是資產、負債、權益；**虛帳戶**是收益與費損。**權責發生基礎**按發生期間認列收入費用而非僅按現金進出。",
+    "extension": "反向思考：若漏作的是**應付費用**期末調整，費用少記，淨利會**高估**；與漏作應收收入導致低估相反。",
+    "source": {
+      "originalExam": "115-09-2-05",
+      "originalImagePinnedSha256": "85e6398a3252c22a11455b5b7647d035ef6cd0bffe1887a4cf1010c58ec4e6aa",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學課本之版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學最終標準答案與更正說明待核實"
+    },
+    "highlightTerms": [
+      "實帳戶",
+      "虛帳戶",
+      "漏調預收→高估",
+      "漏調應收→低估",
+      "②④"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①不成立，預付使用資產法調整時會借費用（虛）；③不成立，收益法預收漏調會高估淨利，不能選①③。",
+        "elementary": "第一、三句都說錯了。",
+        "reason": "①不成立，預付使用資產法調整時會借費用（虛）；③不成立，收益法預收漏調會高估淨利，不能選①③。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "②應付調整借費用虛帳，④應收調整漏做使收益／淨利低估，兩句皆對；選B。",
+        "elementary": "第二跟第四句都對。",
+        "reason": "②應付調整借費用虛帳，④應收調整漏做使收益／淨利低估，兩句皆對；選B。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "雖包含②④，但混入錯誤①『預付調整借方一定實帳』，整組不正確。",
+        "elementary": "多選了錯誤的第一句。",
+        "reason": "雖包含②④，但混入錯誤①『預付調整借方一定實帳』，整組不正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "包含錯誤①和③，也未列出正確②，不能選。",
+        "elementary": "漏掉第二句，又加兩句錯的。",
+        "reason": "包含錯誤①和③，也未列出正確②，不能選。"
+      }
+    },
+    "accounting": {
+      "principle": "期末調整要符合權責發生：應付費用、應收收益、預付與預收的實轉虛／虛轉實。",
+      "accounts": [
+        "預付費用（資產）",
+        "費用（虛）",
+        "應付費用（負債）",
+        "應收收益（資產）",
+        "收益（虛）",
+        "預收收益（負債）"
+      ],
+      "journalEntry": "示意：應計應付『借：費用，貸：應付費用』；應計應收『借：應收收益，貸：收益』；已記收益的預收調整『借：收益，貸：預收收益』；初始記預付資產的使用部分『借：費用，貸：預付費用』。無題目金額，不編造數值。",
+      "calculation": "N/A（無指定金額或試題計算）",
+      "standardsStatus": "權責發生基礎會計教材章節版本待核對"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
