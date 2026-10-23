@@ -269,6 +269,33 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "imageSha256ReusedFromPreviouslyVerifiedFrozenManifest": "c2f2c57d0d65abc757c35e560f6ed8ce1114a452f9bae59e174e904fbb047f92",
+      "originalWebpViewedInThisReview": true,
+      "recomputedSteps": [
+        "設t=x+2，x=t−2",
+        "g(t−2)=4(t−2)³+3(t−2)²+2(t−2)+1",
+        "合併係數b=−24+3=−21，c=48−12+2=38",
+        "d=−32+12−4+1=−23，b+c=17，官方D"
+      ],
+      "allFourOptionsTeacherAndElementaryPresentAndLogicChecked": true,
+      "misconceptionNote": "x+2換元要整式把x改t−2，不是t+2；二次係數−21不可漏負號。",
+      "curriculumTopic": "多項式換元與恆等式係數",
+      "curriculumCodes": [
+        "A-10-3",
+        "A-10-4"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumEvidence": "Official Math B curriculum PDF P13-16 text; screenshot fetch cache miss; not an exact school textbook",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortBookEditionPage": "UNVERIFIED",
+      "initialBlindAnswerHistoryPreserved": true,
+      "fullIndependentTeachingReview": "PENDING",
+      "releaseApproved": false,
+      "evidence": "MATH_B_07_12_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

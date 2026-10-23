@@ -259,6 +259,32 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "imageSha256ReusedFromPreviouslyVerifiedFrozenManifest": "3c06c677c7362cbf22e792cdcbd990a584129b929d25cd63efb98037a390b7c4",
+      "originalWebpViewedInThisReview": true,
+      "recomputedSteps": [
+        "非甲有乙與丙兩支，單次P=2/3",
+        "題明言每次抽後放回，三次獨立",
+        "三次皆非甲：(2/3)³=8/27，官方C",
+        "補事件至少一次甲=1−8/27=19/27，正是D而非本題"
+      ],
+      "allFourOptionsTeacherAndElementaryPresentAndLogicChecked": true,
+      "misconceptionNote": "A=4/9只算兩次，D=19/27是補事件；不能把有放回說成不放回。",
+      "curriculumTopic": "獨立重複抽取與補事件",
+      "curriculumCodes": [
+        "D-11-6"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumEvidence": "Official Math B curriculum PDF P13-16 text; screenshot fetch cache miss; not an exact school textbook",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortBookEditionPage": "UNVERIFIED",
+      "initialBlindAnswerHistoryPreserved": true,
+      "fullIndependentTeachingReview": "PENDING",
+      "releaseApproved": false,
+      "evidence": "MATH_B_07_12_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
