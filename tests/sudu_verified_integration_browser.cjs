@@ -8,7 +8,8 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
  const page=await browser.newPage();
  try{
   await page.goto(base+'v4-115-multisubject-review-demo.html');
-  await page.locator('#verifiedYearNav').waitFor();
+  assert.equal(await page.locator('#verifiedYearNav').count(),0,'no obstructive four-link navigation');
+  assert.deepEqual(await page.locator('#yearSel option').evaluateAll(xs=>xs.map(x=>x.value)),['demo','115','114']);
   assert.equal(await page.locator('.opt').count(),4);
   assert.equal(await page.evaluate(()=>JSON.parse(document.getElementById('demoData').textContent).questions.length),35);
   const r=await page.request.get(base+'data/approved/progress.json');assert(r.ok());
@@ -31,36 +32,39 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     await page.setViewportSize({width,height});
     await page.goto(base+'v4-115-multisubject-review-demo.html?year='+year);
     await page.waitForFunction(()=>!document.body.classList.contains('verified-year-loading'));
-    assert.equal(await page.locator('#verifiedStatus').count(),0,'no large validation status card');
+    assert.equal(await page.locator('#verifiedStatus').count(),0,'no large status card');
+    assert.equal(await page.locator('#verifiedImagePreview').count(),0,'no separate preview gallery');
+    assert.equal(await page.locator('#verifiedPreviewToggle').count(),0,'no preview toggle bar');
+    assert.equal(await page.locator('#verifiedYearNav').count(),0,'no four-link bar');
+    assert.equal(await page.locator('#yearSel').inputValue(),year);
     if(data.approvedCount===0){
-     assert.equal(await page.locator('#studyView').isVisible(),false);
-     assert.equal(await page.locator('#reviewView').isVisible(),false);
      if(preview.imagePreviewCount){
-      await page.locator('#verifiedImagePreview').waitFor({state:'visible'});
-      assert.equal(await page.locator('#verifiedImagePreview[data-qa-preview="read-only"]').count(),1);
-      assert.equal(await page.locator('#verifiedImagePreview .opt').count(),0,'preview cannot grade');
-      const src=await page.locator('#previewQuestionCard img').first().getAttribute('src');
-      const qid=await page.locator('#previewQuestionCard img').first().getAttribute('data-canonical-id');
-      assert(src.endsWith('/'+qid+'.webp'),'same question number must match its WebP');
-      assert(await page.locator('#previewQuestionCard img').first().evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
+      await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
+      assert.equal(await page.locator('#studyView').isVisible(),true);
+      assert.equal(await page.locator('#answerCard').isVisible(),false);
+      assert.equal(await page.locator('#studyView .opt').count(),0,'image-only never exposes grading');
+      const first=preview.questions[0];
+      assert.equal(Number(await page.locator('#questionCard .qnum').innerText()),first.questionNumber);
+      assert.equal(await page.locator('#questionCard').getAttribute('data-canonical-id'),first.canonicalId);
+      const img=page.locator('#questionCard img').first();
+      assert.equal(await img.getAttribute('src'),'./'+first.image);
+      assert.equal(await img.getAttribute('data-canonical-id'),first.canonicalId);
+      assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0&&el.naturalHeight>0}));
+      if(preview.questions.length>1){
+       await page.locator('#nextBtn').click();
+       const second=preview.questions[1];
+       assert.equal(Number(await page.locator('#questionCard .qnum').innerText()),second.questionNumber);
+       assert.equal(await page.locator('#questionCard img').first().getAttribute('src'),'./'+second.image);
+      }
      }
     }else{
-     const subjects=await page.locator('#subjectSel option').allTextContents();
-     assert(subjects.length>0);
-     assert.equal(await page.locator('#verifiedImagePreview').isVisible(),false,'gallery must not block practice');
-     await page.locator('#verifiedPreviewToggle').waitFor();
-     await page.locator('#verifiedPreviewToggle').click();
-     assert.equal(await page.locator('#verifiedImagePreview').isVisible(),true);
-     assert.equal(await page.locator('#studyView').isVisible(),false);
-     const item=preview.questions.find(q=>!data.questions.some(v=>v.canonicalId===q.canonicalId));
-     if(item){
-       const first=page.locator('#previewQuestionCard img').first();
-       assert.equal(await first.getAttribute('src'),'./'+item.image);
-       assert.equal(await first.getAttribute('data-canonical-id'),item.canonicalId);
-       assert.equal(Number(await page.locator('#previewQuestionNumber').innerText()),item.questionNumber);
-     }
-     await page.locator('#verifiedPreviewToggle').click();
+     await page.locator('#questionCard img').first().waitFor();
      assert.equal(await page.locator('#studyView').isVisible(),true);
+     assert.equal(await page.locator('#studyView .opt').count(),4);
+     const first=data.questions[0];
+     assert.equal(Number(await page.locator('#questionCard .qnum').innerText()),first.id);
+     assert.equal(await page.locator('#questionCard img').first().getAttribute('src'),first.image);
+     assert.equal(await page.locator('#answerCard').isVisible(),true);
     }
     for(const theme of ['light','dark']){
      await page.evaluate(mode=>document.documentElement.dataset.theme=mode,theme);
@@ -69,6 +73,15 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     }
    }
   }
+  // 115 original-image audit is available ONLY as a single-question view in
+  // the existing question card, without an extra top block or answer leak.
+  await page.goto(base+'v4-115-multisubject-review-demo.html?year=115&view=images');
+  await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
+  assert.equal(await page.locator('#verifiedYearNav').count(),0);
+  assert.equal(await page.locator('#verifiedImagePreview').count(),0);
+  assert.equal(await page.locator('#answerCard').isVisible(),false);
+  assert.equal(await page.locator('#questionCard img').first().getAttribute('data-canonical-id'),
+    (await (await page.request.get(base+'data/approved/preview/115.json')).json()).questions[0].canonicalId);
   await page.goto(base+'question-bank-progress.html');
   await page.locator('#cards article.card').first().waitFor();
   assert.match(await page.locator('h1').innerText(),/題庫接入平台部署進度表/);

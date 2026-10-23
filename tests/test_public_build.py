@@ -1,5 +1,6 @@
 """A private database or student backup must never enter a public Pages artifact."""
 import importlib.util
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -37,6 +38,28 @@ class PublicBuildPrivacy(unittest.TestCase):
                 build.build()
                 published = [p.relative_to(build.ROOT / "_site").as_posix() for p in (build.ROOT / "_site").rglob("*") if p.is_file()]
                 self.assertEqual(sorted(published), [".nojekyll", "index.html", "sudu/data/index.json", "sudu/index.html"])
+            finally:
+                build.ROOT = previous
+
+    def test_v4_adapter_cache_buster_matches_public_js_bytes(self):
+        previous = build.ROOT
+        with tempfile.TemporaryDirectory() as tmp:
+            build.ROOT = Path(tmp)
+            content = {
+                "index.html": '<script id="catalog" type="application/json">[]</script>',
+                "sudu/v4-115-multisubject-review-demo.html": '<html><body><main>V4 demo</main></body></html>',
+                "sudu/verified-questions-runtime.js": "// verified single-question runtime v2\n",
+            }
+            for name, value in content.items():
+                p = build.ROOT / name
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(value)
+            try:
+                build.build()
+                page = (build.ROOT / "_site/sudu/v4-115-multisubject-review-demo.html").read_text()
+                expected = hashlib.sha256(content["sudu/verified-questions-runtime.js"].encode()).hexdigest()[:12]
+                self.assertIn(f'verified-questions-runtime.js?v={expected}', page)
+                self.assertEqual(page.count('verified-questions-runtime.js?v='), 1)
             finally:
                 build.ROOT = previous
 

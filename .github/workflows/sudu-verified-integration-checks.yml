@@ -8,6 +8,7 @@ on:
       - feature/115-math-b-audited-student-release-20261023
       - fix/fast-chromium-qa-20261023
       - fix/v4-inline-webp-reader-20261023
+      - fix/v4-single-question-only-20261023
   workflow_dispatch:
 permissions:
   contents: read
