@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-30",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 30,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-30.webp",
+  "imageSha256": "6978feb1ffc00354f8cf35383c25f48bcdc6194949677aed3ba6904105a0a9d8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始單題圖）",
+    "method": "逐題打開 GitHub 原始 WebP；檢查全部題幹A-D、符號與文字，並比對原始檔SHA256符合progress固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLUTION_BEFORE_CANDIDATE_READ_NOT_EXTERNAL_QA",
+    "notice": "獨立依原始單題WebP解題後比對候選；尚未直接回讀官方最終答案PDF與更正公告。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "keyConditions": [
+      "辰氏企業自行車製造商",
+      "短期成本項目與產量Q無關"
+    ],
+    "reasoningFromOriginalImage": "短期TFC總固定成本不會隨產量Q增減；TVC變動成本隨Q變，AFC=TFC/Q隨Q增加而下降，AC=TC/Q也依Q不同，故A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "短期有**總固定成本 TFC**（例如已承租且短期無法調整的廠房租金），在相關產量範圍內不管生產1台或更多台車，總額不因Q改變。**總變動成本 TVC**隨產量變；**平均固定成本 AFC=TFC/Q** 因分攤件數變多而下降；**平均成本 AC=(TFC+TVC)/Q** 也會受產量變動。因此本題問『與產量無關』應選A。",
+    "elementarySummary": "工廠租金每個月先固定付，例如這個月多做或少做幾台車，這筆『總租金』不會因數量變；但把租金分給每一台車算，做越多台，每台分攤越少。",
+    "memory": "**TFC總固定成本不變；AFC=TFC÷Q會變**。",
+    "concept": "固定是總額固定，不是每單位固定；成本需區分總成本與平均成本。",
+    "extension": "反向題：若工廠短期總固定成本12,000元，生產100台與200台時每台平均固定成本各是多少？題目沒給金額，這只是延伸練習，不能當本題已知。",
+    "source": {
+      "originalExam": "115-09-2-30",
+      "originalImagePinnedSha256": "6978feb1ffc00354f8cf35383c25f48bcdc6194949677aed3ba6904105a0a9d8",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案及更正公告仍待回讀"
+    },
+    "highlightTerms": [
+      "總固定成本",
+      "TFC",
+      "平均固定成本",
+      "AFC=TFC/Q",
+      "產量"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A總固定成本TFC在短期相關產量範圍內與Q無關，直接符合題目要求。",
+        "elementary": "這筆固定租金不管做幾台都先要付。",
+        "reason": "A總固定成本TFC在短期相關產量範圍內與Q無關，直接符合題目要求。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B變動成本TVC會隨生產數量與材料、計件人工等用量增加而改變，與產量有關。",
+        "elementary": "車做越多，通常用越多材料，花的錢會增加。",
+        "reason": "B變動成本TVC會隨生產數量與材料、計件人工等用量增加而改變，與產量有關。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C平均固定成本AFC=TFC/Q，固定總額分到不同Q，平均數會變；Q越多AFC越低。",
+        "elementary": "租金總額一樣，分給越多台車，每台要攤的錢越少。",
+        "reason": "C平均固定成本AFC=TFC/Q，固定總額分到不同Q，平均數會變；Q越多AFC越低。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D平均成本AC=TC/Q，包含分攤固定成本和變動成本，通常會隨產量而變，不是固定不動。",
+        "elementary": "每台平均花多少會因做的數量改變。",
+        "reason": "D平均成本AC=TC/Q，包含分攤固定成本和變動成本，通常會隨產量而變，不是固定不動。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
