@@ -1,3 +1,9 @@
+## 2026-10-23｜128題正式發布逐題證據門檻與分類稽核
+- 最新授權允許真正逐題完整教學與V4 UI驗收 PASS 後安全整合 main 並正式部署，但目前固定 128 題解說草稿、原圖及官方證據雖各128/128，`fullyAccepted=0`、本批`deployed=0`、dry-run releaseEligible=0/128；**不批次解鎖或偽造QA**。
+- 新的隔離腳本 `scripts/audit_preview_128_teaching_candidates.py` 嚴格比對逐題官方答案、WebP SHA、A-D教學、計算步驟、歷史警示、教學 digest、teacher/UI 審查文件 SHA 及 8種 RWD×2主題；最新[read-only QA #39956820856](https://github.com/homelux-huang/7581707/actions/runs/39956820856) SUCCESS（6+11測試）；完整接手文件 `TEACHING_RELEASE_EVIDENCE_GATE_20261023.md`。
+- 警示分為真正 AI/官答不同3題（商概07、數科33、經濟28），與現行字母相同卻仍有警示的21題（114國文2-10、115國文1-5/7-10、會計06/12/15），後者要逐題辨別來源，不能當21題都同樣錯解。完整發布必須另產生實際V4對應教學QA與8×2 UI證據，舊Demo Browser Smoke不能代替。
+- 本批前已核准主站 115 數學 B 02/03/04/09 共4題可作答，不等於草稿128已有4題完整教學QA。獨立分支成果不得蓋過其他 Session 最新 SHA；詳正式交接文件。
+
 ## 2026-10-23｜數學B第13–18題逐題原圖、圖表與算式核實
 - MB13–18原題目視、圖(13)/人口統計表(16)/LED(17)與答案A/D/D/C/C/C逐式吻合；數學B局部QA已18/25，詳見 `MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md`。第15模型不可當食品安全證據，第18題只算期望值。完整教學QA仍0。
 
