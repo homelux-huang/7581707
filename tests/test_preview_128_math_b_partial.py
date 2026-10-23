@@ -105,6 +105,36 @@ class MathBPartialQaTests(unittest.TestCase):
                 self.assertEqual(qa["independentTeachingReview"], "PENDING")
                 self.assertIs(record["studentReleaseApproved"], False)
 
+    def test_legacy_text_quarantine_for_math_with_diagrams(self):
+        """Candidate PDF text spill is not approved student option text."""
+        ids = [f"115-00-MB-{num:02d}" for num in (20, 21, 22, 23, 24, 25)]
+        ledger = self.progress.get("mathBLegacyTextQuarantine") or {}
+        self.assertEqual(ledger.get("affectedCount"), len(ids))
+        self.assertEqual(ledger.get("questionIds"), ids)
+        self.assertFalse(ledger.get("reOcrPerformedThisRound"))
+        self.assertEqual(ledger.get("newStudentReleases"), 0)
+        corpus = json.loads((ROOT / "sudu/data/years/115.json").read_text(encoding="utf-8"))
+        paper = next(p for p in corpus["papers"] if p["paper"] == "00-MB")
+        for qid in ids:
+            with self.subTest(qid=qid):
+                rec = json.loads((BASE / (qid + ".json")).read_text(encoding="utf-8"))
+                info = rec["qa"]["legacyCandidateTextRisk20261023"]
+                legacy = next(q for q in paper["questions"] if q["id"] == qid)
+                self.assertEqual(len(legacy["options"]), 4)
+                self.assertEqual(info["legacyQuestionId"], qid)
+                self.assertEqual(info["originalWebpPinnedSha256"], rec["imageSha256"])
+                self.assertEqual(info["legacyCorpus"], "sudu/data/years/115.json")
+                self.assertEqual(info["status"],
+                                 "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE")
+                self.assertTrue(info["originalImageAlreadyQaPassed"])
+                self.assertFalse(info["formalTextQaPass"])
+                self.assertFalse(info["textCandidateReExtractedOrReOcrThisRound"])
+                self.assertFalse(info["studentReleaseApproved"])
+                self.assertFalse(info["deploy"])
+                self.assertEqual(rec["qa"]["independentTeachingReview"], "PENDING")
+                self.assertIs(rec["studentReleaseApproved"], False)
+        self.assertEqual(self.progress["deployed"], 0)
+
     def test_seven_new_questions_independently_derived_numeric_values(self):
         # Reference equations transcribed from each original WebP and rederived
         # separately from draft step strings. These check examples, NOT full QA.

@@ -3432,5 +3432,25 @@
     "firstPassSolutionStatusRetained": true,
     "evidence": "MATH_B_25_OFFICIAL_STATUS_NOTICE_RECONCILIATION_20261023.md",
     "date": "2026-10-23"
+  },
+  "mathBLegacyTextQuarantine": {
+    "status": "6_TEXT_CANDIDATE_RISKS__RETAIN_IMAGE_WITHOUT_UNVERIFIED_TEXT",
+    "affectedCount": 6,
+    "questionIds": [
+      "115-00-MB-20",
+      "115-00-MB-21",
+      "115-00-MB-22",
+      "115-00-MB-23",
+      "115-00-MB-24",
+      "115-00-MB-25"
+    ],
+    "legacyCorpus": "sudu/data/years/115.json",
+    "evidenceDocument": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md",
+    "reOcrPerformedThisRound": false,
+    "newStudentReleases": 0,
+    "newTextQaPass": 0,
+    "notOriginalImageQA": false,
+    "remainingFullTeachingQa": "PENDING",
+    "date": "2026-10-23"
   }
 }
