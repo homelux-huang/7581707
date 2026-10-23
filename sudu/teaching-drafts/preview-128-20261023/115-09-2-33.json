@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-33",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 33,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-33.webp",
+  "imageSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原始單題圖）",
+    "method": "逐題打開 GitHub 原始 WebP；檢查全部題幹A-D、符號與文字，並比對原始檔SHA256符合progress固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_FINAL_OFFICIAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_SOLUTION_BEFORE_CANDIDATE_READ_NOT_EXTERNAL_QA",
+    "notice": "獨立依原始單題WebP解題後比對候選；尚未直接回讀官方最終答案PDF與更正公告。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-symbolic-calculation",
+    "keyConditions": [
+      "擁有產品價格制定權的獨占廠商",
+      "追求利潤極大化",
+      "①供給曲線、②需求彈性>1、③水平需求虧損歇業"
+    ],
+    "reasoningFromOriginalImage": "獨占者不存在對應單純價格的供給曲線所以①錯；一般正邊際成本下MR=MC>0，需求價格彈性絕對值>1的彈性區生產，②對；獨占面對向下傾斜需求而不是水平線，歇業判斷仍須比較收入與可變成本，③錯。B僅②。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**獨占**可制定價格但仍受需求曲線限制，不是想賣多貴就能賣出。①獨占廠商沒有一般完全競爭式、只憑價格就定供給量的單一供給曲線。②利潤最大化通常需**MR=MC**；在MC為正時MR＞0，獨占廠商會選擇需求價格彈性**絕對值大於1**的區段。③獨占面對向下傾斜的需求，而非水平；虧損也不能直接等同短期歇業，還要看能否支付變動成本。",
+    "elementarySummary": "只有一家賣的老闆可以決定標價，但太貴大家會少買。為了多賺錢，他通常不會選『降價卻讓總收入變少』的那段；如果賠錢，也要分清繼續賣能不能補一些固定費用。",
+    "memory": "**獨占無單一供給曲線；MC＞0時最適生產在需求彈性＞1區**。",
+    "concept": "MR=P(1−1/|Ed|)，當MC＞0且MR=MC時，需 |Ed|＞1；獨占短期停產看AVC等條件。",
+    "extension": "反向題：若廠商面對完全水平的需求曲線，它比較像獨占還是完全競爭？若MC=0，需求彈性大於1的結論是否還是嚴格大於？",
+    "source": {
+      "originalExam": "115-09-2-33",
+      "originalImagePinnedSha256": "cb6c043034ecbf9923d72e533028d318c27e7bfa4b1715a66c14d51586ddccce",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案及更正公告仍待回讀"
+    },
+    "highlightTerms": [
+      "獨占",
+      "需求彈性",
+      "MR=MC",
+      "|Ed|＞1",
+      "供給曲線",
+      "短期歇業"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A僅①，但一般獨占廠商沒有可獨立於需求的單一供給曲線，①不成立。",
+        "elementary": "獨占賣多少還要看客人願意買多少，不能像固定一條供給線那樣判。",
+        "reason": "A僅①，但一般獨占廠商沒有可獨立於需求的單一供給曲線，①不成立。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B僅②，利潤最大且MC為正時，MR必須正，獨占選需求富彈性的區域，②成立，正解。",
+        "elementary": "老闆會在降價能讓總收入增加的那段賣。",
+        "reason": "B僅②，利潤最大且MC為正時，MR必須正，獨占選需求富彈性的區域，②成立，正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C含①②，即使②正確，①獨占短期供給曲線的說法錯，因此整組不能選。",
+        "elementary": "一條對、一條錯，整組還是錯。",
+        "reason": "C含①②，即使②正確，①獨占短期供給曲線的說法錯，因此整組不能選。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D含②③，③認定獨占面對水平需求，混淆完全競爭，且有損失不等於立刻歇業，所以整組錯。",
+        "elementary": "獨占店家不是每家都只能照同一價賣，虧損也不一定馬上關。",
+        "reason": "D含②③，③認定獨占面對水平需求，混淆完全競爭，且有損失不等於立刻歇業，所以整組錯。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "廠商具有獨占定價權",
+        "以利潤極大化為目標",
+        "一般邊際成本MC＞0（推導嚴格大於1的前提）"
+      ],
+      "formula": "MR=P×(1−1/|Ed|)；MR=MC",
+      "formulaPurpose": "說明獨占廠商在正邊際成本下為何選在需求富彈性區段。",
+      "substitutionAndSteps": [
+        {
+          "formula": "利潤極大：MR=MC",
+          "why": "增加一件商品的收益與成本相等時是一般內部最適條件。"
+        },
+        {
+          "formula": "若MC＞0，則MR＞0",
+          "why": "最適時MR等於正的邊際成本。"
+        },
+        {
+          "formula": "MR=P×(1−1/|Ed|)，且P＞0",
+          "why": "獨占者的邊際收益與需求彈性之關係。"
+        },
+        {
+          "formula": "1−1/|Ed|＞0 ⇒ |Ed|＞1",
+          "why": "MR為正須括號為正，需求須有彈性。"
+        },
+        {
+          "formula": "因此②『需求彈性大於1』成立（指絕對值），候選B",
+          "why": "套用一般教材默認正邊際成本的獨占利潤最大化情境。"
+        }
+      ],
+      "result": "|Ed|＞1，僅②（B）",
+      "unit": "無單位（彈性係數）",
+      "matchingOption": "B",
+      "commonMistake": "將獨占的需求曲線當水平線，或把虧損等同立即短期歇業。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
