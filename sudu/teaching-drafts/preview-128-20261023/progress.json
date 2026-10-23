@@ -1697,6 +1697,23 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseForbidden": true
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "1964a3dbd282861f2408ebf09d0917d9d09f2090",
+      "batch": "CHINESE_EARLY_5_BULLETS",
+      "ids": [
+        "114-00-C-02",
+        "114-00-C-03",
+        "114-00-C-04",
+        "114-00-C-05",
+        "114-00-C-06"
+      ],
+      "actualNewShaChecks": 0,
+      "reason": "Earlier five were SHA+visually reviewed in previous checkpoint; this commit adds 3 unique key-point bullets per item",
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
+      "releaseForbidden": true
     }
   ],
   "chineseTeachingSupplement": {
@@ -1709,7 +1726,8 @@
     "officialFinalAnswerVerified": 0,
     "allHaveImageHashRechecked": true,
     "releaseAllowed": false,
-    "lastCheckpoint": "CHINESE_KEYPOINTS_3"
+    "lastCheckpoint": "CHINESE_KEYPOINTS_3",
+    "structureReadbackPending": false
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
