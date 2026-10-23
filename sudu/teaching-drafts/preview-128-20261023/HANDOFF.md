@@ -1,3 +1,6 @@
+## 2026-10-23｜數學B前6題原圖與逐步算式重算
+- MB01–06的圖/座標/韋達定理/斜率/二次不等式/中點/餘式逐步重算、四選項理由與官方B/A/A/C/B/D一致，連至數學B官方課綱N-10-10、A-11-2、R-10-3/4、A-10-2、N-10-3、A-10-5。這是局部數學教學QA 6/25；學校實際課本頁碼與逐題UI仍未核實；詳見 `MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md`。
+
 ## 2026-10-23｜數學B 02/03/04/09 直接看原題重新列式、修正現行官方證據用語（不發布）
 - 已由目前實際 WebP 題幹重新推導數學B 02=A、03=A、04=C、09=A，逐選項檢查並保存推算過程；未重做 OCR／裁圖，亦未重新計算本輪二進位 SHA 或直接重讀 TCTE PDF，沿用已有官方最終答案證據檔。
 - 修正4題 `answerComparison.notice` 與 `teaching.source.officialIssueExplanation` 舊『官方待回讀』現在式；先前文字完整保存於 `qa.mathContentRecheck20261023.previousNotice`、`previousOfficialIssueExplanation`，不改官方答案字母、原AI結論及 `stepByStep` bundle。

@@ -259,6 +259,32 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "D",
+      "imageSha256ReusedFromPreviouslyVerifiedFrozenManifest": "bbf46a7b80de52c10e23cd038d33401eb199a4626554c5c1b7f98f5673bb330f",
+      "originalWebpViewedInThisReview": true,
+      "recomputedSteps": [
+        "除式(x−1)(x−2)是二次→餘式R(x)=mx+n",
+        "f(1)=1−3+2−1+1=0→m+n=0",
+        "f(2)=16−24+8−2+1=−1→2m+n=−1",
+        "m=−1,n=1→R(x)=−x+1；兩根都代回吻合，官方D"
+      ],
+      "allFourOptionsTeacherAndElementaryPresentAndLogicChecked": true,
+      "misconceptionNote": "只代x=1會同時允許x−1及−x+1，必須另用x=2確認；先把f(2)計錯正負也會失準。",
+      "curriculumTopic": "除法原理與餘式定理",
+      "curriculumCodes": [
+        "A-10-5"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumEvidence": "Tech high school Math B official curriculum PDF P13-16 extracted text; screenshot tool returned cache miss; no textbook PDF claim",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortBookEditionPage": "UNVERIFIED",
+      "originalBlindAnswerHistoryPreserved": true,
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

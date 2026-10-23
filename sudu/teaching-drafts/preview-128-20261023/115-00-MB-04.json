@@ -289,6 +289,33 @@
       "deploy": false,
       "reviewEvidence": "MATH2_3_4_9_CONTENT_RECHECK_20261023.md",
       "date": "2026-10-23"
+    },
+    "mathBReasoningReview20261023": {
+      "status": "PASS_INDEPENDENT_RECOMPUTATION_AND_OPTION_MAPPING__FULL_TEACHING_QA_PENDING",
+      "officialOption": "C",
+      "imageSha256ReusedFromPreviouslyVerifiedFrozenManifest": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "originalWebpViewedInThisReview": true,
+      "recomputedSteps": [
+        "2x²+7x+3=(2x+1)(x+3)",
+        "零點為−3與−1/2，二次項係數為正",
+        "≤0解域−3≤x≤−1/2，故a=−3是整數、b=−1/2非整數",
+        "官方C；代x=−2得−3≤0驗算區間內確實成立"
+      ],
+      "allFourOptionsTeacherAndElementaryPresentAndLogicChecked": true,
+      "misconceptionNote": "負數大小排序容易誤判；≤包含零點；負的半數仍不是整數。",
+      "curriculumTopic": "一元二次不等式、因式分解",
+      "curriculumCodes": [
+        "A-10-2",
+        "A-10-4"
+      ],
+      "curriculumSourceUrl": "https://site.ssvs.tp.edu.tw/var/file/0/1000/img/2/12_math.pdf",
+      "curriculumEvidence": "Tech high school Math B official curriculum PDF P13-16 extracted text; screenshot tool returned cache miss; no textbook PDF claim",
+      "curriculumIsNotTextbook": true,
+      "schoolExamCohortBookEditionPage": "UNVERIFIED",
+      "originalBlindAnswerHistoryPreserved": true,
+      "fullIndependentTeachingReview": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

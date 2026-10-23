@@ -3305,5 +3305,25 @@
     "fullIndependentPedagogicalQaDelta": 0,
     "releaseDelta": 0,
     "meaning": "All 28 English questions independently rechecked for core answer reasoning and all A-D options (partial QA only); not comprehensive IPA, level labels, authentic textbooks, browser UI or release approval"
+  },
+  "partialMathBReviewLedger": {
+    "questionIds": [
+      "115-00-MB-01",
+      "115-00-MB-02",
+      "115-00-MB-03",
+      "115-00-MB-04",
+      "115-00-MB-05",
+      "115-00-MB-06"
+    ],
+    "reviewedQuestionCount": 6,
+    "scopeMathB": 25,
+    "sourceHead": "9b0c4cd6f28071e0915b3712465ed5d81ec74a3d",
+    "date": "2026-10-23",
+    "evidence": "MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md",
+    "method": "Original WebP visual checked plus independent numeric/formula verification; official answer was known so not blind solve",
+    "curriculumEdition": "108課綱技術型高中數學 B PDF, content codes from P13-16",
+    "schoolTextbookPageVerified": false,
+    "fullTeachingAcceptedDelta": 0,
+    "studentReleaseApprovedDelta": 0
   }
 }
