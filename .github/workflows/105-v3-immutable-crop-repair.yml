@@ -42,7 +42,7 @@ jobs:
           import hashlib, json, pathlib
           base=pathlib.Path('sudu/data/processed/105/qa-drafts')
           d=json.loads((base/'UNVERIFIED_105_GAPS_V3_20261023.json').read_text())
-          assert len(d['items'])==5 and d['newImageQaPass']==0 and d['newAnswerVerified']==0
+          assert len(d['items'])==5 and d['imageQaPassAdded']==0 and d['answerVerifiedAdded']==0
           assert not d['integrationReady']
           for row in d['items']:
               f=pathlib.Path(row['v3CandidateWebp'])
