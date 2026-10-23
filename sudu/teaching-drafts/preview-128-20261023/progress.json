@@ -3337,5 +3337,59 @@
     "schoolTextbookPageVerified": false,
     "fullTeachingAcceptedDelta": 0,
     "studentReleaseApprovedDelta": 0
+  },
+  "partialMathBTeachingReviewLedger": {
+    "status": "25_MATH_B_PARTIAL_IMAGE_AND_OPTION_CALCULATION_REVIEWS__NO_FULL_QA_RELEASE",
+    "scopeTotalMathB": 25,
+    "reviewedCount": 25,
+    "reviewedQuestionIds": [
+      "115-00-MB-01",
+      "115-00-MB-02",
+      "115-00-MB-03",
+      "115-00-MB-04",
+      "115-00-MB-05",
+      "115-00-MB-06",
+      "115-00-MB-07",
+      "115-00-MB-08",
+      "115-00-MB-09",
+      "115-00-MB-10",
+      "115-00-MB-11",
+      "115-00-MB-12",
+      "115-00-MB-13",
+      "115-00-MB-14",
+      "115-00-MB-15",
+      "115-00-MB-16",
+      "115-00-MB-17",
+      "115-00-MB-18",
+      "115-00-MB-19",
+      "115-00-MB-20",
+      "115-00-MB-21",
+      "115-00-MB-22",
+      "115-00-MB-23",
+      "115-00-MB-24",
+      "115-00-MB-25"
+    ],
+    "batchDocuments": [
+      "MATH_B_01_06_INDEPENDENT_CALC_QA_20261023.md",
+      "MATH_B_07_12_INDEPENDENT_CALC_QA_20261023.md",
+      "MATH_B_13_18_INDEPENDENT_CALC_QA_20261023.md",
+      "MATH_B_19_25_INDEPENDENT_CALC_QA_20261023.md"
+    ],
+    "sourceHeadBeforeLastBatch": "19686b3c1067097b4458fbfc51dbf958938986e5",
+    "lastBatchIds": [
+      "115-00-MB-19",
+      "115-00-MB-20",
+      "115-00-MB-21",
+      "115-00-MB-22",
+      "115-00-MB-23",
+      "115-00-MB-24",
+      "115-00-MB-25"
+    ],
+    "officialAnswerReverifiedThisBatch": 0,
+    "newFullTeachingQaPass": 0,
+    "newStudentReleases": 0,
+    "schoolBookVersionAndPage": "UNVERIFIED",
+    "real128QuestionUiBrowser": "PENDING",
+    "date": "2026-10-23"
   }
 }

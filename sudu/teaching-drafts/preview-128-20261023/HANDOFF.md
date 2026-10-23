@@ -1,3 +1,7 @@
+## 2026-10-23｜數學B19–25直接原圖獨立重算，25題計算與選項局部QA已到齊
+- 本批實際開啟MB19–25原WebP，逐式重算 B/A/A/B/B/C/C，保留B19線性插值只是近似、B20正弦定理邊角配對、B21>4限定、B22補事件、B23只有一人折扣、B24上取整與B25半徑平方。四選項高中／國小原因逐題核對。詳 `MATH_B_19_25_INDEPENDENT_CALC_QA_20261023.md`。
+- 數學B固定25/25僅達**原題、算式與選項局部教學QA**，不是整題正式教學QA；彰化高商114學年度教材實際頁數待核、V4每題8尺寸×2主題未實測。全128題正式完整教學QA0、草稿新增部署0，未解鎖任何release旗標。
+
 ## 2026-10-23｜128題正式發布逐題證據門檻與分類稽核
 - 最新授權允許真正逐題完整教學與V4 UI驗收 PASS 後安全整合 main 並正式部署，但目前固定 128 題解說草稿、原圖及官方證據雖各128/128，`fullyAccepted=0`、本批`deployed=0`、dry-run releaseEligible=0/128；**不批次解鎖或偽造QA**。
 - 新的隔離腳本 `scripts/audit_preview_128_teaching_candidates.py` 嚴格比對逐題官方答案、WebP SHA、A-D教學、計算步驟、歷史警示、教學 digest、teacher/UI 審查文件 SHA 及 8種 RWD×2主題；最新[read-only QA #39956820856](https://github.com/homelux-huang/7581707/actions/runs/39956820856) SUCCESS（6+11測試）；完整接手文件 `TEACHING_RELEASE_EVIDENCE_GATE_20261023.md`。
