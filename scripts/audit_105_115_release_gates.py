@@ -45,14 +45,18 @@ def audit(year):
             image_pass.append(qid)
     pending=sorted(set(ids)-set(image_pass))
     if pending: report["blockers"].append("image_visual_qa_pending:"+str(len(pending)))
-    qa_answers=sum(bool(q.get("answerVerified")) for q in qs)
-    qa_questions=sum(bool(q.get("questionVerified")) for q in qs)
+    qa_answers=sum(q.get("answerVerified") is True for q in qs)
+    qa_questions=sum(q.get("questionVerified") is True for q in qs)
+    if any(q.get("integrationReady") is not True for q in qs):
+        report["blockers"].append("question_level_integration_not_ready")
     if qa_answers!=n:report["blockers"].append("official_final_answer_qa_pending:"+str(n-qa_answers))
     if qa_questions!=n:report["blockers"].append("question_text_qa_pending:"+str(n-qa_questions))
     shared=manifest.get("sharedMaterialCrops",[])
     shared_pending=[s.get("sharedMaterialId") for s in shared if s.get("qaStatus")!="PASS"]
     if shared_pending:report["blockers"].append("shared_material_qa_pending:"+str(len(shared_pending)))
     if inv.get("integrationReady") is not True:report["blockers"].append("inventory_not_release_ready")
+    if len(set((q.get("year"),q.get("paperCode"),q.get("originalQuestionNumber")) for q in qs))!=n:
+        report["blockers"].append("duplicate_canonical_question_identity")
     # G0-G6 evidence artifacts are mandatory even when the manifest says ready.
     # File existence is a necessary condition, never sufficient for QA PASS.
     for required in ("ocr-raw-candidates.json", "VISUAL_QA.json",
