@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-03",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 3,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-03.webp",
+  "imageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐張觀看 GitHub 原始單題 WebP；實際確認題號、完整題幹、A～D 與無鄰題／表格遺漏；重新計算 WebP SHA256 與固定清單一致",
+    "ocrIssues": [],
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "keyConditions": [
+      "treats all her students",
+      "giving every student the same opportunity",
+      "succeed"
+    ],
+    "reasoningFromOriginalImage": "對所有學生提供相同成功機會，表示公平、一視同仁地對待；副詞 equally 修飾 treats。",
+    "formulaRequired": false,
+    "reasoningRecordedBeforeCandidateRead": true,
+    "officialFinalStatus": "PENDING_FINAL_PDF_AND_ISSUE_EXPLANATION"
+  },
+  "teaching": {
+    "teacherSummary": "**treats** 是動詞，空格需放修飾動詞的**副詞**。由 **every student the same opportunity** 可知老師給每個學生相同機會，選 **equally（一視同仁地）**；相同機會不一定代表每人最終成績相同。",
+    "elementarySummary": "老師讓每個小朋友都有機會回答、學習，不因為喜歡誰就偏心，所以叫 **equally**，也就是公平地對待。",
+    "memory": "**same opportunity → equally**；公平給機會，不等於結果全一樣。",
+    "concept": "英文**副詞修飾動詞**：treat + someone + equally；題目的 same opportunity 是判斷意義的主要線索。注意 equally 強調同等對待，而不是保證同樣結果。",
+    "extension": "反向思考：若改成「The teacher gives more opportunities only to her favorites」，便不是 **equally**；想一想『公平提供機會』和『強迫成績都一樣』有什麼不同。",
+    "source": {
+      "originalExam": "115-00-E-03",
+      "originalImagePinnedSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "treats",
+      "equally",
+      "the same opportunity"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**carelessly** 是粗心地。老師粗心處理學生事務，不代表將每人視為相同；與 same opportunity 的正面公平線索衝突。",
+        "elementary": "粗心會忘東忘西，不是公平對大家。",
+        "reason": "**carelessly** 是粗心地。老師粗心處理學生事務，不代表將每人視為相同；與 same opportunity 的正面公平線索衝突。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**equally** 表同等地、公平地；treat all students equally 是固定而自然的搭配，呼應每人有同樣機會。",
+        "elementary": "每個人都輪得到，不偏心，就是 equally。",
+        "reason": "**equally** 表同等地、公平地；treat all students equally 是固定而自然的搭配，呼應每人有同樣機會。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**instantly** 是立即地，只描述速度，不說明學生是否獲得同等機會。",
+        "elementary": "做得很快不一定公平。",
+        "reason": "**instantly** 是立即地，只描述速度，不說明學生是否獲得同等機會。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**silently** 是安靜地，描述聲音方式；就算老師很安靜，也不能證明一視同仁。",
+        "elementary": "不說話和對大家公平是兩回事。",
+        "reason": "**silently** 是安靜地，描述聲音方式；就算老師很安靜，也不能證明一視同仁。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "這位老師一視同仁地對待所有學生，讓每位學生都有相同的成功機會。",
+      "answerWord": "equally",
+      "pronunciationIPA": "/ˈiːkwəli/",
+      "optionMeaningZh": {
+        "A": "粗心地",
+        "B": "平等地／一視同仁地",
+        "C": "立即地",
+        "D": "安靜地"
+      },
+      "synonyms": {
+        "初級": [
+          "fairly（公平地）"
+        ],
+        "中級": [
+          "evenly（均等地）"
+        ],
+        "高級": [
+          "impartially（不偏袒地）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "unfairly（不公平地）"
+        ],
+        "中級": [
+          "unequally（不平等地）"
+        ],
+        "高級": [
+          "preferentially（偏向某一方地；語境相反）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "exampleEnglish": "The coach treated every player equally during practice.",
+      "exampleChinese": "教練在練習時一視同仁地對待每位球員。",
+      "exampleHighlightedSurfaceForm": "equally",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
