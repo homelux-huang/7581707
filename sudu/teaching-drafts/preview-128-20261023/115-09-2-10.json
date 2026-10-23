@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-10",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 10,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-10.webp",
+  "imageSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看既有單題WebP、核對題號、所有選項與數字圖表，重新計算圖片位元組SHA256與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有OCR在選項D後混入下一頁頁首，原圖D僅②④⑤。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖先解題後讀候選；官方最終答案PDF及更正仍待直接核實。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_MATCHES_CANDIDATE_PENDING_FINAL_QA"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "判我國營業稅敘述何者錯誤：①進口收貨人/持有人納稅；②無銷售額免申報；③自用乘人小車不得抵進項；④只能單數月申報；⑤5-10%由立法院核定。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "①依營業稅法第2條正確。②第35條規定一般營業人不論有無銷售額均須申報，錯。③第19條自用乘人小汽車不得扣抵進項，對。④零稅率外銷可申請按月申報，非只能單數月，錯。⑤第10條徵收率由行政院定之而非立法院，錯。題目問錯的，因此②④⑤、選D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "①依營業稅法第2條正確。②第35條規定一般營業人不論有無銷售額均須申報，錯。③第19條自用乘人小汽車不得扣抵進項，對。④零稅率外銷可申請按月申報，非只能單數月，錯。⑤第10條徵收率由行政院定之而非立法院，錯。題目問錯的，因此②④⑤、選D。",
+    "elementarySummary": "就算公司當期沒賣東西也要依法申報；有出口的公司可申請每個月報；定實際稅率的是行政院。第二、第四、第五句才錯。",
+    "memory": "錯②④⑤：無銷售仍報、零稅率可按月、稅率行政院定。",
+    "concept": "《加值型及非加值型營業稅法》第2、10、19、35條，以及申報規則的例外。",
+    "extension": "反向思考：把④改成『原則每二月報一次，出口零稅率得申請按月』是否正確？",
+    "source": {
+      "originalExam": "115-09-2-10",
+      "originalImagePinnedSha256": "269cc3631747d8ef14e44923a1e9eeb1163104f9daa7d8f8a0e4e06216053de8",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計教材版本、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核",
+      "independentlyCheckedLawSources": [
+        "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006082&kw=51-T",
+        "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM"
+      ],
+      "lawVerificationScope": "法規與考試官方答案為不同的核實工作"
+    },
+    "highlightTerms": [
+      "②④⑤",
+      "不論有無銷售額",
+      "零稅率按月",
+      "行政院定徵收率"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "把①③這兩個合法敘述當錯誤，且漏④⑤，不能選。",
+        "elementary": "第一和第三句其實是對的。",
+        "reason": "把①③這兩個合法敘述當錯誤，且漏④⑤，不能選。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "①正確，不該列錯；真正錯的②又沒選。",
+        "elementary": "第一句對，第二句錯。",
+        "reason": "①正確，不該列錯；真正錯的②又沒選。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "②④確實錯，但③正確，不應混入，且漏了⑤。",
+        "elementary": "第三句不是錯句。",
+        "reason": "②④確實錯，但③正確，不應混入，且漏了⑤。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "②、④、⑤都違反第35、10條的申報與核定規則，是全部錯誤項。",
+        "elementary": "第二、四、五句都說錯。",
+        "reason": "②、④、⑤都違反第35、10條的申報與核定規則，是全部錯誤項。"
+      }
+    },
+    "accounting": {
+      "principle": "《加值型及非加值型營業稅法》第2、10、19、35條，以及申報規則的例外。",
+      "accounts": [
+        "銷項稅額",
+        "進項稅額",
+        "應納營業稅"
+      ],
+      "journalEntry": "N/A（純法規辨識，無具體會計分錄）",
+      "calculation": "N/A（沒有題目要求的數值運算）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
