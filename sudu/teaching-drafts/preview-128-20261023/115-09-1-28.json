@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-28",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 28,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-28.webp",
+  "imageSha256": "406eaa84ccc681598d20d6e2bdbb1726c97ee9cf5b6b44f2418a85cccc702487",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。是否全雙工取決於硬體和自動協商；題目限定一般個人電腦預設狀態。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "串列傳輸",
+      "全雙工＝同時傳送接收",
+      "PS/2 / VGA / HDMI / 網卡接交換器"
+    ],
+    "reasoningFromOriginalImage": "網路卡與交換器一般協商為全雙工乙太網路，同一時間可以傳送與接收；資訊經鏈路以串列方式傳輸。PS/2雖是串列卻不是典型全雙工；VGA是類比視訊非典型串列；HDMI視訊傳輸主要單向。因此D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "兩個條件要**同時成立**：**串列**表示按時序傳遞資料，**全雙工 full-duplex** 是兩端可同時收與送。一般現代乙太網路卡接交換器支援全雙工，因此D符合。**PS/2** 也是串列協定，但裝置與主機不能像全雙工網路同時任意雙向傳送；**VGA** 不是本題的串列全雙工方式；**HDMI** 主視訊資料由來源端送顯示端。",
+    "elementarySummary": "像兩個人都能同時說話也都能聽見，叫全雙工。電腦用網路線接交換器，可以邊送資料邊收資料，所以選D。",
+    "memory": "**網卡＋交換器→一般全雙工；PS/2串列但非全雙工**。",
+    "concept": "單工只單向、半雙工雙向輪流、全雙工雙向同時；物理連接和設備協商設定也影響實際是否全雙工。",
+    "extension": "反向題：兩支對講機一次只能一個人按鍵說話，屬於半雙工還是全雙工？若Ethernet端點協商為half duplex還能選D嗎？",
+    "source": {
+      "originalExam": "115-09-1-28",
+      "originalImagePinnedSha256": "406eaa84ccc681598d20d6e2bdbb1726c97ee9cf5b6b44f2418a85cccc702487",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "是否全雙工取決於硬體和自動協商；題目限定一般個人電腦預設狀態。"
+    },
+    "highlightTerms": [
+      "串列傳輸",
+      "全雙工",
+      "網卡",
+      "交換器",
+      "PS/2",
+      "HDMI"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A PS/2鍵盤屬同步串列介面，但一般不提供可同時雙向傳送資料的全雙工方式，無法同時滿足兩條件。",
+        "elementary": "鍵盤的線可一個個傳資料，但不等於兩邊都能同時講話。",
+        "reason": "A PS/2鍵盤屬同步串列介面，但一般不提供可同時雙向傳送資料的全雙工方式，無法同時滿足兩條件。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B VGA主要傳輸類比視訊分量訊號到螢幕，不屬此題所指的串列且全雙工資料傳輸。",
+        "elementary": "VGA是送畫面給螢幕，不是互相同時傳資料。",
+        "reason": "B VGA主要傳輸類比視訊分量訊號到螢幕，不屬此題所指的串列且全雙工資料傳輸。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C HDMI使用高速差動序列資料通道傳視訊，但主要是來源端送畫面到投影機，不能直接視為一般全雙工視訊鏈路。",
+        "elementary": "筆電把畫面送投影機，投影機不是同時把另一個畫面傳回。",
+        "reason": "C HDMI使用高速差動序列資料通道傳視訊，但主要是來源端送畫面到投影機，不能直接視為一般全雙工視訊鏈路。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D網卡接交換器在一般可支援且協商為全雙工的乙太網路連線，可同時傳送與接收資料，符合串列＋全雙工。",
+        "elementary": "網路卡可以一邊送資料、一邊收資料，就是題目要的。",
+        "reason": "D網卡接交換器在一般可支援且協商為全雙工的乙太網路連線，可同時傳送與接收資料，符合串列＋全雙工。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
