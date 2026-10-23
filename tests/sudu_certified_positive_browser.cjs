@@ -58,7 +58,10 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    await page.locator('#studyView .opt[data-a="B"]').click();
    await page.locator('#studyView .option-detail').first().waitFor();
    assert.match(await page.locator('#answerCard').innerText(),/國小學生也聽得懂/);
-   assert.match(await page.locator('#answerCard').innerText(),/考題計算式/);
+   assert.equal(await page.locator('#guideCard .guide-block h3').first().innerText(),'考題計算式','worked math is first in guide');
+   assert.equal(await page.locator('#correctAnswer .calculation-step').count(),0,'calculation no longer duplicates correct option');
+   assert(await page.locator('#guideCard .calculation-step').count()>=5,'full worked steps retained');
+   assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'no memory card in approved year');
    const wrong=await page.locator('#studyView .opt.wrong').count();
    assert(wrong>=1,'selected wrong answer should be styled red');
    await page.locator('#nextBtn').click();
@@ -66,8 +69,9 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    assert(await page.locator('#nextBtn').isDisabled());
    await page.locator('#studyView .opt[data-a="C"]').click();
    await page.locator('#studyView .option-detail').first().waitFor();
-   assert(!/考題計算式/.test(await page.locator('#answerCard').innerText()),
-      'Non-calculating question must not render empty calculation block');
+   assert.equal(await page.locator('#guideCard .calculation-step').count(),0,
+      'Non-calculating question must not render an empty calculation block');
+   assert.equal((await page.locator('#guideCard .guide-block h3').allTextContents()).includes('考題計算式'),false);
    for(const theme of ['light','dark']){
     await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
     const d=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));
