@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""G3-only: 115 business-management paper 00-MB Q01-25 FINAL official answers.
+"""G3-only: 115 common subject Math B 00-MB Q01-25 FINAL official answers.
 
 Verified visually against the official final-answer WebP derived from the
-published TCTE PDF and the official 115 index saying "4-09-1 未提出疑義".
+published TCTE PDF and the official 115 index saying "4-00-MB 未提出疑義".
 Every value has an independently recorded manual image read + SHA-bound source.
 Preserves G1/G2/questionVerified/old QA image work and release blockers.
 This program NEVER independently marks any image or OCR QA PASS.
