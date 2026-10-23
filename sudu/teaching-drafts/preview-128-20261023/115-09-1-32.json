@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-32",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 32,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-32.webp",
+  "imageSha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。雲端即時同步需網路與編輯權限；不能保證任何離線條件下都即時。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "家庭旅行共同排程",
+      "手機平板筆電同步查看和編輯",
+      "最方便且即時"
+    ],
+    "reasoningFromOriginalImage": "雲端硬碟共享行程文件、設定編輯權限後，一份行程能由家人在多裝置存取編輯；電郵、相簿圖片、藍牙檔案傳輸不能讓大家像共用檔案般即時協作。因此C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "本題重點**多人、跨裝置、共同編輯、即時更新**。雲端硬碟可存**同一份行程檔**並透過權限控制、連結共享，支援有網路時的同步與協作。Email附件易產生多個版本；截圖無法直接編輯原始路線；藍牙依距離，傳完後不會自動合併各人修改。",
+    "elementarySummary": "全家要一起改旅遊計畫，就把同一份檔案放雲端、給大家可以編輯的連結。不用每個人一直傳照片，不會搞不清楚哪份最新版。",
+    "memory": "**多人跨裝置共同改→雲端硬碟＋權限＋分享連結**。",
+    "concept": "即時協作和『傳送檔案給別人』不同；權限要給需要編輯者，而非全部公開。",
+    "extension": "反向題：若只想讓親戚看行程、不讓他修改，分享雲端檔案時應選檢視還是編輯權限？若完全沒有網路連線，還能保證即時同步嗎？",
+    "source": {
+      "originalExam": "115-09-1-32",
+      "originalImagePinnedSha256": "5fc53d27531c283f829e7e3e76c453d16615b8e82657c39ffc1ecbb66725c850",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "雲端即時同步需網路與編輯權限；不能保證任何離線條件下都即時。"
+    },
+    "highlightTerms": [
+      "雲端硬碟",
+      "權限設定",
+      "共享連結",
+      "跨裝置",
+      "即時編輯"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A即時寄Email可以告知行程，但每次修改要重寄，附件版本容易分歧，無法取代同一份雲端即時共編。",
+        "elementary": "一直寄信，大家可能看到舊版。",
+        "reason": "A即時寄Email可以告知行程，但每次修改要重寄，附件版本容易分歧，無法取代同一份雲端即時共編。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B分享相簿截圖有助展示，但截圖不是原始可編輯路線／景點資料，修改更新不即時。",
+        "elementary": "照片看得見路線，卻不能直接改那份行程。",
+        "reason": "B分享相簿截圖有助展示，但截圖不是原始可編輯路線／景點資料，修改更新不即時。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C上傳雲端並設定權限共享連結，可由手機、平板、筆電看同份檔案與共同修改，最符合需求。",
+        "elementary": "大家一起改同一份雲端檔案最方便。",
+        "reason": "C上傳雲端並設定權限共享連結，可由手機、平板、筆電看同份檔案與共同修改，最符合需求。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D藍牙適合近距離傳檔，不能讓分散的家人遠距離同步即時編輯，檔案仍各自分開。",
+        "elementary": "藍牙像附近傳照片，不能大家在不同地方一起改。",
+        "reason": "D藍牙適合近距離傳檔，不能讓分散的家人遠距離同步即時編輯，檔案仍各自分開。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
