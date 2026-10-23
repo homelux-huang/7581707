@@ -249,6 +249,21 @@
       "fullIndependentTeachingQAAccepted": false,
       "releaseApproved": false,
       "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    },
+    "archivedAnswerPageCrossCheck": {
+      "status": "GITHUB_ARCHIVE_IMAGE_MATCHES_CANDIDATE_NOT_FINAL_APPROVAL",
+      "paper": "115/00-MB",
+      "printedNumber": 7,
+      "archivedAnswerVisible": "B",
+      "archivedImage": "data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+      "archivedImageSha256Verified": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+      "originalPdfShaRecordedNotRedownloaded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "originalSourceUrl": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "independentlyReviewedCorrections": false,
+      "officialFinalCorrectionVerified": false,
+      "fullTeachingQaAccepted": false,
+      "releaseApproved": false,
+      "evidence": "ARCHIVED_ANSWER_IMAGE_LAST_5_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

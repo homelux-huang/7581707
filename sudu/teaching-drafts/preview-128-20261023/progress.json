@@ -1904,6 +1904,17 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseChange": 0
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "4cb5e171818bfe4343c1347632e6baddeb114356",
+      "batch": "ARCHIVED_OFFICIAL_ANSWER_09_2_MB_LAST_5",
+      "newArchiveMatches": 5,
+      "archiveMatchedTotal": 15,
+      "questionImageShaRechecksAdded": 0,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
+      "releaseChange": 0
     }
   ],
   "chineseTeachingSupplement": {
@@ -1928,7 +1939,7 @@
     "notYetRecheckedThisCycle": 95
   },
   "archivedAnswerImageCrossCheck": {
-    "count": 10,
+    "count": 15,
     "ids": [
       "115-09-1-01",
       "115-09-1-03",
@@ -1939,19 +1950,32 @@
       "115-09-2-06",
       "115-09-2-12",
       "115-09-2-15",
-      "115-09-2-25"
+      "115-09-2-25",
+      "115-09-2-26",
+      "115-09-2-27",
+      "115-09-2-28",
+      "115-09-2-29",
+      "115-00-MB-07"
     ],
     "paperCounts": {
       "115/09-1": 5,
-      "115/09-2": 5
+      "115/09-2": 9,
+      "115/00-MB": 1
     },
     "kind": "ARCHIVED_WEBP_CANDIDATE_VISUAL_MATCH_NON_FINAL",
     "sourceWebpSha256Verified": {
       "115/09-1": "58b27b8b03e3a9a7fd7ed0edd9fcab916e51fa98d01c0509f74c38e2de4b37c9",
-      "115/09-2": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67"
+      "115/09-2": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+      "115/00-MB": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d"
     },
     "officialFinalAndCorrectionsVerified": 0,
     "fullTeachingQaAccepted": 0,
-    "releaseApproved": 0
+    "releaseApproved": 0,
+    "evidenceDocuments": [
+      "ARCHIVED_ANSWER_IMAGE_09-1_5_20261023.md",
+      "ARCHIVED_ANSWER_IMAGE_09-2_A_5_20261023.md",
+      "ARCHIVED_ANSWER_IMAGE_LAST_5_20261023.md"
+    ],
+    "notice": "Verifiable archived official answer-sheet page rendered WebPs; original PDFs NOT re-downloaded during this round; correction explanation documents NOT reviewed; 15 matches only."
   }
 }
