@@ -76,6 +76,28 @@ def audit(year):
     if len(set(identities)) != n:
         blocks.append('duplicate_canonical_question_identity')
 
+    # Hash actual checked-out bytes, not only two matching claims in JSON.
+    asset_cache = {}
+
+    def asset_matches(rel, expected):
+        key = (rel, expected)
+        if key in asset_cache:
+            return asset_cache[key]
+        valid = False
+        if isinstance(rel, str) and isinstance(expected, str) and len(expected) == 64:
+            try:
+                path = (ROOT / rel).resolve()
+                if path.is_relative_to(ROOT.resolve()) and path.is_file():
+                    digest = hashlib.sha256()
+                    with path.open('rb') as asset:
+                        for chunk in iter(lambda: asset.read(1024 * 1024), b''):
+                            digest.update(chunk)
+                    valid = digest.hexdigest() == expected
+            except (OSError, ValueError):
+                pass
+        asset_cache[key] = valid
+        return valid
+
     image_pass = []
     for q in qs:
         qid = q['questionId']
@@ -95,7 +117,8 @@ def audit(year):
                 vi.get('reviewedWebpSha256') or vi.get('candidateSha256'))
         vpass = vi.get('status', vi.get('result')) == 'PASS'
         claimed_pass = im.get('qaStatus') == 'PASS'
-        good = (claimed_pass and source_ok and isinstance(sha, str) and len(sha) == 64
+        good = (claimed_pass and source_ok and asset_matches(im.get('source'), source_sha)
+                and asset_matches(im.get('output'), sha) and isinstance(sha, str) and len(sha) == 64
                 and evidence.get('reviewedSha256') == sha
                 and bool(evidence.get('reference')) and vpass and vsha == sha)
         if good:
@@ -167,6 +190,10 @@ def audit(year):
         if (item.get('qaStatus') == 'PASS' and shared_source_sha and evidence_source_sha
                 and shared_source_sha != evidence_source_sha):
             blocks.append('shared_material_source_sha_mismatch:' + str(sid))
+        if (item.get('qaStatus') == 'PASS' and
+                (not asset_matches(item.get('output'), sha) or
+                 not asset_matches(item.get('source'), shared_source_sha))):
+            blocks.append('shared_material_asset_sha_mismatch:' + str(sid))
         links = item.get('questionIds')
         if isinstance(links, list) and any(qid not in ids_set for qid in links):
             blocks.append('shared_material_unknown_question:' + str(sid))
