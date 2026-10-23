@@ -1,14 +1,14 @@
 {
   "year": 106,
-  "passCount": 6,
+  "passCount": 12,
   "items": [
     {
       "questionId": "106-00-C-01",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-01.webp",
+      "candidateSha256": "731809f11a6c3eb34d9679996e8708d5edd8fd5b82023f125b2d1647bd8208d4",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -19,16 +19,17 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-02",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-02.webp",
+      "candidateSha256": "e81d343e340b6231427a8ce66f613ee8b13b3eab156b45b73d5cbea84a270565",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -39,16 +40,17 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-03",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-03.webp",
+      "candidateSha256": "9f437bea804d393fe604e2301f7997390cd7b275d3b51a243e117a4316d4090c",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -59,16 +61,17 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-04",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-04.webp",
+      "candidateSha256": "cdd9903d60297abb4b325482f26b7ca4cf348a34a3388269aaf896c9126d9fcb",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -79,16 +82,17 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-05",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-05.webp",
+      "candidateSha256": "d9d0a870f96ea09f919b27577d6c13a5311a99b0eaa63860727e7f5f21c7bc70",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -99,16 +103,17 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-06",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PASS",
+      "sourcePage": 2,
+      "sourceWebp": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-06.webp",
+      "candidateSha256": "91f3dda70dcaa7ad75c96528c65f40925af69d69fb31353b9ac01918bb92c26c",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -119,8 +124,9 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+      "reviewedAt": "2026-10-23"
     },
     {
       "questionId": "106-00-C-07",

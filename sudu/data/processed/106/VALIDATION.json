@@ -1,7 +1,7 @@
 {
   "year": 106,
   "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
-  "imageVisualQaPass": 6,
+  "imageVisualQaPass": 12,
   "answerOfficialFinalVerified": 0,
   "ocrTextVerified": 6,
   "officialExpectedQuestionCountsConfirmed": false,
@@ -13,12 +13,6 @@
       "numberedAnchors": 22,
       "imageDrafts": 22,
       "unresolvedAnchorNumbers": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
         14,
         15,
         16,
@@ -35,7 +29,15 @@
       "officialAnswerTextKeys": 38,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualVisualAnchorRecoveredNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     "00-E": {
       "candidateRecords": 41,

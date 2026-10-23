@@ -13,13 +13,44 @@
       "originalQuestionNumber": 1,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        241,
+        1310,
+        411
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-01.webp",
+      "outputSize": [
+        1220,
+        170
+      ],
+      "outputSha256": "731809f11a6c3eb34d9679996e8708d5edd8fd5b82023f125b2d1647bd8208d4",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "731809f11a6c3eb34d9679996e8708d5edd8fd5b82023f125b2d1647bd8208d4",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-02",
@@ -29,13 +60,44 @@
       "originalQuestionNumber": 2,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        414,
+        1310,
+        590
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-02.webp",
+      "outputSize": [
+        1220,
+        176
+      ],
+      "outputSha256": "e81d343e340b6231427a8ce66f613ee8b13b3eab156b45b73d5cbea84a270565",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "e81d343e340b6231427a8ce66f613ee8b13b3eab156b45b73d5cbea84a270565",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-03",
@@ -45,13 +107,44 @@
       "originalQuestionNumber": 3,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        594,
+        1310,
+        1046
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-03.webp",
+      "outputSize": [
+        1220,
+        452
+      ],
+      "outputSha256": "9f437bea804d393fe604e2301f7997390cd7b275d3b51a243e117a4316d4090c",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "9f437bea804d393fe604e2301f7997390cd7b275d3b51a243e117a4316d4090c",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-04",
@@ -61,13 +154,44 @@
       "originalQuestionNumber": 4,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        1046,
+        1310,
+        1290
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-04.webp",
+      "outputSize": [
+        1220,
+        244
+      ],
+      "outputSha256": "cdd9903d60297abb4b325482f26b7ca4cf348a34a3388269aaf896c9126d9fcb",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "cdd9903d60297abb4b325482f26b7ca4cf348a34a3388269aaf896c9126d9fcb",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-05",
@@ -77,13 +201,44 @@
       "originalQuestionNumber": 5,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        1293,
+        1310,
+        1611
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-05.webp",
+      "outputSize": [
+        1220,
+        318
+      ],
+      "outputSha256": "d9d0a870f96ea09f919b27577d6c13a5311a99b0eaa63860727e7f5f21c7bc70",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
         "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "d9d0a870f96ea09f919b27577d6c13a5311a99b0eaa63860727e7f5f21c7bc70",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-06",
@@ -93,12 +248,43 @@
       "originalQuestionNumber": 6,
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
-      "sourcePage": null,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "sourcePage": 2,
+      "generationVersion": "manual-qa-pixel-v2",
+      "qaStatus": "PASS",
       "issues": [
+        "PDF_AUTO_ANCHOR_FAILED_MANUAL_SOURCE_REVIEW",
+        "OCR_TEXT_QA_PENDING"
+      ],
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "sourceSize": [
+        1400,
+        1980
+      ],
+      "cropPixels": [
+        90,
+        1635,
+        1310,
+        1827
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-06.webp",
+      "outputSize": [
+        1220,
+        192
+      ],
+      "outputSha256": "91f3dda70dcaa7ad75c96528c65f40925af69d69fb31353b9ac01918bb92c26c",
+      "originalAutomatedIssues": [
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+        "reviewedSha256": "91f3dda70dcaa7ad75c96528c65f40925af69d69fb31353b9ac01918bb92c26c",
+        "sourceSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+        "qaReviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "actual_direct_official_page_v2_to_question_pixel_crop",
+        "independentHumanReview": false
+      }
     },
     {
       "questionId": "106-00-C-07",
