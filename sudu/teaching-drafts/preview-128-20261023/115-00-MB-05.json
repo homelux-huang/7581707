@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-05",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-05.webp",
+  "imageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "逐題打開 GitHub 既有單題 WebP，目視題號、全部條件與四選項；對第1題座標圖逐格檢視；重新以 WebP bytes 計算 SHA256 與固定清單一致",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有 OCR 選項為表格錯行，故所有座標分數以原始 WebP 目視為準，未覆寫來源。"
+    ]
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "本輪先直接按原圖運算和核對四選項，再查候選答案；舊資料含一份標準答案 PDF 的 SHA，但本輪未直接回讀最終 PDF 與更正公告，故不計入最終核實。",
+    "independentSolveScope": "先原圖獨立解題並留完整計算；未完成第三方教學QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "平行四邊形 ABCD：A(−1,0)、B(0,−5)、C(a,b)、D(2,3)，線段 BC 的中點為何？",
+    "keyConditions": [
+      "ABCD 依序為平行四邊形",
+      "A=(−1,0)",
+      "B=(0,−5)",
+      "D=(2,3)",
+      "先求 C 再求 BC 中點"
+    ],
+    "reasoningFromOriginalImage": "平行四邊形對邊向量相等，**BC=AD**。由 **AD=D−A=(3,3)**，得 **C=B+AD=(3,−2)**。再用**中點公式**，**M_BC=((0+3)/2,(−5−2)/2)=(3/2,−7/2)**，對應選 B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "(3/2,−7/2)",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "平行四邊形對邊向量相等，**BC=AD**。由 **AD=D−A=(3,3)**，得 **C=B+AD=(3,−2)**。再用**中點公式**，**M_BC=((0+3)/2,(−5−2)/2)=(3/2,−7/2)**，對應選 B。",
+    "elementarySummary": "把 A 到 D 的移動方式搬到 B 出發：向右3格、向上3格，就走到 C(3,−2)。再找 B 和 C 的中間位置，兩人的座標各加起來除以2，得到右邊1.5、下方3.5。",
+    "memory": "**BC=AD=(3,3) ⇒ C=(3,−2) ⇒ BC 中點=(3/2,−7/2)**。",
+    "concept": "平行四邊形 **A+C=B+D**（對角線互相平分）或 **BC=AD**，都可求未知頂點；中點公式 **((x₁+x₂)/2,(y₁+y₂)/2)**。要注意負號運算。",
+    "extension": "反向思考：若改問 **對角線 AC 的中點**，也可直接算 **BD 的中點**：((0+2)/2,(−5+3)/2)=(1,−1)。與 BC 中點不同。",
+    "source": {
+      "originalExam": "115-00-MB-05",
+      "originalImagePinnedSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B科標準答案確認／更正事項待直接回讀"
+    },
+    "highlightTerms": [
+      "BC=AD",
+      "C=(3,−2)",
+      "中點=(3/2,−7/2)"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "(3/2,−5/2) 的 x 正確但 y 錯：B_y=−5、C_y=−2，平均應 (−5−2)/2=−7/2。",
+        "elementary": "x 算對了，卻少加 C 的−2，y 不對。",
+        "reason": "(3/2,−5/2) 的 x 正確但 y 錯：B_y=−5、C_y=−2，平均應 (−5−2)/2=−7/2。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "(3/2,−7/2) 正是 B(0,−5)、C(3,−2) 的中點，兩個座標皆吻合。",
+        "elementary": "左右正中間和上下正中間都找到，B 對。",
+        "reason": "(3/2,−7/2) 正是 B(0,−5)、C(3,−2) 的中點，兩個座標皆吻合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "(5/2,−5/2) 的 x、y 都不符：正確 x=(0+3)/2=3/2，y=−7/2。",
+        "elementary": "把中點往右又往上移了，不在兩點正中間。",
+        "reason": "(5/2,−5/2) 的 x、y 都不符：正確 x=(0+3)/2=3/2，y=−7/2。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "(5/2,−7/2) 雖然 y 正確，但 x 應 (0+3)/2=3/2 而非5/2。",
+        "elementary": "上下高度對，左右卻偏右，不是中點。",
+        "reason": "(5/2,−7/2) 雖然 y 正確，但 x 應 (0+3)/2=3/2 而非5/2。"
+      }
+    },
+    "math": {
+      "formula": "對邊向量 BC=AD=D−A；C=B+(D−A)；中點 M=((xB+xC)/2,(yB+yC)/2)",
+      "formulaUsage": "中點公式求兩座標點正中央的位置；平行四邊形利用等向量求未知頂點。",
+      "workedExample": "例：P(2,4)、Q(6,0) 中點 M=((2+6)/2,(4+0)/2)=(4,2)。",
+      "dailyApplication": "平面圖中找兩店鋪之間的中繼點、配送中心位置。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "所有關鍵運算為原題數學式，非金額計算也必須顯示完整考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "A=(−1,0)",
+        "B=(0,−5)",
+        "D=(2,3)",
+        "ABCD 為依序平行四邊形"
+      ],
+      "formula": "對邊向量 BC=AD=D−A；C=B+(D−A)；中點 M=((xB+xC)/2,(yB+yC)/2)",
+      "formulaPurpose": "中點公式求兩座標點正中央的位置；平行四邊形利用等向量求未知頂點。",
+      "substitutionAndSteps": [
+        {
+          "formula": "AD=D−A=(2−(−1),3−0)=(3,3)",
+          "why": "平行四邊形對邊向量相同，先求從 A 到 D 的位移。"
+        },
+        {
+          "formula": "BC=AD=(3,3)",
+          "why": "依 A→B→C→D 順序，BC 與 AD 是方向與大小相同的對邊。"
+        },
+        {
+          "formula": "C=B+BC=(0,−5)+(3,3)=(3,−2)",
+          "why": "由 B 位移(3,3)可以到 C，得到未知頂點。"
+        },
+        {
+          "formula": "Mx=(xB+xC)/2=(0+3)/2=3/2",
+          "why": "取線段兩端的水平座標平均。"
+        },
+        {
+          "formula": "My=(yB+yC)/2=(−5+(−2))/2=−7/2",
+          "why": "取垂直座標平均，負負相加得−7。"
+        },
+        {
+          "formula": "M=(3/2,−7/2)，選 B",
+          "why": "中點座標對應選項 B。"
+        }
+      ],
+      "result": "(3/2,−7/2)",
+      "unit": "座標單位",
+      "matchingOption": "B",
+      "commonMistake": "把 B_y=−5、C_y=−2 的平均算成−5/2，或將 C 的 x 值求錯。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
