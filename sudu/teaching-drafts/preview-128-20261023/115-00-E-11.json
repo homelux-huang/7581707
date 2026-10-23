@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-11",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 11,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-11.webp",
+  "imageSha256": "ce1069caa2946e09330534b3534cdf44f1cc55b94f9ab2c8799712c571ee19ba",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題看原圖）",
+    "method": "目視原始單題 WebP，核對題號、對話前後句、A-D 各選項；確認無鄰題裁切或共用材料遺漏；對原圖 bytes 重算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先閱讀原圖並推論答案，再讀現有 OCR 候選資料；原官方網站 2026-05-08 最終確認公告可查，但英文科最終 PDF 與疑義確認說明仍待直接回讀，不能當完整驗收。",
+    "independentSolveScope": "本輪獨立看圖解答，非獨立第三方教學 QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Customer: Hi, do you sell phone chargers? Clerk: Yes, over there. Take a look, please. Customer: Great, I'll take this one. How much is it? Clerk: That'll be NT$350. ____ Customer: No, just the charger. Clerk: OK, got it.",
+    "keyConditions": [
+      "That'll be NT$350",
+      "No, just the charger",
+      "OK, got it"
+    ],
+    "reasoningFromOriginalImage": "商店結帳時店員在報價後問是否還要其他東西，顧客回答 No, just the charger（不用，只要充電器），與 Anything else?（還要其他嗎）完美呼應。Is that all? 若只買充電器應通常回答 Yes, that's all；問付款方式則不會得到 No, just the charger 的回應。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "這是**收銀結帳對話**。店員報出 NT$350 後，顧客說 **No, just the charger**，其中 No 回答一個是否還有額外需求的問題，因此填 **Anything else?（還需要其他東西嗎？）**。NT$350 是價錢背景，沒有要求折扣或找零計算。",
+    "elementarySummary": "客人要買充電器，店員說350元，再問『還要別的嗎？』，客人說『不用，只要充電器。』問答剛好接起來。",
+    "memory": "**Anything else? → No, just ...**；『還要其他的嗎？』→『不用，就這個。』",
+    "concept": "購物會話：**How much is it?** 問價格；**Anything else?** 問要不要加購；**That'll be NT$350.** 是自然報價方式。注意 yes/no 回答須與原問題一致。",
+    "extension": "反向思考：若客人回答『Yes, I'd like a cable, too』，仍可回應 **Anything else?**；若店員問 **Is that all?** 且客人只買充電器，應自然答 **Yes, that's all.**。",
+    "source": {
+      "originalExam": "115-00-E-11",
+      "originalImagePinnedSha256": "ce1069caa2946e09330534b3534cdf44f1cc55b94f9ab2c8799712c571ee19ba",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 公告確認標準答案；本題答案仍未直接對正式 PDF 核實",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "Anything else?",
+      "No, just the charger",
+      "That'll be NT$350"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**Is that all?** 表『就這樣嗎？』，如果沒有更多要買，通常回答 Yes, that's all；本題卻回 No, just the charger，語意不自然。",
+        "elementary": "問『就這樣嗎？』，只有這個應說『對，就這個』，不是說『不』。",
+        "reason": "**Is that all?** 表『就這樣嗎？』，如果沒有更多要買，通常回答 Yes, that's all；本題卻回 No, just the charger，語意不自然。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**Anything else?** 是『還需要其他的嗎？』，顧客回答 No, just the charger，意思與語用正好符合。",
+        "elementary": "還要別的嗎？不用，只要充電器。很順。",
+        "reason": "**Anything else?** 是『還需要其他的嗎？』，顧客回答 No, just the charger，意思與語用正好符合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**Cash or credit card?** 問現金或刷卡，客人應回答付款方式，不會回答『只要充電器』。",
+        "elementary": "問刷卡還是付錢，不會答我只買充電器。",
+        "reason": "**Cash or credit card?** 問現金或刷卡，客人應回答付款方式，不會回答『只要充電器』。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**It works well, right?** 問機器好不好用，客人應答性能；No, just the charger 並未談產品品質。",
+        "elementary": "問它好不好用，卻回只要這個，沒對到問題。",
+        "reason": "**It works well, right?** 問機器好不好用，客人應答性能；No, just the charger 並未談產品品質。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "顧客：你們有賣手機充電器嗎？店員：有，在那邊，請看看。顧客：太好了，我要這個。多少錢？店員：350 元，還要其他東西嗎？顧客：不用，只要充電器。店員：好的，了解。",
+      "testedWord": "Anything else",
+      "answerWord": "Anything else",
+      "pronunciationIPA": "/ˈeniθɪŋ els/",
+      "optionMeaningZh": {
+        "A": "就這些嗎？",
+        "B": "還有其他需要的嗎？",
+        "C": "現金還是刷卡？",
+        "D": "它很好用，對嗎？"
+      },
+      "synonyms": {
+        "初級": [
+          "More?（還要更多嗎；口語省略）"
+        ],
+        "中級": [
+          "Would you like anything else?（還需要其他嗎？）"
+        ],
+        "高級": [
+          "Can I get you anything further?（還有其他需要嗎；較正式）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "That's all.（就這些；答句概念對照）"
+        ],
+        "中級": [
+          "Nothing else.（沒有別的；答句概念對照）"
+        ],
+        "高級": [
+          "N/A（問句 Anything else? 無標準詞彙反義詞）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "shop（商店）"
+        ],
+        "中級": [
+          "charger（充電器）"
+        ],
+        "高級": [
+          "checkout（結帳）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義句或相關詞未必在每個語境可直接互換；N/A 不填造反義字。",
+      "exampleEnglish": "Do you need anything else before you leave?",
+      "exampleChinese": "你離開前還需要其他東西嗎？",
+      "exampleHighlightedSurfaceForm": "anything else",
+      "exampleType": "自行撰寫的雙語教學例句，非新聞",
+      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
