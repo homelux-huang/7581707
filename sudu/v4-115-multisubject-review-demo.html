@@ -463,19 +463,124 @@ function renderGuide(){
 }
 let navCloseTimer=0;
 function questionNavStarted(){return list().some(q=>Boolean(record(q).status));}
-function questionNavExpanded(){if(document.body.classList.contains('review-mode'))return false;return !document.body.classList.contains('nav-auto')||document.body.classList.contains('nav-peek')||document.body.classList.contains('nav-open');}
-function updateNavToggle(){if(!$('navToggle'))return;$('navToggle').setAttribute('aria-expanded',String(document.body.classList.contains('nav-open')));$('navToggleNum').textContent=qnow()?.id??'';}
-function setQuestionNavAutoHide(on){document.body.classList.toggle('nav-auto',Boolean(on));if(!on)document.body.classList.remove('nav-peek','nav-open');if(on&&!document.body.classList.contains('nav-open'))document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();}
-function openQuestionNav(mode='open'){clearTimeout(navCloseTimer);if(!document.body.classList.contains('nav-auto'))return;document.body.classList.add(mode==='peek'?'nav-peek':'nav-open');updateNavToggle();syncHeights();}
-function closeQuestionNav(){clearTimeout(navCloseTimer);document.body.classList.remove('nav-peek','nav-open');updateNavToggle();syncHeights();}
-function scheduleQuestionNavClose(){clearTimeout(navCloseTimer);navCloseTimer=setTimeout(()=>{if($('progressShell').matches(':focus-within'))return;document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();},950);}
+function questionNavExpanded(){
+ return document.body.classList.contains('study-mode')&&
+  (!document.body.classList.contains('nav-auto')||document.body.classList.contains('nav-peek')||document.body.classList.contains('nav-open'));
+}
+function updateNavToggle(){
+ const expanded=questionNavExpanded();
+ for(const name of ['navToggle','navHandle']){
+  const el=$(name);if(!el)continue;
+  el.setAttribute('aria-expanded',String(expanded));
+  el.setAttribute('aria-label',expanded?'收合動態題目選單':'下拉展開動態題目選單');
+  el.title=expanded?'收合年度／科目／題號':'展開年度／科目／題號';
+ }
+}
+function setQuestionNavAutoHide(on){
+ document.body.classList.toggle('nav-auto',Boolean(on));
+ if(!on)document.body.classList.remove('nav-peek','nav-open');
+ if(on&&!document.body.classList.contains('nav-open'))document.body.classList.remove('nav-peek');
+ updateNavToggle();syncHeights();
+}
+function openQuestionNav(mode='open'){
+ if(!document.body.classList.contains('study-mode'))return;
+ clearTimeout(navCloseTimer);
+ document.body.classList.add(mode==='peek'?'nav-peek':'nav-open');
+ updateNavToggle();syncHeights();
+}
+function closeQuestionNav(){
+ clearTimeout(navCloseTimer);
+ document.body.classList.remove('nav-peek','nav-open');
+ updateNavToggle();syncHeights();
+}
+function collapseQuestionNav(){
+ clearTimeout(navCloseTimer);
+ document.body.classList.remove('nav-peek','nav-open');
+ document.body.classList.add('nav-auto');
+ updateNavToggle();syncHeights();
+}
+function toggleQuestionNav(){
+ if(questionNavExpanded())collapseQuestionNav();
+ else openQuestionNav('open');
+}
+function scheduleQuestionNavClose(){
+ clearTimeout(navCloseTimer);
+ navCloseTimer=setTimeout(()=>{
+  if($('progressShell').matches(':focus-within')||$('navHandle').matches(':hover'))return;
+  document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();
+ },400);
+}
 function showGuide(){$('guideCard').classList.add('show');syncHeights();}
 function hideGuide(){$('guideCard').classList.remove('show');}
 function alignGuideToCorrectAnswer(){
  const target=$('correctAnswer'),guide=$('guideCard');
  if(target&&target.nextElementSibling!==guide)target.after(guide);
 }
-function syncHeights(){requestAnimationFrame(()=>{alignGuideToCorrectAnswer();const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;document.documentElement.style.setProperty('--navH',navHeight+'px')})}
+function syncHeights(){
+ requestAnimationFrame(()=>{
+  alignGuideToCorrectAnswer();
+  const dockHeight=$('progressShell').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--dockH',dockHeight+'px');
+  document.documentElement.style.setProperty('--navH',(questionNavExpanded()?dockHeight:0)+'px');
+  updateNavToggle();
+ });
+}
+function pageYear(){
+ const value=new URLSearchParams(location.search).get('year');
+ return value==='114'||value==='115'?value:'demo';
+}
+function changeYear(nextYear){
+ if(!['demo','114','115'].includes(nextYear))return;
+ if(nextYear===pageYear()){refreshHomeSubjects();return;}
+ const url=new URL(location.href);
+ url.searchParams.set('year',nextYear);
+ url.searchParams.delete('subject');
+ url.searchParams.delete('view');
+ location.href=url.pathname+url.search;
+}
+function refreshHomeSubjects(){
+ const select=$('homeSubjectSel'),year=$('homeYearSel').value;
+ if(!select)return;
+ const validYear=year&&year===pageYear();
+ const ready=year==='demo'||document.body.dataset.verifiedReadyYear===year;
+ const loading=validYear&&!ready;
+ const candidates=document.body.classList.contains('qa-image-mode')?
+  [...$('subjectSel').options].map(o=>o.value).filter(s=>s&&s!=='全部科目'):
+  SUBJECTS.slice();
+ const previous=select.value;
+ select.replaceChildren();
+ const first=document.createElement('option');
+ first.value='';
+ first.textContent=!year?'請先選年度':!validYear?'正在切換年度':loading?'題庫驗證中…':candidates.length?'選擇科目':'目前無已核准科目';
+ select.append(first);
+ if(validYear&&ready){
+  for(const name of candidates){
+   const option=document.createElement('option');option.value=name;option.textContent=name;select.append(option);
+  }
+ }
+ select.disabled=!validYear||!ready||!candidates.length;
+ if(previous&&candidates.includes(previous)&&!select.disabled)select.value=previous;
+}
+function updateJumpButtons(){
+ const q=SUBJECTS.length&&listFor(currentSubject)[currentIndex];
+ const answered=!!(q&&!document.body.classList.contains('qa-image-mode')&&record(q).status);
+ $('explainBtn').disabled=!answered;
+ $('explainBtn').setAttribute('aria-disabled',String(!answered));
+}
+function openSubjectFromHome(subject){
+ if(!subject)return;
+ if(document.body.classList.contains('qa-image-mode')){
+  if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(subject);
+  return;
+ }
+ if(!SUBJECTS.includes(subject)||pageYear()!=='demo'&&document.body.dataset.verifiedReadyYear!==pageYear())return;
+ currentSubject=subject;
+ currentIndex=Math.max(0,listFor(subject).findIndex(q=>!record(q).status));
+ if($('subjectSel').querySelector('option[value="'+CSS.escape(subject)+'"]'))$('subjectSel').value=subject;
+ showStudy();renderAll();
+ window.scrollTo({top:0,behavior:'instant'});
+}
+
 function scrollToCorrectAnswer(){
  const target=$('correctAnswer');if(!target||!$('guideCard').classList.contains('show'))return;
  const navHeight=questionNavExpanded()?$('progressShell').getBoundingClientRect().height:0;
