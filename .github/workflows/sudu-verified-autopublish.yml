@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - scripts/sudu_verified_publish.py
+      - scripts/sudu_pages_recovery.py
       - .github/workflows/sudu-verified-autopublish.yml
   workflow_run:
     workflows:
@@ -118,3 +119,34 @@ jobs:
           # Explicit workflow_dispatch is required to deploy this new exact SHA.
           gh workflow run pages.yml --ref main -f target_sha="$RELEASE_SHA"
           echo "Main updated at $RELEASE_SHA; dispatched mandatory Pages same-commit release gate."
+
+      - name: Automatically recover failed, cancelled or missing same-SHA Pages release
+        # No QA data change is required to recover a previously cancelled deploy.
+        # Never duplicate or cancel a release that's currently in progress.
+        if: steps.snapshot.outputs.updated == 'false'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          MAIN_SHA="$(git rev-parse HEAD)"
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/runs?per_page=40" \
+            > /tmp/sudu_pages_runs.json
+          DECISION="$(python scripts/sudu_pages_recovery.py --main-sha "$MAIN_SHA" --runs /tmp/sudu_pages_runs.json)"
+          case "$DECISION" in
+            active)
+              echo "Pages same-SHA run is already active; no duplicate deployment."
+              ;;
+            verified)
+              echo "Pages same-SHA release completed verify_live; no retry necessary."
+              ;;
+            retry)
+              gh workflow run pages.yml --ref main -f target_sha="$MAIN_SHA"
+              echo "Re-dispatched existing, mandatory Pages release gate for $MAIN_SHA"
+              ;;
+            *)
+              echo "Invalid recovery decision: $DECISION" >&2
+              exit 1
+              ;;
+          esac
+
