@@ -315,13 +315,18 @@ function guideEntries(q){
  const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
  const proposed=[...extra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
                  ...common,...extra.filter(x=>x[0]!=='考題計算式')];
- const entries=[],titles=new Set(),contents=new Set();
+ const entries=[],positions=new Map(),contents=new Set();
  for(const [title,value] of proposed){
   if(!hasStudyValue(value)&&String(value??'').trim()!=='N/A')continue;
-  if(titles.has(title))continue;
   const text=normalizeStudyText(value);
   if(text!=='n/a'&&contents.has(text))continue;
-  entries.push([title,value]);titles.add(title);
+  if(positions.has(title)){
+   // Preserve additional, non-duplicate details in the original guide field.
+   // The main calculation is singular and must never be doubled.
+   if(title!=='考題計算式')entries[positions.get(title)][1]+='\n'+String(value);
+  }else{
+   positions.set(title,entries.length);entries.push([title,value]);
+  }
   if(text!=='n/a')contents.add(text);
  }
  const note=normalizeStudyText(q.memory);
