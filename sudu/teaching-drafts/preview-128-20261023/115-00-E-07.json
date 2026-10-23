@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-07",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-07.webp",
+  "imageSha256": "ac938e9496f6cce069f2f16e538e973e81ce78f80a2fb0d8b0626fee40d0fd8b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "GitHub 單題 WebP 實際目視；檢查題號、完整題幹與選項 A-D、畫線要求、無鄰題雜訊；重新計算 WebP bytes SHA256 與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先以圖片自行解題後才讀取候選；官網證實 2026-05-08 確認標準答案，但官方英文科最終 PDF 與疑義確認說明目前不能獨立回讀核實；不得計為官方最終核實或教學 QA 完成。",
+    "independentSolveScope": "本輪先讀圖自行推理，非獨立第三方教學複核",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "fill-in-the-blank",
+    "questionAsReadFromOriginalImage": "Amy was certain that she had a high fever after measuring her body _______.",
+    "keyConditions": [
+      "certain",
+      "high fever",
+      "after measuring her body ___"
+    ],
+    "reasoningFromOriginalImage": "body temperature 是測量體溫的固定且自然的詞組；Amy 測到自己的體溫後才知道發燒，其餘存在、影像、結構不屬體溫測量的對象。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**measure one's body temperature** 是『量體溫』的標準搭配。高燒 high fever 是體溫異常升高，Amy 量完 **temperature（體溫）** 才確定自己發燒。這是詞彙搭配題，無須題目未提供的攝氏數值。",
+    "elementarySummary": "Amy 懷疑自己發燒，拿溫度計量身體的**溫度**，這就叫 **body temperature**。量身高、拍照片或看樣子都不是在量體溫。",
+    "memory": "**fever → body temperature**；發燒要量體溫。",
+    "concept": "**temperature** 為溫度，**body temperature** 是體溫，measure / check / take one's temperature 都可描述量體溫，但每個說法用字不同。",
+    "extension": "反向思考：若句子改為『Amy went to have an X-ray to check her bone ___』，檢查骨骼的『構造』可用 **structure**；和 body temperature 的測量目標不同。",
+    "source": {
+      "originalExam": "115-00-E-07",
+      "originalImagePinnedSha256": "ac938e9496f6cce069f2f16e538e973e81ce78f80a2fb0d8b0626fee40d0fd8b",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 已確認各科標準答案；僅確認公告日期，尚未直接核實本題官方最終答案 PDF",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商使用之英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "high fever",
+      "measure",
+      "body temperature"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**existence** 表『存在』，抽象概念不能用 measure her body existence 描述量體溫，也無法據此判斷高燒。",
+        "elementary": "有沒有存在不是溫度計量的東西。",
+        "reason": "**existence** 表『存在』，抽象概念不能用 measure her body existence 描述量體溫，也無法據此判斷高燒。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**image** 是影像、圖片，可拍攝影像但不是量體溫的搭配，無法直接解釋 high fever。",
+        "elementary": "拍一張照片不等於量出發燒幾度。",
+        "reason": "**image** 是影像、圖片，可拍攝影像但不是量體溫的搭配，無法直接解釋 high fever。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**structure** 是構造，身體有骨骼結構，但『測量身體結構』不是此句判定發燒的依據。",
+        "elementary": "看看骨頭怎麼長，也不會知道有沒有發燒。",
+        "reason": "**structure** 是構造，身體有骨骼結構，但『測量身體結構』不是此句判定發燒的依據。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**temperature** 是溫度；**body temperature** 正是量體溫的固定搭配，與 high fever 及 measuring 相連。",
+        "elementary": "溫度計就是量體溫，所以填它。",
+        "reason": "**temperature** 是溫度；**body temperature** 正是量體溫的固定搭配，與 high fever 及 measuring 相連。"
+      }
+    },
+    "english": {
+      "questionType": "fill-in-the-blank",
+      "sentenceTranslationZh": "Amy 在量了體溫後，確定自己發高燒。",
+      "testedWord": "temperature",
+      "answerWord": "temperature",
+      "pronunciationIPA": "/ˈtemprətʃər/",
+      "optionMeaningZh": {
+        "A": "存在",
+        "B": "影像",
+        "C": "構造",
+        "D": "溫度"
+      },
+      "synonyms": {
+        "初級": [
+          "N/A（常用英文沒有完全可直接替換 temperature 的單字）"
+        ],
+        "中級": [
+          "N/A（temperature reading 是『溫度讀數』而非單字同義詞）"
+        ],
+        "高級": [
+          "N/A（thermal measurement 是『溫度量測』相關概念）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（溫度名詞無直接反義詞）"
+        ],
+        "中級": [
+          "N/A（可比較 high / low temperature）"
+        ],
+        "高級": [
+          "N/A（cold 與 heat 非 temperature 的詞彙反義）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "fever（發燒）"
+        ],
+        "中級": [
+          "thermometer（溫度計）"
+        ],
+        "高級": [
+          "thermoregulation（體溫調節）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關詞不保證所有情境可以互換；N/A 欄位不應硬補。",
+      "exampleEnglish": "The nurse measured my body temperature twice.",
+      "exampleChinese": "護理師量了我兩次體溫。",
+      "exampleHighlightedSurfaceForm": "temperature",
+      "exampleType": "自編教學例句；非新聞來源",
+      "newsExampleStatus": "無可核實新聞例句，本題不冒稱新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
