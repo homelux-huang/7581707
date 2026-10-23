@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-02",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 2,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-02.webp",
+  "imageSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
+  "visualReview": {
+    "status": "PASS_WITH_NOTE",
+    "reviewedBy": "GPT-6（本輪逐題原圖）",
+    "method": "直接目視 GitHub 既有單題 WebP，題幹選項完整，核實四選項和題號，原始 WebP SHA256 重算一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先根據原圖自行解題再查候選；候選與解答一致但未直接回讀官方最終答案PDF和更正說明。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": null,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "商業會計法：年度決算程序終了後至少保存十年的項目：①發票②傳票③日記簿④分類帳⑤資產負債表⑥綜合損益表。",
+    "keyConditions": [
+      "A-D四選項或①②③④逐項判斷",
+      "正確表述由會計概念及原圖文字決定"
+    ],
+    "reasoningFromOriginalImage": "《商業會計法》第**38條**區分兩類：**會計憑證原則上至少五年**（不計依法永久保存或未結事項等例外）；**會計帳簿及財務報表至少十年**（條文另有未結事項例外）。①發票、②傳票屬會計憑證；③日記簿、④分類帳屬帳簿；⑤資產負債表、⑥綜合損益表屬財務報表。故十年是**③④⑤⑥，選D**。法源已由經濟部主管法規及全國法規資料庫第38條獨立核查；但未直接比對考試最終答案PDF。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "《商業會計法》第**38條**區分兩類：**會計憑證原則上至少五年**（不計依法永久保存或未結事項等例外）；**會計帳簿及財務報表至少十年**（條文另有未結事項例外）。①發票、②傳票屬會計憑證；③日記簿、④分類帳屬帳簿；⑤資產負債表、⑥綜合損益表屬財務報表。故十年是**③④⑤⑥，選D**。法源已由經濟部主管法規及全國法規資料庫第38條獨立核查；但未直接比對考試最終答案PDF。",
+    "elementarySummary": "發票和記帳傳票是憑證，通常至少留五年；記帳的本子和最後做出的財務報表，要至少留十年，所以選後面四項。",
+    "memory": "**憑證5年；帳簿與財報10年（商業會計法38條，注意法定例外）**。",
+    "concept": "**憑證**記錄發生交易的證據；**帳簿**系統地記錄分錄；**財務報表**彙整財務狀況與績效。保存起算點按條文是**年度決算程序辦理終了後**。",
+    "extension": "反向思考：如果問『一般會計憑證至少保存幾年』，答案原則上是五年，不是十年；但涉及永久保存、未結會計事項者須另外依法處理。",
+    "source": {
+      "originalExam": "115-09-2-02",
+      "originalImagePinnedSha256": "f3b847cf2d16a4e217ecbdf6d6af3b0daeb48a817804e415c1e24d84815670bf",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學課本之版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學最終標準答案與更正說明待核實",
+      "independentlyCheckedStatute": "https://law.moea.gov.tw/LawContent.aspx?id=FL011300",
+      "lawVerificationScope": "僅查主管機關法條內容，不等同官方考題答案核實"
+    },
+    "highlightTerms": [
+      "商業會計法第38條",
+      "憑證5年",
+      "帳簿與財報10年",
+      "③④⑤⑥"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "①發票與②傳票原則是會計憑證至少五年，將它們放入十年群組錯；③④是帳簿確需十年。",
+        "elementary": "發票傳票不是這題的十年組。",
+        "reason": "①發票與②傳票原則是會計憑證至少五年，將它們放入十年群組錯；③④是帳簿確需十年。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "①②列十年不合第38條一般保存區分，且漏掉帳簿③④。",
+        "elementary": "把五年的東西混進來，又漏了帳本。",
+        "reason": "①②列十年不合第38條一般保存區分，且漏掉帳簿③④。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "②傳票是憑證原則五年，不屬十年清單；也漏掉⑥財報。",
+        "elementary": "傳票不是這組，綜合損益表又漏了。",
+        "reason": "②傳票是憑證原則五年，不屬十年清單；也漏掉⑥財報。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "③日記簿、④分類帳為帳簿；⑤資產負債表、⑥綜合損益表為財務報表，法定一般期間至少十年，選D。",
+        "elementary": "兩本帳、兩張財報，都是十年。",
+        "reason": "③日記簿、④分類帳為帳簿；⑤資產負債表、⑥綜合損益表為財務報表，法定一般期間至少十年，選D。"
+      }
+    },
+    "accounting": {
+      "principle": "法律規定帳表憑證保存年限；不得混淆憑證與帳簿財報。",
+      "accounts": [
+        "原始憑證",
+        "記帳憑證",
+        "日記簿",
+        "分類帳",
+        "資產負債表",
+        "綜合損益表"
+      ],
+      "journalEntry": "N/A（法規辨認，不涉及記帳）",
+      "calculation": "N/A（不是計算題）",
+      "legalSource": "https://law.moea.gov.tw/LawContent.aspx?id=FL011300",
+      "legalArticle": "商業會計法第38條",
+      "legalVerifiedByOfficialGovPage": true,
+      "legalQuoteSummary": "會計憑證原則至少保存5年；會計帳簿及財報至少保存10年，且有法定例外。",
+      "legalVersion": "依 2026-10-23 查得經濟部與法務部法規資料庫現行條文；仍以主管機關最新公布為準"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
