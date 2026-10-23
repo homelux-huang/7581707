@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 87,
-  "draftPercent": 68,
-  "visualRechecked": 87,
-  "candidateAnswerMatched": 83,
+  "draftWritten": 91,
+  "draftPercent": 71.1,
+  "visualRechecked": 91,
+  "candidateAnswerMatched": 86,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -97,13 +97,13 @@
     "115-09-2-12",
     "115-09-2-13",
     "115-09-2-14",
-    "115-09-2-15"
-  ],
-  "remainingIds": [
+    "115-09-2-15",
     "115-09-1-01",
     "115-09-1-03",
     "115-09-1-05",
-    "115-09-1-07",
+    "115-09-1-07"
+  ],
+  "remainingIds": [
     "115-09-1-26",
     "115-09-1-27",
     "115-09-1-28",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "會計16～20、21題；獨立審核會計第3、6、12、15題首輪差異",
+  "nextSubject": "115數位科技第26、27、28、29、32、33、34題",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -830,7 +830,7 @@
       "image": "data/approved/webp/115/115-09-1-01.webp",
       "imageSha256": "da86b958242f46bb5c8cfce60a0bf9b79a72d33f3bb049c1ac801be9109ff799",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-1-03",
@@ -839,7 +839,7 @@
       "image": "data/approved/webp/115/115-09-1-03.webp",
       "imageSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-1-05",
@@ -848,7 +848,7 @@
       "image": "data/approved/webp/115/115-09-1-05.webp",
       "imageSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-09-1-06",
@@ -866,7 +866,7 @@
       "image": "data/approved/webp/115/115-09-1-07.webp",
       "imageSha256": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_BLOCKED_OFFICIAL_REVIEW"
     },
     {
       "questionId": "115-09-1-26",
