@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-13",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 13,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-13.webp",
+  "imageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際讀取WebP）",
+    "method": "逐題親自目視既有原始單題WebP、題號、四選項、分錄、表格；原始圖檔bytes SHA256已重算吻合固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先依原圖解題才核對候選，官方最終答案PDF及更正公告仍未獨立核實。",
+    "initialImageBasedAnswer": "D",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_CANDIDATE_MATCH_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "2月1日取得面額50000元、九個月到期的不附息票據，貼現率6%、實收49000，問貼現日。",
+    "keyConditions": [
+      "面額50000元，不附息",
+      "發票2月1日，九個月到期",
+      "貼現率6%年率，實收49000元"
+    ],
+    "reasoningFromOriginalImage": "取得日2月1日，九個月後**11月1日到期**。貼現息=到期值50000−實收49000=**1000元**。公式貼現息=到期值×年貼現率×貼現期，故貼現期=1000/(50000×6%)=1/3年=**4個月**。由11月1日倒推四個月，貼現日**7月1日**，選D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "7月1日",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "取得日2月1日，九個月後**11月1日到期**。貼現息=到期值50000−實收49000=**1000元**。公式貼現息=到期值×年貼現率×貼現期，故貼現期=1000/(50000×6%)=1/3年=**4個月**。由11月1日倒推四個月，貼現日**7月1日**，選D。",
+    "elementarySummary": "票到11月1日才拿得到五萬元，但銀行先給四萬九，少掉的一千是貼現費。算出提早四個月領，就是7月1日。",
+    "memory": "**11/1到期，貼現息1000，貼現期4個月→7/1。**",
+    "concept": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+    "extension": "反向思考：如果貼現息增為2000元而其他不變，貼現期將變幾個月？",
+    "source": {
+      "originalExam": "115-09-2-13",
+      "originalImagePinnedSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "會計學官方最終標準答案及更正待核對"
+    },
+    "highlightTerms": [
+      "到期11月1日",
+      "貼現息1000",
+      "四個月",
+      "7月1日"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "4月1日距11月1日7個月，貼現息=50000×6%×7/12=1750元，不合。",
+        "elementary": "七個月會扣1750，太多了。",
+        "reason": "4月1日距11月1日7個月，貼現息=50000×6%×7/12=1750元，不合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "6月1日距到期5個月，貼現息1250元，不合1000。",
+        "elementary": "五個月也扣太多。",
+        "reason": "6月1日距到期5個月，貼現息1250元，不合1000。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "6月15日距到期超過四個月，貼現息多於1000。",
+        "elementary": "比四個月早得更多。",
+        "reason": "6月15日距到期超過四個月，貼現息多於1000。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "7月1日距11月1日四個月，貼現息50000×6%×4/12=1000，正解。",
+        "elementary": "剛好提前四個月。",
+        "reason": "7月1日距11月1日四個月，貼現息50000×6%×4/12=1000，正解。"
+      }
+    },
+    "accounting": {
+      "principle": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+      "accounts": [
+        "應收票據",
+        "銀行存款",
+        "貼現息"
+      ],
+      "journalEntry": "教學簡式：借『銀行存款49000』、借『貼現息1000』，貸『應收票據50000』；正式終止認列仍待核對教材及追索權條件。",
+      "calculation": "逐步見考題計算式"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "面額50000元，不附息",
+        "發票2月1日，九個月到期",
+        "貼現率6%年率，實收49000元"
+      ],
+      "formula": "貼現息=到期值×貼現率×貼現期間(年)。",
+      "formulaPurpose": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+      "substitutionAndSteps": [
+        {
+          "formula": "到期日=2月1日+9個月=11月1日",
+          "why": "依題目票據九個月到期。"
+        },
+        {
+          "formula": "到期值=50000元",
+          "why": "不附息票據不另計到期利息。"
+        },
+        {
+          "formula": "貼現息=50000−49000=1000元",
+          "why": "到期值與銀行實收差額。"
+        },
+        {
+          "formula": "期間=1000÷(50000×0.06)=1/3年=4個月",
+          "why": "用貼現公式反算時間。"
+        },
+        {
+          "formula": "貼現日=11月1日往前4個月=7月1日",
+          "why": "以到期日倒推。"
+        }
+      ],
+      "result": "7月1日",
+      "unit": "日期（貼現率為年率，金額為新臺幣元）",
+      "matchingOption": "D",
+      "commonMistake": "將九個月到期算錯，或直接用實收金額做貼現公式。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
