@@ -195,9 +195,15 @@ def build():
         needle = "</body>"
         if original_v4.count(needle) != 1:
             raise ValueError("Missing unique V4 closing body tag")
-        v4.write_text(original_v4.replace(needle,
-            '<script src="./verified-questions-runtime.js"></script>\n</body>'),
-            encoding="utf-8")
+        adapter = output / "sudu" / "verified-questions-runtime.js"
+        if not adapter.is_file():
+            raise ValueError("Verified V4 adapter missing from public artifact")
+        # GitHub Pages/browser caches must never keep showing an old UI script.
+        adapter_revision = hashlib.sha256(adapter.read_bytes()).hexdigest()[:12]
+        v4.write_text(original_v4.replace(
+            needle,
+            f'<script src="./verified-questions-runtime.js?v={adapter_revision}"></script>\n</body>'
+        ), encoding="utf-8")
     crop_manifest = generate_demo_question_crops(output)
     entries = catalog(ROOT)
     template = (ROOT / "index.html").read_text(encoding="utf-8")
