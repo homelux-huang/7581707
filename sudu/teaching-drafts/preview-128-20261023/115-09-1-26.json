@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-26",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 26,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-26.webp",
+  "imageSha256": "1121850558b92aeb994fa355456b31dc0ae03cc7e087458b78de6e58741338fb",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。ASCII 7位元編碼與8位元儲存須區分，候選A仍是最明確錯誤；教材出處待核。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "題問錯誤",
+      "Big-5 / Unicode / ASCII / 二進位"
+    ],
+    "reasoningFromOriginalImage": "Big-5是面向繁體中文字形與字元的傳統編碼，並不是『常用英文編碼系統』；Unicode通稱萬國碼；標準ASCII編碼核心7位元，常存放於8位元byte中，題幹的『可由8位元所組成』在儲存語境可成立；編碼將字元映射至電腦可處理的碼值。故最錯的是A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "請區分**字元集、編碼、儲存單位**。**Big-5** 主要服務繁體中文，不是英文專用；**Unicode** 提供多語字元碼位，常見UTF-8是其一種編碼格式；**ASCII** 原始以7位元表128個碼值，電腦通常使用8位元位元組儲存一個ASCII字元，所以C在『可用8位元表示』的敘述下可以成立。**編碼**讓電腦將字元對應為數字／二進位表示。",
+    "elementarySummary": "打英文和打繁體中文，需要用電腦看得懂的字元編號。Big-5比較像繁體中文字典，不是英文專用字典，所以A錯。",
+    "memory": "**Big-5→繁體中文；Unicode→多語系；ASCII→基本英文字元（7位元碼，常1 byte儲存）**。",
+    "concept": "字元編碼、Unicode碼位與UTF格式不可混同；ASCII原始7位元，常見儲存一byte。",
+    "extension": "反向思考：一個字元若在UTF-8中占3個byte，是否代表Unicode只支援3-byte字元？為何『編碼規則』不等於『每個字必定固定byte數』？",
+    "source": {
+      "originalExam": "115-09-1-26",
+      "originalImagePinnedSha256": "1121850558b92aeb994fa355456b31dc0ae03cc7e087458b78de6e58741338fb",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "ASCII 7位元編碼與8位元儲存須區分，候選A仍是最明確錯誤；教材出處待核。"
+    },
+    "highlightTerms": [
+      "Big-5",
+      "Unicode",
+      "ASCII",
+      "7位元",
+      "8位元",
+      "二進位碼"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**A錯**。Big-5用於繁體中文漢字等字元編碼，不能稱作常用英文編碼系統；此選項符合題問『錯誤』。",
+        "elementary": "Big-5主要裝繁體中文字，不是專門存英文。",
+        "reason": "**A錯**。Big-5用於繁體中文漢字等字元編碼，不能稱作常用英文編碼系統；此選項符合題問『錯誤』。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**B正確的概括**。Unicode用統一的碼位表示多語文字，常被稱萬國碼；UTF-8/UTF-16是編碼形式，別當成另一個字元集。",
+        "elementary": "萬國碼就是讓很多國家文字有共用的編號規則。",
+        "reason": "**B正確的概括**。Unicode用統一的碼位表示多語文字，常被稱萬國碼；UTF-8/UTF-16是編碼形式，別當成另一個字元集。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**C有儲存語境前提**。ASCII正式編碼為7位元，但常以1byte（8位元）儲存，說『可由8位元所組成』可按儲存方式理解，不能因此判成較A更明確錯誤。",
+        "elementary": "字元的編號可能只用7格，但電腦常用8格的小盒子裝它。",
+        "reason": "**C有儲存語境前提**。ASCII正式編碼為7位元，但常以1byte（8位元）儲存，說『可由8位元所組成』可按儲存方式理解，不能因此判成較A更明確錯誤。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**D正確**。編碼將文字或符號對應成碼值，電腦最後以二進位形式儲存或傳輸。",
+        "elementary": "把字變成電腦認得的0和1，就是編碼在做的事。",
+        "reason": "**D正確**。編碼將文字或符號對應成碼值，電腦最後以二進位形式儲存或傳輸。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
