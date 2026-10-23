@@ -1329,7 +1329,8 @@
         "sha256": "f031f108b2805bffd737479bb019a682439db5ef31bf1e8082b8a65c4942691c",
         "processingVersion": "115-draft-pixelcrop-v2",
         "cropMethod": "pixel_crop_of_official_page_webp",
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -1337,7 +1338,8 @@
         "single_question_crop_not_yet_generated"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,
@@ -1896,7 +1898,8 @@
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -1904,7 +1907,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,
@@ -2003,7 +2007,8 @@
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2011,7 +2016,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,
@@ -2110,7 +2116,8 @@
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2118,7 +2125,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,
@@ -2217,7 +2225,8 @@
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2226,7 +2235,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,
@@ -2325,7 +2335,8 @@
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "imageQaEvidence": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2336,7 +2347,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS"
     },
     {
       "schemaVersion": 1,

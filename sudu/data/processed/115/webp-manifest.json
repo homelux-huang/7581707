@@ -477,10 +477,19 @@
         15
       ],
       "processingVersion": "v3-visual-review-draft-source-pixel-only",
-      "qaStatus": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "Visually compare entire shared passage against official full page."
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "reviewedSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+        "sourceSha256": "b317ce491d6849193572adc6e96c255d0074bfe6c54246e8638a754432df7808",
+        "method": "direct_original_page_vs_shared_material_WebP"
+      }
     },
     {
       "source": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
@@ -962,9 +971,19 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "f031f108b2805bffd737479bb019a682439db5ef31bf1e8082b8a65c4942691c",
+        "sourceSha256": "08ae32b6b9e6633aa60f2f60321045cd10c5402ee80562e4603d2477ab13eeba",
+        "sharedMaterialId": null
+      }
     },
     {
       "schemaVersion": 1,
@@ -1208,9 +1227,19 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "101bcdaf6b77f421fa0a20a2220a0e592e7fdd6a28595f0b58ec46eda4c767ce",
+        "sourceSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+        "sharedMaterialId": "115-00-C-SHARED-11-15"
+      }
     },
     {
       "schemaVersion": 1,
@@ -1245,9 +1274,19 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "ac9b20198dea3530262fa9c35b2ecd46e17d1ef8a05a705d2c4255a243dc7f5e",
+        "sourceSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+        "sharedMaterialId": "115-00-C-SHARED-11-15"
+      }
     },
     {
       "schemaVersion": 1,
@@ -1282,9 +1321,19 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "575c1ecd856e31d4c861f675225ecc553c2c4d4060ba7534a8eaa24fa0eba82f",
+        "sourceSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+        "sharedMaterialId": "115-00-C-SHARED-11-15"
+      }
     },
     {
       "schemaVersion": 1,
@@ -1319,9 +1368,19 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
-      "issues": []
+      "issues": [],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "2d5d49607eb941df0f6ed272447a312723bfbf050555f53deb1e0cd675a1888e",
+        "sourceSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+        "sharedMaterialId": "115-00-C-SHARED-11-15"
+      }
     },
     {
       "schemaVersion": 1,
@@ -1356,11 +1415,21 @@
       "processingVersion": "115-draft-pixelcrop-v2",
       "generatedAt": "2026-10-22T09:42:21.609274+00:00",
       "cropMethod": "pixel_crop_of_official_page_webp",
-      "qaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "qaStatus": "PASS",
       "ocrPerformed": true,
       "issues": [
         "last_question_on_page_check_footer_and_continuation"
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_original_page_vs_individual_WebP",
+        "reviewedSha256": "74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f",
+        "sourceSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+        "sharedMaterialId": "115-00-C-SHARED-11-15"
+      }
     },
     {
       "schemaVersion": 1,
@@ -9942,6 +10011,7 @@
       }
     ],
     "independentHumanReview": false,
-    "note": "Assistant direct visual page-to-crop review, not independent external human review; grading flags remain false."
+    "note": "Assistant direct visual page-to-crop review, not independent external human review; grading flags remain false.",
+    "additionalBatch115C20261023": "sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json"
   }
 }
