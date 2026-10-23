@@ -113,7 +113,10 @@ def audit(year):
         if not (isinstance(page_sha, str) and len(page_sha) == 64 and
                 isinstance(page_url, str) and page_url.startswith('https://')):
             return False
-        expected = 'OFFICIAL_' + q.get('paperCode', '').replace('-', '_') + '_NO_OBJECTION_SUBMITTED'
+        paper_code = q.get('paperCode')
+        if not isinstance(paper_code, str):
+            return False
+        expected = 'OFFICIAL_' + paper_code.replace('-', '_') + '_NO_OBJECTION_SUBMITTED'
         if answer.get('officialCorrectionStatus') != expected:
             return False
         status_file = base / 'official-confirmation-status.json'
