@@ -354,7 +354,7 @@ function formatStudyValue(q,key,value){
 function optionReason(q,L){
  const C=window.DEMO_LEARNING_CONFIG||{};
  if(q.subject==='會計學'&&(C.accountingOptionReason||{})[q.id+'|'+L])return C.accountingOptionReason[q.id+'|'+L];
- if(L===q.answer)return '符合本題核心：'+q.concept;
+ if(L===q.answer)return '此選項符合題目條件；完整原理集中在下方「解說重點」。';
  return '此選項不符合題幹條件。請用「'+q.memory+'」的相反意思來判斷。';
 }
 function optionSubjectEntries(q,L){
@@ -439,16 +439,20 @@ function guideEntries(q){
  const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
  // English: move the vocabulary/news items from the correct option into the
  // TOP of the subject guide, preserving their exact content and order.
- const englishTop=['中文翻譯','發音','同意相關單字','反意相關單字','新聞時事例句','新聞時事中文翻譯'];
- const firstEnglish=q.subject==='英文'?englishTop.flatMap(name=>extra.filter(([k])=>k===name)):[];
- const proposed=[...extra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
-                 ...firstEnglish,...common,...extra.filter(x=>x[0]!=='考題計算式'&&!(q.subject==='英文'&&englishTop.includes(x[0])))];
+ const englishTop=['中文翻譯','發音','同意相關單字','反意相關單字','新聞時事例句'];
+ const visibleExtra=extra.filter(([name])=>!(q.subject==='英文'&&name==='新聞時事中文翻譯'&&hasStudyValue(q.extra?.['新聞時事例句'])));
+ const firstEnglish=q.subject==='英文'?englishTop.flatMap(name=>visibleExtra.filter(([k])=>k===name)):[];
+ const proposed=[...visibleExtra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
+                 ...firstEnglish,...common,...visibleExtra.filter(x=>x[0]!=='考題計算式'&&!(q.subject==='英文'&&englishTop.includes(x[0])))];
  const entries=[],positions=new Map(),contents=new Set();
+ const correctDetail=q.optionExplanations?.[q.answer];
+ const correctParagraphs=[correctDetail?.teacher,correctDetail?.elementary,correctDetail?.reason]
+  .filter(hasStudyValue).map(normalizeStudyText);
  for(const [rawTitle,value] of proposed){
   const title=rawTitle==='文本出處'?'出處':rawTitle;
   if(!hasStudyValue(value)&&String(value??'').trim()!=='N/A')continue;
   const text=normalizeStudyText(value);
-  if(text!=='n/a'&&contents.has(text))continue;
+  if(text!=='n/a'&&(contents.has(text)||correctParagraphs.some(x=>x===text)))continue;
   if(positions.has(title)){
    // Preserve additional, non-duplicate details in the original guide field.
    // The main calculation is singular and must never be doubled.
@@ -459,7 +463,7 @@ function guideEntries(q){
   if(text!=='n/a')contents.add(text);
  }
  const note=normalizeStudyText(q.memory);
- if(hasStudyValue(q.memory)&&!entries.some(x=>{
+ if(hasStudyValue(q.memory)&&!correctParagraphs.includes(note)&&!entries.some(x=>{
   const value=normalizeStudyText(x[1]);return value&&(value===note||value.includes(note));
  }))entries.splice(entries[0]?.[0]==='考題計算式'?1:0,0,['速記重點',q.memory]);
  return entries;
