@@ -142,6 +142,78 @@
       "matchingOption": "B",
       "commonMistake": "誤把tan47的值直接當tan46；未做週期化簡。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-19",
+      "subject": "數學 B",
+      "questionNumber": 19,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "tan1847°≈1.072；tan2126°≈−0.675；tan2205°=1.000；求tan2026°最可能的選項",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "tan(θ+180°k)=tanθ；在(−90°,90°)中tan單調遞增。",
+          "why": "用正切週期和單調性對大角度三角函數做近似估算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2026°−11×180°=46° ⇒ tan2026°=tan46°",
+          "why": "利用180度週期減少大角度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1847°−10×180°=47° ⇒ tan47°≈1.072",
+          "why": "取得較大的鄰近角度和已知值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2205°−12×180°=45° ⇒ tan45°=1.000",
+          "why": "取得較小的鄰近角度和已知值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "tan45°<tan46°<tan47°，故1.000<tan46°<1.072",
+          "why": "正切在這個角度區間遞增。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "46°介於45°與47°中間，附近估值≈(1.000+1.072)/2=1.036（插值估計）",
+          "why": "平滑函數的局部估計，非嚴格等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "四選項最合理為B：1.036",
+          "why": "排除不在界內或符號錯的選項。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "約1.036；單位：無單位；選項：B",
+          "why": "誤把tan47的值直接當tan46；未做週期化簡。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "fc3e3cc5ae4aaa06eede83901c434769acda783a97051b0379f3e90973b1a9b4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -151,7 +223,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

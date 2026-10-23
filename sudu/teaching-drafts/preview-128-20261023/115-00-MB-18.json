@@ -150,6 +150,84 @@
       "matchingOption": "C",
       "commonMistake": "忘了票價而得到30；或把負20誤寫正20。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-18",
+      "subject": "數學 B",
+      "questionNumber": 18,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "票價50元；P(10000元)=1/1000；P(5000元)=2/1000；P(1000元)=5/1000；P(500元)=1/100；不中奖獎金為0元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "E(獎金)=Σ獎金_i×機率_i；E(淨獲利)=E(獎金)−成本。",
+          "why": "加權平均計算期望，淨收益還要扣成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "10000×(1/1000)=10元",
+          "why": "頭獎獎金乘其發生機率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "5000×(2/1000)=10元",
+          "why": "貳獎同樣作加權。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1000×(5/1000)=5元",
+          "why": "參獎加權。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "500×(1/100)=5元",
+          "why": "肆獎1%要轉成1/100。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "不中獎時獎金0元，該項對期望的貢獻=0",
+          "why": "未中獎不會額外得到獎金。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E(獎金)=10+10+5+5=30元",
+          "why": "四種獎金的平均加權合計。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E(獲利)=30−50=−20元，選C",
+          "why": "固定購票成本每次都要扣除。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "−20元；單位：新臺幣元；選項：C",
+          "why": "忘了票價而得到30；或把負20誤寫正20。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3e13e20fc9728a4541162a2de8dfa141f04650bd168d641c2d9173915d632013",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -159,7 +237,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

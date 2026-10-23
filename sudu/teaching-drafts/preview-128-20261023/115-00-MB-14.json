@@ -130,6 +130,66 @@
       "matchingOption": "D",
       "commonMistake": "把公比誤當公差；把3²−1當新公比8。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-14",
+      "subject": "數學 B",
+      "questionNumber": 14,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "原數列公比3；x,y,z正整數；y−x=z−y=2",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "a_y/a_x=r^{y−x}，a_z/a_y=r^{z−y}，取r=3。",
+          "why": "固定間隔抽取等比數列仍成等比，公比是原公比的間距次方。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "y−x=2、z−y=2",
+          "why": "等差索引公差為2。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a_y/a_x=3^{y−x}=3²=9",
+          "why": "每隔兩項原比值要乘兩次3。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a_z/a_y=3^{z−y}=3²=9",
+          "why": "同理第二對亦然。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "兩比相等均9 ⇒新等比數列、公比9，選D",
+          "why": "符合等比數列的相鄰比值固定。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "等比，公比9；單位：無單位；選項：D",
+          "why": "把公比誤當公差；把3²−1當新公比8。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -139,7 +199,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -1892,7 +1892,571 @@ window.PREVIEW_STEP_BY_STEP_DRAFT = {
       "independentTeachingQA": "PENDING",
       "officialFinalVerified": false,
       "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|8": {
+      "questionId": "115-00-MB-08",
+      "subject": "數學 B",
+      "questionNumber": 8,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=(0,0)；B=(4,0)；C=(−2,2√3)；θ 是 AB 與 AC 的夾角",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "向量 AB·AC=|AB|×|AC|×cosθ；內積=uxvx+uyvy；向量長度 √(x²+y²)",
+          "why": "內積可求兩向量夾角，尤其題目以座標而不是直角三角形給條件時。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AB=(4−0,0−0)=(4,0)",
+          "why": "求 A 指向 B 的向量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC=(−2−0,2√3−0)=(−2,2√3)",
+          "why": "求 A 指向 C 的向量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AB·AC=4×(−2)+0×2√3=−8",
+          "why": "分量相乘後相加得到內積。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "|AB|=√(4²+0²)=4",
+          "why": "使用畢氏定理得 AB 長度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "|AC|=√((−2)²+(2√3)²)=√(4+12)=4",
+          "why": "先平方 √3 項，2√3 平方=12。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "cosθ=(AB·AC)/(|AB|×|AC|)=−8/(4×4)=−1/2",
+          "why": "將內積除兩向量長度乘積，得到選 D。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "cosθ=−1/2；單位：餘弦值無單位；選項：D",
+          "why": "錯把 (2√3)² 當作 4√3；或忽略 AB·AC 負號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "dcad64f776b9128299839aee37597d7509d4155c01a9bc81092fd30bad96aec6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|13": {
+      "questionId": "115-00-MB-13",
+      "subject": "數學 B",
+      "questionNumber": 13,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "26x+15y≤2026；15x+26y≤2026；以完整四圖選擇交集",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "Ax+By≤C（B>0）⇒y≤−Ax/B+C/B；聯立取交集；代(0,0)測半平面。",
+          "why": "以測試點與半平面交集處理線性不等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "直線①：y=−(26/15)x+2026/15，斜率−26/15，y截距約135.07",
+          "why": "正係數除過去保留≤方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "其x截距2026/26≈77.92",
+          "why": "由y=0得x截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "直線②：y=−(15/26)x+2026/26，斜率−15/26，y截距約77.92",
+          "why": "另一邊界同法求斜率與截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "其x截距2026/15≈135.07",
+          "why": "求第二條x截距以核對圖形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "交點兩式相減11x−11y=0 ⇒x=y=2026/41≈49.41",
+          "why": "兩線相交約在(49.41,49.41)。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(0,0)：兩式左邊都是0，均≤2026",
+          "why": "測原點是快速找陰影的一種方法。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "共同下方含原點的圖是A",
+          "why": "選同時成立的陰影交集。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "A（共同下方含原點）；單位：圖形座標單位；選項：A",
+          "why": "只看斜率就選C卻沒判原點是否在陰影。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|14": {
+      "questionId": "115-00-MB-14",
+      "subject": "數學 B",
+      "questionNumber": 14,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "原數列公比3；x,y,z正整數；y−x=z−y=2",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "a_y/a_x=r^{y−x}，a_z/a_y=r^{z−y}，取r=3。",
+          "why": "固定間隔抽取等比數列仍成等比，公比是原公比的間距次方。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "y−x=2、z−y=2",
+          "why": "等差索引公差為2。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a_y/a_x=3^{y−x}=3²=9",
+          "why": "每隔兩項原比值要乘兩次3。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "a_z/a_y=3^{z−y}=3²=9",
+          "why": "同理第二對亦然。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "兩比相等均9 ⇒新等比數列、公比9，選D",
+          "why": "符合等比數列的相鄰比值固定。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "等比，公比9；單位：無單位；選項：D",
+          "why": "把公比誤當公差；把3²−1當新公比8。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|15": {
+      "questionId": "115-00-MB-15",
+      "subject": "數學 B",
+      "questionNumber": 15,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "T(x)=10650×32^{−0.1x}天；原35°C，新27°C",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "倍率=T(27)/T(35)，a^m/a^n=a^{m−n}。",
+          "why": "以指數函數比值比較不同條件的倍率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(27)=10650×32^{−2.7}天",
+          "why": "把27代入指數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(35)=10650×32^{−3.5}天",
+          "why": "把35代入指數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(27)/T(35)=32^{−2.7−(−3.5)}=32^{0.8}",
+          "why": "比值消去10650，指數相減。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "32^{0.8}=32^{4/5}=(2⁵)^{4/5}=2⁴=16",
+          "why": "將32轉換成2的次方來化簡。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新保鮮期為原本16倍，選D",
+          "why": "題問倍數，因此只回比值。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "16倍；單位：倍（T的天數被相除）；選項：D",
+          "why": "將天數相減而非相除；忽略32^{−0.1x}中負指數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|16": {
+      "questionId": "115-00-MB-16",
+      "subject": "數學 B",
+      "questionNumber": 16,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "2008～2016九筆：198733,191310,166886,196627,229481,199113,210383,213598,208440；圖1970～2025全年出生數折線；2017～2025表格數字 193844,181601,177767,165249,153820,138986,135571,134856,107812",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "n=9為奇數，中位數=排序後第(n+1)/2=5筆；全距=max−min。",
+          "why": "排序求中位數、最大減最小求全距，並用時間序列逐點比對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2008～2016共有2016−2008+1=9筆資料。",
+          "why": "含2008與2016兩端共有九年。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "小到大排序：166886<191310<196627<198733<199113<208440<210383<213598<229481。",
+          "why": "中位數必須先排序，不能按年份原順序。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "中位數位置=(9+1)/2=5，值=199113，不是229481。",
+          "why": "奇數筆取正中央一筆。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原折線約最高430000、最低107812，全距約322188>300000，B成立。",
+          "why": "全距是最大減最小，可由圖判超過30萬。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2017～2025依表193844>181601>177767>165249>153820>138986>135571>134856>107812，D成立。",
+          "why": "逐年下降須每一對相鄰年份比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "圖上1976、1988、2000各自皆高於相鄰兩年，A成立；因此C錯誤。",
+          "why": "題問『何者錯誤』，前三項正確排除後為C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "錯誤敘述 C；中位數=199113 人；單位：人；選項：C",
+          "why": "將最大值229481誤當中位數；或未將9筆按大小排序。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|17": {
+      "questionId": "115-00-MB-17",
+      "subject": "數學 B",
+      "questionNumber": 17,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "固定七段LED（圖示數字8）；從七段全暗中任選不重複兩段；不計順序、不考慮旋轉或翻面",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "C(7,2)=7!/(2!5!)=7×6/2=21。",
+          "why": "從n個固定物件選k個且不計先後，使用組合數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "從七個位置選第一段有7種。",
+          "why": "第一段任選七段之一。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "第一段已選，第二段不能重覆，剩6種。",
+          "why": "限制不重複，因此選法少一。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若計順序是7×6=42種。",
+          "why": "先算有順序的數目便於處理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "同一對位置兩種選取先後會算兩次，除以2。",
+          "why": "最後的明暗配置不顧選取先後。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C(7,2)=42/2=21，選C。",
+          "why": "得到不重複的亮燈圖案數。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "21種；單位：種；選項：C",
+          "why": "把次序算兩次選A 42；或錯誤乘7×2選D 14。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "8c55964cf7cec4143310da4282e1ed2c4b6e4d95c8327c3e9ef159998b4a26ab",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|18": {
+      "questionId": "115-00-MB-18",
+      "subject": "數學 B",
+      "questionNumber": 18,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "票價50元；P(10000元)=1/1000；P(5000元)=2/1000；P(1000元)=5/1000；P(500元)=1/100；不中奖獎金為0元",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "E(獎金)=Σ獎金_i×機率_i；E(淨獲利)=E(獎金)−成本。",
+          "why": "加權平均計算期望，淨收益還要扣成本。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "10000×(1/1000)=10元",
+          "why": "頭獎獎金乘其發生機率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "5000×(2/1000)=10元",
+          "why": "貳獎同樣作加權。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1000×(5/1000)=5元",
+          "why": "參獎加權。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "500×(1/100)=5元",
+          "why": "肆獎1%要轉成1/100。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "不中獎時獎金0元，該項對期望的貢獻=0",
+          "why": "未中獎不會額外得到獎金。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E(獎金)=10+10+5+5=30元",
+          "why": "四種獎金的平均加權合計。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "E(獲利)=30−50=−20元，選C",
+          "why": "固定購票成本每次都要扣除。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "−20元；單位：新臺幣元；選項：C",
+          "why": "忘了票價而得到30；或把負20誤寫正20。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "3e13e20fc9728a4541162a2de8dfa141f04650bd168d641c2d9173915d632013",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    },
+    "數學 B|19": {
+      "questionId": "115-00-MB-19",
+      "subject": "數學 B",
+      "questionNumber": 19,
+      "answerCandidate": "B",
+      "aiAnswer": "B",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "tan1847°≈1.072；tan2126°≈−0.675；tan2205°=1.000；求tan2026°最可能的選項",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "tan(θ+180°k)=tanθ；在(−90°,90°)中tan單調遞增。",
+          "why": "用正切週期和單調性對大角度三角函數做近似估算。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2026°−11×180°=46° ⇒ tan2026°=tan46°",
+          "why": "利用180度週期減少大角度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "1847°−10×180°=47° ⇒ tan47°≈1.072",
+          "why": "取得較大的鄰近角度和已知值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2205°−12×180°=45° ⇒ tan45°=1.000",
+          "why": "取得較小的鄰近角度和已知值。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "tan45°<tan46°<tan47°，故1.000<tan46°<1.072",
+          "why": "正切在這個角度區間遞增。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "46°介於45°與47°中間，附近估值≈(1.000+1.072)/2=1.036（插值估計）",
+          "why": "平滑函數的局部估計，非嚴格等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "四選項最合理為B：1.036",
+          "why": "排除不在界內或符號錯的選項。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "約1.036；單位：無單位；選項：B",
+          "why": "誤把tan47的值直接當tan46；未做週期化簡。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "fc3e3cc5ae4aaa06eede83901c434769acda783a97051b0379f3e90973b1a9b4",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
-  "readyQuestionCount": 31
+  "readyQuestionCount": 39
 };

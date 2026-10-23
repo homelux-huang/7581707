@@ -134,6 +134,72 @@
       "matchingOption": "C",
       "commonMistake": "把次序算兩次選A 42；或錯誤乘7×2選D 14。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-17",
+      "subject": "數學 B",
+      "questionNumber": 17,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "固定七段LED（圖示數字8）；從七段全暗中任選不重複兩段；不計順序、不考慮旋轉或翻面",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "C(7,2)=7!/(2!5!)=7×6/2=21。",
+          "why": "從n個固定物件選k個且不計先後，使用組合數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "從七個位置選第一段有7種。",
+          "why": "第一段任選七段之一。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "第一段已選，第二段不能重覆，剩6種。",
+          "why": "限制不重複，因此選法少一。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "若計順序是7×6=42種。",
+          "why": "先算有順序的數目便於處理。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "同一對位置兩種選取先後會算兩次，除以2。",
+          "why": "最後的明暗配置不顧選取先後。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "C(7,2)=42/2=21，選C。",
+          "why": "得到不重複的亮燈圖案數。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "21種；單位：種；選項：C",
+          "why": "把次序算兩次選A 42；或錯誤乘7×2選D 14。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "8c55964cf7cec4143310da4282e1ed2c4b6e4d95c8327c3e9ef159998b4a26ab",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -143,7 +209,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -141,6 +141,78 @@
       "matchingOption": "C",
       "commonMistake": "將最大值229481誤當中位數；或未將9筆按大小排序。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-16",
+      "subject": "數學 B",
+      "questionNumber": 16,
+      "answerCandidate": "C",
+      "aiAnswer": "C",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "2008～2016九筆：198733,191310,166886,196627,229481,199113,210383,213598,208440；圖1970～2025全年出生數折線；2017～2025表格數字 193844,181601,177767,165249,153820,138986,135571,134856,107812",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "n=9為奇數，中位數=排序後第(n+1)/2=5筆；全距=max−min。",
+          "why": "排序求中位數、最大減最小求全距，並用時間序列逐點比對。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2008～2016共有2016−2008+1=9筆資料。",
+          "why": "含2008與2016兩端共有九年。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "小到大排序：166886<191310<196627<198733<199113<208440<210383<213598<229481。",
+          "why": "中位數必須先排序，不能按年份原順序。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "中位數位置=(9+1)/2=5，值=199113，不是229481。",
+          "why": "奇數筆取正中央一筆。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "原折線約最高430000、最低107812，全距約322188>300000，B成立。",
+          "why": "全距是最大減最小，可由圖判超過30萬。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "2017～2025依表193844>181601>177767>165249>153820>138986>135571>134856>107812，D成立。",
+          "why": "逐年下降須每一對相鄰年份比較。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "圖上1976、1988、2000各自皆高於相鄰兩年，A成立；因此C錯誤。",
+          "why": "題問『何者錯誤』，前三項正確排除後為C。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "錯誤敘述 C；中位數=199113 人；單位：人；選項：C",
+          "why": "將最大值229481誤當中位數；或未將9筆按大小排序。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "57d2c97c6cc8ce80b03c1b43d7c919f2242dae13945945b151abea9f9891c219",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -150,7 +222,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

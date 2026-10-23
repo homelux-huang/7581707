@@ -145,6 +145,78 @@
       "matchingOption": "D",
       "commonMistake": "錯把 (2√3)² 當作 4√3；或忽略 AB·AC 負號。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-08",
+      "subject": "數學 B",
+      "questionNumber": 8,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "A=(0,0)；B=(4,0)；C=(−2,2√3)；θ 是 AB 與 AC 的夾角",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "向量 AB·AC=|AB|×|AC|×cosθ；內積=uxvx+uyvy；向量長度 √(x²+y²)",
+          "why": "內積可求兩向量夾角，尤其題目以座標而不是直角三角形給條件時。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AB=(4−0,0−0)=(4,0)",
+          "why": "求 A 指向 B 的向量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AC=(−2−0,2√3−0)=(−2,2√3)",
+          "why": "求 A 指向 C 的向量。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "AB·AC=4×(−2)+0×2√3=−8",
+          "why": "分量相乘後相加得到內積。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "|AB|=√(4²+0²)=4",
+          "why": "使用畢氏定理得 AB 長度。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "|AC|=√((−2)²+(2√3)²)=√(4+12)=4",
+          "why": "先平方 √3 項，2√3 平方=12。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "cosθ=(AB·AC)/(|AB|×|AC|)=−8/(4×4)=−1/2",
+          "why": "將內積除兩向量長度乘積，得到選 D。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "cosθ=−1/2；單位：餘弦值無單位；選項：D",
+          "why": "錯把 (2√3)² 當作 4√3；或忽略 AB·AC 負號。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "dcad64f776b9128299839aee37597d7509d4155c01a9bc81092fd30bad96aec6",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -154,7 +226,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

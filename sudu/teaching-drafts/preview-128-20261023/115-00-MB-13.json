@@ -143,6 +143,84 @@
       "matchingOption": "A",
       "commonMistake": "只看斜率就選C卻沒判原點是否在陰影。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-13",
+      "subject": "數學 B",
+      "questionNumber": 13,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "26x+15y≤2026；15x+26y≤2026；以完整四圖選擇交集",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "Ax+By≤C（B>0）⇒y≤−Ax/B+C/B；聯立取交集；代(0,0)測半平面。",
+          "why": "以測試點與半平面交集處理線性不等式。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "直線①：y=−(26/15)x+2026/15，斜率−26/15，y截距約135.07",
+          "why": "正係數除過去保留≤方向。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "其x截距2026/26≈77.92",
+          "why": "由y=0得x截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "直線②：y=−(15/26)x+2026/26，斜率−15/26，y截距約77.92",
+          "why": "另一邊界同法求斜率與截距。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "其x截距2026/15≈135.07",
+          "why": "求第二條x截距以核對圖形。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "交點兩式相減11x−11y=0 ⇒x=y=2026/41≈49.41",
+          "why": "兩線相交約在(49.41,49.41)。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "(0,0)：兩式左邊都是0，均≤2026",
+          "why": "測原點是快速找陰影的一種方法。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "共同下方含原點的圖是A",
+          "why": "選同時成立的陰影交集。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "A（共同下方含原點）；單位：圖形座標單位；選項：A",
+          "why": "只看斜率就選C卻沒判原點是否在陰影。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -152,7 +230,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

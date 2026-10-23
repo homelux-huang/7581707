@@ -134,6 +134,72 @@
       "matchingOption": "D",
       "commonMistake": "將天數相減而非相除；忽略32^{−0.1x}中負指數。",
       "display": true
+    },
+    "stepByStep": {
+      "questionId": "115-00-MB-15",
+      "subject": "數學 B",
+      "questionNumber": 15,
+      "answerCandidate": "D",
+      "aiAnswer": "D",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": true,
+      "title": "考題計算式｜逐步解題",
+      "steps": [
+        {
+          "title": "整理題目已知",
+          "content": "T(x)=10650×32^{−0.1x}天；原35°C，新27°C",
+          "why": "核對題目原本提供的數值、單位及限制，不另外假設。",
+          "kind": "given"
+        },
+        {
+          "title": "挑選公式與用途",
+          "content": "倍率=T(27)/T(35)，a^m/a^n=a^{m−n}。",
+          "why": "以指數函數比值比較不同條件的倍率。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(27)=10650×32^{−2.7}天",
+          "why": "把27代入指數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(35)=10650×32^{−3.5}天",
+          "why": "把35代入指數。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "T(27)/T(35)=32^{−2.7−(−3.5)}=32^{0.8}",
+          "why": "比值消去10650，指數相減。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "32^{0.8}=32^{4/5}=(2⁵)^{4/5}=2⁴=16",
+          "why": "將32轉換成2的次方來化簡。",
+          "kind": "formula"
+        },
+        {
+          "title": "代入與運算",
+          "content": "新保鮮期為原本16倍，選D",
+          "why": "題問倍數，因此只回比值。",
+          "kind": "formula"
+        },
+        {
+          "title": "計算結果及對應選項",
+          "content": "16倍；單位：倍（T的天數被相除）；選項：D",
+          "why": "將天數相減而非相除；忽略32^{−0.1x}中負指數。",
+          "kind": "result"
+        }
+      ],
+      "originalImageSha256": "304b3844a384648e5643468c5eeaee79fb0bc0716fa168e8136a90f790841b15",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": false,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
     }
   },
   "qa": {
@@ -143,7 +209,8 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
-    "extensionNeedsQuestionSpecificRevision": false
+    "extensionNeedsQuestionSpecificRevision": false,
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
