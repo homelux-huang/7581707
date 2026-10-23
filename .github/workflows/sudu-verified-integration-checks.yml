@@ -5,6 +5,7 @@ on:
       - integration/114-115-auto-verified-pages
       - feature/partial-qa-preview-114-115-20261022
       - release/114-115-qa-incremental-20261022
+      - feature/115-math-b-audited-student-release-20261023
       - fix/fast-chromium-qa-20261023
   workflow_dispatch:
 permissions:
