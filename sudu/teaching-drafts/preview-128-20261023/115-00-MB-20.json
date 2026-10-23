@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-20",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 20,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-20.webp",
+  "imageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視）",
+    "method": "目視 GitHub 既有單題原始 WebP，完整題幹、圖表、年份、單位、選項 A-D；對 WebP 原始 bytes 重新計算 SHA256 並與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "三角形ABC，AB=100公尺、∠CAB=60°、∠CBA=75°，求AC距離（公尺）。",
+    "keyConditions": [
+      "AB=100公尺",
+      "∠A=60°",
+      "∠B=75°",
+      "AC為待求距離"
+    ],
+    "reasoningFromOriginalImage": "已知兩角60°、75°，第三角 **∠C=180−60−75=45°**。正弦定理 **AC/sin75°=AB/sin45°**，得到 **AC=100×sin75°/sin45°**。因 **sin75°=(√6+√2)/4**、**sin45°=√2/2**，比值化成 (√3+1)/2，故 **AC=50(√3+1)公尺**，選A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "50(√3+1) 公尺（約136.60公尺）",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "已知兩角60°、75°，第三角 **∠C=180−60−75=45°**。正弦定理 **AC/sin75°=AB/sin45°**，得到 **AC=100×sin75°/sin45°**。因 **sin75°=(√6+√2)/4**、**sin45°=√2/2**，比值化成 (√3+1)/2，故 **AC=50(√3+1)公尺**，選A。",
+    "elementarySummary": "先知道三角形三個角加起來180度，所以最後一角是45度。接著用正弦定理，把100公尺的那條邊當標準，就能求出草人到工寮的距離，約136.6公尺。",
+    "memory": "**C=45°；AC=100 sin75°/sin45°=50(√3+1)公尺**。",
+    "concept": "正弦定理：**邊長/對角正弦值**對三條邊一致。要確認 AC 對的是**B角75°**，AB對的是**C角45°**，別放反。",
+    "extension": "反向思考：如果∠A與∠B互換成75°和60°，C仍45°，但 AC 對的B角變60°，新的AC=100 sin60°/sin45°=50√6公尺，不再是A。",
+    "source": {
+      "originalExam": "115-00-MB-20",
+      "originalImagePinnedSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B更正公告與最終解答待核對"
+    },
+    "highlightTerms": [
+      "∠C=45°",
+      "正弦定理",
+      "sin75°",
+      "50(√3+1)公尺"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "50(√3+1)公尺與正弦定理完整推導一致，為正解。",
+        "elementary": "計算得到50乘(根號3加1)。",
+        "reason": "50(√3+1)公尺與正弦定理完整推導一致，為正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "50(√3−1)少了正號，sin75°展開是**sin45cos30+cos45sin30**，兩項要相加。",
+        "elementary": "兩個正的三角函數要加，不是減。",
+        "reason": "50(√3−1)少了正號，sin75°展開是**sin45cos30+cos45sin30**，兩項要相加。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "20(√3+1)使用錯誤倍數20，而AB=100公尺使正確係數為50。",
+        "elementary": "把100公尺縮錯成20倍的係數。",
+        "reason": "20(√3+1)使用錯誤倍數20，而AB=100公尺使正確係數為50。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "20(√3−1)同時錯在係數20及括號內負號，不符合正弦定理。",
+        "elementary": "大小和正負號都算錯。",
+        "reason": "20(√3−1)同時錯在係數20及括號內負號，不符合正弦定理。"
+      }
+    },
+    "math": {
+      "formula": "正弦定理 AC/sinB=AB/sinC；sin(α+β)=sinαcosβ+cosαsinβ。",
+      "formulaUsage": "知道一邊與另外兩角時，依正弦定理解三角形邊長。",
+      "workedExample": "例：三角形AB=10、B=30°、C=90°，則AC=10 sin30°/sin90°=5。",
+      "dailyApplication": "測量農地上兩個不能直接拉尺的地點距離。",
+      "notes": "非金額數學運算仍要顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "AB=100公尺",
+        "∠A=60°",
+        "∠B=75°",
+        "AC為待求距離"
+      ],
+      "formula": "正弦定理 AC/sinB=AB/sinC；sin(α+β)=sinαcosβ+cosαsinβ。",
+      "formulaPurpose": "知道一邊與另外兩角時，依正弦定理解三角形邊長。",
+      "substitutionAndSteps": [
+        {
+          "formula": "∠C=180°−60°−75°=45°",
+          "why": "三角形內角和是180°。"
+        },
+        {
+          "formula": "AC/sin75°=AB/sin45°=100/sin45°",
+          "why": "以邊及其對角使用正弦定理。"
+        },
+        {
+          "formula": "sin75°=sin(45°+30°)=sin45cos30+cos45sin30",
+          "why": "75°拆成45°+30°運用和角公式。"
+        },
+        {
+          "formula": "=(√2/2)(√3/2)+(√2/2)(1/2)=(√6+√2)/4",
+          "why": "代入特殊角的正弦、餘弦值。"
+        },
+        {
+          "formula": "sin45°=√2/2",
+          "why": "取得分母確切值。"
+        },
+        {
+          "formula": "AC=100×[(√6+√2)/4]÷(√2/2)=100×(√3+1)/2=50(√3+1)公尺，選A",
+          "why": "化簡根號與分數得距離。"
+        }
+      ],
+      "result": "50(√3+1) 公尺（約136.60公尺）",
+      "unit": "公尺",
+      "matchingOption": "A",
+      "commonMistake": "將對角放錯；或在sin75°和角公式中誤用減號。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
