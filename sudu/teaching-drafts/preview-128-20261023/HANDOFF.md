@@ -1,3 +1,6 @@
+## 2026-10-23｜英文詞彙／來源型新聞例句CI QA新增
+- 強化`audit_preview_128_release_readiness.py`：28題四選項中文、IPA、初中高級同反義字、自編例句/中譯/實際highlight；只有附URL及日期、標註paraphrase、highlight的才可稱來源型新聞。progress新聞集合須一致，目前9/28。詳見 `ENGLISH_NEWS_AND_VOCAB_AUTOMATED_GATES_20261023.md`。
+
 ## 2026-10-23｜英文新聞來源例句追加5題（仍不發布）
 - E17、E22、E24、E25、E26查到2025/26年可靠官方／海事媒體／交通新聞來源，中英改寫句和highlight已保存。加前一批E08、20、21、28共9/28有來源、剩19題仍維持非新聞自編例句。詳見 `ENGLISH_NEWS_SOURCED_EXAMPLES_5_MORE_20261023.md`。完整教學0、部署0。
 

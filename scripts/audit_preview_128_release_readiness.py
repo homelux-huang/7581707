@@ -37,6 +37,7 @@ def main():
     pending_ui = 0
     disagreement = []
     subjects = Counter()
+    sourced_news = set()
 
     def verify_asset(qid, year, relative, sha, kind):
         if not isinstance(relative, str) or not relative.startswith(
@@ -90,9 +91,46 @@ def main():
             disagreement.append(qid)
             if not comp.get("conflictWarningRequired"):
                 problems.append(f"{qid}: AI/official mismatch lacks visible warning requirement")
+        if record.get("subject") == "英文":
+            english = record.get("teaching", {}).get("english") or {}
+            if not english.get("pronunciationIPA") or not english.get("sentenceTranslationZh"):
+                problems.append(f"{qid}: English IPA or full-sentence Chinese translation missing")
+            if set((english.get("optionMeaningZh") or {}).keys()) != set("ABCD"):
+                problems.append(f"{qid}: four English option meanings missing")
+            for level in ("初級", "中級", "高級"):
+                if not (english.get("synonyms") or {}).get(level):
+                    problems.append(f"{qid}: synonym level {level} missing")
+                if not (english.get("antonyms") or {}).get(level):
+                    problems.append(f"{qid}: antonym level {level} missing")
+            sample = english.get("exampleEnglish") or ""
+            surface = english.get("exampleHighlightedSurfaceForm") or ""
+            if not sample or not english.get("exampleChinese") or not surface or surface.casefold() not in sample.casefold():
+                problems.append(f"{qid}: self-authored English example/translation/highlight incomplete")
+            news_url = english.get("newsExampleSourceUrl")
+            if news_url:
+                sourced_news.add(qid)
+                news_sentence = english.get("newsExampleEnglish") or ""
+                news_surface = english.get("newsExampleHighlightedSurfaceForm") or ""
+                if not str(news_url).startswith("https://") or not news_sentence or not english.get("newsExampleChinese"):
+                    problems.append(f"{qid}: source-backed news example or Chinese translation incomplete")
+                if not news_surface or news_surface.casefold() not in news_sentence.casefold():
+                    problems.append(f"{qid}: sourced news highlight absent from sentence")
+                if not english.get("newsExampleSourceDate") or not english.get("newsExampleSourceTitle"):
+                    problems.append(f"{qid}: news source publication date or title missing")
+                if "PARAPHRASE" not in (english.get("newsExampleStatus") or ""):
+                    problems.append(f"{qid}: news must be clearly labeled a paraphrase rather than a direct quote")
+            elif "SOURCE_VERIFIED" in (english.get("newsExampleStatus") or ""):
+                problems.append(f"{qid}: news falsely labeled source-verified without a URL")
+
         qa = record.get("qa") or {}
         pending_teaching += qa.get("independentTeachingReview") != "PASS"
         pending_ui += qa.get("uiReview") != "PASS"
+
+    news_ledger = progress.get("partialEnglishNewsSourceLedger") or {}
+    if set(news_ledger.get("questionIds", [])) != sourced_news:
+        problems.append("Recorded English sourced-news IDs do not match source-bearing records")
+    if news_ledger.get("sourcedExampleCount") != len(sourced_news):
+        problems.append("English news-source count differs from verified records")
 
     binary = progress.get("binaryRecheckedLatest") or {}
     if binary.get("recheckedDistinctQuestions", 0) > checked_visual:
@@ -118,6 +156,8 @@ def main():
         "pendingIndependentTeachingReview": pending_teaching,
         "pendingUiReview": pending_ui,
         "aiOfficialConflicts": disagreement,
+        "newsContextExamplesWithSource": len(sourced_news),
+        "englishNewsUnverifiedCount": 28 - len(sourced_news),
         "fullyAcceptedPerManifest": progress.get("fullyAccepted"),
         "deployedPerManifest": progress.get("deployed"),
         "errors": problems,
