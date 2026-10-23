@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-20",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 20,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-20.webp",
+  "imageSha256": "35deace190479184ac88967f7e1ecb0e6c24194e032ae7d2b10c35ba1fc58994",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看 GitHub 對應的原始單題 WebP，核實第 20 題／題幹／A-D／對話上下文／無鄰題，重新計算文件 SHA256 與 progress 固定清單相符。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "候選 OCR 在第20題 D 選項後混入下一頁頁首及第21～24題的文章；原圖 D 只到 stray cats.，已依原圖剔除混頁文字，不覆寫來源。"
+    ]
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並留下自行解題結果，才比對候選答案；官網確認 2026-05-08 標準答案定案，但尚無法直接讀取英文最終答案 PDF 與試題／答案確認說明。",
+    "blindSolveStatus": "SELF_IMAGE_SOLVE_BEFORE_LOOKUP_NOT_INDEPENDENT_THIRD_PARTY",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Willy: Did you hear that Dr. Jane Goodall passed away last year? Joan: It's so sad. She spent her whole life studying chimpanzees in Africa. Willy: Yes. ____ So now we know better how chimpanzees behave in the wild.",
+    "keyConditions": [
+      "Jane Goodall",
+      "studying chimpanzees in Africa",
+      "know better how chimpanzees behave in the wild"
+    ],
+    "reasoningFromOriginalImage": "Jane Goodall 研究非洲黑猩猩，下句說大家因此更懂黑猩猩在野外行為，所以選 B She really helped people understand these animals。其餘選項海洋、貧困兒童或流浪貓不是這段要解釋的主題。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "對話核心是 **Jane Goodall 研究 chimpanzees（黑猩猩）**，而下句 **So now we know better how chimpanzees behave in the wild** 表『因此我們更了解野外黑猩猩行為』，最適合用 **She really helped people understand these animals** 作因果承接。passed away 是較委婉的『逝世』說法。不要用題幹之外的成就湊錯誤選項理由。",
+    "elementarySummary": "珍古德博士一直研究黑猩猩，讓大家更知道牠們在野外怎麼生活。所以上一句應該是『她幫助人們了解這些動物』，下一句才接得上。",
+    "memory": "**study chimpanzees → understand chimpanzees → know their behavior**。",
+    "concept": "**study animals**＝研究動物；**help people understand**＝幫助人理解；**so** 表前因後果；**passed away** 是 died 的委婉說法。",
+    "extension": "反向思考：若下一句改成『So many endangered sea animals were protected』，選項 A 的海洋保護才可能和結果相符；閱讀先對應『結果講的是哪一種動物』。",
+    "source": {
+      "originalExam": "115-00-E-20",
+      "originalImagePinnedSha256": "35deace190479184ac88967f7e1ecb0e6c24194e032ae7d2b10c35ba1fc58994",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 答案確認公告；該題最終 PDF 尚未獨立複核",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "studying chimpanzees",
+      "helped people understand",
+      "how chimpanzees behave"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**protecting the oceans** 是保護海洋，但題幹講黑猩猩研究與野外行為，無法說明下句的 chimpanzees 行為知識。",
+        "elementary": "這段在聊黑猩猩，不是在說大海。",
+        "reason": "**protecting the oceans** 是保護海洋，但題幹講黑猩猩研究與野外行為，無法說明下句的 chimpanzees 行為知識。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**helped people understand these animals** 中 these animals 指黑猩猩，與後句知道牠們的野外行為直接形成因果，是正解。",
+        "elementary": "她研究黑猩猩，大家才更懂黑猩猩。",
+        "reason": "**helped people understand these animals** 中 these animals 指黑猩猩，與後句知道牠們的野外行為直接形成因果，是正解。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**poor children in Africa** 談非洲貧困兒童，雖同樣提 Africa，但答句重點是了解動物行為，不能只因地點相同就選它。",
+        "elementary": "同樣提到非洲，卻不是在說孩子，是說黑猩猩。",
+        "reason": "**poor children in Africa** 談非洲貧困兒童，雖同樣提 Africa，但答句重點是了解動物行為，不能只因地點相同就選它。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**stray cats** 指流浪貓，物種和研究主題 chimpanzees 不一致，因此不能解釋下句。",
+        "elementary": "流浪貓和野外黑猩猩是不同動物。",
+        "reason": "**stray cats** 指流浪貓，物種和研究主題 chimpanzees 不一致，因此不能解釋下句。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Willy：你聽說珍古德博士去年過世了嗎？Joan：真令人難過。她一生投入研究非洲黑猩猩。Willy：是啊，她真的幫助人們了解這些動物，因此現在我們更知道黑猩猩在野外如何活動。",
+      "testedWord": "understand",
+      "answerWord": "understand",
+      "pronunciationIPA": "/ˌʌndərˈstænd/",
+      "optionMeaningZh": {
+        "A": "她花很多心力保護海洋。",
+        "B": "她確實幫助人們了解這些動物。",
+        "C": "她給非洲的貧困兒童許多愛。",
+        "D": "她鼓勵大家照顧流浪貓。"
+      },
+      "synonyms": {
+        "初級": [
+          "know（知道；語意較廣）"
+        ],
+        "中級": [
+          "comprehend（理解）"
+        ],
+        "高級": [
+          "grasp（掌握、理解）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "not understand（不理解）"
+        ],
+        "中級": [
+          "misunderstand（誤解）"
+        ],
+        "高級": [
+          "misinterpret（錯誤詮釋）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "animal（動物）"
+        ],
+        "中級": [
+          "chimpanzee（黑猩猩）"
+        ],
+        "高級": [
+          "behavior（行為）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關或近義片語不能保證任何情況都完全可替換；非反義關係已註明。",
+      "exampleEnglish": "Watching the documentary helped me understand animal behavior.",
+      "exampleChinese": "看這部紀錄片幫助我了解動物行為。",
+      "exampleHighlightedSurfaceForm": "understand",
+      "exampleType": "自編雙語教學例句，非新聞",
+      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
