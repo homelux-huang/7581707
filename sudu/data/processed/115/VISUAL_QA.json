@@ -5,7 +5,7 @@
   "reviewerPolicy": "PASS requires exact SHA-bound original visual evidence",
   "passCount": 143,
   "questionCount": 205,
-  "sharedMaterialPassCount": 4,
+  "sharedMaterialPassCount": 5,
   "questions": [
     {
       "questionId": "115-00-C-01",
@@ -1325,9 +1325,9 @@
     },
     {
       "sharedMaterialId": "115-00-C-SHARED-16-18",
-      "qaStatus": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
-      "reference": null,
-      "sha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45"
+      "qaStatus": "PASS",
+      "reference": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json",
+      "sha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c"
     },
     {
       "sharedMaterialId": "115-00-C-SHARED-19-22",

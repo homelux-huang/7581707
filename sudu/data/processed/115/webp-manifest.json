@@ -502,14 +502,14 @@
         90,
         161,
         1310,
-        1049
+        1059
       ],
-      "output": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+      "output": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
       "outputSize": [
         1220,
-        888
+        898
       ],
-      "sha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+      "sha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
       "sharedMaterialId": "115-00-C-SHARED-16-18",
       "paperCode": "00-C",
       "sourcePage": 6,
@@ -518,11 +518,33 @@
         17,
         18
       ],
-      "processingVersion": "v3-visual-review-draft-source-pixel-only",
-      "qaStatus": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
-      "issues": [
-        "Visually compare entire shared passage against official full page."
-      ]
+      "processingVersion": "source-pixel-v4-review-2026-10-23",
+      "qaStatus": "PASS",
+      "issues": [],
+      "previousCropRecord": {
+        "output": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+        "sha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+        "crop": [
+          90,
+          161,
+          1310,
+          1049
+        ],
+        "qaStatus": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+        "issues": [
+          "Visually compare entire shared passage against official full page."
+        ]
+      },
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json",
+        "reviewedSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+        "sourceSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-23",
+        "method": "direct_original_page_vs_shared_paper_v4_WebP",
+        "independentHumanReview": false,
+        "text": "Reading text and byline complete; Q16 excluded"
+      }
     },
     {
       "source": "sudu/data/original/115/00-C/p007-6b454d6590-v2-w1400-q66.webp",

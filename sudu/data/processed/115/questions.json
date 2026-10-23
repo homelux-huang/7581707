@@ -2475,10 +2475,11 @@
         "processingVersion": "direct-source-pixel-review-2026-10-23",
         "cropMethod": "source_pixel_composite_preserving_full_diagram_only",
         "sharedMaterialWebps": [
-          "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp"
+          "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp"
         ],
         "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
-        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json"
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+        "sharedMaterialQaEvidence": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2584,10 +2585,11 @@
         "processingVersion": "direct-source-pixel-review-2026-10-23",
         "cropMethod": "source_pixel_crop_mask_previous_Q16_wheel_arc_only",
         "sharedMaterialWebps": [
-          "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp"
+          "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp"
         ],
         "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
-        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json"
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+        "sharedMaterialQaEvidence": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2693,9 +2695,10 @@
         "processingVersion": "115-draft-pixelcrop-v2",
         "cropMethod": "pixel_crop_of_official_page_webp",
         "sharedMaterialWebps": [
-          "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp"
+          "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": null,
+        "sharedMaterialQaEvidence": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
@@ -2706,7 +2709,8 @@
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
