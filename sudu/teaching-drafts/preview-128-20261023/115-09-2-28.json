@@ -74,10 +74,10 @@
     ],
     "optionExplanations": {
       "A": {
-        "isCorrect": false,
-        "teacher": "A=(2,1,2)，最後一份蛋餅MU=24−20=4、豆沙包MU=5、三明治第二份MU=21−15=6。MU/P=4/40=5/50=6/60=0.10，**符合命題預期的等邊際原則**；總費用250元、總效用24+5+21=50。未列預算則尚不能單憑此說全域TU最大。",
-        "elementary": "如果只看每元增加的快樂，這組三樣都一樣划算，像老師教的均衡組合。",
-        "reason": "A=(2,1,2)，最後一份蛋餅MU=24−20=4、豆沙包MU=5、三明治第二份MU=21−15=6。MU/P=4/40=5/50=6/60=0.10，**符合命題預期的等邊際原則**；總費用250元、總效用24+5+21=50。未列預算則尚不能單憑此說全域TU最大。"
+        "isCorrect": true,
+        "teacher": "**115年官方最終答案為 A（2、1、2）**，並有商管專二疑義確認說明。最後一份蛋餅MU/P＝(24−20)/40＝0.10、豆沙包＝(5−0)/50＝0.10、三明治＝(21−15)/60＝0.10，符合官方每元邊際效用相等的均衡判準。A花費2×40＋1×50＋2×60＝250元，但**250元是此選項算出的支出，不是原題提供的預算**。原AI曾因沒有預算而以總效用54選D，該獨立初解須保留作對照；此題完整教學QA仍待驗收。",
+        "elementary": "官方選A，因為三樣早餐最後多買一份時，每花一塊錢增加的快樂都剛好是0.1。雖然另一種不限制花費的選法快樂總分更高，但花錢條件不一樣；題目沒說預算，所以不能自己補上250元。",
+        "reason": "**115年官方最終答案為 A（2、1、2）**，並有商管專二疑義確認說明。最後一份蛋餅MU/P＝(24−20)/40＝0.10、豆沙包＝(5−0)/50＝0.10、三明治＝(21−15)/60＝0.10，符合官方每元邊際效用相等的均衡判準。A花費2×40＋1×50＋2×60＝250元，但**250元是此選項算出的支出，不是原題提供的預算**。原AI曾因沒有預算而以總效用54選D，該獨立初解須保留作對照；此題完整教學QA仍待驗收。"
       },
       "B": {
         "isCorrect": false,
@@ -358,6 +358,21 @@
       "fullIndependentTeachingQa": "PENDING",
       "releaseApproved": false,
       "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
+    },
+    "optionCorrectnessAlignment20261023": {
+      "status": "OFFICIAL_OPTION_FLAG_ALIGNED_TEACHING_BLOCK_RETAINED",
+      "officialAnswer": "A",
+      "before": {
+        "isCorrect": false,
+        "teacher": "A=(2,1,2)，最後一份蛋餅MU=24−20=4、豆沙包MU=5、三明治第二份MU=21−15=6。MU/P=4/40=5/50=6/60=0.10，**符合命題預期的等邊際原則**；總費用250元、總效用24+5+21=50。未列預算則尚不能單憑此說全域TU最大。",
+        "elementary": "如果只看每元增加的快樂，這組三樣都一樣划算，像老師教的均衡組合。",
+        "reason": "A=(2,1,2)，最後一份蛋餅MU=24−20=4、豆沙包MU=5、三明治第二份MU=21−15=6。MU/P=4/40=5/50=6/60=0.10，**符合命題預期的等邊際原則**；總費用250元、總效用24+5+21=50。未列預算則尚不能單憑此說全域TU最大。"
+      },
+      "scope": "Draft answer-option label only, not independent teaching approval",
+      "firstPassAiAnswerUnchanged": true,
+      "studentReleaseApproved": false,
+      "independentTeachingQA": "PENDING",
+      "source": "official-final-evidence-20261023.json"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

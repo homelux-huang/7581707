@@ -13,11 +13,34 @@ def audit():
     records = {p.stem: json.loads(p.read_text()) for p in DRAFT.glob('1??-*.json')}
     if len(records) != 128 or set(records) != set(evidence):
         errors.append('Frozen 128-question scope differs from official evidence registry')
+    manifest = json.loads((DRAFT / 'progress.json').read_text())
+    items = {item['questionId']: item for item in manifest['items']}
+    if manifest['scopeTotal'] != 128 or len(manifest['items']) != 128 or set(items) != set(records):
+        errors.append('Frozen manifest must list exactly 128 unique draft records')
+    verified_image_hashes = {}
+
+    def actual_sha256(repo_path):
+        if repo_path not in verified_image_hashes:
+            binary = ROOT / 'sudu' / repo_path
+            verified_image_hashes[repo_path] = (
+                hashlib.sha256(binary.read_bytes()).hexdigest() if binary.is_file() else None
+            )
+        return verified_image_hashes[repo_path]
+
     for q, d in records.items():
         t, comparison = d['teaching'], d['answerComparison']
         image = ROOT / 'sudu' / d['image']
-        if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != d['imageSha256']:
+        if actual_sha256(d['image']) != d['imageSha256']:
             errors.append(q + ': original image digest mismatch')
+        registry_item = items.get(q, {})
+        if registry_item.get('image') != d['image'] or registry_item.get('imageSha256') != d['imageSha256']:
+            errors.append(q + ': draft image path or SHA differs from frozen manifest')
+        shared = registry_item.get('sharedImages', [])
+        for ref in shared:
+            if actual_sha256(ref['image']) != ref['sha256']:
+                errors.append(q + ': shared image digest mismatch: ' + ref['image'])
+        if d.get('sharedImages') is not None and d.get('sharedImages') != shared:
+            errors.append(q + ': shared image association differs from frozen manifest')
         if d.get('deploy') is not False or d.get('studentReleaseApproved') is not False:
             errors.append(q + ': draft release gate unexpectedly open')
         if comparison.get('officialAnswer') != evidence[q]['officialAnswer']:
@@ -27,6 +50,11 @@ def audit():
         options = t.get('optionExplanations', {})
         if set(options) != set('ABCD') or any(not v.get('teacher') or not v.get('elementary') for v in options.values()):
             errors.append(q + ': incomplete four-option dual-level explanations')
+        correctly_labeled = [key for key, option in options.items() if option.get('isCorrect') is True]
+        if correctly_labeled != [evidence[q]['officialAnswer']]:
+            errors.append(q + ': exactly one option must match verified official answer')
+        if d['qa'].get('officialFinalEvidence', {}).get('officialAnswer') != evidence[q]['officialAnswer']:
+            errors.append(q + ': official QA evidence differs from registry')
         if t.get('hasExamCalculation') is False and t.get('examCalculation') not in (None, {}):
             errors.append(q + ': hidden calculation has unexpected payload')
         if t.get('hasExamCalculation') is True:

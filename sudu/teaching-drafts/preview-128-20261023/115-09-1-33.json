@@ -73,10 +73,10 @@
     ],
     "optionExplanations": {
       "A": {
-        "isCorrect": false,
-        "teacher": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。",
-        "elementary": "①像大家共同存記帳簿不易改；②說每筆都加鎖又開鎖，有疑問。",
-        "reason": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。"
+        "isCorrect": true,
+        "teacher": "**115年官方最終答案為 A（①②）**。①符合區塊鏈記帳後不易竄改的特性。②將「密碼學驗證」說成「資料加解密」是通俗課程表述，技術上**雜湊是不可逆摘要、數位簽章是驗證、加解密則是不同的保密操作**，不能把它們當作同一動作。此選項必須保留教材術語爭議與教學QA警示，不能聲稱每筆比特幣交易都需要先加密再解密。",
+        "elementary": "官方選A。大家共同存帳簿、難以偷偷修改是對的；但驗證像檢查簽名，不等於把秘密訊息鎖起來再打開。請記住這個差別。",
+        "reason": "**115年官方最終答案為 A（①②）**。①符合區塊鏈記帳後不易竄改的特性。②將「密碼學驗證」說成「資料加解密」是通俗課程表述，技術上**雜湊是不可逆摘要、數位簽章是驗證、加解密則是不同的保密操作**，不能把它們當作同一動作。此選項必須保留教材術語爭議與教學QA警示，不能聲稱每筆比特幣交易都需要先加密再解密。"
       },
       "B": {
         "isCorrect": false,
@@ -252,6 +252,21 @@
       "fullIndependentTeachingQa": "PENDING",
       "releaseApproved": false,
       "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
+    },
+    "optionCorrectnessAlignment20261023": {
+      "status": "OFFICIAL_OPTION_FLAG_ALIGNED_TEACHING_BLOCK_RETAINED",
+      "officialAnswer": "A",
+      "before": {
+        "isCorrect": false,
+        "teacher": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。",
+        "elementary": "①像大家共同存記帳簿不易改；②說每筆都加鎖又開鎖，有疑問。",
+        "reason": "A包含①②。①難以竄改符合區塊鏈特性；②若解釋為『用密碼學』可依教材視為真，但若直讀『資料加密與解密』則不精確。此組為候選答案，仍需官方核實，暫不標完整正解。"
+      },
+      "scope": "Draft answer-option label only, not independent teaching approval",
+      "firstPassAiAnswerUnchanged": true,
+      "studentReleaseApproved": false,
+      "independentTeachingQA": "PENDING",
+      "source": "official-final-evidence-20261023.json"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

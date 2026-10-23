@@ -1,3 +1,7 @@
+## 2026-10-23｜3個官方選項一致性問題修正與原圖shared SHA強化
+- 三個概念BLOCKED題原本四個選項全被標為錯，現正式標註官方選項B/A/A為正確且保留教材歧義、初解差異及發布封鎖；QA附舊內容完整追蹤。
+- 自動audit新增全128題原圖＋共用文章的實體SHA以及選項唯一正確規則；詳細 `OFFICIAL_OPTION_FLAG_AND_SHARED_SHA_AUDIT_20261023.md`。CI仍只做草稿唯讀測試，非教學獨立核准。
+
 ## 2026-10-23｜新增草稿分支唯讀CI（無正式發布）
 - `.github/workflows/preview-128-draft-qa.yml` 僅在128草稿或audit-script更新時對草稿分支觸發：執行現有全128題WebP SHA、資料一致性與發布隔離稽核、逐步解題JS語法、隔離Chromium兩套既有UI smoke。只授權 `contents: read`；不使用workflow_dispatch、Pages或main變更。CI PASS不得冒稱獨立完整教學內容QA通過。
 

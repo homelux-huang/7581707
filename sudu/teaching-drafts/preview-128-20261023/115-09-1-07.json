@@ -81,10 +81,10 @@
         "reason": "A票據貼現一般是利用短期票據提前取得現金，屬短期周轉籌資，不是中期籌資。"
       },
       "B": {
-        "isCorrect": false,
-        "teacher": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。",
-        "elementary": "它不是一般借錢，但要先分股利也會改變普通股能拿到多少，不能說完全沒有影響。",
-        "reason": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。"
+        "isCorrect": true,
+        "teacher": "**115年官方最終答案為 B**。此題採教材中偏向「舉債籌資」的財務槓桿用語，特別股屬股權，不是公司債。但專業財務理論也可能將固定特別股股利納入普通股EPS槓桿敏感度分析，因此題句「無法發揮」並非各理論下都成立。**官方B已核實、教材定義待獨立教學QA**；不能把考題分類無條件推廣到所有財務情況。",
+        "elementary": "考試的答案是B，因這題把槓桿主要當作借錢使用；特別股不算借款。不過深入學財務時，固定股利也會影響普通股能分到的錢，所以要分清這兩種說法。",
+        "reason": "**115年官方最終答案為 B**。此題採教材中偏向「舉債籌資」的財務槓桿用語，特別股屬股權，不是公司債。但專業財務理論也可能將固定特別股股利納入普通股EPS槓桿敏感度分析，因此題句「無法發揮」並非各理論下都成立。**官方B已核實、教材定義待獨立教學QA**；不能把考題分類無條件推廣到所有財務情況。"
       },
       "C": {
         "isCorrect": false,
@@ -255,6 +255,21 @@
       "fullIndependentTeachingQa": "PENDING",
       "releaseApproved": false,
       "evidence": "BLOCKED_3_TECHNICAL_SOURCE_AUDIT_20261023.md"
+    },
+    "optionCorrectnessAlignment20261023": {
+      "status": "OFFICIAL_OPTION_FLAG_ALIGNED_TEACHING_BLOCK_RETAINED",
+      "officialAnswer": "B",
+      "before": {
+        "isCorrect": false,
+        "teacher": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。",
+        "elementary": "它不是一般借錢，但要先分股利也會改變普通股能拿到多少，不能說完全沒有影響。",
+        "reason": "B候選認為特別股不能發揮財務槓桿；若只把槓桿界定為付債息的借款，特別股屬股權而非借款。但固定特別股股利也可能使普通股剩餘收益對盈餘波動更敏感，因此『無法』的絕對性存在重大爭議；目前不能標正式正解。"
+      },
+      "scope": "Draft answer-option label only, not independent teaching approval",
+      "firstPassAiAnswerUnchanged": true,
+      "studentReleaseApproved": false,
+      "independentTeachingQA": "PENDING",
+      "source": "official-final-evidence-20261023.json"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
