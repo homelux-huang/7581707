@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-14",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 14,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-14.webp",
+  "imageSha256": "1a6e63fae6d9cbcb329cd781eae25721a92f712fc41fa715794c9f03b71f17eb",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題看原圖）",
+    "method": "目視原始單題 WebP，核對題號、對話前後句、A-D 各選項；確認無鄰題裁切或共用材料遺漏；對原圖 bytes 重算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "已先閱讀原圖並推論答案，再讀現有 OCR 候選資料；原官方網站 2026-05-08 最終確認公告可查，但英文科最終 PDF 與疑義確認說明仍待直接回讀，不能當完整驗收。",
+    "independentSolveScope": "本輪獨立看圖解答，非獨立第三方教學 QA",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Brian: I heard you're learning Spanish. Is it hard? Lily: Yes, it is, but I like it. Brian: You're already 30. ____ Lily: No, not at all. Age is not a big deal.",
+    "keyConditions": [
+      "You're already 30",
+      "No, not at all",
+      "Age is not a big deal"
+    ],
+    "reasoningFromOriginalImage": "Brian 接連提到年齡30歲，Lily 明確否認年齡是問題，所以 Brian 應問年紀是否太大、學新語言會不會太晚；D 直接呼應。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**You're already 30** 暗示 Brian 的疑問與年紀有關；Lily 說 **Age is not a big deal（年齡不是大問題）**，正回應 **Isn't it too late to learn a new language?**（學新語言不會太晚嗎？）。**No, not at all** 用來否定疑問句隱含的『太晚』想法。",
+    "elementarySummary": "Brian 覺得 Lily 已經30歲，會不會太晚開始學西班牙文？Lily 說『一點也不會！年紀沒關係。』所以只能選問『太晚了嗎？』那句。",
+    "memory": "**You're already 30 → too late? → Age is not a big deal.**",
+    "concept": "**too + 形容詞 + to V** 表『太……而不能做某事』，如 too late to learn；本題考對話中的**話題承接**，不要以年齡偏見當事實。",
+    "extension": "反向思考：若 Lily 回答『I started last month』，Brian 問的應是 **When did you start learning Spanish?**；回答時間 vs 回答年齡疑慮須區分。",
+    "source": {
+      "originalExam": "115-00-E-14",
+      "originalImagePinnedSha256": "1a6e63fae6d9cbcb329cd781eae25721a92f712fc41fa715794c9f03b71f17eb",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 公告確認標準答案；本題答案仍未直接對正式 PDF 核實",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "too late",
+      "Age is not a big deal",
+      "No, not at all"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**How would you deal with it anyway?** 問打算如何處理學習難題，但 Lily 回答年齡不重要，沒提供處理困難的方法。",
+        "elementary": "問『怎麼解決？』，卻答『年紀沒關係』，沒有講方法。",
+        "reason": "**How would you deal with it anyway?** 問打算如何處理學習難題，但 Lily 回答年齡不重要，沒提供處理困難的方法。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Isn't Spanish your favorite language?** 問西班牙文是否最喜歡的語言，答句應回喜好，不會談年齡。",
+        "elementary": "問是不是最喜歡，卻說不嫌老，主題不同。",
+        "reason": "**Isn't Spanish your favorite language?** 問西班牙文是否最喜歡的語言，答句應回喜好，不會談年齡。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**When did you start learning Spanish?** 問開始學的時間，應答日期或多久前，Lily 卻談年齡不影響。",
+        "elementary": "問什麼時候開始，應答上個月或去年，而不是年紀。",
+        "reason": "**When did you start learning Spanish?** 問開始學的時間，應答日期或多久前，Lily 卻談年齡不影響。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "**Isn't it too late to learn a new language?** 承接 You're already 30，Lily 用 No, not at all; age ... 否定太晚的看法，完整對應。",
+        "elementary": "問『現在會不會太晚？』答『不會啦！』剛好。",
+        "reason": "**Isn't it too late to learn a new language?** 承接 You're already 30，Lily 用 No, not at all; age ... 否定太晚的看法，完整對應。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Brian：聽說你在學西班牙文，很難嗎？Lily：是有點難，但我喜歡。Brian：你已經三十歲了，現在才學新語言不會太晚嗎？Lily：一點也不晚！年齡不是什麼大問題。",
+      "testedWord": "too late",
+      "answerWord": "too late",
+      "pronunciationIPA": "/tuː leɪt/",
+      "optionMeaningZh": {
+        "A": "你打算怎麼解決呢？",
+        "B": "西班牙文不是你最喜歡的語言嗎？",
+        "C": "你什麼時候開始學西班牙文？",
+        "D": "現在學新語言不會太晚嗎？"
+      },
+      "synonyms": {
+        "初級": [
+          "late（晚；未表太晚程度）"
+        ],
+        "中級": [
+          "past the right time（錯過合適時機；依語境）"
+        ],
+        "高級": [
+          "belated（遲來的；多形容行動或祝賀，不能直接互換）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "early（早）"
+        ],
+        "中級": [
+          "in time（及時）"
+        ],
+        "高級": [
+          "timely（適時的）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "age（年齡）"
+        ],
+        "中級": [
+          "language learning（語言學習）"
+        ],
+        "高級": [
+          "lifelong learning（終身學習）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "近義句或相關詞未必在每個語境可直接互換；N/A 不填造反義字。",
+      "exampleEnglish": "It is never too late to start learning something new.",
+      "exampleChinese": "開始學新東西永遠不嫌晚。",
+      "exampleHighlightedSurfaceForm": "too late",
+      "exampleType": "自行撰寫的雙語教學例句，非新聞",
+      "newsExampleStatus": "未核實新聞來源，不稱時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
