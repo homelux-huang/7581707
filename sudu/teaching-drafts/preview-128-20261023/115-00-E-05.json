@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-05",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 5,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-05.webp",
+  "imageSha256": "5d5891fec314de437acdb2239a0b41a0d881424edbb0e2d8bb5a875971cf194e",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "逐張觀看 GitHub 原始單題 WebP；實際確認題號、完整題幹、A～D 與無鄰題／表格遺漏；重新計算 WebP SHA256 與固定清單一致",
+    "ocrIssues": [],
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "keyConditions": [
+      "In order to",
+      "more customers",
+      "offers a 20% discount",
+      "for three days"
+    ],
+    "reasoningFromOriginalImage": "咖啡廳限期打八折，目的是吸引更多顧客購買。in order to 後接原形動詞，最符合行銷目標為 attract。",
+    "formulaRequired": false,
+    "reasoningRecordedBeforeCandidateRead": true,
+    "officialFinalStatus": "PENDING_FINAL_PDF_AND_ISSUE_EXPLANATION"
+  },
+  "teaching": {
+    "teacherSummary": "**In order to + 原形動詞** 是「為了……」的目的用法。咖啡廳透過 **20% discount（八折）** 讓更多人想來購買，故選 **attract more customers（吸引更多顧客）**。折扣促銷的目標是增加來客，不表示一定能增加實際銷量。",
+    "elementarySummary": "咖啡店說「這三天咖啡便宜兩成喔！」是希望更多客人來喝咖啡。把客人吸引過來就叫 **attract**。",
+    "memory": "**discount → attract customers**；打折為了吸引客人。",
+    "concept": "常見商業英語：**attract customers（招攬顧客）**、offer a discount（提供折扣）；**in order to** 後接動詞原形。題中 20% 只是促銷條件，沒有問折後價，因此無考題計算式。",
+    "extension": "反向思考：若店家故意設不合理限制讓顧客不敢來，可能會 **deter（嚇阻）** 客人，不是 attract。另想想『想吸引顧客』與『實際必定增加獲利』是否相同；打折也會改變單杯收入。",
+    "source": {
+      "originalExam": "115-00-E-05",
+      "originalImagePinnedSha256": "5d5891fec314de437acdb2239a0b41a0d881424edbb0e2d8bb5a875971cf194e",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀"
+    },
+    "highlightTerms": [
+      "In order to",
+      "attract",
+      "more customers",
+      "20% discount"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**attract** 是吸引，**attract more customers** 是零售、餐飲常見行銷目的；20% 降價能作為促銷手段，搭配 in order to。",
+        "elementary": "降價就是想把更多人吸引來，正好是 attract。",
+        "reason": "**attract** 是吸引，**attract more customers** 是零售、餐飲常見行銷目的；20% 降價能作為促銷手段，搭配 in order to。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**blame** 是責怪；商家提供折扣通常不是為了責怪更多顧客，blame customers 與促銷行動不相符。",
+        "elementary": "打折不是要罵顧客。",
+        "reason": "**blame** 是責怪；商家提供折扣通常不是為了責怪更多顧客，blame customers 與促銷行動不相符。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**excuse** 作動詞是原諒或免除責任，也可作名詞「藉口」；不是促銷招攬客人之意。",
+        "elementary": "買咖啡變便宜，不是在說原諒客人的錯。",
+        "reason": "**excuse** 作動詞是原諒或免除責任，也可作名詞「藉口」；不是促銷招攬客人之意。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**prevent** 是阻止，常用 prevent someone from doing something；折扣的目的是招攬，而非阻止顧客進門。",
+        "elementary": "變便宜通常想請大家來，不是把大家擋在門外。",
+        "reason": "**prevent** 是阻止，常用 prevent someone from doing something；折扣的目的是招攬，而非阻止顧客進門。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "為了吸引更多顧客，這家烘焙咖啡館連續三天每杯咖啡提供八折優惠。",
+      "answerWord": "attract",
+      "pronunciationIPA": "/əˈtrækt/",
+      "optionMeaningZh": {
+        "A": "吸引",
+        "B": "責怪",
+        "C": "原諒／免除責任",
+        "D": "阻止"
+      },
+      "synonyms": {
+        "初級": [
+          "draw（吸引、引來）"
+        ],
+        "中級": [
+          "appeal to（吸引某人的興趣）"
+        ],
+        "高級": [
+          "entice（引誘、吸引；語氣較強）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "push away（推開；口語意義）"
+        ],
+        "中級": [
+          "repel（使反感、排斥）"
+        ],
+        "高級": [
+          "deter（嚇阻；使打消念頭）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "exampleEnglish": "The café attracted more visitors during its weekend sale.",
+      "exampleChinese": "這家咖啡館在週末促銷期間吸引了更多來客。",
+      "exampleHighlightedSurfaceForm": "attracted",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "未附新聞來源，不宣稱為新聞時事例句"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
