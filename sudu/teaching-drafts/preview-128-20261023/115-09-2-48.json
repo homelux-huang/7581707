@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-48",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 48,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-48.webp",
+  "imageSha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視原圖）",
+    "method": "從 GitHub 草稿分支取出單題 WebP 並實際觀看題幹、全部四選項、圖形及文字；重算圖片 bytes SHA256 與凍結 progress 清單一致。不重新裁切、不重做OCR。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "既有OCR的第48題D選項後混入下一頁第49～50題的共同文章及表格；原圖只含本題①～④與A～D，不能把混入內容視為本題條件。"
+    ]
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_REVIEW",
+    "notice": "已先按原圖推理，再對照既有候選答案；官方最終標準答案、試題疑義及更正公告仍未直接核實。候選一致不等於正式答案核實。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "questionAsReadFromOriginalImage": "下列敘述何者正確？①成本推動型通膨係因生產成本攀升，造成總需求減少、價格上升的通膨；②痛苦指數指失業率與物價上漲率造成的痛苦；③停滯性通膨指高失業率與高物價上漲率同時並存；④需求拉動型通膨因總需求增加造成價格上揚。",
+    "keyConditions": [
+      "①成本推動應是總供給減少，不是總需求減少",
+      "②痛苦指數由通膨率與失業率組合",
+      "③停滯性通膨高失業與高通膨並存",
+      "④需求拉動為總需求增加"
+    ],
+    "reasoningFromOriginalImage": "①說生產成本升高會造成總需求減少並推升物價，將成本推動的總供給AS左移誤寫成總需求AD減少，錯。②痛苦指數常由通膨率和失業率加總表示，對。③停滯性通膨即高失業與高通膨並存，對。④需求拉動型通膨由總需求右移推升物價，對。②③④，故D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "通膨可由不同機制造成：**成本推動型**是原料、能源、工資等生產成本上升，使**短期總供給AS左移**、物價提高；①錯把**總供給減少**寫成**總需求減少**。**痛苦指數 misery index** 在常用簡式下為**失業率＋通膨率**，②對。**停滯性通膨 stagflation** 指物價持續上漲且失業偏高／經濟不景氣同時存在，③對。**需求拉動型**則為**總需求AD增加**推升物價，④對。故選 **D（②③④）**。",
+    "elementarySummary": "工廠原料突然變貴，做東西更難，賣價可能提高，這是供給變少，不是大家突然不想買。痛苦指數看失業跟漲價；經濟不景氣又很會漲價叫停滯性通膨；大家搶著買、東西跟不上而漲價叫需求拉動。",
+    "memory": "**成本推動→AS左移；需求拉動→AD右移；痛苦指數＝失業率＋通膨率**。",
+    "concept": "AS總供給與AD總需求方向須區分；stagflation包含高通膨與高失業，不能混為景氣很好。",
+    "extension": "反向題：假設全球原油價格突然大漲，在AD不變時物價也可能上漲嗎？應畫AS左移還是AD右移？題目沒有失業與通膨數字，不做額外代入。",
+    "source": {
+      "originalExam": "115-09-2-48",
+      "originalImagePinnedSha256": "b38ca952e39bbc102c5c3dacd4b3e8a1b36e59b85edf1b4244faabbaed61d4f2",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案PDF／疑義確認及更正公告仍待核實"
+    },
+    "highlightTerms": [
+      "成本推動型通膨",
+      "總供給AS左移",
+      "痛苦指數",
+      "停滯性通膨",
+      "總需求AD增加"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A僅①②，但①將成本推動通膨誤寫為總需求減少；②痛苦指數概念正確，整組含錯項因此不選。",
+        "elementary": "算痛苦程度沒問題，但把供給變少說成需求變少，搞錯原因。",
+        "reason": "A僅①②，但①將成本推動通膨誤寫為總需求減少；②痛苦指數概念正確，整組含錯項因此不選。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B僅③④，雖然③停滯性通膨與④需求拉動都對，但漏掉同樣正確的②痛苦指數，故不完整。",
+        "elementary": "兩句都對，還少算了痛苦指數那句。",
+        "reason": "B僅③④，雖然③停滯性通膨與④需求拉動都對，但漏掉同樣正確的②痛苦指數，故不完整。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C僅①②④，①錯把成本推動的AS左移寫成AD減少，且漏掉正確的③，故錯。",
+        "elementary": "包含一個錯的，又漏掉一個對的。",
+        "reason": "C僅①②④，①錯把成本推動的AS左移寫成AD減少，且漏掉正確的③，故錯。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D是②③④，三項均符合經濟學定義，且排除錯誤的①，故正確。",
+        "elementary": "痛苦指數、停滯性通膨、需求拉動三句都對，所以選D。",
+        "reason": "D是②③④，三項均符合經濟學定義，且排除錯誤的①，故正確。"
+      }
+    },
+    "relatedFormulaNotPartOfExamCalculation": "痛苦指數通常＝通膨率＋失業率；題目沒有實際百分比數據，屬概念判斷，hasExamCalculation=false。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
