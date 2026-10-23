@@ -38,7 +38,8 @@ def audit(year):
     image_pass=[]
     for qid in ids:
         x=images.get(qid,{})
-        evidence=x.get("visualReviewEvidence",{})
+        evidence=x.get("visualReviewEvidence") or {}
+        if not isinstance(evidence,dict): evidence={}
         output_sha=x.get("sha256") or x.get("outputSha256")
         if x.get("qaStatus")=="PASS" and output_sha and evidence.get("reviewedSha256")==output_sha and evidence.get("reference"):
             image_pass.append(qid)
@@ -74,7 +75,7 @@ def audit(year):
     # G5: a passing SQLite integrity check is not a two-pass import test.
     # Require separately recorded idempotent import and SHA comparison evidence.
     db_evidence=inv.get("sqlite") if isinstance(inv.get("sqlite"),dict) else {}
-    if db_evidence.get("reimportCount",0)<2:
+    if not isinstance(db_evidence.get("reimportCount"),int) or db_evidence["reimportCount"]<2:
         report["blockers"].append("sqlite_idempotent_reimport_not_evidenced")
     if db_evidence.get("shaMismatches") not in ([],0):
         report["blockers"].append("sqlite_sha_mismatch_or_unverified")
