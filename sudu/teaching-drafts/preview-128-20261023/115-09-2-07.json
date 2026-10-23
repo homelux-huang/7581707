@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-07",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-07.webp",
+  "imageSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看既有單題WebP、核對題號、所有選項與數字圖表，重新計算圖片位元組SHA256與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖先解題後讀候選；官方最終答案PDF及更正仍待直接核實。",
+    "initialImageBasedAnswer": "B",
+    "correctedAfterCandidateReview": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "IMAGE_FIRST_MATCHES_CANDIDATE_PENDING_FINAL_QA"
+  },
+  "solution": {
+    "questionType": "accounting-calculation",
+    "questionAsReadFromOriginalImage": "調整後：銷貨1650000、折讓50000、進貨800000、進貨退出14000、薪資300000、折舊80000、預期信用減損4000、利息16000；存貨減少30000；所得稅20%。",
+    "keyConditions": [
+      "銷貨收入1650000、折讓50000",
+      "進貨800000、退出14000、存貨減少30000",
+      "薪資300000、折舊80000、信用減損4000",
+      "利息16000、所得稅率20%"
+    ],
+    "reasoningFromOriginalImage": "淨銷貨1650000−50000=1600000；銷貨成本(800000−14000)+30000=816000；營業毛利784000；營業費用300000+80000+4000=384000；營業利益400000，除淨銷貨1600000得**營業利益率25%**。利息16000另計，稅前淨利384000，稅後淨利307200，故選B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "營業利益率25%",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "淨銷貨1650000−50000=1600000；銷貨成本(800000−14000)+30000=816000；營業毛利784000；營業費用300000+80000+4000=384000；營業利益400000，除淨銷貨1600000得**營業利益率25%**。利息16000另計，稅前淨利384000，稅後淨利307200，故選B。",
+    "elementarySummary": "真的賣貨收入160萬，扣貨品和營業費用後還有40萬。40萬除160萬是25%，所以B。",
+    "memory": "淨銷貨160萬、成本81.6萬、營業利益40萬、25%。",
+    "concept": "營業利益與稅前淨利不同，利息費用屬營業外；營業利益率分母是淨銷貨。",
+    "extension": "反向思考：如果利息費用錯列營業費用，營業利益率會變成多少？",
+    "source": {
+      "originalExam": "115-09-2-07",
+      "originalImagePinnedSha256": "a8a0827579e919118e5cc0947db29b5a89eeb1a2a57056fddde3e09d49347fc5",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計教材版本、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待直接複核"
+    },
+    "highlightTerms": [
+      "營業利益400000",
+      "淨銷貨1600000",
+      "25%",
+      "稅後淨利307200"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "營業成本率816000÷1600000=51%，不是47.25%。",
+        "elementary": "成本率是51%。",
+        "reason": "營業成本率816000÷1600000=51%，不是47.25%。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "營業利益400000÷1600000=25%，完全符合。",
+        "elementary": "賣160萬、營業賺40萬，就是25%。",
+        "reason": "營業利益400000÷1600000=25%，完全符合。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "稅後淨利307200為貸餘，不是借餘444000。",
+        "elementary": "實際有賺，不是虧44.4萬。",
+        "reason": "稅後淨利307200為貸餘，不是借餘444000。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "384000是稅前淨利，扣所得稅76800才得稅後307200，不可直接結轉384000。",
+        "elementary": "最後利潤要先扣稅。",
+        "reason": "384000是稅前淨利，扣所得稅76800才得稅後307200，不可直接結轉384000。"
+      }
+    },
+    "accounting": {
+      "principle": "營業利益與稅前淨利不同，利息費用屬營業外；營業利益率分母是淨銷貨。",
+      "accounts": [
+        "銷貨收入",
+        "銷貨折讓",
+        "進貨",
+        "進貨退出",
+        "存貨",
+        "銷貨成本",
+        "薪資支出",
+        "折舊",
+        "預期信用減損",
+        "利息費用",
+        "所得稅費用"
+      ],
+      "journalEntry": "結帳要區分營業損益、利息費用與所得稅；可歸於稅後累積盈虧的金額為307200元（依題幹計算）。",
+      "calculation": "逐步見 examCalculation"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "銷貨收入1650000、折讓50000",
+        "進貨800000、退出14000、存貨減少30000",
+        "薪資300000、折舊80000、信用減損4000",
+        "利息16000、所得稅率20%"
+      ],
+      "formula": "淨銷貨=銷貨−折讓；銷貨成本=淨進貨+存貨減少；營業利益率=營業利益/淨銷貨×100%。",
+      "formulaPurpose": "營業利益與稅前淨利不同，利息費用屬營業外；營業利益率分母是淨銷貨。",
+      "substitutionAndSteps": [
+        {
+          "formula": "淨銷貨=1650000−50000=1600000",
+          "why": "銷貨折讓減少銷貨收入。"
+        },
+        {
+          "formula": "淨進貨=800000−14000=786000",
+          "why": "進貨退出抵減進貨。"
+        },
+        {
+          "formula": "銷貨成本=786000+30000=816000",
+          "why": "存貨減少代表多耗用30000的存貨。"
+        },
+        {
+          "formula": "毛利=1600000−816000=784000",
+          "why": "收入扣銷貨成本。"
+        },
+        {
+          "formula": "營業費用=300000+80000+4000=384000",
+          "why": "三項為營業費用。"
+        },
+        {
+          "formula": "營業利益=784000−384000=400000",
+          "why": "利息不屬營業費用。"
+        },
+        {
+          "formula": "營業利益率=400000/1600000×100%=25%",
+          "why": "正解為B。"
+        },
+        {
+          "formula": "營業成本率=816000/1600000×100%=51%",
+          "why": "核對A錯。"
+        },
+        {
+          "formula": "稅前淨利=400000−16000=384000",
+          "why": "扣營業外利息。"
+        },
+        {
+          "formula": "所得稅=384000×20%=76800；稅後淨利=384000−76800=307200",
+          "why": "核對C、D錯。"
+        }
+      ],
+      "result": "營業利益率25%",
+      "unit": "金額新臺幣元；比率%",
+      "matchingOption": "B",
+      "commonMistake": "錯把進貨退出當銷貨折讓、將利息計入營業費用、漏扣所得稅。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
