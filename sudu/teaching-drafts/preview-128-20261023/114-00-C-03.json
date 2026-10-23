@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "binaryRechecked": {
+      "status": "SHA256_MATCH_AND_VISUAL_REVIEWED",
+      "source": "GitHub original WebP binary fetched via contents API; SHA-256 freshly calculated from bytes; image opened directly for inspection",
+      "checkedDate": "2026-10-23",
+      "sha256": "728a96a170e8d07ad9ce20e02c668dad0cf13942e4f9de6764a755bd8703e8a8",
+      "sharedImagesCount": 0,
+      "branchHead": "0d8676753416ec77e0e2ca6468f2e43d458a5464"
+    }
   },
   "aiAnswer": "D",
   "answerComparison": {
@@ -27,13 +35,17 @@
     "elementarySummary": "像出國一樣的旅行，重點是「像」，不是把東西分組。",
     "memory": "類＝像／種類不同",
     "concept": "「類出國」表示類似出國；要找表示「像」的類，而不是種類或同類。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向思考：把「類出國」換成「出國旅遊之類的行程」。「類」在前者是『像』還是『種類』？後者又是哪個意思？請再比較「有類橐駝者」的用法。",
     "source": {
       "originalExam": "114-00-C-03",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "類＝像／種類不同"
+      "類出國",
+      "有類橐駝者",
+      "之類",
+      "品類",
+      "群類"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +74,47 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_DICTIONARY_AND_TEXTBOOK_REVIEW",
+      "readings": [
+        {
+          "term": "類",
+          "bopomofo": "ㄌㄟˋ",
+          "meaning": "本文有『相像』與『種類』兩種不同用法"
+        },
+        {
+          "term": "橐駝",
+          "bopomofo": "ㄊㄨㄛˊ ㄊㄨㄛˊ",
+          "meaning": "駱駝；此處形容彎背似駝"
+        }
+      ],
+      "wordRelations": {
+        "term": "類似",
+        "synonymsByLevel": {
+          "初級": [
+            "像"
+          ],
+          "中級": [
+            "相似"
+          ],
+          "高級": [
+            "仿若"
+          ]
+        },
+        "antonymsByLevel": {
+          "初級": [
+            "不像"
+          ],
+          "中級": [
+            "相異"
+          ],
+          "高級": [
+            "迥然不同"
+          ]
+        }
+      }
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -71,7 +123,7 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

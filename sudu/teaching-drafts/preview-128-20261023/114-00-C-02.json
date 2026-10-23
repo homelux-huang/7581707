@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR將右側定義混入選項；依原圖解讀。"
-    ]
+    ],
+    "binaryRechecked": {
+      "status": "SHA256_MATCH_AND_VISUAL_REVIEWED",
+      "source": "GitHub original WebP binary fetched via contents API; SHA-256 freshly calculated from bytes; image opened directly for inspection",
+      "checkedDate": "2026-10-23",
+      "sha256": "f156e266648642110226ccd4acafb7df028107685b27af91e06cca6332de0274",
+      "sharedImagesCount": 0,
+      "branchHead": "0d8676753416ec77e0e2ca6468f2e43d458a5464"
+    }
   },
   "aiAnswer": "C",
   "answerComparison": {
@@ -29,13 +37,17 @@
     "elementarySummary": "人可以故意倒飯、剪頭髮；船身自己不會想事情，只是碰到海水而產生白浪。",
     "memory": "有意處置／無意導致",
     "concept": "判斷「把」字句時，先看主語是否有意識地處置事物；船身沒有意志，白浪是船行造成的結果。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向思考：將「船身把墨藍海水掘犁成翻花的白浪」改寫成「船長把船駛過浪區」。哪一句主語有意識地處置受事者？如果主語由船長換回船身，判斷為何不同？",
     "source": {
       "originalExam": "114-00-C-02",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "有意處置／無意導致"
+      "把門打開了",
+      "樹把路擋住了",
+      "船身把墨藍海水掘犁成翻花的白浪",
+      "處置",
+      "導致"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +76,43 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_DICTIONARY_AND_TEXTBOOK_REVIEW",
+      "readings": [
+        {
+          "term": "把",
+          "bopomofo": "ㄅㄚˇ",
+          "meaning": "本題判斷的是把字句的語意，不是字面搬動"
+        }
+      ],
+      "wordRelations": {
+        "term": "導致",
+        "synonymsByLevel": {
+          "初級": [
+            "造成"
+          ],
+          "中級": [
+            "引起"
+          ],
+          "高級": [
+            "促使某結果發生"
+          ]
+        },
+        "antonymsByLevel": {
+          "初級": [
+            "N/A"
+          ],
+          "中級": [
+            "N/A"
+          ],
+          "高級": [
+            "N/A"
+          ]
+        },
+        "note": "導致與處置在此是語意功能對比，非嚴格字典反義詞"
+      }
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -73,7 +121,7 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

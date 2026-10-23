@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR表格欄位錯序；按原圖四欄判讀。"
-    ]
+    ],
+    "binaryRechecked": {
+      "status": "SHA256_MATCH_AND_VISUAL_REVIEWED",
+      "source": "GitHub original WebP binary fetched via contents API; SHA-256 freshly calculated from bytes; image opened directly for inspection",
+      "checkedDate": "2026-10-23",
+      "sha256": "56ec8d06a181ba76e6b5a67f115b469ab49f2f63dc3b0224ed9e0f07bc5474ee",
+      "sharedImagesCount": 0,
+      "branchHead": "0d8676753416ec77e0e2ca6468f2e43d458a5464"
+    }
   },
   "aiAnswer": "C",
   "answerComparison": {
@@ -29,13 +37,16 @@
     "elementarySummary": "一段感人的聲音，可以讓兩種聽者都受到影響，像一條路分成兩條。",
     "memory": "一個原因→兩個結果",
     "concept": "因果圖必須對準「原因與結果」；簫聲使潛蛟舞、嫠婦泣，是一因分出兩果。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向思考：原文是簫聲同時使潛蛟起舞、嫠婦哭泣。如果改成「簫聲先使潛蛟起舞，而潛蛟又使嫠婦哭泣」，因果圖應由 I→II、I→III 改成 I→II→III 嗎？為什麼不能把原本兩個結果當成前後相因？",
     "source": {
       "originalExam": "114-00-C-06",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "一個原因→兩個結果"
+      "I導致了II與III",
+      "舞幽壑之潛蛟",
+      "泣孤舟之嫠婦",
+      "一因兩果"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +75,48 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_DICTIONARY_AND_TEXTBOOK_REVIEW",
+      "readings": [
+        {
+          "term": "嫠婦",
+          "bopomofo": "ㄌㄧˊ ㄈㄨˋ",
+          "meaning": "寡婦"
+        },
+        {
+          "term": "潛蛟",
+          "bopomofo": "ㄑㄧㄢˊ ㄐㄧㄠ",
+          "meaning": "潛伏水中的蛟龍；是文章修辭意象"
+        }
+      ],
+      "wordRelations": {
+        "term": "導致",
+        "synonymsByLevel": {
+          "初級": [
+            "造成"
+          ],
+          "中級": [
+            "引發"
+          ],
+          "高級": [
+            "誘發"
+          ]
+        },
+        "antonymsByLevel": {
+          "初級": [
+            "N/A"
+          ],
+          "中級": [
+            "N/A"
+          ],
+          "高級": [
+            "N/A"
+          ]
+        },
+        "note": "『一因兩果』與『二因一果』是圖式分類，不是詞語反義"
+      }
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -73,7 +125,7 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

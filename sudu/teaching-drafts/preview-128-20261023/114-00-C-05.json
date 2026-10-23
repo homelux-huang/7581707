@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "binaryRechecked": {
+      "status": "SHA256_MATCH_AND_VISUAL_REVIEWED",
+      "source": "GitHub original WebP binary fetched via contents API; SHA-256 freshly calculated from bytes; image opened directly for inspection",
+      "checkedDate": "2026-10-23",
+      "sha256": "9791124eb82655a379b09da6fb7b7bbaab89061c51c9a4110b0897ffdcbfb651",
+      "sharedImagesCount": 0,
+      "branchHead": "0d8676753416ec77e0e2ca6468f2e43d458a5464"
+    }
   },
   "aiAnswer": "B",
   "answerComparison": {
@@ -27,13 +35,17 @@
     "elementarySummary": "先講為什麼成功，再舉兩個做法，最後說可愛娃娃和殘酷遊戲差很多。",
     "memory": "①⑤／④③／③②",
     "concept": "先組合「不僅①、更⑤」交代成功的兩層原因，再用「既④、也③」展開文化表現，②緊接純真形象形成對比。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向思考：把③「英熙娃娃的純真童年形象」移到②「與無情的生存遊戲形成對比」後面，②的『對比』會失去什麼鋪墊？再標出①接⑤與④接③時各用了哪一組關聯詞。",
     "source": {
       "originalExam": "114-00-C-05",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "①⑤／④③／③②"
+      "不僅",
+      "更在於",
+      "既",
+      "也",
+      "形成對比"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +74,48 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_DICTIONARY_AND_TEXTBOOK_REVIEW",
+      "readings": [
+        {
+          "term": "對比",
+          "bopomofo": "ㄉㄨㄟˋ ㄅㄧˇ",
+          "meaning": "將不同面向放在一起，凸顯差異"
+        },
+        {
+          "term": "純真",
+          "bopomofo": "ㄔㄨㄣˊ ㄓㄣ",
+          "meaning": "純潔天真"
+        }
+      ],
+      "wordRelations": {
+        "term": "對比",
+        "synonymsByLevel": {
+          "初級": [
+            "比較差別"
+          ],
+          "中級": [
+            "反差"
+          ],
+          "高級": [
+            "鮮明對照"
+          ]
+        },
+        "antonymsByLevel": {
+          "初級": [
+            "相同"
+          ],
+          "中級": [
+            "一致"
+          ],
+          "高級": [
+            "趨同"
+          ]
+        },
+        "note": "此處對比指純真形象與殘酷遊戲的敘事反差"
+      }
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -71,7 +124,7 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

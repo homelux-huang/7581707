@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "binaryRechecked": {
+      "status": "SHA256_MATCH_AND_VISUAL_REVIEWED",
+      "source": "GitHub original WebP binary fetched via contents API; SHA-256 freshly calculated from bytes; image opened directly for inspection",
+      "checkedDate": "2026-10-23",
+      "sha256": "c16eb7b4768823a669d33456e1abd6829a83db968b8cd5e0ef2b519785b467d9",
+      "sharedImagesCount": 0,
+      "branchHead": "0d8676753416ec77e0e2ca6468f2e43d458a5464"
+    }
   },
   "aiAnswer": "D",
   "answerComparison": {
@@ -27,13 +35,16 @@
     "elementarySummary": "別人拿了你的錢，說要給回你，叫歸還；「收回」是把錢拿回自己這邊。",
     "memory": "歸還給對方，收回到自己",
     "concept": "修改病句須維持主語、動作及受事者一致；詐騙者宣稱之後將錢給回民眾，應用「歸還」。此為文意分析，不表示詐騙說詞可信。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向思考：詐騙者說「會收回匯款」和「會歸還匯款」，何者表示『把收到的錢交還受害者』？若主語換成受害者本人，何時可以使用「收回」？請一併指出為何「存款應主動前往法院」不通順。",
     "source": {
       "originalExam": "114-00-C-04",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "歸還給對方，收回到自己"
+      "收回匯款",
+      "歸還匯款",
+      "傳喚出庭民眾",
+      "存款應主動前往法院"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +73,48 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_DICTIONARY_AND_TEXTBOOK_REVIEW",
+      "readings": [
+        {
+          "term": "歸還",
+          "bopomofo": "ㄍㄨㄟ ㄏㄨㄢˊ",
+          "meaning": "把物品或款項返還原主"
+        },
+        {
+          "term": "傳喚",
+          "bopomofo": "ㄔㄨㄢˊ ㄏㄨㄢˋ",
+          "meaning": "通知當事人到指定處所應訊"
+        }
+      ],
+      "wordRelations": {
+        "term": "歸還",
+        "synonymsByLevel": {
+          "初級": [
+            "還給"
+          ],
+          "中級": [
+            "返還"
+          ],
+          "高級": [
+            "交還原主"
+          ]
+        },
+        "antonymsByLevel": {
+          "初級": [
+            "拿走"
+          ],
+          "中級": [
+            "取走"
+          ],
+          "高級": [
+            "侵占（非完全對義）"
+          ]
+        },
+        "note": "本文是詐騙語境的語病辨析，不代表款項真的會被退還"
+      }
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -71,7 +123,7 @@
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
