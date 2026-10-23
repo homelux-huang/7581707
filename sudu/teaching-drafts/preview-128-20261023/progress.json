@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "scopeFrozenAt": "2026-10-23",
   "scopeTotal": 128,
-  "draftWritten": 18,
-  "draftPercent": 14.1,
-  "visualRechecked": 18,
-  "candidateAnswerMatched": 18,
+  "draftWritten": 23,
+  "draftPercent": 18,
+  "visualRechecked": 23,
+  "candidateAnswerMatched": 23,
   "officialFinalCorrectionVerified": 0,
   "fullyAccepted": 0,
   "deployed": 0,
@@ -28,14 +28,14 @@
     "115-00-C-07",
     "115-00-C-08",
     "115-00-C-09",
-    "115-00-C-10"
-  ],
-  "remainingIds": [
+    "115-00-C-10",
     "115-00-E-01",
     "115-00-E-02",
     "115-00-E-03",
     "115-00-E-04",
-    "115-00-E-05",
+    "115-00-E-05"
+  ],
+  "remainingIds": [
     "115-00-E-06",
     "115-00-E-07",
     "115-00-E-08",
@@ -142,7 +142,7 @@
     "115-09-2-47",
     "115-09-2-48"
   ],
-  "nextSubject": "115英文28題",
+  "nextSubject": "115英文第6～10題（未完成）",
   "items": [
     {
       "questionId": "114-00-C-02",
@@ -313,7 +313,7 @@
       "image": "data/approved/webp/115/115-00-E-01.webp",
       "imageSha256": "0aaf917f21ae7dbd99ee088592350ee4cfa4096f4208e245f2a44f029e57db3d",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-02",
@@ -322,7 +322,7 @@
       "image": "data/approved/webp/115/115-00-E-02.webp",
       "imageSha256": "e62968113b52267811a43d63a85c40a58e5fbb307b053a132fe237f7055618c8",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-03",
@@ -331,7 +331,7 @@
       "image": "data/approved/webp/115/115-00-E-03.webp",
       "imageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-04",
@@ -340,7 +340,7 @@
       "image": "data/approved/webp/115/115-00-E-04.webp",
       "imageSha256": "d78ba6137913c629b215b80374cc5295d5d9f109d289e5283e9d3d756be512e4",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-05",
@@ -349,7 +349,7 @@
       "image": "data/approved/webp/115/115-00-E-05.webp",
       "imageSha256": "5d5891fec314de437acdb2239a0b41a0d881424edbb0e2d8bb5a875971cf194e",
       "sharedImages": [],
-      "stage": "NOT_STARTED"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
     },
     {
       "questionId": "115-00-E-06",
