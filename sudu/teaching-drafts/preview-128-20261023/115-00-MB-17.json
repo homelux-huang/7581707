@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-17",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 17,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-17.webp",
+  "imageSha256": "8c55964cf7cec4143310da4282e1ed2c4b6e4d95c8327c3e9ef159998b4a26ab",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視）",
+    "method": "目視 GitHub 既有單題原始 WebP，完整題幹、圖表、年份、單位、選項 A-D；對 WebP 原始 bytes 重新計算 SHA256 並與固定清單一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並計算出結論，後讀候選答案；英文／數學B官方最終標準答案 PDF 與更正公告未直接回讀核實，仍屬草稿。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "七段固定LED燈條（如圖三）全暗，任選不重複兩段點亮；不考慮旋轉或翻面，最多幾種明暗樣式？",
+    "keyConditions": [
+      "固定七段LED（圖示數字8）",
+      "從七段全暗中任選不重複兩段",
+      "不計順序、不考慮旋轉或翻面"
+    ],
+    "reasoningFromOriginalImage": "數字8外觀的 LED 圖共有**七個固定位置**：上橫、中橫、下橫、左上、左下、右上、右下。任選**兩個不同位置**，不計先後順序，因此用**組合** **C(7,2)=7×6/2=21**，選C。不能把選取順序當新樣式；題目又明示不考慮旋轉與翻面。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "21種",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "數字8外觀的 LED 圖共有**七個固定位置**：上橫、中橫、下橫、左上、左下、右上、右下。任選**兩個不同位置**，不計先後順序，因此用**組合** **C(7,2)=7×6/2=21**，選C。不能把選取順序當新樣式；題目又明示不考慮旋轉與翻面。",
+    "elementarySummary": "七根燈條中，想選兩根亮起來。先選第一根有7種，第二根剩6種；但先選上再選左跟先選左再選上，是同一個圖案，所以要除以2，得到21種。",
+    "memory": "**七段選兩段、順序不重要→7×6÷2=21**。",
+    "concept": "組合 C(n,k)=n!/(k!(n−k)!)。當『選出哪些』重要但先後無關，用組合；若位置固定，兩種不同亮燈位置代表不同圖案。",
+    "extension": "反向思考：如果**選兩段的順序也要記錄**（第一段先亮、第二段後亮），有序選法會是7×6=42，而非21。",
+    "source": {
+      "originalExam": "115-00-MB-17",
+      "originalImagePinnedSha256": "8c55964cf7cec4143310da4282e1ed2c4b6e4d95c8327c3e9ef159998b4a26ab",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B更正公告與最終解答待核對"
+    },
+    "highlightTerms": [
+      "七段",
+      "任選兩段",
+      "C(7,2)=21"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "42是7×6，將選段的先後順序視為不同；題目要的是最後亮起來的圖案，同兩段交換次序仍相同。",
+        "elementary": "先亮A再亮B，和先亮B再亮A長一樣，不算兩種。",
+        "reason": "42是7×6，將選段的先後順序視為不同；題目要的是最後亮起來的圖案，同兩段交換次序仍相同。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "35無法由七段任兩個固定位置的不重複組合得到，沒有正確計數依據。",
+        "elementary": "沒有35種，應照兩段選法來數。",
+        "reason": "35無法由七段任兩個固定位置的不重複組合得到，沒有正確計數依據。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C(7,2)=7×6/2=21，正好是不重複兩段的組合數，為正解。",
+        "elementary": "42除以重覆的2就有21種。",
+        "reason": "C(7,2)=7×6/2=21，正好是不重複兩段的組合數，為正解。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "14是7×2，錯把『選2段』當單純乘2；忽略從剩下的6段選另一段。",
+        "elementary": "第二根有六個可能，不是只有兩個。",
+        "reason": "14是7×2，錯把『選2段』當單純乘2；忽略從剩下的6段選另一段。"
+      }
+    },
+    "math": {
+      "formula": "C(7,2)=7!/(2!5!)=7×6/2=21。",
+      "formulaUsage": "從n個固定物件選k個且不計先後，使用組合數。",
+      "workedExample": "例：5名學生選兩人代表，組合數5×4/2=10。",
+      "dailyApplication": "商品組合、抽樣及介面狀態枚舉。",
+      "notes": "非金額數學運算仍要顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "固定七段LED（圖示數字8）",
+        "從七段全暗中任選不重複兩段",
+        "不計順序、不考慮旋轉或翻面"
+      ],
+      "formula": "C(7,2)=7!/(2!5!)=7×6/2=21。",
+      "formulaPurpose": "從n個固定物件選k個且不計先後，使用組合數。",
+      "substitutionAndSteps": [
+        {
+          "formula": "從七個位置選第一段有7種。",
+          "why": "第一段任選七段之一。"
+        },
+        {
+          "formula": "第一段已選，第二段不能重覆，剩6種。",
+          "why": "限制不重複，因此選法少一。"
+        },
+        {
+          "formula": "若計順序是7×6=42種。",
+          "why": "先算有順序的數目便於處理。"
+        },
+        {
+          "formula": "同一對位置兩種選取先後會算兩次，除以2。",
+          "why": "最後的明暗配置不顧選取先後。"
+        },
+        {
+          "formula": "C(7,2)=42/2=21，選C。",
+          "why": "得到不重複的亮燈圖案數。"
+        }
+      ],
+      "result": "21種",
+      "unit": "種",
+      "matchingOption": "C",
+      "commonMistake": "把次序算兩次選A 42；或錯誤乘7×2選D 14。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
