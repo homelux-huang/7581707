@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-17",
+  "year": 115,
+  "subject": "會計學",
+  "questionNumber": 17,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-17.webp",
+  "imageSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接目視WebP）",
+    "method": "逐張實際查看原始WebP題號、圖表、金額及A-D選項；圖檔SHA256重算與固定清單完全一致。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先看原始WebP自行推理後讀候選；官方最終解答PDF及更正事項未直接核實。",
+    "initialImageBasedAnswer": "D",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false,
+    "independentSolveScope": "SELF_IMAGE_SOLVE_BEFORE_CANDIDATE_THIRD_PARTY_PENDING"
+  },
+  "solution": {
+    "questionType": "accounting-concepts",
+    "questionAsReadFromOriginalImage": "不動產、廠房及設備取得成本敘述何者正確：附條件政府贈地、自建廠房超可回收金額、拆舊屋改建、購入機器現金折扣。",
+    "keyConditions": [],
+    "reasoningFromOriginalImage": "**D正確**：外購機器設備以**購價扣最大現金折扣後之淨額**作取得成本，未利用現金折扣依題目商科教材通常作營業外支出。A附條件政府補助需按是否具有合理保證及適用準則認列，不能一律延至條件完成時按當時市價入帳。B成本高於可回收金額，應考慮減損，不可能照成本認列自建資產利益。C已有舊屋要先按資產除列處理，不能一律認定拆除支出必屬新屋成本、不得認舊屋處分損益。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": null,
+    "officialFinalStatus": "PENDING_FINAL_OFFICIAL_ANSWER_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "**D正確**：外購機器設備以**購價扣最大現金折扣後之淨額**作取得成本，未利用現金折扣依題目商科教材通常作營業外支出。A附條件政府補助需按是否具有合理保證及適用準則認列，不能一律延至條件完成時按當時市價入帳。B成本高於可回收金額，應考慮減損，不可能照成本認列自建資產利益。C已有舊屋要先按資產除列處理，不能一律認定拆除支出必屬新屋成本、不得認舊屋處分損益。",
+    "elementarySummary": "買機器如果有最高現金折扣，成本應按扣掉折扣的價錢記。自己蓋廠房不是越花越多就能說賺錢；拆舊房和政府送地也有另外的會計規則。",
+    "memory": "**外購設備成本按最大現金折扣後淨額；未取得折扣另作費用。**",
+    "concept": "固定資產取得成本以必要支出和現金等值價為基礎；政府補助、自建資產減損、汰舊換新需分別依準則處理。",
+    "extension": "反向思考：若機器價100000元、2%現金折扣未把握，課程中的入帳成本與放棄折扣費用各是多少？",
+    "source": {
+      "originalExam": "115-09-2-17",
+      "originalImagePinnedSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商會計學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終標準答案與更正公告待核實",
+      "accountingStandardsCaution": "現金折扣及政府補助之現行會計準則、教材版本待核對，不聲稱一體適用所有金融報表準則。"
+    },
+    "highlightTerms": [
+      "扣最大現金折扣",
+      "取得成本",
+      "可回收金額",
+      "資產除列"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "政府附條件土地是否認列，須看取得權利、是否有合理保證達條件，不是一定『完成後才以當時FV入帳』。",
+        "elementary": "不能等完成才隨便用後來的新價錢。",
+        "reason": "政府附條件土地是否認列，須看取得權利、是否有合理保證達條件，不是一定『完成後才以當時FV入帳』。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "自建成本高於可回收金額應考慮減損，不是認列自建利益。",
+        "elementary": "花太多錢不能當成賺錢。",
+        "reason": "自建成本高於可回收金額應考慮減損，不是認列自建利益。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "拆掉自有舊屋需考量舊屋除列及處分損益，不能一律說不准認。",
+        "elementary": "舊房不能當作完全不存在的帳。",
+        "reason": "拆掉自有舊屋需考量舊屋除列及處分損益，不能一律說不准認。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "外購機器按可取得最大現金折扣後淨額計成本，放棄折扣另列費用，符合本題原則。",
+        "elementary": "有折扣時按最優惠的淨價記機器。",
+        "reason": "外購機器按可取得最大現金折扣後淨額計成本，放棄折扣另列費用，符合本題原則。"
+      }
+    },
+    "accounting": {
+      "principle": "固定資產取得成本以必要支出和現金等值價為基礎；政府補助、自建資產減損、汰舊換新需分別依準則處理。",
+      "accounts": [
+        "不動產廠房及設備",
+        "政府補助",
+        "資產減損",
+        "處分損益",
+        "現金折扣"
+      ],
+      "journalEntry": "假設100000元機器可享2%現金折扣，教材示意機器成本98000；未取得折扣2000視課程規範列費用，不得任意墊高機器成本。",
+      "calculation": "N/A（題目無數字計算）"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
