@@ -83,7 +83,7 @@ def audit(year):
                    "integrationReady":not report["blockers"]})
     report["gates"]={"webp":len(image_pass)==n,"answer":qa_answers==n,
                        "text":qa_questions==n,"shared":not shared_pending,
-                       "databaseAndRelease":not any(s.startswith(("missing:","inventory_","validation_","release_manifest_")) for s in report["blockers"])}
+                       "databaseAndRelease":not any(s.startswith(("missing:","inventory_","validation_","release_manifest_","sqlite_")) for s in report["blockers"])}
     return report
 
 def main():
