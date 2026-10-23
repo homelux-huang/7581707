@@ -316,7 +316,8 @@ function guideEntries(q){
  const proposed=[...extra.filter(x=>x[0]==='考題計算式'&&hasStudyValue(x[1])),
                  ...common,...extra.filter(x=>x[0]!=='考題計算式')];
  const entries=[],positions=new Map(),contents=new Set();
- for(const [title,value] of proposed){
+ for(const [rawTitle,value] of proposed){
+  const title=rawTitle==='文本出處'?'出處':rawTitle;
   if(!hasStudyValue(value)&&String(value??'').trim()!=='N/A')continue;
   const text=normalizeStudyText(value);
   if(text!=='n/a'&&contents.has(text))continue;
