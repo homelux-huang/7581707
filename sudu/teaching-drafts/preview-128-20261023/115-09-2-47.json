@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-47",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 47,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-47.webp",
+  "imageSha256": "09ae5d9666fb473f87aa693e197988fb0cc385aa607345e1b596d3df2debfb6b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視原圖）",
+    "method": "從 GitHub 草稿分支取出單題 WebP 並實際觀看題幹、全部四選項、圖形及文字；重算圖片 bytes SHA256 與凍結 progress 清單一致。不重新裁切、不重做OCR。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_REVIEW",
+    "notice": "已先按原圖推理，再對照既有候選答案；官方最終標準答案、試題疑義及更正公告仍未直接核實。候選一致不等於正式答案核實。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-concept",
+    "questionAsReadFromOriginalImage": "關於經濟成長的敘述，下列何者正確？",
+    "keyConditions": [
+      "名目GDP受價格影響",
+      "實質GDP剔除物價變化",
+      "每人名目GDP與總實質GDP不同",
+      "技術進步與PPF曲線位移"
+    ],
+    "reasoningFromOriginalImage": "經濟成長率衡量實際生產量成長，通常用實質GDP年增率而非受通膨影響的名目GDP；每人名目GDP又混入人口及物價因素。技術進步提高生產能力會讓生產可能曲線向外移，不是向內。故B。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**經濟成長率**重點是同一物價基準下**實際產出**是否變多，所以使用**實質GDP年增率**。名目GDP可能只因物價上漲而變大，即使實際商品量不變；每人名目GDP也不等同整體經濟成長率。**技術進步**提高可生產的最大組合，一般使**生產可能曲線 PPF 向外移動**，不是向內。故選 **B**。",
+    "elementarySummary": "如果去年麵包100個、今年還是100個，但每個價錢變貴，收到的錢變多，不代表做了更多麵包。要比較經濟真的有沒有長大，應去掉漲價影響，看實質GDP。",
+    "memory": "**經濟成長＝實質GDP年增率；技術進步→PPF外移**。",
+    "concept": "實質GDP排除價格變動，名目GDP可能含通膨；PPF向外表示經濟生產能力擴張。",
+    "extension": "反向題：如果某國名目GDP年增8%，物價也普遍上升8%，能直接說實質產出也成長8%嗎？為什麼不能？題目未給數據，此為延伸練習。",
+    "source": {
+      "originalExam": "115-09-2-47",
+      "originalImagePinnedSha256": "09ae5d9666fb473f87aa693e197988fb0cc385aa607345e1b596d3df2debfb6b",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案PDF／疑義確認及更正公告仍待核實"
+    },
+    "highlightTerms": [
+      "實質GDP",
+      "年增率",
+      "名目GDP",
+      "物價上漲",
+      "生產可能曲線外移"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A以名目GDP的年增率衡量，名目GDP同時受價格與數量影響，通膨可讓它上升，不能直接代表真實成長。",
+        "elementary": "只是變貴，不代表實際做出更多東西。",
+        "reason": "A以名目GDP的年增率衡量，名目GDP同時受價格與數量影響，通膨可讓它上升，不能直接代表真實成長。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B以實質GDP年增率衡量，排除價格波動，較能呈現經濟實際產出變化，正確。",
+        "elementary": "比較真正做了多少商品與服務，所以看實質GDP。",
+        "reason": "B以實質GDP年增率衡量，排除價格波動，較能呈現經濟實際產出變化，正確。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C看每人名目GDP年增率；除價格波動外還涉及人口數，與總體實質GDP年增率不是同一衡量。",
+        "elementary": "每人分到的平均金額不等於全國實際做出的東西變多多少。",
+        "reason": "C看每人名目GDP年增率；除價格波動外還涉及人口數，與總體實質GDP年增率不是同一衡量。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說技術進步使PPF向內移，但生產技術提高通常增加可生產的最大數量，PPF應向外擴張。",
+        "elementary": "機器更厲害，能做更多，不該往裡縮。",
+        "reason": "D說技術進步使PPF向內移，但生產技術提高通常增加可生產的最大數量，PPF應向外擴張。"
+      }
+    },
+    "relatedFormulaNotPartOfExamCalculation": "實質GDP成長率＝(本年實質GDP－上年實質GDP)÷上年實質GDP×100%；原題無數據計算要求，hasExamCalculation=false。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
