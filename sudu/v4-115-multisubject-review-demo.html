@@ -213,6 +213,13 @@ button,select,.nav-field,.home-choice{word-break:keep-all}
 .options,.option-wrap,.guide-grid,.review-sections{min-width:0;grid-template-columns:minmax(0,1fr)}
 .guide-block,.guide-block p,.option-detail,.option-wrap{min-width:0;max-width:100%}
 .guide-block p{overflow-wrap:anywhere;word-break:normal}
+/* Nested option metadata may contain long ratios, Latin formulae and URLs.
+   A grid child must shrink to viewport before wrapping its contents. */
+#answerCard,.options,.option-wrap,.option-detail,.option-detail-grid,.option-detail-grid>span,.option-detail-grid em{min-width:0;max-width:100%}
+.option-detail-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}
+.option-detail-grid>span{overflow-wrap:anywhere;word-break:normal;white-space:normal}
+.option-detail-grid em{overflow-wrap:anywhere;white-space:normal}
+@media(max-width:620px){.option-detail-grid{grid-template-columns:minmax(0,1fr)}}
 .options .guide{max-width:100%}
 .progress-shell{max-height:min(72dvh,620px);overflow-y:auto;overscroll-behavior:contain}
 .nav-row .review-head{position:relative}
