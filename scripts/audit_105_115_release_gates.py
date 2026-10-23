@@ -5,6 +5,7 @@ Normal CI reports blocked years without failing; --require-ready exits nonzero.
 This auditor never modifies QA flags, source assets, or student records.
 """
 import argparse
+import hashlib
 import json
 import sqlite3
 from pathlib import Path
@@ -189,6 +190,25 @@ def audit(year):
                     blocks.append('sqlite_question_count_mismatch')
         except (sqlite3.DatabaseError, OSError, ValueError):
             blocks.append('sqlite_unreadable')
+    # Independent G5 evidence must agree with this exact on-disk database.
+    g5file = D / '105-115-SQLITE_G5_READONLY_AUDIT.json'
+    if not g5file.is_file():
+        blocks.append('missing:105-115-SQLITE_G5_READONLY_AUDIT.json')
+    else:
+        try:
+            g5 = json.loads(g5file.read_text(encoding='utf-8'))
+            record = next((x for x in g5['years'] if x['year'] == year), None)
+            if (g5.get('sourceDatabasesModified') is not False or
+                g5.get('studentDataTouched') is not False or
+                g5.get('released') is not False or record is None or
+                record.get('g5Pass') is not True or record.get('sandboxImportPasses') != 2 or
+                record.get('jsonRows') != n or record.get('onDiskRows') != n):
+                blocks.append('sqlite_readonly_g5_evidence_failed')
+            if (record and dbfile.is_file() and
+                record.get('sqliteSha256') != hashlib.sha256(dbfile.read_bytes()).hexdigest()):
+                blocks.append('sqlite_readonly_g5_db_sha_stale')
+        except (ValueError, KeyError, TypeError, OSError, StopIteration):
+            blocks.append('sqlite_readonly_g5_report_invalid')
     db_evidence = inv.get('sqlite') if isinstance(inv.get('sqlite'), dict) else {}
     reimports = db_evidence.get('reimportCount')
     if type(reimports) is not int or reimports < 2:
