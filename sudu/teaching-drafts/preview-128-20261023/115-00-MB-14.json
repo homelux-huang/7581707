@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-14",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 14,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-14.webp",
+  "imageSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "直接打開既有單題 WebP、核對題號、完整題幹、四選項、公式上下標、圖表及負號，原始 WebP SHA256 重算與固定清單吻合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "D",
+  "answerComparison": {
+    "candidate": "D",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先以原始 WebP 自行解題，再查候選；官方最終標準答案 PDF 及確認更正說明尚未本輪獨立回讀。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "等比數列 a_n 公比3；索引 x,y,z 成公差2的等差數列，求 a_x,a_y,a_z 的數列關係。",
+    "keyConditions": [
+      "原數列公比3",
+      "x,y,z正整數",
+      "y−x=z−y=2"
+    ],
+    "reasoningFromOriginalImage": "索引 **y−x=2、z−y=2**，原數列每往下一項乘3，每跳兩項乘 **3²=9**。所以 **a_y/a_x=9** 且 **a_z/a_y=9**，三項是等比數列、公比9，選D。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "等比，公比9",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "索引 **y−x=2、z−y=2**，原數列每往下一項乘3，每跳兩項乘 **3²=9**。所以 **a_y/a_x=9** 且 **a_z/a_y=9**，三項是等比數列、公比9，選D。",
+    "elementarySummary": "原本每前進一格都乘3；現在每次跳兩格就是乘3再乘3，總共乘9，還是等比數列。",
+    "memory": "**指標公差2 → 新公比3²=9**。",
+    "concept": "等比數列 a_n=a_1 r^{n−1}。以公差d的等差索引選出子數列，新等比公比 r^d。",
+    "extension": "反向思考：若索引每跳3項，新公比=3³=27，而不是3×3=9。",
+    "source": {
+      "originalExam": "115-00-MB-14",
+      "originalImagePinnedSha256": "458f014169cc2a6b35d5e71c92c83002a7d91ce4d5c22a7d0693f80ab1ac904b",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B答案更正公告待核對"
+    },
+    "highlightTerms": [
+      "y−x=2",
+      "3²=9",
+      "等比數列"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "公差6是將3乘2的錯誤想法，原數列按倍數增長而非固定相加6。",
+        "elementary": "不是一直加6，而是一直乘。",
+        "reason": "公差6是將3乘2的錯誤想法，原數列按倍數增長而非固定相加6。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "公差8來自3²−1，但差值不固定，不能構成等差。",
+        "elementary": "乘9不能說每次加8。",
+        "reason": "公差8來自3²−1，但差值不固定，不能構成等差。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "等比性質對，但公比8算錯，跨兩項應是3²=9。",
+        "elementary": "9不是8。",
+        "reason": "等比性質對，但公比8算錯，跨兩項應是3²=9。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "兩個相鄰比均3²=9，等比且公比9，正解。",
+        "elementary": "跳兩格各乘一次3，結果9倍。",
+        "reason": "兩個相鄰比均3²=9，等比且公比9，正解。"
+      }
+    },
+    "math": {
+      "formula": "a_y/a_x=r^{y−x}，a_z/a_y=r^{z−y}，取r=3。",
+      "formulaUsage": "固定間隔抽取等比數列仍成等比，公比是原公比的間距次方。",
+      "workedExample": "2,6,18,54,162...取第1、3、5項變2、18、162，公比9。",
+      "dailyApplication": "每隔兩期觀察複利或成長模型。",
+      "notes": "含數學非金額運算，必須完整顯示式子。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "原數列公比3",
+        "x,y,z正整數",
+        "y−x=z−y=2"
+      ],
+      "formula": "a_y/a_x=r^{y−x}，a_z/a_y=r^{z−y}，取r=3。",
+      "formulaPurpose": "固定間隔抽取等比數列仍成等比，公比是原公比的間距次方。",
+      "substitutionAndSteps": [
+        {
+          "formula": "y−x=2、z−y=2",
+          "why": "等差索引公差為2。"
+        },
+        {
+          "formula": "a_y/a_x=3^{y−x}=3²=9",
+          "why": "每隔兩項原比值要乘兩次3。"
+        },
+        {
+          "formula": "a_z/a_y=3^{z−y}=3²=9",
+          "why": "同理第二對亦然。"
+        },
+        {
+          "formula": "兩比相等均9 ⇒新等比數列、公比9，選D",
+          "why": "符合等比數列的相鄰比值固定。"
+        }
+      ],
+      "result": "等比，公比9",
+      "unit": "無單位",
+      "matchingOption": "D",
+      "commonMistake": "把公比誤當公差；把3²−1當新公比8。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
