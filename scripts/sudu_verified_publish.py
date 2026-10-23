@@ -610,12 +610,21 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         "sourceSha":source_sha,
     }
 
+def publication_provenance(source_sha: str, source_tree_signature: str = "") -> dict:
+    """Pin the importer script so stricter gates always re-evaluate previous approvals."""
+    return {
+        "ref": "qa/114-115-official-visual-review",
+        "commit": source_sha,
+        "sourceTreeSignature": source_tree_signature or source_sha,
+        "certificationSchemaVersion": "student-reviewed-batch-v1",
+        "publisherCodeSha256": digest(Path(__file__).read_bytes()),
+    }
+
+
 def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = ""):
     report = { "schemaVersion":1, "dataStage":"qa_verified_only",
         "notYetLiveUntilPagesSuccess":True,
-        "provenance":{"ref":"qa/114-115-official-visual-review","commit":source_sha,
-                      "sourceTreeSignature":source_tree_signature or source_sha,
-                      "certificationSchemaVersion":"student-reviewed-batch-v1"},
+        "provenance": publication_provenance(source_sha, source_tree_signature),
         "years":{}}
     for year in YEARS:
         report["years"][str(year)] = snapshot(source,dest,year,source_sha)
