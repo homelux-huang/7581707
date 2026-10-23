@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-13",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 13,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-13.webp",
+  "imageSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪原圖目視）",
+    "method": "直接打開既有單題 WebP、核對題號、完整題幹、四選項、公式上下標、圖表及負號，原始 WebP SHA256 重算與固定清單吻合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先以原始 WebP 自行解題，再查候選；官方最終標準答案 PDF 及確認更正說明尚未本輪獨立回讀。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "26x+15y≤2026 與 15x+26y≤2026 的共同解集圖形為何？",
+    "keyConditions": [
+      "26x+15y≤2026",
+      "15x+26y≤2026",
+      "以完整四圖選擇交集"
+    ],
+    "reasoningFromOriginalImage": "兩條邊界 **y=−26x/15+2026/15** 與 **y=−15x/26+2026/26** 均為負斜率。原點(0,0)兩式都成立，陰影須含原點且在**兩直線共同下方**。圖 A 符合；B、D線是正斜率，C陰影在上方。選A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "A（共同下方含原點）",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "兩條邊界 **y=−26x/15+2026/15** 與 **y=−15x/26+2026/26** 均為負斜率。原點(0,0)兩式都成立，陰影須含原點且在**兩直線共同下方**。圖 A 符合；B、D線是正斜率，C陰影在上方。選A。",
+    "elementarySummary": "兩條線都是往右下斜。原點是0，把0放進兩題都小於2026，代表原點應塗色。只有圖A把原點跟兩線下面一起塗了。",
+    "memory": "**負斜率兩條線、原點通過≤，共同下方：A**。",
+    "concept": "不等式先畫等式的線，再代測試點找半平面；兩條同時成立要取交集。",
+    "extension": "反向思考：若第一式改≥2026，原點不符合了，要換到第一條線的另一側。",
+    "source": {
+      "originalExam": "115-00-MB-13",
+      "originalImagePinnedSha256": "9ec74bf1b9556f189212050527a37d0310940f37788e088a522df34edaf55617",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B答案更正公告待核對"
+    },
+    "highlightTerms": [
+      "負斜率",
+      "(0,0)成立",
+      "共同下方",
+      "圖A"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "兩條負斜率直線、含原點的共同下方陰影，符合兩式，正解。",
+        "elementary": "A兩條線方向與塗色都對。",
+        "reason": "兩條負斜率直線、含原點的共同下方陰影，符合兩式，正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "圖B兩條直線為正斜率，與這兩式的負斜率不符。",
+        "elementary": "B往右上走，方向錯。",
+        "reason": "圖B兩條直線為正斜率，與這兩式的負斜率不符。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "圖C雖為負斜率線，但陰影在原點以外的上方區域，與0≤2026相反。",
+        "elementary": "C塗錯面了，原點應有塗。",
+        "reason": "圖C雖為負斜率線，但陰影在原點以外的上方區域，與0≤2026相反。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "圖D畫成正斜率邊界且陰影不同，不是原式可行交集。",
+        "elementary": "D的線方向和塗色不符合。",
+        "reason": "圖D畫成正斜率邊界且陰影不同，不是原式可行交集。"
+      }
+    },
+    "math": {
+      "formula": "Ax+By≤C（B>0）⇒y≤−Ax/B+C/B；聯立取交集；代(0,0)測半平面。",
+      "formulaUsage": "以測試點與半平面交集處理線性不等式。",
+      "workedExample": "x+y≤4、x≥0、y≥0的交集為第一象限三角區。",
+      "dailyApplication": "線性規劃中的可行區域。",
+      "notes": "含數學非金額運算，必須完整顯示式子。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "26x+15y≤2026",
+        "15x+26y≤2026",
+        "以完整四圖選擇交集"
+      ],
+      "formula": "Ax+By≤C（B>0）⇒y≤−Ax/B+C/B；聯立取交集；代(0,0)測半平面。",
+      "formulaPurpose": "以測試點與半平面交集處理線性不等式。",
+      "substitutionAndSteps": [
+        {
+          "formula": "直線①：y=−(26/15)x+2026/15，斜率−26/15，y截距約135.07",
+          "why": "正係數除過去保留≤方向。"
+        },
+        {
+          "formula": "其x截距2026/26≈77.92",
+          "why": "由y=0得x截距。"
+        },
+        {
+          "formula": "直線②：y=−(15/26)x+2026/26，斜率−15/26，y截距約77.92",
+          "why": "另一邊界同法求斜率與截距。"
+        },
+        {
+          "formula": "其x截距2026/15≈135.07",
+          "why": "求第二條x截距以核對圖形。"
+        },
+        {
+          "formula": "交點兩式相減11x−11y=0 ⇒x=y=2026/41≈49.41",
+          "why": "兩線相交約在(49.41,49.41)。"
+        },
+        {
+          "formula": "(0,0)：兩式左邊都是0，均≤2026",
+          "why": "測原點是快速找陰影的一種方法。"
+        },
+        {
+          "formula": "共同下方含原點的圖是A",
+          "why": "選同時成立的陰影交集。"
+        }
+      ],
+      "result": "A（共同下方含原點）",
+      "unit": "圖形座標單位",
+      "matchingOption": "A",
+      "commonMistake": "只看斜率就選C卻沒判原點是否在陰影。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
