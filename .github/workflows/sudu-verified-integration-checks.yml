@@ -19,6 +19,14 @@ on:
       - tests/sudu_certified_positive_browser.cjs
       - tests/sudu_browser_smoke.cjs
       - .github/workflows/sudu-verified-integration-checks.yml
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - tests/sudu_real_reviewed_browser.cjs
+      - tests/sudu_verified_integration_browser.cjs
+      - .github/workflows/sudu-release-checks.yml
+      - .github/workflows/sudu-browser-test.yml
+      - .github/workflows/pages.yml
+      - .github/workflows/sudu-verified-autopublish.yml
   workflow_dispatch:
 permissions:
   contents: read
