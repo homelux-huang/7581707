@@ -531,7 +531,7 @@ function toggleQuestionNav(){
 function scheduleQuestionNavClose(){
  clearTimeout(navCloseTimer);
  navCloseTimer=setTimeout(()=>{
-  if($('progressShell').matches(':focus-within')||$('navHandle').matches(':hover'))return;
+  if($('progressShell').matches(':focus-within')||$('progressShell').matches(':hover')||$('navHandle').matches(':hover'))return;
   document.body.classList.remove('nav-peek');updateNavToggle();syncHeights();
  },400);
 }
