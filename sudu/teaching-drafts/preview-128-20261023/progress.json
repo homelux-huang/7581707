@@ -390,7 +390,14 @@
       "image": "data/approved/webp/115/115-00-C-08.webp",
       "imageSha256": "b8c74de7e32cd62dae4e4b7131709d37fd15b43bbfb7533fa4878a74eac3a2d6",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "b8c74de7e32cd62dae4e4b7131709d37fd15b43bbfb7533fa4878a74eac3a2d6",
+        "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "115-00-C-09",
@@ -399,7 +406,14 @@
       "image": "data/approved/webp/115/115-00-C-09.webp",
       "imageSha256": "94e6ee5f999e0bf360181a45439e1a3ad52dde642979ace4549e7a8f849497bd",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "94e6ee5f999e0bf360181a45439e1a3ad52dde642979ace4549e7a8f849497bd",
+        "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "115-00-C-10",
@@ -408,7 +422,14 @@
       "image": "data/approved/webp/115/115-00-C-10.webp",
       "imageSha256": "bc81559bf0b8ec19ed37ba7ad9b825d89f19443128372a2843db928b8d23d3e9",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "bc81559bf0b8ec19ed37ba7ad9b825d89f19443128372a2843db928b8d23d3e9",
+        "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e"
+      },
+      "questionSpecificExtensionRevised": true
     },
     {
       "questionId": "115-00-E-01",
@@ -1660,6 +1681,42 @@
       "officialFinalVerifiedChange": 0,
       "fullTeachingQaChange": 0,
       "releaseForbidden": true
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e",
+      "batch": "CHINESE_KEYPOINTS_3",
+      "ids": [
+        "115-00-C-08",
+        "115-00-C-09",
+        "115-00-C-10"
+      ],
+      "imageSha256Verified": 3,
+      "sharedImagesVerified": 0,
+      "subjectSpecificReverseQuestions": 3,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
+      "releaseForbidden": true
     }
-  ]
+  ],
+  "chineseTeachingSupplement": {
+    "schemaVersion": 1,
+    "total": 18,
+    "withQuestionSpecificExtension": 18,
+    "withKeyPointBullets": 18,
+    "withInitialChineseEnrichment": 18,
+    "contentQaAccepted": 0,
+    "officialFinalAnswerVerified": 0,
+    "allHaveImageHashRechecked": true,
+    "releaseAllowed": false,
+    "lastCheckpoint": "CHINESE_KEYPOINTS_3"
+  },
+  "binaryRecheckedLatest": {
+    "scopeFixed": 128,
+    "recheckedDistinctQuestions": 21,
+    "allMatchedPinnedSha256": true,
+    "allWithEmptySharedImages": true,
+    "source": "Actual GitHub WebP bytes + displayed image, not manifest-only",
+    "notYetRecheckedThisCycle": 107
+  }
 }

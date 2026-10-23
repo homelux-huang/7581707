@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e",
+      "sha256": "b8c74de7e32cd62dae4e4b7131709d37fd15b43bbfb7533fa4878a74eac3a2d6",
+      "sharedImagesReviewed": 0,
+      "source": "Direct GitHub WebP bytes and image inspection"
+    }
   },
   "aiAnswer": "A",
   "answerComparison": {
@@ -27,13 +35,18 @@
     "elementarySummary": "切肉要順著縫，種樹要順著樹的需要；做人做事也別硬來，大家的道理很像。",
     "memory": "不同事情，共同道理→相似聯想",
     "concept": "由解牛順應肌理推養生、由種樹順性推治理，都是跨領域抓共同道理的相似聯想。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：如果有人說「因為庖丁切牛，文惠君當天才突然能長壽」，這把故事誤判成哪種聯想（因果／相似）？請說明為何「順著骨節用刀」與「順應自然養生」是性質相似，而不是甲直接造成乙。",
     "source": {
       "originalExam": "115-00-C-08",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "不同事情，共同道理→相似聯想"
+      "游刃有餘",
+      "得養生焉",
+      "順木之天",
+      "得養人術",
+      "相似聯想",
+      "因果聯想"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +75,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "先讀題框：Ⅱ相似聯想是兩件事有共同特性，Ⅳ因果聯想則須能說明先後因果",
+      "〈庖丁解牛〉順骨節下刀而游刃有餘，聯想到順應自然養生；〈種樹郭橐駝傳〉順樹木天性，聯想到不擾民治理",
+      "兩組都從具體技藝類推抽象做事道理，都是Ⅱ，對照選項選A"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_TEXTBOOK_AND_INDEPENDENT_REVIEW",
+      "relatedWordsByDifficulty": {
+        "相似聯想": {
+          "初級": [
+            "很像"
+          ],
+          "中級": [
+            "有共同特點"
+          ],
+          "高級": [
+            "類比推論"
+          ]
+        },
+        "因果聯想": {
+          "初級": [
+            "因為所以"
+          ],
+          "中級": [
+            "前因後果"
+          ],
+          "高級": [
+            "因果關聯"
+          ]
+        }
+      },
+      "note": "字詞分級為本批教學補強草稿；不得視為已核實高職課本頁碼"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +116,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

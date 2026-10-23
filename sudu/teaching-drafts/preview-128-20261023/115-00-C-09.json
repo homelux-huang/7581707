@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e",
+      "sha256": "94e6ee5f999e0bf360181a45439e1a3ad52dde642979ace4549e7a8f849497bd",
+      "sharedImagesReviewed": 0,
+      "source": "Direct GitHub WebP bytes and image inspection"
+    }
   },
   "aiAnswer": "B",
   "answerComparison": {
@@ -27,13 +35,17 @@
     "elementarySummary": "先說改了什麼，再說大家喜歡，最後才加播節目。",
     "memory": "創新②⑤→圈粉①④→加播③",
     "concept": "②⑤先列眼神與配樂兩項創新，①以「這些」回指，④描述著迷結果，③再說電視臺加播。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：把①「這些創新手法圈粉無數」放到②眼神和⑤音樂變革之前，讀者還知道「這些」在指什麼嗎？若③「電視臺為此增加播出集數」放在觀眾著迷的④之前，會缺少哪個原因？",
     "source": {
       "originalExam": "115-00-C-09",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "創新②⑤→圈粉①④→加播③"
+      "布偶的眼部神氣",
+      "以流行音樂取代傳統鑼鼓",
+      "這些創新手法",
+      "男女老幼都著迷",
+      "電視臺為此增加每週播出集數"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +74,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "②「眼部神氣」和⑤「流行音樂取代鑼鼓」先提出兩種具體創新",
+      "①「這些創新手法」回指②⑤，再由④「男女老幼著迷」細述粉絲反應",
+      "③「電視臺為此增加每週集數」是受歡迎之後的結果，完整順序②⑤①④③，故選B"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_TEXTBOOK_AND_INDEPENDENT_REVIEW",
+      "relatedWordsByDifficulty": {
+        "回指": {
+          "初級": [
+            "往前指"
+          ],
+          "中級": [
+            "指回前文"
+          ],
+          "高級": [
+            "指代前文訊息"
+          ]
+        },
+        "承接": {
+          "初級": [
+            "接著說"
+          ],
+          "中級": [
+            "前後銜接"
+          ],
+          "高級": [
+            "語意照應"
+          ]
+        }
+      },
+      "note": "字詞分級為本批教學補強草稿；不得視為已核實高職課本頁碼"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +115,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

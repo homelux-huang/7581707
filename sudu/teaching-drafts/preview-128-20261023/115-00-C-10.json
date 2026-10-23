@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR末選項混入下一頁文章；使用原圖對話。"
-    ]
+    ],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "f675ab31b2dd44fad435b5f32b663948ec80ef2e",
+      "sha256": "bc81559bf0b8ec19ed37ba7ad9b825d89f19443128372a2843db928b8d23d3e9",
+      "sharedImagesReviewed": 0,
+      "source": "Direct GitHub WebP bytes and image inspection"
+    }
   },
   "aiAnswer": "D",
   "answerComparison": {
@@ -29,13 +37,24 @@
     "elementarySummary": "抓兩個名字暗號：拿長矛吟詩的曹操，還有被稱作武侯的諸葛亮。",
     "memory": "橫槊曹操；武侯諸葛亮",
     "concept": "「橫槊」聯想到曹操橫槊賦詩，「武侯」指諸葛亮；須同時對應兩處典故。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：若詩中保留「橫槊江山」，卻把「武侯」換成明顯指陶淵明的「陶令」，答案還會是「曹操與諸葛亮」嗎？要作答時應如何逐個解讀典故，而不是看詩人姓范就猜范仲淹？",
     "source": {
       "originalExam": "115-00-C-10",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "dictionaryReferences": [
+        {
+          "title": "教育部《重編國語辭典修訂本》橫槊賦詩",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=82450&la=0&powerMode=0",
+          "verifiedReading": "ㄏㄥˊ ㄕㄨㄛˋ ㄈㄨˋ ㄕ"
+        }
+      ]
     },
     "highlightTerms": [
-      "橫槊曹操；武侯諸葛亮"
+      "橫槊江山",
+      "男兒未了功名債",
+      "羞聽人間說武侯",
+      "曹操",
+      "諸葛亮"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +83,47 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "「橫槊」是握長矛的形象，聯想到曹操橫槊賦詩的歷史典故",
+      "「武侯」在詩句借指蜀漢諸葛亮，詩人自嘆功名未就、尚未達到先賢功業",
+      "兩個典故須同時吻合，四組答案只有D「曹操與諸葛亮」同時正確"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_PENDING_TEXTBOOK_AND_INDEPENDENT_REVIEW",
+      "relatedWordsByDifficulty": {
+        "橫槊": {
+          "初級": [
+            "握長矛"
+          ],
+          "中級": [
+            "持矛吟詩"
+          ],
+          "高級": [
+            "橫槊賦詩"
+          ]
+        },
+        "武侯": {
+          "初級": [
+            "諸葛亮"
+          ],
+          "中級": [
+            "諸葛孔明"
+          ],
+          "高級": [
+            "蜀漢武鄉侯"
+          ]
+        }
+      },
+      "note": "字詞分級為本批教學補強草稿；不得視為已核實高職課本頁碼",
+      "verifiedReadings": [
+        {
+          "word": "橫槊賦詩",
+          "bopomofo": "ㄏㄥˊ ㄕㄨㄛˋ ㄈㄨˋ ㄕ",
+          "source": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=82450&la=0&powerMode=0"
+        }
+      ]
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -72,8 +131,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
