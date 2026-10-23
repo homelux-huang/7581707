@@ -204,6 +204,21 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalQuestionWebpSha256": "d6412daa205b2fbfbb264d7a83862f49dfc371eaa97bba283a93d3e361d3bca4",
+      "sharedImagePath": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+      "sharedImageWebpSha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7",
+      "imageVisuallyReviewed": true,
+      "sharedReadingArticleVisuallyReviewed": true,
+      "correctSharedArticleGroup": "21-24",
+      "allFourOptionsPresent": true,
+      "partialTeachingReview": "大浪中登移動船舶需冒風險，所以tough，官方D。",
+      "sourceOcrNotOverwritten": true,
+      "candidateKnownBeforeThisReview": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

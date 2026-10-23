@@ -204,6 +204,21 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalQuestionWebpSha256": "c35665f575c84b35391ebeaf1e782e639754c419f0c9b35027e3b57c5373d51b",
+      "sharedImagePath": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sharedImageWebpSha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e",
+      "imageVisuallyReviewed": true,
+      "sharedReadingArticleVisuallyReviewed": true,
+      "correctSharedArticleGroup": "25-28",
+      "allFourOptionsPresent": true,
+      "partialTeachingReview": "淡江大橋讓兩地交通車流順暢，traffic flow，官方B。",
+      "sourceOcrNotOverwritten": true,
+      "candidateKnownBeforeThisReview": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

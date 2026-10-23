@@ -203,6 +203,21 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalQuestionWebpSha256": "d60fe5fe2573515efd40bf92aa6ad56448e57e92471f155ac68ea3ef0bd8617f",
+      "sharedImagePath": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sharedImageWebpSha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e",
+      "imageVisuallyReviewed": true,
+      "sharedReadingArticleVisuallyReviewed": true,
+      "correctSharedArticleGroup": "25-28",
+      "allFourOptionsPresent": true,
+      "partialTeachingReview": "橋被國際設計競賽選中，過去分詞selected，官方A。",
+      "sourceOcrNotOverwritten": true,
+      "candidateKnownBeforeThisReview": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

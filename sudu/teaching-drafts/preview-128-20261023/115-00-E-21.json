@@ -203,6 +203,21 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalQuestionWebpSha256": "50cb3ade513346aa98daa7587d4716cc68e1e0c28a2d675e0803bb0c126aae28",
+      "sharedImagePath": "data/approved/webp/115/115-00-E-SHARED-21-24.webp",
+      "sharedImageWebpSha256": "a6a17a954dd9a8aac78c54977be3c428d8a5f4cc5ea280d0a7408082fe5ec1a7",
+      "imageVisuallyReviewed": true,
+      "sharedReadingArticleVisuallyReviewed": true,
+      "correctSharedArticleGroup": "21-24",
+      "allFourOptionsPresent": true,
+      "partialTeachingReview": "Among the 260 women seafarers語意為其中許多人，官方A。",
+      "sourceOcrNotOverwritten": true,
+      "candidateKnownBeforeThisReview": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_21_28_SHARED_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
