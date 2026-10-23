@@ -28,6 +28,9 @@
   const control=document.querySelector('.control-row');
   if(control)control.after(nav);
   if(!['114','115'].includes(activeYear)) return;
+  const highlightStyles=document.createElement('style');
+  highlightStyles.textContent='.exam-highlight{background:#ffe86f!important;color:#152037!important;font-weight:900;padding:0 2px;border-radius:3px}';
+  document.head.append(highlightStyles);
   const storageKey='tvet-verified-'+activeYear+'-v1';
   const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const useful=value=>typeof value==='string'&&value.trim()!==''&&!/^(N\/?A|本題無金額計算)$/i.test(value.trim());
