@@ -189,6 +189,18 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalWebpSha256": "1a6e63fae6d9cbcb329cd781eae25721a92f712fc41fa715794c9f03b71f17eb",
+      "imageVisuallyReviewed": true,
+      "originalQuestionAndFourOptionsComplete": true,
+      "sharedImages": "NONE",
+      "sourceOcrNotOverwritten": true,
+      "postCandidatePartialTeachingReview": "30歲學外語太晚嗎→Age is not a big deal，官方D。",
+      "officialAnswerPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

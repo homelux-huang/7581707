@@ -191,6 +191,18 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalWebpSha256": "f2074b22d1f36a763ba374063efec38ab000210632de9eb20bea9a563a7d3b3e",
+      "imageVisuallyReviewed": true,
+      "originalQuestionAndFourOptionsComplete": true,
+      "sharedImages": "NONE",
+      "sourceOcrNotOverwritten": true,
+      "postCandidatePartialTeachingReview": "奶奶有信心辦好駕照換發，官方C；換照年齡屬題目角色說法，不能當現行法規。",
+      "officialAnswerPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

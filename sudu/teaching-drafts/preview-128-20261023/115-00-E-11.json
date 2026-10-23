@@ -189,6 +189,18 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalWebpSha256": "ce1069caa2946e09330534b3534cdf44f1cc55b94f9ab2c8799712c571ee19ba",
+      "imageVisuallyReviewed": true,
+      "originalQuestionAndFourOptionsComplete": true,
+      "sharedImages": "NONE",
+      "sourceOcrNotOverwritten": true,
+      "postCandidatePartialTeachingReview": "店員問Anything else?，顧客No, just charger，官方B。350元僅背景，無計算題。",
+      "officialAnswerPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -190,6 +190,18 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalWebpSha256": "02cca9c69a01d1c6d9d884376c51d6372a949aacb598a903ddf7464ba03c769c",
+      "imageVisuallyReviewed": true,
+      "originalQuestionAndFourOptionsComplete": true,
+      "sharedImages": "NONE",
+      "sourceOcrNotOverwritten": true,
+      "postCandidatePartialTeachingReview": "冰箱無食材，說eat out今晚→訂餐廳，官方C。",
+      "officialAnswerPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

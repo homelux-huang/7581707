@@ -608,7 +608,15 @@
       "image": "data/approved/webp/115/115-00-E-11.webp",
       "imageSha256": "ce1069caa2946e09330534b3534cdf44f1cc55b94f9ab2c8799712c571ee19ba",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "ce1069caa2946e09330534b3534cdf44f1cc55b94f9ab2c8799712c571ee19ba",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-12",
@@ -617,7 +625,15 @@
       "image": "data/approved/webp/115/115-00-E-12.webp",
       "imageSha256": "8176348a929a02a6c67fe2ab481fc5450295cba017bcaeeeb96b10a2d021fc01",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "8176348a929a02a6c67fe2ab481fc5450295cba017bcaeeeb96b10a2d021fc01",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-13",
@@ -626,7 +642,15 @@
       "image": "data/approved/webp/115/115-00-E-13.webp",
       "imageSha256": "169f1d9b84faa28c84d1a861e08a413e57c71789a8b4786578ff86de750a4c87",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "169f1d9b84faa28c84d1a861e08a413e57c71789a8b4786578ff86de750a4c87",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-14",
@@ -635,7 +659,15 @@
       "image": "data/approved/webp/115/115-00-E-14.webp",
       "imageSha256": "1a6e63fae6d9cbcb329cd781eae25721a92f712fc41fa715794c9f03b71f17eb",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "1a6e63fae6d9cbcb329cd781eae25721a92f712fc41fa715794c9f03b71f17eb",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-15",
@@ -644,7 +676,15 @@
       "image": "data/approved/webp/115/115-00-E-15.webp",
       "imageSha256": "ec944c9633cb20dc0096d2c8e606f78fb097a8de274fe5517401d4efef24e03e",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "ec944c9633cb20dc0096d2c8e606f78fb097a8de274fe5517401d4efef24e03e",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-16",
@@ -653,7 +693,15 @@
       "image": "data/approved/webp/115/115-00-E-16.webp",
       "imageSha256": "02cca9c69a01d1c6d9d884376c51d6372a949aacb598a903ddf7464ba03c769c",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "02cca9c69a01d1c6d9d884376c51d6372a949aacb598a903ddf7464ba03c769c",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-17",
@@ -662,7 +710,15 @@
       "image": "data/approved/webp/115/115-00-E-17.webp",
       "imageSha256": "f24acb687dfdd16a943ee1a87716c14320bd7bcd635ee8fe69e828a963794e24",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "f24acb687dfdd16a943ee1a87716c14320bd7bcd635ee8fe69e828a963794e24",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-18",
@@ -671,7 +727,15 @@
       "image": "data/approved/webp/115/115-00-E-18.webp",
       "imageSha256": "64e15867eaa91fb35e756672f34ba358cc834fb33a09e20f0fe4967416c136ac",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "64e15867eaa91fb35e756672f34ba358cc834fb33a09e20f0fe4967416c136ac",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-19",
@@ -680,7 +744,15 @@
       "image": "data/approved/webp/115/115-00-E-19.webp",
       "imageSha256": "f2074b22d1f36a763ba374063efec38ab000210632de9eb20bea9a563a7d3b3e",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "f2074b22d1f36a763ba374063efec38ab000210632de9eb20bea9a563a7d3b3e",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-20",
@@ -689,7 +761,15 @@
       "image": "data/approved/webp/115/115-00-E-20.webp",
       "imageSha256": "35deace190479184ac88967f7e1ecb0e6c24194e032ae7d2b10c35ba1fc58994",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "35deace190479184ac88967f7e1ecb0e6c24194e032ae7d2b10c35ba1fc58994",
+        "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+        "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md",
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-E-21",
@@ -2823,6 +2903,29 @@
       "fullTeachingQAChange": 0,
       "releaseApprovedChange": 0,
       "evidenceDocument": "ENGLISH_01_10_IMAGE_QA_20261023.md"
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "9edb0f644f4494c4592896e109988fac7fc22f0b",
+      "batch": "ENGLISH_11_20_IMAGE_QA",
+      "ids": [
+        "115-00-E-11",
+        "115-00-E-12",
+        "115-00-E-13",
+        "115-00-E-14",
+        "115-00-E-15",
+        "115-00-E-16",
+        "115-00-E-17",
+        "115-00-E-18",
+        "115-00-E-19",
+        "115-00-E-20"
+      ],
+      "newDistinctBinaryImageSha256Matched": 10,
+      "cumulativeDistinctBinaryImageSha256Matched": 120,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaChange": 0,
+      "releaseApprovedChange": 0,
+      "evidenceDocument": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   ],
   "chineseTeachingSupplement": {
@@ -2840,11 +2943,11 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 110,
+    "recheckedDistinctQuestions": 120,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Actual GitHub WebP bytes + directly viewed single images, English 01-10",
-    "notYetRecheckedThisCycle": 18
+    "source": "Actual GitHub original WebP bytes and displayed images, English 01-20 now all SHA256/visual PASS",
+    "notYetRecheckedThisCycle": 8
   },
   "archivedAnswerImageCrossCheck": {
     "count": 54,

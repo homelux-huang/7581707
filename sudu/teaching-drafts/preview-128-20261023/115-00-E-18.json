@@ -190,6 +190,18 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageEnglishReview20261023": {
+      "originalWebpSha256": "64e15867eaa91fb35e756672f34ba358cc834fb33a09e20f0fe4967416c136ac",
+      "imageVisuallyReviewed": true,
+      "originalQuestionAndFourOptionsComplete": true,
+      "sharedImages": "NONE",
+      "sourceOcrNotOverwritten": true,
+      "postCandidatePartialTeachingReview": "逆時間順序列past jobs＝work experience，官方B。",
+      "officialAnswerPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ENGLISH_11_20_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
