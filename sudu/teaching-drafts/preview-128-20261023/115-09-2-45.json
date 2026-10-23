@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-45",
+  "year": 115,
+  "subject": "經濟學",
+  "questionNumber": 45,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-2-45.webp",
+  "imageSha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視原圖）",
+    "method": "從 GitHub 草稿分支取出單題 WebP 並實際觀看題幹、全部四選項、圖形及文字；重算圖片 bytes SHA256 與凍結 progress 清單一致。不重新裁切、不重做OCR。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": [
+      "OCR候選題幹將原圖『浮動匯率』誤讀為『應付匯率』；原圖清楚顯示浮動匯率，依原圖解題，來源OCR保持不變。"
+    ]
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE_PENDING_OFFICIAL_FINAL",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "ORIGINAL_IMAGE_INDEPENDENT_REASONING_BEFORE_CANDIDATE_LOOKUP_NOT_THIRD_PARTY_REVIEW",
+    "notice": "已先按原圖推理，再對照既有候選答案；官方最終標準答案、試題疑義及更正公告仍未直接核實。候選一致不等於正式答案核實。",
+    "conflictWarningRequired": false,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "pdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "economics-foreign-exchange-graph",
+    "questionAsReadFromOriginalImage": "圖（三）為臺灣外匯市場，新臺幣與美元的兌換採用浮動匯率，假設台積電最新製程良率由50%提升到75%，吸引美元資金大幅湧進我國外匯市場，下列敘述何者正確？",
+    "keyConditions": [
+      "外匯數量Q為美元數量",
+      "縱軸匯率，D1外匯需求、S1外匯供給",
+      "美元資金湧入臺灣外匯市場",
+      "新臺幣升值與出口競爭力"
+    ],
+    "reasoningFromOriginalImage": "美元資金湧入臺灣外匯市場，表示市場上可供交換的美元增加，外匯供給S1向右移；外匯匯率（每美元兌換的新臺幣）降低，等於新臺幣對美元升值。臺灣商品換算美元相對變貴，其他條件不變下不利出口。故C。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_FINAL_PDF"
+  },
+  "teaching": {
+    "teacherSummary": "**外匯市場先判斷誰增加**：外國資金將美元帶入臺灣，增加的是**美元外匯供給**，故圖中 **S1右移** 而非D1需求右移。新均衡美元匯率下跌（每美元可兌換新臺幣較少），即**新臺幣升值**；同一新臺幣訂價的出口品換算成美元變貴，其他條件固定時出口價格競爭力降低。選C。題中的製程良率50%→75%僅是資金流入原因，**不是要求算25個百分點的考題計算**。",
+    "elementarySummary": "很多人帶美金到臺灣換臺幣，市場上的美金就更多。美金變得比較不稀有，臺幣相對變值錢，這叫臺幣升值。外國人買臺灣東西時可能覺得比較貴，所以出口較不利。",
+    "memory": "**美元資金流入→美元供給S右移→台幣升值→出口較不利**。",
+    "concept": "以外幣美元為交易標的時，美元供給增加使美元的台幣價格下降；台幣升值通常不利出口、相對有利進口（其他條件不變）。",
+    "extension": "反向題：若海外投資人把大量美元換回美國、美元外匯供給減少，美元供給線會向左還是右移？新臺幣對美元可能升值還是貶值？",
+    "source": {
+      "originalExam": "115-09-2-45",
+      "originalImagePinnedSha256": "dd8c9ff5483e63b2825b50c7e99753232cdfefdba93d3082952acf2285a5ef99",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "官方最終答案PDF／疑義確認及更正公告仍待核實"
+    },
+    "highlightTerms": [
+      "美元資金",
+      "外匯供給S1右移",
+      "新臺幣升值",
+      "不利出口",
+      "浮動匯率"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A誤把美元資金湧入解讀為**外匯需求D1右移**；若外匯需求增加，美元價格通常上升，反而使新臺幣貶值，與其聲稱升值矛盾。",
+        "elementary": "美金變多是有人拿來換，不是更多人想買美金。",
+        "reason": "A誤把美元資金湧入解讀為**外匯需求D1右移**；若外匯需求增加，美元價格通常上升，反而使新臺幣貶值，與其聲稱升值矛盾。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說需求左移會造成新臺幣貶值；美元需求左移通常使美元價格下跌，台幣應升值，匯率方向及原因不符。",
+        "elementary": "更少人想買美金不會讓美金反而更值錢。",
+        "reason": "B說需求左移會造成新臺幣貶值；美元需求左移通常使美元價格下跌，台幣應升值，匯率方向及原因不符。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C說供給S1右移、台幣升值且不利出口，完整對應美元流入與外匯均衡變化，正確。",
+        "elementary": "美金變多、台幣較值錢，臺灣商品對外國人較貴。",
+        "reason": "C說供給S1右移、台幣升值且不利出口，完整對應美元流入與外匯均衡變化，正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說美元供給左移，與資金湧入相反；即使美元供給左移使台幣貶值，通常是有利出口而非有利進口。",
+        "elementary": "美金帶進來明明變多了，不是變少；後面方向也說反。",
+        "reason": "D說美元供給左移，與資金湧入相反；即使美元供給左移使台幣貶值，通常是有利出口而非有利進口。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
