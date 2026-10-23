@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-27",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 27,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-27.webp",
+  "imageSha256": "5fec3e12dbc2e20a0e8b5e558313eb8d79ee7159775711f8e6179aa4f3c3c392",
+  "sharedImages": [
+    {
+      "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+      "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+    }
+  ],
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪直接看原圖）",
+    "method": "同時打開本題 A-D 單題 WebP 及淡江大橋共用文章 WebP，逐張目視並重新核算 SHA256、無混題或缺少必要文章。",
+    "sha256Matched": true,
+    "sharedImageSha256Matched": true,
+    "sharedMaterialsRequired": true,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先據原圖與共用文章自行解題，再讀候選。原官方網站 2026-05-08 確認標準答案的公告已見，惟未直接回讀英文科最終標準答案 PDF 與疑義確認說明，仍待核實。",
+    "blindSolveStatus": "SELF_SOLVE_BEFORE_CANDIDATE_READ; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "cloze-shared-reading",
+    "questionAsReadFromOriginalImage": "Expressing a sense of art and beauty, the bridge's 200-meter tower rises into the sky, ____ a dancer were lifting both hands in prayer.",
+    "keyConditions": [
+      "sense of art and beauty",
+      "tower rises into the sky",
+      "a dancer were lifting both hands in prayer"
+    ],
+    "reasoningFromOriginalImage": "橋塔高聳的模樣被比喻為舞者舉雙手祈禱，空格需表『彷彿、好像』的 as if；搭 were 可做不符合字面事實的形象比擬。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "句子把**橋塔外觀**比喻為『舞者雙手舉起祈禱』，需用 **as if（彷彿、好像）** 引入想像畫面。後面的 **were lifting** 可用於非真實情境的比喻。這句不是『以防』、不是『為了』，也不是『只要』。",
+    "elementarySummary": "橋塔看起來像一個人把雙手舉起來祈禱。英文說『**彷彿**舞者那樣』就是 **as if**。",
+    "memory": "**像什麼一樣 → as if**；橋塔像舞者。",
+    "concept": "**as if + 子句** 用來比喻或描述非事實般的樣子；**in case** 表以防，**in order that** 表目的，**as long as** 表條件。注意 were 不代表橋塔真的是舞者。",
+    "extension": "反向思考：若句子改成『Take an umbrella ____ it rains』，意為『以防下雨』，該用 **in case**，不是 as if。",
+    "source": {
+      "originalExam": "115-00-E-27",
+      "originalImagePinnedSha256": "5fec3e12dbc2e20a0e8b5e558313eb8d79ee7159775711f8e6179aa4f3c3c392",
+      "sharedImages": [
+        {
+          "image": "data/approved/webp/115/115-00-E-SHARED-25-28.webp",
+          "sha256": "fe20804241ad196d516addcac2652aae89859ddd4f626f2f533deb43782fad9e"
+        }
+      ],
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "officialAnswerFinalCheck": "待回讀PDF和疑義說明",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "articleDataNote": "淡江大橋建設年份、最長紀錄等依115學年度考題文本，不等於當下官方工程進度或最新紀錄。"
+    },
+    "highlightTerms": [
+      "as if",
+      "a dancer were lifting both hands",
+      "200-meter tower"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**as if** 表好像、彷彿，導入舞者舉手的比喻，與橋塔的藝術外型完全對應。",
+        "elementary": "橋塔好像舞者，就是 as if。",
+        "reason": "**as if** 表好像、彷彿，導入舞者舉手的比喻，與橋塔的藝術外型完全對應。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**in case** 表以防萬一，通常交代防備某事；橋塔不是『以防舞者舉手』才向上伸展。",
+        "elementary": "這裡不是防什麼事情發生。",
+        "reason": "**in case** 表以防萬一，通常交代防備某事；橋塔不是『以防舞者舉手』才向上伸展。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**in order that** 表為了達到目的；橋塔沒有為了讓一位舞者真的舉手而伸向天空。",
+        "elementary": "橋不是為了指揮舞者舉手。",
+        "reason": "**in order that** 表為了達到目的；橋塔沒有為了讓一位舞者真的舉手而伸向天空。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**as long as** 表只要、在條件成立時；此處重點是像舞者的外型，不是條件交換。",
+        "elementary": "不是『只要舞者舉手，橋才升起』。",
+        "reason": "**as long as** 表只要、在條件成立時；此處重點是像舞者的外型，不是條件交換。"
+      }
+    },
+    "english": {
+      "questionType": "cloze-shared-reading",
+      "sentenceTranslationZh": "高200公尺的橋塔向天空伸展，彷彿一位舞者雙手舉起祈禱，充滿藝術美感。",
+      "passageTranslationZh": "淡江大橋自2019年開始興建，文章說今年準備投入使用。淡水與八里近年快速發展，兩地往返通勤者增加，所以需要大橋。文中說通車後往返兩地可節省約半小時。大橋不只能使交通車流順暢，也會以特殊建築美感吸引遊客。設計者為知名建築師札哈・哈蒂。文章描述它是臺灣第一座經由國際設計競賽選出的橋，將成為世界最長的單塔不對稱斜張橋。高200公尺的橋塔向天空伸展，好像舞者雙手舉起祈禱；橋的形狀與淡水河日落相映，非常醒目。遊客可以欣賞河岸景色。由於縮短交通時間並兼具美感，淡江大橋對交通及觀光都有重要作用，並將帶來便利與休閒利益。建設狀態、最長紀錄與數字均依115學年度題幹敘述，未以2026年最新工程公告獨立核實。",
+      "testedWord": "as if",
+      "answerWord": "as if",
+      "pronunciationIPA": "/æz ɪf/",
+      "optionMeaningZh": {
+        "A": "彷彿／好像",
+        "B": "以防",
+        "C": "為了使",
+        "D": "只要"
+      },
+      "synonyms": {
+        "初級": [
+          "like（像；語法結構不同）"
+        ],
+        "中級": [
+          "as though（彷彿）"
+        ],
+        "高級": [
+          "in the manner of（以……方式；通常需改寫）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "N/A（as if 沒有固定直接反義詞）"
+        ],
+        "中級": [
+          "in reality（實際上；概念對照）"
+        ],
+        "高級": [
+          "in fact（事實上；修辭對照，不是語法反義）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "dance（跳舞）"
+        ],
+        "中級": [
+          "prayer（祈禱）"
+        ],
+        "高級": [
+          "simile（明喻）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "部分為片語改寫或概念對照，不可當作所有語境可直接替換的完全同／反義詞。",
+      "exampleEnglish": "The sculpture looks as if it were moving.",
+      "exampleChinese": "這座雕塑看起來彷彿正在移動。",
+      "exampleHighlightedSurfaceForm": "as if",
+      "exampleType": "自編非新聞英文例句",
+      "newsExampleStatus": "未引用可核實新聞例句，不宣稱是新聞時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
