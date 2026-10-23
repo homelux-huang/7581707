@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-21",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 21,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-21.webp",
+  "imageSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪目視原圖）",
+    "method": "直接目視既有單題WebP完整題幹、圖形、表格、單位、四選項；重算原始 bytes SHA256 並與固定清單符合。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "原圖獨立解題後才讀既有候選答案；官方最終答案 PDF／更正公告尚未直接回讀，不計完整官方核實。",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "圖(五)：AB=7公里，AC=8公里，∠ACB=60°，且BC>4公里，求BC約幾公里？",
+    "keyConditions": [
+      "AB=7公里",
+      "AC=8公里",
+      "∠ACB=60°",
+      "BC=x>4公里"
+    ],
+    "reasoningFromOriginalImage": "已知 **AB=7、AC=8**，C角60°，設 BC=x。使用**餘弦定理** **7²=8²+x²−2·8·x·cos60°**，整理 **x²−8x+15=0**，得 x=3 或5；題目指定 **BC>4**，只能取 **5公里**，選 A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "5公里",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "已知 **AB=7、AC=8**，C角60°，設 BC=x。使用**餘弦定理** **7²=8²+x²−2·8·x·cos60°**，整理 **x²−8x+15=0**，得 x=3 或5；題目指定 **BC>4**，只能取 **5公里**，選 A。",
+    "elementarySummary": "A到B是7公里，A到C是8公里，加上C那邊的60度，可以列出兩種可能的距離：3或5公里。題目說B到C要超過4公里，所以只能選5。",
+    "memory": "**49=64+x²−8x ⇒ (x−3)(x−5)=0；x>4 ⇒5公里**。",
+    "concept": "餘弦定理 c²=a²+b²−2ab cosC，需正確對應已知角的**對邊**。方程出現兩組距離解時，以題目附加條件篩選。",
+    "extension": "反向思考：若題目改成BC<4公里，其餘條件不變，解就應取x=3公里。",
+    "source": {
+      "originalExam": "115-00-MB-21",
+      "originalImagePinnedSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學 B 教材版本／章節／頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B最終更正公告待直接核實"
+    },
+    "highlightTerms": [
+      "餘弦定理",
+      "x²−8x+15=0",
+      "x>4",
+      "5公里"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "5公里符合二次式根 x=5，亦符合 BC>4，正解。",
+        "elementary": "5比4大，可以選。",
+        "reason": "5公里符合二次式根 x=5，亦符合 BC>4，正解。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "4.75公里不滿足二次式 x²−8x+15=0，不能由四捨五入任意挑一個數。",
+        "elementary": "4.75雖比4大，但不是公式算出的距離。",
+        "reason": "4.75公里不滿足二次式 x²−8x+15=0，不能由四捨五入任意挑一個數。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "4.50公里也不是方程的根；必須符合餘弦定理的實際幾何條件。",
+        "elementary": "不能選看起來剛好在中間的4.5。",
+        "reason": "4.50公里也不是方程的根；必須符合餘弦定理的實際幾何條件。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "4.25公里不是滿足關係的3或5之一；題目給的是確切幾何關係。",
+        "elementary": "4.25沒算式根據。",
+        "reason": "4.25公里不是滿足關係的3或5之一；題目給的是確切幾何關係。"
+      }
+    },
+    "math": {
+      "formula": "餘弦定理 AB²=AC²+BC²−2(AC)(BC)cos∠ACB",
+      "formulaUsage": "兩邊和一個對角已知時，用餘弦定理求另一邊長度。",
+      "workedExample": "例：兩邊3、4夾角90°，對邊長√(3²+4²)=5。",
+      "dailyApplication": "海岸測距、地形探勘與導航。",
+      "notes": "數學、折扣與複利考題運算全數保留完整過程"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "AB=7公里",
+        "AC=8公里",
+        "∠ACB=60°",
+        "BC=x>4公里"
+      ],
+      "formula": "餘弦定理 AB²=AC²+BC²−2(AC)(BC)cos∠ACB",
+      "formulaPurpose": "兩邊和一個對角已知時，用餘弦定理求另一邊長度。",
+      "substitutionAndSteps": [
+        {
+          "formula": "令BC=x公里，且x>4。",
+          "why": "把未知距離設為x並保留限制。"
+        },
+        {
+          "formula": "7²=8²+x²−2×8×x×cos60°",
+          "why": "已知角C的對邊是AB，正確代入餘弦定理。"
+        },
+        {
+          "formula": "49=64+x²−16x×1/2=64+x²−8x",
+          "why": "cos60°=1/2並乘開。"
+        },
+        {
+          "formula": "x²−8x+15=0=(x−3)(x−5)",
+          "why": "移項後因式分解二次式。"
+        },
+        {
+          "formula": "x=3或5；由x>4得x=5，選A",
+          "why": "利用附加條件排除x=3。"
+        }
+      ],
+      "result": "5公里",
+      "unit": "公里",
+      "matchingOption": "A",
+      "commonMistake": "將C角60°對錯邊；或忘記x>4而答3公里。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
