@@ -2,9 +2,10 @@
   "dataStage": "qa_verified_only",
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
-    "commit": "8a9777d71b88253ccc46bac87fa34aa1a6371392",
+    "certificationSchemaVersion": "student-reviewed-batch-v1",
+    "commit": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "7300d225cbf411d8367b517cbb3cfb34d3af9c8ba942bddd8822b38cdd31f381"
+    "sourceTreeSignature": "836834c7a0ca660b8e917e8cb7f1ca0a59dec4ae7fa82721c15545e5f53561d8"
   },
   "schemaVersion": 1,
   "years": {
@@ -31,7 +32,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 0,
       "sharedWebpTotal": 1,
-      "sourceSha": "8a9777d71b88253ccc46bac87fa34aa1a6371392",
+      "sourceSha": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -111,20 +112,20 @@
       "expected": 205,
       "imagePreviewCount": 119,
       "imagePreviewPercent": 58.0,
-      "imageQaPercent": 65.9,
+      "imageQaPercent": 68.8,
       "ocrCandidate": 205,
       "ocrQaPass": 0,
       "officialCandidateMatches": 205,
       "officialFinalQaPass": 0,
       "pending": 205,
       "pendingReasonCounts": {
-        "image_pending": 86,
-        "ocr_or_db_pending": 119
+        "image_pending": 80,
+        "ocr_or_db_pending": 125
       },
       "reviewStatus": "not_all_gates_passed",
-      "sharedWebpQaPass": 3,
+      "sharedWebpQaPass": 4,
       "sharedWebpTotal": 20,
-      "sourceSha": "8a9777d71b88253ccc46bac87fa34aa1a6371392",
+      "sourceSha": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -142,7 +143,7 @@
           "imagePreviewReady": 9,
           "ocrQaPass": 0,
           "studentReady": 0,
-          "webpQaPass": 9
+          "webpQaPass": 15
         },
         "數位科技": {
           "candidate": 25,
@@ -191,7 +192,7 @@
         }
       },
       "webpGenerated": 205,
-      "webpQaPass": 135,
+      "webpQaPass": 141,
       "year": 115
     }
   }
