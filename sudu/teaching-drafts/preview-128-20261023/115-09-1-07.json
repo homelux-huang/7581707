@@ -163,7 +163,22 @@
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "ANSWER_CONCEPT_CONFLICT",
     "blockingReason": "候選B與廣義財務槓桿理論相衝突；TEJ財務槓桿文件提及特別股固定財務成本，需官方115年最終解答／更正及教材定義複核。",
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "07507836cc787e0535eb3e237d8f61a0f5c3dd7edf1674d7c72bb583f6bb340d",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "BLOCKED",
+      "findings": "原圖問「何者正確」，A票據貼現非中期、C公司債發行成本與特別股不能斷言高低、D公司債利息通常有節稅效果；B「特別股無法發揮財務槓桿」與固定股利可能影響普通股EPS敏感度的廣義財務槓桿定義衝突。候選B只能保留，並非已核准答案。需查當年度指定教材定義與最終疑義說明。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

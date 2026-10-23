@@ -234,7 +234,22 @@
     "textHighlightRendering": "PENDING",
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "PARTIAL_MATH_STEPS_RECHECK",
+      "findings": "圖示題幹與A-D象限完整。2026°最大負同界角a=-134°，-115°最小正同界角b=245°；a-b=-379°同界-19°，tan<0；a+b=111°，sin>0，所以點在第二象限，候選B；角度°與四象限符號一致。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

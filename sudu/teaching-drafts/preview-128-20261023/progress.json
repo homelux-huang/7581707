@@ -784,7 +784,17 @@
       "image": "data/approved/webp/115/115-00-MB-07.webp",
       "imageSha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-00-MB-08",
@@ -972,7 +982,17 @@
       "image": "data/approved/webp/115/115-09-1-03.webp",
       "imageSha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-1-05",
@@ -981,7 +1001,17 @@
       "image": "data/approved/webp/115/115-09-1-05.webp",
       "imageSha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-1-06",
@@ -1304,7 +1334,17 @@
       "image": "data/approved/webp/115/115-09-2-25.webp",
       "imageSha256": "ec7abde20dc64ede40c066a1b20483db3b320479b5480a778e7495366d261a34",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "ec7abde20dc64ede40c066a1b20483db3b320479b5480a778e7495366d261a34",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-26",
@@ -1313,7 +1353,17 @@
       "image": "data/approved/webp/115/115-09-2-26.webp",
       "imageSha256": "5b4426ed72ed5fa16e65625976465dcfc771d1c34dd3dab012e3eaf5b7cf5cbb",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "5b4426ed72ed5fa16e65625976465dcfc771d1c34dd3dab012e3eaf5b7cf5cbb",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-27",
@@ -1322,7 +1372,17 @@
       "image": "data/approved/webp/115/115-09-2-27.webp",
       "imageSha256": "3c13bf5dc3ed5f81b7d8c0e667f5596f5a169ead9df78360ae82451e8a1e79c4",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "3c13bf5dc3ed5f81b7d8c0e667f5596f5a169ead9df78360ae82451e8a1e79c4",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-28",
@@ -1346,7 +1406,17 @@
       "image": "data/approved/webp/115/115-09-2-29.webp",
       "imageSha256": "1ff70b0b7724f499ffe88fa9e37e624909ff0f6a61f7468a1beccac216606a06",
       "sharedImages": [],
-      "stage": "DRAFT_WRITTEN_REVIEW_PENDING"
+      "stage": "DRAFT_WRITTEN_REVIEW_PENDING",
+      "supplementalImageQa": {
+        "status": "PASS_SHA256_AND_VISUAL",
+        "reviewDate": "2026-10-23",
+        "sha256": "1ff70b0b7724f499ffe88fa9e37e624909ff0f6a61f7468a1beccac216606a06",
+        "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+        "evidenceDocument": "ORIGINAL_RECHECK_10_20261023.md",
+        "sharedImages": [],
+        "officialFinalVerified": false,
+        "notFullTeachingQA": true
+      }
     },
     {
       "questionId": "115-09-2-30",
@@ -1774,6 +1844,45 @@
       "officialFinalVerifiedChange": 0,
       "releaseApprovedChange": 0,
       "evidenceDocument": "POST_CANDIDATE_RECHECK_5_20261023.md"
+    },
+    {
+      "date": "2026-10-23",
+      "sourceHead": "1fbc0b1bd8f6bac6f7ff848cf709a4a0b46020b6",
+      "batch": "BLOCKERS_AND_MATH_ECON_10",
+      "reviewedQuestionIds": [
+        "115-09-1-07",
+        "115-09-1-33",
+        "115-09-2-28",
+        "115-09-1-03",
+        "115-09-1-05",
+        "115-00-MB-07",
+        "115-09-2-25",
+        "115-09-2-26",
+        "115-09-2-27",
+        "115-09-2-29"
+      ],
+      "alreadyImageVerifiedIds": [
+        "115-09-1-07",
+        "115-09-1-33",
+        "115-09-2-28"
+      ],
+      "newDistinctIds": [
+        "115-09-1-03",
+        "115-09-1-05",
+        "115-00-MB-07",
+        "115-09-2-25",
+        "115-09-2-26",
+        "115-09-2-27",
+        "115-09-2-29"
+      ],
+      "recheckedThisBatch": 10,
+      "newDistinctImageShaCount": 7,
+      "cumulativeDistinctImageShaCount": 33,
+      "notBlind": true,
+      "officialFinalVerifiedChange": 0,
+      "fullTeachingQaAcceptedChange": 0,
+      "releaseChange": 0,
+      "reference": "ORIGINAL_RECHECK_10_20261023.md"
     }
   ],
   "chineseTeachingSupplement": {
@@ -1791,10 +1900,10 @@
   },
   "binaryRecheckedLatest": {
     "scopeFixed": 128,
-    "recheckedDistinctQuestions": 26,
+    "recheckedDistinctQuestions": 33,
     "allMatchedPinnedSha256": true,
     "allWithEmptySharedImages": true,
-    "source": "Actual GitHub WebP bytes + displayed images, independently computed SHA256 (5 new unique at 2026-10-23)",
-    "notYetRecheckedThisCycle": 102
+    "source": "Actual GitHub WebP raw binary SHA256 with validated JS SHA-256 + model image viewing; 7 distinct added 2026-10-23, no sharedImages",
+    "notYetRecheckedThisCycle": 95
   }
 }

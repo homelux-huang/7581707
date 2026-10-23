@@ -160,7 +160,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "blockingReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "BLOCKED",
+      "findings": "原圖①難以篡改可作一般性描述；②明寫『用加密技術來為資料加解密』，與不可逆hash及數位簽章驗證不等價；③金資中心、④交易只留雙方帳本皆不符典型Bitcoin。候選A包含②，技術措辭爭議未解，不能當作嚴格技術教學事實。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -229,7 +229,22 @@
     "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
     "extensionNeedsQuestionSpecificRevision": false,
     "blockingReason": "題幹未列預算但候選解以等邊際效用／價格相等認定A；未設預算下D總效用較高。需官方及教材檢視。",
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "914f28cf23ad62958e9a70e85b6e1cd27bf6b9f9b04849ec8b6f84fe99d6dbef",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "BLOCKED",
+      "findings": "原圖要求考慮財貨價格但未提供收入/總預算：候選A=(2,1,2)最後單位MU/P各0.10，支出250、TU50；原始AI推D=(3,3,2)，支出390、TU54。對無預算約束的表列離散組合，D總效用較高；在限定250支出等情境A可能合理，但250不是題目已知，不能自行補作約束。A與D差異繼續BLOCKED。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

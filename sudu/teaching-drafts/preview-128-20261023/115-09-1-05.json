@@ -162,7 +162,22 @@
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "CLASSIFICATION_DEPENDS_ON_TEXTBOOK",
     "blockingReason": null,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "96ab298a88b9f98416b91d3935ef3e64723ab5b7d1fd55928d1412ac6b14ff3c",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "ADDITIONAL_CONCEPT_REVIEW",
+      "findings": "原圖②購買暢銷電子書是數位內容、①求職媒合及④訂票訂房偏線上服務；③付費觀看影音同時有數位內容與串流線上服務特徵。候選D依內容分類可解，但C把③歸線上服務有語義合理性；正式教材分類尚需查證。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

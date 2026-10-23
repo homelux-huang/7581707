@@ -161,7 +161,22 @@
     "extensionNeedsQuestionSpecificRevision": false,
     "conceptualReviewFlag": "POTENTIALLY_MULTIPLE_OPTIONS",
     "blockingReason": null,
-    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING"
+    "stepByStepReview": "DRAFT_PREPARED_QA_PENDING",
+    "recheckFromOriginal20261023": {
+      "reviewType": "AFTER_EXISTING_CANDIDATE_WAS_AVAILABLE_NOT_BLIND",
+      "imageSha256ActuallyRecomputed": "b0720a8d88dabeaba5e8dc9450bf14eef27de3f45dc6a4459465047d8bdca55a",
+      "imageShaMatchesManifest": true,
+      "imageDisplayedAndQuestionOptionsReviewed": true,
+      "sharedImagesStatus": "NONE_REQUIRED",
+      "contentReview": "PARTIAL_EVIDENCE_ONLY",
+      "conclusion": "ADDITIONAL_CONCEPT_REVIEW",
+      "findings": "原圖C說與創業者交流是人際關係維繫者，符合聯絡者角色；但D『其他企業推出類似服務，則會增加經營風險』依競爭分析可能也成立，是否被命題視為必然需要教材與官方說明；不得寫作D必然錯且不必解釋。",
+      "officialFinalPdfInspected": false,
+      "officialCorrectionDecisionVerified": false,
+      "fullIndependentTeachingQAAccepted": false,
+      "releaseApproved": false,
+      "auditFile": "ORIGINAL_RECHECK_10_20261023.md"
+    }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
