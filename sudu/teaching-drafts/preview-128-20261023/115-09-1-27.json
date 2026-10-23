@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-1-27",
+  "year": 115,
+  "subject": "數位科技",
+  "questionNumber": 27,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-09-1-27.webp",
+  "imageSha256": "a3b18d6faabb4321b1fc3bec4592f136190ce831432bccc7ab4ee13f5f4ffce8",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪親自目視WebP）",
+    "method": "從 GitHub 讀取既有單題 WebP，檢查完整題號、題幹、每一選項、公式數字與頁尾；重新 SHA256 並比對凍結清單；有OCR混頁僅記錄、不更動。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "A",
+  "answerComparison": {
+    "candidate": "A",
+    "status": "MATCHES_CANDIDATE_REVIEW_PENDING",
+    "officialFinalCorrectionVerified": false,
+    "blindSolveStatus": "SOLVED_FROM_IMAGE_BEFORE_CANDIDATE_READ; NOT_THIRD_PARTY_REVIEW",
+    "notice": "先看原圖解題，之後才查候選答案；官方最終標準答案PDF與更正公告尚未直接核實。新開發產品最終授權仍取決於使用的Linux組件及授權條款，不能把『可以收費』擴大成可任意閉源。",
+    "conflictWarningRequired": false,
+    "warningText": null,
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "pdfSha256": "b492e931f1947f906df5b214c3f8e823bee58fedb8cfc7c619ea533ac6cd9f2d",
+      "officialRevisionChecked": false
+    }
+  },
+  "solution": {
+    "questionType": "digital-tech-concept",
+    "keyConditions": [
+      "以Linux系統開發新產品",
+      "自由軟體／共享軟體／公用軟體／免費軟體"
+    ],
+    "reasoningFromOriginalImage": "Linux核心等常見開源授權允許在符合授權條件下商業銷售，自由軟體的『自由』不等於『必須免費』。共享軟體可有期限和付費限制，免費軟體仍通常有著作權。故A。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
+  },
+  "teaching": {
+    "teacherSummary": "**自由軟體（free software）強調使用、研究、修改和再散布的自由，而不是零售價必須為0**。基於Linux進行開發的具體再散布義務須依套件適用授權，例如GPL條款，不可只說任何改作都毫無條件。A『屬自由軟體，可以銷售』最接近考題意旨。**共享軟體 shareware**常有試用限制；**免費軟體 freeware**也可能受著作權保護。",
+    "elementarySummary": "有人把開源程式改好拿去賣，是可以的，但要遵守原本規定。『自由使用修改』不代表『一律不能收錢』；『免費』也不代表大家可以隨便拿去改。",
+    "memory": "**自由軟體可以收費；免費不等於沒著作權**。",
+    "concept": "free speech 而非 free beer 是常用比喻；GPL、MIT、Apache 等授權規則各不同；實際能否販售和是否需提供原始碼要看授權。",
+    "extension": "反向題：一套免費下載的商業程式，授權禁止修改與再散布，它屬於 freeware 還是自由軟體？為什麼『價格0元』不能判定授權自由？",
+    "source": {
+      "originalExam": "115-09-1-27",
+      "originalImagePinnedSha256": "a3b18d6faabb4321b1fc3bec4592f136190ce831432bccc7ab4ee13f5f4ffce8",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTEtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商數位科技教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "新開發產品最終授權仍取決於使用的Linux組件及授權條款，不能把『可以收費』擴大成可任意閉源。"
+    },
+    "highlightTerms": [
+      "Linux",
+      "自由軟體",
+      "可以銷售",
+      "GPL",
+      "免費軟體",
+      "著作權"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A符合自由軟體可商業銷售的原則，但再散布時應遵守適用的開放原始碼授權義務，不能因此說毫無條件。",
+        "elementary": "開源程式可以賣，賣的時候也要守授權規矩。",
+        "reason": "A符合自由軟體可商業銷售的原則，但再散布時應遵守適用的開放原始碼授權義務，不能因此說毫無條件。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B把基於Linux的自由軟體說成共享軟體；shareware常提供試用，期限和授權條件視產品而定，不能保證無限制長期使用。",
+        "elementary": "試用軟體可能要付錢才能一直用，和自由軟體不同。",
+        "reason": "B把基於Linux的自由軟體說成共享軟體；shareware常提供試用，期限和授權條件視產品而定，不能保證無限制長期使用。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說公用軟體『需要付費』，public domain本身不表示一定收費，也不是Linux依GPL授權的典型分類。",
+        "elementary": "進公共領域的東西，不代表買來一定要付錢。",
+        "reason": "C說公用軟體『需要付費』，public domain本身不表示一定收費，也不是Linux依GPL授權的典型分類。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說免費軟體『無著作權保護』；免費與權利放棄是兩回事，免費程式仍可能有著作權和禁止修改的授權。",
+        "elementary": "免費下載不等於作者把所有權利都送人。",
+        "reason": "D說免費軟體『無著作權保護』；免費與權利放棄是兩回事，免費程式仍可能有著作權和禁止修改的授權。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false,
+    "blockingReason": null
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
