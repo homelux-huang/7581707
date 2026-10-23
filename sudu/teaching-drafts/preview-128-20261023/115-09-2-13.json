@@ -248,6 +248,19 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageAndTeachingReview20261023": {
+      "actualSourceWebpSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+      "imageShaMatchesFrozenManifest": true,
+      "imageVisuallyInspected": true,
+      "questionIdAndOptionsVisible": true,
+      "sharedImages": "NONE",
+      "explanationPartialRecheck": "面額50000、貼現現金49000、年貼現率6%，差1000，貼現期1000/(50000×.06)=1/3年=4月；2/1加九月到11/1再扣四個月=7/1，D。",
+      "candidateWasAlreadyKnown": true,
+      "officialFinalPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

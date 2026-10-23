@@ -250,6 +250,19 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageAndTeachingReview20261023": {
+      "actualSourceWebpSha256": "5c5dcab67b6d0d6dbaf56771e9726a21e3f213f2136fe3c5e7166782ec5cf4b1",
+      "imageShaMatchesFrozenManifest": true,
+      "imageVisuallyInspected": true,
+      "questionIdAndOptionsVisible": true,
+      "sharedImages": "NONE",
+      "explanationPartialRecheck": "X2到期20%=2000000；X1/12/15已簽延期至X3/6/30，X1年底不屬12個月內到期；依題目資訊流動0；A。IFRS有效展延權利條件仍需版本複核。",
+      "candidateWasAlreadyKnown": true,
+      "officialFinalPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

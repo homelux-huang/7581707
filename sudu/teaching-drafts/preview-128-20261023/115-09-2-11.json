@@ -198,6 +198,19 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageAndTeachingReview20261023": {
+      "actualSourceWebpSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+      "imageShaMatchesFrozenManifest": true,
+      "imageVisuallyInspected": true,
+      "questionIdAndOptionsVisible": true,
+      "sharedImages": "NONE",
+      "explanationPartialRecheck": "目視題幹問零用金制度『錯誤』；B說期末報銷但未撥補，下期不得補，該斷言錯。須依高中教材定額／非定額帳務用語核實。",
+      "candidateWasAlreadyKnown": true,
+      "officialFinalPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

@@ -264,6 +264,19 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageAndTeachingReview20261023": {
+      "actualSourceWebpSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+      "imageShaMatchesFrozenManifest": true,
+      "imageVisuallyInspected": true,
+      "questionIdAndOptionsVisible": true,
+      "sharedImages": "NONE",
+      "explanationPartialRecheck": "X1折舊高估3000，累計折舊高估、前期權益低估；X2發現時借記累計折舊3000、貸追溯重編影響數3000；不是沖當期折舊，C。",
+      "candidateWasAlreadyKnown": true,
+      "officialFinalPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

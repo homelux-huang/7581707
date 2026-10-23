@@ -199,6 +199,19 @@
       "aiMatchesOfficial": true,
       "releaseApproved": false,
       "evidenceDocument": "OFFICIAL_FINAL_ANSWER_QA_20261023.md"
+    },
+    "imageAndTeachingReview20261023": {
+      "actualSourceWebpSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+      "imageShaMatchesFrozenManifest": true,
+      "imageVisuallyInspected": true,
+      "questionIdAndOptionsVisible": true,
+      "sharedImages": "NONE",
+      "explanationPartialRecheck": "原圖D敘述購價扣最大現金折扣的淨額入帳，符合本題候選；A政府附條件贈地認列時點、B自建廠房減損、C拆舊屋資產除列，均須教材版次查核，不可直接教材QA PASS。",
+      "candidateWasAlreadyKnown": true,
+      "officialFinalPreviouslyVerified": true,
+      "fullTeachingQA": "PENDING",
+      "studentReleaseApproved": false,
+      "evidence": "ACCOUNTING_11_13_21_IMAGE_QA_20261023.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
