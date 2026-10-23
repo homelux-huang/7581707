@@ -1,13 +1,13 @@
 {
   "year": 114,
   "definition": "A PASS requires genuine official-source-page versus exact crop comparison.",
-  "passCount": 24,
+  "passCount": 25,
   "questions": [
     {
       "questionId": "114-00-C-01",
-      "result": "BLOCKED",
-      "asset": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
-      "assetSha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e",
+      "result": "PASS",
+      "asset": "sudu/data/processed/114/qa-drafts/webp-v2/00-C/114-00-C-01.webp",
+      "assetSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
       "source": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
       "sourceSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
       "sourcePage": 2,
@@ -21,8 +21,17 @@
         "clarity",
         "input_output_sha256"
       ],
-      "evidenceReference": "sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json",
-      "failureReason": "HEADER_FRAGMENT"
+      "evidenceReference": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+      "failureReason": null,
+      "previousBlockedCropHistory": {
+        "result": "BLOCKED",
+        "asset": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
+        "assetSha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e",
+        "failureReason": "HEADER_FRAGMENT"
+      },
+      "reviewedWebpSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+      "reviewedAt": "2026-10-23",
+      "reviewer": "ChatGPT assistant"
     },
     {
       "questionId": "114-00-C-02",

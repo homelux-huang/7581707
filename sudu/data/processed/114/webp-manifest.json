@@ -5,7 +5,7 @@
   "generatedAt": "2026-10-22T11:45:24.817564+00:00",
   "expected": 205,
   "generated": 205,
-  "visualQaPass": 24,
+  "visualQaPass": 25,
   "reviewPolicy": "Automated source pixels/decoding are DRAFT, not visual QA.",
   "sharedMaterialCrops": [
     {
@@ -92,11 +92,9 @@
       "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMucGRm",
       "sourcePdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
       "sourcePage": 2,
-      "processingVersion": "114-source-pixel-draft-v1",
-      "qaStatus": "BLOCKED_VISUAL_HEADER_FRAGMENT",
-      "issues": [
-        "crop_contains_previous_line_fragment"
-      ],
+      "processingVersion": "direct-source-pixel-review-2026-10-23",
+      "qaStatus": "PASS",
+      "issues": [],
       "source": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
       "sourceSize": [
         1400,
@@ -105,16 +103,46 @@
       "sourceSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
       "crop": [
         90,
-        199,
+        210,
         1310,
         329
       ],
-      "output": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
+      "output": "sudu/data/processed/114/qa-drafts/webp-v2/00-C/114-00-C-01.webp",
       "outputSize": [
         1220,
-        130
+        119
       ],
-      "sha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e"
+      "sha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+      "oldAssetBeforeDirectVisualRepair": {
+        "output": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
+        "sha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e",
+        "crop": [
+          90,
+          199,
+          1310,
+          329
+        ],
+        "qaStatus": "BLOCKED_VISUAL_HEADER_FRAGMENT",
+        "processingVersion": "114-source-pixel-draft-v1"
+      },
+      "cropMethod": "source_pixel_crop_y_start_adjusted",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+        "reviewedAt": "2026-10-23",
+        "reviewer": "ChatGPT assistant",
+        "independentHumanReview": false,
+        "method": "direct_visual_official_source_page_render_to_exact_candidate_webp",
+        "reviewedSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+        "sourceSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+        "cropSourcePixelBounds": [
+          90,
+          210,
+          1310,
+          329
+        ],
+        "compositionMethod": "source_pixel_crop_y_start_adjusted",
+        "note": "Image G1 only. OCR, shared passages and final official answer independently gated."
+      }
     },
     {
       "questionId": "114-00-C-02",

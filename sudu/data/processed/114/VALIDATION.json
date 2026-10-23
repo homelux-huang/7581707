@@ -1,13 +1,11 @@
 {
   "year": 114,
   "structuralStatus": "DRAFT_WITH_UNRESOLVED_QA",
-  "imageVisualQaPass": 24,
+  "imageVisualQaPass": 25,
   "answerOfficialFinalVerified": 0,
   "ocrTextVerified": 1,
   "officialCorrectionQaComplete": false,
   "releaseAllowed": false,
   "integrationReady": false,
-  "blockedCropIds": [
-    "114-00-C-01"
-  ]
+  "blockedCropIds": []
 }

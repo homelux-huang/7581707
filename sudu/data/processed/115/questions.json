@@ -2450,12 +2450,12 @@
       "formulas": [],
       "tables": [],
       "assets": {
-        "singleQuestionWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-16.webp",
+        "singleQuestionWebp": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-16.webp",
         "sourcePageWebp": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
         "sourcePage": 6,
         "existingDemoCropBox": null,
         "generatedCropSha256": null,
-        "visualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+        "visualQa": "PASS_ASSISTANT_DIRECT_ORIGINAL_SOURCE",
         "sourceSize": [
           1400,
           1981
@@ -2465,27 +2465,29 @@
           90,
           1060,
           1310,
-          1303
+          1330
         ],
         "outputSize": [
           1220,
-          243
+          270
         ],
-        "sha256": "a09e042e11b0c1927bf8d0ff63ccc617230c0bf9d3011407c31fa0940f033400",
-        "processingVersion": "115-draft-pixelcrop-v2",
-        "cropMethod": "pixel_crop_of_official_page_webp",
+        "sha256": "cc874e5f44e18ff05e7bb121e346eb4d1430a42dd8b061ad97b27f8339d5bff8",
+        "processingVersion": "direct-source-pixel-review-2026-10-23",
+        "cropMethod": "source_pixel_composite_preserving_full_diagram_only",
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated",
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,
@@ -2557,12 +2559,12 @@
       "formulas": [],
       "tables": [],
       "assets": {
-        "singleQuestionWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-17.webp",
+        "singleQuestionWebp": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-17.webp",
         "sourcePageWebp": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
         "sourcePage": 6,
         "existingDemoCropBox": null,
         "generatedCropSha256": null,
-        "visualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+        "visualQa": "PASS_ASSISTANT_DIRECT_ORIGINAL_SOURCE",
         "sourceSize": [
           1400,
           1981
@@ -2578,21 +2580,23 @@
           1220,
           130
         ],
-        "sha256": "c195e20b574658c0e9ee0c4e10622c15f04f16f3376d8df09146b363eaef8350",
-        "processingVersion": "115-draft-pixelcrop-v2",
-        "cropMethod": "pixel_crop_of_official_page_webp",
+        "sha256": "074a9f792c7b011f59606394ea2c521c2190143bce9d013fdf79b8703dbdad8a",
+        "processingVersion": "direct-source-pixel-review-2026-10-23",
+        "cropMethod": "source_pixel_crop_mask_previous_Q16_wheel_arc_only",
         "sharedMaterialWebps": [
           "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp"
         ],
-        "visualReviewEvidence": null
+        "visualReviewEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json",
+        "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114C01_115C16_17_20261023.json"
       },
       "correctionVersion": "legacy-unmodified",
       "issues": [
-        "single_question_crop_not_yet_generated",
         "shared_material_separate_original_pixel_asset_pending_individual_QA"
       ],
       "reviewStatus": "needs_review",
-      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+      "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
+      "imageQaStatus": "PASS",
+      "integrationReady": false
     },
     {
       "schemaVersion": 1,

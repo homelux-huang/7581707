@@ -9,14 +9,14 @@
       "officialExpectedQuestions": 38,
       "candidateRecords": 38,
       "generatedPerQuestionWebp": 38,
-      "visualQaPass": 15,
+      "visualQaPass": 17,
       "rawOcrEngineOutput": 38,
       "nativePdfOrManualTextAvailable": 38,
       "questionVerified": 0,
       "officialAnswerMatchedPdfText": 38,
       "officialAnswerIndependentlyVerified": 6,
       "sqliteRecordCount": 38,
-      "needsFullVisualReview": 23
+      "needsFullVisualReview": 21
     },
     "英文": {
       "officialExpectedQuestions": 42,
@@ -109,7 +109,7 @@
   "generatedWebp": 205,
   "webpDecodePass": 205,
   "webpShaPass": 205,
-  "imageVisualQaPass": 141,
+  "imageVisualQaPass": 143,
   "sharedMaterialWebp": 20,
   "rawOcrRecords": 205,
   "missingRawOcrIds": [],
@@ -120,8 +120,6 @@
     "shaMismatches": []
   },
   "pendingVisualReviewIds": [
-    "115-00-C-16",
-    "115-00-C-17",
     "115-00-C-18",
     "115-00-C-19",
     "115-00-C-20",
@@ -185,5 +183,6 @@
     "115-09-2-49",
     "115-09-2-50"
   ],
-  "blockingStructuralFailures": []
+  "blockingStructuralFailures": [],
+  "integrationReady": false
 }
