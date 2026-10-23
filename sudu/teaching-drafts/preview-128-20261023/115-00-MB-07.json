@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-07",
+  "year": 115,
+  "subject": "數學 B",
+  "questionNumber": 7,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-MB-07.webp",
+  "imageSha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪逐題原圖目視）",
+    "method": "直接開啟既有單題 WebP，讀取題幹、符號、度數、三角函數、負號及四個選項，逐檔重新算 SHA256 並比對固定清單。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "B",
+  "answerComparison": {
+    "candidate": "B",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "依原圖先獨立解出答案、完整算式後才讀候選資料；候選的官方答案 PDF 尚未本輪直接回讀並查更正事項，不等於官方最終核實。",
+    "independentSolveScope": "IMAGE_FIRST_MATH_SOLVE_THEN_CANDIDATE; THIRD_PARTY_QA_PENDING",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "math-calculation",
+    "questionAsReadFromOriginalImage": "若 a 為 2026° 的最大負同界角、b 為 −115° 的最小正同界角，點 (tan(a−b),sin(a+b)) 落在哪個象限？",
+    "keyConditions": [
+      "a 為 2026° 最大負同界角",
+      "b 為 −115° 最小正同界角",
+      "點座標 (tan(a−b),sin(a+b))"
+    ],
+    "reasoningFromOriginalImage": "同界角相差 360° 的整數倍。**2026°=5×360°+226°**，最大負同界角 **a=226°−360°=−134°**；**b=−115°+360°=245°**。因此 **a−b=−379°**，與 **−19°** 同界，tan 為負；**a+b=111°**，sin 在第二象限為正。座標為 **(負,正)**，落在**第二象限**。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathematicalResult": "第二象限",
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CORRECTIONS"
+  },
+  "teaching": {
+    "teacherSummary": "同界角相差 360° 的整數倍。**2026°=5×360°+226°**，最大負同界角 **a=226°−360°=−134°**；**b=−115°+360°=245°**。因此 **a−b=−379°**，與 **−19°** 同界，tan 為負；**a+b=111°**，sin 在第二象限為正。座標為 **(負,正)**，落在**第二象限**。",
+    "elementarySummary": "角度就像繞圈圈，繞滿360度可以算成回到原來方向。把第一個角度換成最大但還是負的，把第二個換成最小的正角度。算出 x 負、y 正，就是左上角第二象限。",
+    "memory": "**a=−134°、b=245° ⇒ tan(−379°)<0、sin(111°)>0 ⇒ (−,+) 第二象限**。",
+    "concept": "**同界角 θ+360°k**；tan 在第二與第四象限為負，sin 在第一與第二象限為正。座標 (x,y) 的象限由正負決定，(−,+) 是第二象限。",
+    "extension": "反向思考：如果誤取 **a=226°**（不是負角），計算就不符合『最大負同界角』。請把 a 改成 −134° 再查象限。",
+    "source": {
+      "originalExam": "115-00-MB-07",
+      "originalImagePinnedSha256": "75599abe2d8e2232eb13d49cf31908f05a9c8b9fb3d170453d75a0e29f8f11d9",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+      "textbook": "彰化高商數學B教材之版本／章節／頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "數學B 最終答案與更正事項待獨立回讀"
+    },
+    "highlightTerms": [
+      "a=−134°",
+      "b=245°",
+      "tan(−19°)<0",
+      "sin111°>0",
+      "第二象限"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "第一象限需 x>0、y>0，但 tan(a−b)<0，所以 x 不為正。",
+        "elementary": "第一象限在右上角，本題 x 是負的。",
+        "reason": "第一象限需 x>0、y>0，但 tan(a−b)<0，所以 x 不為正。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "第二象限需 x<0、y>0，符合 tan(−379°)<0 與 sin111°>0。",
+        "elementary": "左上角就是負 x、正 y。",
+        "reason": "第二象限需 x<0、y>0，符合 tan(−379°)<0 與 sin111°>0。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "第三象限需兩座標都負；本題 sin111°>0，y 非負，因此不是第三象限。",
+        "elementary": "第三象限要在左下，本題 y 在上方。",
+        "reason": "第三象限需兩座標都負；本題 sin111°>0，y 非負，因此不是第三象限。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "第四象限需 x>0、y<0；本題 x<0 且 y>0，兩個符號都不符。",
+        "elementary": "本題在左上，不是在右下。",
+        "reason": "第四象限需 x>0、y<0；本題 x<0 且 y>0，兩個符號都不符。"
+      }
+    },
+    "math": {
+      "formula": "同界角 θ+360°k；由角所在象限判斷三角函數正負：tan第二、第四象限負，sin第二象限正",
+      "formulaUsage": "同界角縮減與正負判斷，不須查實際 tan/sin 小數值。",
+      "workedExample": "例：tan300°<0、sin120°>0，點(tan300°,sin120°)在第二象限。",
+      "dailyApplication": "以方向角判斷位移或航向；本題屬純三角函數判號。",
+      "variablesAreGroundedInOriginal": true,
+      "notes": "數學非金額運算也必須顯示考題計算式。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "givenConditions": [
+        "a 為 2026° 最大負同界角",
+        "b 為 −115° 最小正同界角",
+        "點座標 (tan(a−b),sin(a+b))"
+      ],
+      "formula": "同界角 θ+360°k；由角所在象限判斷三角函數正負：tan第二、第四象限負，sin第二象限正",
+      "formulaPurpose": "同界角縮減與正負判斷，不須查實際 tan/sin 小數值。",
+      "substitutionAndSteps": [
+        {
+          "formula": "2026°−5×360°=226°",
+          "why": "先把 2026 度減去完整的五圈。"
+        },
+        {
+          "formula": "a=226°−360°=−134°",
+          "why": "在所有負同界角中，−134° 最大（最接近0）。"
+        },
+        {
+          "formula": "b=−115°+360°=245°",
+          "why": "在所有正同界角中，245° 最小。"
+        },
+        {
+          "formula": "a−b=−134°−245°=−379°；−379°+360°=−19°",
+          "why": "化成便於判斷符號的同界角。"
+        },
+        {
+          "formula": "tan(−19°)<0",
+          "why": "−19° 位於第四象限，正切值為負。"
+        },
+        {
+          "formula": "a+b=−134°+245°=111°；sin111°>0",
+          "why": "111° 位於第二象限，正弦值為正。"
+        },
+        {
+          "formula": "(tan(a−b),sin(a+b))=(負,正)，第二象限",
+          "why": "套用座標象限正負定義。"
+        }
+      ],
+      "result": "第二象限",
+      "unit": "角度單位 °；座標三角函數值無單位",
+      "matchingOption": "B",
+      "commonMistake": "把 2026° 的 226° 當負同界角；或忽略 tan(a−b) 的負號。",
+      "display": true
+    }
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
