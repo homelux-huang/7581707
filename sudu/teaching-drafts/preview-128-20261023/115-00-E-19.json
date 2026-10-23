@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-19",
+  "year": 115,
+  "subject": "英文",
+  "questionNumber": 19,
+  "status": "EXPLANATION_DRAFT_NOT_FOR_RELEASE",
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "image": "data/approved/webp/115/115-00-E-19.webp",
+  "imageSha256": "f2074b22d1f36a763ba374063efec38ab000210632de9eb20bea9a563a7d3b3e",
+  "visualReview": {
+    "status": "PASS",
+    "reviewedBy": "GPT-6（本輪實際目視）",
+    "method": "直接觀看 GitHub 對應的原始單題 WebP，核實第 19 題／題幹／A-D／對話上下文／無鄰題，重新計算文件 SHA256 與 progress 固定清單相符。",
+    "sha256Matched": true,
+    "sharedMaterialsRequired": false,
+    "ocrIssues": []
+  },
+  "aiAnswer": "C",
+  "answerComparison": {
+    "candidate": "C",
+    "status": "MATCHES_CANDIDATE",
+    "officialFinalCorrectionVerified": false,
+    "notice": "先讀原圖並留下自行解題結果，才比對候選答案；官網確認 2026-05-08 標準答案定案，但尚無法直接讀取英文最終答案 PDF 與試題／答案確認說明。",
+    "blindSolveStatus": "SELF_IMAGE_SOLVE_BEFORE_LOOKUP_NOT_INDEPENDENT_THIRD_PARTY",
+    "candidateProvenance": {
+      "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "pdfSha256": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+      "officialRevisionChecked": false
+    },
+    "conflictWarningRequired": false
+  },
+  "solution": {
+    "questionType": "dialogue-completion",
+    "questionAsReadFromOriginalImage": "Dave: Grandma, you need to renew your driver's license if you want to keep driving. Grandma: But I'm just 71. I thought only people over 75 had to do it. Dave: Not anymore. The new rules say people have to renew their licenses at 70 now. Grandma: That won't be a problem. I'm very healthy. ____. Dave: I totally agree, Grandma. I believe I'll still get rides from you.",
+    "keyConditions": [
+      "That won't be a problem",
+      "I'm very healthy",
+      "I believe I'll still get rides from you"
+    ],
+    "reasoningFromOriginalImage": "奶奶認為自己健康且續照沒問題，孫子也相信她會繼續開車載人；因此 C I'm sure I can get my license renewed。題目提到70歲換照規定是對話設定，草稿不能未查法規即宣稱現行規定。",
+    "reasoningRecordedBeforeCandidateLookup": true,
+    "mathOrAccountingCalculationNeeded": false,
+    "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_PDF_AND_CONFIRMATION_NOTE"
+  },
+  "teaching": {
+    "teacherSummary": "**That won't be a problem** 與 **I'm very healthy** 顯示奶奶對續照有信心。孫子回答 **I'll still get rides from you**，也預期她繼續駕駛，故選 **I'm sure I can get my license renewed**。**get + 受詞 + 過去分詞** 表辦理／使某事完成。題幹所說 70 歲換照是對話角色陳述，是否為現行法規、適用條件應另查主管機關，不能把考題語句當法規依據。",
+    "elementarySummary": "奶奶說『我身體很好，換駕照應該沒問題！』孫子說『對呀，以後你還能開車載我。』所以她不會是在說要賣車或停開車。",
+    "memory": "**healthy + no problem + still get rides → license renewed**。",
+    "concept": "**renew a license** 是換發／續期證照；**get my license renewed** 強調把證照換發手續辦好。與法規有關的年齡門檻須查當年度官方規定，不由這題推定現行法律。",
+    "extension": "反向思考：如果奶奶改說『I'm worried my eyesight is too poor to drive safely』，後面便可能要談停止駕駛或健康評估，而不是直接說一定可成功續照。",
+    "source": {
+      "originalExam": "115-00-E-19",
+      "originalImagePinnedSha256": "f2074b22d1f36a763ba374063efec38ab000210632de9eb20bea9a563a7d3b3e",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "officialAnnouncement": "2026-05-08 答案確認公告；該題最終 PDF 尚未獨立複核",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商英文教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科試題或答案確認說明待回讀",
+      "legalVersionCheck": "70 歲／75 歲換照年齡只引用題幹角色的說法，尚未核實現行監理法規；不得當成平台法規教學結論。"
+    },
+    "highlightTerms": [
+      "renew your driver's license",
+      "I'm very healthy",
+      "get my license renewed",
+      "still get rides"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**Maybe I should sell my car right now** 表考慮賣車，與奶奶說自己健康、孫子預期繼續搭她的車不一致。",
+        "elementary": "奶奶說換照沒問題，就不太會突然說賣掉車。",
+        "reason": "**Maybe I should sell my car right now** 表考慮賣車，與奶奶說自己健康、孫子預期繼續搭她的車不一致。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "**Maybe it's time for me to stop driving** 是可能該停止開車；孫子接著表示還能搭她的車，邏輯相反。",
+        "elementary": "她若說不開車了，孫子不會說以後還可以讓她載。",
+        "reason": "**Maybe it's time for me to stop driving** 是可能該停止開車；孫子接著表示還能搭她的車，邏輯相反。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "**I'm sure I can get my license renewed** 表有信心完成換照，呼應身體健康、沒有問題及未來仍可駕駛的下文，正確。",
+        "elementary": "奶奶相信自己能辦好換照，就能繼續開車。",
+        "reason": "**I'm sure I can get my license renewed** 表有信心完成換照，呼應身體健康、沒有問題及未來仍可駕駛的下文，正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**I'll wait until I turn 70** 不合題幹奶奶已是 **71** 歲的情況；也不能合理解釋續照沒有問題。",
+        "elementary": "已經71歲了，不能說等我以後滿70歲再換。",
+        "reason": "**I'll wait until I turn 70** 不合題幹奶奶已是 **71** 歲的情況；也不能合理解釋續照沒有問題。"
+      }
+    },
+    "english": {
+      "questionType": "dialogue-completion",
+      "sentenceTranslationZh": "Dave：奶奶，如果還想繼續開車，妳得更新駕照。奶奶：可我才71歲，我以為超過75歲才需要。Dave：題目中說現在的新規定是70歲。奶奶：那對我不會有問題，我很健康，一定能辦好駕照換發。Dave：我也覺得，以後還能搭妳的車呢。",
+      "testedWord": "renewed",
+      "answerWord": "renewed",
+      "pronunciationIPA": "/rɪˈnuːd/",
+      "optionMeaningZh": {
+        "A": "或許我現在該把車賣掉。",
+        "B": "或許我該停止開車了。",
+        "C": "我相信我可以把駕照換發好。",
+        "D": "我會等滿70歲再換發駕照。"
+      },
+      "synonyms": {
+        "初級": [
+          "updated（更新了；用途較廣）"
+        ],
+        "中級": [
+          "extended（延長有效期；部分情境近義）"
+        ],
+        "高級": [
+          "revalidated（重新使有效；正式用語）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "expired（過期；狀態對照）"
+        ],
+        "中級": [
+          "lapsed（失效／逾期）"
+        ],
+        "高級": [
+          "revoked（被撤銷；法律狀態不同）"
+        ]
+      },
+      "relatedWords": {
+        "初級": [
+          "drive（開車）"
+        ],
+        "中級": [
+          "license（證照／駕照）"
+        ],
+        "高級": [
+          "eligibility（資格）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "synonymUsageNote": "相關或近義片語不能保證任何情況都完全可替換；非反義關係已註明。",
+      "exampleEnglish": "My aunt got her driver's license renewed last month.",
+      "exampleChinese": "我阿姨上個月辦好了駕照換發。",
+      "exampleHighlightedSurfaceForm": "renewed",
+      "exampleType": "自編雙語教學例句，非新聞",
+      "newsExampleStatus": "沒有具可查來源的新聞時事例句，故不冒稱時事"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "qa": {
+    "explanationWritten": true,
+    "independentTeachingReview": "PENDING",
+    "uiReview": "PENDING",
+    "officialFinalReview": "PENDING",
+    "textHighlightRendering": "PENDING",
+    "subjectSpecificEnrichment": "DRAFT_PREPARED_REVIEW_PENDING",
+    "extensionNeedsQuestionSpecificRevision": false
+  },
+  "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+  "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
+}
