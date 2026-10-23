@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "cfd9fc683cf9f6f76e664eb824865e69ff4eeed5",
+      "sha256": "0992ee68b0b87bb38747374ce9d9fe260c15a65d0d0c8027aa7fa57026c5b0ce",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub Base64 WebP bytes decoded hashed and image displayed"
+    }
   },
   "aiAnswer": "A",
   "answerComparison": {
@@ -27,13 +35,17 @@
     "elementarySummary": "老師說你當不了神仙，但可以下山幫助好君王、做大事。",
     "memory": "人間之福→仙道難成；周興→扶助明主",
     "concept": "由「只可受人間之福」推得難成仙；由周室將興、身為將相推得下山輔佐明主。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：如果天尊改說「你命格足以成仙，無須下山輔佐周室」，第一格還會是「仙道難成」、第二格還會是「扶助明主」嗎？請分別依修行結果與奉命下山的情境填詞，而不是看到『天尊』就選仙道。",
     "source": {
       "originalExam": "115-00-C-03",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "人間之福→仙道難成；周興→扶助明主"
+      "只可受人間之福",
+      "仙道難成",
+      "周室將興",
+      "扶助明主",
+      "功高震主"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +74,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "文中「你生來命薄，只可受人間之福」限定修行結果，是「仙道難成」而非「盛情難卻」",
+      "「周室將興」「你與我代勞封神，下山身為將相」表示輔佐周室，是「扶助明主」",
+      "「功高震主」是功勞過高招君主忌憚，和此段託付使命不合，因此A兩格皆對"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_TEXTBOOK_VERSION_AND_INDEPENDENT_QA",
+      "relatedWordsByDifficulty": {
+        "仙道難成": {
+          "初級": [
+            "不能成仙"
+          ],
+          "中級": [
+            "修仙不成"
+          ],
+          "高級": [
+            "仙緣難就"
+          ]
+        },
+        "扶助明主": {
+          "初級": [
+            "幫助好君王"
+          ],
+          "中級": [
+            "輔佐君主"
+          ],
+          "高級": [
+            "匡輔賢君"
+          ]
+        }
+      },
+      "wordLevelNotice": "字詞程度層級為教學草稿而非出版社正式分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +115,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

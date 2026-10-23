@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "cfd9fc683cf9f6f76e664eb824865e69ff4eeed5",
+      "sha256": "0475bf588049dbc45da398f28ebcb69666d506d569ac6cf36f5645d371540f62",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub Base64 WebP bytes decoded hashed and image displayed"
+    }
   },
   "aiAnswer": "C",
   "answerComparison": {
@@ -27,12 +35,17 @@
     "elementarySummary": "像相機先拍一座山，再放大拍山上的小洞。",
     "memory": "整體→局部",
     "concept": "聚焦是視線由大範圍或整體縮到局部；山再縮到山的小口，正是整體到局部。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：如果把「林盡水源，便得一山，山有小口」改為「走出小口，看見整片群山」，觀察方向由局部轉整體，還能算『聚焦』嗎？請指出原文「屈原→面容」與選項C「山→山口」的共同視線路徑。",
     "source": {
       "originalExam": "115-00-C-07",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
+      "屈原既放",
+      "顏色憔悴",
+      "林盡水源",
+      "便得一山",
+      "山有小口",
       "整體→局部"
     ],
     "optionExplanations": {
@@ -62,7 +75,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "原文先描述屈原整個人，再描寫他「顏色憔悴」的局部面容，是整體到局部",
+      "C「得一山」後又注意「山有小口」，觀看對象逐步縮小，與原文同樣是聚焦",
+      "A從登樓到心理、B從人群到宇宙、D從宴飲到抒情都不是把同一物體視線拉近局部"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_TEXTBOOK_VERSION_AND_INDEPENDENT_QA",
+      "relatedWordsByDifficulty": {
+        "聚焦": {
+          "初級": [
+            "看清某一點"
+          ],
+          "中級": [
+            "集中注意"
+          ],
+          "高級": [
+            "聚焦局部細節"
+          ]
+        },
+        "描寫": {
+          "初級": [
+            "說出樣子"
+          ],
+          "中級": [
+            "具體刻畫"
+          ],
+          "高級": [
+            "細部摹寫"
+          ]
+        }
+      },
+      "wordLevelNotice": "字詞程度層級為教學草稿而非出版社正式分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +116,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

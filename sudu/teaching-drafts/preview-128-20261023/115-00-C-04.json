@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "cfd9fc683cf9f6f76e664eb824865e69ff4eeed5",
+      "sha256": "f8517932c1ffa93cb3ef52f0e17ec8c93b895c5ca7092156a7591a289db47aa8",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub Base64 WebP bytes decoded hashed and image displayed"
+    }
   },
   "aiAnswer": "D",
   "answerComparison": {
@@ -27,13 +35,17 @@
     "elementarySummary": "把同一種東西分兩組，再說兩組各有什麼效果。",
     "memory": "同一事物＋分類標準＋作用差異",
     "concept": "題目要求同一事物按同一標準分兩類，再比較作用；鏡依凹凸分兩類，成像大小不同。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：若原框由「長者為槐，短者為梲」改成「槐樹很高大，天氣也炎熱」，還有使用同一分類標準把同一物分成兩類嗎？再比較「凹鏡／凸鏡」何以符合此題的分類＋用途結構。",
     "source": {
       "originalExam": "115-00-C-04",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "同一事物＋分類標準＋作用差異"
+      "長者為槐，短者為梲",
+      "同一分類基準",
+      "不同功能或用途",
+      "凡鑑窪則照人面大",
+      "凸則照人面小"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +74,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "原框必備兩要素：同一對象依共同基準分成兩類，且兩類功能或效果不同",
+      "A「道／師」、B「骨節／刀刃」是不同對象；C是景物描寫，都不符合此框",
+      "D把鏡子按凹凸形狀區分，再比較成像大小的不同表述，結構一致；本題是修辭分類，不推廣成不分情況的物理定律"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_TEXTBOOK_VERSION_AND_INDEPENDENT_QA",
+      "relatedWordsByDifficulty": {
+        "分類": {
+          "初級": [
+            "分組"
+          ],
+          "中級": [
+            "歸類"
+          ],
+          "高級": [
+            "按一致標準分群"
+          ]
+        },
+        "用途": {
+          "初級": [
+            "用來做什麼"
+          ],
+          "中級": [
+            "功能"
+          ],
+          "高級": [
+            "功用"
+          ]
+        }
+      },
+      "wordLevelNotice": "字詞程度層級為教學草稿而非出版社正式分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +115,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

@@ -15,7 +15,15 @@
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
     "ocrIssues": [
       "OCR圖文順序混亂；原圖資料框完整。"
-    ]
+    ],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "cfd9fc683cf9f6f76e664eb824865e69ff4eeed5",
+      "sha256": "c8b96c85679e3a865ae98325108a2d4a31e9317cfeffa8d3554a6b3f3df66abf",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub Base64 WebP bytes decoded hashed and image displayed"
+    }
   },
   "aiAnswer": "B",
   "answerComparison": {
@@ -29,13 +37,18 @@
     "elementarySummary": "只用表格真的有寫的線索，沒寫的事情不要自己猜。",
     "memory": "有證據才下結論",
     "concept": "資料判讀只能推論證據支持的範圍；兩詞缺乏清代以前出處，不能擴推所有新詞數量或作者態度。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：若有一篇明確早於清代的原始史料也使用「接觸」或「取締」，選項B中「依此資料無法回溯古義」的判斷還能保留嗎？為什麼單憑兩例不能推出新造詞數量比古詞多，或說當時作者一概反對日語新詞？",
     "source": {
       "originalExam": "115-00-C-05",
       "textbook": "教材版本、章節及頁數待核對"
     },
     "highlightTerms": [
-      "有證據才下結論"
+      "取締",
+      "接觸",
+      "未見於清代以前的經史子集",
+      "1873年",
+      "1885年",
+      "1920年"
     ],
     "optionExplanations": {
       "A": {
@@ -64,7 +77,40 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "先區分「材料顯示何時有書面例證」與「這個詞真正最早何時出現」，兩者不等同",
+      "提供的「取締」（1873）、「接觸」（1885、1920）只能支持材料中尚無更早古義例證的審慎說法",
+      "A擅推詞義演變；C擅推詞數；D擅推所有作者態度，只有B能依題給證據有限地推論，不能宣稱客觀歷史絕不存在更早例"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_TEXTBOOK_VERSION_AND_INDEPENDENT_QA",
+      "relatedWordsByDifficulty": {
+        "古義": {
+          "初級": [
+            "以前的意思"
+          ],
+          "中級": [
+            "古代詞義"
+          ],
+          "高級": [
+            "歷時語義"
+          ]
+        },
+        "新造詞": {
+          "初級": [
+            "新詞"
+          ],
+          "中級": [
+            "新創詞語"
+          ],
+          "高級": [
+            "現代新生詞彙"
+          ]
+        }
+      },
+      "wordLevelNotice": "字詞程度層級為教學草稿而非出版社正式分級"
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -72,8 +118,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"

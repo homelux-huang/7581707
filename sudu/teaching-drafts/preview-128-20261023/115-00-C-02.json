@@ -13,7 +13,15 @@
     "status": "PASS",
     "reviewedBy": "Codex",
     "method": "逐題讀取既有單題原圖；核對題號、題幹、四選項及必要圖表",
-    "ocrIssues": []
+    "ocrIssues": [],
+    "supplementalBinaryReview": {
+      "status": "SHA256_MATCH_VISUALLY_REVIEWED",
+      "date": "2026-10-23",
+      "sourceHead": "cfd9fc683cf9f6f76e664eb824865e69ff4eeed5",
+      "sha256": "ff9119c069bced508200d661a8d9adfc794f5c2c14d9a6913c59924c341bfa88",
+      "sharedImagesReviewed": 0,
+      "source": "GitHub Base64 WebP bytes decoded hashed and image displayed"
+    }
   },
   "aiAnswer": "A",
   "answerComparison": {
@@ -27,13 +35,30 @@
     "elementarySummary": "同一個然，有時是「的樣子」，有時是「這樣」，還可能是「可是」。",
     "memory": "①樣子；②這樣",
     "concept": "①愀然的然是形容狀態的詞尾；②其然的然是「這樣」。另有句首然表示然而，不能混用。",
-    "extension": "反向檢查：若改變題幹的關鍵條件，原來的答案是否仍成立？請使用四選項理由逐一驗證。",
+    "extension": "反向題：比較「蘇子愀然」、「屋舍儼然」、「其然也」、「他植者則不然」這四處的「然」。哪兩個是狀態語尾？哪兩個指「如此、這樣」？如果改成「然鄭亡」，意思又變成什麼？",
     "source": {
       "originalExam": "115-00-C-02",
-      "textbook": "教材版本、章節及頁數待核對"
+      "textbook": "教材版本、章節及頁數待核對",
+      "dictionaryReferences": [
+        {
+          "title": "教育部重編國語辭典 愀然",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=99996&la=0&powerMode=0",
+          "verifiedBopomofo": "ㄑㄧㄠˇ ㄖㄢˊ"
+        },
+        {
+          "title": "教育部重編國語辭典 默然",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=27940&la=0&powerMode=0",
+          "verifiedBopomofo": "ㄇㄛˋ ㄖㄢˊ"
+        }
+      ]
     },
     "highlightTerms": [
-      "①樣子；②這樣"
+      "蘇子愀然",
+      "何為其然也",
+      "屋舍儼然",
+      "項王默然不應",
+      "然鄭亡",
+      "他植者則不然"
     ],
     "optionExplanations": {
       "A": {
@@ -62,7 +87,52 @@
       }
     },
     "hasExamCalculation": false,
-    "examCalculation": null
+    "examCalculation": null,
+    "keyPointBullets": [
+      "先按原題①「愀然」的「然」表示某種狀態、樣子，②「其然」則是「如此、這樣」",
+      "「屋舍儼然」「項王默然」皆描寫狀態，故A兩處都同①",
+      "「然鄭亡」句首「然」是轉折「然而」；「不然」可以是「不這樣」，混在同一選項就不全符合題意"
+    ],
+    "chineseEnrichment": {
+      "status": "DRAFT_NEEDS_TEXTBOOK_VERSION_AND_INDEPENDENT_QA",
+      "relatedWordsByDifficulty": {
+        "然（狀態）": {
+          "初級": [
+            "樣子"
+          ],
+          "中級": [
+            "形容狀態"
+          ],
+          "高級": [
+            "形容詞語尾"
+          ]
+        },
+        "然（如此）": {
+          "初級": [
+            "這樣"
+          ],
+          "中級": [
+            "如此"
+          ],
+          "高級": [
+            "如是"
+          ]
+        }
+      },
+      "wordLevelNotice": "字詞程度層級為教學草稿而非出版社正式分級",
+      "verifiedReadings": [
+        {
+          "word": "愀然",
+          "bopomofo": "ㄑㄧㄠˇ ㄖㄢˊ",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=99996&la=0&powerMode=0"
+        },
+        {
+          "word": "默然",
+          "bopomofo": "ㄇㄛˋ ㄖㄢˊ",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=27940&la=0&powerMode=0"
+        }
+      ]
+    }
   },
   "qa": {
     "explanationWritten": true,
@@ -70,8 +140,8 @@
     "uiReview": "PENDING",
     "officialFinalReview": "PENDING",
     "textHighlightRendering": "PENDING",
-    "subjectSpecificEnrichment": "PENDING",
-    "extensionNeedsQuestionSpecificRevision": true
+    "subjectSpecificEnrichment": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+    "extensionNeedsQuestionSpecificRevision": false
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
   "imageRepositoryCommit": "ca2b4637dc783f8527a78c20e3f665db3084ef60"
