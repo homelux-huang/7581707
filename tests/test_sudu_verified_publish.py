@@ -312,5 +312,56 @@ class Year114OfficialCorrectionScopeTests(unittest.TestCase):
             v.dump(ledger,data)
             self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
 
+
+class GenuineLegacy114VisualCertificateTests(unittest.TestCase):
+    def fixture(self, root, criteria=None):
+        from pathlib import Path
+        rel="sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json"
+        path=root/rel
+        path.parent.mkdir(parents=True,exist_ok=True)
+        features={name:True for name in (
+            "original_number","complete_stem","all_four_options",
+            "required_formula_images_units","no_neighboring_question",
+            "no_page_header_or_footer","readable",
+            "source_and_output_sha256_matched","exact_source_crop_pixel_match")}
+        if criteria:
+            features.update(criteria)
+        proof={"reference":rel,"reviewedSha256":"b"*64}
+        item={"questionId":"114-00-E-07","output":"sudu/data/processed/114/webp-v1/00-E/114-00-E-07.webp",
+              "sha256":"b"*64,"visualReviewEvidence":proof}
+        v.dump(path,{"items":[{"questionId":"114-00-E-07","result":"PASS",
+                                "reviewedWebpPath":item["output"],
+                                "reviewedWebpSha256":item["sha256"],
+                                "criteria":features}]})
+        return item
+    def test_genuine_legacy_english_sha_bound_qa_pass(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root)
+            self.assertTrue(v.visual_certificate(root,item,"114-00-E-07"))
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-08"))
+    def test_one_failed_criterion_wrong_sha_wrong_path_do_not_pass(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root,{"all_four_options":False})
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+            item=self.fixture(root)
+            item["sha256"]="0"*64
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+            item=self.fixture(root)
+            item["output"]="sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp"
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+    def test_legacy_reference_acceptance_requires_actual_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root)
+            q={"questionId":item["questionId"],"year":114,"sharedMaterialIds":[]}
+            expected={"evidencePath":"no-such-file.json","evidenceSha256":"0"*64}
+            # Image-only certificate can pass; full student release still
+            # fails because OCR, answer, blind-solve, teaching and UI are missing.
+            self.assertTrue(v.visual_certificate(root,item,q["questionId"]))
+            self.assertFalse(v.certificates_complete(root,q,item,{}))
+
+
 if __name__ == "__main__":
     unittest.main()
