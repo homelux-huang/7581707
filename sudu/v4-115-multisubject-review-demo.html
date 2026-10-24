@@ -91,7 +91,10 @@ html[data-theme="dark"] .opt.correct{background:var(--correct-bg);color:var(--co
 .wrong-card:focus-within{box-shadow:0 8px 24px rgba(30,50,80,.15)}
 @media(hover:hover) and (pointer:fine){.wrong-card:hover{background:hsl(var(--review-hue) 75% 90%);border-color:hsl(var(--review-hue) 55% 50%);transform:translateY(-3px);box-shadow:0 12px 28px rgba(30,50,80,.17)}}
 @media(max-width:720px){.review-mode .header-actions{grid-template-columns:1fr 54px}}
-/* Reduced motion must override the higher-specificity option hover transform.\n   Otherwise cursor-edge hover toggles translateY(-2px) on/off and makes the\n   answer button genuinely unstable for mouse users and Chromium click QA. */\n@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.opt,.wrong-card,.progress-shell{transition:none}.wrong-card:hover{transform:none}.opt:not(.correct):not(.wrong):hover,.opt:hover{transform:none!important}}
+/* Reduced motion must override the higher-specificity option hover transform.
+   Otherwise cursor-edge hover toggles translateY(-2px) on/off and makes the
+   answer button genuinely unstable for mouse users and Chromium click QA. */
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.opt,.wrong-card,.progress-shell{transition:none}.wrong-card:hover{transform:none}.opt:not(.correct):not(.wrong):hover,.opt:hover{transform:none!important}}
 
 
 .options{gap:10px}
