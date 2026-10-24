@@ -14,7 +14,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
  page.on('pageerror',e=>errors.push(e.message));
  // These mutations exist only in this fresh automated browser context.
  const choose=async(subject,id)=>{
-  await page.evaluate(({subject,id})=>{currentSubject=subject;currentIndex=list().findIndex(q=>q.id===id);showStudy();renderAll();closeQuestionNav();window.scrollTo(0,0);},{subject,id});
+  await page.evaluate(({subject,id})=>{currentSubject=subject;currentIndex=list().findIndex(q=>q.id===id);showStudy();renderAll();closeQuestionNav();window.scrollTo({top:0,behavior:'instant'});},{subject,id});
  };
  const settle=()=>page.waitForTimeout(400);
  const noOverflow=async(label)=>{const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(layout.scrollWidth<=layout.width+1,label+' '+JSON.stringify(layout));};
@@ -56,6 +56,16 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    assert.equal(await page.locator('.option-detail').count(),4);
    assert((await page.locator('#guideCard').innerText()).includes('頁數：待核對'));
   }
+  // A fast subject/question switch must cancel an earlier answer's delayed jump.
+  // Use real browser interaction and preserve the normal (non-forced) click QA.
+  await choose('經濟學',27);
+  await page.locator('.opt').first().click();
+  await choose('經濟學',28);
+  const beforeLateJump=await page.evaluate(()=>window.scrollY);
+  await page.waitForTimeout(470);
+  const afterLateJump=await page.evaluate(()=>window.scrollY);
+  assert(Math.abs(afterLateJump-beforeLateJump)<=2,
+    'previous question answer-jump moved the newly selected question: '+JSON.stringify({beforeLateJump,afterLateJump}));
     // Existing guide content wins, while unique source notes remain in the same section.
   await choose('國文',1);
   await page.locator('.opt').first().click();await settle();
