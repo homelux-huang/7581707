@@ -1,0 +1,86 @@
+name: 106 Chinese C14-C20 immutable draft linking and SQLite (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/link_106_c14_20_existing_webp_drafts.py
+      - .github/workflows/106-c14-20-draft-linking.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: 106-c14-20-draft-linking
+  cancel-in-progress: false
+jobs:
+  link_and_audit:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow, no source regeneration
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin the inspected QA HEAD
+        run: echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Verify existing original image and all 10 immutable candidate crops
+        run: python scripts/link_106_c14_20_existing_webp_drafts.py --check
+      - name: Link only draft images, raw OCR SHA and isolated SQLite
+        run: python scripts/link_106_c14_20_existing_webp_drafts.py --stage
+      - name: Strict two-import SQLite audit and no released G1/G3 data
+        run: |
+          python scripts/audit_105_115_sqlite_readonly.py --years 106 --output /tmp/g5_106_after_link.json
+          python - <<'PY_AUDIT'
+          import json
+          from pathlib import Path
+          root=Path('sudu/data/processed/106')
+          r=json.loads(Path('/tmp/g5_106_after_link.json').read_text())
+          assert r['yearsReviewed']==r['yearsG5Pass']==1 and r['years'][0]['sandboxImportPasses']==2
+          m=json.loads((root/'webp-manifest.json').read_text())
+          q=json.loads((root/'questions.json').read_text())
+          v=json.loads((root/'VISUAL_QA.json').read_text())
+          release=json.loads((root/'release-manifest.json').read_text())
+          inv=json.loads((root/'inventory.json').read_text())
+          assert len(q['questions'])==len(m['items'])==204
+          assert len(m['sharedMaterialCrops'])==len(q['sharedMaterials'])==3
+          assert inv['webpGeneratedDrafts']==201 and inv['visualQaPass']==v['passCount']==12
+          assert inv['answerOfficialFinalVerified']==0 and release['releaseAllowed'] is False
+          for n in range(14,21):
+              qid=f'106-00-C-{n:02d}'
+              a=next(x for x in m['items'] if x['questionId']==qid)
+              b=next(x for x in q['questions'] if x['questionId']==qid)
+              assert a['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert b['imageQaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert not b['questionVerified'] and not b['answerVerified'] and not b['integrationReady']
+          print('106 C14-C20 staging G5 PASS; all new G1/G3 flags remain false')
+          PY_AUDIT
+      - name: Non-force, SHA-lease guarded QA branch commit
+        run: |
+          set -eu
+          git add sudu/data/processed/106/qa-drafts/LINKED_106_C14_20_DRAFT_ONLY_20261024.json
+          git add sudu/data/processed/106/webp-manifest.json sudu/data/processed/106/questions.json
+          git add sudu/data/processed/106/ocr-raw-candidates.json sudu/data/processed/106/VISUAL_QA.json
+          git add sudu/data/processed/106/inventory.json sudu/data/processed/106/VALIDATION.json
+          git add sudu/data/processed/106/question-bank.sqlite3
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "Already linked with no changes"
+            exit 0
+          fi
+          git fetch origin qa/114-115-official-visual-review
+          actual=$(git rev-parse FETCH_HEAD)
+          if [ "$actual" != "$QA_BASE" ]; then
+            echo "Another session advanced QA HEAD, refusing nonleased write: $actual"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa106): link 7 existing source-pixel drafts and 3 shared, G5 checked, no release"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review
