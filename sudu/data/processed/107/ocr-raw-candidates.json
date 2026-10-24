@@ -1100,11 +1100,19 @@
         "Thursday",
         "Friday"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "On which day is it most likely to rain?",
+      "correctedOptions": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "diff": "",
       "imageSha256": "fe13465861d99e8f244f483929e25de7ab20783bc4fac9251dd8b061f4ef5e22",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T22:14:51+08:00",
+      "qaEvidencePath": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "questionId": "107-00-E-33",
@@ -1117,11 +1125,19 @@
         "Wednesday to Thursday",
         "Thursday to Friday\n\nA BAT SC > ESS 34 — 37題\n\nAt the 50th Golden Horse Film Festival, Beyond Beauty: Taiwan from Above 《看見台灣》\nwon the 2013 Best Documentary Award. Before directing the documentary, Chi Po-lin(齊柏林)\nwas a full-time photographer working for the Ministry of Transportation and Communications.\nHe had been taking pictures from an aircraft for twenty years.\n\nIn 2009, in a mission to record the damage caused by Typhoon Morakot, Chi found that the\nlandslides brought about by this typhoon buried several mountain villages, and many areas were\ncovered in flood waters. When Chi learned about the serious harm of land abuse, he decided to\nquit his government job to make films.\n\nDuring the filming of Beyond Beauty: Taiwan from Above, Chi had difficulties raising\nfunds. To meet the total costs of some NT $90 million, he used up all his savings and even asked\nfor a bank loan. After the successful release of the documentary in around thirty countries, Chi\nplanned to make a sequel. On June 10, 2017, unfortunately, when Chi was shooting the sequel,\nhis helicopter crashed in the mountains. Many were saddened by the news of his death, but Chi\n\nwill always be remembered for his contribution to promoting environmental awareness.\ndocumentary: 紀錄片"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the best choice for the trip?",
+      "correctedOptions": [
+        "Monday to Tuesday",
+        "Tuesday to Wednesday",
+        "Wednesday to Thursday",
+        "Thursday to Friday"
+      ],
+      "diff": "--- legacy-PDF-text-preserved\n+++ source-image-corrected\n@@ -1,27 +1,5 @@\n-33. Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the\n-best choice for the trip?\n+33. Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the best choice for the trip?\n (A) Monday to Tuesday\n (B) Tuesday to Wednesday\n (C) Wednesday to Thursday\n (D) Thursday to Friday\n-\n-A BAT SC > ESS 34 — 37題\n-\n-At the 50th Golden Horse Film Festival, Beyond Beauty: Taiwan from Above 《看見台灣》\n-won the 2013 Best Documentary Award. Before directing the documentary, Chi Po-lin(齊柏林)\n-was a full-time photographer working for the Ministry of Transportation and Communications.\n-He had been taking pictures from an aircraft for twenty years.\n-\n-In 2009, in a mission to record the damage caused by Typhoon Morakot, Chi found that the\n-landslides brought about by this typhoon buried several mountain villages, and many areas were\n-covered in flood waters. When Chi learned about the serious harm of land abuse, he decided to\n-quit his government job to make films.\n-\n-During the filming of Beyond Beauty: Taiwan from Above, Chi had difficulties raising\n-funds. To meet the total costs of some NT $90 million, he used up all his savings and even asked\n-for a bank loan. After the successful release of the documentary in around thirty countries, Chi\n-planned to make a sequel. On June 10, 2017, unfortunately, when Chi was shooting the sequel,\n-his helicopter crashed in the mountains. Many were saddened by the news of his death, but Chi\n-\n-will always be remembered for his contribution to promoting environmental awareness.\n-documentary: 紀錄片\n",
       "imageSha256": "06a91330240b25dd3585995c59022b01eb930fbed79d572a9a958a8c43a32027",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T22:14:51+08:00",
+      "qaEvidencePath": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "questionId": "107-00-E-34",
@@ -1134,11 +1150,19 @@
         "Chi was an employee hired by the government at that time.",
         "Chi was sent to record the pace and movement of the typhoon."
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "According to the passage, which of the following best describes Chi at the time he recorded Typhoon Morakot?",
+      "correctedOptions": [
+        "Chi had been a famous movie director for twenty years.",
+        "Chi had been an award-winning typhoon photographer.",
+        "Chi was an employee hired by the government at that time.",
+        "Chi was sent to record the pace and movement of the typhoon."
+      ],
+      "diff": "--- legacy-PDF-text-preserved\n+++ source-image-corrected\n@@ -1,5 +1,4 @@\n-34. According to the passage, which of the following best describes Chi at the time he recorded\n-Typhoon Morakot?\n+34. According to the passage, which of the following best describes Chi at the time he recorded Typhoon Morakot?\n (A) Chi had been a famous movie director for twenty years.\n (B) Chi had been an award-winning typhoon photographer.\n (C) Chi was an employee hired by the government at that time.\n",
       "imageSha256": "3316ec74a77ea9f6d4c60aadee3d91aee227a4f7b5d7560e0930c93b09c55df0",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T22:14:51+08:00",
+      "qaEvidencePath": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "questionId": "107-00-E-35",
@@ -1151,11 +1175,19 @@
         "moving",
         "promoting\n\n\n107 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "Which of the following has the closest meaning to the word “raising” in paragraph 3?",
+      "correctedOptions": [
+        "collecting",
+        "lifting",
+        "moving",
+        "promoting"
+      ],
+      "diff": "--- legacy-PDF-text-preserved\n+++ source-image-corrected\n@@ -3,7 +3,3 @@\n (B) lifting\n (C) moving\n (D) promoting\n-\n-\n-107 年四技                                              第7 頁\n-英文 共同科目                                            共8 頁   公告試題僅供參考\n",
       "imageSha256": "1910a827ec92a8a1b71cfad7ec5406d517b9731655d3d02381e1fc48621734b3",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T22:14:51+08:00",
+      "qaEvidencePath": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "questionId": "107-00-E-36",

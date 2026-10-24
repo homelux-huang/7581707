@@ -1164,10 +1164,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/106_4y/downloader.php?obj=MTA2LTR5LTAwLWMucGRm",
       "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
       "sourcePage": 7,
-      "generationVersion": "historical-official-pixel-draft-v1",
+      "generationVersion": "assistant-direct-source-pixel-candidate-v4-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA"
+        "LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA",
+        "PENDING_DIRECT_G1_Q35_V4"
       ],
       "source": "sudu/data/original/106/00-C/p007-93b8ec6eb3-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "c2094dd3dc2d2c7221be4abf109bb19e0af7d546d79ed1f4a4505d75586fefc7",
@@ -1179,14 +1180,14 @@
         90,
         1057,
         1310,
-        1815
+        1248
       ],
-      "output": "sudu/data/processed/106/webp-v1/00-C/106-00-C-35.webp",
+      "output": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-35.webp",
       "outputSize": [
         1220,
-        758
+        191
       ],
-      "outputSha256": "55b57b4a090ecc693550cd585dd1339d36b215fc0e152989ed9458814796d413"
+      "outputSha256": "df0c0b3be462379b0e2f4175156ad679addee726154139556ea95e9b2a74d29f"
     },
     {
       "questionId": "106-00-C-36",

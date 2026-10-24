@@ -2626,7 +2626,7 @@
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-32-33"
@@ -2648,10 +2648,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "On which day is it most likely to rain?",
+      "legacyUnverifiedOptions": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -2660,17 +2669,17 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 33,
       "subject": "英文",
-      "question": "Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the\nbest choice for the trip?",
+      "question": "Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the best choice for the trip?",
       "options": [
         "Monday to Tuesday",
         "Tuesday to Wednesday",
         "Wednesday to Thursday",
-        "Thursday to Friday\n\nA BAT SC > ESS 34 — 37題\n\nAt the 50th Golden Horse Film Festival, Beyond Beauty: Taiwan from Above 《看見台灣》\nwon the 2013 Best Documentary Award. Before directing the documentary, Chi Po-lin(齊柏林)\nwas a full-time photographer working for the Ministry of Transportation and Communications.\nHe had been taking pictures from an aircraft for twenty years.\n\nIn 2009, in a mission to record the damage caused by Typhoon Morakot, Chi found that the\nlandslides brought about by this typhoon buried several mountain villages, and many areas were\ncovered in flood waters. When Chi learned about the serious harm of land abuse, he decided to\nquit his government job to make films.\n\nDuring the filming of Beyond Beauty: Taiwan from Above, Chi had difficulties raising\nfunds. To meet the total costs of some NT $90 million, he used up all his savings and even asked\nfor a bank loan. After the successful release of the documentary in around thirty countries, Chi\nplanned to make a sequel. On June 10, 2017, unfortunately, when Chi was shooting the sequel,\nhis helicopter crashed in the mountains. Many were saddened by the news of his death, but Chi\n\nwill always be remembered for his contribution to promoting environmental awareness.\ndocumentary: 紀錄片"
+        "Thursday to Friday"
       ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-32-33"
@@ -2692,10 +2701,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "Jane is planning a two-day trip to Hualien. She likes sunny days, so which period would be the\nbest choice for the trip?",
+      "legacyUnverifiedOptions": [
+        "Monday to Tuesday",
+        "Tuesday to Wednesday",
+        "Wednesday to Thursday",
+        "Thursday to Friday\n\nA BAT SC > ESS 34 — 37題\n\nAt the 50th Golden Horse Film Festival, Beyond Beauty: Taiwan from Above 《看見台灣》\nwon the 2013 Best Documentary Award. Before directing the documentary, Chi Po-lin(齊柏林)\nwas a full-time photographer working for the Ministry of Transportation and Communications.\nHe had been taking pictures from an aircraft for twenty years.\n\nIn 2009, in a mission to record the damage caused by Typhoon Morakot, Chi found that the\nlandslides brought about by this typhoon buried several mountain villages, and many areas were\ncovered in flood waters. When Chi learned about the serious harm of land abuse, he decided to\nquit his government job to make films.\n\nDuring the filming of Beyond Beauty: Taiwan from Above, Chi had difficulties raising\nfunds. To meet the total costs of some NT $90 million, he used up all his savings and even asked\nfor a bank loan. After the successful release of the documentary in around thirty countries, Chi\nplanned to make a sequel. On June 10, 2017, unfortunately, when Chi was shooting the sequel,\nhis helicopter crashed in the mountains. Many were saddened by the news of his death, but Chi\n\nwill always be remembered for his contribution to promoting environmental awareness.\ndocumentary: 紀錄片"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -2704,7 +2722,7 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 34,
       "subject": "英文",
-      "question": "According to the passage, which of the following best describes Chi at the time he recorded\nTyphoon Morakot?",
+      "question": "According to the passage, which of the following best describes Chi at the time he recorded Typhoon Morakot?",
       "options": [
         "Chi had been a famous movie director for twenty years.",
         "Chi had been an award-winning typhoon photographer.",
@@ -2714,7 +2732,7 @@
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-34-37"
@@ -2736,10 +2754,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "According to the passage, which of the following best describes Chi at the time he recorded\nTyphoon Morakot?",
+      "legacyUnverifiedOptions": [
+        "Chi had been a famous movie director for twenty years.",
+        "Chi had been an award-winning typhoon photographer.",
+        "Chi was an employee hired by the government at that time.",
+        "Chi was sent to record the pace and movement of the typhoon."
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -2753,12 +2780,12 @@
         "collecting",
         "lifting",
         "moving",
-        "promoting\n\n\n107 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考"
+        "promoting"
       ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-34-37"
@@ -2780,10 +2807,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "Which of the following has the closest meaning to the word “raising” in paragraph 3?",
+      "legacyUnverifiedOptions": [
+        "collecting",
+        "lifting",
+        "moving",
+        "promoting\n\n\n107 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json"
     },
     {
       "schemaVersion": 1,

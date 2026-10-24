@@ -6,7 +6,7 @@
   "webpGeneratedDrafts": 189,
   "visualQaPass": 4,
   "ocrGapCandidatesGenerated": 18,
-  "ocrTextIndependentlyVerified": 0,
+  "ocrTextIndependentlyVerified": 4,
   "missingFourTextOptions": [
     "107-00-C-08",
     "107-00-C-09",
@@ -141,5 +141,6 @@
     "shaMismatches": 0
   },
   "integrationReady": false,
-  "sharedMaterialsDrafts": 2
+  "sharedMaterialsDrafts": 2,
+  "textQaPass": 4
 }
