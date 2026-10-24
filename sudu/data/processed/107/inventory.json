@@ -3,7 +3,7 @@
   "expectedFromLegacy": 204,
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 204,
-  "webpGeneratedDrafts": 185,
+  "webpGeneratedDrafts": 189,
   "visualQaPass": 0,
   "ocrGapCandidatesGenerated": 18,
   "ocrTextIndependentlyVerified": 0,
@@ -67,7 +67,7 @@
     "00-E": {
       "candidateRecords": 41,
       "numberedAnchors": 37,
-      "imageDrafts": 37,
+      "imageDrafts": 41,
       "unresolvedAnchorNumbers": [
         32,
         33,
@@ -79,7 +79,13 @@
       "officialAnswerTextKeys": 41,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        32,
+        33,
+        34,
+        35
+      ]
     },
     "00-MB": {
       "candidateRecords": 25,
@@ -126,7 +132,7 @@
     }
   },
   "sharedMaterialsVerified": 0,
-  "sharedMaterialsReviewRequired": true,
+  "sharedMaterialsReviewRequired": 2,
   "sqlite": {
     "rows": 204,
     "unique": 204,
@@ -134,5 +140,6 @@
     "reimportCount": 2,
     "shaMismatches": 0
   },
-  "integrationReady": false
+  "integrationReady": false,
+  "sharedMaterialsDrafts": 2
 }
