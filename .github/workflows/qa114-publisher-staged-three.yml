@@ -1,0 +1,64 @@
+name: 114 exact source publisher dry-run 3 English questions (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-english-blind-solve-and-ready-20261024]
+    paths:
+      - sudu/data/processed/114/verified-student-batch.json
+      - scripts/sudu_verified_publish.py
+      - .github/workflows/qa114-publisher-staged-three.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dry_source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install same original WebP decoding dependency as production publisher
+        run: python -m pip install -q pillow
+      - name: Real publisher stage of QA-only original source 114 and 115 with zero source file edits
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_sudu_verified_publish.py -v
+          python scripts/qa114_release_evidence_gate.py
+          python scripts/sudu_verified_publish.py stage --source . --dest /tmp/qa114-formal-stage --sha "$(git rev-parse HEAD)"
+          python scripts/sudu_verified_publish.py check --dest /tmp/qa114-formal-stage
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          root=Path("/tmp/qa114-formal-stage/sudu/data/approved")
+          a=json.loads((root/"114.json").read_text())
+          b=json.loads((root/"115.json").read_text())
+          p=json.loads((root/"progress.json").read_text())
+          correct={"114-00-E-07":"A","114-00-E-08":"D","114-00-E-09":"D"}
+          assert a["approvedCount"]==3,(a["approvedCount"],[r.get("canonicalId") for r in a["questions"]])
+          assert {r["canonicalId"]:r["answer"] for r in a["questions"]}==correct
+          assert b["approvedCount"]==5
+          assert {r["canonicalId"] for r in b["questions"]}=={
+            "115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          assert p["years"]["114"]["approvedCount"]==3
+          for r in a["questions"]:
+              assert len(r["options"])==4
+              assert r["examCalculation"] is None
+              img=root.parents[1]/r["image"]
+              assert img.is_file(),str(img)
+              assert hashlib.sha256(img.read_bytes()).hexdigest()==r["imageSha256"]
+          print("PASS REAL PUBLISHER DRY RUN: 114 exactly 3 SHA-certified original English, 115 exactly 5 unchanged; NO main/Pages write")
+          PY
+      - name: Archive exact staged certified student records for further review (private Actions artifact only)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-real-publisher-three-questions-no-deployment
+          path: |
+            /tmp/qa114-formal-stage/sudu/data/approved/114.json
+            /tmp/qa114-formal-stage/sudu/data/approved/115.json
+            /tmp/qa114-formal-stage/sudu/data/approved/progress.json
+          retention-days: 30
+          if-no-files-found: ignore
