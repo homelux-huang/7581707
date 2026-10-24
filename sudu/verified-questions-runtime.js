@@ -157,8 +157,8 @@
   // This never executes arbitrary HTML from the teaching draft.
   function safeTeachingInlineMarkup(value,terms){
     return String(value??'').replace(/反向檢查/g,'相反意思')
-      .split(/(\\*\\*[^*\\n]+\\*\\*)/g).map(bit=>{
-        if(/^\\*\\*[^*\\n]+\\*\\*$/.test(bit))
+      .split(/(\*\*[^*\n]+\*\*)/g).map(bit=>{
+        if(/^\*\*[^*\n]+\*\*$/.test(bit))
           return '<strong>'+htmlWithActualHighlights(bit.slice(2,-2),terms)+'</strong>';
         return htmlWithActualHighlights(bit,terms);
       }).join('');
@@ -233,7 +233,7 @@
         ['高職生理解',detail.teacher],
         ['國小學生也聽得懂',detail.elementary]
       ].filter(x=>useful(x[1]));
-      const norm=x=>String(x??'').replace(/\\*\\*/g,'').replace(/\\s+/g,'').trim();
+      const norm=x=>String(x??'').replace(/\*\*/g,'').replace(/\s+/g,'').trim();
       if(useful(detail.reason)&&!rows.some(x=>norm(x[1])===norm(detail.reason)))
         rows.push(['此選項正確／錯誤原因',detail.reason]);
       // The guide card already displays the teacher summary, memory, vocabulary
