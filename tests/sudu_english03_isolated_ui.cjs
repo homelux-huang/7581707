@@ -40,7 +40,18 @@ assert(!adapter.includes('verifiedImagePreview'),'do not restore obsolete previe
  await page.waitForFunction(()=>document.body.dataset.verifiedReadyYear==='115');
  await page.evaluate(theme=>{document.documentElement.dataset.theme=theme;state.theme=theme;},theme);
  assert.equal((await page.locator('#questionCard .qnum').innerText()).trim(),'03');
- assert.equal(await page.locator('#questionCard .source-figure img').evaluate(async img=>{await img.decode();return img.naturalWidth>100}),true);
+ const qaImage=page.locator('#questionCard .source-figure img');
+ const imageDiagnostic=await qaImage.evaluate(async img=>{
+   const source=img.currentSrc||img.src;
+   let http=null,size=null,fetchError=null,decodeError=null;
+   try{const r=await fetch(source);http=r.status;size=(await r.arrayBuffer()).byteLength;}
+   catch(e){fetchError=String(e)}
+   try{await img.decode();}catch(e){decodeError=String(e)}
+   return {source,rawAttribute:img.getAttribute('src'),http,size,fetchError,decodeError,
+     naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight};
+ });
+ assert(imageDiagnostic.naturalWidth>100&&!imageDiagnostic.decodeError,
+   'Image decode in V4: '+JSON.stringify(imageDiagnostic));
  assert.equal(await page.locator('#guideCard.show').count(),0);
  await activate(page.locator('#answerCard .opt[data-a="A"]'));
  await page.locator('#guideCard.show').waitFor();
