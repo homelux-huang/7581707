@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "date": "2026-10-24",
+  "state": "BLOCKED_PENDING_ACTUALLY_INDEPENDENT_TEACHING_REVIEW_AND_SOURCE_ADMISSION",
+  "officialSourceCertificationCount": 5,
+  "candidateHistoricalSixStageRunId": 40087595980,
+  "candidateHistoricalSixStageMeans": "technical publisher allowed 6 with AI-authored certificate booleans; NOT proof of reviewer independence",
+  "originalBlindReasoningCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+  "originalWebpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "sourceQuestionRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
+  "officialAnswerImageRunId": 40086437762,
+  "officialFinalAnswer": "A",
+  "publisherNoticeRegressionRunId": 40087334902,
+  "teachingCandidateDigest": "4b1f87a47b6ba2bfc74c58b0a7ffd273a44cde62da71aeaf633f7fedf78adb54",
+  "uiCandidateSameSource8x2RunId": 40087199089,
+  "independentReviewer": "",
+  "actualIndependentReviewEvidence": "",
+  "independentHumanTeacherReviewed": false,
+  "aiAuthoredAndPostOfficialExplained": true,
+  "noNewBlindSolveClaimed": true,
+  "followUpRequired": [
+    "Obtain substantive separate reviewer inspection of original image, canonical question, A-D, textbook/curriculum concepts and all pedagogical notes; no new reviewer string or PASS boolean is acceptable without traceable proof",
+    "Confirm any remaining source-version and official-notice revisions against SHA-bound TCTE PDF",
+    "After real review, preserve reviewer identity/date, review evidence SHA, question revision, teaching digest, UI test digest on exact main and add only 115-09-2-34 certificate",
+    "Run unchanged publisher stage/check and compare four earlier plus MB05 source-safe",
+    "Only then run existing exact SHA main/pages/live release pipeline"
+  ],
+  "note": "The 5+1 staging run #40087595980 passed structural proofs, but one AI authored the post-official teaching and provisional approval. Historical staging is preserved; candidate admission is withheld instead of falsely claiming fully independent teaching."
+}

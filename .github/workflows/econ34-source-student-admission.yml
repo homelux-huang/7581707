@@ -1,15 +1,11 @@
-name: Econ34 full per-question READY by unchanged formal gates (NO DEPLOY)
+name: Econ34 separate reviewer evidence blocker and safe five-question source (NO DEPLOY)
 on:
   push:
     branches: [qa/econ34-prekey-image-only-20261024]
     paths:
-      - sudu/data/processed/115/review-evidence/115-09-2-34-ocr.json
-      - sudu/data/processed/115/review-evidence/115-09-2-34-official.json
-      - sudu/data/processed/115/review-evidence/115-09-2-34-blind.json
-      - sudu/data/processed/115/review-evidence/115-09-2-34-teaching.json
-      - sudu/data/processed/115/review-evidence/115-09-2-34-ui.json
-      - sudu/data/processed/115/verified-student-batch.json
-      - .github/workflows/econ34-source-student-admission.yml
+      - 'sudu/data/processed/115/verified-student-batch.json'
+      - 'sudu/data/processed/115/review-evidence/115-09-2-34-independent-review-needed-20261024.json'
+      - '.github/workflows/econ34-source-student-admission.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,63 +25,67 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Read original source and strict TCTE correction review
-        run: |
-          python -m pip install -q pillow
-          (cd strict-publisher && python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v)
-      - name: 'Dry-run formal source gate for five prior plus Econ34, no invented approvals'
+      - name: Verify existing and negative TCTE final correction tests
         run: |
           set -eu
-          mkdir -p econ34-staged-only
-          python strict-publisher/scripts/sudu_verified_publish.py stage --source . --dest econ34-staged-only --sha "$(git rev-parse HEAD)" > /tmp/econ34-publisher-stage.json
-          python strict-publisher/scripts/sudu_verified_publish.py check --dest econ34-staged-only
+          python -m pip install -q pillow
+          (cd strict-publisher && python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v)
+      - name: Assert original independent solving and official A are intact but the separate teaching review is absent
+        run: |
           python - <<'PY'
-          import hashlib,importlib.util,json
+          import json
+          from pathlib import Path
+          root=Path(".")
+          base=root/"sudu/data/processed/115"
+          read=lambda p:json.loads(Path(p).read_text(encoding="utf-8"))
+          item=read(base/"review-evidence/115-09-2-34-independent-review-needed-20261024.json")
+          proof=read(base/"review-evidence/115-09-2-34-blind-original-20261024.json")
+          official=read(base/"review-evidence/115-09-2-34-official-visual-20261024.json")
+          teaching=read(base/"review-evidence/115-09-2-34-teaching.json")
+          batch=read(base/"verified-student-batch.json")
+          assert item["state"].startswith("BLOCKED") and not item["independentHumanTeacherReviewed"]
+          assert item["questionId"] not in {x["questionId"] for x in batch["items"]}
+          assert len(batch["items"])==5
+          assert proof["answer"]==official["officialFinalOptionReadVisually"]=="A"
+          assert proof["solvedWithoutOfficialAnswer"] and proof["officialAnswerHiddenDuringSolve"]
+          assert official["sourceOriginalQuestionWebpSha256"]==item["originalWebpSha256"]
+          assert teaching["teachingCanonicalSha256"]==item["teachingCandidateDigest"]
+          assert teaching["reviewer"].startswith("GPT-6 AI")
+          print("PASS: original solution and full teaching proposal are preserved; NO independent teaching admission claimed")
+          PY
+      - name: Run unchanged publisher and PROVE Econ34 remains BLOCKED
+        run: |
+          set -eu
+          mkdir -p econ34-blocked-stage
+          python strict-publisher/scripts/sudu_verified_publish.py stage --source . --dest econ34-blocked-stage --sha "$(git rev-parse HEAD)" > /tmp/econ34-safe-stage.json
+          python strict-publisher/scripts/sudu_verified_publish.py check --dest econ34-blocked-stage
+          python - <<'PY'
+          import importlib.util,json
           from pathlib import Path
           root=Path(".").resolve()
-          s=importlib.util.spec_from_file_location("publisher",root/"strict-publisher/scripts/sudu_verified_publish.py")
-          pub=importlib.util.module_from_spec(s);s.loader.exec_module(pub)
-          base=root/"sudu/data/processed/115"
-          original=pub.read(base/"questions.json")
-          q=next(x for x in original["questions"] if x["questionId"]=="115-09-2-34")
-          m=next(x for x in pub.read(base/"webp-manifest.json")["items"] if x["questionId"]==q["questionId"])
-          cert=pub.reviewed_student_batches(root,115)[q["questionId"]]
-          revised=pub.apply_independently_certified_review(root,115,q,m,cert)
-          rev=pub.text_revision(q,m["sha256"])
-          assert rev=="162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8"
-          assert q.get("questionVerified") is not True and q.get("answerVerified") is not True
-          assert revised.get("questionVerified") is True and revised.get("answerVerified") is True
-          assert revised["officialCorrectionChecked"] is True and revised["officialFinalAnswer"]=="A"
-          assert revised["teachingQaStatus"]==revised["uiQaStatus"]=="PASS"
-          assert pub.official_notice_scope_certified(root,115,q,pub.read(root/"sudu/data/processed/115/review-evidence/115-09-2-34-official.json"))
-          assert pub.source_proof(revised,True,True,rev)==(True,True)
-          assert pub.independently_solved(revised,rev)=="matched"
-          assert pub.teaching_complete(revised,"經濟學","A")
-          assert pub.certificates_complete(root,revised,m,{})
-          lesson=revised["teaching"]
-          digest=hashlib.sha256(json.dumps(lesson,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()
-          assert digest=="4b1f87a47b6ba2bfc74c58b0a7ffd273a44cde62da71aeaf633f7fedf78adb54"
-          assert lesson["hasExamCalculation"] is False and lesson["examCalculation"] is None
-          release=pub.read(root/"econ34-staged-only/sudu/data/approved/115.json")
-          assert release["approvedCount"]==6
-          expected={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09","115-09-2-34"}
-          assert {x["canonicalId"] for x in release["questions"]}==expected
+          spec=importlib.util.spec_from_file_location("pub",root/"strict-publisher/scripts/sudu_verified_publish.py")
+          pub=importlib.util.module_from_spec(spec);spec.loader.exec_module(pub)
+          q=next(x for x in pub.read(root/"sudu/data/processed/115/questions.json")["questions"] if x["questionId"]=="115-09-2-34")
+          m=next(x for x in pub.read(root/"sudu/data/processed/115/webp-manifest.json")["items"] if x["questionId"]==q["questionId"])
+          assert pub.reviewed_student_batches(root,115).get(q["questionId"]) is None
+          result=pub.apply_independently_certified_review(root,115,q,m,None)
+          assert result==q and result.get("studentReleaseApproved") is not True
+          released=pub.read(root/"econ34-blocked-stage/sudu/data/approved/115.json")
+          expected={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          assert released["approvedCount"]==5
+          assert {x["canonicalId"] for x in released["questions"]}==expected
           previous=pub.read(root/"strict-publisher/sudu/data/approved/115.json")
           assert previous["approvedCount"]==5
-          for record in previous["questions"]:
-              assert record in release["questions"],"prior release content altered"
-          new=next(x for x in release["questions"] if x["canonicalId"]=="115-09-2-34")
-          assert new["answer"]=="A" and new["examCalculation"] is None
-          print("PASS Econ34 student-source READY: 6 true admissions, 5 unchanged, per-question TCTE correction scope, no main write")
+          assert set(map(str,previous["questions"]))==set(map(str,released["questions"]))
+          print("PASS: previous five unchanged, Econ34 independent review PENDING, no accidental source admission or LIVE release")
           PY
-      - name: Store source-stage and original SHA review CI-only
+      - name: Keep blocked candidate evidence as CI artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: econ34-real-student-admission-six-staged-no-release
+          name: econ34-independent-teaching-blocked-no-deploy
           path: |
-            /tmp/econ34-publisher-stage.json
-            econ34-staged-only/sudu/data/approved/115.json
-            econ34-staged-only/sudu/data/approved/progress.json
-          retention-days: 30
+            /tmp/econ34-safe-stage.json
+            econ34-blocked-stage/sudu/data/approved/115.json
           if-no-files-found: ignore
+          retention-days: 45
