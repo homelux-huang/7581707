@@ -1,3 +1,15 @@
+# 2026-10-24｜後續接手：既有正式 V4 年度轉接器文字與 highlight 修復（尚未發布）
+
+- **最新內容提交**：`cd99e681850f835daf0ff57e1fd15008ccad144d`；這批不更動 main、正式 approved、128 題 QA 與學生作答紀錄。
+- 修正 `sudu/verified-questions-runtime.js`：對經過HTML escape的教學資料，安全渲染 `**粗體**`、對真實出現詞形建立 mark，不執行草稿 HTML；四選項如果老師文字與 reason 重複則只呈現一次。答後重點/計算留在 guide，不在正解重複整排。修復 join 不可只高亮 joined 一部分的英文詞界限錯誤。
+- 新增 `tests/sudu_verified_teaching_markup_test.cjs`，read-only QA workflow 納入測試。
+- 初次新測試 [run #40046604901](https://github.com/homelux-huang/7581707/actions/runs/40046604901) **FAIL**：抓出 join 會誤被標在 joined 字首。已依真正 log 修復，必須以修復提交的新 CI 為準；不可把失敗標 PASS。
+- 來源盤點新檔：`ALL_YEARS_SOURCE_INVENTORY_20261024.json` 已逐年讀取 104–115 `sudu/data/years/*.json` 現存原始紀錄，12 年總計 2453 筆，內含未完成來源與佔位，不能算全部完整題目QA；保留固定128題原manifest作第一優先，再擴大114/115，隨後113到104。
+- **新 READY=0、正式 main 合併=0、此次新增部署=0**。先確認此次測試通過，隨後針對非爭議英文 E03 及其他題目的真實 V4 8x2 操作進行完整隔離QA，不能沿用含佔位文字的 MathB19–25 預檢當正式憑證。
+- 當前無跨 Session 發送工具：請原部署 Session 以本 handoff、精確教學分支 HEAD 與 source inventory 繼續處理。本輪沒有聲稱已直接通知。
+
+---
+
 # 2026-10-24｜部署 Session 接續複核
 
 已完成10題SHA與隔離狀態測試、數學B20/25圖文與計算複核；修正25選項A具體反證；將隔離V4預檢從鍵盤改為真實click/tap。詳見 `DEPLOY_QA_FOLLOWUP_20261024.md`。UI結果待CI，不授予正式憑證，READY仍0。
