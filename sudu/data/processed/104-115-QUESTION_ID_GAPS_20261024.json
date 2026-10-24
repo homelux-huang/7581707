@@ -1,6 +1,6 @@
 {
-  "generatedAtUTC": "2026-10-24T14:17:51.028503+00:00",
-  "qaCommitAtStart": "e74a33be9e9cec4c078dd227f7a9be9fa8c562ce",
+  "generatedAtUTC": "2026-10-24T14:40:29.092108+00:00",
+  "qaCommitAtStart": "47788b7a4a0682171dd5fa5cc4f569dade152c86",
   "documentedOriginalScope": "105-114 inclusive = 10 years, plus 115; 104 is supplementary",
   "year104Status": "EXTRA_SOURCE_ONLY_UNVERIFIED_COUNT",
   "noNewQAFlagsOrAnswerFlagsSet": true,
@@ -9,9 +9,9 @@
   "officialCountIndependentlyRecheckedThisRun": false,
   "totals": {
     "candidateQuestions105_115": 2249,
-    "webpLinkedAndShaVerified105_115": 2208,
-    "webpQaPassWithReference105_115": 225,
-    "missingWebp105_115": 41,
+    "webpLinkedAndShaVerified105_115": 2249,
+    "webpQaPassWithReference105_115": 266,
+    "missingWebp105_115": 0,
     "g5PassYears105_115": 11,
     "readyYears": 0
   },
@@ -470,27 +470,11 @@
       "webpManifestRows": 204,
       "officialAnswerEvidenceRows": 204,
       "ocrRawCandidateRows": 204,
-      "webpLinkedAndShaVerified": 189,
-      "missingSingleQuestionWebpIds": [
-        "107-00-C-08",
-        "107-00-C-09",
-        "107-00-C-10",
-        "107-00-C-11",
-        "107-00-C-12",
-        "107-00-C-13",
-        "107-00-C-14",
-        "107-00-C-15",
-        "107-00-C-16",
-        "107-00-C-35",
-        "107-00-C-36",
-        "107-00-C-37",
-        "107-00-C-38",
-        "107-09-1-49",
-        "107-09-1-50"
-      ],
+      "webpLinkedAndShaVerified": 204,
+      "missingSingleQuestionWebpIds": [],
       "webpFileMissingIds": [],
       "webpShaMismatchIds": [],
-      "webpQaPassWithSourceReference": 4,
+      "webpQaPassWithSourceReference": 19,
       "qaPassReferenceMissingIds": [],
       "ocrRawNonblank": 18,
       "missingFourTextOptionsIds": [
@@ -521,12 +505,12 @@
         "107-00-MB-25",
         "107-09-1-50"
       ],
-      "ocrTextIndependentlyVerified": 4,
+      "ocrTextIndependentlyVerified": 5,
       "answerFinalVerified": 0,
-      "questionVerifiedFlagCount": 4,
+      "questionVerifiedFlagCount": 5,
       "sourceLegacyCanonicalMismatchIds": [],
-      "sharedMaterialCandidates": 2,
-      "sharedMaterialQaPassRecorded": 2,
+      "sharedMaterialCandidates": 5,
+      "sharedMaterialQaPassRecorded": 5,
       "sqliteG5Pass": true,
       "sqliteRows": 204,
       "sqliteMismatchCount": 0,
@@ -546,8 +530,9 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 25,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 38,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "107-00-C-08",
             "107-00-C-09",
             "107-00-C-10",
@@ -562,8 +547,7 @@
             "107-00-C-37",
             "107-00-C-38"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 13,
           "missingFourTextOptionsIds": [
             "107-00-C-08",
             "107-00-C-09",
@@ -647,13 +631,13 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 48,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 50,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "107-09-1-49",
             "107-09-1-50"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 2,
           "missingFourTextOptionsIds": [
             "107-09-1-50"
           ],
@@ -686,38 +670,11 @@
       "webpManifestRows": 204,
       "officialAnswerEvidenceRows": 204,
       "ocrRawCandidateRows": 204,
-      "webpLinkedAndShaVerified": 178,
-      "missingSingleQuestionWebpIds": [
-        "108-00-MB-11",
-        "108-00-MB-12",
-        "108-00-MB-13",
-        "108-00-MB-14",
-        "108-00-MB-15",
-        "108-00-MB-16",
-        "108-00-MB-17",
-        "108-09-1-15",
-        "108-09-1-16",
-        "108-09-1-17",
-        "108-09-1-18",
-        "108-09-1-26",
-        "108-09-1-27",
-        "108-09-1-28",
-        "108-09-1-29",
-        "108-09-1-30",
-        "108-09-1-31",
-        "108-09-1-32",
-        "108-09-1-33",
-        "108-09-2-23",
-        "108-09-2-24",
-        "108-09-2-25",
-        "108-09-2-26",
-        "108-09-2-27",
-        "108-09-2-28",
-        "108-09-2-29"
-      ],
+      "webpLinkedAndShaVerified": 204,
+      "missingSingleQuestionWebpIds": [],
       "webpFileMissingIds": [],
       "webpShaMismatchIds": [],
-      "webpQaPassWithSourceReference": 0,
+      "webpQaPassWithSourceReference": 26,
       "qaPassReferenceMissingIds": [],
       "ocrRawNonblank": 15,
       "missingFourTextOptionsIds": [
@@ -757,8 +714,8 @@
       "answerFinalVerified": 0,
       "questionVerifiedFlagCount": 0,
       "sourceLegacyCanonicalMismatchIds": [],
-      "sharedMaterialCandidates": 0,
-      "sharedMaterialQaPassRecorded": 0,
+      "sharedMaterialCandidates": 1,
+      "sharedMaterialQaPassRecorded": 1,
       "sqliteG5Pass": true,
       "sqliteRows": 204,
       "sqliteMismatchCount": 0,
@@ -825,8 +782,9 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 18,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 25,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "108-00-MB-11",
             "108-00-MB-12",
             "108-00-MB-13",
@@ -835,8 +793,7 @@
             "108-00-MB-16",
             "108-00-MB-17"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 7,
           "missingFourTextOptionsIds": [
             "108-00-MB-01",
             "108-00-MB-05",
@@ -863,8 +820,9 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 38,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 50,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "108-09-1-15",
             "108-09-1-16",
             "108-09-1-17",
@@ -878,8 +836,7 @@
             "108-09-1-32",
             "108-09-1-33"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 12,
           "missingFourTextOptionsIds": [
             "108-09-1-13",
             "108-09-1-26",
@@ -904,8 +861,9 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 43,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 50,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "108-09-2-23",
             "108-09-2-24",
             "108-09-2-25",
@@ -914,8 +872,7 @@
             "108-09-2-28",
             "108-09-2-29"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 7,
           "missingFourTextOptionsIds": [
             "108-09-2-26"
           ],
