@@ -12,53 +12,98 @@
   "confirmations": {
     "00-C": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
       "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
-      "confirmationPdfSha256": null,
-      "confirmedQuestionIds": null,
-      "perQuestionReleaseCertified": false
+      "confirmedQuestionIds": [
+        "114-00-C-14",
+        "114-00-C-24",
+        "114-00-C-28",
+        "114-00-C-30"
+      ],
+      "perQuestionReleaseCertified": false,
+      "revisionDocumentSha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+      "revisionDocumentPages": 5,
+      "pdfSourceUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+      "reviewedAt": "2026-10-24",
+      "reviewMethod": "AI visually inspected all official rendered PDF pages, with PDF text confirmation; final answer image QA separate",
+      "perQuestionOfficialNoticeScopeEvidenceComplete": true
     },
     "00-E": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
       "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
-      "confirmationPdfSha256": null,
-      "confirmedQuestionIds": null,
-      "perQuestionReleaseCertified": false
+      "confirmedQuestionIds": [
+        "114-00-E-26"
+      ],
+      "perQuestionReleaseCertified": false,
+      "revisionDocumentSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+      "revisionDocumentPages": 1,
+      "pdfSourceUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUUtY29uZmlybS5wZGY=",
+      "reviewedAt": "2026-10-24",
+      "reviewMethod": "AI visually inspected all official rendered PDF pages, with PDF text confirmation; final answer image QA separate",
+      "perQuestionOfficialNoticeScopeEvidenceComplete": true
     },
     "00-MB": {
       "officialStatus": "no_objection_submitted",
       "revisionDocumentContent": "not_applicable",
       "indexStatement": "4-00-MB 數學(B)：未提出疑義",
       "perQuestionAnswerQA": "NOT_VERIFIED",
-      "perQuestionReleaseCertified": false
+      "perQuestionReleaseCertified": false,
+      "perQuestionOfficialNoticeScopeEvidenceComplete": true
     },
     "09-1": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
       "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
-      "confirmationPdfSha256": null,
-      "confirmedQuestionIds": null,
-      "perQuestionReleaseCertified": false
+      "confirmedQuestionIds": [
+        "114-09-1-02",
+        "114-09-1-07",
+        "114-09-1-08",
+        "114-09-1-09",
+        "114-09-1-18",
+        "114-09-1-21",
+        "114-09-1-24",
+        "114-09-1-32",
+        "114-09-1-43"
+      ],
+      "perQuestionReleaseCertified": false,
+      "revisionDocumentSha256": "5ea66797b68a00ea831bcbd645af747a4802298ae2fedcd5abe6a05705543246",
+      "revisionDocumentPages": 9,
+      "pdfSourceUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTEtY29uZmlybS5wZGY=",
+      "reviewedAt": "2026-10-24",
+      "reviewMethod": "AI visually inspected all official rendered PDF pages, with PDF text confirmation; final answer image QA separate",
+      "perQuestionOfficialNoticeScopeEvidenceComplete": true
     },
     "09-2": {
       "officialStatus": "question_or_answer_confirmation_document_exists",
-      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
       "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
-      "confirmationPdfSha256": null,
-      "confirmedQuestionIds": null,
-      "perQuestionReleaseCertified": false
+      "confirmedQuestionIds": [
+        "114-09-2-10",
+        "114-09-2-16",
+        "114-09-2-27",
+        "114-09-2-35"
+      ],
+      "perQuestionReleaseCertified": false,
+      "revisionDocumentSha256": "70d95c1b4835c8410821543bbb4ed2fd92f3e31df502808deb5f50d72ef93762",
+      "revisionDocumentPages": 4,
+      "pdfSourceUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTItY29uZmlybS5wZGY=",
+      "reviewedAt": "2026-10-24",
+      "reviewMethod": "AI visually inspected all official rendered PDF pages, with PDF text confirmation; final answer image QA separate",
+      "perQuestionOfficialNoticeScopeEvidenceComplete": true
     }
   },
   "reviewLimits": {
     "officialIndexObserved": true,
-    "officialConfirmationPdfsDownloadedOrVisuallyReviewedThisSession": false,
-    "officialPdfSha256ClaimsAdded": false,
-    "officialConfirmedQuestionListVerified": false,
+    "officialConfirmationPdfsDownloadedOrVisuallyReviewedThisSession": true,
+    "officialPdfSha256ClaimsAdded": true,
+    "officialConfirmedQuestionListVerified": true,
     "yearSpecificPublisherGateReady": false,
     "studentQaApprovedNewQuestions": 0,
     "perQuestionReleaseApproved": false,
-    "mustNotInfer": "The official index gives a paper-level notice category only. It does not independently certify any question text, final answer, WEBP, independent solution, teaching or UI."
+    "mustNotInfer": "The official index gives a paper-level notice category only. It does not independently certify any question text, final answer, WEBP, independent solution, teaching or UI.",
+    "officialPdfNamedConfirmations": 18,
+    "independentPublishedFinalAnswerVisualVerification": false
   },
   "nextEvidenceNeeded": [
     "Acquire each actual 114 TCTE confirmation PDF, verify file bytes and SHA256, inspect every page and record every named question ID.",
@@ -66,5 +111,9 @@
     "Only then integrate a 114 year-specific fail-closed correction gate plus negative tests; do not enable approvals from this index record.",
     "Retain all existing student-specific QA and Pages same-SHA release gates."
   ],
-  "provenance": "Official TCTE four-year question/answer announcement index, section 試題或答案確認說明; no PDF content or SHA asserted."
+  "provenance": "Official TCTE four-year question/answer announcement index, section 試題或答案確認說明; no PDF content or SHA asserted.",
+  "sourceIndexSha256": "e6a44ca0fc8b2945924c6d6f553df19904784dadfd693263fe427c5fc94302e2",
+  "officialNoticeEvidencePath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+  "noticeEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/40094431419",
+  "reviewNote": "Official 114 notice-scope PDF evidence complete; published final-answer text candidates only, independent image/text/teaching/UI release QA still missing; none approved by this document."
 }
