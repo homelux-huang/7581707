@@ -1,3 +1,11 @@
+## 2026-10-24｜MB05 從 128 草稿取得來源認證，正式 main 已新增1題；Pages LIVE 尚待同 SHA 驗證
+- 本批真的讓 `115-00-MB-05` 跨越 source QA student-admission：歷史事前原圖解題 Git Commit `cf6a4efe`（與後讀官答分開）、真正的單題 WebP SHA、canonical OCR 文字及 SQLite 對讀、官方 B、GPT-6 事後雙層四選項／計算獨立複核、正式 `main` V4 8種尺寸×2主題真實點擊觸控測試 #40085323981 SUCCESS，UI/teaching SHA一致。
+- 未弱化正式發布器；源分支可重現 publisher stage 4→5 的 #40085542771 SUCCESS，正式 `qa/114-115-official-visual-review` non-force FF 已到 `b78a14c8`；來源資料 CI #40085605193 SUCCESS。既有自動同步 #40085628007 SUCCESS 將正式 `main` 更新 `31adda6c`，`sudu/data/approved/115.json` 已讀回 **5題（原4＋MB05）**，原4內容原封不動。
+- 重要：這是**正式 main 資料接入成功**，**不等於 Pages LIVE 已成功**。精確 SHA Pages #40085654639 在本交接寫入時仍待 `verify_live`；完成 SUCCESS 後才計入本批實際 LIVE=1。尚無證據就不得寫1/128已LIVE。
+- 凍結128草稿的 `progress.json.fullyAccepted` 仍0，因 draft 的 `release-certificates-128.json` 尚未補；然而正式 source admission + main 已新增 MB05 一題，這是兩份不同的統計，**不能把草稿0當成主站新增0、也不能把來源1當成全部128完整QA**。
+- 另外 MathB20～25 六題：原始 WebP 六張 SHA相符、目視文字修訂候選在QA來源 `aad909a7`，真實候選文字的 V4 8×2測試 #40084761957 SUCCESS；但正式獨立逐字來源 admission／事前解題／完整教學證據不足，六題維持 BLOCKED 不發布。
+- 128逐題阻塞與SHA的只讀CI #40085104362 SUCCESS，歸檔 artifact #12556428889；全部其餘題目仍需每題獨立正式教學證書、UI同SHA及來源 admission。詳 `SOURCE_QA_FIRST_READY_MB05_20261024.md`、`source-release-trace-20261024.json`。
+
 ## 2026-10-24｜數學B20–25候選文字污染發布阻塞新增自動防護
 - 本批新加候選發布閘門 `legacy_candidate_text_not_independently_approved`；六題逐字文字尚未獨立核對時，即使他人製作完整測試證書也無法誤放行。synthetic 兩測項新增。見 `MATHB_LEGACY_TRANSCRIPTION_FAIL_CLOSED_20261024.md`。只讀不部署，READY仍0。
 
