@@ -75,6 +75,21 @@ jobs:
           assert result['allDistinctAssetsChecked']>=128,result
           print('PASS P1: production build exact source + lesson digests; all approved, full preview and shared WebP content',json.dumps(result,ensure_ascii=False))
           PY
+      - name: Print strictly validated legacy-main-only bootstrap manifests (NO WRITE)
+        run: |
+          python - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          for year in (114,115):
+              old=json.loads(subprocess.check_output(['git','show',f'HEAD:sudu/data/approved/{year}.json']))
+              new=json.loads(Path(f'sudu/data/approved/{year}.json').read_text())
+              meta=json.loads(Path(f'sudu/data/approved/integrity/{year}.json').read_text())
+              assert old['questions']==new['questions'] and old['approvedCount']==new['approvedCount']
+              assert old['approvedCount']==meta['approvedCount']
+              assert old['sourceSha'] and len(old['sourceSha'])==40
+              meta['sourceSha']=old['sourceSha']
+              print('BOOTSTRAP_MAIN_INTEGRITY_'+str(year)+'='+json.dumps(meta,ensure_ascii=False,separators=(',',':')))
+          PY
       - name: Preserve test's stage report, without touching main
         if: always()
         uses: actions/upload-artifact@v4
