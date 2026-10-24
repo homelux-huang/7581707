@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "evidenceType": "OFFICIAL_TCTE_INDEX_ONLY_NOT_PER_QUESTION_QA",
+  "source": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+  "officialNews": "https://www.tcte.edu.tw/index.php?mod=Index%2FNewMag%2Fid%2F194",
+  "checkedOn": "2026-10-24",
+  "sourcePageLastUpdated": "2025-08-18 08:00 (as shown on TCTE)",
+  "finalAnswerMeetingDate": "2025-05-09",
+  "finalAnswerPublishedAt": "2025-05-09 17:00 Asia/Taipei",
+  "officialInstruction": "TCTE says official PDF version governs when Word and PDF differ.",
+  "scope": "114 four-year technical and vocational exam only; paper codes 00-C, 00-E, 00-MB, 09-1 and 09-2. Do not apply to 115 or two-year exams.",
+  "confirmations": {
+    "00-C": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
+      "confirmationPdfSha256": null,
+      "confirmedQuestionIds": null,
+      "perQuestionReleaseCertified": false
+    },
+    "00-E": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
+      "confirmationPdfSha256": null,
+      "confirmedQuestionIds": null,
+      "perQuestionReleaseCertified": false
+    },
+    "00-MB": {
+      "officialStatus": "no_objection_submitted",
+      "revisionDocumentContent": "not_applicable",
+      "indexStatement": "4-00-MB 數學(B)：未提出疑義",
+      "perQuestionAnswerQA": "NOT_VERIFIED",
+      "perQuestionReleaseCertified": false
+    },
+    "09-1": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
+      "confirmationPdfSha256": null,
+      "confirmedQuestionIds": null,
+      "perQuestionReleaseCertified": false
+    },
+    "09-2": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "PENDING_SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEW",
+      "indexStatement": "TCTE presents a confirmation-document download entry; named question scope is not yet verified",
+      "confirmationPdfSha256": null,
+      "confirmedQuestionIds": null,
+      "perQuestionReleaseCertified": false
+    }
+  },
+  "reviewLimits": {
+    "officialIndexObserved": true,
+    "officialConfirmationPdfsDownloadedOrVisuallyReviewedThisSession": false,
+    "officialPdfSha256ClaimsAdded": false,
+    "officialConfirmedQuestionListVerified": false,
+    "yearSpecificPublisherGateReady": false,
+    "studentQaApprovedNewQuestions": 0,
+    "perQuestionReleaseApproved": false,
+    "mustNotInfer": "The official index gives a paper-level notice category only. It does not independently certify any question text, final answer, WEBP, independent solution, teaching or UI."
+  },
+  "nextEvidenceNeeded": [
+    "Acquire each actual 114 TCTE confirmation PDF, verify file bytes and SHA256, inspect every page and record every named question ID.",
+    "Separately compare each affected question with the final standard-answer PDF and original image.",
+    "Only then integrate a 114 year-specific fail-closed correction gate plus negative tests; do not enable approvals from this index record.",
+    "Retain all existing student-specific QA and Pages same-SHA release gates."
+  ]
+}
