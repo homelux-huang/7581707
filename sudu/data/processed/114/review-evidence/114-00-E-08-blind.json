@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-08",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 independent text-based solve from question and A-D without requesting or showing official answer values for these three items",
+  "questionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+  "webpSha256": "5a9ebec3dbb4cacf3bbb2cd2f6121f69319d042e3c716f41fdbe96f30bfd9c85",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-24",
+  "solver": "GPT-6 reasoning from stem/options only",
+  "blindReasoning": "The sentence says Chen Chieh-hsien excelled and gained attention as the MVP due to his performance. 'stood out as' conveys being distinguished in that role. 'was named after' means named in someone's honor, not receiving a title; 'made fun of' is to ridicule; 'was in charge of' concerns managing something. D fits both grammar and meaning.",
+  "answer": "D",
+  "historicalPreKeyCommit": "e676be923200587288e653e373fb57641eb84066",
+  "historicalPreKeyEvidence": "sudu/data/processed/114/review-evidence/EN07_09_PREKEY_BLIND_SOLVE_ORIGINAL_20261024.json",
+  "verifiedNotPostHocAnswerCopy": true
+}

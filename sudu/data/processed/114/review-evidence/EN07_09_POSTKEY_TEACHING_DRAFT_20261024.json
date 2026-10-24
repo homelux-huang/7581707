@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI draft teaching review; human QA not claimed",
+  "stage": "POST_KEY_TEACHING_DRAFT_PENDING_FINAL_SOURCE_TEXT_AND_V4_CHROMIUM_UI_QA",
+  "sourceIndependentSolvePath": "sudu/data/processed/114/review-evidence/EN07_09_PREKEY_BLIND_SOLVE_ORIGINAL_20261024.json",
+  "answerComparedAfterHistoricPreKeyCommit": "e676be923200587288e653e373fb57641eb84066",
+  "comparedToExistingOfficialAnswerImageQa": "QA_114_EN_Q06_Q20_OFFICIAL_ANSWER_IMAGE_VISUAL_20261023.json",
+  "notYetIndependentlyReverifiedImageBytesThisSession": true,
+  "officialNoticeScopeLedger": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+  "uiQaStatus": "PENDING",
+  "textQaStatus": "PENDING",
+  "formalStudentQaApproved": false,
+  "releaseAllowed": false,
+  "items": [
+    {
+      "id": "114-00-E-07",
+      "answer": "A",
+      "topic": "副詞與感應裝置｜automatically",
+      "teacherSummary": "題目說夜間公園感應燈會在有人經過時自己亮起，因此修飾 turn on 的副詞應是 automatically（自動地）。",
+      "elementarySummary": "有人走過去，燈自己亮了，不需要有人去按開關。這就叫「自動地」。",
+      "concept": "automatically = 自動地，通常修飾動作；turn on = 開啟（燈、設備）。",
+      "memory": "感應燈自己亮 → automatically；by themselves 是關鍵線索。",
+      "formula": "",
+      "extension": "相反意思：manually（手動地）與 automatically（自動地）不同。",
+      "optionExplanations": {
+        "A": {
+          "teacher": "正確。automatically 可修飾 turn on，描述感應燈自行啟動。",
+          "elementary": "燈不用手按就自己亮，正好符合。",
+          "reason": "by themselves、sensor lights 提供語意線索。"
+        },
+        "B": {
+          "teacher": "錯誤。organically 著重有機、自然生長或自然方式，不描述感應燈的自動開關。",
+          "elementary": "自然生長和燈自動亮不是同一件事。",
+          "reason": "搭配不自然。"
+        },
+        "C": {
+          "teacher": "錯誤。productively 是富有成效地，不能表達感應式自動啟動。",
+          "elementary": "有效率做事情不是燈自己亮。",
+          "reason": "不符合設備功能。"
+        },
+        "D": {
+          "teacher": "錯誤。selfishly 指自私地，多用於人的行為。",
+          "elementary": "燈不會自私。",
+          "reason": "語意及主語不搭配。"
+        }
+      },
+      "teachingQaStatus": "DRAFT_PENDING_VISUAL_TEXT_AND_UI",
+      "hasExamCalculation": false,
+      "examCalculation": null,
+      "calculationReviewed": true,
+      "highlights": [
+        "考題重點",
+        "語意線索"
+      ],
+      "source": "114 年 TCTE 英文試卷；正式教學仍需再次對應原圖和 V4 頁面"
+    },
+    {
+      "id": "114-00-E-08",
+      "answer": "D",
+      "topic": "片語辨析｜stand out as",
+      "teacherSummary": "由 due to his magnificent performance 判斷陳傑憲因表現出色，以世界十二強賽 MVP 身分脫穎而出；stood out as 語意相符。",
+      "elementarySummary": "球員表現非常棒，很突出，所以大家都注意到他是最亮眼的選手。",
+      "concept": "stand out as = 作為……而突出／脫穎而出；due to = 因為。",
+      "memory": "表現傑出→stand out as；不要把 was named after 誤解成「被選為」。",
+      "formula": "",
+      "extension": "相反意思：blend in（融入、不顯眼）與 stand out（突出）形成對比。",
+      "optionExplanations": {
+        "A": {
+          "teacher": "錯誤。be named after 表示『以某人或某物命名』，非因表現優異獲評 MVP。",
+          "elementary": "這是在說名字跟誰一樣，不是得獎。",
+          "reason": "固定片語語義不同。"
+        },
+        "B": {
+          "teacher": "錯誤。make fun of 是取笑，和優異表現完全相反。",
+          "elementary": "這是嘲笑，不是在稱讚球員。",
+          "reason": "語意衝突。"
+        },
+        "C": {
+          "teacher": "錯誤。be in charge of 是負責管理，MVP 不是管理工作。",
+          "elementary": "最有價值球員不是主管。",
+          "reason": "角色關係錯誤。"
+        },
+        "D": {
+          "teacher": "正確。stood out as（以……身分突出）與 MVP、magnificent performance 搭配。",
+          "elementary": "因為打得特別好，他脫穎而出。",
+          "reason": "因果關係與動詞時態均正確。"
+        }
+      },
+      "teachingQaStatus": "DRAFT_PENDING_VISUAL_TEXT_AND_UI",
+      "hasExamCalculation": false,
+      "examCalculation": null,
+      "calculationReviewed": true,
+      "highlights": [
+        "考題重點",
+        "語意線索"
+      ],
+      "source": "114 年 TCTE 英文試卷；正式教學仍需再次對應原圖和 V4 頁面"
+    },
+    {
+      "id": "114-00-E-09",
+      "answer": "D",
+      "topic": "副詞同義｜apparently vs obviously",
+      "teacherSummary": "Apparently 表示從觀察跡象推知『顯然、看來』。Mary 再次自我介紹，說話者推測她以為名字已被忘記；obviously 最接近。",
+      "elementarySummary": "Mary 又講了一次名字，讓人覺得她大概認為別人忘了。看到這個線索，就說『看起來很明顯』。",
+      "concept": "apparently = 看來、顯然（基於跡象推斷）；obviously = 明顯地；actively/entirely/internally 不同。",
+      "memory": "apparently（看來）≈ obviously（顯然），要依上下文判斷。",
+      "formula": "",
+      "extension": "apparently 有時保留推測語氣；obviously 有時語氣較確定，考題考最接近意思，不代表任何語境完全等義。",
+      "optionExplanations": {
+        "A": {
+          "teacher": "錯誤。actively 是主動地，與從線索得知的推測無關。",
+          "elementary": "主動做事不等於『看起來』。",
+          "reason": "詞義不同。"
+        },
+        "B": {
+          "teacher": "錯誤。entirely 是完全地，不是根據跡象推論。",
+          "elementary": "全部做完不等於看出原因。",
+          "reason": "詞義不同。"
+        },
+        "C": {
+          "teacher": "錯誤。internally 是內部地／內心地，與顯然不同。",
+          "elementary": "在裡面做事不是『顯然』。",
+          "reason": "詞義不同。"
+        },
+        "D": {
+          "teacher": "正確。obviously（顯然地）最接近 apparently 的語境意義。",
+          "elementary": "從 Mary 又自我介紹，看來她覺得對方忘記名字。",
+          "reason": "推測含義吻合。"
+        }
+      },
+      "teachingQaStatus": "DRAFT_PENDING_VISUAL_TEXT_AND_UI",
+      "hasExamCalculation": false,
+      "examCalculation": null,
+      "calculationReviewed": true,
+      "highlights": [
+        "考題重點",
+        "語意線索"
+      ],
+      "source": "114 年 TCTE 英文試卷；正式教學仍需再次對應原圖和 V4 頁面"
+    }
+  ]
+}

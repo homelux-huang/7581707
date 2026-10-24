@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-09",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 independent text-based solve from question and A-D without requesting or showing official answer values for these three items",
+  "questionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+  "webpSha256": "393dbdbfbd59220a18fd11d2c09d1b07cd9daf5816d32bbe91a6ec1a335c204b",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-24",
+  "solver": "GPT-6 reasoning from stem/options only",
+  "blindReasoning": "Mary reintroduced herself, so the speaker infers that she thought her name had been forgotten. 'Apparently' means evidently/obviously based on what is observed. Actively, entirely, internally do not express this inference. D 'obviously' matches.",
+  "answer": "D",
+  "historicalPreKeyCommit": "e676be923200587288e653e373fb57641eb84066",
+  "historicalPreKeyEvidence": "sudu/data/processed/114/review-evidence/EN07_09_PREKEY_BLIND_SOLVE_ORIGINAL_20261024.json",
+  "verifiedNotPostHocAnswerCopy": true
+}

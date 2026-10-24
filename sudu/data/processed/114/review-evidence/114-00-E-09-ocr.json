@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-09",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+  "webpSha256": "393dbdbfbd59220a18fd11d2c09d1b07cd9daf5816d32bbe91a6ec1a335c204b",
+  "question": "Mary came to me and introduced herself again. Apparently, she thought that I had forgotten her\n   name.",
+  "options": [
+    "actively",
+    "entirely",
+    "internally",
+    "obviously"
+  ],
+  "visualTextCompared": true,
+  "originalPageWebpPath": "sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp",
+  "originalPageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+  "originalWebpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-09.webp",
+  "originalCropCoordinates": [
+    90,
+    1282,
+    1310,
+    1403
+  ],
+  "originalWebpDecoded": true,
+  "sourceCropsExactPixelMatched": true,
+  "priorImageQaReference": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+  "actualVisualInspection": "Official 114 English original single-question WebP visibly contains the correct numbered question, complete stem and all four A-D options without another question",
+  "originalSourcePixelRun": "https://github.com/homelux-huang/7581707/actions/runs/40097216703",
+  "humanReviewerClaimed": false
+}

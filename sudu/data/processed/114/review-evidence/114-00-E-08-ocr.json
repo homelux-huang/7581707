@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-08",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+  "webpSha256": "5a9ebec3dbb4cacf3bbb2cd2f6121f69319d042e3c716f41fdbe96f30bfd9c85",
+  "question": "Chen Chieh-hsien ( 陳傑憲 )              the WBSC Premier12 2024 MVP ( Most Valuable Player )\n   due to his magnificent performance.",
+  "options": [
+    "was named after",
+    "made fun of",
+    "was in charge of",
+    "stood out as"
+  ],
+  "visualTextCompared": true,
+  "originalPageWebpPath": "sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp",
+  "originalPageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+  "originalWebpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp",
+  "originalCropCoordinates": [
+    90,
+    1127,
+    1310,
+    1284
+  ],
+  "originalWebpDecoded": true,
+  "sourceCropsExactPixelMatched": true,
+  "priorImageQaReference": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+  "actualVisualInspection": "Official 114 English original single-question WebP visibly contains the correct numbered question, complete stem and all four A-D options without another question",
+  "originalSourcePixelRun": "https://github.com/homelux-huang/7581707/actions/runs/40097216703",
+  "humanReviewerClaimed": false
+}

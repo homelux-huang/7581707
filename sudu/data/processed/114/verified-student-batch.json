@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "generatedAt": "2026-10-24",
+  "status": "THREE_114_ENGLISH_REAL_STUDENT_QA_APPROVED_PENDING_CANONICAL_BRANCH_AND_MAIN_RELEASE_GATE",
+  "sourceNotice": "No legacy flag was changed. QA-approved here only after direct rendered TCTE answer sheet and three original WebP visual QA, 114 per-question correction ledger, immutable pre-key solve, 2-level all-four teaching, two-pass 205-row SQLite, and formal main V4 8x2 real original browser run all passed.",
+  "sourceWebsite": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+  "officialTcteFullAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+  "officialCorrectionEnglishPdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+  "officialEnglishNamedConfirmationQuestionIds": [
+    "114-00-E-26"
+  ],
+  "historicalBlindSolveCommit": "e676be923200587288e653e373fb57641eb84066",
+  "formalMainUiRun": "https://github.com/homelux-huang/7581707/actions/runs/40098085893",
+  "formalMainUiCodeSha": "57d766e841235b937babf3fe10a8ff44606c7c41",
+  "sqliteRoundtripCommit": "5396168f3c890517c294676f89bd25d9a2f1ed9c",
+  "reviewer": "GPT-6 AI original image and teaching QA; not a human examiner",
+  "items": [
+    {
+      "year": 114,
+      "questionId": "114-00-E-07",
+      "status": "STUDENT_QA_APPROVED",
+      "questionBeforeReview": "During the night, the sensor lights in the park will              turn on by themselves when\n   someone is passing by.",
+      "optionsBeforeReview": [
+        "automatically",
+        "organically",
+        "productively",
+        "selfishly"
+      ],
+      "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+      "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+      "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+      "originalAnswerCandidate": "A",
+      "evidence": {
+        "ocr": "sudu/data/processed/114/review-evidence/114-00-E-07-ocr.json",
+        "official": "sudu/data/processed/114/review-evidence/114-00-E-07-official.json",
+        "blind": "sudu/data/processed/114/review-evidence/114-00-E-07-blind.json",
+        "teaching": "sudu/data/processed/114/review-evidence/114-00-E-07-teaching.json",
+        "ui": "sudu/data/processed/114/review-evidence/114-00-E-07-ui.json"
+      }
+    },
+    {
+      "year": 114,
+      "questionId": "114-00-E-08",
+      "status": "STUDENT_QA_APPROVED",
+      "questionBeforeReview": "Chen Chieh-hsien ( 陳傑憲 )              the WBSC Premier12 2024 MVP ( Most Valuable Player )\n   due to his magnificent performance.",
+      "optionsBeforeReview": [
+        "was named after",
+        "made fun of",
+        "was in charge of",
+        "stood out as"
+      ],
+      "webpSha256": "5a9ebec3dbb4cacf3bbb2cd2f6121f69319d042e3c716f41fdbe96f30bfd9c85",
+      "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+      "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+      "originalAnswerCandidate": "D",
+      "evidence": {
+        "ocr": "sudu/data/processed/114/review-evidence/114-00-E-08-ocr.json",
+        "official": "sudu/data/processed/114/review-evidence/114-00-E-08-official.json",
+        "blind": "sudu/data/processed/114/review-evidence/114-00-E-08-blind.json",
+        "teaching": "sudu/data/processed/114/review-evidence/114-00-E-08-teaching.json",
+        "ui": "sudu/data/processed/114/review-evidence/114-00-E-08-ui.json"
+      }
+    },
+    {
+      "year": 114,
+      "questionId": "114-00-E-09",
+      "status": "STUDENT_QA_APPROVED",
+      "questionBeforeReview": "Mary came to me and introduced herself again. Apparently, she thought that I had forgotten her\n   name.",
+      "optionsBeforeReview": [
+        "actively",
+        "entirely",
+        "internally",
+        "obviously"
+      ],
+      "webpSha256": "393dbdbfbd59220a18fd11d2c09d1b07cd9daf5816d32bbe91a6ec1a335c204b",
+      "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+      "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+      "originalAnswerCandidate": "D",
+      "evidence": {
+        "ocr": "sudu/data/processed/114/review-evidence/114-00-E-09-ocr.json",
+        "official": "sudu/data/processed/114/review-evidence/114-00-E-09-official.json",
+        "blind": "sudu/data/processed/114/review-evidence/114-00-E-09-blind.json",
+        "teaching": "sudu/data/processed/114/review-evidence/114-00-E-09-teaching.json",
+        "ui": "sudu/data/processed/114/review-evidence/114-00-E-09-ui.json"
+      }
+    }
+  ]
+}
