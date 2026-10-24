@@ -1,6 +1,6 @@
 {
   "year": 106,
-  "passCount": 16,
+  "passCount": 23,
   "items": [
     {
       "questionId": "106-00-C-01",
@@ -270,11 +270,11 @@
     },
     {
       "questionId": "106-00-C-14",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-14.webp",
-      "candidateSha256": "c69aa34ebd883d6ff852ecab3653480a92a784b649ae43b1e7f6f060be329bca",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-14.webp",
+      "candidateSha256": "f7d4f9de756b6963883bca4b90e373bef615dde784ef2dfcb971e06cadacadd8",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -285,16 +285,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-15",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-15.webp",
-      "candidateSha256": "0b95904bf76b4c793627edd283f3c0b0c4dc7adc43d01b0f85696124aaf0b1c9",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-15.webp",
+      "candidateSha256": "fd47f3d964ff88100485c27e42b106e6760699247ffca2802286bad361a2908a",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -305,16 +305,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-16",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-16.webp",
-      "candidateSha256": "0be20036898a3f9229e0add9888f780400d21e332752d4f83b2bedc5b2186500",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-16.webp",
+      "candidateSha256": "33cece88067f29060d9359578960911eafcbe1c2aef7c93748d1d1b2fd4fa3c6",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -325,16 +325,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-17",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-17.webp",
-      "candidateSha256": "3ecdfafacdf3f9bbad64063b37b449d74ce237774ba16cab71668d4778ef2965",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-17.webp",
+      "candidateSha256": "5971bd1359b62fad2d03abdb34b8c866987e7508047e7104e2f039a5834f8cb7",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -345,16 +345,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-18",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-18.webp",
-      "candidateSha256": "94e2a4a105cac6ab5777903d0bd222ed880c64361d1d2357cb32b46f3a7b9d84",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-18.webp",
+      "candidateSha256": "c9f8d477fe6b1168d95e938dbb8992ad65f2dae853ec64b843384a839ca4f69c",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -365,16 +365,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-19",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-19.webp",
-      "candidateSha256": "00acc4aedf7da4712429f53f350571e52121c0172094e25e21417660e371c1f6",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-19.webp",
+      "candidateSha256": "cd5cb1a6e90929bc058b289ce292cc45bd1f3cc76b5613057a17429d5e8db703",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -385,16 +385,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-20",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-20.webp",
-      "candidateSha256": "d790e4209fca706212b54759a85de5de56c0c4276cebb2f5b929aa58092a7180",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-20.webp",
+      "candidateSha256": "c0b0998ab809b6b701c0bea84644deddd72d63396e2a24e560f3c7eb49299b55",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -405,8 +405,8 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "questionId": "106-00-C-21",
@@ -4098,33 +4098,33 @@
   "sharedMaterials": [
     {
       "sharedMaterialId": "106-00-C-SHARED-15-16",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-15-16.webp",
       "candidateSha256": "ae3dcac0a630c75ba0cc0006000d3ebf408b218df1c317937c083d5b2e2cc28d",
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "sharedMaterialId": "106-00-C-SHARED-17-18",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-17-18.webp",
-      "candidateSha256": "6f502c71627269b340a751f4f45aa6e7bcc4f616884c7a1aa00d516d029b6a87",
-      "reviewer": null,
-      "visualEvidence": null
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/shared/106-00-C-SHARED-17-18.webp",
+      "candidateSha256": "000c449c08a27d9b7f52a16ed624607240e17fb8cd71228e77360b17ad1b28d9",
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "sharedMaterialId": "106-00-C-SHARED-19-20",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 4,
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-19-20.webp",
-      "candidateSha256": "34bfbe09b39e6583ea34c52935b581e2c714596b9b64ef87ba707685f30f36cc",
-      "reviewer": null,
-      "visualEvidence": null
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v5/shared/106-00-C-SHARED-19-20.webp",
+      "candidateSha256": "647c1af0bbc1d5d14b816ff63845a5bec80e8d6594801c951378ad1a1898a310",
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C14_20_AND_THREE_SHARED_20261024.json"
     },
     {
       "sharedMaterialId": "106-00-C-SHARED-36-38",
