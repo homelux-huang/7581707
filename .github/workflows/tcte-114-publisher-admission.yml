@@ -7,6 +7,7 @@ on:
       - tests/test_sudu_verified_publish.py
       - sudu/data/processed/114/review-evidence/**
       - .github/workflows/tcte-114-publisher-admission.yml
+      - scripts/qa114_sqlite_content_diff.py
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,6 +22,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Read-only exact SQLite payload diff (diagnostic, never promotes QA)
+        run: python scripts/qa114_sqlite_content_diff.py
+      - name: Retain unresolved SQLite field-level evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-sqlite-original-vs-current-question-json
+          path: /tmp/114-sqlite-reconciliation.json
+          retention-days: 30
+          if-no-files-found: ignore
       - name: Test strict per-question official TCTE scope, negative cases, and 115 compatibility
         run: |
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
