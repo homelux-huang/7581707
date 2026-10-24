@@ -1,0 +1,38 @@
+name: 114 TCTE publisher fail-closed gates and English evidence (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-english-blind-solve-and-ready-20261024]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - sudu/data/processed/114/review-evidence/**
+      - .github/workflows/tcte-114-publisher-admission.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test strict per-question official TCTE scope, negative cases, and 115 compatibility
+        run: |
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python scripts/check_tcte_114_confirmation_evidence.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          pre=json.loads(Path("sudu/data/processed/114/review-evidence/EN07_09_PREKEY_BLIND_SOLVE_ORIGINAL_20261024.json").read_text())
+          assert pre["officialKeysIncluded"] is False
+          assert pre["approvalGranted"] is False
+          assert len(pre["items"])==3
+          assert all(x["officialAnswerHiddenDuringSolve"] and x["solvedWithoutOfficialAnswer"] and
+                     x["preKeyEvidence"] and not x["officialCandidateKeyRead"] for x in pre["items"])
+          print("PASS: three immutable 114 blind-solve records not student approvals")
+          PY
