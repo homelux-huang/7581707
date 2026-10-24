@@ -1,0 +1,75 @@
+{
+  "year": 114,
+  "expected": 205,
+  "canonicalUnique": 205,
+  "webpDrafts": 205,
+  "webpVisualQaPassed": 0,
+  "missingImageIds": [],
+  "missingFourTextOptionIds": [
+    "114-00-C-30",
+    "114-00-E-21",
+    "114-00-E-22",
+    "114-00-E-23",
+    "114-00-E-24",
+    "114-00-E-25",
+    "114-00-E-26",
+    "114-00-E-27",
+    "114-00-E-28",
+    "114-00-MB-01",
+    "114-00-MB-02",
+    "114-00-MB-06",
+    "114-00-MB-08"
+  ],
+  "answerTextMatched": 200,
+  "answerUnmatchedIds": [
+    "114-00-C-15",
+    "114-00-E-15",
+    "114-00-MB-15",
+    "114-09-1-15",
+    "114-09-2-15"
+  ],
+  "answerIndependentlyVerified": 0,
+  "questionIndependentlyVerified": 0,
+  "perPaper": {
+    "00-C": {
+      "expected": 38,
+      "candidateWebp": 38,
+      "anchorMissing": [],
+      "answerPdfKeys": 37,
+      "answerPdfConflicts": [],
+      "ocrGapCandidates": 1
+    },
+    "00-E": {
+      "expected": 42,
+      "candidateWebp": 42,
+      "anchorMissing": [],
+      "answerPdfKeys": 41,
+      "answerPdfConflicts": [],
+      "ocrGapCandidates": 8
+    },
+    "00-MB": {
+      "expected": 25,
+      "candidateWebp": 25,
+      "anchorMissing": [],
+      "answerPdfKeys": 24,
+      "answerPdfConflicts": [],
+      "ocrGapCandidates": 4
+    },
+    "09-1": {
+      "expected": 50,
+      "candidateWebp": 50,
+      "anchorMissing": [],
+      "answerPdfKeys": 49,
+      "answerPdfConflicts": [],
+      "ocrGapCandidates": 0
+    },
+    "09-2": {
+      "expected": 50,
+      "candidateWebp": 50,
+      "anchorMissing": [],
+      "answerPdfKeys": 49,
+      "answerPdfConflicts": [],
+      "ocrGapCandidates": 0
+    }
+  }
+}

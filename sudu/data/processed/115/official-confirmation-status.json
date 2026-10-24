@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "source": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+  "checkedOn": "2026-10-22",
+  "notice": "Final standard answer confirmation meeting was held 2026-05-08 and standard answers released 17:00 that day. Source page says PDF is authoritative; Word variations are not authoritative.",
+  "scope": "Only 115 four-year technological and vocational entrance examination",
+  "confirmations": {
+    "00-C": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "not_reviewed"
+    },
+    "00-E": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "not_reviewed"
+    },
+    "00-MB": {
+      "officialStatus": "no_objection_submitted",
+      "revisionDocumentContent": "not_applicable"
+    },
+    "09-1": {
+      "officialStatus": "no_objection_submitted",
+      "revisionDocumentContent": "not_applicable"
+    },
+    "09-2": {
+      "officialStatus": "question_or_answer_confirmation_document_exists",
+      "revisionDocumentContent": "not_reviewed"
+    }
+  },
+  "interpretation": "No objection is not independent per-question verification. All answerVerified flags stay false. 09-2 question-or-answer confirmation document must be read before declaring verified. PDF SHA-pinned evidence in each question record remains the answer source.",
+  "repositoryBaseline": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096"
+}
