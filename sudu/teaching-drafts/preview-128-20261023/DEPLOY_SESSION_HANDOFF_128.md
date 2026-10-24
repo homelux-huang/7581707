@@ -1,3 +1,13 @@
+# 2026-10-24 | New AI-source QA: 115-00-MB-05 (NOT RELEASE READY)
+
+- QA branch: `qa/114-115-official-visual-review`; initial image-only pre-key solve commit `cf6a4efede233b0e447d52498209adf1b721c13e`; subsequent source/official comparison and teaching candidate commit `a6d441ae52c286d43572faa035697d5d634cd2ca`.
+- QID `115-00-MB-05`, original image SHA256 `be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2`. Visually inspected complete cropped question, 4 options, no adjacent question.
+- Solve performed and saved BEFORE consulting official letter: A+C=B+D; A=(-1,0), B=(0,-5), D=(2,3); C=(3,-2), BC midpoint (3/2,-7/2), answer **B**. Subsequently matched stored official-PDF-extracted answer B. No new claim that original official PDF was visually rechecked or that AI was a human reviewer.
+- Critical actual defect: processed source candidate text options split fractions across multiple lines, including a private-use glyph. Original-image-corrected A-D and distinct HS/elementary teaching, worked formula, reasoning and official-comparison evidence saved under `sudu/data/processed/115/review-evidence/115-00-MB-05-*-20261024.json` in QA branch. Original `questions.json`, original WebP, SQLite and formal approval flags are NOT altered.
+- Next: incorporate validated text correction into source through supported workflow, recompute question revision, complete formal source/official/teaching/UI evidence, then produce certificate and admit through existing publisher. **READY=0 new**, no new LIVE deployment. This handoff is saved in GitHub; no direct cross-chat notification was sent.
+
+---
+
 # 2026-10-24｜新Session實做：E03正式UI憑證避免舊版內容假陽性
 
 - 已重新核對三分支 HEAD：main `5415a30452cdf9020242aca16fe0ff2b6814ab4b`、教學 `11c327b409182a8abde76d9ce217b55f66619097`（開始時）、來源 QA `844c813a859f00e194a46322ca798696bffea5bf`。
