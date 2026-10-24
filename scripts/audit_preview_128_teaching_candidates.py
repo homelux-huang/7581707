@@ -102,6 +102,12 @@ def assess_record(item, record, official, certificate, root=ROOT):
         calc = teaching.get("examCalculation") or {}
         if not calc.get("substitutionAndSteps") or not calc.get("result"):
             fail.append("calculation_working_missing")
+    # Original-image QA does not certify the OCR/legacy candidate text.
+    # A same-image reference and a real independent transcription QA must
+    # precede any student-facing text-first replacement for quarantined items.
+    risk = qa.get("legacyCandidateTextRisk20261023")
+    if isinstance(risk, dict) and risk.get("formalTextQaPass") is not True:
+        fail.append("legacy_candidate_text_not_independently_approved")
     if qa.get("independentTeachingReview") != "PASS":
         fail.append("teaching_review_pending")
     if qa.get("uiReview") != "PASS" or qa.get("textHighlightRendering") != "PASS":

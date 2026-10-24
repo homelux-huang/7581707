@@ -1,3 +1,6 @@
+## 2026-10-24｜數學B20–25候選文字污染發布阻塞新增自動防護
+- 本批新加候選發布閘門 `legacy_candidate_text_not_independently_approved`；六題逐字文字尚未獨立核對時，即使他人製作完整測試證書也無法誤放行。synthetic 兩測項新增。見 `MATHB_LEGACY_TRANSCRIPTION_FAIL_CLOSED_20261024.md`。只讀不部署，READY仍0。
+
 ## 2026-10-24｜英文來源型新聞語境28/28補齊
 - 新增E01、04、11、12、13、15的官方來源、日期、中英教學改寫及實際highlight；原自編例句保留。詳 `ENGLISH_NEWS_FINAL_6_20261024.md`。來源型例句28/28不等於完整教學QA；所有發布旗標未解鎖，等待CI結果與逐題V4驗收。
 

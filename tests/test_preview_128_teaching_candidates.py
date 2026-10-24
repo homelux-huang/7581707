@@ -123,6 +123,19 @@ class PerQuestionReleaseSafety(unittest.TestCase):
         self.teach["optionExplanations"]["A"]["isCorrect"] = False
         self.check("four_option_content_or_answer_mismatch")
 
+    def test_quarantined_ocr_text_blocks_even_with_complete_synthetic_certificate(self):
+        self.record["qa"]["legacyCandidateTextRisk20261023"] = {
+            "status": "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE",
+            "formalTextQaPass": False,
+        }
+        self.check("legacy_candidate_text_not_independently_approved")
+
+    def test_quarantine_cannot_be_bypassed_by_missing_formal_qa_value(self):
+        self.record["qa"]["legacyCandidateTextRisk20261023"] = {
+            "status": "TEXT_FIRST_BLOCKED_PENDING_INDEPENDENT_TRANSCRIPTION_QA__IMAGE_SAFE"
+        }
+        self.check("legacy_candidate_text_not_independently_approved")
+
     def test_draft_release_flags_must_remain_closed(self):
         self.record["deploy"] = True
         self.check("draft_release_isolation_modified")
