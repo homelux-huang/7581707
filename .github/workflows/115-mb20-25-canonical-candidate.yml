@@ -7,7 +7,7 @@ on:
       - .github/workflows/115-mb20-25-canonical-candidate.yml
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   stage_text_without_approval:
     runs-on: ubuntu-24.04
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: true
       - uses: actions/checkout@v4
         with:
           ref: 31adda6c3973ee73387c767d4a8ba56af1fd81b8
@@ -66,3 +66,27 @@ jobs:
             /tmp/publisher_stage.json
           if-no-files-found: ignore
           retention-days: 30
+      - name: Commit ONLY blocked corrected source candidates and SQLite to this isolated branch
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3
+          if git diff --cached --quiet; then
+            echo 'Already persisted in candidate branch: 205 source/SQLite roundtrip unchanged.'
+            exit 0
+          fi
+          mapfile -t changed < <(git diff --cached --name-only)
+          if [ "${#changed[@]}" -ne 2 ]; then
+            echo 'Unexpected staged file scope' >&2
+            exit 1
+          fi
+          if [ "${changed[0]}" != "sudu/data/processed/115/question-bank.sqlite3" ] || \
+             [ "${changed[1]}" != "sudu/data/processed/115/questions.json" ]; then
+            echo 'Unexpected staged file names' >&2
+            exit 1
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'data(qa-only): persist Math B20-25 corrected source text and verified 205 SQLite records; six BLOCKED'
+          git push origin HEAD:qa/mb20-25-source-text-candidate-20261024
