@@ -6,6 +6,8 @@ on:
     paths:
       - scripts/audit_104_115_numbered_assets.py
       - .github/workflows/104-115-numbered-asset-audit.yml
+      - sudu/data/processed/*/inventory.json
+      - sudu/data/processed/*/webp-manifest.json
   workflow_dispatch:
 permissions:
   contents: write
@@ -40,6 +42,9 @@ jobs:
           assert j['totals']['candidateQuestions105_115']==2249
           y110=next(y for y in j['years'] if y['year']==110)
           assert y110['papers']['09-1']['excludedHistoricalFalsePositiveIds']==['110-09-1-80']
+          assert j['totals']['webpLinkedAndShaVerified105_115'] + j['totals']['missingWebp105_115'] == j['totals']['candidateQuestions105_115']
+          assert 0 <= j['totals']['webpQaPassWithReference105_115'] <= j['totals']['webpLinkedAndShaVerified105_115']
+          assert j['totals']['readyYears']==0
           assert j['totals']['g5PassYears105_115']==11
           assert j['noNewQAFlagsOrAnswerFlagsSet'] is True and j['notForRelease'] is True
           assert all(y.get('integrationReady') is False for y in j['years'])
