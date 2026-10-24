@@ -7,6 +7,7 @@ the original records; release requires a complete student-reviewed-batch.
 from __future__ import annotations
 import hashlib,json,sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from scripts import sudu_verified_publish as pub
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/"sudu/data/processed/114"
