@@ -1,3 +1,8 @@
+## 2026-10-24｜MB20–25 canonical +205 SQLite 隔離驗證成功、經濟34 新預先解題與官方圖核實（皆未發布）
+- 六題 Math B20～25 對同一 SHA 原圖的校字與205筆資料庫 roundtrip，隔離 [Actions #40086016032](https://github.com/homelux-huang/7581707/actions/runs/40086016032) SUCCESS。可重現分支 `qa/mb20-25-source-text-candidate-20261024` HEAD `0058afdb`，只有CI暫存修改，原 5 題發布清單仍為5；六題獨立正式來源／教學／盲解尚未具備，不增 READY。
+- 經濟34採先只讀原始 WebP、**先提交盲解A** `33aa3228`，**後**核對官方答表原圖 A #40086437762，官方答頁WebP SHA `60482dbb…`，完整證據分支 `qa/econ34-prekey-image-only-20261024` HEAD `daf35efd`。初次盲解轉錄漏了『中』字，歷史如實保留、未修改，題意與答案不變；正式來源 admission、雙層教學和8x2 UI仍待，不能算 READY/LIVE。
+- 現階段 MB05 是**唯一新增正式 LIVE 題**（Pages #40085654639 verify_live SUCCESS）。固定128草稿 schema 的 `fullyAccepted=0` 與正式 source 1題LIVE須分列；請勿批次改 flag。
+
 ## 2026-10-24｜正式 Pages LIVE 已驗 MB05 首題成功（#40085654639）
 - 正式 `main` SHA `31adda6c3973ee73387c767d4a8ba56af1fd81b8` 的 Pages [#40085654639](https://github.com/homelux-huang/7581707/actions/runs/40085654639) **verify / build / deploy / verify_live 全 SUCCESS**；115數學B第05題與原有四題在正式 `sudu/data/approved/115.json` 逐題可讀。這是本批新真正LIVE=**1/128（0.78%）**，不得再記「正在驗證」。此不代表其餘127題已教學QA/READY。
 - 下一批僅使用獨立完整證據上線：6題 MathB20–25 已在隔離分支 `qa/mb20-25-source-text-candidate-20261024` 做來源文字與 SQLite 205筆 staged、未准學生發布；經濟34另有不看官答先完成解題的 Git Commit `33aa3228`、對照官方A一致，仍需來源、教學、8×2 UI全項證書。

@@ -53,5 +53,35 @@
   "meaning": "One original 128-scope MB05 independently source-certified question genuinely published with same-SHA Pages live verification; remaining 127 not approved. Draft's separate 128-certificate ledger remains zero.",
   "pagesWorkflowConclusion": "success",
   "pagesWorkflowSourceHeadSha": "31adda6c3973ee73387c767d4a8ba56af1fd81b8",
-  "pagesVerificationDetail": "Same-SHA verify, build, deploy, verify_live all SUCCESS for #40085654639"
+  "pagesVerificationDetail": "Same-SHA verify, build, deploy, verify_live all SUCCESS for #40085654639",
+  "mathB20To25CanonicalCandidate": {
+    "branch": "qa/mb20-25-source-text-candidate-20261024",
+    "head": "0058afdb9abcd57e343907b23ffda42c07444383",
+    "ciRunId": 40086016032,
+    "ciConclusion": "success",
+    "scope6": true,
+    "sourceImageTranscriptionAnd205SQLiteRoundtripPass": true,
+    "formalIndependentTextQaForStudent": false,
+    "newReady": 0,
+    "releaseNoWrite": true
+  },
+  "nextIndependentFirstSolveCandidate": {
+    "qid": "115-09-2-34",
+    "branch": "qa/econ34-prekey-image-only-20261024",
+    "qaHead": "daf35efde280c6a29aaddc1cd4a8159f8e613fee",
+    "imageOnlyRunId": 40086129327,
+    "originalImageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+    "historicalPreOfficialAnswerBlindCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+    "blindAnswer": "A",
+    "afterwardsActualOfficialAnswerImageRunId": 40086437762,
+    "officialAnswer": "A",
+    "officialImageSha256": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+    "historicalPreKeyTranscriptionOmittedChineseChar": "中",
+    "sourceAdmissionQaPending": true,
+    "independentTeachingFullQaPending": true,
+    "realV4UiQaPending": true,
+    "newReady": 0,
+    "newLive": 0,
+    "needsHumanTextbookSourceStillUnknown": true
+  }
 }
