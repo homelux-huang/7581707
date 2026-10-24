@@ -36,5 +36,7 @@
     }
   },
   "configurationStatus": "NO_AUTHORIZED_REVIEWER_KEYS_YET__NEW_RELEASES_FAIL_CLOSED",
-  "notes": "Add a reviewer identity and Ed25519 public key only via trusted main code review after offline verification of role, independence and private-key custody. Never commit private keys or rely on source-branch reviewer strings. Historical exact five are retained without implying human teacher credentials."
+  "notes": "Add a reviewer identity and Ed25519 public key only via trusted main code review after offline verification of role, independence and private-key custody. Never commit private keys or rely on source-branch reviewer strings. Historical exact five are retained without implying human teacher credentials.",
+  "githubRepository": "homelux-huang/7581707",
+  "identityPolicy": "Only actual GitHub reviewed PR plus its author/commits/APPROVED review event and owner-registered externally verified role can approve. Branch protection is owner-required. No keys authorized."
 }
