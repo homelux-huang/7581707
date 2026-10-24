@@ -1,7 +1,7 @@
 name: MB23 original table and WebP student V4 full QA (NO DEPLOY)
 on:
   push:
-    branches: [fix/mb23-source-table-revision-and-publish-20261024]
+    branches: [fix/mb23-source-table-revision-and-publish-20261024, integration/128-p0-p1-pr22-mb23-final-20261025]
     paths:
       - scripts/sudu_verified_publish.py
       - scripts/build_mb23_qa_only_table_preview.py

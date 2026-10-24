@@ -9,6 +9,7 @@ on:
       - tests/test_sudu_certified_overlay.py
       - tests/test_sudu_independent_review_gate.py
       - .github/workflows/128-source-admission-matrix.yml
+      - .github/workflows/mb23-source-table-qa-only.yml
   workflow_dispatch:
 permissions:
   contents: read
