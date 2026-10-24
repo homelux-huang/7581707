@@ -140,4 +140,6 @@ jobs:
     name: Run complete same-SHA Pages release gate (no deployment)
     uses: ./.github/workflows/sudu-release-checks.yml
     with:
-      target_sha: ${{ github.sha }}
+      # PR events use a synthetic merge SHA in github.sha; pin the real PR head
+      # so Browser Smoke and release gates prove the exact feature commit.
+      target_sha: ${{ github.event.pull_request.head.sha || github.sha }}
