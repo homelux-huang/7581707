@@ -763,8 +763,9 @@ def site_check(dest: Path):
             assert digest(json.dumps(published,ensure_ascii=False,sort_keys=True,
                                      separators=(",",":")).encode("utf-8"))==proof["approvedContentSha256"]
             for shared_asset in proof["sharedImages"]:
-                assert asset_rel_ok("sudu/"+shared_asset["image"],year,
-                                    Path(shared_asset["image"]).name,"shared")
+                assert re.fullmatch(
+                    rf"data/approved/webp/{year}/{year}-(?:00-C|00-E|00-MB|09-1|09-2)-SHARED-[0-9]{{2}}-[0-9]{{2}}\\.webp",
+                    shared_asset["image"])
                 assert digest((dest/"sudu"/shared_asset["image"]).read_bytes())==shared_asset["sha256"]
         preview_file=read(dest/f"sudu/data/approved/preview/{year}.json")
         pictures=preview_file.get("questions")

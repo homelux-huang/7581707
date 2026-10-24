@@ -97,10 +97,9 @@ class FullLiveCoverageTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.run_checker()
     def test_old_teaching_digest_or_source_revision_denied(self):
         url="sudu/data/approved/integrity/115.json"
-        self.mutate_json(url,lambda j:j["questions"][0].update(teachingCanonicalSha256="d"*64),also_local=True)
-        self.assertEqual(self.run_checker()["live"],"VERIFIED_ALL_PUBLISHED_BYTES")
-        # The trusted local expected artifact has been replaced by the caller:
-        # this simulates a NEW signed main code commit, not a stale LIVE mutation.
+        self.mutate_json(url,lambda j:j["questions"][0].update(teachingCanonicalSha256="d"*64))
+        with self.assertRaises(ValueError):self.run_checker()
+        self.store[url]=(self.root/url).read_bytes()
         self.mutate_json(url,lambda j:j["questions"][0].update(sourceQuestionRevision="e"*64))
         with self.assertRaises(ValueError):self.run_checker()
     def test_tampered_published_content_without_new_integrity_sha_denied(self):

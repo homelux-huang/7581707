@@ -1,0 +1,84 @@
+name: Full LIVE source/teaching digest every item negative tests (NO DEPLOY)
+on:
+  push:
+    branches: [fix/128-certified-reviewer-and-full-live-audit-20261024]
+    paths:
+      - scripts/check_live_release.py
+      - tests/test_check_live_release.py
+      - scripts/sudu_verified_publish.py
+      - scripts/build.py
+      - sudu/release-governance/**
+      - .github/workflows/128-full-live-cover-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_full_live_preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c7b4362b3125e623098f57c304f14c0edb5f6974
+          path: _source_qa
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original WebP decoder and real signed-review verifier
+        run: python -m pip install -q pillow cryptography
+      - name: Negatively check full approved integrity, third preview image and second shared image
+        run: |
+          set -eu
+          python -m unittest discover -s tests -p 'test_check_live_release.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Rebuild QA-gated 5 real questions and ALL preview image integrity manifests
+        run: |
+          set -eu
+          python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha c7b4362b3125e623098f57c304f14c0edb5f6974 > /tmp/live-audit-stage.json
+          python scripts/sudu_verified_publish.py check
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for year in (114,115):
+              q=json.loads(Path(f'sudu/data/approved/{year}.json').read_text())
+              m=json.loads(Path(f'sudu/data/approved/integrity/{year}.json').read_text())
+              assert q['approvedCount']==m['approvedCount']==(5 if year==115 else 0)
+              assert len(m['questions'])==len(q['questions'])
+              assert all(len(x['teachingCanonicalSha256'])==64 for x in m['questions'])
+          print('PASS: genuine five preserve exact production identity, P1 manifests both years generated')
+          PY
+      - name: Verify exact public build includes all manifests and fully probes local published artifact
+        env:
+          SUDU_BUILD_SHA: 57d766e841235b937babf3fe10a8ff44606c7c41
+        run: |
+          set -eu
+          python scripts/build.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from unittest.mock import patch
+          from scripts import check_live_release as check
+          expected="57d766e841235b937babf3fe10a8ff44606c7c41"
+          site=Path('_site')
+          def from_public_build(base,route,sha):
+              return (site/route).read_bytes()
+          with patch.object(check,'fetch',side_effect=from_public_build):
+              result=check.inspect_live("https://homelux-huang.github.io/7581707/",expected)
+          assert result['live']=='VERIFIED_ALL_PUBLISHED_BYTES',result
+          assert result['years']['115']['approved']==5
+          assert result['allDistinctAssetsChecked']>=128,result
+          print('PASS P1: production build exact source + lesson digests; all approved, full preview and shared WebP content',json.dumps(result,ensure_ascii=False))
+          PY
+      - name: Preserve test's stage report, without touching main
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-live-coverage-negative-replayed-all-preview-no-deploy
+          path: /tmp/live-audit-stage.json
+          retention-days: 30
+          if-no-files-found: ignore
