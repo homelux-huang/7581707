@@ -153,6 +153,16 @@
     chunks.push(escapeHtml(raw.slice(at)));
     return chunks.join('');
   }
+  // Escape untrusted text first; only **bold** and actual highlight terms are rendered.
+  // This never executes arbitrary HTML from the teaching draft.
+  function safeTeachingInlineMarkup(value,terms){
+    return String(value??'').replace(/反向檢查/g,'相反意思')
+      .split(/(\\*\\*[^*\\n]+\\*\\*)/g).map(bit=>{
+        if(/^\\*\\*[^*\\n]+\\*\\*$/.test(bit))
+          return '<strong>'+htmlWithActualHighlights(bit.slice(2,-2),terms)+'</strong>';
+        return htmlWithActualHighlights(bit,terms);
+      }).join('');
+  }
   fetch('./data/approved/'+activeYear+'.json',{cache:'no-store'}).then(async r=>{
     if(!r.ok)throw Error('資料未發布（HTTP '+r.status+'）');
     return r.json();
@@ -179,6 +189,7 @@
     const originalMove=move;
     const originalProgress=renderProgress;
     const originalDetail=renderOptionDetail;
+    const originalStudyFormatter=formatStudyValue;
     const originalSource=sourceText;
     const originalSubjectEntries=subjectEntries;
     const stored=(()=>{try{return JSON.parse(localStorage.getItem(storageKey)||'null')}catch{return null}})();
@@ -207,6 +218,11 @@
         parts.push(['考題計算式',calc.lines.join('\n')]);
       return parts;
     };
+    formatStudyValue=function(q,key,value){
+      if(q.year!==Number(activeYear)||key==='考題計算式')
+        return originalStudyFormatter(q,key,value);
+      return safeTeachingInlineMarkup(value,q.highlights||[]);
+    };
     renderOptionDetail=function(q,L){
       if(q.year!==Number(activeYear))return originalDetail(q,L);
       const detail=q.optionExplanations?.[L]||{};
@@ -215,16 +231,16 @@
       const header=L===q.answer?'✓ 正確解答':'× 選項檢查';
       const rows=[
         ['高職生理解',detail.teacher],
-        ['國小學生也聽得懂',detail.elementary],
-        ['此選項正確／錯誤原因',detail.reason]
+        ['國小學生也聽得懂',detail.elementary]
       ].filter(x=>useful(x[1]));
+      const norm=x=>String(x??'').replace(/\\*\\*/g,'').replace(/\\s+/g,'').trim();
+      if(useful(detail.reason)&&!rows.some(x=>norm(x[1])===norm(detail.reason)))
+        rows.push(['此選項正確／錯誤原因',detail.reason]);
+      // The guide card already displays the teacher summary, memory, vocabulary
+      // and calculation. Do not append the same extra sections under the answer.
       let html='<div class="option-detail '+color+'"><b>'+header+'</b>'+
-        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+htmlWithActualHighlights(x[1],keywords)+'</p>').join('');
-      if(L===q.answer){
-        const extra=subjectEntries(q);
-        if(extra.length)html+='<div class="option-detail-grid">'+extra.map(x=>
-          '<span><em>'+escapeHtml(x[0])+'</em>'+formatStudyValue(q,x[0],x[1])+'</span>').join('')+'</div>';
-      }
+        rows.map(x=>'<p><b>'+escapeHtml(x[0])+'：</b>'+
+          safeTeachingInlineMarkup(x[1],keywords)+'</p>').join('');
       return html+'</div>';
     };
     renderProgress=function(){
