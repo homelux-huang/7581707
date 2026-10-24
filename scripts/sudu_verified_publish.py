@@ -273,7 +273,19 @@ def certificates_complete(source: Path, q: dict, item: dict, shared: dict) -> bo
     for sid in shared_material_ids(q) or []:
         ev = shared[sid].get("visualReviewEvidence") or {}
         checks.append((ev, "reference", "referenceSha256"))
-    return all(certificate_exists(source, evidence, field, hash_field)
+    def independently_anchored(proof: dict, field: str, hash_field: str) -> bool:
+        if certificate_exists(source, proof, field, hash_field):
+            return True
+        # Legacy 114 image batches predate referenceSha256, but contain an
+        # exact per-question original SHA and PASS image identity. A generic
+        # filename or an unrelated PASS record does NOT authorize release.
+        if field != "reference" or hash_field != "referenceSha256":
+            return False
+        refs=[(item,item.get("questionId"))]
+        refs += [(shared[s],s) for s in shared_material_ids(q) or []]
+        return any(x.get("visualReviewEvidence") is proof and
+                   visual_certificate(source,x,str(identity)) for x,identity in refs)
+    return all(independently_anchored(evidence,field,hash_field)
                for evidence, field, hash_field in checks)
 
 
@@ -308,10 +320,23 @@ def visual_certificate(source: Path, item: dict, identity: str) -> bool:
         return False
     # Older source does not have a file SHA claim. Validate the immutable Git
     # source copy by matching a genuine per-question visual-QA record.
-    for row in parsed.get("records", []):
-        if (row.get("questionId") == identity and row.get("result") == "PASS"
-                and row.get("webpSha256") == item.get("sha256")
+    for row in (parsed.get("records") or []) + (parsed.get("items") or []):
+        if row.get("questionId") != identity or row.get("result") != "PASS":
+            continue
+        if (row.get("webpSha256") == item.get("sha256")
                 and row.get("webpPath") == item.get("output")):
+            return True
+        # 114 English 06-20: reviewedWebpSha256 and the exact official crop
+        # path, plus all eight original page comparison criteria are required.
+        criteria=row.get("criteria") or {}
+        if (row.get("reviewedWebpSha256") == item.get("sha256")
+                and row.get("reviewedWebpPath") == item.get("output")
+                and criteria and all(value is True for value in criteria.values())
+                and set(("original_number","complete_stem","all_four_options",
+                         "required_formula_images_units","no_neighboring_question",
+                         "no_page_header_or_footer","readable",
+                         "source_and_output_sha256_matched",
+                         "exact_source_crop_pixel_match")) <= set(criteria)):
             return True
     return False
 
@@ -409,8 +434,7 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
     explicitly lists each question in confirmation PDFs. The public answer
     table and the individual original-answer review remain separate gates.
     """
-    if year != 115:
-        # Prior 114 approvals require a separate year-specific reviewed ledger.
+    if year not in (114, 115):
         return False
     base = source / f"sudu/data/processed/{year}"
     status_path = base / "official-confirmation-status.json"
@@ -424,6 +448,8 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
         record=(status.get("confirmations") or {}).get(paper) or {}
         state=record.get("officialStatus")
         if state=="no_objection_submitted":
+            if year == 114 and record.get("perQuestionOfficialNoticeScopeEvidenceComplete") is not True:
+                return False
             return bool(proof.get("noObjectionForPaper") is True
                         and record.get("revisionDocumentContent")=="not_applicable"
                         and proof.get("noCorrectionForThisQuestion") is not True
@@ -439,7 +465,11 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
         if (not SHA.fullmatch(str(expected_sha))
                 or proof.get("confirmationPdfSha256")!=expected_sha):
             return False
-        ledger_relative="sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
+        ledger_relative=(
+            "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json"
+            if year == 114 else
+            "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
+        )
         if status.get("officialNoticeEvidencePath")!=ledger_relative:
             return False
         ledger_path=source/ledger_relative
@@ -448,14 +478,16 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
         catalog=read(ledger_path)
         if not (catalog.get("schemaVersion")==1
                 and catalog.get("year")==year
-                and catalog.get("allPagesInThreeDocumentsReviewed") is True
-                and catalog.get("sourceIndexUrl")=="https://web1.tcte.edu.tw/EXAM/115_4y/"):
+                and catalog.get("allPagesInFourDocumentsReviewed" if year == 114 else "allPagesInThreeDocumentsReviewed") is True
+                and catalog.get("sourceIndexUrl")==f"https://web1.tcte.edu.tw/EXAM/{year}_4y/"):
             return False
         rows=[x for x in catalog.get("docs",[]) if x.get("paperCode")==paper]
         if len(rows)!=1:
             return False
         doc=rows[0]
         if not (doc.get("pdfSha256")==expected_sha
+                and (year != 114 or (doc.get("allPagesVisuallyReviewed") is True and
+                     record.get("perQuestionOfficialNoticeScopeEvidenceComplete") is True))
                 and doc.get("noticeScopeOnly") is True
                 and doc.get("pageCount")==record.get("revisionDocumentPages")
                 and isinstance(doc.get("confirmed"),list)
@@ -474,8 +506,9 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
         # A named correction is NOT omitted. Its answer, PDF and scope must all match.
         return bool(proof.get("correctionForQuestionReviewed") is True
                     and proof.get("noCorrectionForThisQuestion") is not True
-                    and row.get("comparedToOfficialPublishedTableCandidate")=="MATCHED"
-                    and row.get("changeFromPublishedAnswer")=="NONE_OBSERVED"
+                    and row.get("comparedToOfficialPublishedTableCandidate" if year == 115 else "comparedToExistingOfficialPdfTextCandidate")=="MATCHED"
+                    and row.get("changeFromPublishedAnswer" if year == 115 else "changeFromExistingOfficialPdfTextCandidate")=="NONE_OBSERVED"
+                    and (year != 114 or proof.get("officialFinalAnswerImageQaPassed") is True)
                     and row.get("officialConfirmedAnswer")==proof.get("finalAnswer")==q.get("answer"))
     except (OSError, ValueError, TypeError, KeyError, AttributeError):
         return False
@@ -518,7 +551,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         off.get("officialPdfSha256") == pdf_sha(q,"answer"),
         off.get("finalAnswer") == q.get("answer"),
         off.get("correctionNoticeReviewed") is True,
-        off.get("officialPage") == "https://web1.tcte.edu.tw/EXAM/115_4y/",
+        off.get("officialPage") == f"https://web1.tcte.edu.tw/EXAM/{year}_4y/",
         official_notice_scope_certified(source,year,q,off),
         blind.get("questionRevision") == revision,
         blind.get("webpSha256") == manifest["sha256"],
