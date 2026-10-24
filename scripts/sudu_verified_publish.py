@@ -508,6 +508,18 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
             return q
         docs[key]=value
     ocr,off,blind,teach,ui=[docs[key][0] for key in ("ocr","official","blind","teaching","ui")]
+    # P0: source-authored PASS strings and SHA files are not a separate reviewer.
+    # Legacy exemption is tied to exact old review bytes and question/image revision.
+    try:
+        from scripts import sudu_independent_review_gate as reviewer_gate
+    except ModuleNotFoundError:
+        import sudu_independent_review_gate as reviewer_gate
+    teaching_rel=audit["evidence"]["teaching"]
+    teaching_raw=(source/teaching_rel).read_bytes()
+    independently_authorized,identity_reason=reviewer_gate.certified(
+        source,audit,q,manifest,teach,teaching_raw)
+    if not independently_authorized:
+        return q
     revision=text_revision(q,manifest["sha256"])
     if not all((
         ocr.get("questionRevision") == revision,
