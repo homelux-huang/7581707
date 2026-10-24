@@ -52,7 +52,28 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    const dimensions=await img.evaluate(i=>({width:i.naturalWidth,height:i.naturalHeight,src:i.getAttribute('src')}));
    if(q.subject!=='會計學')assert(dimensions.src.startsWith('questions/115/'));
    report.images.push({subject:q.subject,question:q.id,width:dimensions.width,height:dimensions.height,decoded:true});
-   await page.locator('.opt').first().click();await settle();
+   // On the historical economics 28 stall, sample geometry *during* Playwright
+   // actionability checks (post-timeout geometry alone can look stationary).
+   const trace=(q.subject==='經濟學'&&q.id===28);
+   if(trace)await page.evaluate(()=>{
+    window.__suduClickTrace=[];
+    window.__suduClickTraceTimer=setInterval(()=>{
+     const e=document.querySelector('.opt'),r=e?.getBoundingClientRect();
+     window.__suduClickTrace.push({t:Math.round(performance.now()),y:scrollY,
+      top:r?.top,left:r?.left,w:r?.width,h:r?.height,
+      scroller:document.scrollingElement?.scrollTop,
+      body:document.body.className,hover:e?.matches(':hover'),
+      transform:e?getComputedStyle(e).transform:null});
+    },80);
+   });
+   try{await page.locator('.opt').first().click();}
+   catch(clickError){
+    if(trace)report.duringClick=await page.evaluate(()=>window.__suduClickTrace);
+    throw clickError;
+   }finally{
+    if(trace)await page.evaluate(()=>clearInterval(window.__suduClickTraceTimer));
+   }
+   await settle();
    assert.equal(await page.locator('.option-detail').count(),4);
    assert((await page.locator('#guideCard').innerText()).includes('頁數：待核對'));
   }
