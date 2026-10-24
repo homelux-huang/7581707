@@ -15,6 +15,13 @@ for label,rel in (("original","question-bank.sqlite3"),("staged","qa-drafts/sqli
     state={"path":str(rel),"dbSha256":hashlib.sha256(path.read_bytes()).hexdigest(),"exists":path.exists()}
     conn=sqlite3.connect("file:"+str(path)+"?mode=ro",uri=True)
     try:
+        columns=[row[1] for row in conn.execute("PRAGMA table_info(questions)").fetchall()]
+        state["columns"]=columns
+        if not all(name in columns for name in ("question_id","payload_json","payload_sha256")):
+            state.update({"publisherReady":False,"schemaSupported":False,
+                          "reason":"Staged QA draft uses a different SQLite schema: no made-up parity"})
+            report[label]=state
+            continue
         rows=conn.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
     finally:
         conn.close()
