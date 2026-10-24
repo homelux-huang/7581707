@@ -446,6 +446,7 @@ function renderQuestion(){
  renderGuide();
  startedAt=performance.now();
 }
+let pendingAnswerScrollTimer=null;
 function answer(sel){
  const q=qnow(),r=record(q);
  const feedback=window.SUDU_SCORE_FEEDBACK;
@@ -456,7 +457,8 @@ function answer(sel){
  save();const scoreResult=renderProgress();renderQuestion();setQuestionNavAutoHide(true);showGuide();updateJumpButtons();
  feedback?.announce({score:outcome,result:scoreResult});
  requestAnimationFrame(()=>requestAnimationFrame(()=>syncHeights()));
- setTimeout(scrollToCorrectAnswer,320);
+ if(pendingAnswerScrollTimer!==null)clearTimeout(pendingAnswerScrollTimer);
+ pendingAnswerScrollTimer=setTimeout(()=>{pendingAnswerScrollTimer=null;scrollToCorrectAnswer();},320);
 }
 function normalizeStudyText(value){
  return String(value??'').normalize('NFKC').toLowerCase().replace(/\s+/g,'').replace(/[，、。；;：:！!？?（）()]/g,'');
@@ -691,6 +693,9 @@ function seedDemo(){
 }
 function move(delta){currentIndex=Math.max(0,Math.min(4,currentIndex+delta));showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'})}
 function renderAll(){
+ // Navigation invalidates an answer-jump scheduled by the previous question.
+ // Otherwise an outdated callback can scroll across the newly rendered choices.
+ if(pendingAnswerScrollTimer!==null){clearTimeout(pendingAnswerScrollTimer);pendingAnswerScrollTimer=null;}
  $('prevBtn').disabled=currentIndex===0;
  $('nextBtn').disabled=currentIndex===listFor(currentSubject).length-1;
  renderProgress();renderQuestion();
