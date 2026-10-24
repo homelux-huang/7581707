@@ -1,0 +1,30 @@
+name: Econ34 true canonical source and official-admission gap (NO RELEASE)
+on:
+  push:
+    branches: [qa/econ34-prekey-image-only-20261024]
+    paths:
+      - scripts/inspect_115_econ34_source.py
+      - .github/workflows/econ34-source-admission-gaps.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  read_source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 31adda6c3973ee73387c767d4a8ba56af1fd81b8
+          path: current-main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image decoder
+        run: python -m pip install -q pillow
+      - name: Inspect canonical question and SQLite without QA mutation
+        run: python scripts/inspect_115_econ34_source.py
