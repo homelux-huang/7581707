@@ -765,8 +765,17 @@
       "ocrRawText": "5. 在坐標平面上,若平行四邊形 ABCD 的四個頂點其坐標分別為 4(-1,0)、有(0,-5)\n、C(Cz,2)、2D(2,3),則下列何者為2C的中點坐標?\nG) G,防)\n(8) 2,子)\nOG. 2)\n0 3.2)\n",
       "ocrDate": "2026-10-22T09:42:21.609274+00:00",
       "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-05.webp",
-      "correctedText": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
-      "qaStatus": "NOT_VISUALLY_VERIFIED"
+      "correctedText": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+      "qaStatus": "PASS_ORIGINAL_WEBP_TEXT_REVIEW",
+      "correctedOptions": [
+        "(3/2, -5/2)",
+        "(3/2, -7/2)",
+        "(5/2, -5/2)",
+        "(5/2, -7/2)"
+      ],
+      "qaReviewer": "GPT-6 AI, post-image visual inspection, not human",
+      "qaEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-05-source-text-applied-20261024.json",
+      "legacyCorrectedTextBeforeReview": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5"
     },
     {
       "questionId": "115-00-MB-06",

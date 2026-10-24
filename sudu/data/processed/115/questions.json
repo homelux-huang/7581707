@@ -10185,12 +10185,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 5,
       "legacySubject": "數學 B",
-      "question": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
+      "question": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
       "options": [
-        "(     ,      )\n        2   2\n        3   7",
-        "(     ,      )\n        2   2\n        5   5",
-        "(     ,      )\n        2   2\n        5   7",
-        "(     ,      )\n        2   2"
+        "(3/2, -5/2)",
+        "(3/2, -7/2)",
+        "(5/2, -5/2)",
+        "(5/2, -7/2)"
       ],
       "answer": "B",
       "acceptedAnswers": [
@@ -10198,7 +10198,7 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
@@ -10285,13 +10285,23 @@
       "issues": [
         "single_question_crop_not_yet_generated"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "original_webp_text_reviewed_other_release_gates_pending",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "B",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
+      "legacyUnverifiedOptions": [
+        "(     ,      )\n        2   2\n        3   7",
+        "(     ,      )\n        2   2\n        5   5",
+        "(     ,      )\n        2   2\n        5   7",
+        "(     ,      )\n        2   2"
+      ],
+      "textQaStatus": "PASS",
+      "sourceTextCorrectionEvidence": "sudu/data/processed/115/review-evidence/115-00-MB-05-source-text-applied-20261024.json",
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,

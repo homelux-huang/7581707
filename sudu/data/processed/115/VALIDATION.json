@@ -42,7 +42,7 @@
       "visualQaPass": 25,
       "rawOcrEngineOutput": 25,
       "nativePdfOrManualTextAvailable": 25,
-      "questionVerified": 0,
+      "questionVerified": 1,
       "officialAnswerMatchedPdfText": 25,
       "officialAnswerIndependentlyVerified": 25,
       "sqliteRecordCount": 25,
@@ -102,5 +102,6 @@
     }
   },
   "integrationReady": false,
-  "sharedMaterialVisualQaPassed": 5
+  "sharedMaterialVisualQaPassed": 5,
+  "ocrTextVerified": 1
 }
