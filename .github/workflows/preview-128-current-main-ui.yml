@@ -8,6 +8,7 @@ on:
       - 'tests/sudu_preview_128_current_main_ui.cjs'
       - 'tests/sudu_english03_isolated_ui.cjs'
       - 'sudu/verified-questions-runtime.js'
+      - 'tests/test_115_mathb20_25_corrected_source.py'
       - '.github/workflows/preview-128-current-main-ui.yml'
   workflow_dispatch:
 permissions:
@@ -29,6 +30,11 @@ jobs:
           ref: main
           path: current-main
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: aad909a726a201e2841b86b2c35634e5d5f4afe5
+          path: current-qa-source
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -42,6 +48,7 @@ jobs:
           echo "CURRENT_MAIN_SHA=$(git -C current-main rev-parse HEAD)"
           python -m pip install -q pillow
           (cd current-main && SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py)
+          python -m unittest discover -s draft/tests -p 'test_115_mathb20_25_corrected_source.py' -v
           npm install --prefix draft --no-save playwright@1.51.1
           (cd draft && npx playwright install --only-shell chromium)
       - name: Real main V4 browser preflight with 7 unpublished draft Math B records
@@ -49,6 +56,7 @@ jobs:
           SUDU_PREVIEW_ONLY: '1'
           SUDU_TEST_URL: http://127.0.0.1:8777/sudu/
           SUDU_QA_MAIN_CHECKOUT: current-main
+          SUDU_QA_SOURCE_CHECKOUT: current-qa-source
           SUDU_TEST_OUTPUT: preview-128-current-main-ui-results
         run: |
           set -eu
