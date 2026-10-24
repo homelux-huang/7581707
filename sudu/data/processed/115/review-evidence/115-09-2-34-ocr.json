@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI second visual transcription against pinned official source WebP, no human reviewer",
+  "questionRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
+  "webpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "question": "假設人工智慧 ( AI ) 伺服器的寡占市場中僅存在兩間廠商，下列敘述何者正確？",
+  "options": [
+    "兩廠商可能會採跟跌不跟漲的訂價策略",
+    "邊際收益曲線會因寡占市場特性而呈現膨脹缺口",
+    "對消費者來說，兩廠商設計的 AI 伺服器必定具備同質性",
+    "價格僵固現象的原因為兩廠商面對同樣需求彈性的需求線"
+  ],
+  "visualTextCompared": true,
+  "sourceWebpPath": "sudu/data/processed/115/webp-v2/09-2/115-09-2-34.webp",
+  "questionPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "originalImageOnlyRunId": 40086129327,
+  "allFourOptionsReviewed": true,
+  "reviewNote": "Verified original official picture of number 34, entire stem including 中, complete original A-D, no footer/adjacent question; normalized original PDF spacing ( AI ) preserved in canonical DB; initial blind scratch transcription omitted 中, does not change reasoning.",
+  "rawOcrPreserved": true,
+  "initialBlindTranscriptionHistoricalDifferenceRecorded": true,
+  "studentReleaseApprovedInThisDocument": false
+}

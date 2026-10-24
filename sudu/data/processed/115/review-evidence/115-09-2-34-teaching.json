@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI, new post-official source-image and four-option teaching pass; not a teacher or human reviewer",
+  "questionRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
+  "webpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "teachingCanonicalSha256": "4b1f87a47b6ba2bfc74c58b0a7ffd273a44cde62da71aeaf633f7fedf78adb54",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "經濟學｜雙占、折彎需求與價格僵固",
+    "teacherSummary": "題目問「可能」，不是「一定」。兩家廠商構成雙占寡占，可能相互觀察競爭者定價。在折彎需求模型中，對手降價可能跟著降，對手漲價則可能不跟，這種策略反應能解釋價格僵固，所以選 A。模型是一種可能情境，並非每個寡占市場都必然如此。",
+    "elementarySummary": "想像鎮上只有兩家賣伺服器的店。另一家降價，我可能跟著降，才不會失去客人；另一家漲價，我可能先不漲，讓客人來找我。題目只問這樣做有沒有可能，答案是有。",
+    "memory": "雙占屬寡占；折彎需求可能「跟跌不跟漲」→價格僵固；邊際收益是斷裂缺口，並非膨脹缺口。",
+    "concept": "寡占廠商的定價策略互相依存。折彎需求模型假設競爭對手可能跟隨降價、不跟隨漲價，因此漲價時本廠商需求較富彈性、降價時需求較缺彈性，邊際收益在折點對應數量處出現不連續區間。不能把這模型視為所有雙占市場的必然行為。",
+    "extension": "反過來想：如果市場只有一家廠商，就沒有另一家會不會跟價的問題；如果兩家伺服器有不同功能，也仍可能是雙占寡占，並非必須同質。",
+    "source": "115 年統一入學測驗四技二專商業與管理群專業科目（二）經濟學第 34 題；題目及 A-D 以官方單題原始 WebP（SHA256 5141e911…）為準，官方標準答案PDF（SHA256 6a2aacc7…）第34題 A；來源確認說明無第34題更正。本題未聲稱特定學校教材版本、章節或頁碼已驗證。",
+    "formula": "",
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "「可能」採跟跌不跟漲，符合折彎需求模型描述的寡占競爭反應，故正確。",
+        "elementary": "其他店降價我可能跟著降，漲價卻不一定跟。",
+        "reason": "可成立的是一種可能的策略，不是題目宣稱所有雙占廠商都必定如此。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "折彎需求曲線在折點造成邊際收益（MR）曲線的不連續區間；「膨脹缺口」是另一個總體經濟概念，不能用在這個 MR 缺口。",
+        "elementary": "這裡說的是收益線中間斷開，並不是整個國家經濟過熱的缺口。",
+        "reason": "把個體經濟的 MR 不連續錯稱為總體經濟的膨脹缺口。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "寡占只有少數廠商，不代表產品必須同質；同樣是 AI 伺服器，也可以因規格、效能、軟體服務而不同。",
+        "elementary": "兩家店都賣伺服器，也可以一台快、一台慢，不能說一定相同。",
+        "reason": "「必定同質」的絕對斷言不符合寡占定義。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "折彎需求模型重點是漲價與降價時對手反應不同，需求曲線兩段彈性不同，才可能出現價格僵固。",
+        "elementary": "價錢變貴、變便宜時，客人的反應不一樣，不能說彈性都相同。",
+        "reason": "把兩段不同的需求彈性錯說成相同，無法解釋模型所述價格僵固。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "寡占",
+      "跟跌不跟漲",
+      "價格僵固",
+      "邊際收益",
+      "膨脹缺口",
+      "必定"
+    ],
+    "extra": {
+      "解題判斷步驟": "① 兩間廠商＝雙占，屬寡占，重點是定價策略互相影響。\n② 題目問「可能」，以折彎需求模型檢查跟跌不跟漲是否可發生。\n③ B 混淆 MR 不連續與膨脹缺口，C 誤把產品限定同質，D 忽略漲跌需求彈性不同。\n④ 因此選 A；本題是概念題，不需要任何數值計算。"
+    }
+  },
+  "independentContentReviewMethod": "Post-answer GPT-6 AI second-pass independent evaluation of direct official image, A-D errors, conceptual vs numerical processing, plus real V4 interaction 8x2. Not human teacher review.",
+  "actualNoNumericCalculation": true,
+  "studentTextbookEditionKnown": false,
+  "realSourcePedagogyCandidateEvidence": "sudu/data/processed/115/review-evidence/115-09-2-34-pedagogy-candidate-20261024.json",
+  "sourceImageFirstLookCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+  "allReviewAfterOfficialKnown": true,
+  "sourceMeaningPreserved": true,
+  "studentReleaseApprovedByThisDocument": false
+}

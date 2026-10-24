@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "year": 115,
   "generatedAt": "2026-10-24",
-  "status": "FIVE_115_MATH_B_STUDENT_QA_APPROVED_PENDING_MAIN_SYNC",
-  "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key. MB05 added with distinct historic pre-key original solve, AI post-key teaching re-review, real source publisher-mapped main V4 8x2 Playwright CI, with no human claim.",
+  "status": "SIX_115_STUDENT_QA_APPROVED_PENDING_SOURCE_PROMOTION",
+  "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key. MB05 added with distinct historic pre-key original solve, AI post-key teaching re-review, real source publisher-mapped main V4 8x2 Playwright CI, with no human claim. Econ34 AI first-look image-only reasoning committed before official answer was read; visually reviewed TCTE PDF confirms A. 09-2 paper has correction notes for 06/28/44; Q34 unaffected and not claimed as paper-wide no objection. Actual main V4 8x2 tested. Human teacher review not claimed.",
   "items": [
     {
       "year": 115,
@@ -121,15 +121,43 @@
       },
       "admittedAfter": 40085323981,
       "reviewNotes": "Post-official teaching checked separately; pre-official solve anchored to historic git commit. Source, teaching and actual main V4 test SHA checked."
+    },
+    {
+      "year": 115,
+      "questionId": "115-09-2-34",
+      "status": "STUDENT_QA_APPROVED",
+      "questionBeforeReview": "假設人工智慧 ( AI ) 伺服器的寡占市場中僅存在兩間廠商，下列敘述何者正確？",
+      "optionsBeforeReview": [
+        "兩廠商可能會採跟跌不跟漲的訂價策略",
+        "邊際收益曲線會因寡占市場特性而呈現膨脹缺口",
+        "對消費者來說，兩廠商設計的 AI 伺服器必定具備同質性",
+        "價格僵固現象的原因為兩廠商面對同樣需求彈性的需求線"
+      ],
+      "webpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+      "officialPdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+      "questionPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+      "originalAnswerCandidate": "A",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-09-2-34-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-09-2-34-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-09-2-34-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-09-2-34-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-09-2-34-ui.json"
+      },
+      "preKeyInitialCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+      "officialDirectVisualRun": 40086437762,
+      "realV4UiRun": 40087199089,
+      "note": "Paper 09-2 contains challenged Q06/28/44. Q34 not among SHA-pinned official notices; source/teaching and original WebP verified, no blanket no-objection paper claim, no invented textbook version."
     }
   ],
-  "approvalEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/40085323981",
+  "approvalEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/40087199089",
   "approvedQuestionIds": [
     "115-00-MB-02",
     "115-00-MB-03",
     "115-00-MB-04",
     "115-00-MB-09",
-    "115-00-MB-05"
+    "115-00-MB-05",
+    "115-09-2-34"
   ],
   "approvedAt": "2026-10-24"
 }

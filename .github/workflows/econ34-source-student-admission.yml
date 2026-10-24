@@ -1,0 +1,91 @@
+name: Econ34 full per-question READY by unchanged formal gates (NO DEPLOY)
+on:
+  push:
+    branches: [qa/econ34-prekey-image-only-20261024]
+    paths:
+      - sudu/data/processed/115/review-evidence/115-09-2-34-ocr.json
+      - sudu/data/processed/115/review-evidence/115-09-2-34-official.json
+      - sudu/data/processed/115/review-evidence/115-09-2-34-blind.json
+      - sudu/data/processed/115/review-evidence/115-09-2-34-teaching.json
+      - sudu/data/processed/115/review-evidence/115-09-2-34-ui.json
+      - sudu/data/processed/115/verified-student-batch.json
+      - .github/workflows/econ34-source-student-admission.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_admission:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c83279e06775c044663884525a4c1d67e5191c63
+          path: strict-publisher
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Read original source and strict TCTE correction review
+        run: |
+          python -m pip install -q pillow
+          python -m unittest discover -s strict-publisher/tests -p 'test_sudu_verified_publish.py' -v
+      - name: Dry-run original formal source gate: 5 prior + Econ34, no invented approvals
+        run: |
+          set -eu
+          mkdir -p econ34-staged-only
+          python strict-publisher/scripts/sudu_verified_publish.py stage --source . --dest econ34-staged-only --sha "$(git rev-parse HEAD)" > /tmp/econ34-publisher-stage.json
+          python strict-publisher/scripts/sudu_verified_publish.py check --dest econ34-staged-only
+          python - <<'PY'
+          import hashlib,importlib.util,json
+          from pathlib import Path
+          root=Path(".").resolve()
+          s=importlib.util.spec_from_file_location("publisher",root/"strict-publisher/scripts/sudu_verified_publish.py")
+          pub=importlib.util.module_from_spec(s);s.loader.exec_module(pub)
+          base=root/"sudu/data/processed/115"
+          original=pub.read(base/"questions.json")
+          q=next(x for x in original["questions"] if x["questionId"]=="115-09-2-34")
+          m=next(x for x in pub.read(base/"webp-manifest.json")["items"] if x["questionId"]==q["questionId"])
+          cert=pub.reviewed_student_batches(root,115)[q["questionId"]]
+          revised=pub.apply_independently_certified_review(root,115,q,m,cert)
+          rev=pub.text_revision(q,m["sha256"])
+          assert rev=="162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8"
+          assert q.get("questionVerified") is not True and q.get("answerVerified") is not True
+          assert revised.get("questionVerified") is True and revised.get("answerVerified") is True
+          assert revised["officialCorrectionChecked"] is True and revised["officialFinalAnswer"]=="A"
+          assert revised["teachingQaStatus"]==revised["uiQaStatus"]=="PASS"
+          assert pub.official_notice_scope_certified(root,115,q,pub.read(root/"sudu/data/processed/115/review-evidence/115-09-2-34-official.json"))
+          assert pub.source_proof(revised,True,True,rev)==(True,True)
+          assert pub.independently_solved(revised,rev)=="matched"
+          assert pub.teaching_complete(revised,"經濟學","A")
+          assert pub.certificates_complete(root,revised,m,{})
+          lesson=revised["teaching"]
+          digest=hashlib.sha256(json.dumps(lesson,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()).hexdigest()
+          assert digest=="4b1f87a47b6ba2bfc74c58b0a7ffd273a44cde62da71aeaf633f7fedf78adb54"
+          assert lesson["hasExamCalculation"] is False and lesson["examCalculation"] is None
+          release=pub.read(root/"econ34-staged-only/sudu/data/approved/115.json")
+          assert release["approvedCount"]==6
+          expected={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09","115-09-2-34"}
+          assert {x["canonicalId"] for x in release["questions"]}==expected
+          previous=pub.read(root/"strict-publisher/sudu/data/approved/115.json")
+          assert previous["approvedCount"]==5
+          for record in previous["questions"]:
+              assert record in release["questions"],"prior release content altered"
+          new=next(x for x in release["questions"] if x["canonicalId"]=="115-09-2-34")
+          assert new["answer"]=="A" and new["examCalculation"] is None
+          print("PASS Econ34 student-source READY: 6 true admissions, 5 unchanged, per-question TCTE correction scope, no main write")
+          PY
+      - name: Store source-stage and original SHA review CI-only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: econ34-real-student-admission-six-staged-no-release
+          path: |
+            /tmp/econ34-publisher-stage.json
+            econ34-staged-only/sudu/data/approved/115.json
+            econ34-staged-only/sudu/data/approved/progress.json
+          retention-days: 30
+          if-no-files-found: ignore

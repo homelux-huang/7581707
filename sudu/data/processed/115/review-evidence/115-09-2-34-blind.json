@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI read-only wrapper of historical source-image-only independent solution; wrapper written after official A, not a second blind solve",
+  "solver": "GPT-6 AI direct original-question WebP only, first-look reasoning; no human reviewer claimed",
+  "solvedAt": "2026-10-24",
+  "questionRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
+  "webpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "answer": "A",
+  "blindReasoning": "在典型寡占折彎需求（kinked demand）模型中，競爭者可能跟隨降價以守住市占，但不跟隨漲價，故「可能採跟跌不跟漲」的 A 為合理敘述。這是存在可能性，而非一切雙占都必採的策略。折彎需求有上下不同需求價格彈性，邊際收益線可能有不連續的垂直間斷，不是總體經濟的『膨脹缺口』；兩家生產的 AI 伺服器未必同質，D 所稱相同彈性亦不是僵固的原因。",
+  "sourcePreKeyOriginalCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+  "sourcePreKeyOriginalEvidencePath": "sudu/data/processed/115/review-evidence/115-09-2-34-blind-original-20261024.json",
+  "originalHistoricalOneCharacterOmission": "初始題幹轉錄漏了「中」，已在官方回讀後更正；原圖 SHA、原選項、初解邏輯與答案未改動",
+  "questionRevisionNowBoundToExactOriginalCurrentQuestion": true,
+  "noRetroactiveBlindClaim": true,
+  "humanIndependentReviewerClaimed": false
+}
