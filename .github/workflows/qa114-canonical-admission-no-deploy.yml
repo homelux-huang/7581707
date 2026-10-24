@@ -1,0 +1,67 @@
+name: Canonical QA 114-English three full publisher audit (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-eng07-09-canonical-integrate-20261024]
+    paths:
+      - sudu/data/processed/114/**
+      - .github/workflows/qa114-canonical-admission-no-deploy.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_certified:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - name: Check out canonical QA data, never change existing bank
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check out exact previously validated strict publisher code read-only
+        uses: actions/checkout@v4
+        with:
+          ref: 93c478e4cfe775be621a107902212cd8ec2f6f2a
+          path: strict-publisher
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install same WebP decode as main publishing pipeline
+        run: python -m pip install -q pillow
+      - name: Strict original 114 notice scope and 115 compatibility unit gates
+        run: |
+          set -euo pipefail
+          (cd strict-publisher && python -m unittest discover -s tests -p test_sudu_verified_publish.py -v)
+          python strict-publisher/scripts/sudu_verified_publish.py stage --source . --dest /tmp/qa114-canonical-stage --sha "$(git rev-parse HEAD)"
+          python strict-publisher/scripts/sudu_verified_publish.py check --dest /tmp/qa114-canonical-stage
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('/tmp/qa114-canonical-stage/sudu/data/approved')
+          approved=json.loads((root/'114.json').read_text())
+          previous=json.loads((root/'115.json').read_text())
+          expected={'114-00-E-07':'A','114-00-E-08':'D','114-00-E-09':'D'}
+          assert approved['approvedCount']==3,approved['approvedCount']
+          assert {r['canonicalId']:r['answer'] for r in approved['questions']}==expected
+          assert previous['approvedCount']>=5
+          assert {'115-00-MB-02','115-00-MB-03','115-00-MB-04','115-00-MB-05','115-00-MB-09'}<={
+            r['canonicalId'] for r in previous['questions']}
+          index=json.loads(Path('sudu/data/processed/114/inventory.json').read_text())
+          assert index['sqlite']['roundtripPass'] is True
+          assert index['sqlite']['rows']==205
+          report=json.loads(Path('sudu/data/processed/114/SQLITE_QA_RECONCILED_20261024.json').read_text())
+          assert report['roundtripPass'] is True and report['isolatedImportPasses']==2
+          assert Path('sudu/data/processed/114/verified-student-batch.json').is_file()
+          print('PASS: clean canonical QA with exact 114 English 07-09 certified; prior 115 preserved, no Pages/main write')
+          PY
+      - name: Store staged proof only inside private GitHub CI artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-source-certified-three-after-canonical-merge-no-release
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            /tmp/qa114-canonical-stage/sudu/data/approved/114.json
+            /tmp/qa114-canonical-stage/sudu/data/approved/115.json
+            /tmp/qa114-canonical-stage/sudu/data/approved/progress.json
