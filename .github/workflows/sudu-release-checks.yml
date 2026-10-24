@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install audit dependencies
-        run: python -m pip install -q pillow requests beautifulsoup4 pymupdf
+        run: python -m pip install -q pillow requests beautifulsoup4 pymupdf cryptography
       - name: Validate syntax, student-history compatibility, scoring and privacy
         run: |
           python scripts/check_sudu.py
