@@ -222,6 +222,10 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
             data=v.read(file);data["allPagesInThreeDocumentsReviewed"]=False;v.dump(file,data)
             self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
 
+class MB23SourceTableTests(unittest.TestCase):
+    def setUp(self):
+        VerifiedPublicationTests.setUp(self)
+
     def test_mb23_source_table_changes_invalidate_all_revision_bound_qa(self):
         import copy
         q=copy.deepcopy(self.q)
@@ -239,6 +243,7 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
     def test_unverified_mb23_table_cannot_enter_student_public_output(self):
         import copy
         q=copy.deepcopy(self.q)
+        q["assets"]={"sha256":"d"*64}
         q["originalSourceTableCandidate"]={
             "heading":["行程","原價","優惠"],
             "rows":[["行程Ⅰ","x","折抵3000"],["行程Ⅱ","x+2000","一人八折"]]}
