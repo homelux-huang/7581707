@@ -14,3 +14,8 @@
 本機已通過：node markup regression、5個Oct24內容測試、128筆結構audit（0 errors）。UI結果必須讀實際workflow，不能提前標PASS。測試中的英文欄位映射目前仍為隔離fixture，後續需對正式匯出路徑做同內容驗證。
 
 READY=0；未簽發正式逐題教學/UI發布憑證，未部署。
+
+
+## 2026-10-24 來源/教學再檢補充
+
+E03 原題已改由實際 `sudu/data/years/115.json` 取文字及四選項，並在 `E03_PEDAGOGY_SOURCE_QA_20261024.md` 實際查證劍橋發音、詞義與聯合國新聞原文；E03新聞網址修復後教學 SHA 變更，原 UI run 40048104080 不再當作新版本正式證據。正式 READY 保留0。

@@ -141,12 +141,13 @@
       "officialAnswer": "B",
       "originalImage": "data/approved/webp/115/115-00-E-03.webp",
       "originalImageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
-      "teachingDigestSha256": "3db68a8a3877fc5e6c2e39f08cd9b778b17cba077c273ab5be28529c4ef729b9",
-      "reviewEvidence": "sudu/teaching-drafts/preview-128-20261023/BATCH_10_PEDAGOGY_QA_20261024.md",
+      "teachingDigestSha256": "c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316",
+      "reviewEvidence": "sudu/teaching-drafts/preview-128-20261023/E03_PEDAGOGY_SOURCE_QA_20261024.md",
       "independentTeachingQA": "PENDING",
       "uiQA": "PENDING",
       "readyForDeployment": false,
-      "deployed": false
+      "deployed": false,
+      "teachingRevision": "2026-10-24-source-corrected-review"
     }
   ]
 }

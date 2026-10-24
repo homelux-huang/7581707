@@ -96,7 +96,7 @@
     "english": {
       "sentenceTranslationZh": "這位老師一視同仁地對待所有學生，讓每位學生都有相同的成功機會。",
       "answerWord": "equally",
-      "pronunciationIPA": "/ˈiːkwəli/",
+      "pronunciationIPA": "/ˈiː.kwə.li/",
       "optionMeaningZh": {
         "A": "粗心地",
         "B": "平等地／一視同仁地",
@@ -130,7 +130,7 @@
         "中級",
         "高級"
       ],
-      "note": "同反義字有語境或程度差異，並非所有字皆可直接互換。",
+      "note": "同／反意詞僅作語境教學，分級是本課程的教學難度，不等於官方CEFR評定。evenly 偏向數量均分，不能在所有『平等對待』情境直接替換 equally；preferentially 有時依語境而非一律反義。",
       "exampleEnglish": "The coach treated every player equally during practice.",
       "exampleChinese": "教練在練習時一視同仁地對待每位球員。",
       "exampleHighlightedSurfaceForm": "equally",
@@ -139,7 +139,7 @@
       "newsExampleEnglish": "In September 2026, UN Women called for decision-making power to be shared equally with women.",
       "newsExampleChinese": "2026年9月，聯合國婦女署呼籲讓女性平等分享決策權。",
       "newsExampleHighlightedSurfaceForm": "equally",
-      "newsExampleSourceUrl": "https://www.un.org/sustainabledevelopment/blog/2026/09/press-release-one-in-three-institutions-built-to-advance-gender-equality-stripped-of-power-in-just-two-years-new-un-report-reveals/",
+      "newsExampleSourceUrl": "https://www.un.org/en/desa/one-in-three-institutions-built-to-advance-gender-equality-stripped-of-power-in-just-two-years-new-un-report-reveals",
       "newsExampleSourceTitle": "Gender Snapshot 2026 press release",
       "newsExampleSourceOrganization": "United Nations / UN Women",
       "newsExampleSourceDate": "2026-09-17",
@@ -244,6 +244,23 @@
       "uiQA": "PENDING",
       "releaseApproved": false,
       "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
+    },
+    "aiPostAnswerTeachingReview20261024": {
+      "status": "PASS_SEMANTIC_AND_SOURCE_REVIEW_ONLY_NOT_INDEPENDENT_RELEASE_APPROVAL",
+      "reviewer": "GPT-6 separate-session AI, post-answer review; not blind and not human examiner",
+      "reviewedAt": "2026-10-24",
+      "officialFinalBPreviouslyVerified": true,
+      "originalOfficialImageVisuallyInspected": true,
+      "exactStemAndOptionsFromSourceYear115": true,
+      "allFourTeacherAndElementaryReasonsReviewed": true,
+      "ipaVerifiedWithCambridge": true,
+      "newsLinkReplacedWithWorkingOriginalUNPage": true,
+      "newsExampleIsExplicitlyParaphrased": true,
+      "schoolAdoptionBookChapterPage": "待核對",
+      "releaseCertificateIssued": false,
+      "formalIndependentTeachingReview": "PENDING",
+      "fullReleaseUINeedsNewSameContentTest": true,
+      "evidencePath": "sudu/teaching-drafts/preview-128-20261023/E03_PEDAGOGY_SOURCE_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

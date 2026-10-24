@@ -3483,5 +3483,18 @@
     "deployed": 0,
     "notReOcr": true,
     "artifact": "content-review-delivery-20261024.json"
+  },
+  "english03SemanticSourceQa20261024": {
+    "questionId": "115-00-E-03",
+    "status": "POST_ANSWER_AI_SEMANTIC_SOURCE_PASS_NOT_RELEASE_GATE",
+    "contentReviewEvidence": "E03_PEDAGOGY_SOURCE_QA_20261024.md",
+    "sourceImageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+    "teachingDigestSha256": "c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316",
+    "partialContentReviewed": 1,
+    "formalIndependentTeachingQaDelta": 0,
+    "formalUiQaDelta": 0,
+    "readyForDeploymentDelta": 0,
+    "deployedDelta": 0,
+    "reviewedAt": "2026-10-24"
   }
 }
