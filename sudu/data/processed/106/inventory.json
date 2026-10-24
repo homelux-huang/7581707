@@ -3,7 +3,7 @@
   "expectedFromLegacy": 204,
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 204,
-  "webpGeneratedDrafts": 194,
+  "webpGeneratedDrafts": 201,
   "visualQaPass": 12,
   "ocrGapCandidatesGenerated": 20,
   "ocrTextIndependentlyVerified": 6,
@@ -50,7 +50,7 @@
     "00-C": {
       "candidateRecords": 38,
       "numberedAnchors": 22,
-      "imageDrafts": 28,
+      "imageDrafts": 35,
       "unresolvedAnchorNumbers": [
         14,
         15,
@@ -76,6 +76,15 @@
         4,
         5,
         6
+      ],
+      "manualCandidateRecoveredNumbers": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
       ]
     },
     "00-E": {
@@ -150,5 +159,6 @@
   "integrationReady": false,
   "directVisualQaEvidence106English": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_DIRECT_VISUAL_SHA_20261023.json",
   "textQaPass": 6,
-  "directVisualQaEvidence106Chinese": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json"
+  "directVisualQaEvidence106Chinese": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
+  "sharedMaterialsDrafts": 3
 }
