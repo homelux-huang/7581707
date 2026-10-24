@@ -101,7 +101,7 @@ def main():
     qid="115-00-MB-05"
     q=bank[qid];item=images[qid];audit=certs[qid]
     check(item["sha256"]==MB05_IMAGE_SHA and q["answer"]=="B", "Original MB05 WebP/answer mismatch")
-    image_file=src/item["output"]];check(image_file.is_file(), "MB05 original source WebP absent")
+    image_file=src/item["output"];check(image_file.is_file(), "MB05 original source WebP absent")
     check(sha_bytes(image_file.read_bytes())==MB05_IMAGE_SHA, "MB05 original WebP changed")
     source_revision=pub.text_revision(q,MB05_IMAGE_SHA)
     check(source_revision==MB05_SOURCE_REV,"MB05 exact source text revision changed")
