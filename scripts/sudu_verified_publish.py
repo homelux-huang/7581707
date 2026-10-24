@@ -526,7 +526,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         off.get("officialPdfSha256") == pdf_sha(q,"answer"),
         off.get("finalAnswer") == q.get("answer"),
         off.get("correctionNoticeReviewed") is True,
-        off.get("officialPage") == "https://web1.tcte.edu.tw/EXAM/115_4y/",
+        off.get("officialPage") == f"https://web1.tcte.edu.tw/EXAM/{year}_4y/",
         official_notice_scope_certified(source,year,q,off),
         blind.get("questionRevision") == revision,
         blind.get("webpSha256") == manifest["sha256"],
