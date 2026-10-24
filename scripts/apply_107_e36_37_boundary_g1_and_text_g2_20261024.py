@@ -11,8 +11,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from PIL import Image,ImageChops
-from stage_107_e32_35_source_pixel_crops import update_db
-from audit_105_115_sqlite_readonly import audit_year
+import sqlite3,tempfile,shutil,os
+from audit_105_115_sqlite_readonly import audit_year,canonical,digest
 
 ROOT=Path(__file__).resolve().parents[1]
 BRANCH="qa/114-115-official-visual-review"
@@ -72,6 +72,53 @@ def idx(rows):
     return out
 def glyph_lines(q,opts):
     return [q+"\n"]+[v+"\n" for v in opts]
+
+def update_db_107(bank):
+    """G5: update a disposable 107 DB, including ALL currently present shared material IDs.
+
+    The old E32-35 helper assumed exactly 2 shared records. Since the Chinese
+    107 batch, that fixed count is stale. Require exact equality with the current
+    canonical bank, not a lowered bound; never alter the source DB on failure.
+    """
+    dbfile=path(BASE+"question-bank.sqlite3")
+    expected_questions={q["questionId"]:q for q in bank["questions"]}
+    expected_shared={s["sharedMaterialId"]:s for s in bank["sharedMaterials"]}
+    assert len(expected_questions)==len(bank["questions"])==204
+    assert len(expected_shared)==len(bank["sharedMaterials"])
+    with tempfile.TemporaryDirectory(dir=dbfile.parent) as td:
+        staged=Path(td)/"question-bank.sqlite3"
+        shutil.copyfile(dbfile,staged)
+        with sqlite3.connect(staged) as db:
+            assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
+            old_count=db.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
+            assert old_count==204
+            for turn in (1,2):
+                for q in bank["questions"]:
+                    payload=canonical(q)
+                    cursor=db.execute(
+                        "UPDATE questions SET payload=?,payload_sha256=? WHERE question_id=?",
+                        (payload,digest(payload.encode("utf8")),q["questionId"]))
+                    assert cursor.rowcount==1, q["questionId"]
+                for material in bank["sharedMaterials"]:
+                    db.execute(
+                        "INSERT INTO shared_materials(material_id,payload) VALUES (?,?) "
+                        "ON CONFLICT(material_id) DO UPDATE SET payload=excluded.payload",
+                        (material["sharedMaterialId"],canonical(material)))
+                db.commit()
+                assert db.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==204
+                assert db.execute("SELECT COUNT(*) FROM shared_materials").fetchone()[0]==len(expected_shared)
+                assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
+            rows=db.execute("SELECT question_id,payload,payload_sha256 FROM questions").fetchall()
+            assert len(rows)==204
+            for id,payload,hsh in rows:
+                assert id in expected_questions and json.loads(payload)==expected_questions[id]
+                assert digest(payload.encode("utf8"))==hsh
+            shared_rows=db.execute("SELECT material_id,payload FROM shared_materials").fetchall()
+            assert len(shared_rows)==len(expected_shared)
+            for id,payload in shared_rows:
+                assert id in expected_shared and json.loads(payload)==expected_shared[id]
+        os.replace(staged,dbfile)
+
 
 def run(stage):
     assert subprocess.check_output(["git","branch","--show-current"],cwd=ROOT,text=True).strip()==BRANCH
@@ -216,7 +263,7 @@ def run(stage):
             "Q38To41OwnReviewStatusesNotModified":True,"records":reviewed}
         for name in names:write(BASE+name,files[name])
         write(EVIDENCE,evidence)
-        update_db(qs)
+        update_db_107(qs)
         audits=[audit_year(year) for year in range(105,116)]
         assert len(audits)==11 and all(x["g5Pass"] and x["sandboxImportPasses"]==2 for x in audits)
         aggregate="sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json"
