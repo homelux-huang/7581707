@@ -41,6 +41,10 @@ const results=[];
    await page.locator('#guideCard.show').waitFor();
    assert.equal(await page.locator('#guideCard .guide-block.calculation-first').count(),1);
    assert((await page.locator('#guideCard').innerText()).includes('33000'));
+   // V4 hides the top question-picker while answering; a real mobile user
+   // must first touch the visible pull-out handle, not tap a hidden button.
+   await tap(page.locator('#navHandle'));
+   assert.equal(await page.locator('#navHandle').getAttribute('aria-expanded'),'true');
    await tap(page.locator('#reviewTop'));
    await page.locator('#reviewView.show').waitFor();
    assert((await page.locator('#reviewList').innerText()).includes('正確答案 B'));
