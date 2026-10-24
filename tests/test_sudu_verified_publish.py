@@ -225,5 +225,145 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
             self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
 
 
+class Year114OfficialCorrectionScopeTests(unittest.TestCase):
+    """Real 114 reviewed ledger, one question at a time, no shortcut by other years."""
+
+    def fixture114(self, root):
+        p=root/"sudu/data/processed/114"
+        p.mkdir(parents=True,exist_ok=True)
+        sha="a"*64
+        v.dump(p/"official-confirmation-status.json",{
+            "year":114,
+            "confirmations":{
+                "00-MB":{"officialStatus":"no_objection_submitted",
+                    "revisionDocumentContent":"not_applicable",
+                    "perQuestionOfficialNoticeScopeEvidenceComplete":True},
+                "00-E":{"officialStatus":"question_or_answer_confirmation_document_exists",
+                    "revisionDocumentContent":"SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+                    "revisionDocumentSha256":sha,"revisionDocumentPages":1,
+                    "perQuestionOfficialNoticeScopeEvidenceComplete":True}
+            },
+            "officialNoticeEvidencePath":
+                "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json"
+        })
+        v.dump(p/"QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",{
+            "schemaVersion":1,"year":114,"allPagesInFourDocumentsReviewed":True,
+            "sourceIndexUrl":"https://web1.tcte.edu.tw/EXAM/114_4y/",
+            "docs":[{"paperCode":"00-E","pdfSha256":sha,"noticeScopeOnly":True,
+                "allPagesVisuallyReviewed":True,"pageCount":1,"confirmed":[
+                    {"questionId":"114-00-E-26","officialConfirmedAnswer":"C",
+                     "comparedToExistingOfficialPdfTextCandidate":"MATCHED",
+                     "changeFromExistingOfficialPdfTextCandidate":"NONE_OBSERVED"}
+                ]}]
+        })
+        return p,sha
+
+    def test_114_english_unlisted_must_pin_pdf_and_not_claim_paper_no_objection(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            p,sha=self.fixture114(root)
+            q={"questionId":"114-00-E-07","paperCode":"00-E","answer":"A"}
+            proof={"noCorrectionForThisQuestion":True,"confirmationPdfSha256":sha,"finalAnswer":"A"}
+            self.assertTrue(v.official_notice_scope_certified(root,114,q,proof))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{**proof,"noObjectionForPaper":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{**proof,"confirmationPdfSha256":"0"*64}))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
+            (p/"QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json").unlink()
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
+
+    def test_114_named_question_requires_independent_final_image_proof(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            self.fixture114(root)
+            q={"questionId":"114-00-E-26","paperCode":"00-E","answer":"C"}
+            proof={"correctionForQuestionReviewed":True,"confirmationPdfSha256":"a"*64,"finalAnswer":"C"}
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
+            self.assertTrue(v.official_notice_scope_certified(root,114,q,{
+                **proof,"officialFinalAnswerImageQaPassed":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{
+                **proof,"officialFinalAnswerImageQaPassed":True,"finalAnswer":"A"}))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{
+                **proof,"officialFinalAnswerImageQaPassed":True,"noObjectionForPaper":True}))
+
+    def test_114_math_b_requires_official_index_no_objection_not_115(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            p,sha=self.fixture114(root)
+            q={"questionId":"114-00-MB-02","paperCode":"00-MB","answer":"A"}
+            self.assertTrue(v.official_notice_scope_certified(root,114,q,{"noObjectionForPaper":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{"noCorrectionForThisQuestion":True}))
+            status=v.read(p/"official-confirmation-status.json")
+            status["confirmations"]["00-MB"]["perQuestionOfficialNoticeScopeEvidenceComplete"]=False
+            v.dump(p/"official-confirmation-status.json",status)
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,{"noObjectionForPaper":True}))
+
+    def test_114_bad_year_scope_and_incomplete_ledger_fail_closed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            p,sha=self.fixture114(root)
+            q={"questionId":"114-00-E-07","paperCode":"00-E","answer":"A"}
+            proof={"noCorrectionForThisQuestion":True,"confirmationPdfSha256":sha}
+            ledger=p/"QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json"
+            data=v.read(ledger)
+            data["sourceIndexUrl"]="https://web1.tcte.edu.tw/EXAM/115_4y/"
+            v.dump(ledger,data)
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
+            data["sourceIndexUrl"]="https://web1.tcte.edu.tw/EXAM/114_4y/"
+            data["allPagesInFourDocumentsReviewed"]=False
+            v.dump(ledger,data)
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
+
+
+class GenuineLegacy114VisualCertificateTests(unittest.TestCase):
+    def fixture(self, root, criteria=None):
+        from pathlib import Path
+        rel="sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json"
+        path=root/rel
+        path.parent.mkdir(parents=True,exist_ok=True)
+        features={name:True for name in (
+            "original_number","complete_stem","all_four_options",
+            "required_formula_images_units","no_neighboring_question",
+            "no_page_header_or_footer","readable",
+            "source_and_output_sha256_matched","exact_source_crop_pixel_match")}
+        if criteria:
+            features.update(criteria)
+        proof={"reference":rel,"reviewedSha256":"b"*64}
+        item={"questionId":"114-00-E-07","output":"sudu/data/processed/114/webp-v1/00-E/114-00-E-07.webp",
+              "sha256":"b"*64,"visualReviewEvidence":proof}
+        v.dump(path,{"items":[{"questionId":"114-00-E-07","result":"PASS",
+                                "reviewedWebpPath":item["output"],
+                                "reviewedWebpSha256":item["sha256"],
+                                "criteria":features}]})
+        return item
+    def test_genuine_legacy_english_sha_bound_qa_pass(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root)
+            self.assertTrue(v.visual_certificate(root,item,"114-00-E-07"))
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-08"))
+    def test_one_failed_criterion_wrong_sha_wrong_path_do_not_pass(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root,{"all_four_options":False})
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+            item=self.fixture(root)
+            item["sha256"]="0"*64
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+            item=self.fixture(root)
+            item["output"]="sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp"
+            self.assertFalse(v.visual_certificate(root,item,"114-00-E-07"))
+    def test_legacy_reference_acceptance_requires_actual_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            item=self.fixture(root)
+            q={"questionId":item["questionId"],"year":114,"sharedMaterialIds":[]}
+            expected={"evidencePath":"no-such-file.json","evidenceSha256":"0"*64}
+            # Image-only certificate can pass; full student release still
+            # fails because OCR, answer, blind-solve, teaching and UI are missing.
+            self.assertTrue(v.visual_certificate(root,item,q["questionId"]))
+            self.assertFalse(v.certificates_complete(root,q,item,{}))
+
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,59 @@
+name: PR22 114 official correction plus P0/P1 reviewer and full-live integration (NO DEPLOY)
+on:
+  push:
+    branches: [test/128-p0-p1-plus-pr22-114-compat-20261024]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - scripts/sudu_independent_review_gate.py
+      - tests/test_sudu_verified_publish.py
+      - .github/workflows/128-pr22-year-114-p0-p1-compat.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compatibility:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c7b4362b3125e623098f57c304f14c0edb5f6974
+          path: _source_qa
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original image decoding and verified Ed25519 implementation
+        run: python -m pip install -q pillow cryptography
+      - name: Execute all 114 + 115 original final-correction negatives, independent reviewer and full LIVE negatives
+        run: |
+          set -eu
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_check_live_release.py' -v
+      - name: Re-stage genuine immutable five on cross-year/independent reviewer gate without releasing
+        run: |
+          set -eu
+          python scripts/sudu_verified_publish.py stage --source _source_qa --dest /tmp/114-115-safe-stage --sha c7b4362b3125e623098f57c304f14c0edb5f6974 > /tmp/compat-stage-report.json
+          python scripts/sudu_verified_publish.py check --dest /tmp/114-115-safe-stage
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          old=json.loads(Path("sudu/data/approved/115.json").read_text())
+          approved=json.loads(Path("/tmp/114-115-safe-stage/sudu/data/approved/115.json").read_text())
+          assert old["approvedCount"]==approved["approvedCount"]==5
+          assert old["questions"]==approved["questions"],"Original five altered during integration"
+          assert json.loads(Path("/tmp/114-115-safe-stage/sudu/data/approved/114.json").read_text())["approvedCount"]==0
+          print("PASS integrated PR22 114-year official correction + P0 separate signed reviewer + P1 full LIVE unchanged original 5")
+          PY
+      - name: Archive compatibility dry run without altering main
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr22-year114-and-p0-p1-five-unchanged-no-release
+          path: /tmp/compat-stage-report.json
+          if-no-files-found: ignore
+          retention-days: 30
