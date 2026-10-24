@@ -19,3 +19,13 @@
 商概07、數科33、經濟28維持隔離；math20–25候選OCR風險不解除。
 仍需10題全項獨立教學審核，以及各科真實教學欄位、highlight、觸控與錯題卡的完整UI證據。
 未修改main、approved、正式UI、OCR或WebP。
+
+## 已完成的CI實證（非發布）
+
+測試內容commit：0266a4eed5e472a607001a787755dfc04fa24e6e。
+- readiness：40044325298 SUCCESS。
+- latest-main V4真實click/tap預檢：40044325259 SUCCESS；執行main 5415a30452cdf9020242aca16fe0ff2b6814ab4b，7題×8尺寸×2主題，共112題目案例。小於1024寬採tap，其餘click；沒有force或DOM click。
+- 證據：https://github.com/homelux-huang/7581707/actions/runs/40044325259
+- 截圖及summary artifact：https://github.com/homelux-huang/7581707/actions/runs/40044325259/artifacts/12541045008 （GitHub保存期限7天）。
+- 一般draft QA run 40044325235在本紀錄寫入時仍in_progress，不能先寫PASS。
+- 仍非完整10題/128題UI憑證：fixture只涵蓋數學B19–25，部分文字為原圖提示，完整highlight及其他科目尚待實測。READY仍0。
