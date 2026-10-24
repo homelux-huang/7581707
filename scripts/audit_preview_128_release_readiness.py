@@ -7,6 +7,8 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 from collections import Counter
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from preview_128_question_files import canonical_question_json_files
 
 ROOT = Path(__file__).resolve().parents[1]
