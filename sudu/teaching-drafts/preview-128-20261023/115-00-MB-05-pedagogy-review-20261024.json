@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI image and calculation re-review, official answer already visible; not a blind solve or human review",
+  "reviewStage": "IMAGE_AND_PEDAGOGY_REVIEWED_UI_PENDING",
+  "correctAnswer": "B",
+  "sourceImageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "teacherSummary": "先用平行四邊形的對角線互相平分找 C，再求 BC 的中點。注意：這是兩次不同的中點運用，不能把對角線的交點當成 BC 的中點。",
+  "elementarySummary": "把座標想成地圖上的左右位置和上下位置。我們先找出 C 在哪裡，再把 B 和 C 的左右位置各加起來除以 2、上下位置也加起來除以 2，就能找到兩點的正中間。",
+  "memory": "**平行四邊形對角線互相平分**：A+C=B+D；**中點座標**＝兩端 x 相加除2、y相加除2。",
+  "concept": "A、B、C、D 按平行四邊形順序排列時，對角線 AC 與 BD 有共同中點，所以 C=B+D-A。座標都必須成對做向量加減。",
+  "extension": "相反意思：若是任意四邊形，就不能直接假設 A+C=B+D；一定要先確認平行四邊形性質。",
+  "source": "115年四技二專統測數學B第5題原圖；官方試題與標準答案PDF SHA資料詳來源欄；特定學校課本版本及頁碼待核對。",
+  "optionExplanations": {
+    "A": {
+      "isCorrect": false,
+      "teacher": "x座標 3/2 正確，但 y應為(-5-2)/2=-7/2，而不是 -5/2。",
+      "elementary": "左右位置對了，但上下要把 B 的 -5 和 C 的 -2 一起算：(-5-2)÷2=-3.5，不能只把 -5 除以 2。",
+      "reason": "只符合 x=3/2；y=-5/2 比正確的 -7/2 高 1，故不選。"
+    },
+    "B": {
+      "isCorrect": true,
+      "teacher": "C=(3,-2)，所以 BC 中點=((0+3)/2,(-5-2)/2)=(3/2,-7/2)，符合兩個座標。",
+      "elementary": "左右取一半得一又二分之一，上下取平均得負三又二分之一。",
+      "reason": "x=(0+3)/2=3/2 且 y=(-5-2)/2=-7/2，兩個座標都符合。"
+    },
+    "C": {
+      "isCorrect": false,
+      "teacher": "此選項 (5/2,-5/2) 的 x 與 y 都不等於由 B、C 算出的 (3/2,-7/2)。",
+      "elementary": "左右和上下都沒對到兩個點的正中間。",
+      "reason": "x=5/2 比正確值多 1，y=-5/2 也比正確值多 1，兩個座標都不符。"
+    },
+    "D": {
+      "isCorrect": false,
+      "teacher": "y=-7/2 正確，但 x應為(0+3)/2=3/2，不能用 5/2。",
+      "elementary": "高度算對了，左右位置卻多算了一格。",
+      "reason": "y=-7/2 正確，但 x=5/2 比正確值 3/2 多 1，故不選。"
+    }
+  },
+  "hasExamCalculation": true,
+  "examCalculation": {
+    "given": [
+      "A=(-1,0)",
+      "B=(0,-5)",
+      "D=(2,3)",
+      "ABCD 是平行四邊形，求 BC 中點"
+    ],
+    "formulaUse": "對角線中點相同⇒ A+C=B+D，接著中點 M_BC=(B+C)/2",
+    "steps": [
+      "對角線 AC 與 BD 的中點相同，所以 (-1+a)/2=(0+2)/2。",
+      "兩邊乘 2：-1+a=2；兩邊加 1：a=3。",
+      "再比上下座標：(0+b)/2=(-5+3)/2=-2/2=-1。",
+      "兩邊乘 2：b=-2，因此 C=(3,-2)。",
+      "BC 中點的 x=(0+3)/2=3/2=1.5。",
+      "BC 中點的 y=(-5+(-2))/2=-7/2=-3.5。",
+      "所以 BC 中點為 (3/2,-7/2)，對應選項 B。"
+    ],
+    "result": "(3/2,-7/2)",
+    "option": "B",
+    "unit": "坐標值，無長度單位",
+    "substitution": [
+      "(-1+a)/2=(0+2)/2",
+      "(0+b)/2=(-5+3)/2",
+      "M_BC=((0+a)/2,(-5+b)/2)"
+    ]
+  },
+  "independentAlternativeCheck": "BC 向量=AD=(3,3)；C=B+AD=(3,-2)；再次得中點 (3/2,-7/2)。",
+  "highlights": [
+    "平行四邊形",
+    "互相平分",
+    "中點",
+    "3/2",
+    "-7/2"
+  ],
+  "teachingQaStatus": "AI_CONTENT_REVIEW_PASS_NOT_RELEASE_CERTIFICATE",
+  "uiQaStatus": "PENDING",
+  "studentReleaseApproved": false,
+  "calculationReviewed": true,
+  "reviewEvidence": {
+    "sourceCommit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+    "parentCandidatePath": "sudu/data/processed/115/review-evidence/115-00-MB-05-teaching-candidate-20261024.json",
+    "parentCandidateSha256": "7ed05f4714d02db57a944bbc6c63ddfdd4e8c8cad0b3108912c28055621dd47a",
+    "imageVisuallyViewedThisSession": true,
+    "questionAndFourOptionsCompared": true,
+    "adjacentQuestionsAbsent": true,
+    "officialAnswerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "allFourOptionsReviewed": true,
+    "calculationRecomputed": true,
+    "uiActuallyTestedThisSession": false,
+    "formalSourceAdmissionPending": true
+  },
+  "deploy": false
+}

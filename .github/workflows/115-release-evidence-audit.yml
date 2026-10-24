@@ -1,0 +1,38 @@
+name: 115 pinned per-question release evidence (NO DEPLOY)
+on:
+  push:
+    branches: [draft/preview-128-explanations-20261023]
+    paths:
+      - scripts/audit_115_release_evidence.py
+      - sudu/teaching-drafts/preview-128-20261023/release-evidence-115-20261024.json
+      - .github/workflows/115-release-evidence-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ed832065d1eaebbb836d4264c9b32f944a2e082e
+          path: evidence-source
+      - uses: actions/checkout@v4
+        with:
+          ref: 88b87451f776e95be05e2ecb51bcb8781ebd8b0b
+          path: evidence-publisher
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install Pillow
+      - name: Reproduce all 205 byte and admission checks
+        run: |
+          python scripts/audit_115_release_evidence.py --source evidence-source --publisher evidence-publisher --output /tmp/release-evidence.json
+          cmp /tmp/release-evidence.json sudu/teaching-drafts/preview-128-20261023/release-evidence-115-20261024.json
+      - name: Keep immutable report as CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 115-pinned-release-evidence
+          path: /tmp/release-evidence.json
+          retention-days: 30
