@@ -7,9 +7,12 @@ student publisher mapping and render in existing V4 before any READY decision.
 import hashlib
 import json
 from pathlib import Path
-from scripts import sudu_verified_publish as p
+import importlib.util
 
 ROOT=Path(__file__).resolve().parents[1]
+spec=importlib.util.spec_from_file_location('publisher',ROOT/'scripts/sudu_verified_publish.py')
+p=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(p)
 SOURCE=ROOT/"_mb23_source"
 BASE=SOURCE/"sudu/data/processed/115"
 OUT=ROOT/"mb23-qa-only"
