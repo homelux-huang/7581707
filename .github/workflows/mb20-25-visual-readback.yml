@@ -1,0 +1,25 @@
+name: MB20-25 pinned original visual QA readback (NO DEPLOY)
+on:
+  push:
+    branches: [draft/preview-128-explanations-20261023]
+    paths:
+      - scripts/emit_115_mathb_visual_review.py
+      - .github/workflows/mb20-25-visual-readback.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_webp:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        number: [20, 21, 22, 23, 24, 25]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify frozen source SHA and emit byte-identical image for review
+        run: python scripts/emit_115_mathb_visual_review.py ${{ matrix.number }}
