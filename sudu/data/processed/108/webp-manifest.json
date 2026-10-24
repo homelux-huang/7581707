@@ -2980,10 +2980,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLnBkZg==",
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-00-MB-16",
       "source": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
@@ -2993,13 +2994,13 @@
         90,
         1249,
         1310,
-        1667
+        1647
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-16.webp",
-      "outputSha256": "c0666583305f7d4ca0c38fc9b5be54d42b729ba52ca2e7ecb677eee8ae72a3bf",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/00-MB/108-00-MB-16.webp",
+      "outputSha256": "13edac32a0088c4e65d6de5b2f0c82a9910d6b8f1e5fcc9c4c3e3beec1bd3a6b",
       "outputSize": [
         1220,
-        418
+        398
       ]
     },
     {
@@ -3011,10 +3012,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLnBkZg==",
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-00-MB-17",
       "source": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
@@ -3022,15 +3024,15 @@
       "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
       "cropPixels": [
         90,
-        1668,
+        1648,
         1310,
         1825
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-17.webp",
-      "outputSha256": "4f1339b3217f9ea950638323e7526e5a04727cd6dded90cd28d6cf2ad2ac4fd1",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/00-MB/108-00-MB-17.webp",
+      "outputSha256": "0b3d725654ea21ca79f7a10ad307da37b714087a5c02ea60811feed6320342fe",
       "outputSize": [
         1220,
-        157
+        177
       ]
     },
     {
@@ -4139,10 +4141,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTEucGRm",
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-09-1-28",
       "source": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
@@ -4152,13 +4155,13 @@
         90,
         586,
         1310,
-        747
+        795
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-28.webp",
-      "outputSha256": "866bed50a6cedf3bc5b35987625b210c6eee9db77a6f81e33a420b3b21536c9a",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/09-1/108-09-1-28.webp",
+      "outputSha256": "27834b951409d3fe925de49a81e6147ad03a29cd639caa4a32807ae20aa1f968",
       "outputSize": [
         1220,
-        161
+        209
       ]
     },
     {
@@ -4170,10 +4173,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTEucGRm",
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-09-1-29",
       "source": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
@@ -4181,15 +4185,15 @@
       "sourcePageWebpSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
       "cropPixels": [
         90,
-        748,
+        796,
         1310,
         980
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-29.webp",
-      "outputSha256": "581f0ccd91339595281ab718cb4b6c68f8f2aa557c11fa7725f831f258af9d98",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/09-1/108-09-1-29.webp",
+      "outputSha256": "e2cc6bc69b027eea81edfb01ddcbb9f00fe9aed0c839a434787235394f5bed20",
       "outputSize": [
         1220,
-        232
+        184
       ]
     },
     {
@@ -5575,10 +5579,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTIucGRm",
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-09-2-24",
       "source": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
@@ -5588,13 +5593,13 @@
         90,
         511,
         1310,
-        619
+        612
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-24.webp",
-      "outputSha256": "b1875090bba74bfe4ea2ba7c7993c29fb36ac82addb269584b081702f4b49739",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/09-2/108-09-2-24.webp",
+      "outputSha256": "05979b4c13cf090f01d5895c993ff8b3fbeaedab382fc012f5c76ea11319eeb1",
       "outputSize": [
         1220,
-        108
+        101
       ]
     },
     {
@@ -5699,10 +5704,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTIucGRm",
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-09-2-28",
       "source": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
@@ -5712,13 +5718,13 @@
         90,
         1381,
         1310,
-        1567
+        1595
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-28.webp",
-      "outputSha256": "3c740fe1e16ba6330756bdffa6b907f1d44fa921f3df96890c2b5d6b02194af1",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/09-2/108-09-2-28.webp",
+      "outputSha256": "5fd9d6ebb6ec193f72a42172077612bf657598602062b08d36214d25ea4f3fc4",
       "outputSize": [
         1220,
-        186
+        214
       ]
     },
     {
@@ -5730,10 +5736,11 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTA5LTIucGRm",
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
-      "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
+      "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
       "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "issues": [
-        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
       ],
       "id": "108-09-2-29",
       "source": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
@@ -5741,15 +5748,15 @@
       "sourcePageWebpSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
       "cropPixels": [
         90,
-        1568,
+        1596,
         1310,
         1810
       ],
-      "output": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-29.webp",
-      "outputSha256": "a782971f78b264699f7edadbae92dac990f60db67c0c3516e638501014d60164",
+      "output": "sudu/data/processed/108/qa-drafts/webp-v3/09-2/108-09-2-29.webp",
+      "outputSha256": "a7680d76290294e8d47c814b369d5b0c2633b4620ba7bf8a3163848c6baa68d2",
       "outputSize": [
         1220,
-        242
+        214
       ]
     },
     {
