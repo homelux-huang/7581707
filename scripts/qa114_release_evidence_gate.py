@@ -91,7 +91,7 @@ def main():
             "officialSourceReleaseQAIndependentlyReviewed":True,
             "sourceFilesMutatedByThisCheck":False}
     print(json.dumps(result,ensure_ascii=False,indent=2))
-    if len(promoted)!=len(actual) if batch_file.exists() else False:
+    if batch_file.exists() and len(promoted)!=len(actual):
         raise AssertionError("promoted count")
 if __name__=="__main__":
     main()
