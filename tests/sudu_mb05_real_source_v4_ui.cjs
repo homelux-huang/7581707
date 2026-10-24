@@ -65,8 +65,10 @@ const report={kind:'MB05_REAL_CANONICAL_SOURCE_MAIN_V4_UI_PREFLIGHT_NOT_RELEASE'
     assert.equal(await page.locator('.option-detail').count(),4);
     assert.equal(await page.locator('.option-detail.is-correct').count(),1);
     assert.equal(await page.locator('#guideCard .guide-block.calculation-first').count(),1,'worked steps once');
+    const correctDetail=await page.locator('.option-detail.is-correct').innerText();
+    assert(correctDetail.includes('高職生理解')&&correctDetail.includes('國小學生也聽得懂'),
+      'dual-level explanations must be visible in the actual main correct-answer component');
     const guide=await page.locator('#guideCard').innerText();
-    assert(guide.includes('高職老師原理解說')&&guide.includes('國小學生白話解說'),'dual level');
     assert(guide.includes('3/2')&&guide.includes('7/2'),'actual computation');
     assert(!guide.includes('**'),'no raw markdown leak');
     await activate(page.locator('#questionBtn'));
