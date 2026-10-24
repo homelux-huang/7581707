@@ -15,7 +15,11 @@ const results=[];
  for(const [width,height] of widths)for(const theme of ['light','dark']){
   const ctx=await b.newContext({viewport:{width,height},hasTouch:width<1024,isMobile:width<768,reducedMotion:'reduce'});
   const page=await ctx.newPage(),err=[];
+  console.log('MB23_DEVICE_BEGIN',width,height,theme);
   page.on('pageerror',e=>err.push(e.message));
+  page.on('requestfailed',request=>console.log('MB23_REQUEST_FAIL',request.url(),request.failure()));
+  page.on('response',response=>{if(response.url().includes('115-00-MB-23.webp'))
+    console.log('MB23_WEBP_HTTP',response.status(),response.url());});
   const tap=loc=>width<1024?loc.tap({timeout:15000}):loc.click({timeout:15000});
   try{
    await page.route('**/data/approved/115.json',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(payload)}));
@@ -26,7 +30,9 @@ const results=[];
    assert((await page.locator('#questionCard').innerText()).includes('如表（二）'));
    assert.equal(await page.locator('#questionCard .source-figure img').count(),1);
    const img=await page.locator('#questionCard .source-figure img').evaluate(async e=>{
-      await e.decode();return {src:e.getAttribute('src'),w:e.naturalWidth,h:e.naturalHeight};});
+      try{await e.decode()}catch(error){throw Error('Original MB23 WebP decoding failed: '+error.message+
+        ' src='+e.src+' natural='+e.naturalWidth+'x'+e.naturalHeight+' complete='+e.complete)}
+      return {src:e.getAttribute('src'),w:e.naturalWidth,h:e.naturalHeight};});
    assert(img.src.endsWith('115-00-MB-23.webp')&&img.w>100&&img.h>30);
    const t=page.locator('#questionCard details.official-source-table');
    assert.equal(await t.count(),1,'table accessibility must appear next to original WebP');
