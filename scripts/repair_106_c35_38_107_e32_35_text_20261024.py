@@ -173,7 +173,7 @@ def apply(stage):
             q=qs[qid];o=os[qid];m=imgs[qid]
             assert len(options)==4 and all(isinstance(x,str) and x.strip() for x in options)
             assert not q["answerVerified"] and not q["integrationReady"]
-            assert q["assets"]["sha256"]==m["outputSha256"] if (year,n)!=(106,35) else stage or m["output"]==CROP_PATH
+            assert q["assets"]["sha256"]==m["outputSha256"], "Existing source-linked asset changed"
             if year==106 and n==35:
                 target_sha=new_sha
             else:
