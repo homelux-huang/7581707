@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Versioned repair of 4 detected 108 single-question DRAFT crop boundary defects.
-Math16/17 determinant, 09-1 Q28/29 D option, 09-2 Q24/25 edge & Q28/29 D.
+Math16/17 determinant top margin; 09-2 economics Q28/29 option boundary.
 Old WebP v3 remains immutable and G1/G2/G3 gates remain unchanged.
 """
 import argparse,hashlib,io,json,subprocess
