@@ -10,6 +10,8 @@ on:
       - tests/test_preview_128_teaching_candidates.py
       - tests/test_preview_128_news_dates.py
       - tests/test_preview_128_math_b_partial.py
+      - tests/sudu_verified_teaching_markup_test.cjs
+      - sudu/verified-questions-runtime.js
       - sudu/teaching-drafts/preview-128-20261023/**
       - sudu/data/approved/webp/**
       - .github/workflows/sudu-preview-128-readiness.yml
@@ -40,5 +42,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_preview_128_math_b_partial.py' -v
       - name: Oct 24 self-reviewed content regression, no release
         run: python -m unittest discover -s tests -p 'test_preview_128_oct24_content.py' -v
+      - name: Verify V4 escaped teaching markup and real keyword highlights
+        run: node tests/sudu_verified_teaching_markup_test.cjs
       - name: Check teaching steps JavaScript syntax
         run: node --check sudu/teaching-drafts/preview-128-20261023/solution-steps-128.js
