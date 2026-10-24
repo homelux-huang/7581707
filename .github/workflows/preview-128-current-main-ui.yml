@@ -6,6 +6,8 @@ on:
     paths:
       - 'sudu/teaching-drafts/preview-128-20261023/**'
       - 'tests/sudu_preview_128_current_main_ui.cjs'
+      - 'tests/sudu_english03_isolated_ui.cjs'
+      - 'sudu/verified-questions-runtime.js'
       - '.github/workflows/preview-128-current-main-ui.yml'
   workflow_dispatch:
 permissions:
@@ -55,6 +57,7 @@ jobs:
           trap 'kill "$server"' EXIT
           sleep 2
           node draft/tests/sudu_preview_128_current_main_ui.cjs
+          node draft/tests/sudu_english03_isolated_ui.cjs
       - name: Retain QA ONLY screenshots and both SHA without releasing
         if: always()
         uses: actions/upload-artifact@v4

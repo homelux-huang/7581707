@@ -4,133 +4,222 @@
  */
 (() => {
   'use strict';
-  const relative = './v4-115-multisubject-review-demo.html';
-  const args = new URLSearchParams(location.search);
-  const activeYear = args.get('year');
-  const nav = document.createElement('nav');
-  nav.id='verifiedYearNav';
-  nav.setAttribute('aria-label','正式題庫與進度');
-  nav.style.cssText='max-width:980px;margin:0 auto 10px;padding:0 14px;display:flex;flex-wrap:wrap;gap:7px;align-items:center';
-  const links=[
-    ['./v4-115-multisubject-review-demo.html','35 題 UI Demo'],
-    [relative+'?year=115','115 年正式驗收題庫'],
-    [relative+'?year=114','114 年正式驗收題庫'],
-    ['./question-bank-progress.html','題庫接入／部署進度']
-  ];
-  for(const [href,label] of links){
-    const a=document.createElement('a');
-    a.href=href;a.textContent=label;
-    a.style.cssText='border:1px solid var(--line);border-radius:12px;padding:9px 12px;min-height:44px;display:inline-flex;align-items:center;text-decoration:none;font-weight:800;font-size:14px;color:var(--text);background:var(--card)';
-    if((activeYear==='114'&&label.includes('114 年'))||(activeYear==='115'&&label.includes('115 年')))
-      a.style.boxShadow='inset 0 0 0 2px #4675e8';
-    nav.append(a);
+  const relative='./v4-115-multisubject-review-demo.html';
+  const args=new URLSearchParams(location.search);
+  const activeYear=args.get('year');
+  const imageModeRequested=args.get('view')==='images';
+  // Keep navigation within the EXISTING year selector. Never add the four
+  // large Demo/year/progress link buttons to the question reading area.
+  const yearSelect=document.getElementById('yearSel');
+  if(yearSelect){
+    yearSelect.replaceChildren();
+    for(const [value,label] of [['demo','35 題 Demo'],['115','115 年'],['114','114 年']]){
+      const option=document.createElement('option');
+      option.value=value;option.textContent=label;yearSelect.append(option);
+    }
+    yearSelect.value=['114','115'].includes(activeYear)?activeYear:'demo';
+    yearSelect.onchange=()=>{
+      location.href=yearSelect.value==='demo'?relative:relative+'?year='+yearSelect.value;
+    };
   }
-  const control=document.querySelector('.control-row');
-  if(control)control.after(nav);
-  if(!['114','115'].includes(activeYear)) return;
-  const storageKey='tvet-verified-'+activeYear+'-v1';
+  if(!['114','115'].includes(activeYear))return;
   const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const useful=value=>typeof value==='string'&&value.trim()!==''&&!/^(N\/?A|本題無金額計算)$/i.test(value.trim());
-  const status=(message)=>{
-    const existing=document.getElementById('verifiedStatus');
-    if(existing)existing.remove();
-    const panel=document.createElement('section');
-    panel.id='verifiedStatus';panel.className='card';
-    panel.style.cssText='max-width:900px;margin:15px auto;line-height:1.7';
-    const h=document.createElement('h2');h.textContent=activeYear+' 年正式題庫驗收';
-    const p=document.createElement('p');p.textContent=message;
-    const a=document.createElement('a');a.textContent='檢視年度驗收與部署進度';a.href='./question-bank-progress.html';
-    a.style.cssText='display:inline-flex;min-height:44px;align-items:center;color:var(--blue);font-weight:900';
-    panel.append(h,p,a);
-    document.querySelector('main')?.prepend(panel);
-    return panel;
-  };
-  const empty=(message)=>{
-    status(message);
-    ['studyView','reviewView','progressShell','prevBtn','nextBtn'].forEach(id=>{
-      const el=document.getElementById(id);if(el)el.style.display='none';
-    });
-    const bottom=document.querySelector('.bottom');if(bottom)bottom.style.display='none';
-    const select=document.getElementById('subjectSel');if(select)select.disabled=true;
-    const summary=document.getElementById('summary');
-    if(summary)summary.innerHTML='<b>'+activeYear+' 年：正式可用 0 題</b>';
-  };
-  /* Read-only, image-QA-only stage. Do NOT show OCR text, answer keys,
-   * auto-scoring, incomplete teaching, or homework hints here.
-   */
-  async function showImagePreview(approvedIds=new Set()) {
-    const existing=document.getElementById('verifiedImagePreview');
-    if(existing)existing.remove();
-    const response=await fetch('./data/approved/preview/'+activeYear+'.json',{cache:'no-store'});
-    if(!response.ok)throw Error('原圖預覽清單 HTTP '+response.status);
-    const data=await response.json();
-    if(Number(data.year)!==Number(activeYear)||!Array.isArray(data.questions)||
-       data.imagePreviewCount!==data.questions.length)
-      throw Error('原圖預覽清單不符合 QA 格式');
-    const allowedImage={test(path){const prefix='data/approved/webp/'+activeYear+'/'+activeYear+'-'; return typeof path==='string' && path.startsWith(prefix) && /^(00-C|00-E|00-MB|09-1|09-2)-(?:[0-9]{2}|SHARED-[0-9]{2}-[0-9]{2})[.]webp$/.test(path.slice(prefix.length))}};
-    const seen=new Set();
-    const available=[];
-    for(const item of data.questions){
-      if(typeof item.canonicalId!=='string'||seen.has(item.canonicalId)||
-         item.year!==Number(activeYear)||item.reviewStage!=='image_qa_pass_only'||
-         !allowedImage.test(item.image)||!Array.isArray(item.sharedImages)||!/^[a-f0-9]{64}$/.test(item.imageSha256)||
-         !item.image.endsWith('/'+item.canonicalId+'.webp')||
-         ['answer','question','options','memory','teaching','independentSolve'].some(k=>Object.hasOwn(item,k))||
-         item.sharedImages.some(shared=>!allowedImage.test(shared.image) || !/^[a-f0-9]{64}$/.test(shared.sha256)))
-        throw Error('原圖預覽資料不合法或包含未驗收教學內容');
-      seen.add(item.canonicalId);
-      if(!approvedIds.has(item.canonicalId))available.push(item);
+  const storageKey='tvet-verified-'+activeYear+'-v1';
+  const highlightStyles=document.createElement('style');
+  highlightStyles.textContent='.exam-highlight{background:#ffe86f!important;color:#152037!important;font-weight:900;padding:0 2px;border-radius:3px}';
+  document.head.append(highlightStyles);
+  const viewStyles=document.createElement('style');
+  viewStyles.textContent=[
+    'body.verified-year-loading #studyView,body.verified-year-loading #reviewView,body.verified-year-loading #progressShell,body.verified-year-loading .bottom{display:none!important}',
+    'body.qa-image-mode #answerCard,body.qa-image-mode #guideCard,body.qa-image-mode #answerScrollSpace,body.qa-image-mode .review-head,body.qa-image-mode #readingShortcuts{display:none!important}',
+    'body.qa-image-mode.study-mode #studyView{display:block!important}',
+    'body.qa-image-mode .side-arrow{bottom:24px}',
+    'body.qa-image-mode #resetBtn,body.qa-image-mode #continueBtn{display:none!important}',
+    'body.qa-image-mode #questionCard .source-figure{margin:12px 0 4px}',
+    'body.qa-image-mode #questionCard .source-figure img{max-width:100%;height:auto}',
+    'body.qa-image-mode #questionCard .qa-caption{margin:8px 0 0;font-size:13px;color:var(--muted);font-weight:750}',
+    'body.qa-error-mode #studyView,body.qa-error-mode #reviewView,body.qa-error-mode #progressShell,body.qa-error-mode .bottom,body.qa-error-mode #prevBtn,body.qa-error-mode #nextBtn,body.qa-error-mode #navHandle,body.qa-error-mode #readingShortcuts{display:none!important}'
+  ].join('');
+  document.head.append(viewStyles);
+  document.body.classList.add('verified-year-loading');
+
+  const showError=(message)=>{
+    document.body.classList.remove('verified-year-loading','qa-image-mode');
+    document.body.classList.add('qa-error-mode');
+    let p=document.getElementById('verifiedLoadError');
+    if(!p){
+      p=document.createElement('p');p.id='verifiedLoadError';
+      p.setAttribute('role','alert');
+      p.style.cssText='margin:8px 0 16px;color:var(--text);font-weight:750';
+      document.querySelector('main')?.prepend(p);
     }
-    const host=document.querySelector('main');
-    if(!host)return;
-    const section=document.createElement('section');
-    section.id='verifiedImagePreview';section.className='card';
-    section.style.cssText='max-width:980px;margin:16px auto;padding:16px;min-width:0;overflow-wrap:anywhere';
-    section.setAttribute('data-qa-preview','read-only');
-    const head=document.createElement('h2');head.textContent='已驗收單題 WebP 原圖｜待教學核對';
-    const note=document.createElement('p');
-    note.textContent='以下僅通過圖片、題號及必要共用材料的逐題 QA，可閱讀官方原題影像；OCR、最終官方答案、獨立解題、四個選項的高職與國小白話詳解仍待核對，不計入學生正式可作答題數。後續全部通過會自動轉入正式作答。';
-    note.style.cssText='line-height:1.65;color:var(--muted);margin:8px 0 13px';
-    const choose=document.createElement('select');choose.setAttribute('aria-label','篩選已完成影像 QA 科目');
-    choose.style.cssText='min-height:46px;border-radius:11px;padding:10px;margin-bottom:12px;max-width:100%;color:var(--text);background:var(--card);border:1px solid var(--line)';
-    const subjects=['全部科目',...new Set(available.map(x=>x.subject))];
-    for(const label of subjects){const option=document.createElement('option');option.value=label;option.textContent=label;choose.append(option)}
-    const count=document.createElement('p');count.style.fontWeight='800';count.setAttribute('aria-live','polite');
-    const grid=document.createElement('div');grid.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;align-items:start';
-    const more=document.createElement('button');more.type='button';more.textContent='顯示更多已 QA 單題原圖';
-    more.style.cssText='min-height:48px;padding:10px 18px;margin:12px 0;border-radius:12px;background:#132f61;color:white;border:0;font-weight:800';
-    let visible=12;
-    const image=(src,alt)=>{
-      const img=document.createElement('img');img.src='./'+src;img.alt=alt;img.loading='lazy';img.decoding='async';
-      img.style.cssText='display:block;width:100%;height:auto;object-fit:contain;max-width:100%;border-radius:10px';
-      return img;
-    };
-    const render=()=>{
-      const rows=available.filter(q=>choose.value==='全部科目'||q.subject===choose.value);
-      count.textContent=activeYear+' 年圖片已核對 '+data.imagePreviewCount+' 題，其中 '+available.length+' 題仍待教學 QA；目前科目 '+rows.length+' 題';
-      grid.replaceChildren();
-      for(const q of rows.slice(0,visible)){
-        const card=document.createElement('article');
-        card.style.cssText='min-width:0;border:1px solid var(--line);border-radius:15px;padding:12px;background:var(--card);overflow:hidden';
-        const h=document.createElement('h3');h.textContent=q.subject+'｜第 '+q.questionNumber+' 題';
-        h.style.cssText='font-size:17px;margin:0 0 8px;overflow-wrap:anywhere';
-        const label=document.createElement('p');label.textContent='原題 WebP 目視 QA PASS · 答案／詳解未核對';
-        label.style.cssText='font-size:13px;color:var(--muted);margin:0 0 7px';
-        card.append(h,label,image(q.image,q.subject+' 第 '+q.questionNumber+' 題原始單題 WebP'));
-        for(const group of q.sharedImages){
-          const sp=document.createElement('p');sp.textContent='本題共用文章／圖表（已 QA）';
-          card.append(sp,image(group.image,'本題所需共用圖表或文章'));
-        }
-        grid.append(card);
+    p.textContent=message;
+  };
+  const subjectFor=(paper,n)=>{
+    if(paper==='00-C')return '國文';
+    if(paper==='00-E')return '英文';
+    if(paper==='00-MB')return '數學 B';
+    if(paper==='09-1')return n<=25?'商業概論':'數位科技';
+    if(paper==='09-2')return n<=24?'會計學':'經濟學';
+    return null;
+  };
+  const parsedIdentity=q=>{
+    if(typeof q.canonicalId!=='string')return null;
+    const m=/^(114|115)-(00-C|00-E|00-MB|09-1|09-2)-([0-9]{2})$/.exec(q.canonicalId);
+    if(!m||m[1]!==activeYear||q.year!==Number(activeYear))return null;
+    const n=Number(m[3]);
+    if(n<1||q.subject!==subjectFor(m[2],n))return null;
+    return {n,paper:m[2],id:q.canonicalId};
+  };
+  const imagePath=id=>'data/approved/webp/'+activeYear+'/'+id+'.webp';
+  const shaValid=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
+
+  // verifiedSingleQuestionWebp: only the SAME canonical question ID may appear
+  // immediately below its own question header; never a whole paper or another
+  // question's WebP. Source visual QA and asset hashes remain authoritative.
+  function verifiedSingleQuestionWebp(q){
+    if(q.image!==imagePath(q.canonicalId)||!shaValid(q.imageSha256))
+      throw Error('單題 WebP 題號或 SHA 不符：'+q.canonicalId);
+    const figure=document.createElement('figure');
+    figure.className='source-figure';
+    figure.setAttribute('data-single-question-webp','true');
+    const img=document.createElement('img');
+    img.src='./'+q.image;
+    img.alt=q.subject+'第 '+q.questionNumber+' 題，官方原始單題 WebP';
+    img.dataset.canonicalId=q.canonicalId;
+    img.dataset.sha256=q.imageSha256;
+    img.decoding='async';
+    img.loading='eager';
+    const caption=document.createElement('figcaption');
+    caption.textContent='本題原圖｜第 '+q.questionNumber+' 題';
+    figure.append(img,caption);
+    return figure;
+  }
+  async function showImageOnlyMode(){
+    const response=await fetch('./data/approved/preview/'+activeYear+'.json',{cache:'no-store'});
+    if(!response.ok)throw Error('原圖清單 HTTP '+response.status);
+    const payload=await response.json();
+    if(payload.year!==Number(activeYear)||!Array.isArray(payload.questions)||
+       payload.imagePreviewCount!==payload.questions.length)
+      throw Error('原圖題庫年度或筆數有誤');
+    const seen=new Set();
+    const items=payload.questions;
+    for(const q of items){
+      const id=parsedIdentity(q);
+      if(!id||seen.has(id.id)||q.reviewStage!=='image_qa_pass_only'||
+         q.questionNumber!==id.n||q.image!==imagePath(id.id)||
+         !shaValid(q.imageSha256)||!Array.isArray(q.sharedImages)||
+         ['answer','question','options','teaching','memory','independentSolve'].some(k=>Object.hasOwn(q,k))||
+         q.sharedImages.some(s=>typeof s.image!=='string'||
+           !s.image.startsWith('data/approved/webp/'+activeYear+'/'+activeYear+'-'+id.paper+'-SHARED-')||
+           !/SHARED-[0-9]{2}-[0-9]{2}[.]webp$/.test(s.image)||!shaValid(s.sha256)))
+        throw Error('題號、科目、WebP 來源或影像 QA 有誤');
+      seen.add(id.id);
+    }
+    if(!items.length)throw Error(activeYear+' 年尚無通過影像 QA 的單題原圖');
+    // Keep the existing V4 question area, and clear the demo records from the
+    // active quiz model so image-only questions cannot be accidentally graded.
+    QUESTIONS.splice(0,QUESTIONS.length);
+    SUBJECTS.splice(0,SUBJECTS.length);
+    document.getElementById('answerCard').replaceChildren();
+    document.getElementById('guideCard').replaceChildren();
+    document.getElementById('reviewSubject').innerHTML='<option value="ALL">全部科目</option>';
+    const subjects=['全部科目',...new Set(items.map(q=>q.subject))];
+    const filter=document.getElementById('subjectSel');
+    filter.replaceChildren();
+    for(const s of subjects){
+      const option=document.createElement('option');
+      option.value=s;option.textContent=s;filter.append(option);
+    }
+    let rows=items,index=0;
+    const card=document.getElementById('questionCard');
+    const summary=document.getElementById('summary');
+    const render=(scroll=false)=>{
+      const q=rows[index];
+      if(!q)return;
+      card.replaceChildren();
+      card.dataset.canonicalId=q.canonicalId;
+      card.setAttribute('data-qa-preview','read-only');
+      const meta=document.createElement('div');
+      meta.className='qmeta';
+      const prefix=document.createElement('span');
+      prefix.textContent='第';
+      const number=document.createElement('span');
+      number.className='qnum';
+      number.textContent=String(q.questionNumber).padStart(2,'0');
+      const suffix=document.createElement('span');
+      suffix.textContent='題';
+      const subj=document.createElement('span');
+      subj.className='pill';subj.textContent=q.subject;
+      meta.append(prefix,number,suffix,subj);
+      card.append(meta,verifiedSingleQuestionWebp(q));
+      for(const shared of q.sharedImages){
+        const note=document.createElement('p');
+        note.className='qa-caption';note.textContent='本題需要的共用文章／圖表';
+        const fig=document.createElement('figure');
+        fig.className='source-figure';
+        const img=document.createElement('img');
+        img.src='./'+shared.image;img.decoding='async';img.loading='eager';
+        img.alt='第 '+q.questionNumber+' 題需要的官方共用材料';
+        img.dataset.canonicalId=q.canonicalId;
+        img.dataset.sha256=shared.sha256;
+        fig.append(img);
+        card.append(note,fig);
       }
-      more.hidden=visible>=rows.length;more.disabled=visible>=rows.length;
+      const note=document.createElement('p');
+      note.className='qa-caption';
+      note.textContent='影像 QA 已通過；答案與詳解待核對，尚未開放作答';
+      card.append(note);
+      summary.replaceChildren();
+      const title=document.createElement('span');
+      title.textContent=activeYear+' 年｜原題影像';
+      const count=document.createElement('b');
+      count.textContent=q.subject+'｜第 '+q.questionNumber+' 題（'+(index+1)+' / '+rows.length+'）';
+      summary.append(title,count);
+      document.getElementById('prevBtn').disabled=index===0;
+      document.getElementById('nextBtn').disabled=index===rows.length-1;
+      // Visible single-question IDs are the existing QA-approved image snapshots.
+      const chips=document.getElementById('progressChips');
+      chips.replaceChildren();
+      rows.forEach((entry,i)=>{
+        const button=document.createElement('button');
+        button.className='chip'+(i===index?' current':'');
+        button.textContent=entry.questionNumber;
+        button.setAttribute('aria-label',entry.subject+'第 '+entry.questionNumber+' 題唯讀原圖');
+        button.onclick=()=>{index=i;render(true);collapseQuestionNav();};
+        chips.append(button);
+      });
+      document.getElementById('progressLabel').textContent='原圖唯讀｜'+(index+1)+' / '+rows.length+' 題';
+      syncHeights();
+      if(scroll)card.scrollIntoView({behavior:'smooth',block:'start'});
     };
-    choose.onchange=()=>{visible=12;render()};
-    more.onclick=()=>{visible+=12;render()};
-    section.append(head,note,choose,count,grid,more);
-    const statusCard=document.getElementById('verifiedStatus');
-    if(statusCard)statusCard.after(section);else host.prepend(section);
+    const changeSubject=()=>{
+      rows=filter.value==='全部科目'?items:items.filter(q=>q.subject===filter.value);
+      index=0;render(true);
+    };
+    window.suduOpenImageSubject=subject=>{
+      if(!subjects.includes(subject)||subject==='全部科目')return;
+      filter.value=subject;
+      rows=items.filter(q=>q.subject===subject);
+      index=0;
+      showStudy();
+      render();
+      setQuestionNavAutoHide(false);
+      window.scrollTo({top:0,behavior:'instant'});
+    };
+    filter.onchange=changeSubject;
+    move=function(delta){
+      index=Math.max(0,Math.min(rows.length-1,index+delta));
+      render(true);
+    };
+    document.title='速讀｜'+activeYear+' 年單題 WebP 原圖';
+    document.body.classList.remove('verified-year-loading','qa-error-mode');
+    document.body.classList.add('qa-image-mode');
+    document.body.dataset.verifiedReadyYear=activeYear;
     render();
+    refreshHomeSubjects();
+    showHome();
   }
 
   function htmlWithActualHighlights(value,terms) {
@@ -177,17 +266,21 @@
     if(Number(data.year)!==Number(activeYear)||!Array.isArray(data.questions)||data.approvedCount!==data.questions.length)
       throw Error('題庫驗收清單格式不符');
     const verified=data.questions;
-    if(!verified.length) {
-      empty('目前沒有通過全部驗收而可正式作答的題目。以下先提供已完成 WebP 目視 QA 的原題，完整解答後續逐題自動補入。');
-      showImagePreview().catch(e=>console.error('原圖預覽暫不可用',e));
+    if(!verified.length||imageModeRequested) {
+      showImageOnlyMode().catch(e=>{
+        console.error('原圖逐題驗證失敗',e);
+        showError('單題 WebP 暫不可用：'+e.message);
+      });
       return;
     }
     const keyset=new Set();
     const expectedIds=new Set();
     for(const q of verified){
       const id=q.canonicalId;
-      if(q.year!==Number(activeYear)||typeof id!=='string'||expectedIds.has(id)||q.image!==('data/approved/webp/'+activeYear+'/'+id+'.webp')||
-         !Array.isArray(q.options)||q.options.length!==4||!q.options.every(useful)||!/[ABCD]/.test(q.answer)||!q.optionExplanations ||
+      const identity=parsedIdentity(q);
+      if(!identity||identity.id!==id||q.id!==identity.n||expectedIds.has(id)||
+         q.image!==imagePath(id)||!shaValid(q.imageSha256)||
+         !Array.isArray(q.options)||q.options.length!==4||!q.options.every(useful)||!/^[ABCD]$/.test(q.answer)||!q.optionExplanations ||
          ['A','B','C','D'].some(k=>!useful(q.optionExplanations[k]?.teacher)||!useful(q.optionExplanations[k]?.elementary)))
         throw Error('題庫驗收欄位異常：'+String(id));
       expectedIds.add(id);keyset.add(q.subject);
@@ -216,10 +309,9 @@
     sourceText=function(q){return q.sourceText||originalSource(q)};
     subjectEntries=function(q){
       if(q.year!==Number(activeYear))return originalSubjectEntries(q);
-      const parts=[
-        ['高職老師解題',q.teacherSummary],['國小學生白話',q.elementarySummary],
-        ...Object.entries(q.extra||{})
-      ].filter(x=>useful(x[1]));
+      // The correct answer retains both teaching levels, while extra notes and
+      // full worked steps occur exactly once in the subject guide.
+      const parts=Object.entries(q.extra||{}).filter(x=>useful(x[1]));
       const calc=q.examCalculation;
       if(calc&&calc.hasExamCalculation===true&&Array.isArray(calc.lines)&&calc.lines.length)
         parts.push(['考題計算式',calc.lines.join('\n')]);
@@ -261,13 +353,13 @@
       showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'});
     };
     document.title='速讀｜'+activeYear+' 正式題庫｜教學解說';
-    renderSelectors();showStudy();renderAll();
-    status('已通過全部驗收並開放 '+verified.length+' 題。老師會先說高職的解法，再用國小學生聽得懂的白話說明；需要計算的題目會列完整步驟，非計算題自動隱藏。');
-    const statusCard=document.getElementById('verifiedStatus');
-    if(statusCard)statusCard.style.marginBottom='14px';
-    showImagePreview(expectedIds).catch(e=>console.error('待教學原圖預覽暫不可用',e));
+    document.body.dataset.verifiedReadyYear=activeYear;
+    document.body.classList.remove('verified-year-loading','qa-image-mode');
+    renderSelectors();renderAll();refreshHomeSubjects();showHome();
+    const requestedSubject=new URLSearchParams(location.search).get('subject');
+    if(requestedSubject&&SUBJECTS.includes(requestedSubject))openSubjectFromHome(requestedSubject);
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
-    empty('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
+    showError('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
   });
 })();
