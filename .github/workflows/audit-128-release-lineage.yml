@@ -1,0 +1,63 @@
+name: 128-source READY LIVE chain audit (READ ONLY)
+on:
+  push:
+    branches: [audit/128-source-ready-live-crosswalk-20261024]
+    paths:
+      - scripts/audit_128_release_lineage_20261024.py
+      - .github/workflows/audit-128-release-lineage.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  crosswalk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: actions/checkout@v4
+        with:
+          ref: f6d8f3b395fd1077d67d74ac2d6d2bbe6aee4fe6
+          path: _source
+          persist-credentials: false
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/checkout@v4
+        with:
+          ref: c4cdb10ea61f70e0184f0a078963ebb537a9cc99
+          path: _draft
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: |
+            sudu/teaching-drafts/preview-128-20261023
+      - uses: actions/checkout@v4
+        with:
+          ref: 2b48a4aee849e38eee7ac47a77a3977c34c3779c
+          path: _historical
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/v4-115-multisubject-review-demo.html
+            sudu/verified-questions-runtime.js
+            sudu/data/approved/115.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Decode exactly original reviewed WebP with unchanged release publisher
+        run: python -m pip install -q pillow
+      - name: Recompute all 128 crosswalks and MB05 original pre-key/UI/main/LIVE chain
+        run: |
+          python scripts/audit_128_release_lineage_20261024.py \
+            --source _source --draft _draft --historical _historical \
+            --expected-live-sha 57d766e841235b937babf3fe10a8ff44606c7c41 \
+            --out /tmp/audit-128-release-lineage.json
+      - name: Archive complete 128 question true-stage proof matrix
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 128-release-lineage-mb05-real-live-no-release
+          path: /tmp/audit-128-release-lineage.json
+          if-no-files-found: ignore
+          retention-days: 45
