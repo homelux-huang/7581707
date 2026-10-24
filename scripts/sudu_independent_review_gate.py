@@ -56,8 +56,9 @@ def _protected_main_trust_verified():
     # question until owner establishes a real branch ruleset and owns keys.
     try:
         main=_github_json("/branches/main")
-        return (main.get("name")=="main" and main.get("protected") is True
-                and (main.get("protection") or {}).get("enabled") is True)
+        # GitHub protected=true covers both classic protection and repository
+        # rulesets; the legacy .protection.enabled field alone does NOT cover rulesets.
+        return main.get("name")=="main" and main.get("protected") is True
     except (ValueError,OSError,TypeError,KeyError,TimeoutError,UnicodeError):
         return False
 
