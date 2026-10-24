@@ -3,7 +3,7 @@
   "expectedFromLegacy": 204,
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 204,
-  "webpGeneratedDrafts": 178,
+  "webpGeneratedDrafts": 204,
   "visualQaPass": 0,
   "ocrGapCandidatesGenerated": 15,
   "ocrTextIndependentlyVerified": 0,
@@ -70,7 +70,7 @@
     "00-MB": {
       "candidateRecords": 25,
       "numberedAnchors": 18,
-      "imageDrafts": 18,
+      "imageDrafts": 25,
       "unresolvedAnchorNumbers": [
         11,
         12,
@@ -90,12 +90,21 @@
       "officialAnswerTextKeys": 24,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
     },
     "09-1": {
       "candidateRecords": 50,
       "numberedAnchors": 38,
-      "imageDrafts": 38,
+      "imageDrafts": 50,
       "unresolvedAnchorNumbers": [
         15,
         16,
@@ -115,12 +124,26 @@
       "officialAnswerTextKeys": 48,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        15,
+        16,
+        17,
+        18,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ]
     },
     "09-2": {
       "candidateRecords": 50,
       "numberedAnchors": 43,
-      "imageDrafts": 43,
+      "imageDrafts": 50,
       "unresolvedAnchorNumbers": [
         23,
         24,
@@ -135,11 +158,20 @@
       "officialAnswerTextKeys": 48,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
     }
   },
   "sharedMaterialsVerified": 0,
-  "sharedMaterialsReviewRequired": true,
+  "sharedMaterialsReviewRequired": 1,
   "sqlite": {
     "rows": 204,
     "unique": 204,
@@ -147,5 +179,6 @@
     "reimportCount": 2,
     "shaMismatches": 0
   },
-  "integrationReady": false
+  "integrationReady": false,
+  "sharedMaterialsDrafts": 1
 }
