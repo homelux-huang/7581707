@@ -710,11 +710,11 @@
     },
     {
       "questionId": "106-00-C-36",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PENDING",
+      "sourcePage": 8,
+      "sourceWebp": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-36.webp",
+      "candidateSha256": "04c8ef87fb6274cb8a6997adba9c64a22d07e0cbc815e0b447b33e69dcad2a99",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -730,11 +730,11 @@
     },
     {
       "questionId": "106-00-C-37",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PENDING",
+      "sourcePage": 8,
+      "sourceWebp": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-37.webp",
+      "candidateSha256": "882af62e1b001e298da67ea47aebe6e7472d9be52b2319f40fd5d827746f8a28",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -750,11 +750,11 @@
     },
     {
       "questionId": "106-00-C-38",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PENDING",
+      "sourcePage": 8,
+      "sourceWebp": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-38.webp",
+      "candidateSha256": "8a105cbf88ad8cf1f760060c04e07611d918828dedada7d0e9c767eb2d6848cc",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -4123,6 +4123,16 @@
       "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-19-20.webp",
       "candidateSha256": "34bfbe09b39e6583ea34c52935b581e2c714596b9b64ef87ba707685f30f36cc",
+      "reviewer": null,
+      "visualEvidence": null
+    },
+    {
+      "sharedMaterialId": "106-00-C-SHARED-36-38",
+      "status": "PENDING",
+      "sourcePage": 7,
+      "sourceWebp": "sudu/data/original/106/00-C/p007-93b8ec6eb3-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/106/qa-drafts/webp-v3/shared/106-00-C-SHARED-36-38.webp",
+      "candidateSha256": "caa1e05684a21bc72b968bc5881be788ddb4f192e9915cc7d7ffe1df30a3d93d",
       "reviewer": null,
       "visualEvidence": null
     }
