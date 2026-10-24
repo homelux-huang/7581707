@@ -54,6 +54,9 @@ jobs:
           assert all(y.get('integrationReady') is False for y in j['years'])
           for y in j['years'][1:]:
               assert sum(p['legacyCandidateCount'] for p in y['papers'].values())==y['questionJsonRows']
+              inv=json.loads((Path('sudu/data/processed')/str(y['year'])/'inventory.json').read_text(encoding='utf8'))
+              assert y['webpQaPassWithSourceReference']==inv['visualQaPass'],'year-specific source G1 mismatch'
+              assert y['ocrTextIndependentlyVerified']==inv['ocrTextIndependentlyVerified'],'year-specific OCR G2 mismatch'
           print('104 extra + 105-115 exact question-ID inventory PASS; no release')
           PY_AUDIT
       - name: Commit report-only with nonforce, latest HEAD lease
