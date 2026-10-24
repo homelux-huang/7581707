@@ -1,0 +1,33 @@
+name: 114 original answer visual source and SQLite QA (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-english-blind-solve-and-ready-20261024]
+    paths:
+      - scripts/qa_114_source_bundle.py
+      - .github/workflows/qa-114-original-answer-visual.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official_original:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official source pixel/PDF reading packages
+        run: python -m pip install -q requests pymupdf pillow
+      - name: Read official answer PDF bytes, original WebP pixels and SQLite
+        run: python scripts/qa_114_source_bundle.py
+      - name: Save exact source files and hashes for independent visual inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-114-english-original-answers-and-sqlite-readonly
+          path: /tmp/114-answer-qa-original/
+          retention-days: 30
+          if-no-files-found: warn

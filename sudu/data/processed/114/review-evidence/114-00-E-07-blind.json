@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 independent text-based solve from question and A-D without requesting or showing official answer values for these three items",
+  "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-24",
+  "solver": "GPT-6 reasoning from stem/options only",
+  "blindReasoning": "The adverb must describe what motion-triggered park lights do without deliberate human intervention: automatically means 'by themselves' in this situation. Organically concerns biological/natural growth, productively means efficiently producing results, and selfishly describes self-centered behavior. Only A fits 'will ___ turn on by themselves when someone is passing by'.",
+  "answer": "A",
+  "historicalPreKeyCommit": "e676be923200587288e653e373fb57641eb84066",
+  "historicalPreKeyEvidence": "sudu/data/processed/114/review-evidence/EN07_09_PREKEY_BLIND_SOLVE_ORIGINAL_20261024.json",
+  "verifiedNotPostHocAnswerCopy": true
+}

@@ -1,0 +1,68 @@
+name: Canonical 114 SQLite two-pass safe reconciliation (QA BRANCH ONLY)
+on:
+  push:
+    branches: [qa/114-english-blind-solve-and-ready-20261024]
+    paths:
+      - scripts/qa114_reconcile_canonical_sqlite.py
+      - .github/workflows/qa-114-sqlite-canonical-reconcile.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-114-db-reconcile
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-english-blind-solve-and-ready-20261024
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify source branch did not move and preserve every other contributor commit
+        run: |
+          set -euo pipefail
+          git fetch origin qa/114-english-blind-solve-and-ready-20261024
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/qa/114-english-blind-solve-and-ready-20261024)" ||
+            { echo "Source moved; abort without touching user data"; exit 1; }
+      - name: Two isolated imports, full 205-row SHA/JSON check and atomic replace in runner
+        run: python scripts/qa114_reconcile_canonical_sqlite.py
+      - name: Recheck immutable source and isolate exactly three changed output files
+        run: |
+          set -euo pipefail
+          python scripts/qa114_sqlite_content_diff.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('sudu/data/processed/114/SQLITE_QA_RECONCILED_20261024.json').read_text())
+          q=json.loads(Path('/tmp/114-sqlite-reconciliation.json').read_text())
+          assert r['roundtripPass'] and r['isolatedImportPasses']==2
+          assert q['originalStrictRoundtripPass'], 'canonical database does not match 205 question JSON records'
+          assert r['answerVerifiedOrQaApprovalChanged'] is False
+          assert r['sourceQuestionTextAndOptionsModified'] is False
+          print('PASS source-only 114 SQLite two isolated imports + exact JSON and SHA; zero student approvals')
+          PY
+          git add -- sudu/data/processed/114/question-bank.sqlite3 sudu/data/processed/114/inventory.json sudu/data/processed/114/SQLITE_QA_RECONCILED_20261024.json
+          git diff --cached --name-only
+          test "$(git diff --cached --name-only | wc -l)" -eq 3
+      - name: Commit only checked 114 QA database without force or changing main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'fix(114): reconcile exact 205 QA source rows in SQLite (two-pass SHA verified)'
+          git pull --rebase origin qa/114-english-blind-solve-and-ready-20261024
+          git push origin HEAD:qa/114-english-blind-solve-and-ready-20261024
+          echo "Safe non-force QA branch only push at $(git rev-parse HEAD)"
+      - name: Archive validated original database reconciliation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-canonical-sqlite-two-pass-report-no-student-release
+          path: /tmp/114-sqlite-reconciliation.json
+          retention-days: 30
+          if-no-files-found: ignore
