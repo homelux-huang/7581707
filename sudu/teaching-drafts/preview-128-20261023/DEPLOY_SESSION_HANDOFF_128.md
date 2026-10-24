@@ -1,3 +1,16 @@
+# 2026-10-24｜逐題增量發布工作：E03 UI 阻塞實修與解碼診斷（未放行）
+
+- 使用者已授權逐題完成即可增量發布；仍須各題實際 QA 與正式 same-SHA Pages 部署。正式 main SHA 最後檢查為 `5415a30452cdf9020242aca16fe0ff2b6814ab4b`；主開發 Session 統一合併。
+- E03 對應原圖 `sudu/data/approved/webp/115/115-00-E-03.webp`；GitHub main 與 draft blob 皆 `f511b6b5447c38f4cb91ec14572adef56f79991f`，直接目視內容完整：題3原句、A carelessly/B equally/C instantly/D silently，官答 B。這不是正式的所有 UI 核准。
+- **真實修正1：** `tests/sudu_english03_isolated_ui.cjs` 依正式 V4 的「答後收合」導覽，改以真實 pointer/touch 操作 `#navHandle` 展開，再用 `#reviewTop` 進錯題復習，不以 force click 掩蓋。提交 `a98c9fa98dec69636e9fb6d3671524e6a8ebbb61`。
+- [CI #40047884759](https://github.com/homelux-huang/7581707/actions/runs/40047884759) 數學B7題×8尺寸×2主題預檢 PASS，但英文E03在原圖 decode 時失敗（`EncodingError: The source image cannot be decoded`），故**整體workflow FAIL，絕不可將E03記成 UI PASS**。不是另一個確認導覽失敗的證據，因該次先在圖像載入中止。
+- **真實修正2：** 再補 `img.currentSrc`、HTTP status、回應位元組、decodeError、原始src等診斷，提交 `d56eaaf48956bfd607fa0538f0069501ea02d4d2`；[CI #40048048087](https://github.com/homelux-huang/7581707/actions/runs/40048048087) 正在驗證，完成前不記PASS。需讀 CI log 判斷是圖片網路/路徑/404或媒體本身解碼問題，修復後再跑所有真實 E03 8×2 測項。
+- 來源分支 `qa/114-115-official-visual-review` 僅有四個 Math B `STUDENT_QA_APPROVED` 紀錄，E03 沒有 `verified-student-batch.json` 的獨立先行解答、OCR文字/正式答案與教學/UI同來源SHA認證。不能因草稿128答案核對與隔離fixture測試便擅自偽造 `solvedWithoutOfficialAnswer=true`、降低 admission gate 或將 E03 放入正式 main；須補真正可追溯的驗收或隔離此題改驗下一題。
+- 本回合新增READY=0；新進度系統要分開計算舊正式Math B 4題及新草稿128題。資料工程原圖、OCR、SQLite及學生紀錄未修改。
+- 給部署 Session：只可接入拿到完整原圖/官方/教學/UI同SHA憑證的題，先隔離測試後依正式 `scripts/sudu_verified_publish.py`、`pages.yml` 驗證及 LIVE SHA 核對。**目前不得直接合併或宣稱E03上線。**
+
+---
+
 # 2026-10-24｜接入修復與E03真實內容UI測試
 
 發現教學分支轉接器基底落後main，已在草稿中保留main最新首頁／逐題原圖架構並移入markup修正。新增E03無選項佔位文字的8×2隔離V4測試。詳見 `E03_INTEGRATION_QA_20261024.md`；UI結果待實際CI，READY仍0，main未動。
