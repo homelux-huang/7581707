@@ -1,6 +1,6 @@
 # 7581707｜首筆 128 題增量正式 admission：115 數學 B 05
 
-日期 2026-10-24。**正式主分支已經接入第05題**，待 GitHub Pages `verify_live` 再確認實際 LIVE。
+日期 2026-10-24。**正式主分支已經接入第05題**，GitHub Pages `verify_live` 已確認正式 LIVE。
 
 ## 真正的逐題證據鏈
 
@@ -15,13 +15,13 @@
 | 未修改正式發布器之 staging | [#40085542771](https://github.com/homelux-huang/7581707/actions/runs/40085542771) SUCCESS，原有四題不變，MB05一題新增，source 0–115 admission = 5 |
 | 正式來源 QA /資料核驗 | source head `b78a14c8cc6081a7a01613238255fce0a22ba60b`，來源 Actions [#40085605193](https://github.com/homelux-huang/7581707/actions/runs/40085605193) SUCCESS |
 | `main` 正式資料接入 | 自動同步 [#40085628007](https://github.com/homelux-huang/7581707/actions/runs/40085628007) SUCCESS，main `31adda6c3973ee73387c767d4a8ba56af1fd81b8` 且實際 `sudu/data/approved/115.json` 5 筆 |
-| Pages LIVE | [#40085654639](https://github.com/homelux-huang/7581707/actions/runs/40085654639) **需核實 verify_live completed/success**，不可提前宣稱已部署 |
+| Pages LIVE | [#40085654639](https://github.com/homelux-huang/7581707/actions/runs/40085654639) **SUCCESS**，四階段均完成，LIVE 新增1題 |
 
 ## 兩組進度分清楚
 
 - 128固定草稿：解說128、單圖/SHA128、官方答案128；其 `progress.json.fullyAccepted=0`／`deployed=0` 是**教學分支獨立憑證結構**的歷史狀態，不等於正式來源沒有新核准題。
 - 正式 QA student-certified：原4（02/03/04/09）**+本次 MB05 1**，`verified-student-batch.json` 5個分立證書與實際檔案SHA一致。
-- 正式 main 的 115 科學生可作答資料：5題；本批新增 main 接入 **1/128**，本批新增 LIVE **尚待** Pages verify_live。不可把 main 接入誤寫成 LIVE 已可讀。
+- 正式 main 的 115 科學生可作答資料：5題；本批新增 main 接入 **1/128**，本批新增 LIVE **1/128**，Pages verify_live 已 SUCCESS。不可把 main 接入誤寫成 LIVE 已可讀。
 - 六題 Math B20～25 雖有原圖重核與真實文字隔離預覽 8×2 PASS，尚需正式獨立文字來源 admission、可信先於官答的獨立求解證據與全項教學憑證，故不得增量發布。
 
 ## 接續阻塞

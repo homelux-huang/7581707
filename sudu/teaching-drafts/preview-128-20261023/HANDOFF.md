@@ -1,3 +1,7 @@
+## 2026-10-24｜正式 Pages LIVE 已驗 MB05 首題成功（#40085654639）
+- 正式 `main` SHA `31adda6c3973ee73387c767d4a8ba56af1fd81b8` 的 Pages [#40085654639](https://github.com/homelux-huang/7581707/actions/runs/40085654639) **verify / build / deploy / verify_live 全 SUCCESS**；115數學B第05題與原有四題在正式 `sudu/data/approved/115.json` 逐題可讀。這是本批新真正LIVE=**1/128（0.78%）**，不得再記「正在驗證」。此不代表其餘127題已教學QA/READY。
+- 下一批僅使用獨立完整證據上線：6題 MathB20–25 已在隔離分支 `qa/mb20-25-source-text-candidate-20261024` 做來源文字與 SQLite 205筆 staged、未准學生發布；經濟34另有不看官答先完成解題的 Git Commit `33aa3228`、對照官方A一致，仍需來源、教學、8×2 UI全項證書。
+
 ## 2026-10-24｜MB05 從 128 草稿取得來源認證，正式 main 已新增1題；Pages LIVE 尚待同 SHA 驗證
 - 本批真的讓 `115-00-MB-05` 跨越 source QA student-admission：歷史事前原圖解題 Git Commit `cf6a4efe`（與後讀官答分開）、真正的單題 WebP SHA、canonical OCR 文字及 SQLite 對讀、官方 B、GPT-6 事後雙層四選項／計算獨立複核、正式 `main` V4 8種尺寸×2主題真實點擊觸控測試 #40085323981 SUCCESS，UI/teaching SHA一致。
 - 未弱化正式發布器；源分支可重現 publisher stage 4→5 的 #40085542771 SUCCESS，正式 `qa/114-115-official-visual-review` non-force FF 已到 `b78a14c8`；來源資料 CI #40085605193 SUCCESS。既有自動同步 #40085628007 SUCCESS 將正式 `main` 更新 `31adda6c`，`sudu/data/approved/115.json` 已讀回 **5題（原4＋MB05）**，原4內容原封不動。

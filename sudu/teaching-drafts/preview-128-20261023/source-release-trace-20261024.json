@@ -24,9 +24,9 @@
   "draftIndependentCertificateAccepted": 0,
   "draftFullyAcceptedManifest": 0,
   "newProductionMainDataIntegrated": 1,
-  "newLiveCountCertifiedByPages": null,
+  "newLiveCountCertifiedByPages": 1,
   "pagesWorkflowRunId": 40085654639,
-  "pagesVerifiedLive": false,
+  "pagesVerifiedLive": true,
   "qid": "115-00-MB-05",
   "sourceQuestionRevision": "3b0a4236f9298edd225b445592faee3b222c8ecfc1b62425278a0de576cc1df9",
   "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
@@ -39,7 +39,7 @@
   "mainSyncRunId": 40085628007,
   "realMainV4UiRunId": 40085323981,
   "currentMainAlreadyHasQuestion": true,
-  "liveVerified": false,
+  "liveVerified": true,
   "blockedSourceTextIds": [
     "115-00-MB-20",
     "115-00-MB-21",
@@ -50,5 +50,8 @@
   ],
   "sourceTextIsolationUiRunId": 40084761957,
   "all128BlockerInventoryRunId": 40085104362,
-  "meaning": "First true source-certified incremental publication passed existing gates and synced main; the separate 128 draft release-cert ledger is still pending, and LIVE must await exact Pages verification; no mass release flags unlocked."
+  "meaning": "One original 128-scope MB05 independently source-certified question genuinely published with same-SHA Pages live verification; remaining 127 not approved. Draft's separate 128-certificate ledger remains zero.",
+  "pagesWorkflowConclusion": "success",
+  "pagesWorkflowSourceHeadSha": "31adda6c3973ee73387c767d4a8ba56af1fd81b8",
+  "pagesVerificationDetail": "Same-SHA verify, build, deploy, verify_live all SUCCESS for #40085654639"
 }
