@@ -3385,12 +3385,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 11,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "一顆雞蛋從生產到運送至超市販售，所需的成本為4元，在超市的售價為5元，其獲利由蛋農與超市平分；但運送過程中破裂或超過保存期限等因素，超市會將雞蛋銷毀，雞蛋即無法成功銷售，超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為0.006，則蛋農一顆雞蛋之獲利的期望值為多少元？",
+      "options": [
+        "0.473",
+        "0.5",
+        "0.967",
+        "0.97"
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3410,10 +3415,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "legacyUnverifiedIssues": [
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -3422,12 +3436,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 12,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "在理想環境下，將一球自離地面30公尺處垂直落下，球只會上下垂直來回彈跳。若每次反彈高度為前一次高度的2/5，則此球靜止前所經過的路程為多少公尺？",
+      "options": [
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3447,10 +3466,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "legacyUnverifiedIssues": [
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -3459,12 +3487,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 13,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "某校校長想知道全校學生贊成取消早自習的比例p，並將p在95%的信心水準下之信賴區間簡稱95%信賴區間，現從所有學生中隨機抽取樣本數為36的一組樣本，利用這36位學生的意見求得p之95%信賴區間為[0.642,0.914]。若學生對早自習是否取消的意見是固定不變的，則下列何者為正確解讀？",
+      "options": [
+        "該校約有95%的學生贊成取消早自習",
+        "p落在64.2%與91.4%之間的機率為95%",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個p之95%信賴區間，其中約有950個區間會包含p",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個學生贊成取消早自習的樣本比例，其中約有950個會落在64.2%與91.4%之間"
+      ],
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3484,10 +3517,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "legacyUnverifiedIssues": [
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -3496,12 +3538,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 14,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "若拋物線y=ax²+b之開口向上且與x軸沒有交點，則下列敘述何者正確？",
+      "options": [
+        "a>0，b>0",
+        "a>0，b<0",
+        "a<0，b>0",
+        "a<0，b<0"
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3521,10 +3568,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "legacyUnverifiedIssues": [
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -3533,12 +3589,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 15,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "已知直線L₁為y=m₁x、直線L₂為y=m₂x。若m₁、m₂的值皆為2、1/2或−1/2三種數字之一，彼此取值互為獨立，且三種數字出現的機率相同，則L₁和L₂相互垂直的機率為何？",
+      "options": [
+        "4/9",
+        "1/3",
+        "2/9",
+        "1/9"
+      ],
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3558,10 +3619,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "legacyUnverifiedIssues": [
+        "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,

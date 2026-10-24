@@ -1460,11 +1460,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "一顆雞蛋從生產到運送至超市販售，所需的成本為4元，在超市的售價為5元，其獲利由蛋農與超市平分；但運送過程中破裂或超過保存期限等因素，超市會將雞蛋銷毀，雞蛋即無法成功銷售，超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為0.006，則蛋農一顆雞蛋之獲利的期望值為多少元？",
+      "correctedOptions": [
+        "0.473",
+        "0.5",
+        "0.967",
+        "0.97"
+      ],
+      "diff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+一顆雞蛋從生產到運送至超市販售，所需的成本為4元，在超市的售價為5元，其獲利由蛋農與超市平分；但運送過程中破裂或超過保存期限等因素，超市會將雞蛋銷毀，雞蛋即無法成功銷售，超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為0.006，則蛋農一顆雞蛋之獲利的期望值為多少元？\n+0.473\n+0.5\n+0.967\n+0.97\n",
       "imageSha256": "84f81cbb1674801ce9fc16b15771eb938f38b8c000f9e9cfbbb08e068ab37993",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:03:25+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-12",
@@ -1472,11 +1480,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "在理想環境下，將一球自離地面30公尺處垂直落下，球只會上下垂直來回彈跳。若每次反彈高度為前一次高度的2/5，則此球靜止前所經過的路程為多少公尺？",
+      "correctedOptions": [
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "diff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+在理想環境下，將一球自離地面30公尺處垂直落下，球只會上下垂直來回彈跳。若每次反彈高度為前一次高度的2/5，則此球靜止前所經過的路程為多少公尺？\n+50\n+60\n+70\n+80\n",
       "imageSha256": "01a04ced7ea78bae93dffbbcd61b50bb098820922c139a5c9d6cfec580c709bc",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:03:25+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-13",
@@ -1484,11 +1500,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "某校校長想知道全校學生贊成取消早自習的比例p，並將p在95%的信心水準下之信賴區間簡稱95%信賴區間，現從所有學生中隨機抽取樣本數為36的一組樣本，利用這36位學生的意見求得p之95%信賴區間為[0.642,0.914]。若學生對早自習是否取消的意見是固定不變的，則下列何者為正確解讀？",
+      "correctedOptions": [
+        "該校約有95%的學生贊成取消早自習",
+        "p落在64.2%與91.4%之間的機率為95%",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個p之95%信賴區間，其中約有950個區間會包含p",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個學生贊成取消早自習的樣本比例，其中約有950個會落在64.2%與91.4%之間"
+      ],
+      "diff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+某校校長想知道全校學生贊成取消早自習的比例p，並將p在95%的信心水準下之信賴區間簡稱95%信賴區間，現從所有學生中隨機抽取樣本數為36的一組樣本，利用這36位學生的意見求得p之95%信賴區間為[0.642,0.914]。若學生對早自習是否取消的意見是固定不變的，則下列何者為正確解讀？\n+該校約有95%的學生贊成取消早自習\n+p落在64.2%與91.4%之間的機率為95%\n+若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個p之95%信賴區間，其中約有950個區間會包含p\n+若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個學生贊成取消早自習的樣本比例，其中約有950個會落在64.2%與91.4%之間\n",
       "imageSha256": "2b4b72f7b08e0ed7d64483001315b01df29982009498f51f173944a9aa1f837e",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:03:25+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-14",
@@ -1496,11 +1520,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "若拋物線y=ax²+b之開口向上且與x軸沒有交點，則下列敘述何者正確？",
+      "correctedOptions": [
+        "a>0，b>0",
+        "a>0，b<0",
+        "a<0，b>0",
+        "a<0，b<0"
+      ],
+      "diff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+若拋物線y=ax²+b之開口向上且與x軸沒有交點，則下列敘述何者正確？\n+a>0，b>0\n+a>0，b<0\n+a<0，b>0\n+a<0，b<0\n",
       "imageSha256": "4e488da14604b8b00158c3825fb404ad03f70f862834f1ebdb26a59b4976e188",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:03:25+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-15",
@@ -1508,11 +1540,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "已知直線L₁為y=m₁x、直線L₂為y=m₂x。若m₁、m₂的值皆為2、1/2或−1/2三種數字之一，彼此取值互為獨立，且三種數字出現的機率相同，則L₁和L₂相互垂直的機率為何？",
+      "correctedOptions": [
+        "4/9",
+        "1/3",
+        "2/9",
+        "1/9"
+      ],
+      "diff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+已知直線L₁為y=m₁x、直線L₂為y=m₂x。若m₁、m₂的值皆為2、1/2或−1/2三種數字之一，彼此取值互為獨立，且三種數字出現的機率相同，則L₁和L₂相互垂直的機率為何？\n+4/9\n+1/3\n+2/9\n+1/9\n",
       "imageSha256": "ea6e4129de7bdcd929549adf2d769c4a4b04bf3b86de02bf1216d1248da01ee9",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:03:25+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-16",
