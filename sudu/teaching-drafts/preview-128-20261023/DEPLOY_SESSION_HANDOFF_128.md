@@ -1,3 +1,13 @@
+# 2026-10-24｜新Session實做：E03正式UI憑證避免舊版內容假陽性
+
+- 已重新核對三分支 HEAD：main `5415a30452cdf9020242aca16fe0ff2b6814ab4b`、教學 `11c327b409182a8abde76d9ce217b55f66619097`（開始時）、來源 QA `844c813a859f00e194a46322ca798696bffea5bf`。
+- 已查 [V4隔離UI CI #40048508080](https://github.com/homelux-huang/7581707/actions/runs/40048508080) `SUCCESS`，不等於正式學生題庫發布。
+- **實際修正** `tests/sudu_english03_isolated_ui.cjs`：在啟動瀏覽器前，計算真實 E03 教學 canonical SHA256，必須與最新 `content-review-delivery-20261024.json` 內 `teachingDigestSha256` 一致；image SHA及隔離 release=false 也核對。防止測試用舊教學資料得到綠燈卻拿去放行新內容。commit `787a9d2c62237262fdccd08ed6257e5b221c4694`。
+- 新CI [#40050163438](https://github.com/homelux-huang/7581707/actions/runs/40050163438) 已觸發，讀取 completed 結論及 log 才可宣告此新增防偽檢查 PASS。
+- **尚未放行** E03 正式來源 QA：`qa/114-115-official-visual-review` 的 `verified-student-batch.json` 僅四題 115數學B；E03正式文字、官答、更正與獨立解題憑證未齊，不能把已知官答後的自評寫成 blind solve。下一步應補真實分階段 source evidence，或先選已具真正事前獨立解題證據的題目；不得以此阻礙其他候選。
+- 本輪 `READY_FOR_DEPLOYMENT` 新增0、Pages新增部署0；main未修改。正式發布仍需相同內容digest之教學與UI證據、來源 QA admission、same-SHA Pages LIVE verification。
+
+---
 # 2026-10-24｜逐題第一候選 E03 真實原題與教學來源修復（維持隔離直到完整證書）
 
 - 最新實質內容 commit `3399a3abd90bedac8ebad14c9bdb8368a6608afa`；E03 新 teaching canonical SHA256 `c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316`，原圖 SHA256 `16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd`。
