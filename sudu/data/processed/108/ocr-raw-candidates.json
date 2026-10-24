@@ -1560,11 +1560,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "如圖（一）所示，使用8種不同顏色塗在圖中標號A、B、C、D、E的5個格子內，顏色不可重複使用，若規定同一格子僅塗同一顏色，則共可塗出幾種不同的著色樣式？",
+      "correctedOptions": [
+        "P⁸₅",
+        "C⁸₅",
+        "5⁶",
+        "6⁵"
+      ],
+      "diff": "--- legacy-source-placeholder\n+++ image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+如圖（一）所示，使用8種不同顏色塗在圖中標號A、B、C、D、E的5個格子內，顏色不可重複使用，若規定同一格子僅塗同一顏色，則共可塗出幾種不同的著色樣式？\n+P⁸₅\n+C⁸₅\n+5⁶\n+6⁵\n",
       "imageSha256": "d472b5e3f0c9383ea0585dc7201feec57a050eba8652fa5d108d479b407c90e7",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:52:24+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-17",
@@ -1572,11 +1580,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "若實數x滿足行列式|1−x, 2, 0; 4, 6−2x, 2; 0, 3, 1|＝4，則行列式|2, 3−x, 1; 0, 6, 2; 1−x, −1, −1|＝？",
+      "correctedOptions": [
+        "4",
+        "−4",
+        "8",
+        "−8"
+      ],
+      "diff": "--- legacy-source-placeholder\n+++ image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+若實數x滿足行列式|1−x, 2, 0; 4, 6−2x, 2; 0, 3, 1|＝4，則行列式|2, 3−x, 1; 0, 6, 2; 1−x, −1, −1|＝？\n+4\n+−4\n+8\n+−8\n",
       "imageSha256": "8db038429ad97927dbfa8e989e497c8948254f058f755a09546b31ac8144222e",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:52:24+08:00",
+      "qaEvidencePath": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "108-00-MB-18",

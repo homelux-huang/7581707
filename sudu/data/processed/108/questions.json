@@ -3640,12 +3640,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 16,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "如圖（一）所示，使用8種不同顏色塗在圖中標號A、B、C、D、E的5個格子內，顏色不可重複使用，若規定同一格子僅塗同一顏色，則共可塗出幾種不同的著色樣式？",
+      "options": [
+        "P⁸₅",
+        "C⁸₅",
+        "5⁶",
+        "6⁵"
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3665,10 +3670,14 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -3677,12 +3686,17 @@
       "paperCode": "00-MB",
       "originalQuestionNumber": 17,
       "subject": "數學 B",
-      "question": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
-      "options": [],
+      "question": "若實數x滿足行列式|1−x, 2, 0; 4, 6−2x, 2; 0, 3, 1|＝4，則行列式|2, 3−x, 1; 0, 6, 2; 1−x, −1, −1|＝？",
+      "options": [
+        "4",
+        "−4",
+        "8",
+        "−8"
+      ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -3702,10 +3716,14 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/108_4y/downloader.php?obj=MTA4LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "answerPdfSha256": "3a209cc9a7b348c4f0c5f887aa0287add5cb59064978dfff45a9d10ff3f00aa7"
       },
-      "ocrStatus": "PENDING_NEEDS_OCR",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
       "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyUnverifiedOptions": [],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "schemaVersion": 1,
