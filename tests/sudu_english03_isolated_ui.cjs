@@ -8,6 +8,15 @@ assert(process.env.SUDU_PREVIEW_ONLY==='1'&&new URL(base).hostname==='127.0.0.1'
 const folder=path.join(root,'sudu/teaching-drafts/preview-128-20261023');
 const q=JSON.parse(fs.readFileSync(path.join(folder,'115-00-E-03.json'),'utf8')),t=q.teaching,e=t.english;
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const canonical=o=>Array.isArray(o)?o.map(canonical):o&&typeof o==='object'?Object.fromEntries(Object.keys(o).sort().map(k=>[k,canonical(o[k])])):o;
+const manifest=JSON.parse(fs.readFileSync(path.join(folder,'content-review-delivery-20261024.json'),'utf8'));
+const pinned=manifest.items.find(x=>x.questionId===q.questionId);
+const actualTeachingDigest=hash(JSON.stringify(canonical(t)));
+assert(pinned,'E03 must exist in persistent teaching handoff manifest');
+assert.equal(pinned.originalImageSha256,q.imageSha256,'E03 source image SHA must stay pinned');
+assert.equal(pinned.teachingDigestSha256,actualTeachingDigest,
+  'Reject passing UI test when candidate teaching changes without refreshed evidence');
+assert.equal(pinned.readyForDeployment,false,'isolated preflight never changes release approval');
 const yearSource=JSON.parse(fs.readFileSync(path.join(main,'sudu/data/years/115.json'),'utf8'));
 const original=yearSource.papers.find(p=>p.paper==='00-E')?.questions.find(x=>x.id===q.questionId);
 assert(original&&original.year===115&&original.paper==='00-E'&&original.number===3,
@@ -31,9 +40,9 @@ const fixture={year:115,canonicalId:original.id,id:original.number,subject:origi
  '新聞時事例句':e.newsExampleKind+'\n英文：'+e.newsExampleEnglish+'\n中文：'+e.newsExampleChinese+'\n來源：'+e.newsExampleSourceOrganization+'｜'+e.newsExampleSourceDate+'\n'+e.newsExampleSourceUrl},
  examCalculation:{hasExamCalculation:false,lines:[]}};
 const out=path.resolve(process.env.SUDU_TEST_OUTPUT||'test-results/english03-ui');fs.mkdirSync(out,{recursive:true});
-const canonical=o=>Array.isArray(o)?o.map(canonical):o&&typeof o==='object'?Object.fromEntries(Object.keys(o).sort().map(k=>[k,canonical(o[k])])):o;
+
 const report={kind:'ISOLATED_E03_MAIN_HTML_CANDIDATE_ADAPTER',questionId:q.questionId,
- imageSha256:q.imageSha256,teachingDigestSha256:hash(JSON.stringify(canonical(t))),
+ imageSha256:q.imageSha256,teachingDigestSha256:actualTeachingDigest,
  sourceQuestionRevision:hash(JSON.stringify({question:original.question,options:original.options,imageSha256:q.imageSha256})),
  sourceRecord:'sudu/data/years/115.json#115-00-E-03',
  sourceIsLegacyPendingIndependentTextQA:true,
