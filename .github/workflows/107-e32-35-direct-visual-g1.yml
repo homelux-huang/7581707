@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install Pillow for source-pixel checks
+        run: python -m pip install 'Pillow>=10,<12'
       - name: Pin latest QA HEAD and update only independently visually inspected evidence
         run: |
           echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
