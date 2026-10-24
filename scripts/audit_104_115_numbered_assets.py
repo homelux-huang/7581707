@@ -44,11 +44,20 @@ def expected_legacy(year):
     groups={}
     for paper in p:
         code=paper["paper"]
-        numbers=[int(q["number"]) for q in paper["questions"]]
+        # Historical 110 legacy parser inserted the nonexistent commerce Q80.
+        # Honor the explicit immutable quarantine, never add it as a real item.
+        excluded={"110-09-1-80"} if year==110 and code=="09-1" else set()
+        if excluded:
+            inv=read(PROCESSED/"110"/"inventory.json")
+            assert excluded <= set(inv["legacyQuarantinedIds"])
+            assert {q["id"] for q in paper["questions"] if q["id"] in excluded}==excluded
+        valid_rows=[q for q in paper["questions"] if q["id"] not in excluded]
+        numbers=[int(q["number"]) for q in valid_rows]
         assert len(numbers)==len(set(numbers))
         groups[code]={
             "subject":paper.get("subject"),
             "legacyRecordCount":len(numbers),
+            "excludedHistoricalFalsePositiveIds": sorted(excluded),
             "numberRange": [min(numbers),max(numbers)],
             "legacyNumberHoles": sorted(set(range(min(numbers),max(numbers)+1))-set(numbers)),
             "expectedIdsFromLegacy":[f"{year}-{code}-{n:02d}" for n in sorted(numbers)]
@@ -139,6 +148,7 @@ def audit(year, g5audit):
                 image_ids.append(qid)
         papers[code]={
             "subject":group["subject"],"legacyCandidateCount":len(wanted),
+            "excludedHistoricalFalsePositiveIds":group["excludedHistoricalFalsePositiveIds"],
             "candidateNumberRange":group["numberRange"],
             "missingCanonicalRecords":missing_q,
             "missingManifestRecords":missing_manifest,
@@ -236,6 +246,9 @@ def build_report():
     for r in result:
         md.append(f"### {r['year']} 年")
         for code,p in r["papers"].items():
+            if p.get("excludedHistoricalFalsePositiveIds"):
+                md.append("- 原始舊資料的已隔離假題號（不屬正式題數）："+
+                          ", ".join(p["excludedHistoricalFalsePositiveIds"]))
             missing=p.get("missingSingleQuestionWebpIds",[])
             options=p.get("missingFourTextOptionsIds",[])
             md.append(f"- `{code}` {p['subject']}：候選 {p.get('legacyCandidateCount',p.get('legacyRecordCount'))}；"

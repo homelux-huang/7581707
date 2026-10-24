@@ -38,6 +38,8 @@ jobs:
           j=json.loads(p.read_text(encoding='utf8'))
           assert len(j['years'])==12 and j['years'][0]['year']==104
           assert j['totals']['candidateQuestions105_115']==2249
+          y110=next(y for y in j['years'] if y['year']==110)
+          assert y110['papers']['09-1']['excludedHistoricalFalsePositiveIds']==['110-09-1-80']
           assert j['totals']['g5PassYears105_115']==11
           assert j['noNewQAFlagsOrAnswerFlagsSet'] is True and j['notForRelease'] is True
           assert all(y.get('integrationReady') is False for y in j['years'])
