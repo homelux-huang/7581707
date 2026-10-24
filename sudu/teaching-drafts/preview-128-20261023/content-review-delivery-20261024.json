@@ -104,12 +104,13 @@
       "officialAnswer": "C",
       "originalImage": "data/approved/webp/115/115-00-MB-25.webp",
       "originalImageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
-      "teachingDigestSha256": "7bbe44fe9f5eb8bbf5f167870366f4586e631aa19630480431a5fc18f4c90991",
+      "teachingDigestSha256": "4696abf4894cbd8664ab4a57e111bacb08bfb7137878108d021b3c8dbabcdda8",
       "reviewEvidence": "sudu/teaching-drafts/preview-128-20261023/BATCH_10_PEDAGOGY_QA_20261024.md",
       "independentTeachingQA": "PENDING",
       "uiQA": "PENDING",
       "readyForDeployment": false,
-      "deployed": false
+      "deployed": false,
+      "followupReviewEvidence": "sudu/teaching-drafts/preview-128-20261023/DEPLOY_QA_FOLLOWUP_20261024.md"
     },
     {
       "questionId": "115-00-E-01",

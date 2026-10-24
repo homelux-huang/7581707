@@ -73,9 +73,9 @@ const report={kind:'CROSS_BRANCH_MAIN_V4_DRAFT_PREFLIGHT_ONLY_NO_RELEASE',
  mainSha,draftSha,pinnedImagesChecked:7,questionIds:fixtures.map(f=>f.canonicalId),
  actualReleaseApproved:false,formalContentUiQaGranted:false,
  browserOnlyApprovedJsonInterception:true,
- browserInputModality:'KEYBOARD_ENTER_ACCESSIBILITY_PREFLIGHT_ONLY',
- mousePointerClickStability:'PENDING_PRIOR_FAILED_RUN_39962743686',
- touchActionability:'PENDING_NOT_TESTED',
+ browserInputModality:'REAL_TOUCH_UNDER_1024_AND_MOUSE_CLICK',
+ mousePointerClickStability:'SEE_PER_CASE_RESULTS',
+ touchActionability:'SEE_PER_CASE_RESULTS',
 
  legacyTextReplacementsOnlyInQaFixture:[20,21,22,25],
  expectedViewportThemeCases:16,observations:[],errors:[]};
@@ -85,7 +85,7 @@ fs.mkdirSync(out,{recursive:true});
  try{
   for(const [width,height] of dims){
    for(const theme of ['light','dark']){
-    const ctx=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'});
+    const ctx=await browser.newContext({viewport:{width,height},hasTouch:width<1024,isMobile:width<768,reducedMotion:'reduce'});
     try{
      await ctx.route('**/data/approved/115.json',route=>{
       if(!route.request().url().startsWith(base))throw Error('off-host fixture denied');
@@ -93,6 +93,7 @@ fs.mkdirSync(out,{recursive:true});
        headers:{'Cache-Control':'no-store','X-Internal-Preview':'NO-RELEASE'}});
      });
      const page=await ctx.newPage(),pageErrors=[];
+     const activate=async locator=>width<1024?locator.tap({timeout:10000}):locator.click({timeout:10000});
      page.on('pageerror',err=>pageErrors.push(err.message));
      await page.goto(base+'v4-115-multisubject-review-demo.html?year=115&subject='+encodeURIComponent('數學 B'),
        {waitUntil:'domcontentloaded',timeout:30000});
@@ -114,11 +115,9 @@ fs.mkdirSync(out,{recursive:true});
       assert.equal(await page.locator('#answerCard .opt').count(),4,'4 options');
       assert.equal(await page.locator('#guideCard.show').count(),0,'hidden explanation before answer');
       const selected=n===19?'A':fixture.answer;
-      // Real keyboard activation is an accessible user input, not JS .click()
-      // or Playwright force-click. Mouse pointer stability remains UNVERIFIED.
+      // Actual pointer/touch input; never force or dispatch a synthetic DOM click.
       const answerButton=page.locator('#answerCard .opt[data-a="'+selected+'"]');
-      await answerButton.focus();
-      await page.keyboard.press('Enter');
+      await activate(answerButton);
       await page.locator('#correctAnswer').waitFor({state:'visible'});
       await page.locator('#guideCard.show').waitFor({state:'visible'});
       assert.equal(await page.locator('#guideCard .guide-block.calculation-first').count(),1,'exactly one math computation');
@@ -132,15 +131,13 @@ fs.mkdirSync(out,{recursive:true});
       assert(widthCheck.scroll<=widthCheck.client+1,'no horizontal overflow '+JSON.stringify(widthCheck));
       if(n===19){
        assert.equal(await page.locator('#answerCard .opt.wrong').count(),1,'wrong answer shown');
-       await page.locator('#questionBtn').focus();
-       await page.keyboard.press('Enter');
+       await activate(page.locator('#questionBtn'));
        assert.equal(await page.locator('#guideCard.show').count(),0,'hide explanation');
-       await page.locator('#explainBtn').focus();
-       await page.keyboard.press('Enter');
+       await activate(page.locator('#explainBtn'));
        assert.equal(await page.locator('#guideCard.show').count(),1,'restore explanation');
       }
       successes.push({questionId:fixture.canonicalId,decoded:true,optionsExplained:4,mathStepsShown:true,
-        noHorizontalOverflow:true,keyboardActivated:true});
+        noHorizontalOverflow:true,inputModality:width<1024?'touch':'mouse'});
      }
      await page.evaluate(()=>showReview());
      assert.equal(await page.locator('#reviewView.show').count(),1,'review UI');

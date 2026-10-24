@@ -1,3 +1,7 @@
+# 2026-10-24｜部署 Session 接續複核
+
+已完成10題SHA與隔離狀態測試、數學B20/25圖文與計算複核；修正25選項A具體反證；將隔離V4預檢從鍵盤改為真實click/tap。詳見 `DEPLOY_QA_FOLLOWUP_20261024.md`。UI結果待CI，不授予正式憑證，READY仍0。
+
 # 2026-10-24｜第1批10題原圖及教學內容修復交付（尚非READY_FOR_DEPLOYMENT）
 
 - **教學分支 commit：`3ecb617f83da87f25ad9e7be645c355d68cc7459`**；base `ee74cbaad51740577b24a341559b17a2be5290ba`；未變更 main `5415a30452cdf9020242aca16fe0ff2b6814ab4b`。
