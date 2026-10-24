@@ -1,0 +1,84 @@
+name: Verify 114 TCTE official year gate and exact release dry-run (NO DEPLOY)
+on:
+  push:
+    branches: [release/114-year-scoped-official-gate-20261024]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - .github/workflows/release-114-correction-gate-preflight.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_release_preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - name: Check out actual candidate code at exact branch commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Existing canonical QA source (must remain 114 zero before promotion)
+        uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          path: _qa_original
+          persist-credentials: false
+      - name: Exact 114 three-question approval candidate from reviewed clean source
+        uses: actions/checkout@v4
+        with:
+          ref: qa/114-eng07-09-canonical-integrate-20261024
+          path: _qa_ready
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install same official WebP decoder as release
+        run: python -m pip install -q pillow
+      - name: Reject wrong paper/year/modified SHA, retain all old source review gates
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_sudu_verified_publish.py -v
+          python scripts/sudu_verified_publish.py stage --source _qa_original --dest /tmp/qa-before --sha "$(git -C _qa_original rev-parse HEAD)"
+          python scripts/sudu_verified_publish.py check --dest /tmp/qa-before
+          python scripts/sudu_verified_publish.py stage --source _qa_ready --dest /tmp/qa-after --sha "$(git -C _qa_ready rev-parse HEAD)"
+          python scripts/sudu_verified_publish.py check --dest /tmp/qa-after
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          before=Path("/tmp/qa-before/sudu/data/approved")
+          after=Path("/tmp/qa-after/sudu/data/approved")
+          def get(p):return json.loads(p.read_text())
+          b114=get(before/"114.json")
+          a114=get(after/"114.json")
+          b115=get(before/"115.json")
+          a115=get(after/"115.json")
+          p=get(after/"progress.json")
+          assert b114["approvedCount"]==0
+          assert a114["approvedCount"]==3
+          expected={"114-00-E-07":"A","114-00-E-08":"D","114-00-E-09":"D"}
+          assert {x["canonicalId"]:x["answer"] for x in a114["questions"]}==expected
+          assert b115["approvedCount"]==a115["approvedCount"]
+          assert b115["questions"]==a115["questions"],"115 source changed or previously QA not preserved"
+          assert p["years"]["114"]["approvedCount"]==3
+          for q in a114["questions"]:
+              assert q["examCalculation"] is None
+              assert q["year"]==114 and len(q["options"])==4
+              assert set(q["optionExplanations"])==set("ABCD")
+              file=after.parents[1]/q["image"]
+              assert hashlib.sha256(file.read_bytes()).hexdigest()==q["imageSha256"]
+          print("PASS: strict 114 candidate at exactly three original SHA-traced English 07/08/09, 115 fully unchanged; original QA 114=0; NO deployment")
+          PY
+      - name: Store original/current SHA-proof comparison but never release from CI
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-code-and-source-preflight-no-deploy
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            /tmp/qa-before/sudu/data/approved/114.json
+            /tmp/qa-before/sudu/data/approved/115.json
+            /tmp/qa-after/sudu/data/approved/114.json
+            /tmp/qa-after/sudu/data/approved/115.json
+            /tmp/qa-after/sudu/data/approved/progress.json

@@ -1,0 +1,62 @@
+name: MB23 original table and WebP student V4 full QA (NO DEPLOY)
+on:
+  push:
+    branches: [fix/mb23-source-table-revision-and-publish-20261024, integration/128-p0-p1-pr22-mb23-final-20261025]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - scripts/build_mb23_qa_only_table_preview.py
+      - sudu/v4-115-multisubject-review-demo.html
+      - tests/test_sudu_verified_publish.py
+      - tests/sudu_mb23_table_preview.cjs
+      - .github/workflows/mb23-source-table-qa-only.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 0b1343fb7853701ec847fd33321cc792c3172bbf
+          path: _mb23_source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate original 5 approved unchanged and reject unreviewed source table
+        run: |
+          set -eu
+          python -m pip install -q pillow
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python scripts/sudu_verified_publish.py check
+      - name: Stage authentic 115 mathB23 original source, approved-only preview mapper (NEVER ADMIT)
+        run: python scripts/build_mb23_qa_only_table_preview.py
+      - name: Build current V4 and run actual 8x2 Chromium with exact original question and table
+        run: |
+          set -eu
+          SUDU_BUILD_SHA="$(git rev-parse HEAD)" python scripts/build.py
+          cp _mb23_source/sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp _site/sudu/data/approved/webp/115/115-00-MB-23.webp
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+          python -m http.server 8777 --bind 127.0.0.1 --directory _site >/tmp/mb23-http.log 2>&1 &
+          pid=$!
+          trap 'kill "$pid"' EXIT
+          sleep 2
+          node tests/sudu_mb23_table_preview.cjs
+      - name: Keep exact source WebP SHA, table revision, isolated UI result (NO RELEASE)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mb23-source-table-8x2-qa-only
+          path: |
+            mb23-qa-only/
+          if-no-files-found: ignore
+          retention-days: 30

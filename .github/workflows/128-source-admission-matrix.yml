@@ -1,0 +1,100 @@
+name: 128 unified publisher admission A/B and historical Econ34 negative matrix (NO DEPLOY)
+on:
+  push:
+    branches: [integration/128-p0-p1-pr22-mb23-final-20261025]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - scripts/sudu_independent_review_gate.py
+      - sudu/release-governance/independent-review-policy.json
+      - tests/test_sudu_certified_overlay.py
+      - tests/test_sudu_independent_review_gate.py
+      - .github/workflows/128-source-admission-matrix.yml
+      - .github/workflows/mb23-source-table-qa-only.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  fail_closed_matrix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 16d04a0d642fb433de289417a22c3050aa3e52b6
+          path: _latest_qa_source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 9944759e339ef2d3c002042798f7fe696d861d96
+          path: _114_eng_07_09_candidate
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 6fea22296877e31d9f1d3bd01d987b0096ddcf1b
+          path: _old_econ34_self_signed_six
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate no self-signed forged approvers, stale QA or official-answer versions
+        run: |
+          set -eu
+          python -m pip install -q pillow cryptography
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_certified_overlay.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Stage matrix A approved original five and B PR21 three plus Econ34 old sixth are NOT authorized
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/128-publisher-admission
+          for label in latest_qa_source 114_eng_07_09_candidate old_econ34_self_signed_six; do
+            case "$label" in
+              latest_qa_source) src=_latest_qa_source ;;
+              114_eng_07_09_candidate) src=_114_eng_07_09_candidate ;;
+              old_econ34_self_signed_six) src=_old_econ34_self_signed_six ;;
+            esac
+            rev="$(git -C "$src" rev-parse HEAD)"
+            python scripts/sudu_verified_publish.py stage --source "$src" --dest "/tmp/128-publisher-admission/$label" --sha "$rev" >/tmp/128-publisher-admission/"$label"-stage.json
+            python scripts/sudu_verified_publish.py check --dest "/tmp/128-publisher-admission/$label"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          baseline=json.loads(Path('sudu/data/approved/115.json').read_text())
+          assert baseline['approvedCount']==5
+          result={}
+          for label in ('latest_qa_source','114_eng_07_09_candidate','old_econ34_self_signed_six'):
+              base=Path('/tmp/128-publisher-admission')/label/'sudu/data/approved'
+              y114=json.loads((base/'114.json').read_text())
+              y115=json.loads((base/'115.json').read_text())
+              assert y114['approvedCount']==0,(label,'114',y114['approvedCount'])
+              assert y115['approvedCount']==5,(label,'115',y115['approvedCount'])
+              assert y115['questions']==baseline['questions'],(label,'previous 5 changed')
+              result[label]={'114':0,'115':5,'newUnauthorizedAdmissions':0,'baselineFiveUnchanged':True}
+          state={
+            'auditType':'REAL_STAGE_A_AND_B_AND_HISTORIC_SELF_REVIEW_NEGATIVE',
+            'noRealExternalReviewerConfigured':True,
+            'licensedTestKeyUsedForProduction':False,
+            'matrixA':result['latest_qa_source'],
+            'matrixB114English07_09':result['114_eng_07_09_candidate'],
+            'matrixHistoricEcon34':result['old_econ34_self_signed_six'],
+            'matrixC114ThreeRealSigned':'BLOCKED_EXTERNAL_OWNER_QUALIFIED_REVIEWER_ABSENT',
+            'matrixDEcon34RealSigned':'BLOCKED_EXTERNAL_OWNER_QUALIFIED_REVIEWER_ABSENT',
+            'matrixEChangedAnswerImageLessonOfficial':'DENIED_BY_REAL_UNIT_NEGATIVE_TESTS',
+            'newReady':0,'newLive':0,
+          }
+          (Path('/tmp/128-publisher-admission')/'matrix.json').write_text(json.dumps(state,indent=2)+'\n')
+          print('PASS: actual publisher resists unauthorized PR21 114=3 and historic Econ34 115=6; only five already LIVE remain')
+          PY
+      - name: Save exact-stage JSON per QA source in isolated CI artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 128-admission-A-B-E-negative-same-HEAD-no-release
+          path: /tmp/128-publisher-admission/
+          if-no-files-found: ignore
+          retention-days: 45
