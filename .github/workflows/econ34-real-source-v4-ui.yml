@@ -31,7 +31,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Assemble authentic source and teaching through unchanged real publisher (QA ONLY)
-        run: python candidate/scripts/build_econ34_real_source_preview.py
+        run: |
+          python -m pip install -q pillow
+          python candidate/scripts/build_econ34_real_source_preview.py
       - name: Build same-SHA main V4, install Chromium headless
         run: |
           set -eu
