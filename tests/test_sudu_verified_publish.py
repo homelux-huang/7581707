@@ -222,6 +222,39 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
             data=v.read(file);data["allPagesInThreeDocumentsReviewed"]=False;v.dump(file,data)
             self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
 
+class MB23SourceTableTests(unittest.TestCase):
+    def setUp(self):
+        VerifiedPublicationTests.setUp(self)
+
+    def test_mb23_source_table_changes_invalidate_all_revision_bound_qa(self):
+        import copy
+        q=copy.deepcopy(self.q)
+        q["originalSourceTableCandidate"]={
+            "heading":["行程","原價","優惠"],
+            "rows":[["行程Ⅰ","每位 x 元","兩人一人減 3000 元"],
+                    ["行程Ⅱ","每位 x+2000 元","一人打八折"]]}
+        before=v.text_revision(q,"d"*64)
+        q["originalSourceTableCandidate"]["rows"][1][2]="減 3000 元"
+        self.assertNotEqual(before,v.text_revision(q,"d"*64))
+        self.assertTrue(v.verified_source_table(q["originalSourceTableCandidate"]))
+        q["originalSourceTableCandidate"]["rows"].append(["only","two"])
+        self.assertIsNone(v.verified_source_table(q["originalSourceTableCandidate"]))
+
+    def test_unverified_mb23_table_cannot_enter_student_public_output(self):
+        import copy
+        q=copy.deepcopy(self.q)
+        q["assets"]={"sha256":"d"*64}
+        q["originalSourceTableCandidate"]={
+            "heading":["行程","原價","優惠"],
+            "rows":[["行程Ⅰ","x","折抵3000"],["行程Ⅱ","x+2000","一人八折"]]}
+        with self.assertRaises(ValueError):
+            v.public_question(q,115,"經濟學","data/approved/webp/115/115-09-2-27.webp")
+        q["textQaEvidence"]["tableReviewedAgainstOriginalWebp"]=True
+        obj=v.public_question(q,115,"經濟學","data/approved/webp/115/115-09-2-27.webp")
+        self.assertEqual(len(obj["sourceTable"]["rows"]),2)
+        self.assertEqual(obj["sourceTable"]["heading"],["行程","原價","優惠"])
+        self.assertEqual(obj["sourceTable"]["sourceWebpSha256"],v.image_sha(q))
+
 
 if __name__ == "__main__":
     unittest.main()
