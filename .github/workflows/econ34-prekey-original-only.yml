@@ -1,0 +1,21 @@
+name: Econ34 original question first-look image ONLY (NO KEY, NO DEPLOY)
+on:
+  push:
+    branches: [qa/econ34-prekey-image-only-20261024]
+    paths:
+      - scripts/econ34_prekey_original_only.py
+      - .github/workflows/econ34-prekey-original-only.yml
+permissions:
+  contents: read
+jobs:
+  original_only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Read question-only official WebP and emit SHA-pinned image without answer
+        run: python scripts/econ34_prekey_original_only.py
