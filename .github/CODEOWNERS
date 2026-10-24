@@ -1,0 +1,11 @@
+# Repository owner oversight for release-affecting changes. This does not
+# constitute independently accredited lesson review by itself. The owner MUST
+# enable a protected main ruleset with a genuinely different reviewer.
+/.github/CODEOWNERS                         @homelux-huang
+/scripts/sudu_verified_publish.py          @homelux-huang
+/scripts/sudu_independent_review_gate.py   @homelux-huang
+/scripts/check_live_release.py             @homelux-huang
+/scripts/build.py                          @homelux-huang
+/sudu/release-governance/                  @homelux-huang
+/sudu/data/approved/                       @homelux-huang
+/.github/workflows/                        @homelux-huang
