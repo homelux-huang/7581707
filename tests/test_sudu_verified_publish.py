@@ -116,6 +116,8 @@ class VerifiedPublicationTests(unittest.TestCase):
             for year in (114,115):
                 v.dump(root/f"sudu/data/approved/{year}.json",{"year":year,"expected":205,"questions":[],"approvedCount":0})
             for year in (114,115):
+                v.dump(root/f"sudu/data/approved/integrity/{year}.json",{
+                    "schemaVersion":1,"year":year,"sourceSha":None,"approvedCount":0,"questions":[]})
                 v.dump(root/f"sudu/data/approved/preview/{year}.json",{
                     "schemaVersion":1,"year":year,"expected":205,
                     "imagePreviewCount":0,"questions":[]
