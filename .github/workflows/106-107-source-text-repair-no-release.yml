@@ -1,0 +1,102 @@
+name: 106 C35 v4 source-pixel candidate and 106/107 source text G2 (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/repair_106_c35_38_107_e32_35_text_20261024.py
+      - .github/workflows/106-107-source-text-repair-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-106-107-text-source-repair-no-release
+  cancel-in-progress: false
+jobs:
+  verify_and_stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-image library without relaxing assertions
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Capture branch head and compile script
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/repair_106_c35_38_107_e32_35_text_20261024.py
+      - name: Pin current original assets and check source-bound text plan
+        run: python scripts/repair_106_c35_38_107_e32_35_text_20261024.py
+      - name: Produce only new C35 candidate and corrected G2 with raw and diff
+        run: python scripts/repair_106_c35_38_107_e32_35_text_20261024.py --stage
+      - name: Validate no extra G1 or G3 and all G5 years are still valid
+        run: |
+          python - <<'PY_STRICT'
+          import json,hashlib,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          def load(p):return json.loads(Path(p).read_text(encoding='utf8'))
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          for y,expect_g1,expect_g2 in ((106,15,10),(107,4,4)):
+              d=Path('sudu/data/processed')/str(y)
+              q=load(d/'questions.json');m=load(d/'webp-manifest.json')
+              inv=load(d/'inventory.json');v=load(d/'VISUAL_QA.json')
+              val=load(d/'VALIDATION.json');rel=load(d/'release-manifest.json')
+              assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==expect_g1
+              assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==expect_g2
+              assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+              assert not rel['releaseAllowed'] and not rel['integrationReady']
+              assert not val['releaseAllowed'] and not val['integrationReady']
+              assert all(not x['answerVerified'] and not x['integrationReady'] for x in q['questions'])
+              assert len(q['questions'])==len(m['items'])==204
+              ids=[f"{y}-{'00-C' if y==106 else '00-E'}-{k:02d}" for k in range(35,39)] if y==106 else [f'{y}-00-E-{k:02d}' for k in range(32,36)]
+              rows={x['questionId']:x for x in q['questions']}
+              texts={x['questionId']:x for x in load(d/'ocr-raw-candidates.json')['items']}
+              for id in ids:
+                  assert rows[id]['questionVerified'] and len(rows[id]['options'])==4
+                  assert texts[id]['qaStatus']=='PASS' and texts[id]['rawOcrText'] is None
+                  assert len(texts[id]['correctedOptions'])==4 and texts[id]['qaEvidencePath']
+              if y==106:
+                  img=next(x for x in m['items'] if x['questionId']=='106-00-C-35')
+                  assert img['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+                  assert img['output'].endswith('qa-drafts/webp-v4/00-C/106-00-C-35.webp')
+                  assert hashlib.sha256(Path(img['output']).read_bytes()).hexdigest()==img['outputSha256']
+                  assert not rows['106-00-C-35']['integrationReady']
+              if y==107:
+                  assert all(next(x for x in m['items'] if x['questionId']==id)['qaStatus']=='PASS' for id in ids)
+          print('G2 corrected 106 4+107 4; 106 C35 v4 remains DRAFT G1; G5 11/11; G3 0 and NO RELEASE')
+          PY_STRICT
+      - name: Save evidence with nonforce HEAD lease, no deployment
+        run: |
+          set -eu
+          for y in 106 107; do
+            git add "sudu/data/processed/$y/questions.json"
+            git add "sudu/data/processed/$y/ocr-raw-candidates.json"
+            git add "sudu/data/processed/$y/webp-manifest.json"
+            git add "sudu/data/processed/$y/VISUAL_QA.json"
+            git add "sudu/data/processed/$y/inventory.json"
+            git add "sudu/data/processed/$y/VALIDATION.json"
+            git add "sudu/data/processed/$y/question-bank.sqlite3"
+          done
+          git add sudu/data/processed/106/qa-drafts/TEXT_QA_106_C35_38_SOURCE_20261024.json
+          git add sudu/data/processed/107/qa-drafts/TEXT_QA_107_E32_35_SOURCE_20261024.json
+          git add sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-35.webp
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "All selected evidence already staged: no rewrite"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Another session advanced QA branch; refusing stale nonforce push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa): isolate 106 C35 v4 and correct 106/107 source text with G5 NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review
