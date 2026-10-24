@@ -141,7 +141,14 @@
     const chunks=[],indexes=[];
     for(const term of unique){
       let p=0,pos=raw.indexOf(term,p);
-      while(pos>=0){indexes.push({from:pos,to:pos+term.length});p=pos+term.length;pos=raw.indexOf(term,p)}
+      while(pos>=0){
+        const before=raw[pos-1]||'', after=raw[pos+term.length]||'';
+        const isAsciiWord=c=>/[A-Za-z0-9]/.test(c);
+        const brokenWord=(isAsciiWord(term[0])&&isAsciiWord(before))||
+          (isAsciiWord(term[term.length-1])&&isAsciiWord(after));
+        if(!brokenWord)indexes.push({from:pos,to:pos+term.length});
+        p=pos+term.length;pos=raw.indexOf(term,p);
+      }
     }
     indexes.sort((a,b)=>a.from-b.from||b.to-a.to);
     let at=0;
