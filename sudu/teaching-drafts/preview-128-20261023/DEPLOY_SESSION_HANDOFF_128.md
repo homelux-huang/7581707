@@ -1,3 +1,21 @@
+# 2026-10-24｜第1批10題原圖及教學內容修復交付（尚非READY_FOR_DEPLOYMENT）
+
+- **教學分支 commit：`3ecb617f83da87f25ad9e7be645c355d68cc7459`**；base `ee74cbaad51740577b24a341559b17a2be5290ba`；未變更 main `5415a30452cdf9020242aca16fe0ff2b6814ab4b`。
+- 本批逐題教學修正：`115-09-1-07`、`115-09-1-33`、`115-09-2-28`、`115-09-2-13`、`115-09-2-18`、`115-00-MB-20`、`115-00-MB-25`、`115-00-E-01`、`115-00-E-02`、`115-00-E-03`。
+- 本輪實際打開10張既有原圖，重新計算**WebP原始位元組SHA256 10/10相符**；有實質內容修訂10題，三道爭議仍隔離。既存128/128初稿及官方答案來源核實未改。
+- 修改內容：上述10個單題JSON、`solution-steps-128.js`、`progress.json`、`content-review-delivery-20261024.json`（含10題來源圖SHA256與教學canonical SHA256）、`BATCH_10_PEDAGOGY_QA_20261024.md`、`tests/test_preview_128_oct24_content.py`、read-only QA workflow（共16檔）。
+- 工程／內容證據：[第一批提交](https://github.com/homelux-huang/7581707/commit/3ecb617f83da87f25ad9e7be645c355d68cc7459)；[逐題圖文重核報告](https://github.com/homelux-huang/7581707/blob/draft/preview-128-explanations-20261023/sudu/teaching-drafts/preview-128-20261023/BATCH_10_PEDAGOGY_QA_20261024.md)；[機器可讀manifest](https://github.com/homelux-huang/7581707/blob/draft/preview-128-explanations-20261023/sudu/teaching-drafts/preview-128-20261023/content-review-delivery-20261024.json)。
+- 觸發的同SHA workflow： [readiness #40043821023](https://github.com/homelux-huang/7581707/actions/runs/40043821023)、[draft QA #40043821158](https://github.com/homelux-huang/7581707/actions/runs/40043821158)、[latest-main UI preflight #40043821026](https://github.com/homelux-huang/7581707/actions/runs/40043821026)。在確認completed/success前**不得記錄PASS**。
+- 真正剩餘阻塞：**128題完整獨立教學QA仍未PASS；128題正式V4對應教學內容之8 RWD×2主題、click/touch與highlight完整獨立UI QA未取得PASS；3題官方/AI概念爭議保持醒目警示；數學B20–25舊OCR文字風險隔離；當屆彰化高商實際採用教材頁碼未核。** 所有資料`studentReleaseApproved=false`、`deploy=false`。
+- 交付統計：初稿128、原圖SHA既有128且本次新增再驗10、官方最終答案原有128、本批部分教學內容修訂10、**完整教學QA=0、UI QA=0、READY_FOR_DEPLOYMENT=0、新增正式部署=0**。既有main四題另計。
+
+**部署Session請依序**：讀上述commit＋manifest；核對十題的圖像SHA和教學SHA及A-D；針對實際已改文字進行獨立教學審核（非單靠此Session自行複核）；在最新main V4隔離注入資料做8尺寸×2主題逐題真實mouse-click、手機touch、錯題複習與highlights；各題有真實審核憑證後才逐題打開READY_FOR_DEPLOYMENT，依法遵守正式QA gate。**本批沒有可安全發布的題，勿提前接入main或approved**。
+
+**給原部署Session可貼訊息（本Session沒有跨對話主動傳訊能力，未聲稱已送）：**
+> 7581707教學第1批10題修正已存GitHub `draft/preview-128-explanations-20261023` commit `3ecb617f83da87f25ad9e7be645c355d68cc7459`。請讀`DEPLOY_SESSION_HANDOFF_128.md`和`content-review-delivery-20261024.json`；10張原圖SHA已再驗；3道爭議仍隔離，未完成獨立教學及V4 UI實測，READY=0，本批不可部署。CI run 40043821023/40043821158/40043821026須另查結果。
+
+---
+
 ## 2026-10-23｜商概及數科固定12題原圖SHA全部到齊、會計增加3題（非完整教學QA）
 - 數科32、34與會計01、02、04共5題，實際WebP位元組SHA和逐題目視PASS；部分解說觀念複核。至此商概5／數科7共12題均完成原WebP本週期再驗，非完整答案教學QA。證據`BIZ_TECH_ACCOUNTING_5_20261023.md`。
 - 固定128題原圖與SHA去重67/128，封存公告答案影像對照49/128；官方最終更正查證0/128，獨立教學全項QA0、部署0；原BLOCKED持續保留。
