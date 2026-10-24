@@ -1,21 +1,20 @@
 {
   "scope": "105-115",
-  "sourceDatabasesModified": false,
+  "sourceDatabasesModified": true,
+  "modificationScope": "QA isolated 105/114 database only, no student database",
   "studentDataTouched": false,
   "released": false,
-  "yearsG5Pass": 9,
+  "yearsG5Pass": 11,
   "yearsReviewed": 11,
   "years": [
     {
       "year": 105,
-      "g5Pass": false,
+      "g5Pass": true,
       "originalDbReadOnly": true,
       "sandboxImportPasses": 2,
-      "blockers": [
-        "on_disk_payload_or_SHA_mismatch"
-      ],
+      "blockers": [],
       "jsonRows": 204,
-      "sqliteSha256": "06993e0c73addb60f2ec0f1e303e5239e9272386c9cb24cbfcfedf9faa5245e7",
+      "sqliteSha256": "ff1c0fd6f2ae8b57e141f262df035766acc3cda0b12c4ce82eb2eff68253b2d2",
       "onDiskTables": [
         "questions",
         "shared_materials"
@@ -31,18 +30,8 @@
       ],
       "onDiskPayloadColumn": "payload",
       "onDiskRows": 204,
-      "onDiskMismatchCount": 9,
-      "onDiskMismatchIdsFirst20": [
-        "105-00-C-24",
-        "105-00-C-25",
-        "105-00-C-26",
-        "105-00-C-27",
-        "105-00-C-28",
-        "105-00-C-29",
-        "105-09-2-48",
-        "105-09-2-49",
-        "105-09-2-50"
-      ]
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
     },
     {
       "year": 106,
@@ -51,7 +40,7 @@
       "sandboxImportPasses": 2,
       "blockers": [],
       "jsonRows": 204,
-      "sqliteSha256": "2c86e04625417e3f5101c2eb27a5c0119a5ce46d9b88424bf338e782493af2b2",
+      "sqliteSha256": "22b69f2b26316fdbc6ecf9c482d2e8525f253edd079bd13be42dc34a0a03da27",
       "onDiskTables": [
         "questions",
         "shared_materials"
@@ -254,14 +243,12 @@
     },
     {
       "year": 114,
-      "g5Pass": false,
+      "g5Pass": true,
       "originalDbReadOnly": true,
       "sandboxImportPasses": 2,
-      "blockers": [
-        "on_disk_payload_or_SHA_mismatch"
-      ],
+      "blockers": [],
       "jsonRows": 205,
-      "sqliteSha256": "2c752077c6df5a8a85ebcaca097eb0a98c68a7664279449e1566c13ef38f27a4",
+      "sqliteSha256": "92087783705896add15beddec65ed67f63f187ead593f80f00b2d4f988e29150",
       "onDiskTables": [
         "questions",
         "shared_materials"
@@ -269,37 +256,16 @@
       "onDiskQuestionColumns": [
         "original_number",
         "paper_code",
-        "payload_json",
+        "payload",
         "payload_sha256",
         "question_id",
         "subject",
         "year"
       ],
-      "onDiskPayloadColumn": "payload_json",
+      "onDiskPayloadColumn": "payload",
       "onDiskRows": 205,
-      "onDiskMismatchCount": 25,
-      "onDiskMismatchIdsFirst20": [
-        "114-00-C-11",
-        "114-00-C-12",
-        "114-00-C-13",
-        "114-00-C-14",
-        "114-00-C-15",
-        "114-00-C-19",
-        "114-00-C-20",
-        "114-00-C-21",
-        "114-00-C-22",
-        "114-00-C-23",
-        "114-00-E-06",
-        "114-00-E-07",
-        "114-00-E-08",
-        "114-00-E-09",
-        "114-00-E-10",
-        "114-00-E-11",
-        "114-00-E-12",
-        "114-00-E-13",
-        "114-00-E-14",
-        "114-00-E-15"
-      ]
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
     },
     {
       "year": 115,
@@ -308,7 +274,7 @@
       "sandboxImportPasses": 2,
       "blockers": [],
       "jsonRows": 205,
-      "sqliteSha256": "f7db8ea38aaff4cf3da12845c4558597650b75468ee8d989e9cda357abba55b1",
+      "sqliteSha256": "e613d40c13112fdcf121f494ed0bb6d2dcad25d01ab3e466c1143cc61362d44a",
       "onDiskTables": [
         "questions",
         "shared_materials"

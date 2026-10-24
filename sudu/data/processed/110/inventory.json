@@ -101,11 +101,12 @@
   "sharedMaterialsVerified": 0,
   "sharedMaterialsReviewRequired": true,
   "sqlite": {
-    "rows": 205,
-    "unique": 205,
+    "rows": 204,
+    "unique": 204,
     "integrity": "ok",
     "reimportCount": 2,
-    "shaMismatches": 0
+    "shaMismatches": 0,
+    "correctionEvidence": "105-115-SQLITE_G5_READONLY_AUDIT.json; exact 204 rows, false extra 110-09-1-80 already quarantined"
   },
   "integrationReady": false,
   "legacyQuarantinedIds": [
