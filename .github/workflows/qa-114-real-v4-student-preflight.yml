@@ -1,0 +1,73 @@
+name: 114 genuine English 07-09 formal V4 Chromium preflight (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-english-blind-solve-and-ready-20261024]
+    paths:
+      - scripts/qa114_stage_real_v4_browser.py
+      - tests/sudu_real_114_english_browser.cjs
+      - sudu/data/processed/114/review-evidence/EN07_09_POSTKEY_TEACHING_DRAFT_20261024.json
+      - .github/workflows/qa-114-real-v4-student-preflight.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser_qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 38
+    steps:
+      - name: Check out original QA source branch read-only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check out actual latest formal main V4 UI independently
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: formal
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Copy only original SHA-verified 114 source images, options and teacher drafts into disposable main runtime
+        run: |
+          set -euo pipefail
+          python -m pip install -q pillow
+          python scripts/qa114_stage_real_v4_browser.py --source . --formal formal
+          cp tests/sudu_real_114_english_browser.cjs formal/tests/sudu_real_114_english_browser.cjs
+          git -C formal rev-parse HEAD > /tmp/qa114-formal-main-sha.txt
+          git rev-parse HEAD > /tmp/qa114-source-branch-sha.txt
+      - name: Install formal Playwright Chromium runner, no relaxed test controls
+        working-directory: formal
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+          node -e "const p=require('playwright');p.chromium.launch({headless:true,args:['--no-sandbox']}).then(b=>b.close())"
+      - name: Build actual main V4 and test real 114 questions at eight viewports x both themes
+        working-directory: formal
+        env:
+          SUDU_TEST_OUTPUT: test-results
+        run: |
+          set -euo pipefail
+          python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site > /tmp/qa114-v4-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          node tests/sudu_real_114_english_browser.cjs
+      - name: Retain version-pinned actual RWD screenshots and verified per-question UI checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-real-english-formal-main-v4-browser-8x2-no-release
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            /tmp/qa114-v4-source-hashes.json
+            /tmp/qa114-formal-main-sha.txt
+            /tmp/qa114-source-branch-sha.txt
+            formal/test-results/qa114-*
+            /tmp/qa114-v4-server.log
