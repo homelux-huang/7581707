@@ -7,7 +7,7 @@ on:
       - .github/workflows/audit-128-release-lineage.yml
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   crosswalk:
     runs-on: ubuntu-24.04
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: true
           fetch-depth: 0
           filter: blob:none
       - uses: actions/checkout@v4
@@ -62,3 +62,15 @@ jobs:
           path: /tmp/audit-128-release-lineage.json
           if-no-files-found: ignore
           retention-days: 45
+      - name: Persist auditable 128-row lineage in isolated review branch only
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p sudu/release-audit
+          cp /tmp/audit-128-release-lineage.json sudu/release-audit/128-source-ready-live-crosswalk-20261024.json
+          git add sudu/release-audit/128-source-ready-live-crosswalk-20261024.json
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'audit: retain complete frozen 128 question/source/main/LIVE SHA matrix'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
