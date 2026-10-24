@@ -69,7 +69,7 @@ jobs:
           assert not val['releaseAllowed'] and not val['integrationReady']
           ev=read('qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json')
           assert ev['reviewer']=='ChatGPT assistant' and ev['independentHumanReview'] is False
-          assert ev['newTextQaPass']==5 and ev['newOfficialFinalAnswersVerifiedThisRun'] if False else True
+          assert ev['newTextQaPass']==5 and ev['officialFinalAnswersIndependentlyVerifiedThisRun']==0
           assert ev['officialFinalAnswersIndependentlyVerifiedThisRun']==0
           assert len(ev['records'])==5 and all(t['sourcePixelDifferenceZero'] for t in ev['records'])
           for id in selected:
