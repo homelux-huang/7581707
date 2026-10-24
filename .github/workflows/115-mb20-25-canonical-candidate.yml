@@ -1,0 +1,68 @@
+name: Math B20-25 canonical text+SQLite candidate QA (NO DEPLOY)
+on:
+  push:
+    branches: [qa/mb20-25-source-text-candidate-20261024]
+    paths:
+      - scripts/apply_115_math_b20_25_text_candidates.py
+      - .github/workflows/115-mb20-25-canonical-candidate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage_text_without_approval:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 31adda6c3973ee73387c767d4a8ba56af1fd81b8
+          path: current-main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Decode exactly same original source WebP bytes
+        run: python -m pip install -q pillow
+      - name: Check 205 baseline rows and six visual correction proofs without writing
+        run: |
+          set -eu
+          python -m py_compile scripts/apply_115_math_b20_25_text_candidates.py
+          python scripts/apply_115_math_b20_25_text_candidates.py > /tmp/mb20_25_before.json
+      - name: Stage six text corrections only in ephemeral CI checkout
+        run: |
+          set -eu
+          python scripts/apply_115_math_b20_25_text_candidates.py --stage > /tmp/mb20_25_staged.json
+          sha256sum sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 >/tmp/before_again
+          python scripts/apply_115_math_b20_25_text_candidates.py --stage > /tmp/mb20_25_second.json
+          sha256sum sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 >/tmp/after_again
+          diff /tmp/before_again /tmp/after_again
+      - name: Run unchanged production publisher: preserve 5 admissions; six still BLOCKED
+        run: |
+          set -eu
+          python current-main/scripts/sudu_verified_publish.py stage --source . --dest /tmp/mathb20_25_staging --sha "$(git rev-parse HEAD)" > /tmp/publisher_stage.json
+          python current-main/scripts/sudu_verified_publish.py check --dest /tmp/mathb20_25_staging
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f=json.loads(Path('/tmp/mathb20_25_staging/sudu/data/approved/115.json').read_text())
+          ids={q["canonicalId"] for q in f["questions"]}
+          assert ids=={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"},ids
+          assert f["approvedCount"]==5
+          assert not any(f"115-00-MB-{n:02d}" in ids for n in range(20,26))
+          print("PASS: all 205 SQLite rows, 6 original-WebP text corrections, NO new approval; original five student releases intact")
+          PY
+      - name: Save candidate changes and test logs as CI-only evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mb20-25-six-question-original-text-sqlite-candidate
+          path: |
+            /tmp/mb20_25_before.json
+            /tmp/mb20_25_staged.json
+            /tmp/mb20_25_second.json
+            /tmp/publisher_stage.json
+          if-no-files-found: ignore
+          retention-days: 30
