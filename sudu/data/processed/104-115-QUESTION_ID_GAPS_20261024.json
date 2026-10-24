@@ -1,6 +1,6 @@
 {
-  "generatedAtUTC": "2026-10-24T15:03:27.093685+00:00",
-  "qaCommitAtStart": "d95d9e90ddb6b0382c129c6b23a8a27be7d34cb9",
+  "generatedAtUTC": "2026-10-24T15:10:35.233941+00:00",
+  "qaCommitAtStart": "0c26660c497d93f74627a09f5155727891c9cc8d",
   "documentedOriginalScope": "105-114 inclusive = 10 years, plus 115; 104 is supplementary",
   "year104Status": "EXTRA_SOURCE_ONLY_UNVERIFIED_COUNT",
   "noNewQAFlagsOrAnswerFlagsSet": true,
@@ -10,7 +10,7 @@
   "totals": {
     "candidateQuestions105_115": 2249,
     "webpLinkedAndShaVerified105_115": 2249,
-    "webpQaPassWithReference105_115": 266,
+    "webpQaPassWithReference105_115": 268,
     "missingWebp105_115": 0,
     "g5PassYears105_115": 11,
     "readyYears": 0
@@ -474,7 +474,7 @@
       "missingSingleQuestionWebpIds": [],
       "webpFileMissingIds": [],
       "webpShaMismatchIds": [],
-      "webpQaPassWithSourceReference": 19,
+      "webpQaPassWithSourceReference": 21,
       "qaPassReferenceMissingIds": [],
       "ocrRawNonblank": 18,
       "missingFourTextOptionsIds": [
@@ -505,9 +505,9 @@
         "107-00-MB-25",
         "107-09-1-50"
       ],
-      "ocrTextIndependentlyVerified": 5,
+      "ocrTextIndependentlyVerified": 7,
       "answerFinalVerified": 0,
-      "questionVerifiedFlagCount": 5,
+      "questionVerifiedFlagCount": 7,
       "sourceLegacyCanonicalMismatchIds": [],
       "sharedMaterialCandidates": 5,
       "sharedMaterialQaPassRecorded": 5,
@@ -576,9 +576,11 @@
             "107-00-E-32",
             "107-00-E-33",
             "107-00-E-34",
-            "107-00-E-35"
+            "107-00-E-35",
+            "107-00-E-36",
+            "107-00-E-37"
           ],
-          "qaPassWithReferenceEvidence": 4,
+          "qaPassWithReferenceEvidence": 6,
           "missingFourTextOptionsIds": [
             "107-00-E-22",
             "107-00-E-23",

@@ -2603,7 +2603,7 @@
       "officialQuestionPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
       "sourcePage": 7,
       "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
@@ -2622,7 +2622,23 @@
         1220,
         216
       ],
-      "outputSha256": "2814146a40347909f38095c125c14fab019893dcfc683bff899bb62d00f202f8"
+      "outputSha256": "2814146a40347909f38095c125c14fab019893dcfc683bff899bb62d00f202f8",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T23:10:33+08:00",
+        "independentHumanReview": false,
+        "method": "assistant_direct_original_page7_and_current_crop_visual_plus_CI_zero_pixel_diff",
+        "sourceSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+        "reviewedSha256": "2814146a40347909f38095c125c14fab019893dcfc683bff899bb62d00f202f8",
+        "sourcePage": 7,
+        "cropPixels": [
+          90,
+          156,
+          1310,
+          372
+        ]
+      }
     },
     {
       "questionId": "107-00-E-37",
@@ -2633,8 +2649,8 @@
       "officialQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUucGRm",
       "officialQuestionPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
       "sourcePage": 7,
-      "generationVersion": "historical-official-pixel-draft-v1",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "generationVersion": "assistant-v2-article-boundary-repaired-20261024",
+      "qaStatus": "PASS",
       "issues": [],
       "source": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
       "sourcePageWebpSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
@@ -2646,14 +2662,31 @@
         90,
         372,
         1310,
-        1160
+        568
       ],
-      "output": "sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp",
+      "output": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp",
       "outputSize": [
         1220,
-        788
+        196
       ],
-      "outputSha256": "f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b"
+      "outputSha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T23:10:33+08:00",
+        "independentHumanReview": false,
+        "method": "assistant_direct_original_page7_and_current_crop_visual_plus_CI_zero_pixel_diff",
+        "sourceSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+        "reviewedSha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
+        "sourcePage": 7,
+        "cropPixels": [
+          90,
+          372,
+          1310,
+          568
+        ]
+      },
+      "sourceGitBlob": "dacba885baae37a8290476026df3a2cf0eda2be3"
     },
     {
       "questionId": "107-00-E-38",

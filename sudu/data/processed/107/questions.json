@@ -2868,7 +2868,7 @@
       "paperCode": "00-E",
       "originalQuestionNumber": 36,
       "subject": "英文",
-      "question": "Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from\n   Above?",
+      "question": "Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from Above?",
       "options": [
         "Chi refused to accept funds from others.",
         "Chi tried to borrow money from banks.",
@@ -2878,7 +2878,7 @@
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-34-37"
@@ -2896,10 +2896,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from\n   Above?",
+      "legacyUnverifiedOptions": [
+        "Chi refused to accept funds from others.",
+        "Chi tried to borrow money from banks.",
+        "Chi had a hard time finding enough money.",
+        "Chi spent all his money producing the film."
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -2913,21 +2922,21 @@
         "Chi and his concern about the environment.",
         "The success of Chi’s documentary abroad.",
         "What Chi went through to save typhoon victims.",
-        "The scenery recorded by Chi in his documentary.\n\n▲ 閱讀下文，回答第38 － 41 題\n\n        In 2017, when she became a citizen, a robot named Sophia attracted worldwide attention to\n   her human-like look and manners. Sophia is one model of a new invention known as social\n   robots, a smart machine created to interact and work closely with people in different areas.\n      The service industry is among the first users of social robots. In 2020, friendly robots will\n   assist human volunteers in hotels and at tourist attractions during the Tokyo Olympic Games.\n   Social robots are also tested out in Japan to care for the elderly in nursing homes. There, gentle\n   robot caregivers help to serve food and entertain lonely residents. Still another type of social\n   robots does all the housework. As their prices fall, these hardworking housekeepers may become\n   a common home appliance. Researchers even tried out robot teachers at elementary schools to\n   engage students in learning, or to patiently help children with communication difficulties learn\n   social skills.\n      However, not everyone welcomes social robots with open arms. Some people are\n   afraid that human partners may be disappointed when robots do not behave exactly\n   like humans. Others are not sure if children learning from robots will be able to handle\n   surprises in real-world communication. These and many other questions are being\n   asked, but researchers will not stop efforts to develop effective social robots."
+        "The scenery recorded by Chi in his documentary."
       ],
       "answer": "A",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [
         "107-00-E-SHARED-34-37"
       ],
       "issues": [],
       "assets": {
-        "singleQuestionWebp": "sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp",
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp",
         "sourcePageWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
-        "sha256": "f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b",
+        "sha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
         "sourcePage": 7
       },
       "source": {
@@ -2936,10 +2945,21 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "c90ed66097c0a8dbbe15d5d621ba10f3784aabc5114194735444f720a5a91367"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "What is this passage mainly about?",
+      "legacyUnverifiedOptions": [
+        "Chi and his concern about the environment.",
+        "The success of Chi’s documentary abroad.",
+        "What Chi went through to save typhoon victims.",
+        "The scenery recorded by Chi in his documentary.\n\n▲ 閱讀下文，回答第38 － 41 題\n\n        In 2017, when she became a citizen, a robot named Sophia attracted worldwide attention to\n   her human-like look and manners. Sophia is one model of a new invention known as social\n   robots, a smart machine created to interact and work closely with people in different areas.\n      The service industry is among the first users of social robots. In 2020, friendly robots will\n   assist human volunteers in hotels and at tourist attractions during the Tokyo Olympic Games.\n   Social robots are also tested out in Japan to care for the elderly in nursing homes. There, gentle\n   robot caregivers help to serve food and entertain lonely residents. Still another type of social\n   robots does all the housework. As their prices fall, these hardworking housekeepers may become\n   a common home appliance. Researchers even tried out robot teachers at elementary schools to\n   engage students in learning, or to patiently help children with communication difficulties learn\n   social skills.\n      However, not everyone welcomes social robots with open arms. Some people are\n   afraid that human partners may be disappointed when robots do not behave exactly\n   like humans. Others are not sure if children learning from robots will be able to handle\n   surprises in real-world communication. These and many other questions are being\n   asked, but researchers will not stop efforts to develop effective social robots."
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json",
+      "legacySingleQuestionWebpV1": "sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp",
+      "legacySingleQuestionWebpV1Sha256": "f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b"
     },
     {
       "schemaVersion": 1,

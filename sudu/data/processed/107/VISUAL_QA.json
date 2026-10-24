@@ -1,6 +1,6 @@
 {
   "year": 107,
-  "passCount": 19,
+  "passCount": 21,
   "items": [
     {
       "questionId": "107-00-C-01",
@@ -1464,7 +1464,7 @@
     },
     {
       "questionId": "107-00-E-36",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 7,
       "sourceWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/107/webp-v1/00-E/107-00-E-36.webp",
@@ -1479,16 +1479,16 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json"
     },
     {
       "questionId": "107-00-E-37",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 7,
       "sourceWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
-      "candidateWebp": "sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp",
-      "candidateSha256": "f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b",
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp",
+      "candidateSha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -1499,8 +1499,8 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json"
     },
     {
       "questionId": "107-00-E-38",
