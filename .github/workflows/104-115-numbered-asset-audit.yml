@@ -55,7 +55,8 @@ jobs:
           for y in j['years'][1:]:
               assert sum(p['legacyCandidateCount'] for p in y['papers'].values())==y['questionJsonRows']
               inv=json.loads((Path('sudu/data/processed')/str(y['year'])/'inventory.json').read_text(encoding='utf8'))
-              assert y['webpQaPassWithSourceReference']==inv['visualQaPass'],'year-specific source G1 mismatch'
+              g1_key = {114:'webpVisualQaPassed',115:'imageVisualQaPass'}.get(y['year'],'visualQaPass')
+              assert y['webpQaPassWithSourceReference']==inv[g1_key],'year-specific source G1 mismatch'
               assert y['ocrTextIndependentlyVerified']==inv['ocrTextIndependentlyVerified'],'year-specific OCR G2 mismatch'
           print('104 extra + 105-115 exact question-ID inventory PASS; no release')
           PY_AUDIT
