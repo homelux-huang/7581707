@@ -5,7 +5,7 @@ on:
       - qa/114-115-official-visual-review
     paths:
       - scripts/refine_108_four_matrix_elasticity_boundaries_v4.py
-      - .github/workflows/108-seven-crop-boundary-v3-no-release.yml
+      - .github/workflows/108-four-matrix-elasticity-v4-no-release.yml
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
           python-version: '3.11'
       - name: Pillow for lossless TCTE page pixel comparison
         run: python -m pip install 'Pillow>=10,<12'
-      - name: Pin QA branch SHA and check prior v2 candidates unchanged
+      - name: Pin QA branch SHA and check prior v3 candidates unchanged
         run: |
           echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           python -m py_compile scripts/refine_108_four_matrix_elasticity_boundaries_v4.py
