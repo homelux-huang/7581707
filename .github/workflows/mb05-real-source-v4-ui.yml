@@ -1,0 +1,66 @@
+name: MB05 real-source V4 8x2 teaching candidate test (NO RELEASE)
+on:
+  push:
+    branches: [draft/preview-128-explanations-20261023]
+    paths:
+      - scripts/build_mb05_real_source_preview.py
+      - tests/sudu_mb05_real_source_v4_ui.cjs
+      - .github/workflows/mb05-real-source-v4-ui.yml
+      - sudu/teaching-drafts/preview-128-20261023/115-00-MB-05-pedagogy-review-20261024.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mb05_rwd:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: draft
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: aad909a726a201e2841b86b2c35634e5d5f4afe5
+          path: current-qa-source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: f413718aaa6caa3d87692a32baf6768ea0dd2918
+          path: current-main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build exact read-only source + formal-publisher output with source and teaching SHA
+        run: python draft/scripts/build_mb05_real_source_preview.py
+      - name: Start real latest pinned main V4 and isolated Playwright
+        run: |
+          set -eu
+          (cd current-main && SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py)
+          npm install --prefix draft --no-save playwright@1.51.1
+          (cd draft && npx playwright install --only-shell chromium)
+      - name: Run real corrected MB05 question and teaching against unmodified main V4, no deploy
+        env:
+          SUDU_PREVIEW_ONLY: '1'
+          SUDU_TEST_URL: http://127.0.0.1:8777/sudu/
+          SUDU_TEST_OUTPUT: mb05-ui-test-results
+        run: |
+          set -eu
+          python -m http.server 8777 --bind 127.0.0.1 --directory current-main/_site >/tmp/mb05-v4-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          sleep 2
+          node draft/tests/sudu_mb05_real_source_v4_ui.cjs
+      - name: Archive all UI SHA+viewport evidence (NOT student release)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mb05-main-real-source-ui-no-release
+          path: |
+            mb05-stage/input-digests.json
+            mb05-ui-test-results/
+          retention-days: 30
