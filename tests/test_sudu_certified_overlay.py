@@ -13,6 +13,16 @@ class StudentOverlayTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.source=Path(self.tmp.name)
         self.year=115
+        # The real publisher now checks the per-paper TCTE correction-status
+        # ledger in addition to the independent answer and image certificates.
+        # Model that mandatory external evidence ONLY in this synthetic test
+        # directory. Its absence must still fail closed.
+        publish.dump(
+            self.source/"sudu/data/processed/115/official-confirmation-status.json",
+            {"schemaVersion":1,"year":115,
+             "confirmations":{"00-MB":{
+                 "officialStatus":"no_objection_submitted",
+                 "revisionDocumentContent":"not_applicable"}}})
         self.question={
             "questionId":"115-00-MB-03","year":115,"paperCode":"00-MB",
             "originalQuestionNumber":3,"subject":"數學B",
@@ -84,6 +94,14 @@ class StudentOverlayTests(unittest.TestCase):
             "referenceSha256":publish.digest((self.source/self.evidence["ocr"]).read_bytes())
         }},{}))
         self.assertFalse(self.question.get("answerVerified",False),"Do not mutate OCR original")
+
+    def test_missing_official_notice_status_never_admits(self):
+        notice=self.source/"sudu/data/processed/115/official-confirmation-status.json"
+        original=notice.read_bytes()
+        notice.unlink()
+        self.assertIs(self.admitted(),self.question)
+        notice.write_bytes(original)
+        self.assertIsNot(self.admitted(),self.question)
 
     def test_unapproved_doc_is_never_admitted(self):
         audit={**self.audit,"status":"QA_PENDING"}
