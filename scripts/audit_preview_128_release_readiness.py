@@ -7,6 +7,7 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 from collections import Counter
 from pathlib import Path
+from preview_128_question_files import canonical_question_json_files
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "sudu" / "teaching-drafts" / "preview-128-20261023"
@@ -43,7 +44,7 @@ def main():
     official = load(BASE / "official-final-evidence-20261023.json")["questions"]
     items = progress.get("items", [])
     ids = [x.get("questionId") for x in items]
-    files = {p.stem for p in BASE.glob("1??-*.json")}
+    files = {p.stem for p in canonical_question_json_files(BASE)}
     if len(ids) != 128 or len(set(ids)) != 128 or set(ids) != files or set(ids) != set(official):
         problems.append("Frozen question IDs differ across manifest, files and official evidence")
     if progress.get("scopeTotal") != 128 or progress.get("deploymentForbidden") is not True:

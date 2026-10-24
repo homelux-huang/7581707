@@ -5,6 +5,8 @@ on:
       - draft/preview-128-explanations-20261023
     paths:
       - scripts/audit_preview_teaching_drafts.py
+      - scripts/preview_128_question_files.py
+      - tests/test_preview_128_question_files.py
       - scripts/audit_preview_128_release_readiness.py
       - scripts/audit_preview_128_teaching_candidates.py
       - tests/test_preview_128_teaching_candidates.py
@@ -28,6 +30,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Verify exact question file scope while preserving QA sidecars
+        run: python -m unittest discover -s tests -p 'test_preview_128_question_files.py' -v
       - name: Verify structural draft and step-bundle integrity
         run: python scripts/audit_preview_teaching_drafts.py
       - name: Verify all original WebPs, shared passages and explicit release gates

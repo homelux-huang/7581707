@@ -3,6 +3,7 @@
 import hashlib
 import json
 from pathlib import Path
+from preview_128_question_files import canonical_question_json_files
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAFT = ROOT / 'sudu/teaching-drafts/preview-128-20261023'
@@ -10,7 +11,7 @@ DRAFT = ROOT / 'sudu/teaching-drafts/preview-128-20261023'
 def audit():
     errors, pending = [], []
     evidence = json.loads((DRAFT / 'official-final-evidence-20261023.json').read_text())['questions']
-    records = {p.stem: json.loads(p.read_text()) for p in DRAFT.glob('1??-*.json')}
+    records = {p.stem: json.loads(p.read_text()) for p in canonical_question_json_files(DRAFT)}
     if len(records) != 128 or set(records) != set(evidence):
         errors.append('Frozen 128-question scope differs from official evidence registry')
     manifest = json.loads((DRAFT / 'progress.json').read_text())

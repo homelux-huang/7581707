@@ -6,6 +6,9 @@ on:
     paths:
       - 'sudu/teaching-drafts/preview-128-20261023/**'
       - 'scripts/audit_preview_teaching_drafts.py'
+      - 'scripts/audit_preview_128_release_readiness.py'
+      - 'scripts/preview_128_question_files.py'
+      - 'tests/test_preview_128_question_files.py'
       - '.github/workflows/preview-128-draft-qa.yml'
 permissions:
   contents: read
@@ -24,6 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify exact question file scope while preserving QA sidecars
+        run: python -m unittest discover -s tests -p 'test_preview_128_question_files.py' -v
       - name: Check 128 original images, options, answer evidence and isolation
         run: python scripts/audit_preview_teaching_drafts.py
       - name: Check frozen manifest and separate all QA counters
