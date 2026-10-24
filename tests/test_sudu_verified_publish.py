@@ -137,5 +137,91 @@ class VerifiedPublicationTests(unittest.TestCase):
         self.assertEqual(v.shared_material_ids({"assets":{"sharedMaterialIds":["114-09-2-SHARED-1-2"]}}),("114-09-2-SHARED-1-2",))
 
 
+class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
+    """Prove correction papers fail closed; other questions are not blocked."""
+
+    def fixture(self,root,confirmation=True):
+        p=root/"sudu/data/processed/115"
+        p.mkdir(parents=True,exist_ok=True)
+        official_sha="b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133"
+        v.dump(p/"official-confirmation-status.json",{
+            "confirmations":{
+                "00-MB":{"officialStatus":"no_objection_submitted",
+                         "revisionDocumentContent":"not_applicable"},
+                "09-2":{"officialStatus":"question_or_answer_confirmation_document_exists",
+                        "revisionDocumentContent":"SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+                        "revisionDocumentSha256":official_sha,"revisionDocumentPages":3}
+            },
+            "officialNoticeEvidencePath":"sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
+        })
+        if confirmation:
+            v.dump(p/"QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",{
+                "schemaVersion":1,"year":115,"allPagesInThreeDocumentsReviewed":True,
+                "sourceIndexUrl":"https://web1.tcte.edu.tw/EXAM/115_4y/",
+                "docs":[{"paperCode":"09-2","pdfSha256":official_sha,
+                         "pageCount":3,"noticeScopeOnly":True,
+                         "confirmed":[
+                             {"questionId":"115-09-2-06","officialConfirmedAnswer":"D",
+                              "comparedToOfficialPublishedTableCandidate":"MATCHED",
+                              "changeFromPublishedAnswer":"NONE_OBSERVED"},
+                             {"questionId":"115-09-2-28","officialConfirmedAnswer":"A",
+                              "comparedToOfficialPublishedTableCandidate":"MATCHED",
+                              "changeFromPublishedAnswer":"NONE_OBSERVED"},
+                             {"questionId":"115-09-2-44","officialConfirmedAnswer":"A",
+                              "comparedToOfficialPublishedTableCandidate":"MATCHED",
+                              "changeFromPublishedAnswer":"NONE_OBSERVED"}
+                         ]}]
+            })
+        return official_sha
+
+    def test_09_2_q34_is_unaffected_but_not_no_objection_paper(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            sha=self.fixture(root)
+            q={"questionId":"115-09-2-34","paperCode":"09-2","answer":"A"}
+            proof={"noCorrectionForThisQuestion":True,"confirmationPdfSha256":sha,"finalAnswer":"A"}
+            self.assertTrue(v.official_notice_scope_certified(root,115,q,proof))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,{
+                **proof,"noObjectionForPaper":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,{
+                **proof,"confirmationPdfSha256":"0"*64}))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,{
+                **proof,"noCorrectionForThisQuestion":False}))
+            self.assertFalse(v.official_notice_scope_certified(root,114,q,proof))
+
+    def test_named_notice_q28_is_never_accidentally_unaffected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            sha=self.fixture(root)
+            q={"questionId":"115-09-2-28","paperCode":"09-2","answer":"A"}
+            base={"noCorrectionForThisQuestion":True,"confirmationPdfSha256":sha,"finalAnswer":"A"}
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,base))
+            self.assertTrue(v.official_notice_scope_certified(root,115,q,{
+                **base,"noCorrectionForThisQuestion":False,"correctionForQuestionReviewed":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,{
+                **base,"noCorrectionForThisQuestion":False,"correctionForQuestionReviewed":True,
+                "finalAnswer":"C"}))
+
+    def test_00_mb_no_objection_requires_actual_official_no_objection(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            self.fixture(root)
+            q={"questionId":"115-00-MB-05","paperCode":"00-MB","answer":"B"}
+            self.assertTrue(v.official_notice_scope_certified(root,115,q,{"noObjectionForPaper":True}))
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,{"noCorrectionForThisQuestion":True}))
+
+    def test_no_ledger_or_incomplete_notice_blocks_any_claim(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            sha=self.fixture(root,confirmation=False)
+            q={"questionId":"115-09-2-34","paperCode":"09-2","answer":"A"}
+            proof={"noCorrectionForThisQuestion":True,"confirmationPdfSha256":sha,"finalAnswer":"A"}
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
+            self.fixture(root,confirmation=True)
+            file=root/"sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
+            data=v.read(file);data["allPagesInThreeDocumentsReviewed"]=False;v.dump(file,data)
+            self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
+
+
 if __name__ == "__main__":
     unittest.main()

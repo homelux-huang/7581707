@@ -401,6 +401,86 @@ def review_document(source: Path, year: int, rel: object, qid: str) -> tuple[dic
     return data,digest(raw)
 
 
+def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dict) -> bool:
+    """Verify TCTE confirmation-document scope for ONE question, fail-closed.
+
+    A correction PDF for any other question in the same paper must never be
+    called a 'no-objection paper'. The SHA-pinned reviewed official ledger
+    explicitly lists each question in confirmation PDFs. The public answer
+    table and the individual original-answer review remain separate gates.
+    """
+    if year != 115:
+        # Prior 114 approvals require a separate year-specific reviewed ledger.
+        return False
+    base = source / f"sudu/data/processed/{year}"
+    status_path = base / "official-confirmation-status.json"
+    if not status_path.is_file() or status_path.is_symlink():
+        return False
+    try:
+        status=read(status_path)
+        paper=q.get("paperCode")
+        if not isinstance(paper,str) or not paper:
+            return False
+        record=(status.get("confirmations") or {}).get(paper) or {}
+        state=record.get("officialStatus")
+        if state=="no_objection_submitted":
+            return bool(proof.get("noObjectionForPaper") is True
+                        and record.get("revisionDocumentContent")=="not_applicable"
+                        and proof.get("noCorrectionForThisQuestion") is not True
+                        and proof.get("correctionForQuestionReviewed") is not True)
+        if state!="question_or_answer_confirmation_document_exists":
+            return False
+        if proof.get("noObjectionForPaper") is True:
+            # Prevent claiming 09-2, 00-C or 00-E have no challenged questions.
+            return False
+        if record.get("revisionDocumentContent")!="SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED":
+            return False
+        expected_sha=record.get("revisionDocumentSha256")
+        if (not SHA.fullmatch(str(expected_sha))
+                or proof.get("confirmationPdfSha256")!=expected_sha):
+            return False
+        ledger_relative="sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
+        if status.get("officialNoticeEvidencePath")!=ledger_relative:
+            return False
+        ledger_path=source/ledger_relative
+        if not ledger_path.is_file() or ledger_path.is_symlink():
+            return False
+        catalog=read(ledger_path)
+        if not (catalog.get("schemaVersion")==1
+                and catalog.get("year")==year
+                and catalog.get("allPagesInThreeDocumentsReviewed") is True
+                and catalog.get("sourceIndexUrl")=="https://web1.tcte.edu.tw/EXAM/115_4y/"):
+            return False
+        rows=[x for x in catalog.get("docs",[]) if x.get("paperCode")==paper]
+        if len(rows)!=1:
+            return False
+        doc=rows[0]
+        if not (doc.get("pdfSha256")==expected_sha
+                and doc.get("noticeScopeOnly") is True
+                and doc.get("pageCount")==record.get("revisionDocumentPages")
+                and isinstance(doc.get("confirmed"),list)
+                and len(doc["confirmed"])>=1):
+            return False
+        by_id={}
+        for item in doc["confirmed"]:
+            qid=item.get("questionId")
+            if not isinstance(qid,str) or not QID.fullmatch(qid) or qid in by_id or not qid.startswith(f"{year}-{paper}-"):
+                return False
+            by_id[qid]=item
+        current=q.get("questionId")
+        if current not in by_id:
+            return proof.get("noCorrectionForThisQuestion") is True and proof.get("correctionForQuestionReviewed") is not True
+        row=by_id[current]
+        # A named correction is NOT omitted. Its answer, PDF and scope must all match.
+        return bool(proof.get("correctionForQuestionReviewed") is True
+                    and proof.get("noCorrectionForThisQuestion") is not True
+                    and row.get("comparedToOfficialPublishedTableCandidate")=="MATCHED"
+                    and row.get("changeFromPublishedAnswer")=="NONE_OBSERVED"
+                    and row.get("officialConfirmedAnswer")==proof.get("finalAnswer")==q.get("answer"))
+    except (OSError, ValueError, TypeError, KeyError, AttributeError):
+        return False
+
+
 def apply_independently_certified_review(source: Path, year: int, q: dict, manifest: dict,
                                         audit: dict | None) -> dict:
     """Fail closed: a source or answer change invalidates the entire certificate.
@@ -439,7 +519,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         off.get("finalAnswer") == q.get("answer"),
         off.get("correctionNoticeReviewed") is True,
         off.get("officialPage") == "https://web1.tcte.edu.tw/EXAM/115_4y/",
-        off.get("noObjectionForPaper") is True,
+        official_notice_scope_certified(source,year,q,off),
         blind.get("questionRevision") == revision,
         blind.get("webpSha256") == manifest["sha256"],
         blind.get("officialAnswerHiddenDuringSolve") is True,

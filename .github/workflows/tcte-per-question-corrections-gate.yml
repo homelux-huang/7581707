@@ -1,0 +1,53 @@
+name: Official TCTE per-question correction admission regression (NO DEPLOY)
+on:
+  push:
+    branches: [feature/tcte-per-question-official-notice-qa-20261024]
+    paths:
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - .github/workflows/tcte-per-question-corrections-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  correction_scope:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: b78a14c8cc6081a7a01613238255fce0a22ba60b
+          path: _source_qa
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify existing release gates and all new negative cases
+        run: |
+          python -m pip install -q pillow
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Dry-run same production publisher on genuine source with no new student release
+        run: |
+          set -eu
+          python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha b78a14c8cc6081a7a01613238255fce0a22ba60b > /tmp/tcte-stage-report.json
+          python scripts/sudu_verified_publish.py check
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('sudu/data/approved/115.json').read_text())
+          assert p["approvedCount"]==5
+          assert {x["canonicalId"] for x in p["questions"]}=={
+             "115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          print("PASS unchanged all five certified source questions; no artificial answers approved")
+          PY
+      - name: Archive strict negative and compatibility suite report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tcte-correction-scope-no-deploy
+          path: /tmp/tcte-stage-report.json
+          retention-days: 30
+          if-no-files-found: ignore
