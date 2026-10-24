@@ -1,5 +1,23 @@
 # 7581707｜104–115 年題庫獨立稽核後修復交接（2026-10-24）
 
+## 2026-10-24 QA 後續批次最新稽核（追加更新，不覆蓋原始歷史）
+
+**注意：本段是較新進度；以下「本次真正完成」與舊版266題表格為歷史快照，不應以舊數字作最新完成率。**
+
+- QA 分支於寫入本段前的 HEAD：`dc4800699c09401fc1943ac0b66a8d984da63b1d`。後續 Session 必須重新取得真實 HEAD。
+- 105–115 年候選題庫：**2,249**；單題 WebP 已 SHA 連結：**2,249**；缺圖 **0**。
+- G1 目前已登錄 **268／2,249 = 11.92%**，尚待逐題 G1 **1,981 題**；新增2題為 107 年英文第36、37題。
+- G2 原本17題，新增 108 年數學 B11–15 共5題、107 年英文36、37共2題，現在 **24／2,249**（依年度加總）。108年G2=5；107年G2=7。
+- G3 官方最終答案新增0，既有總數81；G5 105–115 **11／11 PASS**；年度 G6 **0／11，NO RELEASE**。
+- 108 年數學 B11–15：直接官方來源第3頁與5張原始單題WebP做完整題幹、公式、四選項G2；原本佔位與空選項已保留 legacy+unified diff，OCR raw 未編造。保存 `scripts/repair_108_math_b11_15_source_text_g2_20261024.py`、證據 `sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json`，CI [40105194575](https://github.com/homelux-huang/7581707/actions/runs/40105194575) SUCCESS，資料 Commit `e37287a9bc18d983f239744e413c42abeafad78f`；原199題保持不變、SQLite雙次PASS，release false。
+- 107 年英文36/37：原 v1第37題的 WebP 與選項D混入下一組38–41題機器人文章，已保留污染圖SHA，先建立僅含Q37的版本v2（SHA `7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6`），並由助理真實直接目視；完成36、37兩題G1+G2、保持前202題不變，G5 11/11，答案G3 0，NO RELEASE。證據 `sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json`；CI [40105741524](https://github.com/homelux-huang/7581707/actions/runs/40105741524) SUCCESS，資料 Commit `a06e738593095a4c5bf334bba7f41dc0cf165f17`。
+- 107 SQLite G5 腳本中存在舊 E32–35 共用材料固定2筆的硬編 assert，與後續新增國文共用材料衝突，已以**精確核對目前全部 shared_materials ID 與數量**、雙次匯入、讀回SHA的動態版本修正，並通過同run 40105741524，未刪品質檢查。
+- 106 國文14–20七張舊 DRAFT 圖不宜直接升級G1：本次打開官方第4頁及每一張候選，發現15/16混下一題邊界、17/18缺題幹且混題、19/20缺題號題幹，以及17–18共用材料含第17題題幹。已保存真實負面QA：`sudu/data/processed/106/qa-drafts/106_C14_20_INDEPENDENT_CROP_BOUNDARY_REVIEW_20261024.md`；必須 v3/v4 版本化重裁，**目前仍 DRAFT，不新增G1/G2**。
+- 本輪均非獨立人類教師認證；每項紀錄 reviewer = ChatGPT assistant、independentHumanReview = false。官方原PDF位元本輪未新抓取，G0不能冒稱重新核過。
+- Draft PR #3 繼續 OPEN/Draft；QA ONLY，無 main/正式核准/LIVE/學生資料變更；不要執行前述腳本的重複寫入，應沿用 SHA 有效的成果。
+
+---
+
 **最高規則：QA ONLY / NO RELEASE。不得修改 main、合併 Draft PR #3、部署 LIVE、改學生資料或把 G1 視為 G6。**
 
 ## 唯一 GitHub 與真實覆蓋
