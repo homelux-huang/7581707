@@ -3,10 +3,10 @@
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
     "certificationSchemaVersion": "student-reviewed-batch-v1",
-    "commit": "aad909a726a201e2841b86b2c35634e5d5f4afe5",
+    "commit": "b78a14c8cc6081a7a01613238255fce0a22ba60b",
     "publisherCodeSha256": "877e5042632001f73c1f95890e93993825c913d0a62f535b08d6fe749bb41d47",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "a80b1ed39e88d4e82d82a95ee45fd9bacd25cb6eaa9ab8de8a45a15b84d24177"
+    "sourceTreeSignature": "79d105d83e2bc8c1801ffed603412ff55074c3807a8e5e1c54b7bfdd956f85e7"
   },
   "schemaVersion": 1,
   "years": {
@@ -33,7 +33,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 1,
       "sharedWebpTotal": 2,
-      "sourceSha": "aad909a726a201e2841b86b2c35634e5d5f4afe5",
+      "sourceSha": "b78a14c8cc6081a7a01613238255fce0a22ba60b",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -105,28 +105,28 @@
     },
     "115": {
       "aiMismatch": 0,
-      "aiNotChecked": 201,
-      "aiSolvedMatched": 4,
-      "approvedCount": 4,
-      "approvedPercent": 2.0,
+      "aiNotChecked": 200,
+      "aiSolvedMatched": 5,
+      "approvedCount": 5,
+      "approvedPercent": 2.4,
       "candidate": 205,
       "expected": 205,
       "imagePreviewCount": 119,
       "imagePreviewPercent": 58.0,
       "imageQaPercent": 68.8,
       "ocrCandidate": 205,
-      "ocrQaPass": 4,
+      "ocrQaPass": 5,
       "officialCandidateMatches": 205,
-      "officialFinalQaPass": 4,
-      "pending": 201,
+      "officialFinalQaPass": 5,
+      "pending": 200,
       "pendingReasonCounts": {
         "image_pending": 80,
-        "ocr_or_db_pending": 121
+        "ocr_or_db_pending": 120
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 5,
       "sharedWebpTotal": 20,
-      "sourceSha": "aad909a726a201e2841b86b2c35634e5d5f4afe5",
+      "sourceSha": "b78a14c8cc6081a7a01613238255fce0a22ba60b",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -158,10 +158,10 @@
         "數學 B": {
           "candidate": 25,
           "expected": 0,
-          "finalAnswerQaPass": 4,
+          "finalAnswerQaPass": 5,
           "imagePreviewReady": 25,
-          "ocrQaPass": 4,
-          "studentReady": 4,
+          "ocrQaPass": 5,
+          "studentReady": 5,
           "webpQaPass": 25
         },
         "會計學": {
