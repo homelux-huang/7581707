@@ -1,3 +1,13 @@
+## 2026-10-24 | Math B05 original text and SQLite source repaired; NOT RELEASE READY
+
+- `115-00-MB-05` image SHA: `be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2`. True pre-key solution was saved in commit `cf6a4efede233b0e447d52498209adf1b721c13e`, then compared with the official recorded answer B. No human audit or fresh PDF reading claimed.
+- Original OCR fractions were broken. New text/choices correctly read as A (3/2,-5/2), B (3/2,-7/2), C (5/2,-5/2), D (5/2,-7/2). Earlier raw text, image, answers, historical evidence and all 205 IDs preserved.
+- Source correction run [#40082891762](https://github.com/homelux-huang/7581707/actions/runs/40082891762) SUCCESS; corrected JSON, full SQLite roundtrip for 205 rows, checked idempotence. Exact applied QA branch commit `30122c3ca2dba956ff62c0de24d090664689c7dc`. Source review diff: `review-evidence/115-00-MB-05-source-text-applied-20261024.json`.
+- An earlier run #40082858255 failed in only the added CI assertion due to unexpected SQLite column `payload_json` instead of `payload`. CI check was corrected to interrogate table schema, preserving all assertions. Do not count the earlier run as success.
+- Remaining **concrete** requirements: final correct text_revision binding, five schema-compatible OCR/official/pre-key blind/teaching/UI evidence docs and hashes, real final-export source content V4 browser test on 8 sizes x 2 themes, valid addition to verified-student-batch, publisher stage/check, same-SHA Pages and LIVE. The MathB19–25 placeholder fixture is not usable as a release UI certificate. Do not set studentReleaseApproved/READY before actual proof.
+- Formal published baseline: 115 Math B 02,03,04,09; 114 none. Q05 is **NOT DEPLOYED**.
+
+---
 # 115 年題庫尚待 QA｜105–115 QA 分支工作清單
 
 > 2026-10-23 基於指定 QA 分支 JSON 的可追溯快照；本清單**不是**新的人工圖片目視驗收、答案查核或放行結果。不修改任何既有 QA 狀態。當來源 JSON 更新時，應重新比對清單與來源，而非把舊快照視為即時狀態。
