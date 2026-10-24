@@ -2523,11 +2523,19 @@
         "6",
         "10"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "執行下列 Visual Basic 程式片段後，陣列元素 A(3)的值為何？\nDim X, Y As Integer\nDim A(6) As Integer\nFor X = 1 To 6\n    A(1) = 1\n    A(X) = 0\n    For Y = X - 1 To 2 Step -1\n        A(Y) = A(Y - 1) + A(Y)\n    Next Y\nNext X",
+      "correctedOptions": [
+        "3",
+        "4",
+        "6",
+        "10"
+      ],
+      "diff": "--- legacy-PDF-layer-preserved\n+++ original-source-corrected\n@@ -1,13 +1,12 @@\n-執行下列 Visual Basic 程式版段後,陣列元素 A(3)的值為何 ?\n-Dim X,Y As Integer\n+執行下列 Visual Basic 程式片段後，陣列元素 A(3)的值為何？\n+Dim X, Y As Integer\n Dim A(6) As Integer\n-For X= 1To6\n-A(1)=1\n-A(X) =0\n-For Y = X - 1 To 2Step -1\n-A(Y) = ACY - 1)+A(Y)\n-\n-Next Y\n+For X = 1 To 6\n+    A(1) = 1\n+    A(X) = 0\n+    For Y = X - 1 To 2 Step -1\n+        A(Y) = A(Y - 1) + A(Y)\n+    Next Y\n Next X\n 3\n 4\n",
       "imageSha256": "fafd23f04ab7c765beabfc9ea5aa1455ce279993741385b653df588a888356d4",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T22:23:13+08:00",
+      "qaEvidencePath": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json"
     },
     {
       "questionId": "107-09-1-50",

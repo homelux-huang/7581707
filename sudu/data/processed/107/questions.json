@@ -5849,7 +5849,7 @@
       "paperCode": "09-1",
       "originalQuestionNumber": 49,
       "subject": "專業科目（一）",
-      "question": "執行下列 Visual Basic 程式版段後,陣列元素 A(3)的值為何 ?\nDim X,Y As Integer\nDim A(6) As Integer\nFor X= 1To6\nA(1)=1\nA(X) =0\nFor Y = X - 1 To 2Step -1\nA(Y) = ACY - 1)+A(Y)\n\nNext Y\nNext X",
+      "question": "執行下列 Visual Basic 程式片段後，陣列元素 A(3)的值為何？\nDim X, Y As Integer\nDim A(6) As Integer\nFor X = 1 To 6\n    A(1) = 1\n    A(X) = 0\n    For Y = X - 1 To 2 Step -1\n        A(Y) = A(Y - 1) + A(Y)\n    Next Y\nNext X",
       "options": [
         "3",
         "4",
@@ -5859,7 +5859,7 @@
       "answer": "C",
       "answerMatched": true,
       "answerVerified": false,
-      "questionVerified": false,
+      "questionVerified": true,
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
@@ -5878,10 +5878,19 @@
         "answerPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTEtc3RhbmRhcmQucGRm",
         "answerPdfSha256": "362a3322ebe48138837e675a350ad41c83c292655fcb12a827c71ce5a00eb229"
       },
-      "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
-      "reviewStatus": "needs_review"
+      "reviewStatus": "needs_review",
+      "legacyUnverifiedQuestion": "執行下列 Visual Basic 程式版段後,陣列元素 A(3)的值為何 ?\nDim X,Y As Integer\nDim A(6) As Integer\nFor X= 1To6\nA(1)=1\nA(X) =0\nFor Y = X - 1 To 2Step -1\nA(Y) = ACY - 1)+A(Y)\n\nNext Y\nNext X",
+      "legacyUnverifiedOptions": [
+        "3",
+        "4",
+        "6",
+        "10"
+      ],
+      "textQaStatus": "PASS",
+      "textQaEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json"
     },
     {
       "schemaVersion": 1,
@@ -5916,7 +5925,7 @@
         "answerPdfSha256": "362a3322ebe48138837e675a350ad41c83c292655fcb12a827c71ce5a00eb229"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },

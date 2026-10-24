@@ -1,6 +1,6 @@
 {
   "year": 107,
-  "passCount": 4,
+  "passCount": 6,
   "items": [
     {
       "questionId": "107-00-C-01",
@@ -3044,7 +3044,7 @@
     },
     {
       "questionId": "107-09-1-49",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 8,
       "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp",
@@ -3059,12 +3059,12 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json"
     },
     {
       "questionId": "107-09-1-50",
-      "status": "PENDING",
+      "status": "PASS",
       "sourcePage": 8,
       "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
       "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp",
@@ -3079,8 +3079,8 @@
         "sharpness",
         "original_and_output_sha256"
       ],
-      "reviewer": null,
-      "visualEvidence": null
+      "reviewer": "ChatGPT assistant",
+      "visualEvidence": "sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json"
     },
     {
       "questionId": "107-09-2-01",

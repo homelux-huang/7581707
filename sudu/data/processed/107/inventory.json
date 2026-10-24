@@ -4,9 +4,9 @@
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 204,
   "webpGeneratedDrafts": 191,
-  "visualQaPass": 4,
+  "visualQaPass": 6,
   "ocrGapCandidatesGenerated": 18,
-  "ocrTextIndependentlyVerified": 4,
+  "ocrTextIndependentlyVerified": 5,
   "missingFourTextOptions": [
     "107-00-C-08",
     "107-00-C-09",
@@ -146,5 +146,5 @@
   },
   "integrationReady": false,
   "sharedMaterialsDrafts": 2,
-  "textQaPass": 4
+  "textQaPass": 5
 }
