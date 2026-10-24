@@ -8,12 +8,21 @@ assert(process.env.SUDU_PREVIEW_ONLY==='1'&&new URL(base).hostname==='127.0.0.1'
 const folder=path.join(root,'sudu/teaching-drafts/preview-128-20261023');
 const q=JSON.parse(fs.readFileSync(path.join(folder,'115-00-E-03.json'),'utf8')),t=q.teaching,e=t.english;
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const yearSource=JSON.parse(fs.readFileSync(path.join(main,'sudu/data/years/115.json'),'utf8'));
+const original=yearSource.papers.find(p=>p.paper==='00-E')?.questions.find(x=>x.id===q.questionId);
+assert(original&&original.year===115&&original.paper==='00-E'&&original.number===3,
+  'load exact E03 from existing official-year record, never hand-author the student question');
+assert.deepEqual(original.options,['carelessly','equally','instantly','silently'],
+  'source options must match the original WebP and source record');
+assert.equal(original.answer,1);
+assert.equal(original.officialAnswerCandidate,'B');
+const letters='ABCD';
+
 assert.equal(hash(fs.readFileSync(path.join(main,'sudu',q.image))),q.imageSha256);
 assert.equal(q.studentReleaseApproved,false);assert.equal(q.deploy,false);
 const levels=o=>Object.entries(o).map(([k,v])=>k+'：'+v.join('、')).join('\n');
-const fixture={year:115,canonicalId:q.questionId,id:3,subject:'英文',topic:'同等對待',
- question:'The teacher treats all her students ________, giving every student the same opportunity to succeed.',
- options:['carelessly','equally','instantly','silently'],answer:'B',image:q.image,imageSha256:q.imageSha256,
+const fixture={year:115,canonicalId:original.id,id:original.number,subject:original.subject,topic:'同等對待',
+ question:original.question,options:original.options,answer:letters[original.answer],image:q.image,imageSha256:q.imageSha256,
  memory:t.memory,concept:t.concept,extension:t.extension,formula:'',teacherSummary:t.teacherSummary,
  elementarySummary:t.elementarySummary,optionExplanations:t.optionExplanations,highlights:t.highlightTerms,
  sourceText:'彰化高商適用英文教材版本、單元、章節、頁數：待核對',
@@ -25,6 +34,9 @@ const out=path.resolve(process.env.SUDU_TEST_OUTPUT||'test-results/english03-ui'
 const canonical=o=>Array.isArray(o)?o.map(canonical):o&&typeof o==='object'?Object.fromEntries(Object.keys(o).sort().map(k=>[k,canonical(o[k])])):o;
 const report={kind:'ISOLATED_E03_MAIN_HTML_CANDIDATE_ADAPTER',questionId:q.questionId,
  imageSha256:q.imageSha256,teachingDigestSha256:hash(JSON.stringify(canonical(t))),
+ sourceQuestionRevision:hash(JSON.stringify({question:original.question,options:original.options,imageSha256:q.imageSha256})),
+ sourceRecord:'sudu/data/years/115.json#115-00-E-03',
+ sourceIsLegacyPendingIndependentTextQA:true,
  actualReleaseApproved:false,fullTeachingReview:false,observations:[],errors:[]};
 const adapter=fs.readFileSync(path.join(root,'sudu/verified-questions-runtime.js'),'utf8');
 assert(!adapter.includes('verifiedImagePreview'),'do not restore obsolete preview panel');
