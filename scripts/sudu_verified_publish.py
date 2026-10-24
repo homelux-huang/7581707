@@ -62,6 +62,10 @@ def stable(q: dict, year: int) -> tuple[str, str] | None:
 def text_revision(q: dict, sha_webp: str) -> str:
     """Hash excludes answer so independent solving cannot derive the official key."""
     payload = {"question": q.get("question"), "options": q.get("options"), "singleQuestionWebpSha256": sha_webp}
+    # A visual table is part of the problem condition. Editing it MUST invalidate
+    # the original question text revision and all linked teaching/UI certificates.
+    if "originalSourceTableCandidate" in q:
+        payload["originalSourceTableCandidate"] = q["originalSourceTableCandidate"]
     return digest(json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode())
 
 def shared_material_ids(q: dict) -> tuple[str, ...] | None:
@@ -337,6 +341,20 @@ def certified_visual_assets(source: Path, q: dict, item: dict, shared: dict) -> 
     return assets
 
 
+def verified_source_table(raw):
+    """Strict 2-D source-table structure; invalid or cropped table fails closed."""
+    if not isinstance(raw,dict) or set(raw)!={"heading","rows"}:
+        return None
+    heading=raw.get("heading")
+    rows=raw.get("rows")
+    if (not isinstance(heading,list) or not (2<=len(heading)<=6)
+            or not all(good(x) for x in heading)
+            or not isinstance(rows,list) or not (1<=len(rows)<=20)
+            or not all(isinstance(row,list) and len(row)==len(heading)
+                       and all(good(value) for value in row) for row in rows)):
+        return None
+    return {"heading":heading,"rows":rows}
+
 def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
     t = q["teaching"]
     calc = t["examCalculation"] if t["hasExamCalculation"] else None
@@ -350,7 +368,7 @@ def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
             + ["結果："+calc["result"]+(("；單位："+calc["unit"]) if calc.get("unit") else ""),
                "對應選項："+calc["option"]]
         )
-    return {
+    result = {
         "id": q["originalQuestionNumber"], "canonicalId":q["questionId"],
         "year":year, "subject":subject, "topic":str(t.get("topic") or subject),
         "question":q["question"], "options":q["options"], "answer":q["officialFinalAnswer"].upper(),
@@ -364,6 +382,13 @@ def public_question(q: dict, year: int, subject: str, image_path: str) -> dict:
         "image":image_path,
         "imageSha256":image_sha(q),
     }
+    if "originalSourceTableCandidate" in q:
+        table=verified_source_table(q["originalSourceTableCandidate"])
+        if (table is None or q.get("questionVerified") is not True
+                or (q.get("textQaEvidence") or {}).get("tableReviewedAgainstOriginalWebp") is not True):
+            raise ValueError("Unreviewed or malformed official source table: "+q["questionId"])
+        result["sourceTable"]={**table,"sourceWebpSha256":image_sha(q)}
+    return result
 
 def reviewed_student_batches(source: Path, year: int) -> dict[str, dict]:
     """Additive, SHA-anchored certificates without rewriting huge OCR/DB sources."""
@@ -515,6 +540,10 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         ocr.get("question") == q.get("question"),
         ocr.get("options") == q.get("options"),
         ocr.get("visualTextCompared") is True,
+        ("originalSourceTableCandidate" not in q or (
+            verified_source_table(q.get("originalSourceTableCandidate")) is not None and
+            ocr.get("tableReviewedAgainstOriginalWebp") is True and
+            ocr.get("originalSourceTable") == q.get("originalSourceTableCandidate"))),
         off.get("officialPdfSha256") == pdf_sha(q,"answer"),
         off.get("finalAnswer") == q.get("answer"),
         off.get("correctionNoticeReviewed") is True,
@@ -551,7 +580,9 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         "questionVerified":True,"textQaStatus":"PASS",
         "textQaEvidence":{**ev("ocr"),"questionRevision":revision,
             "sourceImageSha256":(q.get("questionProvenance") or {}).get("pixelSourceSha256")
-                or (q.get("assets") or {}).get("sourceSha256")},
+                or (q.get("assets") or {}).get("sourceSha256"),
+            "tableReviewedAgainstOriginalWebp":(
+                "originalSourceTableCandidate" in q and ocr.get("tableReviewedAgainstOriginalWebp") is True)},
         "officialFinalAnswer":off["finalAnswer"],"answerVerified":True,
         "officialCorrectionChecked":True,
         "officialFinalQaEvidence":{**ev("official"),"answerPdfSha256":pdf_sha(q,"answer"),
@@ -745,6 +776,13 @@ def site_check(dest: Path):
             assert len(q["options"])==4 and all(good(x) for x in q["options"])
             assert set(q["optionExplanations"])==LETTERS
             assert all(good(q["optionExplanations"][l]["teacher"]) and good(q["optionExplanations"][l]["elementary"]) for l in LETTERS)
+            original_table=q.get("sourceTable")
+            if original_table is not None:
+                assert isinstance(original_table,dict)
+                assert original_table.get("sourceWebpSha256")==q["imageSha256"]
+                assert verified_source_table({
+                    "heading":original_table.get("heading"),
+                    "rows":original_table.get("rows")}) is not None
             c=q.get("examCalculation")
             if c is not None:
                 assert c["hasExamCalculation"] is True and len(c["lines"])>=5
