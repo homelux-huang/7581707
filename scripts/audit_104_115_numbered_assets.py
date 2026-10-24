@@ -283,7 +283,7 @@ def main():
         OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
         OUT_MD.parent.mkdir(parents=True,exist_ok=True)
         OUT_JSON.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-        OUT_MD.write_text(md+"\n",encoding="utf-8")
+        OUT_MD.write_text(md.rstrip("\n")+"\n",encoding="utf-8")
     print(json.dumps({"totals":result["totals"],
                       "missingIdsByYear":{str(y["year"]):y["missingSingleQuestionWebpIds"]
                                           for y in result["years"] if y["year"]>=105},
