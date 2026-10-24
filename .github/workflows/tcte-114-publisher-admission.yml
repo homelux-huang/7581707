@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install same Pillow WebP SHA/decode dependency as production publisher
+        run: python -m pip install -q pillow
       - name: Read-only exact SQLite payload diff (diagnostic, never promotes QA)
         run: python scripts/qa114_sqlite_content_diff.py
       - name: Retain unresolved SQLite field-level evidence
