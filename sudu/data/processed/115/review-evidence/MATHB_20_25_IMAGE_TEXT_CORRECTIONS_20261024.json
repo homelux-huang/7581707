@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "paper": "00-MB",
+  "scopeQuestionIds": [
+    "115-00-MB-20",
+    "115-00-MB-21",
+    "115-00-MB-22",
+    "115-00-MB-23",
+    "115-00-MB-24",
+    "115-00-MB-25"
+  ],
+  "items": [
+    {
+      "qid": "115-00-MB-20",
+      "sourceWebpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-20-image-transcription-correction-20261024.json",
+      "officialAnswer": "A"
+    },
+    {
+      "qid": "115-00-MB-21",
+      "sourceWebpSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-21-image-transcription-correction-20261024.json",
+      "officialAnswer": "A"
+    },
+    {
+      "qid": "115-00-MB-22",
+      "sourceWebpSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-22-image-transcription-correction-20261024.json",
+      "officialAnswer": "B"
+    },
+    {
+      "qid": "115-00-MB-23",
+      "sourceWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
+      "officialAnswer": "B"
+    },
+    {
+      "qid": "115-00-MB-24",
+      "sourceWebpSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-24-image-transcription-correction-20261024.json",
+      "officialAnswer": "C"
+    },
+    {
+      "qid": "115-00-MB-25",
+      "sourceWebpSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+      "entry": "sudu/data/processed/115/review-evidence/115-00-MB-25-image-transcription-correction-20261024.json",
+      "officialAnswer": "C"
+    }
+  ],
+  "kind": "SOURCE_IMAGE_GROUNDED_CORRECTED_TEXT_CANDIDATES__NOT_FORMAL_INDEPENDENT_APPROVAL",
+  "reviewDate": "2026-10-24",
+  "visualSourceRunId": 40084307251,
+  "formalTextQaPass": false,
+  "independentTeachingQaPass": false,
+  "releaseReadyCount": 0,
+  "studentDataMutated": false
+}
