@@ -38,7 +38,7 @@ def _time(value):
 def _github_json(path):
     # External identity is verified from GitHub itself. No authored certificate
     # can substitute its own GitHub PR author, commits or APPROVED review event.
-    if not path.startswith("/pulls/") or ".." in path:
+    if not (path.startswith("/pulls/") or path=="/branches/main") or ".." in path:
         raise ValueError("invalid GitHub review API path")
     headers={"Accept":"application/vnd.github+json","User-Agent":"7581707-release-review/1"}
     token=os.environ.get("GITHUB_TOKEN")
@@ -49,6 +49,18 @@ def _github_json(path):
         if response.status!=200:
             raise ValueError("GitHub verification unavailable")
         return json.loads(response.read())
+
+def _protected_main_trust_verified():
+    # Main is presently UNPROTECTED (GitHub reports protected=false).
+    # Even a mathematically valid signature cannot safely authorize a new
+    # question until owner establishes a real branch ruleset and owns keys.
+    try:
+        main=_github_json("/branches/main")
+        # GitHub protected=true covers both classic protection and repository
+        # rulesets; the legacy .protection.enabled field alone does NOT cover rulesets.
+        return main.get("name")=="main" and main.get("protected") is True
+    except (ValueError,OSError,TypeError,KeyError,TimeoutError,UnicodeError):
+        return False
 
 def _author_and_github_review_verified(payload,signer):
     number=payload.get("reviewPullRequestNumber")
@@ -234,6 +246,8 @@ def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,po
             return False,"review_outside_signer_authorization"
     except (ValueError,TypeError):
         return False,"review_time_unverified"
+    if not _protected_main_trust_verified():
+        return False,"unprotected_main_cannot_authorize_reviewer_keys"
     if not _author_and_github_review_verified(statement,signer):
         return False,"github_pr_author_or_review_event_unverified"
     options=statement.get("optionByOptionFindings")

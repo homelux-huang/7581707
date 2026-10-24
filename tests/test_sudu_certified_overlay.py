@@ -94,12 +94,16 @@ class StudentOverlayTests(unittest.TestCase):
                 "expiresAt":"2030-01-01T00:00:00Z",
                 "role":"qualified_human_teacher","organizationVerified":True,
                 "ed25519PublicKey":base64.b64encode(raw_pub).decode()}}}
+        self.main_protected=True
         # Mock only external GitHub GET replies, NOT the signature or event
         # verification routine; test the real identity semantics end-to-end.
         def fake_github(request,timeout=15):
             url=request.full_url
             head="c"*40
-            if url.endswith("/pulls/19"):
+            if url.endswith("/branches/main"):
+                doc={"name":"main","protected":self.main_protected,
+                     "protection":{"enabled":self.main_protected}}
+            elif url.endswith("/pulls/19"):
                 doc={"draft":False,"base":{"repo":{"full_name":"homelux-huang/7581707"}},
                      "head":{"sha":head},"user":{"login":"synthetic-original-author","id":102},"commits":1}
             elif url.endswith("/pulls/19/reviews/1991"):
@@ -227,6 +231,11 @@ class StudentOverlayTests(unittest.TestCase):
         self.assertIs(self.admitted(),self.question)
         authorized["enabled"]=True
         self.assertIsNot(self.admitted(),self.question)
+
+    def test_reviewer_authorization_denied_while_main_unprotected(self):
+        self.assertIsNot(self.admitted(),self.question)
+        self.main_protected=False
+        self.assertIs(self.admitted(),self.question)
 
     def test_signed_review_identity_must_match_real_pr_author(self):
         self.assertIsNot(self.admitted(),self.question)

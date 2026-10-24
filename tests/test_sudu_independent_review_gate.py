@@ -31,9 +31,13 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
                          "role":"qualified_human_teacher","organizationVerified":True,
                          "ed25519PublicKey":base64.b64encode(pub).decode()}}}
         self.review_head="c"*40
+        self.main_protected=True
         def fake_github(request,timeout=15):
             url=request.full_url
-            if url.endswith("/pulls/17"):
+            if url.endswith("/branches/main"):
+                result={"name":"main","protected":self.main_protected,
+                        "protection":{"enabled":self.main_protected}}
+            elif url.endswith("/pulls/17"):
                 result={"draft":False,"base":{"repo":{"full_name":"homelux-huang/7581707"}},
                         "head":{"sha":self.review_head},"user":{"login":"homelux-huang","id":101},"commits":1}
             elif url.endswith("/pulls/17/reviews/1234"):
@@ -152,6 +156,15 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
         self.assertTrue(self.verify()[0])
         (self.root/self.official_path).write_text('{"questionId":"115-09-2-34","finalAnswer":"B"}')
         self.assertFalse(self.verify()[0])
+
+    def test_unprotected_main_rejects_even_legitimate_external_signature(self):
+        self.sign()
+        self.assertTrue(self.verify()[0])
+        self.main_protected=False
+        allowed,why=self.verify()
+        self.assertFalse(allowed)
+        self.assertEqual(why,"unprotected_main_cannot_authorize_reviewer_keys")
+        self.main_protected=True
 
     def test_legacy_five_only_match_pinned_original_git_blob(self):
         item={"year":115,"questionRevision":"a"*64,
