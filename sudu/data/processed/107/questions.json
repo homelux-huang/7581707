@@ -288,14 +288,16 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-08.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p003-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "06b4f075524b2e13930b1b2d32add4df6977cf8bdf58eb91b82f45764e8ef202",
+        "sourcePage": 3
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -304,7 +306,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -324,14 +326,16 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-09.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p003-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "2cbc14cd552b8b4239a92d0d8278c0a084d2c9f55beadb6dc35b6739fbf6d9d3",
+        "sourcePage": 3
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -340,7 +344,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -360,14 +364,16 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-10.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p003-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "3e4b6a3f86c8d93b0d42d29006d22d40384b405d0c776db3955e0275f3d0d8d6",
+        "sourcePage": 3
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -376,7 +382,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -396,14 +402,16 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-11.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p003-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "89b67661f8ee014c433bb27ef08a6f03e5fb0eede3d42ffc5f2ce7d991efe69b",
+        "sourcePage": 3
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -412,7 +420,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -437,13 +445,15 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-12.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p003-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "b9727eec79a8517d2ba0f9dbe51d5cc1b0514c4a7ee3b5fbe0a5b6d8fc78bd01",
+        "sourcePage": 3
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -452,7 +462,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -475,15 +485,19 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-13-14"
+      ],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-13.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "f19108b663ebbae394a0045d9d0ef9a1f8784a7c7069f25d1f5d6e1ac5757f46",
+        "sourcePage": 4
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -492,7 +506,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -510,16 +524,20 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-13-14"
+      ],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-14.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "d33f8272b71d14481946db71eea80917ed5a589f71e3bfcfc828a80717d435fd",
+        "sourcePage": 4
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -528,7 +546,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -551,15 +569,19 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-15-16"
+      ],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-15.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "935db684241f5d74795bd528278ce0170cabdd5205ce894b16779de842d81e9f",
+        "sourcePage": 4
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -568,7 +590,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -586,16 +608,20 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-15-16"
+      ],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-16.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "599e719a4ef7a9bc0218043176f845e6495730d95b89843d92a405cbcb1696a9",
+        "sourcePage": 4
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -604,7 +630,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1314,14 +1340,16 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-35.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p008-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "87ff363417882ee0232b8ead9602ae666a89b4a581eccfb2b7597e0c6e7a453d",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -1330,7 +1358,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1353,15 +1381,19 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-36-38"
+      ],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-36.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p008-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "09b63e15b77b3700a7025593f889a4731ad59cd292cc0bc47d39053a48049119",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -1370,7 +1402,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1393,15 +1425,19 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-36-38"
+      ],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-37.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p008-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "fbedbee02738fb805cf6d68f6cc3e7ff6fd596d7866ac39c690e8ca42183c0d1",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -1410,7 +1446,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1433,15 +1469,19 @@
       "answerVerified": false,
       "questionVerified": false,
       "integrationReady": false,
-      "sharedMaterialIds": [],
+      "sharedMaterialIds": [
+        "107-00-C-SHARED-36-38"
+      ],
       "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/00-C/107-00-C-38.webp",
+        "sourcePageWebp": "sudu/data/original/107/00-C/p008-9dcc8c71c2-v2-w1400-q66.webp",
+        "sha256": "dc018e30860b2f087953a2408c0e38d9a0f77855aa80e9a8322f4fd98afd262e",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTAwLWMucGRm",
@@ -1450,7 +1490,7 @@
         "answerPdfSha256": "ed05df557600b78f4aeff413213266baee43ae8ca9e24b3a38fa9e4cc50a824e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -7938,6 +7978,103 @@
         ],
         "method": "assistant_direct_visual_original_pdf_pixel_webp_compare"
       }
+    },
+    {
+      "year": 107,
+      "paperCode": "00-C",
+      "sourcePage": 4,
+      "source": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "70028061ff910d508e6a68d993b051526ccc1d1ecd1ffe3a13406fe0c1340c09",
+      "sourcePageGitBlob": "88907af20f1f0e209e1d6a411b2f78eb6e6a1522",
+      "officialQuestionPdfSha256": "9dcc8c71c26d97aa1e71a2e1c673823d084d2a5985ce3a682caa5d46e3036430",
+      "cropPixels": [
+        90,
+        167,
+        1310,
+        496
+      ],
+      "output": "sudu/data/processed/107/qa-drafts/webp-v3/shared/107-00-C-SHARED-13-14.webp",
+      "outputSha256": "2e56ab5bd8b33dd11f45b470970afd790372bbec7819f4be2b539efe3675b71a",
+      "outputSize": [
+        1220,
+        329
+      ],
+      "generationVersion": "assistant-located-source-pixel-v3-20261024",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS"
+      ],
+      "sharedMaterialId": "107-00-C-SHARED-13-14",
+      "originalQuestionNumbers": [
+        13,
+        14
+      ]
+    },
+    {
+      "year": 107,
+      "paperCode": "00-C",
+      "sourcePage": 4,
+      "source": "sudu/data/original/107/00-C/p004-9dcc8c71c2-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "70028061ff910d508e6a68d993b051526ccc1d1ecd1ffe3a13406fe0c1340c09",
+      "sourcePageGitBlob": "88907af20f1f0e209e1d6a411b2f78eb6e6a1522",
+      "officialQuestionPdfSha256": "9dcc8c71c26d97aa1e71a2e1c673823d084d2a5985ce3a682caa5d46e3036430",
+      "cropPixels": [
+        90,
+        1140,
+        1310,
+        1283
+      ],
+      "output": "sudu/data/processed/107/qa-drafts/webp-v3/shared/107-00-C-SHARED-15-16.webp",
+      "outputSha256": "2365141f796b0bc6b514ba326ef83f93450591f5ed83ba19332f90f5ccf2f0c8",
+      "outputSize": [
+        1220,
+        143
+      ],
+      "generationVersion": "assistant-located-source-pixel-v3-20261024",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS"
+      ],
+      "sharedMaterialId": "107-00-C-SHARED-15-16",
+      "originalQuestionNumbers": [
+        15,
+        16
+      ]
+    },
+    {
+      "year": 107,
+      "paperCode": "00-C",
+      "sourcePage": 8,
+      "source": "sudu/data/original/107/00-C/p008-9dcc8c71c2-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "994a8953aec808acad4a6769418b92b09bbe6ff4600f6eb4bd6e6f860389ee98",
+      "sourcePageGitBlob": "f66a0018d9e34fb66a7273756e13329d6b0ec088",
+      "officialQuestionPdfSha256": "9dcc8c71c26d97aa1e71a2e1c673823d084d2a5985ce3a682caa5d46e3036430",
+      "cropPixels": [
+        90,
+        348,
+        1310,
+        930
+      ],
+      "output": "sudu/data/processed/107/qa-drafts/webp-v3/shared/107-00-C-SHARED-36-38.webp",
+      "outputSha256": "8d1c6f5806292b520be39bbafc7b39125558e5d58eda3e20a046c560ac360b45",
+      "outputSize": [
+        1220,
+        582
+      ],
+      "generationVersion": "assistant-located-source-pixel-v3-20261024",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "DRAFT_PENDING_SEPARATE_SOURCE_CROP_G1",
+        "MUST_VERIFY_ABCD_AND_SHARED_CROPS"
+      ],
+      "sharedMaterialId": "107-00-C-SHARED-36-38",
+      "originalQuestionNumbers": [
+        36,
+        37,
+        38
+      ]
     }
   ]
 }
