@@ -3,6 +3,7 @@ import json
 import tempfile
 import unittest
 import base64
+import io
 from pathlib import Path
 from unittest.mock import patch
 
@@ -84,11 +85,37 @@ class StudentOverlayTests(unittest.TestCase):
         self._key=Ed25519PrivateKey.generate()
         raw_pub=self._key.public_key().public_bytes(Encoding.Raw,PublicFormat.Raw)
         self._trusted_test_policy={
-            "schemaVersion":1,"requireHumanTeacher":True,"legacyAlreadyPublished":{},
+            "schemaVersion":1,"githubRepository":"homelux-huang/7581707",
+            "requireHumanTeacher":True,"legacyAlreadyPublished":{},
             "authorizedReviewers":{"independent-fixture-key":{
                 "enabled":True,"login":"separately-reviewed-fixture",
+                "githubUserId":990,"validFrom":"2026-01-01T00:00:00Z",
+                "expiresAt":"2030-01-01T00:00:00Z",
                 "role":"qualified_human_teacher","organizationVerified":True,
                 "ed25519PublicKey":base64.b64encode(raw_pub).decode()}}}
+        # Mock only external GitHub GET replies, NOT the signature or event
+        # verification routine; test the real identity semantics end-to-end.
+        def fake_github(request,timeout=15):
+            url=request.full_url
+            head="c"*40
+            if url.endswith("/pulls/19"):
+                doc={"draft":False,"base":{"repo":{"full_name":"homelux-huang/7581707"}},
+                     "head":{"sha":head},"user":{"login":"synthetic-original-author","id":102},"commits":1}
+            elif url.endswith("/pulls/19/reviews/1991"):
+                doc={"id":1991,"state":"APPROVED","commit_id":head,
+                     "user":{"login":"separately-reviewed-fixture","id":990},
+                     "submitted_at":"2026-10-24T11:00:00Z"}
+            elif url.endswith("/pulls/19/commits?per_page=100"):
+                doc=[{"sha":head,"author":{"login":"synthetic-original-author"},
+                      "committer":{"login":"synthetic-original-author"}}]
+            else:
+                raise AssertionError("Unexpected fake GitHub endpoint "+url)
+            stream=io.BytesIO(json.dumps(doc).encode())
+            stream.status=200
+            return stream
+        github_patch=patch.object(reviewer_gate,"urlopen",side_effect=fake_github)
+        github_patch.start()
+        self.addCleanup(github_patch.stop)
         policy_patch=patch.object(reviewer_gate,"policy_from_trusted_main",
                                   return_value=self._trusted_test_policy)
         policy_patch.start()
@@ -107,8 +134,12 @@ class StudentOverlayTests(unittest.TestCase):
             "teachingDigest":reviewer_gate.digest(
                 reviewer_gate.canonical(self.docs["teaching"]["content"])),
             "teachingEvidenceSha256":reviewer_gate.digest(raw_teaching),
+            "officialAnswer":"A",
+            "officialEvidenceSha256":reviewer_gate.digest(
+                (self.source/self.evidence["official"]).read_bytes()),
             "reviewerLogin":"separately-reviewed-fixture","reviewerRole":"qualified_human_teacher",
-            "sourceAuthorLogin":"synthetic-original-author",
+            "sourceAuthorLogin":"synthetic-original-author","sourceAuthorGithubId":102,
+            "reviewPullRequestNumber":19,"approvedReviewId":1991,"reviewHeadSha":"c"*40,
             "reviewedAt":"2026-10-24T20:00:00+08:00",
             "optionByOptionFindings":{
                 o:"Reviewed original slope and x-intercept evidence against this "
@@ -195,6 +226,17 @@ class StudentOverlayTests(unittest.TestCase):
         self.assertIs(self.admitted(),self.question)
         authorized["enabled"]=True
         self.assertIsNot(self.admitted(),self.question)
+
+    def test_signed_review_identity_must_match_real_pr_author(self):
+        self.assertIsNot(self.admitted(),self.question)
+        item=json.loads(json.dumps(self.audit))
+        item["independentReviewAttestation"]["payload"]["sourceAuthorLogin"]="unrelated-user"
+        self.assertIs(self.admitted(item),self.question)
+        item=json.loads(json.dumps(self.audit))
+        item["independentReviewAttestation"]["payload"]["approvedReviewId"]=2001
+        self.assertIs(self.admitted(item),self.question)
+        self._trusted_test_policy["authorizedReviewers"]["independent-fixture-key"]["revokedAt"]="2026-10-25T00:00:00Z"
+        self.assertIs(self.admitted(),self.question)
 
     def test_reading_batch_fails_closed_for_duplicate_ids(self):
         root=self.source/"sudu/data/processed/115/verified-student-batch.json"
