@@ -4,7 +4,9 @@ import copy
 import json
 import tempfile
 import unittest
+import io
 from pathlib import Path
+from unittest.mock import patch
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives.serialization import Encoding,PublicFormat
 from scripts import sudu_independent_review_gate as gate
@@ -20,12 +22,38 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
         f.write_text("# Independent review\nPersonally checked image and all A-D, calculations and dual-level teaching.")
         self.private=Ed25519PrivateKey.generate()  # test-only ephemeral, never stored in release policy
         pub=self.private.public_key().public_bytes(Encoding.Raw,PublicFormat.Raw)
-        self.policy={"schemaVersion":1,"requireHumanTeacher":True,
+        self.policy={"schemaVersion":1,"githubRepository":"homelux-huang/7581707","requireHumanTeacher":True,
                      "legacyAlreadyPublished":{},"authorizedReviewers":{
                          "teacher-test-01":{"login":"external-teacher","enabled":True,
+                         "githubUserId":991,"validFrom":"2026-01-01T00:00:00Z",
+                         "expiresAt":"2030-01-01T00:00:00Z",
                          "role":"qualified_human_teacher","organizationVerified":True,
                          "ed25519PublicKey":base64.b64encode(pub).decode()}}}
-        self.q={"questionId":"115-09-2-34","year":115}
+        self.review_head="c"*40
+        def fake_github(request,timeout=15):
+            url=request.full_url
+            if url.endswith("/pulls/17"):
+                result={"draft":False,"base":{"repo":{"full_name":"homelux-huang/7581707"}},
+                        "head":{"sha":self.review_head},"user":{"login":"homelux-huang","id":101},"commits":1}
+            elif url.endswith("/pulls/17/reviews/1234"):
+                result={"id":1234,"state":"APPROVED","commit_id":self.review_head,
+                        "user":{"login":"external-teacher","id":991},"submitted_at":"2026-10-24T14:00:00Z"}
+            elif url.endswith("/pulls/17/commits?per_page=100"):
+                result=[{"sha":self.review_head,"author":{"login":"homelux-huang"},
+                         "committer":{"login":"homelux-huang"}}]
+            else:
+                raise RuntimeError("Unexpected GitHub URL "+url)
+            fake=io.BytesIO(json.dumps(result).encode())
+            fake.status=200
+            return fake
+        github_patch=patch.object(gate,"urlopen",side_effect=fake_github)
+        github_patch.start()
+        self.addCleanup(github_patch.stop)
+        self.q={"questionId":"115-09-2-34","year":115,"answer":"A"}
+        self.official_path="sudu/data/processed/115/review-evidence/115-09-2-34-official.json"
+        official=self.root/self.official_path
+        official.write_text(json.dumps({"questionId":self.q["questionId"],"finalAnswer":"A"}))
+        self.official_sha=gate.digest(official.read_bytes())
         self.manifest={"sha256":"b"*64}
         self.teaching={"questionRevision":"a"*64,
                        "content":{"teacherSummary":"Correct analysis","elementarySummary":"Explained to pupil"}}
@@ -35,14 +63,17 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
           "questionRevision":"a"*64,"webpSha256":"b"*64,
           "teachingDigest":gate.digest(gate.canonical(self.teaching["content"])),
           "teachingEvidenceSha256":gate.digest(self.raw),
+          "officialAnswer":"A","officialEvidenceSha256":self.official_sha,
           "reviewerLogin":"external-teacher","reviewerRole":"qualified_human_teacher",
-          "sourceAuthorLogin":"homelux-huang","reviewedAt":"2026-10-24T23:00:00+08:00",
+          "sourceAuthorLogin":"homelux-huang","sourceAuthorGithubId":101,
+          "reviewPullRequestNumber":17,"approvedReviewId":1234,"reviewHeadSha":self.review_head,
+          "reviewedAt":"2026-10-24T23:00:00+08:00",
           "teacherAndElementaryReviewed":True,
           "reviewedCalculationOrNoncalculation":True,
           "reviewNotesPath":self.rel,"reviewNotesSha256":gate.digest(f.read_bytes()),
           "optionByOptionFindings":{x:f"Independent comparison for option {x}, true concept and distractor checked." for x in "ABCD"}
         }
-        self.audit={}
+        self.audit={"evidence":{"official":self.official_path}}
     def sign(self):
         self.audit["independentReviewAttestation"]={
             "keyId":"teacher-test-01","payload":copy.deepcopy(self.statement),
@@ -92,10 +123,40 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
         self.assertFalse(self.verify()[0])
         self.policy["authorizedReviewers"]={}
         self.assertFalse(self.verify()[0])
+    def test_source_author_cannot_be_changed_to_hide_self_review(self):
+        self.sign()
+        self.assertTrue(self.verify()[0])
+        self.statement["sourceAuthorLogin"]="third-party"
+        self.sign()  # even a real signer cannot lie about original GitHub author
+        self.assertFalse(self.verify()[0])
+        self.statement["sourceAuthorLogin"]="homelux-huang"
+        self.statement["reviewHeadSha"]="d"*40
+        self.sign()
+        self.assertFalse(self.verify()[0])
+    def test_review_commit_author_and_approved_event_are_immutable(self):
+        self.sign()
+        self.assertTrue(self.verify()[0])
+        self.statement["approvedReviewId"]=98765
+        self.sign()
+        self.assertFalse(self.verify()[0])
+        self.statement["approvedReviewId"]=1234
+        self.policy["authorizedReviewers"]["teacher-test-01"]["revokedAt"]="2026-10-25T00:00:00Z"
+        self.sign()
+        self.assertFalse(self.verify()[0])
+        self.policy["authorizedReviewers"]["teacher-test-01"].pop("revokedAt")
+        self.policy["authorizedReviewers"]["teacher-test-01"]["expiresAt"]="2026-01-01T00:00:00Z"
+        self.assertFalse(self.verify()[0])
+    def test_official_evidence_change_invalidates_signed_review(self):
+        self.sign()
+        self.assertTrue(self.verify()[0])
+        (self.root/self.official_path).write_text('{"questionId":"115-09-2-34","finalAnswer":"B"}')
+        self.assertFalse(self.verify()[0])
+
     def test_legacy_five_only_match_pinned_original_git_blob(self):
         item={"year":115,"questionRevision":"a"*64,
               "webpSha256":"b"*64,"teachingEvidenceGitBlob":gate.blob_oid(self.raw)}
-        policy={"schemaVersion":1,"legacyAlreadyPublished":{self.q["questionId"]:item},"authorizedReviewers":{}}
+        policy={"schemaVersion":1,"githubRepository":"homelux-huang/7581707",
+                "legacyAlreadyPublished":{self.q["questionId"]:item},"authorizedReviewers":{}}
         self.assertTrue(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
         self.teaching["content"]["teacherSummary"]="changed"
         self.assertTrue(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
@@ -104,6 +165,7 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
     def test_unconfigured_main_policy_cannot_approve_new_questions(self):
         self.sign()
         self.assertFalse(gate.certified(self.root,self.audit,self.q,self.manifest,self.teaching,self.raw,
-                   policy={"schemaVersion":1,"requireHumanTeacher":True,"authorizedReviewers":{}})[0])
+                   policy={"schemaVersion":1,"githubRepository":"homelux-huang/7581707",
+                           "requireHumanTeacher":True,"authorizedReviewers":{}})[0])
 if __name__=="__main__":
     unittest.main()
