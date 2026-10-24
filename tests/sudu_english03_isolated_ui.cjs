@@ -55,6 +55,11 @@ assert(!adapter.includes('verifiedImagePreview'),'do not restore obsolete previe
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
  await activate(page.locator('#questionBtn'));assert.equal(await page.locator('#guideCard.show').count(),0);
  await activate(page.locator('#explainBtn'));await page.locator('#guideCard.show').waitFor();
+ // On mobile the dynamic top bar intentionally collapses after answering.
+ // Use the real visible handle to expand it before touching the review entry.
+ const navHandle=page.locator('#navHandle');
+ await activate(navHandle);
+ assert.equal(await navHandle.getAttribute('aria-expanded'),'true','navigation opened by real touch/click');
  await activate(page.locator('#reviewTop'));await page.locator('#reviewView.show').waitFor();
  const review=await page.locator('#reviewList').innerText();
  assert(review.includes(e.newsExampleChinese)&&review.includes('正確答案 B'));
