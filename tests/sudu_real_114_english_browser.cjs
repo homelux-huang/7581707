@@ -73,6 +73,13 @@ for(const pub of snapshot.questions){
       assert.equal((await page.locator('#guideCard .guide-block h3').allTextContents()).includes('考題計算式'),false);
       assert.equal(await correct.locator('.option-detail-grid').count(),0,'correct option explanation duplicated');
       assert.equal(await page.locator('#memoryWrap, #memoryCard').count(),0,'extra memory card overlays question');
+      await page.mouse.move(width/2,height-25);
+      await page.waitForTimeout(480);
+      const nav=await page.evaluate(()=>({auto:document.body.classList.contains('nav-auto'),
+        opened:document.body.classList.contains('nav-open'),
+        peek:document.body.classList.contains('nav-peek')}));
+      assert(nav.auto && !nav.opened && !nav.peek,
+        'question number/navigation overlay must automatically retract after answering '+qid+' '+JSON.stringify(nav));
       assert.equal(await page.locator('#nextBtn').isDisabled(),i===ids.length-1);
       for(const theme of ['light','dark']){
         await page.evaluate(mode=>{document.documentElement.dataset.theme=mode;document.body.dataset.theme=mode;},theme);
