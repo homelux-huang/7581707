@@ -2826,7 +2826,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -2845,7 +2845,23 @@
       "outputSize": [
         1220,
         182
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "84f81cbb1674801ce9fc16b15771eb938f38b8c000f9e9cfbbb08e068ab37993",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          169,
+          1310,
+          351
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-12",
@@ -2857,7 +2873,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -2876,7 +2892,23 @@
       "outputSize": [
         1220,
         172
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "01a04ced7ea78bae93dffbbcd61b50bb098820922c139a5c9d6cfec580c709bc",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          352,
+          1310,
+          524
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-13",
@@ -2888,7 +2920,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -2907,7 +2939,23 @@
       "outputSize": [
         1220,
         393
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "2b4b72f7b08e0ed7d64483001315b01df29982009498f51f173944a9aa1f837e",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          525,
+          1310,
+          918
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-14",
@@ -2919,7 +2967,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -2938,7 +2986,23 @@
       "outputSize": [
         1220,
         141
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "4e488da14604b8b00158c3825fb404ad03f70f862834f1ebdb26a59b4976e188",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          919,
+          1310,
+          1060
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-15",
@@ -2950,7 +3014,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -2969,7 +3033,23 @@
       "outputSize": [
         1220,
         187
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "ea6e4129de7bdcd929549adf2d769c4a4b04bf3b86de02bf1216d1248da01ee9",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          1061,
+          1310,
+          1248
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-16",
@@ -2981,7 +3061,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-source-pixel-margin-completion-v4-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1",
@@ -3002,7 +3082,23 @@
       "outputSize": [
         1220,
         388
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "d472b5e3f0c9383ea0585dc7201feec57a050eba8652fa5d108d479b407c90e7",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          1249,
+          1310,
+          1637
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-17",
@@ -3014,7 +3110,7 @@
       "officialQuestionPdfSha256": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
       "sourcePage": 3,
       "generationVersion": "assistant-source-pixel-margin-completion-v4-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1",
@@ -3035,7 +3131,23 @@
       "outputSize": [
         1220,
         187
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+        "reviewedSha256": "8db038429ad97927dbfa8e989e497c8948254f058f755a09546b31ac8144222e",
+        "sourcePage": 3,
+        "cropPixels": [
+          90,
+          1638,
+          1310,
+          1825
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-00-MB-18",
@@ -3739,7 +3851,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 4,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -3758,7 +3870,23 @@
       "outputSize": [
         1220,
         383
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+        "reviewedSha256": "cb30a096711f952e0187d1cdf55930960fc5a391465a202933dd1fa675694acb",
+        "sourcePage": 4,
+        "cropPixels": [
+          90,
+          163,
+          1310,
+          546
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-16",
@@ -3770,7 +3898,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 4,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -3789,7 +3917,23 @@
       "outputSize": [
         1220,
         582
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+        "reviewedSha256": "acf8852abf3244a8aae31938b37b52b65cf0a6ae4bbfcd132bd4c2308809355e",
+        "sourcePage": 4,
+        "cropPixels": [
+          90,
+          547,
+          1310,
+          1129
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-17",
@@ -3801,7 +3945,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 4,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -3820,7 +3964,23 @@
       "outputSize": [
         1220,
         320
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+        "reviewedSha256": "2e8a7d9a4e2f525c790892c36bdf37e9e0ba8062101bd4f2fdefc354aae672a4",
+        "sourcePage": 4,
+        "cropPixels": [
+          90,
+          1130,
+          1310,
+          1450
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-18",
@@ -3832,7 +3992,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 4,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -3851,7 +4011,23 @@
       "outputSize": [
         1220,
         331
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+        "reviewedSha256": "039035d73423fefd94a0f049594ee03c3b28f3fb6239c94d9c02b373fd73af1a",
+        "sourcePage": 4,
+        "cropPixels": [
+          90,
+          1451,
+          1310,
+          1782
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-19",
@@ -4082,7 +4258,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4101,7 +4277,23 @@
       "outputSize": [
         1220,
         277
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "d5e9c23f19816a0d21c0b18260557958c87817f1da0fc75839cebea361420a26",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          220,
+          1310,
+          497
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-27",
@@ -4113,7 +4305,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4132,7 +4324,23 @@
       "outputSize": [
         1220,
         87
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "31ff2e02836a78cbf2f95d7940b490b6a77c0fe63a63fbd8920cd894523f9687",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          498,
+          1310,
+          585
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-28",
@@ -4144,7 +4352,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
@@ -4164,7 +4372,23 @@
       "outputSize": [
         1220,
         209
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "27834b951409d3fe925de49a81e6147ad03a29cd639caa4a32807ae20aa1f968",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          586,
+          1310,
+          795
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-29",
@@ -4176,7 +4400,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
@@ -4196,7 +4420,23 @@
       "outputSize": [
         1220,
         184
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "e2cc6bc69b027eea81edfb01ddcbb9f00fe9aed0c839a434787235394f5bed20",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          796,
+          1310,
+          980
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-30",
@@ -4208,7 +4448,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4227,7 +4467,23 @@
       "outputSize": [
         1220,
         227
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "ffd7318c2c6240c6dd202b05df631a489810c361f14599ea5798853729f922db",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          981,
+          1310,
+          1208
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-31",
@@ -4239,7 +4495,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4258,7 +4514,23 @@
       "outputSize": [
         1220,
         226
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "e6b52d81ccb8720cd1987a312cd6e722ab5fb6f8489d9d567e40c5bf8bafce88",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          1209,
+          1310,
+          1435
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-32",
@@ -4270,7 +4542,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4289,7 +4561,23 @@
       "outputSize": [
         1220,
         201
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "f11d400aecfd8e371a5412fc9b9cf33812da20063d817ef306f041c9a0218603",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          1436,
+          1310,
+          1637
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-33",
@@ -4301,7 +4589,7 @@
       "officialQuestionPdfSha256": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
       "sourcePage": 6,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -4320,7 +4608,23 @@
       "outputSize": [
         1220,
         147
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+        "reviewedSha256": "b2387383703d1169efc14ac75b544e601658390a8277b11e3d776139268e65b0",
+        "sourcePage": 6,
+        "cropPixels": [
+          90,
+          1638,
+          1310,
+          1785
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-1-34",
@@ -5551,7 +5855,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -5570,7 +5874,23 @@
       "outputSize": [
         1220,
         189
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "d77f72c014affc22221574afac5ff787b072925652987efe7c9fd000e0f83f52",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          170,
+          1310,
+          359
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-24",
@@ -5582,7 +5902,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-source-pixel-boundary-refinement-v3-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1"
@@ -5602,7 +5922,23 @@
       "outputSize": [
         1220,
         101
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "05979b4c13cf090f01d5895c993ff8b3fbeaedab382fc012f5c76ea11319eeb1",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          511,
+          1310,
+          612
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-25",
@@ -5614,7 +5950,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -5633,7 +5969,23 @@
       "outputSize": [
         1220,
         70
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "d651038a74fd8160e15fb4411e47363b167b6c0691bc63767742e622fbfa93aa",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          620,
+          1310,
+          690
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-26",
@@ -5645,7 +5997,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -5664,7 +6016,23 @@
       "outputSize": [
         1220,
         397
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "d220fa6b218e223ae5e4308763eb2153e5a4ed3c86b2deabec5c382b0f07d99c",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          737,
+          1310,
+          1134
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-27",
@@ -5676,7 +6044,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -5695,7 +6063,23 @@
       "outputSize": [
         1220,
         245
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "91542828fa608bb6d414135c909cccd2232a73efde46bf5ed295715e3804ed46",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          1135,
+          1310,
+          1380
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-28",
@@ -5707,7 +6091,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-source-pixel-margin-completion-v4-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1",
@@ -5728,7 +6112,23 @@
       "outputSize": [
         1220,
         205
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "07e5b08fbc80329be5fdd580acc73cc0e88a84cd5a563bc655a6f49589b19b4c",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          1381,
+          1310,
+          1586
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-29",
@@ -5740,7 +6140,7 @@
       "officialQuestionPdfSha256": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
       "sourcePage": 5,
       "generationVersion": "assistant-source-pixel-margin-completion-v4-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW",
         "PENDING_V3_BOUNDARY_DIRECT_VISUAL_G1",
@@ -5761,7 +6161,23 @@
       "outputSize": [
         1220,
         223
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "fe8e293e17fbfe8b29180c57240af388a8246a645ab96ef830c359e0b7cd4c16",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          1587,
+          1310,
+          1810
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     },
     {
       "questionId": "108-09-2-30",
@@ -6443,7 +6859,7 @@
         144
       ],
       "generationVersion": "assistant-original-page-pixel-only-v2-20261024",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "DRAFT_NEEDS_INDEPENDENT_G1_VISUAL_REVIEW"
       ],
@@ -6451,7 +6867,23 @@
       "originalQuestionNumbers": [
         24,
         25
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T22:39:21+08:00",
+        "independentHumanReview": false,
+        "sourceSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+        "reviewedSha256": "e60d85733befb9a1ad118af72f75880c97b8c3777f6a1b57807e558a875dcd9f",
+        "sourcePage": 5,
+        "cropPixels": [
+          90,
+          366,
+          1310,
+          510
+        ],
+        "method": "assistant_direct_original_page_and_current_version_visual_check_and_zero_pixel_diff"
+      }
     }
   ]
 }
