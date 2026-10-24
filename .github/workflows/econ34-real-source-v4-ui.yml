@@ -1,0 +1,63 @@
+name: Econ34 authentic official-source main V4 8x2 teaching QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/econ34-prekey-image-only-20261024]
+    paths:
+      - scripts/build_econ34_real_source_preview.py
+      - tests/sudu_econ34_real_source_v4_ui.cjs
+      - .github/workflows/econ34-real-source-v4-ui.yml
+      - sudu/data/processed/115/review-evidence/115-09-2-34-pedagogy-candidate-20261024.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  econ34_preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: candidate
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 31adda6c3973ee73387c767d4a8ba56af1fd81b8
+          path: current-main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assemble authentic source and teaching through unchanged real publisher (QA ONLY)
+        run: python candidate/scripts/build_econ34_real_source_preview.py
+      - name: Build same-SHA main V4, install Chromium headless
+        run: |
+          set -eu
+          python -m pip install -q pillow
+          (cd current-main && SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py)
+          npm install --prefix candidate --no-save playwright@1.51.1
+          (cd candidate && npx playwright install --only-shell chromium)
+      - name: Exercise real Econ34 options and high school/elementary content across 8x2 viewports
+        env:
+          SUDU_PREVIEW_ONLY: '1'
+          SUDU_TEST_URL: http://127.0.0.1:8777/sudu/
+          SUDU_TEST_OUTPUT: econ34-ui-results
+        run: |
+          set -eu
+          python -m http.server 8777 --bind 127.0.0.1 --directory current-main/_site >/tmp/econ34-v4-http.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          sleep 2
+          node candidate/tests/sudu_econ34_real_source_v4_ui.cjs
+      - name: Retain real V4 source SHA, teaching SHA, screenshots and browser log (NO RELEASE)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: econ34-real-v4-qa-only-no-release
+          path: |
+            econ34-stage/input-digests.json
+            econ34-ui-results/
+          if-no-files-found: ignore
+          retention-days: 30
