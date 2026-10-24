@@ -51,8 +51,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Decode WebP only when an entire question passed QA
-        run: python -m pip install -q pillow
+      - name: Install WebP decoder and trusted independent reviewer Ed25519 verifier
+        run: python -m pip install -q pillow cryptography
       - name: Pin source subtrees and skip updates unrelated to 114/115
         id: snapshot
         shell: bash

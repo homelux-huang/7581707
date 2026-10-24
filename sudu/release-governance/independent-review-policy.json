@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "policy": "NEW_ADMISSIONS_REQUIRE_EXTERNAL_SEPARATE_SIGNED_TEACHING_REVIEW",
+  "requireHumanTeacher": true,
+  "authorizedReviewers": {},
+  "legacyAlreadyPublished": {
+    "115-00-MB-02": {
+      "year": 115,
+      "questionRevision": "e773c34c83007af4bac0e1567262acfd0a5369b1c7be21bfdc14b44ac13c4459",
+      "webpSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "teachingEvidenceGitBlob": "cc8c4f7716c261e374796d19c9b6da4972cf573f"
+    },
+    "115-00-MB-03": {
+      "year": 115,
+      "questionRevision": "ca22881177ea237464044c3390aae43b58517e28e20f5a8cfb9f17efbd0b2653",
+      "webpSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "teachingEvidenceGitBlob": "cc595e724e7b7def17f59e41831e654ea8b8ef59"
+    },
+    "115-00-MB-04": {
+      "year": 115,
+      "questionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+      "webpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "teachingEvidenceGitBlob": "207327b0a313bdff158f8b11be235ce70616d3b6"
+    },
+    "115-00-MB-05": {
+      "year": 115,
+      "questionRevision": "3b0a4236f9298edd225b445592faee3b222c8ecfc1b62425278a0de576cc1df9",
+      "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "teachingEvidenceGitBlob": "fedf263a7466ecdd2e189bce0f4e6d7ee987513b"
+    },
+    "115-00-MB-09": {
+      "year": 115,
+      "questionRevision": "354a437dac1b26c8eb290262948c72eee72b649a685e8bf448ee59b3df58b9e7",
+      "webpSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "teachingEvidenceGitBlob": "5c968cab99302ff0942b9ac5673a87230caddb5a"
+    }
+  },
+  "configurationStatus": "NO_AUTHORIZED_REVIEWER_KEYS_YET__NEW_RELEASES_FAIL_CLOSED",
+  "notes": "Add a reviewer identity and Ed25519 public key only via trusted main code review after offline verification of role, independence and private-key custody. Never commit private keys or rely on source-branch reviewer strings. Historical exact five are retained without implying human teacher credentials."
+}

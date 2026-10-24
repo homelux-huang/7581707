@@ -508,6 +508,18 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
             return q
         docs[key]=value
     ocr,off,blind,teach,ui=[docs[key][0] for key in ("ocr","official","blind","teaching","ui")]
+    # P0: source-authored PASS strings and SHA files are not a separate reviewer.
+    # Legacy exemption is tied to exact old review bytes and question/image revision.
+    try:
+        from scripts import sudu_independent_review_gate as reviewer_gate
+    except ModuleNotFoundError:
+        import sudu_independent_review_gate as reviewer_gate
+    teaching_rel=audit["evidence"]["teaching"]
+    teaching_raw=(source/teaching_rel).read_bytes()
+    independently_authorized,identity_reason=reviewer_gate.certified(
+        source,audit,q,manifest,teach,teaching_raw)
+    if not independently_authorized:
+        return q
     revision=text_revision(q,manifest["sha256"])
     if not all((
         ocr.get("questionRevision") == revision,
@@ -585,6 +597,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         or (year == 114 and bool(inventory.get("sqlite",{}).get("roundtripPass"))))
     qa_per_subject = defaultdict(lambda:{"expected":0, "candidate":0,"webpQaPass":0,"imagePreviewReady":0,"ocrQaPass":0,"finalAnswerQaPass":0,"studentReady":0})
     released, previewed, approved_files, blocked, ai = [], [], set(), [], Counter()
+    integrity_rows = []
     seen=set()
     for q in questions:
         identity = stable(q, year)
@@ -648,7 +661,22 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
         target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(src/rel,target)
         approved_files.add(target.resolve())
-        released.append(public_question(q,year,subject,location))
+        public=public_question(q,year,subject,location)
+        released.append(public)
+        # This is generated ONLY after every existing G0-G10 admission gate passed.
+        # Main-and-LIVE content identity can now be checked per question, not by count.
+        integrity_rows.append({
+            "canonicalId":qid,"year":year,"sourceQuestionRevision":revision,
+            "teachingCanonicalSha256":digest(json.dumps(
+                q["teaching"],ensure_ascii=False,sort_keys=True,separators=(",",":")).encode("utf-8")),
+            "approvedContentSha256":digest(json.dumps(
+                public,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode("utf-8")),
+            "officialAnswer":public["answer"],"image":location,"imageSha256":public["imageSha256"],
+            "sharedImages":[{
+                "image":f"data/approved/webp/{year}/{sid}.webp",
+                "sha256":shared[sid]["sha256"]
+            } for sid in shared_ids]
+        })
         qa_per_subject[subject]["studentReady"] += 1
     expected = int(inventory.get("expected",manifest.get("expected",COUNT[year])))
     if expected != COUNT[year] or len(questions) != expected or len(entries) != expected or len(seen) != expected:
@@ -661,6 +689,10 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
     out = {"schemaVersion":1,"year":year,"sourceSha":source_sha,"expected":expected,
            "approvedCount":len(released),"questions":released}
     dump(output / f"sudu/data/approved/{year}.json",out)
+    dump(output / f"sudu/data/approved/integrity/{year}.json",{
+        "schemaVersion":1,"year":year,"sourceSha":source_sha,
+        "approvedCount":len(integrity_rows),"questions":integrity_rows
+    })
     # Public preview contains ONLY individually reviewed original WebP images.
     # Never serialize draft OCR, answer candidates, option keys or teaching.
     dump(output / f"sudu/data/approved/preview/{year}.json",{
@@ -719,6 +751,22 @@ def site_check(dest: Path):
         assert p["year"]==year and p["expected"]==COUNT[year]
         assert len(qs)==p["approvedCount"]==status["years"][str(year)]["approvedCount"]
         seen=set()
+        integrity=read(dest/f"sudu/data/approved/integrity/{year}.json")
+        assert integrity["schemaVersion"]==1 and integrity["year"]==year
+        assert integrity["sourceSha"]==p["sourceSha"]
+        assert integrity["approvedCount"]==len(qs)==len(integrity["questions"])
+        assert [x["canonicalId"] for x in integrity["questions"]]==[x["canonicalId"] for x in qs]
+        for published,proof in zip(qs,integrity["questions"]):
+            assert published["answer"]==proof["officialAnswer"] and published["image"]==proof["image"]
+            assert published["imageSha256"]==proof["imageSha256"]
+            assert SHA.fullmatch(proof["sourceQuestionRevision"]) and SHA.fullmatch(proof["teachingCanonicalSha256"])
+            assert digest(json.dumps(published,ensure_ascii=False,sort_keys=True,
+                                     separators=(",",":")).encode("utf-8"))==proof["approvedContentSha256"]
+            for shared_asset in proof["sharedImages"]:
+                assert re.fullmatch(
+                    rf"data/approved/webp/{year}/{year}-(?:00-C|00-E|00-MB|09-1|09-2)-SHARED-[0-9]{{2}}-[0-9]{{2}}\\.webp",
+                    shared_asset["image"])
+                assert digest((dest/"sudu"/shared_asset["image"]).read_bytes())==shared_asset["sha256"]
         preview_file=read(dest/f"sudu/data/approved/preview/{year}.json")
         pictures=preview_file.get("questions")
         assert isinstance(pictures,list)

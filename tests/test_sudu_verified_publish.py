@@ -114,8 +114,10 @@ class VerifiedPublicationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for year in (114,115):
-                v.dump(root/f"sudu/data/approved/{year}.json",{"year":year,"expected":205,"questions":[],"approvedCount":0})
+                v.dump(root/f"sudu/data/approved/{year}.json",{"year":year,"expected":205,"sourceSha":"f"*40,"questions":[],"approvedCount":0})
             for year in (114,115):
+                v.dump(root/f"sudu/data/approved/integrity/{year}.json",{
+                    "schemaVersion":1,"year":year,"sourceSha":"f"*40,"approvedCount":0,"questions":[]})
                 v.dump(root/f"sudu/data/approved/preview/{year}.json",{
                     "schemaVersion":1,"year":year,"expected":205,
                     "imagePreviewCount":0,"questions":[]
