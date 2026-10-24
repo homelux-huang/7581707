@@ -5,6 +5,7 @@ import json
 import tempfile
 import unittest
 import io
+from urllib.error import HTTPError
 from pathlib import Path
 from unittest.mock import patch
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
@@ -42,7 +43,7 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
                 result=[{"sha":self.review_head,"author":{"login":"homelux-huang"},
                          "committer":{"login":"homelux-huang"}}]
             else:
-                raise RuntimeError("Unexpected GitHub URL "+url)
+                raise HTTPError(url,404,"Unknown reviewed event",None,None)
             fake=io.BytesIO(json.dumps(result).encode())
             fake.status=200
             return fake
