@@ -40,8 +40,16 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_preview_128_news_dates.py' -v
       - name: Synthetic fail-closed individual release certificate regressions
         run: python -m unittest discover -s tests -p 'test_preview_128_teaching_candidates.py' -v
-      - name: Dry-run per-question teaching release eligibility (no write)
-        run: python scripts/audit_preview_128_teaching_candidates.py
+      - name: Dry-run all 128 per-question blockers and image/teaching SHA (no approval)
+        run: python scripts/audit_preview_128_teaching_candidates.py --output /tmp/preview-128-blockers.json
+      - name: Archive all 128 blocker evidence without changing release
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-128-per-question-blockers-no-release
+          path: /tmp/preview-128-blockers.json
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Check all 25 Math B partial QA evidence and 7 reference calculations
         run: python -m unittest discover -s tests -p 'test_preview_128_math_b_partial.py' -v
       - name: Oct 24 self-reviewed content regression, no release

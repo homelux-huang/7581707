@@ -5,6 +5,7 @@ A draft's answer match, official key, visual QA or complete fields do NOT grant
 student release. An independently reviewed, SHA-pinned teaching+UI certificate
 is required for each individual question, separate from draft flags.
 """
+import argparse
 import hashlib
 import json
 from collections import Counter
@@ -144,6 +145,9 @@ def assess_record(item, record, official, certificate, root=ROOT):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Read-only 128-lesson release blockers")
+    parser.add_argument("--output", help="Optional CI artifact JSON; never mutates QA/approval flags")
+    args = parser.parse_args()
     progress = json.loads((BASE / "progress.json").read_text(encoding="utf-8"))
     official = json.loads((BASE / "official-final-evidence-20261023.json").read_text(encoding="utf-8"))["questions"]
     ledger_file = BASE / "release-certificates-128.json"
@@ -157,10 +161,21 @@ def main():
     counts = Counter()
     blocker_ids = {}
     accepted = []
+    per_question = []
     for item in items:
         qid = item["questionId"]
         record = json.loads((BASE / (qid + ".json")).read_text(encoding="utf-8"))
         reasons = assess_record(item, record, official[qid], certs.get(qid))
+        per_question.append({
+            "questionId": qid, "year": item["year"], "subject": item.get("subject"),
+            "status": "BLOCKED" if reasons else "DRAFT_RELEASE_CANDIDATE",
+            "imageSha256": item.get("imageSha256"),
+            "teachingCanonicalSha256": teaching_digest(record.get("teaching") or {}),
+            "officialFinalAnswer": official[qid]["officialAnswer"],
+            "legacyTextQuarantine": bool((record.get("qa") or {}).get("legacyCandidateTextRisk20261023")),
+            "blockers": reasons,
+            "hasReleaseCertificate": qid in certs,
+        })
         if reasons:
             counts.update(reasons)
             for reason in reasons:
@@ -174,6 +189,7 @@ def main():
         "releaseEligibleCount": len(accepted),
         "releaseEligibleQuestionIds": accepted,
         "blockedCount": 128 - len(accepted),
+        "perQuestion": per_question,
         "blockerCounts": dict(sorted(counts.items())),
         "answerDisagreementIds": {
             key: sorted(blocker_ids.get(key, []))
@@ -183,6 +199,10 @@ def main():
         "doesNotChangeAnyDraftOrApprovedData": True,
         "meaning": "Dry-run eligibility only, not automatic publication or full teaching QA"
     }
+    if args.output:
+        path = Path(args.output)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
