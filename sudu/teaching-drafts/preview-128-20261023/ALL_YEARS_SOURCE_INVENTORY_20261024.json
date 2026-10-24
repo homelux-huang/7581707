@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-24",
+  "sourceBranch": "draft/preview-128-explanations-20261023",
+  "scope": "114_115_FIRST_THEN_113_TO_104",
+  "type": "SOURCE_CORPUS_INVENTORY_NOT_TEACHING_APPROVAL",
+  "frozenPrior128": {
+    "total": 128,
+    "year114": 9,
+    "year115": 119,
+    "keepFrozenManifestUnchanged": true
+  },
+  "years": [
+    {
+      "year": 115,
+      "source": "sudu/data/years/115.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 196,
+      "sourceAnswersMatched": 192,
+      "unresolvedSourceQuestionCount": 9,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 114,
+      "source": "sudu/data/years/114.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 194,
+      "sourceAnswersMatched": 189,
+      "unresolvedSourceQuestionCount": 11,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 113,
+      "source": "sudu/data/years/113.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 196,
+      "sourceAnswersMatched": 190,
+      "unresolvedSourceQuestionCount": 9,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 112,
+      "source": "sudu/data/years/112.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 194,
+      "sourceAnswersMatched": 187,
+      "unresolvedSourceQuestionCount": 11,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 111,
+      "source": "sudu/data/years/111.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 194,
+      "sourceAnswersMatched": 191,
+      "unresolvedSourceQuestionCount": 11,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 110,
+      "source": "sudu/data/years/110.json",
+      "rawQuestionRecords": 205,
+      "sourceQuestionsFound": 190,
+      "sourceAnswersMatched": 180,
+      "unresolvedSourceQuestionCount": 15,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 109,
+      "source": "sudu/data/years/109.json",
+      "rawQuestionRecords": 204,
+      "sourceQuestionsFound": 194,
+      "sourceAnswersMatched": 181,
+      "unresolvedSourceQuestionCount": 10,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 108,
+      "source": "sudu/data/years/108.json",
+      "rawQuestionRecords": 204,
+      "sourceQuestionsFound": 176,
+      "sourceAnswersMatched": 165,
+      "unresolvedSourceQuestionCount": 28,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 107,
+      "source": "sudu/data/years/107.json",
+      "rawQuestionRecords": 204,
+      "sourceQuestionsFound": 183,
+      "sourceAnswersMatched": 178,
+      "unresolvedSourceQuestionCount": 21,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 106,
+      "source": "sudu/data/years/106.json",
+      "rawQuestionRecords": 204,
+      "sourceQuestionsFound": 176,
+      "sourceAnswersMatched": 168,
+      "unresolvedSourceQuestionCount": 28,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 105,
+      "source": "sudu/data/years/105.json",
+      "rawQuestionRecords": 204,
+      "sourceQuestionsFound": 187,
+      "sourceAnswersMatched": 180,
+      "unresolvedSourceQuestionCount": 17,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    },
+    {
+      "year": 104,
+      "source": "sudu/data/years/104.json",
+      "rawQuestionRecords": 203,
+      "sourceQuestionsFound": 186,
+      "sourceAnswersMatched": 179,
+      "unresolvedSourceQuestionCount": 17,
+      "requiresPaperSpecificOfficialReview": true,
+      "completeTeachingQAProven": false,
+      "questionCountNotInferredFrom115": true
+    }
+  ],
+  "provenanceNote": "Counts read from year-specific existing JSON in repository, may contain incomplete OCR/indexed placeholders and do not certify each question; different year has distinct official paper/question count.",
+  "newReleaseApprovals": 0
+}
