@@ -237,11 +237,19 @@
         "孟嘗君重視豪奢享受",
         "孟嘗君志在返國奪位\n\n人閱讀下文,回答第 17-18題\n友人見而謂之曰:四時之花,君能兼之;四季之樂,君能享之;此地不可以不名也。謂之\n「聚芳園」,可乎?然君究何修而得此樂也?夫人惟不滯於境之內者,斯可超於象之外。\n嘗見夫權門貴客,日坐錦堂,玩好滿前,落穩鋪地,以視君之茅舍柴屏,紙窗竹屋,不當\n示壤也;猶自營營於紛華靡麗之場 MRRAMRRRZN BRAK? KRRES> RAF\n\n何時而樂也 | (翟灝〈聚芳園記》)"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "「齊其聞之矣」意謂馮諼想讓齊王明白什麼事？",
+      "correctedOptions": [
+        "孟嘗君跳槽恐有後患",
+        "孟嘗君果然見利忘義",
+        "孟嘗君重視豪奢享受",
+        "孟嘗君志在返國奪位"
+      ],
+      "diff": "--- legacy-PDF-layer-and-placeholder\n+++ original-pixel-text-corrected\n@@ -1,5 +1,5 @@\n-「齊其聞之矣」意調馮衣想讓齊王明白什麼事?\n-孟嘗君跳槽匝有後患\n-REBRA RADE\n+「齊其聞之矣」意謂馮諼想讓齊王明白什麼事？\n+孟嘗君跳槽恐有後患\n+孟嘗君果然見利忘義\n 孟嘗君重視豪奢享受\n-孟嘗君志在返國奪位\n\n人閱讀下文,回答第 17-18題\n友人見而謂之曰:四時之花,君能兼之;四季之樂,君能享之;此地不可以不名也。謂之\n「聚芳園」,可乎?然君究何修而得此樂也?夫人惟不滯於境之內者,斯可超於象之外。\n嘗見夫權門貴客,日坐錦堂,玩好滿前,落穩鋪地,以視君之茅舍柴屏,紙窗竹屋,不當\n示壤也;猶自營營於紛華靡麗之場 MRRAMRRRZN BRAK? KRRES> RAF\n\n何時而樂也 | (翟灝〈聚芳園記》)\n+孟嘗君志在返國奪位\n",
       "imageSha256": "33cece88067f29060d9359578960911eafcbe1c2aef7c93748d1d1b2fd4fa3c6",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:54:14+08:00",
+      "qaEvidencePath": "sudu/data/processed/106/qa-drafts/TEXT_QA_106_C16_17_19_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "106-00-C-17",
@@ -249,11 +257,19 @@
       "rawOrigin": "PENDING_NEEDS_OCR",
       "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
       "legacyOptions": [],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "依據上文，友人認為作者能享庭園之樂，主要原因在於：",
+      "correctedOptions": [
+        "怡然自得，不役於物",
+        "花開四季，群賢畢至",
+        "簞食瓢飲，有志於學",
+        "遠離紅塵，遺世獨立"
+      ],
+      "diff": "--- legacy-PDF-layer-and-placeholder\n+++ original-pixel-text-corrected\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+依據上文，友人認為作者能享庭園之樂，主要原因在於：\n+怡然自得，不役於物\n+花開四季，群賢畢至\n+簞食瓢飲，有志於學\n+遠離紅塵，遺世獨立\n",
       "imageSha256": "5971bd1359b62fad2d03abdb34b8c866987e7508047e7104e2f039a5834f8cb7",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:54:14+08:00",
+      "qaEvidencePath": "sudu/data/processed/106/qa-drafts/TEXT_QA_106_C16_17_19_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "106-00-C-18",
@@ -283,11 +299,19 @@
         "鯊魚割鰭後行動遲緩,故攻擊力不及鱷魚",
         "漁魚的物體辨識力差,並非專嗜人類獵食"
       ],
-      "correctedQuestion": null,
-      "correctedOptions": null,
-      "diff": null,
+      "correctedQuestion": "依據右圖，下列敘述何者正確？",
+      "correctedOptions": [
+        "鯊魚體內環境毒素多，唯魚鰭毒稀而可食",
+        "鯊魚長壽且繁殖力強，但敵不過人類濫捕",
+        "鯊魚割鰭後行動遲緩，故攻擊力不及鱷魚",
+        "鯊魚的物體辨識力差，並非專嗜人類獵食"
+      ],
+      "diff": "--- legacy-PDF-layer-and-placeholder\n+++ original-pixel-text-corrected\n@@ -1,5 +1,5 @@\n-依據右圖,下列敘述何者正確 ?\n-鯊魚體內環境毒素多,唯魚鰭毒稀而可食\n-鯊魚長壽且繁殖力強,但敵不過人類濫捕\n-鯊魚割鰭後行動遲緩,故攻擊力不及鱷魚\n-漁魚的物體辨識力差,並非專嗜人類獵食\n+依據右圖，下列敘述何者正確？\n+鯊魚體內環境毒素多，唯魚鰭毒稀而可食\n+鯊魚長壽且繁殖力強，但敵不過人類濫捕\n+鯊魚割鰭後行動遲緩，故攻擊力不及鱷魚\n+鯊魚的物體辨識力差，並非專嗜人類獵食\n",
       "imageSha256": "cd5cb1a6e90929bc058b289ce292cc45bd1f3cc76b5613057a17429d5e8db703",
-      "qaStatus": "PENDING"
+      "qaStatus": "PASS",
+      "qaReviewer": "ChatGPT assistant",
+      "qaReviewedAt": "2026-10-24T23:54:14+08:00",
+      "qaEvidencePath": "sudu/data/processed/106/qa-drafts/TEXT_QA_106_C16_17_19_ORIGINAL_IMAGE_20261024.json"
     },
     {
       "questionId": "106-00-C-20",

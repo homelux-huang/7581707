@@ -6,7 +6,7 @@
   "webpGeneratedDrafts": 204,
   "visualQaPass": 23,
   "ocrGapCandidatesGenerated": 20,
-  "ocrTextIndependentlyVerified": 10,
+  "ocrTextIndependentlyVerified": 13,
   "missingFourTextOptions": [
     "106-00-C-01",
     "106-00-C-02",
@@ -161,7 +161,7 @@
   },
   "integrationReady": false,
   "directVisualQaEvidence106English": "sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_DIRECT_VISUAL_SHA_20261023.json",
-  "textQaPass": 10,
+  "textQaPass": 13,
   "directVisualQaEvidence106Chinese": "sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json",
   "sharedMaterialsDrafts": 4
 }
