@@ -39,7 +39,7 @@ jobs:
           python scripts/apply_115_math_b20_25_text_candidates.py --stage > /tmp/mb20_25_second.json
           sha256sum sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 >/tmp/after_again
           diff /tmp/before_again /tmp/after_again
-      - name: Run unchanged production publisher: preserve 5 admissions; six still BLOCKED
+      - name: Run unchanged production publisher and preserve 5 admissions (six still BLOCKED)
         run: |
           set -eu
           python current-main/scripts/sudu_verified_publish.py stage --source . --dest /tmp/mathb20_25_staging --sha "$(git rev-parse HEAD)" > /tmp/publisher_stage.json
