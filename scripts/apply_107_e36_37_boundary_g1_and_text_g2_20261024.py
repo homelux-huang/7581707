@@ -94,7 +94,6 @@ def run(stage):
     assert draft["candidateReviewStatus"]=="DRAFT_AWAITING_NEW_INDIVIDUAL_VISUAL_G1"
     assert draft["candidateCropPixels"]==TARGETS[37]["crop"]
     assert draft["candidateSha256"]==TARGETS[37]["sha"]
-    assert draft["originalSourcePdfFreshlyRedownloaded"] is False if False else True
     assert draft["officialSourcePdfFreshlyRedownloaded"] is False
     assert sha(path(draft["historicalLegacyCrop"]).read_bytes())==draft["historicalLegacySha256"]
 
