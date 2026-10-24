@@ -5863,13 +5863,14 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
+        "REQUIRES_INDIVIDUAL_DIRECT_SOURCE_CROP_G1",
         "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp",
+        "sourcePageWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+        "sha256": "fafd23f04ab7c765beabfc9ea5aa1455ce279993741385b653df588a888356d4",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTEucGRm",
@@ -5878,7 +5879,7 @@
         "answerPdfSha256": "362a3322ebe48138837e675a350ad41c83c292655fcb12a827c71ce5a00eb229"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -5898,14 +5899,15 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR",
-        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK"
+        "NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK",
+        "REQUIRES_INDIVIDUAL_DIRECT_SOURCE_CROP_G1",
+        "UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR"
       ],
       "assets": {
-        "singleQuestionWebp": null,
-        "sourcePageWebp": null,
-        "sha256": null,
-        "sourcePage": null
+        "singleQuestionWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp",
+        "sourcePageWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+        "sha256": "1a3c63369850a8d12f5c35e04ced08ff08bbf145af638197304984b7e57d89bd",
+        "sourcePage": 8
       },
       "source": {
         "questionPdf": "https://web1.tcte.edu.tw/EXAM/107_4y/downloader.php?obj=MTA3LTR5LTA5LTEucGRm",
@@ -5914,7 +5916,7 @@
         "answerPdfSha256": "362a3322ebe48138837e675a350ad41c83c292655fcb12a827c71ce5a00eb229"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },

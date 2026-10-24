@@ -3044,11 +3044,11 @@
     },
     {
       "questionId": "107-09-1-49",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PENDING",
+      "sourcePage": 8,
+      "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp",
+      "candidateSha256": "fafd23f04ab7c765beabfc9ea5aa1455ce279993741385b653df588a888356d4",
       "criteria": [
         "official_number",
         "whole_stem",
@@ -3064,11 +3064,11 @@
     },
     {
       "questionId": "107-09-1-50",
-      "status": "BLOCKED",
-      "sourcePage": null,
-      "sourceWebp": null,
-      "candidateWebp": null,
-      "candidateSha256": null,
+      "status": "PENDING",
+      "sourcePage": 8,
+      "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp",
+      "candidateSha256": "1a3c63369850a8d12f5c35e04ced08ff08bbf145af638197304984b7e57d89bd",
       "criteria": [
         "official_number",
         "whole_stem",

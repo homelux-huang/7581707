@@ -3,7 +3,7 @@
   "expectedFromLegacy": 204,
   "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
   "totalCandidateQuestions": 204,
-  "webpGeneratedDrafts": 189,
+  "webpGeneratedDrafts": 191,
   "visualQaPass": 4,
   "ocrGapCandidatesGenerated": 18,
   "ocrTextIndependentlyVerified": 4,
@@ -106,7 +106,7 @@
     "09-1": {
       "candidateRecords": 50,
       "numberedAnchors": 48,
-      "imageDrafts": 48,
+      "imageDrafts": 50,
       "unresolvedAnchorNumbers": [
         49,
         50
@@ -116,7 +116,11 @@
       "officialAnswerTextKeys": 50,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        49,
+        50
+      ]
     },
     "09-2": {
       "candidateRecords": 50,

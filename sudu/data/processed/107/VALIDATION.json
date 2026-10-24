@@ -76,7 +76,7 @@
     "09-1": {
       "candidateRecords": 50,
       "numberedAnchors": 48,
-      "imageDrafts": 48,
+      "imageDrafts": 50,
       "unresolvedAnchorNumbers": [
         49,
         50
@@ -86,7 +86,11 @@
       "officialAnswerTextKeys": 50,
       "answerTextConflicts": [],
       "issues": [],
-      "legacyIdNumberGap": []
+      "legacyIdNumberGap": [],
+      "manualCandidateRecoveredNumbers": [
+        49,
+        50
+      ]
     },
     "09-2": {
       "candidateRecords": 50,
