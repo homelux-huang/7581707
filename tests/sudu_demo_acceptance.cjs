@@ -203,6 +203,31 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   assert.deepEqual(errors,[]);report.status='passed';report.generatedCount=30;report.ocrPerformed=false;report.errors=errors;
   fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));
   console.log('PASS: 35 images; 30 hashes; 5 English questions x 4 surfaces; 35 questions x 8 viewports x 2 themes; touch and graded hover');
- }catch(e){report.status='failed';report.error=e.stack;fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));await page.screenshot({path:path.join(output,'demo-acceptance-failure.png')});throw e;}
+ }catch(e){
+  report.status='failed';report.error=e.stack;
+  // Observe genuine click geometry and CSS for a full second on failure.
+  // Do not force clicks, disable assertions, or turn failures into PASS.
+  report.clickGeometry=[];
+  try{
+   for(let sample=0;sample<14;sample++){
+    report.clickGeometry.push(await page.evaluate(()=>{
+     const btn=document.querySelector('.opt'),answer=document.querySelector('#answerCard');
+     const rect=btn?.getBoundingClientRect(),ar=answer?.getBoundingClientRect();
+     const cs=btn?getComputedStyle(btn):null;
+     return {time:Math.round(performance.now()),scrollY:window.scrollY,
+      reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,
+      scrollBehavior:getComputedStyle(document.documentElement).scrollBehavior,
+      option:rect?{top:rect.top,left:rect.left,width:rect.width,height:rect.height}:null,
+      answerTop:ar?.top, transform:cs?.transform,animation:cs?.animationName,
+      transition:cs?.transitionDuration,htmlHeight:document.documentElement.scrollHeight,
+      activeAnimations:document.getAnimations().slice(0,8).map(a=>({playState:a.playState,
+       animationName:a.animationName||null}))};
+    }));
+    await page.waitForTimeout(65);
+   }
+  }catch(debugError){report.geometryError=String(debugError);}
+  fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));
+  await page.screenshot({path:path.join(output,'demo-acceptance-failure.png')});throw e;
+ }
  finally{await browser.close();}
 })().catch(e=>{console.error(e.stack);process.exit(1)});
