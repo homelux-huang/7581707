@@ -1,0 +1,80 @@
+name: 107 English Q37 question-only source-pixel v2 (DRAFT NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/stage_107_e37_question_only_boundary_v2_20261024.py
+      - .github/workflows/107-e37-question-only-source-pixel-v2-draft-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-107-e37-source-pixel-v2-draft-no-release
+  cancel-in-progress: false
+jobs:
+  create_candidate_only:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow for pixel-exact original crop
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Capture immutable lease and check 107 Q37 original-page/source
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/stage_107_e37_question_only_boundary_v2_20261024.py
+          python scripts/stage_107_e37_question_only_boundary_v2_20261024.py
+      - name: Stage new file ONLY, no QA PASS, DB, JSON or release mutation
+        run: python scripts/stage_107_e37_question_only_boundary_v2_20261024.py --stage
+      - name: Prevent any G1 G2 G3 or G6 promotion
+        run: |
+          python - <<'PY'
+          import json,hashlib,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          d=Path('sudu/data/processed/107')
+          def rd(n):return json.loads((d/n).read_text('utf8'))
+          m=rd('webp-manifest.json');v=rd('VISUAL_QA.json')
+          q=rd('questions.json');inv=rd('inventory.json')
+          val=rd('VALIDATION.json');r=rd('release-manifest.json')
+          e=rd('qa-drafts/DRAFT_107_E37_Q38_ARTICLE_REMOVED_V2_20261024.json')
+          assert e['candidateReviewStatus']=='DRAFT_AWAITING_NEW_INDIVIDUAL_VISUAL_G1'
+          assert e['candidatePixelDifferenceZero'] and e['candidateSha256']
+          assert hashlib.sha256(Path(e['candidateWebp']).read_bytes()).hexdigest()==e['candidateSha256']
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==19
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          x=next(z for z in q['questions'] if z['questionId']=='107-00-E-37')
+          y=next(z for z in m['items'] if z['questionId']==x['questionId'])
+          assert not x['questionVerified'] and not x['answerVerified'] and not x['integrationReady']
+          assert y['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+          assert y['output'].endswith('/webp-v1/00-E/107-00-E-37.webp')
+          assert not r['releaseAllowed'] and not r['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          assert audit_year(107)['g5Pass']
+          print('PASS: Q37 v2 candidate only; historical polluted v1 kept, no G1/G2/G3/G6, G5 unchanged')
+          PY
+      - name: Save candidate and evidence with nonforce QA SHA lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp
+          git add sudu/data/processed/107/qa-drafts/DRAFT_107_E37_Q38_ARTICLE_REMOVED_V2_20261024.json
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "Candidate already exists"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA branch advance: refuse stale push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa107): preserve Q37 question-only pixel crop candidate v2, DRAFT NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review
