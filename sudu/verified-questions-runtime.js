@@ -259,6 +259,11 @@
         return htmlWithActualHighlights(bit,terms);
       }).join('');
   }
+  function safeCalculationMarkup(value,terms){
+    return '<span class="calculation-steps">'+String(value??'').split('\n')
+      .map((line,i)=>'<span class="calculation-step"><b>步驟 '+(i+1)+'</b> '+
+        safeTeachingInlineMarkup(line,terms)+'</span>').join('')+'</span>';
+  }
   fetch('./data/approved/'+activeYear+'.json',{cache:'no-store'}).then(async r=>{
     if(!r.ok)throw Error('資料未發布（HTTP '+r.status+'）');
     return r.json();
@@ -318,8 +323,9 @@
       return parts;
     };
     formatStudyValue=function(q,key,value){
-      if(q.year!==Number(activeYear)||key==='考題計算式')
+      if(q.year!==Number(activeYear))
         return originalStudyFormatter(q,key,value);
+      if(key==='考題計算式')return safeCalculationMarkup(value,q.highlights||[]);
       return safeTeachingInlineMarkup(value,q.highlights||[]);
     };
     renderOptionDetail=function(q,L){

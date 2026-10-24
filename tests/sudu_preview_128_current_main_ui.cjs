@@ -73,6 +73,8 @@ const report={kind:'CROSS_BRANCH_MAIN_V4_DRAFT_PREFLIGHT_ONLY_NO_RELEASE',
  mainSha,draftSha,pinnedImagesChecked:7,questionIds:fixtures.map(f=>f.canonicalId),
  actualReleaseApproved:false,formalContentUiQaGranted:false,
  browserOnlyApprovedJsonInterception:true,
+ candidateAdapterSha256:sha(fs.readFileSync(path.join(root,'sudu/verified-questions-runtime.js'))),
+ candidateAdapterInterception:true,
  browserInputModality:'REAL_TOUCH_UNDER_1024_AND_MOUSE_CLICK',
  mousePointerClickStability:'SEE_PER_CASE_RESULTS',
  touchActionability:'SEE_PER_CASE_RESULTS',
@@ -87,6 +89,7 @@ fs.mkdirSync(out,{recursive:true});
    for(const theme of ['light','dark']){
     const ctx=await browser.newContext({viewport:{width,height},hasTouch:width<1024,isMobile:width<768,reducedMotion:'reduce'});
     try{
+     await ctx.route('**/verified-questions-runtime.js*',route=>route.fulfill({contentType:'text/javascript',body:fs.readFileSync(path.join(root,'sudu/verified-questions-runtime.js'),'utf8')}));
      await ctx.route('**/data/approved/115.json',route=>{
       if(!route.request().url().startsWith(base))throw Error('off-host fixture denied');
       return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(dataset),
@@ -125,6 +128,11 @@ fs.mkdirSync(out,{recursive:true});
       assert.equal(await page.locator('.option-detail.is-correct').count(),1,'one correct explanation');
       const reason=await page.locator('.option-detail.is-correct').innerText();
       assert(reason.includes('高職生理解')&&reason.includes('國小學生也聽得懂'),'two levels');
+      if(n===25){
+       const calculation=page.locator('#guideCard .guide-block.calculation-first');
+       assert((await calculation.locator('mark.exam-highlight').count())>0,'real MB25 calculation highlights');
+       assert(!(await calculation.innerText()).includes('**'),'no leaked calculation markup');
+      }
       const guide=await page.locator('#guideCard').innerText();
       assert(guide.includes('高職老師原理解說')&&guide.includes('國小學生白話解說'),'guide summaries');
       const widthCheck=await page.evaluate(()=>({client:innerWidth,scroll:document.documentElement.scrollWidth}));
