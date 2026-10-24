@@ -4,6 +4,7 @@ import tempfile
 import unittest
 import base64
 import io
+from urllib.error import HTTPError
 from pathlib import Path
 from unittest.mock import patch
 
@@ -109,7 +110,7 @@ class StudentOverlayTests(unittest.TestCase):
                 doc=[{"sha":head,"author":{"login":"synthetic-original-author"},
                       "committer":{"login":"synthetic-original-author"}}]
             else:
-                raise AssertionError("Unexpected fake GitHub endpoint "+url)
+                raise HTTPError(url,404,"Unknown GitHub PR review event",None,None)
             stream=io.BytesIO(json.dumps(doc).encode())
             stream.status=200
             return stream
