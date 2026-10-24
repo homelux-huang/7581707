@@ -1,6 +1,6 @@
 {
-  "generatedAtUTC": "2026-10-24T13:22:18.215546+00:00",
-  "qaCommitAtStart": "99aed5e78c16616f9cb520951a18f11c32e97c44",
+  "generatedAtUTC": "2026-10-24T14:17:51.028503+00:00",
+  "qaCommitAtStart": "e74a33be9e9cec4c078dd227f7a9be9fa8c562ce",
   "documentedOriginalScope": "105-114 inclusive = 10 years, plus 115; 104 is supplementary",
   "year104Status": "EXTRA_SOURCE_ONLY_UNVERIFIED_COUNT",
   "noNewQAFlagsOrAnswerFlagsSet": true,
@@ -9,9 +9,9 @@
   "officialCountIndependentlyRecheckedThisRun": false,
   "totals": {
     "candidateQuestions105_115": 2249,
-    "webpLinkedAndShaVerified105_115": 2201,
-    "webpQaPassWithReference105_115": 217,
-    "missingWebp105_115": 48,
+    "webpLinkedAndShaVerified105_115": 2208,
+    "webpQaPassWithReference105_115": 225,
+    "missingWebp105_115": 41,
     "g5PassYears105_115": 11,
     "readyYears": 0
   },
@@ -272,15 +272,11 @@
       "webpManifestRows": 204,
       "officialAnswerEvidenceRows": 204,
       "ocrRawCandidateRows": 204,
-      "webpLinkedAndShaVerified": 201,
-      "missingSingleQuestionWebpIds": [
-        "106-00-C-36",
-        "106-00-C-37",
-        "106-00-C-38"
-      ],
+      "webpLinkedAndShaVerified": 204,
+      "missingSingleQuestionWebpIds": [],
       "webpFileMissingIds": [],
       "webpShaMismatchIds": [],
-      "webpQaPassWithSourceReference": 12,
+      "webpQaPassWithSourceReference": 16,
       "qaPassReferenceMissingIds": [],
       "ocrRawNonblank": 26,
       "missingFourTextOptionsIds": [
@@ -291,8 +287,6 @@
         "106-00-C-05",
         "106-00-C-14",
         "106-00-C-17",
-        "106-00-C-36",
-        "106-00-C-37",
         "106-00-E-22",
         "106-00-E-23",
         "106-00-E-24",
@@ -314,12 +308,12 @@
         "106-00-MB-23",
         "106-09-1-34"
       ],
-      "ocrTextIndependentlyVerified": 6,
+      "ocrTextIndependentlyVerified": 10,
       "answerFinalVerified": 0,
-      "questionVerifiedFlagCount": 6,
+      "questionVerifiedFlagCount": 10,
       "sourceLegacyCanonicalMismatchIds": [],
-      "sharedMaterialCandidates": 3,
-      "sharedMaterialQaPassRecorded": 0,
+      "sharedMaterialCandidates": 4,
+      "sharedMaterialQaPassRecorded": 1,
       "sqliteG5Pass": true,
       "sqliteRows": 204,
       "sqliteMismatchCount": 0,
@@ -339,21 +333,21 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 35,
-          "missingSingleQuestionWebpIds": [
-            "106-00-C-36",
-            "106-00-C-37",
-            "106-00-C-38"
-          ],
+          "withExistingShaVerifiedWebp": 38,
+          "missingSingleQuestionWebpIds": [],
           "qaPassWithReferenceEvidenceIds": [
             "106-00-C-01",
             "106-00-C-02",
             "106-00-C-03",
             "106-00-C-04",
             "106-00-C-05",
-            "106-00-C-06"
+            "106-00-C-06",
+            "106-00-C-35",
+            "106-00-C-36",
+            "106-00-C-37",
+            "106-00-C-38"
           ],
-          "qaPassWithReferenceEvidence": 6,
+          "qaPassWithReferenceEvidence": 10,
           "missingFourTextOptionsIds": [
             "106-00-C-01",
             "106-00-C-02",
@@ -361,9 +355,7 @@
             "106-00-C-04",
             "106-00-C-05",
             "106-00-C-14",
-            "106-00-C-17",
-            "106-00-C-36",
-            "106-00-C-37"
+            "106-00-C-17"
           ],
           "officialFinalAnswerVerified": 0
         },
@@ -478,7 +470,7 @@
       "webpManifestRows": 204,
       "officialAnswerEvidenceRows": 204,
       "ocrRawCandidateRows": 204,
-      "webpLinkedAndShaVerified": 185,
+      "webpLinkedAndShaVerified": 189,
       "missingSingleQuestionWebpIds": [
         "107-00-C-08",
         "107-00-C-09",
@@ -493,16 +485,12 @@
         "107-00-C-36",
         "107-00-C-37",
         "107-00-C-38",
-        "107-00-E-32",
-        "107-00-E-33",
-        "107-00-E-34",
-        "107-00-E-35",
         "107-09-1-49",
         "107-09-1-50"
       ],
       "webpFileMissingIds": [],
       "webpShaMismatchIds": [],
-      "webpQaPassWithSourceReference": 0,
+      "webpQaPassWithSourceReference": 4,
       "qaPassReferenceMissingIds": [],
       "ocrRawNonblank": 18,
       "missingFourTextOptionsIds": [
@@ -533,12 +521,12 @@
         "107-00-MB-25",
         "107-09-1-50"
       ],
-      "ocrTextIndependentlyVerified": 0,
+      "ocrTextIndependentlyVerified": 4,
       "answerFinalVerified": 0,
-      "questionVerifiedFlagCount": 0,
+      "questionVerifiedFlagCount": 4,
       "sourceLegacyCanonicalMismatchIds": [],
-      "sharedMaterialCandidates": 0,
-      "sharedMaterialQaPassRecorded": 0,
+      "sharedMaterialCandidates": 2,
+      "sharedMaterialQaPassRecorded": 2,
       "sqliteG5Pass": true,
       "sqliteRows": 204,
       "sqliteMismatchCount": 0,
@@ -598,15 +586,15 @@
           "missingCanonicalRecords": [],
           "missingManifestRecords": [],
           "legacyNumberHoles": [],
-          "withExistingShaVerifiedWebp": 37,
-          "missingSingleQuestionWebpIds": [
+          "withExistingShaVerifiedWebp": 41,
+          "missingSingleQuestionWebpIds": [],
+          "qaPassWithReferenceEvidenceIds": [
             "107-00-E-32",
             "107-00-E-33",
             "107-00-E-34",
             "107-00-E-35"
           ],
-          "qaPassWithReferenceEvidenceIds": [],
-          "qaPassWithReferenceEvidence": 0,
+          "qaPassWithReferenceEvidence": 4,
           "missingFourTextOptionsIds": [
             "107-00-E-22",
             "107-00-E-23",
