@@ -8,6 +8,8 @@ on:
       - sudu/data/processed/114/review-evidence/**
       - .github/workflows/tcte-114-publisher-admission.yml
       - scripts/qa114_sqlite_content_diff.py
+      - scripts/qa114_release_evidence_gate.py
+      - sudu/data/processed/114/verified-student-batch.json
   workflow_dispatch:
 permissions:
   contents: read
@@ -32,6 +34,8 @@ jobs:
           path: /tmp/114-sqlite-reconciliation.json
           retention-days: 30
           if-no-files-found: ignore
+      - name: Independently cross-check 114 original SHA source, official image, blind solve and four-option teacher evidence
+        run: python scripts/qa114_release_evidence_gate.py
       - name: Test strict per-question official TCTE scope, negative cases, and 115 compatibility
         run: |
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
