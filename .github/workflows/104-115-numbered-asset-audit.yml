@@ -8,6 +8,9 @@ on:
       - .github/workflows/104-115-numbered-asset-audit.yml
       - sudu/data/processed/*/inventory.json
       - sudu/data/processed/*/webp-manifest.json
+      - sudu/data/processed/*/questions.json
+      - sudu/data/processed/*/VISUAL_QA.json
+      - sudu/data/processed/*/release-manifest.json
   workflow_dispatch:
 permissions:
   contents: write
@@ -44,6 +47,7 @@ jobs:
           assert y110['papers']['09-1']['excludedHistoricalFalsePositiveIds']==['110-09-1-80']
           assert j['totals']['webpLinkedAndShaVerified105_115'] + j['totals']['missingWebp105_115'] == j['totals']['candidateQuestions105_115']
           assert 0 <= j['totals']['webpQaPassWithReference105_115'] <= j['totals']['webpLinkedAndShaVerified105_115']
+          assert sum(y['webpQaPassWithSourceReference'] for y in j['years'][1:]) == j['totals']['webpQaPassWithReference105_115']
           assert j['totals']['readyYears']==0
           assert j['totals']['g5PassYears105_115']==11
           assert j['noNewQAFlagsOrAnswerFlagsSet'] is True and j['notForRelease'] is True
