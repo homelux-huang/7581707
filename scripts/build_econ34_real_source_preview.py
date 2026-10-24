@@ -41,6 +41,14 @@ assert revision==QSHA==review["canonicalQuestionRevisionSha256"]
 assert q["questionId"]==blind["questionId"]==official["questionId"]==review["questionId"]
 assert item["sha256"]==blind["originalWebpSha256"]==official["sourceOriginalQuestionWebpSha256"]==review["sourceImageSha256"]==WSHA
 assert item["qaStatus"]=="PASS" and pub.visual_certificate(SOURCE,item,QID)
+print("IMAGE_PROOF_DIAG",json.dumps({
+ "imageProofWithNoShared":pub.image_proof(q,item,{},SOURCE),
+ "individualImage":pub.individual_image_proof(q,item,SOURCE),
+ "sharedIds":pub.shared_material_ids(q),
+ "assets":q.get("assets"),"manifestFile":item.get("output"),
+ "manifestImageSha":item.get("sha256"),
+ "sourceOriginalSha":item.get("sourceSha256")
+},ensure_ascii=False,sort_keys=True),flush=True)
 assert pub.image_proof(q,item,{},SOURCE) and pub.certified_visual_assets(SOURCE,q,item,{})
 assert q["question"].startswith("假設人工智慧") and "寡占市場中僅存在兩間廠商" in q["question"]
 assert q["options"]==blind["sourceOptionsFromOriginalImage"]
