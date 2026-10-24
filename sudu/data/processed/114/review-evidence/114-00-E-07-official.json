@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+  "finalAnswer": "A",
+  "correctionNoticeReviewed": true,
+  "officialFinalAnswerImageQaPassed": true,
+  "noObjectionForPaper": false,
+  "noCorrectionForThisQuestion": true,
+  "correctionForQuestionReviewed": false,
+  "confirmationPdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+  "officialPage": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+  "officialFinalAnswerPdfUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+  "officialAnswerImageSource": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+  "officialAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+  "independentDirectOfficialFinalAnswerPdfRenderedInCurrentReview": true,
+  "underlyingOfficialPdfDownloadAndShaEvidence": "https://github.com/homelux-huang/7581707/actions/runs/40097216703",
+  "underlyingOriginalAnswerImageQaRecord": "sudu/data/processed/114/QA_114_EN_Q06_Q20_OFFICIAL_ANSWER_IMAGE_VISUAL_20261023.json",
+  "underlyingOfficialCorrectionLedger": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+  "officialConfirmationNamedQuestionIds": [
+    "114-00-E-26"
+  ],
+  "humanReviewerClaimed": false
+}

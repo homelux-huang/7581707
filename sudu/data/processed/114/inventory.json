@@ -1,10 +1,13 @@
 {
-  "year": 114,
-  "expected": 205,
+  "answerCandidatesMatchedAcrossTextAndImage": 205,
+  "answerIndependentlyVerified": 0,
+  "answerOfficialImageMatchedWithoutPdfText": 5,
+  "answerTextMatched": 200,
+  "answerUnmatchedIds": [],
   "canonicalUnique": 205,
-  "webpDrafts": 205,
-  "webpVisualQaPassed": 35,
-  "missingImageIds": [],
+  "expected": 205,
+  "integrationReady": false,
+  "lastImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
   "missingFourTextOptionIds": [
     "114-00-C-30",
     "114-00-E-21",
@@ -20,58 +23,64 @@
     "114-00-MB-06",
     "114-00-MB-08"
   ],
-  "answerTextMatched": 200,
-  "answerUnmatchedIds": [],
-  "answerIndependentlyVerified": 0,
-  "questionIndependentlyVerified": 0,
+  "missingImageIds": [],
+  "ocrTextIndependentlyVerified": 1,
+  "officialCorrectionQaComplete": false,
   "perPaper": {
     "00-C": {
-      "expected": 38,
-      "candidateWebp": 38,
       "anchorMissing": [],
-      "answerPdfKeys": 37,
       "answerPdfConflicts": [],
+      "answerPdfKeys": 37,
+      "candidateWebp": 38,
+      "expected": 38,
       "ocrGapCandidates": 1
     },
     "00-E": {
-      "expected": 42,
-      "candidateWebp": 42,
       "anchorMissing": [],
-      "answerPdfKeys": 41,
       "answerPdfConflicts": [],
+      "answerPdfKeys": 41,
+      "candidateWebp": 42,
+      "expected": 42,
       "ocrGapCandidates": 8
     },
     "00-MB": {
-      "expected": 25,
-      "candidateWebp": 25,
       "anchorMissing": [],
-      "answerPdfKeys": 24,
       "answerPdfConflicts": [],
+      "answerPdfKeys": 24,
+      "candidateWebp": 25,
+      "expected": 25,
       "ocrGapCandidates": 4
     },
     "09-1": {
-      "expected": 50,
-      "candidateWebp": 50,
       "anchorMissing": [],
-      "answerPdfKeys": 49,
       "answerPdfConflicts": [],
+      "answerPdfKeys": 49,
+      "candidateWebp": 50,
+      "expected": 50,
       "ocrGapCandidates": 0
     },
     "09-2": {
-      "expected": 50,
-      "candidateWebp": 50,
       "anchorMissing": [],
-      "answerPdfKeys": 49,
       "answerPdfConflicts": [],
+      "answerPdfKeys": 49,
+      "candidateWebp": 50,
+      "expected": 50,
       "ocrGapCandidates": 0
     }
   },
-  "answerOfficialImageMatchedWithoutPdfText": 5,
-  "answerCandidatesMatchedAcrossTextAndImage": 205,
-  "officialCorrectionQaComplete": false,
-  "integrationReady": false,
-  "ocrTextIndependentlyVerified": 1,
+  "questionIndependentlyVerified": 0,
+  "sharedMaterialVisualQaPassed": 1,
+  "sqlite": {
+    "dbSha256": "a7748cfaef79709534602e6e6c013deef196715d894aaa9ff33847a8f5978633",
+    "evidencePath": "sudu/data/processed/114/SQLITE_QA_RECONCILED_20261024.json",
+    "isolatedImportPasses": 2,
+    "releaseApproved": false,
+    "roundtripPass": true,
+    "rows": 205,
+    "sourceQuestionsSha256": "96be27e8d562abf4aa34e409b41106cb9f6168590fcecef8c86494e7778a4a60"
+  },
   "textQaPass": 1,
-  "lastImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
-  "sharedMaterialVisualQaPassed": 1
+  "webpDrafts": 205,
+  "webpVisualQaPassed": 35,
+  "year": 114
 }
