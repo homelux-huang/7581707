@@ -116,9 +116,15 @@ def assess_record(item, record, official, certificate, root=ROOT):
             or certificate.get("originalImageSha256") != record.get("imageSha256")
             or certificate.get("teachingDigestSha256") != teaching_digest(teaching)):
         fail.append("release_certificate_not_bound_to_question_content")
-    if (not proof_valid(certificate.get("teachingReviewEvidence"), root)
-            or not proof_valid(certificate.get("uiReviewEvidence"), root)):
+    teaching_proof = certificate.get("teachingReviewEvidence")
+    ui_proof = certificate.get("uiReviewEvidence")
+    if not proof_valid(teaching_proof, root) or not proof_valid(ui_proof, root):
         fail.append("review_evidence_not_sha_verified")
+    elif (teaching_proof["path"] == ui_proof["path"]
+          or teaching_proof["sha256"] == ui_proof["sha256"]):
+        # A single generic PASS file cannot serve as both independent teaching
+        # content review and real V4 UI/browser interaction evidence.
+        fail.append("teaching_and_ui_evidence_not_independent")
     viewports = certificate.get("rwdResults") or {}
     if any((viewports.get(theme) or {}).get(dim) != "PASS"
            for theme in ("light", "dark") for dim in RWD):

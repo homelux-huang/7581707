@@ -48,11 +48,16 @@ class PerQuestionReleaseSafety(unittest.TestCase):
         self.proof = {"result": "PASS", "reviewer": "Synthetic fixture",
                       "reviewedAt": "2026-10-23", "path": "evidence/review.md",
                       "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+        ui_path = self.root / "evidence" / "ui-browser.md"
+        ui_path.write_text("Synthetic browser viewport and interaction evidence")
+        self.ui_proof = dict(self.proof, path="evidence/ui-browser.md",
+                             reviewer="Synthetic UI reviewer",
+                             sha256=hashlib.sha256(ui_path.read_bytes()).hexdigest())
         self.cert = {"questionId": "115-00-MB-02", "status": "QA_APPROVED",
                      "releaseApproved": True, "officialAnswer": "A",
                      "originalImageSha256": img_sha,
                      "teachingDigestSha256": gate.teaching_digest(self.teach),
-                     "teachingReviewEvidence": self.proof, "uiReviewEvidence": self.proof,
+                     "teachingReviewEvidence": self.proof, "uiReviewEvidence": self.ui_proof,
                      "textbookUnknownClearlyLabeled": True,
                      "rwdResults": {theme: {d: "PASS" for d in gate.RWD}
                                     for theme in ("light", "dark")},
@@ -73,6 +78,18 @@ class PerQuestionReleaseSafety(unittest.TestCase):
                       gate.assess_record(self.item, self.record, self.official, None, self.root))
         self.cert["releaseApproved"] = False
         self.check("release_certificate_not_bound_to_question_content")
+
+    def test_same_document_for_teaching_and_ui_is_rejected(self):
+        self.cert["uiReviewEvidence"] = self.proof
+        self.check("teaching_and_ui_evidence_not_independent")
+
+    def test_identical_content_digest_even_different_paths_rejected(self):
+        second = self.root / "evidence" / "duplicate-review.md"
+        second.write_bytes((self.root / "evidence" / "review.md").read_bytes())
+        self.cert["uiReviewEvidence"] = dict(
+            self.proof, path="evidence/duplicate-review.md",
+            reviewer="Synthetic UI reviewer")
+        self.check("teaching_and_ui_evidence_not_independent")
 
     def test_ai_official_disagreement_is_isolated_even_with_certificate(self):
         self.record["aiAnswer"] = "D"
