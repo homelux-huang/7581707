@@ -1,0 +1,55 @@
+name: 106 English missing Q13-Q18 official pages (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/106-english-q13-18-missing-source-review.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - name: Check six truly missing, SHA-pinned official pages and legacy source constraints
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json, hashlib
+          base=Path('sudu/data/processed/106')
+          manifest=json.loads((base/'webp-manifest.json').read_text())
+          m={x['questionId']:x for x in manifest['items']}
+          for n in range(13,19):
+              qid=f'106-00-E-{n:02d}'
+              assert not m[qid].get('output') and m[qid]['qaStatus']=='BLOCKED_NO_SINGLE_QUESTION_WEBP'
+          paths=[Path(f'sudu/data/original/106/00-E/p{n:03}-190985dceb-v2-w1400-q66.webp') for n in (2,3,4)]
+          assert all(x.is_file() for x in paths)
+          for n in (12,19):
+              q=m[f'106-00-E-{n:02d}']
+              assert hashlib.sha256(Path(q['source']).read_bytes()).hexdigest()==q['sourcePageWebpSha256']
+              assert hashlib.sha256(Path(q['output']).read_bytes()).hexdigest()==q['outputSha256']
+          for x in paths:
+              print('OFFICIAL_PAGE',x,hashlib.sha256(x.read_bytes()).hexdigest())
+          inv=json.loads((base/'inventory.json').read_text())
+          assert inv['visualQaPass']==0 and inv['answerOfficialFinalVerified']==0
+          print('PASS: all six Q13-18 genuinely missing; no image QA or answer approval')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 106-english-q13-18-original-pages-and-neighbors
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            sudu/data/original/106/00-E/p002-190985dceb-v2-w1400-q66.webp
+            sudu/data/original/106/00-E/p003-190985dceb-v2-w1400-q66.webp
+            sudu/data/original/106/00-E/p004-190985dceb-v2-w1400-q66.webp
+            sudu/data/original/106/00-E-answers/p001-0ee00ea745-v2-w1400-q66.webp
+            sudu/data/processed/106/webp-v1/00-E/106-00-E-12.webp
+            sudu/data/processed/106/webp-v1/00-E/106-00-E-19.webp

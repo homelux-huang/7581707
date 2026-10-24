@@ -1,0 +1,55 @@
+{
+  "year": 111,
+  "paperCode": "00-E",
+  "officialSourcePage": "sudu/data/original/111/00-E/p004-4fef546202-v2-w1400-q66.webp",
+  "originalPageSha256": "7d26e9485a860ded0fbef125b9b507127176092c35633a7909966559bc47a325",
+  "reviewNote": "Direct visual view showed v1 Q24 included both Q24 and Q25; Q25 originally had no single-question crop.",
+  "repairStatus": "DRAFT_UNTIL_INDEPENDENT_V2_VISUAL_RECHECK",
+  "records": [
+    {
+      "questionId": "111-00-E-24",
+      "oldVersion": {
+        "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+        "output": "sudu/data/processed/111/webp-v1/00-E/111-00-E-24.webp",
+        "outputSha256": "744c4c21e68fad252e0f3ac7aeee2eaf0e7e12b3f74cf8a30a8bb572f0461d13",
+        "cropPixels": [
+          90,
+          1650,
+          1310,
+          1759
+        ],
+        "source": "sudu/data/original/111/00-E/p004-4fef546202-v2-w1400-q66.webp",
+        "sourcePage": 4
+      },
+      "v2Path": "sudu/data/processed/111/webp-v2/00-E/111-00-E-24.webp",
+      "v2Sha256": "d0f78c84f0c95ed8b30a5637d03c508288294dcde682ee8b20451f16bfb9f0c1",
+      "v2CropPixels": [
+        90,
+        1650,
+        1310,
+        1705
+      ],
+      "result": "REPAIRED_CANDIDATE_PENDING_QA"
+    },
+    {
+      "questionId": "111-00-E-25",
+      "oldVersion": {
+        "qaStatus": "BLOCKED_NO_SINGLE_QUESTION_WEBP",
+        "output": null,
+        "outputSha256": null,
+        "cropPixels": null,
+        "source": null,
+        "sourcePage": null
+      },
+      "v2Path": "sudu/data/processed/111/webp-v2/00-E/111-00-E-25.webp",
+      "v2Sha256": "bef3d3e340186b892bc8b3ba9f94679f59c3159bba6a40a40bb35cf76529f6ad",
+      "v2CropPixels": [
+        90,
+        1705,
+        1310,
+        1759
+      ],
+      "result": "REPAIRED_CANDIDATE_PENDING_QA"
+    }
+  ]
+}

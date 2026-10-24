@@ -1,0 +1,103 @@
+{
+  "year": 113,
+  "expectedFromLegacy": 205,
+  "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
+  "totalCandidateQuestions": 205,
+  "webpGeneratedDrafts": 205,
+  "visualQaPass": 10,
+  "ocrGapCandidatesGenerated": 13,
+  "ocrTextIndependentlyVerified": 0,
+  "missingFourTextOptions": [
+    "113-00-E-21",
+    "113-00-E-22",
+    "113-00-E-23",
+    "113-00-E-24",
+    "113-00-E-25",
+    "113-00-E-26",
+    "113-00-E-27",
+    "113-00-E-28",
+    "113-00-MB-01",
+    "113-00-MB-02",
+    "113-00-MB-09",
+    "113-09-1-36",
+    "113-09-1-37"
+  ],
+  "answerPdfTextMatchedOnly": 198,
+  "answerOfficialFinalVerified": 0,
+  "sourcePaperStats": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 38,
+      "imageDrafts": 38,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 37,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 42,
+      "numberedAnchors": 42,
+      "imageDrafts": 42,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 41,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "officialAnswerTextKeys": 24,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 47,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 49,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  },
+  "sharedMaterialsVerified": 0,
+  "sharedMaterialsReviewRequired": true,
+  "sqlite": {
+    "rows": 205,
+    "unique": 205,
+    "integrity": "ok",
+    "reimportCount": 2,
+    "shaMismatches": 0
+  },
+  "integrationReady": false
+}

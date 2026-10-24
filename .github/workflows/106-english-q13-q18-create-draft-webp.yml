@@ -1,0 +1,77 @@
+name: 106 English Q13-Q18 missing WebP draft generation (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/stage_106_english_missing_q13_q18.py
+      - .github/workflows/106-english-q13-q18-create-draft-webp.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-106-english-q13-q18-staging
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Verify official page SHA and six missing candidate IDs
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          python -m py_compile scripts/stage_106_english_missing_q13_q18.py
+          python scripts/stage_106_english_missing_q13_q18.py --check
+      - name: Create ONLY six draft source-pixel WebPs twice and check hashes
+        run: |
+          set -euo pipefail
+          python scripts/stage_106_english_missing_q13_q18.py --stage
+          sha256sum sudu/data/processed/106/qa-drafts/webp-v2/00-E/*.webp > /tmp/106-en-before.sha
+          python scripts/stage_106_english_missing_q13_q18.py --stage
+          sha256sum sudu/data/processed/106/qa-drafts/webp-v2/00-E/*.webp > /tmp/106-en-after.sha
+          diff -u /tmp/106-en-before.sha /tmp/106-en-after.sha
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          base=Path("sudu/data/processed/106/qa-drafts")
+          d=json.loads((base/"UNVERIFIED_106_ENGLISH_Q13_18_20261023.json").read_text())
+          assert len(d["items"])==6 and d["visualQaPassAdded"]==0 and d["answerVerifiedAdded"]==0
+          assert not d["integrationReady"]
+          for x in d["items"]:
+              f=Path(x["output"])
+              assert f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest()==x["outputSha256"]
+              assert x["imageQaStatus"].startswith("DRAFT_")
+          inv=json.loads(Path("sudu/data/processed/106/inventory.json").read_text())
+          assert inv["visualQaPass"]==0 and inv["webpGeneratedDrafts"]==182 and inv["answerOfficialFinalVerified"]==0
+          print("PASS: six missing candidate WebPs staged, not yet QA PASS")
+          PY
+      - name: Commit new draft files on QA branch only
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 QA Draft Images"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add sudu/data/processed/106/qa-drafts/webp-v2/00-E/ sudu/data/processed/106/qa-drafts/UNVERIFIED_106_ENGLISH_Q13_18_20261023.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(106): stage six missing English Q13-18 WebP drafts; no QA promotion"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 106-english-q13-q18-source-and-final-candidates
+          if-no-files-found: ignore
+          retention-days: 30
+          path: |
+            sudu/data/original/106/00-E/p003-190985dceb-v2-w1400-q66.webp
+            sudu/data/processed/106/qa-drafts/webp-v2/00-E/
+            sudu/data/processed/106/qa-drafts/UNVERIFIED_106_ENGLISH_Q13_18_20261023.json

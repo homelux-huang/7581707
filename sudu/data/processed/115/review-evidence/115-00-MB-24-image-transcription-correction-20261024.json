@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-24",
+  "subject": "數學 B",
+  "questionNumber": 24,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 8,
+  "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-24.webp",
+  "sourceWebpSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980816,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "小仲跟阿慈投資一筆資金，以年利率r % 複利計算，並想瞭解本利和達到三倍本金需要\n                                                110\n 幾年。小仲提問人工智慧得到快速估算值 A   ，阿慈用數學公式算出精確值\n                                                                r\n            log10 3   B        。若r8，且將A 以無條件進位至整數C，B 以無條件進位至整數D，\n                    r  \n        log10  1      \n                  100 \n\n  則下列何者正確？",
+    "options": [
+      "D = C – 1",
+      "D = C",
+      "D = C+1",
+      "D = C+2"
+    ]
+  },
+  "correctedText": {
+    "question": "小仲跟阿慈投資一筆資金，以年利率 r% 複利計算，並想瞭解本利和達到三倍本金需要幾年。小仲提問人工智慧得到快速估算值 A＝110/r，阿慈用數學公式算出精確值 B＝log₁₀(3)／log₁₀(1＋r/100)。若 r＝8，且將 A 以無條件進位至整數 C，B 以無條件進位至整數 D，則下列何者正確？",
+    "options": [
+      "D＝C－1",
+      "D＝C",
+      "D＝C＋1",
+      "D＝C＋2"
+    ],
+    "figureRequired": true,
+    "figureDescription": "原卷印刷兩個完整分式：A＝110／r、B＝log₁₀(3)／log₁₀(1＋r/100)。不得以破碎的跨行字碼顯示。"
+  },
+  "knownOfficialAnswer": "C",
+  "postAnswerMathCheck": "A＝13.75 ⇒ C＝14；B＝log(3)／log(1.08) 在14與15間 ⇒ D＝15；D＝C＋1，C",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}

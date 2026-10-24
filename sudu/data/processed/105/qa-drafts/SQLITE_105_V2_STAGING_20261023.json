@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 105,
+  "sourceQuestionsSha256": "2017eac358b3d90ce196e7329efb643e954b8481ed7d32f304f38404eb9afec7",
+  "originalDatabasePath": "sudu/data/processed/105/question-bank.sqlite3",
+  "originalDatabaseSha256Unchanged": "06993e0c73addb60f2ec0f1e303e5239e9272386c9cb24cbfcfedf9faa5245e7",
+  "qaDraftDbPath": "sudu/data/processed/105/qa-drafts/sqlite-v2/question-bank.sqlite3",
+  "qaDraftDbSha256": "ff1c0fd6f2ae8b57e141f262df035766acc3cda0b12c4ce82eb2eff68253b2d2",
+  "rows": 204,
+  "sharedMaterialRows": 2,
+  "isolatedImportPasses": 2,
+  "qaStatus": "DRAFT_SQLITE_ROUNDTRIP_PASS_NOT_RELEASE",
+  "originalDatabaseModified": false,
+  "answerVerifiedChanged": false,
+  "questionVerifiedChanged": false,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

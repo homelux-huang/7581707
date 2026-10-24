@@ -1,0 +1,88 @@
+name: 106 Chinese C16 C17 C19 original-image text G2 (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/repair_106_c16_c17_c19_source_text_g2_20261024.py
+      - .github/workflows/106-chinese-c16-c17-c19-direct-text-g2-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa106-chinese-c16-17-19-text
+  cancel-in-progress: false
+jobs:
+  source_text:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 38
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original source image decoder
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Preflight original source, G1 certificates and legacy G2 text
+        run: |
+          set -euo pipefail
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/repair_106_c16_c17_c19_source_text_g2_20261024.py
+          python scripts/repair_106_c16_c17_c19_source_text_g2_20261024.py
+      - name: Stage three source-checked G2 only plus isolated G5
+        run: python scripts/repair_106_c16_c17_c19_source_text_g2_20261024.py --stage
+      - name: Confirm exactly 3 text PASS, 7 new image PASS retained and all release gates closed
+        run: |
+          python - <<'PY_GATE'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          base=Path('sudu/data/processed/106')
+          def rd(f):return json.loads((base/f).read_text('utf8'))
+          q=rd('questions.json');o=rd('ocr-raw-candidates.json')
+          m=rd('webp-manifest.json');v=rd('VISUAL_QA.json')
+          inv=rd('inventory.json');val=rd('VALIDATION.json')
+          rel=rd('release-manifest.json')
+          ev=rd('qa-drafts/TEXT_QA_106_C16_17_19_ORIGINAL_IMAGE_20261024.json')
+          assert len(q['questions'])==len(o['items'])==len(m['items'])==len(v['items'])==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==23
+          assert inv['sharedMaterialsVerified']==4
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==13
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert ev['newG2Pass']==3 and ev['newG1Pass']==ev['newOfficialFinalAnswerVerified']==0
+          assert ev['independentHumanReview'] is False
+          qs={z['questionId']:z for z in q['questions']}
+          raw={z['questionId']:z for z in o['items']}
+          for id in ('106-00-C-16','106-00-C-17','106-00-C-19'):
+              r=qs[id];orig=raw[id]
+              assert r['questionVerified'] and r['imageQaStatus']=='PASS' and r['textQaStatus']=='PASS'
+              assert len(r['options'])==4 and all(x.strip() for x in r['options'])
+              assert orig['rawOcrText'] is None and orig['qaStatus']=='PASS' and orig['diff']
+              assert orig['correctedQuestion']==r['question'] and orig['correctedOptions']==r['options']
+              assert not r['answerVerified'] and not r['integrationReady']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('106 C16 C17 C19 G2=3, current G2 13, G1 23, G5 11/11, official G3 0, NO RELEASE')
+          PY_GATE
+      - name: Nonforce SHA-lease commit of only G2, isolated SQLite and evidence
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/106/questions.json
+          git add sudu/data/processed/106/ocr-raw-candidates.json
+          git add sudu/data/processed/106/inventory.json
+          git add sudu/data/processed/106/VALIDATION.json
+          git add sudu/data/processed/106/release-manifest.json
+          git add sudu/data/processed/106/question-bank.sqlite3
+          git add sudu/data/processed/106/qa-drafts/TEXT_QA_106_C16_17_19_ORIGINAL_IMAGE_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          test "$(git rev-parse FETCH_HEAD)" = "$QA_BASE" || { echo "Concurrent QA update, stale push blocked"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(106): source Q16 Q17 Q19 text and unified diffs, G5 strict NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

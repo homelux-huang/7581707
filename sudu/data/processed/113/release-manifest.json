@@ -1,0 +1,16 @@
+{
+  "year": 113,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "imageQA": "PARTIAL_10_OF_205",
+  "officialFinalAnswerQA": "PENDING",
+  "questionTextQA": "PENDING",
+  "sharedMaterialQA": "PENDING",
+  "database": {
+    "rows": 205,
+    "unique": 205,
+    "integrity": "ok",
+    "reimportCount": 2,
+    "shaMismatches": 0
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "scope": "105-115",
+  "sourceDatabasesModified": true,
+  "modificationScope": "QA isolated 105/114 database only, no student database",
+  "studentDataTouched": false,
+  "released": false,
+  "yearsG5Pass": 11,
+  "yearsReviewed": 11,
+  "years": [
+    {
+      "year": 105,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "ff1c0fd6f2ae8b57e141f262df035766acc3cda0b12c4ce82eb2eff68253b2d2",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 106,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "c981489e332b99466de9a2ab5ffbee1f85eeefc8e82d558106050123733dde6b",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 107,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "ba43c70175fadb7449bfd0711f7e3573baa8522e905877e16b636cc8efb488e3",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 108,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "c95236da283a41917b65cb120a36fd992dfc3cbaea49a200c0f56ba40459e30c",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 109,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "6b88443eb905ed4ab78b673da4ba8b05a4f27393f14e86609e7a1815796a3b96",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 110,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 204,
+      "sqliteSha256": "5b4da97c8209a4e95477ed68b18fb998b347853b1cc15097d9de8f7da65b8e3c",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 204,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 111,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "4de8f52408702f5138dcd275239ce6c829c9cd56b285ae043336efd9cf4ef68e",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 112,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "db41285575447bf09526bed1bbe83a9f5a6c93b787c1d9cf494685a91fddfd48",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 113,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "2ee3274e4e454e556305c13d1e84c0303eccacd4c962bb0980f7b4a6e0efedc3",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 114,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "92087783705896add15beddec65ed67f63f187ead593f80f00b2d4f988e29150",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "original_number",
+        "paper_code",
+        "payload",
+        "payload_sha256",
+        "question_id",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    },
+    {
+      "year": 115,
+      "g5Pass": true,
+      "originalDbReadOnly": true,
+      "sandboxImportPasses": 2,
+      "blockers": [],
+      "jsonRows": 205,
+      "sqliteSha256": "e613d40c13112fdcf121f494ed0bb6d2dcad25d01ab3e466c1143cc61362d44a",
+      "onDiskTables": [
+        "questions",
+        "shared_materials"
+      ],
+      "onDiskQuestionColumns": [
+        "answer",
+        "answer_matched",
+        "answer_verified",
+        "original_number",
+        "paper_code",
+        "payload_json",
+        "payload_sha256",
+        "question",
+        "question_id",
+        "question_verified",
+        "review_status",
+        "schema_version",
+        "subject",
+        "year"
+      ],
+      "onDiskPayloadColumn": "payload_json",
+      "onDiskRows": 205,
+      "onDiskMismatchCount": 0,
+      "onDiskMismatchIdsFirst20": []
+    }
+  ]
+}

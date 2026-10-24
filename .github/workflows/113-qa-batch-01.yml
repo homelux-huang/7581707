@@ -1,0 +1,38 @@
+name: 113 Chinese Q1-5 Genuine Visual QA Evidence Apply (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/apply_113_visual_qa_batch_01.py
+      - .github/workflows/113-qa-batch-01.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Verify recorded visual comparison and bind exact SHA
+        run: |
+          python -m py_compile scripts/apply_113_visual_qa_batch_01.py
+          python scripts/apply_113_visual_qa_batch_01.py
+      - name: Commit QA only, never main
+        run: |
+          git config user.name '7581707 verified QA evidence'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/113
+          if ! git diff --cached --quiet; then
+            git commit -m 'qa(113): mark five directly compared images PASS, keep release blocked'
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi

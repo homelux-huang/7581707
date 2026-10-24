@@ -1,0 +1,41 @@
+name: 114 English Batch14 Q06-Q20 official answer image (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/114-english-batch14-official-answer-page-readonly.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official-answer-image:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - name: Verify official answer evidence image exists, no answerVerified
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          img=Path('sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp')
+          ans=json.loads(Path('sudu/data/processed/114/official-answer-evidence.json').read_text())
+          by={x['questionId']:x for x in ans['items']}
+          assert img.is_file()
+          for n in range(6,21):
+              q=by[f'114-00-E-{n:02}']
+              assert q['answerVerified'] is False
+              assert q['officialPdfSha256'].startswith('ebd3940a54')
+          print('PASS: answer page present; all 15 final answers remain unverified pending correction notices')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 114-english-batch14-official-answer-page
+          retention-days: 14
+          if-no-files-found: error
+          path: sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp

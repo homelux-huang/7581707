@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: direct reliance on earlier independently saved, SHA-pinned TCTE final-answer visual QA; not a fresh PDF download",
+  "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+  "finalAnswer": "B",
+  "correctionNoticeReviewed": true,
+  "noObjectionForPaper": true,
+  "officialPage": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+  "underlyingOfficialRecord": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
+  "underlyingCorrectionRecord": "sudu/data/processed/115/official-confirmation-status.json",
+  "actualPriorQa": "PASS_DIRECT_VISUAL_AND_NO_OFFICIAL_OBJECTION",
+  "noNewOfficialPdfDownload": true,
+  "officialNotice": "00-MB no objection submitted; source page final answer PDF authoritative",
+  "pdfSource": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
+  "humanReviewerClaimed": false
+}

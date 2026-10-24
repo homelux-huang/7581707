@@ -1,0 +1,46 @@
+name: 105 official final answer page visual review bundle (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/105-official-answer-pages-visual-review.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official-answer-artifact:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - name: Verify answer page presence and candidate official SHA metadata
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          base=Path('sudu/data/original/105')
+          files=[
+              base/'00-C-answers/p001-fdbff82853-v2-w1400-q66.webp',
+              base/'09-2-answers/p001-76508ece0b-v2-w1400-q66.webp',
+          ]
+          data=json.loads(Path('sudu/data/processed/105/official-answer-evidence.json').read_text())
+          s={x['questionId']:x for x in data['items']}
+          assert all(f.is_file() for f in files)
+          assert s['105-00-C-24']['officialAnswerPdfSha256'].startswith('fdbff82853')
+          assert s['105-09-2-50']['officialAnswerPdfSha256'].startswith('76508ece0b')
+          assert not s['105-00-C-24']['answerVerified'] and not s['105-09-2-50']['answerVerified']
+          print('PASS: original official answer page WebPs exist; final correction verification remains pending')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 105-official-answer-two-papers-readonly
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            sudu/data/original/105/00-C-answers/p001-fdbff82853-v2-w1400-q66.webp
+            sudu/data/original/105/09-2-answers/p001-76508ece0b-v2-w1400-q66.webp
