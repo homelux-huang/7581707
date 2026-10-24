@@ -273,7 +273,19 @@ def certificates_complete(source: Path, q: dict, item: dict, shared: dict) -> bo
     for sid in shared_material_ids(q) or []:
         ev = shared[sid].get("visualReviewEvidence") or {}
         checks.append((ev, "reference", "referenceSha256"))
-    return all(certificate_exists(source, evidence, field, hash_field)
+    def independently_anchored(proof: dict, field: str, hash_field: str) -> bool:
+        if certificate_exists(source, proof, field, hash_field):
+            return True
+        # Legacy 114 image batches predate referenceSha256, but contain an
+        # exact per-question original SHA and PASS image identity. A generic
+        # filename or an unrelated PASS record does NOT authorize release.
+        if field != "reference" or hash_field != "referenceSha256":
+            return False
+        refs=[(item,item.get("questionId"))]
+        refs += [(shared[s],s) for s in shared_material_ids(q) or []]
+        return any(x.get("visualReviewEvidence") is proof and
+                   visual_certificate(source,x,str(identity)) for x,identity in refs)
+    return all(independently_anchored(evidence,field,hash_field)
                for evidence, field, hash_field in checks)
 
 
@@ -308,10 +320,23 @@ def visual_certificate(source: Path, item: dict, identity: str) -> bool:
         return False
     # Older source does not have a file SHA claim. Validate the immutable Git
     # source copy by matching a genuine per-question visual-QA record.
-    for row in parsed.get("records", []):
-        if (row.get("questionId") == identity and row.get("result") == "PASS"
-                and row.get("webpSha256") == item.get("sha256")
+    for row in (parsed.get("records") or []) + (parsed.get("items") or []):
+        if row.get("questionId") != identity or row.get("result") != "PASS":
+            continue
+        if (row.get("webpSha256") == item.get("sha256")
                 and row.get("webpPath") == item.get("output")):
+            return True
+        # 114 English 06-20: reviewedWebpSha256 and the exact official crop
+        # path, plus all eight original page comparison criteria are required.
+        criteria=row.get("criteria") or {}
+        if (row.get("reviewedWebpSha256") == item.get("sha256")
+                and row.get("reviewedWebpPath") == item.get("output")
+                and criteria and all(value is True for value in criteria.values())
+                and set(("original_number","complete_stem","all_four_options",
+                         "required_formula_images_units","no_neighboring_question",
+                         "no_page_header_or_footer","readable",
+                         "source_and_output_sha256_matched",
+                         "exact_source_crop_pixel_match")) <= set(criteria)):
             return True
     return False
 
