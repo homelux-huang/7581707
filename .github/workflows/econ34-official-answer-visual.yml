@@ -1,0 +1,22 @@
+name: Econ34 official final answer P1 visual check AFTER pre-key solution (NO RELEASE)
+on:
+  push:
+    branches: [qa/econ34-prekey-image-only-20261024]
+    paths:
+      - scripts/econ34_official_answer_visual.py
+      - .github/workflows/econ34-official-answer-visual.yml
+permissions:
+  contents: read
+jobs:
+  answer_image:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify archived official final answer WebP after existing immutable blind answer
+        run: python scripts/econ34_official_answer_visual.py
