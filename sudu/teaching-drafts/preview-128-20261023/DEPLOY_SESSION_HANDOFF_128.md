@@ -1,3 +1,14 @@
+# 2026-10-24｜逐題第一候選 E03 真實原題與教學來源修復（維持隔離直到完整證書）
+
+- 最新實質內容 commit `3399a3abd90bedac8ebad14c9bdb8368a6608afa`；E03 新 teaching canonical SHA256 `c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316`，原圖 SHA256 `16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd`。
+- 舊候選 UI 最新完整綠燈 [Actions #40048104080](https://github.com/homelux-huang/7581707/actions/runs/40048104080)：E03 真點擊／觸控／錯題復習、8×2、單題原圖與解說成功。由於本批後續修訂教學來源與 IPA，**不能沿用舊 SHA 作新教學版本正式 UI 驗收**。
+- 最新 `tests/sudu_english03_isolated_ui.cjs` 改用真正 `sudu/data/years/115.json` 題幹與四個選項，不再手填練習題。E03 四選項語義、新聞原始出處、Cambridge 發音查核詳 `E03_PEDAGOGY_SOURCE_QA_20261024.md`；已修正原無法取回的新聞網址及 IPA、補同義詞不能任意替換的教學提醒。
+- **真正的學生發布阻塞**：`qa/114-115-official-visual-review` 分支 student-certified 現僅數學B02/03/04/09，E03 尚缺符合 `scripts/sudu_verified_publish.py` 的 source OCR text QA、事前獨立解題證據、正式獨立教學證據及 UI 覆核憑證。不得追認已知答案後審查成盲解，亦不得因 8×2 隔離 UI 綠燈改 releaseApproved。先完成各層真實查證才可交由原部署 Session 依 same-SHA gate 增量發布。
+- 統計：既有 main 四道數學B仍單獨核准；本批新正式教學 READY=0、新部署=0。教學草稿 E03 已改善；工作應繼續其他非爭議題，不能讓此題來源認證拖住後續。
+- 無跨 Session 通訊 API 已確認，此交接文字與 manifest 是可供原部署 Session 直接取用的持久通知，**未宣稱已直接送達其他對話**。
+
+---
+
 # 2026-10-24｜逐題增量發布工作：E03 UI 阻塞實修與解碼診斷（未放行）
 
 - 使用者已授權逐題完成即可增量發布；仍須各題實際 QA 與正式 same-SHA Pages 部署。正式 main SHA 最後檢查為 `5415a30452cdf9020242aca16fe0ff2b6814ab4b`；主開發 Session 統一合併。
