@@ -5,6 +5,7 @@ on:
     paths:
       - scripts/sudu_independent_review_gate.py
       - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
       - tests/test_sudu_independent_review_gate.py
       - sudu/release-governance/**
       - .github/workflows/128-independent-reviewer-gate.yml

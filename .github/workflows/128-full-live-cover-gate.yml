@@ -6,6 +6,7 @@ on:
       - scripts/check_live_release.py
       - tests/test_check_live_release.py
       - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
       - scripts/build.py
       - sudu/release-governance/**
       - .github/workflows/128-full-live-cover-gate.yml
