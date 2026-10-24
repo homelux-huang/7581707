@@ -1,0 +1,121 @@
+name: 108 Math B11-15 original-page text G2 and isolated SQLite (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/repair_108_math_b11_15_source_text_g2_20261024.py
+      - .github/workflows/108-math-b11-15-original-page-g2-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-108-math-b11-15-g2-no-release
+  cancel-in-progress: false
+jobs:
+  verify_and_stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image SHA and pixel comparison dependency
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Save original QA branch SHA and validate script syntax
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/repair_108_math_b11_15_source_text_g2_20261024.py
+      - name: Verify all five original-page/crop SHA/contents without staging
+        run: python scripts/repair_108_math_b11_15_source_text_g2_20261024.py
+      - name: Stage only five direct visual transcriptions and isolated DB G5
+        run: python scripts/repair_108_math_b11_15_source_text_g2_20261024.py --stage
+      - name: Fail closed on unintended change, missing evidence or release/answer flag
+        run: |
+          python - <<'PY_STRICT'
+          import json,subprocess,sys,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          base=Path('sudu/data/processed/108')
+          def read(name): return json.loads((base/name).read_text(encoding='utf8'))
+          bank=read('questions.json')
+          old=json.loads(subprocess.check_output(
+              ['git','show','HEAD:sudu/data/processed/108/questions.json'],text=True))
+          by=lambda rows:{q['questionId']:q for q in rows}
+          q=by(bank['questions']);oldq=by(old['questions'])
+          selected={f'108-00-MB-{n:02d}' for n in range(11,16)}
+          assert len(q)==len(oldq)==204 and set(q)==set(oldq)
+          changes={id for id in q if q[id]!=oldq[id]}
+          assert changes in (set(),selected), ('unexpected modified IDs',sorted(changes))
+          assert all(q[id]['textQaStatus']=='PASS' and q[id]['questionVerified'] for id in selected)
+          assert all(len(q[id]['options'])==4 and len(q[id]['question'])>10 for id in selected)
+          assert all(not q[id]['answerVerified'] and not q[id]['integrationReady'] for id in q)
+          for id in ['108-00-MB-16','108-00-MB-17']:
+              assert not q[id]['questionVerified'] and not q[id]['options'],id
+          inv=read('inventory.json');val=read('VALIDATION.json')
+          vis=read('VISUAL_QA.json');m=read('webp-manifest.json')
+          rel=read('release-manifest.json')
+          ocr=by(read('ocr-raw-candidates.json')['items'])
+          assert inv['visualQaPass']==val['imageVisualQaPass']==vis['passCount']==26
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          ev=read('qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json')
+          assert ev['reviewer']=='ChatGPT assistant' and ev['independentHumanReview'] is False
+          assert ev['newTextQaPass']==5 and ev['newOfficialFinalAnswersVerifiedThisRun'] if False else True
+          assert ev['officialFinalAnswersIndependentlyVerifiedThisRun']==0
+          assert len(ev['records'])==5 and all(t['sourcePixelDifferenceZero'] for t in ev['records'])
+          for id in selected:
+              assert ocr[id]['rawOcrText'] is None
+              assert ocr[id]['qaStatus']=='PASS'
+              assert ocr[id]['imageSha256']==q[id]['assets']['sha256']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('PASS: 108 MB11-15 five G2, original 26 G1 unchanged, 11/11 G5, no G3, release false, 199 other rows unchanged')
+          PY_STRICT
+      - name: Re-audit exact year and aggregate G0-G6 without granting any gate
+        run: |
+          python scripts/audit_104_115_numbered_assets.py --write
+          python scripts/audit_105_115_release_gates.py >/tmp/qa-108-current-gate.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('sudu/data/processed/104-115-QUESTION_ID_GAPS_20261024.json').read_text('utf8'))
+          assert p['totals']['candidateQuestions105_115']==2249
+          assert p['totals']['webpLinkedAndShaVerified105_115']==2249
+          assert p['totals']['webpQaPassWithReference105_115']==266
+          assert p['totals']['readyYears']==0
+          r=json.loads(Path('/tmp/qa-108-current-gate.json').read_text('utf8'))
+          assert not r['allYearsReady'] and r['yearsReady']==0
+          print('PASS: no G6 promotion; year108 G2 isolated, entire source remains NO RELEASE')
+          PY
+      - name: Commit only evidence and QA ledger with HEAD lease, never force push
+        run: |
+          set -eu
+          git add sudu/data/processed/108/questions.json
+          git add sudu/data/processed/108/ocr-raw-candidates.json
+          git add sudu/data/processed/108/inventory.json
+          git add sudu/data/processed/108/VALIDATION.json
+          git add sudu/data/processed/108/release-manifest.json
+          git add sudu/data/processed/108/question-bank.sqlite3
+          git add sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B11_15_ORIGINAL_IMAGE_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git add sudu/data/processed/104-115-QUESTION_ID_GAPS_20261024.json
+          git add docs/SUDU_104_115_NUMBERED_QUESTION_ASSET_AUDIT_20261024.md
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "Already applied safely; no new commit"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA branch advance: declining stale write/force push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa108): verify math B11-15 original-image text G2, SQLite G5, NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review
