@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "副詞與感應裝置｜automatically",
+    "teacherSummary": "題目說夜間公園感應燈會在有人經過時自己亮起，因此修飾 turn on 的副詞應是 automatically（自動地）。",
+    "elementarySummary": "有人走過去，燈自己亮了，不需要有人去按開關。這就叫「自動地」。",
+    "concept": "automatically = 自動地，通常修飾動作；turn on = 開啟（燈、設備）。",
+    "extension": "相反意思：manually（手動地）與 automatically（自動地）不同。",
+    "formula": "",
+    "source": "114 年四技二專統測英文第 7 題；官方原始試卷與公布答案 PDF；教科書頁碼待核對",
+    "memory": "感應燈自己亮 → automatically；by themselves 是關鍵線索。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確。automatically 可修飾 turn on，描述感應燈自行啟動。",
+        "elementary": "燈不用手按就自己亮，正好符合。",
+        "reason": "by themselves、sensor lights 提供語意線索。"
+      },
+      "B": {
+        "teacher": "錯誤。organically 著重有機、自然生長或自然方式，不描述感應燈的自動開關。",
+        "elementary": "自然生長和燈自動亮不是同一件事。",
+        "reason": "搭配不自然。"
+      },
+      "C": {
+        "teacher": "錯誤。productively 是富有成效地，不能表達感應式自動啟動。",
+        "elementary": "有效率做事情不是燈自己亮。",
+        "reason": "不符合設備功能。"
+      },
+      "D": {
+        "teacher": "錯誤。selfishly 指自私地，多用於人的行為。",
+        "elementary": "燈不會自私。",
+        "reason": "語意及主語不搭配。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "sensor lights",
+      "by themselves",
+      "automatically"
+    ],
+    "extra": {}
+  },
+  "teachingSourceDraft": "sudu/data/processed/114/review-evidence/EN07_09_POSTKEY_TEACHING_DRAFT_20261024.json",
+  "originalQuestionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "humanReviewerClaimed": false
+}
