@@ -1,0 +1,71 @@
+name: 128 independent reviewer P0 negative gates and original five preservation
+on:
+  push:
+    branches: [fix/128-certified-reviewer-and-full-live-audit-20261024]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_independent_review_gate.py
+      - sudu/release-governance/**
+      - .github/workflows/128-independent-reviewer-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review_identity_security:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c7b4362b3125e623098f57c304f14c0edb5f6974
+          path: _latest_source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 6fea22296877e31d9f1d3bd01d987b0096ddcf1b
+          path: _historical_six_self_attested
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install required original WebP decoder and Ed25519 verifier
+        run: python -m pip install -q pillow cryptography
+      - name: Run security negative and positive Ed25519 material binding tests
+        run: |
+          set -eu
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Recheck genuine source five and reject previously self-attested Econ34 sixth
+        run: |
+          set -eu
+          python scripts/sudu_verified_publish.py stage --source _latest_source --dest /tmp/sudu-real-source-check --sha c7b4362b3125e623098f57c304f14c0edb5f6974 > /tmp/current-review-result.json
+          python scripts/sudu_verified_publish.py check --dest /tmp/sudu-real-source-check
+          python scripts/sudu_verified_publish.py stage --source _historical_six_self_attested --dest /tmp/sudu-unsigned-six-check --sha 6fea22296877e31d9f1d3bd01d987b0096ddcf1b > /tmp/old-six-result.json
+          python scripts/sudu_verified_publish.py check --dest /tmp/sudu-unsigned-six-check
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          wanted={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          main=json.loads(Path('sudu/data/approved/115.json').read_text())
+          assert main["approvedCount"]==5
+          for d in ['/tmp/sudu-real-source-check','/tmp/sudu-unsigned-six-check']:
+              p=json.loads((Path(d)/'sudu/data/approved/115.json').read_text())
+              assert p["approvedCount"]==5, (d,p["approvedCount"])
+              assert {q["canonicalId"] for q in p["questions"]}==wanted,d
+              assert p["questions"]==main["questions"],'original five published student content altered'
+          print('PASS P0: real five unchanged; forged historical sixth Econ34 blocked despite self-signed QA JSON')
+          PY
+      - name: Keep forensic proof without granting any new admission
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewer-identity-negative-tests-five-unchanged-no-release
+          path: |
+            /tmp/current-review-result.json
+            /tmp/old-six-result.json
+          retention-days: 30
+          if-no-files-found: ignore
