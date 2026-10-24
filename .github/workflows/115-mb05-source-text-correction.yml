@@ -51,7 +51,10 @@ jobs:
           assert q["answerVerified"] is True and q["studentReleaseApproved"] is False
           with sqlite3.connect(b/"question-bank.sqlite3") as db:
               assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
-              rows=db.execute("SELECT question_id,payload,payload_sha256 FROM questions").fetchall()
+              cols={r[1] for r in db.execute("PRAGMA table_info(questions)")}
+              field="payload" if "payload" in cols else "payload_json"
+              assert {"question_id","payload_sha256",field}<=cols
+              rows=db.execute(f"SELECT question_id,{field},payload_sha256 FROM questions").fetchall()
               assert len(rows)==205
               byid={x["questionId"]:x for x in bank["questions"]}
               for qid,payload,sha in rows:
