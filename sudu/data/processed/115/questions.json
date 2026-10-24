@@ -12008,12 +12008,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 20,
       "legacySubject": "數學 B",
-      "question": "阿雄想測量農地裡一個稻草人C 到工寮A 的距離，如圖 ( 四 ) 所示。他先在A 點和田埂上\n  另一處B 點拉出基準線，測得A、B 兩點的距離為100 公尺，接著測得角度∠CAB = 60°，\n\n  以及∠CBA = 75°。試求A、C 兩點的距離為多少公尺？",
+      "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
       "options": [
-        "50(  3  1)",
-        "50( 3  1)                                        C",
-        "20(  3  1)\n                                                             60°",
-        "20(  3  1)                                A\n                                                100m  75°\n                       圖 ( 四 )          B"
+        "50(√3＋1)",
+        "50(√3－1)",
+        "20(√3＋1)",
+        "20(√3－1)"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -12111,13 +12111,24 @@
         "long_gap_after_D_clipped_candidate",
         "previous_candidate_missing_figure_IV_lower_edge_and_caption"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "A",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "阿雄想測量農地裡一個稻草人C 到工寮A 的距離，如圖 ( 四 ) 所示。他先在A 點和田埂上\n  另一處B 點拉出基準線，測得A、B 兩點的距離為100 公尺，接著測得角度∠CAB = 60°，\n\n  以及∠CBA = 75°。試求A、C 兩點的距離為多少公尺？",
+      "legacyUnverifiedOptions": [
+        "50(  3  1)",
+        "50( 3  1)                                        C",
+        "20(  3  1)\n                                                             60°",
+        "20(  3  1)                                A\n                                                100m  75°\n                       圖 ( 四 )          B"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-20-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
@@ -12128,12 +12139,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 21,
       "legacySubject": "數學 B",
-      "question": "探勘人員為確認一個新的優良漁場C 與港口B 的距離，從港口A 直線航行8 公里到漁場\n  C，此時在C 點經由儀器測定角度得知∠ACB 60°，且港口A 與港口B 相距7 公里，如圖\n     ( 五 ) 所示。若B、C 的距離大於4 公里，則B、C 的距離約為多少公里？",
+      "question": "探勘人員為確認一個新的優良漁場 C 與港口 B 的距離，從港口 A 直線航行 8 公里到漁場 C，此時在 C 點經由儀器測定角度得知 ∠ACB＝60°，且港口 A 與港口 B 相距 7 公里，如圖（五）所示。若 B、C 的距離大於 4 公里，則 B、C 的距離約為多少公里？",
       "options": [
-        "5\n                                                                             7 km",
-        "4.75                                              A\n                                                                       B",
+        "5",
+        "4.75",
         "4.50",
-        "4.25                                                             8 km\n                                                                                      60°\n                                                               C\n                      圖 ( 五 )"
+        "4.25"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -12229,13 +12240,24 @@
         "figure_or_table_recheck_pdf",
         "single_question_crop_not_yet_generated"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "A",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "探勘人員為確認一個新的優良漁場C 與港口B 的距離，從港口A 直線航行8 公里到漁場\n  C，此時在C 點經由儀器測定角度得知∠ACB 60°，且港口A 與港口B 相距7 公里，如圖\n     ( 五 ) 所示。若B、C 的距離大於4 公里，則B、C 的距離約為多少公里？",
+      "legacyUnverifiedOptions": [
+        "5\n                                                                             7 km",
+        "4.75                                              A\n                                                                       B",
+        "4.50",
+        "4.25                                                             8 km\n                                                                                      60°\n                                                               C\n                      圖 ( 五 )"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-21-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
@@ -12246,12 +12268,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 22,
       "legacySubject": "數學 B",
-      "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，\n\n  由左而右依序展現在螢幕上，且每一張卡片只會顯示「有ū」或「無bô」。為了讓玩家\n  都有獎勵，抽出的五張卡片中至少有一張會顯示「有ū」，圖 ( 六 ) 僅為其中一種可能。\n\n  試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+      "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，由左而右依序展現在螢幕上，且每一張卡片只會顯示「有 ū」或「無 bô」。為了讓玩家都有獎勵，抽出的五張卡片中至少有一張會顯示「有 ū」，圖（六）僅為其中一種可能。試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
       "options": [
-        "32\n                         無 無 無 無 有",
-        "31\n                                               bô  bô  bô  bô  ū",
-        "16                        圖 ( 六 )",
-        "5\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                115 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考"
+        "32",
+        "31",
+        "16",
+        "5"
       ],
       "answer": "B",
       "acceptedAnswers": [
@@ -12348,13 +12370,24 @@
         "single_question_crop_not_yet_generated",
         "last_question_on_page_check_footer_and_continuation"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "B",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，\n\n  由左而右依序展現在螢幕上，且每一張卡片只會顯示「有ū」或「無bô」。為了讓玩家\n  都有獎勵，抽出的五張卡片中至少有一張會顯示「有ū」，圖 ( 六 ) 僅為其中一種可能。\n\n  試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+      "legacyUnverifiedOptions": [
+        "32\n                         無 無 無 無 有",
+        "31\n                                               bô  bô  bô  bô  ū",
+        "16                        圖 ( 六 )",
+        "5\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                115 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-22-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
@@ -12365,7 +12398,7 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 23,
       "legacySubject": "數學 B",
-      "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表 ( 二 )。已知有兩名旅客預計結伴報名同\n  一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求x？\n\n               原價            優惠\n\n      行程Ⅰ 每位收費x 元      兩人同行，其中一人減免3000 元\n\n  表 ( 二 ) 行程Ⅱ 每位收費 ( x + 2000 ) 元  兩人同行，其中一人打八折",
+      "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
       "options": [
         "32000",
         "33000",
@@ -12466,13 +12499,43 @@
         "figure_or_table_recheck_pdf",
         "single_question_crop_not_yet_generated"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "B",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "某旅行社推出兩種旅遊行程，其費用與優惠如表 ( 二 )。已知有兩名旅客預計結伴報名同\n  一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求x？\n\n               原價            優惠\n\n      行程Ⅰ 每位收費x 元      兩人同行，其中一人減免3000 元\n\n  表 ( 二 ) 行程Ⅱ 每位收費 ( x + 2000 ) 元  兩人同行，其中一人打八折",
+      "legacyUnverifiedOptions": [
+        "32000",
+        "33000",
+        "34000",
+        "35000"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "originalSourceTableCandidate": {
+        "heading": [
+          "行程",
+          "原價",
+          "優惠"
+        ],
+        "rows": [
+          [
+            "行程Ⅰ",
+            "每位收費 x 元",
+            "兩人同行，其中一人減免 3000 元"
+          ],
+          [
+            "行程Ⅱ",
+            "每位收費 (x＋2000) 元",
+            "兩人同行，其中一人打八折"
+          ]
+        ]
+      },
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
@@ -12483,12 +12546,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 24,
       "legacySubject": "數學 B",
-      "question": "小仲跟阿慈投資一筆資金，以年利率r % 複利計算，並想瞭解本利和達到三倍本金需要\n                                                110\n 幾年。小仲提問人工智慧得到快速估算值 A   ，阿慈用數學公式算出精確值\n                                                                r\n            log10 3   B        。若r8，且將A 以無條件進位至整數C，B 以無條件進位至整數D，\n                    r  \n        log10  1      \n                  100 \n\n  則下列何者正確？",
+      "question": "小仲跟阿慈投資一筆資金，以年利率 r% 複利計算，並想瞭解本利和達到三倍本金需要幾年。小仲提問人工智慧得到快速估算值 A＝110/r，阿慈用數學公式算出精確值 B＝log₁₀(3)／log₁₀(1＋r/100)。若 r＝8，且將 A 以無條件進位至整數 C，B 以無條件進位至整數 D，則下列何者正確？",
       "options": [
-        "D = C – 1",
-        "D = C",
-        "D = C+1",
-        "D = C+2"
+        "D＝C－1",
+        "D＝C",
+        "D＝C＋1",
+        "D＝C＋2"
       ],
       "answer": "C",
       "acceptedAnswers": [
@@ -12583,13 +12646,24 @@
       "issues": [
         "single_question_crop_not_yet_generated"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "C",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "小仲跟阿慈投資一筆資金，以年利率r % 複利計算，並想瞭解本利和達到三倍本金需要\n                                                110\n 幾年。小仲提問人工智慧得到快速估算值 A   ，阿慈用數學公式算出精確值\n                                                                r\n            log10 3   B        。若r8，且將A 以無條件進位至整數C，B 以無條件進位至整數D，\n                    r  \n        log10  1      \n                  100 \n\n  則下列何者正確？",
+      "legacyUnverifiedOptions": [
+        "D = C – 1",
+        "D = C",
+        "D = C+1",
+        "D = C+2"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-24-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
@@ -12600,12 +12674,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 25,
       "legacySubject": "數學 B",
-      "question": "小晏想在坐標平面中創作一個卡通人物，如圖 ( 七 ) 所示。已知A、B、P 為圖 ( 七 ) 中的\n\n  三點，直線L 通過A、B 兩點，點P 的坐標為 ( h , 7 )，點P 到直線L 的距離為  2 。若小晏\n  要畫出以點P 為圓心，並與直線L 相切的圓，且此圓的方程式為 x 2  8 x  ( y  7) 2  a ，則\n   h + a？",
+      "question": "小晏想在坐標平面中創作一個卡通人物，如圖（七）所示。已知 A、B、P 為圖（七）中的三點，直線 L 通過 A、B 兩點，點 P 的坐標為 (h,7)，點 P 到直線 L 的距離為 √2。若小晏要畫出以點 P 為圓心，並與直線 L 相切的圓，且此圓的方程式為 x²－8x＋(y－7)²＝a，則 h＋a＝？",
       "options": [
-        "– 59",
-        "– 16",
-        "– 10",
-        "10\n\n                        圖 ( 七 )\n\n\n\n\n          【以下空白】\n\n\n\n\n-8-"
+        "－59",
+        "－16",
+        "－10",
+        "10"
       ],
       "answer": "C",
       "acceptedAnswers": [
@@ -12703,13 +12777,24 @@
         "long_gap_after_D_clipped_candidate",
         "last_question_on_page_check_footer_and_continuation"
       ],
-      "reviewStatus": "needs_review",
+      "reviewStatus": "source_text_image_corrected_pending_independent_admission",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "C",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "legacyUnverifiedQuestion": "小晏想在坐標平面中創作一個卡通人物，如圖 ( 七 ) 所示。已知A、B、P 為圖 ( 七 ) 中的\n\n  三點，直線L 通過A、B 兩點，點P 的坐標為 ( h , 7 )，點P 到直線L 的距離為  2 。若小晏\n  要畫出以點P 為圓心，並與直線L 相切的圓，且此圓的方程式為 x 2  8 x  ( y  7) 2  a ，則\n   h + a？",
+      "legacyUnverifiedOptions": [
+        "– 59",
+        "– 16",
+        "– 10",
+        "10\n\n                        圖 ( 七 )\n\n\n\n\n          【以下空白】\n\n\n\n\n-8-"
+      ],
+      "originalWebpTextCorrectionCandidate": "sudu/data/processed/115/review-evidence/115-00-MB-25-image-transcription-correction-20261024.json",
+      "sourceFigureRequired": true,
+      "formalTextApproval": false,
+      "studentReleaseApproved": false
     },
     {
       "schemaVersion": 1,
