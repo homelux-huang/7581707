@@ -40,6 +40,7 @@ jobs:
       - name: Start real latest pinned main V4 and isolated Playwright
         run: |
           set -eu
+          python -m pip install -q pillow
           (cd current-main && SUDU_BUILD_SHA=$(git rev-parse HEAD) python scripts/build.py)
           npm install --prefix draft --no-save playwright@1.51.1
           (cd draft && npx playwright install --only-shell chromium)
