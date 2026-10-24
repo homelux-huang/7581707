@@ -1370,7 +1370,8 @@
       "integrationReady": false,
       "sharedMaterialIds": [],
       "issues": [
-        "LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA"
+        "LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA",
+        "V1_MIXED_QUESTION_REPLACED_BY_VALIDATED_V4"
       ],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-35.webp",
@@ -1385,7 +1386,7 @@
         "answerPdfSha256": "ca4adaa741efa0344c1bcd2eb6c8fee5567d4f4f2c7c7dafbc8123f30b1ef77e"
       },
       "ocrStatus": "PASS_REVIEWED_ORIGINAL_PAGE_IMAGE",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review",
       "legacyUnverifiedQuestion": "依據上文，下列「」內的解釋，何者正確？",
