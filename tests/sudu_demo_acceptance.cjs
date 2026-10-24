@@ -14,7 +14,7 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
  page.on('pageerror',e=>errors.push(e.message));
  // These mutations exist only in this fresh automated browser context.
  const choose=async(subject,id)=>{
-  await page.evaluate(({subject,id})=>{currentSubject=subject;currentIndex=list().findIndex(q=>q.id===id);showStudy();renderAll();closeQuestionNav();window.scrollTo(0,0);},{subject,id});
+  await page.evaluate(({subject,id})=>{currentSubject=subject;currentIndex=list().findIndex(q=>q.id===id);showStudy();renderAll();closeQuestionNav();window.scrollTo({top:0,behavior:'instant'});},{subject,id});
  };
  const settle=()=>page.waitForTimeout(400);
  const noOverflow=async(label)=>{const layout=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>innerWidth+1&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(layout.scrollWidth<=layout.width+1,label+' '+JSON.stringify(layout));};
@@ -52,10 +52,41 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
    const dimensions=await img.evaluate(i=>({width:i.naturalWidth,height:i.naturalHeight,src:i.getAttribute('src')}));
    if(q.subject!=='會計學')assert(dimensions.src.startsWith('questions/115/'));
    report.images.push({subject:q.subject,question:q.id,width:dimensions.width,height:dimensions.height,decoded:true});
-   await page.locator('.opt').first().click();await settle();
+   // On the historical economics 28 stall, sample geometry *during* Playwright
+   // actionability checks (post-timeout geometry alone can look stationary).
+   const trace=(q.subject==='經濟學'&&q.id===28);
+   if(trace)await page.evaluate(()=>{
+    window.__suduClickTrace=[];
+    window.__suduClickTraceTimer=setInterval(()=>{
+     const e=document.querySelector('.opt'),r=e?.getBoundingClientRect();
+     window.__suduClickTrace.push({t:Math.round(performance.now()),y:scrollY,
+      top:r?.top,left:r?.left,w:r?.width,h:r?.height,
+      scroller:document.scrollingElement?.scrollTop,
+      body:document.body.className,hover:e?.matches(':hover'),
+      transform:e?getComputedStyle(e).transform:null});
+    },80);
+   });
+   try{await page.locator('.opt').first().click();}
+   catch(clickError){
+    if(trace)report.duringClick=await page.evaluate(()=>window.__suduClickTrace);
+    throw clickError;
+   }finally{
+    if(trace)await page.evaluate(()=>clearInterval(window.__suduClickTraceTimer));
+   }
+   await settle();
    assert.equal(await page.locator('.option-detail').count(),4);
    assert((await page.locator('#guideCard').innerText()).includes('頁數：待核對'));
   }
+  // A fast subject/question switch must cancel an earlier answer's delayed jump.
+  // Use real browser interaction and preserve the normal (non-forced) click QA.
+  await choose('經濟學',27);
+  await page.locator('.opt').first().click();
+  await choose('經濟學',28);
+  const beforeLateJump=await page.evaluate(()=>window.scrollY);
+  await page.waitForTimeout(470);
+  const afterLateJump=await page.evaluate(()=>window.scrollY);
+  assert(Math.abs(afterLateJump-beforeLateJump)<=2,
+    'previous question answer-jump moved the newly selected question: '+JSON.stringify({beforeLateJump,afterLateJump}));
     // Existing guide content wins, while unique source notes remain in the same section.
   await choose('國文',1);
   await page.locator('.opt').first().click();await settle();
@@ -193,6 +224,31 @@ const expected={'國文':[1,2,3,7,9],'英文':[1,2,3,4,5],'數學 B':[7,9,10,11,
   assert.deepEqual(errors,[]);report.status='passed';report.generatedCount=30;report.ocrPerformed=false;report.errors=errors;
   fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));
   console.log('PASS: 35 images; 30 hashes; 5 English questions x 4 surfaces; 35 questions x 8 viewports x 2 themes; touch and graded hover');
- }catch(e){report.status='failed';report.error=e.stack;fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));await page.screenshot({path:path.join(output,'demo-acceptance-failure.png')});throw e;}
+ }catch(e){
+  report.status='failed';report.error=e.stack;
+  // Observe genuine click geometry and CSS for a full second on failure.
+  // Do not force clicks, disable assertions, or turn failures into PASS.
+  report.clickGeometry=[];
+  try{
+   for(let sample=0;sample<14;sample++){
+    report.clickGeometry.push(await page.evaluate(()=>{
+     const btn=document.querySelector('.opt'),answer=document.querySelector('#answerCard');
+     const rect=btn?.getBoundingClientRect(),ar=answer?.getBoundingClientRect();
+     const cs=btn?getComputedStyle(btn):null;
+     return {time:Math.round(performance.now()),scrollY:window.scrollY,
+      reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,
+      scrollBehavior:getComputedStyle(document.documentElement).scrollBehavior,
+      option:rect?{top:rect.top,left:rect.left,width:rect.width,height:rect.height}:null,
+      answerTop:ar?.top, transform:cs?.transform,animation:cs?.animationName,
+      transition:cs?.transitionDuration,htmlHeight:document.documentElement.scrollHeight,
+      activeAnimations:document.getAnimations().slice(0,8).map(a=>({playState:a.playState,
+       animationName:a.animationName||null}))};
+    }));
+    await page.waitForTimeout(65);
+   }
+  }catch(debugError){report.geometryError=String(debugError);}
+  fs.writeFileSync(path.join(output,'sudu-demo-acceptance.json'),JSON.stringify(report,null,2));
+  await page.screenshot({path:path.join(output,'demo-acceptance-failure.png')});throw e;
+ }
  finally{await browser.close();}
 })().catch(e=>{console.error(e.stack);process.exit(1)});

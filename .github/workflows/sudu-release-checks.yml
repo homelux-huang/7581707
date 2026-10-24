@@ -40,6 +40,7 @@ jobs:
           for file in sudu/*.js; do node --check "$file"; done
           node --test tests/share.test.cjs
           node tests/sudu_scoring_test.cjs
+          node tests/sudu_score_feedback_test.cjs
           node tests/sudu_dashboard_test.cjs
           node tests/sudu_countdown_test.cjs
           python -m unittest discover -s backend/tests -v

@@ -1,0 +1,123 @@
+/* 7581707 V4 A | Celebratory score UI. The V4 theme variables remain authoritative. */
+#scoreHud[hidden],#scoreSummary[hidden]{display:none!important}
+.score-hud{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:11px;
+  padding:12px 15px;margin:0 0 12px;border-radius:17px;max-width:100%;
+  min-width:0;border:2px solid color-mix(in srgb,var(--blue) 45%,var(--line));
+  background:color-mix(in srgb,var(--blue-soft) 80%,var(--card));
+  color:var(--text);box-shadow:0 4px 14px rgba(25,42,110,.08)
+}
+.score-hud>div{min-width:0}
+.score-eyebrow{display:block;font-size:12px;font-weight:850;line-height:1.6;color:var(--text)}
+.score-value-row{display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+#scoreEarned{font-size:clamp(29px,3.5vw,38px);font-weight:950;
+  font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.03em}
+.score-divider{font-size:13px;color:var(--muted);font-weight:800}
+.score-percent{margin-left:auto;font-size:16px;font-weight:950;color:var(--green)}
+.score-hud-count{display:flex;justify-content:space-between;gap:8px;
+  font-size:12px;font-weight:850;margin-bottom:7px;flex-wrap:wrap}
+#scoreStatus{background:var(--card);border:1px solid var(--line);padding:3px 7px;
+  border-radius:999px;color:var(--text);white-space:nowrap}
+.score-meter{height:9px;background:color-mix(in srgb,var(--blue) 18%,var(--card));
+  border-radius:99px;overflow:hidden}
+#scoreMeterFill{display:block;height:100%;background:var(--green);width:0;
+  max-width:100%;border-radius:inherit;transition:width .3s ease}
+.score-hud-right small{display:block;font-weight:740;font-size:11px;
+  margin-top:7px;line-height:1.5;color:var(--muted)}
+.score-hud.is-complete{border-color:color-mix(in srgb,var(--green) 65%,var(--line))}
+.score-summary{
+  margin:12px 0 14px;padding:16px;border-radius:20px;
+  background:color-mix(in srgb,var(--green) 9%,var(--card));
+  border:2px solid color-mix(in srgb,var(--green) 55%,var(--line));
+  max-width:100%;min-width:0;color:var(--text);overflow-wrap:break-word
+}
+.score-summary-head{display:flex;gap:12px;align-items:center;margin-bottom:13px}
+.score-summary-head>span{font-size:30px}
+.score-summary-head div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.score-summary-head strong{font-size:17px;line-height:1.4}
+.score-summary-head div span{font-size:12px;color:var(--muted);font-weight:700}
+.score-summary-grid{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(2,minmax(0,1fr));gap:8px}
+.score-summary-grid>div{display:flex;flex-direction:column;gap:5px;
+  border:1px solid var(--line);border-radius:13px;min-width:0;
+  background:var(--card);padding:10px}
+.score-summary-grid span{font-size:11px;color:var(--muted);font-weight:800}
+.score-summary-grid strong{font-size:clamp(14px,2vw,20px);font-variant-numeric:tabular-nums}
+.score-summary-grid .score-summary-major strong{color:var(--green)}
+.score-summary p{font-size:12px;line-height:1.6;font-weight:650;
+  color:var(--muted);margin:12px 0 0}
+.score-summary.score-finish{animation:score-summary-in .6s cubic-bezier(.2,1.25,.4,1) both}
+@keyframes score-summary-in{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* The overlay never blocks the answer buttons or reading/navigation shortcuts. */
+.score-toast{
+  position:fixed;z-index:100000;top:47%;left:50%;pointer-events:none;
+  width:min(calc(100vw - 38px),360px);min-width:0;padding:24px 16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;text-align:center;visibility:hidden;opacity:0;
+  transform:translate(-50%,-44%) scale(.72);
+  border:3px solid var(--green);border-radius:24px;
+  background:color-mix(in srgb,var(--correct-bg) 92%,var(--card));
+  color:var(--correct-text);box-shadow:0 16px 65px rgba(0,0,0,.3);
+}
+.score-toast.is-visible{visibility:visible;opacity:1;
+  animation:score-pop .68s cubic-bezier(.2,1.45,.27,1) both}
+.score-toast.score-lose{border-color:var(--red);background:var(--red-soft);color:var(--text)}
+.score-toast.score-pending,.score-toast.score-repeat{border-color:var(--blue);
+  background:var(--card);color:var(--text)}
+.score-pop-title{font-size:clamp(23px,5vw,31px);font-weight:950;line-height:1.3}
+.score-pop-delta{font-size:clamp(30px,6vw,44px);font-weight:1000;
+  font-variant-numeric:tabular-nums;line-height:1.2;color:var(--green)}
+.score-toast.score-lose .score-pop-delta{color:var(--red)}
+.score-toast.score-pending .score-pop-delta,.score-toast.score-repeat .score-pop-delta{font-size:21px;color:var(--text)}
+.score-pop-total{font-size:13px;line-height:1.6;font-weight:850;max-width:100%}
+.score-stars{display:none;position:absolute;inset:0;overflow:visible;pointer-events:none}
+.score-win .score-stars{display:block}
+.score-stars i{position:absolute;top:38%;left:48%;font-style:normal;
+  font-size:24px;opacity:0;color:#efb11a}
+.score-stars i:nth-child(1){--sx:-135px;--sy:-85px;--d:0ms;color:#e7a60a}
+.score-stars i:nth-child(2){--sx:115px;--sy:-90px;--d:40ms;color:#60a5fa}
+.score-stars i:nth-child(3){--sx:-145px;--sy:25px;--d:80ms;color:#d57af5}
+.score-stars i:nth-child(4){--sx:140px;--sy:40px;--d:60ms;color:#22c55e}
+.score-stars i:nth-child(5){--sx:-55px;--sy:-140px;--d:120ms;color:#e879f9}
+.score-stars i:nth-child(6){--sx:65px;--sy:-145px;--d:70ms;color:#fb923c}
+.score-stars i:nth-child(7){--sx:-65px;--sy:120px;--d:100ms;color:#38bdf8}
+.score-stars i:nth-child(8){--sx:80px;--sy:125px;--d:15ms;color:#facc15}
+.score-win.is-visible .score-stars i{animation:score-confetti .9s ease-out var(--d) both}
+@keyframes score-confetti{0%{opacity:1;transform:translate(0,0) rotate(0)}
+  68%{opacity:1}100%{opacity:0;transform:translate(var(--sx),var(--sy)) rotate(340deg)}}
+@keyframes score-pop{0%{opacity:0;transform:translate(-50%,-38%) scale(.64)}
+  61%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}
+  100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+/* Shake the whole answering canvas, not the fixed nav or browser viewport. */
+#studyView.score-shake #questionCard,#studyView.score-shake #answerCard{
+  animation:score-answer-shake .43s both}
+@keyframes score-answer-shake{
+  0%,100%{transform:translateX(0)}
+  14%{transform:translateX(-9px)}28%{transform:translateX(8px)}
+  42%{transform:translateX(-7px)}58%{transform:translateX(6px)}
+  74%{transform:translateX(-4px)}88%{transform:translateX(2px)}
+}
+@media(max-width:600px){
+  .score-hud{padding:10px 12px;gap:7px;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+  .score-value-row{gap:4px}
+  #scoreEarned{font-size:28px}
+  .score-percent{font-size:13px}
+  .score-hud-count{font-size:11px;gap:4px}
+  .score-hud-right small{font-size:10px}
+  .score-summary{padding:13px}
+  .score-summary-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .score-summary-grid>.score-summary-major{grid-column:1/-1}
+  .score-toast{top:44%;padding:21px 12px}
+}
+@media(max-width:360px){
+ .score-hud{grid-template-columns:1fr}
+ .score-hud-right{width:100%}
+ .score-summary-grid strong{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  #studyView.score-shake #questionCard,#studyView.score-shake #answerCard,
+  .score-toast.is-visible,.score-win.is-visible .score-stars i,
+  .score-summary.score-finish{animation:none!important;transform:none!important}
+  .score-toast.is-visible{transform:translate(-50%,-50%)!important;opacity:1}
+  .score-stars{display:none!important}
+  #scoreMeterFill{transition:none}
+}
