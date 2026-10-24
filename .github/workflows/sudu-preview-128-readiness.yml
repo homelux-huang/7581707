@@ -38,5 +38,7 @@ jobs:
         run: python scripts/audit_preview_128_teaching_candidates.py
       - name: Check all 25 Math B partial QA evidence and 7 reference calculations
         run: python -m unittest discover -s tests -p 'test_preview_128_math_b_partial.py' -v
+      - name: Oct 24 self-reviewed content regression, no release
+        run: python -m unittest discover -s tests -p 'test_preview_128_oct24_content.py' -v
       - name: Check teaching steps JavaScript syntax
         run: node --check sudu/teaching-drafts/preview-128-20261023/solution-steps-128.js

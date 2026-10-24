@@ -80,9 +80,9 @@
       },
       "B": {
         "isCorrect": false,
-        "teacher": "100000與正確102000差2000，可能忘記新殘值2000。",
-        "elementary": "還有殘值2000不能忘。",
-        "reason": "100000與正確102000差2000，可能忘記新殘值2000。"
+        "teacher": "**100,000元**比新估計折舊法計算的期末帳面**102,000元**少2,000元。應先算可折舊基礎(302,000−2,000)，再用剩餘2年之權數2/3，X3折舊是200,000元。",
+        "elementary": "先保留殘值2,000元，再依2:1比例計提折舊，不能少掉這筆。",
+        "reason": "**100,000元**比新估計折舊法計算的期末帳面**102,000元**少2,000元。應先算可折舊基礎(302,000−2,000)，再用剩餘2年之權數2/3，X3折舊是200,000元。"
       },
       "C": {
         "isCorrect": true,
@@ -92,9 +92,9 @@
       },
       "D": {
         "isCorrect": false,
-        "teacher": "D的151,000與正確102,000差49,000。151,000可能來自把新年度開始時的帳面302,000直接平分兩份，忽略殘值及新的年數合計法；本題正確X3折舊為200,000，帳面應餘102,000。",
-        "elementary": "不能把剩餘帳面金額直接切一半；這題改用新的折舊方法，第一年要多分一些。",
-        "reason": "D的151,000與正確102,000差49,000。151,000可能來自把新年度開始時的帳面302,000直接平分兩份，忽略殘值及新的年數合計法；本題正確X3折舊為200,000，帳面應餘102,000。"
+        "teacher": "**151,000元＝302,000÷2**，是直接平分期初帳面金額的數字，未使用題目指定之**新年數合計法**。正確X3期末是302,000−(302,000−2,000)×2/3＝102,000元；不能把151,000當作本題折舊結果。",
+        "elementary": "把302,000直接除兩半得到151,000，但這題第一年要分2份，第二年才分1份。",
+        "reason": "**151,000元＝302,000÷2**，是直接平分期初帳面金額的數字，未使用題目指定之**新年數合計法**。正確X3期末是302,000−(302,000−2,000)×2/3＝102,000元；不能把151,000當作本題折舊結果。"
       }
     },
     "accounting": {
@@ -295,6 +295,21 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidenceFile": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md"
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "22e743c48472915b7d524d3263a88e8069f086cc086082248ce0140999053ceb",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

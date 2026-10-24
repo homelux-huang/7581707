@@ -47,11 +47,11 @@
     "officialFinalStatus": "PENDING_DIRECT_OFFICIAL_ISSUE_CONFIRMATION"
   },
   "teaching": {
-    "teacherSummary": "**區塊鏈**核心是**分散式帳本、雜湊鏈結、數位簽章、共識驗證**。①交易確認後具高度抗竄改性，通常視為對；③誤以中央金資中心辦所有交易；④誤以資料只存交易雙方，均不對。**②『資料加解密』是關鍵疑點**：雜湊是不可逆單向摘要，不是可解密的密文；簽章的驗證也不等於交易資料加解密。傳統課本若把這些統稱『加密技術』，出題可能認A，但專業區分必須保留，故本題 BLOCKED 待查。",
+    "teacherSummary": "**115年官方答案 A（①②）**。①區塊寫入並經驗證後通常難以單方篡改；③錯把比特幣網路當成依賴**金資中心**的跨行系統；④錯把分散式共同記帳當成只記在交易雙方私人帳本。真正爭議是②原句『為資料**加解密**』：**雜湊**是不可逆摘要、**數位簽章**是授權驗證、**加解密**是可逆的資料保密程序，不能視為同一技術動作。官方A保留，但教材術語待查且不得教成每筆比特幣交易必須加密後解密。",
     "elementarySummary": "區塊鏈像很多人都保存同一本記帳簿，想偷偷改其中一頁很難。確認身分會用特殊數學方法，但不表示每筆交易都先上鎖、再把鎖打開才算完成；『用密碼學』不一定等於『把資料加密又解密』。",
     "memory": "**難以竄改、分散式帳本、雜湊與簽章**；『加解密』≠所有密碼學操作。",
-    "concept": "hash不可逆；digital signature用於簽署和驗證；encryption/decryption通常是保密通訊的可逆操作；區塊鏈不必依賴中央金融交換中心。",
-    "extension": "反向題：若有人取得區塊交易的SHA-256摘要，能把摘要直接『解密』還原原始交易內容嗎？為何簽章驗證和解密在數學目的上不同？",
+    "concept": "**雜湊(hash)**不可逆，**數位簽章**做簽署與驗證，**加解密(encryption/decryption)**通常用於資訊保密；比特幣典型記帳靠**分散式帳本與共識**，不是中央金資中心或僅買賣雙方私人帳本。",
+    "extension": "相反意思：將②另寫成『使用雜湊與數位簽章**協助資料驗證**』較精確，但**原題不是這樣寫**，不能用改寫的句子替原敘述背書。",
     "source": {
       "originalExam": "115-09-1-33",
       "originalImagePinnedSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
@@ -106,45 +106,45 @@
       "answerCandidate": "A",
       "aiAnswer": "UNDETERMINED",
       "needsReview": true,
-      "reviewReason": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
+      "reviewReason": "官方A已確認，但原句②將密碼學驗證描述成資料加解密，缺當屆教材術語證據，BLOCKED保留。",
       "hasSteps": true,
       "hasExamCalculation": false,
       "title": "解題步驟",
       "steps": [
         {
-          "title": "整理題意",
-          "content": "①驗證後難以竄改；②加密技術對資料加解密；③透過金資中心跨行金融交易；④只保存在買賣雙方自己的帳本",
-          "why": "避免只看選項猜答案。",
+          "title": "讀原題四句",
+          "content": "①寫入後不易竄改；②驗證時對資料加解密；③經金資中心跨行；④只存買賣雙方自己的帳本。",
+          "why": "保留原圖②的『資料加解密』，不得暗改成『簽章驗證』。",
           "kind": "given"
         },
         {
-          "title": "確定適用觀念",
-          "content": "hash不可逆；digital signature用於簽署和驗證；encryption/decryption通常是保密通訊的可逆操作；區塊鏈不必依賴中央金融交換中心。",
-          "why": "由課程定義判斷，而非憑直覺。",
-          "kind": "concept"
-        },
-        {
-          "title": "依題目推論（1）",
-          "content": "①區塊鏈經驗證後的記錄有抗竄改性（實務上非數學上絕對不可能改）；",
-          "why": "區塊鏈像很多人都保存同一本記帳簿，想偷偷改其中一頁很難。確認身分會用特殊數學方法，但不表示每筆交易都先上鎖、再把鎖打開才算完成；『用密碼學』不一定等於『把資料加密又解密』。",
+          "title": "①判斷",
+          "content": "以雜湊鏈結、共識機制形成難以單方竄改的記錄，①可成立。",
+          "why": "難竄改不是宣稱絕對永不能修改。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（2）",
-          "content": "③所稱金資中心作為所有區塊鏈交易中央節點不符典型公有鏈去中心化；",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "②技術區分",
+          "content": "**hash雜湊是不可逆摘要；數位簽章驗證權限；加密與解密是可逆保密處理**。一般比特幣交易驗證不等於將所有資料加密又解密。",
+          "why": "官方選A含②，但②字面有教學爭議，尚無實際採用教材定義。",
+          "kind": "warning"
+        },
+        {
+          "title": "③排除",
+          "content": "比特幣的分散節點驗證並非透過單一臺灣**金資中心**進行金融跨行交易。",
+          "why": "傳統跨行清算與去中心化網路不是相同制度。",
           "kind": "reasoning"
         },
         {
-          "title": "依題目推論（3）",
-          "content": "④只寫雙方自己的帳本與分散式共識記帳相反。 ②若廣義把密碼學工具稱作『加密技術』有課本簡化空間，但比特幣核心運用雜湊與數位簽章，交易內容並不必然經『加密後解密』才驗證，語義不嚴謹。 候選A含①②，待官方與教材確認，不可把②寫成技術必然。",
-          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "title": "④排除",
+          "content": "交易記錄通常由分散式網路的多節點維護，並非只存買賣雙方私人的帳本。",
+          "why": "『僅兩人記帳』與分散式帳本概念相反。",
           "kind": "reasoning"
         },
         {
-          "title": "對照候選及待查疑點",
-          "content": "②將『密碼學雜湊、數位簽章』泛稱為『資料加解密』，技術上並不等同；候選A保留並標示 BLOCKED，待官方更正及教材定義核實。",
-          "why": "本題待官方答案與教材獨立查核。",
+          "title": "選項結論",
+          "content": "官方為**A＝①②**；B含錯③、C含錯④、D含錯③④。②的原文技術問題仍需教材獨立審核；**本題隔離**。",
+          "why": "排錯選項不能當成已驗證②精確無誤的證據。",
           "kind": "answer"
         }
       ],
@@ -267,6 +267,21 @@
       "studentReleaseApproved": false,
       "independentTeachingQA": "PENDING",
       "source": "official-final-evidence-20261023.json"
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "6c8442d1e9755a877de7e479d0f3cf26af88f5701003602274e5f7197bd7dd31",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

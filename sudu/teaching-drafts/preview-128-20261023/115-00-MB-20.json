@@ -50,7 +50,7 @@
     "teacherSummary": "已知兩角60°、75°，第三角 **∠C=180−60−75=45°**。正弦定理 **AC/sin75°=AB/sin45°**，得到 **AC=100×sin75°/sin45°**。因 **sin75°=(√6+√2)/4**、**sin45°=√2/2**，比值化成 (√3+1)/2，故 **AC=50(√3+1)公尺**，選A。",
     "elementarySummary": "先知道三角形三個角加起來180度，所以最後一角是45度。接著用正弦定理，把100公尺的那條邊當標準，就能求出草人到工寮的距離，約136.6公尺。",
     "memory": "**C=45°；AC=100 sin75°/sin45°=50(√3+1)公尺**。",
-    "concept": "正弦定理：**邊長/對角正弦值**對三條邊一致。要確認 AC 對的是**B角75°**，AB對的是**C角45°**，別放反。",
+    "concept": "正弦定理：**邊長/對角正弦值**對三條邊一致。要確認 AC 對的是**B角75°**，AB對的是**C角45°**，別放反。 **原始WebP為唯一題目準據：AB＝100公尺，∠CAB＝60°、∠CBA＝75°，選項含√3**；既有候選OCR把圖中文字與根號混入選項，在人工文字QA之前不得直接發布文字。",
     "extension": "反向思考：如果∠A與∠B互換成75°和60°，C仍45°，但 AC 對的B角變60°，新的AC=100 sin60°/sin45°=50√6公尺，不再是A。",
     "source": {
       "originalExam": "115-00-MB-20",
@@ -328,6 +328,21 @@
       "studentReleaseApproved": false,
       "deploy": false,
       "report": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md"
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

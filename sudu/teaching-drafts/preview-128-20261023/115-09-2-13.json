@@ -52,7 +52,7 @@
     "teacherSummary": "取得日2月1日，九個月後**11月1日到期**。貼現息=到期值50000−實收49000=**1000元**。公式貼現息=到期值×年貼現率×貼現期，故貼現期=1000/(50000×6%)=1/3年=**4個月**。由11月1日倒推四個月，貼現日**7月1日**，選D。",
     "elementarySummary": "票到11月1日才拿得到五萬元，但銀行先給四萬九，少掉的一千是貼現費。算出提早四個月領，就是7月1日。",
     "memory": "**11/1到期，貼現息1000，貼現期4個月→7/1。**",
-    "concept": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。",
+    "concept": "不附息票據到期值=面額；貼現息=到期值×年貼現率×期間。 **反算貼現期間使用票據到期值50,000元，而不是銀行實收49,000元**；九個月是簽發至到期，四個月才是貼現日至到期。",
     "extension": "反向思考：如果貼現息增為2000元而其他不變，貼現期將變幾個月？",
     "source": {
       "originalExam": "115-09-2-13",
@@ -87,9 +87,9 @@
       },
       "C": {
         "isCorrect": false,
-        "teacher": "6月15日距到期超過四個月，貼現息多於1000。",
-        "elementary": "比四個月早得更多。",
-        "reason": "6月15日距到期超過四個月，貼現息多於1000。"
+        "teacher": "6月15日距11月1日超過四個月；貼現息會高於以四個月算出的**1,000元**，不符合題目銀行實收49,000元的條件。",
+        "elementary": "6月15日太早去領，還沒到期的時間更長，扣的貼現息會比一千元多。",
+        "reason": "6月15日距11月1日超過四個月；貼現息會高於以四個月算出的**1,000元**，不符合題目銀行實收49,000元的條件。"
       },
       "D": {
         "isCorrect": true,
@@ -283,6 +283,21 @@
       "fullTeachingQA": "PENDING",
       "studentReleaseApproved": false,
       "evidenceFile": "ACCOUNTING_5_SOURCE_LINKED_NUMERIC_QA_20261023.md"
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

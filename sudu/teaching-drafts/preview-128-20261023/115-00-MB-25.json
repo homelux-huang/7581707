@@ -51,7 +51,7 @@
     "teacherSummary": "對圓方程配方：**x²−8x=(x−4)²−16**，所以 **(x−4)²+(y−7)²=a+16**。圓心是 **(4,7)**，因此 **h=4**。圓與直線 L 相切，半徑等於圓心到直線的距離 **√2**，故 **a+16=(√2)²=2 ⇒a=−14**。最後 **h+a=4−14=−10**，選C。",
     "elementarySummary": "把圓的算式整理，就知道圓心在(4,7)。它剛好碰到那條線，所以半徑是根號2。半徑平方是2，算出a是−14，加上圓心的x=4，就等於−10。",
     "memory": "**圓心(4,7)、r=√2、a+16=2→a=−14，h+a=−10**。",
-    "concept": "圓標準式 **(x−h)²+(y−k)²=r²**。圓與直線相切時，**圓心到直線的垂直距離就是半徑**。",
+    "concept": "圓標準式 **(x−h)²+(y−k)²=r²**。圓與直線相切時，**圓心到直線的垂直距離就是半徑**。 **原圖的P到L距離是√2，不是2**，相切半徑r＝√2，故r²＝2；既有OCR漏根號仍需隔離，原圖保持不變。",
     "extension": "反向思考：若圓心仍(4,7)，但距離直線變成3，則a+16=9 ⇒a=−7，h+a=−3。",
     "source": {
       "originalExam": "115-00-MB-25",
@@ -328,6 +328,21 @@
       "studentReleaseApproved": false,
       "deploy": false,
       "report": "MATH_B_20_25_LEGACY_TEXT_QUARANTINE_20261023.md"
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",

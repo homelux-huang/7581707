@@ -22,7 +22,7 @@
     "candidate": "D",
     "status": "MATCHES_CANDIDATE",
     "officialFinalCorrectionVerified": true,
-    "notice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+    "notice": "官方最終答案已有既存核實證據；本輪對原圖及A-D進行已知答案後自行複核，非首次盲解、第三方審查或完整教學驗收。",
     "blindReview": "SELF_IMAGE_REASONING_BEFORE_CANDIDATE_LOOKUP; NOT INDEPENDENT_THIRD_PARTY_REVIEW",
     "candidateProvenance": {
       "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
@@ -59,7 +59,7 @@
       "textbookVersion": "待核對",
       "textbookChapter": "待核對",
       "textbookPage": "待核對",
-      "officialIssueExplanation": "英文科試題或答案確認說明待回讀",
+      "officialIssueExplanation": "英文科官方最終答案及確認說明已有既存核實證據（official-final-evidence-20261023.json）；此輪未重下官方PDF，教學及UI仍待完整獨立QA。",
       "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
     },
     "highlightTerms": [
@@ -219,6 +219,26 @@
       "highlightSurfaceMatched": true,
       "fullTeachingApproval": false,
       "releaseApproved": false
+    },
+    "officialNoticeHistoricalRecheck20261024": {
+      "originalText": "英文科試題或答案確認說明待回讀",
+      "originalAnswerComparisonNotice": "先按原圖解答，再讀既有候選答案。候選記錄引用官方答案 PDF，但未重新回讀最終確認 PDF 及英文科疑義處理說明，故不得計入官方最終核實或完整驗收。",
+      "historicalFirstPassRetained": true
+    },
+    "originalImagePostAnswerSelfReview20261024": {
+      "result": "PARTIAL_SELF_CONTENT_REVIEW_NOT_FULL_INDEPENDENT_QA",
+      "reviewedAt": "2026-10-24",
+      "reviewer": "GPT-6 self-review after existing official answer",
+      "originalImageSha256": "0aaf917f21ae7dbd99ee088592350ee4cfa4096f4208e245f2a44f029e57db3d",
+      "originalImageActuallyDisplayed": true,
+      "originalWebpBinarySha256VerifiedAgainstPinned": true,
+      "officialSource": "official-final-evidence-20261023.json",
+      "newOfficialPdfDownloaded": false,
+      "noNewOcrOrCrop": true,
+      "fullTeachingQA": "PENDING",
+      "uiQA": "PENDING",
+      "releaseApproved": false,
+      "reference": "BATCH_10_PEDAGOGY_QA_20261024.md"
     }
   },
   "sourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
