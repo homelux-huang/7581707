@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "year": 115,
-  "generatedAt": "2026-10-23",
-  "status": "FOUR_115_MATH_B_STUDENT_QA_APPROVED",
-  "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key.",
+  "generatedAt": "2026-10-24",
+  "status": "FIVE_115_MATH_B_STUDENT_QA_APPROVED_PENDING_MAIN_SYNC",
+  "sourceNotice": "Additive verified reviews. Never change source WebP, original question or official candidate. Independent solving was performed BEFORE retrieving the original candidate key. MB05 added with distinct historic pre-key original solve, AI post-key teaching re-review, real source publisher-mapped main V4 8x2 Playwright CI, with no human claim.",
   "items": [
     {
       "year": 115,
@@ -96,14 +96,40 @@
         "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-09-teaching.json",
         "ui": "sudu/data/processed/115/review-evidence/115-00-MB-09-ui.json"
       }
+    },
+    {
+      "year": 115,
+      "questionId": "115-00-MB-05",
+      "status": "STUDENT_QA_APPROVED",
+      "questionBeforeReview": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+      "optionsBeforeReview": [
+        "(3/2, -5/2)",
+        "(3/2, -7/2)",
+        "(5/2, -5/2)",
+        "(5/2, -7/2)"
+      ],
+      "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "officialPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+      "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+      "originalAnswerCandidate": "B",
+      "evidence": {
+        "ocr": "sudu/data/processed/115/review-evidence/115-00-MB-05-ocr.json",
+        "official": "sudu/data/processed/115/review-evidence/115-00-MB-05-official.json",
+        "blind": "sudu/data/processed/115/review-evidence/115-00-MB-05-blind.json",
+        "teaching": "sudu/data/processed/115/review-evidence/115-00-MB-05-teaching.json",
+        "ui": "sudu/data/processed/115/review-evidence/115-00-MB-05-ui.json"
+      },
+      "admittedAfter": 40085323981,
+      "reviewNotes": "Post-official teaching checked separately; pre-official solve anchored to historic git commit. Source, teaching and actual main V4 test SHA checked."
     }
   ],
-  "approvalEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/39896725974",
+  "approvalEvidenceRun": "https://github.com/homelux-huang/7581707/actions/runs/40085323981",
   "approvedQuestionIds": [
     "115-00-MB-02",
     "115-00-MB-03",
     "115-00-MB-04",
-    "115-00-MB-09"
+    "115-00-MB-09",
+    "115-00-MB-05"
   ],
-  "approvedAt": "2026-10-23"
+  "approvedAt": "2026-10-24"
 }

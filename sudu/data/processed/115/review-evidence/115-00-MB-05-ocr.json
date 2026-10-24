@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI, second-pass source/image/teaching QA in separate session; not a human, post-official review, not a new blind solve",
+  "questionRevision": "3b0a4236f9298edd225b445592faee3b222c8ecfc1b62425278a0de576cc1df9",
+  "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "question": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+  "options": [
+    "(3/2, -5/2)",
+    "(3/2, -7/2)",
+    "(5/2, -5/2)",
+    "(5/2, -7/2)"
+  ],
+  "visualTextCompared": true,
+  "sourceType": "PINNED_SINGLE_QUESTION_OFFICIAL_WEBP",
+  "sourceWebpPath": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-05.webp",
+  "sourceComparisonDocument": "sudu/data/processed/115/review-evidence/115-00-MB-05-source-text-applied-20261024.json",
+  "originalOCRRetained": true,
+  "allFourOptionsAndFractionsVisuallyCompared": true,
+  "reviewersHuman": false,
+  "releaseGrantedByThisDocument": false
+}
