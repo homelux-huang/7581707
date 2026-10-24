@@ -1425,7 +1425,7 @@
         "answerPdfSha256": "ca4adaa741efa0344c1bcd2eb6c8fee5567d4f4f2c7c7dafbc8123f30b1ef77e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1465,7 +1465,7 @@
         "answerPdfSha256": "ca4adaa741efa0344c1bcd2eb6c8fee5567d4f4f2c7c7dafbc8123f30b1ef77e"
       },
       "ocrStatus": "PENDING_NEEDS_OCR",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -1509,7 +1509,7 @@
         "answerPdfSha256": "ca4adaa741efa0344c1bcd2eb6c8fee5567d4f4f2c7c7dafbc8123f30b1ef77e"
       },
       "ocrStatus": "REUSED_LEGACY_PDF_TEXT_OCR_NOT_REPEATED",
-      "imageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "imageQaStatus": "PASS",
       "officialAnswerQaStatus": "PENDING_FINAL_SOURCE_RECHECK",
       "reviewStatus": "needs_review"
     },
@@ -7978,7 +7978,7 @@
         550
       ],
       "generationVersion": "manual-source-pixel-candidate-v3-crosspage",
-      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "qaStatus": "PASS",
       "issues": [
         "PENDING_INDIVIDUAL_VISUAL_SOURCE_TO_CROP_COMPARISON",
         "PENDING_SHARED_PASSAGE_INDEPENDENT_QA"
@@ -7989,7 +7989,25 @@
         36,
         37,
         38
-      ]
+      ],
+      "visualReviewEvidence": {
+        "reference": "sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C36_38_SHARED_20261024.json",
+        "reviewedSha256": "caa1e05684a21bc72b968bc5881be788ddb4f192e9915cc7d7ffe1df30a3d93d",
+        "sourceSha256": "c2094dd3dc2d2c7221be4abf109bb19e0af7d546d79ed1f4a4505d75586fefc7",
+        "reviewer": "ChatGPT assistant",
+        "reviewedAt": "2026-10-24T21:28:40+08:00",
+        "independentHumanReview": false,
+        "sourcePage": 7,
+        "cropPixels": [
+          90,
+          1260,
+          1310,
+          1810
+        ],
+        "method": "direct_original_printed_page_to_extracted_lossless_WebP_visual_compare",
+        "noAdjacentQuestion": true,
+        "completeOptions": true
+      }
     }
   ]
 }
