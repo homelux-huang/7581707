@@ -2,7 +2,13 @@
 import json
 import tempfile
 import unittest
+import base64
 from pathlib import Path
+from unittest.mock import patch
+
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+from scripts import sudu_independent_review_gate as reviewer_gate
 
 from scripts import sudu_verified_publish as publish
 
@@ -73,6 +79,49 @@ class StudentOverlayTests(unittest.TestCase):
                     "optionsBeforeReview":self.question["options"],
                     "webpSha256":"f"*64,"officialPdfSha256":"a"*64,
                     "questionPdfSha256":"b"*64,"originalAnswerCandidate":"A","evidence":self.evidence}
+        # A TEST-ONLY genuine Ed25519 signer. Never update actual main policy,
+        # pretend the original author is a teacher, or mock signature validation.
+        self._key=Ed25519PrivateKey.generate()
+        raw_pub=self._key.public_key().public_bytes(Encoding.Raw,PublicFormat.Raw)
+        self._trusted_test_policy={
+            "schemaVersion":1,"requireHumanTeacher":True,"legacyAlreadyPublished":{},
+            "authorizedReviewers":{"independent-fixture-key":{
+                "enabled":True,"login":"separately-reviewed-fixture",
+                "role":"qualified_human_teacher","organizationVerified":True,
+                "ed25519PublicKey":base64.b64encode(raw_pub).decode()}}}
+        policy_patch=patch.object(reviewer_gate,"policy_from_trusted_main",
+                                  return_value=self._trusted_test_policy)
+        policy_patch.start()
+        self.addCleanup(policy_patch.stop)
+        notes="sudu/data/processed/115/review-evidence/115-00-MB-03-distinct-review.md"
+        notes_file=self.source/notes
+        notes_file.write_text(
+            "# Distinct source review (synthetic CI only)\\n"
+            "Reviewer scrutinized exact image, source formula L1/L2, official answer, "
+            "and teacher/elementary reasons for A B C D. No teacher credentials "
+            "are asserted outside this deliberately isolated synthetic fixture.")
+        raw_teaching=(self.source/self.evidence["teaching"]).read_bytes()
+        payload={
+            "schemaVersion":1,"year":115,"questionId":self.question["questionId"],
+            "questionRevision":self.revision,"webpSha256":self.manifest["sha256"],
+            "teachingDigest":reviewer_gate.digest(
+                reviewer_gate.canonical(self.docs["teaching"]["content"])),
+            "teachingEvidenceSha256":reviewer_gate.digest(raw_teaching),
+            "reviewerLogin":"separately-reviewed-fixture","reviewerRole":"qualified_human_teacher",
+            "sourceAuthorLogin":"synthetic-original-author",
+            "reviewedAt":"2026-10-24T20:00:00+08:00",
+            "optionByOptionFindings":{
+                o:"Reviewed original slope and x-intercept evidence against this "
+                   "distractor "+o for o in "ABCD"},
+            "teacherAndElementaryReviewed":True,
+            "reviewedCalculationOrNoncalculation":True,
+            "reviewNotesPath":notes,
+            "reviewNotesSha256":reviewer_gate.digest(notes_file.read_bytes())}
+        self.audit["independentReviewAttestation"]={
+            "keyId":"independent-fixture-key","payload":payload,
+            "signature":base64.b64encode(
+                self._key.sign(reviewer_gate.canonical(payload))).decode()}
+
 
     def admitted(self,audit=None):
         return publish.apply_independently_certified_review(
@@ -132,6 +181,20 @@ class StudentOverlayTests(unittest.TestCase):
         publish.dump(p,item)
         q=self.admitted()
         self.assertEqual(publish.independently_solved(q,self.revision),"mismatch")
+
+    def test_reviewer_cannot_be_pretended_or_revoked_even_for_complete_docs(self):
+        self.assertIsNot(self.admitted(),self.question)
+        invalid=json.loads(json.dumps(self.audit))
+        invalid["independentReviewAttestation"]["payload"]["reviewerLogin"]="different-string"
+        self.assertIs(self.admitted(invalid),self.question)
+        invalid=json.loads(json.dumps(self.audit))
+        invalid["independentReviewAttestation"]["payload"]["sourceAuthorLogin"]="separately-reviewed-fixture"
+        self.assertIs(self.admitted(invalid),self.question)
+        authorized=self._trusted_test_policy["authorizedReviewers"]["independent-fixture-key"]
+        authorized["enabled"]=False
+        self.assertIs(self.admitted(),self.question)
+        authorized["enabled"]=True
+        self.assertIsNot(self.admitted(),self.question)
 
     def test_reading_batch_fails_closed_for_duplicate_ids(self):
         root=self.source/"sudu/data/processed/115/verified-student-batch.json"
