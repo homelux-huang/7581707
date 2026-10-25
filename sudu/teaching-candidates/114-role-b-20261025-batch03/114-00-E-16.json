@@ -109,7 +109,7 @@
       },
       {
         "headword": "teamwork",
-        "ipa": "/ˈtiːm.wɜːrk/",
+        "ipa": "/ˈtiːm.wɝːk/",
         "level": "中級",
         "meaningZh": "團隊合作、默契",
         "synonyms": [
@@ -120,7 +120,10 @@
           "poor coordination"
         ],
         "usageNote": "teamwork 指協作能力而非單純 luck。",
-        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/teamwork"
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/teamwork",
+        "accent": "US",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/teamwork",
+        "ipaEvidenceScope": "Cambridge 美式 teamwork 單字發音；與英式 /ˈtiːm.wɜːk/ 區分，未混用兩種口音。"
       }
     ],
     "newsExample": {
@@ -139,7 +142,7 @@
     }
   },
   "teachingCanonicalSha256": "30501e6acaa3dc24306c328e888218fe2a5f9a2f09b997e3edc8bc39eb0434c6",
-  "composedTeachingSha256": "76832f46d22b0ef068c17464ccaa4d0e341ff085eb0db94b2bdc185cce861c83",
+  "composedTeachingSha256": "eefbd140412a393706243f6edf90807fa01a8fdf610219a13a32c8db39daafdf",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,

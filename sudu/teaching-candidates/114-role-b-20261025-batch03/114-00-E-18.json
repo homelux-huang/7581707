@@ -99,7 +99,7 @@
     "englishVocabulary": [
       {
         "headword": "lost",
-        "ipa": "/lɔːst/",
+        "ipa": "/lɑːst/",
         "level": "初級",
         "meaningZh": "遺失，lose 的過去式",
         "synonyms": [
@@ -111,7 +111,10 @@
           "recovered"
         ],
         "usageNote": "lost 不代表物品必定遭人偷竊，找不到與被偷不同。",
-        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/lose"
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/lost",
+        "accent": "US",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/lost",
+        "ipaEvidenceScope": "Cambridge lost 單字美式發音 /lɑːst/；英式為 /lɒst/，明確採用 US 標音。"
       },
       {
         "headword": "look like",
@@ -144,7 +147,7 @@
     }
   },
   "teachingCanonicalSha256": "59d9782a6a0ea81481fd3304b471b9a8930527214200717296025136a2a34f1b",
-  "composedTeachingSha256": "282258c793c964c3425e4b9e40026b8d95a6aa2e93e3598c0ba6212605deee85",
+  "composedTeachingSha256": "072089292ce17fa6f289651cbdcadcf9e69924310c30b1f04bd58d941e30b27f",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,
