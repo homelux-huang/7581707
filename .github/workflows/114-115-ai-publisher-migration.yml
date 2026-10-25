@@ -50,6 +50,17 @@ jobs:
           python -m unittest discover -s tests -p 'test_114_115_first_batch_receipt_integrity.py' -v
           python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Run independent Role D full AI-to-V4 regression, read-only from exact pinned Git Blob
+        run: |
+          set -euo pipefail
+          # Do not edit/cherry-pick/claim Role D's owned test. Fetch READ ONLY.
+          git fetch --no-tags --depth=1 origin refs/heads/qa/role-d-ai-policy-regressions-20261025
+          test "$(git rev-parse FETCH_HEAD)" = "ae554c14986beecb76e43c80e58b39ca0453ec93"
+          temporary=tests/test_role_d_ai_policy_quality_regressions.py
+          trap 'rm -f "$temporary"' EXIT
+          git show ae554c14986beecb76e43c80e58b39ca0453ec93:tests/test_role_d_ai_policy_quality_regressions.py > "$temporary"
+          test "$(git hash-object "$temporary")" = "ed475d2f6fe4651ebc3cf561dd754b635eb91492"
+          python -m unittest discover -s tests -p 'test_role_d_ai_policy_quality_regressions.py' -v
       - name: Assert actual approved publisher artifacts STILL no extra READY/Pages students
         run: |
           set -euo pipefail
