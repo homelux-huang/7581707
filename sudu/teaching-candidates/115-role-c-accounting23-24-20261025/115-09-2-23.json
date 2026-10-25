@@ -28,7 +28,8 @@
     "text": "ˉ\n▲閱讀下文，回答第23-24 題\n    甲公司會計基礎採權責發生基礎之記虛轉實法，依據X5 年底資產負債表得知，資產\n  總額為$1,950,000，流動比率為3，速動比率為0.8，非流動負債為流動負債1.6 倍，權益\n  總額為負債總額1.5 倍。",
     "image": "sudu/data/processed/115/webp-v3/shared/115-09-2-SHARED-23-24.webp",
     "imageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
-    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
   },
   "teaching": {
     "teacherSummary": "先用**資產＝負債＋權益**求總負債，再依非流動負債是流動負債1.6倍拆出短債；由**速動比率＝速動資產÷流動負債**及**營運資金＝流動資產－流動負債**，求出**240,000元、600,000元（A）**。",
@@ -121,7 +122,11 @@
     "officialAnswerEvidenceSha256": null,
     "sourceAdmission": "PENDING",
     "sharedSourceQa": "PENDING",
-    "v4ExactDigestQa": "PENDING"
+    "v4ExactDigestQa": "PENDING",
+    "knownSourceRevisionForReview": "48f8b1dcc79f08d469b20fbbc62b41f099d9d74b3606927afcbac962a51be304",
+    "knownTeachingDigestForReview": "4ee0177dfd0f15f4a2a78910247255e7b152576d74eb3213169d5a383bf758ff",
+    "knownOriginalImageSha256ForReview": "3b6c4d55fe4a519c0805104df18b87bdfd8f994268688e4318459fd0ef713bf6",
+    "sharedMaterialRevisionForReview": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
   },
   "studentReleaseApproved": false,
   "deploy": false,
@@ -130,5 +135,8 @@
     "ORIGINAL_SHARED_23_24_IMAGE_VISUAL_QA_PENDING",
     "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING",
     "V4_EXACT_DIGEST_8X2_UI_PENDING"
-  ]
+  ],
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "48f8b1dcc79f08d469b20fbbc62b41f099d9d74b3606927afcbac962a51be304",
+  "teachingCanonicalSha256": "4ee0177dfd0f15f4a2a78910247255e7b152576d74eb3213169d5a383bf758ff"
 }
