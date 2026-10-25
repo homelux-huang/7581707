@@ -1,0 +1,69 @@
+name: 114-115 owner AI-only publisher policy migration (DRAFT NO RELEASE)
+on:
+  push:
+    branches: [governance/114-115-ai-publisher-gate-20261025]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - scripts/sudu_verified_publish.py
+      - sudu/release-governance/**
+      - tests/test_114_115_first_batch_receipt_integrity.py
+      - tests/test_sudu_ai_publisher_policy_migration.py
+      - .github/workflows/114-115-ai-publisher-migration.yml
+  pull_request:
+    branches: [governance/114-115-independent-ai-review-contract-20261025]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - scripts/sudu_verified_publish.py
+      - sudu/release-governance/**
+      - tests/**
+      - .github/workflows/114-115-ai-publisher-migration.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sudu-owner-ai-publisher-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify_no_release_review_migration:
+    name: Verify 114/115 AI E policy and historic publisher gates (NO RELEASE)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing release reviewer test dependencies
+        run: python -m pip install -q cryptography
+      - name: Compile strict published gate and fail-closed AI gate
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/sudu_independent_review_gate.py scripts/sudu_verified_publish.py
+      - name: Test synthetic/adversarial AI E policy, actual receipts, 410 IDs, 205x2 SQLite, source and legacy tests
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_sudu_ai_publisher_policy_migration.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_ai_review_content_contract.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_114_115_first_batch_receipt_integrity.py' -v
+          python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Run independent Role D full AI-to-V4 regression, read-only from exact pinned Git Blob
+        run: |
+          set -euo pipefail
+          # Do not edit/cherry-pick/claim Role D's owned test. Fetch READ ONLY.
+          git fetch --no-tags --depth=1 origin refs/heads/qa/role-d-ai-policy-regressions-20261025
+          test "$(git rev-parse FETCH_HEAD)" = "ae554c14986beecb76e43c80e58b39ca0453ec93"
+          temporary=tests/test_role_d_ai_policy_quality_regressions.py
+          trap 'rm -f "$temporary"' EXIT
+          git show ae554c14986beecb76e43c80e58b39ca0453ec93:tests/test_role_d_ai_policy_quality_regressions.py > "$temporary"
+          test "$(git hash-object "$temporary")" = "ed475d2f6fe4651ebc3cf561dd754b635eb91492"
+          python -m unittest discover -s tests -p 'test_role_d_ai_policy_quality_regressions.py' -v
+      - name: Assert actual approved publisher artifacts STILL no extra READY/Pages students
+        run: |
+          set -euo pipefail
+          python scripts/sudu_verified_publish.py check
+      - name: Prove read-only checks did not mutate approved/student/source/lesson data
+        run: git diff --exit-code && git diff --cached --exit-code

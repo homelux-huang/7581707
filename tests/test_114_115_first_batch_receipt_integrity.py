@@ -85,10 +85,12 @@ class CandidateIntegrityOnly(unittest.TestCase):
                 finally:
                     con.close()
 
-    def test_teacher_gate_nonempty_impossible_with_current_policy(self):
+    def test_distinct_ai_review_required_and_historical_five_exact(self):
         policy = read_json("sudu/release-governance/independent-review-policy.json")
-        self.assertIs(policy["requireHumanTeacher"], True)
-        self.assertEqual(policy["authorizedReviewers"], {})
+        self.assertIs(policy["requireHumanTeacher"], False)
+        self.assertEqual(policy["reviewMode"], "DISTINCT_AI_CONTENT_RECEIPT_V1")
+        self.assertNotIn("authorizedReviewers", policy)
+        self.assertEqual(policy["trustedAiReviewReceipts"], {})
         self.assertEqual(len(policy["legacyAlreadyPublished"]), 5)
         existing = read_json("sudu/data/approved/115.json")
         self.assertEqual(existing["approvedCount"], 5)
@@ -118,7 +120,7 @@ class CandidateIntegrityOnly(unittest.TestCase):
                         self.assertFalse(doc["studentReleaseApproved"])
                         self.assertEqual(doc["review"]["externalIndependentReview"], "PENDING")
 
-    def test_mb23_original_table_is_present_but_not_teacher_approved(self):
+    def test_mb23_original_table_is_present_but_not_independently_ai_reviewed(self):
         q = self.q["115-00-MB-23"]
         table = q.get("originalSourceTableCandidate")
         self.assertIsInstance(table, dict)
