@@ -32,3 +32,11 @@ These are Role-B candidate digests, **not** final approved lesson digests or sig
   
 ## Next step (for master)
 Independently inspect exact final PR-head Chromium run and report/artifact, cherry-pick only this HTML hunk after conflict checking against #35/other D PRs, then rerun all affected original Demo and eventual approved English per-question 8×2 checks. Do not merge or publish based solely on this isolated renderer result.
+
+
+## Continued Issue #36 digest-bound rerun after B's real author patch
+- taskId: `D-ENGLISH-NEW-DIGEST-UI-20261025-02` (same isolated Draft PR #40; separate Issue36 file lease).
+- Reviewer E independently identified that original PR35 E08/E09 teaching digests describe a `teaching=null` candidate and are now superseded by Role B PR31 exact immutable commit `852c6613161f39314d87476b4e201cfe1811f783`.
+- We do **NOT** overwrite, copy, or independently approve any B authored JSON. The read-only CI checks out that commit separately under `_role_b_current/`, verifies its exact Git HEAD, re-reads the actual 114 English candidate, original 4 option teaching JSON and WebP. It checks the original teaching Git Blob SHA using a true NUL byte, canonically hashes the original teacher/elementary/option reasons and applies only B's authored reason overrides, then independently recomputes `composedTeachingSha256` with the exact source revision and original WebP SHA. Missing/changed/incorrect digest fails closed.
+- Updated expected current candidate digest: `114-00-E-07=f65c50e011f57025f2ffc9ff7df107f16f4bd6c6e3b1c64c75169bb77c35dd5b`; `114-00-E-08=6dd7125dddf83293dc52a0fcbc35b113918f92f9b2fca9e6b0dc0ca06442d5b1`; `114-00-E-09=45b33a02da4059fc7efc2cae7d9c7914732d53e967c195d004cc879e212fa584`. All three remain `BLOCKED` by separate human teacher/signature, official admission, full-question 8×2 and exact-SHA LIVE requirements.
+- After this test rewrite, the earlier read-only component CI `40163449898` at SHA `7463792e2f39702940ec498d04ab112bdf357a70` is **historical evidence for old source only**; it cannot be reused as the exact current PR head CI. The current amended SHA must be independently checked in GitHub Actions and its 48 screenshots archived before accepting even candidate-component PASS.
