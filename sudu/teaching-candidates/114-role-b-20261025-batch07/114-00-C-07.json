@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-C07-C09-IMAGE-TABLE-DIAGRAM-20261025-09",
+  "year": 114,
+  "questionId": "114-00-C-07",
+  "subject": "國文",
+  "kind": "DRAFT_PIXEL_TABLE_DIAGRAM_SOURCE_G2_QUARANTINE",
+  "question": "前人認為宋詞可分「婉約詞」、「豪放詞」。有一研究從兩類作品取樣發現：其高頻率\n  字、詞前六名如下表所示，確有差異，則①、②、③、④依序應是何種詞風的高頻率\n  字、詞？\n                      兩類風格宋詞的高頻率字詞",
+  "options": [
+    "婉約 ／ 豪放 ／ 婉約 ／ 豪放",
+    "婉約 ／ 豪放 ／ 豪放 ／ 婉約    ①   ②      ③     ④",
+    "豪放 ／ 婉約 ／ 豪放 ／ 婉約   風 君 春 憐   人間 西風 東風 相逢",
+    "豪放 ／ 婉約 ／ 婉約 ／ 豪放                  江 古 花 鴛   風流 白髮 何處 天涯\n                  北 劍 愁 芳   風雨 歸來 春風 相思"
+  ],
+  "imageTranscribedOptions": [
+    "婉約 ／ 豪放 ／ 婉約 ／ 豪放",
+    "婉約 ／ 豪放 ／ 豪放 ／ 婉約",
+    "豪放 ／ 婉約 ／ 豪放 ／ 婉約",
+    "豪放 ／ 婉約 ／ 婉約 ／ 豪放"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "webpManifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "2c26317b58a3c1118090802ccf136ebda12ebad6b9db659ac9f14b3d6267d779",
+    "sourceImageTranscriptSha256": "99a48404f45bc1f4d96591e4def8ae482e50cb150631c8cde2016581600ab564",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "answerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "answerPageGitBlobSha": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p003-f7c8a4b732-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "6443ef95b1083802bb259bdba58928bcbc80471ae1403b23cbbc18fe0aed64fd",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-07.webp",
+    "webpSha256": "de3aa6dc943acc5e086acdddf3a6922abd505d0eba99c9ece82dec7641e3bc20",
+    "archivedPixelOnlyQaEvidence": "sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json",
+    "manifestImageQaStatus": "PASS",
+    "originalSourceIssueCodes": [],
+    "originalManifestIssueCodes": [],
+    "unresolvedNewG2Issue": "G2_WORD_FREQUENCY_TABLE_INTERLEAVED_IN_RAW_CHOICES",
+    "sourceNeedsRoleACanonicalTableDiagramReconciliation": true,
+    "originalAnswerVerifiedFlag": false,
+    "originalQuestionVerifiedFlag": false,
+    "authorTranscriptIsNotCanonicallyVerified": true,
+    "sourceNotEdited": true
+  },
+  "teaching": {
+    "topic": "宋詞高頻字詞辨認婉約與豪放風格",
+    "teacherSummary": "宋詞風格是比較**成組的高頻詞**，不應以一個詞機械判定。①『風、江、北、君、古、劍』意象較開闊剛健，屬豪放；②『春、花、愁、憐、鴛、芳』較婉轉細膩，屬婉約；③『人間、風流、風雨、西風、白髮、歸來』偏人生境界與歷練，整體屬豪放；④『東風、何處、春風、相逢、天涯、相思』偏相思離合，整體屬婉約。因此①②③④是『豪放、婉約、豪放、婉約』，選 C。本題是樣本的統計分類，不代表單一用字只能屬於某派。",
+    "elementarySummary": "看四堆詞：①有江、北、劍，很大氣；②有花、愁、憐，細細的感情；③有人生、風雨、白髮，像經歷大事；④有相逢、天涯、相思，是想念的人。順序是**豪放、婉約、豪放、婉約**，選 C。",
+    "concept": "豪放常偏慷慨、開闊、志向或人生感慨；婉約常偏柔婉、感情纏綿、惜別思念。必須看本題整組詞頻和意象，不能說有『風』就是豪放、有『春』就一定婉約。",
+    "extension": "詞風並非作者或作品絕對二分，題目列的是抽樣研究的高頻字詞，不可以把局部樣本當成所有宋詞的定律。",
+    "memory": "①江北劍=豪；②花愁憐=婉；③人間風雨白髮=豪；④相逢天涯相思=婉。**豪婉豪婉＝C**。",
+    "solvingSteps": [
+      "依單題官方原圖的四欄詞頻表辨識①、②、③、④，不把 OCR 誤接在選項後的表格資料當成選項。",
+      "①江、北、劍等氣勢開闊屬豪放；②春、花、愁、憐等纖細情感屬婉約。",
+      "③人間、風流、風雨、白髮等偏大格局人生感慨，歸豪放；④相逢、天涯、相思偏離合，歸婉約。",
+      "逐項代入①②③④，只有 C 四欄皆為豪放／婉約／豪放／婉約。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 讓①與③成婉約，卻把②與④說成豪放，和江北劍、花愁憐、人間風雨及相逢相思四組題內取樣意象全相反。",
+        "elementary": "A 把氣勢大的寫成細膩，把思念的寫成大氣，四個全都分反了。",
+        "reason": "A 的四格分類全部對調；①③不是本表的婉約組，而②④不是本表的豪放組。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 後兩欄③豪放④婉約符合表內意象，但前兩欄錯把①江北劍說成婉約、②花愁憐說成豪放，無法四欄全中。",
+        "elementary": "B 第三和第四堆有對，可是第一和第二堆放錯了，不能選半對的答案。",
+        "reason": "B 僅③④正確，前面①應豪放、②應婉約，不能因為後兩組符合就當全部答對。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 指定①豪放、②婉約、③豪放、④婉約，分別吻合壯闊、細膩、人生經歷與離合相思的整組高頻詞分布。",
+        "elementary": "C 四堆詞的感覺都分對了：大氣、細膩、大氣、細膩，所以正確。",
+        "reason": "C 的①②③④和實際四組詞的相對風格都一致，沒有任一欄被反向分類。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 的①豪放②婉約正確，但③被列成婉約、④被列為豪放，將人生風雨白髮與相逢天涯相思兩組倒置。",
+        "elementary": "D 前兩堆對，第三與第四卻交換了，大氣的被當成思念，思念的當成大氣。",
+        "reason": "D 把③④反過來：原表③整組偏豪放，④整組偏婉約，後兩格因此不成立。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114國文官方原題像素直視（含原詞頻表或雙氣泡圖）；A未校正 canonical OCR 選項與圖表混排前只作來源綁定教學候選，不給學生正式作答。"
+  },
+  "enrichment": {
+    "originalVisual": {
+      "visualType": "ORIGINAL_WORD_FREQUENCY_TABLE",
+      "transcribedFromOriginalPixel": true,
+      "notCanonicalTextQa": true,
+      "groups": [
+        {
+          "label": "①",
+          "col1": [
+            "風",
+            "江",
+            "北"
+          ],
+          "col2": [
+            "君",
+            "古",
+            "劍"
+          ],
+          "interpretation": "豪放"
+        },
+        {
+          "label": "②",
+          "col1": [
+            "春",
+            "花",
+            "愁"
+          ],
+          "col2": [
+            "憐",
+            "鴛",
+            "芳"
+          ],
+          "interpretation": "婉約"
+        },
+        {
+          "label": "③",
+          "col1": [
+            "人間",
+            "風流",
+            "風雨"
+          ],
+          "col2": [
+            "西風",
+            "白髮",
+            "歸來"
+          ],
+          "interpretation": "豪放"
+        },
+        {
+          "label": "④",
+          "col1": [
+            "東風",
+            "何處",
+            "春風"
+          ],
+          "col2": [
+            "相逢",
+            "天涯",
+            "相思"
+          ],
+          "interpretation": "婉約"
+        }
+      ],
+      "notes": "原始單題WebP可辨四欄詞頻表；canonical q.options[1:3] 的尾端混入 table OCR 殘片，暫抄不得當成A審核的正式G2來源。"
+    },
+    "chineseVocabulary": [
+      {
+        "word": "婉約",
+        "level": "初級",
+        "meaning": "委婉柔和、細膩的詞風。",
+        "usage": "②花、愁、憐與④相思、相逢在本表偏細膩。"
+      },
+      {
+        "word": "豪放",
+        "level": "中級",
+        "meaning": "氣勢開展、較慷慨的詞風。",
+        "usage": "①江、北、劍與③人間、風雨在本表偏開闊。"
+      },
+      {
+        "word": "高頻字詞",
+        "level": "高級",
+        "meaning": "在抽樣作品中比其他詞出現較多的字或詞。",
+        "usage": "根據整組樣本判斷語意傾向，不把單字硬定為某一詞風。"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "婉約詞",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "豪放詞",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "①",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "②",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "③",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "④",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "江",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "北",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "劍",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "春",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "花",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "愁",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "憐",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "鴛",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "芳",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "人間",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "風雨",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "白髮",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "歸來",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "相逢",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "天涯",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "相思",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      }
+    ],
+    "originalImageOnlyQaReceiptIsNotFinalAnswerQa": true
+  },
+  "teachingCanonicalSha256": "24b2431a5317840bf246f5c816c9a4d19abe401fac4baf7c6c708829aa528fd1",
+  "composedTeachingSha256": "14c4e5cafb9c80db163d6806cfe0399785b88ddc3154bc08f52ed085e7a8bc7a",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "notBlindSolve": true,
+    "answerCandidateAgreeWithVisiblePublishedAnswerPage": true,
+    "answerProvenanceScopeRequiresRoleA": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerYearCorrectionScopeNotCertified": true,
+    "sourceTextAndTableQaNotCertified": true,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E",
+      "reviewerRole": "E",
+      "reviewTaskId": null,
+      "reviewSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "G2_UNCORRECTED_CANONICAL_RAW_OPTION_TABLE_OR_DIAGRAM_INTERLEAVE_ROLE_A",
+      "OFFICIAL_YEAR_FINAL_ANSWER_AND_CORRECTION_A_QA_PENDING",
+      "E_DISTINCT_AI_OPTION_REASON_VERIFICATION_PENDING",
+      "D_ANNUAL_V4_SAME_REVISED_SOURCE_AND_TEACHING_DIGEST_8X2_PENDING",
+      "MASTER_TRUSTED_E_REVIEW_PROTECTED_MAIN_PUBLISHER_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
