@@ -24,3 +24,12 @@
 唯一主指揮可收取此 Draft PR，但必須依最新完整來源與教學 SHA 更新單一控制台、逐題台帳及 UI/CI 測試。角色 C 應將 C15 新 `sourceRevision` 作為後續教學版本基準，角色 E 以不同 AI 作者身分檢核文字、A～D 與閱讀理解，角色 D 驗證同版原圖及現有 35 Demo V4。**無真人教師資格、簽章或 GitHub 人工 APPROVED 前置條件**，但實質內容、官方來源、完整來源及 V4 QA 仍不能省略。所有錯誤待核對題持續隔離、先接其他 READY 題。
 
 **狀態：C15 source-text correction candidate — independent OCR/source final review pending, new READY=0, new LIVE=0。**
+
+## 本輪實際完成結果（精確 source + SQLite 證據）
+
+- 實際原始 source sửa補於隔離分支 GitHub Actions [#40167384148](https://github.com/homelux-huang/7581707/actions/runs/40167384148)，CI `SUCCESS`，先進行嚴格修改前原圖／證據 SHA/205 筆 canonical JSON+SQLite payload 稽核，再修改唯一 C15 D 選項及單筆 DB payload，最後實際跑 **8 項 C15 新測試 + 9 項先前 C11–15 原圖測試 = 17/17 PASS**，Git 非強制 fast-forward push。
+- 實際 Actions 產生的來源／資料庫提交為 `5aa533317025d4eb94155e6bb4b1177d5e47f62d`，修補文件由 `QA_115_C15_OPTION_D_CROSSPAGE_CORRECTION_20261025.json` 實際產生，而非手寫核准旗標。
+- 新來源 `text_revision`：`29ee0b0159cef18c7b9458d4bea07cbd5acf15f787e396a2430cb613310f4485`；原污染文字版本：`ed67a7fbd1535f2c38dc7ce69aea4f0e0129cff0f909bccc86c500ae19ec9744`。實際單題 WebP SHA256 `74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f`、官方答案 B、歷史 QA 仍不變。
+- **新增重大但屬於既存的 SQL 展開欄位落差**：稽核比較 205 題 canonical `payload_json`（皆與 `questions.json` 相同且 SHA256 正確）及額外 SQL 展開欄位後，發現 **81 個題號已有舊資料不一致**：`answer_verified` 落差涉及 81 題、`question` 題幹展開文字落差涉及 7 題、`question_verified` 落差涉及 1 題，部分互相重疊。已將**所有受影響題號與欄位**完整保存在上述來源修正 JSON 的 `preexistingSqliteDenormalizedFieldDivergences` 欄位，供 Role A 獨立有界後續核對；原本的額外欄位仍與最初 PR61 Git 版本**位元組／值一致**，絕不以刷新 QA 旗標的方式批次消除差異。
+- **不可誤報**：本次 205-row `payload_json` 全數哈希與 JSON 一致、資料庫 `PRAGMA integrity_check=ok`，但不代表額外 denormalized 欄位已與 JSON 一致。正式發布器若讀取那些 SQL 展開欄位，須繼續 fail-closed 並先核定實際資料來源優先順序；不要將矛盾的 SQL `answer_verified` 當作經過真實獨立官答 QA 的證據。
+- 已正式修正 C15 的**候選結構化題目文字**，仍需由 Role E 不同作者 AI 以相同新 textRevision／原圖核對 A–D、共用閱讀與內容，Role D 原始 V4 UI QA；`questionVerified=false`, `integrationReady=false`, **新 READY 0、LIVE 0**。本次 CI 的 SHA 如發生進一步文件更新必須再用實際最新 HEAD 重新測試。
