@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C06-ORIGINAL-DIAGRAM-OCR-20261025-11",
+  "scope": "113-00-C-06_ONLY",
+  "year": 113,
+  "paperCode": "00-C",
+  "sourceIndex": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+  "sourceOriginalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+  "answerOriginalPageWebpSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+  "sourceOriginalGitBlobSha1": "6796adb4df977d064baae8a3e066238014d096f6",
+  "answerOriginalGitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+  "questionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+  "answerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+  "actualPdfRedownloadedAndRehashed": false,
+  "officialFinalCorrectionNoticeChecked": false,
+  "questions": [
+    {
+      "questionId": "113-00-C-06",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 6,
+      "subject": "國文",
+      "question": "右圖是一副具有儒家內涵的對聯，依上、下聯規則，\n  ○○、□□最適當的詞語應是：",
+      "options": [
+        "詩書、孝弟",
+        "孝弟、詩書",
+        "無為、齊物",
+        "齊物、無為"
+      ],
+      "answerCandidate": "B",
+      "officialAnswerCandidate": "B",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "sourceArchiveQuestionId": "113-00-C-06",
+      "sourceArchiveOriginalPage": 2,
+      "sourceArchiveOriginalOptions": [
+        "詩書、孝弟",
+        "孝弟、詩書",
+        "無為、齊物",
+        "齊物、無為\n\n\n\n\n\n-2-\n\n113 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考"
+      ],
+      "sourceArchiveOptionDSha256": "05c958fcc04582afa87cf57ea3950ff74372c8404f65afe64ceb65d3f5b119d1",
+      "correctedOptionDSha256": "ef2366ace26f7bebbe455f7ad0bf1acce820bcea612ac8d0f019eeb293c6eb3c",
+      "sourceRawOptionDChanged": false,
+      "textCorrectionScope": "only structured Q06 option D removed original p2 footer and p3 next header",
+      "sourceOriginalTextStatus": "CORRECTED_CANDIDATE_WAITING_FINAL_SOURCE_PDF_REVIEW",
+      "sourceOriginalFigureStatus": "FULL_RIGHT_COUPLET_FIGURE_DIRECT_VISUAL_QA_PENDING",
+      "sharedMaterialIds": [],
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp",
+        "sha256": "289e16a96ceeeb1c691075b0b553adbd9e31652af0821ab24ad77cf8e15daeb7",
+        "gitBlobSha1": "ec5150173ecf4edcbdc19737d5c58ffc19f41747",
+        "cropPixels": [
+          90,
+          1472,
+          1310,
+          1881
+        ],
+        "pixelSize": [
+          1220,
+          409
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+        "containsOriginalFigure": true
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerStatus": "ANNOUNCED_ANSWER_PAGE_IMAGE_B_OBSERVED_FINAL_AMENDMENT_PDF_PENDING",
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ORIGINAL_DIAGRAM_VISUAL_QA",
+      "sourceRevisionSha256": "84b74d40d2aa5715a72ba74f52d194284ac31faa6818f649aded130521adb11c"
+    }
+  ],
+  "partialCandidateSqliteRows": 1,
+  "newQuestionVerified": 0,
+  "newAnswerVerified": 0,
+  "newTeachingVerified": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "status": "SINGLE_ORIGINAL_FIGURE_IMAGE_QA_PENDING_NO_RELEASE"
+}
