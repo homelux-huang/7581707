@@ -42,19 +42,19 @@
       "A": {
         "teacher": "Which theater do you prefer? 只是問喜歡哪家戲院，沒有否定不守排隊秩序。",
         "elementary": "問戲院偏好，不是叫人不要插隊。",
-        "reason": "問地點無法解釋 Ken 隨後自願去隊伍後面。",
+        "reason": "Which theater do you prefer? 問喜歡哪家戲院，不批評 Ken 想 cut in line，也無法解釋為何要到隊尾。",
         "isCorrect": false
       },
       "B": {
         "teacher": "Which movie are we going to see? 是問電影片名，不能回應插隊是否適當。",
         "elementary": "問要看哪部片，不是在制止插隊。",
-        "reason": "電影片名無法引出 Ken 的道歉式讓步。",
+        "reason": "Which movie are we going to see? 僅問電影片名，沒有拒絕插隊，Ken 也不需因此回到隊伍後方。",
         "isCorrect": false
       },
       "C": {
         "teacher": "How much do you pay for two adults? 問兩張成人票價，應收到金額而非行為改變。",
         "elementary": "問票價，和排隊禮貌無關。",
-        "reason": "票價問題與回到隊尾的反應不連貫。",
+        "reason": "How much do you pay for two adults? 問兩張成人票價，需要金額回答，和 Ken 決定回隊尾毫無關係。",
         "isCorrect": false
       },
       "D": {
@@ -140,8 +140,8 @@
       }
     }
   },
-  "teachingCanonicalSha256": "f398d45bcca81e672fe38261704f1108e9560dc5af47fa020799a487a9871efa",
-  "composedTeachingSha256": "01c3e3dea298bc0d5fea17107167718b3f328bf29692de5f8127e165625c7088",
+  "teachingCanonicalSha256": "27c9028082da7aa5d7b8bc1897d5eabfc40d21506b463ced08938841cfcf8811",
+  "composedTeachingSha256": "b9c464e05fcec6969ef298d5744a9599af8e17612fc5cde2615a6a090e3c560e",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,
