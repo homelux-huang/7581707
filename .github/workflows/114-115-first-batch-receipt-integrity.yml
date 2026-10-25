@@ -1,0 +1,41 @@
+name: 114-115 first-batch isolated evidence receipts (NO RELEASE)
+on:
+  push:
+    branches: [integration/114-115-first-batch-v4-receipts-20261025]
+    paths:
+      - sudu/teaching-candidates/**
+      - sudu/data/processed/114/**
+      - sudu/data/processed/115/**
+      - sudu/release-governance/**
+      - tests/test_114_115_first_batch_receipt_integrity.py
+      - tests/test_114_role_b_teaching_20261025.py
+      - tests/test_114_115_lesson_batch_oct25.py
+      - .github/workflows/114-115-first-batch-receipt-integrity.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: first-batch-evidence-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify_candidate_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source IDs, exact WebP bytes, two 205-row SQLite banks, candidate digests and no-release gates
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_114_115_first_batch_receipt_integrity.py' -v
+          python -m unittest discover -s tests -p 'test_114_role_b_teaching_20261025.py' -v
+          python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python -m py_compile scripts/sudu_verified_publish.py
+          node --check sudu/verified-questions-runtime.js
+      - name: Confirm no mutation of source, approved, or student files
+        run: git diff --exit-code && git diff --cached --exit-code
