@@ -3,7 +3,7 @@ on:
   # GitHub Actions allows at least five minutes, but schedule can drift/drop.
   # Schedule becomes active ONLY after this file is on default branch main.
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '2-57/5 * * * *'
   workflow_dispatch:
   push:
     branches:
