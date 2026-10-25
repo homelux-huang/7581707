@@ -554,16 +554,23 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
             return q
         docs[key]=value
     ocr,off,blind,teach,ui=[docs[key][0] for key in ("ocr","official","blind","teaching","ui")]
-    # P0: source-authored PASS strings and SHA files are not a separate reviewer.
-    # Legacy exemption is tied to exact old review bytes and question/image revision.
+    # P0: source-authored PASS, a reviewer field or a signed-teacher string
+    # cannot certify a new student question. The active owner's policy uses a
+    # DIFFERENT AI content reviewer with an authenticated exact evidence receipt.
+    # The distinct-AI reviewer gate is additional to every source/answer/UI
+    # check below; old five remain exact-Git-blob exceptions inside certified().
     try:
         from scripts import sudu_independent_review_gate as reviewer_gate
     except ModuleNotFoundError:
         import sudu_independent_review_gate as reviewer_gate
+    policy=reviewer_gate.policy_from_trusted_main()
+    if (not isinstance(policy,dict)
+            or policy.get("reviewMode")!="DISTINCT_AI_CONTENT_RECEIPT_V1"):
+        return q  # Never fall back to old human-teacher signer admission.
     teaching_rel=audit["evidence"]["teaching"]
     teaching_raw=(source/teaching_rel).read_bytes()
     independently_authorized,identity_reason=reviewer_gate.certified(
-        source,audit,q,manifest,teach,teaching_raw)
+        source,audit,q,manifest,teach,teaching_raw,policy=policy)
     if not independently_authorized:
         return q
     revision=text_revision(q,manifest["sha256"])
