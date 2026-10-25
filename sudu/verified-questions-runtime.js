@@ -75,6 +75,75 @@
   const imagePath=id=>'data/approved/webp/'+activeYear+'/'+id+'.webp';
   const shaValid=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
 
+  // All seven commerce-group subjects use the SAME V4 UI as the 35-question
+  // Demo. The annual subject menu reflects course coverage, not permission
+  // to answer unpublished questions.
+  const annualSubjects=['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'];
+  let approvedCounts=new Map(),previewCounts=new Map();
+  function annualNote(message){
+    const target=document.getElementById('homeSubjectSel')?.closest('.home-choice-content');
+    if(!target)return;
+    let note=document.getElementById('annualSubjectAvailability');
+    if(!note){
+      note=document.createElement('small');
+      note.id='annualSubjectAvailability';
+      note.setAttribute('role','status');
+      note.setAttribute('aria-live','polite');
+      note.style.cssText='display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:4px';
+      target.appendChild(note);
+    }
+    note.textContent=message;
+  }
+  function subjectStatus(subject){
+    const count=approvedCounts.get(subject)||0;
+    const images=previewCounts.get(subject)||0;
+    if(count)return subject+'：'+count+' 題已完成正式審查，可作答並查看逐選項雙層解說；其他題目仍待 QA。';
+    if(images)return subject+'：'+images+' 題僅通過原圖 QA，可唯讀原圖；答案及教學未獲核准，不開放作答。';
+    return subject+'：目前尚無可顯示的正式題目或通過影像 QA 的原圖；請選其他科目。';
+  }
+  function publishAnnualMenu(){
+    window.suduAnnualSubjects=annualSubjects.slice();
+    refreshHomeSubjects();
+    annualNote(activeYear+' 年｜七科沿用 35 題 Demo V4；僅經逐題正式核准者開放作答。');
+  }
+  function subjectUrl(subject,images){
+    const url=new URL(relative,location.href);
+    url.searchParams.set('year',activeYear);
+    url.searchParams.set('subject',subject);
+    if(images)url.searchParams.set('view','images');
+    else url.searchParams.delete('view');
+    return url.pathname+url.search;
+  }
+  async function loadPreviewSubjectCounts(){
+    // Untrusted QA-only data must never supply answers or teaching to the
+    // playable QUESTIONS array. Use it only for validated preview counts.
+    try{
+      const res=await fetch('./data/approved/preview/'+activeYear+'.json',{cache:'no-store'});
+      if(!res.ok)return new Map();
+      const data=await res.json();
+      if(data.year!==Number(activeYear)||!Array.isArray(data.questions)||
+         data.imagePreviewCount!==data.questions.length)throw Error('preview index metadata mismatch');
+      const counts=new Map(),seen=new Set();
+      for(const q of data.questions){
+        const identity=parsedIdentity(q);
+        if(!identity||seen.has(identity.id)||q.reviewStage!=='image_qa_pass_only'||
+           q.image!==imagePath(identity.id)||q.questionNumber!==identity.n||
+           !shaValid(q.imageSha256)||!Array.isArray(q.sharedImages)||
+           ['answer','question','options','teaching','memory','independentSolve'].some(k=>Object.hasOwn(q,k))||
+           q.sharedImages.some(v=>typeof v.image!=='string'||
+             !v.image.startsWith('data/approved/webp/'+activeYear+'/'+activeYear+'-'+identity.paper+'-SHARED-')||
+             !/SHARED-[0-9]{2}-[0-9]{2}[.]webp$/.test(v.image)||!shaValid(v.sha256)))
+          throw Error('preview subject/question content not authorized');
+        seen.add(identity.id);
+        counts.set(q.subject,(counts.get(q.subject)||0)+1);
+      }
+      return counts;
+    }catch(error){
+      console.warn('唯讀原圖索引不可用；不將來源候選加入正式作答',error);
+      return new Map();
+    }
+  }
+
   // verifiedSingleQuestionWebp: only the SAME canonical question ID may appear
   // immediately below its own question header; never a whole paper or another
   // question's WebP. Source visual QA and asset hashes remain authoritative.
@@ -96,7 +165,7 @@
     figure.append(img,caption);
     return figure;
   }
-  async function showImageOnlyMode(){
+  async function showImageOnlyMode(approved=[]){
     const response=await fetch('./data/approved/preview/'+activeYear+'.json',{cache:'no-store'});
     if(!response.ok)throw Error('原圖清單 HTTP '+response.status);
     const payload=await response.json();
@@ -118,6 +187,10 @@
       seen.add(id.id);
     }
     if(!items.length)throw Error(activeYear+' 年尚無通過影像 QA 的單題原圖');
+    approvedCounts=new Map();
+    for(const q of approved)approvedCounts.set(q.subject,(approvedCounts.get(q.subject)||0)+1);
+    previewCounts=new Map();
+    for(const q of items)previewCounts.set(q.subject,(previewCounts.get(q.subject)||0)+1);
     // Keep the existing V4 question area, and clear the demo records from the
     // active quiz model so image-only questions cannot be accidentally graded.
     QUESTIONS.splice(0,QUESTIONS.length);
@@ -198,16 +271,28 @@
       rows=filter.value==='全部科目'?items:items.filter(q=>q.subject===filter.value);
       index=0;render(true);
     };
-    window.suduOpenImageSubject=subject=>{
-      if(!subjects.includes(subject)||subject==='全部科目')return;
+    window.suduOpenYearSubject=subject=>{
+      if(!annualSubjects.includes(subject))return;
+      if(approvedCounts.get(subject)){
+        location.href=subjectUrl(subject,false);
+        return;
+      }
+      const nextRows=items.filter(q=>q.subject===subject);
+      if(!nextRows.length){
+        showHome();
+        annualNote(subjectStatus(subject));
+        return;
+      }
       filter.value=subject;
-      rows=items.filter(q=>q.subject===subject);
+      rows=nextRows;
       index=0;
       showStudy();
       render();
+      annualNote(subjectStatus(subject));
       setQuestionNavAutoHide(false);
       window.scrollTo({top:0,behavior:'instant'});
     };
+    window.suduOpenImageSubject=window.suduOpenYearSubject;
     filter.onchange=changeSubject;
     move=function(delta){
       index=Math.max(0,Math.min(rows.length-1,index+delta));
@@ -218,8 +303,11 @@
     document.body.classList.add('qa-image-mode');
     document.body.dataset.verifiedReadyYear=activeYear;
     render();
-    refreshHomeSubjects();
+    publishAnnualMenu();
     showHome();
+    const requestedSubject=args.get('subject');
+    if(requestedSubject&&annualSubjects.includes(requestedSubject))
+      window.suduOpenYearSubject(requestedSubject);
   }
 
   function htmlWithActualHighlights(value,terms) {
@@ -245,12 +333,12 @@
   fetch('./data/approved/'+activeYear+'.json',{cache:'no-store'}).then(async r=>{
     if(!r.ok)throw Error('資料未發布（HTTP '+r.status+'）');
     return r.json();
-  }).then(data=>{
+  }).then(async data=>{
     if(Number(data.year)!==Number(activeYear)||!Array.isArray(data.questions)||data.approvedCount!==data.questions.length)
       throw Error('題庫驗收清單格式不符');
     const verified=data.questions;
     if(!verified.length||imageModeRequested) {
-      showImageOnlyMode().catch(e=>{
+      showImageOnlyMode(verified).catch(e=>{
         console.error('原圖逐題驗證失敗',e);
         showError('單題 WebP 暫不可用：'+e.message);
       });
@@ -261,13 +349,22 @@
     for(const q of verified){
       const id=q.canonicalId;
       const identity=parsedIdentity(q);
+      const calc=q.examCalculation;
       if(!identity||identity.id!==id||q.id!==identity.n||expectedIds.has(id)||
          q.image!==imagePath(id)||!shaValid(q.imageSha256)||
+         !useful(q.question)||!useful(q.topic)||!useful(q.teacherSummary)||
+         !useful(q.elementarySummary)||!useful(q.memory)||!useful(q.sourceText)||
          !Array.isArray(q.options)||q.options.length!==4||!q.options.every(useful)||!/^[ABCD]$/.test(q.answer)||!q.optionExplanations ||
-         ['A','B','C','D'].some(k=>!useful(q.optionExplanations[k]?.teacher)||!useful(q.optionExplanations[k]?.elementary)))
-        throw Error('題庫驗收欄位異常：'+String(id));
+         ['A','B','C','D'].some(k=>!useful(q.optionExplanations[k]?.teacher)||
+           !useful(q.optionExplanations[k]?.elementary)||!useful(q.optionExplanations[k]?.reason))||
+         (calc?.hasExamCalculation===true&&(!Array.isArray(calc.lines)||
+           calc.lines.length<2||!calc.lines.every(useful))))
+        throw Error('年度題目未具備與35題Demo相同的雙層教學、四選項或必要解題步驟：'+String(id));
       expectedIds.add(id);keyset.add(q.subject);
     }
+    approvedCounts=new Map();
+    for(const q of verified)approvedCounts.set(q.subject,(approvedCounts.get(q.subject)||0)+1);
+    previewCounts=await loadPreviewSubjectCounts();
     const originalSave=save;
     const originalMove=move;
     const originalProgress=renderProgress;
@@ -288,7 +385,11 @@
     SUBJECTS.splice(0,SUBJECTS.length,...keyset);
     currentSubject=SUBJECTS.includes(state.ui.subject)?state.ui.subject:SUBJECTS[0];
     currentIndex=Math.max(0,Math.min((listFor(currentSubject).length||1)-1,Number(state.ui.index)||0));
-    sourceText=function(q){return q.sourceText||originalSource(q)};
+    sourceText=function(q){
+      // Demo textbook profiles are not verified for another exam year.
+      return useful(q.sourceText)?q.sourceText:
+        activeYear+' 年正式原題 '+q.canonicalId+'｜教材來源待核對';
+    };
     subjectEntries=function(q){
       if(q.year!==Number(activeYear))return originalSubjectEntries(q);
       // The correct answer retains both teaching levels, while extra notes and
@@ -325,12 +426,32 @@
       currentIndex=Math.max(0,Math.min(listFor(currentSubject).length-1,currentIndex+delta));
       showStudy();renderAll();window.scrollTo({top:0,behavior:'smooth'});
     };
+    window.suduOpenYearSubject=subject=>{
+      if(!annualSubjects.includes(subject))return;
+      if(!approvedCounts.get(subject)){
+        if(previewCounts.get(subject))location.href=subjectUrl(subject,true);
+        else{
+          showHome();
+          annualNote(subjectStatus(subject));
+        }
+        return;
+      }
+      currentSubject=subject;
+      const firstOpen=listFor(subject).findIndex(q=>!record(q).status);
+      currentIndex=Math.max(0,firstOpen);
+      const top=document.getElementById('subjectSel');
+      if(top&&[...top.options].some(o=>o.value===subject))top.value=subject;
+      showStudy();renderAll();
+      annualNote(subjectStatus(subject));
+      window.scrollTo({top:0,behavior:'instant'});
+    };
     document.title='速讀｜'+activeYear+' 正式題庫｜教學解說';
     document.body.dataset.verifiedReadyYear=activeYear;
     document.body.classList.remove('verified-year-loading','qa-image-mode');
-    renderSelectors();renderAll();refreshHomeSubjects();showHome();
-    const requestedSubject=new URLSearchParams(location.search).get('subject');
-    if(requestedSubject&&SUBJECTS.includes(requestedSubject))openSubjectFromHome(requestedSubject);
+    renderSelectors();renderAll();publishAnnualMenu();showHome();
+    const requestedSubject=args.get('subject');
+    if(requestedSubject&&annualSubjects.includes(requestedSubject))
+      window.suduOpenYearSubject(requestedSubject);
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
     showError('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
