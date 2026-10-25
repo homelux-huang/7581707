@@ -168,6 +168,13 @@ def apply():
     old_record = copy.deepcopy(after)
     old_record["questionProvenance"]["webpSha256"] = OLD
     assert original_db[QID] in (old_record, after)
+    if before == after and original_db[QID] == after and RECEIPT.is_file():
+        cached = read(RECEIPT)
+        actual = validate_fixed()
+        assert cached.get("sqliteSha256") == actual["sqliteSha256"], "stale receipt DB"
+        assert cached.get("sourceQuestionCanonicalSha256") == actual["sourceQuestionCanonicalSha256"], "stale receipt question"
+        assert cached.get("v2Sha256") == NEW and cached.get("twoIsolatedImportsEqual") is True
+        return cached
     old_sqlite_sha = sha((BASE / "question-bank.sqlite3").read_bytes())
     old_json_sha = sha((BASE / "questions.json").read_bytes())
 
