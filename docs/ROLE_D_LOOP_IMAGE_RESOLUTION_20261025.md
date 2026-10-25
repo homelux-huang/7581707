@@ -20,3 +20,11 @@
 - 再診斷已越過原圖解析／未解碼失敗；國文、會計各至少25個真實case完成。接著發現手機深色模式回首頁時，驗收器盲目再點一次已展開的navHandle，反而收合導覽後再點視窗外的navHomeBtn。為避免重複已知失敗，診斷已停止，部分結果不能作完整UIQA。
 - 真實360×800觸控重現：按themeBtn後 aria-expanded=true、navHomeBtn top=28；再tap navHandle後 aria-expanded=false、top=-235。這是驗收器的切換狀態假設，下一批將保留真實tap/click並先核對展開狀態。
 - [35題bytes/digest綁定](ROLE_D_LOOP_IMAGE_BINDINGS_20261025.json)提供本批實際imageSHA與Demo欄位digest；其sourceRevision明確是Demo JSON serialization摘要，不冒充114/115官方候選題revision。教學未修改，新獨立QA/UIQA/READY/main/LIVE仍0。
+
+## D-NAV-STATE-CI-20261025-VSCODE-03
+
+- 基底 `0cf250848056a0cc0ec8b9f4a6102ec4a70dbba8`；租約 `6393616724`。先讀navHandle實際aria-expanded，只有收合時才真實tap/click展開，接著要求aria-expanded=true再點首頁；所有錯題復習及localStorage要求保留。
+- 國文、會計各5題×8viewport×2theme本機診斷 PASS 80，各80截圖，含真實touch/mouse、原圖bytes及Demo欄位digest。這是修改工作樹中的診斷；raw report actualCommitSha為啟動時0cf2508，不可冒稱本批提交的精確SHA證書。最終SHA CI仍須重跑；未提升任何新候選UIQA。
+- 唯讀Role-D workflow允許stacked PR的PR35 base；新增helper路徑觸發及resolver負測，不改發布workflow或權限。報告新增實際執行的browser test／resolver bytes SHA，並將命令引用更新為實讀PR30 `144364bc...`。
+- 原先真人教師阻塞已由Issue36最新置頂政策取代；改採不同作者的可追溯AI內容複核。相關policy/publisher/審查契約由MASTER另租約修訂；本Role-D批次不改發布gate，也不以舊教師名冊作唯一阻塞。來源、官方答案、實質獨立複核與精確digest UI/CI仍須完整證據。
+- 下一步：核對本PR最新精確SHA的21個年度×科目CI job，按實際失敗另領最小修復；已合格的原圖/OCR/教學不重做。來源/教學變更時舊UI結果不可沿用。

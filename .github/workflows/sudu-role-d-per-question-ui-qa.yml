@@ -1,7 +1,7 @@
 name: Role D exact-source V4 per-question 8x2 audit (NO RELEASE)
 on:
   pull_request:
-    branches: [main]
+    branches: [main, integration/114-115-first-batch-v4-receipts-20261025]
     paths:
       - 'sudu/v4-115-multisubject-review-demo.html'
       - 'sudu/verified-questions-runtime.js'

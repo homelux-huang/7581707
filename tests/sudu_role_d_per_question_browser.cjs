@@ -46,7 +46,7 @@ const report={
   year:YEAR,subject:SUBJECT,sourceMode:'ACTUAL_GITHUB_CHECKOUT_NOT_FIXTURE',
   actualCommitSha:git(),expectedCommitSha:expect||null,
   mainBaseSha:process.env.SUDU_D_MAIN_SHA||null,
-  commandDocRef:'PR30:27f13aef46588e0eacd9c50edddae90f982e0d86',
+  commandDocRef:'PR30:144364bc5f7711bacf3b8d04faf0e87194bf233c',
   ciRunId:process.env.GITHUB_RUN_ID||null,
   ciRunUrl:process.env.GITHUB_RUN_ID?
     'https://github.com/homelux-huang/7581707/actions/runs/'+process.env.GITHUB_RUN_ID:null,
@@ -54,6 +54,8 @@ const report={
   runtimeSha256:fileHash('sudu/verified-questions-runtime.js'),
   demoLearningSha256:fileHash('sudu/demo-subject-learning.js'),
   baselineSha256:fileHash('docs/ROLE_D_V4_DEMO_35_BASELINE_20261025.json'),
+  browserTestSha256:fileHash('tests/sudu_role_d_per_question_browser.cjs'),
+  imageResolverSha256:fileHash('tests/sudu_role_d_image_source.cjs'),
   approvedJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/'+YEAR+'.json'),
   previewJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/preview/'+YEAR+'.json'),
   approvedSourceRevision:approved?.sourceSha||null,
@@ -395,7 +397,10 @@ function dump(){
             }
           }
           if(mode!=='image-preview-only'){
-            await act(page.locator('#navHandle'),touch);
+            const handle=page.locator('#navHandle');
+            if(await handle.getAttribute('aria-expanded')!=='true')await act(handle,touch);
+            assert.equal(await handle.getAttribute('aria-expanded'),'true',
+              'real navigation must be expanded before returning home');
             await act(page.locator('#navHomeBtn'),touch);
             await act(page.locator('#homeReviewBtn'),touch);
             await page.locator('#reviewList .wrong-card').first().waitFor({timeout:15000});
