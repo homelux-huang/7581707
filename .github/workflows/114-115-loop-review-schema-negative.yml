@@ -4,11 +4,13 @@ on:
     branches: [coord/loop-master-review-schema-negative-20261025]
     paths:
       - tests/test_114_115_first_batch_receipt_integrity.py
+      - tests/test_114_115_loop_candidate_links.py
       - .github/workflows/114-115-loop-review-schema-negative.yml
   pull_request:
     branches: [integration/114-115-first-batch-v4-receipts-20261025]
     paths:
       - tests/test_114_115_first_batch_receipt_integrity.py
+      - tests/test_114_115_loop_candidate_links.py
       - .github/workflows/114-115-loop-review-schema-negative.yml
   workflow_dispatch:
 permissions:
@@ -34,6 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m unittest discover -s tests -p 'test_114_115_first_batch_receipt_integrity.py' -v
+          python -m unittest discover -s tests -p 'test_114_115_loop_candidate_links.py' -v
           python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v
           python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
       - name: Prove no source or approved student data mutated by read-only tests
