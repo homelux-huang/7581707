@@ -94,6 +94,17 @@
     }
     note.textContent=message;
   }
+  function syncAnnualStickySubjects(){
+    const nav=document.getElementById('subjectSel');
+    if(!nav)return;
+    const selected=nav.value;
+    nav.replaceChildren();
+    for(const name of annualSubjects){
+      const option=document.createElement('option');
+      option.value=name;option.textContent=name;nav.appendChild(option);
+    }
+    nav.value=annualSubjects.includes(selected)?selected:currentSubject;
+  }
   function subjectStatus(subject){
     const count=approvedCounts.get(subject)||0;
     const images=previewCounts.get(subject)||0;
@@ -198,7 +209,7 @@
     document.getElementById('answerCard').replaceChildren();
     document.getElementById('guideCard').replaceChildren();
     document.getElementById('reviewSubject').innerHTML='<option value="ALL">全部科目</option>';
-    const subjects=['全部科目',...new Set(items.map(q=>q.subject))];
+    const subjects=['全部科目',...annualSubjects];
     const filter=document.getElementById('subjectSel');
     filter.replaceChildren();
     for(const s of subjects){
@@ -268,8 +279,10 @@
       if(scroll)card.scrollIntoView({behavior:'smooth',block:'start'});
     };
     const changeSubject=()=>{
-      rows=filter.value==='全部科目'?items:items.filter(q=>q.subject===filter.value);
-      index=0;render(true);
+      if(filter.value==='全部科目'){
+        rows=items;index=0;showStudy();render(true);return;
+      }
+      window.suduOpenYearSubject(filter.value);
     };
     window.suduOpenYearSubject=subject=>{
       if(!annualSubjects.includes(subject))return;
@@ -448,7 +461,7 @@
     document.title='速讀｜'+activeYear+' 正式題庫｜教學解說';
     document.body.dataset.verifiedReadyYear=activeYear;
     document.body.classList.remove('verified-year-loading','qa-image-mode');
-    renderSelectors();renderAll();publishAnnualMenu();showHome();
+    renderSelectors();syncAnnualStickySubjects();renderAll();publishAnnualMenu();showHome();
     const requestedSubject=args.get('subject');
     if(requestedSubject&&annualSubjects.includes(requestedSubject))
       window.suduOpenYearSubject(requestedSubject);
