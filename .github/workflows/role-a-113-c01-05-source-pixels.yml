@@ -52,8 +52,13 @@ jobs:
           git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp
           expected="$(printf '%s\n' 'sudu/data/processed/113/role-a-c01-05/manifest.json' 'sudu/data/processed/113/role-a-c01-05/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp')"
           changed="$(git diff --cached --name-only)"
+          revised="$(printf '%s\n' 'sudu/data/processed/113/role-a-c01-05/manifest.json' 'sudu/data/processed/113/role-a-c01-05/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp')"
           if test -n "$changed"; then
-            test "$changed" = "$expected" || { echo 'ONLY exact seven owned source outputs may change'; git diff --cached --name-only; exit 1; }
+            if test "$changed" != "$expected" && test "$changed" != "$revised"; then
+              echo 'ONLY initial seven or explicit C05-only correction to three source outputs may change'
+              git diff --cached --name-only
+              exit 1
+            fi
             git diff --cached --check
             test -z "$(git diff --name-only)" || { echo 'Other tracked files modified'; exit 1; }
             git config user.name 'github-actions[bot]'
