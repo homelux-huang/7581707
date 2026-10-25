@@ -9,6 +9,7 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -21,7 +22,7 @@ SOURCE_GIT="9578305e9c4181d3b339b830e23e12402f4893d3"
 TASK="A-113-C07-10-DIAGRAM-AND-TEXT-20261025-12"
 BASE=ROOT/"sudu/data/processed/113/role-a-c07-10"
 MAN=BASE/"manifest.json";DB=BASE/"question-bank.sqlite3"
-CROPS={7:[90,164,1310,502],8:[90,505,1310,657],9:[90,661,1310,1123],10:[90,1125,1310,1840]}
+CROPS={7:[90,164,1310,502],8:[90,505,1310,657],9:[90,661,1310,1136],10:[90,1137,1310,1840]}
 ANS={7:"A",8:"D",9:"B",10:"B"}
 CLEAN_OPTIONS={
  9:["①、②皆正確","①、②皆錯誤","①正確，②錯誤","①錯誤，②正確"],
@@ -66,6 +67,9 @@ def exact():
     man={"schemaVersion":1,"taskId":TASK,"year":113,"paperCode":"00-C",
          "sourceIndex":doc["sourceIndex"],"yearCandidateQuestionCount":205,
          "yearLegacyQuestionsFound":196,"originalPageNumber":3,
+         "rejectedInitialCrops":[
+             {"questionId":"113-00-C-09","cropPixels":[90,661,1310,1123],"sha256":"2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac","reason":"bottom x-axis label touched and risked glyph clipping"},
+             {"questionId":"113-00-C-10","cropPixels":[90,1125,1310,1840],"sha256":"d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491","reason":"shift Q10 start past Q09 complete axis caption without mixing"}],
          "originalPage":{"path":ORIGIN.relative_to(ROOT).as_posix(),"gitBlobSha1":SOURCE_GIT,
                          "sha256":sha(original),"pixelSize":[1400,1981]},
          "originalAnswerPage":{"path":archived.ANSWER.relative_to(ROOT).as_posix(),
@@ -86,7 +90,19 @@ def exact():
             orig=p["questions"][n-1]
             out=BASE/"webp"/f"113-00-C-{n:02d}.webp"
             crop=archived.crop(image,CROPS[n])
-            archived.savepixels(crop,out)
+            if n in (7,8) and out.exists():
+                # Already original-image byte verified and genuinely visualized.
+                # Never re-crop valid Q7/Q8 just to fix figure boundaries in Q9/Q10.
+                pins={7:"dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a",
+                      8:"4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49"}
+                existing=out.read_bytes()
+                assert sha(existing)==pins[n],"verified Q7/Q8 image drift"
+                with Image.open(out) as verified:
+                    verified.load()
+                    assert verified.size==crop.size
+                    assert ImageChops.difference(verified.convert("RGB"),crop).getbbox() is None
+            else:
+                archived.savepixels(crop,out)
             raw=out.read_bytes()
             correct=copy.deepcopy(CLEAN_OPTIONS.get(n,orig["options"]))
             if n==9:
@@ -212,7 +228,33 @@ def main():
     if args.apply==args.verify:parser.error("choose one of --apply or --verify")
     if args.apply:
         if MAN.exists():
-            current=read(MAN);check(current);read_db(DB,current)
+            current=read(MAN)
+            old_crops={q["originalQuestionNumber"]:q["asset"]["cropPixels"] for q in current["questions"]}
+            if old_crops[9]==[90,661,1310,1123] and old_crops[10]==[90,1125,1310,1840]:
+                # Tight bottom caption Q09 crop discovered by real image inspection.
+                # Verify old exact SHA, preserve and never regenerate Q07/Q08.
+                old_expected={7:"dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a",
+                              8:"4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49",
+                              9:"2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
+                              10:"d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491"}
+                assert {q["originalQuestionNumber"]:q["asset"]["sha256"] for q in current["questions"]}==old_expected
+                for q in current["questions"]:
+                    assert sha((ROOT/q["asset"]["path"]).read_bytes())==old_expected[q["originalQuestionNumber"]]
+                read_db(DB,current)
+                updated=exact()
+                assert current["questions"][:2]==updated["questions"][:2]
+                unchanged=copy.deepcopy(current)
+                unchanged["questions"][2:]=updated["questions"][2:]
+                unchanged["rejectedInitialCrops"]=updated["rejectedInitialCrops"]
+                assert unchanged==updated,"changes beyond corrected Q09/Q10 pixels/digest"
+                stage=DB.with_suffix(".sqlite3.stage")
+                write_db(stage,updated)
+                read_db(stage,updated)
+                os.replace(stage,DB)
+                MAN.write_text(json.dumps(updated,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+                print("SOURCE_IMAGE_Q09_Q10_BOUNDARY_ONLY_CORRECTED",[(n,old_expected[n],updated["questions"][n-7]["asset"]["sha256"]) for n in (9,10)])
+                return
+            check(current);read_db(DB,current)
             print("IDEMPOTENT_NO_IMAGE_REBUILD_AFTER_SOURCE_REVIEW",DB.as_posix())
             return
         BASE.mkdir(parents=True,exist_ok=True)
