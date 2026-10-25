@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACCOUNTING-23-24-20261025-04",
+  "role": "C",
+  "claimedIssueCommentId": 6393746271,
+  "claimedAtUtc": "2026-10-25T05:06:58Z",
+  "branch": "teaching/115-role-c-accounting23-24-20261025",
+  "baseSHA": "e906b5b0b6098bd81dbd0ec52aacbaef4e2ba5e7",
+  "sourceHead": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceBankBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "status": "AUTHOR_DRAFT_PENDING_SOURCE_AND_DIFFERENT_AI_REVIEW",
+  "newReady": 0,
+  "newLive": 0,
+  "items": [
+    {
+      "questionId": "115-09-2-23",
+      "path": "sudu/teaching-candidates/115-role-c-accounting23-24-20261025/115-09-2-23.json",
+      "fileSha256": "09ffd0b820c43e7db5d70d2b017af0277b8df955fb41a1979001a2333d8e1cb5",
+      "teachingSha256": "4ee0177dfd0f15f4a2a78910247255e7b152576d74eb3213169d5a383bf758ff",
+      "sourceTextRevision": "48f8b1dcc79f08d469b20fbbc62b41f099d9d74b3606927afcbac962a51be304",
+      "imageSha256": "3b6c4d55fe4a519c0805104df18b87bdfd8f994268688e4318459fd0ef713bf6",
+      "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1",
+      "sharedImageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
+      "coordinatorLedgerHistoricalRevision": "4dc7a376e0b9e5929a0a0df3e652ea0811d3b662ddce431eff4ebc539c859731",
+      "ledgerRevisionMatches": false,
+      "ready": false
+    },
+    {
+      "questionId": "115-09-2-24",
+      "path": "sudu/teaching-candidates/115-role-c-accounting23-24-20261025/115-09-2-24.json",
+      "fileSha256": "809337c52de70748e44f04b69a266b125a8b1e3881f5f1a3a86bbf1fb160fa2c",
+      "teachingSha256": "6d620446cbbbf4965b378421f8f8c00fa46a7e04adb73d4bbb772a568ea6c3ac",
+      "sourceTextRevision": "10418a4048adfca3d3201fb5ad5aafdc19b45e62c2e1a0b410a90d4d6560a6b9",
+      "imageSha256": "3de9bc054cbbcc29f600801c35b35764c09032a8f26d9c083e92217cdd11cf3f",
+      "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1",
+      "sharedImageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
+      "coordinatorLedgerHistoricalRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+      "ledgerRevisionMatches": false,
+      "ready": false
+    }
+  ]
+}

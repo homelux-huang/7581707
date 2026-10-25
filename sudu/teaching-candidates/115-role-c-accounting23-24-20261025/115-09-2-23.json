@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACCOUNTING-23-24-20261025-04",
+  "questionId": "115-09-2-23",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 23,
+  "subject": "會計學",
+  "claimedAtUtc": "2026-10-25T05:06:58Z",
+  "status": "ROLE_C_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "依據甲公司X5 年底資產負債表所計算之速動資產及營運資金分別為多少？",
+  "options": [
+    "$240,000，$600,000",
+    "$270,000，$675,000",
+    "$390,000，$975,000",
+    "$400,000，$1,000,000"
+  ],
+  "answerCandidate": "A",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "image": "sudu/data/processed/115/webp-v2/09-2/115-09-2-23.webp",
+  "imageSha256": "3b6c4d55fe4a519c0805104df18b87bdfd8f994268688e4318459fd0ef713bf6",
+  "originalQuestionPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "sharedMaterial": {
+    "sharedMaterialId": "115-09-2-SHARED-23-24",
+    "text": "ˉ\n▲閱讀下文，回答第23-24 題\n    甲公司會計基礎採權責發生基礎之記虛轉實法，依據X5 年底資產負債表得知，資產\n  總額為$1,950,000，流動比率為3，速動比率為0.8，非流動負債為流動負債1.6 倍，權益\n  總額為負債總額1.5 倍。",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-09-2-SHARED-23-24.webp",
+    "imageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
+  },
+  "teaching": {
+    "teacherSummary": "先用**資產＝負債＋權益**求總負債，再依非流動負債是流動負債1.6倍拆出短債；由**速動比率＝速動資產÷流動負債**及**營運資金＝流動資產－流動負債**，求出**240,000元、600,000元（A）**。",
+    "elementarySummary": "先知道公司總共欠多少，再找一年內要還多少，接著算可以很快變成錢的資產，以及流動資產扣掉短期欠款後還剩多少。",
+    "memory": "**總負債78萬→流動負債30萬→速動資產24萬；90萬－30萬＝營運資金60萬**。",
+    "concept": "資產＝負債＋權益；流動比率＝流動資產÷流動負債；速動比率＝速動資產÷流動負債；營運資金＝流動資產－流動負債。",
+    "extension": "速動比率分母應是**流動負債**，不可直接用流動資產作分母。",
+    "highlights": [
+      "會計恆等式",
+      "流動比率",
+      "速動比率",
+      "流動負債",
+      "營運資金",
+      "240,000元",
+      "600,000元"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "**速動資產＝0.8×300,000＝240,000元；營運資金＝900,000－300,000＝600,000元**，兩數均吻合題幹比率與資產負債關係。",
+        "elementary": "短債30萬元，可快速還債資產24萬元，流動資產扣短債剩60萬元，A兩個答案都正確。",
+        "reason": "**速動資產＝0.8×300,000＝240,000元；營運資金＝900,000－300,000＝600,000元**，兩數均吻合題幹比率與資產負債關係。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "270,000÷300,000＝0.9，與題目速動比率0.8不符；營運資金675,000也與900,000－300,000所得600,000不符。",
+        "elementary": "選B會把速動比率算成0.9，而且剩餘資金也不是60萬元，所以不對。",
+        "reason": "270,000÷300,000＝0.9，與題目速動比率0.8不符；營運資金675,000也與900,000－300,000所得600,000不符。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "390,000÷300,000＝1.3，與速動比率0.8矛盾；營運資金975,000元亦與600,000不符。",
+        "elementary": "C算的速動資產和扣除短債後剩的錢都太多，和題目條件不一樣。",
+        "reason": "390,000÷300,000＝1.3，與速動比率0.8矛盾；營運資金975,000元亦與600,000不符。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "400,000÷300,000約1.333，與速動比率0.8矛盾；營運資金1,000,000元甚至超過流動資產900,000元，顯然不可能。",
+        "elementary": "扣掉欠款後怎麼會剩100萬元，比全部流動資產90萬元更多？D明顯不對。",
+        "reason": "400,000÷300,000約1.333，與速動比率0.8矛盾；營運資金1,000,000元甚至超過流動資產900,000元，顯然不可能。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "總資產1,950,000元；權益＝總負債×1.5",
+        "非流動負債＝流動負債×1.6",
+        "流動比率3倍；速動比率0.8倍"
+      ],
+      "formulaUse": "先用會計恆等式求總負債，再拆分流動負債；分別以流動及速動比率求流動資產與速動資產，營運資金=流動資產－流動負債。",
+      "substitution": [
+        "1,950,000＝L＋1.5L",
+        "780,000＝CL＋1.6CL",
+        "CA＝3×CL；QA＝0.8×CL；WC＝CA－CL"
+      ],
+      "steps": [
+        "設L為總負債、CL為流動負債，金額皆為元。",
+        "**資產＝負債＋權益**，故1,950,000＝L＋1.5L＝2.5L。",
+        "**總負債L＝1,950,000÷2.5＝780,000元**。",
+        "非流動負債為1.6CL，故780,000＝CL＋1.6CL＝2.6CL。",
+        "**流動負債CL＝780,000÷2.6＝300,000元**。",
+        "**流動資產CA＝3×300,000＝900,000元**。",
+        "**速動資產QA＝0.8×300,000＝240,000元**。",
+        "**營運資金WC＝900,000－300,000＝600,000元**。",
+        "驗算：非流動負債＝480,000元，權益＝1,170,000元；300,000＋480,000＋1,170,000＝1,950,000元。",
+        "驗算原比率：900,000÷300,000＝3，240,000÷300,000＝0.8，故選A。"
+      ],
+      "result": "速動資產240,000元；營運資金600,000元",
+      "unit": "元",
+      "option": "A",
+      "verification": "負債與權益合計符合原資產1,950,000元，兩個比率3與0.8也吻合。"
+    },
+    "stepByStep": [
+      "利用資產負債表的權益比值求總負債780,000元。",
+      "拆出流動負債300,000元，再求流動資產900,000元。",
+      "套速動比率求速動資產240,000元；相減求營運資金600,000元。",
+      "把兩比率和資產恆等式代回驗算。"
+    ],
+    "source": "115年統測專業科目二官方題圖與共享題幹；實際校用教材版本與頁碼待核對。"
+  },
+  "review": {
+    "author": "GPT-6 Role C AI author",
+    "knownAnswerBeforeDerivation": true,
+    "newBlindSolveClaimed": false,
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialAnswerEvidenceSha256": null,
+    "sourceAdmission": "PENDING",
+    "sharedSourceQa": "PENDING",
+    "v4ExactDigestQa": "PENDING",
+    "knownSourceRevisionForReview": "48f8b1dcc79f08d469b20fbbc62b41f099d9d74b3606927afcbac962a51be304",
+    "knownTeachingDigestForReview": "4ee0177dfd0f15f4a2a78910247255e7b152576d74eb3213169d5a383bf758ff",
+    "knownOriginalImageSha256ForReview": "3b6c4d55fe4a519c0805104df18b87bdfd8f994268688e4318459fd0ef713bf6",
+    "sharedMaterialRevisionForReview": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_NOTICE_AND_SOURCE_ADMISSION_PENDING",
+    "ORIGINAL_SHARED_23_24_IMAGE_VISUAL_QA_PENDING",
+    "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING",
+    "COORDINATOR_LEDGER_SOURCE_REVISION_MISMATCH_NEEDS_MASTER_A_RECONCILIATION"
+  ],
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "48f8b1dcc79f08d469b20fbbc62b41f099d9d74b3606927afcbac962a51be304",
+  "teachingCanonicalSha256": "4ee0177dfd0f15f4a2a78910247255e7b152576d74eb3213169d5a383bf758ff",
+  "coordinatorLedgerHistoricalRevision": "4dc7a376e0b9e5929a0a0df3e652ea0811d3b662ddce431eff4ebc539c859731",
+  "coordinatorLedgerRevisionMatchesCurrentSource": false
+}

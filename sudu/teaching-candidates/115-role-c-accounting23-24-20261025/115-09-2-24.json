@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACCOUNTING-23-24-20261025-04",
+  "questionId": "115-09-2-24",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 24,
+  "subject": "會計學",
+  "claimedAtUtc": "2026-10-25T05:06:58Z",
+  "status": "ROLE_C_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "若X6 年發現，X5 年底漏作下列二項交易事項應作之調整分錄，則此錯誤對X5 年底流\n  動比率及速動比率之影響分別為何？\n  ① X5 年 6 月 1 日出租設備 9 個月，預收 9 個月租金$27,000\n  ② X5 年 9 月 1 日預付一年期火災保險費$45,000",
+  "options": [
+    "流動比率低估，速動比率低估",
+    "流動比率低估，速動比率高估",
+    "流動比率高估，速動比率低估",
+    "流動比率高估，速動比率高估"
+  ],
+  "answerCandidate": "B",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "image": "sudu/data/processed/115/webp-v2/09-2/115-09-2-24.webp",
+  "imageSha256": "3de9bc054cbbcc29f600801c35b35764c09032a8f26d9c083e92217cdd11cf3f",
+  "originalQuestionPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "sharedMaterial": {
+    "sharedMaterialId": "115-09-2-SHARED-23-24",
+    "text": "ˉ\n▲閱讀下文，回答第23-24 題\n    甲公司會計基礎採權責發生基礎之記虛轉實法，依據X5 年底資產負債表得知，資產\n  總額為$1,950,000，流動比率為3，速動比率為0.8，非流動負債為流動負債1.6 倍，權益\n  總額為負債總額1.5 倍。",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-09-2-SHARED-23-24.webp",
+    "imageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
+  },
+  "teaching": {
+    "teacherSummary": "採**記虛轉實法**，期末要把**未賺租金6,000元**轉為流動負債，將**未耗保險費30,000元**轉為流動資產（非速動資產）。漏調整時的流動比率**3倍低於正確約3.0392倍**；速動比率**0.8倍高於正確約0.7843倍**，因此選**B：流動比率低估、速動比率高估**。",
+    "elementarySummary": "收到租金有2個月的服務還沒做完，應該記下欠客人的6千元；保險還有8個月能用，是公司還擁有的3萬元。漏記這兩件事，第一個比例會看太小，第二個會看太大。",
+    "memory": "**租金未賺2/9＝欠款＋6千；保險未用8/12＝流動資產＋3萬、不算速動資產；CR低估、QR高估。**",
+    "concept": "**記虛轉實法**：初記為收益或費用的預收／預付交易，期末依未實現部分轉列負債或資產。**預付保險費是流動資產，但不是速動資產**。比較低估/高估必須計算未調整值與正確值。",
+    "extension": "資產與負債都增加時，流動比率不能只靠方向猜測，要實算分子分母的比例；本題CA增幅3.33%大於CL增幅2%，因此CR正確值上升。",
+    "highlights": [
+      "記虛轉實法",
+      "未賺租金",
+      "預收租金",
+      "預付保險費",
+      "速動資產不含預付",
+      "流動比率低估",
+      "速動比率高估"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A說流動比率、速動比率均低估；前者確實低估，但少計**預收租金負債6,000元**會讓原速動比率0.8大於正確0.7843，速動比率其實高估。",
+        "elementary": "第一個比例看小了沒錯，但第二個是因少記欠款而看大，不是一起看小。",
+        "reason": "A說流動比率、速動比率均低估；前者確實低估，但少計**預收租金負債6,000元**會讓原速動比率0.8大於正確0.7843，速動比率其實高估。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**流動比率：漏調整3 < 正確930,000÷306,000≈3.0392（低估）；速動比率：漏調整0.8 > 正確240,000÷306,000≈0.7843（高估）**。兩項完全符合題意。",
+        "elementary": "改正後第一個變大、第二個變小，所以以前漏記時第一個太小、第二個太大，B正確。",
+        "reason": "**流動比率：漏調整3 < 正確930,000÷306,000≈3.0392（低估）；速動比率：漏調整0.8 > 正確240,000÷306,000≈0.7843（高估）**。兩項完全符合題意。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說流動比率高估、速動比率低估，但本題調整後分別是3.0392及0.7843；與原3、0.8比較方向完全相反。",
+        "elementary": "C把兩個數比較的方向都說反了，所以不能選。",
+        "reason": "C說流動比率高估、速動比率低估，但本題調整後分別是3.0392及0.7843；與原3、0.8比較方向完全相反。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D的速動比率高估有對，但流動比率不是高估：未調整3比正確約3.0392低，整個選項仍錯。",
+        "elementary": "D只對第二格，第一格錯；兩格都對才能選整個答案。",
+        "reason": "D的速動比率高估有對，但流動比率不是高估：未調整3比正確約3.0392低，整個選項仍錯。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "採權責發生基礎記虛轉實法，原整筆租金列收入、原整筆保險列費用",
+        "X5年6月1日收9個月租金27,000元，年底已經過7個月、未賺2個月",
+        "X5年9月1日付1年保險費45,000元，年底已使用4個月、未耗8個月",
+        "承第23題原流動資產900,000元、流動負債300,000元、速動資產240,000元"
+      ],
+      "formulaUse": "依記虛轉實法把未賺租金回轉為流動負債，未耗保險回轉為流動資產（非速動資產），再比較遺漏調整與正確調整後的兩個比率。",
+      "substitution": [
+        "預收租金未賺＝27,000×2÷9＝6,000元",
+        "保險未耗＝45,000×8÷12＝30,000元",
+        "正確CA＝900,000＋30,000＝930,000元",
+        "正確CL＝300,000＋6,000＝306,000元",
+        "正確QA＝240,000元（預付保險不列速動）",
+        "CR漏調整＝900,000÷300,000；CR正確＝930,000÷306,000",
+        "QR漏調整＝240,000÷300,000；QR正確＝240,000÷306,000"
+      ],
+      "steps": [
+        "租金起自X5年6月1日，9個月到X6年2月底；X5年已賺7個月，尚未賺2個月。",
+        "未賺租金＝27,000×2/9＝**6,000元**；期末調整：**借：租金收入6,000元／貸：預收租金6,000元**，流動負債應增加6,000元。",
+        "保險起自X5年9月1日，至年底已耗4個月，尚剩8個月。",
+        "未耗保險＝45,000×8/12＝**30,000元**；期末調整：**借：預付保險費30,000元／貸：保險費30,000元**，流動資產應增加30,000元；這是預付款項不列速動資產。",
+        "承第23題未調整CA＝900,000元、CL＝300,000元、QA＝240,000元。",
+        "正確調整後CA＝930,000元，CL＝306,000元，QA維持240,000元。",
+        "未調整流動比率＝900,000÷300,000＝**3倍**。",
+        "正確流動比率＝930,000÷306,000≈**3.039215686倍**；漏記時3 < 3.0392，故流動比率**低估**。",
+        "未調整速動比率＝240,000÷300,000＝**0.8倍**。",
+        "正確速動比率＝240,000÷306,000≈**0.784313725倍**；漏記時0.8 > 0.7843，故速動比率**高估**。",
+        "驗算方向：CA增加30,000／900,000≈3.33%，CL增加6,000／300,000=2%；CR上升。QA不變但CL上升，所以QR下降。選B。"
+      ],
+      "result": "流動比率低估；速動比率高估",
+      "unit": "倍（比率無量綱；金額單位為元）",
+      "option": "B",
+      "verification": "未調整3倍 < 正確約3.0392倍，未調整0.8倍 > 正確約0.7843倍，兩個方向符合B。"
+    },
+    "stepByStep": [
+      "依月份算租金未賺2個月6,000元，應增加預收租金負債。",
+      "算保險未耗8個月30,000元，應增加預付保險資產但非速動。",
+      "用第23題的原CA/CL/QA重算調整後CA930,000、CL306,000、QA240,000。",
+      "比較兩比率調整前後大小並檢查所有選項，判定B。"
+    ],
+    "source": "115年統測專業科目二第24題及第23～24題原始共用文字；教材版本與頁碼待核對。"
+  },
+  "review": {
+    "author": "GPT-6 Role C AI author",
+    "knownAnswerBeforeDerivation": true,
+    "newBlindSolveClaimed": false,
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialAnswerEvidenceSha256": null,
+    "sourceAdmission": "PENDING",
+    "sharedSourceQa": "PENDING",
+    "v4ExactDigestQa": "PENDING",
+    "knownSourceRevisionForReview": "10418a4048adfca3d3201fb5ad5aafdc19b45e62c2e1a0b410a90d4d6560a6b9",
+    "knownTeachingDigestForReview": "6d620446cbbbf4965b378421f8f8c00fa46a7e04adb73d4bbb772a568ea6c3ac",
+    "knownOriginalImageSha256ForReview": "3de9bc054cbbcc29f600801c35b35764c09032a8f26d9c083e92217cdd11cf3f",
+    "sharedMaterialRevisionForReview": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_NOTICE_AND_SOURCE_ADMISSION_PENDING",
+    "ORIGINAL_SHARED_23_24_IMAGE_VISUAL_QA_PENDING",
+    "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING",
+    "COORDINATOR_LEDGER_SOURCE_REVISION_MISMATCH_NEEDS_MASTER_A_RECONCILIATION"
+  ],
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "10418a4048adfca3d3201fb5ad5aafdc19b45e62c2e1a0b410a90d4d6560a6b9",
+  "teachingCanonicalSha256": "6d620446cbbbf4965b378421f8f8c00fa46a7e04adb73d4bbb772a568ea6c3ac",
+  "coordinatorLedgerHistoricalRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+  "coordinatorLedgerRevisionMatchesCurrentSource": false
+}
