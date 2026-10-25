@@ -1,0 +1,64 @@
+name: Role A 113 Chinese 06 original couplet diagram + option D OCR candidate (NO RELEASE)
+on:
+  push:
+    branches:
+      - data/role-a-113-c06-original-diagram-ocr-20261025
+    paths:
+      - scripts/role_a_113_c06_source_diagram.py
+      - tests/test_role_a_113_c06_source_diagram.py
+      - docs/ROLE_A_113_C06_SOURCE_DIAGRAM_20261025.md
+      - .github/workflows/role-a-113-c06-source-diagram.yml
+      - sudu/data/processed/113/role-a-c06/**
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: role-a-113-c06-diagram-source-exclusive-20261025
+  cancel-in-progress: false
+jobs:
+  scoped_original_couplet_pixel_and_sqlite:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/data/role-a-113-c06-original-diagram-ocr-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact isolated Role A branch; never main
+        uses: actions/checkout@v4
+        with:
+          ref: data/role-a-113-c06-original-diagram-ocr-20261025
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image decoder for original source-pixel verification
+        run: python -m pip install -q Pillow==11.3.0
+      - name: Verify exact original Q06 image and safely build one candidate SQLite row
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "data/role-a-113-c06-original-diagram-ocr-20261025"
+          python -m py_compile scripts/role_a_113_c06_source_diagram.py tests/test_role_a_113_c06_source_diagram.py
+          python -m scripts.role_a_113_c06_source_diagram --apply
+          python -m scripts.role_a_113_c06_source_diagram --verify
+          python -m unittest discover -s tests -p test_role_a_113_c06_source_diagram.py -v
+          python -m unittest discover -s tests -p test_role_a_113_c01_05_source_receipts.py -v
+      - name: Commit only three exclusive new source artifacts and no main or Pages
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/113/role-a-c06/manifest.json
+          git add -- sudu/data/processed/113/role-a-c06/question-bank.sqlite3
+          git add -- sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp
+          expected="$(printf '%s\n' 'sudu/data/processed/113/role-a-c06/manifest.json' 'sudu/data/processed/113/role-a-c06/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp')"
+          changed="$(git diff --cached --name-only)"
+          if test -n "$changed"; then
+            test "$changed" = "$expected" || { echo 'Unexpected changes outside isolated C06 manifest, SQL, or image'; git diff --cached --name-only; exit 1; }
+            git diff --cached --check
+            test -z "$(git diff --name-only)" || { echo 'Tracked files unexpectedly modified'; exit 1; }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'data(role A): 113 C06 original-couplet pixels, D OCR crop repair, one-row candidate SQL [NO RELEASE]'
+            git push origin HEAD:refs/heads/data/role-a-113-c06-original-diagram-ocr-20261025
+          else
+            echo 'IDEMPOTENT: actual original Q06 source pixels and SQLite SHA unchanged'
+          fi
+          test "$(git ls-remote origin refs/heads/data/role-a-113-c06-original-diagram-ocr-20261025 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo 'NO STUDENT RELEASE; official final amendment, independent E lesson review and V4 UI QA pending.'
