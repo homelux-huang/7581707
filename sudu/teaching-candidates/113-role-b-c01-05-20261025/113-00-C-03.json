@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-03",
+  "taskId": "B-113-C01-05-A72-PROVENANCE-LESSONS-20261025-11",
+  "subject": "國文",
+  "question": "「他是鵝蛋臉，臥蠶眉。」句中「鵝蛋」、「臥蠶」用來修飾其後的臉、眉，意指鵝蛋\n  般的臉，臥蠶般的眉。下列「」內的詞，何者有相同用法？",
+  "options": [
+    "沙鷗翔集，「錦鱗」游泳",
+    "月明星稀，「烏鵲」南飛",
+    "寧赴湘流，葬於「江魚」之腹中",
+    "夫秦王有「虎狼」之心，殺人如不能舉"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourcePR72Head": "481734d51928c8e47303718034479feafdf7e45e",
+    "sourceRevision": "ecad096df5d194a1a98e78dbd0ca5130bd27fbd47d24b7316d0b0caa79b68261",
+    "sourceWebpPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp",
+    "webpSha256": "ef5244f376272eaf43718c33cac84e3585eaa23a3411e11e024fe627536adf79",
+    "sourceManifestG1Status": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+    "sourceTextQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+    "finalOfficialAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+    "roleAImageEvidencePath": "sudu/data/processed/113/role-a-c01-05/VISUAL_QA_ASSISTANT_20261025.json",
+    "originalImageQaReceipt": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "finalNoticeScopeVerified": false
+  },
+  "teaching": {
+    "topic": "113國文3｜鵝蛋臉與虎狼之心：物象比喻修飾",
+    "teacherSummary": "題幹『鵝蛋臉』『臥蠶眉』把鵝蛋和臥蠶的形態借來修飾臉、眉，構成比喻性前置修飾。D『**虎狼之心**』借凶狠猛獸形容秦王的心性，也用前面物象修飾後方中心詞。A『錦鱗』是魚的借代，B『烏鵲』只是鳥名，C『江魚』用江指出魚的棲息處，都和題幹用法不同，因此 D 正確。",
+    "elementarySummary": "鵝蛋臉就是臉像鵝蛋，臥蠶眉就是眉像蠶。D 虎狼之心說心像老虎、狼一樣狠，也拿東西形容後面的名詞，所以選 D。",
+    "concept": "找先以物象形容後面名詞的關係：鵝蛋→臉、臥蠶→眉、虎狼→心。錦鱗借代魚、江魚說地點，不是同法。",
+    "memory": "鵝蛋→臉；臥蠶→眉；虎狼→心。D。",
+    "solvingSteps": [
+      "題幹先告知鵝蛋和臥蠶比喻臉眉，抓住物象前置修飾。",
+      "A 錦鱗是代稱魚，B 烏鵲是鳥類名稱，都無明示被比喻的後詞。",
+      "C 江魚表示江中的魚，是地點限定。",
+      "D 虎狼之心以虎狼比擬心性，符合構詞方法，選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『錦鱗』借美麗魚鱗代稱魚，偏借代；沒有被魚鱗比喻修飾的另一個明示中心名詞。",
+        "elementary": "A 的錦鱗就是魚在游，不是在比喻別的東西。",
+        "why": "A 借代魚，非前置比喻修飾另一名詞。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B『烏鵲』直接是鳥名並作主語，不是在用烏鵲的形貌比喻後面的臉或心。",
+        "elementary": "B 是鳥往南飛，本來就指鳥。",
+        "why": "B 是動物本名，不是題幹的比喻構詞。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C『江魚』是江中的魚，江說明魚的棲息位置，不是像江一樣的魚。",
+        "elementary": "C 是江裡的魚，不是魚長得像江。",
+        "why": "C 為地點限制，與形貌比喻不同。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D『虎狼之心』以猛獸凶狠的性質形容心性，和『鵝蛋臉』『臥蠶眉』都是前面的物象修飾後面的名詞。",
+        "elementary": "D 的心像虎狼般凶狠，就像臉像鵝蛋一樣。",
+        "why": "D 的虎狼比喻心性，前置修飾關係相同。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "chineseVocabulary": [
+      {
+        "level": "初級",
+        "term": "比喻",
+        "meaning": "拿一件東西形容另一件"
+      },
+      {
+        "level": "中級",
+        "term": "借代",
+        "meaning": "用相關特徵代替原物名稱"
+      },
+      {
+        "level": "高級",
+        "term": "前置修飾",
+        "meaning": "把用來描述的詞放在主要名詞前"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "鵝蛋",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "臥蠶",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "錦鱗",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "烏鵲",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "江魚",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "虎狼",
+        "bold": true,
+        "highlight": true
+      }
+    ]
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "knownAnswerBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "roleE": "PENDING_DISTINCT_AI_REVIEW",
+    "roleD": "PENDING_SAME_SHA_8X2",
+    "requiresRealHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerVerified": false,
+    "sourceFinalQaVerified": false,
+    "formalReady": false,
+    "newMain": false,
+    "newLive": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
