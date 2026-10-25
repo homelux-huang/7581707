@@ -1,0 +1,57 @@
+name: Compile 7581707 GH-AW Codex source (isolated / no inference)
+on:
+  push:
+    branches:
+      - coord/7581707-gh-aw-real-compile-20261025
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  compile-codex-lock:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - name: Install official gh-aw CLI extension without API model key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh extension install github/gh-aw
+      - name: Record compiler exact version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh aw version
+      - name: Compile only role-agent Codex workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh aw compile 7581707-role-agent --no-check-update
+      - name: Fail closed if compiled lock missing or indicates unsafe write permission
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=".github/workflows/7581707-role-agent.lock.yml"
+          test -s "$FILE"
+          echo "Compiled lock: $(wc -c < "$FILE") bytes"
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path(".github/workflows/7581707-role-agent.lock.yml").read_text()
+          assert len(s)>500, "Compiler result missing"
+          assert "contents: write" not in s, "Reject content writes in read-only worker"
+          assert "pull-requests: write" not in s, "Reject PR writes in read-only worker"
+          assert "issues: write" not in s, "Reject issue writes in read-only worker"
+          assert "CODEX_API_KEY" in s or "OPENAI_API_KEY" in s, "Require actual Codex secret hook"
+          assert "engine" in s.lower() or "codex" in s.lower(), "No Codex engine evidence"
+          print("PASS compiled lock read-only scope and Codex auth references")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gh-aw-compiled-codex-lock-${{ github.sha }}
+          path: .github/workflows/7581707-role-agent.lock.yml
+          if-no-files-found: error
+          retention-days: 7
