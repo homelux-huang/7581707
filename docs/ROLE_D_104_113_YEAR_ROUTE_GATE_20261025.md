@@ -35,3 +35,12 @@
 - CI 每次 **只接受同 HEAD**，不借舊 CI。完整 `historical-year-gate.json` 記每個實際 `sudu/data/years/{year}.json` 的 SHA、2,043 候選與 0 E/A/B 認證、每次截圖、mobile touch/desktop click、CJK、HTML/runtime/字詞選單與歷史發布結果。
 - 精確 commit、Actions run/job、ZIP SHA、錯誤、PR 和 E 待審事項於 CI 結束後寫回唯一 [Issue #36](https://github.com/homelux-huang/7581707/issues/36)；若失敗仍留所有斷言，修復同一有界任務再重跑；不得使用假證據或批次改 READY。
 - 現階段：**104–113 年新 READY=0、新 LIVE=0、新官方教學 UIQA=0；114／115 原有成果與 main/Pages 一律不變**。5 分鐘 watchdog 仍為 MASTER Draft PR #66（直到 main 合併前不是真正啟用的排程），本 Session 非背景常駐執行者。
+
+
+## 額外有界 V4 錯題復習隔離返修（Issue36 D-104-115-DEMO-REVIEW-SEED-SEPARATION-20261025-02）
+
+- 第二次 CLAIM [#6394349645](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6394349645) 使用本分支前一個已完成 CI HEAD `95b5b176171f2535833b7ef26d11b10bb488aaee` 作基底。未更動其他角色租約；本改動僅原始 HTML 的 `renderReview/seedDemo` 兩段與本 D 測試、交接。
+- 真實 bug：舊 `renderReview()` 以「year 不等於 114 或 115」判斷 Demo，新增 104～113 路由後會被認成 Demo。未來 A/B/C/E 逐題核准正式舊年度時，將可能把「Demo：建立跨科錯題樣本」顯示給正式學生；更嚴重的是原 `seedDemo()` 缺少 year guard，會把原學習 `state.records` 裡的跨科錯誤次數寫入正式年度歷史。不能因目前舊年度沒有已核准題而放任這個隱性錯誤。
+- 修正：統一 `isDemoRoute()`，**只有網址沒有 year 或明確 `?year=demo`** 才允許 Demo 範例；舊年度 104～113、114／115，甚至不支援的 URL 都不能顯示／呼叫 `seedDemo`。不是移除原 Demo 功能，也沒有改 35 題原資料。
+- 本 D 測試先真實觸控/點擊進入原 Demo 的錯題頁，確認原 `#seedDemo` 仍存在；再訪舊年度時對 `renderReview()` 和 `seedDemo()` 執行**只做拒絕的負向探針**，必須看不到 Demo 種子、同時學生 Demo 歷史逐位元不變。新加的 115 正式數學 B 5 題檢查確保也不能出現種子或改變正式作答紀錄；此程式安全負測不是虛構原題與老師 QA 證書。
+- 原 104–113 160 真實 HTTP 404／8×2／CJK／觸控與 114/115 既有核准題目回歸斷言**全部保留不刪**。最新精確 HEAD 必須重跑 CI，之前成功的 `95b5b176...` 不是新修正版本的 UIQA。READY、main、LIVE 仍未增加。
