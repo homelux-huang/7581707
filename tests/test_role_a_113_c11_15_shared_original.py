@@ -148,6 +148,52 @@ class Original113Chinese11To15(unittest.TestCase):
             for flags in db.execute("SELECT answer_verified,question_verified,teaching_verified,student_ready FROM questions"):
                 self.assertEqual(flags,(0,0,0,0))
 
+    def test_true_six_original_visual_observation_receipts_source_sha_only(self):
+        file=ROOT/"sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json"
+        self.assertTrue(file.exists())
+        data=a.read(file)
+        self.assertEqual(data["taskId"],a.TASK)
+        self.assertEqual(data["reviewerType"],"ASSISTANT_DIRECT_ORIGINAL_PAGE_PIXEL_VISUAL")
+        self.assertEqual(data["sourcePages"],self.m["originalPages"])
+        self.assertEqual(data["answerPage"],self.m["originalAnnouncedAnswerPage"])
+        self.assertEqual(data["sharedMaterialId"],a.SHARED_ID)
+        shared=data["sharedOriginal"]
+        self.assertEqual(shared["asset"],self.m["sharedMaterials"][0]["asset"])
+        self.assertEqual(shared["reviewStatus"],"PASS_ROLE_A_SOURCE_IMAGE_ONLY")
+        self.assertEqual(shared["linkedQuestionPages"],[4,5])
+        self.assertTrue(all(shared["criteria"].values()))
+        self.assertGreater(len(shared["reviewNote"]),100)
+        items={x["questionId"]:x for x in data["questions"]}
+        self.assertEqual(len(items),5)
+        for n,q in self.q.items():
+            with self.subTest(n=n):
+                result=items[q["questionId"]]
+                self.assertEqual(result["asset"],q["sourceAsset"])
+                self.assertEqual(result["sharedAssetSha256"],q["sharedMaterialAssetSha256"])
+                self.assertEqual(result["sourceRevisionSha256"],q["sourceRevisionSha256"])
+                self.assertEqual(result["printedPublishedAnswerCandidate"],q["answerCandidate"])
+                self.assertEqual(result["sourceImageReviewResult"],"PASS_ROLE_A_SOURCE_IMAGE_ONLY")
+                self.assertEqual(result["originalTableReview"],
+                                 "PASS_ORIGINAL_SIDE_BY_SIDE_TABLE_COMPLETE" if n==13 else "NOT_APPLICABLE")
+                self.assertEqual(result["originalPoetryReview"],
+                                 "PASS_TWO_PRINTED_BOXES_COMPLETE" if n==14 else "NOT_APPLICABLE")
+                self.assertEqual(result["originalIllustrationReview"],
+                                 "PASS_FOUR_FIGURE_POEM_LABELS_COMPLETE" if n==15 else "NOT_APPLICABLE")
+                self.assertTrue(all(result["criteria"].values()))
+                self.assertGreater(len(result["reviewNote"]),90)
+                self.assertFalse(result["answerVerified"])
+                self.assertFalse(result["questionVerified"])
+                self.assertFalse(result["independentRoleEContentReview"])
+                self.assertEqual(q["visualQaStatus"],"DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA")
+        for field in ("independentHumanReview","independentRoleEContentReview",
+                      "originalPdfBytesRehashedThisBatch","fullOfficialAmendmentScopeChecked",
+                      "officialFinalAnswerVerifiedByThisReview"):
+            self.assertFalse(data[field])
+        for field in ("newQuestionVerified","newIndependentRoleEContentReview",
+                      "newTeachingVerified","newReady","newLive"):
+            self.assertEqual(data[field],0)
+        self.assertEqual(data["newSourceImageAssistantPassCount"],6)
+
     def test_no_release_prior_ten_sources_unchanged_and_year_original_not_rebuilt(self):
         for key in ("newQuestionVerified","newAnswerVerified","newTeachingVerified",
                     "newIndependentEReview","newReady","newLive"):
