@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C15-E33-E34-20261025-07",
+  "claimedAtUtc": "2026-10-25T06:16:26Z",
+  "role": "C",
+  "questionId": "115-00-E-34",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 34,
+  "subject": "英文",
+  "status": "ROLE_C_AUTHOR_ONLY_QUARANTINED_PENDING_EXTERNAL_QA",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceParentARepairPR": 64,
+  "sourceBankGitBlobSha": "0128adc3f41e748950c3f5af83fca6dd1c331f5c",
+  "sourceManifestGitBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerHead": "340471f1c821ff58c292c13410a8e081e246c2cb",
+  "question": "Which of the following is NOT mentioned as a reason that makes Din Tai Fung successful?",
+  "options": [
+    "Every xiao long bao is folded 18 times and weighs 21 grams.",
+    "Din Tai Fung has 180 stores in 13 countries all over the world.",
+    "Customers can see chefs preparing food in glass-walled kitchens.",
+    "Customer service and taste of food are the same in any branch store."
+  ],
+  "answerCandidate": "B",
+  "knownAnswerBeforeDerivation": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "82de1011ed10d19453c6f9e669acc98bb282bce9f8da259f2461fc2bf3f55004",
+  "sourceImageManifestQa": "PASS",
+  "sourceAssetVisualQa": "PASS",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "individualImage": "sudu/data/processed/115/webp-v2/00-E/115-00-E-34.webp",
+  "individualWebpSha256": "e02ca43b3b8e33347c0cc6c8d3c83a869a7a1d606e2be768c7eb051b977f6d74",
+  "sourceQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalImageBytesRehashedThisTurn": false,
+  "sharedMaterial": {
+    "id": "115-00-E-SHARED-33-35",
+    "sourceText": "▲ 閱讀下文，回答第33 － 35 題\n\n       As the chart below shows, Din Tai Fung ( 鼎泰豐 ) has emerged as the top-performing\n    restaurant in the United States ( US ) in terms of revenue per store, according to the 2025 Technomic\n   Top 500 Chain Restaurant Report.\n       Founded in 1958 in Taiwan as a cooking oil business, Din Tai Fung began selling xiao long\n   bao in 1972 in Taipei. About 25 years later, it opened its first American branch store in Los\n    Angeles. Over the years, it has expanded to 180 branch stores in 13 countries around the world.\n       Din Tai Fung’s success was not achieved through expensive ads. Instead, the restaurant chain\n    has built its brand on global consistent product excellence, operational discipline, and social\n   media buzz. Whether in Los Angeles or Taipei, customers experience the same taste and service.\n   Every Din Tai Fung xiao long bao is folded exactly 18 times and weighs precisely 21 grams.\n   Through glass walls, customers can see chefs in the kitchen, making xiao long bao with exactness\n   and care. The way the chefs make the food, the steam coming off the baskets, and the perfect look\n    of each dish all make for great photos and videos. Customers post the pictures and share their\n    dining experience widely online, giving the brand effective publicity. The consistent quality,\n   combined with visual pleasure and the power of social media, has made Din Tai Fung successful\n   and popular in the US.\n                                                                           revenue 營收\n\n\n                 The Revenue per Store for the US Restaurant Chains\n\n                             Nobu Restaurant          10.1\n\n                           The Cheesecake Factory            12.4                                      Chains\n                               Smith and Wollensky              13.4\n\n                  Del Frisco's Double Eagle Steak House              13.8                                                               Restaurant                                 Mastro's Restaurants               14.5\n             US\n                                        Din Tai Fung                               27.4\n\n                                                          0           10          20          30\n                                                         Revenue ( Million USD )",
+    "sourceTextSha256": "bb62ef9db8d8067c46181c93f69ebcbdec00532a491db3d9303acb435a4a392d",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-33-35.webp",
+    "imageSha256": "eb19a37ba2d85414ebe06551aac145cb7053befa6622f7adfb1d86d4e63046ea",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 8,
+    "sharedMaterialRevision": "7b0e5a651c1c4d6c290642b131c35baeed5734d849a17e32743b53b9724382a5",
+    "originalImageBytesRehashedThisTurn": false
+  },
+  "teaching": {
+    "teacherSummary": "題幹的**NOT mentioned as a reason**是「哪個不是**成功的原因**」，不等於文章沒有提過。**B：180 stores in 13 countries**是規模與擴張**成果**，不屬作者提出的成功原因。A包子**18摺21克**代表品質與標準化，C玻璃廚房引發影像分享，D跨店**same taste and service**是品牌一致，這三者都是成功原因。",
+    "elementarySummary": "題目問不是成功原因，不是完全沒出現。包子做得仔細、廚師做菜給大家看、每家店味道一樣都是成功的方法。開到180家13國是已經做出的成績，所以選B。",
+    "memory": "**Reason＝原因；result＝成果。180 stores／13 countries是擴張成果，不是原因 → B。**",
+    "concept": "英文閱讀否定問句需區別**NOT mentioned as a reason**與**not mentioned at all**。資料在文中出現，仍可能只是背景或結果。",
+    "extension": "Technomic的每店平均營收可當作市場表現的**結果**，但不是本題原文的成因證明。新聞例句和閱讀文章分層呈現，避免將規模當因果。",
+    "highlights": [
+      "NOT mentioned as a reason",
+      "180 branch stores",
+      "13 countries",
+      "folded exactly 18 times",
+      "21 grams",
+      "through glass walls",
+      "same taste and service"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A提到每顆小籠包**摺18摺、重21克**，原文將這種精準做法連到**consistent product excellence**與作業紀律，所以屬成功因素，不是題目問的「非原因」。",
+        "elementary": "包子都做得精準整齊，這能讓品質穩定，當然是成功的一個方法，因此A不能選。",
+        "reason": "A提到每顆小籠包**摺18摺、重21克**，原文將這種精準做法連到**consistent product excellence**與作業紀律，所以屬成功因素，不是題目問的「非原因」。",
+        "sourceEvidence": "Passage: Every Din Tai Fung xiao long bao is folded exactly 18 times and weighs precisely 21 grams; global consistent product excellence."
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B的**180門市／13國**確實出現在文章，但那段是回顧擴張規模的**成果**；作者明說成功來自產品、紀律、社群口碑等，因此B是**提到卻非成功原因**，正確。",
+        "elementary": "180家店只是做大後的成績，不是在回答『為什麼它會成功』，所以B就是要找的。",
+        "reason": "B的**180門市／13國**確實出現在文章，但那段是回顧擴張規模的**成果**；作者明說成功來自產品、紀律、社群口碑等，因此B是**提到卻非成功原因**，正確。",
+        "sourceEvidence": "Passage: Over the years, it has expanded to 180 branch stores in 13 countries around the world; success was not achieved through expensive ads."
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C的**透明玻璃廚房**讓顧客看到製作過程；原文接著明說便於拍照片與影片、在社群分享形成**effective publicity**，所以是成功原因，不能選。",
+        "elementary": "客人看得到廚師做小籠包，就容易拍照分享、幫店家宣傳，C是成功的原因。",
+        "reason": "C的**透明玻璃廚房**讓顧客看到製作過程；原文接著明說便於拍照片與影片、在社群分享形成**effective publicity**，所以是成功原因，不能選。",
+        "sourceEvidence": "Passage: Through glass walls, customers can see chefs in the kitchen; great photos and videos; effective publicity."
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D的**same taste and service**呼應原文明列的全球一致品質與營運紀律，能讓跨國不同門市給人可靠的顧客體驗，屬成功原因，非本題所問。",
+        "elementary": "台北和洛杉磯吃起來味道、服務差不多，客人就比較放心，D是在說成功的方法。",
+        "reason": "D的**same taste and service**呼應原文明列的全球一致品質與營運紀律，能讓跨國不同門市給人可靠的顧客體驗，屬成功原因，非本題所問。",
+        "sourceEvidence": "Passage: Whether in Los Angeles or Taipei, customers experience the same taste and service; global consistent product excellence."
+      }
+    },
+    "english": {
+      "answerWord": "successful",
+      "pronunciationIPA": "/səkˈses.fəl/",
+      "answerWordMeaningZh": "成功的",
+      "sentenceTranslationZh": "下列哪一項不是文章提及的鼎泰豐成功原因？",
+      "synonyms": {
+        "初級": [
+          "doing well（表現良好）"
+        ],
+        "中級": [
+          "thriving（興盛）"
+        ],
+        "高級": [
+          "prosperous（成功繁榮）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "failing（失敗中）"
+        ],
+        "中級": [
+          "struggling（經營艱難）"
+        ],
+        "高級": [
+          "unsuccessful（不成功的）"
+        ]
+      },
+      "newsExampleEnglish": "A June 2025 industry report described Din Tai Fung's **successful** U.S. restaurant business, citing about $27.4 million in 2024 average sales per location.",
+      "newsExampleChinese": "2025年6月產業文章描述鼎泰豐美國餐廳的成功表現，並引用2024年每店平均營收約2,740萬美元。",
+      "newsExampleHighlightedSurfaceForm": "successful",
+      "newsExampleSourceOrganization": "Restaurant Business; Technomic statistics",
+      "newsExampleSourceUrl": "https://www.restaurantbusinessonline.com/financing/soup-dumpling-chain-has-industrys-highest-auvs-its-not-even-close",
+      "newsExampleSourceDate": "2025-06-06",
+      "newsExampleKind": "2025 original news-backed self-written bilingual pedagogic paraphrase, NOT VERBATIM",
+      "note": "英文是作者根據業界報導自行改寫，不是來源逐字引用；成功成績不等同本題文章的成功原因。"
+    },
+    "stepByStep": [
+      "看題幹的**NOT mentioned as a reason**，先判讀作者在問原因。",
+      "A精準製造、C開放廚房與社群分享、D同味同服務，都能找到作者明說的成功因素。",
+      "B 180家／13國是擴張結果而非原因，故選B。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年英文第34題與Din Tai Fung共用文章及原始chart；教材版次及頁碼未確認。"
+  },
+  "teachingCanonicalSha256": "ca8eb4d3304d6ea3ae1a946745ea0eae931dde67d0423a8b9c2d21e7a1a2282b",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI pedagogic author, not human credential",
+    "independentAiReviewer": "PENDING",
+    "independentAiReviewEvidenceSha256": null,
+    "independentAiReviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "sourceAdmission": "PENDING",
+    "sharedWebpSourceQa": "PENDING",
+    "v4SameDigest8Viewports2Themes": "PENDING",
+    "masterTrustedRelease": "PENDING",
+    "authorSelfReviewNotAcceptable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_AND_CORRECTION_SCOPE_DIRECT_EVIDENCE_PENDING",
+    "INDEPENDENT_ORIGINAL_SHARED_PIXEL_QA_AND_TEXT_RECONCILIATION_PENDING",
+    "DISTINCT_ROLE_E_SUBSTANTIVE_AI_OPTION_FORMULA_REVIEW_PENDING",
+    "ROLE_D_REAL_V4_8X2_SAME_SHA_PENDING",
+    "MASTER_PUBLISHER_TRUST_MAIN_LIVE_PENDING"
+  ],
+  "newReady": false
+}

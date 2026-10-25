@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C15-E33-E34-20261025-07",
+  "claimedAtUtc": "2026-10-25T06:16:26Z",
+  "role": "C",
+  "questionId": "115-00-E-33",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 33,
+  "subject": "英文",
+  "status": "ROLE_C_AUTHOR_ONLY_QUARANTINED_PENDING_EXTERNAL_QA",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceParentARepairPR": 64,
+  "sourceBankGitBlobSha": "0128adc3f41e748950c3f5af83fca6dd1c331f5c",
+  "sourceManifestGitBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerHead": "340471f1c821ff58c292c13410a8e081e246c2cb",
+  "question": "According to the chart, which of the following is correct?",
+  "options": [
+    "The revenue per store of the Cheesecake Factory is half of that of Din Tai Fung.",
+    "The revenue per store of Mastro’s Restaurants is higher than that of Nobu Restaurant.",
+    "Nobu Restaurant has higher revenue per store than Del Frisco’s Double Eagle Steak House.",
+    "Smith and Wollensky’s revenue per store is one million USD more than that of Din Tai Fung."
+  ],
+  "answerCandidate": "B",
+  "knownAnswerBeforeDerivation": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "d440c66050551440ca887ea3a0d910f28e93cc45d58b9e584fddbeaad7dea855",
+  "sourceImageManifestQa": "PASS",
+  "sourceAssetVisualQa": "PASS",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "individualImage": "sudu/data/processed/115/webp-v2/00-E/115-00-E-33.webp",
+  "individualWebpSha256": "d8faa4637558482adde2cf28f27b681f56527a3aeb67cf7ecc3349cbd4260525",
+  "sourceQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalImageBytesRehashedThisTurn": false,
+  "sharedMaterial": {
+    "id": "115-00-E-SHARED-33-35",
+    "sourceText": "▲ 閱讀下文，回答第33 － 35 題\n\n       As the chart below shows, Din Tai Fung ( 鼎泰豐 ) has emerged as the top-performing\n    restaurant in the United States ( US ) in terms of revenue per store, according to the 2025 Technomic\n   Top 500 Chain Restaurant Report.\n       Founded in 1958 in Taiwan as a cooking oil business, Din Tai Fung began selling xiao long\n   bao in 1972 in Taipei. About 25 years later, it opened its first American branch store in Los\n    Angeles. Over the years, it has expanded to 180 branch stores in 13 countries around the world.\n       Din Tai Fung’s success was not achieved through expensive ads. Instead, the restaurant chain\n    has built its brand on global consistent product excellence, operational discipline, and social\n   media buzz. Whether in Los Angeles or Taipei, customers experience the same taste and service.\n   Every Din Tai Fung xiao long bao is folded exactly 18 times and weighs precisely 21 grams.\n   Through glass walls, customers can see chefs in the kitchen, making xiao long bao with exactness\n   and care. The way the chefs make the food, the steam coming off the baskets, and the perfect look\n    of each dish all make for great photos and videos. Customers post the pictures and share their\n    dining experience widely online, giving the brand effective publicity. The consistent quality,\n   combined with visual pleasure and the power of social media, has made Din Tai Fung successful\n   and popular in the US.\n                                                                           revenue 營收\n\n\n                 The Revenue per Store for the US Restaurant Chains\n\n                             Nobu Restaurant          10.1\n\n                           The Cheesecake Factory            12.4                                      Chains\n                               Smith and Wollensky              13.4\n\n                  Del Frisco's Double Eagle Steak House              13.8                                                               Restaurant                                 Mastro's Restaurants               14.5\n             US\n                                        Din Tai Fung                               27.4\n\n                                                          0           10          20          30\n                                                         Revenue ( Million USD )",
+    "sourceTextSha256": "bb62ef9db8d8067c46181c93f69ebcbdec00532a491db3d9303acb435a4a392d",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-33-35.webp",
+    "imageSha256": "eb19a37ba2d85414ebe06551aac145cb7053befa6622f7adfb1d86d4e63046ea",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 8,
+    "sharedMaterialRevision": "7b0e5a651c1c4d6c290642b131c35baeed5734d849a17e32743b53b9724382a5",
+    "originalImageBytesRehashedThisTurn": false
+  },
+  "teaching": {
+    "teacherSummary": "**According to the chart** 要以**每店營收（million USD per store）**核對，不能把公司總營收混入。圖上**Mastro’s 14.5**，**Nobu 10.1**，所以**14.5－10.1＝4.4 百萬美元／店**，Mastro確實較高，選**B**。A的12.4不是27.4的一半，C的10.1小於13.8，D的13.4比27.4少14.0而非多1。",
+    "elementarySummary": "看圖上的數字，Mastro每店14.5，Nobu每店10.1，14.5比較大，所以B正確。A的一半算錯，C和D也把數字的大小弄反。",
+    "memory": "**Mastro 14.5 > Nobu 10.1，差4.4 million USD／store → B。**",
+    "concept": "**revenue per store** 是每店平均營收，資料單位是百萬美元；一半要先除2，差額要相減，驗算仍須維持相同單位。",
+    "extension": "2025年Restaurant Business報導的每店**27.4百萬美元**回顧2024年統計，不是2025年全公司收入；外部消息是英文延伸教材，不代替官方圖表。",
+    "highlights": [
+      "revenue per store",
+      "million USD",
+      "14.5 > 10.1",
+      "27.4 ÷ 2 = 13.7",
+      "14.5 − 10.1 = 4.4",
+      "13.4 − 27.4 = −14.0"
+    ],
+    "chartValuesMillionUsd": {
+      "Nobu Restaurant": 10.1,
+      "The Cheesecake Factory": 12.4,
+      "Smith and Wollensky": 13.4,
+      "Del Frisco's Double Eagle Steak House": 13.8,
+      "Mastro's Restaurants": 14.5,
+      "Din Tai Fung": 27.4
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A聲稱**Cheesecake 12.4**是**Din Tai Fung 27.4的一半**，但**27.4÷2＝13.7**，且**12.4×2＝24.8≠27.4**，因此A的半數說法不成立。",
+        "elementary": "鼎泰豐27.4的一半是13.7，Cheesecake只有12.4，不是剛剛好一半，所以A錯。",
+        "reason": "A聲稱**Cheesecake 12.4**是**Din Tai Fung 27.4的一半**，但**27.4÷2＝13.7**，且**12.4×2＝24.8≠27.4**，因此A的半數說法不成立。",
+        "sourceEvidence": "Original chart: The Cheesecake Factory 12.4; Din Tai Fung 27.4; Revenue ( Million USD )."
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B原圖的**Mastro’s Restaurants 14.5**大於**Nobu Restaurant 10.1**；差**14.5－10.1＝4.4百萬美元／店**，所以B描述的比較方向正確。",
+        "elementary": "Mastro14.5比Nobu10.1多4.4，圖表上就是這樣，所以B對。",
+        "reason": "B原圖的**Mastro’s Restaurants 14.5**大於**Nobu Restaurant 10.1**；差**14.5－10.1＝4.4百萬美元／店**，所以B描述的比較方向正確。",
+        "sourceEvidence": "Original chart: Mastro's Restaurants 14.5; Nobu Restaurant 10.1; Revenue ( Million USD )."
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C誤稱Nobu比Del Frisco高，但實際**Nobu 10.1 < Del Frisco 13.8**，差額**13.8－10.1＝3.7百萬美元／店**，應是Del Frisco更高。",
+        "elementary": "Nobu只有10.1，另一家13.8，C把誰比較大講反了。",
+        "reason": "C誤稱Nobu比Del Frisco高，但實際**Nobu 10.1 < Del Frisco 13.8**，差額**13.8－10.1＝3.7百萬美元／店**，應是Del Frisco更高。",
+        "sourceEvidence": "Original chart: Nobu Restaurant 10.1; Del Frisco's Double Eagle Steak House 13.8; Revenue ( Million USD )."
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D誤說Smith比Din Tai Fung多1百萬美元。原圖**Smith 13.4**、**Din Tai Fung 27.4**，**13.4－27.4＝−14.0百萬美元／店**，Smith其實少14，D錯。",
+        "elementary": "Smith13.4和鼎泰豐27.4相比，少了14，不是多1，所以D錯。",
+        "reason": "D誤說Smith比Din Tai Fung多1百萬美元。原圖**Smith 13.4**、**Din Tai Fung 27.4**，**13.4－27.4＝−14.0百萬美元／店**，Smith其實少14，D錯。",
+        "sourceEvidence": "Original chart: Smith and Wollensky 13.4; Din Tai Fung 27.4; Revenue ( Million USD )."
+      }
+    },
+    "english": {
+      "answerWord": "revenue",
+      "pronunciationIPA": "/ˈrev.ə.nuː/",
+      "answerWordMeaningZh": "營收",
+      "sentenceTranslationZh": "根據圖表，下列哪一敘述正確？",
+      "synonyms": {
+        "初級": [
+          "income（收入）"
+        ],
+        "中級": [
+          "sales revenue（銷售收入）"
+        ],
+        "高級": [
+          "gross receipts（營收）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "cost（成本：相對概念）"
+        ],
+        "中級": [
+          "expense（費用：相對概念）"
+        ],
+        "高級": [
+          "expenditure（支出：相對概念）"
+        ]
+      },
+      "newsExampleEnglish": "A June 2025 industry report said Din Tai Fung generated about $27.4 million in **revenue** per U.S. restaurant in 2024.",
+      "newsExampleChinese": "2025年6月產業報導指出，鼎泰豐2024年美國每家店的平均營收約為2,740萬美元。",
+      "newsExampleHighlightedSurfaceForm": "revenue",
+      "newsExampleSourceOrganization": "Restaurant Business; Technomic statistics",
+      "newsExampleSourceUrl": "https://www.restaurantbusinessonline.com/financing/soup-dumpling-chain-has-industrys-highest-auvs-its-not-even-close",
+      "newsExampleSourceDate": "2025-06-06",
+      "newsExampleKind": "2025 original news-backed self-written bilingual pedagogic paraphrase, NOT VERBATIM",
+      "note": "費用與營收是財報對照而非字典嚴格反義；報導用2024年每店數據，句子為教學改寫。"
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "原始長條圖每店營收單位：**million USD per store**",
+        "Din Tai Fung 27.4、Cheesecake Factory 12.4",
+        "Mastro’s 14.5、Nobu 10.1、Del Frisco 13.8、Smith & Wollensky 13.4"
+      ],
+      "formulaUse": "核對倍數時用原值÷2，核對比大小及高出金額時用兩數相減；保持同一個『百萬美元／店』單位，驗算回代原圖值。",
+      "substitution": [
+        "A: 27.4÷2 與 12.4 比較",
+        "B: 14.5−10.1",
+        "C: 13.8−10.1",
+        "D: 13.4−27.4"
+      ],
+      "steps": [
+        "1. 單位統一為**百萬美元／店**，不是店數或公司營收。",
+        "2. **A：27.4÷2＝13.7**，Cheesecake為12.4，兩者不等；**12.4×2＝24.8≠27.4**，A錯。",
+        "3. **B：14.5−10.1＝4.4 百萬美元／店 > 0**，故Mastro高於Nobu，B對。",
+        "4. **B驗算：10.1＋4.4＝14.5 百萬美元／店**，恰等於原圖Mastro營收。",
+        "5. **C：13.8−10.1＝3.7 百萬美元／店**，Del Frisco更高，C錯。",
+        "6. **D：13.4−27.4＝−14.0 百萬美元／店**，Smith比Din Tai Fung低14而非高1，D錯。",
+        "7. 四個選項僅B與原圖比較、單位及驗算全部一致。"
+      ],
+      "result": "Mastro’s 14.5 > Nobu 10.1，差4.4百萬美元／店，選B",
+      "unit": "百萬美元／店 (million USD per store)",
+      "option": "B",
+      "verification": "10.1+4.4=14.5；12.4×2=24.8≠27.4；13.8>10.1；13.4−27.4=−14.0"
+    },
+    "stepByStep": [
+      "先讀原圖6家企業的每店營收與單位。",
+      "檢查A的一半、B與C的大小和D的差額，代入每筆數據。",
+      "以10.1+4.4=14.5驗算B，答案B。"
+    ],
+    "source": "115年度英文原始第33題，美國餐廳每店營收長條圖；2025業界新聞僅延伸字彙，不是原題QA。"
+  },
+  "teachingCanonicalSha256": "477fc29e7e52ae8d829cea89d7c1af953ed854576823296195c485409cdf9840",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI pedagogic author, not human credential",
+    "independentAiReviewer": "PENDING",
+    "independentAiReviewEvidenceSha256": null,
+    "independentAiReviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "sourceAdmission": "PENDING",
+    "sharedWebpSourceQa": "PENDING",
+    "v4SameDigest8Viewports2Themes": "PENDING",
+    "masterTrustedRelease": "PENDING",
+    "authorSelfReviewNotAcceptable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_AND_CORRECTION_SCOPE_DIRECT_EVIDENCE_PENDING",
+    "INDEPENDENT_ORIGINAL_SHARED_PIXEL_QA_AND_TEXT_RECONCILIATION_PENDING",
+    "DISTINCT_ROLE_E_SUBSTANTIVE_AI_OPTION_FORMULA_REVIEW_PENDING",
+    "ROLE_D_REAL_V4_8X2_SAME_SHA_PENDING",
+    "MASTER_PUBLISHER_TRUST_MAIN_LIVE_PENDING"
+  ],
+  "newReady": false
+}

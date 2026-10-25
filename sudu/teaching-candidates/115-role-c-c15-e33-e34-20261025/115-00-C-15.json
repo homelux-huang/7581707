@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C15-E33-E34-20261025-07",
+  "claimedAtUtc": "2026-10-25T06:16:26Z",
+  "role": "C",
+  "questionId": "115-00-C-15",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 15,
+  "subject": "國文",
+  "status": "ROLE_C_AUTHOR_ONLY_QUARANTINED_PENDING_EXTERNAL_QA",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceParentARepairPR": 64,
+  "sourceBankGitBlobSha": "0128adc3f41e748950c3f5af83fca6dd1c331f5c",
+  "sourceManifestGitBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerHead": "340471f1c821ff58c292c13410a8e081e246c2cb",
+  "question": "若將甲文「會不會和上一次一樣？」、乙文「名義上說」視為作者透露諷刺意圖的線索，\n  甲、乙二文諷刺之事依序應是：",
+  "options": [
+    "人情淡薄 ／ 不知變通",
+    "人情淡薄 ／ 徒具儀式",
+    "拘泥禮法 ／ 徒具儀式",
+    "拘泥禮法 ／ 不知變通"
+  ],
+  "answerCandidate": "B",
+  "knownAnswerBeforeDerivation": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "29ee0b0159cef18c7b9458d4bea07cbd5acf15f787e396a2430cb613310f4485",
+  "sourceImageManifestQa": "PASS",
+  "sourceAssetVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": true,
+  "individualImage": "sudu/data/processed/115/webp-v2/00-C/115-00-C-15.webp",
+  "individualWebpSha256": "74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f",
+  "sourceQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "originalImageBytesRehashedThisTurn": false,
+  "sharedMaterial": {
+    "id": "115-00-C-SHARED-11-15",
+    "sourceText": "▲閱讀下文，回答第11-15 題\n【甲】\n  不到兩個禮拜的時間，粉娘又不省人事，急急地被送到醫院。醫院對上一次的迴光能\n拖這麼久，表示意外神奇。不過這一次醫院又說，還是快點回去，恐怕時間來不及在家裡\n過世。\n  粉娘又彌留在廳頭。隨救護車來的醫師按她的脈搏，聽聽她的心跳，用手電筒看她的\n瞳孔。他說：「快了。」\n  炎坤請人到么女的高中學校，用機車把她接回來，要她打電話連絡親戚。大部分的親\n戚都要求跟炎坤直接通話。\n  「會不會和上一次一樣？」\n  「我做兒子的當然希望和上一次一樣，但是這一次醫生也說了，我也看了，①大概天\n不從人願吧。」炎坤說。②對方言語支吾，炎坤又說，「你是內孫，父親又不在，你一定\n要回來。上次你們回來，老人家高興得天天唸著。」\n  幾乎每一個要求跟炎坤通話的，都是類似這樣的對答。而對方想表示即時回去有困\n難，又不好直說。結果，六個也算老女人的女兒輩都回來了，在世的三個兒子也回來，孫\n子輩的內孫外孫，沒回來的較多，曾孫都被拿來當年幼，又被他們的母親拿來當著需要照\n顧他們的理由，全都沒回來了。（黃春明〈死去活來〉）\n\n\n【乙】\n  我們到的時候，那些插到你身體的管子和儀器都拔掉了。僅留你左邊鼻孔拉出的一條\n管子，與一只虛妄的兩公升保特瓶連結。名義上說，留著一口氣，回到家裡了。\n  那是你以前最愛講的冷笑話――聽到救護車的鳴笛，要分辨一下啊，如果是有醫〜有\n醫〜，就要趕快讓路；如果是無醫〜無醫〜，就不用讓了。一干親戚朋友被你逗得哈哈大\n笑時，往往只有我敢挑戰你：如果是無醫，幹嘛還要坐救護車？要送回家啊！你說。所\n以，我們與你一起坐上救護車，回家。名義上說，子女有送你最後一程了。\n  上車後，救護車司機平板的聲音問：小姐你家是拜佛祖還是信耶穌的？我會意不過\n來，司機更直白一點：你家有沒有拿香拜拜啦？我僵硬點頭。司機倏地把一捲卡帶翻面推\n進音響，南無阿彌陀佛。那另一面是什麼？難道哈利路亞？我知道我人生最荒謬的一趟旅\n程已經啟動。（③無醫〜無醫〜）\n  我好想把我看到的告訴你。男護士正規律地一張一縮壓著保特瓶，你的偽呼吸。相對\n於前面六天你受的各種複雜又專業的治療，這一最後步驟的名稱，顯得平易近人許多。\n  這叫做，最後一口氣。\n  到家。荒謬之旅的導遊旗子交棒給葬儀社、道士以及左鄰右舍。（有人斥責，怎不趕\n快說，爸我們到家了。我們說，爸我們到家了。）男護士取出工具，抬手看錶，來！大家\n對一下時喔，十七點三十五分好不好？好不好？我們能說什麼？好。④我們說好。我們竟\n然說好。（改寫自劉梓潔〈父後七日〉）\nˉ",
+    "sourceTextSha256": "91e2590c9635d351a571798124867ad02d3b8ccae8ee530233dbf9cbc7f41f5f",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp",
+    "imageSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 4,
+    "sharedMaterialRevision": "9d0735b8c397d8a9c384410e13eb5b83e60b32becd5022cc5f6c69092c08d18f",
+    "originalImageBytesRehashedThisTurn": false
+  },
+  "teaching": {
+    "teacherSummary": "**甲、乙分別諷刺什麼？**甲文的親人問「**會不會和上一次一樣？**」，實際上很多孫輩難以返家又不好直說，語言關懷與行為落差顯示**人情淡薄**。乙文反覆「**名義上說**」留著一口氣返家、子女完成送行，搭配偽呼吸與「我們竟然說好」，揭示**徒具儀式**。兩文依序對應**B**。",
+    "elementarySummary": "甲的親戚嘴上問奶奶會不會好起來，很多人卻找理由趕不回家，是親情變淡。乙的家人做了送爸爸回家的形式，卻覺得整件事很荒謬、難過，所以是只剩儀式，選B。",
+    "memory": "**甲：嘴上問候，返家困難→人情淡薄；乙：「名義上說」→徒具儀式；B。**",
+    "concept": "**反諷**看言語和實際行動的反差。雙篇配對題必須兩個判斷都符合原文，不能因選項後半正確而忽略前半。",
+    "extension": "甲文反映部分親屬缺席，並非所有子女未回；乙文質疑送終的形式，並非說家人不愛父親。不要把原文複雜情感誇大成普遍道德判斷。",
+    "highlights": [
+      "會不會和上一次一樣",
+      "名義上說",
+      "人情淡薄",
+      "徒具儀式",
+      "對方想表示即時回去有困難",
+      "我們竟然說好"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "人情淡薄：與親友間關心、情分減少"
+      ],
+      "中級": [
+        "徒具儀式：形式存在但意義難以實現"
+      ],
+      "高級": [
+        "反諷：話語與現實形成落差，含蓄表達批評或無奈"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A的**甲人情淡薄**符合親屬未及時返家的反差；但**乙不知變通**不符。乙文兩次「名義上說」是在嘲諷形式性送終，而非有人拒絕變通。",
+        "elementary": "A第一半對，可是乙不是在說大家不會改方法，而是事情只剩形式，所以整句錯。",
+        "reason": "A的**甲人情淡薄**符合親屬未及時返家的反差；但**乙不知變通**不符。乙文兩次「名義上說」是在嘲諷形式性送終，而非有人拒絕變通。",
+        "sourceEvidence": "甲：對方想表示即時回去有困難，又不好直說。乙：名義上說，子女有送你最後一程了。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B的**人情淡薄／徒具儀式**兩半皆合。甲文對話看似關心，許多人沒有返家；乙文的「名義上說，留著一口氣」和偽呼吸讓告別像程序，呼應「我們竟然說好」的無奈。",
+        "elementary": "甲是家人關心不夠，乙是送別有形式卻很空虛，兩個都符合文章，所以B正確。",
+        "reason": "B的**人情淡薄／徒具儀式**兩半皆合。甲文對話看似關心，許多人沒有返家；乙文的「名義上說，留著一口氣」和偽呼吸讓告別像程序，呼應「我們竟然說好」的無奈。",
+        "sourceEvidence": "甲：「會不會和上一次一樣？」……孫子輩的內孫外孫，沒回來的較多；乙：名義上說，留著一口氣，回到家裡了。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C後半**乙徒具儀式**合理，但甲文不是批判親屬**拘泥禮法**。作者著重電話關切和實際返家之間的矛盾，未描寫親戚因拘守傳統禮節才缺席。",
+        "elementary": "C後面對，但甲不是有人太守規矩，而是有些人不肯或不能趕回來，所以C不能選。",
+        "reason": "C後半**乙徒具儀式**合理，但甲文不是批判親屬**拘泥禮法**。作者著重電話關切和實際返家之間的矛盾，未描寫親戚因拘守傳統禮節才缺席。",
+        "sourceEvidence": "甲：對方想表示即時回去有困難，又不好直說；乙：名義上說，子女有送你最後一程了。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D的兩半皆錯。甲文的反諷重點不是**拘泥禮法**，乙文「偽呼吸」「大家對一下時喔」的荒謬也不能簡化成**不知變通**，並沒有把固定規矩當問題原因。",
+        "elementary": "D說甲的人太守舊、乙的人不會變通，這不是兩篇想批評的主要事情，所以D錯。",
+        "reason": "D的兩半皆錯。甲文的反諷重點不是**拘泥禮法**，乙文「偽呼吸」「大家對一下時喔」的荒謬也不能簡化成**不知變通**，並沒有把固定規矩當問題原因。",
+        "sourceEvidence": "甲：曾孫都被拿來當年幼……全都沒回來了；乙：男護士正規律地一張一縮壓著保特瓶，你的偽呼吸。"
+      }
+    },
+    "stepByStep": [
+      "甲文看問候與較多孫輩未返的反差，判為**人情淡薄**。",
+      "乙文抓「名義上說」、偽呼吸與形式化死亡時刻，判為**徒具儀式**。",
+      "兩篇同時符合的是B，A/C各只對一半，D兩半都不合。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115國文甲黃春明〈死去活來〉、乙改寫劉梓潔〈父後七日〉；Role A PR64的C15選項D跨頁OCR修正候選。教材版本頁碼未確認。"
+  },
+  "teachingCanonicalSha256": "f58b554031ca18cf07db92856e2071535fb0f1d5bec87799fb5d8573ae36e056",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI pedagogic author, not human credential",
+    "independentAiReviewer": "PENDING",
+    "independentAiReviewEvidenceSha256": null,
+    "independentAiReviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "sourceAdmission": "PENDING",
+    "sharedWebpSourceQa": "PENDING",
+    "v4SameDigest8Viewports2Themes": "PENDING",
+    "masterTrustedRelease": "PENDING",
+    "authorSelfReviewNotAcceptable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_AND_CORRECTION_SCOPE_DIRECT_EVIDENCE_PENDING",
+    "INDEPENDENT_ORIGINAL_SHARED_PIXEL_QA_AND_TEXT_RECONCILIATION_PENDING",
+    "DISTINCT_ROLE_E_SUBSTANTIVE_AI_OPTION_FORMULA_REVIEW_PENDING",
+    "ROLE_D_REAL_V4_8X2_SAME_SHA_PENDING",
+    "MASTER_PUBLISHER_TRUST_MAIN_LIVE_PENDING",
+    "A_PR64_STRUCTURED_OPTION_CORRECTION_IS_ONLY_CANDIDATE",
+    "C11_15_SHARED_TEXT_TRAILING_GLYPH_SUSPECT_NOT_REPAIRED"
+  ],
+  "newReady": false
+}

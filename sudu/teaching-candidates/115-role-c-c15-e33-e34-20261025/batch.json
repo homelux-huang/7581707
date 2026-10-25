@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C15-E33-E34-20261025-07",
+  "role": "C",
+  "issue36ClaimCommentId": 6394295888,
+  "claimedAtUtc": "2026-10-25T06:16:26Z",
+  "branch": "teaching/115-role-c-c15-e33-e34-after-a64-20261025",
+  "baseSHA": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "baseRoleASourcePR": 64,
+  "sourceQuestionBankGitBlobSHA": "0128adc3f41e748950c3f5af83fca6dd1c331f5c",
+  "sourceManifestGitBlobSHA": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sole114115LedgerHead": "340471f1c821ff58c292c13410a8e081e246c2cb",
+  "status": "AUTHOR_DRAFT_PENDING_A_SOURCE_E_AI_D_V4_MASTER",
+  "addedReady": 0,
+  "addedLive": 0,
+  "items": [
+    {
+      "questionId": "115-00-C-15",
+      "path": "sudu/teaching-candidates/115-role-c-c15-e33-e34-20261025/115-00-C-15.json",
+      "fileSha256": "3dc21b7f4588ce4ca4203d130260acdaca57f9559a215e44a305c880ca5f930d",
+      "sourceRevision": "29ee0b0159cef18c7b9458d4bea07cbd5acf15f787e396a2430cb613310f4485",
+      "individualWebpSha256": "74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f",
+      "sharedOriginalWebpSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+      "sharedMaterialRevision": "9d0735b8c397d8a9c384410e13eb5b83e60b32becd5022cc5f6c69092c08d18f",
+      "teachingCanonicalSha256": "f58b554031ca18cf07db92856e2071535fb0f1d5bec87799fb5d8573ae36e056",
+      "sourceAnswerVerifiedHistorical": true,
+      "sourceQuestionVerified": false,
+      "sourceSharedVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "distinctAiReview": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-E-33",
+      "path": "sudu/teaching-candidates/115-role-c-c15-e33-e34-20261025/115-00-E-33.json",
+      "fileSha256": "80e38784ca2765b67ea67e0cda77295401ecc8e49fec0e1c45fd8dee0e466c13",
+      "sourceRevision": "d440c66050551440ca887ea3a0d910f28e93cc45d58b9e584fddbeaad7dea855",
+      "individualWebpSha256": "d8faa4637558482adde2cf28f27b681f56527a3aeb67cf7ecc3349cbd4260525",
+      "sharedOriginalWebpSha256": "eb19a37ba2d85414ebe06551aac145cb7053befa6622f7adfb1d86d4e63046ea",
+      "sharedMaterialRevision": "7b0e5a651c1c4d6c290642b131c35baeed5734d849a17e32743b53b9724382a5",
+      "teachingCanonicalSha256": "477fc29e7e52ae8d829cea89d7c1af953ed854576823296195c485409cdf9840",
+      "sourceAnswerVerifiedHistorical": false,
+      "sourceQuestionVerified": false,
+      "sourceSharedVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "distinctAiReview": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-E-34",
+      "path": "sudu/teaching-candidates/115-role-c-c15-e33-e34-20261025/115-00-E-34.json",
+      "fileSha256": "0b4f0b06466d503e13dc7bf1d6f8d1a00003c17dfb725c277bc7ed5070c2195d",
+      "sourceRevision": "82de1011ed10d19453c6f9e669acc98bb282bce9f8da259f2461fc2bf3f55004",
+      "individualWebpSha256": "e02ca43b3b8e33347c0cc6c8d3c83a869a7a1d606e2be768c7eb051b977f6d74",
+      "sharedOriginalWebpSha256": "eb19a37ba2d85414ebe06551aac145cb7053befa6622f7adfb1d86d4e63046ea",
+      "sharedMaterialRevision": "7b0e5a651c1c4d6c290642b131c35baeed5734d849a17e32743b53b9724382a5",
+      "teachingCanonicalSha256": "ca8eb4d3304d6ea3ae1a946745ea0eae931dde67d0423a8b9c2d21e7a1a2282b",
+      "sourceAnswerVerifiedHistorical": false,
+      "sourceQuestionVerified": false,
+      "sourceSharedVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "distinctAiReview": "PENDING",
+      "ready": false
+    }
+  ]
+}
