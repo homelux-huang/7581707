@@ -1,0 +1,47 @@
+name: Role A 115 Math B five exact original source receipts (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-mb20-25-source-receipts-20261025
+    paths:
+      - sudu/data/processed/115/review-evidence/115-00-MB-20-image-transcription-correction-20261024.json
+      - sudu/data/processed/115/review-evidence/115-00-MB-21-image-transcription-correction-20261024.json
+      - sudu/data/processed/115/review-evidence/115-00-MB-22-image-transcription-correction-20261024.json
+      - sudu/data/processed/115/review-evidence/115-00-MB-24-image-transcription-correction-20261024.json
+      - sudu/data/processed/115/review-evidence/115-00-MB-25-image-transcription-correction-20261024.json
+      - tests/test_role_a_115_mb_source_receipts.py
+      - docs/ROLE_A_115_MB20_22_24_25_SOURCE_20261025.md
+      - .github/workflows/role-a-115-mb-source-receipts.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-mb-five-source-20261025
+  cancel-in-progress: false
+
+jobs:
+  source_five:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb20-25-source-receipts-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout read-only immutable Role A source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify five source records, original math WebP and official source SHA, 205 database rows
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb_source_receipts.py scripts/sudu_verified_publish.py
+          python -m unittest discover -s tests -p test_role_a_115_mb_source_receipts.py -v
+      - name: Fail closed if any source asset/QA student record was mutated
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Role A source evidence only; no final answer or separate AI teaching review sign-off."
