@@ -1,0 +1,73 @@
+name: Role A C19 exact source and 205-row SQLite repair (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-c19-provenance-20261025
+    paths:
+      - scripts/repair_114_c19_provenance.py
+      - tests/test_role_a_114_c19_provenance.py
+      - sudu/data/processed/114/**
+      - .github/workflows/role-a-114-c19-source-qa.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: role-a-c19-qa-20261025
+  cancel-in-progress: false
+
+jobs:
+  source_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-c19-provenance-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Check out ONLY the author-owned isolated source branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reconcile strict v1/v2 WebP provenance and two isolated SQLite imports
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/repair_114_c19_provenance.py tests/test_role_a_114_c19_provenance.py
+          python scripts/repair_114_c19_provenance.py --apply
+          python scripts/repair_114_c19_provenance.py
+          python -m unittest discover -s tests -p test_role_a_114_c19_provenance.py -v
+      - name: Assert only C19 source record, its SQLite and this receipt changed
+        run: |
+          python - <<'PY'
+          import subprocess
+          expected={
+            "sudu/data/processed/114/questions.json",
+            "sudu/data/processed/114/question-bank.sqlite3",
+            "docs/ROLE_A_114_C19_RECONCILIATION_20261025.json",
+          }
+          output=subprocess.check_output(["git","status","--porcelain"],text=True)
+          changed={line[3:] for line in output.splitlines()}
+          assert changed <= expected, {"unexpected_worktree_mutations": sorted(changed-expected)}
+          print("PASS exact mutation boundary:", sorted(changed))
+          PY
+      - name: Commit only verified derived JSON, SQLite, and receipt to own branch
+        run: |
+          set -euo pipefail
+          git config user.name "Role A Source CI"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- sudu/data/processed/114/questions.json sudu/data/processed/114/question-bank.sqlite3 docs/ROLE_A_114_C19_RECONCILIATION_20261025.json
+          if git diff --cached --quiet; then
+            echo "No changes; strict source/DB test is idempotent"
+          else
+            git diff --cached --name-only
+            git commit -m "data(role-a): synchronize C19 v2 provenance and 205-row SQLite after two exact imports"
+            git push origin HEAD:refs/heads/qa/role-a-114-c19-provenance-20261025
+          fi
+          git status --porcelain
+          git rev-parse HEAD
+      - name: Fail closed on any source or test error; no Pages action
+        if: always()
+        run: |
+          echo "Role A source-only QA; no authorized teacher, READY or LIVE gate is changed."
