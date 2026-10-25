@@ -104,7 +104,7 @@ class RoleA114B2OriginalWebps(unittest.TestCase):
                 image = self.images[qid]
                 self.assertEqual(image["qaStatus"], "PASS")  # historical record, not newly promoted
                 self.assertEqual(image["sha256"], pin["sha"])
-                self.assertEqual(self.q[qid]["assets"]["sha256"], pin["sha"])
+                self.assertEqual(self.q[qid]["assets"]["imageQaEvidence"], "sudu/data/processed/114/" + ("VISUAL_QA_BATCH_01_2026-10-22.json" if pin["qa"]=="114-chinese" else "QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json"))
                 self.assertEqual(self.q[qid]["questionProvenance"]["webpSha256"], pin["sha"])
                 self.assertEqual(self.q[qid]["assets"]["singleQuestionWebp"], image["output"])
                 original_bytes = (ROOT / image["output"]).read_bytes()
@@ -123,7 +123,7 @@ class RoleA114B2OriginalWebps(unittest.TestCase):
                 self.assertEqual(q["questionProvenance"]["officialPdfSha256"], im["sourcePdfSha256"])
                 self.assertEqual(q["questionProvenance"]["pixelSourceSha256"], im["sourceSha256"])
                 self.assertGreater(check_webp(im["source"], im["sourceSha256"], im["sourceSize"]), 0)
-                self.assertEqual(q["assets"]["cropCoordinates"], im["crop"])
+                self.assertEqual(im["crop"], (self.qc[qid]["cropPixels"] if pin["qa"]=="114-chinese" else self.qe[qid]["cropPixels"]))
                 self.assertEqual(im["outputSize"], [im["crop"][2]-im["crop"][0], im["crop"][3]-im["crop"][1]])
 
     def test_two_original_visual_qa_documents_exact_git_blobs_and_ai_scope(self):
