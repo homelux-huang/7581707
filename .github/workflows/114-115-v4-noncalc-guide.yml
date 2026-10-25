@@ -1,0 +1,20 @@
+name: V4 noncalculation guide fail-closed regression
+on:
+  push:
+    branches:
+      - fix/master-v4-noncalc-guide-20261025
+  pull_request:
+    paths:
+      - 'sudu/v4-115-multisubject-review-demo.html'
+      - 'tests/sudu_master_noncalc_guide_20261025.cjs'
+      - '.github/workflows/114-115-v4-noncalc-guide.yml'
+jobs:
+  guide-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify non-calculation and real calculation guide behavior
+        run: node tests/sudu_master_noncalc_guide_20261025.cjs
