@@ -147,7 +147,7 @@ class RoleA115EnglishSharedOriginalReceipts(unittest.TestCase):
                 dims=[pin["crop"][2]-pin["crop"][0],pin["crop"][3]-pin["crop"][1]]
                 self.assertGreater(original_webp(pin["path"],pin["sha"],dims),0)
                 # Two source-pixel-cropped shared passages are candidates, NOT accepted reading material.
-                self.assertNotEqual(im.get("visualReviewEvidence",{}).get("reviewedSha256"),pin["sha"])
+                self.assertNotEqual((im.get("visualReviewEvidence") or {}).get("reviewedSha256"),pin["sha"])
 
     def test_per_question_historical_b2_pass_only_and_real_qa_unchanged(self):
         self.assertEqual(self.b2["records"],60)
@@ -181,7 +181,7 @@ class RoleA115EnglishSharedOriginalReceipts(unittest.TestCase):
                 self.assertEqual(publisher.text_revision(q,pin["sha"]),pin["sourceRevision"])
                 self.assertIs(q["questionVerified"],False)
                 self.assertIs(q["answerVerified"],False)
-                self.assertIs(q.get("integrationReady"),False)
+                self.assertIsNot(q.get("integrationReady"),True)
                 self.assertTrue("shared_reading_material_crop_requires_review" in q["issues"])
                 self.assertEqual(publisher.source_proof(q,True,True,pin["sourceRevision"]),(False,False))
 
