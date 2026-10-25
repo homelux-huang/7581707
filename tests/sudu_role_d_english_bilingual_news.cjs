@@ -22,15 +22,38 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const hashFile=p=>sha(fs.readFileSync(path.join(ROOT,p)));
 const realSHA=cp.execFileSync('git',['rev-parse','HEAD'],{cwd:ROOT,encoding:'utf8'}).trim();
 if(EXPECT_SHA)assert.equal(realSHA,EXPECT_SHA,'workflow did not checkout exact audited HEAD');
+// A separate, immutable, read-only Role B checkout is required for current
+// effective teaching SHA; the PR35 integration snapshot has obsolete E08/E09
+// digests. Never silently fall back to old candidate files in formal CI.
+const roleBPath=process.env.SUDU_D_ROLE_B_CHECKOUT||'';
+const roleBHead=process.env.SUDU_D_ROLE_B_HEAD||'';
+let actualRoleBHead=null;
+if(roleBHead){
+  assert(roleBPath,'Role B exact source required, cannot silently use PR35 stale lessons');
+  actualRoleBHead=cp.execFileSync('git',['-C',path.join(ROOT,roleBPath),'rev-parse','HEAD'],{encoding:'utf8'}).trim();
+  assert.equal(actualRoleBHead,roleBHead,'Role B source checkout SHA changed');
+}
+const sorted=x=>Array.isArray(x)?x.map(sorted):
+  x!==null&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,sorted(x[k])])):x;
+const canonicalSha=x=>sha(Buffer.from(JSON.stringify(sorted(x)),'utf8'));
+const gitBlobSha=bytes=>crypto.createHash('sha1').update(
+  Buffer.concat([Buffer.from('blob '+bytes.length+'\\0'),bytes])).digest('hex');
+const expectedCurrentB={
+ '114-00-E-07':'f65c50e011f57025f2ffc9ff7df107f16f4bd6c6e3b1c64c75169bb77c35dd5b',
+ '114-00-E-08':'6dd7125dddf83293dc52a0fcbc35b113918f92f9b2fca9e6b0dc0ca06442d5b1',
+ '114-00-E-09':'45b33a02da4059fc7efc2cae7d9c7914732d53e967c195d004cc879e212fa584'
+};
 
 function assertSourceRecords(){
   const records=[];
   for(const id of candidateIds){
     const folder='sudu/teaching-candidates/114-role-b-20261025/';
-    const file=folder+id+'.json';
+    const file=(roleBPath?roleBPath+'/':'')+folder+id+'.json';
     const c=read(file);
     const ocr=read('sudu/data/processed/114/review-evidence/'+id+'-ocr.json');
-    const prior=read('sudu/data/processed/114/review-evidence/'+id+'-teaching.json');
+    const priorPath='sudu/data/processed/114/review-evidence/'+id+'-teaching.json';
+    const priorBytes=fs.readFileSync(path.join(ROOT,priorPath));
+    const prior=JSON.parse(priorBytes);
     const n=c.enrichment?.newsExample,source=c.source;
     assert.equal(c.questionId,id);
     assert.equal(c.year,114);
@@ -50,6 +73,32 @@ function assertSourceRecords(){
     assert(n.english.toLowerCase().includes(n.highlightActualForm.toLowerCase()),
       'the declared highlight does not occur in real candidate English text');
     assert(/^[0-9a-f]{64}$/.test(c.composedTeachingSha256||''),'missing exact authored digest');
+    assert.equal(gitBlobSha(priorBytes),source.baseTeachingGitBlobSha,
+      'actual original Role B teaching Git blob was changed');
+    assert.equal(canonicalSha(prior.content),source.baseTeachingCanonicalSha256,
+      'actual original teaching text/options changed');
+    assert.equal(c.kind,'PRESERVE_BASE_AND_ENRICH');
+    assert.equal(c.teaching,null,'original preserved teaching must not be overwritten');
+    const effectiveTeaching=JSON.parse(JSON.stringify(prior.content));
+    const overrides=c.optionReasonOverrides||{};
+    if(roleBHead&&id!=='114-00-E-07')assert.deepEqual(Object.keys(overrides).sort(),
+      ['A','B','C','D'],'latest B effective option-specific reasons missing');
+    for(const [letter,reason] of Object.entries(overrides)){
+      assert('ABCD'.includes(letter)&&typeof reason==='string'&&reason.trim().length>20);
+      assert.notEqual(effectiveTeaching.optionExplanations[letter].reason,reason);
+      effectiveTeaching.optionExplanations[letter].reason=reason;
+    }
+    for(const letter of 'ABCD')for(const field of ['teacher','elementary','reason'])
+      assert(effectiveTeaching.optionExplanations[letter][field].trim().length>5,
+        'real teacher/elementary/individual option content absent '+id+' '+letter+' '+field);
+    const composed=canonicalSha({
+      questionId:id,sourceRevision:source.questionRevision,
+      webpSha256:source.webpSha256,teaching:effectiveTeaching,enrichment:c.enrichment
+    });
+    assert.equal(composed,c.composedTeachingSha256,
+      'current complete source-bound candidate lesson digest mismatch '+id);
+    if(roleBHead)assert.equal(composed,expectedCurrentB[id],
+      'Role B teaching changed: existing component cert must not silently apply '+id);
     const absolute=path.join(ROOT,source.webpPath);
     assert(fs.existsSync(absolute),'actual original question WebP missing '+source.webpPath);
     assert.equal(hashFile(source.webpPath),source.webpSha256,
@@ -72,7 +121,9 @@ function assertSourceRecords(){
 
 const source=assertSourceRecords();
 const report={
- schemaVersion:1,role:'D',taskId:'D-ENGLISH-BILINGUAL-V4-20261025-01',
+ schemaVersion:1,role:'D',taskId:roleBHead?
+   'D-ENGLISH-NEW-DIGEST-UI-20261025-02':'D-ENGLISH-BILINGUAL-V4-20261025-01',
+ roleBSourceHead:actualRoleBHead,
  purpose:'CANDIDATE_BILINGUAL_COMPONENT_REGRESSION_NOT_FULL_QUESTION_UIQA',
  release:'NO_RELEASE',eligibleForReady:false,teacherApprovalClaimed:false,
  checkoutSha:realSHA,mainBaseSha:mainSHA,
