@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "paperCode": "09-2",
+  "subject": "經濟學",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI visual read of existing SHA-pinned original published TCTE answer-sheet WebP; no human review claimed",
+  "officialFinalOptionReadVisually": "A",
+  "originalBlindOptionCommittedEarlier": "A",
+  "match": true,
+  "sourceOriginalQuestionWebpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "sourceAnswerPageWebpPath": "sudu/data/original/115/09-2-answers/p001-6a2aacc705-v2-w1400-q66.webp",
+  "sourceAnswerPageWebpSha256": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+  "sourceAnswerPdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+  "sourceAnswerPdfUrl": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+  "sourceOfficialConfirmationPdfSha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+  "confirmationForOtherQuestions": [
+    6,
+    28,
+    44
+  ],
+  "question34MentionedInConfirm": false,
+  "officialVisualCheckRunId": 40086437762,
+  "originalSourceImageOnlyRunId": 40086129327,
+  "sourcePreKeyImageCommit": "48315ead806fbb1e04f003505fc4ce804deed342",
+  "genuinePreKeyInitialSolveCommit": "33aa3228077d9cd7ad4ec2f59890d46013b976f7",
+  "answerVisualToolCommit": "61959abda5f17d33c5c50a0b98f2ea8a4cd226ae",
+  "preKeyTransparency": {
+    "initialTranscriptionBeforeKey": "假設人工智慧（AI）伺服器的寡占市場僅存在兩間廠商，下列敘述何者正確？",
+    "correctedSourceImageTranscription": "假設人工智慧（AI）伺服器的寡占市場中僅存在兩間廠商，下列敘述何者正確？",
+    "difference": "初次盲解人工式轉錄漏了一個『中』字；原圖及其 SHA 未變，推理與答案不受影響；原始 blind commit 不改寫。",
+    "questionOptionsUnchanged": true,
+    "blindReasoningUnchanged": true,
+    "answerWasNotConsultedBeforeBlindCommit": true,
+    "newBlindSolveAfterKeyClaimed": false
+  },
+  "sourceProcessedCanonicalCurrently": {
+    "answerVerified": false,
+    "questionVerified": false,
+    "officialCorrectionChecked": null,
+    "status": "NEEDS_SEPARATE_SOURCE_BANK_QA_ADMISSION"
+  },
+  "reviewStatus": "OFFICIAL_ANSWER_IMAGE_MATCH_ONLY_NOT_FORMAL_STUDENT_RELEASE",
+  "teachingFullIndependentQaStatus": "PENDING",
+  "realV4SameShaUiStatus": "PENDING",
+  "sourceReleaseCertificate": false,
+  "studentReleaseApproved": false,
+  "deploy": false
+}

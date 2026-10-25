@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI direct visual read of pre-existing TCTE final published answer-sheet image, official SHA evidence; no human claim",
+  "officialPdfSha256": "6a2aacc705eb06edaf59c7ab6abe594763822e595e396bc0c279eef37235b9bc",
+  "finalAnswer": "A",
+  "correctionNoticeReviewed": true,
+  "noObjectionForPaper": false,
+  "noCorrectionForThisQuestion": true,
+  "correctionForQuestionReviewed": false,
+  "confirmationPdfSha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+  "officialPage": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+  "originalAnswerVisualSha256": "60482dbb1ac147d23e57b113790a1c2867c798a56e67611c5aa58c096c3cce67",
+  "originalAnswerVisualRunId": 40086437762,
+  "underlyingCorrectionReview": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",
+  "officialConfirmationDocumentQuestionIds": [
+    "115-09-2-06",
+    "115-09-2-28",
+    "115-09-2-44"
+  ],
+  "officialCorrectionForQuestion34": false,
+  "note": "There ARE question/answer confirmation documents for 09-2; do not claim paper-wide no objection. The full SHA-bound official confirmation review lists 06,28,44 only, so question34 is individually unaffected. Separately visually checked authoritative official answer image for 34=A.",
+  "officialFinalAnswerPdfUrl": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+  "originalHumanReviewClaimed": false
+}

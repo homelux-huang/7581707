@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-09-2-34",
+  "reviewDate": "2026-10-24",
+  "reviewer": "GPT-6 AI direct original-question WebP only, first-look reasoning; no human reviewer claimed",
+  "evidenceStage": "PRE_OFFICIAL_ANSWER_FIRST_LOOK_ORIGINAL_IMAGE_SOLVE",
+  "originalWebpSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "sourceImageReadOnlyRunId": 40086129327,
+  "sourceImageJobId": 120849336936,
+  "imageFirstLookCommit": "48315ead806fbb1e04f003505fc4ce804deed342",
+  "sourceImageOnlyNoKeyAtSolve": true,
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "sourceQuestionTranscriptionFromOriginalImage": "假設人工智慧（AI）伺服器的寡占市場僅存在兩間廠商，下列敘述何者正確？",
+  "sourceOptionsFromOriginalImage": [
+    "兩廠商可能會採跟跌不跟漲的訂價策略",
+    "邊際收益曲線會因寡占市場特性而呈現膨脹缺口",
+    "對消費者來說，兩廠商設計的 AI 伺服器必定具備同質性",
+    "價格僵固現象的原因為兩廠商面對同樣需求彈性的需求線"
+  ],
+  "answer": "A",
+  "blindReasoning": "在典型寡占折彎需求（kinked demand）模型中，競爭者可能跟隨降價以守住市占，但不跟隨漲價，故「可能採跟跌不跟漲」的 A 為合理敘述。這是存在可能性，而非一切雙占都必採的策略。折彎需求有上下不同需求價格彈性，邊際收益線可能有不連續的垂直間斷，不是總體經濟的『膨脹缺口』；兩家生產的 AI 伺服器未必同質，D 所稱相同彈性亦不是僵固的原因。",
+  "teacherSummary": "寡占價格僵固的折彎需求模型：在既有價格以上，單獨漲價會流失較多顧客（較富彈性）；降價時競爭者也可能跟降，市場份額難大增（較缺彈性），所以業者可能選擇跟跌不跟漲的競爭互動。",
+  "elementarySummary": "如果兩家店互相盯著對方，對方降價我也可能跟著降，避免客人都跑走；但對方漲價時我不一定跟著漲，這樣客人可能更願意買我的。題目問『可能』發生的做法。",
+  "optionChecks": {
+    "A": {
+      "correct": true,
+      "teacher": "折彎需求模型的競爭者可能跟跌不跟漲；題目用『可能』而非『必定』，與寡占策略行為相符。",
+      "elementary": "有人降價可能一起降；有人漲價不一定跟。"
+    },
+    "B": {
+      "correct": false,
+      "teacher": "邊際收益可能形成不連續（垂直間斷）區間，但『膨脹缺口』不是這個寡占模型的正確術語，不能把總經概念套在個體模型。",
+      "elementary": "這裡有可能斷開一段，但那不是選項說的膨脹缺口。"
+    },
+    "C": {
+      "correct": false,
+      "teacher": "雙占可以提供同質或差異化產品，AI 伺服器型號、性能、軟體支援等可有差異；『必定同質』無法成立。",
+      "elementary": "兩家公司都做伺服器，也可能做出功能不一樣的產品。"
+    },
+    "D": {
+      "correct": false,
+      "teacher": "價格僵固的折彎需求假設在轉折點上下存在不同需求彈性，且邊際收益出現間斷；不是兩家面對同樣彈性需求線。",
+      "elementary": "漲價和降價後客人的反應不一樣，不能說兩邊一樣。"
+    }
+  },
+  "alternativeReasoning": "先以『必定』『同樣』等絕對敘述排除 C/D，再辨認 B 把寡占 MR 不連續誤說成宏觀膨脹缺口；A 的『可能』最符合折彎需求的跟跌不跟漲。",
+  "textbookEditionNotKnown": true,
+  "textbookPageNotAsserted": true,
+  "officialComparisonNotPerformedYet": true,
+  "independentTeachingQaPass": false,
+  "formalSourceQaPass": false,
+  "uiQaPass": false,
+  "studentReleaseApproved": false,
+  "deploy": false
+}
