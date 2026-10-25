@@ -113,7 +113,7 @@ jobs:
           path: _qa_real_student_fixture/
 
   verify_real_student_ui:
-    name: Browser test all 4 original math questions with actual audited answers
+    name: Browser test all 5 approved Math B questions with actual audited answers
     needs: [real_source_preview]
     runs-on: ubuntu-24.04
     timeout-minutes: 20

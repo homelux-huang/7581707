@@ -360,6 +360,17 @@ function formatStudyValue(q,key,value){
  if(q.subject==='英文'&&(key==='同意相關單字'||key==='反意相關單字')){
   return '<span class="level-vocab">'+esc(text.replace(/\blow\s*:/gi,'初級：').replace(/\bmid\s*:/gi,'中級：').replace(/\bhigh\s*:/gi,'高級：'))+'</span>';
  }
+ if(q.subject==='英文'&&key==='新聞時事例句'&&q.canonicalId){
+  // The Demo sample is keyed by QUESTION NUMBER, not year or canonical ID.
+  // Never substitute a 115 Demo sample for another year's real exam question.
+  // Use only this admitted question's author-reviewed text and highlights.
+  const terms=Array.isArray(q.highlights)?q.highlights.filter(t=>typeof t==='string'&&t.trim()):[];
+  const term=terms.find(t=>text.toLowerCase().includes(t.toLowerCase()));
+  const at=term?text.toLowerCase().indexOf(term.toLowerCase()):-1;
+  const safe=at<0?esc(text):esc(text.slice(0,at))+
+   '<mark class="exam-highlight">'+esc(text.slice(at,at+term.length))+'</mark>'+esc(text.slice(at+term.length));
+  return '<span class="news-en">'+safe+'</span>';
+ }
  if(q.subject==='英文'&&key==='新聞時事例句'){
   const news=((window.DEMO_LEARNING_CONFIG||{}).englishNewsExamples||{})[String(q.id)];
   if(news){
@@ -594,9 +605,11 @@ function refreshHomeSubjects(){
  const validYear=year&&year===pageYear();
  const ready=year==='demo'||document.body.dataset.verifiedReadyYear===year;
  const loading=validYear&&!ready;
- const candidates=document.body.classList.contains('qa-image-mode')?
-  [...$('subjectSel').options].map(o=>o.value).filter(s=>s&&s!=='全部科目'):
-  SUBJECTS.slice();
+ const annualSubjects=year!=='demo'&&Array.isArray(window.suduAnnualSubjects)?window.suduAnnualSubjects:null;
+ const candidates=annualSubjects||(
+  document.body.classList.contains('qa-image-mode')?
+   [...$('subjectSel').options].map(o=>o.value).filter(s=>s&&s!=='全部科目'):
+   SUBJECTS.slice());
  const previous=select.value;
  select.replaceChildren();
  const first=document.createElement('option');
@@ -619,6 +632,12 @@ function updateJumpButtons(){
 }
 function openSubjectFromHome(subject){
  if(!subject)return;
+ // The 114/115 adapter owns the QA-gated subject route: READY is playable,
+ // G1 image-only is read-only, and missing subjects never fall back to Demo.
+ if(pageYear()!=='demo'&&typeof window.suduOpenYearSubject==='function'){
+  window.suduOpenYearSubject(subject);
+  return;
+ }
  if(document.body.classList.contains('qa-image-mode')){
   if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(subject);
   return;
@@ -742,6 +761,10 @@ $('yearSel').onchange=e=>{
  else showHome();
 };
 $('subjectSel').onchange=e=>{
+ if(pageYear()!=='demo'&&typeof window.suduOpenYearSubject==='function'){
+  window.suduOpenYearSubject(e.target.value);
+  return;
+ }
  if(document.body.classList.contains('qa-image-mode')){
   if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(e.target.value);
   return;
