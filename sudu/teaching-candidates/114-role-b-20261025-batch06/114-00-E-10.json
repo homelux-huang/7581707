@@ -58,25 +58,25 @@
       "A": {
         "teacher": "bring about 表促成、導致，例如 bring about change；它不是放棄習慣，換入題幹會變成造成習慣。",
         "elementary": "bring about 是讓事情發生，不是把老習慣丟掉。",
-        "reason": "動作方向不同，A 表造成而非停止。",
+        "reason": "A 的 bring about 意思是促成或造成一件事，題幹 abandon 卻是在放棄舊習慣，不能互換。",
         "isCorrect": false
       },
       "B": {
         "teacher": "carry on 表繼續進行；carry on her old habits 變成姐姐繼續維持舊習慣，和 abandon 相反。",
         "elementary": "姐姐要停止老習慣，carry on 卻說繼續做，所以錯。",
-        "reason": "B 是本題語境下 abandon 的相反意思。",
+        "reason": "B carry on 是繼續維持舊習慣，與題幹 abandon 停止舊習慣的語意方向相反。",
         "isCorrect": false
       },
       "C": {
         "teacher": "give up 表放棄或停止從事；give up old habits 與 abandon old habits 在此自然同義，後句新篇章也呼應。",
         "elementary": "give up 就是放棄，和改掉老習慣一樣，C 對。",
-        "reason": "C 的 give up 能維持整句停止舊習慣的意義。",
+        "reason": "C give up 與 abandon 在本句都表示停止舊習慣，並與展開新生活的語境相呼應。",
         "isCorrect": true
       },
       "D": {
         "teacher": "run into 常指偶然遇到某人或遭逢問題；既不是戒除，也不能自然替換 abandon old habits。",
         "elementary": "run into 像路上剛好碰到朋友，跟改掉習慣不同。",
-        "reason": "D 指意外碰到，沒有放棄舊習慣的語義。",
+        "reason": "D run into 指偶遇人事物或碰到問題，不表示停止或放棄習慣，所以不合。",
         "isCorrect": false
       }
     },
@@ -187,8 +187,8 @@
     },
     "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
   },
-  "teachingCanonicalSha256": "e65a64db631445ea482faaa523b41688d523b69f7ae5b087310635146909f7ea",
-  "composedTeachingSha256": "96ee581897fc3e1ea829255c59e20fdc26b6d1a868505d38f30a51d8ea64e77a",
+  "teachingCanonicalSha256": "dc49cf4d921977204cceabe8ab2d6e95a31721540f236329a0055600cc9ef675",
+  "composedTeachingSha256": "2818bfc1d82aa631712a5a92bee51949127d3532af86f5787abefacde72e4be6",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,

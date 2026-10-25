@@ -58,25 +58,25 @@
       "A": {
         "teacher": "You have to dress properly 提醒穿著得體，後句用西裝或正式服裝舉例，句意及邏輯都完整。",
         "elementary": "穿著得體就可以舉西裝當例子，所以 A。",
-        "reason": "A 與後續實例同屬衣著類別，問答最連貫。",
+        "reason": "A dress properly 直接描述穿著得體，Nancy 後面舉正式西裝作例子，概念與例子吻合。",
         "isCorrect": true
       },
       "B": {
         "teacher": "You need to speak carefully 討論謹慎措辭，而 Nancy 的例子是正式服裝；西裝不能解釋說話方式。",
         "elementary": "西裝不會告訴你怎麼講話，所以 B 錯。",
-        "reason": "說話態度與穿著不同類，不能承接 suit 例子。",
+        "reason": "B 談面試時謹慎說話，Nancy 隨後卻舉西裝等服飾，無法從服裝例子推回說話態度。",
         "isCorrect": false
       },
       "C": {
         "teacher": "You ought to show interest in the pay 談面試對薪資的關注，後句的西裝沒有談待遇或數字。",
         "elementary": "pay 是薪水；西裝不是薪水的例子。",
-        "reason": "題目後句談 clothes，不支持 C 的 pay。",
+        "reason": "C 涉及對薪資的興趣，正式衣物無法當成薪資待遇問題的例子，故與後句不連貫。",
         "isCorrect": false
       },
       "D": {
         "teacher": "You should ask questions about the job 雖可能是另種面試建議，但西裝也不是該如何提問工作的例子。",
         "elementary": "問工作內容跟穿西裝是兩件事，所以 D 不合。",
-        "reason": "D 談職務提問，無法由服飾例子支持。",
+        "reason": "D 問的是如何詢問工作內容，而 Nancy 下一句舉出西裝等服飾，兩者不屬同一類例子。",
         "isCorrect": false
       }
     },
@@ -189,8 +189,8 @@
     },
     "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
   },
-  "teachingCanonicalSha256": "bd7a05fb85498694df5379d7f5191ca01fccc2cb1fb8e22148b49ad2655cf361",
-  "composedTeachingSha256": "286a2809fb7b4b2807a717a24137eb037b3fe6784c193c9954140e9f69860f69",
+  "teachingCanonicalSha256": "a558a3e2b123b0deb0eecd2f943a6c8b970bae613251c3652a124f7b979e632e",
+  "composedTeachingSha256": "8b0b14d695b6627ec69aa75bf52f98a7e84733c5a0feb640194a40180fd99d92",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,

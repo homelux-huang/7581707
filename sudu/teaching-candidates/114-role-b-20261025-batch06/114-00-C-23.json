@@ -60,25 +60,25 @@
       "A": {
         "teacher": "A 車中驗票司事負責裝卸貨物、稽查客車，是並列列出工作項目，沒有一步比一步更激烈的情緒或動作。",
         "elementary": "A 只是說一個人要做哪幾件工作，不是事情越來越嚴重。",
-        "reason": "工作職責並列，不具有焦怒到焦愈怒的程度遞增。",
+        "reason": "A 只是並列驗票員負責裝卸與稽查工作，沒有同一個人物的行動一層比一層強的描寫。",
         "isCorrect": false
       },
       "B": {
         "teacher": "B 比較本地煤質與西洋、東洋煤的差異，是材料品質上的對照，不是同一事件按順序愈演愈烈。",
         "elementary": "B 只是在比不同地方的煤好不好，不是動作越變越大。",
-        "reason": "空間比較與遞進的時間／程度序列不同。",
+        "reason": "B 比較本地煤與西洋、東洋煤的品質差別，屬於並列比較而非單一事件的動作逐層加強。",
         "isCorrect": false
       },
       "C": {
         "teacher": "C 一死生與齊彭殤是對生死觀念的議論，『後之視今，亦猶今之視昔』則比較今昔視角，缺少逐層加重的同一行動。",
         "elementary": "C 講人怎樣看生死、古今，沒有做事一步比一步誇張。",
-        "reason": "這是議論和類比，不能推出與焦怒愈怒相同的遞進。",
+        "reason": "C 議論死生觀點與今昔視角，屬觀念對照，沒有情緒或動作的連續強化。",
         "isCorrect": false
       },
       "D": {
         "teacher": "D 由『旦視而暮撫』到『已去而復顧』再到『甚者爪其膚……搖其本……』，檢視樹木的行為逐級加劇，與題幹遞進相同。",
         "elementary": "D 從看看、摸摸，到回頭看，最後還抓樹皮搖樹幹，很明顯越來越誇張。",
-        "reason": "『甚者』引入更強烈的行動，確立 D 的遞進結構。",
+        "reason": "D 由早晚查看到離開再回頭，最後甚至抓樹皮搖樹幹，『甚者』明確引出更強的行動。",
         "isCorrect": true
       }
     },
@@ -156,8 +156,8 @@
       "directPixelReadByAuthor": true
     }
   },
-  "teachingCanonicalSha256": "9acdb9c167144d885205970f660e54c1eb363bf85b8403a792c6154186fb6530",
-  "composedTeachingSha256": "5a07849727ede4a5ce21993702d6368aebcb2b1d5470971083f267fed391f73c",
+  "teachingCanonicalSha256": "5bcbc2690515fe96e01f6c7261e6d7ba6979ae2305e4372022ce19455f310afb",
+  "composedTeachingSha256": "48687e7bef261e201c860257ac740c9dc2b372d7d2ba9e86fc46521fac326de9",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,

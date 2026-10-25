@@ -58,7 +58,7 @@
       "A": {
         "teacher": "But who finally switched it off 問最後是誰把燈關掉；上下文不是說關閉燈泡，所以 Paul 的科學家人名回答不合。",
         "elementary": "題目不是在問誰關燈，A 跑題了。",
-        "reason": "switched off 是關掉，並非發明來源。",
+        "reason": "A switched it off 問的是最後關燈的人，後文卻回答電光發明者的姓名，答非所問。",
         "isCorrect": false
       },
       "B": {
@@ -76,7 +76,7 @@
       "D": {
         "teacher": "who did he really invite to his home 問誰被邀請去他家；invite 和 invent 字形接近但意思不同，對話從未談訪客。",
         "elementary": "invite 是邀請，不是 invent 發明；不該問來家裡的客人。",
-        "reason": "D 偷換為家中邀客，和電光發明話題不相干。",
+        "reason": "D invite 問被邀到家的人，和 invent 只是拼字接近；Paul 提供發明者的答句不支持此問法。",
         "isCorrect": false
       }
     },
@@ -180,8 +180,8 @@
     },
     "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
   },
-  "teachingCanonicalSha256": "7c52786bddc888f344b71c1c6851cd774eb709790218ea6322564395bf34826f",
-  "composedTeachingSha256": "be4dfdc737577f5364712f071b4b7d9fba8c451e805ca9beb8e5b37bc4d7fd17",
+  "teachingCanonicalSha256": "eceb93d9cee5f623b4157d4369c8de59faaee42f96744d9e36657a5b519ac6c7",
+  "composedTeachingSha256": "a3480c83d318fae37b288a08476e5f183c07f792f9e8abb089df2516493c76ca",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,
