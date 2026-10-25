@@ -13,6 +13,8 @@ tools:
   github:
 safe-outputs:
   create-issue: false
+  report-failure-as-issue: false
+  report-failed-jobs: false
 ---
 
 # 7581707 MASTER AI triage — read-only bootstrap
