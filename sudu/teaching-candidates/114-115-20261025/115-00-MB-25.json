@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-25",
+  "year": 115,
+  "sourceCommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+  "question": "小晏想在坐標平面中創作一個卡通人物，如圖（七）所示。已知 A、B、P 為圖（七）中的三點，直線 L 通過 A、B 兩點，點 P 的坐標為 (h,7)，點 P 到直線 L 的距離為 √2。若小晏要畫出以點 P 為圓心，並與直線 L 相切的圓，且此圓的方程式為 x²－8x＋(y－7)²＝a，則 h＋a＝？",
+  "options": [
+    "－59",
+    "－16",
+    "－10",
+    "10"
+  ],
+  "sourceTables": [],
+  "image": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-25.webp",
+  "imageSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+  "sourceTextRevisionWithoutTable": "8b29dffa0c37abd1b37989878a9f8d34392ba71a04017ca1591d6fa45ec9cb6f",
+  "teaching": {
+    "teacherSummary": "圓心可從配方讀出。**x²－8x＝(x－4)²－16**，所以圓心是(4,7)，h＝4。相切時半徑等於圓心到直線的距離√2。",
+    "elementarySummary": "先把圓的算式整理成容易看懂的樣子，就能知道圓心在哪裡。圓剛好碰到直線，所以從圓心走到直線的最短距離就是半徑。",
+    "memory": "**h＝4；r²＝(√2)²＝2；a＋16＝2 → a＝－14；h＋a＝－10。**",
+    "concept": "標準圓式(x－h)²＋(y－k)²＝r²，圓與直線相切的距離條件為圓心至直線距離等於半徑。",
+    "extension": "已知圓心到直線距離時，不必從示意圖猜A、B座標或直線方程；圖形不能代替精確數據。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "x²－8x＝(x－4)²－16；圓心(h,k)、半徑平方r²可由標準式讀出。",
+    "highlights": [
+      "配方",
+      "h＝4",
+      "r²",
+      "√2",
+      "－10"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "P＝(h,7)",
+        "圓式x²－8x＋(y－7)²＝a",
+        "P至L距離為√2，圓與L相切"
+      ],
+      "formulaUse": "x²－8x＝(x－4)²－16；圓心(h,k)、半徑平方r²可由標準式讀出。",
+      "substitution": [
+        "(x－4)²＋(y－7)²＝a＋16",
+        "r²＝(√2)²＝2"
+      ],
+      "steps": [
+        "x²－8x＝x²－8x＋16－16＝(x－4)²－16。",
+        "原式改寫為(x－4)²＋(y－7)²＝a＋16。",
+        "讀出圓心(4,7)，所以h＝4，r²＝a＋16。",
+        "因為相切，r＝√2，所以r²＝2。",
+        "a＋16＝2，得a＝－14。",
+        "h＋a＝4＋(－14)＝－10，選 C。",
+        "驗算a＋16＝－14＋16＝2＞0，確實是一個半徑√2的圓。"
+      ],
+      "result": "－10",
+      "unit": "無單位（代數值）",
+      "option": "C"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "若h＋a＝－59，h＝4使a＝－63，則r²＝－47，不可能為實圓。",
+        "elementary": "半徑平方不能是負數，這個選項不成立。",
+        "reason": "若h＋a＝－59，h＝4使a＝－63，則r²＝－47，不可能為實圓。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "若h＋a＝－16，則a＝－20，r²＝－4，也不是實圓。",
+        "elementary": "這也算出負的半徑平方，不能選。",
+        "reason": "若h＋a＝－16，則a＝－20，r²＝－4，也不是實圓。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "h＝4且a＝－14，和為－10，且r²＝2。",
+        "elementary": "圓心和半徑都對上了，答案是負10。",
+        "reason": "h＝4且a＝－14，和為－10，且r²＝2。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "若h＋a＝10，則a＝6，r²＝22，與距離平方2不符。",
+        "elementary": "算出來的圓太大，不能剛好碰到那條直線。",
+        "reason": "若h＋a＝10，則a＝6，r²＝22，與距離平方2不符。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "a860b08a6f5b76fe1331dc4204a46a3135e511449d9b6004cc4f99be020e4d32",
+  "review": {
+    "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
+    "reviewedAt": "2026-10-25",
+    "originalImageViewed": true,
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "officialFinalDirectReviewThisSession": false,
+    "uiQa": "PENDING",
+    "hasRequiredSourceTable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
+    "OFFICIAL_FINAL_ADMISSION_PENDING"
+  ]
+}
