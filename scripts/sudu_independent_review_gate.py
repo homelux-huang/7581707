@@ -38,7 +38,9 @@ def _time(value):
 def _github_json(path):
     # External identity is verified from GitHub itself. No authored certificate
     # can substitute its own GitHub PR author, commits or APPROVED review event.
-    if not (path.startswith("/pulls/") or path=="/branches/main") or ".." in path:
+    if not (path.startswith("/pulls/") or path=="/branches/main"
+            or re.fullmatch(r"/issues/comments/[1-9][0-9]*",path)
+            or re.fullmatch(r"/commits/[0-9a-f]{40}",path)) or ".." in path:
         raise ValueError("invalid GitHub review API path")
     headers={"Accept":"application/vnd.github+json","User-Agent":"7581707-release-review/1"}
     token=os.environ.get("GITHUB_TOKEN")
@@ -168,6 +170,205 @@ def substantive_notes_verified(source,rel,sha):
                 and digest(target.read_bytes())==sha)
     except (OSError,ValueError):
         return False
+
+def _ai_official_receipt_consistent(source,audit,question):
+    """Require actual official document ANSWER and correction fields, not only SHA.
+
+    Final official-answer notice scope and PDF-pixel verification must ALSO
+    be checked independently by the original publisher G0-G10 gates.
+    """
+    qid=question.get("questionId")
+    official=(audit or {}).get("evidence") or {}
+    relative=official.get("official")
+    root=Path(source)
+    if (not isinstance(relative,str) or not relative.startswith(
+            "sudu/data/processed/"+str(question.get("year"))+"/review-evidence/")
+            or ".." in Path(relative).parts or Path(relative).is_absolute()
+            or not relative.endswith(".json")):
+        return None
+    path=root/relative
+    try:
+        if (not path.resolve().is_relative_to(root.resolve())
+                or path.is_symlink() or not path.is_file()):
+            return None
+        raw=path.read_bytes()
+        doc=json.loads(raw,object_pairs_hook=_no_duplicate_keys)
+    except (OSError,ValueError,TypeError,UnicodeError):
+        return None
+    ans=question.get("answer")
+    if (not isinstance(doc,dict) or doc.get("year")!=question.get("year")
+            or doc.get("questionId")!=qid or not isinstance(ans,str) or ans not in "ABCD"
+            or doc.get("finalAnswer")!=ans or doc.get("correctionNoticeReviewed") is not True
+            or doc.get("officialFinalAnswerImageQaPassed") is not True
+            or doc.get("officialPage") !=
+               "https://web1.tcte.edu.tw/EXAM/"+str(question.get("year"))+"_4y/"
+            or not SHA.fullmatch(str(doc.get("officialPdfSha256")))):
+        return None
+    source_pdf=(question.get("answerProvenance") or {})
+    source_pdf_sha=source_pdf.get("officialPdfSha256") or source_pdf.get("pdfSha256")
+    if source_pdf_sha and doc.get("officialPdfSha256")!=source_pdf_sha:
+        return None
+    return digest(raw)
+
+
+def _ai_real_issue36_return_verified(statement,registry):
+    """Never trust a positive-looking numeric comment ID or task label alone."""
+    if not _protected_main_trust_verified():
+        return False,"ai_review_main_registry_unprotected"
+    id_=statement["reviewIssueCommentId"]
+    if (registry.get("reviewIssueCommentId")!=id_
+            or registry.get("sourceCommit")!=statement["sourceCommit"]
+            or type(registry.get("reviewerGithubUserId")) is not int
+            or registry["reviewerGithubUserId"]<=0
+            or not isinstance(registry.get("reviewerGithubLogin"),str)
+            or not registry["reviewerGithubLogin"]):
+        return False,"ai_review_registry_identity_or_source_not_pinned"
+    try:
+        comment=_github_json("/issues/comments/"+str(id_))
+        commit=_github_json("/commits/"+statement["sourceCommit"])
+        if (not isinstance(comment,dict) or not isinstance(commit,dict)
+                or commit.get("sha")!=statement["sourceCommit"]
+                or not HEX40.fullmatch(str(
+                    ((commit.get("commit") or {}).get("tree") or {}).get("sha")))):
+            return False,"ai_review_source_commit_not_verified"
+        if (comment.get("id")!=id_
+                or comment.get("issue_url") !=
+                    "https://api.github.com/repos/"+REPO+"/issues/36"
+                or (comment.get("user") or {}).get("id")!=registry["reviewerGithubUserId"]
+                or (comment.get("user") or {}).get("login")!=registry["reviewerGithubLogin"]):
+            return False,"ai_review_issue36_comment_identity_mismatch"
+        body=comment.get("body")
+        if (not isinstance(body,str) or not body.lstrip().upper().startswith("RETURN")
+                or "role E" not in body and "role: E" not in body
+                or any(str(statement[key]) not in body for key in (
+                    "reviewTaskId","reviewerSessionId","questionId",
+                    "questionRevision","webpSha256","teachingDigest",
+                    "officialEvidenceSha256","sourceCommit"))):
+            return False,"ai_review_comment_not_bound_to_actual_findings"
+        posted=_time(comment.get("created_at"))
+        reviewed=_time(statement["reviewedAt"])
+        if not (reviewed<=posted<=datetime.now(timezone.utc)):
+            return False,"ai_review_comment_timestamp_not_valid"
+        return True,"actual_issue36_comment_and_source_commit_checked"
+    except (ValueError,OSError,TypeError,KeyError,TimeoutError,UnicodeError):
+        return False,"ai_review_github_verification_unavailable"
+
+
+def separate_ai_content_receipt_verified(source,audit,question,manifest,
+                                         teaching_document,raw_teaching,*,
+                                         trusted_receipts=None):
+    """Verify a distinctly authored AI CONTENT REVIEW receipt, not admission.
+
+    The registry is deliberately a required caller-supplied *trusted main*
+    approval of an exact Git Blob and author/reviewer provenance, never a
+    source-branch registry. This function is NOT yet wired to the publisher.
+    It cannot grant READY or override G0-G10 by itself.
+    """
+    qid=question.get("questionId")
+    revision=teaching_document.get("questionRevision")
+    webp=(manifest or {}).get("sha256")
+    content=teaching_document.get("content")
+    if (not isinstance(qid,str) or not SHA.fullmatch(str(revision))
+            or not SHA.fullmatch(str(webp)) or not isinstance(content,dict)
+            or not isinstance(raw_teaching,(bytes,bytearray))):
+        return False,"invalid_ai_review_input"
+    registry=trusted_receipts.get(qid) if isinstance(trusted_receipts,dict) else None
+    if not isinstance(registry,dict):
+        return False,"separate_ai_reviewer_trusted_receipt_absent"
+    rel=(audit or {}).get("independentAiContentEvidence")
+    if (not isinstance(rel,str) or not rel.startswith(
+            "sudu/data/processed/"+str(question.get("year"))+"/review-evidence/")
+            or not rel.endswith(".json") or ".." in Path(rel).parts
+            or Path(rel).is_absolute()):
+        return False,"ai_review_evidence_path_untrusted"
+    root=Path(source)
+    target=root/rel
+    try:
+        if (not target.resolve().is_relative_to(root.resolve())
+                or target.is_symlink() or not target.is_file()):
+            return False,"ai_review_evidence_missing"
+        original=target.read_bytes()
+        statement=json.loads(original,object_pairs_hook=_no_duplicate_keys)
+    except (OSError,ValueError,UnicodeError,AttributeError):
+        return False,"ai_review_evidence_invalid"
+    if (not isinstance(statement,dict)
+            or registry.get("evidencePath")!=rel
+            or registry.get("evidenceGitBlobSha")!=blob_oid(original)
+            or registry.get("reviewTaskId")!=statement.get("reviewTaskId")
+            or registry.get("reviewerSessionId")!=statement.get("reviewerSessionId")
+            or registry.get("sourceAuthorSessionId")!=statement.get("sourceAuthorSessionId")):
+        return False,"ai_review_receipt_not_trusted_or_modified"
+    official=_ai_official_receipt_consistent(source,audit,question)
+    if not official:
+        return False,"ai_review_official_document_missing_or_answer_conflict"
+    expected={
+        "schemaVersion":1,"year":question.get("year"),"questionId":qid,
+        "questionRevision":revision,"webpSha256":webp,
+        "teachingDigest":digest(canonical(content)),
+        "teachingEvidenceSha256":digest(bytes(raw_teaching)),
+        "officialEvidenceSha256":official,
+        "officialAnswerCandidate":question.get("answer"),
+    }
+    if any(statement.get(k)!=v for k,v in expected.items()):
+        return False,"ai_review_material_revision_mismatch"
+    if (not SHA.fullmatch(str(statement.get("questionRevision")))
+            or not SHA.fullmatch(str(statement.get("webpSha256")))
+            or registry.get("questionRevision")!=revision
+            or registry.get("webpSha256")!=webp
+            or registry.get("teachingDigest")!=expected["teachingDigest"]
+            or registry.get("officialEvidenceSha256")!=official):
+        return False,"ai_review_trusted_registry_version_mismatch"
+    author=statement.get("sourceAuthorSessionId")
+    reviewer=statement.get("reviewerSessionId")
+    author_task=statement.get("sourceAuthorTaskId")
+    review_task=statement.get("reviewTaskId")
+    if (not isinstance(author,str) or len(author.strip())<6
+            or not isinstance(reviewer,str) or len(reviewer.strip())<6
+            or reviewer.casefold()==author.casefold()
+            or statement.get("sourceAuthorRole") not in ("B","C")
+            or statement.get("reviewerRole")!="E"
+            or not isinstance(author_task,str) or not author_task.startswith(
+                statement["sourceAuthorRole"]+"-")
+            or not isinstance(review_task,str) or not review_task.startswith("E-")
+            or review_task==author_task):
+        return False,"ai_review_author_or_reviewer_not_distinct"
+    if (statement.get("reviewIssueNumber")!=36
+            or type(statement.get("reviewIssueCommentId")) is not int
+            or statement["reviewIssueCommentId"]<=0
+            or type(statement.get("sourceCommit")) is not str
+            or not HEX40.fullmatch(statement["sourceCommit"])):
+        return False,"ai_review_traceability_missing"
+    try:
+        reviewed=_time(statement.get("reviewedAt"))
+        if reviewed>datetime.now(timezone.utc):
+            return False,"ai_review_time_in_future"
+    except (TypeError,ValueError):
+        return False,"ai_review_timestamp_invalid"
+    findings=statement.get("optionByOptionFindings")
+    if (not isinstance(findings,dict) or set(findings)!=set("ABCD")
+            or any(not isinstance(findings[k],str) or
+                   len(findings[k].strip())<20 for k in "ABCD")
+            or len({findings[k].strip() for k in "ABCD"})!=4):
+        return False,"ai_review_four_distinct_substantive_option_findings_missing"
+    if (statement.get("teacherAndElementaryReviewed") is not True
+            or statement.get("correctAnswerComparedToOfficial") is not True
+            or statement.get("officialCorrectionsReviewed") is not True
+            or statement.get("calculationReview") not in
+               ("APPLICABLE_ALL_STEPS_CHECKED","NOT_APPLICABLE_EXPLAINED")):
+        return False,"ai_review_required_teaching_or_answer_checks_missing"
+    if (not substantive_notes_verified(source,statement.get("reviewNotesPath"),
+                                       statement.get("reviewNotesSha256"))
+            or registry.get("reviewNotesSha256")!=statement.get("reviewNotesSha256")):
+        return False,"ai_review_substantive_notes_not_sha_bound"
+    # A registry from unprotected main or a source-authored, invented Issue36
+    # comment cannot certify actual independent AI review.
+    authentic,why=_ai_real_issue36_return_verified(statement,registry)
+    if not authentic:
+        return False,why
+    # Even with all these conditions, publisher must separately run all
+    # source/correction, independent solve, QA, original image, V4 and LIVE gates.
+    return True,"distinct_ai_content_receipt_exact_registry_and_material_match"
+
 
 def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,policy=None):
     """Return (approved,reason); signature verification is *additional* to all G0-G10."""

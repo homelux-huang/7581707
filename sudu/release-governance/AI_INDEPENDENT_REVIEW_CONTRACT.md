@@ -1,0 +1,29 @@
+# 114/115 independent AI content review — isolated contract candidate (NO RELEASE)
+
+Policy provenance: [Issue #36](https://github.com/homelux-huang/7581707/issues/36), new owner rule prefixed on 2026-10-25. “High school teacher explanation” means a pedagogic style, not a teacher credential. Do not request or fabricate a human/Ed25519/GitHub APPROVED certification as the pedagogic gate. Do not treat this as a student admission.
+
+## Implemented in this bounded branch
+- Added additive function `scripts/sudu_independent_review_gate.py::separate_ai_content_receipt_verified`. **It is inactive**: existing publisher `certified` and default `independent-review-policy.json` are NOT changed by this batch. Until a separately reviewed integration migrates publisher and policy, new admissions still fail closed under the old code.
+- An independent-role E AI content-review **evidence file** (source-bound, in `sudu/data/processed/<year>/review-evidence/`) is necessary but is NOT enough. Its exact **Git Blob SHA**, source revision, image SHA, teaching digest, official evidence SHA, reviewer/author task and session IDs and note SHA must appear in a separately controlled trusted-main registry. An author-controlled QA branch cannot authorize itself by adding its own record or review string.
+- Required evidence: canonical questionId/year; exact source `questionRevision`; unchanged original WebP SHA; SHA256 of teaching content and original teaching JSON bytes; official evidence file SHA256 and candidate answer; reviewedAt; source author B/C session+task; distinct E reviewer session+task and real Issue36 review comment number; original source commit; substantive **different** A/B/C/D findings; math/full calculation or justified non-calculation, official corrections, two-layer language checks; immutable MD review notes with SHA.
+- Missing registry, malformed or changed Blob, untrusted/symlinked path, modified answer/revision/WebP/teaching digest, same author/reviewer, duplicate/generic option findings, missing notes, claimed future timestamp, invalid calculation/status must fail closed.
+- Initial trusted registry is **empty and no real E certificate has been admitted**. Current E Issue comments are useful independent review observations, but do not automatically establish a complete signed/trusted release certificate. Do not fabricate task IDs or notes.
+- Unit tests use deliberately **synthetic** adversarial fixtures and are not real student lessons, AI audit events or formal reviewer approvals. Their synthetic positive case validates parsing/consistency only; the current publisher still rejects that synthetic record.
+
+## Next separate gated integration
+1. Owner/master and independent E must agree how the registry is controlled on protected `main`, how real Issue36 claim+return provenance is checked, and whether its GitHub writer identity establishes meaningful reviewer separation (different AI sessions may share the same GitHub login).
+2. After independently reviewed end-to-end tests, migrate `independent-review-policy.json` and `scripts/sudu_independent_review_gate.py::certified` / publisher to the new branch, removing old teacher/Ed25519/APPROVED-only dead path **without** disabling source, official notices, wrong-answer checks, per-option explanations, calculations, UIQA, and same-SHA Pages gates.
+3. Register real independently validated E receipts only for exact verified source/digest candidates; zero blanket READY/APPROVED flags. Re-run all existing historical-five, negative and release regression tests. Do not merge directly to `main` from this draft.
+4. PR30 remains the only canonical per-question ledger; no second ledger in this workstream.
+
+This file is an implementation handoff, not an assertion that the migration or external verification has happened.
+
+## E independent audit P0 remediation (same Draft PR, still inactive)
+
+After independent Role E's Issue36 return [#6393716388](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393716388), this prospective helper now additionally:
+- Checks original official-answer JSON **contents**, not only a rehashed SHA: the exact questionId/year, candidate finalAnswer, official PDF SHA when claimed, officialPage, `correctionNoticeReviewed` and `officialFinalAnswerImageQaPassed` must match. This is NOT a substitute for publisher's TCTE scope/PDF-image/correction gates.
+- Fetches a **real** GitHub Issue36 comment by exact integer ID via GitHub REST, checks the issue URL, GitHub reviewer's trusted-main pinned login/user ID, timestamp, real `RETURN` body and required question/revision/WebP/teaching/official evidence SHA plus independent role E task/session bindings.
+- Fetches a real GitHub source commit matching the pinned `sourceCommit`, and refuses an unprotected `main` as a trust root. A bare integer comment ID or 40-character commit string can no longer pass by format alone.
+- Tests synthetic acceptance **only with explicitly mocked GitHub API responses**, plus negative mocks for nonexistent IDs, wrong issue, wrong author, changed content, forged SHA/commit and unprotected main. All tests are artificial contract exercises; no synthetic comment, GitHub actor or source commit is claimed real.
+
+**Remaining before active integration:** same GitHub login may operate multiple ChatGPT sessions, so GitHub actor checks alone do not prove distinct AI review sessions. A separately owned, protected trusted-main session/task ledger and real E submitted content are required; registry provenance must be validated at the caller boundary. Meaningful option-by-option correctness, math, source/original WebP pixels and exact 8×2 V4 still need independent QA; a cryptographically intact review note is not true content QA. The existing publisher remains unchanged, active `requireHumanTeacher=true`, and **new READY/main/LIVE = 0** until a distinct, fully reviewed migration occurs.

@@ -1,0 +1,44 @@
+name: 114-115 isolated AI independent-review receipt contract (NO RELEASE)
+on:
+  push:
+    branches: [governance/114-115-independent-ai-review-contract-20261025]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - tests/test_sudu_ai_review_content_contract.py
+      - sudu/release-governance/AI_INDEPENDENT_REVIEW_CONTRACT.md
+      - .github/workflows/114-115-loop-ai-review-contract.yml
+  pull_request:
+    branches: [integration/114-115-first-batch-v4-receipts-20261025]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - tests/test_sudu_ai_review_content_contract.py
+      - .github/workflows/114-115-loop-ai-review-contract.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sudu-ai-review-contract-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate_inactive_fail_closed_contract:
+    name: Test separate author/reviewer evidence and original publisher regression (NO RELEASE)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing gate test dependencies
+        run: python -m pip install -q cryptography
+      - name: Validate non-releasing reviewer content contract and existing gate
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/sudu_independent_review_gate.py
+          python -m unittest discover -s tests -p 'test_sudu_ai_review_content_contract.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_independent_review_gate.py' -v
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python scripts/sudu_verified_publish.py check
+          git diff --exit-code
