@@ -1,5 +1,20 @@
 # 114–115 Delivery Command — master coordination (2026-10-25)
 
+## CURRENT OWNER POLICY OVERRIDE — Issue #36, 2026-10-25
+
+**This is the current user instruction and supersedes contrary historical teacher/signature requirements appearing below.** "高職老師角度" means pedagogic explanation quality, NOT a claim of a human teacher credential. New student lessons do **not** require a real teacher identity, teacher qualification, personal Ed25519 signature, or an actual GitHub APPROVED teacher-review event as a pedagogic gate. Instead require a **distinct, traceable AI content reviewer (Role E, not the B/C author)**, substantive A–D option and complete calculation/non-calculation review, accurate official final answer and correction evidence, exact source questionRevision, original WebP SHA, teaching digest, review notes and review evidence SHA, and the same 35-Demo subject-specific V4 UI verified at 8 screen sizes × 2 themes. The no-self-review and fail-closed principles remain mandatory.
+
+**Current implementation is NOT yet migrated:** `sudu/release-governance/independent-review-policy.json` still has `requireHumanTeacher=true` and `authorizedReviewers={}`, and the active publisher/reviewer gate still expects the former signed teacher review and GitHub APPROVED path. Master Draft [PR #46](https://github.com/homelux-huang/7581707/pull/46) only contains an **inactive** prospective independent-AI content receipt verifier with unit CI PASS (8 new + 11 original reviewer + 23 publisher = 42). It is neither a verified real E approval nor a completed publisher/policy migration. Never set a boolean false and claim production READY while old code still blocks or new independent evidence is missing.
+
+The single PR30 ledger now has **405 not-yet-integrated candidates** labelled separately `DISTINCT_AI_CONTENT_REVIEW_NOT_YET_CERTIFIED` and `PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE`. Its five existing approved math records and all actual source, image, lesson, original answer, UI, READY, main, LIVE bytes/statuses remain unchanged. Still **new READY 0, new main 0, new LIVE 0**. This governance wording is **no approval**.
+
+**Implementation handoff:** A separately claimed bounded MASTER code review must safely integrate updated trusted reviewer registry and publisher certificate logic with a real distinct E evidence source and test conflicts/malformed hashes/mismatched official answers/source table and current exact V4 UI. Validate the five existing historical records unchanged, run original source/answer/public build/CI/LIVE gates, and submit Draft PR. E cannot certify content it wrote as author; no reviewer identity or review task events may be fabricated. Continue technical work independently of this review-policy migration.
+
+Source of current policy: https://github.com/homelux-huang/7581707/issues/36. Task ledger: `docs/114-115-QUESTION-DELIVERY-LEDGER.json`.
+
+---
+
+
 ## Authority and immutable baseline
 - Repository: homelux-huang/7581707; only student UI: `sudu/v4-115-multisubject-review-demo.html`.
 - This document is a coordination candidate on a dedicated branch, NOT a merge, admission, deployment, or independent review.
