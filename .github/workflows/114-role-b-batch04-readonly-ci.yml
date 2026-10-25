@@ -1,0 +1,37 @@
+name: Role B 114 Chinese source-bound 5 lessons (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch04/**"
+      - "tests/test_114_role_b_batch04_20261025.py"
+      - ".github/workflows/114-role-b-batch04-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-and-author-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Source and WebP actual bytes, article Git Blobs, five A-D lessons and review negatives
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch04_20261025.py' -v
+      - name: Fail-closed zero-new-ready/no-publisher-write
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          d=Path('sudu/teaching-candidates/114-role-b-20261025-batch04')
+          batch=json.loads((d/'batch.json').read_text(encoding='utf-8'))
+          assert batch['newReady']==batch['newMain']==batch['newLive']==0
+          assert batch['distinctAiReviewerStatus']=='PENDING_ROLE_E'
+          for item in batch['items']:
+              q=json.loads(Path(item['path']).read_text(encoding='utf-8'))
+              assert q['review']['status']=='BLOCKED'
+              assert q['review']['independentReviewer'] is None
+              assert q['review']['studentReleaseApproved'] is False
+              assert q['review']['independentAiContentReview']['status']=='PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW'
+          print('NO RELEASE: 5 Role-B authored Chinese candidates, independent E review pending')
+          PY

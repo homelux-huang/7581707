@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-08",
+  "taskId": "B-114-C08-C11-14-20261025-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "下文□□□□內，最適合填入的詞語依序是：\n  炒米粉，是最普及的一種臺灣吃食。我們可以在□□□□的攤販夜市嘗食，也可以在標\n  榜著「臺灣小吃」的觀光飯店很當一回事地點菜選食，當然，在一般家庭的廚房中也是\n  主婦□□□□的家常食品。 ( 林文月〈炒米粉〉 )",
+  "options": [
+    "街頭巷尾 ／ 一知半解",
+    "街頭巷尾 ／ 互別苗頭",
+    "前呼後擁 ／ 一知半解",
+    "前呼後擁 ／ 互別苗頭"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "522828de27b6c225170abf137a021c3520a98fe30f22b86da5b0f8f6e0f0785e",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "94c4fcad6e68de1f36034df484ee6ffe09039f1f5a2d52dfe7eca82759a7f551",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-08.webp",
+    "sourcePageWebpSha256": "6443ef95b1083802bb259bdba58928bcbc80471ae1403b23cbbc18fe0aed64fd",
+    "qaStatusFromExistingManifest": "PASS",
+    "originalImageQaEvidence": "sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json",
+    "finalOfficialAnswerDirectQaThisBatch": false,
+    "readingContext": null
+  },
+  "teaching": {
+    "topic": "國文語詞填空｜街頭巷尾與互別苗頭",
+    "teacherSummary": "第一空修飾『攤販夜市』的分布位置，炒米粉在各街道巷弄皆可見，應用『街頭巷尾』；第二空描述一般家庭主婦在烹調手藝上較量，『互別苗頭』符合。兩詞合成選項 B。",
+    "elementarySummary": "夜市小吃到處有，叫『街頭巷尾』；大家做炒米粉都想比比誰比較厲害，叫『互別苗頭』。兩個放一起就是 B。",
+    "concept": "先看搭配對象：街頭巷尾說地點遍布，互別苗頭說彼此較量；別只記成語字面。",
+    "extension": "林文月〈炒米粉〉的敘述藉夜市、觀光飯店與家庭廚房凸顯臺灣小吃的普遍；並非說主婦一定互相競賽。",
+    "memory": "看到「攤販夜市」要想到地點遍布的「街頭巷尾」；看到「主婦」做料理互相比手藝要想到「互別苗頭」，所以選 B。",
+    "solvingSteps": [
+      "第一格後面是『攤販夜市』，需要表示各地街巷的語詞，街頭巷尾合理。",
+      "第二格後面是『家常食品』，前有『主婦』，可理解為料理手藝互相比較，故互別苗頭。",
+      "把兩格各自代入檢查文章連貫，選 B『街頭巷尾／互別苗頭』。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 第一格街頭巷尾正確，但第二格一知半解指知識了解不完整，無法恰當形容主婦料理家常菜彼此比手藝的情況。",
+        "elementary": "地點答對了，可是『一知半解』是只懂一點，並不是在比誰煮得好。",
+        "reason": "街頭巷尾對上夜市，但一知半解不能自然搭配主婦做炒米粉的語境。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 以街頭巷尾呈現夜市攤販遍布，再用互別苗頭寫家庭料理手藝的比較，與文章兩處語義都相合。",
+        "elementary": "夜市到處都有炒米粉，家庭煮法又各有巧思，兩個詞都放對位置。",
+        "reason": "夜市的空間分布用街頭巷尾，料理互相較量用互別苗頭，兩空皆合。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 前呼後擁描寫有人前後簇擁追隨，通常用於人物出行而非攤販夜市的分布；第二格一知半解又不能說料理切磋。",
+        "elementary": "夜市不是有人前後護送的隊伍，後面說只懂一點也不順。",
+        "reason": "前呼後擁搭配人物被簇擁而非攤販所在位置，一知半解亦不搭主婦手藝。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 第二格互別苗頭能表達主婦較量手藝，但第一格前呼後擁形容人群簇擁，不是夜市分布，整組仍錯。",
+        "elementary": "後面會比手藝是對的，但夜市不能說被人前後擁護。",
+        "reason": "互別苗頭語義合第二空，前呼後擁卻不符合第一空『攤販夜市』的空間語境。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原題／甲乙原文；官方最終答案與年度更正公告逐題獨立核對待完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "街頭巷尾",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "前呼後擁",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "一知半解",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "互別苗頭",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "攤販夜市",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "家常食品",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "街頭巷尾",
+        "level": "初級",
+        "meaning": "街道、巷子裡各個地方，常指隨處可見。",
+        "usageNote": "可形容夜市攤販所在的各處，不是某人被群眾包圍。"
+      },
+      {
+        "term": "一知半解",
+        "level": "中級",
+        "meaning": "對事情或知識只了解一部分。",
+        "usageNote": "形容理解不深，不是互相比較廚藝。"
+      },
+      {
+        "term": "互別苗頭",
+        "level": "高級",
+        "meaning": "彼此競爭、互相較量高下。",
+        "usageNote": "在家常菜語境描述烹調手藝上的比拚。"
+      },
+      {
+        "term": "前呼後擁",
+        "level": "中級",
+        "meaning": "前面有人呼喊、後面有人簇擁，多形容隨行陣仗。",
+        "usageNote": "指人物的行列，不能拿來表示夜市攤販分布。"
+      }
+    ],
+    "readingFacts": [
+      "原題直接引林文月〈炒米粉〉，描述夜市、觀光飯店、家庭廚房都能吃到炒米粉。"
+    ]
+  },
+  "teachingCanonicalSha256": "2766beac8ff620793470a0c41c93a2bfb453ca1d84dfad0ee610888bd5bc3260",
+  "composedTeachingSha256": "7243bb83cb7a630bede0f0803dcba6786f53c5102130ecf5c7a073b224bd46f1",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "reasoningAgreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_AND_CORRECTION_IMAGE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "SAME_DIGEST_V4_8_VIEWPORT_2_THEME_QA_PENDING",
+      "MASTER_PUBLISHER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
