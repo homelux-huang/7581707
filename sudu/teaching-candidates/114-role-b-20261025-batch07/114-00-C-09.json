@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-C07-C09-IMAGE-TABLE-DIAGRAM-20261025-09",
+  "year": 114,
+  "questionId": "114-00-C-09",
+  "subject": "國文",
+  "kind": "DRAFT_PIXEL_TABLE_DIAGRAM_SOURCE_G2_QUARANTINE",
+  "question": "「雙氣泡圖」通常用於呈現兩個事物的共同點、相異點。若要將下文所述「耳鑒」、\n  「揣骨聽聲」繪成雙氣泡圖：介於二者間的實線圈表示共同點，二者朝外側延伸的虛線\n  圈表示各自的特性，則①、②、③分別應是：\n  藏書畫者，多取空名。偶傳為鍾、王、顧、陸之筆，見者爭售，此所謂「耳鑒」。又有\n  觀畫而以手摸之，相傳以謂色不隱指者為佳畫，此又在耳鑒之下，謂之「揣骨聽聲」。",
+  "options": [
+    "鑑定粗糙／憑畫者名聲／憑視覺觸感                               收藏",
+    "鑑定粗糙／憑畫作年代／憑畫者名聲           古畫\n                                    揣骨",
+    "吝出高價／憑畫者名聲／憑視覺觸感                                      ③                      ②   耳鑒                                    聽聲",
+    "吝出高價／憑視覺觸感／憑畫作年代\n                              ①"
+  ],
+  "imageTranscribedOptions": [
+    "鑑定粗糙 ／ 憑畫者名聲 ／ 憑視覺觸感",
+    "鑑定粗糙 ／ 憑畫作年代 ／ 憑畫者名聲",
+    "吝出高價 ／ 憑畫者名聲 ／ 憑視覺觸感",
+    "吝出高價 ／ 憑視覺觸感 ／ 憑畫作年代"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "webpManifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "ab33eb1eb3bed907f8b0412d39339f2f2b0d62671efb235e2973328f82ca5fad",
+    "sourceImageTranscriptSha256": "f65c9852c8a0295add5807fda4f3273483f94f5d1f5062981103dc0831b75dfb",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "answerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "answerPageGitBlobSha": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p003-f7c8a4b732-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "6443ef95b1083802bb259bdba58928bcbc80471ae1403b23cbbc18fe0aed64fd",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-09.webp",
+    "webpSha256": "c49f150c96f564e63d8697937e40acf5b123a363db9b05fb4c8db09c30a5c2be",
+    "archivedPixelOnlyQaEvidence": "sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json",
+    "manifestImageQaStatus": "PASS",
+    "originalSourceIssueCodes": [],
+    "originalManifestIssueCodes": [],
+    "unresolvedNewG2Issue": "G2_DOUBLE_BUBBLE_LABELS_INTERLEAVED_IN_RAW_CHOICES",
+    "sourceNeedsRoleACanonicalTableDiagramReconciliation": true,
+    "originalAnswerVerifiedFlag": false,
+    "originalQuestionVerifiedFlag": false,
+    "authorTranscriptIsNotCanonicallyVerified": true,
+    "sourceNotEdited": true
+  },
+  "teaching": {
+    "topic": "耳鑒與揣骨聽聲：雙氣泡圖的共同／獨有比較",
+    "teacherSummary": "雙氣泡圖的中間①是**共同點**，左外②是**耳鑒**獨有方法，右外③是**揣骨聽聲**獨有方法。耳鑒『偶傳為鍾、王、顧、陸之筆，見者爭售』說明只憑傳聞的**畫者名聲**判價；揣骨聽聲『觀畫而以手摸之』『色不隱指』說明用手觸摸判斷畫作。兩種都是依據不充分的**鑑定粗糙**。故①鑑定粗糙、②憑畫者名聲、③憑視覺觸感，選 A。『見者爭售』不等於大家吝於花錢，不能寫成共同點。",
+    "elementarySummary": "中間要放兩種看畫方法都一樣的問題：判斷太隨便。左邊只聽人家說『名畫家畫的』，右邊靠手去摸。中間是粗糙，左是名聲，右是觸感，選 A。",
+    "concept": "雙氣泡圖先分清楚共通的①與各自特有的②③：耳鑒靠作者名聲、揣骨聽聲靠手摸觸感，共同點是缺乏可靠鑑定方法。圖中文字『收藏古畫』已位在上方中央，①仍須填比較兩法的共同評價。",
+    "extension": "題目在批評這兩種不充分的鑑賞依據；若提到現代文物的流傳、材質或畫風，只能算延伸觀念，不能冒稱題幹已提供相關證據。",
+    "memory": "①兩者共同=鑑定粗糙，②耳鑒=聽畫家名聲，③揣骨聽聲=用手摸；**粗糙／名聲／觸感＝A**。",
+    "solvingSteps": [
+      "依原始雙氣泡圖直接辨認位置：中間實線①共同點、左外虛線②耳鑒特色、右外虛線③揣骨聽聲特色。",
+      "依『偶傳為……之筆』可知耳鑒靠畫家名望，故②＝憑畫者名聲。",
+      "依『以手摸之』『色不隱指』可知揣骨聽聲靠手指觸摸，故③＝憑視覺觸感（照原答案文字）。",
+      "兩者都缺可靠判準，①填鑑定粗糙；只有 A 的①②③完整相符。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 把共同點①填鑑定粗糙，②填耳鑒的憑畫者名聲，③填揣骨聽聲的憑視覺觸感，與原文及左右圖圈完全對應。",
+        "elementary": "A 中間放共同缺點、左邊聽名聲、右邊靠摸，三格都放對位置了。",
+        "reason": "A 同時滿足①雙法共同弱點與②③各別手段，不須硬塞畫作年代或價格推測。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 共同缺點①雖正確，但②填畫作年代而非耳鑒的名家傳聞，③填畫者名聲而非揣骨聽聲的觸摸法，兩個獨有特性都不符。",
+        "elementary": "B 中間對，可是耳鑒不是看幾歲的畫，摸畫也不是聽作者名字，左右錯了。",
+        "reason": "B 的②缺少年代證據，③則把耳鑒的名聲標準錯安在揣骨聽聲的觸覺方法。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 的②耳鑒靠名聲和③揣骨聽聲靠觸感可成立，但①『吝出高價』沒有文本根據，反而『見者爭售』是爭相交易，不代表共同省錢。",
+        "elementary": "C 左右對了，卻把中間說成大家捨不得花錢，原文沒有這件事。",
+        "reason": "C 的共同點推測沒有原句支持；雙法共同的是方法粗糙，不是吝嗇出價的行為。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 把共同點①說成吝出高價，文中無據；又將耳鑒②改為觸感、揣骨聽聲③改為畫作年代，既錯置手段也憑空加入年代。",
+        "elementary": "D 中間亂猜小氣、左邊放錯觸摸、右邊又說看年代，三個都跟故事不合。",
+        "reason": "D 的①②③分別犯了經濟態度無據、耳鑒方法錯配和揣骨聽聲來源錯配三個錯誤。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114國文官方原題像素直視（含原詞頻表或雙氣泡圖）；A未校正 canonical OCR 選項與圖表混排前只作來源綁定教學候選，不給學生正式作答。"
+  },
+  "enrichment": {
+    "originalVisual": {
+      "visualType": "ORIGINAL_DOUBLE_BUBBLE_DIAGRAM",
+      "transcribedFromOriginalPixel": true,
+      "notCanonicalTextQa": true,
+      "diagram": {
+        "middleTitle": "收藏古畫",
+        "leftNode": "耳鑒",
+        "rightNode": "揣骨聽聲",
+        "sharedCircle": "①",
+        "leftOnlyCircle": "②",
+        "rightOnlyCircle": "③"
+      },
+      "mapping": {
+        "①": "鑑定粗糙",
+        "②": "憑畫者名聲",
+        "③": "憑視覺觸感"
+      },
+      "notes": "原始單題WebP可辨雙氣泡圖，但source options後面混有圈號、耳鑒、收藏古畫等diagram OCR圖文；待A校正。"
+    },
+    "chineseVocabulary": [
+      {
+        "word": "耳鑒",
+        "level": "初級",
+        "meaning": "靠聽說畫家的名氣判斷作品好壞。",
+        "usage": "以傳聞是鍾王顧陸之筆就爭著買賣。"
+      },
+      {
+        "word": "鑑定粗糙",
+        "level": "中級",
+        "meaning": "看事物時判準單薄、不夠細緻。",
+        "usage": "兩種書畫鑑賞方式的共同不足。"
+      },
+      {
+        "word": "揣骨聽聲",
+        "level": "高級",
+        "meaning": "以手摸畫來評斷優劣的說法，原文批評其不可靠。",
+        "usage": "用指頭觸摸作畫品質判準，與耳鑒的傳言不同。"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "耳鑒",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "揣骨聽聲",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "鑑定粗糙",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "憑畫者名聲",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "憑視覺觸感",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "①",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "②",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "③",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "鍾、王、顧、陸",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "手摸之",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      }
+    ],
+    "originalImageOnlyQaReceiptIsNotFinalAnswerQa": true
+  },
+  "teachingCanonicalSha256": "6d3445ba2591b51da0b92a753f572759ec5241848580d1f04bec6bef3b34d092",
+  "composedTeachingSha256": "c3ee9d1d916e374c4ba3a347d7e62fad01238499dffddbc8dd31d550184dde92",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "notBlindSolve": true,
+    "answerCandidateAgreeWithVisiblePublishedAnswerPage": true,
+    "answerProvenanceScopeRequiresRoleA": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerYearCorrectionScopeNotCertified": true,
+    "sourceTextAndTableQaNotCertified": true,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E",
+      "reviewerRole": "E",
+      "reviewTaskId": null,
+      "reviewSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "G2_UNCORRECTED_CANONICAL_RAW_OPTION_TABLE_OR_DIAGRAM_INTERLEAVE_ROLE_A",
+      "OFFICIAL_YEAR_FINAL_ANSWER_AND_CORRECTION_A_QA_PENDING",
+      "E_DISTINCT_AI_OPTION_REASON_VERIFICATION_PENDING",
+      "D_ANNUAL_V4_SAME_REVISED_SOURCE_AND_TEACHING_DIGEST_8X2_PENDING",
+      "MASTER_TRUSTED_E_REVIEW_PROTECTED_MAIN_PUBLISHER_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
