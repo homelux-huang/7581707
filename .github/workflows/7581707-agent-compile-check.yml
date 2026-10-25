@@ -18,6 +18,16 @@ jobs:
           sparse-checkout: |
             .github/workflows
           sparse-checkout-cone-mode: true
+      - name: Check Codex authentication secret presence (boolean only, no secret value)
+        env:
+          CODEX_PRESENT: ${{ secrets.CODEX_API_KEY != '' }}
+          OPENAI_PRESENT: ${{ secrets.OPENAI_API_KEY != '' }}
+        run: |
+          echo "CODEX_API_KEY_CONFIGURED=$CODEX_PRESENT"
+          echo "OPENAI_API_KEY_CONFIGURED=$OPENAI_PRESENT"
+          if [ "$CODEX_PRESENT" != "true" ] && [ "$OPENAI_PRESENT" != "true" ]; then
+            echo "MODEL_INFERENCE_NOT_CONFIGURED_NO_SECRETS_AVAILABLE"
+          fi
       - name: Install official gh-aw CLI extension without API model key
         env:
           GH_TOKEN: ${{ github.token }}
