@@ -7,6 +7,30 @@
   "yearCandidateQuestionCount": 205,
   "yearLegacyQuestionsFound": 196,
   "originalPageNumber": 3,
+  "rejectedInitialCrops": [
+    {
+      "questionId": "113-00-C-09",
+      "cropPixels": [
+        90,
+        661,
+        1310,
+        1123
+      ],
+      "sha256": "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
+      "reason": "bottom x-axis label touched and risked glyph clipping"
+    },
+    {
+      "questionId": "113-00-C-10",
+      "cropPixels": [
+        90,
+        1125,
+        1310,
+        1840
+      ],
+      "sha256": "d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491",
+      "reason": "shift Q10 start past Q09 complete axis caption without mixing"
+    }
+  ],
   "originalPage": {
     "path": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
     "gitBlobSha1": "9578305e9c4181d3b339b830e23e12402f4893d3",
@@ -189,24 +213,24 @@
       "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
       "asset": {
         "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp",
-        "sha256": "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
-        "gitBlobSha1": "2029be86d4356d4dfb4421672b9e8c7862a9e7f7",
+        "sha256": "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b",
+        "gitBlobSha1": "f57d9bf5799f72589929f268d4ab2b175f53edfe",
         "cropPixels": [
           90,
           661,
           1310,
-          1123
+          1136
         ],
         "pixelSize": [
           1220,
-          462
+          475
         ],
         "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
         "page": 3
       },
       "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
-      "sourceRevisionSha256": "dd5c73a13139b90a93fc8ab000f93e3714ffefd1f22b0302ccb12e05f2c43fd1"
+      "sourceRevisionSha256": "826ea6153ea63de6a74bc95b747b88701b613df1d117f894c10844c2322d15be"
     },
     {
       "questionId": "113-00-C-10",
@@ -253,24 +277,24 @@
       "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
       "asset": {
         "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp",
-        "sha256": "d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491",
-        "gitBlobSha1": "c8a5b46c6970ac028e7f80cba88e777a0f9dcfa1",
+        "sha256": "6d02e6a8bcc051c764bd6147f9f49c5b6edee7ea6b78be3ec9c3c439cb997936",
+        "gitBlobSha1": "5d31062165ac00e52f418d7c9fa89c26096238eb",
         "cropPixels": [
           90,
-          1125,
+          1137,
           1310,
           1840
         ],
         "pixelSize": [
           1220,
-          715
+          703
         ],
         "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
         "page": 3
       },
       "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
       "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
-      "sourceRevisionSha256": "e0fb07a047f7cb2cbe6bd69c61902a7ab0ce2cf8fa58a38b757c7771c485c971"
+      "sourceRevisionSha256": "48154f29ead5dd768337d005273a43815bef736d59857c4415d5306af0d2bb15"
     }
   ],
   "newQuestionVerified": 0,
