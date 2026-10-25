@@ -12,3 +12,11 @@
 - 真實瀏覽器診斷未通過：國文15個case PASS／16 FAIL，失敗為下一題圖片未解碼即進入 pre-answer layout；會計40 PASS／10 FAIL的部分報告，遇同類錯誤後人工停止，非完整矩陣。這些部分PASS不是題目8×2合格或UIQA批准。
 - 本機診斷輸出：忽略的 `test-results/role-d/demo-C.json`、`demo-ACC.json` 與截圖。診斷時工作樹有測試修改，不能將其 actualCommitSha 欄位冒稱為已提交的正式精確SHA驗收；修復後必須對最終commit重跑。
 - 新獨立教學QA／UIQA／READY／main／LIVE均0。下一批修布局量測前的實際圖片等待，保留所有原圖及版面斷言；之後檢查其他實際失敗。
+
+## D-IMAGE-READINESS-20261025-VSCODE-02
+
+- 基底為第一批提交 `6c44ce6f7dfa45bcdd280acbd7a651ce364fe8b3`；租約留言 `6393594449`。
+- 每題版面檢查前先等待正確題號與全部原圖src一致，逐張捲入視窗，等待complete及有效尺寸，再執行decode。原圖SHA、版面、題號、選項與digest斷言保留。
+- 再診斷已越過原圖解析／未解碼失敗；國文、會計各至少25個真實case完成。接著發現手機深色模式回首頁時，驗收器盲目再點一次已展開的navHandle，反而收合導覽後再點視窗外的navHomeBtn。為避免重複已知失敗，診斷已停止，部分結果不能作完整UIQA。
+- 真實360×800觸控重現：按themeBtn後 aria-expanded=true、navHomeBtn top=28；再tap navHandle後 aria-expanded=false、top=-235。這是驗收器的切換狀態假設，下一批將保留真實tap/click並先核對展開狀態。
+- [35題bytes/digest綁定](ROLE_D_LOOP_IMAGE_BINDINGS_20261025.json)提供本批實際imageSHA與Demo欄位digest；其sourceRevision明確是Demo JSON serialization摘要，不冒充114/115官方候選題revision。教學未修改，新獨立QA/UIQA/READY/main/LIVE仍0。

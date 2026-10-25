@@ -116,6 +116,25 @@ async function act(locator,touch){
   if(touch)await locator.tap({timeout:15000});
   else await locator.click({timeout:15000});
 }
+async function waitForOriginalImages(page,q,mode){
+  const expected=mode==='image-preview-only'?
+    [{image:q.image},...(q.sharedImages||[])].map(x=>'./'+x.image):[q.image];
+  await page.waitForFunction(({number,sources})=>{
+    const card=document.querySelector('#questionCard');
+    const images=card?[...card.querySelectorAll('img')]:[];
+    return Number(card?.querySelector('.qnum')?.textContent)===number&&
+      images.length===sources.length&&images.every((el,i)=>el.getAttribute('src')===sources[i]);
+  },{number:assertOriginalQuestionNumber(q,mode),sources:expected},{timeout:15000});
+  for(let i=0;i<expected.length;i++){
+    const image=page.locator('#questionCard img').nth(i);
+    await image.scrollIntoViewIfNeeded();
+    await page.waitForFunction(({index,source})=>{
+      const el=document.querySelectorAll('#questionCard img')[index];
+      return el?.getAttribute('src')===source&&el.complete&&el.naturalWidth>0&&el.naturalHeight>0;
+    },{index:i,source:expected[i]},{timeout:15000});
+    await image.evaluate(el=>el.decode());
+  }
+}
 async function layoutQA(page,label){
   const geometry=await page.evaluate(()=>{
     const ids=['#questionCard h1','#questionCard img','.opt-text','#guideCard .calculation-step'];
@@ -354,6 +373,7 @@ function dump(){
           for(let index=0;index<rows.length;index++){
             q=rows[index];
             const label=YEAR+' '+SUBJECT+' '+mode+' '+(q.canonicalId||q.id)+' '+width+'x'+height+' '+theme;
+            await waitForOriginalImages(page,q,mode);
             const geometry=await layoutQA(page,label+' (pre-answer)');
             const evidence=mode==='image-preview-only'?
               await verifyImagePreview(page,q,geometry):
