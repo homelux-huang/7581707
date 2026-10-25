@@ -1,6 +1,7 @@
 /* Positive 114/115 student-mode regression. Synthetic, intercepted fixture ONLY.
-   Real QA file releases remain empty until all independent gates succeed. */
+   Does not admit new questions or certify a real lesson digest. */
 const assert=require('node:assert/strict');
+const {createHash}=require('node:crypto');
 const {chromium}=require('playwright');
 const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
 const explanation=Object.fromEntries('ABCD'.split('').map(letter=>[letter,{
@@ -34,6 +35,32 @@ const conceptual={...reviewQ,id:4,canonicalId:'115-00-MB-04',topic:'二次不等
  }]))
 };
 const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:[reviewQ,conceptual]};
+// Synthetic UI regression only; these checks do not certify a real lesson digest.
+async function verifyFixtureImage(page,question){
+ const expectedUrl=new URL(question.image,base).href;
+ const img=page.locator('#questionCard img').first();
+ assert.equal(await img.getAttribute('src'),question.image,question.canonicalId+' image path');
+ assert.equal(await img.evaluate(el=>el.src),expectedUrl,question.canonicalId+' resolved image URL');
+ const response=await page.request.get(expectedUrl);
+ assert.equal(response.status(),200,expectedUrl+' must return HTTP 200');
+ assert.equal(response.url(),expectedUrl,'fixture image must not redirect');
+ assert.match(response.headers()['content-type']||'',/^image\/webp(?:;|$)/i,expectedUrl+' content type');
+ const bytes=await response.body();
+ assert(bytes.length>=12,expectedUrl+' WebP header is incomplete');
+ assert.equal(bytes.toString('ascii',0,4),'RIFF',expectedUrl+' RIFF signature');
+ assert.equal(bytes.toString('ascii',8,12),'WEBP',expectedUrl+' WebP signature');
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),question.imageSha256,
+  question.canonicalId+' original image SHA256');
+ await img.scrollIntoViewIfNeeded();
+ await page.waitForFunction(url=>{
+  const el=document.querySelector('#questionCard img');
+  return el&&el.src===url&&el.complete&&el.naturalWidth>0&&el.naturalHeight>0;
+ },expectedUrl);
+ assert(await img.evaluate(async(el,url)=>{
+  await el.decode();
+  return el.src===url&&el.complete&&el.naturalWidth>0&&el.naturalHeight>0;
+ },expectedUrl),question.canonicalId+' original WebP must decode');
+}
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
  const page=await browser.newPage();
@@ -56,8 +83,7 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    assert.equal(await page.locator('#verifiedYearNav').count(),0);
    assert.equal(await page.locator('#verifiedPreviewToggle').count(),0);
    assert.equal(await page.locator('#studyView .opt').count(),4);
-   const img=page.locator('#questionCard img[data-mock-asset], #questionCard img').first();
-   assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0}));
+   await verifyFixtureImage(page,reviewQ);
    assert(await page.locator('#prevBtn').isDisabled());
    assert(await page.locator('#nextBtn').isEnabled());
    await page.locator('#studyView .opt[data-a="B"]').click();
@@ -73,6 +99,7 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    assert(wrong>=1,'selected wrong answer should be styled red');
    await page.locator('#nextBtn').click();
    assert.match(await page.locator('#questionCard .qnum').innerText(),/04/);
+   await verifyFixtureImage(page,conceptual);
    assert(await page.locator('#nextBtn').isDisabled());
    await page.locator('#studyView .opt[data-a="C"]').click();
    await page.locator('#studyView .option-detail').first().waitFor();

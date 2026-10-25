@@ -4,6 +4,8 @@
 
 公開分享 HTML 學習程式，首頁可搜尋並開啟全部工具。
 
+114／115 題庫與 V4 開發接續請先讀 [VS Code 接手檢查點](docs/VSCODE_TAKEOVER_2026-10-25.md) 與 [共同交付命令](docs/114-115-DELIVERY-COMMAND.md)。候選接收、教學 QA 與正式發布分開記錄；正式頁為 `sudu/v4-115-multisubject-review-demo.html`。
+
 ## 現有工具
 
 - [7581707 統測速讀平台](https://homelux-huang.github.io/7581707/sudu/)：`sudu/index.html`。
