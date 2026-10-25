@@ -82,6 +82,34 @@ class Source113ChineseOriginalDiagram(unittest.TestCase):
         self.assertEqual(prior[3],1450)
         self.assertEqual(prior[3],self.q["asset"]["cropPixels"][1])
         self.assertIn("calligraphy",rejected["reason"])
+    def test_direct_actual_couplet_image_visual_qa_receipt_exact_source_sha_only(self):
+        path=ROOT/"sudu/data/processed/113/role-a-c06/VISUAL_QA_ASSISTANT_20261025.json"
+        self.assertTrue(path.exists())
+        receipt=a.fromjson(path)
+        self.assertEqual(receipt["taskId"],a.TASK)
+        self.assertEqual(receipt["questionId"],a.QID)
+        self.assertEqual(receipt["reviewerType"],"AI_ASSISTANT_SOURCE_VISUAL")
+        self.assertEqual(receipt["result"],"PASS_ROLE_A_SOURCE_IMAGE_ONLY")
+        self.assertEqual(receipt["originalSourcePage"]["webpSha256"],self.man["sourceOriginalPageWebpSha256"])
+        self.assertEqual(receipt["originalAnswerPage"]["webpSha256"],self.man["answerOriginalPageWebpSha256"])
+        candidate=receipt["candidate"]
+        self.assertEqual(candidate["path"],self.q["asset"]["path"])
+        self.assertEqual(candidate["webpSha256"],self.q["asset"]["sha256"])
+        self.assertEqual(candidate["gitBlobSha1"],self.q["asset"]["gitBlobSha1"])
+        self.assertEqual(candidate["cropPixels"],a.CROP)
+        self.assertEqual(candidate["pixelSize"],[1220,431])
+        self.assertEqual(candidate["sourceRevisionSha256"],self.q["sourceRevisionSha256"])
+        self.assertEqual(receipt["previousRejected"]["sha256"],self.man["rejectedOldImage"]["sha256"])
+        self.assertEqual(receipt["previousRejected"]["result"],"FAIL_INCOMPLETE_TOP_RIGHT_COUPLET")
+        self.assertTrue(all(v is True for k,v in receipt["observations"].items() if k!="notes"))
+        self.assertGreater(len(receipt["observations"]["notes"]),100)
+        for field in ("independentHumanReview","independentRoleEContentReview",
+                      "officialFinalAnswerReviewed","officialFullCorrectionNoticeReviewed",
+                      "sourcePdfRehashedThisBatch"):
+            self.assertFalse(receipt[field])
+        for field in ("newAnswerVerified","newQuestionVerified",
+                      "newIndependentTeachingReview","newReady","newLive"):
+            self.assertEqual(receipt[field],0)
     def test_official_announced_candidate_B_only_not_final_answer_qa(self):
         q=self.q
         self.assertEqual(self.old["answer"],1)
