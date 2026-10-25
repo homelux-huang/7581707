@@ -42,25 +42,25 @@
       "A": {
         "teacher": "①改成『因查案時被發現遭歹徒冒名』會使被發現者主語不明，原『發現民眾遭歹徒冒名』較清楚。",
         "elementary": "亂用被發現，會不知道誰被發現。",
-        "reason": "主動發現與被動被發現的受事關係混淆。",
+        "reason": "改成被動『被發現遭冒名』會模糊誰查案、誰遭冒名的施事受事關係；原句主動發現較清楚。",
         "isCorrect": false
       },
       "B": {
         "teacher": "②改成『告知曾傳喚出庭民眾，卻未到案』會讓民眾黏成修飾對象，未到案的主語不清。",
         "elementary": "原本叫他出庭他沒來，亂改反而不好懂。",
-        "reason": "逗點與詞序移動使修飾對象和主語混亂。",
+        "reason": "改成『曾傳喚出庭民眾，卻未到案』造成『民眾』修飾對象與未到案的主語不清楚。",
         "isCorrect": false
       },
       "C": {
         "teacher": "③『存款應主動前往法院保管』讓存款做出『前往』動作，語義不合理。",
         "elementary": "錢不會自己走路到法院。",
-        "reason": "前往需要能行動的人，不能是存款本身。",
+        "reason": "『存款』不會自行『前往法院』，前往的主語必須是能移動的人，不能是存款本身。",
         "isCorrect": false
       },
       "D": {
         "teacher": "④改『歸還匯款』才能表示把錢交回原來的民眾，符合詐騙話術中的假承諾方向。",
         "elementary": "把錢還給別人叫歸還。",
-        "reason": "歸還表示回到原持有人，與『收回』方向不同。",
+        "reason": "『歸還匯款』指把錢交回民眾原持有人，符合假檢警承諾退還的方向；『收回』則是往自己取回。",
         "isCorrect": true
       }
     },
@@ -115,8 +115,8 @@
     ],
     "caution": "題目假稱的國家安全帳戶是詐騙話術，不可解釋成合法法院匯款方式。"
   },
-  "teachingCanonicalSha256": "9956c4797e24ea6d476896e2604660f6364f7f2e2117db882fef000a84de02f4",
-  "composedTeachingSha256": "3d2578bf62245dbeba6041ab782806b63382f45a70c1022c7292a72598cf132e",
+  "teachingCanonicalSha256": "a130b6d30bff31effae34b6433cf5d683b8c28092e0545f2487878275ac8cb48",
+  "composedTeachingSha256": "fde3df4b637cdd6bea7a161367bdda9aa5946494e645ceb913c8ed61460fee41",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimed": false,
