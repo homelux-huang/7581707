@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-C16-C18-THREE-LAMPS-20261025-10",
+  "year": 114,
+  "questionId": "114-00-C-17",
+  "subject": "國文",
+  "kind": "AUTHOR_PROVISIONAL_LAMP_READING_G1_PIXEL_QA_AND_SOURCE_PENDING",
+  "question": "依據上文，關於燈具的敘述，何者正確？",
+  "options": [
+    "青銅容易導熱，自漢至宋皆是燈具製作材料的主流",
+    "兩座銅燈與夾燈盞雖然大小有別，但皆可拆開清潔",
+    "兩座銅燈著重造型設計，無法調光；夾燈盞雖無造型，但可調光",
+    "兩座銅燈的燈盤結構考量燃料屬性；夾燈盞省油效能受氣溫影響\n\n\n\n-6-\n\n114 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考"
+  ],
+  "imageTranscribedOptions": [
+    "青銅容易導熱，自漢至宋皆是燈具製作材料的主流",
+    "兩座銅燈與夾燈盞雖然大小有別，但皆可拆開清潔",
+    "兩座銅燈著重造型設計，無法調光；夾燈盞雖無造型，但可調光",
+    "兩座銅燈的燈盤結構考量燃料屬性；夾燈盞省油效能受氣溫影響"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "originalQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "originalManifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "1cbe6a902f31771a2589cdb7aac8416a93fd15536d33338da1303931a4aeef81",
+    "sourceImageTranscriptSha256": "afc774fb2dea26e61c9476e09dc97d491b960d6656c09169461691cff2a13b0c",
+    "webpSha256": "9fd277ec092fe55fb9bc12080b6bce9749ffe9f6b7cb468e33439ae5b23c985e",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-17.webp",
+    "sourcePageWebpSha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "officialAnswerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "originalAnswerPageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "archivedManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "manifestIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "originalSourceQuestionVerified": false,
+    "originalSourceAnswerVerified": false,
+    "sharedReadingLinkNotYetCanonical": true,
+    "authorOriginalPixelTranscriptNotImageQa": true,
+    "roleARequired": true,
+    "authorDidNotModifySource": true
+  },
+  "teaching": {
+    "topic": "三種燈具的材料、調光與燃料設計辨析",
+    "teacherSummary": "要把四項敘述逐句與三燈原文對照。漢代長信宮燈與銅牛燈採青銅且體型較大，燈盤都設插針以固定**固態動物油脂**；宋代**夾燈盞**改用瓷材及上下夾層降溫。文章特別說節油量因季節氣溫不同：夏天實驗約**10%**，非陸游宣傳的**50%**。因此 D『兩座銅燈的燈盤結構考量燃料屬性；夾燈盞省油效能受氣溫影響』吻合。A 誤說宋仍青銅主流；B 把一體成型夾燈盞說成可拆裝；C 誤說長信宮燈無法調光，與可調節燈罩兩片板子衝突。",
+    "elementarySummary": "兩個銅做的漢代燈，燈盤有針可以插住固體的動物油；宋代小燈用水幫油降溫省一點燃料，但天氣變熱、變冷，省油效果也變。D 把這兩件事都講對了。其他答案把材料、能不能拆、能不能調光搞錯。",
+    "concept": "先分「材質／結構／調光／燃料」四類證據：青銅昂貴且導熱快；夾燈盞用瓷製**一體成型**上下層；長信宮燈可調兩片燈罩板控制光；漢代青銅燈盤有固定動物油脂的針；夾燈盞省油受氣溫影響。",
+    "memory": "**漢銅燈：固態動物油脂插針；宋夾燈：下層水冷卻，夏約省10%。** 所以 D。",
+    "solvingSteps": [
+      "先在原始第6頁找材料敘述：宋代多陶瓷小燈、漢代貴族使用青銅大燈，排除 A 的歷代主流青銅。",
+      "看結構：銅燈幾個部件方便拆卸，夾燈盞一體成型上下層，並非三燈皆能拆開，排除 B。",
+      "看調光：長信宮燈的燈罩兩片板子能調節亮度方向，與 C 兩銅燈都不能調光矛盾。",
+      "看燃料與溫度：兩漢代燈盤有針固定固態動物油脂；夾燈盞省油受季節氣溫左右，故選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 前半『青銅容易導熱』有原文線索，但宋代民間普遍使用陶製或瓷製小燈，夾燈盞本身就是瓷材；不可推成『漢至宋青銅一直為主流』。",
+        "elementary": "A 說宋代大家也主要用青銅燈，圖文卻介紹宋代人常用的小陶瓷燈，所以錯。",
+        "why": "A 把青銅導熱的局部事實過度推成跨朝代材質主流，與宋燈例子矛盾。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 把兩座漢代銅燈幾部件可拆卸清潔，誤推到宋代的夾燈盞；原文強調夾燈盞有**一體成型上下兩層**，不能說三座燈都可拆開。",
+        "elementary": "兩個大銅燈能拆洗，不代表上下連成一體的小燈也能拆，B 把不同燈混在一起。",
+        "why": "B 錯在『皆』字：夾燈盞是一體成型，不能承接銅燈的拆卸結構。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 稱兩座銅燈無法調光，但長信宮燈的燈罩兩片板子能調整光照亮度與方向；同時原文也沒有說夾燈盞能調光，因此前後都是不支持的轉述。",
+        "elementary": "C 說大銅燈不能調光，可是長信宮燈明明能調；也沒證據說小燈可以調光。",
+        "why": "C 的第一分句直接違反長信宮燈可調燈罩，第二分句沒有夾燈盞調光證據。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 正確：兩座銅燈燈盤的插針配合動物油脂固態特性；瓷夾燈盞靠下層注水降溫，實驗夏季約省10%，所以效果會隨氣溫而變。",
+        "elementary": "D 前半說銅燈的針配合固體動物油，後半說水冷小燈受天氣影響，兩句都對。",
+        "why": "D 的燃料固定設計及季節省油幅度都能從原題第6頁具體找到，沒有跨物件誤推。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方國文三燈第6頁原始像素及各單題WebP讀取的暫存教材草稿；單題G1尚未逐題影像QA，閱讀共用原頁未成為QA正式共享記錄，不能正式發布。"
+  },
+  "enrichment": {
+    "originalVisual": {
+      "type": "ORIGINAL_READING_PAGE6_THREE_LAMP_FACTS",
+      "lampFacts": {
+        "hanBronzeLamps": [
+          "長信宮燈48公分、青銅鍍金",
+          "銅牛燈46公分、腹部裝水吸附煙",
+          "兩漢燈盤有針錐插固體動物油脂"
+        ],
+        "songPorcelain": [
+          "夾燈盞約5公分高",
+          "上下層一體成型",
+          "上層油、下層從側孔注水",
+          "節省油量實驗夏天約10%，不是宣傳50%"
+        ]
+      },
+      "notCanonicalPassageOrImageQa": true
+    },
+    "readingContext": {
+      "originalPage6WebpPath": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage6WebpSha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+      "originalPage6GitBlob": "8719fddcdb4ddd835a573828710994936d329b80",
+      "readingAppliesTo": "114-00-C-16_to_19",
+      "independentSharedReadingQa": false,
+      "originalFigureAndTextAreNotRepainted": true
+    },
+    "chineseVocabulary": [
+      {
+        "word": "青銅",
+        "level": "初級",
+        "meaning": "銅與其他金屬混合的材料。",
+        "usage": "本題漢代長信宮燈、銅牛燈使用青銅。"
+      },
+      {
+        "word": "一體成型",
+        "level": "中級",
+        "meaning": "各層或部位在製作時連為一體。",
+        "usage": "夾燈盞上下兩層不是每一層都可拆卸。"
+      },
+      {
+        "word": "燃料屬性",
+        "level": "高級",
+        "meaning": "燃料的固態、液態、熱傳等性質。",
+        "usage": "漢燈盤插針配合固態動物脂；瓷燈靠水降低油溫節油。"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "青銅容易導熱",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "自漢至宋",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "皆可拆開清潔",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "無法調光",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "燃料屬性",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "省油效能受氣溫影響",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      }
+    ],
+    "nonArithmeticReadingOnly": true
+  },
+  "teachingCanonicalSha256": "c39dcd21a8a568e6eec7f53c779580e8514c046615f817a2edd65769588e1845",
+  "composedTeachingSha256": "610c4607d0c870aba209ce61fce9e97cff374ccd22065cf3ffe6d04bdd480a75",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "notBlindSolve": true,
+    "candidateMatchesExistingSource": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "sourceImageQaG1": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceTextAndReadingQaG2": "PENDING_ROLE_A",
+    "finalOfficialAnswerAndCorrectionsG3": "PENDING_ROLE_A",
+    "distinctAiE": {
+      "status": "PENDING",
+      "reviewerRole": "E",
+      "reviewTaskId": null,
+      "reviewSessionId": null,
+      "reviewNotes": null
+    },
+    "dV4ExactDigest8x2": "PENDING",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "G1_PER_QUESTION_ORIGINAL_WEBP_MANIFEST_DRAFT_QA_NOT_YET_PASS",
+      "G2_SHARED_READING_PAGE6_STRUCTURE_AND_C16_DIAGRAM_ROLE_A_PENDING",
+      "G2_C17_CANONICAL_OPTION_D_PAGE_FOOTER_NEEDS_SOURCE_CORRECTION",
+      "G3_OFFICIAL_YEAR_FINAL_ANSWER_AND_CORRECTION_ROLE_A_PENDING",
+      "E_DISTINCT_AI_PEDAGOGY_REVIEW_PENDING",
+      "D_8X2_ANNUAL_V4_ORIGINAL_SOURCE_AND_NEW_TEACHING_DIGEST_PENDING",
+      "MASTER_PROTECTED_MAIN_TRUST_AND_SAME_SHA_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

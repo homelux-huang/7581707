@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-C16-C18-THREE-LAMPS-20261025-10",
+  "year": 114,
+  "questionId": "114-00-C-16",
+  "subject": "國文",
+  "kind": "AUTHOR_PROVISIONAL_LAMP_READING_G1_PIXEL_QA_AND_SOURCE_PENDING",
+  "question": "依據上文，下列構造位於各燈何處？\n     長信宮燈導煙管 夾燈盞放水處 銅牛燈放油處",
+  "options": [
+    "ㄅ       ㄇ      ㄊ",
+    "ㄅ       ㄈ      ㄉ",
+    "ㄆ       ㄈ      ㄊ",
+    "ㄆ       ㄇ      ㄉ"
+  ],
+  "imageTranscribedOptions": [
+    "ㄅ       ㄇ      ㄊ",
+    "ㄅ       ㄈ      ㄉ",
+    "ㄆ       ㄈ      ㄊ",
+    "ㄆ       ㄇ      ㄉ"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "originalQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "originalManifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "592d062eefc320a1973ae091c2272bf20ccda6d83352a6b0d1c52aeb3c41cd4a",
+    "sourceImageTranscriptSha256": "592d062eefc320a1973ae091c2272bf20ccda6d83352a6b0d1c52aeb3c41cd4a",
+    "webpSha256": "d04b2f4b9bd7bb2a1212fdb12da4ee7d9b0cee14afd3e17d4bd1733061952d4a",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-16.webp",
+    "sourcePageWebpSha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "officialAnswerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "originalAnswerPageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "archivedManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceIssueCodes": [],
+    "manifestIssueCodes": [],
+    "originalSourceQuestionVerified": false,
+    "originalSourceAnswerVerified": false,
+    "sharedReadingLinkNotYetCanonical": true,
+    "authorOriginalPixelTranscriptNotImageQa": true,
+    "roleARequired": true,
+    "authorDidNotModifySource": true
+  },
+  "teaching": {
+    "topic": "三燈構造位置：長信宮燈、夾燈盞、銅牛燈",
+    "teacherSummary": "題目要求按順序辨識**長信宮燈導煙管／夾燈盞放水處／銅牛燈放油處**，必須回到第6頁原像素圖，不能靠題號文字猜。原圖中長信宮燈空心右臂將油煙導入底座，標示**ㄅ**；夾燈盞上層盛油、下層從側孔注水幫助降溫，放水處標示**ㄈ**；銅牛燈上方燈盤放置燃料，標示**ㄉ**。順序ㄅ、ㄈ、ㄉ對應選項 B。此為位置識圖題，題組其他燈具敘述不能取代原圖的箭頭核對。",
+    "elementarySummary": "看三張燈的圖：第一個問煙跑去哪裡，長信宮燈沿著空心的手臂走到**ㄅ**；第二個問省油小燈把水放哪裡，水在下層**ㄈ**；第三個問牛燈油放哪裡，油放上面的燈盤**ㄉ**。排成ㄅ、ㄈ、ㄉ，所以選 B。",
+    "concept": "**導煙管**是把煙引導走的管路；**下層注水**是夾燈盞的降溫結構；**燈盤**放燃料，不能與銅牛腹中裝水的空間混淆。三個圖上箭頭必須各依原位置作答。",
+    "memory": "長信導煙**ㄅ** → 夾燈放水**ㄈ** → 牛燈放油**ㄉ**，記住 **ㄅㄈㄉ＝B**。",
+    "solvingSteps": [
+      "先回原始第6頁讀長信宮燈右臂空心導煙路徑，確認圖上導煙管標示ㄅ。",
+      "再看夾燈盞剖面：上層盛油、下層有側孔注水，放水處標示ㄈ。",
+      "最後看銅牛燈圖：油脂固定在燈盤處，標示ㄉ；腹部裝水不是放油。",
+      "將三位置排成ㄅ／ㄈ／ㄉ，比較 A～D 的三欄，選項 B 完全對應。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 首欄ㄅ能對應長信宮燈的導煙管，但中欄ㄇ是夾燈盞的上部而非下部放水處，末欄ㄊ也不是銅牛燈的燈盤放油位置，故兩格錯。",
+        "elementary": "A 第一格對，第二格把油上層當水下層，第三格把牛燈的其他位置當油盤，所以不能選。",
+        "why": "A 只有導煙管正確；真正放水處ㄈ與牛燈放油處ㄉ都被填錯。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 的ㄅ是長信宮燈空心臂導煙路線，ㄈ是夾燈盞下層注水位置，ㄉ是銅牛燈上方燈盤放油脂位置，三個箭頭與原圖、原文相合。",
+        "elementary": "B 把煙走的管、水下層的位置、牛燈放油的燈盤全部找到，三格全對。",
+        "why": "B 三個符號依序為ㄅ、ㄈ、ㄉ，與題問的三個實際部件完全一致。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 中間ㄈ雖能指出夾燈盞下層放水處，卻把長信導煙管寫成ㄆ，並把銅牛放油位置指向ㄊ，忽略牛燈的油在上方燈盤而非腹部。",
+        "elementary": "C 第二格對，第一格把導煙手臂看錯，第三格也把牛燈的水肚子看成油盤。",
+        "why": "C 不是三格都對：錯在長信管路的ㄆ與牛燈燈盤的ㄊ，不符合圖上箭頭。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 末欄ㄉ確實是牛燈的上方放油處，但第一格ㄆ不是長信宮燈的導煙管位置，第二格ㄇ也不是夾燈盞側孔所通的下層儲水處。",
+        "elementary": "D 牛燈油盤找對了，可是前兩張燈把煙管和裝水處都看錯，還是不能選。",
+        "why": "D 只有銅牛ㄉ正確，長信應ㄅ而夾燈應ㄈ，非ㄆ與ㄇ。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方國文三燈第6頁原始像素及各單題WebP讀取的暫存教材草稿；單題G1尚未逐題影像QA，閱讀共用原頁未成為QA正式共享記錄，不能正式發布。"
+  },
+  "enrichment": {
+    "originalVisual": {
+      "type": "ORIGINAL_3_COLUMN_COMPONENT_LOCATION_TABLE",
+      "columns": [
+        "長信宮燈導煙管",
+        "夾燈盞放水處",
+        "銅牛燈放油處"
+      ],
+      "choiceSymbols": {
+        "A": [
+          "ㄅ",
+          "ㄇ",
+          "ㄊ"
+        ],
+        "B": [
+          "ㄅ",
+          "ㄈ",
+          "ㄉ"
+        ],
+        "C": [
+          "ㄆ",
+          "ㄈ",
+          "ㄊ"
+        ],
+        "D": [
+          "ㄆ",
+          "ㄇ",
+          "ㄉ"
+        ]
+      },
+      "correctSymbols": [
+        "ㄅ",
+        "ㄈ",
+        "ㄉ"
+      ],
+      "authorObservedOriginalPage6": true,
+      "notIndependentImageQa": true,
+      "notes": "原始第6頁長信宮燈空心右臂導煙、夾燈盞上下分層、銅牛燈盤及腹水圖箭頭，需由A獨立原像素和圖說QA。"
+    },
+    "readingContext": {
+      "originalPage6WebpPath": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage6WebpSha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+      "originalPage6GitBlob": "8719fddcdb4ddd835a573828710994936d329b80",
+      "readingAppliesTo": "114-00-C-16_to_19",
+      "independentSharedReadingQa": false,
+      "originalFigureAndTextAreNotRepainted": true
+    },
+    "chineseVocabulary": [
+      {
+        "word": "燈盤",
+        "level": "初級",
+        "meaning": "裝油脂燃料並供點火照明的地方。",
+        "usage": "銅牛燈放油處ㄉ位在燈盤而非牛腹。"
+      },
+      {
+        "word": "導煙管",
+        "level": "中級",
+        "meaning": "引導煙流到特定通道的空心管。",
+        "usage": "長信宮燈空心手臂將油煙引到底座。"
+      },
+      {
+        "word": "夾層注水冷卻",
+        "level": "高級",
+        "meaning": "用上下分層的結構放水，協助降低油溫。",
+        "usage": "宋代夾燈盞上層油下層水；原文說節油效果與氣溫有關。"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "長信宮燈導煙管",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "夾燈盞放水處",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "銅牛燈放油處",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄅ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄆ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄇ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄈ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄉ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "ㄊ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      }
+    ],
+    "nonArithmeticReadingOnly": true
+  },
+  "teachingCanonicalSha256": "1a1d102e6e79ffdc475004883ddd32363b5b19b0e5c01b5614175df36dd36ced",
+  "composedTeachingSha256": "6f9c10551809b9157af5a064aa0865f4a2e50ba428c131277c79f592c06df94f",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "notBlindSolve": true,
+    "candidateMatchesExistingSource": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "sourceImageQaG1": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceTextAndReadingQaG2": "PENDING_ROLE_A",
+    "finalOfficialAnswerAndCorrectionsG3": "PENDING_ROLE_A",
+    "distinctAiE": {
+      "status": "PENDING",
+      "reviewerRole": "E",
+      "reviewTaskId": null,
+      "reviewSessionId": null,
+      "reviewNotes": null
+    },
+    "dV4ExactDigest8x2": "PENDING",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "G1_PER_QUESTION_ORIGINAL_WEBP_MANIFEST_DRAFT_QA_NOT_YET_PASS",
+      "G2_SHARED_READING_PAGE6_STRUCTURE_AND_C16_DIAGRAM_ROLE_A_PENDING",
+      "G2_C17_CANONICAL_OPTION_D_PAGE_FOOTER_NEEDS_SOURCE_CORRECTION",
+      "G3_OFFICIAL_YEAR_FINAL_ANSWER_AND_CORRECTION_ROLE_A_PENDING",
+      "E_DISTINCT_AI_PEDAGOGY_REVIEW_PENDING",
+      "D_8X2_ANNUAL_V4_ORIGINAL_SOURCE_AND_NEW_TEACHING_DIGEST_PENDING",
+      "MASTER_PROTECTED_MAIN_TRUST_AND_SAME_SHA_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

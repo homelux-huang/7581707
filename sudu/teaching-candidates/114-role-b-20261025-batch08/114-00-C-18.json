@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-C16-C18-THREE-LAMPS-20261025-10",
+  "year": 114,
+  "questionId": "114-00-C-18",
+  "subject": "國文",
+  "kind": "AUTHOR_PROVISIONAL_LAMP_READING_G1_PIXEL_QA_AND_SOURCE_PENDING",
+  "question": "上文三個燈具，在設計上的共同考量要素為何？",
+  "options": [
+    "燃料種類、起居環境",
+    "經濟實惠、節能減碳",
+    "安全保護、氣氛營造",
+    "用者身分、觀賞價值"
+  ],
+  "imageTranscribedOptions": [
+    "燃料種類、起居環境",
+    "經濟實惠、節能減碳",
+    "安全保護、氣氛營造",
+    "用者身分、觀賞價值"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "originalQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "originalManifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "9708faafb83af27eb3a771b2f4546a04efccacfd8f990924545cfaf227644984",
+    "sourceImageTranscriptSha256": "9708faafb83af27eb3a771b2f4546a04efccacfd8f990924545cfaf227644984",
+    "webpSha256": "50c3718fc832c152e735ad773272fd4466888d57cc18b6b319c85218773c53ed",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-18.webp",
+    "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "officialAnswerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "originalAnswerPageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "archivedManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceIssueCodes": [],
+    "manifestIssueCodes": [],
+    "originalSourceQuestionVerified": false,
+    "originalSourceAnswerVerified": false,
+    "sharedReadingLinkNotYetCanonical": true,
+    "authorOriginalPixelTranscriptNotImageQa": true,
+    "roleARequired": true,
+    "authorDidNotModifySource": true
+  },
+  "teaching": {
+    "topic": "三燈設計共同考量：燃料種類及起居環境",
+    "teacherSummary": "題目問三種燈具『共同』考量，而非某一款才有的特點。長信宮燈與銅牛燈考慮**動物油脂為固態**，燈盤設固定燃料的針錐；夾燈盞考慮**植物油燃燒和降溫**，用下層水延長燃燒時間。三者都因燃料種類設計。同時，漢人席地而坐、桌較低，青銅大燈可放地面或桌上；宋人坐椅子、桌面較高，小燈可在桌上或燈架移動，三者也因**起居環境**和照明姿勢安排大小與位置。所以 A『燃料種類、起居環境』是共同因素。",
+    "elementarySummary": "古人設計燈要想兩件事：燒什麼油，以及大家住家裡怎麼坐、怎麼看書。以前有坐地上的人，也有坐椅子的人，所以燈的大小和放的位置會不同。三種燈都要考慮這些，選 A。",
+    "concept": "解共同點題應找**三種燈都有**的設計依據：動物油脂與植物油的性質、古今坐姿及家具高度。不能把『少數貴族用的昂貴銅燈』或『宋代夾燈盞省油』說成每一款都經濟便宜。",
+    "memory": "三燈共同想：**燒什麼油（燃料種類）＋人怎麼生活坐著（起居環境）**＝A。",
+    "solvingSteps": [
+      "讀三燈原文，整理用油：漢兩銅燈以動物油脂為例，宋夾燈盞重視植物油與下層水降溫。",
+      "整理使用環境：漢代席地而坐且桌低，宋代坐椅子、桌較高，燈的高度、燈架與移動方式因而不同。",
+      "同時符合所有三款者是燃料種類及起居環境；經濟實惠、節能減碳、安全氣氛或純裝飾不是三款共同明示。",
+      "與選項對照，A 的兩個要素都有原文證據且具共同性，選 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 的燃料種類直接連到動物脂或植物油、燈盤插針及夾燈盞降溫；起居環境連到漢代席地、宋代坐椅與家具高度，三種燈皆因實際生活而設計。",
+        "elementary": "A 說設計燈要想油和人怎麼坐，古今三種燈都這樣考慮，所以對。",
+        "why": "A 的兩欄都是真正共通的設計條件，且能從三燈原文連續取得證據。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 的經濟實惠不適用漢代王侯之家才用得起的昂貴青銅燈；夾燈盞雖說省油，原文並未提三燈都有『節能減碳』這一現代排碳目標。",
+        "elementary": "B 說每種都便宜又為減碳設計，但大銅燈很貴，而且文章沒說排碳。",
+        "why": "B 把宋代小燈省油局部特點與現代減碳概念擴張成三燈共同，缺少證據。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 的安全保護可能與減煙、降溫有部分關聯，但『氣氛營造』並不是原文三燈的共同設計目的；題文重點在實際照明、燃料與家具姿勢。",
+        "elementary": "C 說三種燈都用來製造氣氛，文章沒有這樣講，主要是在說怎樣用比較好。",
+        "why": "C 只有安全方面的部分推測，氣氛營造的共同證據不存在，不能當答案。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 的用者身分可解釋貴族使用昂貴漢青銅燈，但宋代夾燈盞是一般讀書人實用省油之器，不是所有燈都以『觀賞價值』作主要考量。",
+        "elementary": "D 說都看使用者多尊貴、燈有多好看，可是小燈重點是讀書方便又省油。",
+        "why": "D 是把漢代奢華銅燈局部特性當成全體共通，忽略宋代實用性。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方國文三燈第6頁原始像素及各單題WebP讀取的暫存教材草稿；單題G1尚未逐題影像QA，閱讀共用原頁未成為QA正式共享記錄，不能正式發布。"
+  },
+  "enrichment": {
+    "originalVisual": {
+      "type": "ORIGINAL_LAMP_READING_SOURCE_PAGE6",
+      "commonDesignReasons": [
+        "固態動物脂 vs 液態植物油",
+        "漢代席地、宋代坐椅及桌子高度",
+        "煙流與熱管理、油脂燃燒效率"
+      ],
+      "notCanonicalSharedMaterialQa": true
+    },
+    "readingContext": {
+      "originalPage6WebpPath": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage6WebpSha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+      "originalPage6GitBlob": "8719fddcdb4ddd835a573828710994936d329b80",
+      "readingAppliesTo": "114-00-C-16_to_19",
+      "independentSharedReadingQa": false,
+      "originalFigureAndTextAreNotRepainted": true
+    },
+    "chineseVocabulary": [
+      {
+        "word": "燃料",
+        "level": "初級",
+        "meaning": "燃燒後提供光或熱的物質。",
+        "usage": "三燈考慮動物油脂或植物油等燃料。"
+      },
+      {
+        "word": "起居環境",
+        "level": "中級",
+        "meaning": "日常坐臥、生活與居家家具條件。",
+        "usage": "漢席地而坐、宋坐椅子，影響燈與桌/燈架搭配。"
+      },
+      {
+        "word": "共通設計考量",
+        "level": "高級",
+        "meaning": "多款物品共同受到某種因素影響的設計原理。",
+        "usage": "須同時在三燈文中找到燃料種類及生活使用環境證據。"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "燃料種類",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "起居環境",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "經濟實惠",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "節能減碳",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "安全保護",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "氣氛營造",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "用者身分",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      },
+      {
+        "text": "觀賞價值",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "literal_text_only"
+      }
+    ],
+    "nonArithmeticReadingOnly": true
+  },
+  "teachingCanonicalSha256": "ebc5f2a020ea1a276d965e9a5c65b862e2dccea230886654e104d51ad9a13740",
+  "composedTeachingSha256": "4f4bee04df6b390242b2b9698a01a76c4c98e6121c6ca0991c864d8a690d2a9e",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "notBlindSolve": true,
+    "candidateMatchesExistingSource": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "sourceImageQaG1": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceTextAndReadingQaG2": "PENDING_ROLE_A",
+    "finalOfficialAnswerAndCorrectionsG3": "PENDING_ROLE_A",
+    "distinctAiE": {
+      "status": "PENDING",
+      "reviewerRole": "E",
+      "reviewTaskId": null,
+      "reviewSessionId": null,
+      "reviewNotes": null
+    },
+    "dV4ExactDigest8x2": "PENDING",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "G1_PER_QUESTION_ORIGINAL_WEBP_MANIFEST_DRAFT_QA_NOT_YET_PASS",
+      "G2_SHARED_READING_PAGE6_STRUCTURE_AND_C16_DIAGRAM_ROLE_A_PENDING",
+      "G2_C17_CANONICAL_OPTION_D_PAGE_FOOTER_NEEDS_SOURCE_CORRECTION",
+      "G3_OFFICIAL_YEAR_FINAL_ANSWER_AND_CORRECTION_ROLE_A_PENDING",
+      "E_DISTINCT_AI_PEDAGOGY_REVIEW_PENDING",
+      "D_8X2_ANNUAL_V4_ORIGINAL_SOURCE_AND_NEW_TEACHING_DIGEST_PENDING",
+      "MASTER_PROTECTED_MAIN_TRUST_AND_SAME_SHA_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
