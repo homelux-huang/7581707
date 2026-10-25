@@ -1,0 +1,24 @@
+name: 7581707 Agent Bootstrap Safety Tests (NO AI INFERENCE)
+on:
+  push:
+    branches:
+      - coord/7581707-gh-aw-agent-bootstrap-20261025
+  pull_request:
+    paths:
+      - '.github/workflows/7581707-role-agent.md'
+      - 'docs/7581707-ADMIN-AUTONOMOUS-AGENT-SETUP.md'
+      - 'tests/test_verify_7581707_agent_setup.py'
+      - '.github/workflows/7581707-agent-bootstrap-tests.yml'
+permissions:
+  contents: read
+jobs:
+  verify-uncompiled-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify source is read-only and never claims compiled status
+        run: python -m unittest discover -s tests -p 'test_verify_7581707_agent_setup.py' -v
