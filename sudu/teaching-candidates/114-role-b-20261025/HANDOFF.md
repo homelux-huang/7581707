@@ -14,3 +14,17 @@
 - 後續由角色 E / 真正受授權的獨立教師與 GitHub 簽署進行審查；必要時角色 D 對確切新增教學 digest 執行 V4 8 尺寸 × 2 主題 QA；唯獨主指揮可決定進入正式合併發布。
 
 驗證：`python -m unittest tests/test_114_role_b_teaching_20261025.py -v`。通過只代表資料結構與 SHA 自動檢查，不代表人工簽章或發布許可。
+
+## Issue #36 Loop｜Role B 原作者返修（taskId `B-114-OPTION-REASONS-20261025-01`）
+
+- 控制台：https://github.com/homelux-huang/7581707/issues/36 ，認領留言 #6393593834；GitHub 伺服器建立時間：**2026-10-25T04:47:58Z**（12:47:58 臺北）。
+- 指揮文件現位於 `coord/114-115-delivery-command-20261025` PR #30；逐題唯一台帳 `docs/114-115-QUESTION-DELIVERY-LEDGER.json` 共 410 個**候選**，非 410 個可發布；以 PR #30 管理，不在本分支建立第二本台帳。
+- 確認 PR #31 留言 #6393532719 與 #35 真實失敗 run #40162791292：英文08 B、英文09 A/B/C、國文03 A/B/D 的 `reason` 空泛／太短；舊 Python 測試 `git_blob_sha()` 中 NUL header 的 escape 也錯誤。
+- 原有 PR #21 英文07～09 `baseTeachingEvidencePath`、原 Git Blob SHA、原四選項老師／國小解說與原始 `baseTeachingCanonicalSha256` **未變更**。本批英文08/09 只加 `optionReasonOverrides` 覆寫實際候選教學 `optionExplanations[A-D].reason`；renderer/角色 D 要先以 PR21 原內容複製再局部套入，不得將原來源當已變更。
+- 國文03 只修改原候選 `teaching.optionExplanations[A-D].reason`，逐選項各有具體語境或詞義；不修改題幹、來源、單題 WebP、教材、正式答案旗標。
+- **新 canonical digest 不是僅對原 base raw teaching 計算**：`sha256(canonical_json({questionId,sourceRevision,webpSha256,teaching:effectiveBaseAfterReasonOverrides,enrichment}))`。原出處 Git Blob SHA 另獨立驗證，舊 digest 失效，角色 D／E 只可驗新 digest。
+- 適用驗證：`python -m unittest discover -s tests -p 'test_114_role_b_teaching_20261025.py' -v`，包含六個 test methods，負向禁止泛稱／重複及舊原文 Git Blob 篡改（測試通過不等於來源、真人教師、V4或LIVE QA）。
+- 教師 `authorizedReviewers={}`、`requireHumanTeacher=true` 不變；所有 `review.status=BLOCKED`、new READY=0、LIVE=0。
+- 下個候選教學批次應由角色 B 另立 taskId、先檢查 Issue36 租約，再選已具完整原圖、文字 A–D、官方來源可對應的 114 題目；源不完整的英文10與數學B候選先不放行。
+
+先前 handoff 中「coord 主指揮文件不存在」乃第一版檢視時的舊狀態，**以上新狀態覆蓋該說法**。

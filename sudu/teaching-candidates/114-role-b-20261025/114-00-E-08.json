@@ -88,7 +88,7 @@
       "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
     }
   },
-  "composedTeachingSha256": "7415aab85aa8b693ff430b63dde9ebe641652b985a577ee93854aa50493bb3f5",
+  "composedTeachingSha256": "6dd7125dddf83293dc52a0fcbc35b113918f92f9b2fca9e6b0dc0ca06442d5b1",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -119,5 +119,20 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "optionReasonOverrides": {
+    "A": "was named after 指依某人或某物來命名，不等於陳傑憲因精彩表現而以 WBSC Premier12 MVP 身分獲得肯定。",
+    "B": "made fun of 是『取笑、嘲弄』；due to his magnificent performance 是稱讚球員表現傑出，不能把取得 MVP 的語境解成嘲笑。",
+    "C": "was in charge of 是『負責管理』；MVP 是球員競賽表現的獎項，不是負責管理世界十二強賽的職務。",
+    "D": "stood out as 表『以某身分脫穎而出』的過去式，對應球員因 magnificent performance 而成為 WBSC Premier12 MVP。"
+  },
+  "optionReasonOverrideScope": "Only optionExplanations[A-D].reason is replaced for effective candidate rendering; original PR21 teaching Git blob and all teacher/elementary summaries remain unchanged.",
+  "authorCorrection": {
+    "taskId": "B-114-OPTION-REASONS-20261025-01",
+    "role": "B",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "historicalBlindingClaimed": false,
+    "originalBaseTeachingBytesMutated": false,
+    "priorCiRun": 40162791292
   }
 }

@@ -22,7 +22,7 @@ def sha(v):
 def revision(q, sha_webp):
     return sha({"question": q["question"], "options": q["options"], "singleQuestionWebpSha256": sha_webp})
 def git_blob_sha(raw):
-    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\\0" + raw).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
 
 class TestRoleB114Draft(unittest.TestCase):
     @classmethod
@@ -63,8 +63,18 @@ class TestRoleB114Draft(unittest.TestCase):
                     self.assertEqual(git_blob_sha(base_bytes), c["source"]["baseTeachingGitBlobSha"])
                     base = json.loads(base_bytes)
                     self.assertEqual(base["questionRevision"], c["source"]["questionRevision"])
-                    teach = base["content"]
+                    teach = json.loads(json.dumps(base["content"], ensure_ascii=False))
                     self.assertEqual(sha(teach), c["source"]["baseTeachingCanonicalSha256"])
+                    # PR21's actual Git blob stays unchanged; apply a narrow authored
+                    # reason-only patch to the effective candidate before digesting.
+                    overrides = c.get("optionReasonOverrides") or {}
+                    self.assertIsInstance(overrides, dict)
+                    self.assertTrue(set(overrides).issubset(LETTERS))
+                    for ch, reason in overrides.items():
+                        self.assertIsInstance(reason, str)
+                        self.assertGreater(len(reason.strip()), 20)
+                        self.assertNotEqual(reason, teach["optionExplanations"][ch]["reason"])
+                        teach["optionExplanations"][ch]["reason"] = reason
                 else:
                     self.assertIsNone(c["source"]["baseTeachingEvidencePath"])
                     teach = c["teaching"]
@@ -93,6 +103,60 @@ class TestRoleB114Draft(unittest.TestCase):
                 self.assertIsNone(c["review"]["independentReviewer"])
                 self.assertIs(c["reasoningAudit"]["answerAlreadyKnown"], True)
                 self.assertIs(c["reasoningAudit"]["blindSolveClaimedThisBatch"], False)
+
+    def test_repaired_option_reasons_are_distinct_and_source_specific(self):
+        # Distinct actual meanings, not different padding around generic wording.
+        markers = {
+            "114-00-E-08": {
+                "A": "was named after", "B": "made fun of",
+                "C": "was in charge of", "D": "stood out as",
+            },
+            "114-00-E-09": {
+                "A": "actively", "B": "entirely",
+                "C": "internally", "D": "obviously",
+            },
+            "114-00-C-03": {
+                "A": "菜蔬稻稗", "B": "品類", "C": "群類", "D": "橐駝",
+            },
+        }
+        for qid, required in markers.items():
+            with self.subTest(qid=qid):
+                c = load(BASE / (qid + ".json"))
+                if c["kind"] == "PRESERVE_BASE_AND_ENRICH":
+                    self.assertIsNone(c["teaching"])
+                    reasons = c["optionReasonOverrides"]
+                    self.assertEqual(set(reasons), LETTERS)
+                else:
+                    self.assertNotIn("optionReasonOverrides", c)
+                    reasons = {ch: c["teaching"]["optionExplanations"][ch]["reason"]
+                               for ch in LETTERS}
+                self.assertEqual(len(set(reasons.values())), 4)
+                for ch, source_anchor in required.items():
+                    reason = reasons[ch]
+                    self.assertGreater(len(reason.strip()), 20)
+                    self.assertIn(source_anchor, reason)
+                    self.assertNotIn(reason.strip(), ("詞義不同。", "類＝種類。",
+                                                   "類＝相似。", "語意衝突。"))
+
+    def test_regressions_reject_generic_and_duplicated_reasons(self):
+        def specific(reasons):
+            return (isinstance(reasons, dict) and set(reasons) == LETTERS
+                    and len(set(reasons.values())) == 4
+                    and all(isinstance(x, str) and len(x.strip()) > 20
+                            for x in reasons.values()))
+        self.assertFalse(specific(dict.fromkeys(LETTERS, "詞義不同。")))
+        self.assertFalse(specific({"A": "菜蔬稻稗指種類", "B": "品類指種類",
+                                   "C": "群類指種類", "D": "橐駝指相似"}))
+        self.assertFalse(specific({"A": "同一句過長的泛稱理由不能同時用在所有四個選項",
+                                   "B": "同一句過長的泛稱理由不能同時用在所有四個選項",
+                                   "C": "不同的選項只是換了幾個字但語義仍有相同錯因",
+                                   "D": "正解的推理需要指出原句所提供的語境線索和對應"}))
+        for qid in ("114-00-E-08", "114-00-E-09", "114-00-C-03"):
+            c = load(BASE / (qid + ".json"))
+            actual = (c["optionReasonOverrides"] if c["kind"] == "PRESERVE_BASE_AND_ENRICH"
+                      else {ch: c["teaching"]["optionExplanations"][ch]["reason"]
+                            for ch in LETTERS})
+            self.assertTrue(specific(actual), qid)
 
     def test_only_actual_source_forms_highlighted(self):
         for entry in self.batch["items"]:

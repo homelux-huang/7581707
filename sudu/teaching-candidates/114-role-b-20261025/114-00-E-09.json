@@ -73,7 +73,7 @@
       "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
     }
   },
-  "composedTeachingSha256": "d9af8ba1bc7f023f17b9a8f150cdb7a08f1b9163b4665de199cf0a96beca4952",
+  "composedTeachingSha256": "45b33a02da4059fc7efc2cae7d9c7914732d53e967c195d004cc879e212fa584",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -104,5 +104,20 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "optionReasonOverrides": {
+    "A": "actively 是『積極地、主動地』，描述做事方式，不能表示說話者從 Mary 再次報出名字而做的『看來』推論。",
+    "B": "entirely 是『完全地』，強調程度而非推測；Mary 再次自我介紹只提供她以為名字被忘記的線索。",
+    "C": "internally 是『在內部、內心層面』，不描述外在跡象；apparently 在句中用於從 Mary 再自介推知她的想法。",
+    "D": "obviously 是『明顯地』，在 Mary 又自我介紹的情境最接近 apparently 的『看來』；但 obviously 通常語氣更確定，非所有語境可互換。"
+  },
+  "optionReasonOverrideScope": "Only optionExplanations[A-D].reason is replaced for effective candidate rendering; original PR21 teaching Git blob and all teacher/elementary summaries remain unchanged.",
+  "authorCorrection": {
+    "taskId": "B-114-OPTION-REASONS-20261025-01",
+    "role": "B",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "historicalBlindingClaimed": false,
+    "originalBaseTeachingBytesMutated": false,
+    "priorCiRun": 40162791292
   }
 }

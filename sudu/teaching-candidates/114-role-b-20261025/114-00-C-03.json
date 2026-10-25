@@ -33,25 +33,25 @@
       "A": {
         "teacher": "錯誤。『菜蔬稻稗之類』中的類指各種蔬菜、稻穀等『種類』。",
         "elementary": "這是在分食物種類，不是說看起來像誰。",
-        "reason": "類＝種類。",
+        "reason": "『菜蔬稻稗之類』將蔬菜、稻穀等歸為不同物類，這裡的『類』是『種類』，不是『類出國』所指的相似。",
         "isCorrect": false
       },
       "B": {
         "teacher": "錯誤。『品類之盛』是萬物種類繁多，類為『類別』。",
         "elementary": "宇宙裡東西有很多種，不是像出國的像。",
-        "reason": "類＝種類。",
+        "reason": "『俯察品類之盛』說萬物品種繁多，『品類』中的『類』表示事物類別，並非『看起來像出國』的近似。",
         "isCorrect": false
       },
       "C": {
         "teacher": "錯誤。『群類』泛指群體或同類，類屬分類關係。",
         "elementary": "很多同一群的東西，是『一類』的意思。",
-        "reason": "類＝同類／類別。",
+        "reason": "『若各居而老死，何藉有群類哉』談人群與同類聚居，『群類』指同類群體，不是說某物外形好像另一物。",
         "isCorrect": false
       },
       "D": {
         "teacher": "正確。『有類橐駝者』是『看起來像駱駝』，與類出國的類同為『相似』。",
         "elementary": "像駱駝、像出國，都在說『很像』。",
-        "reason": "類＝相似。",
+        "reason": "『病僂，隆然伏行，有類橐駝者』描述彎腰走路的樣子像駱駝，這裡『類』是『相似』，與『類出國』用法相同。",
         "isCorrect": true
       }
     },
@@ -108,7 +108,7 @@
       "category": "種類、類別（稻稗之類／品類／群類）"
     }
   },
-  "composedTeachingSha256": "eda76bec43fe53cd663328dbc46d2ad428d4a74bc14d014f75d25ad4b19f09e2",
+  "composedTeachingSha256": "7cee3b44dce15d2177b1bd2d9081455087d1403dc3948e5a32e1c63d5af0783f",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -140,5 +140,11 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "authorCorrection": {
+    "taskId": "B-114-OPTION-REASONS-20261025-01",
+    "role": "B",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "priorCiRun": 40162791292
   }
 }
