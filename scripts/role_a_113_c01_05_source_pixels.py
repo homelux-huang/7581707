@@ -182,6 +182,16 @@ def main():
     args=parser.parse_args()
     if args.apply==args.verify:parser.error("choose --apply or --verify")
     if args.apply:
+        # After real individual visual QA, refuse re-cropping the now inspected
+        # originals; verify immutable source pixels and 5-row SQL in place.
+        reviewed=DEST/"VISUAL_QA_ASSISTANT_20261025.json"
+        if reviewed.exists() and MANIFEST.exists() and DB.exists():
+            current=read(MANIFEST)
+            check(current)
+            check_db(DB,current)
+            assert reviewed.is_file() and len(read(reviewed)["questions"])==5
+            print("UNCHANGED_AFTER_DIRECT_ASSISTANT_VISUAL_QA, no re-crop, no SQL rewrite")
+            return
         man=make();DEST.mkdir(parents=True,exist_ok=True)
         text=json.dumps(man,ensure_ascii=False,indent=2)+"\n"
         if MANIFEST.exists():
