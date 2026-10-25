@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "questionId": "114-00-E-13",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Vendor:    These vegetables are chemical free.\n    Customer:  They look great. But what about the eggs? ____________\n    Vendor:   Of course! We get them straight from the farm every morning. They are the best.",
+  "options": [
+    "Are they fresh?",
+    "How much are they?",
+    "Do you plant them?",
+    "How do you cook them?"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "074fb9847eda936d31dfd4503f3a7a12cbde9f89ddc888957d8eba4f17fa746c",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "81f4487c4012456b4f1c3449aa388f16d12de19b72cc844ae6b6269be76e9be7",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-13.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalAnswerDirectQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文｜用 Of course 的肯定及 straight from the farm every morning 的時間線索反推前一句問句。",
+    "teacherSummary": "顧客由蔬菜轉問雞蛋 what about the eggs，老闆說 Of course 並補充每早從農場直送；最能呼應的是 A Are they fresh?（新鮮嗎）。",
+    "elementarySummary": "客人問雞蛋新不新鮮，老闆說每天早上從農場拿來，所以答案是問新鮮嗎。",
+    "concept": "用 Of course 的肯定及 straight from the farm every morning 的時間線索反推前一句問句。",
+    "extension": "chemical free 是題目中攤販的宣稱，不等於科學上完全無化學物質；fresh 不保證已完成食品檢驗。",
+    "memory": "eggs + every morning → fresh?；Of course 表肯定。",
+    "solvingSteps": [
+      "找顧客問題的主題 eggs。",
+      "攤販說每日直接從農場進貨，較能回應新鮮程度。",
+      "排除價格、種植雞蛋及烹調法，選 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Are they fresh? 問新鮮度，Of course! 和 every morning from the farm 剛好提供肯定及理由。",
+        "elementary": "問新鮮嗎，老闆說每天農場拿蛋。",
+        "reason": "fresh 指雞蛋新鮮；攤販強調每天早上從農場取得雞蛋，直接回應新鮮度，而不是雞蛋價格。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "How much are they? 是問價錢，但攤販沒有回答元數或每顆售價。",
+        "elementary": "如果問價格，老闆要說多少錢。",
+        "reason": "How much are they? 問雞蛋的單價或一盒售價，應回答金額，卻只得到每天農場直送的來源說明。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "Do you plant them? 問是否種植雞蛋，plant 通常搭配植物，不適合拿來問雞蛋。",
+        "elementary": "雞蛋不能像菜一樣種在地裡。",
+        "reason": "Do you plant them? 的 them 指 eggs；雞蛋不是植物，不能用 plant 來描述雞蛋的生產方式。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "How do you cook them? 問怎麼煮蛋，應該答煎蛋或水煮方式，老闆卻說每天進貨。",
+        "elementary": "問烹飪方法，不能只答從農場來。",
+        "reason": "How do you cook them? 問如何烹調雞蛋，應回答煎、煮等方法，而不是每早從農場進貨。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年官方原始試題；最終答案影像QA／教科書出版社與頁碼待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "what about the eggs",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "Are they fresh?",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "straight from the farm",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "every morning",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "fresh",
+        "ipa": "/freʃ/",
+        "level": "初級",
+        "meaningZh": "新鮮的",
+        "synonyms": [
+          "newly collected",
+          "not stale"
+        ],
+        "antonyms": [
+          "stale",
+          "old"
+        ],
+        "usageNote": "fresh 與 safe 不等義，仍須檢查保存與食品安全。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/fresh"
+      },
+      {
+        "headword": "straight from",
+        "ipa": "/streɪt frəm/",
+        "level": "中級",
+        "meaningZh": "直接從某處來",
+        "synonyms": [
+          "directly from",
+          "without a middleman"
+        ],
+        "antonyms": [
+          "through intermediaries"
+        ],
+        "usageNote": "直接來源並不必然保證商品已通過衛生檢驗。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/straight"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_NEWS_CONTEXT_NOT_QUOTE",
+      "english": "A 2026 report described how eggs are inspected and packed at a Taiwan farm; shoppers may still ask if the eggs are fresh.",
+      "chinese": "2026年的報導介紹臺灣牧場檢查、包裝雞蛋的流程；消費者仍能詢問雞蛋新不新鮮。",
+      "highlightActualForm": "fresh",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2026-09-13",
+        "title": "蛋殼上食安革命／告別洗一顆賠一顆　解密全台最大蛋雞牧場現代化長征路",
+        "url": "https://www.cna.com.tw/news/afe/202609130026.aspx",
+        "factSupportedBySource": "中央社報導雞蛋洗選、分級、檢查與包裝；詢問 fresh 為教學自編。",
+        "webCheckedAt": "2026-10-25"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "412ca7aaffe40ab8f0426c5fe3e20932d0aa13738d4214085899fa169e62c20b",
+  "composedTeachingSha256": "e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "A",
+    "agreesWithKnownAnswer": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorSelfCheck": true,
+    "authorRole": "B",
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "independentReviewer": null,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
+      "EXACT_DIGEST_V4_QA_PENDING",
+      "MASTER_ADMISSION_NOT_GRANTED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "MASTER_OWNER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

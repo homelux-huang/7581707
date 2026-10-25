@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "questionId": "114-00-E-12",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Lucy:  Do you know that plastics can take 20 years to break down?\n    John:   That’s awful! We really need to use less plastic.\n    Lucy:   I agree. ____________\n    John:   Great idea! I’ll try that, too.",
+  "options": [
+    "No wonder I prefer buying plastic containers.",
+    "So I keep using plastic straws for all my drinks.",
+    "That’s why I always carry my own water bottle.",
+    "And I make sure to throw away everything I buy."
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalAnswerDirectQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文｜That's why 意思是『這就是為什麼』；always carry my own water bottle 是可以模仿的減塑行為。",
+    "teacherSummary": "John 說要 use less plastic；Lucy 回 I agree，下一句應給能讓 John 說 Great idea! I'll try that, too 的減塑方法。選 C 自備水壺，與語境和後續反應相符。",
+    "elementarySummary": "兩個人說好要少用塑膠，露西說我都自帶水壺，朋友覺得這方法很好，也要跟著做。",
+    "concept": "That's why 意思是『這就是為什麼』；always carry my own water bottle 是可以模仿的減塑行為。",
+    "extension": "題目人物說塑膠需要20年分解僅為句中資訊；真實分解速度依材質與環境而不同。",
+    "memory": "use less plastic → own water bottle → I'll try that, too。",
+    "solvingSteps": [
+      "抓共同話題：塑膠垃圾與減塑。",
+      "找 Lucy 可實踐的少用塑膠行為。",
+      "其他選項持續使用或丟棄物品；C 自備水壺最合理。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "No wonder I prefer buying plastic containers 表示喜歡買塑膠容器，與少用塑膠完全相反。",
+        "elementary": "更多塑膠盒不是減塑。",
+        "reason": "prefer buying plastic containers 仍持續使用一次性塑膠，不是減少使用。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "So I keep using plastic straws 表示飲料繼續用塑膠吸管，不會被稱為減塑好點子。",
+        "elementary": "繼續用塑膠吸管沒有改善問題。",
+        "reason": "keep using plastic straws 和 John 要減少塑膠的建議方向相反。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "That's why I always carry my own water bottle 用自備水壺減少一次性容器，John 能模仿做法。",
+        "elementary": "帶自己的水壺可以少用塑膠瓶。",
+        "reason": "carry my own water bottle 是可跟著實行的行動，對應 Great idea。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "throw away everything I buy 是把買的東西全部丟掉，並非從源頭減少塑膠使用。",
+        "elementary": "全部丟掉東西不是環保方法。",
+        "reason": "throw away 描述丟棄而非減量，無法得到 I'll try that, too 的肯定。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方原題／候選答案；官方最終答案影像及教材版本、章節、頁碼待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "break down",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "use less plastic",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "carry my own water bottle",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "Great idea",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "break down",
+        "ipa": "/ˌbreɪk ˈdaʊn/",
+        "level": "中級",
+        "meaningZh": "分解；在此指塑膠材料",
+        "synonyms": [
+          "decompose",
+          "deteriorate"
+        ],
+        "antonyms": [
+          "remain intact"
+        ],
+        "usageNote": "也可指機器故障，此題看 plastics 才知是材料分解。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/break-down"
+      },
+      {
+        "headword": "water bottle",
+        "ipa": "/ˈwɔː.t̬ɚ ˌbɑː.t̬əl/",
+        "level": "初級",
+        "meaningZh": "水壺／水瓶",
+        "synonyms": [
+          "drinking bottle",
+          "refillable bottle"
+        ],
+        "antonyms": [
+          "disposable cup (contrast)"
+        ],
+        "usageNote": "refillable 指可重複裝水的款式，不是所有水瓶都可重複使用。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/bottle"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_NEWS_CONTEXT_NOT_QUOTE",
+      "english": "The European Commission supports alternatives to single-use plastic, and students can carry a reusable water bottle.",
+      "chinese": "歐盟執委會支持一次性塑膠替代方案，學生也能自備重複使用的水壺。",
+      "highlightActualForm": "carry",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2025-07-01",
+        "title": "5 things you should know about single-use plastics",
+        "url": "https://environment.ec.europa.eu/news/5-things-you-should-know-about-single-use-plastics-2025-07-01_en",
+        "factSupportedBySource": "歐盟支持減少一次性塑膠及永續替代方案；帶水壺為教學自編建議。",
+        "webCheckedAt": "2026-10-25"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "c6d27aad13dca2edf23d72c16b4bf357173ae052e0a42c89af7e3049e490dc4a",
+  "composedTeachingSha256": "335fa42da12236564daf4304522b454f6788d36be9bb1c50361d88bb23180263",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "C",
+    "agreesWithKnownAnswer": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorSelfCheck": true,
+    "authorRole": "B",
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "independentReviewer": null,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
+      "EXACT_DIGEST_V4_QA_PENDING",
+      "MASTER_ADMISSION_NOT_GRANTED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "MASTER_OWNER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

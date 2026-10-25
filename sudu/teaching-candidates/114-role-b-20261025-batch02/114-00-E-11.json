@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "questionId": "114-00-E-11",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Dad:  Hey, you’re always on your phone!\n    Son:   I know. I just like playing games and watching videos.\n   Dad:  But if you use the phone too much, you might hurt your eyes.\n    Son:  ____________\n   Dad:  Yeah, let’s go jogging. It’s more fun.",
+  "options": [
+    "Then I should use it less.",
+    "Should I use a new phone?",
+    "Do you like to watch videos, too?",
+    "So you should play online games."
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalAnswerDirectQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文｜對話題找上下句因果：use the phone too much（太久）→ use it less（減少）→ Yeah（同意）。it 指 phone。",
+    "teacherSummary": "爸爸擔憂手機使用過久可能傷眼；空格後的 Yeah, let's go jogging 表示他同意兒子減少手機使用並提出戶外活動。A Then I should use it less 承上啟下。",
+    "elementarySummary": "爸爸說：手機玩太久眼睛會累。孩子說：那我少玩一點。爸爸才會說：對，一起去慢跑。",
+    "concept": "對話題找上下句因果：use the phone too much（太久）→ use it less（減少）→ Yeah（同意）。it 指 phone。",
+    "extension": "might hurt 表可能發生的結果，不能誤解成必然傷害；Then 表承接前句提出行動。",
+    "memory": "too much → less；Dad 的 Yeah 與 jogging 證明空格是減少手機使用。",
+    "solvingSteps": [
+      "先讀父親的警告：手機使用過久。",
+      "兒子應接受建議、降低手機使用量。",
+      "父親同意後改邀慢跑，故選 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Then I should use it less 直接回應手機用太久，it 指前面的 phone，也符合爸爸接下來表示同意。",
+        "elementary": "孩子說我該少玩手機，爸爸才會點頭。",
+        "reason": "use it less 與 use the phone too much 是相反方向的改善行動，代名詞 it 對應 phone。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "Should I use a new phone? 是問需不需要換手機，不能解決原句說的長時間使用。",
+        "elementary": "換新手機還是可能看太久。",
+        "reason": "new phone 是設備新舊，爸爸關心的是使用時間和眼睛疲勞。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "Do you like to watch videos, too? 只是詢問爸爸是否也愛看影片，沒有改善手機使用的決定。",
+        "elementary": "問爸爸也愛看影片，沒有回答爸爸的提醒。",
+        "reason": "詢問觀影喜好不能解釋爸爸下一句為何提議去慢跑。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "So you should play online games 反而叫爸爸多打網路遊戲，與傷眼警告方向不符。",
+        "elementary": "叫爸爸去打遊戲不是少看螢幕。",
+        "reason": "選項主語 you 指爸爸，並鼓勵遊戲，沒有承接兒子應改變的行為。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方原題／候選答案；官方最終答案影像及教材版本、章節、頁碼待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "use the phone too much",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "hurt your eyes",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "use it less",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "jogging",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "use it less",
+        "ipa": "/juːz ɪt les/",
+        "level": "初級",
+        "meaningZh": "少用它（這題 it 指手機）",
+        "synonyms": [
+          "reduce its use",
+          "spend less time on it"
+        ],
+        "antonyms": [
+          "use it more"
+        ],
+        "usageNote": "前句代名詞必須有明確先行詞 phone。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/less"
+      },
+      {
+        "headword": "jogging",
+        "ipa": "/ˈdʒɑː.ɡɪŋ/",
+        "level": "中級",
+        "meaningZh": "慢跑",
+        "synonyms": [
+          "slow running",
+          "light running"
+        ],
+        "antonyms": [
+          "sitting still"
+        ],
+        "usageNote": "題目只是建議替代活動，不表示慢跑是眼疾治療。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/jogging"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_NEWS_CONTEXT_NOT_QUOTE",
+      "english": "A 2025 U.S. CDC study found that teenagers with more screen time tended to exercise less often.",
+      "chinese": "美國疾管中心2025年研究發現，螢幕時間較長的青少年，運動頻率往往較低。",
+      "highlightActualForm": "less",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2025-07-10",
+        "title": "Associations Between Screen Time Use and Health Outcomes Among US Teenagers",
+        "url": "https://www.cdc.gov/pcd/issues/2025/24_0537.htm",
+        "factSupportedBySource": "研究報告呈螢幕時間與身體活動較少的關聯，不聲稱因果。",
+        "webCheckedAt": "2026-10-25"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb",
+  "composedTeachingSha256": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "A",
+    "agreesWithKnownAnswer": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorSelfCheck": true,
+    "authorRole": "B",
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "independentReviewer": null,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
+      "EXACT_DIGEST_V4_QA_PENDING",
+      "MASTER_ADMISSION_NOT_GRANTED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "MASTER_OWNER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

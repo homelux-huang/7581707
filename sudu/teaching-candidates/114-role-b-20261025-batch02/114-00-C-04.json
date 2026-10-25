@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "questionId": "114-00-C-04",
+  "year": 114,
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "下文畫底線處的文句修改建議，何者正確？\n  詐騙集團常假冒警察機關名義，以電話通知民眾：①因查案時發現民眾遭歹徒冒名申辦帳\n  戶，涉嫌洗錢詐欺，已將案件移送地檢署偵辦。隨後電話交給假檢察官，②告知曾傳喚出\n  庭，民眾卻未到案，今為查清帳戶內資金流向，③民眾須將存款領出交給法院保管，或匯\n  到名為「國家安全帳戶」的人頭帳戶中，並謊稱於案情釐清後，④就會收回匯款。",
+  "options": [
+    "①應改為「因查案時被發現遭歹徒冒名申辦帳戶」",
+    "②應改為「告知曾傳喚出庭民眾，卻未到案」",
+    "③應改為「存款應主動前往法院保管」",
+    "④應改為「就會歸還匯款」"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "2733f2bea0a32a99d6ec3d54d52c92a06962bec2b74a9a3350d30da5a5a31207",
+    "questionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "answerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "c16eb7b4768823a669d33456e1abd6829a83db968b8cd5e0ef2b519785b467d9",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-04.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalAnswerDirectQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "國文｜病句修改需看主語、動詞搭配與錢的流向：歸還＝交回原主人，收回＝拿回自己手中。",
+    "teacherSummary": "題文是假檢警詐騙話術。④若要說明『之後把匯走的款項還給民眾』，動詞應改成『歸還匯款』，不是『收回匯款』。A/B 改出主語不明，C 讓存款自行前往法院，故 D 正確。",
+    "elementarySummary": "騙子說錢給他之後會還給你；還給原主是『歸還』，不是『收回』。這是騙人的，不能真的匯款。",
+    "concept": "病句修改需看主語、動詞搭配與錢的流向：歸還＝交回原主人，收回＝拿回自己手中。",
+    "extension": "『國家安全帳戶』在題目中是詐騙話術，不能因此當成正式司法收款流程。",
+    "memory": "把錢還回給民眾 → 歸還匯款，選 D。",
+    "solvingSteps": [
+      "了解詐騙者承諾會將款項還給民眾。",
+      "④『收回』與返還原主的方向相反，應用『歸還』。",
+      "A/B/C修改反而引發主語或搭配問題，故 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "①改成『因查案時被發現遭歹徒冒名』會使被發現者主語不明，原『發現民眾遭歹徒冒名』較清楚。",
+        "elementary": "亂用被發現，會不知道誰被發現。",
+        "reason": "改成被動『被發現遭冒名』會模糊誰查案、誰遭冒名的施事受事關係；原句主動發現較清楚。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "②改成『告知曾傳喚出庭民眾，卻未到案』會讓民眾黏成修飾對象，未到案的主語不清。",
+        "elementary": "原本叫他出庭他沒來，亂改反而不好懂。",
+        "reason": "改成『曾傳喚出庭民眾，卻未到案』造成『民眾』修飾對象與未到案的主語不清楚。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "③『存款應主動前往法院保管』讓存款做出『前往』動作，語義不合理。",
+        "elementary": "錢不會自己走路到法院。",
+        "reason": "『存款』不會自行『前往法院』，前往的主語必須是能移動的人，不能是存款本身。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "④改『歸還匯款』才能表示把錢交回原來的民眾，符合詐騙話術中的假承諾方向。",
+        "elementary": "把錢還給別人叫歸還。",
+        "reason": "『歸還匯款』指把錢交回民眾原持有人，符合假檢警承諾退還的方向；『收回』則是往自己取回。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年官方原始試題；最終答案影像QA／教科書出版社與頁碼待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "詐騙集團",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "人頭帳戶",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "國家安全帳戶",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "收回匯款",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "歸還匯款",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "歸還",
+        "level": "初級",
+        "meaning": "把拿走或借來的東西交回原主人"
+      },
+      {
+        "term": "人頭帳戶",
+        "level": "中級",
+        "meaning": "犯罪者利用他人名義控制、收款的帳戶"
+      },
+      {
+        "term": "偵辦",
+        "level": "高級",
+        "meaning": "調查犯罪案件並依法辦理"
+      }
+    ],
+    "caution": "題目假稱的國家安全帳戶是詐騙話術，不可解釋成合法法院匯款方式。"
+  },
+  "teachingCanonicalSha256": "a130b6d30bff31effae34b6433cf5d683b8c28092e0545f2487878275ac8cb48",
+  "composedTeachingSha256": "fde3df4b637cdd6bea7a161367bdda9aa5946494e645ceb913c8ed61460fee41",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "agreesWithKnownAnswer": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorSelfCheck": true,
+    "authorRole": "B",
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "independentReviewer": null,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
+      "EXACT_DIGEST_V4_QA_PENDING",
+      "MASTER_ADMISSION_NOT_GRANTED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "MASTER_OWNER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
