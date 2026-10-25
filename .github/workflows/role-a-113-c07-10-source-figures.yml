@@ -53,8 +53,13 @@ jobs:
           git add -- sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp
           expected="$(printf '%s\n' 'sudu/data/processed/113/role-a-c07-10/manifest.json' 'sudu/data/processed/113/role-a-c07-10/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp')"
           changed="$(git diff --cached --name-only)"
+          revised="$(printf '%s\n' 'sudu/data/processed/113/role-a-c07-10/manifest.json' 'sudu/data/processed/113/role-a-c07-10/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp')"
           if test -n "$changed"; then
-            test "$changed" = "$expected" || { echo 'Only exact 6 Role A artifacts permitted'; git diff --cached --name-only; exit 1; }
+            if test "$changed" != "$expected" && test "$changed" != "$revised"; then
+              echo 'Only six initial source artifacts or exactly four Q9/Q10-only boundary fixes allowed'
+              git diff --cached --name-only
+              exit 1
+            fi
             git diff --cached --check
             test -z "$(git diff --name-only)" || { echo 'Unexpected working tree modification'; exit 1; }
             git config user.name 'github-actions[bot]'
