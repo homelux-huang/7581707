@@ -47,7 +47,7 @@ const report={
   year:YEAR,subject:SUBJECT,sourceMode:'ACTUAL_GITHUB_CHECKOUT_NOT_FIXTURE',
   actualCommitSha:git(),expectedCommitSha:expect||null,
   mainBaseSha:process.env.SUDU_D_MAIN_SHA||null,
-  commandDocRef:'PR30:144364bc5f7711bacf3b8d04faf0e87194bf233c',
+  commandDocRef:'PR30:97d351202fe01de8fdb7c34d94cf36d64b646d17',
   ciRunId:process.env.GITHUB_RUN_ID||null,
   ciRunUrl:process.env.GITHUB_RUN_ID?
     'https://github.com/homelux-huang/7581707/actions/runs/'+process.env.GITHUB_RUN_ID:null,
@@ -372,13 +372,34 @@ function dump(){
           assert.deepEqual(
             await page.locator('#homeSubjectSel option').evaluateAll(xs=>xs.slice(1).map(x=>x.value)),
             SUBJECTS,'different 35-Demo courses replaced by generic UI');
-          await page.locator('#homeSubjectSel').selectOption({label:SUBJECT});
+          // A subject with approved lessons intentionally routes to those lessons.
+          // Its raw images remain accessible through the existing all-subject chips.
+          const previewThroughAll=mode==='image-preview-only'&&approvedRows.length>0;
+          const entrySubject=previewThroughAll?
+            SUBJECTS.find(s=>preview.questions.some(q=>q.subject===s)&&
+              !approved.questions.some(q=>q.subject===s)):SUBJECT;
+          check(entrySubject,'no existing read-only subject entry for original-image navigation');
+          await page.locator('#homeSubjectSel').selectOption({label:entrySubject});
           await page.locator('#studyView').waitFor({state:'visible',timeout:15000});
+          if(previewThroughAll){
+            await page.locator('#subjectSel').selectOption({label:'全部科目'});
+            assert.equal(new URL(page.url()).searchParams.get('view'),'images',
+              'all-subject original-image route must stay read-only');
+            assert.equal(await page.locator('#questionCard').getAttribute('data-qa-preview'),'read-only');
+          }
           if(theme==='dark')await act(page.locator('#themeBtn'),touch);
           assert.equal(await page.locator('html').getAttribute('data-theme'),theme,
             'visible real theme control failed');
           for(let index=0;index<rows.length;index++){
             q=rows[index];
+            if(previewThroughAll){
+              const handle=page.locator('#navHandle');
+              if(await handle.getAttribute('aria-expanded')!=='true')await act(handle,touch);
+              assert.equal(await handle.getAttribute('aria-expanded'),'true');
+              await act(page.getByRole('button',{
+                name:q.subject+'第 '+q.questionNumber+' 題唯讀原圖',exact:true
+              }),touch);
+            }
             const label=YEAR+' '+SUBJECT+' '+mode+' '+(q.canonicalId||q.id)+' '+width+'x'+height+' '+theme;
             await waitForOriginalImages(page,q,mode);
             const geometry=await layoutQA(page,label+' (pre-answer)');
@@ -397,7 +418,7 @@ function dump(){
                 fourOptions:mode!=='image-preview-only',dualLevel:mode==='approved',
                 readOnly:mode==='image-preview-only',realQuestionData:true},
               ...evidence,screenshot:screenshotFile});
-            if(index<rows.length-1){
+            if(index<rows.length-1&&!previewThroughAll){
               await act(page.locator('#nextBtn'),touch);
             }
           }

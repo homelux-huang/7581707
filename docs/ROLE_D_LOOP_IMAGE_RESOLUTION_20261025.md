@@ -42,3 +42,10 @@
 - 新helper嚴格要求teacher/elementary/reason為非空字串並逐字核對。可選isCorrect必須是boolean且等於該選項是否正解；字串true/false、數字/null、衝突布林、未知欄位或缺文字皆拒絕。metadata仍包含在原始教學digest中，不把false改成畫面占位字。
 - contract負測PASS5，包含歷史5題全部20個選項。新增CI觸發與負測，報告綁定optionContractSha256。source/lesson/HTML/runtime及發布門檻不變。
 - 先前115英文精確74f26f1完整448/448 image-preview-only PASS／448截圖，approvedRows=0；此成功不提升新題教學UIQA，不移用為本批新測試版本的正式證書。最終SHA CI及MathB完整480case須實際核對。
+
+## D-PREVIEW-ROUTE-DEPENDENCIES-20261025-VSCODE-07
+
+- 基底 `384dc0e456c43d6aa1d72952e654143de0e28fda`；租約 `6393717283`。中斷後status乾淨，控制台與PR30新 `97d351202fe01de8fdb7c34d94cf36d64b646d17` 的命令／410台帳已重讀，沒有與其他D英語news/字型租約重疊。
+- 該精確基底五題MathB已完成80/80 approved案例；接著預覽選MathB會依既有規格優先回approved，與matrix預期不同。未改runtime。另經360×800真實tap證明「國文唯讀→全部科目→數學B第1題chip」會保持view=images、canonicalId=115-00-MB-01、選項0。
+- 因此matrix對同時有approved的科目，使用既有唯讀科目入口、全部科目及真實題號chip逐題到達原圖；保留全部25張預覽×16＋5題approved×16＝480個預期案例，不縮減、不以來源檢查代替UI。每題仍驗canonicalId、read-only/無答案、HTTP/WebP/SHA、decode、原圖比例、版面及共享材料。
+- workflow補上demo-question-crops.json、原始圖／題圖、build.py的直接依賴路徑觸發，避免變更後漏跑矩陣；只讀權限與全部斷言維持。最終提交CI／完整MathB結果以Issue36 RETURN為準，未完成時不可稱PASS。
