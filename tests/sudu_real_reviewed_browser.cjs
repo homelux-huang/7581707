@@ -25,7 +25,10 @@ const sizes=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,
         assert.equal(await page.locator('#verifiedImagePreview').count(),0);
         assert.equal(await page.locator('#verifiedYearNav').count(),0);
         assert.equal(await page.locator('#verifiedPreviewToggle').count(),0);
-        assert.equal(await page.locator('#subjectSel option').count(),1);
+        assert.deepEqual(
+          await page.locator('#subjectSel option').evaluateAll(xs=>xs.map(x=>x.value)),
+          ['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'],
+          'sticky yearly subject selector must display all seven courses without making unapproved questions playable');
         for(let i=0;i<IDs.length;i++){
           const expected=source.questions[i];
           assert.equal(expected.canonicalId,IDs[i]);
