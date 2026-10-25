@@ -40,7 +40,8 @@ def _github_json(path):
     # can substitute its own GitHub PR author, commits or APPROVED review event.
     if not (path.startswith("/pulls/") or path=="/branches/main"
             or re.fullmatch(r"/issues/comments/[1-9][0-9]*",path)
-            or re.fullmatch(r"/commits/[0-9a-f]{40}",path)) or ".." in path:
+            or re.fullmatch(r"/commits/[0-9a-f]{40}",path)
+            or path=="/contents/sudu/release-governance/independent-review-policy.json?ref=main") or ".." in path:
         raise ValueError("invalid GitHub review API path")
     headers={"Accept":"application/vnd.github+json","User-Agent":"7581707-release-review/1"}
     token=os.environ.get("GITHUB_TOKEN")
@@ -254,6 +255,32 @@ def _ai_real_issue36_return_verified(statement,registry):
         return False,"ai_review_github_verification_unavailable"
 
 
+def _ai_registry_exactly_matches_protected_main_policy(trust):
+    """Never accept a source-branch self-granted AI reviewer allowlist.
+
+    The currently running checkout can be a PR from an untrusted author. The
+    registry is admissible only if it equals the GitHub Blob at PROTECTED main.
+    This is a trust-root check, not a teacher authorization requirement.
+    """
+    if not _protected_main_trust_verified():
+        return False
+    try:
+        doc=_github_json(
+            "/contents/sudu/release-governance/independent-review-policy.json?ref=main")
+        if (not isinstance(doc,dict)
+                or doc.get("path") !=
+                    "sudu/release-governance/independent-review-policy.json"
+                or doc.get("encoding")!="base64"):
+            return False
+        raw=base64.b64decode("".join(doc["content"].split()),validate=True)
+        if doc.get("sha")!=blob_oid(raw):
+            return False
+        remote=json.loads(raw,object_pairs_hook=_no_duplicate_keys)
+        return remote == trust and remote.get("reviewMode")=="DISTINCT_AI_CONTENT_RECEIPT_V1"
+    except (OSError,ValueError,TypeError,AttributeError,KeyError,UnicodeError):
+        return False
+
+
 def separate_ai_content_receipt_verified(source,audit,question,manifest,
                                          teaching_document,raw_teaching,*,
                                          trusted_receipts=None):
@@ -393,6 +420,28 @@ def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,po
                 and previous.get("teachingEvidenceGitBlob")==blob_oid(raw_teaching)):
             return True,"exact_five_historical_students_preserved"
         return False,"legacy_content_changed_must_be_reapproved"
+    # Current owner directive: teacher describes teaching STYLE, not an
+    # actual person or certificate. Source, answer, V4 and CI gates still run
+    # separately in the unchanged verified publisher after this function.
+    mode=trust.get("reviewMode")
+    if mode=="DISTINCT_AI_CONTENT_RECEIPT_V1":
+        if trust.get("requireHumanTeacher") is not False:
+            return False,"ai_review_policy_has_legacy_teacher_requirement"
+        # No trust in author-controlled QA review fields, no auto PASS:
+        # a verified E receipt must already be pinned in protected main.
+        receipts=trust.get("trustedAiReviewReceipts")
+        if not isinstance(receipts,dict) or qid not in receipts:
+            return False,"distinct_ai_content_review_missing"
+        if not _ai_registry_exactly_matches_protected_main_policy(trust):
+            return False,"ai_review_registry_not_verified_against_protected_main"
+        return separate_ai_content_receipt_verified(
+            source,audit,question,manifest,teaching_document,raw_teaching,
+            trusted_receipts=receipts)
+    if mode is not None:
+        return False,"unknown_new_admission_review_mode"
+    # Pre-policy signed-human path below is retained ONLY for archived
+    # backwards-compatibility tests/custom legacy snapshots. It is not called
+    # by the current repository policy's explicit AI reviewMode.
     att=(audit or {}).get("independentReviewAttestation")
     if not isinstance(att,dict):
         return False,"not_independently_attested"
