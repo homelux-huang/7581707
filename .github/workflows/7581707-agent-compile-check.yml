@@ -42,9 +42,26 @@ jobs:
           import re
           s=Path(".github/workflows/7581707-role-agent.lock.yml").read_text()
           assert len(s)>500, "Compiler result missing"
-          assert "contents: write" not in s, "Reject content writes in read-only worker"
-          assert "pull-requests: write" not in s, "Reject PR writes in read-only worker"
-          assert "issues: write" not in s, "Reject issue writes in read-only worker"
+          lines=s.splitlines()
+          privileged=[(i+1, line.strip()) for i,line in enumerate(lines)
+                      if re.match(r'^\\s*(contents|issues|pull-requests): write\\s*
+          assert "CODEX_API_KEY" in s or "OPENAI_API_KEY" in s, "Require actual Codex secret hook"
+          assert "engine" in s.lower() or "codex" in s.lower(), "No Codex engine evidence"
+          print("PASS compiled lock read-only scope and Codex auth references")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gh-aw-compiled-codex-lock-${{ github.sha }}
+          path: .github/workflows/7581707-role-agent.lock.yml
+          if-no-files-found: error
+          retention-days: 7
+,line)]
+          for number,name in privileged:
+              print(f"PRIVILEGED_JOB_REFERENCE line={number} permission={name}",flush=True)
+              for nearby in lines[max(0,number-12):number+3]:
+                  print("  "+nearby[:160],flush=True)
+          assert not privileged, "Compiled workflow has unexpected write job permissions"
           assert "CODEX_API_KEY" in s or "OPENAI_API_KEY" in s, "Require actual Codex secret hook"
           assert "engine" in s.lower() or "codex" in s.lower(), "No Codex engine evidence"
           print("PASS compiled lock read-only scope and Codex auth references")
