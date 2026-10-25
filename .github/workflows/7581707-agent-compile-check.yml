@@ -96,7 +96,7 @@ jobs:
               assert line.strip() not in {"contents: write","issues: write","pull-requests: write"}, "Unexpected write privilege in compiled agent"
           assert os.environ["GITHUB_REPOSITORY"]=="homelux-huang/7581707"
           digest=hashlib.sha256(blob).hexdigest()
-          git_blob_hash=hashlib.sha1(b"blob "+str(len(blob)).encode()+b"\\0"+blob).hexdigest()
+          git_blob_hash=hashlib.sha1(b"blob "+str(len(blob)).encode()+bytes([0])+blob).hexdigest()
           import base64
           request=Request("https://api.github.com/repos/homelux-huang/7581707/git/blobs",
               data=json.dumps({"content":base64.b64encode(blob).decode(),"encoding":"base64"}).encode(),
