@@ -169,6 +169,117 @@ def substantive_notes_verified(source,rel,sha):
     except (OSError,ValueError):
         return False
 
+def separate_ai_content_receipt_verified(source,audit,question,manifest,
+                                         teaching_document,raw_teaching,*,
+                                         trusted_receipts=None):
+    """Verify a distinctly authored AI CONTENT REVIEW receipt, not admission.
+
+    The registry is deliberately a required caller-supplied *trusted main*
+    approval of an exact Git Blob and author/reviewer provenance, never a
+    source-branch registry. This function is NOT yet wired to the publisher.
+    It cannot grant READY or override G0-G10 by itself.
+    """
+    qid=question.get("questionId")
+    revision=teaching_document.get("questionRevision")
+    webp=(manifest or {}).get("sha256")
+    content=teaching_document.get("content")
+    if (not isinstance(qid,str) or not SHA.fullmatch(str(revision))
+            or not SHA.fullmatch(str(webp)) or not isinstance(content,dict)
+            or not isinstance(raw_teaching,(bytes,bytearray))):
+        return False,"invalid_ai_review_input"
+    registry=trusted_receipts.get(qid) if isinstance(trusted_receipts,dict) else None
+    if not isinstance(registry,dict):
+        return False,"separate_ai_reviewer_trusted_receipt_absent"
+    rel=(audit or {}).get("independentAiContentEvidence")
+    if (not isinstance(rel,str) or not rel.startswith(
+            "sudu/data/processed/"+str(question.get("year"))+"/review-evidence/")
+            or not rel.endswith(".json") or ".." in Path(rel).parts
+            or Path(rel).is_absolute()):
+        return False,"ai_review_evidence_path_untrusted"
+    root=Path(source)
+    target=root/rel
+    try:
+        if (not target.resolve().is_relative_to(root.resolve())
+                or target.is_symlink() or not target.is_file()):
+            return False,"ai_review_evidence_missing"
+        original=target.read_bytes()
+        statement=json.loads(original,object_pairs_hook=_no_duplicate_keys)
+    except (OSError,ValueError,UnicodeError,AttributeError):
+        return False,"ai_review_evidence_invalid"
+    if (not isinstance(statement,dict)
+            or registry.get("evidencePath")!=rel
+            or registry.get("evidenceGitBlobSha")!=blob_oid(original)
+            or registry.get("reviewTaskId")!=statement.get("reviewTaskId")
+            or registry.get("reviewerSessionId")!=statement.get("reviewerSessionId")
+            or registry.get("sourceAuthorSessionId")!=statement.get("sourceAuthorSessionId")):
+        return False,"ai_review_receipt_not_trusted_or_modified"
+    official=_official_document_sha(source,audit,qid)
+    if not official:
+        return False,"ai_review_official_document_missing"
+    expected={
+        "schemaVersion":1,"year":question.get("year"),"questionId":qid,
+        "questionRevision":revision,"webpSha256":webp,
+        "teachingDigest":digest(canonical(content)),
+        "teachingEvidenceSha256":digest(bytes(raw_teaching)),
+        "officialEvidenceSha256":official,
+        "officialAnswerCandidate":question.get("answer"),
+    }
+    if any(statement.get(k)!=v for k,v in expected.items()):
+        return False,"ai_review_material_revision_mismatch"
+    if (not SHA.fullmatch(str(statement.get("questionRevision")))
+            or not SHA.fullmatch(str(statement.get("webpSha256")))
+            or registry.get("questionRevision")!=revision
+            or registry.get("webpSha256")!=webp
+            or registry.get("teachingDigest")!=expected["teachingDigest"]
+            or registry.get("officialEvidenceSha256")!=official):
+        return False,"ai_review_trusted_registry_version_mismatch"
+    author=statement.get("sourceAuthorSessionId")
+    reviewer=statement.get("reviewerSessionId")
+    author_task=statement.get("sourceAuthorTaskId")
+    review_task=statement.get("reviewTaskId")
+    if (not isinstance(author,str) or len(author.strip())<6
+            or not isinstance(reviewer,str) or len(reviewer.strip())<6
+            or reviewer.casefold()==author.casefold()
+            or statement.get("sourceAuthorRole") not in ("B","C")
+            or statement.get("reviewerRole")!="E"
+            or not isinstance(author_task,str) or not author_task.startswith(
+                statement["sourceAuthorRole"]+"-")
+            or not isinstance(review_task,str) or not review_task.startswith("E-")
+            or review_task==author_task):
+        return False,"ai_review_author_or_reviewer_not_distinct"
+    if (statement.get("reviewIssueNumber")!=36
+            or type(statement.get("reviewIssueCommentId")) is not int
+            or statement["reviewIssueCommentId"]<=0
+            or type(statement.get("sourceCommit")) is not str
+            or not HEX40.fullmatch(statement["sourceCommit"])):
+        return False,"ai_review_traceability_missing"
+    try:
+        reviewed=_time(statement.get("reviewedAt"))
+        if reviewed>datetime.now(timezone.utc):
+            return False,"ai_review_time_in_future"
+    except (TypeError,ValueError):
+        return False,"ai_review_timestamp_invalid"
+    findings=statement.get("optionByOptionFindings")
+    if (not isinstance(findings,dict) or set(findings)!=set("ABCD")
+            or any(not isinstance(findings[k],str) or
+                   len(findings[k].strip())<20 for k in "ABCD")
+            or len({findings[k].strip() for k in "ABCD"})!=4):
+        return False,"ai_review_four_distinct_substantive_option_findings_missing"
+    if (statement.get("teacherAndElementaryReviewed") is not True
+            or statement.get("correctAnswerComparedToOfficial") is not True
+            or statement.get("officialCorrectionsReviewed") is not True
+            or statement.get("calculationReview") not in
+               ("APPLICABLE_ALL_STEPS_CHECKED","NOT_APPLICABLE_EXPLAINED")):
+        return False,"ai_review_required_teaching_or_answer_checks_missing"
+    if (not substantive_notes_verified(source,statement.get("reviewNotesPath"),
+                                       statement.get("reviewNotesSha256"))
+            or registry.get("reviewNotesSha256")!=statement.get("reviewNotesSha256")):
+        return False,"ai_review_substantive_notes_not_sha_bound"
+    # The registry must be independently controlled/verified by main integration.
+    # A source author cannot create this trusted receipt by editing QA JSON.
+    return True,"distinct_ai_content_receipt_exact_registry_and_material_match"
+
+
 def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,policy=None):
     """Return (approved,reason); signature verification is *additional* to all G0-G10."""
     trust=policy if policy is not None else policy_from_trusted_main()
