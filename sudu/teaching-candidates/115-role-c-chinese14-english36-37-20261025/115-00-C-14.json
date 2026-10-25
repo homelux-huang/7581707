@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C14-E36-E37-20261025-06",
+  "claimedAtUtc": "2026-10-25T05:27:53Z",
+  "questionId": "115-00-C-14",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 14,
+  "subject": "國文",
+  "status": "ROLE_C_CANDIDATE_PENDING_DISTINCT_AI_SOURCE_AND_UI",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceBankBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "依據下表解讀甲、乙二文，何者不適當？\n\n                 兩種敘述觀點\n\n\n      【第一人稱敘述觀點】\n                       【第三人稱全知敘述觀點】\n\n   由故事內的「我」敘述，容易讓讀\n                   由故事外盡知一切的旁觀視角敘\n   者感覺親近，但也因受限於「我」\n                     述，便於呈現所有人物的內心世界\n   的見聞，對周遭事物、他人心思無\n                      及事、物的因果關係。\n   法盡知。\n\n\n  兩種敘述觀點皆可明示或暗示作者意圖。\n  基於特定需要，某些作品會兩種敘述觀點並用。",
+  "options": [
+    "甲文的敘述者在故事外",
+    "乙文兼採兩種敘述觀點",
+    "甲文「對方想表示即時回去有困難，又不好直說」，即敘述者盡知一切的寫法",
+    "乙文「那另一面是什麼？難道哈利路亞？」，即敘述者受限於個人見聞的寫法"
+  ],
+  "answerCandidate": "B",
+  "sourceAnswerVerified": true,
+  "sourceQuestionVerified": false,
+  "knownAnswerBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "9ccbc09172a045f72a02940c61fbdce3762243a58ce424c632302cd08610a896",
+  "sourceImageRecordQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "sourceIndividualManifestQa": "PASS",
+  "individualImage": "sudu/data/processed/115/webp-v2/00-C/115-00-C-14.webp",
+  "individualImageSha256": "2d5d49607eb941df0f6ed272447a312723bfbf050555f53deb1e0cd675a1888e",
+  "originalQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "individualImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-C-SHARED-11-15",
+    "sourceText": "▲閱讀下文，回答第11-15 題\n【甲】\n  不到兩個禮拜的時間，粉娘又不省人事，急急地被送到醫院。醫院對上一次的迴光能\n拖這麼久，表示意外神奇。不過這一次醫院又說，還是快點回去，恐怕時間來不及在家裡\n過世。\n  粉娘又彌留在廳頭。隨救護車來的醫師按她的脈搏，聽聽她的心跳，用手電筒看她的\n瞳孔。他說：「快了。」\n  炎坤請人到么女的高中學校，用機車把她接回來，要她打電話連絡親戚。大部分的親\n戚都要求跟炎坤直接通話。\n  「會不會和上一次一樣？」\n  「我做兒子的當然希望和上一次一樣，但是這一次醫生也說了，我也看了，①大概天\n不從人願吧。」炎坤說。②對方言語支吾，炎坤又說，「你是內孫，父親又不在，你一定\n要回來。上次你們回來，老人家高興得天天唸著。」\n  幾乎每一個要求跟炎坤通話的，都是類似這樣的對答。而對方想表示即時回去有困\n難，又不好直說。結果，六個也算老女人的女兒輩都回來了，在世的三個兒子也回來，孫\n子輩的內孫外孫，沒回來的較多，曾孫都被拿來當年幼，又被他們的母親拿來當著需要照\n顧他們的理由，全都沒回來了。（黃春明〈死去活來〉）\n\n\n【乙】\n  我們到的時候，那些插到你身體的管子和儀器都拔掉了。僅留你左邊鼻孔拉出的一條\n管子，與一只虛妄的兩公升保特瓶連結。名義上說，留著一口氣，回到家裡了。\n  那是你以前最愛講的冷笑話――聽到救護車的鳴笛，要分辨一下啊，如果是有醫〜有\n醫〜，就要趕快讓路；如果是無醫〜無醫〜，就不用讓了。一干親戚朋友被你逗得哈哈大\n笑時，往往只有我敢挑戰你：如果是無醫，幹嘛還要坐救護車？要送回家啊！你說。所\n以，我們與你一起坐上救護車，回家。名義上說，子女有送你最後一程了。\n  上車後，救護車司機平板的聲音問：小姐你家是拜佛祖還是信耶穌的？我會意不過\n來，司機更直白一點：你家有沒有拿香拜拜啦？我僵硬點頭。司機倏地把一捲卡帶翻面推\n進音響，南無阿彌陀佛。那另一面是什麼？難道哈利路亞？我知道我人生最荒謬的一趟旅\n程已經啟動。（③無醫〜無醫〜）\n  我好想把我看到的告訴你。男護士正規律地一張一縮壓著保特瓶，你的偽呼吸。相對\n於前面六天你受的各種複雜又專業的治療，這一最後步驟的名稱，顯得平易近人許多。\n  這叫做，最後一口氣。\n  到家。荒謬之旅的導遊旗子交棒給葬儀社、道士以及左鄰右舍。（有人斥責，怎不趕\n快說，爸我們到家了。我們說，爸我們到家了。）男護士取出工具，抬手看錶，來！大家\n對一下時喔，十七點三十五分好不好？好不好？我們能說什麼？好。④我們說好。我們竟\n然說好。（改寫自劉梓潔〈父後七日〉）\nˉ",
+    "textSha256": "91e2590c9635d351a571798124867ad02d3b8ccae8ee530233dbf9cbc7f41f5f",
+    "originalImage": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp",
+    "originalImageSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "9d0735b8c397d8a9c384410e13eb5b83e60b32becd5022cc5f6c69092c08d18f",
+    "sharedImageBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "題幹問**「何者不適當」**。甲文用故事外旁觀者敘述，還能描述「**對方想表示即時回去有困難**」的內心，具第三人稱全知特徵；乙文是**「我／我們」親身陪父親返家**，有自己的疑問「那另一面是什麼？難道哈利路亞？」，仍受自身見聞限制，不能因回憶父親或稱呼「你」就斷定也有**第三人稱全知**。所以 **B「乙文兼採兩種敘述觀點」** 是不恰當的說法。",
+    "elementarySummary": "甲的說故事者站在故事外，連親戚心裡想什麼也講得出來；乙是女兒自己說「我看到什麼、我覺得怎樣」，她不知道別人的全部想法。B說乙也有兩種視角，就不對。",
+    "memory": "**甲＝故事外全知；乙＝故事內第一人稱限知。問「不適當」→ B。**",
+    "concept": "**第一人稱限知**只能述自己感受與見聞；**第三人稱全知**可描述不同人物未說出口的心事。用「你」對過世父親說話，並不等於敘述者變成全知旁觀者。",
+    "extension": "此題有兩欄**敘述觀點說明表**，圖表原始像素仍待 A 逐項核實。教學候選以 PR35 原題表格文字為依據，不把重排的純文字當已完成原圖 QA。判別立場須看**知道多少**而非只數人稱代名詞。",
+    "highlights": [
+      "何者不適當",
+      "第一人稱敘述觀點",
+      "第三人稱全知敘述觀點",
+      "對方想表示",
+      "我知道",
+      "那另一面是什麼"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "我：故事當中的說話者"
+      ],
+      "中級": [
+        "第一人稱限知：只能知道敘述者親身所見所感"
+      ],
+      "高級": [
+        "第三人稱全知敘事：故事外敘述者可深入不同角色心理的視角"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 甲文由故事外敘述者寫「**粉娘又彌留在廳頭**」「**炎坤請人**」等人物動作，並無在故事裡自稱「我」的旁觀者角色，說其**敘述者在故事外**是適當的。",
+        "elementary": "甲故事不是一個叫「我」的人在講自己的經歷，而是站在外面說粉娘、炎坤發生的事，所以A對。",
+        "reason": "A 甲文由故事外敘述者寫「**粉娘又彌留在廳頭**」「**炎坤請人**」等人物動作，並無在故事裡自稱「我」的旁觀者角色，說其**敘述者在故事外**是適當的。",
+        "sourceEvidence": "甲文：粉娘又彌留在廳頭。炎坤請人到么女的高中學校，用機車把她接回來。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B 乙文的敘事中心始終是孩子的**「我／我們」**，即使回憶父親的冷笑話、稱呼「你」，並未取得其他人的全知內心視角。把乙文說成**兼用第一人稱與第三人稱全知**，缺少證據，故此**不適當**。",
+        "elementary": "乙故事是女兒說自己一路陪爸爸回家，不是一下變成知道所有人想法的旁觀者，所以B錯。",
+        "reason": "B 乙文的敘事中心始終是孩子的**「我／我們」**，即使回憶父親的冷笑話、稱呼「你」，並未取得其他人的全知內心視角。把乙文說成**兼用第一人稱與第三人稱全知**，缺少證據，故此**不適當**。",
+        "sourceEvidence": "乙文：我們到的時候……我好想把我看到的告訴你……所以，我們與你一起坐上救護車。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 甲文寫「**對方想表示即時回去有困難，又不好直說**」，敘述者直接交代遠方親戚心裡難以說出的理由，符合表格中**第三人稱全知**能知他人想法的特色。",
+        "elementary": "甲故事連電話另一邊親戚不好意思說的心事都描述出來，這像全知的敘述方式，所以C對。",
+        "reason": "C 甲文寫「**對方想表示即時回去有困難，又不好直說**」，敘述者直接交代遠方親戚心裡難以說出的理由，符合表格中**第三人稱全知**能知他人想法的特色。",
+        "sourceEvidence": "甲文：對方想表示即時回去有困難，又不好直說。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 乙文自問「**那另一面是什麼？難道哈利路亞？**」正反映「我」只聽到卡帶這一面而不知道另一面的內容，須猜測，符合**第一人稱受限自身見聞**。",
+        "elementary": "女兒不知道卡帶另一面是不是別的宗教音樂，只能在心裡猜，表示不是什麼都知道，所以D對。",
+        "reason": "D 乙文自問「**那另一面是什麼？難道哈利路亞？**」正反映「我」只聽到卡帶這一面而不知道另一面的內容，須猜測，符合**第一人稱受限自身見聞**。",
+        "sourceEvidence": "乙文：那另一面是什麼？難道哈利路亞？我知道我人生最荒謬的一趟旅程已經啟動。"
+      }
+    },
+    "stepByStep": [
+      "先圈出「何者不適當」，此題要選錯誤說法。",
+      "按表格區分故事外全知與故事內第一人稱限知。",
+      "找甲文描述對方心事的敘述、乙文由我／我們出發的有限視角。",
+      "A、C、D符合各文，B主張乙兼用第三人稱全知卻無實證，選B。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年國文第14題官方文字版的敘述觀點表與甲黃春明、乙改寫劉梓潔原文；原表原圖QA待補。"
+  },
+  "teachingCanonicalSha256": "6bafd4e64ab792babd902cbc079607ec1f49ad9c7b44237eb3b455a36f52a270",
+  "review": {
+    "authorIdentity": "GPT-6 Role C AI teaching author (not credentialed human teacher)",
+    "authorRole": "C",
+    "distinctAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewNotes": null,
+    "reviewEvidenceSha256": null,
+    "officialEvidenceSha256": null,
+    "differentAuthorRequired": true,
+    "sameAuthorApprovalProhibited": true,
+    "officialFinalAnswerAndNotice": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4EightByTwoExactDigest": "PENDING",
+    "policy": "ISSUE36_2026-10-25_NO_HUMAN_TEACHER_PREREQUISITE"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_OFFICIAL_FINAL_ANSWER_CORRECTION_AND_FULL_QUESTION_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_IMAGE_DIRECT_VISUAL_QA_PENDING",
+    "DISTINCT_AI_OPTION_BY_OPTION_REVIEW_AND_SOURCE_SHA_EVIDENCE_PENDING",
+    "V4_REAL_8_VIEWPORTS_2_THEMES_EXACT_DIGEST_CI_PENDING",
+    "C14_TABLE_RAW_OFFICIAL_PIXELS_NOT_VISUALLY_CONFIRMED"
+  ]
+}
