@@ -368,11 +368,29 @@ function formatStudyValue(q,key,value){
   // The Demo sample is keyed by QUESTION NUMBER, not year or canonical ID.
   // Never substitute a 115 Demo sample for another year's real exam question.
   // Use only this admitted question's author-reviewed text and highlights.
+  // Mark only substrings that ACTUALLY occur in this annual sentence.
+  // One annual question can have several source keywords: using find() would
+  // silently hide the exam word whenever a different keyword occurred first.
   const terms=Array.isArray(q.highlights)?q.highlights.filter(t=>typeof t==='string'&&t.trim()):[];
-  const term=terms.find(t=>text.toLowerCase().includes(t.toLowerCase()));
-  const at=term?text.toLowerCase().indexOf(term.toLowerCase()):-1;
-  const safe=at<0?esc(text):esc(text.slice(0,at))+
-   '<mark class="exam-highlight">'+esc(text.slice(at,at+term.length))+'</mark>'+esc(text.slice(at+term.length));
+  const lower=text.toLowerCase(),positions=[];
+  for(const term of new Set(terms)){
+   const needle=term.toLowerCase();
+   let offset=0,index=lower.indexOf(needle,offset);
+   while(index>=0){
+    positions.push({from:index,to:index+term.length});
+    offset=index+Math.max(1,term.length);
+    index=lower.indexOf(needle,offset);
+   }
+  }
+  positions.sort((a,b)=>a.from-b.from||b.to-a.to);
+  let safe='',offset=0;
+  for(const item of positions){
+   if(item.from<offset)continue; // Never overlap nested source highlights.
+   safe+=esc(text.slice(offset,item.from))+
+    '<mark class="exam-highlight">'+esc(text.slice(item.from,item.to))+'</mark>';
+   offset=item.to;
+  }
+  safe+=esc(text.slice(offset));
   // The matching annual candidate's Chinese sentence belongs in the same
   // existing guide field. guideEntries() already removes its separate title;
   // never silently discard that translation or borrow Demo news by q.id.
