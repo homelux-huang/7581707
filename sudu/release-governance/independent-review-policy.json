@@ -1,8 +1,7 @@
 {
   "schemaVersion": 1,
-  "policy": "NEW_ADMISSIONS_REQUIRE_EXTERNAL_SEPARATE_SIGNED_TEACHING_REVIEW",
-  "requireHumanTeacher": true,
-  "authorizedReviewers": {},
+  "policy": "NEW_ADMISSIONS_REQUIRE_DISTINCT_AI_SUBSTANTIVE_REVIEW_AND_SOURCE_UI_RELEASE_GATES",
+  "requireHumanTeacher": false,
   "legacyAlreadyPublished": {
     "115-00-MB-02": {
       "year": 115,
@@ -35,8 +34,11 @@
       "teachingEvidenceGitBlob": "5c968cab99302ff0942b9ac5673a87230caddb5a"
     }
   },
-  "configurationStatus": "NO_AUTHORIZED_REVIEWER_KEYS_YET__NEW_RELEASES_FAIL_CLOSED",
-  "notes": "Add a reviewer identity and Ed25519 public key only via trusted main code review after offline verification of role, independence and private-key custody. Never commit private keys or rely on source-branch reviewer strings. Historical exact five are retained without implying human teacher credentials.",
+  "configurationStatus": "NO_INDEPENDENT_AI_E_REVIEW_RECEIPTS_REGISTERED__NEW_READY_ZERO__NOT_A_TEACHER_BLOCK",
+  "notes": "Owner Issue36 policy: no teacher certificate, teacher Ed25519 key or human GitHub APPROVED event is required. Never accept a B/C author self-review. Each independent AI Role E content receipt must be independently evaluated against the original question revision, WebP SHA, teaching digest, official final-answer evidence SHA, four distinct options, calculations, and real audit notes; exact receipt Git Blob and author/reviewer task identities must be recorded in protected main. The current registry is intentionally empty: no new admission has passed. Five historical published records remain exact-byte exceptions only.",
   "githubRepository": "homelux-huang/7581707",
-  "identityPolicy": "Only actual GitHub reviewed PR plus its author/commits/APPROVED review event and owner-registered externally verified role can approve. Branch protection is owner-required. No keys authorized."
+  "identityPolicy": "Only owner-coordinated, protected-main immutable AI E review receipts verified against actual Issue36 RETURN identity/session/commit can authorize an AI CONTENT review; signed human-teacher roster/APPROVED events no longer participate. Source/TCTE/answer, independent solve, exact-digest V4, original WebP QA, release CI and LIVE validation are independent mandatory gates.",
+  "reviewMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+  "teacherStyleMeans": "TEACHING_PERSPECTIVE_NOT_REAL_TEACHER_IDENTITY",
+  "trustedAiReviewReceipts": {}
 }
