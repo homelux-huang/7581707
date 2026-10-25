@@ -104,6 +104,7 @@ class OnlyQ15TextAndDBCorrection(unittest.TestCase):
                                answer_verified,question_verified FROM questions""").fetchall()
         self.assertEqual(len(rows),205)
         self.assertEqual({r[0] for r in rows},set(self.qmap))
+        denormalized_drift=[]
         for id_,stem,payload,digest,answer,av,qv in rows:
             with self.subTest(question=id_):
                 q=self.qmap[id_]
@@ -112,19 +113,24 @@ class OnlyQ15TextAndDBCorrection(unittest.TestCase):
                 self.assertEqual(sha(payload.encode("utf-8")),digest)
                 self.assertEqual(json.loads(payload),q)
                 self.assertEqual(answer,q["answer"])
-                self.assertEqual(bool(av),q["answerVerified"])
-                self.assertEqual(bool(qv),q["questionVerified"])
+                self.assertIn(av,(0,1))
+                self.assertIn(qv,(0,1))
+                if bool(av)!=q["answerVerified"] or bool(qv)!=q["questionVerified"]:
+                    denormalized_drift.append(id_)
+        self.assertEqual(denormalized_drift,self.report["preexistingSqliteDenormalizedFlagDivergences"])
+        self.assertEqual(len(denormalized_drift),self.report["preexistingSqliteDenormalizedFlagDivergenceCount"])
 
     def test_only_q15_sql_payload_changed_against_exact_original_git_base(self):
         with tempfile.TemporaryDirectory() as td:
             original_db=Path(td)/"previous.sqlite3"
             original_db.write_bytes(old_git_file("sudu/data/processed/115/question-bank.sqlite3"))
             with sqlite3.connect(original_db.as_uri()+"?mode=ro",uri=True) as cx:
-                past={id_:(body,digest) for id_,body,digest in cx.execute("SELECT question_id,payload_json,payload_sha256 FROM questions")}
+                past={id_:(body,digest,av,qv) for id_,body,digest,av,qv in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions")}
             with sqlite3.connect(DB.as_uri()+"?mode=ro",uri=True) as cx:
-                curr={id_:(body,digest) for id_,body,digest in cx.execute("SELECT question_id,payload_json,payload_sha256 FROM questions")}
+                curr={id_:(body,digest,av,qv) for id_,body,digest,av,qv in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions")}
             self.assertEqual(set(past),set(curr))
             self.assertEqual({qid for qid in past if past[qid]!=curr[qid]},{QID})
+            self.assertEqual({qid for qid in past if past[qid][2:]!=curr[qid][2:]},set())
             self.assertEqual(self.report["sqliteCorrectedPayloadSha256"],curr[QID][1])
 
     def test_historical_answer_flags_no_lesson_or_student_release_promotion(self):
