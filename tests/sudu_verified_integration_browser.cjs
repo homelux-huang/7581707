@@ -5,6 +5,7 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
  const widths=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,768],[1440,900]];
+ const seven=['國文','英文','數學 B','商業概論','數位科技','會計學','經濟學'];
  const page=await browser.newPage();
  try{
   await page.goto(base+'v4-115-multisubject-review-demo.html');
@@ -42,7 +43,11 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     assert(await page.locator('#homeView').isVisible(),year+' starts on home');
     assert.equal(await page.locator('#studyView').isVisible(),false,'year alone cannot expose question');
     assert.equal(await page.locator('#homeYearSel').inputValue(),year);
-    assert(await page.locator('#homeSubjectSel').isEnabled(),year+' has verified subjects');
+    assert(await page.locator('#homeSubjectSel').isEnabled(),year+' has subject navigation');
+    assert.deepEqual(
+      await page.locator('#homeSubjectSel option').evaluateAll(xs=>xs.slice(1).map(x=>x.value)),
+      seven,year+' must list seven subjects even when not yet student-approved');
+    assert.match(await page.locator('#annualSubjectAvailability').innerText(),/七科沿用 35 題 Demo/);
     const chosenSubject=data.approvedCount?data.questions[0].subject:preview.questions[0].subject;
     await page.locator('#homeSubjectSel').selectOption({label:chosenSubject});
     assert(await page.locator('#studyView').isVisible(),year+' subject begins study');
@@ -83,6 +88,41 @@ const base=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
     }
    }
   }
+  // 115 student-approved Math B and image-only other six subjects coexist
+  // in ONE Demo-style year/subject selector, without leaking answer keys.
+  await page.goto(base+'v4-115-multisubject-review-demo.html?year=115');
+  await page.waitForFunction(()=>document.body.dataset.verifiedReadyYear==='115');
+  await page.locator('#homeSubjectSel').selectOption('國文');
+  await page.waitForFunction(()=>location.search.includes('view=images'));
+  await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
+  assert.equal(await page.locator('#questionCard .pill').first().innerText(),'國文');
+  assert.equal(await page.locator('#studyView .opt').count(),0,'non-approved 115 Chinese cannot be graded');
+  assert.equal(await page.locator('#answerCard').isVisible(),false);
+  assert.match(await page.locator('#annualSubjectAvailability').innerText(),/原圖 QA/);
+  await page.goto(base+'v4-115-multisubject-review-demo.html?year=115&view=images');
+  await page.waitForFunction(()=>document.body.classList.contains('qa-image-mode'));
+  await page.locator('#homeSubjectSel').selectOption('數學 B');
+  await page.waitForFunction(()=>!location.search.includes('view=images'));
+  await page.locator('#studyView .opt').first().waitFor();
+  assert.equal(await page.locator('#studyView .opt').count(),4,'115 Math B uses approved-grade Demo UI');
+  await page.goto(base+'v4-115-multisubject-review-demo.html?year=114');
+  await page.waitForFunction(()=>document.body.dataset.verifiedReadyYear==='114');
+  await page.locator('#homeSubjectSel').selectOption('英文');
+  assert(await page.locator('#homeView').isVisible(),'unavailable 114 English stays on home');
+  assert.equal(await page.locator('#studyView').isVisible(),false,'114 unapproved English never exposes Demo questions');
+  assert.match(await page.locator('#annualSubjectAvailability').innerText(),/尚無可顯示的正式題目/);
+  await page.locator('#homeSubjectSel').selectOption('國文');
+  await page.locator('body.qa-image-mode #questionCard img').first().waitFor();
+  assert.equal(await page.locator('#studyView .opt').count(),0);
+  // A real annual English example must not silently use same-number 115 Demo
+  // examples, which are keyed only by the original question number.
+  await page.goto(base+'v4-115-multisubject-review-demo.html');
+  const annualNews=await page.evaluate(()=>formatStudyValue({
+    canonicalId:'114-00-E-01',id:1,subject:'英文',highlights:['annually']
+  },'新聞時事例句','The figures are reviewed annually by teachers.'));
+  assert.match(annualNews,/exam-highlight/);
+  assert.match(annualNews,/annually/);
+  assert.doesNotMatch(annualNews,/After heavy rain|outdoor seats/);
   // 115 original-image audit is available ONLY as a single-question view in
   // the existing question card, without an extra top block or answer leak.
   await page.goto(base+'v4-115-multisubject-review-demo.html?year=115&view=images');
