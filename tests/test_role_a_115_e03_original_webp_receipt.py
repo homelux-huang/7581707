@@ -101,7 +101,7 @@ class RoleA115E03WebpReceipt(unittest.TestCase):
         original = proof_path.read_text(encoding="utf-8")
         self.assertIn("| 英文 | 3 | 90,592,1310,706 | 1220×114 | PASS |", original)
         self.assertIn("| 英文 | 3 | 90,592,1310,706 | 1220×114 | PASS | \`" + WEBP_SHA + "\` |", original)
-        self.assertIn("no adjacent", "no adjacent")  # no automatic fresh image QA promoted
+        self.assertIn("無相鄰題", original)  # historical written visual criteria, not a new review
 
     def test_four_original_options_and_source_digest_exact_to_role_c_candidate(self):
         q = self.q
