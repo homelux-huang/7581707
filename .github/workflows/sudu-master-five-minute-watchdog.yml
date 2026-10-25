@@ -1,0 +1,54 @@
+name: 7581707 five-minute MASTER watchdog (READ ONLY)
+on:
+  # GitHub Actions allows at least five minutes, but schedule can drift/drop.
+  # Schedule becomes active ONLY after this file is on default branch main.
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - coord/7581707-five-minute-watchdog-20261025
+    paths:
+      - scripts/sudu_master_five_minute_watchdog.py
+      - tests/test_sudu_master_five_minute_watchdog.py
+      - .github/workflows/sudu-master-five-minute-watchdog.yml
+      - docs/MASTER_104_115_FIVE_MINUTE_AGENT_HANDOFF_20261025.md
+  pull_request:
+    paths:
+      - scripts/sudu_master_five_minute_watchdog.py
+      - tests/test_sudu_master_five_minute_watchdog.py
+      - .github/workflows/sudu-master-five-minute-watchdog.yml
+      - docs/MASTER_104_115_FIVE_MINUTE_AGENT_HANDOFF_20261025.md
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+concurrency:
+  group: sudu-master-five-minute-watchdog
+  cancel-in-progress: false
+
+jobs:
+  read-only-receipt-audit:
+    name: Read Issue36 tasks, PR heads and protected statuses without release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fail-closed unit tests
+        run: python -m unittest discover -s tests -p 'test_sudu_master_five_minute_watchdog.py' -v
+      - name: Record true GitHub task queue (NOT an AI worker or READY admission)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/sudu_master_five_minute_watchdog.py --output audit/7581707-five-minute-status.json
+      - name: Attach ephemeral machine-readable task queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: sudu-master-watchdog-${{ github.run_id }}
+          path: audit/7581707-five-minute-status.json
+          if-no-files-found: error
+          retention-days: 1
