@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-39",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 39,
+  "subject": "英文",
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "status": "NEW_ROLE_C_DUAL_LEVEL_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "What is the passage mainly about?",
+  "options": [
+    "Markets for Taiwan’s AI-related products",
+    "Progress of Taiwan’s electronics industry",
+    "Development of artificial intelligence industry",
+    "Examples of Taiwan’s electronics manufacturers"
+  ],
+  "answerCandidate": "B",
+  "sourceTextRevision": "9a098b1db2de04ecdf3af694a686e30a573ba4d63356dbf1dfe39e7ea230956a",
+  "sourceRevisionMethod": "publisher text_revision canonical question/options/singleQuestionWebpSha256 excludes answer",
+  "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-39.webp",
+  "imageSha256": "0e71395b101b6e255d48b3eea86e8a4a1086cafabab62104ade3474b32f11d3c",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalPageWebpSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+  "imageManifestQaStatus": "PASS",
+  "originalImageRehashedThisSession": false,
+  "sharedMaterialId": "115-00-E-SHARED-39-42",
+  "sharedMaterial": {
+    "path": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+    "sha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+    "textSha256": "fd9606cc566e17cb4ca60ecc9062ef05ddc0bd56554594b53470f60f37ba2013",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "officialSourcePage": 10
+  },
+  "teaching": {
+    "teacherSummary": "文章按時間順序介紹臺灣**電子產業（electronics industry）**：早期代工、1990年代電腦與筆電、電子製造服務（EMS），直到今日AI伺服器新需求。唯一能概括全文的選項為**B Progress of Taiwan’s electronics industry**。",
+    "elementarySummary": "文章是在講臺灣電子產業從以前到現在，一步步學會做更多、更新的電子產品，不是只講AI或某家公司。",
+    "memory": "**早期代工 → 1990年代電腦 → EMS → AI 伺服器 = progress**。",
+    "concept": "main idea題要看每段共通的**主體**及時間線；最後一段熱門AI題材只是文章的最新階段。",
+    "extension": "遇到文章主旨題，先為每段用一小句概述，再選能裝下全部段落的標題，不能只挑最後的新聞。",
+    "highlights": [
+      "mainly about",
+      "progress",
+      "electronics industry",
+      "EMS",
+      "AI servers"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **Markets for Taiwan’s AI-related products**僅涉及後段AI需求與商機，忽略前段電子代工與製造技術的發展史。",
+        "elementary": "只談AI市場，漏掉整篇前半段。",
+        "reason": "A **Markets for Taiwan’s AI-related products**僅涉及後段AI需求與商機，忽略前段電子代工與製造技術的發展史。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B **Progress of Taiwan’s electronics industry**涵蓋從早期代工、電腦製造、EMS到AI產品的完整進步歷程，主詞與範圍均符合全文。",
+        "elementary": "它能把從以前到現在每段發展都說進去。",
+        "reason": "B **Progress of Taiwan’s electronics industry**涵蓋從早期代工、電腦製造、EMS到AI產品的完整進步歷程，主詞與範圍均符合全文。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C **Development of artificial intelligence industry**將全文主角錯置為AI產業；文章主要介紹的是**臺灣電子產業**，AI只是最新契機。",
+        "elementary": "AI是故事後段的新機會，不是整篇主題。",
+        "reason": "C **Development of artificial intelligence industry**將全文主角錯置為AI產業；文章主要介紹的是**臺灣電子產業**，AI只是最新契機。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D **Examples of Taiwan’s electronics manufacturers**只重視公司數量或舉例，漏掉人才政策、供應鏈與技術歷史的核心敘事。",
+        "elementary": "文章不是只有數幾家公司，還在講整個產業怎麼變強。",
+        "reason": "D **Examples of Taiwan’s electronics manufacturers**只重視公司數量或舉例，漏掉人才政策、供應鏈與技術歷史的核心敘事。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "本文主要在談論什麼？",
+      "answerWord": "progress",
+      "pronunciationIPA": "/ˈprɑː.ɡres/",
+      "optionMeaningZh": {
+        "A": "臺灣AI相關產品的市場",
+        "B": "臺灣電子產業的進步與發展",
+        "C": "人工智慧產業的發展",
+        "D": "臺灣電子製造商的例子"
+      },
+      "synonyms": {
+        "初級": [
+          "growth（成長）"
+        ],
+        "中級": [
+          "development（發展）"
+        ],
+        "高級": [
+          "advancement（進步）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "decline（衰退）"
+        ],
+        "中級": [
+          "setback（受挫）"
+        ],
+        "高級": [
+          "regression（倒退）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "progress在此作名詞；本題分級為教學難度、非官方逐詞CEFR。新聞句是依經濟部9月2日SEMICON技術新聞改寫，不是原句。",
+      "newsExampleEnglish": "In September 2026, Taiwan's Ministry of Economic Affairs highlighted technological **progress** in advanced semiconductors and AI data-center power systems.",
+      "newsExampleChinese": "2026年9月，臺灣經濟部介紹先進半導體及AI資料中心供電系統的技術進展。",
+      "newsExampleHighlightedSurfaceForm": "progress",
+      "newsExampleSourceUrl": "https://mnscdn.moea.gov.tw/MNS/Populace/news/News.aspx?kind=1&menu_id=40&news_id=123853",
+      "newsExampleSourceOrganization": "Taiwan Ministry of Economic Affairs",
+      "newsExampleSourceDate": "2026-09-02",
+      "newsExampleKind": "依近三年官方公開報導自行改寫的英文教學例句，非來源逐字引述；詞形為原例句實際出現形式"
+    },
+    "stepByStep": [
+      "依段落定位：早年代工、1990年代個人電腦、現在EMS、最新AI需求。",
+      "找每個階段共同主詞：Taiwan's electronics industry。",
+      "只有B完整描述其progress；A/C/D都過度縮小範圍。"
+    ],
+    "source": "115年四技統測官方原卷及共用閱讀原文（來源枝分支候選）；彰化高商使用之教材版本、章節、頁碼均待核對，不得編造。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "7f98f96420a9304518172d206eafc1c88fd932e47b214f00212aef13d6b082ad",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "review": {
+    "author": "GPT-6 role C",
+    "isIndependentHumanReviewer": false,
+    "knownAnswerUsed": true,
+    "newBlindSolveClaimed": false,
+    "authorizedHumanTeacherApproval": "PENDING",
+    "independentTeachingQa": "PENDING",
+    "officialFinalAnswerAdmission": "PENDING",
+    "sharedMaterialIndependentVisualQa": "PENDING",
+    "v4ExactDigestQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_SOURCE_TEXT_AND_FINAL_NOTICE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_SIGNATURE_PENDING",
+    "CURRENT_EXACT_SOURCE_TEACHING_SHA_V4_UI_PENDING",
+    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING"
+  ]
+}
