@@ -175,5 +175,88 @@ class OwnerAiReviewPolicyMigrationTests(unittest.TestCase):
             self.assertNotIn("questionVerified",q)
 
 
+    def test_exact_v4_teaching_digest_blocks_missing_or_stale_ui(self):
+        """Artificial complete-document pipeline; E decision is TEST-mocked.
+
+        Role D's separate PR58 exercises the REAL distinct AI verifier and this
+        same publisher together. This test pins the narrow UI digest guard and
+        is never a real student approval.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            q={**self.question,
+               "question": "SYNTHETIC only: two items priced 30 each",
+               "options": ["30", "60", "90", "120"],
+               "answer": "B", "answerMatched":True,
+               "questionProvenance":{"officialPdfSha256":"e"*64},
+               "answerProvenance":{"officialPdfSha256":"f"*64}}
+            manifest={"sha256":"c"*64}
+            rev=publisher.text_revision(q,manifest["sha256"])
+            content={"teacherSummary":"Two times thirty is sixty",
+                     "elementarySummary":"Think of thirty plus thirty",
+                     "optionExplanations":{x:{"teacher":"Artificial option check "+x,
+                                              "elementary":"Artificial easy reason "+x}
+                                           for x in "ABCD"},
+                     "calculationReviewed":True}
+            base={
+                "ocr":{"questionRevision":rev,"webpSha256":manifest["sha256"],
+                       "question":q["question"],"options":q["options"],
+                       "visualTextCompared":True},
+                "official":{"officialPdfSha256":"f"*64,"finalAnswer":"B",
+                            "correctionNoticeReviewed":True,
+                            "officialPage":"https://web1.tcte.edu.tw/EXAM/115_4y/"},
+                "blind":{"questionRevision":rev,"webpSha256":manifest["sha256"],
+                         "officialAnswerHiddenDuringSolve":True,
+                         "solvedWithoutOfficialAnswer":True,
+                         "blindReasoning":"30 + 30 equals 60","answer":"B"},
+                "teaching":{"questionRevision":rev,"allFourOptionsReviewed":True,
+                            "calculationReviewed":True,"content":content},
+                "ui":{"testedQuestionRevision":rev,
+                      "testedTeachingDigest":gate.digest(gate.canonical(content)),
+                      "browserSmokePassed":True,"rwdPassed":True,
+                      "verifiedYearQaMode":True,
+                      "ciRunUrl":"https://github.com/homelux-huang/7581707/actions/runs/1"}
+            }
+            audit={"status":"STUDENT_QA_APPROVED","questionId":q["questionId"],
+                   "year":115,"questionBeforeReview":q["question"],
+                   "optionsBeforeReview":q["options"],
+                   "webpSha256":manifest["sha256"],
+                   "officialPdfSha256":"f"*64,"questionPdfSha256":"e"*64,
+                   "originalAnswerCandidate":"B","evidence":{}}
+            for name in base:
+                audit["evidence"][name]=(
+                    f"sudu/data/processed/115/review-evidence/synthetic-{name}.json")
+            for variant in ("matching", "missing", "stale", "new_lesson_old_ui"):
+                with self.subTest(variant=variant):
+                    docs=copy.deepcopy(base)
+                    if variant=="missing":
+                        docs["ui"].pop("testedTeachingDigest")
+                    elif variant=="stale":
+                        docs["ui"]["testedTeachingDigest"]="0"*64
+                    elif variant=="new_lesson_old_ui":
+                        docs["teaching"]["content"]["elementarySummary"]+=(
+                            " Different content needing exact new browser QA.")
+                    for name,document in docs.items():
+                        publisher.dump(root/audit["evidence"][name],{
+                            "schemaVersion":1,"year":115,
+                            "questionId":q["questionId"],
+                            "reviewer":"AI unit-test fixture only",
+                            "reviewedAt":"2026-10-24T14:00:00Z",**document})
+                    with patch.object(gate,"policy_from_trusted_main",
+                                      return_value=self.policy), \
+                         patch.object(gate,"certified",
+                                      return_value=(True,"SYNTHETIC_E_APPROVED_NOT_REAL")), \
+                         patch.object(publisher,"official_notice_scope_certified",
+                                      return_value=True):
+                        result=publisher.apply_independently_certified_review(
+                            root,115,q,manifest,audit)
+                    if variant=="matching":
+                        self.assertIsNot(result,q)
+                        self.assertIs(result["studentReleaseApproved"],True)
+                    else:
+                        self.assertIs(result,q,"stale UI should not be promoted")
+                        self.assertNotIn("studentReleaseApproved",result)
+
+
 if __name__=="__main__":
     unittest.main()
