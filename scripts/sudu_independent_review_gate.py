@@ -197,7 +197,7 @@ def _ai_official_receipt_consistent(source,audit,question):
         return None
     ans=question.get("answer")
     if (not isinstance(doc,dict) or doc.get("year")!=question.get("year")
-            or doc.get("questionId")!=qid or ans not in "ABCD"
+            or doc.get("questionId")!=qid or not isinstance(ans,str) or ans not in "ABCD"
             or doc.get("finalAnswer")!=ans or doc.get("correctionNoticeReviewed") is not True
             or doc.get("officialFinalAnswerImageQaPassed") is not True
             or doc.get("officialPage") !=
@@ -229,7 +229,7 @@ def _ai_real_issue36_return_verified(statement,registry):
         if (not isinstance(comment,dict) or not isinstance(commit,dict)
                 or commit.get("sha")!=statement["sourceCommit"]
                 or not HEX40.fullmatch(str(
-                    ((commit.get("commit") or {}).get("tree") or {}).get("sha"))):
+                    ((commit.get("commit") or {}).get("tree") or {}).get("sha")))):
             return False,"ai_review_source_commit_not_verified"
         if (comment.get("id")!=id_
                 or comment.get("issue_url") !=
