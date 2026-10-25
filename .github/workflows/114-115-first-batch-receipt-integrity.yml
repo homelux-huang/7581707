@@ -11,6 +11,16 @@ on:
       - tests/test_114_role_b_teaching_20261025.py
       - tests/test_114_115_lesson_batch_oct25.py
       - .github/workflows/114-115-first-batch-receipt-integrity.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - tests/test_114_115_first_batch_receipt_integrity.py
+      - tests/test_114_role_b_teaching_20261025.py
+      - tests/test_114_115_lesson_batch_oct25.py
+      - sudu/teaching-candidates/**
+      - sudu/data/processed/114/**
+      - sudu/data/processed/115/**
+      - .github/workflows/114-115-first-batch-receipt-integrity.yml
   workflow_dispatch:
 permissions:
   contents: read
