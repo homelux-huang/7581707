@@ -1,3 +1,13 @@
+# 2026-10-25 Issue #36 user policy override (CURRENT, supersedes historical note below)
+
+**Role C is an AI teaching AUTHOR, never its own independent reviewer.** Per Issue #36 latest top-level user instruction, a real teacher, credential roster, teacher Ed25519 key or human GitHub APPROVED event is **NO LONGER required for the teaching gate**. In all seven C-owned candidate JSONs, any former human-review-only blocker has been removed; a different, identifiable AI author/reviewer must conduct substantive option-by-option review bound to the exact current questionId, sourceTextRevision, teachingCanonicalSha256, original WebP SHA256, official final notice/evidence SHA and review notes. The reviewer identity, work, official evidence SHA and written independent review are **not present yet** and remain explicit PENDING / null; author C has NOT performed independent review or claimed blind solving. Teacher-perspective professional explanation text remains without teacher identity claims.
+
+The source/official/image/shared-material gates, 35-question Demo subject-specific V4 8 viewport × 2 theme exact source/teaching digest tests, normal CI/PR security and same-SHA LIVE still apply. Current production publisher/governance code still reflects the previous teacher policy until Master/PR46 really migrates and tests it; this Role C patch is only candidate metadata and own tests. It is NOT a release certificate, schema-policy bypass, actual review, source quality check, teacher-signature simulation, or deployment. All existing sources/teaching JSON content and the canonical teaching digests remain unchanged; only review annotations/fileSHA/batch metadata and own tests are aligned. New READY = 0 / new LIVE = 0.
+
+---
+
+## Historical handoff details retained below (earlier teacher dependency is superseded)
+
 # Role C / Issue #36 bounded reuse delivery (115-00-E-03 and 115-09-2-34)
 Task: `C-115-REUSE-E03-ECON34-20261025-01` · Claim https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393600404 GitHub UTC 2026-10-25T04:48:47Z.
 Branch: `teaching/115-role-c-loop-batch01-20261025`, base PR32 `2e7677411749a8a32a2ab1ecc065ab7e3e971f97`. Source PR35 HEAD `e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5`, source JSON Git blob `216bc43d57501bc1c3e5842b48413a8967456cda`, manifest blob `2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b`.
