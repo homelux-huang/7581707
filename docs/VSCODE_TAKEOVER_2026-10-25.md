@@ -9,6 +9,7 @@
 - `D:\AI\VS CODE`（CUSMED）及原 `D:\AI\7581707` 開始時均乾淨；沒有改寫其檔案或切換分支。原 7581707 main 留在 `946b0db`，只更新 remote refs。
 - GitHub connector 已驗證登入；本機 Git push 權限須以實際 push 結果另行確認。
 - 共同台帳由 PR #30 `38fb73138e7efa89d932f134cad4dff00cd739bf` 接收，410 筆保留，不能回退成空白。
+- 後續現場查詢 [控制台 Issue #36](https://github.com/homelux-huang/7581707/issues/36) 指定 PR #35 為整合候選、PR #30 為唯一台帳。本分支台帳為接收／回填候選，不能自行取代 PR30 或建立平行權威；後續依題號與檔案工作租約避免重複修改。
 
 ## 最新候選接收
 
@@ -23,6 +24,8 @@
 
 PR #21–#32 均未合併。本表為查詢快照，整合前仍須重查。另已 fetch 全部分支，包含後續 `qa/role-d-v4-per-question-matrix-20261025`；未讀取的證據不算驗收。
 
+後續新增 PR #34 `1a844d71f3cc786562b56d1dcb7ac27928b5774c`（Role D 真實逐題矩陣）與 PR #35 `dc64e06ce417e8d64402f7fbdc81856616e71496`（整合候選）。PR35 已有 MB23 表格候選，但尚無本批 decode 修復；須在其最新 SHA 逐檔接入後重驗。PR34 的矩陣 run `40162016136` 失敗，抽查 job `121075377618` 將既有 data URI 圖片視為本機路徑而報 missing actual original image；不得當成 UIQA PASS。#33 與 #36 是 Issues，不是 PR。
+
 MB23 的 PR32 候選含原始表格，台帳保存其新檔案 SHA 與含表格 revision；PR25 的文字來源 revision 仍保留，未假裝已整合。教學本文 digest 不變也不代表來源版本相同，獨立與 UI 審查仍須重新綁定。
 
 ## 本批修改與驗證語意
@@ -36,6 +39,10 @@ MB23 的 PR32 候選含原始表格，台帳保存其新檔案 SHA 與含表格 
 完整 Python suite 執行 52 項，50 項通過、1 failure、1 error：既有 cache-buster fixture 用 LF 字串預期 SHA，但 Windows write_text 產生 CRLF；既有 symlink 測試遇 WinError 1314，現有帳號缺建立符號連結權限。未跳過、未放寬測試、未更改 Windows 全域權限；須看 Linux CI 結果，不能將本機 suite 宣稱全綠。
 
 隔離依賴位於 `.local/venv`、`.local/node_modules`、`.local/ms-playwright`，不提交 Git。瀏覽器測試前設定 `NODE_PATH` 與 `PLAYWRIGHT_BROWSERS_PATH` 為上述路徑，再以 `python -m http.server 8765 --bind 127.0.0.1 --directory _site` 提供建置產物。
+
+既有 main 的 `check_live_release.py --attempts 1` 核對正式站 release SHA `57d766e...` PASS（114=0、115=5；圖片預覽114=9／115=119）。此舊版檢查器僅抽樣預覽圖片，不能稱為 PR26 全資產／逐題教學 digest 的完整 LIVE 稽核，也不能算本批發布。既有 Pages run `40097988371` 為 SUCCESS，未在本批重新部署。
+
+第一批已推送 `2a6f757576c77a58a3fc2768d060e5b8c86d2836`，Draft PR [#37](https://github.com/homelux-huang/7581707/pull/37)。connector 建 PR 因登入帳號不是協作者遭422拒絕，改用已成功 push 的本機既有 Git 認證建立，未保存或輸出憑證。
 
 ## 尚未解除的阻塞
 
