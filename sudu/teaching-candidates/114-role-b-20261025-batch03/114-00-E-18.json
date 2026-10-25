@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-EN16-19-C05-20261025-04",
+  "year": 114,
+  "questionId": "114-00-E-18",
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Housekeeping:  May I help you?\n    Mrs. Liu:       Yes. I’m Mrs. Liu. We’ve just changed rooms, from 706 to 1012. I think I lost\n              my scarf during the move.\n    Housekeeping:  I’m sorry. ____________\n    Mrs. Liu:          It’s blue and green, made of silk. Very expensive!",
+  "options": [
+    "Where did you lose the scarf?",
+    "Which room do you like better?",
+    "What does your scarf look like?",
+    "Why did you move to another room?"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "a72f71ea9c452f2a857f50dabb54548052b00da53c742f232c0079e460924f0b",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-18.webp",
+    "webpSha256": "801e73a65ff83fc9070f1d67904745b1e868673fac148f507caeaf0d6f4b687c",
+    "originalManifestQaStatus": "PASS",
+    "finalOfficialAnswerDirectImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文情境對話｜描述飯店遺失圍巾的外觀",
+    "teacherSummary": "Mrs Liu 換房時遺失圍巾，服務人員提出問題後，她回答 It's blue and green, made of silk。回答是在描述顏色、材質，故應選 C What does your scarf look like?。",
+    "elementarySummary": "圍巾不見了，服務員問『長什麼樣子？』客人回答『藍綠色、絲綢做的』。",
+    "concept": "What does X look like? 是詢問外觀，後句可回答顏色、尺寸、形狀或材質；Where 問地點，Why 問原因。",
+    "extension": "I think I lost it 是推測遺失，不等於偷竊的事實；made of silk 是材質描述。",
+    "memory": "blue and green + made of silk → What does your scarf look like?（C）。",
+    "solvingSteps": [
+      "確認服務員協助尋找在換房途中不見的 scarf。",
+      "客人隨後回答顏色與布料，屬外觀特徵。",
+      "空格必問 What does the scarf look like；只有 C 符合。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Where did you lose the scarf? 問遺失的地點，應回答706房間或走廊等場所，而不是圍巾的顏色。",
+        "elementary": "問丟在哪，不能回答藍綠色。",
+        "reason": "Where 要位置；blue and green、made of silk 都非地點。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Which room do you like better? 是比較新舊房間偏好，和確認圍巾外觀無關，客人也沒有評價哪間房間。",
+        "elementary": "問哪個房間喜歡，答圍巾長相很奇怪。",
+        "reason": "room preference 無法解釋後句色彩與絲質的細節。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "What does your scarf look like? 正是詢問物品外觀；客人用顏色 blue and green 及 made of silk 回答。",
+        "elementary": "問圍巾長相，答藍綠色絲綢，完全接上。",
+        "reason": "look like 所問的外觀與後句顏色、材質逐一吻合。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "Why did you move to another room? 是問為什麼更換房間，客人並未給出理由，只描寫圍巾的特徵。",
+        "elementary": "問換房間原因，卻只說圍巾是絲做的。",
+        "reason": "Why 問原因，而 silk 是圍巾材質，和換房無關。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114統測英文官方原題與候選答案；官方最終答案頁、確認公告及教材版本章節待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "lost",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "scarf",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "What does your scarf look like?",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "blue and green",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "made of silk",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "lost",
+        "ipa": "/lɔːst/",
+        "level": "初級",
+        "meaningZh": "遺失，lose 的過去式",
+        "synonyms": [
+          "misplaced",
+          "could not find"
+        ],
+        "antonyms": [
+          "found",
+          "recovered"
+        ],
+        "usageNote": "lost 不代表物品必定遭人偷竊，找不到與被偷不同。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/lose"
+      },
+      {
+        "headword": "look like",
+        "ipa": "/lʊk laɪk/",
+        "level": "中級",
+        "meaningZh": "外表看起來如何、長什麼樣子",
+        "synonyms": [
+          "resemble",
+          "have the appearance of"
+        ],
+        "antonyms": [
+          "look different from"
+        ],
+        "usageNote": "What does it look like? 裡 like 不是『喜歡』，而是詢問外觀。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/look-like"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_CONTEXT_NOT_ARTICLE_QUOTE",
+      "english": "A 2024 Hotels.com report described valuable items guests lost in hotel rooms, including expensive watches and handbags.",
+      "chinese": "2024年Hotels.com報告整理旅客遺失在飯店房間的貴重物品，例如昂貴手錶和手提包。",
+      "highlightActualForm": "lost",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2024-09-10",
+        "title": "Hotel Room Innsights Report: Hotels.com pulls back the covers on the surprising world of hotels",
+        "url": "https://www.expedia.com/newsroom/hotel-room-innsights-report-hotels-com-pulls-back-the-covers-on-the-surprising-world-of-hotels/",
+        "factSupportedBySource": "Hotels.com官方報告涵蓋400多間旅館及昂貴手錶、包袋等遺失物；題中圍巾不是其報告記載的特定物品。"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "59d9782a6a0ea81481fd3304b471b9a8930527214200717296025136a2a34f1b",
+  "composedTeachingSha256": "282258c793c964c3425e4b9e40026b8d95a6aa2e93e3598c0ba6212605deee85",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "C",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_DIGEST_V4_8x2_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_REVIEW_MIGRATION_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
