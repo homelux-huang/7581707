@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-06",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 6,
+  "subject": "國文",
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "status": "NEW_ROLE_C_AUTHOR_DRAFT_NOT_RELEASED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "下圖是某講解單元的內容摘要，此單元的名稱最可能為何？\n      唐代                   宋代\n\n               歐陽修說：     王安石說：     黃仲元說：\n 韓愈（生於西元768年）\n            自唐以來，言文章者惟  柳文卒配韓以傳， 柳之醇正固不及韓，\n 柳宗元（生於西元773年） 韓、柳。柳豈韓之徒哉？ 亦豪傑可畏者也。 柳之奇崛亦韓所不及。\n            真韓門之罪人也。",
+  "options": [
+    "韓愈、柳宗元的相識互動",
+    "「韓、柳並稱」如何形成",
+    "韓、柳對六朝駢文的態度",
+    "「唐宋八大家」的代表作"
+  ],
+  "answerCandidate": "B",
+  "sourceTextRevision": "d072001630c98baa5ce22cc4939fe01149cc96345e1c89960ee0efbc09f625ba",
+  "image": "sudu/data/processed/115/webp-v2/00-C/115-00-C-06.webp",
+  "imageSha256": "f031f108b2805bffd737479bb019a682439db5ef31bf1e8082b8a65c4942691c",
+  "sourceOriginalPageWebpSha256": "08ae32b6b9e6633aa60f2f60321045cd10c5402ee80562e4603d2477ab13eeba",
+  "sourceQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "imageManifestQaStatus": "PASS",
+  "upstreamAnswerVerifiedFlag": true,
+  "upstreamQuestionVerifiedFlag": false,
+  "sourceFormalAdmissionThisBatch": false,
+  "originalImageBinaryRehashedThisBatch": false,
+  "sharedMaterialId": null,
+  "teaching": {
+    "teacherSummary": "唐代列出**韓愈、柳宗元**，宋代**歐陽修**有「自唐以來，言文章者惟韓、柳」的並論，另有王安石與後人評論。跨時代材料的共同主題是**「韓、柳並稱」如何形成**，不是作品選粹或交友軼事。",
+    "elementarySummary": "先看唐朝的韓愈、柳宗元，再看宋朝的人把他們放在一起談。這張圖想說為什麼後來大家會合稱「韓柳」。",
+    "memory": "**兩位唐代作家＋宋人並評＝「韓、柳並稱」形成史。**",
+    "concept": "**時間軸＋反覆並列的人物＋後代評論**，可判定資訊圖表的核心主題；不要把缺少證據的私交或作品加入。",
+    "extension": "做文學史表格題，先分辨資料討論的是生平互動、文章特色、文學地位還是作品清單。",
+    "highlights": [
+      "韓愈",
+      "柳宗元",
+      "歐陽修",
+      "王安石",
+      "韓、柳並稱"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "並稱：把兩人並列稱呼"
+      ],
+      "中級": [
+        "文學評論：評論作家與文章特色"
+      ],
+      "高級": [
+        "文學經典化：作家逐漸被後人視為典範"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 只提韓愈與柳宗元是否相識互動，但圖表沒有列舉見面或交遊史料；後代共同評論文章不能推出二人相識情形。",
+        "elementary": "兩個名字放一起，不表示他們曾一起聊天或出去玩。",
+        "reason": "A 只提韓愈與柳宗元是否相識互動，但圖表沒有列舉見面或交遊史料；後代共同評論文章不能推出二人相識情形。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B 唐代兩位作家並列，宋代歐陽修與王安石等後人又把**韓柳**並論，恰能交代**韓、柳並稱的形成與流傳**。",
+        "elementary": "後人一直把這兩位作家一起討論，正是「韓柳」這個合稱的故事。",
+        "reason": "B 唐代兩位作家並列，宋代歐陽修與王安石等後人又把**韓柳**並論，恰能交代**韓、柳並稱的形成與流傳**。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 論韓柳對六朝駢文的態度需要文體主張與駢散比較；材料著重後代的評價與並稱，不以六朝駢文為中心。",
+        "elementary": "表格沒在比較兩個人對六朝文體的看法。",
+        "reason": "C 論韓柳對六朝駢文的態度需要文體主張與駢散比較；材料著重後代的評價與並稱，不以六朝駢文為中心。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 若介紹唐宋八大家代表作，應列出作品與八位作家；圖表只有韓柳與後代評論，沒有各家作品清單。",
+        "elementary": "沒有介紹八位作家和作品，不能選代表作。",
+        "reason": "D 若介紹唐宋八大家代表作，應列出作品與八位作家；圖表只有韓柳與後代評論，沒有各家作品清單。"
+      }
+    },
+    "stepByStep": [
+      "定位唐代的韓愈、柳宗元兩位中心人物。",
+      "找宋代歐陽修與後人如何並稱並評兩位作家。",
+      "A/C/D所需的交遊、駢文態度、八大家作品資訊均非圖表重點，故選B。"
+    ],
+    "source": "115年統測國文第6題原始圖表，校用教材版本／章節／頁數待核對。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "c4ddbe70969b738bd0435d830bfafacd918a9dd2796a74a86c51c1e6106ccbb6",
+  "review": {
+    "author": "GPT-6 Role C",
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "independentTeacherReview": "PENDING",
+    "authorizedHumanTeacherApproval": "PENDING",
+    "v4ExactDigestQa": "PENDING",
+    "officialFinalSourceAdmission": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_QA_ASSET_AND_TABLE_DISCREPANCY_NEEDS_A_RECONCILIATION",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+    "CURRENT_EXACT_DIGEST_V4_UI_PENDING"
+  ]
+}
