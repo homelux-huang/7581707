@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-104-OFFICIAL-BASELINE-20261025-10-C01-05",
+  "reviewDate": "2026-10-25",
+  "reviewType": "direct eye inspection of actual 5 archived page-derived WebP crops after GitHub retrieval, original full p002 and original published answer p001",
+  "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+  "originalPageGitBlobSha1": "6796adb4df977d064baae8a3e066238014d096f6",
+  "originalOfficialAnswerPageWebpSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+  "originalOfficialAnswerPageGitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+  "originalQuestionPdfSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+  "originalAnswerPdfSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+  "pdfByteRehashPerformed": false,
+  "officialYearMay10NoticeObserved": true,
+  "finalPerNumberCorrectionNoticeChecked": false,
+  "officialFinalAnswerApproved": false,
+  "originalTextIndependentTeacherQA": false,
+  "sourceQuestionVerifiedPromoted": false,
+  "lessonContentReviewedByE": false,
+  "wrongPreviousCrop": {
+    "questionId": "113-00-C-05",
+    "sha256": "c749bb5993921d303fc8d59b1c849b2a68f366dbb4e3ff76696d9830b4626a81",
+    "originalCropPixels": [
+      90,
+      1085,
+      1310,
+      1475
+    ],
+    "result": "FAIL_MIXED_NEXT_QUESTION",
+    "reason": "bottom of original first candidate image displayed start of Q06, rejected and replaced with source-original-pixel crop y2=1450"
+  },
+  "questions": [
+    {
+      "questionId": "113-00-C-01",
+      "originalQuestionNumber": 1,
+      "assetPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp",
+      "assetSha256": "7530812fb36120a00f1df784da804cb85e8c7cdd03c6eb78fcf886d95625d784",
+      "assetGitBlobSha1": "e6d80678435bf3f79317722f30dfafebe7378d48",
+      "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+      "cropPixels": [
+        90,
+        212,
+        1310,
+        335
+      ],
+      "publishedAnswerImageCandidate": "C",
+      "reviewResult": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+      "directReviewer": "ChatGPT Role A (source worker, visual check on actual GitHub archived WebP)",
+      "reviewerRole": "A_SOURCE_ONLY",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false,
+      "criteria": {
+        "questionNumberExact": true,
+        "completeQuestionStem": true,
+        "necessaryPassageComplete": true,
+        "allFourOptionsComplete": true,
+        "noAdjacentQuestion": true,
+        "noWholeExamPage": true,
+        "clearAndLegible": true,
+        "originalPixelCropEqual": true,
+        "imageDigestMatched": true
+      },
+      "note": "題號1與錯別字題幹完整；四個成語選項 A～D 原像素均可讀，C 選項印刷原字「摒息」保留，未以模型改字；沒有第2題。"
+    },
+    {
+      "questionId": "113-00-C-02",
+      "originalQuestionNumber": 2,
+      "assetPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp",
+      "assetSha256": "4504646281047509ea1bd88b68271e79ef3c44f89893ea8331cfd7f2e3e6c73a",
+      "assetGitBlobSha1": "056ebbd188af62e0934d3eac37938975fd1a518f",
+      "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+      "cropPixels": [
+        90,
+        340,
+        1310,
+        530
+      ],
+      "publishedAnswerImageCandidate": "D",
+      "reviewResult": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+      "directReviewer": "ChatGPT Role A (source worker, visual check on actual GitHub archived WebP)",
+      "reviewerRole": "A_SOURCE_ONLY",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false,
+      "criteria": {
+        "questionNumberExact": true,
+        "completeQuestionStem": true,
+        "necessaryPassageComplete": true,
+        "allFourOptionsComplete": true,
+        "noAdjacentQuestion": true,
+        "noWholeExamPage": true,
+        "clearAndLegible": true,
+        "originalPixelCropEqual": true,
+        "imageDigestMatched": true
+      },
+      "note": "題號2、完整「如」字題幹及 A～D 四句皆出現，兩欄無截字；不含前題1或後題3。"
+    },
+    {
+      "questionId": "113-00-C-03",
+      "originalQuestionNumber": 3,
+      "assetPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp",
+      "assetSha256": "ef5244f376272eaf43718c33cac84e3585eaa23a3411e11e024fe627536adf79",
+      "assetGitBlobSha1": "bc0c7056536609d4c57d4b65fabfbc582e4eccac",
+      "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+      "cropPixels": [
+        90,
+        535,
+        1310,
+        768
+      ],
+      "publishedAnswerImageCandidate": "D",
+      "reviewResult": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+      "directReviewer": "ChatGPT Role A (source worker, visual check on actual GitHub archived WebP)",
+      "reviewerRole": "A_SOURCE_ONLY",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false,
+      "criteria": {
+        "questionNumberExact": true,
+        "completeQuestionStem": true,
+        "necessaryPassageComplete": true,
+        "allFourOptionsComplete": true,
+        "noAdjacentQuestion": true,
+        "noWholeExamPage": true,
+        "clearAndLegible": true,
+        "originalPixelCropEqual": true,
+        "imageDigestMatched": true
+      },
+      "note": "題號3、比喻語詞「鵝蛋、臥蠶」題幹與 A～D 全部完整；選項 D「虎狼」句末可讀，不含其他題號。"
+    },
+    {
+      "questionId": "113-00-C-04",
+      "originalQuestionNumber": 4,
+      "assetPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp",
+      "assetSha256": "f548f0e5cdfbc3c669dd5ea161128ba5b277a83ed58ef0d044d61c64f5e4c13a",
+      "assetGitBlobSha1": "40e79cc9de211c79a8bf3a8367093e4f9735cfeb",
+      "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+      "cropPixels": [
+        90,
+        770,
+        1310,
+        1080
+      ],
+      "publishedAnswerImageCandidate": "C",
+      "reviewResult": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+      "directReviewer": "ChatGPT Role A (source worker, visual check on actual GitHub archived WebP)",
+      "reviewerRole": "A_SOURCE_ONLY",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false,
+      "criteria": {
+        "questionNumberExact": true,
+        "completeQuestionStem": true,
+        "necessaryPassageComplete": true,
+        "allFourOptionsComplete": true,
+        "noAdjacentQuestion": true,
+        "noWholeExamPage": true,
+        "clearAndLegible": true,
+        "originalPixelCropEqual": true,
+        "imageDigestMatched": true
+      },
+      "note": "題號4、電影《富都青年》敘述、三處方格、改寫來源署名及 A～D 四列三詞排列皆完整可讀；無前後相鄰題。"
+    },
+    {
+      "questionId": "113-00-C-05",
+      "originalQuestionNumber": 5,
+      "assetPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp",
+      "assetSha256": "ff1f548bead9b1850688f99b74e1946e2a2e0f5f1c83b299b5002801a51e9cd3",
+      "assetGitBlobSha1": "8112af81a1c61f07de5b3649dd771cf254218b32",
+      "originalPageWebpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+      "cropPixels": [
+        90,
+        1085,
+        1310,
+        1450
+      ],
+      "publishedAnswerImageCandidate": "D",
+      "reviewResult": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+      "directReviewer": "ChatGPT Role A (source worker, visual check on actual GitHub archived WebP)",
+      "reviewerRole": "A_SOURCE_ONLY",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false,
+      "criteria": {
+        "questionNumberExact": true,
+        "completeQuestionStem": true,
+        "necessaryPassageComplete": true,
+        "allFourOptionsComplete": true,
+        "noAdjacentQuestion": true,
+        "noWholeExamPage": true,
+        "clearAndLegible": true,
+        "originalPixelCropEqual": true,
+        "imageDigestMatched": true
+      },
+      "note": "題號5、琦君〈髻〉全文段落與 A～D 四選項完整；初版 SHA c749bb...／crop y2=1475 底部混入第6題，已拒絕舊版，最新 y2=1450 僅保留第5題。"
+    }
+  ],
+  "newImageOnlyAssistantPassCount": 5,
+  "newOfficialFinalAnswerVerified": 0,
+  "newQuestionVerified": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "releaseStatus": "SOURCE_IMAGE_QA_ASSISTANT_PASS_ONLY__OFFICIAL_PDF_CORRECTIONS_AND_CONTENT_E_UI_NOT_READY"
+}
