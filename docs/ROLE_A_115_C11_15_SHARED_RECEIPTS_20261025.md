@@ -1,0 +1,33 @@
+# Role A 115 Chinese C11–15 — original immutable WebP + shared-passage receipt
+
+**Claim:** Issue [#36](https://github.com/homelux-huang/7581707/issues/36) task `A-115-C11-15-EXACT-SHARED-RECEIPT-20261025-08`. **Base:** our own existing [PR53](https://github.com/homelux-huang/7581707/pull/53) head `24c31fadd06f95330f14ceb4ea0d4b4669a38e5f`, which already contains the existing unchanged original C06 WebP plus the two historical 115 C image and official-answer JSONs. This batch does **not** duplicate or rewrite those evidence documents. New branch `qa/role-a-115-c11-15-shared-original-receipts-20261025`; candidate stacked Draft PR, no main/Pages.
+
+## Exact existing immutable question WebPs
+
+| ID | Original Git blob SHA-1 | WebP SHA-256 | Existing official final answer |
+|---|---|---|---|
+| 115-00-C-11 | `12feb2dbeca7ad4c412a0476747e87a0fc6a916e` | `101bcdaf6b77f421fa0a20a2220a0e592e7fdd6a28595f0b58ec46eda4c767ce` | D |
+| 115-00-C-12 | `9859591671be246b45ffb17e8afb6ec49e8281c3` | `ac9b20198dea3530262fa9c35b2ecd46e17d1ef8a05a705d2c4255a243dc7f5e` | C |
+| 115-00-C-13 | `6b525bc2613f3368c26cdfece23a7992d4786a73` | `575c1ecd856e31d4c861f675225ecc553c2c4d4060ba7534a8eaa24fa0eba82f` | D |
+| 115-00-C-14 | `4ed65dce400df50e254df96a7d189cc2d0fbd3b8` | `2d5d49607eb941df0f6ed272447a312723bfbf050555f53deb1e0cd675a1888e` | B |
+| 115-00-C-15 | `2ea856c923d21743272d28ef5318d638f96d937b` | `74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f` | B |
+
+These are the **same six original files already present in canonical `qa/mb20-25-latest-source-sync-20261025`**, now placed in integration paths. Original p5 official-page rendered WebP `sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp`, SHA256 `bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b`. Original question PDF SHA256 `6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135` is from the earlier official provenance record, **not re-downloaded/rehashed in this receipt**.
+
+**Shared article 115-00-C-SHARED-11-15:** exact v3, not v2, `sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp`, Git blob SHA1 `faee3ef1ca6371a769492d568ecf086f268a3cda`, WebP SHA256 `bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66`, crop `[90,160,1310,1530]`, size 1220×1370. Original source p4 WebP SHA256 `b317ce491d6849193572adc6e96c255d0074bfe6c54246e8638a754432df7808`. **Archived AI visual QA already records item PASS** for all original paragraphs 甲／乙, ①～④ markers, attribution, no adjacent question; from existing `QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json` Git blob `fca5b8e9e16b390f245c93caeb420b4b86f97f60`. This task imports exact same original pixels and verifies historical SHA, **does not conduct or claim a new independent visual review or Role E teaching approval**. The shared manifest's original `issues` note about needing review is not silently deleted or normalized.
+
+**Archived official-answer evidence**: already in the PR53 base, `QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json`, immutable blob `250ed2949b54099ee86511e0d1c4bcf69f33c9be`. Published answer-page original WebP SHA256 `5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f` (actual size 1400×1980); official answer PDF SHA256 previously recorded `ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64`. Original C12 final answer C explicitly confirmed in the 10-page C correction PDF; C11/13/14/15 have **no direct entries** there, rather than a fictitious paper-wide confirmation. The exact confirmation PDF SHA recorded `231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0`. Existing `answerVerified=true` flags on five records are inherited historical official-answer-image and correction checks, **not newly granted**. `questionVerified=false`, `integrationReady=false`.
+
+## New confirmed source-text defect requiring separate correction
+
+**115-00-C-15**: The unchanged original canonical 115 JSON and SQLite D option starts correctly with `拘泥禮法 ／ 不知變通`, **but appends unrelated page 5 footer, page 6 header, and the entire reading passage for questions 16–18**. This is genuine **cross-page extraction contamination**, despite the separate **correctly cropped** original single-question WebP and historical image QA PASS. The canonical text cannot be used in the student's question page until corrected. The new strict test confirms and quarantines this known defect, with `questionVerified=false` and zero READY. **A must open a disjoint OCR/text+SQLite repair lease** to surgically remove the contaminating tail *after direct original Q15 image comparison*, preserve original D and original answer B, update only necessary canonical text/SQLite and source digest, and require Role C/D/E re-anchoring wherever Q15 text is consumed. This original-image receipt **does not alter 205 canonical bank records or SQLite**.
+
+C14 additionally contains a narrative-perspective table in the original question text. Preserve all cells; it is **not equivalent** to blindly stringifying a table. Direct official text/diagram QA and substantive E teaching review remain necessary; no `questionVerified` upgrade.
+
+## Real fail-closed receipt verification
+
+New `tests/test_role_a_115_c11_15_shared_receipts.py` checks all six original file Git blob SHA1 and SHA256, real Pillow WebP decodes, original page 4 and page 5 source SHA, original crop positions, exact original per-question and shared AI-QA items, separately historical published final answer/notice scope, unchanged C-author source revisions for Q11/12/13, actual negative tamper checks, the Q15 cross-page-text contamination blocker, canonical **205 SQLite records JSON/payload-SHA/integrity** and no new approved student records. New read-only `.github/workflows/role-a-115-c11-15-shared-source.yml` has `contents:read`, no deploy/no write.
+
+**Current owner policy** (Issue #36) cancels any **actual human teacher qualification, Ed25519 signature, human APPROVED** prerequisite but preserves **different-author AI content review**, exact official source, both explanation levels, A–D and calculation checks, matching original WebP SHA & teaching digest, true V4 8×2 CI and master-only incremental published LIVE verification. Role A is **not** Role E or the publishing master. **NEW READY=0, NEW LIVE=0.**
+
+**Next:** MASTER reviews/receives stacked PR and its actual same-SHA CI, brings over only missing original binaries and strict tests to most recent integration. Role A separately fixes Q15 text/SQLite corruption; roles C/E/D must recheck any changed sourceRevision/lesson/UI before promotion. Other completed evidence should not be re-created.
