@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-14",
+  "taskId": "B-114-C08-C11-14-20261025-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "依據下框所示的諷刺手法常見特徵，下列乙文中作者使用的兩項諷刺，最可能含有何種\n  特徵？\n  Ⅰ、（查大人）輕輕地打他一掌說：……那兒童立刻止住哭聲，偷偷地用手來摩擦著印\n    有指痕紅腫的嘴巴。\n  Ⅱ、做官的不會錯，現在已經成爲定理。\n\n                 諷刺手法常見特徵\n\n         特徵                 例句\n\n   ①故意說偏離常理的反話     「他真是料事如神啊！」（事實是猜測錯誤）\n\n   ②話中有互斥的訊息       「他真是料事如神，沒一件說中！」\n\n   ③話中稱頌裡含譏誚       「他真是料事如神――不，是比神還要神！」\n\n   ④話中有虛偽的對比       「我那麼笨，哪比得上他料事如神！」\n\n\n        Ⅰ      Ⅱ",
+  "options": [
+    "②     ①③",
+    "③     ②④",
+    "①②      ④",
+    "③④      ①"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "582a2d783db53dc4666d50d83d55339856f3c728c6d0afa16823afc0741a850f",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "053bfc7577b36f02089438afb2c19b163744e614378d63332c9ee01700bb3306",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-14.webp",
+    "sourcePageWebpSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+    "qaStatusFromExistingManifest": "PASS",
+    "originalImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+    "finalOfficialAnswerDirectQaThisBatch": false,
+    "readingContext": {
+      "originalReadingPage4Path": "sudu/data/original/114/00-C/p004-f7c8a4b732-v2-w1400-q66.webp",
+      "originalReadingPage4GitBlob": "84980ba031aa5d9da12402f3bb0b11b3e558d753",
+      "originalQuestionPage5Path": "sudu/data/original/114/00-C/p005-f7c8a4b732-v2-w1400-q66.webp",
+      "originalQuestionPage5GitBlob": "381f2df6bb4b8e35691db229d611bb4681f1bd5c",
+      "questionPage5PixelSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+      "readingScope": "甲文賴和〈一桿秤仔〉、乙文改寫自賴和〈不如意的過年〉",
+      "checkedByAuthorFromExistingOriginalPixels": true,
+      "formalIndependentSharedMaterialQaAdded": false,
+      "ocrRecreated": false,
+      "recropPerformed": false
+    }
+  },
+  "teaching": {
+    "topic": "國文諷刺手法｜互斥訊息與稱頌中暗藏譏誚",
+    "teacherSummary": "Ⅰ表面說『輕輕地打一掌』，卻讓孩童嘴巴留下指痕紅腫，兩種訊息相互矛盾，對應②。Ⅱ『做官的不會錯，現在已經成為定理』是偏離常理的反話，表面抬高官員、實際譏諷官威，符合①與③；故 A（Ⅰ②、Ⅱ①③）正確。",
+    "elementarySummary": "說只是『輕輕』打，臉卻腫了，是話說得互相打架；說官員永遠不會錯，是故意講反話來諷刺，所以選 A。",
+    "concept": "①反話：字面稱讚，真意相反；②互斥：同段話訊息互相衝突；③稱頌含譏：表面捧高，實際嘲諷；④虛偽對比：以假比較形成諷刺。",
+    "extension": "這是文學修辭判讀，不代表『做官的不會錯』可當作制度或法律上的真理。",
+    "memory": "Ⅰ『輕輕』vs『指痕紅腫』＝②互斥；Ⅱ『官不會錯』＝①反話＋③稱頌含譏；選 A。",
+    "solvingSteps": [
+      "先分析Ⅰ：『輕輕地打他一掌』與『指痕紅腫』不可能同時如字面所說的輕微，主特徵②互斥。",
+      "再分析Ⅱ：『做官的不會錯』以看似尊崇的斷言批評官威，既是①偏離常理的反話，也含③表面稱頌、內裡譏諷。",
+      "確認答案組合：Ⅰ②；Ⅱ①③，僅 A 正確，其他選項要不是錯分Ⅰ，就是讓Ⅱ套上不相干的④。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 讓Ⅰ對應②互斥訊息，準確指出『輕輕』與留下指痕紅腫的衝突；Ⅱ配①反話及③稱頌中含譏，恰好表達官員絕不會錯的諷刺。",
+        "elementary": "A 把輕輕和腫起來配成矛盾，把官員永不犯錯看成反話和暗諷，完全符合。",
+        "reason": "Ⅰ的言語強度與傷勢互斥為②；Ⅱ反常識又帶假讚美為①③，配對均正確。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 將Ⅰ當③稱頌含譏，但Ⅰ沒有讚美被打孩童或查大人；又把Ⅱ當②互斥加④虛偽對比，可是Ⅱ無對照組與互相矛盾的兩句訊息。",
+        "elementary": "第一句沒有誇獎誰；第二句也沒有拿兩個人來比，B 的類型放錯了。",
+        "reason": "Ⅰ沒有稱頌，Ⅱ也沒寫對比對象；B 的③與②④均不能由兩句本身支持。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 雖然Ⅰ含②互斥，卻又硬加①偏離常理的反話作主要形式；Ⅱ標④虛偽對比，更缺比較對象，不能完整還原文本的真正手法。",
+        "elementary": "第一句主要是前後矛盾，第二句又沒比誰較好，C 多配、錯配了。",
+        "reason": "Ⅰ應定位互斥的②，Ⅱ不具④對比結構；C 對Ⅱ的判準明顯不成立。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 將Ⅰ指作③④，然而Ⅰ既未稱讚也未建立虛假比較；Ⅱ雖含①反話，卻漏掉③表面抬高官員實則譏笑的修辭層次。",
+        "elementary": "說『輕輕打』沒在稱讚或比較，後面那句不只反話還藏諷刺，D 漏了一個。",
+        "reason": "Ⅰ應是②而非③④；Ⅱ在①之外還有③稱頌含譏，兩處都不完整。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原題／甲乙原文；官方最終答案與年度更正公告逐題獨立核對待完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "輕輕地打他一掌",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "指痕紅腫的嘴巴",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "做官的不會錯",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "①故意說偏離常理的反話",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "②話中有互斥的訊息",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "③話中稱頌裡含譏誚",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "④話中有虛偽的對比",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "反話",
+        "level": "初級",
+        "meaning": "嘴上說的話與真正意思相反。",
+        "usageNote": "如表面說官員永遠正確，實際批評官員自大。"
+      },
+      {
+        "term": "互斥",
+        "level": "中級",
+        "meaning": "兩個訊息無法同時按字面成立。",
+        "usageNote": "『輕輕一掌』與『指痕紅腫』構成衝突。"
+      },
+      {
+        "term": "譏誚",
+        "level": "高級",
+        "meaning": "帶著嘲笑意味的批評或諷刺。",
+        "usageNote": "Ⅱ的『官不會錯』不是真心頌揚。"
+      },
+      {
+        "term": "虛偽的對比",
+        "level": "高級",
+        "meaning": "用不真實、不合情理的兩方比較反諷。",
+        "usageNote": "必須有對比的兩方，Ⅱ沒有。"
+      }
+    ],
+    "readingFacts": [
+      "乙文查大人掌摑孩童造成明顯紅腫，卻說輕輕一掌；作者又用『做官的不會錯』批評官威。"
+    ]
+  },
+  "teachingCanonicalSha256": "46a7be01255da5f39e5c67d18a3c49d324af322c4654aee5251d865603da5f99",
+  "composedTeachingSha256": "1305fa3bcd5a1243fe7b12105be15373c6230511f7f70a1868f25af1fcf4dc92",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "A",
+    "reasoningAgreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_AND_CORRECTION_IMAGE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "SAME_DIGEST_V4_8_VIEWPORT_2_THEME_QA_PENDING",
+      "MASTER_PUBLISHER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

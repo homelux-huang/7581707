@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-13",
+  "taskId": "B-114-C08-C11-14-20261025-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "關於甲、乙文敘寫手法的說明，何者最適當？",
+  "options": [
+    "二文皆透過街上路人的視角，以客觀而冷靜的口吻描述事件經過",
+    "甲文側重記述巡警的外在言行與情緒轉變，乙文另揭示查大人的內在想法",
+    "甲文「誠實的參」來自巡警的感受，乙文「不幸這個兒童」來自查大人的感受",
+    "二文「不去嗎」、「不說嗎」皆既凸顯施暴者的蠻橫，又洩露其受群眾威脅的不安"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "254e080c3732c9b245cddbef14b0e1d8e7cd6b50fc728efa4285c030f22e447e",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "e960a359c055a6fe65f7df29f75d4eb3bda66751d4891de36efa867ac78cb515",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-13.webp",
+    "sourcePageWebpSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+    "qaStatusFromExistingManifest": "PASS",
+    "originalImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+    "finalOfficialAnswerDirectQaThisBatch": false,
+    "readingContext": {
+      "originalReadingPage4Path": "sudu/data/original/114/00-C/p004-f7c8a4b732-v2-w1400-q66.webp",
+      "originalReadingPage4GitBlob": "84980ba031aa5d9da12402f3bb0b11b3e558d753",
+      "originalQuestionPage5Path": "sudu/data/original/114/00-C/p005-f7c8a4b732-v2-w1400-q66.webp",
+      "originalQuestionPage5GitBlob": "381f2df6bb4b8e35691db229d611bb4681f1bd5c",
+      "questionPage5PixelSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+      "readingScope": "甲文賴和〈一桿秤仔〉、乙文改寫自賴和〈不如意的過年〉",
+      "checkedByAuthorFromExistingOriginalPixels": true,
+      "formalIndependentSharedMaterialQaAdded": false,
+      "ocrRecreated": false,
+      "recropPerformed": false
+    }
+  },
+  "teaching": {
+    "topic": "國文閱讀｜外在言行與人物內心的敘事視角",
+    "teacherSummary": "甲文敘述巡警怎樣開口刁難、變臉、生氣與奪秤，側重外顯言行及情緒；乙文除描述查大人打孩童，更深入寫出他擔心官員尊嚴受損的內心盤算。選項 B 能準確比較兩篇筆法。",
+    "elementarySummary": "甲文多告訴我們警察說了什麼、做了什麼；乙文還告訴我們官員心裡在想什麼。這就是 B。",
+    "concept": "敘事觀點要分清作者、人物與街上路人，也要分清外在行為與直接呈現內心想法。",
+    "extension": "作者敘事對濫用權力的批評不等於當事人自己承認錯誤；『誠實的參』『不幸這個兒童』屬敘事評語，不可直接歸給施暴者。",
+    "memory": "甲：巡警外在行為＋情緒；乙：查大人內心盤算；選 B。",
+    "solvingSteps": [
+      "看甲文：巡警語氣與臉色改變、責備攤販、奪秤，主要由外在言行看其情緒。",
+      "看乙文：除查大人責打孩童，原文還直接交代他擔心做官尊嚴、不能讓民眾插手的想法。",
+      "逐項比較敘事角度，只有 B 明確指出甲重外在、乙揭內心。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 說兩篇都由街上路人視角客觀冷靜敘事，但原文由敘述者統攝場面，並未全程借路人眼睛看；還帶入對濫權者的批判。",
+        "elementary": "不是兩篇都由路人當攝影機來說故事，作者也在表達看法。",
+        "reason": "甲乙都非僅街上路人的視角，選項以單一旁觀者誤認敘述者。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 指出甲文側寫巡警的言行與情緒變化，乙文進一步透露查大人的官威心理；原文兩篇對人物內外層次安排正是如此。",
+        "elementary": "甲文多寫警察做什麼；乙文連官員心裡怕沒面子都寫出來。",
+        "reason": "甲外在言行、乙內心想法的對照可在兩篇原文分別找到具體敘述。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 將『誠實的參』歸於巡警感受，『不幸這個兒童』歸查大人感受；實際兩語用來凸顯受害者處境，與恃權欺人的施暴者看法相反。",
+        "elementary": "欺負人的人不是在同情受害者，這些是說故事的人讓讀者看到的。",
+        "reason": "把敘事者對弱者的同情誤判為巡警與查大人自己的情感，是視角混淆。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 說『不去嗎』『不說嗎』不只強調蠻橫，還都顯示受群眾威脅的不安；但甲文巡警無民眾威脅的共同線索，乙文亦更重官威。",
+        "elementary": "兩句都很兇，卻不能因此說兩位官員都被路人嚇到了。",
+        "reason": "兩個喝斥語能見威逼，不能從中同時推出兩人均受群眾威脅而不安。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原題／甲乙原文；官方最終答案與年度更正公告逐題獨立核對待完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "街上路人的視角",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "外在言行與情緒轉變",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "內在想法",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "誠實的參",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不幸這個兒童",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不去嗎",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不說嗎",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "敘寫手法",
+        "level": "初級",
+        "meaning": "作者用什麼方式安排與表達故事。",
+        "usageNote": "可以寫動作、言語，也可直接寫人物內心想法。"
+      },
+      {
+        "term": "外在言行",
+        "level": "中級",
+        "meaning": "看得到或聽得到的動作與話語。",
+        "usageNote": "甲文巡警的奪秤、變色與喝問。"
+      },
+      {
+        "term": "內在想法",
+        "level": "中級",
+        "meaning": "人物藏在心中的念頭或判斷。",
+        "usageNote": "乙文查大人想維護官威，作者直接交代。"
+      },
+      {
+        "term": "視角",
+        "level": "高級",
+        "meaning": "由誰的角度看待並敘述事件。",
+        "usageNote": "作者敘述與故事中路人評論是不同層次。"
+      }
+    ],
+    "readingFacts": [
+      "甲文敘述巡警語氣與態度變化、奪秤並以身分威逼；乙文明示查大人認為官事不容人民過問、要守官員尊嚴。"
+    ]
+  },
+  "teachingCanonicalSha256": "aff19ab6967d6b07eabcd75b7c84ba1133a5197009fb3e096b2a2ff5cc5bd189",
+  "composedTeachingSha256": "c0293e9b3ae6224a7ae46c5b0b9fcb82a55dbe92062e57d69b96871ec2e9dfd8",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "reasoningAgreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_AND_CORRECTION_IMAGE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "SAME_DIGEST_V4_8_VIEWPORT_2_THEME_QA_PENDING",
+      "MASTER_PUBLISHER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
