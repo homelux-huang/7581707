@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-16",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 16,
+  "subject": "國文",
+  "taskId": "C-115-C11-13-C16-17-DUAL-LEVEL-20261025-05",
+  "claimedAtUtc": "2026-10-25T05:20:54Z",
+  "status": "ROLE_C_AUTHOR_DRAFT_PENDING_DISTINCT_AI_AND_ORIGINAL_SOURCE",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "《 紅樓夢 》 中的賈府人口眾多，成員總會經歷程度不一的「社會情緒學習」。\n  依據上文，何者最符合探春在事件中的經驗？",
+  "options": [
+    "知道自己非正室所生，故期待於當家時有所表現",
+    "認為賈府生活開銷過於龐大，理應廢除喪葬補助",
+    "同情生母在賈府的處境，願意考慮她所提的要求",
+    "為化解生母與嫡母間的衝突，打算辭去當家之職"
+  ],
+  "answerCandidate": "A",
+  "answerAlreadyKnownBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "f0e790fbeb37aef0ba1a9ffbfb5dc40c9cdaad4a29ed1820b8d671973cf1dcd4",
+  "sourceRevisionMethod": "publisher text_revision SHA256 sorted UTF8 JSON: question/options/singleQuestionWebpSha256; answer excluded",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "sourceImageQuestionRecordQa": "PASS_ASSISTANT_DIRECT_ORIGINAL_SOURCE",
+  "sourceImageManifestQa": "PASS",
+  "image": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-16.webp",
+  "imageSha256": "cc874e5f44e18ff05e7bb121e346eb4d1430a42dd8b061ad97b27f8339d5bff8",
+  "imageOriginalQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "originalImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-C-SHARED-16-18",
+    "sourceText": "▲閱讀下文，回答第16-18 題\n趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n探 春：府中家僕趙國基。                                        趙姨娘原是賈府小廝的女兒，\n趙姨娘：給了多少？                    後為賈政之妾。\n探 春：紋銀二十，按例而行。                    文中「夫人」、「太太」指賈\n趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？   政正室王夫人。\n探 春：四十兩。                            「老祖宗」指賈政母親。\n                                        襲人是賈寶玉的丫鬟，鴛鴦是趙姨娘：鴛鴦母親呢？\n                              賈母的丫鬟。探 春：也是四十。\n趙姨娘：這都叫按例而行嗎？\n探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而\n    行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正\n    好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也\n    失了臉面，那可真叫人看笑話囉！\n探 春：依禮行事，與臉面又有何干哪？\n趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親\n    娘舅。\n探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，\n    姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，\n    哪個又有光彩？\n趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n                         （王安祈〈紅樓夢中人‧探春〉）",
+    "textSha256": "cf44ba29b44872af4bed426dd6d2c50489b12ed7b8e0b64482915c9b37c82f25",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+    "imageSha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 6,
+    "sharedMaterialRevision": "f23678717fa4b5ffb6be1226d2f7d800adcf5b6cd7e825de3d3058cac793678d",
+    "originalSharedWebpBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "探春是賈政妾室**趙姨娘之女**，在賈府中管理家務時對身分與公正都敏感。她強調**「皆因夫人看重，才命我代管家務」「如今還未做出一樁半件」**，希望以**依禮、按例**的處事能力勝任職務，符合 **A**。題目說「社會情緒學習」，要辨認她面對家庭關係壓力時的**自我認識與負責決策**。",
+    "elementarySummary": "探春的媽媽不是家裡的正室夫人。探春被信任去管家，很想把事情公平做好，不願意因為自己的親戚就多給錢，所以選A。",
+    "memory": "**探春知庶出身＋珍惜夫人看重→依規矩把管家做好（A），不是偏袒生母親戚。**",
+    "concept": "人物理解需注意**身分關係**與**說話行動**；社會情緒學習中的自我認識、情緒管理與負責任決策，不等於一味順從家人。",
+    "extension": "說『希望在代管時有所表現』是從「皆因夫人看重」與「還未做出一樁半件」作的**合理推論**，不可當作探春逐字說過的話。",
+    "highlights": [
+      "趙姨娘是賈政之妾",
+      "夫人看重",
+      "代管家務",
+      "當家豈能逾矩",
+      "依禮行事"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "按例：照原有規定辦事"
+      ],
+      "中級": [
+        "嫡庶：正室及妾室子女的傳統身分區別"
+      ],
+      "高級": [
+        "負責任決策：考量規則、公平與行為後果後作選擇"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A符合探春作為**妾室之女**又受正室王夫人委以家務的處境。她說「**皆因夫人看重……如今還未做出一樁半件**」，顯示珍惜表現機會、堅持按例行事；答案所述心理是可由台詞推得的合理概括。",
+        "elementary": "探春知道自己不是正室夫人所生，現在得到管家的機會，想公平地把事情做好，所以A最合適。",
+        "reason": "A符合探春作為**妾室之女**又受正室王夫人委以家務的處境。她說「**皆因夫人看重……如今還未做出一樁半件**」，顯示珍惜表現機會、堅持按例行事；答案所述心理是可由台詞推得的合理概括。",
+        "sourceEvidence": "註：趙姨娘後為賈政之妾，夫人為正室王夫人；探春：皆因夫人看重，才命我代管家務，如今還未做出一樁半件。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B無材料證據支持**廢除喪葬補助**。探春實際表示「紋銀二十，按例而行」，她在執行補助規定，並未主張因府中開銷過大而停發。",
+        "elementary": "探春有照規定發20兩銀子，不是覺得太花錢就把補助全部取消。",
+        "reason": "B無材料證據支持**廢除喪葬補助**。探春實際表示「紋銀二十，按例而行」，她在執行補助規定，並未主張因府中開銷過大而停發。",
+        "sourceEvidence": "探春：府中家僕趙國基……紋銀二十，按例而行。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C把探春對生母的態度說成願意**考慮額外要求**，但探春質問「探春當家，豈能逾矩？」拒絕因親戚身分而違例加給。",
+        "elementary": "媽媽想多拿錢，探春還是說不能超過規定，所以不是打算照媽媽要求辦。",
+        "reason": "C把探春對生母的態度說成願意**考慮額外要求**，但探春質問「探春當家，豈能逾矩？」拒絕因親戚身分而違例加給。",
+        "sourceEvidence": "探春：探春當家，豈能逾矩？……姨娘倒來作踐於我。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說探春打算**辭去當家之職**以化解衝突，與原句不符。她只擔心王夫人得知為難而「不叫我管」，並沒有主動提出辭職。",
+        "elementary": "她怕自己做不好會被取消管家工作，不是自己想辭職不幹。",
+        "reason": "D說探春打算**辭去當家之職**以化解衝突，與原句不符。她只擔心王夫人得知為難而「不叫我管」，並沒有主動提出辭職。",
+        "sourceEvidence": "探春：倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面。"
+      }
+    },
+    "stepByStep": [
+      "從旁註認清趙姨娘與王夫人的妾室／正室關係。",
+      "看探春被授予家務管理職責，說自己要遵守規矩，不私下加給。",
+      "A可由台詞推得，B廢補助、C順從加給、D主動辭職均無證據。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年國文第16題王安祈〈紅樓夢中人‧探春〉節選，教材版本及頁碼尚待核對。"
+  },
+  "teachingCanonicalSha256": "c34f1e8ad5313ae6da22921578c3b3b12cf7006c66ee3e6d3368b9a99f1527e1",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI teaching author",
+    "authorRole": "C",
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "reviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialAnswerAndNoticeAdmission": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4ExactDigestEightViewportsTwoThemes": "PENDING",
+    "policyAuthority": "ISSUE36_2026-10-25_USER_OVERRIDE_NO_HUMAN_TEACHER_REQUIREMENT"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "FULL_OFFICIAL_SOURCE_TEXT_AND_FINAL_ANSWER_CORRECTION_SCOPE_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_PIXEL_WEBP_INDIVIDUAL_VISUAL_QA_PENDING",
+    "DISTINCT_AI_CONTENT_REVIEW_EXACT_SOURCE_IMAGE_LESSON_EVIDENCE_PENDING",
+    "V4_SAME_DIGEST_EIGHT_VIEWPORT_TWO_THEME_AND_FINAL_CI_PENDING"
+  ]
+}

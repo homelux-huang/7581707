@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-17",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 17,
+  "subject": "國文",
+  "taskId": "C-115-C11-13-C16-17-DUAL-LEVEL-20261025-05",
+  "claimedAtUtc": "2026-10-25T05:20:54Z",
+  "status": "ROLE_C_AUTHOR_DRAFT_PENDING_DISTINCT_AI_AND_ORIGINAL_SOURCE",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "上文中，趙姨娘提及襲人母親、鴛鴦母親，主要用意為何？",
+  "options": [
+    "指控二人驕奢任性，自己卻頻遭欺凌",
+    "彰顯自己與二人年齡相近，應受禮遇",
+    "指出並非無破例者，要探春彈性處理",
+    "明言恩賞全憑老祖宗，探春宜去討賞"
+  ],
+  "answerCandidate": "C",
+  "answerAlreadyKnownBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "9ad6510639e7506f7d35ebc7ec01b68ddb6bbeb3eff8bc1c01201aa41190896a",
+  "sourceRevisionMethod": "publisher text_revision SHA256 sorted UTF8 JSON: question/options/singleQuestionWebpSha256; answer excluded",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "sourceImageQuestionRecordQa": "PASS_ASSISTANT_DIRECT_ORIGINAL_SOURCE",
+  "sourceImageManifestQa": "PASS",
+  "image": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-17.webp",
+  "imageSha256": "074a9f792c7b011f59606394ea2c521c2190143bce9d013fdf79b8703dbdad8a",
+  "imageOriginalQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "originalImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-C-SHARED-16-18",
+    "sourceText": "▲閱讀下文，回答第16-18 題\n趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n探 春：府中家僕趙國基。                                        趙姨娘原是賈府小廝的女兒，\n趙姨娘：給了多少？                    後為賈政之妾。\n探 春：紋銀二十，按例而行。                    文中「夫人」、「太太」指賈\n趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？   政正室王夫人。\n探 春：四十兩。                            「老祖宗」指賈政母親。\n                                        襲人是賈寶玉的丫鬟，鴛鴦是趙姨娘：鴛鴦母親呢？\n                              賈母的丫鬟。探 春：也是四十。\n趙姨娘：這都叫按例而行嗎？\n探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而\n    行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正\n    好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也\n    失了臉面，那可真叫人看笑話囉！\n探 春：依禮行事，與臉面又有何干哪？\n趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親\n    娘舅。\n探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，\n    姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，\n    哪個又有光彩？\n趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n                         （王安祈〈紅樓夢中人‧探春〉）",
+    "textSha256": "cf44ba29b44872af4bed426dd6d2c50489b12ed7b8e0b64482915c9b37c82f25",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+    "imageSha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 6,
+    "sharedMaterialRevision": "f23678717fa4b5ffb6be1226d2f7d800adcf5b6cd7e825de3d3058cac793678d",
+    "originalSharedWebpBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "趙姨娘列舉**襲人母親、鴛鴦母親**過世各得到**四十兩**，反問她兄弟趙國基為何只有**二十兩**；即使探春說明兩人有**老祖宗額外恩賞**，她仍希望探春為親族**突破慣例、彈性處理**。故選 **C**。她不是在評價兩人的品行，也不是叫探春去老祖宗求賞。",
+    "elementarySummary": "趙姨娘說別人的媽媽過世能拿40兩，自己的兄弟只有20兩，意思是『既然別人有多給，妳也幫我們破一次例』，所以C對。",
+    "memory": "**別人四十兩／我的兄弟二十兩→用先例要求破例（C）。**",
+    "concept": "說話者的**論證策略**常藏在對比例子裡：趙姨娘舉例不是為了介紹人物，而是借**額外恩賞**向掌事者施壓。需區分「禮法規定」和「個案特賞」。",
+    "extension": "要分清：襲人、鴛鴦各有老祖宗關照的特殊原因，未必能直接作為趙國基按例二十兩的合法類比；本題只問**趙姨娘的目的**，非要求判她的主張有理。",
+    "highlights": [
+      "襲人母親",
+      "鴛鴦母親",
+      "四十兩",
+      "二十兩",
+      "額外恩賞",
+      "彈性處理"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "破例：不照一般規定，特別處理"
+      ],
+      "中級": [
+        "援例：引用前人的例子支持主張"
+      ],
+      "高級": [
+        "訴諸先例：用既有個案支持當前要求的一種說服策略"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A誤把趙姨娘**比較補助金額**說成指控襲人與鴛鴦本人驕奢任性。原文談的是她們母親過世的補助與例外恩賞，沒有批評兩人品行。",
+        "elementary": "她是在比誰拿到多少喪葬銀子，不是在說那兩個人愛亂花錢。",
+        "reason": "A誤把趙姨娘**比較補助金額**說成指控襲人與鴛鴦本人驕奢任性。原文談的是她們母親過世的補助與例外恩賞，沒有批評兩人品行。",
+        "sourceEvidence": "趙姨娘：襲人母親過世，給了多少？……鴛鴦母親呢？……這都叫按例而行嗎？"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B提**與二人年齡相近而應受禮遇**，但文中沒有比較趙姨娘與襲人、鴛鴦或其母親的年紀；論點是待遇差別與親屬身分。",
+        "elementary": "她根本沒有說誰跟誰差不多年紀，所以不是因為年紀要求尊重。",
+        "reason": "B提**與二人年齡相近而應受禮遇**，但文中沒有比較趙姨娘與襲人、鴛鴦或其母親的年紀；論點是待遇差別與親屬身分。",
+        "sourceEvidence": "趙姨娘：到了我這兒，怎麼……就「按例而行」四個字？"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C正是其用意：**襲人、鴛鴦有額外恩賞**，趙姨娘主張探春也應對她的兄弟趙國基**彈性處理，不必死守二十兩**。文中「這都叫按例而行嗎」直接支持此意。",
+        "elementary": "她用別人能多拿20兩的例子，希望探春也為自己的兄弟多給一些，選C。",
+        "reason": "C正是其用意：**襲人、鴛鴦有額外恩賞**，趙姨娘主張探春也應對她的兄弟趙國基**彈性處理，不必死守二十兩**。文中「這都叫按例而行嗎」直接支持此意。",
+        "sourceEvidence": "探春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。趙姨娘：……就「按例而行」四個字？"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D說**恩賞全憑老祖宗，探春宜去討賞**不是她的主要要求。趙姨娘面對面向掌家者探春施壓，要探春「拉拔拉拔我們」，並未要求探春向賈母另行討賞。",
+        "elementary": "她是直接叫探春幫自己家人，不是要探春跑去跟老祖宗要錢。",
+        "reason": "D說**恩賞全憑老祖宗，探春宜去討賞**不是她的主要要求。趙姨娘面對面向掌家者探春施壓，要探春「拉拔拉拔我們」，並未要求探春向賈母另行討賞。",
+        "sourceEvidence": "趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。"
+      }
+    },
+    "stepByStep": [
+      "比較趙國基20兩與襲人母親、鴛鴦母親40兩的具體差別。",
+      "結合趙姨娘反問「這都叫按例而行嗎」以及要求「拉拔拉拔我們」。",
+      "排除A品行指控、B年齡比較、D向老祖宗求賞；選C借先例求破例。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年國文第17題《紅樓夢中人‧探春》節錄，沒有任何四則計算題目。"
+  },
+  "teachingCanonicalSha256": "f9e7683ba1e5f3d7eb4fb1506a1b20a37f45963b0037d0424f4f94e784261919",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI teaching author",
+    "authorRole": "C",
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "reviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialAnswerAndNoticeAdmission": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4ExactDigestEightViewportsTwoThemes": "PENDING",
+    "policyAuthority": "ISSUE36_2026-10-25_USER_OVERRIDE_NO_HUMAN_TEACHER_REQUIREMENT"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "FULL_OFFICIAL_SOURCE_TEXT_AND_FINAL_ANSWER_CORRECTION_SCOPE_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_PIXEL_WEBP_INDIVIDUAL_VISUAL_QA_PENDING",
+    "DISTINCT_AI_CONTENT_REVIEW_EXACT_SOURCE_IMAGE_LESSON_EVIDENCE_PENDING",
+    "V4_SAME_DIGEST_EIGHT_VIEWPORT_TWO_THEME_AND_FINAL_CI_PENDING"
+  ]
+}
