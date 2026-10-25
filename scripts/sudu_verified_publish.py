@@ -600,6 +600,14 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         teach.get("calculationReviewed") is True,
         isinstance(teach.get("content"),dict),
         ui.get("testedQuestionRevision") == revision,
+        # A changed four-option lesson/calculation MUST invalidate the old V4
+        # browser receipt even if the original question/text/WebP did not move.
+        # Missing digest remains allowed ONLY for the five immutable historic
+        # published byte-for-byte review blobs, never for a new AI-E admission.
+        (ui.get("testedTeachingDigest") ==
+             reviewer_gate.digest(reviewer_gate.canonical(teach.get("content"))) or
+         (identity_reason == "exact_five_historical_students_preserved"
+          and ui.get("testedTeachingDigest") is None)),
         ui.get("browserSmokePassed") is True,
         ui.get("rwdPassed") is True,
         ui.get("verifiedYearQaMode") is True,
