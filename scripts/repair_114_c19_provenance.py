@@ -165,8 +165,9 @@ def apply():
     _, original_db = rows(BASE / "question-bank.sqlite3")
     assert len(original_db) == 205
     assert all(original_db[qid] == value for qid, value in unowned.items())
-    assert original_db[QID] in (target_record({**before, "questionProvenance":
-                              {**before["questionProvenance"], "webpSha256": OLD}}), after)
+    old_record = copy.deepcopy(after)
+    old_record["questionProvenance"]["webpSha256"] = OLD
+    assert original_db[QID] in (old_record, after)
     old_sqlite_sha = sha((BASE / "question-bank.sqlite3").read_bytes())
     old_json_sha = sha((BASE / "questions.json").read_bytes())
 
@@ -175,10 +176,7 @@ def apply():
         digests = []
         for dbcopy in copies:
             shutil.copy2(BASE / "question-bank.sqlite3", dbcopy)
-            digests.append(modify_sqlite(dbcopy,
-                              target_record({**before, "questionProvenance":
-                                   {**before["questionProvenance"], "webpSha256": OLD}}),
-                              after, unowned))
+            digests.append(modify_sqlite(dbcopy, old_record, after, unowned))
         assert digests[0] == digests[1], "two isolated SQLite imports not deterministic"
 
         bank_fixed = copy.deepcopy(bank)
