@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-20",
+  "taskId": "B-114-C15-C23-E10-E15-E20-IMGTRANS-20261025-08",
+  "subject": "英文",
+  "kind": "AUTHOR_DRAFT_FROM_ORIGINAL_PIXELS_G2_TEXT_PENDING",
+  "question": "Paul:   I read an article online. It said Thomas Edison ( 湯瑪斯．愛迪生 ) didn’t actually invent\n            the light bulb. What he did was make it work for homes.\n    Jack:  Really? ____________\n    Paul:  The article said it’s Humphry Davy, a scientist. He created the first electric light.",
+  "options": [
+    "But who finally switched it off?",
+    "Then who came up with it first?",
+    "Who bought the first light bulb anyway?",
+    "So who did he really invite to his home?\n\n\n\n\n\n\n-4-\n\n114 年四技                                              第5 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅢ. 綜合測驗：以下兩篇短文，共有8 個空格，為第21 至28 題，每題有四個選項，\n       請依各篇短文文意，選出一個最適合該空格的答案。\n\n▲ 下篇短文共有4 個空格，為第21 － 24 題，請依短文文意，選出一個最適合該\n  空格的答案。\n\n        Taiwan won 43 awards, including two golds, at the 47th WorldSkills Competition hosted by\n    France in September 2024. About 1,400 students competed in over 60 skill categories  21   robotics,\n    carpentry, and refrigeration and air conditioning. Taiwan’s competitors Tsai Yun-rong ( 蔡昀融 )\n    and Chen Sz-yuan ( 陳思源 ) won the top awards in cabinetmaking, and refrigeration and air\n    conditioning, respectively. Tsai said he dedicated many hours of study and practice to his skills.\n    Encouraged  22   his father, Tsai tried woodworking in kindergarten. Since junior high school,\n    he has spent 12 hours every day in the carpentry workshop to improve his skills. As for Chen, he\n    emphasized the importance of hands-on training. Chen joined a training program in refrigeration\n    and air conditioning at the age of 15, and  23   the six-month course when most people dropped\n     out. The two winners are clear examples of learning by doing. They develop their skills through\n     direct experience and  24   over a long period of time. The competition, also known as “Skills\n    Olympics,” provides a global stage for young people to demonstrate their talents."
+  ],
+  "imageTranscribedOptions": [
+    "But who finally switched it off?",
+    "Then who came up with it first?",
+    "Who bought the first light bulb anyway?",
+    "So who did he really invite to his home?"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "6d74afd91d58532976ce2abf96aac703cca30236840cb0c2095e254b47b23811",
+    "sourceImageTranscriptSha256": "532b30064b313e2da787709301092349258d495f1367c3550cfd57762ce936d1",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "f8699901c5b3de551c8cd870419c9ede5982402b76a9db3c9d52ea7c183c416b",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-20.webp",
+    "sourcePageWebpPath": "sudu/data/original/114/00-E/p004-1b1768452e-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "d734a051d0c02e76ec26f44537520fd252ccd20dd17ad20daf9aa62f1ba6e3f5",
+    "imageQaEvidence": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+    "inheritedSourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "sourceOptionMismatchIndices": [
+      3
+    ],
+    "officialSourceTextReconciliationRequired": true,
+    "newFinalAnswerAndNoticeVerification": false,
+    "authorImageTranscriptionIsNotCanonical": true
+  },
+  "teaching": {
+    "topic": "英文選項語意與情境判讀",
+    "teacherSummary": "Paul 在對話中轉述文章，認為 Edison 並不是最早發明電燈的人，只是讓它更適合一般家庭。Jack 空格後 Paul 答『Humphry Davy, a scientist』，故 Jack 應問最早誰想出來，B Then who came up with it first?。這是根據題中對話的問答判斷，不把簡化的電燈發展史提升為精確史實斷言。",
+    "elementarySummary": "Paul 說愛迪生不是第一個想到電燈的人，Jack 問『那到底誰先想到？』，Paul 才回答某個科學家，所以選 B。",
+    "concept": "看回答會給人名還是動作：後句說某科學家的名字和創造電光，空格就得問誰先發明。",
+    "memory": "didn't actually invent → who came up with it first? → Davy：B。",
+    "solvingSteps": [
+      "讀前句 didn't actually invent，暗示會問最初的發明者。",
+      "讀後句 The article said it's Humphry Davy，答的是一個人。",
+      "找同時問『誰』和『最先想出』的選項 B，其他選項都答非所問。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "But who finally switched it off 問最後是誰把燈關掉；上下文不是說關閉燈泡，所以 Paul 的科學家人名回答不合。",
+        "elementary": "題目不是在問誰關燈，A 跑題了。",
+        "reason": "switched off 是關掉，並非發明來源。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Then who came up with it first 問『那誰最早想出它？』，正能由 Paul 之後提供科學家姓名來回答，符合轉折。",
+        "elementary": "問誰最先發明，Paul 正好說人名，所以 B 對。",
+        "reason": "who came up with it first 與後句回答發明者完全銜接。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "Who bought the first light bulb 問第一個購買者；文章未談購買紀錄，回答科學家亦不能解釋買家。",
+        "elementary": "誰買了第一顆燈泡，跟誰先發明不一樣。",
+        "reason": "buyer 和 inventor 不同角色，C 與 Paul 回答不匹配。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "who did he really invite to his home 問誰被邀請去他家；invite 和 invent 字形接近但意思不同，對話從未談訪客。",
+        "elementary": "invite 是邀請，不是 invent 發明；不該問來家裡的客人。",
+        "reason": "D 偷換為家中邀客，和電光發明話題不相干。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方英文單題WebP直接查看與作者暫抄，原canonical OCR含試卷頁尾，交來源A校正後才可發布。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "didn’t actually invent",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "make it work for homes",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "came up with it first",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "switched it off",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "bought the first light bulb",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "invite to his home",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "light",
+        "ipa": null,
+        "accent": null,
+        "level": "初級",
+        "meaningZh": "光；燈",
+        "synonyms": [
+          "illumination"
+        ],
+        "antonyms": [
+          "darkness"
+        ],
+        "usageNote": "light bulb 指燈泡。",
+        "ipaEvidenceUrl": null
+      },
+      {
+        "headword": "invent",
+        "ipa": "/ɪnˈvent/",
+        "accent": "US",
+        "level": "中級",
+        "meaningZh": "發明",
+        "synonyms": [
+          "create",
+          "devise"
+        ],
+        "antonyms": [
+          "copy",
+          "imitate"
+        ],
+        "usageNote": "invent ≠ invite；Cambridge 美式原形音標。",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/invent"
+      },
+      {
+        "headword": "come up with",
+        "ipa": null,
+        "accent": null,
+        "level": "高級",
+        "meaningZh": "想出（方法或點子）",
+        "synonyms": [
+          "think of",
+          "devise"
+        ],
+        "antonyms": [
+          "fail to think of"
+        ],
+        "usageNote": "came up with 是過去式；不冒稱字典提供整句原音檔。",
+        "ipaEvidenceUrl": null
+      }
+    ],
+    "newsExample": {
+      "publishedAt": "2025-06-03",
+      "sourceName": "MIT News",
+      "sourceUrl": "https://news.mit.edu/2025/new-3d-printing-method-enables-complex-designs-creates-less-waste-0603",
+      "english": "In 2025, MIT engineers came up with a 3D-printing method designed to reduce waste.",
+      "zh": "2025 年，麻省理工學院工程師想出一種旨在減少廢料的 3D 列印方法。",
+      "highlightEnglish": "came up with",
+      "highlightZh": "想出",
+      "authorComposedBasedOnSource": true,
+      "notDirectQuote": true
+    },
+    "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
+  },
+  "teachingCanonicalSha256": "7c52786bddc888f344b71c1c6851cd774eb709790218ea6322564395bf34826f",
+  "composedTeachingSha256": "be4dfdc737577f5364712f071b4b7d9fba8c451e805ca9beb8e5b37bc4d7fd17",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "sourceTextStatus": "G2_PENDING_A_FOOTER_OCR_CORRECTION",
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentAiContentReview": {
+      "status": "PENDING_ROLE_E",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "G2_CANONICAL_OCR_FOOTER_RECONCILIATION_PENDING",
+      "FINAL_OFFICIAL_ANSWER_AND_YEAR_CORRECTION_PENDING",
+      "INDEPENDENT_AI_E_CONTENT_REVIEW_PENDING",
+      "SAME_DIGEST_V4_8X2_PENDING",
+      "MASTER_PUBLISHER_MAIN_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

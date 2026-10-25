@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-10",
+  "taskId": "B-114-C15-C23-E10-E15-E20-IMGTRANS-20261025-08",
+  "subject": "英文",
+  "kind": "AUTHOR_DRAFT_FROM_ORIGINAL_PIXELS_G2_TEXT_PENDING",
+  "question": "My sister decided to abandon her old habits and start a fresh chapter in her life.",
+  "options": [
+    "bring about",
+    "carry on",
+    "give up",
+    "run into\n\n\n\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅡ. 對話題：第11 至20 題，請依對話內容選出一個最適合的答案，使其成為有意義\n     的對話。"
+  ],
+  "imageTranscribedOptions": [
+    "bring about",
+    "carry on",
+    "give up",
+    "run into"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "b85789e91d84539f09539e7e33c56f43a11efc622c81bd3ec1b297b5742c139c",
+    "sourceImageTranscriptSha256": "820bb1292dbab9ea2113316dec2ab67d795520742f140dea9936b5e47915025f",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "b0a89c379254466524ff72308a751fe63ade9e85d037f8a46dc03a6727287275",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-10.webp",
+    "sourcePageWebpPath": "sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "imageQaEvidence": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+    "inheritedSourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "sourceOptionMismatchIndices": [
+      3
+    ],
+    "officialSourceTextReconciliationRequired": true,
+    "newFinalAnswerAndNoticeVerification": false,
+    "authorImageTranscriptionIsNotCanonical": true
+  },
+  "teaching": {
+    "topic": "英文選項語意與情境判讀",
+    "teacherSummary": "本題要求選出與句中 abandon 最相近的片語。姐姐決定『放棄』舊習慣，開啟人生新篇章；C give up 可保留停止舊習慣的意思。bring about 是導致、carry on 是繼續、run into 是偶然碰到。",
+    "elementarySummary": "姐姐想把舊習慣改掉，重新開始。abandon 就是放棄，所以選 C 的 give up。",
+    "concept": "同義詞不能只看字形；abandon habits 與 give up habits 都在說不再做，carry on 正好反向。",
+    "memory": "abandon = give up（放棄）；carry on = continue（繼續）。",
+    "solvingSteps": [
+      "找劃線 abandon 的受詞 old habits：動作是對舊習慣做什麼？",
+      "看新生活 fresh chapter：表示離開原有習慣，因此語意是放棄。",
+      "四選項代回句中，只有 C give up 能完整替換 abandon。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "bring about 表促成、導致，例如 bring about change；它不是放棄習慣，換入題幹會變成造成習慣。",
+        "elementary": "bring about 是讓事情發生，不是把老習慣丟掉。",
+        "reason": "動作方向不同，A 表造成而非停止。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "carry on 表繼續進行；carry on her old habits 變成姐姐繼續維持舊習慣，和 abandon 相反。",
+        "elementary": "姐姐要停止老習慣，carry on 卻說繼續做，所以錯。",
+        "reason": "B 是本題語境下 abandon 的相反意思。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "give up 表放棄或停止從事；give up old habits 與 abandon old habits 在此自然同義，後句新篇章也呼應。",
+        "elementary": "give up 就是放棄，和改掉老習慣一樣，C 對。",
+        "reason": "C 的 give up 能維持整句停止舊習慣的意義。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "run into 常指偶然遇到某人或遭逢問題；既不是戒除，也不能自然替換 abandon old habits。",
+        "elementary": "run into 像路上剛好碰到朋友，跟改掉習慣不同。",
+        "reason": "D 指意外碰到，沒有放棄舊習慣的語義。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方英文單題WebP直接查看與作者暫抄，原canonical OCR含試卷頁尾，交來源A校正後才可發布。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "abandon",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "old habits",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "fresh chapter",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "bring about",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "carry on",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "give up",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "run into",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "give up",
+        "ipa": null,
+        "accent": null,
+        "level": "初級",
+        "meaningZh": "放棄、停止",
+        "synonyms": [
+          "quit",
+          "stop"
+        ],
+        "antonyms": [
+          "continue",
+          "carry on"
+        ],
+        "usageNote": "give up smoking/habits；本題正解片語。",
+        "ipaEvidenceUrl": null
+      },
+      {
+        "headword": "abandon",
+        "ipa": "/əˈbæn.dən/",
+        "accent": "US",
+        "level": "中級",
+        "meaningZh": "放棄、捨棄",
+        "synonyms": [
+          "give up",
+          "leave behind"
+        ],
+        "antonyms": [
+          "retain",
+          "keep"
+        ],
+        "usageNote": "本題放棄舊習慣；美式標音與英式相同。",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/abandon"
+      },
+      {
+        "headword": "relinquish",
+        "ipa": null,
+        "accent": null,
+        "level": "高級",
+        "meaningZh": "放棄權利或控制權",
+        "synonyms": [
+          "surrender",
+          "yield"
+        ],
+        "antonyms": [
+          "retain"
+        ],
+        "usageNote": "與 abandon 有部分語義重疊，但常見受詞不同；不說可在此完全互換。",
+        "ipaEvidenceUrl": null
+      }
+    ],
+    "newsExample": {
+      "publishedAt": "2024-07-02",
+      "sourceName": "World Health Organization",
+      "sourceUrl": "https://www.who.int/news/item/02-07-2024-who-releases-first-ever-clinical-treatment-guideline-for-tobacco-cessation-in-adults",
+      "english": "In 2024, WHO published guidance to help adults give up tobacco.",
+      "zh": "2024 年，世界衛生組織發布指引，協助成年人戒除菸草使用習慣。",
+      "highlightEnglish": "give up",
+      "highlightZh": "戒除",
+      "authorComposedBasedOnSource": true,
+      "notDirectQuote": true
+    },
+    "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
+  },
+  "teachingCanonicalSha256": "e65a64db631445ea482faaa523b41688d523b69f7ae5b087310635146909f7ea",
+  "composedTeachingSha256": "96ee581897fc3e1ea829255c59e20fdc26b6d1a868505d38f30a51d8ea64e77a",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "C",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "sourceTextStatus": "G2_PENDING_A_FOOTER_OCR_CORRECTION",
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentAiContentReview": {
+      "status": "PENDING_ROLE_E",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "G2_CANONICAL_OCR_FOOTER_RECONCILIATION_PENDING",
+      "FINAL_OFFICIAL_ANSWER_AND_YEAR_CORRECTION_PENDING",
+      "INDEPENDENT_AI_E_CONTENT_REVIEW_PENDING",
+      "SAME_DIGEST_V4_8X2_PENDING",
+      "MASTER_PUBLISHER_MAIN_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
