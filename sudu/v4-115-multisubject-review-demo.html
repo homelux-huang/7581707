@@ -307,6 +307,8 @@ const DATA=JSON.parse(document.getElementById('demoData').textContent);
 const SUBJECTS=DATA.subjects;
 const QUESTIONS=DATA.questions;
 const LETTERS=['A','B','C','D'];
+// All 104–115 years use this existing V4. A year selector is NOT a release.
+const EXAM_YEARS=Array.from({length:12},(_,i)=>String(115-i));
 const KEY='tvet-115-multisubject-demo-v1';
 const state=loadState();
 let currentSubject=state.ui?.subject&&SUBJECTS.includes(state.ui.subject)?state.ui.subject:SUBJECTS[0];
@@ -639,10 +641,10 @@ function syncHeights(){
 }
 function pageYear(){
  const value=new URLSearchParams(location.search).get('year');
- return value==='114'||value==='115'?value:'demo';
+ return EXAM_YEARS.includes(value)?value:'demo';
 }
 function changeYear(nextYear){
- if(!['demo','114','115'].includes(nextYear))return;
+ if(nextYear!=='demo'&&!EXAM_YEARS.includes(nextYear))return;
  if(nextYear===pageYear()){refreshHomeSubjects();return;}
  const url=new URL(location.href);
  url.searchParams.set('year',nextYear);
@@ -655,7 +657,8 @@ function refreshHomeSubjects(){
  if(!select)return;
  const validYear=year&&year===pageYear();
  const ready=year==='demo'||document.body.dataset.verifiedReadyYear===year;
- const loading=validYear&&!ready;
+ const failed=validYear&&document.body.classList.contains('qa-error-mode');
+ const loading=validYear&&!ready&&!failed;
  const annualSubjects=year!=='demo'&&Array.isArray(window.suduAnnualSubjects)?window.suduAnnualSubjects:null;
  const candidates=annualSubjects||(
   document.body.classList.contains('qa-image-mode')?
@@ -665,7 +668,7 @@ function refreshHomeSubjects(){
  select.replaceChildren();
  const first=document.createElement('option');
  first.value='';
- first.textContent=!year?'請先選年度':!validYear?'正在切換年度':loading?'題庫驗證中…':candidates.length?'選擇科目':'目前無已核准科目';
+ first.textContent=!year?'請先選年度':!validYear?'正在切換年度':failed?'尚無已核准題庫':loading?'題庫驗證中…':candidates.length?'選擇科目':'目前無已核准科目';
  select.append(first);
  if(validYear&&ready){
   for(const name of candidates){
@@ -788,10 +791,19 @@ function countdownText(now){
 }
 function updateCountdown(){$('examClock').textContent=countdownText(Date.now());}
 updateCountdown();setInterval(updateCountdown,1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCountdown()});
+// Only extend original homepage/year dropdown; no old-year question/answer content.
+for(const id of ['homeYearSel','yearSel']){
+ const select=$(id);
+ for(const year of EXAM_YEARS){
+  if([...select.options].some(option=>option.value===year))continue;
+  const option=document.createElement('option');
+  option.value=year;option.textContent=year+' 年';select.append(option);
+ }
+}
 renderSelectors();
 document.documentElement.dataset.theme=state.theme||'light';
 const entryYear=new URLSearchParams(location.search).get('year');
-if(['demo','114','115'].includes(entryYear))$('homeYearSel').value=entryYear;
+if(entryYear==='demo'||EXAM_YEARS.includes(entryYear))$('homeYearSel').value=entryYear;
 $('yearSel').value=pageYear();
 renderAll();
 showHome();
