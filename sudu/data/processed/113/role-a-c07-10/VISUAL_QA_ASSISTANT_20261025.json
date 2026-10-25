@@ -82,8 +82,6 @@
         "printedQuestionNumberCorrect": true,
         "stemAndNecessaryPassageComplete": true,
         "allFourOriginalPrintedChoicesVisible": true,
-        "originalMandatoryDiagramsComplete": true,
-        "allOriginalTableColumnsComplete": true,
         "noAdjacentQuestion": true,
         "noPageHeaderFooter": true,
         "notWholePage": true,
@@ -91,7 +89,9 @@
         "decodedCropPixelsEqualOriginalSource": true,
         "sourceAndAssetSha256Matched": true
       },
-      "observation": "Actual direct original printed p3: Q7 number, 梁實秋〈講價〉 five ①～⑤ sentence fragments and all A-D arrangement choices fully visible; no Q8 header/pixels, no whole page."
+      "observation": "Actual direct original printed p3: Q7 number, 梁實秋〈講價〉 five ①～⑤ sentence fragments and all A-D arrangement choices fully visible; no Q8 header/pixels, no whole page.",
+      "figureReview": "NOT_APPLICABLE",
+      "tableReview": "NOT_APPLICABLE"
     },
     {
       "questionId": "113-00-C-08",
@@ -123,8 +123,6 @@
         "printedQuestionNumberCorrect": true,
         "stemAndNecessaryPassageComplete": true,
         "allFourOriginalPrintedChoicesVisible": true,
-        "originalMandatoryDiagramsComplete": true,
-        "allOriginalTableColumnsComplete": true,
         "noAdjacentQuestion": true,
         "noPageHeaderFooter": true,
         "notWholePage": true,
@@ -132,7 +130,9 @@
         "decodedCropPixelsEqualOriginalSource": true,
         "sourceAndAssetSha256Matched": true
       },
-      "observation": "Actual direct original printed p3: Q8 轉折關係「而」 question, full explanatory stem and A-D classical sentences legible; no adjacent Q7 or Q9."
+      "observation": "Actual direct original printed p3: Q8 轉折關係「而」 question, full explanatory stem and A-D classical sentences legible; no adjacent Q7 or Q9.",
+      "figureReview": "NOT_APPLICABLE",
+      "tableReview": "NOT_APPLICABLE"
     },
     {
       "questionId": "113-00-C-09",
@@ -164,8 +164,6 @@
         "printedQuestionNumberCorrect": true,
         "stemAndNecessaryPassageComplete": true,
         "allFourOriginalPrintedChoicesVisible": true,
-        "originalMandatoryDiagramsComplete": true,
-        "allOriginalTableColumnsComplete": true,
         "noAdjacentQuestion": true,
         "noPageHeaderFooter": true,
         "notWholePage": true,
@@ -173,7 +171,9 @@
         "decodedCropPixelsEqualOriginalSource": true,
         "sourceAndAssetSha256Matched": true
       },
-      "observation": "Actual source pixel five-strategy matrix includes 对立/合作/妥協/迴避/順應 (original simplified/traditional printing as-is) plus high/low vertical axis and complete horizontal 配合他人的程度. Initial y2 1123 clipped/touched bottom chart axis caption, rejected; fixed y2 1136, Q9 full options A-D and no Q10."
+      "observation": "Actual source pixel five-strategy matrix includes 对立/合作/妥協/迴避/順應 (original simplified/traditional printing as-is) plus high/low vertical axis and complete horizontal 配合他人的程度. Initial y2 1123 clipped/touched bottom chart axis caption, rejected; fixed y2 1136, Q9 full options A-D and no Q10.",
+      "figureReview": "PASS_ORIGINAL_PX_FIGURE_FULL",
+      "tableReview": "NOT_APPLICABLE"
     },
     {
       "questionId": "113-00-C-10",
@@ -205,8 +205,6 @@
         "printedQuestionNumberCorrect": true,
         "stemAndNecessaryPassageComplete": true,
         "allFourOriginalPrintedChoicesVisible": true,
-        "originalMandatoryDiagramsComplete": true,
-        "allOriginalTableColumnsComplete": true,
         "noAdjacentQuestion": true,
         "noPageHeaderFooter": true,
         "notWholePage": true,
@@ -214,7 +212,9 @@
         "decodedCropPixelsEqualOriginalSource": true,
         "sourceAndAssetSha256Matched": true
       },
-      "observation": "Actual original complete Q10 《天工開物·舟車》 stem, fishbone diagram and explanatory block plus original A-D four-column table ①,①-1,②,②-1 preserved. Candidate option D raw had unrelated p4 Q11-15 reading article, cleaned only in separate structured candidate; actual image is unmodified original pixels and contains no adjacent Q9, Q11 or exam footer. Adjacent Q09 caption allowed by shifting Q10 top to y1137."
+      "observation": "Actual original complete Q10 《天工開物·舟車》 stem, fishbone diagram and explanatory block plus original A-D four-column table ①,①-1,②,②-1 preserved. Candidate option D raw had unrelated p4 Q11-15 reading article, cleaned only in separate structured candidate; actual image is unmodified original pixels and contains no adjacent Q9, Q11 or exam footer. Adjacent Q09 caption allowed by shifting Q10 top to y1137.",
+      "figureReview": "PASS_ORIGINAL_PX_FIGURE_FULL",
+      "tableReview": "PASS_ALL_FOUR_COLUMN_LABELS_AND_AD_ROWS"
     }
   ],
   "observedQ09OriginalFigureComplete": true,
