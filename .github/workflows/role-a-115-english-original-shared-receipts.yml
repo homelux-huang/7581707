@@ -1,0 +1,51 @@
+name: Role A 115 English 29,39-41 original and unapproved shared WebPs (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-e29-e39-41-original-source-20261025
+    paths:
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-29.webp
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-39.webp
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-40.webp
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-41.webp
+      - sudu/data/processed/115/webp-v2/shared/115-00-E-SHARED-29-30.webp
+      - sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp
+      - sudu/data/processed/115/VISUAL_QA_2026-10-22_B2.json
+      - tests/test_role_a_115_english_original_shared_receipts.py
+      - .github/workflows/role-a-115-english-original-shared-receipts.yml
+      - docs/ROLE_A_115_ENGLISH_29_39_41_SHARED_ORIGINAL_20261025.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-english-shared-original-source-20261025
+  cancel-in-progress: false
+
+jobs:
+  exact_source_not_admission:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-e29-e39-41-original-source-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Read-only checkout exact source branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install actual original WebP decoder
+        run: python -m pip install -q pillow
+      - name: Verify original four WebPs and two shared DRAFT crops and canonical 205-row parity
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_english_original_shared_receipts.py scripts/sudu_verified_publish.py
+          python -m unittest discover -s tests -p test_role_a_115_english_original_shared_receipts.py -v
+      - name: Strict read-only and no new shared PASS or Pages
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Only original immutable WebPs and historic QA, shared article DRAFT remains blocked."
