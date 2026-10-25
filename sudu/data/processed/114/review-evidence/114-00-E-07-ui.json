@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "Playwright Chromium actual formal V4 (not synthetic stems or source images); 8 screen widths × 2 themes, no human QA claimed",
+  "testedQuestionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "testedWebpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+  "testedAnswer": "A",
+  "browserSmokePassed": true,
+  "rwdPassed": true,
+  "verifiedYearQaMode": true,
+  "ciRunUrl": "https://github.com/homelux-huang/7581707/actions/runs/40098085893",
+  "ciArtifactUrl": "https://github.com/homelux-huang/7581707/actions/runs/40098085893/artifacts/12561662233",
+  "codeCommitTested": "57d766e841235b937babf3fe10a8ff44606c7c41",
+  "sourceBranchAtApproval": "9be196cb00a9d9e5255e50f478268e4a5fa6ae90",
+  "testScript": "tests/sudu_real_114_english_browser.cjs",
+  "viewportChecks": 8,
+  "themeChecks": 2,
+  "totalPerQuestionChecks": 16,
+  "testedViewports": [
+    "360x800",
+    "375x812",
+    "390x844",
+    "412x915",
+    "430x932",
+    "768x1024",
+    "1024x768",
+    "1440x900"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "checked": [
+    "Original question number and A-D option strings identical to real QA source",
+    "Original single-question WebP SHA256 and browser decode, no full-page image",
+    "Correct answer and incorrect red state",
+    "Teacher explanation and elementary-school explanation shown for correct option",
+    "Four option explanations rendered",
+    "English has no unrelated calculation block",
+    "No duplicated correct-answer explanation/memo",
+    "No horizontal overflow in all 8x2 combinations",
+    "Question-number navigation auto-retracts after answer",
+    "Navigation moves between exact question numbers without cross-QID mix"
+  ],
+  "ciFixtureScope": "QA-only temporary promotion of three actual source records into checked-out main V4; never deployed the fixture",
+  "actualMainV4UiTested": true,
+  "humanReviewerClaimed": false
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-08",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+  "webpSha256": "5a9ebec3dbb4cacf3bbb2cd2f6121f69319d042e3c716f41fdbe96f30bfd9c85",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "片語辨析｜stand out as",
+    "teacherSummary": "由 due to his magnificent performance 判斷陳傑憲因表現出色，以世界十二強賽 MVP 身分脫穎而出；stood out as 語意相符。",
+    "elementarySummary": "球員表現非常棒，很突出，所以大家都注意到他是最亮眼的選手。",
+    "concept": "stand out as = 作為……而突出／脫穎而出；due to = 因為。",
+    "extension": "相反意思：blend in（融入、不顯眼）與 stand out（突出）形成對比。",
+    "formula": "",
+    "source": "114 年四技二專統測英文第 8 題；官方原始試卷與公布答案 PDF；教科書頁碼待核對",
+    "memory": "表現傑出→stand out as；不要把 was named after 誤解成「被選為」。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "錯誤。be named after 表示『以某人或某物命名』，非因表現優異獲評 MVP。",
+        "elementary": "這是在說名字跟誰一樣，不是得獎。",
+        "reason": "固定片語語義不同。"
+      },
+      "B": {
+        "teacher": "錯誤。make fun of 是取笑，和優異表現完全相反。",
+        "elementary": "這是嘲笑，不是在稱讚球員。",
+        "reason": "語意衝突。"
+      },
+      "C": {
+        "teacher": "錯誤。be in charge of 是負責管理，MVP 不是管理工作。",
+        "elementary": "最有價值球員不是主管。",
+        "reason": "角色關係錯誤。"
+      },
+      "D": {
+        "teacher": "正確。stood out as（以……身分突出）與 MVP、magnificent performance 搭配。",
+        "elementary": "因為打得特別好，他脫穎而出。",
+        "reason": "因果關係與動詞時態均正確。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "MVP",
+      "magnificent performance",
+      "stood out as"
+    ],
+    "extra": {}
+  },
+  "teachingSourceDraft": "sudu/data/processed/114/review-evidence/EN07_09_POSTKEY_TEACHING_DRAFT_20261024.json",
+  "originalQuestionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+  "humanReviewerClaimed": false
+}

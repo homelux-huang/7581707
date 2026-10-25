@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-09",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+  "webpSha256": "393dbdbfbd59220a18fd11d2c09d1b07cd9daf5816d32bbe91a6ec1a335c204b",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "content": {
+    "topic": "副詞同義｜apparently vs obviously",
+    "teacherSummary": "Apparently 表示從觀察跡象推知『顯然、看來』。Mary 再次自我介紹，說話者推測她以為名字已被忘記；obviously 最接近。",
+    "elementarySummary": "Mary 又講了一次名字，讓人覺得她大概認為別人忘了。看到這個線索，就說『看起來很明顯』。",
+    "concept": "apparently = 看來、顯然（基於跡象推斷）；obviously = 明顯地；actively/entirely/internally 不同。",
+    "extension": "apparently 有時保留推測語氣；obviously 有時語氣較確定，考題考最接近意思，不代表任何語境完全等義。",
+    "formula": "",
+    "source": "114 年四技二專統測英文第 9 題；官方原始試卷與公布答案 PDF；教科書頁碼待核對",
+    "memory": "apparently（看來）≈ obviously（顯然），要依上下文判斷。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "錯誤。actively 是主動地，與從線索得知的推測無關。",
+        "elementary": "主動做事不等於『看起來』。",
+        "reason": "詞義不同。"
+      },
+      "B": {
+        "teacher": "錯誤。entirely 是完全地，不是根據跡象推論。",
+        "elementary": "全部做完不等於看出原因。",
+        "reason": "詞義不同。"
+      },
+      "C": {
+        "teacher": "錯誤。internally 是內部地／內心地，與顯然不同。",
+        "elementary": "在裡面做事不是『顯然』。",
+        "reason": "詞義不同。"
+      },
+      "D": {
+        "teacher": "正確。obviously（顯然地）最接近 apparently 的語境意義。",
+        "elementary": "從 Mary 又自我介紹，看來她覺得對方忘記名字。",
+        "reason": "推測含義吻合。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "Apparently",
+      "obviously",
+      "introduced herself again"
+    ],
+    "extra": {}
+  },
+  "teachingSourceDraft": "sudu/data/processed/114/review-evidence/EN07_09_POSTKEY_TEACHING_DRAFT_20261024.json",
+  "originalQuestionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+  "humanReviewerClaimed": false
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI: real original WebP visual QA + actual TCTE official final-answer PDF image reviewed in this session (not human QA)",
+  "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+  "question": "During the night, the sensor lights in the park will              turn on by themselves when\n   someone is passing by.",
+  "options": [
+    "automatically",
+    "organically",
+    "productively",
+    "selfishly"
+  ],
+  "visualTextCompared": true,
+  "originalPageWebpPath": "sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp",
+  "originalPageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+  "originalWebpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-07.webp",
+  "originalCropCoordinates": [
+    90,
+    1007,
+    1310,
+    1129
+  ],
+  "originalWebpDecoded": true,
+  "sourceCropsExactPixelMatched": true,
+  "priorImageQaReference": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+  "actualVisualInspection": "Official 114 English original single-question WebP visibly contains the correct numbered question, complete stem and all four A-D options without another question",
+  "originalSourcePixelRun": "https://github.com/homelux-huang/7581707/actions/runs/40097216703",
+  "humanReviewerClaimed": false
+}
