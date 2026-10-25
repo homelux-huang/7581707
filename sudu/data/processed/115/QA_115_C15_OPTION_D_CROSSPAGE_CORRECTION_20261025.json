@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-C15-OPTION-D-CROSSPAGE-SQLITE-20261025-09",
+  "questionId": "115-00-C-15",
+  "role": "A source/OCR correction author, not independent E",
+  "sourceOriginalSingleWebpSha256": "74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f",
+  "sourceOriginalPageWebpSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+  "sourceHistoricalImageEvidenceGitBlob": "fca5b8e9e16b390f245c93caeb420b4b86f97f60",
+  "sourceHistoricalAnswerEvidenceGitBlob": "250ed2949b54099ee86511e0d1c4bcf69f33c9be",
+  "originalBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "originalRawOptionDSha256": "962d07e7b3f0c2797926259655c4ed3fbedcff9fa89bd84b88fd8c19a8e23542",
+  "correctedOptionD": "拘泥禮法 ／ 不知變通",
+  "correctedOptionDSha256": "d226689fc91d88f5fe35d77150020f133b436be8e8ddc3d6b125326541832a65",
+  "sourceRevisionBefore": "ed67a7fbd1535f2c38dc7ce69aea4f0e0129cff0f909bccc86c500ae19ec9744",
+  "sourceRevisionAfter": "29ee0b0159cef18c7b9458d4bea07cbd5acf15f787e396a2430cb613310f4485",
+  "sqliteCorrectedPayloadSha256": "b0646c4c1e614c4b59c9d25ad6558be6a2d7fd4443a333929832444fe51a68b6",
+  "officialFinalAnswer": "B",
+  "preservedRawExtraction": true,
+  "preexistingSqliteDenormalizedFieldDivergences": {
+    "115-00-C-06": [
+      "answer_verified"
+    ],
+    "115-00-C-11": [
+      "answer_verified"
+    ],
+    "115-00-C-12": [
+      "answer_verified"
+    ],
+    "115-00-C-13": [
+      "answer_verified"
+    ],
+    "115-00-C-14": [
+      "answer_verified"
+    ],
+    "115-00-C-15": [
+      "answer_verified"
+    ],
+    "115-00-MB-01": [
+      "answer_verified"
+    ],
+    "115-00-MB-02": [
+      "answer_verified"
+    ],
+    "115-00-MB-03": [
+      "answer_verified"
+    ],
+    "115-00-MB-04": [
+      "answer_verified"
+    ],
+    "115-00-MB-05": [
+      "question",
+      "answer_verified",
+      "question_verified"
+    ],
+    "115-00-MB-06": [
+      "answer_verified"
+    ],
+    "115-00-MB-07": [
+      "answer_verified"
+    ],
+    "115-00-MB-08": [
+      "answer_verified"
+    ],
+    "115-00-MB-09": [
+      "answer_verified"
+    ],
+    "115-00-MB-10": [
+      "answer_verified"
+    ],
+    "115-00-MB-11": [
+      "answer_verified"
+    ],
+    "115-00-MB-12": [
+      "answer_verified"
+    ],
+    "115-00-MB-13": [
+      "answer_verified"
+    ],
+    "115-00-MB-14": [
+      "answer_verified"
+    ],
+    "115-00-MB-15": [
+      "answer_verified"
+    ],
+    "115-00-MB-16": [
+      "answer_verified"
+    ],
+    "115-00-MB-17": [
+      "answer_verified"
+    ],
+    "115-00-MB-18": [
+      "answer_verified"
+    ],
+    "115-00-MB-19": [
+      "answer_verified"
+    ],
+    "115-00-MB-20": [
+      "question",
+      "answer_verified"
+    ],
+    "115-00-MB-21": [
+      "question",
+      "answer_verified"
+    ],
+    "115-00-MB-22": [
+      "question",
+      "answer_verified"
+    ],
+    "115-00-MB-23": [
+      "question",
+      "answer_verified"
+    ],
+    "115-00-MB-24": [
+      "question",
+      "answer_verified"
+    ],
+    "115-00-MB-25": [
+      "question",
+      "answer_verified"
+    ],
+    "115-09-1-01": [
+      "answer_verified"
+    ],
+    "115-09-1-02": [
+      "answer_verified"
+    ],
+    "115-09-1-03": [
+      "answer_verified"
+    ],
+    "115-09-1-04": [
+      "answer_verified"
+    ],
+    "115-09-1-05": [
+      "answer_verified"
+    ],
+    "115-09-1-06": [
+      "answer_verified"
+    ],
+    "115-09-1-07": [
+      "answer_verified"
+    ],
+    "115-09-1-08": [
+      "answer_verified"
+    ],
+    "115-09-1-09": [
+      "answer_verified"
+    ],
+    "115-09-1-10": [
+      "answer_verified"
+    ],
+    "115-09-1-11": [
+      "answer_verified"
+    ],
+    "115-09-1-12": [
+      "answer_verified"
+    ],
+    "115-09-1-13": [
+      "answer_verified"
+    ],
+    "115-09-1-14": [
+      "answer_verified"
+    ],
+    "115-09-1-15": [
+      "answer_verified"
+    ],
+    "115-09-1-16": [
+      "answer_verified"
+    ],
+    "115-09-1-17": [
+      "answer_verified"
+    ],
+    "115-09-1-18": [
+      "answer_verified"
+    ],
+    "115-09-1-19": [
+      "answer_verified"
+    ],
+    "115-09-1-20": [
+      "answer_verified"
+    ],
+    "115-09-1-21": [
+      "answer_verified"
+    ],
+    "115-09-1-22": [
+      "answer_verified"
+    ],
+    "115-09-1-23": [
+      "answer_verified"
+    ],
+    "115-09-1-24": [
+      "answer_verified"
+    ],
+    "115-09-1-25": [
+      "answer_verified"
+    ],
+    "115-09-1-26": [
+      "answer_verified"
+    ],
+    "115-09-1-27": [
+      "answer_verified"
+    ],
+    "115-09-1-28": [
+      "answer_verified"
+    ],
+    "115-09-1-29": [
+      "answer_verified"
+    ],
+    "115-09-1-30": [
+      "answer_verified"
+    ],
+    "115-09-1-31": [
+      "answer_verified"
+    ],
+    "115-09-1-32": [
+      "answer_verified"
+    ],
+    "115-09-1-33": [
+      "answer_verified"
+    ],
+    "115-09-1-34": [
+      "answer_verified"
+    ],
+    "115-09-1-35": [
+      "answer_verified"
+    ],
+    "115-09-1-36": [
+      "answer_verified"
+    ],
+    "115-09-1-37": [
+      "answer_verified"
+    ],
+    "115-09-1-38": [
+      "answer_verified"
+    ],
+    "115-09-1-39": [
+      "answer_verified"
+    ],
+    "115-09-1-40": [
+      "answer_verified"
+    ],
+    "115-09-1-41": [
+      "answer_verified"
+    ],
+    "115-09-1-42": [
+      "answer_verified"
+    ],
+    "115-09-1-43": [
+      "answer_verified"
+    ],
+    "115-09-1-44": [
+      "answer_verified"
+    ],
+    "115-09-1-45": [
+      "answer_verified"
+    ],
+    "115-09-1-46": [
+      "answer_verified"
+    ],
+    "115-09-1-47": [
+      "answer_verified"
+    ],
+    "115-09-1-48": [
+      "answer_verified"
+    ],
+    "115-09-1-49": [
+      "answer_verified"
+    ],
+    "115-09-1-50": [
+      "answer_verified"
+    ]
+  },
+  "preexistingSqliteDenormalizedFieldDivergenceCount": 81,
+  "questionVerified": false,
+  "independentOriginalTextQa": "PENDING",
+  "independentRoleEContentReview": "PENDING",
+  "studentReleaseApproved": false,
+  "newReady": 0,
+  "newLive": 0,
+  "correctionScope": "Only 115-00-C-15 options[3] structured text, not raw OCR or other questions",
+  "evidence": "Archived exact original Q15 WebP and historical visual QA show A-D with no adjacent Q16; extracted D appended p5 footer/p6 unrelated text"
+}
