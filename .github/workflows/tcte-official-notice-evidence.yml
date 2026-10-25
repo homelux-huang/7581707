@@ -1,0 +1,33 @@
+name: Read-only TCTE 114 official notice PDF evidence (NO DEPLOY)
+on:
+  push:
+    branches: [evidence/114-115-tcte-official-notice-20261024]
+    paths:
+      - scripts/tcte_official_notice_pdf_audit.py
+      - .github/workflows/tcte-official-notice-evidence.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official_notice_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF reading only
+        run: python -m pip install -q requests pymupdf
+      - name: Read actual official PDF bytes and retain pending QA status
+        run: python scripts/tcte_official_notice_pdf_audit.py --output /tmp/tcte-114-notice-audit
+      - name: Archive official PDFs, pages, text and SHA (not QA certificates)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tcte-114-original-official-notices-unreviewed
+          path: /tmp/tcte-114-notice-audit/
+          if-no-files-found: warn
+          retention-days: 30
