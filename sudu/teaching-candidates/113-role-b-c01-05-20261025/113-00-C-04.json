@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-04",
+  "taskId": "B-113-C01-05-A72-PROVENANCE-LESSONS-20261025-11",
+  "subject": "國文",
+  "question": "依據下文，□內最適合填入的詞語依序為何？\n  對演員來說，聾啞角色雖是限制，也可能是機會。吳慷仁在 《 富都青年 》 中掌握手語節\n  奏與情緒，削弱外放的表演氣質，□□□□，讓無語的角色更顯張力。一場自白口語\n  戲，從平靜到憤怒，從憤怒到悲哀，□□□□，即使無聲也毫不影響情緒傳遞，反而更\n  聚焦於細微表情的情感流轉，極具渲染力，□□□□□。 ( 改寫自彭紹宇〈 《 富都青\n  年 》：關於愛，也關於愛的無能〉 )",
+  "options": [
+    "不拘細行 ／ 層次分明 ／ 脈脈不得語",
+    "不拘細行 ／ 千頭萬緒 ／ 無聲勝有聲",
+    "返璞歸真 ／ 層次分明 ／ 無聲勝有聲",
+    "返璞歸真 ／ 千頭萬緒 ／ 脈脈不得語"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourcePR72Head": "481734d51928c8e47303718034479feafdf7e45e",
+    "sourceRevision": "65819ce90089f3b1113b4182ed213e6286a1c99b51a849beaa16c0ea6bd70e61",
+    "sourceWebpPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp",
+    "webpSha256": "f548f0e5cdfbc3c669dd5ea161128ba5b277a83ed58ef0d044d61c64f5e4c13a",
+    "sourceManifestG1Status": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+    "sourceTextQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+    "finalOfficialAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+    "roleAImageEvidencePath": "sudu/data/processed/113/role-a-c01-05/VISUAL_QA_ASSISTANT_20261025.json",
+    "originalImageQaReceipt": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "finalNoticeScopeVerified": false
+  },
+  "teaching": {
+    "topic": "113國文4｜返璞歸真、層次分明、無聲勝有聲",
+    "teacherSummary": "第一格前說吳慷仁削弱**外放的表演氣質**，讓角色自然真實，應填『**返璞歸真**』。第二格有『從平靜到憤怒，從憤怒到悲哀』的分段轉換，是『**層次分明**』，不是千頭萬緒的繁雜思緒。第三格『即使無聲也毫不影響情緒傳遞』並更聚焦表情感染力，吻合『**無聲勝有聲**』。三格同時吻合的只有 C；此為題內《富都青年》評論改寫文本推理，不擴張成現實電影史證實。",
+    "elementarySummary": "演員收起誇張動作，演得自然就是返璞歸真；從平靜到生氣再到難過，分很清楚是層次分明；沒說話也讓人感動是無聲勝有聲。三格一組選 C。",
+    "concept": "語意填空逐格看前後文：收斂→自然；情緒轉換→層次；無言卻動人→無聲勝有聲。",
+    "memory": "收斂→返璞歸真；三段變化→層次分明；無聲表情更動人→無聲勝有聲，C。",
+    "solvingSteps": [
+      "第一格削弱外放，對應返璞歸真，不選不拘細行。",
+      "第二格平靜→憤怒→悲哀有明確層次，選層次分明。",
+      "第三格無聲仍有渲染力，選無聲勝有聲。",
+      "三詞依序組合只有 C，逐項排除其他三列。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 不拘細行意為不拘細節，卻與文章聚焦細微表情不吻合；末格脈脈不得語也不如無聲勝有聲能寫出強烈感染力。",
+        "elementary": "A 中間分層對，但前後詞都不是這個意思。",
+        "why": "A 的第一與第三格和上下文核心語義不合。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 第一格不拘細行不是回歸自然；第二格千頭萬緒指心緒繁雜，不等於平靜到憤怒再悲哀的階段清楚。",
+        "elementary": "B 最後說無聲有力量可以，但前兩格接不起來。",
+        "why": "B 的前兩詞無法呼應表演收斂與情緒分層。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 返璞歸真對應削弱外放表演，層次分明對應平靜憤怒悲哀的轉換，無聲勝有聲對應細微表情仍具渲染力，三格都貼切。",
+        "elementary": "C 是演得自然、情緒分清楚、不用說話也動人，三格都對。",
+        "why": "C 依序吻合全文三段線索，為正解。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 首格返璞歸真合理，但千頭萬緒不是情緒層次分明；脈脈不得語重在含情不語，無法充分表達無聲更有感染力的評價。",
+        "elementary": "D 第一格對，後兩格把清楚變成亂、把有力變成只是沒講話。",
+        "why": "D 第二三格與文本的清楚轉折和強烈情緒不符。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "chineseVocabulary": [
+      {
+        "level": "初級",
+        "term": "返璞歸真",
+        "meaning": "回到自然樸實"
+      },
+      {
+        "level": "中級",
+        "term": "層次分明",
+        "meaning": "情緒或步驟段落清楚"
+      },
+      {
+        "level": "高級",
+        "term": "無聲勝有聲",
+        "meaning": "雖不說話卻更感動人"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "富都青年",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "外放的表演氣質",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "返璞歸真",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "層次分明",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "無聲勝有聲",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不拘細行",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "千頭萬緒",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "脈脈不得語",
+        "bold": true,
+        "highlight": true
+      }
+    ]
+  },
+  "teachingCanonicalSha256": "32635cb85c34e280bb60f21f115b778198c191135f91f94b5bbfc642e4ee854b",
+  "composedTeachingSha256": "a4bbbc6f31c17aa05e06d32eeb17564944f609716657ef6c1378a6aafb90051e",
+  "reasoningAudit": {
+    "knownAnswerBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "roleE": "PENDING_DISTINCT_AI_REVIEW",
+    "roleD": "PENDING_SAME_SHA_8X2",
+    "requiresRealHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerVerified": false,
+    "sourceFinalQaVerified": false,
+    "formalReady": false,
+    "newMain": false,
+    "newLive": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

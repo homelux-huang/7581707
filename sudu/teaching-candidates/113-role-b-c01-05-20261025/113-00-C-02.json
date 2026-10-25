@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-02",
+  "taskId": "B-113-C01-05-A72-PROVENANCE-LESSONS-20261025-11",
+  "subject": "國文",
+  "question": "下列文句的「如」，何者與「他植者雖窺伺傚慕，莫能如也」的「如」意義最接近？",
+  "options": [
+    "縱一葦之所「如」，凌萬頃之茫然",
+    "貓眼黑睛「如」線，此正午貓眼也",
+    "其中往來種作，男女衣著，悉「如」外人",
+    "臣之壯也，猶不「如」人，今老矣，無能為也已"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourcePR72Head": "481734d51928c8e47303718034479feafdf7e45e",
+    "sourceRevision": "9f61ff0935d744867ee63ea100e39a8202d63ae540f13a046cbacf68b03c4971",
+    "sourceWebpPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp",
+    "webpSha256": "4504646281047509ea1bd88b68271e79ef3c44f89893ea8331cfd7f2e3e6c73a",
+    "sourceManifestG1Status": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+    "sourceTextQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+    "finalOfficialAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+    "roleAImageEvidencePath": "sudu/data/processed/113/role-a-c01-05/VISUAL_QA_ASSISTANT_20261025.json",
+    "originalImageQaReceipt": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "finalNoticeScopeVerified": false
+  },
+  "teaching": {
+    "topic": "113國文2｜如的一字多義：比得上",
+    "teacherSummary": "『他植者雖窺伺傚慕，莫能如也』是說其他種樹者雖然觀察與模仿郭橐駝，也沒人能比得上他；如在此意為**及得上**。A『所如』是前往的地方；B『如線』與 C『悉如外人』是相像；只有 D『猶不如人』的如表示比得上，因『不』而成比不上，與原句同義。",
+    "elementarySummary": "題目說其他人怎麼學也比不上他。A 的如是去哪裡；B、C 是像什麼；D 的『不如人』才是比不上別人，所以選 D。",
+    "concept": "如有『往』、『像』、『及得上』等不同意義；莫能如與不如都屬能力比較。",
+    "memory": "莫能如＝比不上；猶不如人＝還比不上；D。",
+    "solvingSteps": [
+      "把莫能如也譯作沒人能比得上他。",
+      "A 所如是小舟前往之處，排除。",
+      "B 如線和 C 如外人都是相像義，排除。",
+      "D 不如人表示比不上，與題幹相同，選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "『縱一葦之所如』是任小舟前往哪兒，如表往或到，不是能力比較。",
+        "elementary": "A 是小船往哪裡走，沒有說誰比較厲害。",
+        "why": "A 的如是前往，與題幹比得上不同。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "『貓眼黑睛如線』的如表示像線一樣細，是形狀相似而非能力比較。",
+        "elementary": "B 說貓的眼睛像一條線。",
+        "why": "B 的如是如同，不是比得上。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "『悉如外人』是衣著都像外面的人，並沒有誰比誰技術更高的比較。",
+        "elementary": "C 是衣服跟外面的人差不多。",
+        "why": "C 的如是相像，不是能力高下。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "『臣之壯也，猶不如人』的如是比得上，前加不就成比不上別人，與莫能如也同義。",
+        "elementary": "D 是『我還比不上人』，跟題目意思相同。",
+        "why": "D 與題幹的如都是及得上、比得上的意思。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "chineseVocabulary": [
+      {
+        "level": "初級",
+        "term": "如",
+        "meaning": "像、往、比得上"
+      },
+      {
+        "level": "中級",
+        "term": "窺伺傚慕",
+        "meaning": "觀察模仿"
+      },
+      {
+        "level": "高級",
+        "term": "一字多義",
+        "meaning": "同一字在不同語境有不同意思"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "莫能如也",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "縱一葦之所「如」",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "貓眼黑睛「如」線",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "悉「如」外人",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "猶不「如」人",
+        "bold": true,
+        "highlight": true
+      }
+    ]
+  },
+  "teachingCanonicalSha256": "4f9d06f80640b2d45e156946f281452c59ab701562cc12f10b54377a8cbf1fe6",
+  "composedTeachingSha256": "fb547ce5485ffe8ffeed26548f368e10072336d8f8b04c3606371a52915ffacd",
+  "reasoningAudit": {
+    "knownAnswerBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "roleE": "PENDING_DISTINCT_AI_REVIEW",
+    "roleD": "PENDING_SAME_SHA_8X2",
+    "requiresRealHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerVerified": false,
+    "sourceFinalQaVerified": false,
+    "formalReady": false,
+    "newMain": false,
+    "newLive": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
