@@ -19,6 +19,37 @@ def read_json(relative):
 def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
+# Intake-only contract: a missing historical author flag is UNKNOWN, never TRUE.
+# This deliberately does not grant independent human approval or publish READY.
+_MISSING = object()
+
+def require_blocked_author_receipt(doc, role):
+    review = doc.get("review", _MISSING)
+    if not isinstance(review, dict):
+        raise AssertionError("candidate review object required")
+    human = review.get("humanTeacherVerified", _MISSING)
+    if human is not _MISSING and human is not False:
+        raise AssertionError("humanTeacherVerified must be missing or literal false")
+    if role == "B":
+        if review.get("studentReleaseApproved", _MISSING) is not False:
+            raise AssertionError("B draft cannot set studentReleaseApproved")
+        if review.get("formalReady", _MISSING) is not False:
+            raise AssertionError("B draft cannot set formalReady")
+        if review.get("independentReviewer", None) is not None:
+            raise AssertionError("independentReviewer cannot be self-attested")
+    elif role == "C":
+        if doc.get("studentReleaseApproved", _MISSING) is not False:
+            raise AssertionError("C draft cannot set studentReleaseApproved")
+        if doc.get("deploy", _MISSING) is not False:
+            raise AssertionError("C draft cannot set deploy")
+        if review.get("externalIndependentReview", _MISSING) != "PENDING":
+            raise AssertionError("C author is not an external reviewer")
+        if review.get("uiQa", _MISSING) != "PENDING":
+            raise AssertionError("C candidate has no exact-digest UI approval")
+    else:
+        raise AssertionError("unknown author role: " + str(role))
+    return "BLOCKED_HUMAN_FLAG_MISSING" if human is _MISSING else "BLOCKED_HUMAN_FLAG_FALSE"
+
 class CandidateIntegrityOnly(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -111,12 +142,66 @@ class CandidateIntegrityOnly(unittest.TestCase):
                     doc = json.loads(path.read_text(encoding="utf-8"))
                     self.assertIn(item["questionId"], self.q)
                     self.assertEqual(doc["questionId"], item["questionId"])
-                    if folder == "114-role-b-20261025":
-                        self.assertFalse(doc["review"]["humanTeacherVerified"])
-                        self.assertFalse(doc["review"]["studentReleaseApproved"])
+                    role = "B" if folder == "114-role-b-20261025" else "C"
+                    state = require_blocked_author_receipt(doc, role)
+                    self.assertTrue(state.startswith("BLOCKED_HUMAN_FLAG_"))
+
+    def test_review_contract_missing_and_literal_false_are_blocked_not_approved(self):
+        b = read_json("sudu/teaching-candidates/114-role-b-20261025/114-00-E-07.json")
+        c = read_json("sudu/teaching-candidates/114-115-20261025/115-00-MB-20.json")
+        self.assertEqual(require_blocked_author_receipt(b, "B"), "BLOCKED_HUMAN_FLAG_FALSE")
+        self.assertEqual(require_blocked_author_receipt(c, "C"), "BLOCKED_HUMAN_FLAG_MISSING")
+        for role, original in (("B", b), ("C", c)):
+            for case in ("missing", "false"):
+                with self.subTest(role=role, case=case):
+                    candidate = json.loads(json.dumps(original))
+                    if case == "missing":
+                        candidate["review"].pop("humanTeacherVerified", None)
+                        self.assertEqual(require_blocked_author_receipt(candidate, role),
+                                         "BLOCKED_HUMAN_FLAG_MISSING")
                     else:
-                        self.assertFalse(doc["studentReleaseApproved"])
-                        self.assertEqual(doc["review"]["externalIndependentReview"], "PENDING")
+                        candidate["review"]["humanTeacherVerified"] = False
+                        self.assertEqual(require_blocked_author_receipt(candidate, role),
+                                         "BLOCKED_HUMAN_FLAG_FALSE")
+
+    def test_review_contract_true_or_truthy_strings_and_numbers_fail_closed(self):
+        b = read_json("sudu/teaching-candidates/114-role-b-20261025/114-00-E-07.json")
+        c = read_json("sudu/teaching-candidates/114-115-20261025/115-00-MB-20.json")
+        for role, original in (("B", b), ("C", c)):
+            for claimed in (True, "true", "True", "false", 1, 0, None, {}, []):
+                with self.subTest(role=role, spoof=repr(claimed)):
+                    candidate = json.loads(json.dumps(original))
+                    candidate["review"]["humanTeacherVerified"] = claimed
+                    with self.assertRaisesRegex(AssertionError, "humanTeacherVerified"):
+                        require_blocked_author_receipt(candidate, role)
+
+    def test_review_contract_rejects_self_approval_and_release_flag_spoofing(self):
+        b = read_json("sudu/teaching-candidates/114-role-b-20261025/114-00-E-07.json")
+        c = read_json("sudu/teaching-candidates/114-115-20261025/115-00-MB-23.json")
+        for role, original, mutations in (
+            ("B", b, (("studentReleaseApproved", True), ("formalReady", True),
+                      ("independentReviewer", "fake-author"))),
+            ("C", c, (("studentReleaseApproved", True), ("deploy", True),
+                      ("externalIndependentReview", "APPROVED"), ("uiQa", "PASS"))),
+        ):
+            for field, value in mutations:
+                with self.subTest(role=role, field=field):
+                    candidate = json.loads(json.dumps(original))
+                    if role == "B" or field in ("externalIndependentReview", "uiQa"):
+                        candidate["review"][field] = value
+                    else:
+                        candidate[field] = value
+                    with self.assertRaises(AssertionError):
+                        require_blocked_author_receipt(candidate, role)
+
+    def test_review_contract_rejects_missing_review_and_unknown_role(self):
+        candidate = read_json("sudu/teaching-candidates/114-115-20261025/115-00-MB-20.json")
+        candidate.pop("review")
+        with self.assertRaisesRegex(AssertionError, "review object"):
+            require_blocked_author_receipt(candidate, "C")
+        candidate["review"] = {"externalIndependentReview": "PENDING"}
+        with self.assertRaisesRegex(AssertionError, "unknown author role"):
+            require_blocked_author_receipt(candidate, "E")
 
     def test_mb23_original_table_is_present_but_not_teacher_approved(self):
         q = self.q["115-00-MB-23"]
