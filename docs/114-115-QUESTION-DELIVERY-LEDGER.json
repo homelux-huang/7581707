@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-25",
+  "repository": "homelux-huang/7581707",
+  "sourceOfTruth": "GitHub canonical branches and official TCTE PDFs; NOT historical counts",
+  "yearInventory": {
+    "114": {
+      "expectedCount": null,
+      "verifiedOriginalIds": [],
+      "inventoryVerification": "PENDING_OFFICIAL_PAPER_ENUMERATION"
+    },
+    "115": {
+      "expectedCount": null,
+      "verifiedOriginalIds": [],
+      "inventoryVerification": "PENDING_OFFICIAL_PAPER_ENUMERATION"
+    }
+  },
+  "fieldSemantics": {
+    "source": "official text+image+final correction evidence accepted",
+    "teachingDraft": "authored evidence candidate not sign-off",
+    "independentTeachingQA": "authorized distinct reviewer with verifiable signed evidence",
+    "uiQA": "matching current source+teaching digest V4 8x2",
+    "ready": "all policy gates pass",
+    "mainIntegrated": "specific accepted main SHA",
+    "liveVerified": "same SHA Pages contents verified"
+  },
+  "defaultStatus": "NOT_VERIFIED",
+  "roles": {
+    "A": "source-answer-SQLite",
+    "B": "114-teaching-author",
+    "C": "115-teaching-author",
+    "D": "V4-UI-and-browser",
+    "E": "independent-evidence-auditor"
+  },
+  "reviewerGovernance": {
+    "requireHumanTeacher": true,
+    "authorizedReviewerCount": 0,
+    "newAdmissions": "BLOCKED_UNTIL_VERIFIED_REVIEWER",
+    "noSelfReview": true
+  },
+  "questionEntries": {},
+  "knownGroups": [
+    {
+      "ids": [
+        "114-00-E-07",
+        "114-00-E-08",
+        "114-00-E-09"
+      ],
+      "role": "A/B/D/E",
+      "status": "SOURCE_CANDIDATES_PR21_NOT_NEW_RELEASE",
+      "sourcePR": 21,
+      "policyPR": 22
+    },
+    {
+      "ids": [
+        "115-00-MB-20",
+        "115-00-MB-21",
+        "115-00-MB-22",
+        "115-00-MB-23",
+        "115-00-MB-24",
+        "115-00-MB-25"
+      ],
+      "role": "A/C/D/E",
+      "status": "SOURCE_PR25_AND_LESSON_PR28_CANDIDATES_NOT_READY",
+      "sourcePR": 25,
+      "teachingPR": 28,
+      "tablePR": 24
+    },
+    {
+      "ids": [
+        "115-00-MB-02",
+        "115-00-MB-03",
+        "115-00-MB-04",
+        "115-00-MB-05",
+        "115-00-MB-09"
+      ],
+      "role": "E",
+      "status": "HISTORICAL_LEGACY_EXCEPTION_PENDING_LIVE_RECHECK",
+      "policyPR": 23
+    }
+  ],
+  "pendingEvidence": [
+    "latest main and qa head full source enumeration",
+    "official question counts and actual paper-number partitions",
+    "per-question revision/WebP SHA/lesson digest",
+    "per-question independent real teacher review",
+    "latest UI and LIVE digest verification"
+  ],
+  "notes": "Known groups are triage leads, not full question inventory. Do not infer entries from group membership or promote a stage."
+}
