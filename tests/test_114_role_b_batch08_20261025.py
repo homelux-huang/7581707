@@ -41,7 +41,7 @@ class OriginalThreeLampsB08(unittest.TestCase):
         self.assertEqual(b['eIndependentAiContentReview'],'PENDING')
         self.assertIs(b['humanTeacherPrerequisite'],False)
         self.assertEqual((b['newReady'],b['newMain'],b['newLive']),(0,0,0))
-        self.assertEqual(b['masterPublisherRelease'],'NOT_AUTHORIZED')
+        self.assertEqual(b['masterRelease'],'NOT_AUTHORIZED')
         for qid in IDS:
             d=self.docs[qid]
             self.assertEqual(d['review']['sourceImageQaG1'],'DRAFT_NEEDS_DIRECT_VISUAL_QA')

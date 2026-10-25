@@ -26,7 +26,7 @@ jobs:
           b=json.loads(Path('sudu/teaching-candidates/114-role-b-20261025-batch08/batch.json').read_text(encoding='utf-8'))
           assert b['itemCount']==3 and b['newReady']==b['newMain']==b['newLive']==0
           assert b['g1ImageStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
-          assert b['eIndependentAiContentReview']=='PENDING' and b['masterPublisherRelease']=='NOT_AUTHORIZED'
+          assert b['eIndependentAiContentReview']=='PENDING' and b['masterRelease']=='NOT_AUTHORIZED'
           for row in b['items']:
               d=json.loads(Path(row['path']).read_text(encoding='utf-8'))
               assert d['review']['status']=='BLOCKED'
