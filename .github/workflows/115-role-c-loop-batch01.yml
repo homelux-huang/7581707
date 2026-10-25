@@ -1,0 +1,25 @@
+name: 115 Role C source-bound lesson drafts (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/115-role-c-loop-batch01-20261025
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-loop-20261025/**'
+      - 'tests/test_115_role_c_loop_batch01.py'
+      - '.github/workflows/115-role-c-loop-batch01.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-loop-20261025/**'
+      - 'tests/test_115_role_c_loop_batch01.py'
+      - '.github/workflows/115-role-c-loop-batch01.yml'
+permissions:
+  contents: read
+jobs:
+  source-bound-draft-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_115_role_c_loop_batch01.py' -v

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-09-2-34",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 34,
+  "subject": "經濟學",
+  "status": "SOURCE_BOUND_AUTHOR_DRAFT_NOT_RELEASED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py:text_revision JSON sorted UTF-8 question+options+singleQuestionWebpSha256 excludes answer",
+  "question": "假設人工智慧 ( AI ) 伺服器的寡占市場中僅存在兩間廠商，下列敘述何者正確？",
+  "options": [
+    "兩廠商可能會採跟跌不跟漲的訂價策略",
+    "邊際收益曲線會因寡占市場特性而呈現膨脹缺口",
+    "對消費者來說，兩廠商設計的 AI 伺服器必定具備同質性",
+    "價格僵固現象的原因為兩廠商面對同樣需求彈性的需求線"
+  ],
+  "answerCandidate": "A",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "image": "sudu/data/processed/115/webp-v2/09-2/115-09-2-34.webp",
+  "imageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+  "originalQuestionPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "originalPageWebpSha256": "defcfedf7cbc0f117d0731854efee59da41547716b0a88805454d9972da92ee5",
+  "imageManifestQaStatus": "PASS",
+  "sourceImageBytesRehashedThisSession": false,
+  "teaching": {
+    "teacherSummary": "兩家寡占的廠商彼此策略相依。**折彎需求曲線（kinked demand）** 模型常用**跟跌不跟漲**解釋價格僵固：對手降價時跟著降以免丟客；對手漲價時不一定跟，以搶到客。此模型的邊際收益曲線在折點對應數量處會有**不連續缺口**，但不是總體經濟的『膨脹缺口』。寡占產品可以同質，也可能差異化；上下兩段需求彈性通常不同。",
+    "elementarySummary": "只有兩家大公司賣相似AI伺服器。一家降價，另一家怕客人跑掉也可能降；一家漲價，另一家可能先不漲，好讓客人來買，所以價錢不一定常常變。",
+    "memory": "**寡占跟跌不跟漲→價格僵固；MR是不連續缺口不是膨脹缺口**。",
+    "concept": "雙占是一種寡占；廠商相依、默契與競爭策略造成需求曲線折彎，非所有寡占都一定採同策略。",
+    "extension": "反向題：若其中一家公司宣布漲價，競爭者保持原價可能發生什麼市場占有率變化？若改成同質完全競爭，還能談跟跌不跟漲嗎？",
+    "source": {
+      "originalExam": "115-09-2-34",
+      "originalImagePinnedSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商經濟學教材版本、章節、頁碼待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "最終答案及更正公告仍待回讀",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
+    },
+    "highlightTerms": [
+      "寡占",
+      "雙占",
+      "跟跌不跟漲",
+      "價格僵固",
+      "折彎需求曲線",
+      "不連續缺口"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A用『可能』表示兩家公司可採跟跌不跟漲，符合寡占價格僵固模型的策略相依特徵，因此正確。",
+        "elementary": "別人降價就怕丟客而跟著降；別人漲價可能不跟。",
+        "reason": "A用『可能』表示兩家公司可採跟跌不跟漲，符合寡占價格僵固模型的策略相依特徵，因此正確。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說邊際收益呈『膨脹缺口』，混用總體經濟術語；折彎需求模型的MR是**不連續跳躍／缺口**，不是『膨脹缺口』概念。",
+        "elementary": "MR的線可能中間斷一塊，但那不是國家經濟過熱的膨脹缺口。",
+        "reason": "B說邊際收益呈『膨脹缺口』，混用總體經濟術語；折彎需求模型的MR是**不連續跳躍／缺口**，不是『膨脹缺口』概念。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C說AI伺服器必定同質；寡占產品也能差異化（規格、品牌、軟體與售後），『必定』過度武斷。",
+        "elementary": "兩家公司做的伺服器可以長得不一樣，不一定一模一樣。",
+        "reason": "C說AI伺服器必定同質；寡占產品也能差異化（規格、品牌、軟體與售後），『必定』過度武斷。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D把價格僵固歸因兩家面對『同樣需求彈性』；折彎模型強調漲價與降價反應不同、需求線段彈性不同，故不合。",
+        "elementary": "價錢往上和往下變，客人的反應不一樣，才讓價格卡住。",
+        "reason": "D把價格僵固歸因兩家面對『同樣需求彈性』；折彎模型強調漲價與降價反應不同、需求線段彈性不同，故不合。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "stepByStep": {
+      "questionId": "115-09-2-34",
+      "subject": "經濟學",
+      "questionNumber": 34,
+      "answerCandidate": "A",
+      "aiAnswer": "A",
+      "needsReview": false,
+      "reviewReason": null,
+      "hasSteps": true,
+      "hasExamCalculation": false,
+      "title": "解題步驟",
+      "steps": [
+        {
+          "title": "整理題意",
+          "content": "AI伺服器市場僅兩間廠商；寡占／雙占；跟跌不跟漲；折彎需求與價格僵固",
+          "why": "避免只看選項猜答案。",
+          "kind": "given"
+        },
+        {
+          "title": "確定適用觀念",
+          "content": "雙占是一種寡占；廠商相依、默契與競爭策略造成需求曲線折彎，非所有寡占都一定採同策略。",
+          "why": "由課程定義判斷，而非憑直覺。",
+          "kind": "concept"
+        },
+        {
+          "title": "依題目推論（1）",
+          "content": "寡占廠商在折彎需求模型中可能採『跟跌不跟漲』：競爭者降價會跟進，對方漲價則不跟，因而價格僵固。",
+          "why": "只有兩家大公司賣相似AI伺服器。一家降價，另一家怕客人跑掉也可能降；一家漲價，另一家可能先不漲，好讓客人來買，所以價錢不一定常常變。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（2）",
+          "content": "A說可能，合理。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "依題目推論（3）",
+          "content": "B『邊際收益膨脹缺口』混用術語，C說商品必定同質過度武斷，D說兩家面對相同需求彈性不符合折彎需求的彈性分段。",
+          "why": "承接前一個判斷，繼續驗證題幹條件。",
+          "kind": "reasoning"
+        },
+        {
+          "title": "核對答案選項",
+          "content": "A用『可能』表示兩家公司可採跟跌不跟漲，符合寡占價格僵固模型的策略相依特徵，因此正確。",
+          "why": "與其餘選項的差異可對照 A-D 個別解說。",
+          "kind": "answer"
+        }
+      ],
+      "originalImageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
+      "independentTeachingQA": "PENDING",
+      "officialFinalVerified": true,
+      "source": "現有原圖草稿與完整計算（待獨立教學複核）"
+    }
+  },
+  "teachingCanonicalSha256": "968607d17fa6a9dfd8ca913f958e5afb9536e3f4dd57bbca1722b32707d19fe3",
+  "legacyTeaching": {
+    "path": "sudu/teaching-drafts/preview-128-20261023/115-09-2-34.json",
+    "ref": "draft/preview-128-explanations-20261023",
+    "blobSha": "77b9621e47c736091910e600381e3481567170c3",
+    "previousSourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+    "unchangedTeachingJson": true,
+    "oldClaimsOfTeacherOrAnswerApprovalNotRevalidated": true
+  },
+  "review": {
+    "author": "GPT-6 Role C (legacy teaching reuse + source bind, not new blind solve)",
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "authorizedHumanTeacherApproval": "PENDING",
+    "officialFinalAdmission": "PENDING",
+    "formalImageSourceQa": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_NOTICE_AND_SOURCE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_APPROVAL_AND_SIGNATURE_PENDING",
+    "CURRENT_EXACT_TEACHING_DIGEST_V4_8x2_UI_PENDING"
+  ]
+}
