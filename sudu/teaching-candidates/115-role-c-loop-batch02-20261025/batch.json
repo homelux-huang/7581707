@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "role": "C",
+  "sourceIssue": 36,
+  "claimCommentId": 6393644385,
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "branch": "teaching/115-role-c-loop-batch02-20261025",
+  "baseSHA": "3356e53c94c1ac0aae9f5aeb2b325b66698bf8a5",
+  "sourceHead": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "status": "ROLE_C_NEW_AUTHOR_DRAFT_ONLY",
+  "newReady": 0,
+  "newLive": 0,
+  "items": [
+    {
+      "questionId": "115-00-C-06",
+      "path": "sudu/teaching-candidates/115-role-c-loop-batch02-20261025/115-00-C-06.json",
+      "fileSha256": "58a67ec70bd1321069435c5314f7effd293dd6a62797d6832d69373ae393f8a1",
+      "teachingSha256": "c4ddbe70969b738bd0435d830bfafacd918a9dd2796a74a86c51c1e6106ccbb6",
+      "sourceTextRevision": "d072001630c98baa5ce22cc4939fe01149cc96345e1c89960ee0efbc09f625ba",
+      "imageSha256": "f031f108b2805bffd737479bb019a682439db5ef31bf1e8082b8a65c4942691c",
+      "sharedImageSha256": null,
+      "ready": false,
+      "independentQa": "PENDING",
+      "sourceSharedImageQa": "NOT_APPLICABLE"
+    },
+    {
+      "questionId": "115-00-E-29",
+      "path": "sudu/teaching-candidates/115-role-c-loop-batch02-20261025/115-00-E-29.json",
+      "fileSha256": "1f8b19e0e33ee818ab9ea9b166863e1bbff3d53b840f21192903c346ef090296",
+      "teachingSha256": "34ba6e2b7570d3ee09ce5142ba1fdc0ef0ae28ea4f6142832effe0219a8ca4e3",
+      "sourceTextRevision": "23952dc29ed2622029cce5b7a431e4c9209ca99c41f25fc7eea5b15af56f883d",
+      "imageSha256": "200722eaba0530fc8f3963cfe9c72e2749630de188ad538d5ce23200d949717d",
+      "sharedImageSha256": "e932d3fc246b55604cabd6fa1716d0fa6f8f67d658ed6a16c6d88f91bfdb49b6",
+      "ready": false,
+      "independentQa": "PENDING",
+      "sourceSharedImageQa": "PENDING"
+    },
+    {
+      "questionId": "115-00-E-39",
+      "path": "sudu/teaching-candidates/115-role-c-loop-batch02-20261025/115-00-E-39.json",
+      "fileSha256": "fa36ff186a64abe9604b1aab86141e153f6f739229db4590bbe75a05fdbb1df6",
+      "teachingSha256": "7f98f96420a9304518172d206eafc1c88fd932e47b214f00212aef13d6b082ad",
+      "sourceTextRevision": "9a098b1db2de04ecdf3af694a686e30a573ba4d63356dbf1dfe39e7ea230956a",
+      "imageSha256": "0e71395b101b6e255d48b3eea86e8a4a1086cafabab62104ade3474b32f11d3c",
+      "sharedImageSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+      "ready": false,
+      "independentQa": "PENDING",
+      "sourceSharedImageQa": "PENDING"
+    },
+    {
+      "questionId": "115-00-E-40",
+      "path": "sudu/teaching-candidates/115-role-c-loop-batch02-20261025/115-00-E-40.json",
+      "fileSha256": "6223781515ebecc74159a40cd54c2d501329db46ae256c86f51dc24cfd27929c",
+      "teachingSha256": "73d79ea31f3a3884504c80eaae2680408be4d2e61caae87b90857427c7a347a1",
+      "sourceTextRevision": "1066b79c8271d1882e9f443609665de1dab0f6a0a49553349e1d65904091fb31",
+      "imageSha256": "afa2a88eb2574bae17aad8d4a16f662e889b906f024b8950e45439f12210fbef",
+      "sharedImageSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+      "ready": false,
+      "independentQa": "PENDING",
+      "sourceSharedImageQa": "PENDING"
+    },
+    {
+      "questionId": "115-00-E-41",
+      "path": "sudu/teaching-candidates/115-role-c-loop-batch02-20261025/115-00-E-41.json",
+      "fileSha256": "c17f4dcfbfd4f2c7f35c2dd10a6a0f5e7aea22a15f97afa382761140a1253536",
+      "teachingSha256": "7c9816cc4263940ece6e99a5a9461cb4a2ed44dd8098f47d5dc66d499bf217a3",
+      "sourceTextRevision": "b5b2282057f093845c8745986a9e034e1bdfb6e6df10c18ab8d445507a68f0fd",
+      "imageSha256": "b10a8ba84292df22dc481107280522e8f8dc168ef0496f9af3f4bf71329740a4",
+      "sharedImageSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+      "ready": false,
+      "independentQa": "PENDING",
+      "sourceSharedImageQa": "PENDING"
+    }
+  ]
+}
