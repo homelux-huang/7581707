@@ -157,6 +157,25 @@ class Original113Chinese07To10(unittest.TestCase):
         self.assertEqual(q6["asset"]["sha256"],"57064b9f8da602c2894216b5f0ce7577988c2e534272d5da02affd5080f1a071")
         self.assertEqual(q6["sourceRevisionSha256"],"f5dd92e4d8b3184590011569c08977d59e3454d18b7489c3d60aca01f3343730")
 
+    def test_visual_boundary_correction_rejects_old_Q9_graph_foot_and_preserves_Q7_Q8(self):
+        old={r["questionId"]:r for r in self.man["rejectedInitialCrops"]}
+        self.assertEqual(set(old),{"113-00-C-09","113-00-C-10"})
+        self.assertEqual(old["113-00-C-09"]["cropPixels"],[90,661,1310,1123])
+        self.assertEqual(old["113-00-C-09"]["sha256"],
+            "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac")
+        self.assertEqual(old["113-00-C-10"]["cropPixels"],[90,1125,1310,1840])
+        self.assertEqual(old["113-00-C-10"]["sha256"],
+            "d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491")
+        self.assertEqual(self.q[9]["asset"]["cropPixels"],[90,661,1310,1136])
+        self.assertEqual(self.q[10]["asset"]["cropPixels"],[90,1137,1310,1840])
+        self.assertNotEqual(old["113-00-C-09"]["sha256"],self.q[9]["asset"]["sha256"])
+        self.assertNotEqual(old["113-00-C-10"]["sha256"],self.q[10]["asset"]["sha256"])
+        self.assertEqual(self.q[7]["asset"]["sha256"],
+            "dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a")
+        self.assertEqual(self.q[8]["asset"]["sha256"],
+            "4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49")
+        self.assertLess(self.q[9]["asset"]["cropPixels"][3],self.q[10]["asset"]["cropPixels"][1])
+
     def test_never_treat_four_image_candidates_or_auto_answers_as_final_ready(self):
         for key in ("newQuestionVerified","newAnswerVerified","newTeachingVerified","newIndependentEReview","newReady","newLive"):
             self.assertEqual(self.man[key],0)
