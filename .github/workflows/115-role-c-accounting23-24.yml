@@ -1,0 +1,25 @@
+name: 115 Role C accounting23-24 lesson QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/115-role-c-accounting23-24-20261025
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-accounting23-24-20261025/**'
+      - 'tests/test_115_role_c_accounting23_24.py'
+      - '.github/workflows/115-role-c-accounting23-24.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-accounting23-24-20261025/**'
+      - 'tests/test_115_role_c_accounting23_24.py'
+      - '.github/workflows/115-role-c-accounting23-24.yml'
+permissions:
+  contents: read
+jobs:
+  author-calculation-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_115_role_c_accounting23_24.py' -v
