@@ -19,7 +19,7 @@ MAN=BASE/"manifest.json"
 DB=BASE/"question-bank.sqlite3"
 WEBP=BASE/"webp/113-00-C-06.webp"
 TASK="A-113-C06-ORIGINAL-DIAGRAM-OCR-20261025-11"
-CROP=[90,1472,1310,1881]
+CROP=[90,1450,1310,1881]
 D_OPTION="齊物、無為"
 QID="113-00-C-06"
 def sha(raw):return hashlib.sha256(raw).hexdigest()
@@ -79,6 +79,7 @@ def make():
         "year":113,"paperCode":"00-C",
         "sourceIndex":"https://web1.tcte.edu.tw/EXAM/113_4y/",
         "sourceOriginalPageWebpSha256":sha(sourcebytes),
+        "rejectedOldImage":{"cropPixels":[90,1472,1310,1881],"sha256":"289e16a96ceeeb1c691075b0b553adbd9e31652af0821ab24ad77cf8e15daeb7","reason":"first diagram crop top border touched/cut upper calligraphy strokes; fixed original pixels with y1 1450"},
         "answerOriginalPageWebpSha256":sha(answerbytes),
         "sourceOriginalGitBlobSha1":archived.SRC_GIT,
         "answerOriginalGitBlobSha1":archived.ANS_GIT,
@@ -168,7 +169,30 @@ def main():
     if args.apply==args.verify:parser.error("choose exactly --apply or --verify")
     if args.apply:
         if MAN.exists():
-            saved=fromjson(MAN);check(saved);check_db(DB,saved)
+            saved=fromjson(MAN)
+            if saved["questions"][0]["asset"]["cropPixels"]==[90,1472,1310,1881]:
+                # Only the first imaged original diagram candidate is defective:
+                # its calligraphy top touches crop boundary. Refuse all unknown
+                # hashes and do NOT recreate or touch Q01-Q05 images/DB.
+                old=saved["questions"][0]["asset"]
+                assert old["sha256"]=="289e16a96ceeeb1c691075b0b553adbd9e31652af0821ab24ad77cf8e15daeb7"
+                assert old["gitBlobSha1"]=="ec5150173ecf4edcbdc19737d5c58ffc19f41747"
+                assert sha(WEBP.read_bytes())==old["sha256"]
+                check_db(DB,saved)
+                updated=make()
+                assert updated["questions"][0]["asset"]["cropPixels"]==CROP
+                assert saved["questions"][0]["options"]==updated["questions"][0]["options"]
+                assert saved["questions"][0]["answerCandidate"]==updated["questions"][0]["answerCandidate"]=="B"
+                assert updated["rejectedOldImage"]["sha256"]==old["sha256"]
+                staged=DB.with_suffix(".sqlite3.stage")
+                make_db(staged,updated)
+                check_db(staged,updated)
+                import os
+                os.replace(staged,DB)
+                MAN.write_text(json.dumps(updated,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+                print("SURGICAL_C06_TOP_FIGURE_BOUNDARY",old["sha256"],"->",updated["questions"][0]["asset"]["sha256"])
+                return
+            check(saved);check_db(DB,saved)
             print("IDEMPOTENT verified existing source, no recrop, no SQLite write")
             return
         BASE.mkdir(parents=True,exist_ok=True)
