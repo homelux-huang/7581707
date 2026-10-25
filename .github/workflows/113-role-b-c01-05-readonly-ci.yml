@@ -1,0 +1,36 @@
+name: Role B 113 C01-05 original source-pixel lessons (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/113-role-b-c01-05-20261025/**"
+      - "tests/test_113_role_b_c01_05_20261025.py"
+      - ".github/workflows/113-role-b-c01-05-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-a-original-pixels-and-role-b-lesson-sha:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: SHA verify five original WebPs, archived PDF-image pages, author lessons and source blockers
+        run: python -m unittest discover -s tests -p 'test_113_role_b_c01_05_20261025.py' -v
+      - name: Explicit fail-closed source QA, reviewer, publisher and LIVE
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          b=json.loads(Path('sudu/teaching-candidates/113-role-b-c01-05-20261025/batch.json').read_text(encoding='utf-8'))
+          assert b['itemCount']==5 and b['newReady']==b['newMain']==b['newLive']==0
+          assert b['officialFinalCorrectionScope']=='PENDING_CORRECTION_PDF_SCOPE'
+          assert not b['officialPdfRehashPerformed']
+          assert b['distinctAiEReview']=='PENDING' and b['masterRelease']=='NOT_AUTHORIZED'
+          for row in b['items']:
+              d=json.loads(Path(row['path']).read_text(encoding='utf-8'))
+              assert d['review']['status']=='BLOCKED' and d['review']['formalReady'] is False
+              assert d['source']['sourceManifestG1Status']=='DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA'
+          print('NO RELEASE: five 113 Role B candidates, source/official/E/D/MASTER pending')
+          PY
