@@ -78,7 +78,7 @@ class Original113Chinese07To10(unittest.TestCase):
         self.assertEqual(q["originalFigureKind"],"five_strategy_positioning_matrix")
         self.assertEqual(q["options"],["①、②皆正確","①、②皆錯誤","①正確，②錯誤","①錯誤，②正確"])
         self.assertNotEqual(q["originalRawOptionsSha256"],q["candidateCorrectedOptionsSha256"])
-        self.assertIn("堅",q["originalRawOptions"][0] if "堅" in q["originalRawOptions"][0] else "".join(q["originalRawOptions"]))
+        self.assertIn("配合他人的程度",q["originalRawOptions"][3])
         self.assertTrue(all("高" not in option and "低" not in option for option in q["options"]))
 
     def test_q10_fishbone_diagram_and_four_column_original_choices_not_next_p4_article(self):
