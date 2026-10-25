@@ -1,0 +1,29 @@
+# Role A | 114 English 11–14 and Chinese 04 original QA/image receipt — 2026-10-25
+
+**Issue #36 task** `A-114-E11E14-C04-ORIGINAL-IMAGE-20261025-05`; branch `qa/role-a-114-e11e14-c04-original-images-20261025` based on original Draft PR35 `e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5`. Do not merge directly to main, deploy Pages, or mark READY.
+
+## Specific original image/Git/teaching SHA matrix
+
+| ID | Original single-question WebP SHA256 | Original Git blob SHA-1 | Role B author sourceRevision | Role B existing composed teaching digest |
+|---|---|---|---|---|
+| `114-00-E-11` | `ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0` | `50f8fde174f4f0e66dc0f2315c11c5a73cec6b7a` | `646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036` | `3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee` |
+| `114-00-E-12` | `99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60` | `def397fcc0693d90de40b051fdf4c7c85b4567ce` | `0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec` | `335fa42da12236564daf4304522b454f6788d36be9bb1c50361d88bb23180263` |
+| `114-00-E-13` | `81f4487c4012456b4f1c3449aa388f16d12de19b72cc844ae6b6269be76e9be7` | `d3a37cc4ecb6c72b06fa19919a376a34203ed739` | `074fb9847eda936d31dfd4503f3a7a12cbde9f89ddc888957d8eba4f17fa746c` | `e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1` |
+| `114-00-E-14` | `388773561e436315452bdf0c28c792efa0983eb25538e8b3119926cd338f3a94` | `2ec99e4912ac49b6c70e84183caadcdb402136bb` | `6164a310c7d38229aaaf52df678121ee88f6242cf6611310badfb5b1b46714dd` | `b9c464e05fcec6969ef298d5744a9599af8e17612fc5cde2615a6a090e3c560e` |
+| `114-00-C-04` | `c16eb7b4768823a669d33456e1abd6829a83db968b8cd5e0ef2b519785b467d9` | `88f92afe560b11335b57a7cf9e9a53882d47895c` | `2733f2bea0a32a99d6ec3d54d52c92a06962bec2b74a9a3350d30da5a5a31207` | `fde3df4b637cdd6bea7a161367bdda9aa5946494e645ceb913c8ed61460fee41` |
+
+All five WebP artifacts are the **unchanged exact original Git blobs** already present in `qa/114-115-official-visual-review`. PR35 `questions.json`/manifest pointed at them and recorded individual QA PASS, but the 5 binaries were missing from PR35 source integration. Source original **English official paper PDF SHA256** was already recorded as `1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf`; **Chinese PDF SHA256** `f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74`. Original PDFs were not freshly downloaded/rehashed this batch; original page WebP SHA256 is independently rehashed in CI. The sourceRevision B used is recomputed directly from current PR35 canonical question, four options and exact image SHA; teaching digest shown is a read-only external role B record and is **not authorized/approved by A**.
+
+## Original QA evidence retained without over-promotion
+
+Exactly restored original QA Git blobs:
+- `sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json` / Git SHA-1 `c1154562fa30cb4b2720a6000a970cf09ef460ff` for the English four. Former 15 independently assistant-visual-inspected English original-question crops; all five sources QA items individually checked via current WebP/image hashes. This is **AI historical image QA** with `independentHumanReview=false`, `answerVerifiedAdded=0`, `questionVerifiedAdded=0`, `releaseAllowed=false`.
+- `sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json` / Git SHA-1 `6e86d5143787a9389387fd0d607fb7899424bc1b`; original **C04 item PASS**. **Crucially C01 in the same original QA document is FAIL_HEADER_FRAGMENT**; no batch-wide promotion is permitted. The old QA document includes other outcomes; source reception does not rewrite them.
+
+Historical answer candidates: E11=A, E12=C, E13=A, E14=D and C04=D. Role E's independent AI read-only review (Issue #36 [comment #6393749559](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393749559)) previously directly compared five official **answer images** and original question images, finding candidate letters match, but **individual formal year-specific final-answer admission/correction scope still pending** and no source `answerVerified` flag may be auto-promoted. E also identified **E12 English IPA / Cambridge US variant mismatch** in the existing teaching candidate: this is a **Role B content correction**, not a source-image defect and must remain QUARANTINED for student approval until corrected and separately verified. A does not alter IPA/teaching/digests, and does not self-approve B's content.
+
+## Strict verification
+
+`tests/test_role_a_114_b2_original_images.py`: exact five RIFF/WEBP bytes, Git original blobs and SHA256, PIL real decode, full original page WebP and size/sha/crop, exact archived QA Git blobs & per-question PASS only, preservation of C01 FAIL, identical current publisher sourceRevision to existing B candidate, negative wrong SHA/dimensions/altered option, canonical all 205 JSON/SQLite identical payload digest/PRAGMA integrity and NO teaching/official/student approval. CI `.github/workflows/role-a-114-b2-original-images.yml` is **read-only** and will not deploy or push. The only existing artifacts restored are the five binary original WebPs plus two immutable QA JSON; all other changes are newly created Role A test, workflow, and handoff. PR35 source questions/manifest/SQLite, original OCR, B teaching, E review, D UI and master policy remain unchanged.
+
+Latest Issue36 owner policy: distinct AI review instead of mandatory human teacher; master independently migrates the inactive PR46 contract without bypassing original source/answer/correction/CI/real V4 UI checks. **NEW READY=0; LIVE=0** for this source receipt. Master next: port exact original blobs and fail-closed tests from Draft source PR after reviewing and E12 author's IPA fix; run same-SHA actual V4 8×2 and official answer/release gates before any deployment.
