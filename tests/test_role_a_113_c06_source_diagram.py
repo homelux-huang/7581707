@@ -56,9 +56,9 @@ class Source113ChineseOriginalDiagram(unittest.TestCase):
 
     def test_real_original_couplet_figure_and_q06_options_pixels_lossless(self):
         q=self.q
-        self.assertEqual(q["asset"]["cropPixels"],[90,1472,1310,1881])
+        self.assertEqual(q["asset"]["cropPixels"],[90,1450,1310,1881])
         self.assertTrue(q["asset"]["containsOriginalFigure"])
-        self.assertEqual(q["asset"]["pixelSize"],[1220,409])
+        self.assertEqual(q["asset"]["pixelSize"],[1220,431])
         self.assertEqual(q["asset"]["path"],"sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp")
         self.assertLess(q["asset"]["pixelSize"][1],1981/2)
         self.assertEqual(q["asset"]["originalPageSha256"],a.sha(self.page_bytes))
@@ -68,10 +68,20 @@ class Source113ChineseOriginalDiagram(unittest.TestCase):
         with Image.open(b.SOURCE) as source, Image.open(a.WEBP) as part:
             source.load();part.load()
             self.assertEqual(part.format,"WEBP")
-            self.assertEqual(part.size,(1220,409))
+            self.assertEqual(part.size,(1220,431))
             self.assertIsNone(ImageChops.difference(
                 part.convert("RGB"),b.crop(source,a.CROP)).getbbox())
 
+    def test_reject_first_image_crop_that_touches_vertical_couplet_top(self):
+        rejected=self.man["rejectedOldImage"]
+        self.assertEqual(rejected["cropPixels"],[90,1472,1310,1881])
+        self.assertEqual(rejected["sha256"],"289e16a96ceeeb1c691075b0b553adbd9e31652af0821ab24ad77cf8e15daeb7")
+        self.assertNotEqual(rejected["sha256"],self.q["asset"]["sha256"])
+        self.assertEqual(self.q["asset"]["cropPixels"][1],1450)
+        prior=b.read(b.MANIFEST)["questions"][4]["asset"]["cropPixels"]
+        self.assertEqual(prior[3],1450)
+        self.assertEqual(prior[3],self.q["asset"]["cropPixels"][1])
+        self.assertIn("calligraphy",rejected["reason"])
     def test_official_announced_candidate_B_only_not_final_answer_qa(self):
         q=self.q
         self.assertEqual(self.old["answer"],1)
