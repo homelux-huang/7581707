@@ -61,3 +61,54 @@ jobs:
           path: .github/workflows/7581707-role-agent.lock.yml
           if-no-files-found: warn
           retention-days: 7
+
+  register-compiled-lock-blob:
+    # Separate write-scoped job; the compiler, external gh-aw installation and AI
+    # source all execute with READ-ONLY GitHub permissions in the prior job.
+    needs: compile-codex-lock
+    if: needs.compile-codex-lock.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Download independently verified compiled YAML only
+        uses: actions/download-artifact@v4
+        with:
+          name: gh-aw-compiled-codex-lock-${{ github.sha }}
+          path: compiled
+      - name: Register inert Git Blob without modifying any branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          from urllib.request import Request,urlopen
+          file=Path("compiled/7581707-role-agent.lock.yml")
+          blob=file.read_bytes()
+          s=blob.decode("utf-8")
+          assert len(blob)>500 and s.startswith("# gh-aw-metadata:")
+          assert "gh-aw-manifest:" in s
+          assert "CODEX_API_KEY" in s or "OPENAI_API_KEY" in s
+          for line in s.splitlines():
+              assert line.strip() not in {"contents: write","issues: write","pull-requests: write"}, "Unexpected write privilege in compiled agent"
+          assert os.environ["GITHUB_REPOSITORY"]=="homelux-huang/7581707"
+          digest=hashlib.sha256(blob).hexdigest()
+          git_blob_hash=hashlib.sha1(b"blob "+str(len(blob)).encode()+b"\\0"+blob).hexdigest()
+          import base64
+          request=Request("https://api.github.com/repos/homelux-huang/7581707/git/blobs",
+              data=json.dumps({"content":base64.b64encode(blob).decode(),"encoding":"base64"}).encode(),
+              headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],
+                       "Accept":"application/vnd.github+json",
+                       "X-GitHub-Api-Version":"2022-11-28"},
+              method="POST")
+          with urlopen(request, timeout=25) as response:
+              result=json.load(response)
+          assert result.get("sha")==git_blob_hash, "GitHub blob identity mismatch"
+          print("EXACT_SOURCE_COMMIT="+os.environ["GITHUB_SHA"])
+          print("COMPILED_BINARY_SHA256="+digest)
+          print("GH_AW_COMPILED_GIT_BLOB_SHA="+result["sha"])
+          print("REGISTERED_GIT_BLOB_ONLY_NO_MAIN_OR_BRANCH_MUTATION")
+          PY
