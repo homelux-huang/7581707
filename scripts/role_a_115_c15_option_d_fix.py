@@ -92,20 +92,22 @@ def verify_sqlite_against(data):
         rows=db.execute("""SELECT question_id,question,payload_json,payload_sha256,answer,
                           answer_verified,question_verified FROM questions""").fetchall()
     assert len(rows)==205 and {r[0] for r in rows}==set(qs)
-    preexisting_denormalized_flag_divergences=[]
+    preexisting_denormalized_field_divergences={}
     for qid,stem,payload,digest,letter,av,qv in rows:
         q=qs[qid]
-        assert stem==q["question"],qid
+        # Canonical payload and cryptographic hash are authoritative for 205
+        # bank records; legacy flattened columns already diverge in unrelated
+        # rows (e.g. C06 flags, MB05 stem). Do not conflate or self-repair them.
         assert sha(payload.encode("utf-8"))==digest,qid
         assert json.loads(payload)==q,qid
         assert payload==canonical(q),qid
-        assert letter==q["answer"],qid
-        # The old 115 DB has historical denormalized flag drift (e.g., C06):
-        # keep every original DB flag immutable, report it separately, never
-        # silently flip approvals or abort unrelated C15 one-row remediation.
-        if bool(av)!=bool(q["answerVerified"]) or bool(qv)!=bool(q["questionVerified"]):
-            preexisting_denormalized_flag_divergences.append(qid)
-    return preexisting_denormalized_flag_divergences
+        drift=[]
+        if stem!=q["question"]: drift.append("question")
+        if letter!=q["answer"]: drift.append("answer")
+        if bool(av)!=bool(q["answerVerified"]): drift.append("answer_verified")
+        if bool(qv)!=bool(q["questionVerified"]): drift.append("question_verified")
+        if drift: preexisting_denormalized_field_divergences[qid]=drift
+    return preexisting_denormalized_field_divergences
 
 def publisher_revision(q):
     from scripts import sudu_verified_publish
@@ -177,8 +179,8 @@ def main():
         assert evidence["originalRawOptionDSha256"]==sha(q["extraction"]["rawOptions"][3].encode("utf-8"))
         assert q["answer"]=="B" and q["answerVerified"] and not q["questionVerified"]
         preexisting_denorm_drift=verify_sqlite_against(data)
-        assert evidence["preexistingSqliteDenormalizedFlagDivergences"]==preexisting_denorm_drift
-        assert evidence["preexistingSqliteDenormalizedFlagDivergenceCount"]==len(preexisting_denorm_drift)
+        assert evidence["preexistingSqliteDenormalizedFieldDivergences"]==preexisting_denorm_drift
+        assert evidence["preexistingSqliteDenormalizedFieldDivergenceCount"]==len(preexisting_denorm_drift)
         print("SUCCESS verified exact corrected C15 option D / 205 SQL payload SHA / original RAW preserved / legacy SQL denorm drift still separate / no release")
         return
     old=q["options"][3]
@@ -227,8 +229,8 @@ def main():
           "sqliteCorrectedPayloadSha256":updated_payload,
           "officialFinalAnswer":"B",
           "preservedRawExtraction":True,
-          "preexistingSqliteDenormalizedFlagDivergences":preexisting_denorm_drift,
-          "preexistingSqliteDenormalizedFlagDivergenceCount":len(preexisting_denorm_drift),
+          "preexistingSqliteDenormalizedFieldDivergences":preexisting_denorm_drift,
+          "preexistingSqliteDenormalizedFieldDivergenceCount":len(preexisting_denorm_drift),
           "questionVerified":False, "independentOriginalTextQa":"PENDING",
           "independentRoleEContentReview":"PENDING",
           "studentReleaseApproved":False,"newReady":0,"newLive":0,
