@@ -3643,7 +3643,15 @@
         "status": "PR21_OLD_UI_EVIDENCE_STALE_AFTER_ENRICHMENT",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -3724,7 +3732,15 @@
         "status": "PR21_OLD_UI_EVIDENCE_STALE_AFTER_ENRICHMENT",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -3805,7 +3821,15 @@
         "status": "PR21_OLD_UI_EVIDENCE_STALE_AFTER_ENRICHMENT",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24381,7 +24405,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24461,7 +24493,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24541,7 +24581,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24584,8 +24632,8 @@
       },
       "source": {
         "status": "IMAGE_QA_CANDIDATE_PASS__FULL_SOURCE_PENDING",
-        "questionRevision": "4dc7a376e0b9e5929a0a0df3e652ea0811d3b662ddce431eff4ebc539c859731",
-        "revisionType": "TEXT_ONLY_NOT_VALID_WITHOUT_TABLE",
+        "questionRevision": null,
+        "revisionType": "TABLE_INCLUSIVE_CANDIDATE_PENDING_FORMAL_ORIGINAL_IMAGE_TABLE_QA_AND_ADMISSION",
         "webpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
         "webpPath": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
         "webpManifestQaStatus": "PASS",
@@ -24611,7 +24659,29 @@
               "兩人同行，其中一人打八折"
             ]
           ]
-        }
+        },
+        "candidateSourceTableRevision": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+        "rejectedOldTextOnlyRevision": "4dc7a376e0b9e5929a0a0df3e652ea0811d3b662ddce431eff4ebc539c859731",
+        "sourceTableCandidate": {
+          "heading": [
+            "行程",
+            "原價",
+            "優惠"
+          ],
+          "rows": [
+            [
+              "行程Ⅰ",
+              "每位收費 x 元",
+              "兩人同行，其中一人減免 3000 元"
+            ],
+            [
+              "行程Ⅱ",
+              "每位收費 (x＋2000) 元",
+              "兩人同行，其中一人打八折"
+            ]
+          ]
+        },
+        "tableIndependentOriginalWebpQa": false
       },
       "officialAnswerEvidence": {
         "status": "SOURCE_RECORD_FLAG_TRUE__FORMAL_ADMISSION_NOT_CONCLUDED",
@@ -24622,12 +24692,13 @@
         "evidencePath": null
       },
       "teachingDraft": {
-        "status": "AUTHOR_DRAFT_RECEIVED",
+        "status": "ORIGINAL_SOURCE_TABLE_BOUND_AUTHOR_DRAFT_PR32__INDEPENDENT_QA_PENDING",
         "authorRole": "C",
-        "sourcePR": 28,
+        "sourcePR": 32,
         "sourceCommit": "f04b26de83931ca384443eeee72de1f9ff468423",
         "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-23.json",
-        "teachingDigest": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6"
+        "teachingDigest": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6",
+        "originalTeachingDigestUnchanged": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6"
       },
       "independentTeachingQA": {
         "status": "NOT_RECEIVED_AUTHORIZED_SIGNED_REVIEW",
@@ -24640,7 +24711,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24657,10 +24736,10 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
+        "ORIGINAL_2X3_TABLE_CANDIDATE_PRESENT__FORMAL_INDEPENDENT_TABLE_QA_AND_SOURCE_ADMISSION_PENDING",
         "TRUE_AUTHORIZED_DISTINCT_TEACHER_SIGNATURE_MISSING",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
-        "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED",
-        "ORIGINAL_2X3_SOURCE_TABLE_REVIEW_AND_TABLE_AWARE_REVISION_MISSING"
+        "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
       ]
     },
     "115-00-MB-24": {
@@ -24721,7 +24800,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -24801,7 +24888,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -31477,7 +31572,15 @@
         "status": "NOT_RECEIVED_EXACT_DIGEST",
         "sourcePR": 27,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "latestRoleDMatrix": {
+          "sourcePR": 34,
+          "ciRunId": 40162016136,
+          "ciStatus": "SOURCE_BRANCH_MATRIX_FAILED__NOT_EXACT_NEW_TEACHING_DIGEST",
+          "passedForThisNewRevision": false,
+          "requiredDimensions": "8_viewports_x_2_themes",
+          "requiredSource": "EXACT_PRIMARY_WEBP_AND_TEACHING_DIGEST"
+        }
       },
       "ready": {
         "status": "BLOCKED",
@@ -32814,9 +32917,12 @@
     "Role D exact-real 8x2 V4 browser QA per new digest and all three priority groups",
     "Role E authorized independent human teacher signed review with GitHub approved event",
     "Fix PR26 CI 40111871501 browser WebP decode failure and rerun all gates",
-    "Same SHA main to Pages release check for previously approved five"
+    "Same SHA main to Pages release check for previously approved five",
+    "PR34 21-job matrix: original #40162016136 15 failed/6 passed. Fix original Demo path/data URI plus real per-question assertions without skipping",
+    "PR32 MB23 true per-image independent table QA and TABLE-inclusive approval",
+    "PR35 exact integration head CI + 114/115 original PDFs + live SHA"
   ],
-  "notes": "First full candidate population: preserve all PR30 schema/knownGroups; all 410 source-branch IDs recorded without pretending Role A official PDF enumeration or blanket official validation. Check official and source revisions before approval.",
+  "notes": "First full candidate population: preserve all PR30 schema/knownGroups; all 410 source-branch IDs recorded without pretending Role A official PDF enumeration or blanket official validation. Check official and source revisions before approval. PR32 MB23 source table is present and digest preserved, but not approved; PR34 source matrix first run is 15 failed / 6 passed; only one canonical ledger.",
   "latestReceipt": {
     "date": "2026-10-25",
     "source": "DIRECT_GITHUB_PR_CONTENTS",
@@ -32847,18 +32953,30 @@
         "basePreservedEnrichments": 3
       },
       "C": {
-        "status": "SIX_SOURCE_BOUND_MATH_CANDIDATES_RECEIVED",
+        "status": "SEVEN_PROVENANCE_RECORDS? NO SIX ORIGINAL LESSONS; MB23 TABLE LINKAGE_ONLY_FROM_PR32",
         "PRs": [
-          28
+          28,
+          32
         ],
-        "count": 6
+        "authoredQuestionCount": 6,
+        "tableAwareRevisionPresent": true,
+        "formalIndependentTableQaCount": 0
       },
       "D": {
-        "status": "SEVEN_SUBJECT_UI_CODE_CANDIDATE_RECEIVED__NO_PER_NEW_DIGEST_QA",
+        "status": "V4_CODE_AND_21_CASE_MATRIX_RECEIVED__15_OF_21_JOBS_FAILED__NO_NEW_DIGEST_UIQA",
         "PRs": [
-          27
+          27,
+          34
         ],
-        "ciRun": 40150602384
+        "ciRun": 40162016136,
+        "ciFinishedFailedJobs": 15,
+        "ciFinishedSuccessfulJobs": 6,
+        "verifiedNewTeacherDigestQuestionCount": 0,
+        "knownFailures": [
+          "demo Chinese original image path unresolved",
+          "demo inline data:image/webp URI incorrectly treated as disk file",
+          "115 English and MathB browser assertions failed"
+        ]
       },
       "E": {
         "status": "GOVERNANCE_CODE_RECEIVED__NO_DISTINCT_TEACHER_APPROVALS",
@@ -32896,6 +33014,27 @@
       "teachingEvidenceGitBlobMatchesPolicy": 5,
       "webpShaInCurrentApprovedMatchesPolicy": 5,
       "currentLiveSameShaNotVerified": true
-    }
+    },
+    "integrationCandidate": {
+      "pullRequest": 35,
+      "branch": "integration/114-115-first-batch-v4-receipts-20261025",
+      "headObserved": "dc64e06ce417e8d64402f7fbdc81856616e71496",
+      "scope": "PR21/25 source, 28/31+32 lessons, 26 governance+MB23 HTML, 27 runtime, 34 exact-source browser matrix, 15 original WebPs",
+      "status": "DRAFT_NO_RELEASE",
+      "sourceBytesNotOverwritten": true,
+      "teacherGateNotRelaxed": true,
+      "mainChanged": false,
+      "newReady": 0,
+      "newMain": 0,
+      "newLive": 0,
+      "ciStatus": "EXACT_HEAD_PENDING__SOURCE_PR34_FAIL_OBSERVED"
+    },
+    "pr32mb23": {
+      "head": "2e7677411749a8a32a2ab1ecc065ab7e3e971f97",
+      "sourceRevisionWithTable": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+      "sourceTableIndependentQa": false,
+      "teachingShaSame": true
+    },
+    "newLiveVerified": 0
   }
 }
