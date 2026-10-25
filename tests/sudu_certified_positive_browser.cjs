@@ -1,5 +1,5 @@
 /* Positive 114/115 student-mode regression. Synthetic, intercepted fixture ONLY.
-   Real QA file releases remain empty until all independent gates succeed. */
+   Does not admit new questions or certify a real lesson digest. */
 const assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const {chromium}=require('playwright');

@@ -34,7 +34,11 @@ MB23 的 PR32 候選含原始表格，台帳保存其新檔案 SHA 與含表格 
 
 這是 synthetic fixture 回歸，絕不是正式教學 UIQA。學生 HTML/runtime、五題正式資料、35 題 Demo、發布器及學生儲存 key 均不在本批修改範圍。
 
+本批 CI run `40162613185` 的 job `121077228468` 實際日誌另證明：既有真實題測試固定四題清單，但 main 已有第五題 MB05。已逐段接入 PR26 的 `sudu_real_reviewed_browser.cjs` 修正，固定 MB02/03/04/05/09 與 A/A/C/B/A 答案，保留原有教學與互動斷言，補原圖 HTTP/WebP/SHA、載入等待及 decode。本機真實五題 × 8 viewport 回歸 PASS；這不是新教學或真人批准，不提升台帳的新題 UIQA。
+
 本機 Windows／Python 3.14／Node 24／Playwright 1.51.1 檢查：台帳保留測試 PASS 5；分享測試 PASS 10；V4 年度入口回歸 PASS 8×2；修復後兩題 fixture 圖片／答題回歸 PASS 8×2；發布器 PASS（114=0、115=5）；公開 build PASS。`check_sudu.py` PASS（39 JSON、64 practice IDs、5423 official record IDs），這些為結構檢查數量，不是新增合格教學數。
+
+35 題 Demo 完整 Chromium 回歸 PASS：35 張圖、30 個原圖 hash、5 題英文×4處呈現、35題×8 viewport×2 theme、觸控及判分後 hover。輸出在本機忽略的 `test-results/demo/`，未使用學生瀏覽器個人資料，也未將此回歸算為新題 UIQA。CI 的五題 job 顯示名稱同步修正；workflow 步驟及發布 gate 未刪減。最後修復提交推送後仍須核對該精確 SHA 的全部 CI，舊失敗紀錄不能當成修復後成功。
 
 完整 Python suite 執行 52 項，50 項通過、1 failure、1 error：既有 cache-buster fixture 用 LF 字串預期 SHA，但 Windows write_text 產生 CRLF；既有 symlink 測試遇 WinError 1314，現有帳號缺建立符號連結權限。未跳過、未放寬測試、未更改 Windows 全域權限；須看 Linux CI 結果，不能將本機 suite 宣稱全綠。
 
@@ -55,4 +59,4 @@ MB23 的 PR32 候選含原始表格，台帳保存其新檔案 SHA 與含表格 
 
 ## 接續入口
 
-見 [主指揮命令](114-115-DELIVERY-COMMAND.md) 與 [共同台帳](114-115-QUESTION-DELIVERY-LEDGER.json)。先完成本批精確 commit 的 CI，將可重用測試修復逐檔帶入 PR26 的整合候選，再處理 PR27 七科 UI、PR31/32 教學與原圖的精確版本驗收。合格題仍逐題增量發布，未達門檻者繼續 BLOCKED。
+見 [主指揮命令](114-115-DELIVERY-COMMAND.md) 與 [共同台帳接收候選](114-115-QUESTION-DELIVERY-LEDGER.json)。先完成本批精確 commit 的 CI，將可重用測試修復逐檔帶入 PR35 最新 SHA，核對其已接收的 PR27／31／32 成果後再驗證，避免重複整合；台帳回填 PR30 唯一來源。合格題仍逐題增量發布，未達門檻者繼續 BLOCKED。
