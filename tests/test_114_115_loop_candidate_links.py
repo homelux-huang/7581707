@@ -60,9 +60,13 @@ class CandidateSourceLessonLinkTests(unittest.TestCase):
                 self.assertEqual(raw[:4], b"RIFF")
                 self.assertEqual(raw[8:12], b"WEBP")
                 self.assertEqual(file_sha(image), asset["sha256"])
-                self.assertEqual(q["questionProvenance"]["webpSha256"], asset["sha256"])
+                self.assertEqual(publisher.image_sha(q), asset["sha256"])
+                # Preserve BOTH source claims when present; no fallback may hide a conflict.
+                for claim in (q.get("questionProvenance") or {}).get("webpSha256"), (q.get("assets") or {}).get("sha256"):
+                    if claim is not None:
+                        self.assertEqual(claim, asset["sha256"])
                 self.assertEqual(q["assets"]["singleQuestionWebp"], asset["output"])
-                self.assertRegex(q["questionProvenance"]["officialPdfSha256"], SHA)
+                self.assertRegex(publisher.pdf_sha(q, "question"), SHA)
                 self.assertIs(q["questionVerified"], False, id_)
                 revision = publisher.text_revision(q, asset["sha256"])
                 if id_ in ENG:
