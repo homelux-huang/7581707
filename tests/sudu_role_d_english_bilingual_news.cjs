@@ -1,6 +1,6 @@
 'use strict';
 /* Role D annual-English news renderer regression using the actual three
- * 114 candidate records. This is COMPONENT ONLY: no teacher review,
+ * 114 candidate records. This is COMPONENT ONLY: no independent AI review,
  * no admission, no approved mutation and no full-question UIQA certificate.
  */
 const assert=require('node:assert/strict');
@@ -44,6 +44,20 @@ const expectedCurrentB={
  '114-00-E-09':'45b33a02da4059fc7efc2cae7d9c7914732d53e967c195d004cc879e212fa584'
 };
 
+// This protects provenance, not a teacher licensing/publishing requirement.
+function assertNoFictitiousHumanTeacher(review){
+  const claim=review?.humanTeacherVerified;
+  assert(claim!==true&&claim!=='true',
+    'fake legacy human-teacher approval must never substitute for distinct AI content review');
+}
+for(const val of [undefined,null,false]){
+  assert.doesNotThrow(()=>assertNoFictitiousHumanTeacher({humanTeacherVerified:val}));
+}
+for(const val of [true,'true']){
+  assert.throws(()=>assertNoFictitiousHumanTeacher({humanTeacherVerified:val}));
+}
+assert.doesNotThrow(()=>assertNoFictitiousHumanTeacher({status:'CONTENT_REVIEW_PENDING'}));
+
 function assertSourceRecords(){
   const records=[];
   for(const id of candidateIds){
@@ -58,7 +72,9 @@ function assertSourceRecords(){
     assert.equal(c.questionId,id);
     assert.equal(c.year,114);
     assert.equal(c.subject,'英文');
-    assert.equal(c.review?.humanTeacherVerified,false,'not a human-reviewed teaching record');
+    // Under owner policy 2026-10-25 a human-teacher field is NOT required.
+    // Legacy flags can be missing or false; a fabricated true claim is refused.
+    assertNoFictitiousHumanTeacher(c.review);
     assert.equal(c.review?.formalReady,false);
     assert.equal(c.review?.studentReleaseApproved,false);
     assert.equal(prior.questionRevision,source.questionRevision);
@@ -90,7 +106,7 @@ function assertSourceRecords(){
     }
     for(const letter of 'ABCD')for(const field of ['teacher','elementary','reason'])
       assert(effectiveTeaching.optionExplanations[letter][field].trim().length>5,
-        'real teacher/elementary/individual option content absent '+id+' '+letter+' '+field);
+        'two-level school-teacher-perspective/elementary option content absent '+id+' '+letter+' '+field);
     const composed=canonicalSha({
       questionId:id,sourceRevision:source.questionRevision,
       webpSha256:source.webpSha256,teaching:effectiveTeaching,enrichment:c.enrichment
@@ -125,7 +141,8 @@ const report={
    'D-ENGLISH-NEW-DIGEST-UI-20261025-02':'D-ENGLISH-BILINGUAL-V4-20261025-01',
  roleBSourceHead:actualRoleBHead,
  purpose:'CANDIDATE_BILINGUAL_COMPONENT_REGRESSION_NOT_FULL_QUESTION_UIQA',
- release:'NO_RELEASE',eligibleForReady:false,teacherApprovalClaimed:false,
+ release:'NO_RELEASE',eligibleForReady:false,humanTeacherSignatureRequired:false,
+ independentAiContentReview:'REQUIRES_DIFFERENT_AUTHOR_EVIDENCE_AND_SOURCE_BINDINGS',
  checkoutSha:realSHA,mainBaseSha:mainSHA,
  htmlSha256:hashFile('sudu/v4-115-multisubject-review-demo.html'),
  runtimeSha256:hashFile('sudu/verified-questions-runtime.js'),
