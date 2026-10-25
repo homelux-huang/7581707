@@ -1,0 +1,40 @@
+name: 114 Role B source-bound teaching candidate CI (NO RELEASE)
+
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025/**"
+      - "tests/test_114_role_b_teaching_20261025.py"
+      - ".github/workflows/114-role-b-teaching-candidate-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lesson-draft-readonly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout candidate and source evidence
+        uses: actions/checkout@v4
+      - name: Prepare Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check canonical revisions, source/image SHA, old Git blobs, four distinct option reasons, and no release flags
+        run: python -m unittest discover -s tests -p 'test_114_role_b_teaching_20261025.py' -v
+      - name: Assert no new student release or teacher approval can be inferred
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('sudu/teaching-candidates/114-role-b-20261025')
+          batch = json.loads((root / 'batch.json').read_text(encoding='utf-8'))
+          assert batch['newReady'] == 0 and batch['newLive'] == 0
+          for row in batch['items']:
+              lesson = json.loads(pathlib.Path(row['path']).read_text(encoding='utf-8'))
+              assert lesson['review']['status'] == 'BLOCKED'
+              assert lesson['review']['humanTeacherVerified'] is False
+              assert lesson['review']['studentReleaseApproved'] is False
+              assert lesson['review']['independentReviewer'] is None
+          print('NO RELEASE: all 7 are authored candidates only.')
+          PY

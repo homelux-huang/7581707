@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-02",
+  "subject": "國文",
+  "answer": "C",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "856c8e8da262960ad365b50bb398420bbe40135134f6c1e39ec5360cd52fce4f",
+    "questionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-02.webp",
+    "webpSha256": "f156e266648642110226ccd4acafb7df028107685b27af91e06cca6332de0274",
+    "sourcePageWebpSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+    "baseTeachingEvidencePath": null,
+    "baseTeachingGitBlobSha": null,
+    "baseTeachingCanonicalSha256": null,
+    "existingHistoricalPrekeySolveEvidence": null,
+    "sourceEvidenceStatus": "INDIVIDUAL_FINAL_ANSWER_IMAGE_QA_PENDING"
+  },
+  "teaching": {
+    "topic": "國文語法｜把字句的有意處置與無意導致",
+    "teacherSummary": "題幹把『把』的作用分為有意識處置與非有意識的結果。C 的船身划開海水是船體航行所造成的現象，船身並沒有主觀意圖，故符合②『導致』。",
+    "elementarySummary": "樹擋住路不是樹故意的；同樣地，船身讓海水翻成白浪，也不是船身決定要去做，答案是 C。",
+    "concept": "重點不是看有沒有『把』，而是判斷『把』前的主語有沒有主動安排這個動作。",
+    "extension": "擬人、譬喻句也須判斷句子所描述的實際因果，不能因為用了動詞就一律當成有意識處置。",
+    "memory": "人主動做 → 處置；物體造成結果 → 導致，選『船身把海水……』。",
+    "source": "114 統測國文第2題含右框兩種定義之文字與單題原圖；官方最終答案影像個別核對及教材頁碼待核對。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "錯誤。『妳要把岳飛的精神演出來』，演出者有意識地展現精神，屬①處置。",
+        "elementary": "演員自己決定怎麼演，這是主動做。",
+        "reason": "人的有意行為。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "錯誤。『余燕翼把……飯倒回鍋裡』，人刻意倒飯，屬①處置。",
+        "elementary": "他自己把飯倒回去，是主動做的。",
+        "reason": "人的有意行為。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "正確。『船身把墨藍海水掘犁成翻花的白浪』是船身造成波浪，並非船身有意安排，屬②導致。",
+        "elementary": "船前進，海水自然翻出白浪；船身不會故意想事情。",
+        "reason": "無意識主語造成結果。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "錯誤。『母親只好把……短髮剪去』有人的剪髮決定，屬①處置。",
+        "elementary": "媽媽拿剪刀把頭髮剪掉，是自己決定做的。",
+        "reason": "有意識剪去頭髮。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "處置",
+      "導致",
+      "船身把墨藍海水掘犁成翻花的白浪"
+    ]
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "處置",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "導致",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "樹把路擋住了",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "船身把墨藍海水掘犁成翻花的白浪",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "處置",
+        "level": "初級",
+        "meaning": "主動處理、安排某件事"
+      },
+      {
+        "term": "導致",
+        "level": "中級",
+        "meaning": "引起某個結果，未必有意識"
+      },
+      {
+        "term": "掘犁",
+        "level": "高級",
+        "meaning": "這裡用來比喻船身劃開海水的形狀與動態"
+      }
+    ],
+    "semanticContrast": {
+      "intentional": "主語有意識地完成動作，如『我把門打開了』",
+      "causal": "主語造成結果，不一定有意識，如『樹把路擋住了』"
+    }
+  },
+  "composedTeachingSha256": "64e72d943280762ae3d9cdd807e9d249f4d81651ae2d5e971aadafa3880e4c64",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": false,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "INDEPENDENT_OFFICIAL_FINAL_ANSWER_IMAGE_QA_PENDING",
+      "EXACT_V4_UI_CONTENT_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}
