@@ -1,0 +1,94 @@
+name: 115 Math B20-25 sync corrected source and SQLite on latest QA isolation only (NO RELEASE)
+on:
+  push:
+    branches: [qa/mb20-25-latest-source-sync-20261025]
+    paths:
+      - scripts/apply_115_math_b20_25_text_candidates.py
+      - .github/workflows/115-mb20-25-sync-latest-source.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  isolated_canonical_candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        with:
+          ref: e473b514f98575f79ae0e4934fc25bcce28b762d
+          path: strict-publisher
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check latest QA 205 original rows and unchanged WebP/OCR without any write
+        run: |
+          set -eu
+          python -m pip install -q pillow cryptography
+          python -m py_compile scripts/apply_115_math_b20_25_text_candidates.py
+          python scripts/apply_115_math_b20_25_text_candidates.py > /tmp/mb20_25_before.json
+      - name: Apply only six original-WebP-verified corrections in isolated checkout and verify idempotence and 199 unchanged
+        run: |
+          set -eu
+          python scripts/apply_115_math_b20_25_text_candidates.py --stage > /tmp/mb20_25_first.json
+          sha256sum sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 > /tmp/mb20_25_first_sha.txt
+          python scripts/apply_115_math_b20_25_text_candidates.py --stage > /tmp/mb20_25_second.json
+          sha256sum sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 > /tmp/mb20_25_second_sha.txt
+          diff /tmp/mb20_25_first_sha.txt /tmp/mb20_25_second_sha.txt
+      - name: Current strict publisher must preserve actual five and reject all six corrected-only subjects
+        run: |
+          set -eu
+          python strict-publisher/scripts/sudu_verified_publish.py stage --source . --dest /tmp/mb20_25_strict --sha "$(git rev-parse HEAD)" > /tmp/mb20_25_publisher.json
+          python strict-publisher/scripts/sudu_verified_publish.py check --dest /tmp/mb20_25_strict
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          public=json.loads(Path("/tmp/mb20_25_strict/sudu/data/approved/115.json").read_text())
+          wanted={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          assert public["approvedCount"]==5
+          assert {x["canonicalId"] for x in public["questions"]}==wanted
+          for i in range(20,26):
+              assert f"115-00-MB-{i:02d}" not in wanted
+          q=json.loads(Path("sudu/data/processed/115/questions.json").read_text())
+          allq={x["questionId"]:x for x in q["questions"]}
+          assert len(allq)==205
+          assert all(allq[f"115-00-MB-{n:02d}"].get("studentReleaseApproved") is not True
+                     and allq[f"115-00-MB-{n:02d}"].get("questionVerified") is not True
+                     for n in range(20,26))
+          print("PASS latest source and 205 SQLite: Math B20-25 corrected only, 199 unchanged and 5 existing LIVE subjects preserved")
+          PY
+      - name: Upload actual evidence for master verification and isolated SHA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mb20-25-candidate-latest-source-205-rows-NO-RELEASE
+          path: |
+            /tmp/mb20_25_before.json
+            /tmp/mb20_25_first.json
+            /tmp/mb20_25_second.json
+            /tmp/mb20_25_first_sha.txt
+            /tmp/mb20_25_second_sha.txt
+            /tmp/mb20_25_publisher.json
+          retention-days: 45
+          if-no-files-found: ignore
+      - name: Persist ONLY candidate questions and 205-row SQLite to THIS isolation branch
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3
+          if git diff --cached --quiet; then
+            echo "No new source/DB changes; existing candidate already preserved"
+            exit 0
+          fi
+          mapfile -t files < <(git diff --cached --name-only)
+          if [ "${#files[@]}" -ne 2 ] || [ "${files[0]}" != "sudu/data/processed/115/question-bank.sqlite3" ] || [ "${files[1]}" != "sudu/data/processed/115/questions.json" ]; then
+            echo "Unexpected changed files, refusing write" >&2
+            exit 1
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m "qa-only: persist Math B20-25 source-image text and SQLite on newest QA base; release blocked"
+          git push origin HEAD:qa/mb20-25-latest-source-sync-20261025

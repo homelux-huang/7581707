@@ -1,0 +1,86 @@
+{
+  "answerCandidatesMatchedAcrossTextAndImage": 205,
+  "answerIndependentlyVerified": 0,
+  "answerOfficialImageMatchedWithoutPdfText": 5,
+  "answerTextMatched": 200,
+  "answerUnmatchedIds": [],
+  "canonicalUnique": 205,
+  "expected": 205,
+  "integrationReady": false,
+  "lastImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+  "missingFourTextOptionIds": [
+    "114-00-C-30",
+    "114-00-E-21",
+    "114-00-E-22",
+    "114-00-E-23",
+    "114-00-E-24",
+    "114-00-E-25",
+    "114-00-E-26",
+    "114-00-E-27",
+    "114-00-E-28",
+    "114-00-MB-01",
+    "114-00-MB-02",
+    "114-00-MB-06",
+    "114-00-MB-08"
+  ],
+  "missingImageIds": [],
+  "ocrTextIndependentlyVerified": 1,
+  "officialCorrectionQaComplete": false,
+  "perPaper": {
+    "00-C": {
+      "anchorMissing": [],
+      "answerPdfConflicts": [],
+      "answerPdfKeys": 37,
+      "candidateWebp": 38,
+      "expected": 38,
+      "ocrGapCandidates": 1
+    },
+    "00-E": {
+      "anchorMissing": [],
+      "answerPdfConflicts": [],
+      "answerPdfKeys": 41,
+      "candidateWebp": 42,
+      "expected": 42,
+      "ocrGapCandidates": 8
+    },
+    "00-MB": {
+      "anchorMissing": [],
+      "answerPdfConflicts": [],
+      "answerPdfKeys": 24,
+      "candidateWebp": 25,
+      "expected": 25,
+      "ocrGapCandidates": 4
+    },
+    "09-1": {
+      "anchorMissing": [],
+      "answerPdfConflicts": [],
+      "answerPdfKeys": 49,
+      "candidateWebp": 50,
+      "expected": 50,
+      "ocrGapCandidates": 0
+    },
+    "09-2": {
+      "anchorMissing": [],
+      "answerPdfConflicts": [],
+      "answerPdfKeys": 49,
+      "candidateWebp": 50,
+      "expected": 50,
+      "ocrGapCandidates": 0
+    }
+  },
+  "questionIndependentlyVerified": 0,
+  "sharedMaterialVisualQaPassed": 1,
+  "sqlite": {
+    "dbSha256": "a7748cfaef79709534602e6e6c013deef196715d894aaa9ff33847a8f5978633",
+    "evidencePath": "sudu/data/processed/114/SQLITE_QA_RECONCILED_20261024.json",
+    "isolatedImportPasses": 2,
+    "releaseApproved": false,
+    "roundtripPass": true,
+    "rows": 205,
+    "sourceQuestionsSha256": "96be27e8d562abf4aa34e409b41106cb9f6168590fcecef8c86494e7778a4a60"
+  },
+  "textQaPass": 1,
+  "webpDrafts": 205,
+  "webpVisualQaPassed": 35,
+  "year": 114
+}
