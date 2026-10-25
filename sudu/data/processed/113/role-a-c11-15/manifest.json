@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C11-15-SHARED-READING-20261025-13",
+  "year": 113,
+  "paperCode": "00-C",
+  "sourceIndex": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+  "originalYearCandidateCount": 205,
+  "originalYearLegacyQuestionsFound": 196,
+  "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+  "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+  "originalPdfsRehashedThisBatch": false,
+  "officialFinalCorrectionNoticeChecked": false,
+  "originalPages": {
+    "4": {
+      "path": "sudu/data/original/113/00-C/p004-67c0d477e9-v2-w1400-q66.webp",
+      "gitBlobSha1": "789a0cfb16e7871e2fb38c1089e14face508a8ed",
+      "sha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelSize": [
+        1400,
+        1981
+      ]
+    },
+    "5": {
+      "path": "sudu/data/original/113/00-C/p005-67c0d477e9-v2-w1400-q66.webp",
+      "gitBlobSha1": "be92fa73cef1622f9ea8990195779b0e41699caa",
+      "sha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+      "pixelSize": [
+        1400,
+        1981
+      ]
+    }
+  },
+  "originalAnnouncedAnswerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "sha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3"
+  },
+  "sharedMaterials": [
+    {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalQuestionNumbers": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "sourcePageNumber": 4,
+      "linkedQuestionPages": [
+        4,
+        5
+      ],
+      "originalContentDescription": "完整 113 年國文梅花宴敘事閱讀段落，含▲題組11-15指示和全文，不含第11題",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+        "sha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+        "gitBlobSha1": "ccf2d2b3765b5313265917a7b9f0f88189cc667b",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          155,
+          1310,
+          951
+        ],
+        "pixelSize": [
+          1220,
+          796
+        ]
+      },
+      "pixelSource": "original archived official 113 00-C page4",
+      "qaStatus": "DRAFT_NEEDS_SHA_BOUND_INDIVIDUAL_IMAGE_QA",
+      "independentHumanReview": false,
+      "independentRoleEContentReview": false
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "113-00-C-11",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 11,
+      "subject": "國文",
+      "question": "下列何者最符合上文所述？",
+      "options": [
+        "大宰府的梅花宴，通常是為送別或迎接遣唐使而舉行",
+        "山上憶良與大伴旅人曾同往唐朝，故能先識梅花之美",
+        "唐朝賞梅之風傳入日本後，成為上層社會的時尚活動",
+        "長屋王因謀反獲罪，大伴旅人亦受牽連而貶為大宰帥"
+      ],
+      "originalRawQuestionText": "下列何者最符合上文所述？",
+      "originalRawOptions": [
+        "大宰府的梅花宴，通常是為送別或迎接遣唐使而舉行",
+        "山上憶良與大伴旅人曾同往唐朝，故能先識梅花之美",
+        "唐朝賞梅之風傳入日本後，成為上層社會的時尚活動",
+        "長屋王因謀反獲罪，大伴旅人亦受牽連而貶為大宰帥"
+      ],
+      "originalRawOptionsSha256": "b52b0c800b29fd95bb0a488e3b9b573d4afaa16468951e107202a4ced89a5a39",
+      "correctedOptionsSha256": "b52b0c800b29fd95bb0a488e3b9b573d4afaa16468951e107202a4ced89a5a39",
+      "optionDSurgicallyTrimmed": false,
+      "optionCorrectionNote": "unchanged original PDF-text choice",
+      "mandatoryOriginalTable": false,
+      "mandatoryOriginalPoetryBlocks": false,
+      "mandatoryOriginalIllustration": false,
+      "mandatorySharedReadingOriginalPixels": true,
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "sharedMaterialAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourcePageNumber": 4,
+      "sourceAsset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-11.webp",
+        "sha256": "fef1fa4be3d594ef7fadf774af7f475602917ddfb99a15b58f29296a69d3203f",
+        "gitBlobSha1": "46c8932f6b2aaebb96f08ea1390c4291f5ad8265",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          953,
+          1310,
+          1150
+        ],
+        "pixelSize": [
+          1220,
+          197
+        ]
+      },
+      "originalContentSha256RecordedOnly": "4838402f1bba5b8b0a54520bc49a2c53f90f84ba3554a4a5fb3620862b93d985",
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerCandidate": "C",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "originalSourceTextQaStatus": "PENDING_NUMBER_LEVEL_OFFICIAL_VISUAL_TEXT_QA",
+      "officialAnswerStatus": "PUBLISHED_ANSWER_IMAGE_CANDIDATE_CORRECTION_PDF_NOT_CHECKED",
+      "visualQaStatus": "DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA",
+      "independentRoleEContentReview": false,
+      "sourceRevisionSha256": "e9d5169deebd85df28f61a9dc1288588581a478152e0fdb66764b9f6f04606c5"
+    },
+    {
+      "questionId": "113-00-C-12",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 12,
+      "subject": "國文",
+      "question": "依據上文，山上憶良認為大伴旅人從〈蘭亭集序〉得到的啟發，主要為何？",
+      "options": [
+        "藉景抒情的筆法",
+        "欣於所遇的自適",
+        "生死齊一的領悟",
+        "樂以天下的胸懷"
+      ],
+      "originalRawQuestionText": "依據上文，山上憶良認為大伴旅人從〈蘭亭集序〉得到的啟發，主要為何？",
+      "originalRawOptions": [
+        "藉景抒情的筆法",
+        "欣於所遇的自適",
+        "生死齊一的領悟",
+        "樂以天下的胸懷"
+      ],
+      "originalRawOptionsSha256": "eb194ade23e5fc1c154ba07852cb48f9376806681d0a58199a9263147defc412",
+      "correctedOptionsSha256": "eb194ade23e5fc1c154ba07852cb48f9376806681d0a58199a9263147defc412",
+      "optionDSurgicallyTrimmed": false,
+      "optionCorrectionNote": "unchanged original PDF-text choice",
+      "mandatoryOriginalTable": false,
+      "mandatoryOriginalPoetryBlocks": false,
+      "mandatoryOriginalIllustration": false,
+      "mandatorySharedReadingOriginalPixels": true,
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "sharedMaterialAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourcePageNumber": 4,
+      "sourceAsset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-12.webp",
+        "sha256": "0370950412243fd6e2cae905c155cecfb81c90ea17eb34c995f5693a4fc87e51",
+        "gitBlobSha1": "9a19cdac29bbed6f1b721d87fd556b193bc7dc6a",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          1154,
+          1310,
+          1284
+        ],
+        "pixelSize": [
+          1220,
+          130
+        ]
+      },
+      "originalContentSha256RecordedOnly": "9545821e87098074fc32672c8e2b275ddcc85f4d2dcb3cc668104076fa1a0e7c",
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerCandidate": "B",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "originalSourceTextQaStatus": "PENDING_NUMBER_LEVEL_OFFICIAL_VISUAL_TEXT_QA",
+      "officialAnswerStatus": "PUBLISHED_ANSWER_IMAGE_CANDIDATE_CORRECTION_PDF_NOT_CHECKED",
+      "visualQaStatus": "DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA",
+      "independentRoleEContentReview": false,
+      "sourceRevisionSha256": "07bdd90a06e947bdb32cb1f542abc28a8bbc9367f0dea58c02a60949fb8206a5"
+    },
+    {
+      "questionId": "113-00-C-13",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 13,
+      "subject": "國文",
+      "question": "若將大伴旅人〈梅花歌序〉、王羲之〈蘭亭集序〉的部分文字相比較，何者理解不適當？\n\n    大伴旅人〈梅花歌序〉           王羲之〈蘭亭集序〉\n①天平二年正月十三日，萃于帥老之 永和九年，歲在癸丑，暮春之初，會於會稽山\n宅，申宴會也。②于時，初春令月，氣 陰之蘭亭，脩禊事也。……是日也，天朗氣\n淑風和。梅披鏡前之粉，蘭薰珮後之 清，惠風和暢。……夫人之相與，俯仰一世，\n香。……於是蓋天坐地，促膝飛觴。③ 或取諸懷抱，悟言一室之內；或因寄所託，放浪\n忘言一室之裡，開衿烟霞之外。④淡然 形骸之外。雖趣舍萬殊，靜躁不同，當其欣於所\n身放，快然自足。          遇，暫得於己，快然自足，不知老之將至。",
+      "options": [
+        "①與，皆依「時間→地點→事件」敘寫",
+        "②與，皆寫當日氣候給人的感受",
+        "③與，皆強調自然美景令人忘我",
+        "④與，皆形容內心獲得愉悅和滿足"
+      ],
+      "originalRawQuestionText": "若將大伴旅人〈梅花歌序〉、王羲之〈蘭亭集序〉的部分文字相比較，何者理解不適當？\n\n    大伴旅人〈梅花歌序〉           王羲之〈蘭亭集序〉\n①天平二年正月十三日，萃于帥老之 永和九年，歲在癸丑，暮春之初，會於會稽山\n宅，申宴會也。②于時，初春令月，氣 陰之蘭亭，脩禊事也。……是日也，天朗氣\n淑風和。梅披鏡前之粉，蘭薰珮後之 清，惠風和暢。……夫人之相與，俯仰一世，\n香。……於是蓋天坐地，促膝飛觴。③ 或取諸懷抱，悟言一室之內；或因寄所託，放浪\n忘言一室之裡，開衿烟霞之外。④淡然 形骸之外。雖趣舍萬殊，靜躁不同，當其欣於所\n身放，快然自足。          遇，暫得於己，快然自足，不知老之將至。",
+      "originalRawOptions": [
+        "①與，皆依「時間→地點→事件」敘寫",
+        "②與，皆寫當日氣候給人的感受",
+        "③與，皆強調自然美景令人忘我",
+        "④與，皆形容內心獲得愉悅和滿足\n\n\n\n-4-\n\n113 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考"
+      ],
+      "originalRawOptionsSha256": "c16616bfbbf48e672bbda5dc529a74288a520fa57da5d28cb68b013ed3d9aa4c",
+      "correctedOptionsSha256": "7c4a50b10575970e963632d03fcc7f109e471b9a07f97c49a6380f666daa9113",
+      "optionDSurgicallyTrimmed": true,
+      "optionCorrectionNote": "cross-page footer/next reading removed from new candidate D; raw OCR retained",
+      "mandatoryOriginalTable": true,
+      "mandatoryOriginalPoetryBlocks": false,
+      "mandatoryOriginalIllustration": false,
+      "mandatorySharedReadingOriginalPixels": true,
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "sharedMaterialAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourcePageNumber": 4,
+      "sourceAsset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-13.webp",
+        "sha256": "6e4f5b84f8c9e83aa1e3e22681c266a5b6b268e8551ae7266cc33c5ed94b7ad4",
+        "gitBlobSha1": "511c530e497277f1cf76aaaead972dec153d83d5",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          1293,
+          1310,
+          1810
+        ],
+        "pixelSize": [
+          1220,
+          517
+        ]
+      },
+      "originalContentSha256RecordedOnly": "85465e14360a3abcb970038f4bb8bb541473d16d565595ad39bf835a96dfefa7",
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerCandidate": "C",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "originalSourceTextQaStatus": "PENDING_NUMBER_LEVEL_OFFICIAL_VISUAL_TEXT_QA",
+      "officialAnswerStatus": "PUBLISHED_ANSWER_IMAGE_CANDIDATE_CORRECTION_PDF_NOT_CHECKED",
+      "visualQaStatus": "DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA",
+      "independentRoleEContentReview": false,
+      "sourceRevisionSha256": "be8c57345bf5aba57a68f07f401e239767a5770ec618cce3b31fc07a909afa7f"
+    },
+    {
+      "questionId": "113-00-C-14",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 14,
+      "subject": "國文",
+      "question": "若山上憶良讀過下列兩首詩，①、②、③、④何者屬於文末他說「早知要由此著筆」的\n  「此」的範圍？\n\n      梅嶺花初發，天山雪未開。   窗外一株梅，寒花五出開。\n      ①雪處疑花滿，花邊似雪回。  ③影隨朝日遠，香逐便風來。\n      因風入舞袖，雜粉向妝臺。   ④泣對銅鉤障，愁看玉鏡臺。\n      ②匈奴幾萬里，春至不知來。  行人斷消息，春恨幾裴回。",
+      "options": [
+        "①、③",
+        "②、④",
+        "①、②、④",
+        "②、③、④"
+      ],
+      "originalRawQuestionText": "若山上憶良讀過下列兩首詩，①、②、③、④何者屬於文末他說「早知要由此著筆」的\n  「此」的範圍？\n\n      梅嶺花初發，天山雪未開。   窗外一株梅，寒花五出開。\n      ①雪處疑花滿，花邊似雪回。  ③影隨朝日遠，香逐便風來。\n      因風入舞袖，雜粉向妝臺。   ④泣對銅鉤障，愁看玉鏡臺。\n      ②匈奴幾萬里，春至不知來。  行人斷消息，春恨幾裴回。",
+      "originalRawOptions": [
+        "①、③",
+        "②、④",
+        "①、②、④",
+        "②、③、④"
+      ],
+      "originalRawOptionsSha256": "bad9465aa05888b226448f92f8bc0ade630b6cfa725d777231fe458eb9c63bf2",
+      "correctedOptionsSha256": "bad9465aa05888b226448f92f8bc0ade630b6cfa725d777231fe458eb9c63bf2",
+      "optionDSurgicallyTrimmed": false,
+      "optionCorrectionNote": "unchanged original PDF-text choice",
+      "mandatoryOriginalTable": false,
+      "mandatoryOriginalPoetryBlocks": true,
+      "mandatoryOriginalIllustration": false,
+      "mandatorySharedReadingOriginalPixels": true,
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "sharedMaterialAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourcePageNumber": 5,
+      "sourceAsset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-14.webp",
+        "sha256": "8c0e426a3b4a40fa31e0391b74663511648f7bb3f4734824d437efbcd419abf5",
+        "gitBlobSha1": "9c7972771d539c08669ad4a64e45fc8bf97b3efc",
+        "sourceOriginalPageNumber": 5,
+        "sourceOriginalPageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+        "cropPixels": [
+          90,
+          165,
+          1310,
+          485
+        ],
+        "pixelSize": [
+          1220,
+          320
+        ]
+      },
+      "originalContentSha256RecordedOnly": "fa12f5fe9c1205ce04d52bbacbfbd1ea00db9a33ea1edad8f864d4d3efd8b537",
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerCandidate": "A",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "originalSourceTextQaStatus": "PENDING_NUMBER_LEVEL_OFFICIAL_VISUAL_TEXT_QA",
+      "officialAnswerStatus": "PUBLISHED_ANSWER_IMAGE_CANDIDATE_CORRECTION_PDF_NOT_CHECKED",
+      "visualQaStatus": "DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA",
+      "independentRoleEContentReview": false,
+      "sourceRevisionSha256": "285199fa48018d8c8cd86ae89b4315b0af6f591f8386f42882ebd136cad1792a"
+    },
+    {
+      "questionId": "113-00-C-15",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 15,
+      "subject": "國文",
+      "question": "下圖為公元730 年大宰府梅花宴的部分歌詞。依據上文，關於①、②的研判應是：\n\n\n\n\n\n  ①甲可能是大伴旅人；丙可能是山上憶良。\n  ②丁比乙符合大伴旅人對以梅賦歌的期待。",
+      "options": [
+        "①、②皆正確",
+        "①、②皆錯誤",
+        "①正確，②錯誤",
+        "①錯誤，②正確"
+      ],
+      "originalRawQuestionText": "下圖為公元730 年大宰府梅花宴的部分歌詞。依據上文，關於①、②的研判應是：\n\n\n\n\n\n  ①甲可能是大伴旅人；丙可能是山上憶良。\n  ②丁比乙符合大伴旅人對以梅賦歌的期待。",
+      "originalRawOptions": [
+        "①、②皆正確",
+        "①、②皆錯誤",
+        "①正確，②錯誤",
+        "①錯誤，②正確\n\n\n\n\n\n                                                        - 5-\n\n第6 頁                                                                                113 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第16-19 題\n                  「強擄薩賓婦女」以大理石雕成，高410 公分，是\n                  詹博洛尼亞完成於1583 年的名作。整座雕塑從底端的薩\n               賓男人到頂端的被擄婦女，如螺旋般盤伸向上，環繞一\n               周，方能從不同角度欣賞這件作品的全貌。婦女試圖掙\n               脫與張口呐喊的驚駭、羅馬士兵抱起婦女且指頭掐入婦\n               女背部的強悍、蹲地男子激烈反抗卻無力阻止的痛苦，\n                栩栩如生，讓觀者彷彿身歷其境。\n                 傳說中，由母狼撫養長大的羅穆盧斯是羅馬城的創\n               建者，他雖號召許多移民前來羅馬，但這些來自四面八\n               方的異鄉人多是男性，若沒有女性，便無法繁衍後代，\n               壯大城邦。於是他邀請鄰近部族薩賓人到羅馬參加宴\n               會，待薩賓男人酒醉後，羅馬人發動奇襲，擄走七百多\n                名薩賓婦女做他們的妻子。\n                 薩賓男人嚥不下這奇恥大辱，秣馬厲兵數年，向羅\n  馬人宣戰，想奪回家人。但薩賓女人已在羅馬落地生根，手心手背都是肉，當然不願任\n  何一方受傷。這時，已是羅穆盧斯妻子的薩賓國王之女赫西莉亞，率領薩賓婦女帶著兒\n  女衝入戰場。最終兩軍和解，同意融為一體，共創羅馬的未來。\n    畫家路易‧大衛的「薩賓婦女」，描繪的就是這關鍵時刻。握緊利劍的是兒女的舅\n  舅，高舉長矛的是兒女的父親，儘管她手無寸鐵，仍堅毅的張開雙臂，力阻雙方互鬥。\n  身處十八世紀末法國大革命時期的大衛，眼見他所屬的雅各賓黨為掃除政治異己而走向\n  極端，遂在獄中以這幅畫借古諷今，表達慨歎。\n    古羅馬記述這個傳說的史家多認為：羅穆盧斯的劫掠計畫，一是為了讓羅馬生生不\n  息，二是製造羅馬人和薩賓人建立關係的機會，藉婚姻形成政治聯盟。薩賓人曾經蔑視\n  剛起步的羅馬人，羅馬人乃藉此證明自己是      ，值得周遭勢力認真對待。"
+      ],
+      "originalRawOptionsSha256": "f51699fa831a8a2d34d4bc31bc8b1cf9b6e9a0faeb79adbf098c8de7d8705f38",
+      "correctedOptionsSha256": "1bc74a4dc420eeb643a4b0348453f5c5af2e4bee5ae00dda4c08253988f3e4c1",
+      "optionDSurgicallyTrimmed": true,
+      "optionCorrectionNote": "cross-page footer/next reading removed from new candidate D; raw OCR retained",
+      "mandatoryOriginalTable": false,
+      "mandatoryOriginalPoetryBlocks": false,
+      "mandatoryOriginalIllustration": true,
+      "mandatorySharedReadingOriginalPixels": true,
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "sharedMaterialAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourcePageNumber": 5,
+      "sourceAsset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-15.webp",
+        "sha256": "c2320b02faeb81e70d9e06a001105e11a204129a23635dbd3bc40559b9085599",
+        "gitBlobSha1": "83c69a80c823bb146dcce2ff1eaa769236f797d0",
+        "sourceOriginalPageNumber": 5,
+        "sourceOriginalPageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+        "cropPixels": [
+          90,
+          492,
+          1310,
+          1600
+        ],
+        "pixelSize": [
+          1220,
+          1108
+        ]
+      },
+      "originalContentSha256RecordedOnly": "ab9c8f33163c62d7dce55df1af50f646396589498ad66d0e329b5d95098ec502",
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "answerCandidate": "A",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "originalSourceTextQaStatus": "PENDING_NUMBER_LEVEL_OFFICIAL_VISUAL_TEXT_QA",
+      "officialAnswerStatus": "PUBLISHED_ANSWER_IMAGE_CANDIDATE_CORRECTION_PDF_NOT_CHECKED",
+      "visualQaStatus": "DRAFT_NEEDS_SOURCE_PIXEL_VISUAL_QA",
+      "independentRoleEContentReview": false,
+      "sourceRevisionSha256": "e8b5a029f0cbf08b0fa1c0d8ea454281ab864de1e10c26d2dd98277f0fa61052"
+    }
+  ],
+  "partialCandidateSqliteRows": 5,
+  "partialSharedMaterials": 1,
+  "newQuestionVerified": 0,
+  "newAnswerVerified": 0,
+  "newTeachingVerified": 0,
+  "newIndependentEReview": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "status": "ORIGINAL_MULTIPAGE_SOURCE_READING_CANDIDATE_NOT_RELEASED"
+}
