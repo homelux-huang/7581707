@@ -23,6 +23,8 @@ jobs:
       SUDU_D_NEWS_EXPECT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       SUDU_D_NEWS_MAIN_SHA: ${{ github.event.pull_request.base.sha || '' }}
       SUDU_D_NEWS_OUTPUT: test-results/role-d-english-news
+      SUDU_D_ROLE_B_CHECKOUT: _role_b_current
+      SUDU_D_ROLE_B_HEAD: 852c6613161f39314d87476b4e201cfe1811f783
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,6 +36,21 @@ jobs:
           test "$(git rev-parse HEAD)" = "$SUDU_D_NEWS_EXPECT_SHA"
           node --check tests/sudu_role_d_english_bilingual_news.cjs
           git diff --exit-code
+      # A true immutable external Role B HEAD is read-only; never overwrite
+      # our frozen PR35 source / published approved files with B candidates.
+      - uses: actions/checkout@v4
+        with:
+          ref: 852c6613161f39314d87476b4e201cfe1811f783
+          path: _role_b_current
+          persist-credentials: false
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/teaching-candidates/114-role-b-20261025
+      - name: Verify frozen real Role B source HEAD
+        run: |
+          set -euo pipefail
+          test "$(git -C _role_b_current rev-parse HEAD)" = "$SUDU_D_ROLE_B_HEAD"
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
