@@ -13,7 +13,7 @@ def load(p):return json.loads(p.read_text(encoding="utf-8"))
 def canonical(v):return json.dumps(v,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode("utf-8")
 def digest(b):return hashlib.sha256(b).hexdigest()
 def canonical_hash(v):return digest(canonical(v))
-def git_blob(b):return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\0"+b).hexdigest()
+def git_blob(b):return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
 
 class RoleB114ChineseBatch04(unittest.TestCase):
     @classmethod
