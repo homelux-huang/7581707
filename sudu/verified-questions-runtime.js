@@ -7,22 +7,25 @@
   const relative='./v4-115-multisubject-review-demo.html';
   const args=new URLSearchParams(location.search);
   const activeYear=args.get('year');
+  // 104–113 have archived candidates, NOT independently verified releases.
+  // Whitelisting a year must not promote auto-paired historic answers to QA.
+  const allYears=Array.from({length:12},(_,i)=>String(115-i));
   const imageModeRequested=args.get('view')==='images';
   // Keep navigation within the EXISTING year selector. Never add the four
   // large Demo/year/progress link buttons to the question reading area.
   const yearSelect=document.getElementById('yearSel');
   if(yearSelect){
     yearSelect.replaceChildren();
-    for(const [value,label] of [['demo','35 題 Demo'],['115','115 年'],['114','114 年']]){
+    for(const [value,label] of [['demo','35 題 Demo'],...allYears.map(year=>[year,year+' 年'])]){
       const option=document.createElement('option');
       option.value=value;option.textContent=label;yearSelect.append(option);
     }
-    yearSelect.value=['114','115'].includes(activeYear)?activeYear:'demo';
+    yearSelect.value=allYears.includes(activeYear)?activeYear:'demo';
     yearSelect.onchange=()=>{
       location.href=yearSelect.value==='demo'?relative:relative+'?year='+yearSelect.value;
     };
   }
-  if(!['114','115'].includes(activeYear))return;
+  if(!allYears.includes(activeYear))return;
   const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const useful=value=>typeof value==='string'&&value.trim()!==''&&!/^(N\/?A|本題無金額計算)$/i.test(value.trim());
   const storageKey='tvet-verified-'+activeYear+'-v1';
@@ -47,6 +50,15 @@
   const showError=(message)=>{
     document.body.classList.remove('verified-year-loading','qa-image-mode');
     document.body.classList.add('qa-error-mode');
+    document.body.dataset.verifiedReadyYear='';
+    // The original V4 initializes Demo questions before the verified adapter.
+    // Never leave those Demo cards/chips reachable on a missing annual route.
+    QUESTIONS.splice(0,QUESTIONS.length);
+    SUBJECTS.splice(0,SUBJECTS.length);
+    for(const id of ['questionCard','answerCard','guideCard','progressChips'])
+      document.getElementById(id)?.replaceChildren();
+    const homeReview=document.getElementById('homeReviewBtn');
+    if(homeReview)homeReview.disabled=true;
     let p=document.getElementById('verifiedLoadError');
     if(!p){
       p=document.createElement('p');p.id='verifiedLoadError';
@@ -55,8 +67,14 @@
       document.querySelector('main')?.prepend(p);
     }
     p.textContent=message;
+    // Error state is stable, not an endless spinner and not a Demo fallback.
+    refreshHomeSubjects();
   };
-  const subjectFor=(paper,n)=>{
+  const subjectFor=(paper,n,year)=>{
+    // Professional 09-1/09-2 sections may differ by historical year.
+    // Refuse unreviewed inferred cutoffs until A's exact official mapping
+    // and MASTER's admission contract are both integrated.
+    if(year<114&&(paper==='09-1'||paper==='09-2'))return null;
     if(paper==='00-C')return '國文';
     if(paper==='00-E')return '英文';
     if(paper==='00-MB')return '數學 B';
@@ -66,10 +84,10 @@
   };
   const parsedIdentity=q=>{
     if(typeof q.canonicalId!=='string')return null;
-    const m=/^(114|115)-(00-C|00-E|00-MB|09-1|09-2)-([0-9]{2})$/.exec(q.canonicalId);
+    const m=/^(10[4-9]|11[0-5])-(00-C|00-E|00-MB|09-1|09-2)-([0-9]{2})$/.exec(q.canonicalId);
     if(!m||m[1]!==activeYear||q.year!==Number(activeYear))return null;
     const n=Number(m[3]);
-    if(n<1||q.subject!==subjectFor(m[2],n))return null;
+    if(n<1||q.subject!==subjectFor(m[2],n,Number(m[1])))return null;
     return {n,paper:m[2],id:q.canonicalId};
   };
   const imagePath=id=>'data/approved/webp/'+activeYear+'/'+id+'.webp';
@@ -115,7 +133,7 @@
   function publishAnnualMenu(){
     window.suduAnnualSubjects=annualSubjects.slice();
     refreshHomeSubjects();
-    annualNote(activeYear+' 年｜七科沿用 35 題 Demo V4；僅經逐題正式核准者開放作答。');
+    annualNote(activeYear+' 年｜沿用原 35 題 Demo 各科 V4；僅經逐題正式核准者開放作答。');
   }
   function subjectUrl(subject,images){
     const url=new URL(relative,location.href);
@@ -467,6 +485,7 @@
       window.suduOpenYearSubject(requestedSubject);
   }).catch(error=>{
     console.error('正式年度題庫載入失敗',error);
-    showError('資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
+    showError((Number(activeYear)<114?activeYear+' 年官方候選尚未完成逐題原圖、官答、解說及獨立 AI QA；':'')+
+      '資料驗證或載入未通過，已暫停本年度正式作答：'+error.message);
   });
 })();
