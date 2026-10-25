@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C14-E36-E37-20261025-06",
+  "claimedAtUtc": "2026-10-25T05:27:53Z",
+  "questionId": "115-00-E-36",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 36,
+  "subject": "英文",
+  "status": "ROLE_C_CANDIDATE_PENDING_DISTINCT_AI_SOURCE_AND_UI",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceBankBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "Which of the following is the best conclusion for the above passage?",
+  "options": [
+    "In a phone-based world, teenagers will spend more time on digital technologies like virtual\n         reality and online shopping. These technologies will help them solve problems effectively, so\n       companies should develop new features to meet their needs.",
+    "To address these concerns, teenagers should be allowed to use social media for two reasons:\n        to make new friends and to talk to people face to face. In this way, they will become more\n        confident about their future.",
+    "Smartphones have become part of everyday life. Teenagers cannot avoid using digital devices\n        as apps become more interesting. Therefore, parents should help their children benefit from\n       technology instead of strictly limiting their phone use.",
+    "To solve these problems, the following actions are suggested. First, children should spend\n      more time interacting with people face to face instead of communicating online. Also, schools\n       should provide more time and space for free, unsupervised play."
+  ],
+  "answerCandidate": "D",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "knownAnswerBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "2a5ef83ac4daab27e63dc520087f259e4dc312dc5242fdd8cd62ae4053a771a0",
+  "sourceImageRecordQa": "PASS",
+  "sourceIndividualManifestQa": "PASS",
+  "individualImage": "sudu/data/processed/115/webp-v2/00-E/115-00-E-36.webp",
+  "individualImageSha256": "eaae0a20b815d0b416ee5318c3c65446ba6a250227761390c4fa7e676baed245",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "individualImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-E-SHARED-36-38",
+    "sourceText": "▲ 閱讀下文，回答第36 － 38 題\n\n        Recent studies show that teenagers experience more anxiety and mental health issues than those\n    in earlier generations. In his book The Anxious Generation: How the Great Rewiring of Childhood Is\n   Causing an Epidemic of Mental Illness, Professor Jonathan Haidt explains that two major changes in\n    childhood are mainly responsible for their problems.\n          First, these young people lost real-world freedom during childhood. Their parents tended to\n    protect them too much and carefully control their daily activities. They were not encouraged to\n    explore outdoors, take risks, and solve problems independently. As a result, they might have\n   missed many opportunities to develop confidence and independence. According to Professor\n    Haidt, plenty of free, unsupervised outdoor play is important for healthy development. Without\n    outdoor play, children may be less willing to try new things as they grow into teenagers.\n        Another major change is the shift from a play-based childhood to a phone-based one. Since\n    childhood, these young people have often spent many hours using smartphones and social media\n    for leisure activities. This leads to several problems. For example, they do not get enough sleep\n    because of long hours on screens. Instead of interacting face to face, they often communicate\n    online, making them feel less connected to people in the real world. Also, constant phone\n   messages and addictive apps make it hard for them to stay focused. When they cannot check their\n    phones, they feel anxious.",
+    "textSha256": "05adfebfe26fa28a4c6b1c5fb93daa4819f8ffea2cd48b73758bfce1f03757df",
+    "originalImage": "sudu/data/processed/115/webp-v2/shared/115-00-E-SHARED-36-38.webp",
+    "originalImageSha256": "180430801f1b7c0775f2ff360c80d0b8d1828e26b95742ca52f57e72c5f4e418",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "d8ebd1565ed82e09a3022f80a088201fb32010901d8e6686c22cfbf8c8b617c5",
+    "sharedImageBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "文章認為青少年問題與**戶外自由探索減少**及**手機社群取代面對面互動**兩種童年變化相關。最適合的結論應回應**這兩個問題**，而非增加數位娛樂或鼓勵無限制滑社群。**D** 提議增加**face-to-face interaction（面對面互動）**及**free, unsupervised play（自由而非事事被監督的遊戲）**，正好針對兩段的主要疑慮。",
+    "elementarySummary": "文章說孩子太少出去玩、也常只用手機跟人聊天。最適合的結尾是多和朋友真正見面，並且有時間自由玩耍，所以選D。",
+    "memory": "**少戶外自由玩＋太多手機互動 → 多面對面＋多自由遊戲（D）**。結論須回應全文兩大問題。",
+    "concept": "英文段落補結論題須回扣每段核心：**overprotection** 讓孩子缺少自主嘗試，**phone-based childhood** 則擠壓睡眠與面對面交流。文章作者主張與當代研究證據要分開，勿把單一敘事當作已證實的普遍因果。",
+    "extension": "2025年UNICEF研究指出**螢幕時間本身沒有明確直接導致心理健康問題的證據**，網路霸凌、有害內容等傷害較有實質關聯。這不影響閱讀理解題按本文結構選D，但教學不得把原文假說說成已證明的唯一原因。",
+    "highlights": [
+      "best conclusion",
+      "face to face",
+      "free, unsupervised play",
+      "phone-based childhood",
+      "overprotection",
+      "instead of"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 將文章結論拉向**VR、線上購物與公司開發更多新功能**；閱讀原文在談真實戶外自由及社交減少帶來的問題，沒有主張以增加數位產品解決問題。",
+        "elementary": "文章在說孩子需要多出去玩、和人見面，不是在叫科技公司做更多購物或虛擬實境功能。",
+        "reason": "A 將文章結論拉向**VR、線上購物與公司開發更多新功能**；閱讀原文在談真實戶外自由及社交減少帶來的問題，沒有主張以增加數位產品解決問題。",
+        "sourceEvidence": "Passage: real-world freedom during childhood; explore outdoors; shift from a play-based childhood to a phone-based one."
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 建議更多使用**social media**來交朋友，還把**社群平台溝通**當作 face to face，混淆原文的線上互動與現實互動，反而與文中問題分析相抵觸。",
+        "elementary": "在網路留言聊天不是面對面見到真人，選B還鼓勵更多滑社群，和文章想說的相反。",
+        "reason": "B 建議更多使用**social media**來交朋友，還把**社群平台溝通**當作 face to face，混淆原文的線上互動與現實互動，反而與文中問題分析相抵觸。",
+        "sourceEvidence": "Passage: Instead of interacting face to face, they often communicate online, making them feel less connected to people in the real world."
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 主張**避免嚴格限制手機使用、更多享受科技**，只處理手機這一面且未回應原文特別強調的**缺乏戶外自由遊戲**。本題最佳結論不應忽略兩個主因。",
+        "elementary": "C只在說手機應該怎樣用，沒有講到孩子缺少戶外自由玩耍這件重要的事。",
+        "reason": "C 主張**避免嚴格限制手機使用、更多享受科技**，只處理手機這一面且未回應原文特別強調的**缺乏戶外自由遊戲**。本題最佳結論不應忽略兩個主因。",
+        "sourceEvidence": "Passage: First, these young people lost real-world freedom during childhood; Another major change is the shift from a play-based childhood to a phone-based one."
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D 同時建議**更多真實面對面互動**及**更多不過度監控的自由玩耍機會**，逐一對應文章兩項核心問題，完整收束段落，正確。",
+        "elementary": "D叫孩子多和朋友真的見面，也要有自由玩耍的時間，兩種困難都有回答到。",
+        "reason": "D 同時建議**更多真實面對面互動**及**更多不過度監控的自由玩耍機會**，逐一對應文章兩項核心問題，完整收束段落，正確。",
+        "sourceEvidence": "Passage: plenty of free, unsupervised outdoor play is important; Instead of interacting face to face, they often communicate online."
+      }
+    },
+    "english": {
+      "answerWord": "outdoor play",
+      "pronunciationIPA": "/ˌaʊt.dɔːr ˈpleɪ/",
+      "sentenceTranslationZh": "哪一項最適合作為上述文章的結論？",
+      "answerWordMeaningZh": "戶外玩耍",
+      "synonyms": {
+        "初級": [
+          "playing outside（在外面玩）"
+        ],
+        "中級": [
+          "open-air recreation（戶外休閒活動）"
+        ],
+        "高級": [
+          "unstructured outdoor activity（自由戶外活動）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "indoor play（室內玩耍；情境相對）"
+        ],
+        "中級": [
+          "screen-based leisure（螢幕娛樂；情境對比）"
+        ],
+        "高級": [
+          "sedentary indoor activity（靜態室內活動；情境對比）"
+        ]
+      },
+      "newsExampleEnglish": "In May 2025, UNICEF described **outdoor play** as valuable for children's physical, emotional, and learning development.",
+      "newsExampleChinese": "2025年5月，聯合國兒童基金會指出，戶外遊戲對兒童的身體、情緒與學習發展具有價值。",
+      "newsExampleHighlightedSurfaceForm": "outdoor play",
+      "newsExampleSourceUrl": "https://www.unicef.org/eca/stories/importance-outdoor-play-and-how-support-it",
+      "newsExampleSourceDate": "2025-05-01",
+      "newsExampleSourceOrganization": "UNICEF",
+      "newsExampleKind": "根據UNICEF於2025年發布的報導自行改寫的英語教學句，非來源逐字引述，不得冒稱官方逐字說法",
+      "note": "戶外遊戲沒有唯一字面反義片語，反義相關詞為情境對比。此例句為教學作者對UNICEF文章的概括，不是引號內官方逐字引句；文章考察的是教授觀點，不能把讀本的強因果敘述視為全領域共識。"
+    },
+    "stepByStep": [
+      "歸納第2段：缺少戶外探索與自主解決問題的機會。",
+      "歸納第3段：長時間手機社群可能擠壓現實互動、睡眠、專注。",
+      "找能同時回應兩項問題的結論；D包含面對面交流及自由遊戲。",
+      "排除A新科技、B加強社群、C偏重科技使用且忽略戶外遊戲。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年英文第36題共用閱讀：節錄 Jonathan Haidt《The Anxious Generation》觀點；外部新聞延伸區另引用2025 UNICEF資訊並區分科學證據。"
+  },
+  "teachingCanonicalSha256": "4b8bb1718d949f6cc7994b002eb7064c549255ce6bdce746960e55ac772f4ab8",
+  "review": {
+    "authorIdentity": "GPT-6 Role C AI teaching author (not credentialed human teacher)",
+    "authorRole": "C",
+    "distinctAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewNotes": null,
+    "reviewEvidenceSha256": null,
+    "officialEvidenceSha256": null,
+    "differentAuthorRequired": true,
+    "sameAuthorApprovalProhibited": true,
+    "officialFinalAnswerAndNotice": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4EightByTwoExactDigest": "PENDING",
+    "policy": "ISSUE36_2026-10-25_NO_HUMAN_TEACHER_PREREQUISITE"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_OFFICIAL_FINAL_ANSWER_CORRECTION_AND_FULL_QUESTION_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_IMAGE_DIRECT_VISUAL_QA_PENDING",
+    "DISTINCT_AI_OPTION_BY_OPTION_REVIEW_AND_SOURCE_SHA_EVIDENCE_PENDING",
+    "V4_REAL_8_VIEWPORTS_2_THEMES_EXACT_DIGEST_CI_PENDING"
+  ]
+}
