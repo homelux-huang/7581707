@@ -56,7 +56,8 @@ def source():
         assert q["sourceVersion"]["answerPdfSha256"]==archived.ANS_PDF_RECORDED
         assert not q["answerVerified"] and not q["questionVerified"] and not q["teachingVerified"]
         assert len(q["options"])==4
-    assert "對立" in p["questions"][8]["options"][0], "expected Q9 strategy-chart OCR contamination absent"
+    assert "對立" in p["questions"][8]["question"], "expected original Q9 strategy-chart text missing"
+    assert "配合他人的程度" in p["questions"][8]["options"][3], "expected actual Q9 axis spill into original option D missing"
     assert "▲閱讀下文，回答第11-15 題" in p["questions"][9]["options"][3], "expected Q10 cross-page bleed absent"
     assert "貶抑物價" in p["questions"][9]["options"][0], "Q10 original table content changed"
     return doc,p,src,ans_img
