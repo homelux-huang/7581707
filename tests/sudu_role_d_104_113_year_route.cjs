@@ -177,6 +177,20 @@ async function loadErrorGate(page,year,baseline,profile){
   'error concealed old-year 0 QA status: '+observed.errorText);
  assert(/未通過|未完成|尚未/.test(observed.errorText));
  const font=await cjkLegible(page);
+ // Negative security probe only (NOT a historic question fixture or QA pass):
+ // a direct old-year call to Demo wrong-sample seed must be a no-op, and
+ // old-year review must NOT offer an action to generate fake wrong answers.
+ const seeded=await page.evaluate(()=>{
+  renderReview();
+  const demoSeedExists=!!document.querySelector('#seedDemo');
+  const before=localStorage.getItem('tvet-115-multisubject-demo-v1');
+  seedDemo();
+  return {demoSeedExists,before,after:localStorage.getItem('tvet-115-multisubject-demo-v1')};
+ });
+ assert.equal(seeded.demoSeedExists,false,
+  'unverified old-year review exposes Demo sample wrong-answer generator');
+ assert.equal(seeded.after,seeded.before,
+  'direct Demo sample callback mutated the real Demo history on an old-year route');
  // Screenshots explicitly remain QA ONLY, never original old exam UIQA.
  await page.addStyleTag({content:
   'body::after{content:"D QA-ONLY / OLD YEAR NOT READY / NOT LIVE";'+
@@ -217,6 +231,14 @@ async function loadErrorGate(page,year,baseline,profile){
     // Real existing 35-Demo navigation; dark is changed by actual UI button,
     // never by injecting test theme or overriding the student CSS.
     await choose(page.locator('#homeYearSel'),'demo',width<=430);
+    // Positive real Demo control: the old example button must remain
+    // accessible ONLY in authentic Demo review and never annual 104–115.
+    await interact(page.locator('#homeReviewBtn'),width<=430);
+    await page.locator('#reviewView.show').waitFor({state:'visible'});
+    assert.equal(await page.locator('#seedDemo').count(),1,
+      'original 35-Demo review sample intentionally removed');
+    await interact(page.locator('#backStudy'),width<=430);
+    await page.locator('#homeView').waitFor({state:'visible'});
     if(theme==='dark'){
      await choose(page.locator('#homeSubjectSel'),'英文',width<=430);
      await page.locator('#studyView').waitFor({state:'visible'});
@@ -274,6 +296,19 @@ async function loadErrorGate(page,year,baseline,profile){
       const canonicalId=await page.evaluate(()=>qnow()?.canonicalId);
       assert(/^115-00-MB-/.test(canonicalId));
       info.realPriorApprovedMathB=canonicalId;
+      // The old implementation would seed fabricated wrong-answer records
+      // into the 115 student session despite being a Demo-only helper.
+      // Call directly as a negative guard test, NEVER as student evidence.
+      const annualSeedGate=await page.evaluate(()=>{
+        const before=localStorage.getItem('tvet-verified-115-v1');
+        renderReview();const demoSeedExists=!!document.getElementById('seedDemo');
+        seedDemo();
+        return {before,after:localStorage.getItem('tvet-verified-115-v1'),demoSeedExists};
+      });
+      assert.equal(annualSeedGate.demoSeedExists,false,
+        'real approved 115 incorrectly offers Demo seed inside wrong-review');
+      assert.equal(annualSeedGate.after,annualSeedGate.before,
+        'Demo seed mutated existing approved 115 student history');
     }else{
       assert.equal(info.preview||info.denied,true,
         'unapproved 114 must not alias to original 35-demo answering');
