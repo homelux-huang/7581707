@@ -22,7 +22,7 @@ def sha(v):
 def revision(q, sha_webp):
     return sha({"question": q["question"], "options": q["options"], "singleQuestionWebpSha256": sha_webp})
 def git_blob_sha(raw):
-    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\\0" + raw).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
 
 class TestRoleB114Draft(unittest.TestCase):
     @classmethod
