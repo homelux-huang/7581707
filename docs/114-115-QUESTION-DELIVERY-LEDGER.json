@@ -281,7 +281,16 @@
         "sourceCommit": "2b1e48336ea103e8f114e4bf6c7a8df023cef9c4",
         "path": "sudu/teaching-candidates/114-role-b-20261025/114-00-C-03.json",
         "teachingDigest": "eda76bec43fe53cd663328dbc46d2ad428d4a74bc14d014f75d25ad4b19f09e2",
-        "baseTeachingEvidencePath": null
+        "baseTeachingEvidencePath": null,
+        "contentQaStatus": "FAILED_REAL_CI_OPTION_SPECIFIC_REASONS",
+        "blockedReasonExamples": [
+          "A/B: same reason 類＝種類。; D 類＝相似。 each 5 chars"
+        ],
+        "failedSourceCI": {
+          "run": 40162791292,
+          "task": "test_114_role_b_teaching_20261025.py:test_all_source_bound_and_all_options",
+          "commit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5"
+        }
       },
       "independentTeachingQA": {
         "status": "NOT_RECEIVED_AUTHORIZED_SIGNED_REVIEW",
@@ -311,6 +320,7 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
+        "PER_OPTION_TEACHING_REASON_TOO_GENERIC_OR_SHORT__B_REVISE_WITH_NEW_DIGEST",
         "TRUE_AUTHORIZED_DISTINCT_TEACHER_SIGNATURE_MISSING",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED"
       ]
@@ -3719,7 +3729,16 @@
         "sourceCommit": "2b1e48336ea103e8f114e4bf6c7a8df023cef9c4",
         "path": "sudu/teaching-candidates/114-role-b-20261025/114-00-E-08.json",
         "teachingDigest": "7415aab85aa8b693ff430b63dde9ebe641652b985a577ee93854aa50493bb3f5",
-        "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-08-teaching.json"
+        "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-08-teaching.json",
+        "contentQaStatus": "FAILED_REAL_CI_OPTION_SPECIFIC_REASONS",
+        "blockedReasonExamples": [
+          "B: reason 語意衝突。 only 5 chars"
+        ],
+        "failedSourceCI": {
+          "run": 40162791292,
+          "task": "test_114_role_b_teaching_20261025.py:test_all_source_bound_and_all_options",
+          "commit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5"
+        }
       },
       "independentTeachingQA": {
         "status": "NOT_RECEIVED_AUTHORIZED_SIGNED_REVIEW",
@@ -3757,6 +3776,7 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
+        "PER_OPTION_TEACHING_REASON_TOO_GENERIC_OR_SHORT__B_REVISE_WITH_NEW_DIGEST",
         "TRUE_AUTHORIZED_DISTINCT_TEACHER_SIGNATURE_MISSING",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
@@ -3808,7 +3828,16 @@
         "sourceCommit": "2b1e48336ea103e8f114e4bf6c7a8df023cef9c4",
         "path": "sudu/teaching-candidates/114-role-b-20261025/114-00-E-09.json",
         "teachingDigest": "d9af8ba1bc7f023f17b9a8f150cdb7a08f1b9163b4665de199cf0a96beca4952",
-        "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-09-teaching.json"
+        "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-09-teaching.json",
+        "contentQaStatus": "FAILED_REAL_CI_OPTION_SPECIFIC_REASONS",
+        "blockedReasonExamples": [
+          "A/B/C: same reason 詞義不同。 each 5 chars"
+        ],
+        "failedSourceCI": {
+          "run": 40162791292,
+          "task": "test_114_role_b_teaching_20261025.py:test_all_source_bound_and_all_options",
+          "commit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5"
+        }
       },
       "independentTeachingQA": {
         "status": "NOT_RECEIVED_AUTHORIZED_SIGNED_REVIEW",
@@ -3846,6 +3875,7 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
+        "PER_OPTION_TEACHING_REASON_TOO_GENERIC_OR_SHORT__B_REVISE_WITH_NEW_DIGEST",
         "TRUE_AUTHORIZED_DISTINCT_TEACHER_SIGNATURE_MISSING",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
@@ -32920,7 +32950,8 @@
     "Same SHA main to Pages release check for previously approved five",
     "PR34 21-job matrix: original #40162016136 15 failed/6 passed. Fix original Demo path/data URI plus real per-question assertions without skipping",
     "PR32 MB23 true per-image independent table QA and TABLE-inclusive approval",
-    "PR35 exact integration head CI + 114/115 original PDFs + live SHA"
+    "PR35 exact integration head CI + 114/115 original PDFs + live SHA",
+    "B PR31 original option-specific reasons: 114 E08-B, E09-A/B/C, 114 C03 A/B/D must be meaningfully distinguished, new teaching digests and D/E recheck"
   ],
   "notes": "First full candidate population: preserve all PR30 schema/knownGroups; all 410 source-branch IDs recorded without pretending Role A official PDF enumeration or blanket official validation. Check official and source revisions before approval. PR32 MB23 source table is present and digest preserved, but not approved; PR34 source matrix first run is 15 failed / 6 passed; only one canonical ledger.",
   "latestReceipt": {
@@ -32945,12 +32976,19 @@
         ]
       },
       "B": {
-        "status": "SEVEN_SOURCE_BOUND_CANDIDATES_RECEIVED",
+        "status": "SEVEN_CANDIDATES_RECEIVED__THREE_ACTUAL_CONTENT_REASON_TESTS_FAILED",
         "PRs": [
           31
         ],
         "newDrafts": 4,
-        "basePreservedEnrichments": 3
+        "basePreservedEnrichments": 3,
+        "failedQuestionIds": [
+          "114-00-E-08",
+          "114-00-E-09",
+          "114-00-C-03"
+        ],
+        "ciRun": 40162791292,
+        "contentQa": "FAIL_NOT_APPROVED"
       },
       "C": {
         "status": "SEVEN_PROVENANCE_RECORDS? NO SIX ORIGINAL LESSONS; MB23 TABLE LINKAGE_ONLY_FROM_PR32",
@@ -33018,7 +33056,7 @@
     "integrationCandidate": {
       "pullRequest": 35,
       "branch": "integration/114-115-first-batch-v4-receipts-20261025",
-      "headObserved": "dc64e06ce417e8d64402f7fbdc81856616e71496",
+      "headObserved": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
       "scope": "PR21/25 source, 28/31+32 lessons, 26 governance+MB23 HTML, 27 runtime, 34 exact-source browser matrix, 15 original WebPs",
       "status": "DRAFT_NO_RELEASE",
       "sourceBytesNotOverwritten": true,
@@ -33027,7 +33065,21 @@
       "newReady": 0,
       "newMain": 0,
       "newLive": 0,
-      "ciStatus": "EXACT_HEAD_PENDING__SOURCE_PR34_FAIL_OBSERVED"
+      "ciStatus": "RECEIPT_CORE_8_PASS_THEN_B_3_OPTION_REASON_FAIL; D_REAL_MATRIX_15_FAIL; MAIN_RELEASE_CI_PENDING",
+      "improvedSyntheticWebPTestFromPR37": {
+        "baseTestBlobUnchangedFromMain": true,
+        "actualOriginalImageHTTP": true,
+        "webpHeaderAndSha": true,
+        "lazyScrollAndDecodeAssertPreserved": true,
+        "noStudentOrReleaseCodeChanged": true
+      },
+      "receiptCoreIntegrityTest": {
+        "runId": 40162791292,
+        "coreEightPassed": true,
+        "bTestFailedCount": 3,
+        "failOpen": false,
+        "publisherChecks": "NOT_FULL_PASS"
+      }
     },
     "pr32mb23": {
       "head": "2e7677411749a8a32a2ab1ecc065ab7e3e971f97",
@@ -33035,6 +33087,12 @@
       "sourceTableIndependentQa": false,
       "teachingShaSame": true
     },
-    "newLiveVerified": 0
+    "newLiveVerified": 0,
+    "laterPR37": {
+      "pr": 37,
+      "scope": "SYNTHETIC_HTTP_WEBP_SHA_DECODE_TEST_ONLY_CHERRY_PICKED",
+      "ledgerCopyUsed": false,
+      "teacherReviewApproved": false
+    }
   }
 }
