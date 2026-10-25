@@ -69,8 +69,7 @@
     "E": "independent-evidence-auditor"
   },
   "reviewerGovernance": {
-    "requireHumanTeacher": true,
-    "authorizedReviewerCount": 0,
+    "requireHumanTeacher": false,
     "newAdmissions": "BLOCKED_UNTIL_DISTINCT_AI_REVIEW_EVIDENCE_AND_SAFE_PUBLISHER_MIGRATION_AND_ALL_SOURCE_UI_GATES",
     "noSelfReview": true,
     "ownerLatestPolicy": {
@@ -105,6 +104,28 @@
       "aiReviewContractState": "DRAFT_INACTIVE_NOT_PUBLISHER_ADMISSION",
       "migrationStatus": "PENDING_REVIEWED_CODE_CHANGE_AND_REAL_DISTINCT_E_REVIEW_EVIDENCE",
       "newReadyAuthorized": false
+    },
+    "candidatePublisherImplementation": {
+      "branch": "governance/114-115-ai-publisher-gate-20261025",
+      "draftPR": 57,
+      "baseDraftPR": 46,
+      "headSHA": "8c998e00bd60bd183b0c1b253a33511486c0d4b0",
+      "activeInIsolatedDraftCode": true,
+      "mergedIntoMain": false,
+      "policyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+      "realTeacherCredentialsRequired": false,
+      "trustedIndependentAiEReceiptCount": 0,
+      "effectiveNewReadyAuthorization": false,
+      "pinnedDRegressionPR": 58,
+      "pinnedDTestGitBlob": "ed475d2f6fe4651ebc3cf561dd754b635eb91492",
+      "exactHeadCI": {
+        "runId": 40165931899,
+        "jobId": 121086853721,
+        "conclusion": "success",
+        "unitTestsPassed": 78,
+        "independentDChainTests": 8
+      },
+      "proofNote": "Only machine regressions and real original SHA integrity succeeded; no new per-question E content QA, student READY or protected main proof"
     }
   },
   "questionEntries": {
@@ -35003,18 +35024,19 @@
     "Role A two isolated SQLite imports+byte hashes+official answer notices incl Econ34 and MB23 table",
     "Role B/Role C source-aware teaching final revisions and digest alignment",
     "Role D exact-real 8x2 V4 browser QA per new digest and all three priority groups",
-    "Role E authorized independent human teacher signed review with GitHub approved event",
     "Fix PR26 CI 40111871501 browser WebP decode failure and rerun all gates",
     "Same SHA main to Pages release check for previously approved five",
     "PR34 21-job matrix: original #40162016136 15 failed/6 passed. Fix original Demo path/data URI plus real per-question assertions without skipping",
     "PR32 MB23 true per-image independent table QA and TABLE-inclusive approval",
     "PR35 exact integration head CI + 114/115 original PDFs + live SHA",
     "B PR31 original option-specific reasons: 114 E08-B, E09-A/B/C, 114 C03 A/B/D must be meaningfully distinguished, new teaching digests and D/E recheck",
-    "Owner's new Issue36 distinct-AI reviewer contract requires reviewed publisher/policy migration; PR46 is inactive draft and produces no real reviewer approval",
     "Independent role E review needs exact source/image/revision/teaching and 4-option notes bound to real GitHub Issue36 task; no self-authored PASS",
-    "Existing original 115 MB02/03/04/05/09 immutable historical exception preserved and same-SHA LIVE still needs verification"
+    "Existing original 115 MB02/03/04/05/09 immutable historical exception preserved and same-SHA LIVE still needs verification",
+    "Role E distinct AI content review per exact source revision/WebP/teaching digest/official evidence and independently verifiable Issue36 RETURN; new teacher credential and signature are NOT prerequisites",
+    "Publisher migration draft PR57 exact head 8c998e00bd60bd183b0c1b253a33511486c0d4b0: CI40165931899 78 unit/negative PASS incl original Role-D PR58 8/8; only isolated Draft, not merged main or Pages",
+    "Role B E08/E09 corrected digests already submitted PR31; integrate exact new authored files and new V4 testedTeachingDigest before closing PR35 stale lesson blockers"
   ],
-  "notes": "First full candidate population: preserve all PR30 schema/knownGroups; all 410 source-branch IDs recorded without pretending Role A official PDF enumeration or blanket official validation. Check official and source revisions before approval. PR32 MB23 source table is present and digest preserved, but not approved; PR34 source matrix first run is 15 failed / 6 passed; only one canonical ledger. Issue36 latest owner policy supersedes real-human teacher/Ed25519 pedagogic gate; code still old and blocked. 405 candidate entries now distinctly record AI independent-content-review pending plus publisher gate migration pending. This is bookkeeping only, not review PASS.",
+  "notes": "First full candidate population: preserve all PR30 schema/knownGroups; all 410 source-branch IDs recorded without pretending Role A official PDF enumeration or blanket official validation. Check official and source revisions before approval. PR32 MB23 source table is present and digest preserved, but not approved; PR34 source matrix first run is 15 failed / 6 passed; only one canonical ledger. Issue36 latest owner policy supersedes real-human teacher/Ed25519 pedagogic gate; code still old and blocked. 405 candidate entries now distinctly record AI independent-content-review pending plus publisher gate migration pending. This is bookkeeping only, not review PASS. 2026-10-25 MASTER isolated PR57 active AI-only publisher code with no signed-teacher fallback passed 78 read-only tests at 8c998e00; main still OLD, no E approved AI receipts yet. Distinct AI E must be real independent author role and bound to source/lesson/UI SHA; no mass approvals.",
   "latestReceipt": {
     "date": "2026-10-25",
     "source": "DIRECT_GITHUB_PR_CONTENTS",
@@ -35164,9 +35186,15 @@
       "newMain": 0,
       "newLive": 0,
       "governanceDraftPR": 46,
-      "technicalMigrationStatus": "NOT_ACTIVE",
+      "technicalMigrationStatus": "ISOLATED_DRAFT_MODE_ACTIVE__MAIN_STILL_OLD",
       "historicalFivePreserved": true,
-      "recordedFor": 405
+      "recordedFor": 405,
+      "candidatePublisherDraftPR": 57,
+      "candidatePublisherHead": "8c998e00bd60bd183b0c1b253a33511486c0d4b0",
+      "candidatePublisherCiRun": 40165931899,
+      "candidatePublisherCiConclusion": "success_78_readonly_tests",
+      "testedTeachingDigestRequiredForNewAdmission": true,
+      "verifiedNewAiEReceipts": 0
     }
   }
 }
