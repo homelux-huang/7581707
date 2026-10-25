@@ -135,6 +135,16 @@ function assertSourceRecords(){
   return records;
 }
 
+// Actual font rasterization, not merely DOM textContent, must show four
+// distinct readable Chinese ideographs instead of the same missing glyph □.
+function cjkGlyphsLegible(metrics){
+ return Array.isArray(metrics)&&metrics.length===4&&
+   metrics.every(x=>Number.isInteger(x.pixels)&&x.pixels>80)&&
+   new Set(metrics.map(x=>x.fingerprint)).size>=3;
+}
+assert.equal(cjkGlyphsLegible(Array.from({length:4},()=>({
+ pixels:100,fingerprint:'tofu-placeholder'}))),false,'tofu negative control failed');
+
 const source=assertSourceRecords();
 const report={
  schemaVersion:1,role:'D',taskId:roleBHead?
@@ -252,12 +262,38 @@ function save(){
          r.id+' '+width+'px '+theme+' clipped English sentence');
        assert(geometry.chineseWidth<=geometry.chineseClientWidth+3,
          r.id+' '+width+'px '+theme+' clipped Chinese sentence');
+       const glyphQA=await page.evaluate(()=>{
+         const node=document.querySelector('#guideCard .news-zh');
+         if(!node)return {font:'none',glyphs:[]};
+         const style=getComputedStyle(node);
+         const font='52px '+(style.fontFamily||'sans-serif');
+         const chars=['中','文','翻','譯'];
+         const glyphs=chars.map(char=>{
+           const canvas=document.createElement('canvas');
+           canvas.width=96;canvas.height=96;
+           const ctx=canvas.getContext('2d',{willReadFrequently:true});
+           ctx.clearRect(0,0,96,96);ctx.fillStyle='#000';
+           ctx.font=font;ctx.textBaseline='top';ctx.fillText(char,6,4);
+           const pixels=ctx.getImageData(0,0,96,96).data;
+           let visible=0,fp=2166136261;
+           for(let i=3;i<pixels.length;i+=4){
+             const alpha=pixels[i];
+             if(alpha>35)visible++;
+             fp=Math.imul(fp^alpha,16777619)>>>0;
+           }
+           return {char,pixels:visible,fingerprint:fp.toString(16)};
+         });
+         return {font,glyphs,chineseHeight:node.getBoundingClientRect().height};
+       });
+       assert(cjkGlyphsLegible(glyphQA.glyphs)&&glyphQA.chineseHeight>0,
+         r.id+' '+width+' '+theme+' CJK glyphs missing/tofu: '+JSON.stringify(glyphQA));
        const screenshot=path.join(OUT,r.id+'-'+width+'x'+height+'-'+theme+'.png');
        await block.screenshot({path:screenshot,animations:'disabled'});
        report.checks.push({questionId:r.id,width,height,theme,
          event:touch?'real_touch_theme':'real_mouse_theme',
          bilingualTranslation:true,exactEnglish:true,actualHighlightedString:true,
-         noDemoNewsFallback:true,noLayoutOverflow:true,
+         noDemoNewsFallback:true,noLayoutOverflow:true,realCjkGlyphsLegible:true,
+         browserFont:glyphQA.font,cjkGlyphFingerprints:glyphQA.glyphs,
          imageSha256:r.imageSha256,sourceRevision:r.sourceRevision,
          composedTeachingSha256:r.composedTeachingSha256,
          screenshot:path.relative(OUT,screenshot),
