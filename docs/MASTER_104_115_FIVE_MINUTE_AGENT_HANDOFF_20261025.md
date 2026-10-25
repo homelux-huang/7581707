@@ -2,7 +2,7 @@
 > 此文件供任何 A／B／C／D／E 角色的 AI 執行環境直接接手；不是第二套題庫台帳，也不是可自動喚醒已關閉 ChatGPT 對話的程式。
 
 ## 運作前提（不得虛構）
-1. ChatGPT 內建 Automations 最短為每小時一次，不能改成每 5 分鐘。GitHub Actions 可以設定 `*/5 * * * *`，但只會在 workflow 已正式存在於預設 `main` 時定時生效，且時間可能延誤或漏跑。
+1. ChatGPT 內建 Automations 最短為每小時一次，不能改成每 5 分鐘。GitHub Actions 可設定 `2-57/5 * * * *`（每小時的02、07、12…57分，每5分鐘一次，避開整點高峰），但只會在 workflow 已正式存在於預設 `main` 時定時生效，且時間可能延誤或漏跑。
 2. 五分鐘 GitHub watcher 是 **READ ONLY**，只讀 Issue #36、PR SHA、CLAIM／RETURN，產生 GitHub Actions Summary 與 JSON artifact。它不是具有模型推論／寫碼能力的子代理，也不能喚醒其他 ChatGPT/VS Code Session，更不是 E 內容 QA 或 READY 驗證。
 3. 若要真正每五分鐘自動執行角色任務，另需正式連接**被授權的常駐 AI agent 執行器／雲端 runner**、有限權限 GitHub App／Token、模型 API 授權與費用管理、互斥鎖及安全策略；目前尚未宣稱已連接。沒有連接時，角色僅在用戶開啟對話、Work/其他可執行代理喚醒時工作；不要假稱5分鐘自動啟動。
 4. 絕對不可把留言中的「已派工」視為已被工作者認領；只有 ROLE 自己留下新的 CLAIM，並在隔離分支提交真正的檔案／測試／RETURN，才算工作實際進展。
