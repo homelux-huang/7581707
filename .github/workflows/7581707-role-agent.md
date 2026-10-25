@@ -11,6 +11,18 @@ engine: codex
 model: openai/gpt-6.1-sol
 tools:
   github:
+safe-outputs:
+  create-issue: false
+  report-failure-as-issue: false
+  report-failed-jobs: false
+  report-incomplete:
+    create-issue: false
+  report-missing-tool:
+    create-issue: false
+  report-missing-data:
+    create-issue: false
+  noop:
+    report-as-issue: false
 ---
 
 # 7581707 MASTER AI triage — read-only bootstrap
