@@ -1,0 +1,26 @@
+name: 115 Role C C15 E33 E34 source-bound dual-level lesson QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/115-role-c-c15-e33-e34-after-a64-20261025
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-c15-e33-e34-20261025/**'
+      - 'tests/test_115_role_c_c15_e33_e34_20261025.py'
+      - '.github/workflows/115-role-c-c15-e33-e34-20261025.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-c15-e33-e34-20261025/**'
+      - 'tests/test_115_role_c_c15_e33_e34_20261025.py'
+      - '.github/workflows/115-role-c-c15-e33-e34-20261025.yml'
+permissions:
+  contents: read
+jobs:
+  role-c-author-integrity-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-bound four options, true calculations, SHA negative tests (author only)
+        run: python -m unittest discover -s tests -p 'test_115_role_c_c15_e33_e34_20261025.py' -v
