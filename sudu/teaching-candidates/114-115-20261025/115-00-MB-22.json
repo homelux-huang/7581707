@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-22",
+  "year": 115,
+  "sourceCommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+  "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，由左而右依序展現在螢幕上，且每一張卡片只會顯示「有 ū」或「無 bô」。為了讓玩家都有獎勵，抽出的五張卡片中至少有一張會顯示「有 ū」，圖（六）僅為其中一種可能。試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+  "options": [
+    "32",
+    "31",
+    "16",
+    "5"
+  ],
+  "sourceTables": [],
+  "image": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-22.webp",
+  "imageSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+  "sourceTextRevisionWithoutTable": "7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17",
+  "teaching": {
+    "teacherSummary": "五個位置各有「有」或「無」兩種選擇，順序不同就算不同。先算 **2⁵**，再扣掉唯一不合格的「五張全無」。",
+    "elementarySummary": "五個小格每格能放有或無。先把所有排法都算進去，再刪掉一張獎品也沒有的那一排。",
+    "memory": "**至少一張有＝全部32種－全無1種＝31種。**",
+    "concept": "乘法原理計算有順序的顯示結果；「至少一個」常用補集計數。",
+    "extension": "若改成六張至少一張有，則2⁶－1＝63；這是在數排法，題目沒有要求各排法機率相等。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "n個位置各2種：2ⁿ；至少一張有：2ⁿ－1。",
+    "highlights": [
+      "至少一張",
+      "2⁵",
+      "31種",
+      "全無"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "五個由左到右的位置",
+        "每格只顯示有ū或無bô",
+        "至少一格顯示有"
+      ],
+      "formulaUse": "n個位置各2種：2ⁿ；至少一張有：2ⁿ－1。",
+      "substitution": [
+        "2×2×2×2×2－1"
+      ],
+      "steps": [
+        "第一至第五格各有2種選擇，全部排法＝2×2×2×2×2＝32。",
+        "五格全無只有「無無無無無」這1種。",
+        "合格排法＝32－1＝31，選 B。",
+        "另一種核對：恰1張有5種、恰2張10種、恰3張10種、恰4張5種、全有1種；合計5＋10＋10＋5＋1＝31。"
+      ],
+      "result": "31種",
+      "unit": "種",
+      "option": "B"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "32包含「全無」，違反至少一張有。",
+        "elementary": "還沒刪掉沒有獎勵的那一排。",
+        "reason": "32包含「全無」，違反至少一張有。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "2⁵－1＝31，正確扣掉全無。",
+        "elementary": "所有排法扣掉全無，剩下31排。",
+        "reason": "2⁵－1＝31，正確扣掉全無。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "16＝2⁴，少算一個位置，也不是本題的補集結果。",
+        "elementary": "題目有五格，不能只算四格。",
+        "reason": "16＝2⁴，少算一個位置，也不是本題的補集結果。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "5只計恰好一張有，漏掉有兩張以上的情況。",
+        "elementary": "兩張有、三張有也有獎，不能漏算。",
+        "reason": "5只計恰好一張有，漏掉有兩張以上的情況。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600",
+  "review": {
+    "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
+    "reviewedAt": "2026-10-25",
+    "originalImageViewed": true,
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "officialFinalDirectReviewThisSession": false,
+    "uiQa": "PENDING",
+    "hasRequiredSourceTable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
+    "OFFICIAL_FINAL_ADMISSION_PENDING"
+  ]
+}

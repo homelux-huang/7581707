@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-21",
+  "year": 115,
+  "sourceCommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+  "question": "探勘人員為確認一個新的優良漁場 C 與港口 B 的距離，從港口 A 直線航行 8 公里到漁場 C，此時在 C 點經由儀器測定角度得知 ∠ACB＝60°，且港口 A 與港口 B 相距 7 公里，如圖（五）所示。若 B、C 的距離大於 4 公里，則 B、C 的距離約為多少公里？",
+  "options": [
+    "5",
+    "4.75",
+    "4.50",
+    "4.25"
+  ],
+  "sourceTables": [],
+  "image": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-21.webp",
+  "imageSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+  "sourceTextRevisionWithoutTable": "817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9",
+  "teaching": {
+    "teacherSummary": "設 **BC＝x**，60°夾在AC與BC之間，其對邊是AB＝7。用餘弦定理得到兩個可能距離，再用 **BC＞4** 排除3公里。",
+    "elementarySummary": "我們先算出漁場到B港可能是3或5公里，再看題目要求超過4公里，所以只能留下5公里。",
+    "memory": "**x²－8x＋15＝0 → x＝3或5；x＞4 → 5公里。**",
+    "concept": "餘弦定理用夾角兩側的邊與夾角求對邊；方程有多解時須檢查題目的額外條件。",
+    "extension": "若條件改成BC小於4公里，則選3公里；不能因兩個根都是正數就都接受。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "c²＝a²＋b²－2ab cosC，其中c是角C的對邊。",
+    "highlights": [
+      "餘弦定理",
+      "BC＞4",
+      "x＝3或5",
+      "5公里"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "AB＝7公里，AC＝8公里",
+        "∠ACB＝60°，BC＞4公里"
+      ],
+      "formulaUse": "c²＝a²＋b²－2ab cosC，其中c是角C的對邊。",
+      "substitution": [
+        "7²＝8²＋x²－2×8×x×cos60°"
+      ],
+      "steps": [
+        "設BC＝x公里，cos60°＝1／2。",
+        "49＝64＋x²－2×8×x×(1／2)＝64＋x²－8x。",
+        "移項得x²－8x＋15＝0。",
+        "因式分解：(x－3)(x－5)＝0，故x＝3或5。",
+        "由x＞4，排除3，得到BC＝5公里，選 A。",
+        "代回：64＋25－40＝49＝7²，符合原條件。"
+      ],
+      "result": "5公里",
+      "unit": "公里",
+      "option": "A"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "5＞4，且5²－8×5＋15＝0。",
+        "elementary": "大於4，也能讓原算式成立。",
+        "reason": "5＞4，且5²－8×5＋15＝0。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "4.75²－8×4.75＋15＝－0.4375，不等於0。",
+        "elementary": "雖然大於4，但代入原算式沒有對上。",
+        "reason": "4.75²－8×4.75＋15＝－0.4375，不等於0。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "4.5²－8×4.5＋15＝－0.75，不等於0。",
+        "elementary": "符合超過4還不夠，距離也要算得正確。",
+        "reason": "4.5²－8×4.5＋15＝－0.75，不等於0。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "4.25²－8×4.25＋15＝－0.9375，不等於0。",
+        "elementary": "這個數字沒有通過原條件檢查。",
+        "reason": "4.25²－8×4.25＋15＝－0.9375，不等於0。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4",
+  "review": {
+    "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
+    "reviewedAt": "2026-10-25",
+    "originalImageViewed": true,
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "officialFinalDirectReviewThisSession": false,
+    "uiQa": "PENDING",
+    "hasRequiredSourceTable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
+    "OFFICIAL_FINAL_ADMISSION_PENDING"
+  ]
+}

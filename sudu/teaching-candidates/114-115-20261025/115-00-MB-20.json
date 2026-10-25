@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-20",
+  "year": 115,
+  "sourceCommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+  "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
+  "options": [
+    "50(√3＋1)",
+    "50(√3－1)",
+    "20(√3＋1)",
+    "20(√3－1)"
+  ],
+  "sourceTables": [],
+  "image": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-20.webp",
+  "imageSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "sourceTextRevisionWithoutTable": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+  "teaching": {
+    "teacherSummary": "這題已知一條邊和兩個角，先算第三角，再用正弦定理。**AC 對應 75°，AB 對應 45°**，邊與對角一定要配對。",
+    "elementarySummary": "把三角形想成三條邊圍成的田地。兩個角知道了，就能找第三個角，再用邊和角的比例算出工寮到稻草人的距離。",
+    "memory": "**先算45°，再用 AC／sin75°＝100／sin45°**。",
+    "concept": "正弦定理：每一條邊除以它正對面角度的正弦，得到的比值相同。",
+    "extension": "若已知兩邊與夾角，可考慮餘弦定理；本題已知兩角一邊，正弦定理較直接。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "a／sinA＝b／sinB，用於已知一邊及可配對角度時求另一邊。",
+    "highlights": [
+      "正弦定理",
+      "45°",
+      "75°",
+      "50(√3＋1)"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "AB＝100公尺",
+        "∠A＝60°，∠B＝75°"
+      ],
+      "formulaUse": "a／sinA＝b／sinB，用於已知一邊及可配對角度時求另一邊。",
+      "substitution": [
+        "∠C＝180°－60°－75°",
+        "AC／sin75°＝100／sin45°"
+      ],
+      "steps": [
+        "∠C＝180°－60°－75°＝45°。",
+        "sin75°＝sin(45°＋30°)＝sin45°cos30°＋cos45°sin30°＝(√6＋√2)／4。",
+        "AC＝100×sin75°／sin45°。",
+        "AC＝100×[(√6＋√2)／4]／(√2／2)＝50(√3＋1)。",
+        "AC 約為136.60公尺，選 A。"
+      ],
+      "result": "50(√3＋1)公尺",
+      "unit": "公尺",
+      "option": "A"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "正弦定理得50(√3＋1)，精確符合。",
+        "elementary": "算出的距離就是這個答案。",
+        "reason": "正弦定理得50(√3＋1)，精確符合。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "50(√3－1)約36.60，不符合sin75°的和角展開。",
+        "elementary": "這個距離太短，不能把相加改成相減。",
+        "reason": "50(√3－1)約36.60，不符合sin75°的和角展開。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "20(√3＋1)約54.64，倍率不符合已知AB＝100。",
+        "elementary": "角度比例用對也要保留100公尺，不能把50變20。",
+        "reason": "20(√3＋1)約54.64，倍率不符合已知AB＝100。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "20(√3－1)約14.64，同時不符倍率與正弦和角式。",
+        "elementary": "數字和加減號都沒有對上題目。",
+        "reason": "20(√3－1)約14.64，同時不符倍率與正弦和角式。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "5eb8bdeeea69701b4c8c990c361b796f3377280b94481fbb54b4802c8362f1c8",
+  "review": {
+    "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
+    "reviewedAt": "2026-10-25",
+    "originalImageViewed": true,
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "officialFinalDirectReviewThisSession": false,
+    "uiQa": "PENDING",
+    "hasRequiredSourceTable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
+    "OFFICIAL_FINAL_ADMISSION_PENDING"
+  ]
+}

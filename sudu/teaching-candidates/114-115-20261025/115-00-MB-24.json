@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-MB-24",
+  "year": 115,
+  "sourceCommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+  "question": "小仲跟阿慈投資一筆資金，以年利率 r% 複利計算，並想瞭解本利和達到三倍本金需要幾年。小仲提問人工智慧得到快速估算值 A＝110/r，阿慈用數學公式算出精確值 B＝log₁₀(3)／log₁₀(1＋r/100)。若 r＝8，且將 A 以無條件進位至整數 C，B 以無條件進位至整數 D，則下列何者正確？",
+  "options": [
+    "D＝C－1",
+    "D＝C",
+    "D＝C＋1",
+    "D＝C＋2"
+  ],
+  "sourceTables": [],
+  "image": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-24.webp",
+  "imageSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+  "sourceTextRevisionWithoutTable": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+  "teaching": {
+    "teacherSummary": "先分別算估算年數A與精確年數B，再各自 **無條件進位**。進位是往上取整數，不是四捨五入。",
+    "elementarySummary": "想知道錢變三倍要等幾年。快速算法算出13年多，精確算法算出14年多；題目要等滿足夠的整年，所以分別要14年和15年。",
+    "memory": "**A＝13.75 → C＝14；B約14.275 → D＝15，所以D＝C＋1。**",
+    "concept": "每年乘1.08的複利成長需用對數解指數；比較時要先依題意將兩個數各自向上取整。",
+    "extension": "驗算1.08¹⁴＜3、1.08¹⁵＞3，可直接確認必須等到第15個完整年度。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "本金P經n年成為P(1＋r／100)ⁿ；令其等於3P，n＝log₁₀3／log₁₀(1＋r／100)。",
+    "highlights": [
+      "無條件進位",
+      "C＝14",
+      "D＝15",
+      "D＝C＋1"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "r＝8",
+        "A＝110／r",
+        "B＝log₁₀3／log₁₀(1＋r／100)",
+        "C、D分別為A、B向上取整"
+      ],
+      "formulaUse": "本金P經n年成為P(1＋r／100)ⁿ；令其等於3P，n＝log₁₀3／log₁₀(1＋r／100)。",
+      "substitution": [
+        "A＝110／8",
+        "B＝log₁₀3／log₁₀1.08"
+      ],
+      "steps": [
+        "A＝110／8＝13.75，向上取整得C＝14。",
+        "1＋r／100＝1＋8／100＝1.08。",
+        "log₁₀3約0.4771212547，log₁₀1.08約0.0334237555。",
+        "B約0.4771212547／0.0334237555＝14.2749146。",
+        "B向上取整得D＝15。",
+        "D－C＝15－14＝1，所以D＝C＋1，選 C。",
+        "驗算1.08¹⁴約2.9372＜3，1.08¹⁵約3.1722＞3。"
+      ],
+      "result": "C＝14、D＝15，D＝C＋1",
+      "unit": "年",
+      "option": "C"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "C－1＝13，但D＝15。",
+        "elementary": "精確算法需要15年，不是13年。",
+        "reason": "C－1＝13，但D＝15。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "C＝14，但D＝15，兩者不相等。",
+        "elementary": "兩種算法進位後還是差一年。",
+        "reason": "C＝14，但D＝15，兩者不相等。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C＋1＝14＋1＝15＝D。",
+        "elementary": "14再加1就是15，符合。",
+        "reason": "C＋1＝14＋1＝15＝D。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "C＋2＝16，但D＝15。",
+        "elementary": "多加了1年，結果太大。",
+        "reason": "C＋2＝16，但D＝15。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "317fe1d731f29e9634ec17f0fc1dc5c308b804de5759991a005f94f81bbffd06",
+  "review": {
+    "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
+    "reviewedAt": "2026-10-25",
+    "originalImageViewed": true,
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "officialFinalDirectReviewThisSession": false,
+    "uiQa": "PENDING",
+    "hasRequiredSourceTable": true
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
+    "OFFICIAL_FINAL_ADMISSION_PENDING"
+  ]
+}
