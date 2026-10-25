@@ -24,9 +24,11 @@
     {
       "questionId": "115-00-MB-23",
       "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-23.json",
-      "fileSha256": "b7a572fc106c726e11ad89a0751b9e18b24f653b26ee5bb8c5d1dabbf6b175aa",
+      "fileSha256": "cfbff0c1f7b2f338187d0b739033eb7d08f2c95004e1f1b1d522a2c7dcceafb3",
       "teachingSha256": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6",
-      "ready": false
+      "ready": false,
+      "sourceTextRevisionWithTable": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+      "formalIndependentSourceTableQa": false
     },
     {
       "questionId": "115-00-MB-24",
@@ -44,5 +46,6 @@
     }
   ],
   "newApprovals": 0,
-  "newDeployments": 0
+  "newDeployments": 0,
+  "lastRoleCNonDestructivePatch": "115-00-MB-23 original 2x3 source table, no teaching text changes, independent review pending"
 }

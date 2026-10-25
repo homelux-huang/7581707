@@ -10,7 +10,27 @@
     "34000",
     "35000"
   ],
-  "sourceTables": [],
+  "sourceTables": [
+    {
+      "heading": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    }
+  ],
   "image": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
   "imageSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
   "sourceTextRevisionWithoutTable": "4dc7a376e0b9e5929a0a0df3e652ea0811d3b662ddce431eff4ebc539c859731",
@@ -91,7 +111,11 @@
     "externalIndependentReview": "PENDING",
     "officialFinalDirectReviewThisSession": false,
     "uiQa": "PENDING",
-    "hasRequiredSourceTable": false
+    "hasRequiredSourceTable": true,
+    "formalIndependentTableQa": false,
+    "originalTableCandidatePresent": true,
+    "sourceRevisionAccepted": false,
+    "authorReviewClassification": "ROLE_C_POST_ANSWER_PROVENANCE_PATCH_NOT_INDEPENDENT_REVIEW"
   },
   "studentReleaseApproved": false,
   "deploy": false,
@@ -99,6 +123,45 @@
     "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
     "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
     "OFFICIAL_FINAL_ADMISSION_PENDING",
-    "SOURCE_2X3_TABLE_MUST_USE_PR24_REVISION_NOT_TEXT_ONLY_HASH"
-  ]
+    "TABLE_INCLUSIVE_REVISION_PENDING_PR24_SOURCE_GATE_AND_DISTINCT_IMAGE_REVIEWER"
+  ],
+  "originalSourceTableCandidate": {
+    "heading": [
+      "行程",
+      "原價",
+      "優惠"
+    ],
+    "rows": [
+      [
+        "行程Ⅰ",
+        "每位收費 x 元",
+        "兩人同行，其中一人減免 3000 元"
+      ],
+      [
+        "行程Ⅱ",
+        "每位收費 (x＋2000) 元",
+        "兩人同行，其中一人打八折"
+      ]
+    ]
+  },
+  "sourceTextRevisionWithTable": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+  "sourceTextRevisionGate": "TABLE_INCLUSIVE_CANDIDATE_PENDING_UPSTREAM_SOURCE_ADMISSION",
+  "sourceTableProvenance": {
+    "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+    "originalSingleQuestionWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+    "sourceEvidence": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
+    "referencePR": 24,
+    "referenceSourceBranch": "qa/mb20-25-latest-source-sync-20261025",
+    "humanImageTableComparisonThisSession": false,
+    "sourceTableFormalQaPass": false,
+    "tableChangedFromOldLesson": true,
+    "originalTeachingDigestUnchanged": true
+  },
+  "roleCChangeLog": {
+    "date": "2026-10-25",
+    "author": "GPT-6 role C",
+    "operation": "Non-destructive source-table association; math prose and original teaching digest unchanged",
+    "originalImageOrOCRRegenerated": false,
+    "studentAdmitted": false
+  }
 }
