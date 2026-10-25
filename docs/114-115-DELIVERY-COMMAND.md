@@ -1,5 +1,13 @@
 # 114–115 Delivery Command — master coordination (2026-10-25)
 
+## Current repair evidence — 2026-10-25
+
+Earlier PR57 CI78 green was superseded by independent E PR67 adverse tests. Draft PR80 exact `fc95d9bb6d35ed356e223a633cc57940fb5663b9` fixes sixth-ID historical admission, resealed-five exception and Role E case/separator rejection. Actual CI [40190886338](https://github.com/homelux-huang/7581707/actions/runs/40190886338) / [40190888934](https://github.com/homelux-huang/7581707/actions/runs/40190888934) SUCCESS: unchanged E5 + new3 + migration10 + content12 + legacy11 + publisher23 =64 tests; publisher check114=0/115=5. Old MASTER synthetic grant expectations strengthened to reject, five original archived GitBlob bytes preserve true historical positives. No independent E assertion changed. **MASTER-authored repair is not E approval or READY.**
+
+Fresh main `276d36f8a49189df03e11746b66317187a5b63b7` protected=true; Pages40171473956 SUCCESS; HTTP release same commit, approved114=0/115=5, sourceSha1eac8fe1869ff6956e929b71b62cbd83debb58ed. Main has not adopted PR80. Do not merge unreviewed PR35/57. No real teacher qualification/signature requirement is restored. Old snapshots below remain history, not current completion proof.
+
+A C15 PR64 and C source-binding PR71 returned; B batch08 PR73 returned. D68 route/seed160 browser tests do not certify new annual teaching. Next distinct E task `E-PR80-IMMUTABLE-BOUNDARY-REAUDIT-20261025` must audit exact repaired HEAD and immutable baseline/real protected-main receipt chain. QUEUED, not assumed claimed. This receipt adds new E-contentQA/UIQA/READY/main/LIVE=0, keeps410 question entries unchanged.
+
 ## CURRENT OWNER POLICY OVERRIDE — Issue #36, 2026-10-25
 
 **This is the current user instruction and supersedes contrary historical teacher/signature requirements appearing below.** "高職老師角度" means pedagogic explanation quality, NOT a claim of a human teacher credential. New student lessons do **not** require a real teacher identity, teacher qualification, personal Ed25519 signature, or an actual GitHub APPROVED teacher-review event as a pedagogic gate. Instead require a **distinct, traceable AI content reviewer (Role E, not the B/C author)**, substantive A–D option and complete calculation/non-calculation review, accurate official final answer and correction evidence, exact source questionRevision, original WebP SHA, teaching digest, review notes and review evidence SHA, and the same 35-Demo subject-specific V4 UI verified at 8 screen sizes × 2 themes. The no-self-review and fail-closed principles remain mandatory.

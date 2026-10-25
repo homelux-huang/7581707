@@ -35195,6 +35195,65 @@
       "candidatePublisherCiConclusion": "success_78_readonly_tests",
       "testedTeachingDigestRequiredForNewAdmission": true,
       "verifiedNewAiEReceipts": 0
+    },
+    "loopSecurityRepairReceipt": {
+      "taskId": "LOOP-MASTER-P0-LEGACY-TRUST-REPAIR-20261025-02",
+      "date": "2026-10-25",
+      "role": "MASTER_CODE_AUTHOR_NOT_E",
+      "claimCommentId": 6395004940,
+      "continuationCommentId": 6397293676,
+      "pr": 80,
+      "headSha": "fc95d9bb6d35ed356e223a633cc57940fb5663b9",
+      "baseSha": "8c998e00bd60bd183b0c1b253a33511486c0d4b0",
+      "status": "DRAFT_REPAIR_CI_PASS__DISTINCT_E_REAUDIT_NOT_RECEIVED",
+      "ciRuns": [
+        40190886338,
+        40190888934
+      ],
+      "ciJob": 121161452167,
+      "ciConclusion": "SUCCESS",
+      "tests": {
+        "unchangedIndependentE": 5,
+        "additional": 3,
+        "migration": 10,
+        "contentContract": 12,
+        "legacyCompatibility": 11,
+        "publisher": 23,
+        "total": 64
+      },
+      "initialCiFailures": [
+        40174021249,
+        40174027922
+      ],
+      "initialFailureCause": "Old MASTER-authored tests incorrectly accepted synthetic resealed legacy rows. Expectations now reject; actual five archived blob positives added. Contract fixture actual newlines corrected, no E test edits.",
+      "historicalRegistryCanonicalSha256": "7d8dea8867db26159d0cc2934c10c4ee2854699990b8d0b2566e9edcd4d3841f",
+      "historicalFiveOriginalBlobsVerified": 5,
+      "mainSha": "276d36f8a49189df03e11746b66317187a5b63b7",
+      "mainProtected": true,
+      "pagesRun": 40171473956,
+      "pagesConclusion": "SUCCESS",
+      "httpReleaseCommit": "276d36f8a49189df03e11746b66317187a5b63b7",
+      "httpApprovedCounts": {
+        "114": 0,
+        "115": 5
+      },
+      "httpSourceSha": "1eac8fe1869ff6956e929b71b62cbd83debb58ed",
+      "newIndependentContentQa": 0,
+      "newExactDigestTeachingUiQa": 0,
+      "newReady": 0,
+      "newMain": 0,
+      "newLive": 0,
+      "teacherCredentialsRequired": false,
+      "nextTaskId": "E-PR80-IMMUTABLE-BOUNDARY-REAUDIT-20261025",
+      "nextStatus": "QUEUED_NOT_CLAIMED",
+      "rolePointersReceivedNotApproved": {
+        "A64": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+        "C71": "9e66cd3022dc72c641074e770f347abf0aaf7435",
+        "B73": "21810dccdfd8674d433561aa1c2442168de1be0e",
+        "D68": "795dbfd45b0572124754f566717178530fd676c1",
+        "E67": "f762bc7d356cecd67a1ff993c222b24f92a493fa"
+      },
+      "scopeNote": "Append-only latest receipt; all410 question entries unchanged. Older latestReceipt fields are historical snapshots, not present certification. D68 route/seed browser160 cases do not establish new annual exact-digest teaching UIQA."
     }
   }
 }
