@@ -9,6 +9,7 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const cp=require('node:child_process');
 const {chromium}=require('playwright');
+const {resolveOriginal,inlineBytes,webp}=require('./sudu_role_d_image_source.cjs');
 
 const ROOT=process.cwd();
 const BASE=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
@@ -81,11 +82,7 @@ function demoFields(q){
     formula:q.formula,extra:q.extra,image:q.image};
 }
 function localImageDigest(item){
-  const full=sourcePath(item.image);
-  check(fs.existsSync(full),'missing actual original image: '+item.image);
-  const actual=fileHash(path.join('sudu',item.image));
-  if(item.sha256)assert.equal(actual,item.sha256,'image bytes fail supplied SHA: '+item.image);
-  return actual;
+  return resolveOriginal(ROOT,item).sha256;
 }
 function sourceAudit(){
   if(YEAR==='demo'){
@@ -150,10 +147,16 @@ async function layoutQA(page,label){
   return geometry;
 }
 async function verifyImageOverHTTP(page,p,expectedSha){
+  if(p.startsWith('data:')){
+    const actual=hash(inlineBytes(p));
+    assert.equal(actual,expectedSha,'inline original WebP SHA mismatch');
+    return actual;
+  }
   const res=await page.request.get(new URL(p,BASE).href);
-  check(res.ok(),'original WebP HTTP failure '+p+': '+res.status());
-  const actual=hash(await res.body());
-  if(expectedSha)assert.equal(actual,expectedSha,'staged original WebP SHA mismatch '+p);
+  assert.equal(res.status(),200,'original WebP HTTP failure '+p);
+  assert.match(res.headers()['content-type']||'',/^image\/webp(?:;|$)/i,'original WebP MIME');
+  const actual=hash(webp(await res.body(),p));
+  assert.equal(actual,expectedSha,'staged original WebP SHA mismatch '+p);
   return actual;
 }
 async function verifyImagePreview(page,q,geometry){
@@ -194,7 +197,8 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
   const img=page.locator('#questionCard .source-figure img').first();
   assert.equal(await img.getAttribute('src'),q.image,'question mismatch: source WebP');
   await img.evaluate(i=>i.decode());
-  const imageSha256=await verifyImageOverHTTP(page,q.image,q.imageSha256);
+  const imageSha256=await verifyImageOverHTTP(page,q.image,
+    localImageDigest({...q,sha256:q.imageSha256}));
   check(geometry.imgs.length>=1,'original single-question WebP missing from question card');
   const draft=mode==='approved'?lessonFields(q):demoFields(q);
   const expectedDigest=hash(Buffer.from(JSON.stringify(draft),'utf8'));
