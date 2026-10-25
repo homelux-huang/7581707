@@ -1,0 +1,98 @@
+name: Role D exact-source V4 per-question 8x2 audit (NO RELEASE)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'sudu/v4-115-multisubject-review-demo.html'
+      - 'sudu/verified-questions-runtime.js'
+      - 'sudu/demo-subject-learning.js'
+      - 'sudu/data/approved/**'
+      - 'tests/sudu_role_d_per_question_browser.cjs'
+      - 'docs/ROLE_D_V4_DEMO_35_BASELINE_20261025.json'
+      - '.github/workflows/sudu-role-d-per-question-ui-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-d-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  source_bound_v4:
+    name: ${{ matrix.year }} / ${{ matrix.slug }} / exact original 8x2
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        include:
+          - {year: demo, subject: 國文, slug: C}
+          - {year: demo, subject: 英文, slug: E}
+          - {year: demo, subject: '數學 B', slug: MB}
+          - {year: demo, subject: 商業概論, slug: BC}
+          - {year: demo, subject: 數位科技, slug: IT}
+          - {year: demo, subject: 會計學, slug: ACC}
+          - {year: demo, subject: 經濟學, slug: ECON}
+          - {year: '114', subject: 國文, slug: C}
+          - {year: '114', subject: 英文, slug: E}
+          - {year: '114', subject: '數學 B', slug: MB}
+          - {year: '114', subject: 商業概論, slug: BC}
+          - {year: '114', subject: 數位科技, slug: IT}
+          - {year: '114', subject: 會計學, slug: ACC}
+          - {year: '114', subject: 經濟學, slug: ECON}
+          - {year: '115', subject: 國文, slug: C}
+          - {year: '115', subject: 英文, slug: E}
+          - {year: '115', subject: '數學 B', slug: MB}
+          - {year: '115', subject: 商業概論, slug: BC}
+          - {year: '115', subject: 數位科技, slug: IT}
+          - {year: '115', subject: 會計學, slug: ACC}
+          - {year: '115', subject: 經濟學, slug: ECON}
+    env:
+      SUDU_D_YEAR: ${{ matrix.year }}
+      SUDU_D_SUBJECT: ${{ matrix.subject }}
+      SUDU_D_OUTPUT: test-results/role-d
+      SUDU_D_EXPECT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      SUDU_D_MAIN_SHA: ${{ github.event.pull_request.base.sha || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Pin evidence to checked-out PR HEAD and compile test
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SUDU_D_EXPECT_SHA"
+          node --check tests/sudu_role_d_per_question_browser.cjs
+          git diff --exit-code
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install isolated Chromium test dependencies
+        run: |
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Build exact checkout's approved public artifacts, not a fixture
+        run: |
+          set -euo pipefail
+          python scripts/sudu_verified_publish.py check
+          python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/role-d-http.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/sudu/v4-115-multisubject-review-demo.html >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/sudu_role_d_per_question_browser.cjs
+      - name: Preserve exact per-question evidence and browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-${{ matrix.year }}-${{ matrix.slug }}-${{ github.run_id }}
+          path: test-results/role-d/
+          if-no-files-found: warn
+          retention-days: 14
