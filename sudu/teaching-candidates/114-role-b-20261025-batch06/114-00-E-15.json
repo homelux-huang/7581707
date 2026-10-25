@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-15",
+  "taskId": "B-114-C15-C23-E10-E15-E20-IMGTRANS-20261025-08",
+  "subject": "英文",
+  "kind": "AUTHOR_DRAFT_FROM_ORIGINAL_PIXELS_G2_TEXT_PENDING",
+  "question": "Dave:   I’m going to a job interview this Thursday. What should I prepare?\n    Nancy: A good first impression is important. ____________\n    Dave:   For example?\n    Nancy: A suit or something formal that looks professional.",
+  "options": [
+    "You have to dress properly.",
+    "You need to speak carefully.",
+    "You ought to show interest in the pay.",
+    "You should ask questions about the job.\n\n\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考"
+  ],
+  "imageTranscribedOptions": [
+    "You have to dress properly.",
+    "You need to speak carefully.",
+    "You ought to show interest in the pay.",
+    "You should ask questions about the job."
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "e2b876604812c4771353451148c7df393d4ec2b0c4d1cf5de09df82bdcb1cf43",
+    "sourceImageTranscriptSha256": "f918c1054897a10496bea35958f7cbeefe7d0b6b5d8b8a110632f66711d31c51",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "16b4efd7b6aea92cd8b2c734e109989f0844a111273100753f030ba2f0032b04",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-15.webp",
+    "sourcePageWebpPath": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "imageQaEvidence": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+    "inheritedSourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "sourceOptionMismatchIndices": [
+      3
+    ],
+    "officialSourceTextReconciliationRequired": true,
+    "newFinalAnswerAndNoticeVerification": false,
+    "authorImageTranscriptionIsNotCanonical": true
+  },
+  "teaching": {
+    "topic": "英文選項語意與情境判讀",
+    "teacherSummary": "Nancy 說面試第一印象重要，Dave 問『For example?』，她接著舉『西裝或正式且有專業感的服裝』。因此空格只能是關於穿著的 A You have to dress properly。B 談說話、C 談薪資、D 談提問工作，都無法用西裝作例子。",
+    "elementarySummary": "Nancy 叫 Dave 面試要有好印象；他問『例如呢？』，她回答『像西裝』，所以是在說穿得得體，選 A。",
+    "concept": "補空格看後一句例子屬於什麼類別。a suit、formal clothes 是衣著，不是薪水或說話內容。",
+    "memory": "A suit / formal clothes → dress properly（A）；例子決定答案。",
+    "solvingSteps": [
+      "先看空格之後的 For example?，說明 Dave 要求舉例。",
+      "再看 Nancy 說 a suit、something formal，明確都是穿著。",
+      "逐選項找描述衣著者，只有 A dress properly 與例子一致。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "You have to dress properly 提醒穿著得體，後句用西裝或正式服裝舉例，句意及邏輯都完整。",
+        "elementary": "穿著得體就可以舉西裝當例子，所以 A。",
+        "reason": "A dress properly 直接描述穿著得體，Nancy 後面舉正式西裝作例子，概念與例子吻合。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "You need to speak carefully 討論謹慎措辭，而 Nancy 的例子是正式服裝；西裝不能解釋說話方式。",
+        "elementary": "西裝不會告訴你怎麼講話，所以 B 錯。",
+        "reason": "B 談面試時謹慎說話，Nancy 隨後卻舉西裝等服飾，無法從服裝例子推回說話態度。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "You ought to show interest in the pay 談面試對薪資的關注，後句的西裝沒有談待遇或數字。",
+        "elementary": "pay 是薪水；西裝不是薪水的例子。",
+        "reason": "C 涉及對薪資的興趣，正式衣物無法當成薪資待遇問題的例子，故與後句不連貫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "You should ask questions about the job 雖可能是另種面試建議，但西裝也不是該如何提問工作的例子。",
+        "elementary": "問工作內容跟穿西裝是兩件事，所以 D 不合。",
+        "reason": "D 問的是如何詢問工作內容，而 Nancy 下一句舉出西裝等服飾，兩者不屬同一類例子。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方英文單題WebP直接查看與作者暫抄，原canonical OCR含試卷頁尾，交來源A校正後才可發布。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "job interview",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "first impression",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "A suit",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "something formal",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "dress properly",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "speak carefully",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "interest in the pay",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "questions about the job",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "dress",
+        "ipa": null,
+        "accent": null,
+        "level": "初級",
+        "meaningZh": "穿著",
+        "synonyms": [
+          "wear clothes"
+        ],
+        "antonyms": [
+          "undress"
+        ],
+        "usageNote": "本題討論 job interview 服裝。",
+        "ipaEvidenceUrl": null
+      },
+      {
+        "headword": "properly",
+        "ipa": "/ˈprɑː.pɚ.li/",
+        "accent": "US",
+        "level": "中級",
+        "meaningZh": "合宜地、得體地",
+        "synonyms": [
+          "appropriately",
+          "correctly"
+        ],
+        "antonyms": [
+          "improperly"
+        ],
+        "usageNote": "美式標音；dress properly 著重場合與職場文化。",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/properly"
+      },
+      {
+        "headword": "professional",
+        "ipa": null,
+        "accent": null,
+        "level": "高級",
+        "meaningZh": "專業的、符合職場形象的",
+        "synonyms": [
+          "work-appropriate",
+          "businesslike"
+        ],
+        "antonyms": [
+          "unprofessional"
+        ],
+        "usageNote": "looks professional 描述衣服傳達職場專業感。",
+        "ipaEvidenceUrl": null
+      }
+    ],
+    "newsExample": {
+      "publishedAt": "2026",
+      "sourceName": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/what-wear-job-interview-online-business-suit-casual-3a29286ffe96deda6b5459ec20531f90",
+      "english": "A 2026 AP report explained why job applicants should dress properly for different workplace cultures.",
+      "zh": "2026 年美聯社報導說明，求職者應依不同公司文化得體穿著。",
+      "highlightEnglish": "dress properly",
+      "highlightZh": "得體穿著",
+      "authorComposedBasedOnSource": true,
+      "notDirectQuote": true
+    },
+    "newsOrigin": "Verified background fact only; sentence authored in English and Chinese, not original press quote."
+  },
+  "teachingCanonicalSha256": "a558a3e2b123b0deb0eecd2f943a6c8b970bae613251c3652a124f7b979e632e",
+  "composedTeachingSha256": "8b0b14d695b6627ec69aa75bf52f98a7e84733c5a0feb640194a40180fd99d92",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "A",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "sourceTextStatus": "G2_PENDING_A_FOOTER_OCR_CORRECTION",
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentAiContentReview": {
+      "status": "PENDING_ROLE_E",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "G2_CANONICAL_OCR_FOOTER_RECONCILIATION_PENDING",
+      "FINAL_OFFICIAL_ANSWER_AND_YEAR_CORRECTION_PENDING",
+      "INDEPENDENT_AI_E_CONTENT_REVIEW_PENDING",
+      "SAME_DIGEST_V4_8X2_PENDING",
+      "MASTER_PUBLISHER_MAIN_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

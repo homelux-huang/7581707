@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-23",
+  "taskId": "B-114-C15-C23-E10-E15-E20-IMGTRANS-20261025-08",
+  "subject": "國文",
+  "kind": "AUTHOR_DRAFT_FROM_ORIGINAL_PIXELS_G2_TEXT_PENDING",
+  "question": "上文描寫焦奇擊貓，使用「焦怒……→焦愈怒……」的遞進手法。下列文句，何者也有類\n  似敘寫方式？",
+  "options": [
+    "車中派驗票司事一人，專管裝卸貨物、稽查客車",
+    "其煤質鬆脆，不敵西洋所産，而與東洋之煤尚相去不遠",
+    "固知一死生爲虛誕，齊彭殤爲妄作。後之視今，亦猶今之視昔",
+    "旦視而暮撫，已去而復顧。甚者爪其膚以驗其生枯，搖其本以觀其疏密"
+  ],
+  "imageTranscribedOptions": [
+    "車中派驗票司事一人，專管裝卸貨物、稽查客車",
+    "其煤質鬆脆，不敵西洋所産，而與東洋之煤尚相去不遠",
+    "固知一死生爲虛誕，齊彭殤爲妄作。後之視今，亦猶今之視昔",
+    "旦視而暮撫，已去而復顧。甚者爪其膚以驗其生枯，搖其本以觀其疏密"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "32b411266f4bfd82ff72e0aaa0954cdb0ed93e36b0a4ac338cfc4afeabcb1773",
+    "sourceImageTranscriptSha256": "32b411266f4bfd82ff72e0aaa0954cdb0ed93e36b0a4ac338cfc4afeabcb1773",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "50547b2a2daa71dea457bd11bf4ebb1a4bcc780e0443ac6cda15374829e67cc1",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-23.webp",
+    "sourcePageWebpPath": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+    "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "inheritedSourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "sourceOptionMismatchIndices": [],
+    "officialSourceTextReconciliationRequired": true,
+    "newFinalAnswerAndNoticeVerification": false,
+    "authorImageTranscriptionIsNotCanonical": true,
+    "sharedMaterialIds": [
+      "114-00-C-SHARED-20-23"
+    ]
+  },
+  "teaching": {
+    "topic": "國文寫作技巧｜遞進式描寫",
+    "teacherSummary": "原文『焦怒……→焦愈怒……』是一層比一層強的遞進描寫。D 先說『旦視而暮撫』早晚查看撫摸，再說『已去而復顧』離開又回看，最後『甚者爪其膚……搖其本……』甚至抓樹皮、搖樹幹，過度關心的行動愈來愈強，因此 D 有同類遞進。其他選項僅列職責、比較煤質或議論時空觀點，不是動作程度漸增。",
+    "elementarySummary": "焦奇越來越生氣；D 則寫有人先早晚看樹，後來走了又回頭，最後竟抓樹皮、搖樹幹，動作一個比一個誇張，所以也是越來越強，選 D。",
+    "concept": "遞進法看『比前一步更強』的連續變化，常有甚者、甚至、愈、再等詞；單純並列或兩地比較不算。",
+    "extension": "D 句出〈種樹郭橐駝傳〉對過度干預樹木的誇張描寫；本題只比較敘述層次，不表示頻繁檢查樹木一定有益。",
+    "memory": "焦怒→焦愈怒；旦視暮撫→復顧→甚者抓樹皮搖樹幹，層層加強＝D。",
+    "solvingSteps": [
+      "先識別題幹『焦怒……→焦愈怒……』的核心是程度愈來愈強。",
+      "讀 A 列工作、B 比較煤質、C 議論時間與生死，皆無動作強度遞增。",
+      "讀 D 的先早晚查看、再回頭、甚至抓皮搖根；『甚者』明顯加深，選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 車中驗票司事負責裝卸貨物、稽查客車，是並列列出工作項目，沒有一步比一步更激烈的情緒或動作。",
+        "elementary": "A 只是說一個人要做哪幾件工作，不是事情越來越嚴重。",
+        "reason": "A 只是並列驗票員負責裝卸與稽查工作，沒有同一個人物的行動一層比一層強的描寫。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 比較本地煤質與西洋、東洋煤的差異，是材料品質上的對照，不是同一事件按順序愈演愈烈。",
+        "elementary": "B 只是在比不同地方的煤好不好，不是動作越變越大。",
+        "reason": "B 比較本地煤與西洋、東洋煤的品質差別，屬於並列比較而非單一事件的動作逐層加強。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 一死生與齊彭殤是對生死觀念的議論，『後之視今，亦猶今之視昔』則比較今昔視角，缺少逐層加重的同一行動。",
+        "elementary": "C 講人怎樣看生死、古今，沒有做事一步比一步誇張。",
+        "reason": "C 議論死生觀點與今昔視角，屬觀念對照，沒有情緒或動作的連續強化。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 由『旦視而暮撫』到『已去而復顧』再到『甚者爪其膚……搖其本……』，檢視樹木的行為逐級加劇，與題幹遞進相同。",
+        "elementary": "D 從看看、摸摸，到回頭看，最後還抓樹皮搖樹幹，很明顯越來越誇張。",
+        "reason": "D 由早晚查看到離開再回頭，最後甚至抓樹皮搖樹幹，『甚者』明確引出更強的行動。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原始單題 WebP 及閱讀原文直接查看，文字來源需角色A G2 確認後才可供正式學生使用。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "焦怒……→焦愈怒……",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "旦視而暮撫",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "已去而復顧",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "甚者爪其膚以驗其生枯",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "車中派驗票司事一人",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不敵西洋所産",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "遞進",
+        "level": "初級",
+        "meaning": "一步接一步，而且程度加深。",
+        "usageNote": "例如焦怒→焦愈怒。"
+      },
+      {
+        "term": "旦視而暮撫",
+        "level": "中級",
+        "meaning": "早晨去看、傍晚去撫摸。",
+        "usageNote": "D 的第一層行動。"
+      },
+      {
+        "term": "復顧",
+        "level": "中級",
+        "meaning": "又回頭觀看。",
+        "usageNote": "D 的第二層行動。"
+      },
+      {
+        "term": "甚者",
+        "level": "高級",
+        "meaning": "更有甚者、甚至於更誇張的情況。",
+        "usageNote": "D 由此詞進入第三層更強烈的動作。"
+      }
+    ],
+    "sharedReading": {
+      "sharedMaterialId": "114-00-C-SHARED-20-23",
+      "sourcePageWebpPath": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "webpPath": "sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp",
+      "webpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+      "webpGitBlob": "2f3ee33a071975a74e9b5c5b28db423a4b49003f",
+      "imageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+      "directPixelReadByAuthor": true
+    }
+  },
+  "teachingCanonicalSha256": "5bcbc2690515fe96e01f6c7261e6d7ba6979ae2305e4372022ce19455f310afb",
+  "composedTeachingSha256": "48687e7bef261e201c860257ac740c9dc2b372d7d2ba9e86fc46521fac326de9",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "sourceTextStatus": "G2_PENDING_A_FOOTER_OCR_CORRECTION",
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentAiContentReview": {
+      "status": "PENDING_ROLE_E",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "G2_CANONICAL_OCR_FOOTER_RECONCILIATION_PENDING",
+      "FINAL_OFFICIAL_ANSWER_AND_YEAR_CORRECTION_PENDING",
+      "INDEPENDENT_AI_E_CONTENT_REVIEW_PENDING",
+      "SAME_DIGEST_V4_8X2_PENDING",
+      "MASTER_PUBLISHER_MAIN_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
