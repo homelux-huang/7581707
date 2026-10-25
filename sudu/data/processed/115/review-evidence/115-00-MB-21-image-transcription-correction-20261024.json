@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-21",
+  "subject": "數學 B",
+  "questionNumber": 21,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 7,
+  "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-21.webp",
+  "sourceWebpSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980768,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "探勘人員為確認一個新的優良漁場C 與港口B 的距離，從港口A 直線航行8 公里到漁場\n  C，此時在C 點經由儀器測定角度得知∠ACB 60°，且港口A 與港口B 相距7 公里，如圖\n     ( 五 ) 所示。若B、C 的距離大於4 公里，則B、C 的距離約為多少公里？",
+    "options": [
+      "5\n                                                                             7 km",
+      "4.75                                              A\n                                                                       B",
+      "4.50",
+      "4.25                                                             8 km\n                                                                                      60°\n                                                               C\n                      圖 ( 五 )"
+    ]
+  },
+  "correctedText": {
+    "question": "探勘人員為確認一個新的優良漁場 C 與港口 B 的距離，從港口 A 直線航行 8 公里到漁場 C，此時在 C 點經由儀器測定角度得知 ∠ACB＝60°，且港口 A 與港口 B 相距 7 公里，如圖（五）所示。若 B、C 的距離大於 4 公里，則 B、C 的距離約為多少公里？",
+    "options": [
+      "5",
+      "4.75",
+      "4.50",
+      "4.25"
+    ],
+    "figureRequired": true,
+    "figureDescription": "圖（五）：港口 A、港口 B、漁場 C；AC＝8 km、AB＝7 km、∠ACB＝60°。圖形必須保留原始 WebP，不能只用純文字取代。"
+  },
+  "knownOfficialAnswer": "A",
+  "postAnswerMathCheck": "令 BC＝x＞4；49＝64＋x²－8x；(x－3)(x－5)＝0；x＝5 公里。A",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}
