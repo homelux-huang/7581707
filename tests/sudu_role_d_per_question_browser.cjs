@@ -279,8 +279,11 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
       'full calculation lines missing or unwanted calculation shown');
     for(let i=0;i<lines.length;i++)
       check((await calc.nth(i).innerText()).includes(lines[i]),'calculation step lost '+i);
-    assert.equal(await page.locator('#answerCard .calculation-step').count(),0,
-      'duplicate calculation in answer and guide');
+    assert.equal(await page.locator('#guideCard').count(),1,'only one subject guide is allowed');
+    assert.equal(await page.locator('#answerCard .option-detail .calculation-step').count(),0,
+      'calculation must not be duplicated inside option explanations');
+    assert.equal(await page.locator('.calculation-step').count(),lines.length,
+      'all calculation steps must occur exactly once in the single guide');
     const headings=await page.locator('#guideCard .guide-block h3').allInnerTexts();
     assert.equal(new Set(headings).size,headings.length,'duplicate explanation guide fields');
     if(q.sourceTable){

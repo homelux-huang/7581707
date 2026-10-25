@@ -28,3 +28,10 @@
 - 唯讀Role-D workflow允許stacked PR的PR35 base；新增helper路徑觸發及resolver負測，不改發布workflow或權限。報告新增實際執行的browser test／resolver bytes SHA，並將命令引用更新為實讀PR30 `144364bc...`。
 - 原先真人教師阻塞已由Issue36最新置頂政策取代；改採不同作者的可追溯AI內容複核。相關policy/publisher/審查契約由MASTER另租約修訂；本Role-D批次不改發布gate，也不以舊教師名冊作唯一阻塞。來源、官方答案、實質獨立複核與精確digest UI/CI仍須完整證據。
 - 下一步：核對本PR最新精確SHA的21個年度×科目CI job，按實際失敗另領最小修復；已合格的原圖/OCR/教學不重做。來源/教學變更時舊UI結果不可沿用。
+
+## D-EXACT-SHA-MATRIX-TRIAGE-20261025-VSCODE-04 / D-SINGLE-GUIDE-CALC-20261025-VSCODE-05
+
+- triage精確提交 `74f26f12752fd965f20c6497ad8b141865442b64`；CI `40163474103`已讀取demo C/E/BC/IT/ACC五組SUCCESS，其餘當時仍執行；不能稱整個21矩陣完成。
+- 115英文只含28張image-preview-only，完整矩陣448case，沒有可作答教學題，不能提升教學UIQA。115數學B既有5題可作答＋25張預覽，完整應480case；精確提交診斷在第一題的計算重複檢查失敗，已隔離並轉最小修復，沒有改內容或期望答案。
+- 真實HTML的alignGuideToCorrectAnswer會用target.after(guide)把唯一guide放入answerCard內。測試原先要求整個answerCard內0條計算，誤把正常guide視為重複。修正要求：唯一guide、全部來源步驟逐條一致、option-detail內0條計算、整頁計算步驟數恰等於來源行數。真重複仍會失敗；既有V4位置維持不變。
+- VSCODE-05租約以Issue36留言為準，基底74f26f1；修改僅本matrix與本交接。須重跑最後精確SHA，舊成功不冒用至新的測試版本。
