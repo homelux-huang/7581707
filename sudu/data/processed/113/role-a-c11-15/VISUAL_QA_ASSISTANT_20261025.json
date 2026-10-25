@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C11-15-SHARED-READING-20261025-13",
+  "reviewDate": "2026-10-25",
+  "reviewer": "ChatGPT Role A original source image QA only",
+  "reviewerType": "ASSISTANT_DIRECT_ORIGINAL_PAGE_PIXEL_VISUAL",
+  "independentHumanReview": false,
+  "independentRoleEContentReview": false,
+  "originalPdfBytesRehashedThisBatch": false,
+  "fullOfficialAmendmentScopeChecked": false,
+  "officialFinalAnswerVerifiedByThisReview": false,
+  "sourcePages": {
+    "4": {
+      "path": "sudu/data/original/113/00-C/p004-67c0d477e9-v2-w1400-q66.webp",
+      "gitBlobSha1": "789a0cfb16e7871e2fb38c1089e14face508a8ed",
+      "sha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelSize": [
+        1400,
+        1981
+      ]
+    },
+    "5": {
+      "path": "sudu/data/original/113/00-C/p005-67c0d477e9-v2-w1400-q66.webp",
+      "gitBlobSha1": "be92fa73cef1622f9ea8990195779b0e41699caa",
+      "sha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+      "pixelSize": [
+        1400,
+        1981
+      ]
+    }
+  },
+  "answerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "sha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3"
+  },
+  "sharedMaterialId": "113-00-C-SHARED-11-15",
+  "sharedOriginal": {
+    "asset": {
+      "path": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "sha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "gitBlobSha1": "ccf2d2b3765b5313265917a7b9f0f88189cc667b",
+      "sourceOriginalPageNumber": 4,
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "cropPixels": [
+        90,
+        155,
+        1310,
+        951
+      ],
+      "pixelSize": [
+        1220,
+        796
+      ]
+    },
+    "reviewStatus": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+    "sourcePage": 4,
+    "linkedQuestionPages": [
+      4,
+      5
+    ],
+    "criteria": {
+      "completeOriginalGroupHeading": true,
+      "completeOriginalReadingNarrative": true,
+      "completeSourceAttributionWherePrinted": true,
+      "allCharactersVisible": true,
+      "noNextQuestion11": true,
+      "noExamHeaderOrFooter": true,
+      "losslessPixelEqualOriginal": true,
+      "sha256Bound": true
+    },
+    "reviewNote": "Visually checked entire original official page4 story from ▲閱讀下文，回答第11-15題 through 以雪喻梅真是絕佳示範. Figure is a separate original-only source image, cropped above Q11, referenced by five original QIDs on pages4/5."
+  },
+  "questions": [
+    {
+      "questionId": "113-00-C-11",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-11.webp",
+        "sha256": "fef1fa4be3d594ef7fadf774af7f475602917ddfb99a15b58f29296a69d3203f",
+        "gitBlobSha1": "46c8932f6b2aaebb96f08ea1390c4291f5ad8265",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          953,
+          1310,
+          1150
+        ],
+        "pixelSize": [
+          1220,
+          197
+        ]
+      },
+      "sharedAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceRevisionSha256": "e9d5169deebd85df28f61a9dc1288588581a478152e0fdb66764b9f6f04606c5",
+      "printedPublishedAnswerCandidate": "C",
+      "questionVerified": false,
+      "answerVerified": false,
+      "independentRoleEContentReview": false,
+      "sourceImageReviewResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "originalTableReview": "NOT_APPLICABLE",
+      "originalPoetryReview": "NOT_APPLICABLE",
+      "originalIllustrationReview": "NOT_APPLICABLE",
+      "criteria": {
+        "questionNumberCorrect": true,
+        "completeOriginalStem": true,
+        "allFourOriginalChoicesComplete": true,
+        "sourceImageSHA256Matches": true,
+        "noAdjacentQuestion": true,
+        "noExamFooterOrHeader": true,
+        "notWholePage": true,
+        "legible": true,
+        "sourceDecodedPixelsEqual": true,
+        "sharedOriginalMaterialLinked": true
+      },
+      "reviewNote": "Actual original page4 Q11 number, entire '下列何者最符合上文所述？' stem, A–D Chinese printed choices all present; no shared article tail nor Q12 beginning."
+    },
+    {
+      "questionId": "113-00-C-12",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-12.webp",
+        "sha256": "0370950412243fd6e2cae905c155cecfb81c90ea17eb34c995f5693a4fc87e51",
+        "gitBlobSha1": "9a19cdac29bbed6f1b721d87fd556b193bc7dc6a",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          1154,
+          1310,
+          1284
+        ],
+        "pixelSize": [
+          1220,
+          130
+        ]
+      },
+      "sharedAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceRevisionSha256": "07bdd90a06e947bdb32cb1f542abc28a8bbc9367f0dea58c02a60949fb8206a5",
+      "printedPublishedAnswerCandidate": "B",
+      "questionVerified": false,
+      "answerVerified": false,
+      "independentRoleEContentReview": false,
+      "sourceImageReviewResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "originalTableReview": "NOT_APPLICABLE",
+      "originalPoetryReview": "NOT_APPLICABLE",
+      "originalIllustrationReview": "NOT_APPLICABLE",
+      "criteria": {
+        "questionNumberCorrect": true,
+        "completeOriginalStem": true,
+        "allFourOriginalChoicesComplete": true,
+        "sourceImageSHA256Matches": true,
+        "noAdjacentQuestion": true,
+        "noExamFooterOrHeader": true,
+        "notWholePage": true,
+        "legible": true,
+        "sourceDecodedPixelsEqual": true,
+        "sharedOriginalMaterialLinked": true
+      },
+      "reviewNote": "Actual original page4 Q12, full prior 〈蘭亭集序〉 question text and all A–D in two-column printed options, no adjacent Q11/Q13."
+    },
+    {
+      "questionId": "113-00-C-13",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-13.webp",
+        "sha256": "6e4f5b84f8c9e83aa1e3e22681c266a5b6b268e8551ae7266cc33c5ed94b7ad4",
+        "gitBlobSha1": "511c530e497277f1cf76aaaead972dec153d83d5",
+        "sourceOriginalPageNumber": 4,
+        "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+        "cropPixels": [
+          90,
+          1293,
+          1310,
+          1810
+        ],
+        "pixelSize": [
+          1220,
+          517
+        ]
+      },
+      "sharedAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceRevisionSha256": "be8c57345bf5aba57a68f07f401e239767a5770ec618cce3b31fc07a909afa7f",
+      "printedPublishedAnswerCandidate": "C",
+      "questionVerified": false,
+      "answerVerified": false,
+      "independentRoleEContentReview": false,
+      "sourceImageReviewResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "originalTableReview": "PASS_ORIGINAL_SIDE_BY_SIDE_TABLE_COMPLETE",
+      "originalPoetryReview": "NOT_APPLICABLE",
+      "originalIllustrationReview": "NOT_APPLICABLE",
+      "criteria": {
+        "questionNumberCorrect": true,
+        "completeOriginalStem": true,
+        "allFourOriginalChoicesComplete": true,
+        "sourceImageSHA256Matches": true,
+        "noAdjacentQuestion": true,
+        "noExamFooterOrHeader": true,
+        "notWholePage": true,
+        "legible": true,
+        "sourceDecodedPixelsEqual": true,
+        "sharedOriginalMaterialLinked": true
+      },
+      "reviewNote": "Actual original page4 Q13, complete '梅花歌序' vs '蘭亭集序' side-by-side comparison table with original marked ①–④ and ❶–❹, all four source printed A–D option rows. Q13 D candidate strips only unrelated p4 footer/p5 header; no text from Q14 in original WebP."
+    },
+    {
+      "questionId": "113-00-C-14",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-14.webp",
+        "sha256": "8c0e426a3b4a40fa31e0391b74663511648f7bb3f4734824d437efbcd419abf5",
+        "gitBlobSha1": "9c7972771d539c08669ad4a64e45fc8bf97b3efc",
+        "sourceOriginalPageNumber": 5,
+        "sourceOriginalPageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+        "cropPixels": [
+          90,
+          165,
+          1310,
+          485
+        ],
+        "pixelSize": [
+          1220,
+          320
+        ]
+      },
+      "sharedAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceRevisionSha256": "285199fa48018d8c8cd86ae89b4315b0af6f591f8386f42882ebd136cad1792a",
+      "printedPublishedAnswerCandidate": "A",
+      "questionVerified": false,
+      "answerVerified": false,
+      "independentRoleEContentReview": false,
+      "sourceImageReviewResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "originalTableReview": "NOT_APPLICABLE",
+      "originalPoetryReview": "PASS_TWO_PRINTED_BOXES_COMPLETE",
+      "originalIllustrationReview": "NOT_APPLICABLE",
+      "criteria": {
+        "questionNumberCorrect": true,
+        "completeOriginalStem": true,
+        "allFourOriginalChoicesComplete": true,
+        "sourceImageSHA256Matches": true,
+        "noAdjacentQuestion": true,
+        "noExamFooterOrHeader": true,
+        "notWholePage": true,
+        "legible": true,
+        "sourceDecodedPixelsEqual": true,
+        "sharedOriginalMaterialLinked": true
+      },
+      "reviewNote": "Actual original page5 Q14, both two boxed 梅嶺／窗外 poems including ①–④ underlined ranges, complete question and A–D option rows; no page header nor Q15 drawing."
+    },
+    {
+      "questionId": "113-00-C-15",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-15.webp",
+        "sha256": "c2320b02faeb81e70d9e06a001105e11a204129a23635dbd3bc40559b9085599",
+        "gitBlobSha1": "83c69a80c823bb146dcce2ff1eaa769236f797d0",
+        "sourceOriginalPageNumber": 5,
+        "sourceOriginalPageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+        "cropPixels": [
+          90,
+          492,
+          1310,
+          1600
+        ],
+        "pixelSize": [
+          1220,
+          1108
+        ]
+      },
+      "sharedAssetSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceRevisionSha256": "e8b5a029f0cbf08b0fa1c0d8ea454281ab864de1e10c26d2dd98277f0fa61052",
+      "printedPublishedAnswerCandidate": "A",
+      "questionVerified": false,
+      "answerVerified": false,
+      "independentRoleEContentReview": false,
+      "sourceImageReviewResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "originalTableReview": "NOT_APPLICABLE",
+      "originalPoetryReview": "NOT_APPLICABLE",
+      "originalIllustrationReview": "PASS_FOUR_FIGURE_POEM_LABELS_COMPLETE",
+      "criteria": {
+        "questionNumberCorrect": true,
+        "completeOriginalStem": true,
+        "allFourOriginalChoicesComplete": true,
+        "sourceImageSHA256Matches": true,
+        "noAdjacentQuestion": true,
+        "noExamFooterOrHeader": true,
+        "notWholePage": true,
+        "legible": true,
+        "sourceDecodedPixelsEqual": true,
+        "sharedOriginalMaterialLinked": true
+      },
+      "reviewNote": "Actual original page5 Q15 full plum blossom banquet illustration including 甲、乙、丙、丁 original poem scrolls and all four figures, both ①② statements and complete A–D. Cropped figure and original final D have no adjacent p6 group; raw OCR D contamination remains archived separately."
+    }
+  ],
+  "existingRawSourceOptionsPreserved": true,
+  "optionDOnlyCandidateCleanupQuestionNumbers": [
+    13,
+    15
+  ],
+  "newSourceImageAssistantPassCount": 6,
+  "newQuestionVerified": 0,
+  "newAnswerVerified": 0,
+  "newIndependentRoleEContentReview": 0,
+  "newTeachingVerified": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "releaseStatus": "SOURCE_PIXEL_IMAGE_QA_ONLY_NOT_FINAL_OFFICIAL_CORRECTIONS_NO_E_OR_D"
+}
