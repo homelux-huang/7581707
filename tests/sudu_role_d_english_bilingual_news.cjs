@@ -207,6 +207,8 @@ function save(){
  }finally{await browser.close()}
  report.status=report.errors.length?'COMPONENT_FAILED':'COMPONENT_PASS_NOT_FULL_UIQA';
  save();
+ if(report.errors.length)console.error('SOURCE_BOUND_NEWS_FAILURES',
+   JSON.stringify(report.errors.slice(0,4),null,2));
  assert.equal(report.errors.length,0,'candidate news renderer regressions failed; see '+OUT);
  assert.equal(report.checks.length,3*8*2,'not all three exact-source candidates x8x2 were exercised');
  console.log('Role D SOURCE-BOUND English news component 3 actual candidates x8x2: PASS; NEW READY=0, UIQA(full)=NOT_VERIFIED, LIVE=0');
