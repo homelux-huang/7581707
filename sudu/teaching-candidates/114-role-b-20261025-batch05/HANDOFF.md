@@ -1,0 +1,9 @@
+# 7581707 Role B｜114 年國文 20～22 題教學草稿，沿用共用材料（DRAFT NO RELEASE）
+
+- Issue36 [CLAIM](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393962043)，taskId `B-114-C20-22-SHARED-20261025-07`、伺服器時間 `2026-10-25T05:33:52Z`。新增隔離教學分支 `teaching/114-role-b-loop-batch05-20261025`，基底 `1a276f19a9dd674805cb71f6f0011b1128ea4b56`（PR56）。獨立 stacked Draft PR，只新增本批三題、batch/HANDOFF、測試/唯讀CI，不覆蓋其他已合格 B1～B4、A/C/D/E/主指揮檔、正式 main/UI/發布器/SQLite 或圖片。
+- 資料仍取既有 QA source PR21 `9944759e339ef2d3c002042798f7fe696d861d96`；`questions.json` Git Blob `074bff8cbb9ca7bbc0aefd8580454892d21f7d6b`、`webp-manifest.json` Blob `249a41d5a64558ccaa3084b21f915922a55c6a1b`，三張單題 WebP manifest PASS 與來源sha一致，四選項皆完整，無未處理 source issues。
+- 共用原始文章 `114-00-C-SHARED-20-23`：真正原始像素 WebP `sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp`；SHA256 `7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a`，Git Blob `2f3ee33a071975a74e9b5c5b28db423a4b49003f`，來源第7頁 SHA256 `63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2`。共享材料已有來源 QA 圖片 `qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json`，作者只讀目視該原始文章及三張原題，沒重 OCR、沒重裁、沒改圖。**舊圖片QA不等於官方答案／教學獨立QA**。
+- 三題主題：國文20人物（原文富家設筵款焦奇、成名交際，候選C）；21 敘事技巧（貓躍登屋角及目眈眈視焦，候選C）；22 大材不適小用（函牛之鼎不烹小鮮、千斤弩不中鼷鼠與不斫柱以為椽相似，候選A）。每題含高職老師角度的正解推導、國小生口語、四選項獨立teacher/elementary/reason、逐步思考、一眼記住、詞彙初級／中級／高級以及安全粗體highlight（只標原題真正出現文字）。無計算：`examCalculation=null`，無占位。
+- 問題 C23 雖有原圖QA，但原文字層 `last_on_page_check_possible_continuation_or_footer` 未解除，**隔離**，這批不硬湊第4題。原候選官方答案本批**事前已知**，不可稱盲解；教科書出版社、版本、章節、頁碼未知均為null、待核。
+- SHA 每題保存 sourceRevision（canonical 題幹+四選項+原單題WebP_SHA）、teachingCanonicalSha256、composedTeachingSha256（另涵蓋原共有文章 asset SHA）、完整 JSON fileSha256。共用材料若改動必須重核教學，舊 digest 不可拿來測V4。
+- 最高政策：不用真人教師、資格、簽章／真人APPROVED；但嚴格保留來源 A 官答／更正公告、不同作者E AI 實質逐項複核及真實review notes/可信憑證、D 依目前35題Demo同科 V4 的8尺寸×2主題同版測試、唯一 MASTER publisher/CI/LIVE。三題皆 `BLOCKED`，READY=0/MAIN=0/LIVE=0，B作者自評非E審查。

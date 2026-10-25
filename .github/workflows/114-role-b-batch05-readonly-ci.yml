@@ -1,0 +1,34 @@
+name: Role B 114 Chinese original shared passage batch CI (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch05/**"
+      - "tests/test_114_role_b_batch05_20261025.py"
+      - ".github/workflows/114-role-b-batch05-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-shared-original-byte-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify C20-C22 real single WebPs and shared source page plus teaching SHA and strict no-release
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch05_20261025.py' -v
+      - name: Assert new lessons cannot be approved by their author
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          b=json.loads(Path('sudu/teaching-candidates/114-role-b-20261025-batch05/batch.json').read_text(encoding='utf-8'))
+          assert b['itemCount']==3 and b['newReady']==b['newMain']==b['newLive']==0
+          for row in b['items']:
+              d=json.loads(Path(row['path']).read_text(encoding='utf-8'))
+              assert d['review']['status']=='BLOCKED'
+              assert d['review']['studentReleaseApproved'] is False
+              assert d['review']['independentAiContentReview']['status']=='PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW'
+          print('NO RELEASE: three source+shared-original-bound AI author candidate lessons')
+          PY

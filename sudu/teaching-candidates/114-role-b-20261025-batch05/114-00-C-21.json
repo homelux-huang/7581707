@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-21",
+  "taskId": "B-114-C20-22-SHARED-20261025-07",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "關於上文寫作技巧的敘述，何者最適當？",
+  "options": [
+    "以獵戶常鹵莽捕虎而遭噬，襯托焦奇擒虎有勇有謀",
+    "以對擊貓、擒虎的描述詳、略有別，凸顯主人恨貓勝於虎",
+    "透過描述貓的行動、眼神，呈現貓在危亂中依然敏捷而從容",
+    "透過主人笑、焦奇慚的對比，諷刺憑空杜撰者的謊言必被揭穿"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "79b10bd19d9ccbd74994844610babf6ffc1a5f6212cf923391f09710026bce9e",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "290d7b3a11395cbe05e2fb1f86fa47986b3c03fc1dde44d97b0baef7e405e975",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-21.webp",
+    "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "originalManifestQaStatus": "PASS",
+    "archivedImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "sharedMaterialId": "114-00-C-SHARED-20-23",
+    "sharedMaterialWebpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+    "finalOfficialAnswerPerQuestionImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "國文閱讀｜以貓的眼神和動作刻畫臨危從容",
+    "teacherSummary": "文章寫焦奇打虎後遇貓偷食，因發怒多次出手；貓雖被撲打仍敏捷閃避、登屋脊且『目眈眈視焦』，故選 C 的動作、眼神呈現危險中敏捷從容。其他選項附會獵戶對比、主人恨貓、杜撰謊言都無證據。",
+    "elementarySummary": "打虎英雄想打貓，貓卻靈活躲開還盯著他看，好像很冷靜，所以 C 說作者用貓的動作和眼神來表現牠最貼切。",
+    "concept": "描寫技巧題要回到原文具體動作和神態的可觀察線索，避免捏造情緒、故事真偽或作者未說的對比目的。",
+    "extension": "焦奇講述打虎的經過不等於故事必定杜撰，主人發笑也不等於已揭穿騙局；文學反差不宜變成無證據的指控。",
+    "memory": "貓一躍上屋角，還目眈眈視焦 → 動作＋眼神＝敏捷從容，選 C。",
+    "solvingSteps": [
+      "先找原共享文章描寫貓逃避的動作：躍起、登屋角，焦奇仍難以捉到。",
+      "再看『目眈眈視焦』這個眼神描寫，貓在危險情況下仍鎮定。",
+      "比對四個選項的證據，C 有動作與眼神兩項直接對照，其餘有額外臆測。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 虛構『獵戶常鹵莽捕虎而遭噬』作襯托，但共享文章沒以其他獵戶失敗作反襯，也沒特別說焦奇靠精密謀略才能擒虎。",
+        "elementary": "文章沒有先說別的獵人很笨被老虎吃掉，不能加這段來誇焦奇。",
+        "reason": "原文不存在獵戶常因魯莽遭噬的對照，選項以無來源的襯托關係解釋寫法。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 認為擊貓描寫詳細是要凸顯主人比老虎更恨貓；原文寫主人先因貓偷食而大聲斥責，並非以虎貓仇恨大小為敘寫主軸。",
+        "elementary": "主人因貓偷東西生氣，不是作者要比『主人更討厭哪種動物』。",
+        "reason": "擒虎詳略和擊貓場景形成反差，但不能據此推主人恨貓更勝虎。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 指出作者寫貓躍登屋角、閃避攻擊的動作，並寫牠目眈眈視焦的眼神，正呈現牠在驚險中仍然敏捷從容。",
+        "elementary": "貓會跳、會躲，還能盯著焦奇看，臨危不亂，這就是描寫貓很靈活。",
+        "reason": "動作『一躍登屋角』和神態『目眈眈視焦』都有原文支撐，是最直接的敘寫分析。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 把主人笑、焦奇慚判成揭露他編造擒虎謊言；原文主人笑的是大英雄竟捉不到貓，焦奇羞愧來自這場反差，沒有證明先前打虎是假。",
+        "elementary": "主人笑他連貓都抓不到，不表示打虎故事是他亂編的。",
+        "reason": "笑與慚構成反差、增添趣味，但作者並無查證指出焦奇擒虎為杜撰。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原始閱讀〈壯夫縛虎〉；原始共享影像及單題WebP沿用既有SHA證據；官方最終答案與更正公告逐題核對待角色A/E完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "貓的行動、眼神",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "敏捷而從容",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "主人笑、焦奇慚",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "以對擊貓、擒虎的描述詳、略有別",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "敏捷",
+        "level": "初級",
+        "meaning": "動作快速又靈活。",
+        "usageNote": "貓能跳開焦奇的攻擊。"
+      },
+      {
+        "term": "神態",
+        "level": "中級",
+        "meaning": "眼神、表情和姿態。",
+        "usageNote": "目眈眈視焦是神態描寫，和動作一起刻畫形象。"
+      },
+      {
+        "term": "襯托",
+        "level": "高級",
+        "meaning": "用旁邊的人事物表現主要對象特質。",
+        "usageNote": "A 附會不存在的獵戶失敗來襯托焦奇。"
+      },
+      {
+        "term": "杜撰",
+        "level": "高級",
+        "meaning": "缺乏事實依據而自行編造故事。",
+        "usageNote": "沒有證據時，不能指控焦奇擒虎經過是杜撰。"
+      }
+    ],
+    "readingFacts": [
+      "共享文章原文貓被襲後跳登屋角，目眈眈視焦，焦奇怒而無計可施，主人撫掌笑。"
+    ],
+    "sharedReading": {
+      "sharedMaterialId": "114-00-C-SHARED-20-23",
+      "originalPage7Path": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage7Sha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "webpPath": "sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp",
+      "webpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+      "qaStatusInherited": "PASS",
+      "archivedImageQaPath": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+      "sourceAlreadyOriginalNotRegenerated": true
+    }
+  },
+  "teachingCanonicalSha256": "02e79478c77931f5451cb6f1c1779194d69637d68a2ac9d62c2d58d71ec2361e",
+  "composedTeachingSha256": "fe12bead7cfa8eb701504980b7393b7b9e71d1f77b54e0ee0657e718117384aa",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "C",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_YEAR_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_SHARED_READING_AND_NEW_DIGEST_V4_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_POLICY_MIGRATION_AND_RELEASE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
