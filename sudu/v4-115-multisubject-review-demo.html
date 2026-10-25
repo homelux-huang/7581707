@@ -525,7 +525,14 @@ function guideEntries(q){
  // Existing guide fields win; only truly new memory content is transferred.
  // A calculation is always first, and absent conceptual calculations stay hidden.
  const extra=subjectEntries(q);
- const common=[['觀念',q.concept],['延伸閱讀',q.extension],['公式／分錄',q.formula],['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
+ // A formula field may hold non-calculation reasoning (e.g. 國文 9 ordering clues).
+ // Keep the educational text, but never present it as a calculation/entry card
+ // unless a real, non-empty exam calculation is explicitly registered for this question.
+ const calcRecord=((window.DEMO_LEARNING_CONFIG||{}).examCalculations||{})[q.subject+'|'+q.id];
+ const hasExamSteps=calcRecord?.hasExamCalculation===true&&Array.isArray(calcRecord.lines)&&calcRecord.lines.length>0;
+ const common=[['觀念',q.concept],['延伸閱讀',q.extension],
+               [hasExamSteps?'公式／分錄':'解題線索',q.formula],
+               ['出處',sourceText(q)]].filter(x=>hasStudyValue(x[1]));
  // English: move the vocabulary/news items from the correct option into the
  // TOP of the subject guide, preserving their exact content and order.
  const englishTop=['中文翻譯','發音','同意相關單字','反意相關單字','新聞時事例句'];
