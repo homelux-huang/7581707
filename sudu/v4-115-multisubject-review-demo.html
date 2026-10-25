@@ -761,6 +761,10 @@ $('yearSel').onchange=e=>{
  else showHome();
 };
 $('subjectSel').onchange=e=>{
+ if(pageYear()!=='demo'&&typeof window.suduOpenYearSubject==='function'){
+  window.suduOpenYearSubject(e.target.value);
+  return;
+ }
  if(document.body.classList.contains('qa-image-mode')){
   if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(e.target.value);
   return;
