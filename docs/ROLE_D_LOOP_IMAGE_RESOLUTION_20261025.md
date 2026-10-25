@@ -56,3 +56,10 @@
 - Linux CI安裝fonts-noto-cjk/fontconfig，保存fc-match繁中字型結果，要求Noto CJK fallback；本機未改全域字型。每個profile等待document.fonts.ready，以實際body font繪製12個繁中字，檢查非空、彼此不同且不同於兩個缺字控制；保存字形raster SHA與helper檔案SHA。
 - 負測拒絕重複方框、空白、缺對照、與missing-glyph相同字形。Node合計PASS14（原圖7＋選項5＋glyph2）；本機真實Chromium body font glyph preflight PASS，390×844首頁截圖目視繁中可讀。此為作者技術檢查，不是E獨立截圖驗收，也不證明尚未完成的Linux CI截圖可讀；須交E抽查最終artifact手機/桌面×深淺。
 - 原先精確2ea80c7 MathB480矩陣在本次字型修改前已啟動，執行中report綁定其啟動時測試SHA；不能套成本批提交的glyph已驗證證書。最終SHA必須跑新的完整matrix，所有新候選UIQA/READY/main/LIVE仍0。
+
+## D-FINAL-SHA-EVIDENCE-TRIAGE-20261025-VSCODE-09 / D-UNOBSCURED-SCREENSHOT-20261025-VSCODE-10
+
+- 精確2ea80c7本機MathB480/480完成（80作答＋400預覽），480截圖、FAIL0；原report SHA `ba5cbeaed8a85f7d731bc55269926e06d1180ee39af6f1b7b8e207c114dcf22e`。不能當作新增CJK檢查的最終SHA驗收。
+- 精確fa70144 CI `40164577159`首6個Demo job成功；實讀國文job `121082935617` Noto Sans CJK TC與80case；下載原artifact `12587598841`並重算ZIP SHA `122ca90cd14c0d80584a022c9fb05824dc5b936b703a47a6d7263526f4fea4aa`，與GitHub digest相同，82file含80圖／report／font。報告綁fa70144、browser/resolver/glyph SHA；本機同SHA國文80case PASS。其他job尚未完成時不稱21全PASS。
+- 真實mobile-light／desktop-dark圖可讀繁中，但答題後scoreToast仍在中央；DOM與字形PASS不能冒充無遮擋截圖接受。此為暫時1600ms產品動畫，非已證實持續遮擋。
+- VSCODE-10基底fa70144，僅matrix截圖前等待產品原timer移除is-visible且computed visibility/display/opacity確實隱藏。未移除、改寫或關閉產品動畫；超時保持FAIL，不以catch當成功。正式新artifact需E再獨立目視，不自批。

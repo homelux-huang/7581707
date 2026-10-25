@@ -320,6 +320,15 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
     teachingDigest:expectedDigest,imageSha256,sharedImageSHA:[]};
 }
 async function screenshot(page,year,subject,mode,q,width,height,theme){
+  // Preserve the student's transient scoring feedback, but capture reading state
+  // only after its own timer hides it. Never remove the UI to make evidence pass.
+  await page.waitForFunction(()=>{
+    const toast=document.getElementById('scoreToast');
+    if(!toast)return true;
+    const style=getComputedStyle(toast);
+    return !toast.classList.contains('is-visible')&&
+      (style.visibility==='hidden'||style.display==='none'||Number(style.opacity)===0);
+  },null,{timeout:5000});
   const slug=SUBJECT_SLUG[subject];
   const id=q.canonicalId||'demo-'+slug+'-'+String(q.id).padStart(2,'0');
   const rel=path.join(year,slug,mode,
