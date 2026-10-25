@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C14-E36-E37-20261025-06",
+  "claimedAtUtc": "2026-10-25T05:27:53Z",
+  "questionId": "115-00-E-37",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 37,
+  "subject": "英文",
+  "status": "ROLE_C_CANDIDATE_PENDING_DISTINCT_AI_SOURCE_AND_UI",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceBankBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "According to the passage, which of the following is true?",
+  "options": [
+    "Too many free, unsupervised activities make it hard for teenagers to focus and sleep.",
+    "A lack of guidance from parents is a main reason causing teenagers’ mental health issues.",
+    "Growing up in a phone-based childhood helps teenagers develop new skills and make friends\n         easily.",
+    "The loss of outdoor play in childhood and too much online time may cause teenagers’ anxiety\n       problems."
+  ],
+  "answerCandidate": "D",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "knownAnswerBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "71604bd6b778c214db6075e841ed9890447ecd3653388e89974c82328db67701",
+  "sourceImageRecordQa": "PASS",
+  "sourceIndividualManifestQa": "PASS",
+  "individualImage": "sudu/data/processed/115/webp-v2/00-E/115-00-E-37.webp",
+  "individualImageSha256": "072c60f80d8cb8a69df5de3aa222e22ca0fe057f0d2c08b608dafcde7cbeed53",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "individualImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-E-SHARED-36-38",
+    "sourceText": "▲ 閱讀下文，回答第36 － 38 題\n\n        Recent studies show that teenagers experience more anxiety and mental health issues than those\n    in earlier generations. In his book The Anxious Generation: How the Great Rewiring of Childhood Is\n   Causing an Epidemic of Mental Illness, Professor Jonathan Haidt explains that two major changes in\n    childhood are mainly responsible for their problems.\n          First, these young people lost real-world freedom during childhood. Their parents tended to\n    protect them too much and carefully control their daily activities. They were not encouraged to\n    explore outdoors, take risks, and solve problems independently. As a result, they might have\n   missed many opportunities to develop confidence and independence. According to Professor\n    Haidt, plenty of free, unsupervised outdoor play is important for healthy development. Without\n    outdoor play, children may be less willing to try new things as they grow into teenagers.\n        Another major change is the shift from a play-based childhood to a phone-based one. Since\n    childhood, these young people have often spent many hours using smartphones and social media\n    for leisure activities. This leads to several problems. For example, they do not get enough sleep\n    because of long hours on screens. Instead of interacting face to face, they often communicate\n    online, making them feel less connected to people in the real world. Also, constant phone\n   messages and addictive apps make it hard for them to stay focused. When they cannot check their\n    phones, they feel anxious.",
+    "textSha256": "05adfebfe26fa28a4c6b1c5fb93daa4819f8ffea2cd48b73758bfce1f03757df",
+    "originalImage": "sudu/data/processed/115/webp-v2/shared/115-00-E-SHARED-36-38.webp",
+    "originalImageSha256": "180430801f1b7c0775f2ff360c80d0b8d1828e26b95742ca52f57e72c5f4e418",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "d8ebd1565ed82e09a3022f80a088201fb32010901d8e6686c22cfbf8c8b617c5",
+    "sharedImageBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "本文分兩項原因：**lost real-world freedom / no unsupervised outdoor play**，以及**phone-based childhood / too much online time**；兩者在文中被描述為青少年焦慮等困擾的可能因素。**D**把兩項完整連起來。A把缺乏自由玩誤改成自由玩太多；B把父母過度保護誤改成缺乏指導；C則把文中提到的手機困境說成正面效果。",
+    "elementarySummary": "文章說小朋友如果很少自由去戶外玩，加上花很多時間在線上，長大後可能比較焦慮。D說的是同樣意思，所以對。別把題目寫的「可能」說成每個孩子一定會生病。",
+    "memory": "**lost outdoor play ＋ too much online time → may contribute to anxiety（D）**。注意**may**不等於必然因果。",
+    "concept": "**According to the passage**要依文中作者的主張判斷正誤，而非任意用生活印象。精確辨別原因方向（overprotection ≠ lack of guidance）與用語強度（may ≠ will）。",
+    "extension": "2025 UNICEF《Childhood in a Digital World》報告發現，**螢幕使用時數單獨與心理健康的直接因果未有明確證據**；網路霸凌與有害經驗和焦慮有較強關聯。因此閱讀本文答案是D，但不應把「長時間使用手機必然導致焦慮」宣稱為科學定論。",
+    "highlights": [
+      "According to the passage",
+      "loss of outdoor play",
+      "phone-based childhood",
+      "too much online time",
+      "anxiety",
+      "may"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 說**太多不受監督的活動**造成失焦失眠，卻與原文「**缺乏自由戶外玩耍**」相反；原文把專注與睡眠問題連到**長時間螢幕使用**，不能換因果主詞。",
+        "elementary": "原文說小孩玩得不夠自由，不是自由玩太多；容易睡不好、分心是講長時間滑手機，所以A顛倒了。",
+        "reason": "A 說**太多不受監督的活動**造成失焦失眠，卻與原文「**缺乏自由戶外玩耍**」相反；原文把專注與睡眠問題連到**長時間螢幕使用**，不能換因果主詞。",
+        "sourceEvidence": "Passage: plenty of free, unsupervised outdoor play is important for healthy development; they do not get enough sleep because of long hours on screens."
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 說父母**缺乏指導**是主要原因，但原文指出父母**protect them too much and carefully control their daily activities（過度保護與控制）**，方向正好相反。",
+        "elementary": "文章說爸媽管得太多，不是都不教小孩、放著不管，所以B錯。",
+        "reason": "B 說父母**缺乏指導**是主要原因，但原文指出父母**protect them too much and carefully control their daily activities（過度保護與控制）**，方向正好相反。",
+        "sourceEvidence": "Passage: Their parents tended to protect them too much and carefully control their daily activities."
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 說**手機童年**讓孩子更容易學技能和交朋友；但本文指出花太多時間上線，可能少面對面交流、睡眠不足、難專注，沒有此項正向總結。",
+        "elementary": "文章在提醒手機用太多可能遇到的麻煩，不是在說這樣就一定更會交朋友。",
+        "reason": "C 說**手機童年**讓孩子更容易學技能和交朋友；但本文指出花太多時間上線，可能少面對面交流、睡眠不足、難專注，沒有此項正向總結。",
+        "sourceEvidence": "Passage: they often communicate online, making them feel less connected to people in the real world; constant phone messages and addictive apps make it hard for them to stay focused."
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D 文中明示**戶外自由探索減少**與**從玩耍轉成手機為主的生活**兩項改變，並將這些經驗與青少年的**焦慮困擾**連結；D完整歸納了文章論點，且以**may**保留推論強度。",
+        "elementary": "D把兩件事放一起：少去戶外自由玩、上網時間太長，文章說這可能和焦慮有關。",
+        "reason": "D 文中明示**戶外自由探索減少**與**從玩耍轉成手機為主的生活**兩項改變，並將這些經驗與青少年的**焦慮困擾**連結；D完整歸納了文章論點，且以**may**保留推論強度。",
+        "sourceEvidence": "Passage: two major changes in childhood are mainly responsible for their problems; lost real-world freedom during childhood; shift from a play-based childhood to a phone-based one."
+      }
+    },
+    "english": {
+      "answerWord": "anxiety",
+      "pronunciationIPA": "/æŋˈzaɪ.ə.ti/",
+      "sentenceTranslationZh": "根據文章，下列哪個敘述正確？",
+      "answerWordMeaningZh": "焦慮、不安",
+      "synonyms": {
+        "初級": [
+          "worry（擔心）"
+        ],
+        "中級": [
+          "nervousness（緊張不安）"
+        ],
+        "高級": [
+          "apprehension（焦慮擔憂）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "calm（平靜；相反情緒）"
+        ],
+        "中級": [
+          "peace of mind（安心）"
+        ],
+        "高級": [
+          "tranquility（寧靜安穩）"
+        ]
+      },
+      "newsExampleEnglish": "A June 2025 UNICEF report linked harmful online experiences to greater **anxiety**, while finding no clear proof that screen time alone directly causes mental-health harm.",
+      "newsExampleChinese": "2025年6月UNICEF報告指出，有害的網路經驗與更高程度的焦慮有關，同時沒有明確證據證明單靠螢幕時間就直接造成心理健康傷害。",
+      "newsExampleHighlightedSurfaceForm": "anxiety",
+      "newsExampleSourceUrl": "https://www.unicef.org/innocenti/reports/childhood-digital-world",
+      "newsExampleSourceDate": "2025-06-01",
+      "newsExampleSourceOrganization": "UNICEF",
+      "newsExampleKind": "根據UNICEF於2025年發布的報導自行改寫的英語教學句，非來源逐字引述，不得冒稱官方逐字說法",
+      "note": "焦慮與平靜為情緒上的對照，不等於臨床診斷上的嚴格同反義。此新聞英文句子為教學摘要，非UNICEF逐字引用；報告指出的是關聯而非所有人必然受害。"
+    },
+    "stepByStep": [
+      "讀文章第2段：缺戶外玩和過度保護，而非戶外自由活動太多。",
+      "讀第3段：手機社群時數、睡眠、真實互動與專注的關聯。",
+      "逐項比對：A/B前後倒置，C把警訊說成好處，D符合全文兩項核心。",
+      "記住考題問的是**本文觀點**，並以may避免過度因果化。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年英文第37題，原文引述Jonathan Haidt兩項童年變化觀點；延伸使用UNICEF 2025報告，避免過度因果推論。"
+  },
+  "teachingCanonicalSha256": "23add6c41c44f27332c6091227ad6c2eebcd52142f801079f7b151140b4398e1",
+  "review": {
+    "authorIdentity": "GPT-6 Role C AI teaching author (not credentialed human teacher)",
+    "authorRole": "C",
+    "distinctAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewNotes": null,
+    "reviewEvidenceSha256": null,
+    "officialEvidenceSha256": null,
+    "differentAuthorRequired": true,
+    "sameAuthorApprovalProhibited": true,
+    "officialFinalAnswerAndNotice": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4EightByTwoExactDigest": "PENDING",
+    "policy": "ISSUE36_2026-10-25_NO_HUMAN_TEACHER_PREREQUISITE"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_OFFICIAL_FINAL_ANSWER_CORRECTION_AND_FULL_QUESTION_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_IMAGE_DIRECT_VISUAL_QA_PENDING",
+    "DISTINCT_AI_OPTION_BY_OPTION_REVIEW_AND_SOURCE_SHA_EVIDENCE_PENDING",
+    "V4_REAL_8_VIEWPORTS_2_THEMES_EXACT_DIGEST_CI_PENDING"
+  ]
+}

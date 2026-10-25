@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-C14-E36-E37-20261025-06",
+  "role": "C",
+  "claimCommentId": 6393915658,
+  "claimedAtUtc": "2026-10-25T05:27:53Z",
+  "branch": "teaching/115-role-c-chinese14-english36-37-20261025",
+  "baseSHA": "3c696903ac5b089f355885c98ab71a74cb79dced",
+  "sourceHead": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "coordinatorLedgerGitBlobSHA": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "sourceQuestionBankGitBlobSHA": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceWebpManifestGitBlobSHA": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "candidateStatus": "AUTHOR_ONLY_DRAFT__OFFICIAL_SHARED_AND_DISTINCT_AI_PENDING",
+  "newReady": 0,
+  "newLive": 0,
+  "items": [
+    {
+      "questionId": "115-00-C-14",
+      "path": "sudu/teaching-candidates/115-role-c-chinese14-english36-37-20261025/115-00-C-14.json",
+      "fileSha256": "091459006af2bd84266203cfa9f3c52972d420c092b2028ca0102268df79b63b",
+      "sourceTextRevision": "9ccbc09172a045f72a02940c61fbdce3762243a58ce424c632302cd08610a896",
+      "individualImageSha256": "2d5d49607eb941df0f6ed272447a312723bfbf050555f53deb1e0cd675a1888e",
+      "teachingDigest": "6bafd4e64ab792babd902cbc079607ec1f49ad9c7b44237eb3b455a36f52a270",
+      "sharedOriginalImageSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+      "sharedMaterialRevision": "9d0735b8c397d8a9c384410e13eb5b83e60b32becd5022cc5f6c69092c08d18f",
+      "sharedQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "sourceAnswerVerifiedHistorical": true,
+      "sourceQuestionVerified": false,
+      "independentAiReview": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-E-36",
+      "path": "sudu/teaching-candidates/115-role-c-chinese14-english36-37-20261025/115-00-E-36.json",
+      "fileSha256": "9d4ab1f7ddad7bb1feac3238a496ee9b7237326e94ffbdf8e0c762aad16f7281",
+      "sourceTextRevision": "2a5ef83ac4daab27e63dc520087f259e4dc312dc5242fdd8cd62ae4053a771a0",
+      "individualImageSha256": "eaae0a20b815d0b416ee5318c3c65446ba6a250227761390c4fa7e676baed245",
+      "teachingDigest": "4b8bb1718d949f6cc7994b002eb7064c549255ce6bdce746960e55ac772f4ab8",
+      "sharedOriginalImageSha256": "180430801f1b7c0775f2ff360c80d0b8d1828e26b95742ca52f57e72c5f4e418",
+      "sharedMaterialRevision": "d8ebd1565ed82e09a3022f80a088201fb32010901d8e6686c22cfbf8c8b617c5",
+      "sharedQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "sourceAnswerVerifiedHistorical": false,
+      "sourceQuestionVerified": false,
+      "independentAiReview": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-E-37",
+      "path": "sudu/teaching-candidates/115-role-c-chinese14-english36-37-20261025/115-00-E-37.json",
+      "fileSha256": "9a9f87ba2d1ebb673f76581ac36085dbcd4dc83811fd714cb1db68c311813af9",
+      "sourceTextRevision": "71604bd6b778c214db6075e841ed9890447ecd3653388e89974c82328db67701",
+      "individualImageSha256": "072c60f80d8cb8a69df5de3aa222e22ca0fe057f0d2c08b608dafcde7cbeed53",
+      "teachingDigest": "23add6c41c44f27332c6091227ad6c2eebcd52142f801079f7b151140b4398e1",
+      "sharedOriginalImageSha256": "180430801f1b7c0775f2ff360c80d0b8d1828e26b95742ca52f57e72c5f4e418",
+      "sharedMaterialRevision": "d8ebd1565ed82e09a3022f80a088201fb32010901d8e6686c22cfbf8c8b617c5",
+      "sharedQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+      "sourceAnswerVerifiedHistorical": false,
+      "sourceQuestionVerified": false,
+      "independentAiReview": "PENDING",
+      "ready": false
+    }
+  ]
+}
