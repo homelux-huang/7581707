@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C07-10-DIAGRAM-AND-TEXT-20261025-12",
+  "reviewDate": "2026-10-25",
+  "reviewer": "ChatGPT Role A original source pixel reviewer; not distinct Role E lesson reviewer",
+  "reviewerType": "ASSISTANT_DIRECT_ORIGINAL_IMAGE_SOURCE",
+  "independentHumanReview": false,
+  "independentRoleEContentReview": false,
+  "officialFinalAmendmentChecked": false,
+  "originalPdfBytesRehashedThisBatch": false,
+  "wholeYearOriginalQuestionVerified": false,
+  "originalSourcePage": {
+    "path": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "gitBlobSha1": "9578305e9c4181d3b339b830e23e12402f4893d3",
+    "sha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "pixelSize": [
+      1400,
+      1981
+    ]
+  },
+  "originalAnswerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "sha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "pixelSize": [
+      1400,
+      1980
+    ]
+  },
+  "oldRejectedCrops": [
+    {
+      "questionId": "113-00-C-09",
+      "cropPixels": [
+        90,
+        661,
+        1310,
+        1123
+      ],
+      "sha256": "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
+      "reason": "bottom x-axis label touched and risked glyph clipping"
+    },
+    {
+      "questionId": "113-00-C-10",
+      "cropPixels": [
+        90,
+        1125,
+        1310,
+        1840
+      ],
+      "sha256": "d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491",
+      "reason": "shift Q10 start past Q09 complete axis caption without mixing"
+    }
+  ],
+  "questionResults": [
+    {
+      "questionId": "113-00-C-07",
+      "originalQuestionNumber": 7,
+      "sourceRevisionSha256": "ff4d5109a27db1bff06d28df802051167915a627ac116e75ce5c456df21dfc26",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp",
+        "sha256": "dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a",
+        "gitBlobSha1": "8cc29669d5146ebd2ea0aa58460f73d61194972b",
+        "cropPixels": [
+          90,
+          164,
+          1310,
+          502
+        ],
+        "pixelSize": [
+          1220,
+          338
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalPublishedAnswerCandidate": "A",
+      "answerVerified": false,
+      "questionVerified": false,
+      "visualSourceResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "independentRoleEReview": false,
+      "criteria": {
+        "printedQuestionNumberCorrect": true,
+        "stemAndNecessaryPassageComplete": true,
+        "allFourOriginalPrintedChoicesVisible": true,
+        "noAdjacentQuestion": true,
+        "noPageHeaderFooter": true,
+        "notWholePage": true,
+        "legible": true,
+        "decodedCropPixelsEqualOriginalSource": true,
+        "sourceAndAssetSha256Matched": true
+      },
+      "observation": "Actual direct original printed p3: Q7 number, 梁實秋〈講價〉 five ①～⑤ sentence fragments and all A-D arrangement choices fully visible; no Q8 header/pixels, no whole page.",
+      "figureReview": "NOT_APPLICABLE",
+      "tableReview": "NOT_APPLICABLE"
+    },
+    {
+      "questionId": "113-00-C-08",
+      "originalQuestionNumber": 8,
+      "sourceRevisionSha256": "052e45e52d7f966f0f4e249522a63dfb1813124b93c2a09239b7848c1a0298d5",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp",
+        "sha256": "4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49",
+        "gitBlobSha1": "e89669211f06f9f0f62f4a301085e846cfcb3c39",
+        "cropPixels": [
+          90,
+          505,
+          1310,
+          657
+        ],
+        "pixelSize": [
+          1220,
+          152
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalPublishedAnswerCandidate": "D",
+      "answerVerified": false,
+      "questionVerified": false,
+      "visualSourceResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "independentRoleEReview": false,
+      "criteria": {
+        "printedQuestionNumberCorrect": true,
+        "stemAndNecessaryPassageComplete": true,
+        "allFourOriginalPrintedChoicesVisible": true,
+        "noAdjacentQuestion": true,
+        "noPageHeaderFooter": true,
+        "notWholePage": true,
+        "legible": true,
+        "decodedCropPixelsEqualOriginalSource": true,
+        "sourceAndAssetSha256Matched": true
+      },
+      "observation": "Actual direct original printed p3: Q8 轉折關係「而」 question, full explanatory stem and A-D classical sentences legible; no adjacent Q7 or Q9.",
+      "figureReview": "NOT_APPLICABLE",
+      "tableReview": "NOT_APPLICABLE"
+    },
+    {
+      "questionId": "113-00-C-09",
+      "originalQuestionNumber": 9,
+      "sourceRevisionSha256": "826ea6153ea63de6a74bc95b747b88701b613df1d117f894c10844c2322d15be",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp",
+        "sha256": "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b",
+        "gitBlobSha1": "f57d9bf5799f72589929f268d4ab2b175f53edfe",
+        "cropPixels": [
+          90,
+          661,
+          1310,
+          1136
+        ],
+        "pixelSize": [
+          1220,
+          475
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalPublishedAnswerCandidate": "B",
+      "answerVerified": false,
+      "questionVerified": false,
+      "visualSourceResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "independentRoleEReview": false,
+      "criteria": {
+        "printedQuestionNumberCorrect": true,
+        "stemAndNecessaryPassageComplete": true,
+        "allFourOriginalPrintedChoicesVisible": true,
+        "noAdjacentQuestion": true,
+        "noPageHeaderFooter": true,
+        "notWholePage": true,
+        "legible": true,
+        "decodedCropPixelsEqualOriginalSource": true,
+        "sourceAndAssetSha256Matched": true
+      },
+      "observation": "Actual source pixel five-strategy matrix includes 对立/合作/妥協/迴避/順應 (original simplified/traditional printing as-is) plus high/low vertical axis and complete horizontal 配合他人的程度. Initial y2 1123 clipped/touched bottom chart axis caption, rejected; fixed y2 1136, Q9 full options A-D and no Q10.",
+      "figureReview": "PASS_ORIGINAL_PX_FIGURE_FULL",
+      "tableReview": "NOT_APPLICABLE"
+    },
+    {
+      "questionId": "113-00-C-10",
+      "originalQuestionNumber": 10,
+      "sourceRevisionSha256": "48154f29ead5dd768337d005273a43815bef736d59857c4415d5306af0d2bb15",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp",
+        "sha256": "6d02e6a8bcc051c764bd6147f9f49c5b6edee7ea6b78be3ec9c3c439cb997936",
+        "gitBlobSha1": "5d31062165ac00e52f418d7c9fa89c26096238eb",
+        "cropPixels": [
+          90,
+          1137,
+          1310,
+          1840
+        ],
+        "pixelSize": [
+          1220,
+          703
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalPublishedAnswerCandidate": "B",
+      "answerVerified": false,
+      "questionVerified": false,
+      "visualSourceResult": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+      "independentRoleEReview": false,
+      "criteria": {
+        "printedQuestionNumberCorrect": true,
+        "stemAndNecessaryPassageComplete": true,
+        "allFourOriginalPrintedChoicesVisible": true,
+        "noAdjacentQuestion": true,
+        "noPageHeaderFooter": true,
+        "notWholePage": true,
+        "legible": true,
+        "decodedCropPixelsEqualOriginalSource": true,
+        "sourceAndAssetSha256Matched": true
+      },
+      "observation": "Actual original complete Q10 《天工開物·舟車》 stem, fishbone diagram and explanatory block plus original A-D four-column table ①,①-1,②,②-1 preserved. Candidate option D raw had unrelated p4 Q11-15 reading article, cleaned only in separate structured candidate; actual image is unmodified original pixels and contains no adjacent Q9, Q11 or exam footer. Adjacent Q09 caption allowed by shifting Q10 top to y1137.",
+      "figureReview": "PASS_ORIGINAL_PX_FIGURE_FULL",
+      "tableReview": "PASS_ALL_FOUR_COLUMN_LABELS_AND_AD_ROWS"
+    }
+  ],
+  "observedQ09OriginalFigureComplete": true,
+  "observedQ10FishboneAndOptionTableComplete": true,
+  "originalQ09RawOptionsChartAxisLeakPreserved": true,
+  "originalQ10RawDNextPageArticleLeakPreserved": true,
+  "editorialCandidateOptionsNotAutomaticallyOfficiallyVerified": true,
+  "newSourceImageAssistantPassCount": 4,
+  "newAnswerVerified": 0,
+  "newQuestionVerified": 0,
+  "newTeachingVerified": 0,
+  "newIndependentRoleEReview": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "releaseStatus": "SOURCE_IMAGE_ASSISTANT_PASS_ONLY__FINAL_TCTE_CORRECTION_PDF_AND_E_D_GATES_PENDING"
+}

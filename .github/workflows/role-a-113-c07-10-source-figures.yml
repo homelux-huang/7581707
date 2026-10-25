@@ -1,0 +1,73 @@
+name: Role A 113 C07-10 original figures and four-row SQL (NO RELEASE)
+on:
+  push:
+    branches:
+      - data/role-a-113-c07-10-figures-20261025
+    paths:
+      - scripts/role_a_113_c07_10_source_figures.py
+      - tests/test_role_a_113_c07_10_source_figures.py
+      - docs/ROLE_A_113_C07_10_SOURCE_FIGURES_20261025.md
+      - .github/workflows/role-a-113-c07-10-source-figures.yml
+      - sudu/data/processed/113/role-a-c07-10/**
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: role-a-113-c07-10-exclusive-source-pixels-20261025
+  cancel-in-progress: false
+jobs:
+  source_figure_and_sqlite_candidate_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/data/role-a-113-c07-10-figures-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact isolated Role A original-source branch
+        uses: actions/checkout@v4
+        with:
+          ref: data/role-a-113-c07-10-figures-20261025
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PIL original WebP pixel decoder (not OCR or image generation)
+        run: python -m pip install -q Pillow==11.3.0
+      - name: Read-only original exams and create four source-only candidate images and SQL
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "data/role-a-113-c07-10-figures-20261025"
+          python -m py_compile scripts/role_a_113_c07_10_source_figures.py tests/test_role_a_113_c07_10_source_figures.py
+          python -m scripts.role_a_113_c07_10_source_figures --apply
+          python -m scripts.role_a_113_c07_10_source_figures --verify
+          python -m unittest discover -s tests -p test_role_a_113_c07_10_source_figures.py -v
+          python -m unittest discover -s tests -p test_role_a_113_c06_source_diagram.py -v
+          python -m unittest discover -s tests -p test_role_a_113_c01_05_source_receipts.py -v
+      - name: Commit at most six own source files (manifest, 4 images, SQLite) to isolated branch
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/113/role-a-c07-10/manifest.json
+          git add -- sudu/data/processed/113/role-a-c07-10/question-bank.sqlite3
+          git add -- sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp
+          git add -- sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp
+          git add -- sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp
+          git add -- sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp
+          expected="$(printf '%s\n' 'sudu/data/processed/113/role-a-c07-10/manifest.json' 'sudu/data/processed/113/role-a-c07-10/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp')"
+          changed="$(git diff --cached --name-only)"
+          revised="$(printf '%s\n' 'sudu/data/processed/113/role-a-c07-10/manifest.json' 'sudu/data/processed/113/role-a-c07-10/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp' 'sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp')"
+          if test -n "$changed"; then
+            if test "$changed" != "$expected" && test "$changed" != "$revised"; then
+              echo 'Only six initial source artifacts or exactly four Q9/Q10-only boundary fixes allowed'
+              git diff --cached --name-only
+              exit 1
+            fi
+            git diff --cached --check
+            test -z "$(git diff --name-only)" || { echo 'Unexpected working tree modification'; exit 1; }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'data(role A): archive original C07-C10 figure pixels, visual option candidates and partial SQL [NO RELEASE]'
+            git push origin HEAD:refs/heads/data/role-a-113-c07-10-figures-20261025
+          else
+            echo 'IDEMPOTENT, no original image regeneration or database mutation'
+          fi
+          test "$(git ls-remote origin refs/heads/data/role-a-113-c07-10-figures-20261025 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo 'No E QA, no official final amendment verification, no V4/main/Pages release.'

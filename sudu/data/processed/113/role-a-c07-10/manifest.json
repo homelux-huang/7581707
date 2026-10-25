@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C07-10-DIAGRAM-AND-TEXT-20261025-12",
+  "year": 113,
+  "paperCode": "00-C",
+  "sourceIndex": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+  "yearCandidateQuestionCount": 205,
+  "yearLegacyQuestionsFound": 196,
+  "originalPageNumber": 3,
+  "rejectedInitialCrops": [
+    {
+      "questionId": "113-00-C-09",
+      "cropPixels": [
+        90,
+        661,
+        1310,
+        1123
+      ],
+      "sha256": "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
+      "reason": "bottom x-axis label touched and risked glyph clipping"
+    },
+    {
+      "questionId": "113-00-C-10",
+      "cropPixels": [
+        90,
+        1125,
+        1310,
+        1840
+      ],
+      "sha256": "d4491b6806725f979615be77164a943732f511991b680fdfc6383a21190c1491",
+      "reason": "shift Q10 start past Q09 complete axis caption without mixing"
+    }
+  ],
+  "originalPage": {
+    "path": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "gitBlobSha1": "9578305e9c4181d3b339b830e23e12402f4893d3",
+    "sha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "pixelSize": [
+      1400,
+      1981
+    ]
+  },
+  "originalAnswerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "sha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "pixelSize": [
+      1400,
+      1980
+    ]
+  },
+  "questionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+  "answerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+  "originalPdfsFreshlyDownloadedAndHashed": false,
+  "officialFinalAmendmentCheckedForNumbers": false,
+  "questionCount": 4,
+  "questions": [
+    {
+      "questionId": "113-00-C-07",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 7,
+      "subject": "國文",
+      "question": "若要使下文的理路連貫有序，①、②、③、④、⑤最適當的排列應是：\n  進得店來，\n  ①夥計於氣餒之餘，\n  ②自然歡天喜地的捧出他的貨色，\n  ③看準了他沒有什麼你就要什麼，\n  ④使得他顯著寒傖，先有幾分慚愧，\n  ⑤然後無精打采的道出你所真心要買的東西，\n  價錢根本不會太高。 ( 梁實秋〈講價〉 )",
+      "options": [
+        "③④⑤①②",
+        "③⑤④②①",
+        "⑤①②③④",
+        "⑤④①③②"
+      ],
+      "originalRawQuestionText": "若要使下文的理路連貫有序，①、②、③、④、⑤最適當的排列應是：\n  進得店來，\n  ①夥計於氣餒之餘，\n  ②自然歡天喜地的捧出他的貨色，\n  ③看準了他沒有什麼你就要什麼，\n  ④使得他顯著寒傖，先有幾分慚愧，\n  ⑤然後無精打采的道出你所真心要買的東西，\n  價錢根本不會太高。 ( 梁實秋〈講價〉 )",
+      "originalRawOptions": [
+        "③④⑤①②",
+        "③⑤④②①",
+        "⑤①②③④",
+        "⑤④①③②"
+      ],
+      "originalRawOptionsSha256": "a5fafab978d4b8a6396cfdf1329a5173ccfda6bdf3180b53558d7240e90936ae",
+      "candidateCorrectedOptionsSha256": "a5fafab978d4b8a6396cfdf1329a5173ccfda6bdf3180b53558d7240e90936ae",
+      "optionTextCorrection": false,
+      "optionDiffReason": "unchanged original source PDF text",
+      "originalAnswerOptionColumnLabels": [],
+      "mandatoryOriginalFigure": false,
+      "originalFigureKind": "none",
+      "originalQuestionTextQa": "PENDING_FINAL_PAGE_VISUAL_TEXT_QA",
+      "candidateOptionTranscriptionReviewer": "ChatGPT Role A direct original full-page image; not independent E",
+      "originalArchivedContentSha256RecordedOnly": "fb66df0fdcdf55465cb6c6cd1905a56f61cc0e5e1602290dfccc81f07c1d8255",
+      "answerCandidate": "A",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "officialAnswerStatus": "ANNOUNCED_IMAGE_CANDIDATE_FINAL_CORRECTION_SCOPE_PENDING",
+      "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp",
+        "sha256": "dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a",
+        "gitBlobSha1": "8cc29669d5146ebd2ea0aa58460f73d61194972b",
+        "cropPixels": [
+          90,
+          164,
+          1310,
+          502
+        ],
+        "pixelSize": [
+          1220,
+          338
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "sourceRevisionSha256": "ff4d5109a27db1bff06d28df802051167915a627ac116e75ce5c456df21dfc26"
+    },
+    {
+      "questionId": "113-00-C-08",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 8,
+      "subject": "國文",
+      "question": "「視而不見」、「口惠而實不至」的「而」，相當於「卻」，用來表示其前、後詞語有\n  轉折關係。下列文句中的「而」，何者有相同用法？",
+      "options": [
+        "提刀「而」立，為之四顧",
+        "滿目蕭然，感極「而」悲者矣",
+        "郁離子之市，見壞宅「而」哭之慟",
+        "惑「而」不從師，其為惑也終不解矣"
+      ],
+      "originalRawQuestionText": "「視而不見」、「口惠而實不至」的「而」，相當於「卻」，用來表示其前、後詞語有\n  轉折關係。下列文句中的「而」，何者有相同用法？",
+      "originalRawOptions": [
+        "提刀「而」立，為之四顧",
+        "滿目蕭然，感極「而」悲者矣",
+        "郁離子之市，見壞宅「而」哭之慟",
+        "惑「而」不從師，其為惑也終不解矣"
+      ],
+      "originalRawOptionsSha256": "f956fae6e60108b53c16844b8e90a31833c7c32cf6d2f0ff4bade44c74facf5c",
+      "candidateCorrectedOptionsSha256": "f956fae6e60108b53c16844b8e90a31833c7c32cf6d2f0ff4bade44c74facf5c",
+      "optionTextCorrection": false,
+      "optionDiffReason": "unchanged original source PDF text",
+      "originalAnswerOptionColumnLabels": [],
+      "mandatoryOriginalFigure": false,
+      "originalFigureKind": "none",
+      "originalQuestionTextQa": "PENDING_FINAL_PAGE_VISUAL_TEXT_QA",
+      "candidateOptionTranscriptionReviewer": "ChatGPT Role A direct original full-page image; not independent E",
+      "originalArchivedContentSha256RecordedOnly": "7cd353d444fe9890dfd8a79210586ae592ea980d7b720c1c1612adce3a4e1d53",
+      "answerCandidate": "D",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "officialAnswerStatus": "ANNOUNCED_IMAGE_CANDIDATE_FINAL_CORRECTION_SCOPE_PENDING",
+      "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp",
+        "sha256": "4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49",
+        "gitBlobSha1": "e89669211f06f9f0f62f4a301085e846cfcb3c39",
+        "cropPixels": [
+          90,
+          505,
+          1310,
+          657
+        ],
+        "pixelSize": [
+          1220,
+          152
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "sourceRevisionSha256": "052e45e52d7f966f0f4e249522a63dfb1813124b93c2a09239b7848c1a0298d5"
+    },
+    {
+      "questionId": "113-00-C-09",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 9,
+      "subject": "國文",
+      "question": "雙方立場不一致時，通常會就下圖所示五種策略擇一回應。依據〈燭之武退秦師〉、\n  〈漁父〉，對①、②的研判應是：\n  ①秦穆公與燭之武對談後，以「對立」策略                        高   對立      合作\n   回應燭之武。                      堅\n  ②屈原與漁父對談時，以「順應」策略回應                      持\n   漁父。                 自        妥協",
+      "options": [
+        "①、②皆正確",
+        "①、②皆錯誤",
+        "①正確，②錯誤",
+        "①錯誤，②正確"
+      ],
+      "originalRawQuestionText": "雙方立場不一致時，通常會就下圖所示五種策略擇一回應。依據〈燭之武退秦師〉、\n  〈漁父〉，對①、②的研判應是：\n  ①秦穆公與燭之武對談後，以「對立」策略                        高   對立      合作\n   回應燭之武。                      堅\n  ②屈原與漁父對談時，以「順應」策略回應                      持\n   漁父。                 自        妥協",
+      "originalRawOptions": [
+        "①、②皆正確             我",
+        "①、②皆錯誤             的",
+        "①正確，②錯誤            程    迴避      順應",
+        "①錯誤，②正確            度\n                        低\n\n                          低           高                             配合他人的程度"
+      ],
+      "originalRawOptionsSha256": "155d4c2affcecd821acc150f46e82b7f6d3428e026c7c0fb14e9f2a95fd6a595",
+      "candidateCorrectedOptionsSha256": "1bc74a4dc420eeb643a4b0348453f5c5af2e4bee5ae00dda4c08253988f3e4c1",
+      "optionTextCorrection": true,
+      "optionDiffReason": "Q09 original axes/labels from adjacent strategy chart spilled into candidate choice strings",
+      "originalAnswerOptionColumnLabels": [],
+      "mandatoryOriginalFigure": true,
+      "originalFigureKind": "five_strategy_positioning_matrix",
+      "originalQuestionTextQa": "PENDING_FINAL_PAGE_VISUAL_TEXT_QA",
+      "candidateOptionTranscriptionReviewer": "ChatGPT Role A direct original full-page image; not independent E",
+      "originalArchivedContentSha256RecordedOnly": "f07768c835ee18b6d98c41c70c123a00d05a914a6dd25abb9456a82dbb96986d",
+      "answerCandidate": "B",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "officialAnswerStatus": "ANNOUNCED_IMAGE_CANDIDATE_FINAL_CORRECTION_SCOPE_PENDING",
+      "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp",
+        "sha256": "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b",
+        "gitBlobSha1": "f57d9bf5799f72589929f268d4ab2b175f53edfe",
+        "cropPixels": [
+          90,
+          661,
+          1310,
+          1136
+        ],
+        "pixelSize": [
+          1220,
+          475
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "sourceRevisionSha256": "826ea6153ea63de6a74bc95b747b88701b613df1d117f894c10844c2322d15be"
+    },
+    {
+      "questionId": "113-00-C-10",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 10,
+      "subject": "國文",
+      "question": "《 天工開物‧舟車 》：「人有貴而必出，行畏周行；物有賤而必須，坐窮負販。四海之\n  內，南資舟而北資車。」這段話若依下框所示，繪製常用於「分析原因」的「魚骨\n  圖」，｛｝、〔〕最適合填入何者？\n\n\n\n  就魚頭所提出的【問題】，\n  先於 寫出｛主因｝，\n  再於    寫出各主因的〔小原因〕。\n\n\n\n\n\n\n         ①      ①－1      ②          ②－1",
+      "options": [
+        "載人 ／ 重視人權 ／ 運貨 ／ 貶抑物價",
+        "載人 ／ 怕走路累 ／ 運貨 ／ 互通有無",
+        "北方 ／ 重視人權 ／ 南方 ／ 貶抑物價",
+        "北方 ／ 怕走路累 ／ 南方 ／ 互通有無"
+      ],
+      "originalRawQuestionText": "《 天工開物‧舟車 》：「人有貴而必出，行畏周行；物有賤而必須，坐窮負販。四海之\n  內，南資舟而北資車。」這段話若依下框所示，繪製常用於「分析原因」的「魚骨\n  圖」，｛｝、〔〕最適合填入何者？\n\n\n\n  就魚頭所提出的【問題】，\n  先於 寫出｛主因｝，\n  再於    寫出各主因的〔小原因〕。\n\n\n\n\n\n\n         ①      ①－1      ②          ②－1",
+      "originalRawOptions": [
+        "載人    重視人權    運貨       貶抑物價",
+        "載人    怕走路累    運貨       互通有無",
+        "北方    重視人權    南方       貶抑物價",
+        "北方    怕走路累    南方       互通有無\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                113 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第11-15 題\n    「唐朝人愛牡丹，也賞梅花。我回日本後不久，賞梅之風開始吹到國內，貴族競相模\n  仿。」三十年前曾跟隨遣唐使到唐朝的山上憶良，向大宰府的賓客們介紹梅花宴的起源。\n  位於九州的大宰府，是與朝鮮半島、中國往來的門戶，自然有更多機會接觸外來文化。\n    這天是公元730 年正月十三。府邸庭園覆雪，梅花盛開。\n    「請大家輪流以梅賦歌一首吧！山上大夫，麻煩記錄下來。我會寫篇短文，述說此\n  刻坐擁天地的歡愉。」大伴旅人就任大宰帥已經兩年。此前，他在朝廷位高權重，但藤\n  原家族的有意排擠，使他不得不離開京城。到職不久，妻子因病過世；隔年，政治盟友\n  長屋王被控謀反而遭賜死。接連而來的人生衝擊，讓已屆耳順之年、也讀過老莊思想的\n  他，對生命體悟良深。\n    當晚，大伴旅人寫好序言，喚山上憶良同看。\n    「您這是……從王羲之〈蘭亭集序〉得到啟發吧？」\n    「這當中完全沒有王羲之『死生亦大矣，豈不痛哉』的省思，就算有些許文句相\n  似，離〈蘭亭集序〉還遠得很！」\n    「就是因為您經歷過死生之痛，才想在這遠離京城的大宰府，召集類似『蘭亭脩\n  褉』的聚會吧！我注意到您用了跟〈蘭亭集序〉相同的『快然自足』四個字，想必希望\n  大家在梅花宴中，一同體驗『欣於所遇』的境界。」\n    「我確實這麼想。所以不希望大家又抒發戍邊、思鄉之情。中國梅花詩雖然常這麼\n  寫，但也有單純投入欣賞、充滿美感聯想的那面。賞花正應如此。」\n    「早知要由此著筆，我的歌就不會只呼籲相偕同樂，莫負良辰『梅』景了。您的歌\n  以雪喻梅，真是絕佳示範！」"
+      ],
+      "originalRawOptionsSha256": "68c1e1751201737e4735cf66a5529470649cd7360d4cacf332caaa66c6b12eef",
+      "candidateCorrectedOptionsSha256": "ce2cc61c651769e2702ae2b759e9bcad6a0fea3baa150e8b2e1853381b23b8ef",
+      "optionTextCorrection": true,
+      "optionDiffReason": "Q10 original fishbone and A-D 4-column table plus next p4 article spilled into options",
+      "originalAnswerOptionColumnLabels": [
+        "①",
+        "①－1",
+        "②",
+        "②－1"
+      ],
+      "mandatoryOriginalFigure": true,
+      "originalFigureKind": "fishbone_cause_chart_and_four_column_AD_table",
+      "originalQuestionTextQa": "PENDING_FINAL_PAGE_VISUAL_TEXT_QA",
+      "candidateOptionTranscriptionReviewer": "ChatGPT Role A direct original full-page image; not independent E",
+      "originalArchivedContentSha256RecordedOnly": "54d141408a8b39947d2d4e0d869182b3d6fdf168f909e54c96bcbe2d4a323262",
+      "answerCandidate": "B",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "officialAnswerStatus": "ANNOUNCED_IMAGE_CANDIDATE_FINAL_CORRECTION_SCOPE_PENDING",
+      "visualQaStatus": "DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA",
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp",
+        "sha256": "6d02e6a8bcc051c764bd6147f9f49c5b6edee7ea6b78be3ec9c3c439cb997936",
+        "gitBlobSha1": "5d31062165ac00e52f418d7c9fa89c26096238eb",
+        "cropPixels": [
+          90,
+          1137,
+          1310,
+          1840
+        ],
+        "pixelSize": [
+          1220,
+          703
+        ],
+        "sourceOriginalPageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+        "page": 3
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "sourceRevisionSha256": "48154f29ead5dd768337d005273a43815bef736d59857c4415d5306af0d2bb15"
+    }
+  ],
+  "newQuestionVerified": 0,
+  "newAnswerVerified": 0,
+  "newTeachingVerified": 0,
+  "newIndependentEReview": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "status": "ORIGINAL_PIXEL_SOURCE_CANDIDATES_UNRELEASED",
+  "notes": "Source original retained intact. Q09 five-strategy axes and Q10 fishbone + A-D table are original pixels, not AI redrawn. Text corrections remain candidates."
+}
