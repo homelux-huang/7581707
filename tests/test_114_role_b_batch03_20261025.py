@@ -94,6 +94,32 @@ class RoleB114ThirdBatch(unittest.TestCase):
                 self.assertTrue(e["chineseVocabulary"])
                 for v in e["chineseVocabulary"]:
                     self.assertIn(v["level"],("初級","中級","高級"))
+    def test_cambridge_us_ipa_source_and_mixed_accent_regressions(self):
+        expected={
+            "114-00-E-16":("teamwork","/ˈtiːm.wɝːk/","https://dictionary.cambridge.org/pronunciation/english/teamwork"),
+            "114-00-E-17":("offered his seat","/ˈɑː.fɚd hɪz siːt/","https://dictionary.cambridge.org/pronunciation/english/offer"),
+            "114-00-E-18":("lost","/lɑːst/","https://dictionary.cambridge.org/pronunciation/english/lost"),
+        }
+        previously_inconsistent={"/ˈtiːm.wɜːrk/","/ˈɔː.fɚd hɪz siːt/","/lɔːst/"}
+        for row in self.batch["items"]:
+            if row["questionId"] not in expected:
+                continue
+            headword,ipa,url=expected[row["questionId"]]
+            d=load(ROOT/row["path"])
+            matches=[w for w in d["enrichment"]["englishVocabulary"] if w["headword"]==headword]
+            self.assertEqual(len(matches),1)
+            w=matches[0]
+            self.assertEqual(w["ipa"],ipa)
+            self.assertNotIn(w["ipa"],previously_inconsistent)
+            self.assertEqual(w["accent"],"US")
+            self.assertEqual(w["ipaEvidenceUrl"],url)
+            self.assertTrue(w["ipaEvidenceScope"])
+            if row["questionId"]=="114-00-E-17":
+                self.assertIn("offer",w["ipaEvidenceScope"])
+                self.assertIn("不是 Cambridge 直接錄製整個短語",w["ipaEvidenceScope"])
+            self.assertIs(d["review"]["formalReady"],False)
+            self.assertIs(d["review"]["studentReleaseApproved"],False)
+
     def test_no_human_required_but_distinct_ai_e_is_mandatory(self):
         for row in self.batch["items"]:
             d=load(ROOT/row["path"]);r=d["review"]

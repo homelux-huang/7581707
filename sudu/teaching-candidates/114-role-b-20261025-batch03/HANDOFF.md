@@ -1,3 +1,9 @@
+## 2026-10-25 Role E IPA 獨立證據返修（三詞最小差分）
+
+角色 E 對本稿之獨立實質審核 [Issue #36 留言 #6393906377](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393906377) 指出 114 E16/E17/E18 IPA 與 Cambridge 引文所列 UK/US 口音不一致。角色 B 依字典 [teamwork](https://dictionary.cambridge.org/pronunciation/english/teamwork)、[offer](https://dictionary.cambridge.org/pronunciation/english/offer)、[lost](https://dictionary.cambridge.org/pronunciation/english/lost) 所列美式發音修正：E16 teamwork `/ˈtiːm.wɝːk/`、E17 offered his seat `/ˈɑː.fɚd hɪz siːt/`、E18 lost `/lɑːst/`。E17 字典**僅直接列 offer 原形**，offered 過去式 + /d/、his seat 為明示教學推導，絕不誤稱 Cambridge 錄製整句。新增US accent與 IPA 引用範圍，保留 E19/C05 及其他單字。
+
+這是詞彙 `enrichment` 最小差分：原題、原四選項、既有選項詳解、國小白話、sourceRevision、WebP SHA、teachingCanonicalSha256 均未動；三題 composedTeachingSha256、原JSON fileSHA、batch 更新。原版 D 8×2/教學 digest 證據**不可自動沿用**，修改後角色 E 不同作者仍須重核新 SHA，角色 A 官答公告、D 精確V4、MASTER publisher/Pages依序待驗。全批 BLOCKED、READY/LIVE=0，不需真人教師簽章。
+
 # Role B｜114 年第三批5題教學草稿（NO RELEASE）
 
 taskId `B-114-EN16-19-C05-20261025-04`，認領 [Issue #36 記錄](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393757201)，GitHub createdAt `2026-10-25T05:08:19Z`。舊 PR44 HEAD `e0d4532c751127204e73af9cd9d3a95c52449131` 為起點，新教學分支 `teaching/114-role-b-loop-batch03-20261025`；來源 PR21 `9944759e339ef2d3c002042798f7fe696d861d96`。既有12題教學、圖片、OCR、SQLite、V4、發布器、main均未修改。
