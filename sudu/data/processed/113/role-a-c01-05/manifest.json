@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-104-OFFICIAL-BASELINE-20261025-10-C01-05",
+  "year": 113,
+  "paperCode": "00-C",
+  "archivedYearJsonGitBlobSha1": "d800128217347c7c3c9c3ba1d425ef01e8b39946",
+  "sourceIndex": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+  "candidateYearQuestions": 205,
+  "legacyYearQuestionsFound": 196,
+  "sourcePdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+  "answerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+  "pdfRehashStatus": "UNAVAILABLE_NOT_FRESHLY_DOWNLOADED",
+  "originalPage": {
+    "path": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
+    "gitBlobSha1": "6796adb4df977d064baae8a3e066238014d096f6",
+    "sha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+    "page": 2,
+    "pixelSize": [
+      1400,
+      1981
+    ]
+  },
+  "answerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "sha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "page": 1,
+    "pixelSize": [
+      1400,
+      1980
+    ]
+  },
+  "originalPublisherNote": "TCTE website says May 10 2024 final answer meeting; individual correction notice scope not audited",
+  "sourceVisualReviewer": "Role A ChatGPT visual comparison of original full-page pixels; not a human or Role E lesson reviewer",
+  "answerReviewStatus": "ORIGINAL_ANSWER_IMAGE_OBSERVED_CORRECTION_PDF_SCOPE_PENDING",
+  "questions": [
+    {
+      "questionId": "113-00-C-01",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 1,
+      "subject": "國文",
+      "question": "下列文句，何者有錯別字？",
+      "options": [
+        "斟酌損益，改弦易轍",
+        "抓耳撓腮，身形臃腫",
+        "摒息凝視，倏乎消逝",
+        "蓊鬱遠山，橫亙千里"
+      ],
+      "answerCandidate": "C",
+      "officialAnswerCandidate": "C",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp",
+        "sha256": "7530812fb36120a00f1df784da804cb85e8c7cdd03c6eb78fcf886d95625d784",
+        "gitBlobSha1": "e6d80678435bf3f79317722f30dfafebe7378d48",
+        "cropPixels": [
+          90,
+          212,
+          1310,
+          335
+        ],
+        "pixelSize": [
+          1220,
+          123
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "officialAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "originalQuestionContentSha256RecordedOnly": "3f1d92845ecfbf9a6ae821a16b449e1bc06e90031ecddff74e2b9caadf6680cd",
+      "textSource": "Archived original 113 PDF-text layer, no new OCR",
+      "sharedMaterialIds": [],
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+      "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+      "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+      "sourceRevisionSha256": "0d979723a0cfd9f689c135ae84a9e198522d66ddc5ab4d1a5e7221310ba9ed47"
+    },
+    {
+      "questionId": "113-00-C-02",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 2,
+      "subject": "國文",
+      "question": "下列文句的「如」，何者與「他植者雖窺伺傚慕，莫能如也」的「如」意義最接近？",
+      "options": [
+        "縱一葦之所「如」，凌萬頃之茫然",
+        "貓眼黑睛「如」線，此正午貓眼也",
+        "其中往來種作，男女衣著，悉「如」外人",
+        "臣之壯也，猶不「如」人，今老矣，無能為也已"
+      ],
+      "answerCandidate": "D",
+      "officialAnswerCandidate": "D",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp",
+        "sha256": "4504646281047509ea1bd88b68271e79ef3c44f89893ea8331cfd7f2e3e6c73a",
+        "gitBlobSha1": "056ebbd188af62e0934d3eac37938975fd1a518f",
+        "cropPixels": [
+          90,
+          340,
+          1310,
+          530
+        ],
+        "pixelSize": [
+          1220,
+          190
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "officialAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "originalQuestionContentSha256RecordedOnly": "dc617f44b59032ae4700bec262e902771b3bd35a8b7abfe2a53b4dc76d9201cf",
+      "textSource": "Archived original 113 PDF-text layer, no new OCR",
+      "sharedMaterialIds": [],
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+      "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+      "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+      "sourceRevisionSha256": "9f61ff0935d744867ee63ea100e39a8202d63ae540f13a046cbacf68b03c4971"
+    },
+    {
+      "questionId": "113-00-C-03",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 3,
+      "subject": "國文",
+      "question": "「他是鵝蛋臉，臥蠶眉。」句中「鵝蛋」、「臥蠶」用來修飾其後的臉、眉，意指鵝蛋\n  般的臉，臥蠶般的眉。下列「」內的詞，何者有相同用法？",
+      "options": [
+        "沙鷗翔集，「錦鱗」游泳",
+        "月明星稀，「烏鵲」南飛",
+        "寧赴湘流，葬於「江魚」之腹中",
+        "夫秦王有「虎狼」之心，殺人如不能舉"
+      ],
+      "answerCandidate": "D",
+      "officialAnswerCandidate": "D",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp",
+        "sha256": "ef5244f376272eaf43718c33cac84e3585eaa23a3411e11e024fe627536adf79",
+        "gitBlobSha1": "bc0c7056536609d4c57d4b65fabfbc582e4eccac",
+        "cropPixels": [
+          90,
+          535,
+          1310,
+          768
+        ],
+        "pixelSize": [
+          1220,
+          233
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "officialAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "originalQuestionContentSha256RecordedOnly": "60f4cbc1df4f3be14b3100d1fa2043d30ace8fcf164afdda1263fbde646c9420",
+      "textSource": "Archived original 113 PDF-text layer, no new OCR",
+      "sharedMaterialIds": [],
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+      "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+      "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+      "sourceRevisionSha256": "ecad096df5d194a1a98e78dbd0ca5130bd27fbd47d24b7316d0b0caa79b68261"
+    },
+    {
+      "questionId": "113-00-C-04",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 4,
+      "subject": "國文",
+      "question": "依據下文，□內最適合填入的詞語依序為何？\n  對演員來說，聾啞角色雖是限制，也可能是機會。吳慷仁在 《 富都青年 》 中掌握手語節\n  奏與情緒，削弱外放的表演氣質，□□□□，讓無語的角色更顯張力。一場自白口語\n  戲，從平靜到憤怒，從憤怒到悲哀，□□□□，即使無聲也毫不影響情緒傳遞，反而更\n  聚焦於細微表情的情感流轉，極具渲染力，□□□□□。 ( 改寫自彭紹宇〈 《 富都青\n  年 》：關於愛，也關於愛的無能〉 )",
+      "options": [
+        "不拘細行 ／ 層次分明 ／ 脈脈不得語",
+        "不拘細行 ／ 千頭萬緒 ／ 無聲勝有聲",
+        "返璞歸真 ／ 層次分明 ／ 無聲勝有聲",
+        "返璞歸真 ／ 千頭萬緒 ／ 脈脈不得語"
+      ],
+      "answerCandidate": "C",
+      "officialAnswerCandidate": "C",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp",
+        "sha256": "f548f0e5cdfbc3c669dd5ea161128ba5b277a83ed58ef0d044d61c64f5e4c13a",
+        "gitBlobSha1": "40e79cc9de211c79a8bf3a8367093e4f9735cfeb",
+        "cropPixels": [
+          90,
+          770,
+          1310,
+          1080
+        ],
+        "pixelSize": [
+          1220,
+          310
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "officialAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "originalQuestionContentSha256RecordedOnly": "8e674c70384a9332a5868cda0f171331f413cf1ae15289501ebbd17b92df66c3",
+      "textSource": "Archived original 113 PDF-text layer, no new OCR",
+      "sharedMaterialIds": [],
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+      "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+      "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+      "sourceRevisionSha256": "65819ce90089f3b1113b4182ed213e6286a1c99b51a849beaa16c0ea6bd70e61"
+    },
+    {
+      "questionId": "113-00-C-05",
+      "year": 113,
+      "paperCode": "00-C",
+      "originalQuestionNumber": 5,
+      "subject": "國文",
+      "question": "關於下文運用空間事物的寫作手法，何者敘述最適當？\n  從那以後，我就墊著矮凳替母親梳頭，梳那最簡單的鮑魚頭。我點起腳尖，從鏡子裡望\n  著母親。她的臉容已不像在鄉下廚房裡忙來忙去時那麼豐潤亮麗了，她的眼睛停在鏡子\n  裡，望著自己出神，不再是瞇縫眼兒的笑了。我手中捏著母親的頭髮，一綹綹地梳理，\n  可是我已懂得，一把小小黃楊木梳，再也理不清母親心中的愁緒。因為在走廊的那一\n  邊，不時飄來父親和姨娘琅琅的笑語聲。 ( 琦君〈髻〉 )",
+      "options": [
+        "以「從鏡子裡望著母親」的殷切，暗示渴望獲得母親關愛",
+        "以「不像在鄉下廚房裡」的環境對比，暗示母親不耐寂寞",
+        "以「眼睛停在鏡子裡」的失神，暗示母親的行為不近人情",
+        "以「走廊的那一邊」相隔甚遠，暗示母親與父親內心疏離"
+      ],
+      "answerCandidate": "D",
+      "officialAnswerCandidate": "D",
+      "answerMatchedLegacy": true,
+      "answerVerified": false,
+      "questionVerified": false,
+      "teachingVerified": false,
+      "studentReady": false,
+      "asset": {
+        "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp",
+        "sha256": "ff1f548bead9b1850688f99b74e1946e2a2e0f5f1c83b299b5002801a51e9cd3",
+        "gitBlobSha1": "8112af81a1c61f07de5b3649dd771cf254218b32",
+        "cropPixels": [
+          90,
+          1085,
+          1310,
+          1450
+        ],
+        "pixelSize": [
+          1220,
+          365
+        ],
+        "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
+      },
+      "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+      "officialAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+      "originalQuestionContentSha256RecordedOnly": "52d18bc64356278a8f013813a3d34e631a58b2710e8ce6a71f7c0ecc7447dd7c",
+      "textSource": "Archived original 113 PDF-text layer, no new OCR",
+      "sharedMaterialIds": [],
+      "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+      "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+      "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+      "sourceRevisionSha256": "232ee18447551bd6e8c7b46ad4d4984a9ec766881bf8e224aed2d16ca3ae399f"
+    }
+  ],
+  "partialCandidateRows": 5,
+  "readyNew": 0,
+  "liveNew": 0,
+  "questionVerified": false,
+  "answerVerified": false,
+  "independentEReview": false,
+  "uiQaVerified": false
+}
