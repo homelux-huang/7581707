@@ -225,8 +225,7 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
     assert.notEqual(hovered,original,'desktop option hover has no visual color response');
   }
   const wrong=q.answer==='A'?'B':'A';
-  await act(option.locator('[data-a="'+wrong+'"]').first().count()?option.locator('[data-a="'+wrong+'"]').first():
-    page.locator('#answerCard .opt[data-a="'+wrong+'"]'),touch);
+  await act(page.locator('#answerCard .opt[data-a="'+wrong+'"]'),touch);
   await page.locator('#answerCard .option-detail').first().waitFor({timeout:15000});
   assert.equal(await page.locator('#answerCard .option-detail').count(),4,
     'all four true answer explanations must appear');
