@@ -38,7 +38,7 @@ main{max-width:900px;margin:auto;padding:18px 14px 38px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;margin-bottom:14px;min-width:0}#questionCard{background:var(--question-bg);border-color:color-mix(in srgb,var(--blue) 32%,var(--line));box-shadow:0 10px 28px rgba(49,93,245,.06)}
 #answerCard{background:var(--option-section);border-color:#c8a76b}#answerCard>h2{font-size:22px;margin-bottom:14px}.qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
 .pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:14px;background:var(--bg)}
-h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} h2{font-size:25px;margin:0 0 12px}
+h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} .official-english-stem{white-space:pre-wrap;overflow-wrap:anywhere} h2{font-size:25px;margin:0 0 12px}
 .options{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:21px;background:var(--option-section)} .opt{width:100%;display:flex;gap:13px;align-items:flex-start;text-align:left;border:1px solid var(--line);background:var(--option-bg);color:var(--text);border-radius:18px;padding:15px 17px;min-height:66px;font-size:20px;line-height:1.28;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
 @media(hover:hover) and (pointer:fine){ .opt:not(.correct):not(.wrong):hover{background:var(--option-hover);border-color:var(--option-hover-border);transform:translateY(-2px);box-shadow:0 9px 22px rgba(49,93,245,.16)} .opt:not(.correct):not(.wrong):hover .letter{border-color:var(--option-hover-border);background:color-mix(in srgb,var(--option-hover-border) 12%,var(--option-bg))}}
 
@@ -368,12 +368,36 @@ function formatStudyValue(q,key,value){
   // The Demo sample is keyed by QUESTION NUMBER, not year or canonical ID.
   // Never substitute a 115 Demo sample for another year's real exam question.
   // Use only this admitted question's author-reviewed text and highlights.
+  // Mark only substrings that ACTUALLY occur in this annual sentence.
+  // One annual question can have several source keywords: using find() would
+  // silently hide the exam word whenever a different keyword occurred first.
   const terms=Array.isArray(q.highlights)?q.highlights.filter(t=>typeof t==='string'&&t.trim()):[];
-  const term=terms.find(t=>text.toLowerCase().includes(t.toLowerCase()));
-  const at=term?text.toLowerCase().indexOf(term.toLowerCase()):-1;
-  const safe=at<0?esc(text):esc(text.slice(0,at))+
-   '<mark class="exam-highlight">'+esc(text.slice(at,at+term.length))+'</mark>'+esc(text.slice(at+term.length));
-  return '<span class="news-en">'+safe+'</span>';
+  const lower=text.toLowerCase(),positions=[];
+  for(const term of new Set(terms)){
+   const needle=term.toLowerCase();
+   let offset=0,index=lower.indexOf(needle,offset);
+   while(index>=0){
+    positions.push({from:index,to:index+term.length});
+    offset=index+Math.max(1,term.length);
+    index=lower.indexOf(needle,offset);
+   }
+  }
+  positions.sort((a,b)=>a.from-b.from||b.to-a.to);
+  let safe='',offset=0;
+  for(const item of positions){
+   if(item.from<offset)continue; // Never overlap nested source highlights.
+   safe+=esc(text.slice(offset,item.from))+
+    '<mark class="exam-highlight">'+esc(text.slice(item.from,item.to))+'</mark>';
+   offset=item.to;
+  }
+  safe+=esc(text.slice(offset));
+  // The matching annual candidate's Chinese sentence belongs in the same
+  // existing guide field. guideEntries() already removes its separate title;
+  // never silently discard that translation or borrow Demo news by q.id.
+  const zh=q.extra?.['新聞時事中文翻譯'];
+  const bilingual=hasStudyValue(zh)&&!text.includes(zh)?
+    '<span class="news-zh"><b>中文：</b>'+esc(zh)+'</span>':'';
+  return '<span class="news-en">'+safe+'</span>'+bilingual;
  }
  if(q.subject==='英文'&&key==='新聞時事例句'){
   const news=((window.DEMO_LEARNING_CONFIG||{}).englishNewsExamples||{})[String(q.id)];
@@ -471,7 +495,10 @@ function renderQuestion(){
   const L=LETTERS[i]; let cls='opt'; if(r.status&&L===q.answer)cls+=' correct'; if(r.status==='bad'&&L===r.selected)cls+=' wrong';
   const wrapCls='option-wrap'+(r.status&&L===q.answer?' correct-wrap':''); optionsHtml+='<div class="'+wrapCls+'"'+(r.status&&L===q.answer?' id="correctAnswer"':'')+'><button class="'+cls+'" data-a="'+L+'"><span class="letter">'+L+'</span><span class="opt-body"><span class="opt-text">'+esc(o)+'</span></span></button>'+(r.status?renderOptionDetail(q,L):'')+'</div>';
  });
- $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img+sourceTableForStudent(q);
+ // Only verified-year English original cloze questions preserve source whitespace.
+ // Demo35 and other subjects retain their original V4 typography.
+ const stemAttrs=q.canonicalId&&q.subject==='英文'?' class="official-english-stem"':'';
+ $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1'+stemAttrs+'>'+esc(q.question)+'</h1>'+img+sourceTableForStudent(q);
  $('answerCard').innerHTML='<h2>答案選項</h2><div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
  renderGuide();
