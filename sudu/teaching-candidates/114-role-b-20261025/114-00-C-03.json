@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-03",
+  "subject": "國文",
+  "answer": "D",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "81a17175e7e4d87b278b568068aff54b8352a9e564b618d63171ff88163223aa",
+    "questionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-03.webp",
+    "webpSha256": "728a96a170e8d07ad9ce20e02c668dad0cf13942e4f9de6764a755bd8703e8a8",
+    "sourcePageWebpSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+    "baseTeachingEvidencePath": null,
+    "baseTeachingGitBlobSha": null,
+    "baseTeachingCanonicalSha256": null,
+    "existingHistoricalPrekeySolveEvidence": null,
+    "sourceEvidenceStatus": "INDIVIDUAL_FINAL_ANSWER_IMAGE_QA_PENDING"
+  },
+  "teaching": {
+    "topic": "國文文言詞義｜『類』表示相似或種類",
+    "teacherSummary": "『類出國』不是正式出境，而是『像出國』。D『有類橐駝者』中的『類』亦為相似之意；A、B、C 都在描述事物種類或類別，故選 D。",
+    "elementarySummary": "『類出國』就是『像出國』；古文說『有類橐駝者』就是『有點像駱駝』，兩個『類』意思一樣。",
+    "concept": "判斷多義字時要看上下文：『類』可指近似（類出國）也可指種類（品類）。",
+    "extension": "『病僂，隆然伏行，有類橐駝者』意指背曲而彎身行走，外貌像駱駝；不要把『類』當分類。",
+    "memory": "像出國＝像駱駝 → D 的『類』都表示『相似』。",
+    "source": "114 統測國文原題、文字選項及單題原圖；文言篇章之教材版本／頁碼待核對。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "錯誤。『菜蔬稻稗之類』中的類指各種蔬菜、稻穀等『種類』。",
+        "elementary": "這是在分食物種類，不是說看起來像誰。",
+        "reason": "類＝種類。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "錯誤。『品類之盛』是萬物種類繁多，類為『類別』。",
+        "elementary": "宇宙裡東西有很多種，不是像出國的像。",
+        "reason": "類＝種類。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "錯誤。『群類』泛指群體或同類，類屬分類關係。",
+        "elementary": "很多同一群的東西，是『一類』的意思。",
+        "reason": "類＝同類／類別。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "正確。『有類橐駝者』是『看起來像駱駝』，與類出國的類同為『相似』。",
+        "elementary": "像駱駝、像出國，都在說『很像』。",
+        "reason": "類＝相似。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "類出國",
+      "有「類」橐駝者",
+      "品「類」之盛"
+    ]
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "類出國",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "「類」",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "群「類」",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "有「類」橐駝者",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "類出國",
+        "level": "初級",
+        "meaning": "形式像出國，實際沒有入境別國"
+      },
+      {
+        "term": "品類",
+        "level": "中級",
+        "meaning": "各種事物或生物的種類"
+      },
+      {
+        "term": "橐駝",
+        "level": "高級",
+        "meaning": "駱駝；古文常用詞"
+      }
+    ],
+    "semanticContrast": {
+      "similarity": "好像、近似（類出國／有類橐駝者）",
+      "category": "種類、類別（稻稗之類／品類／群類）"
+    }
+  },
+  "composedTeachingSha256": "eda76bec43fe53cd663328dbc46d2ad428d4a74bc14d014f75d25ad4b19f09e2",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": false,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "INDEPENDENT_OFFICIAL_FINAL_ANSWER_IMAGE_QA_PENDING",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "EXACT_V4_UI_CONTENT_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}
