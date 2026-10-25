@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-03",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 3,
+  "subject": "英文",
+  "status": "SOURCE_BOUND_AUTHOR_DRAFT_NOT_RELEASED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "c7e7262a3d5283d547f1dda35f1070c21d432314069286b305265aad9fa8977e",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py:text_revision JSON sorted UTF-8 question+options+singleQuestionWebpSha256 excludes answer",
+  "question": "The teacher treats all her students                     , giving every student the same opportunity to\n    succeed.",
+  "options": [
+    "carelessly",
+    "equally",
+    "instantly",
+    "silently"
+  ],
+  "answerCandidate": "B",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-03.webp",
+  "imageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalPageWebpSha256": "0ae3b4495aa79c71248e8b554494009d13b24086f0c23fa1a8fd9a32e44ff68c",
+  "imageManifestQaStatus": "PASS",
+  "sourceImageBytesRehashedThisSession": false,
+  "teaching": {
+    "teacherSummary": "**treats** 是動詞，空格需放修飾動詞的**副詞**。由 **every student the same opportunity** 可知老師給每個學生相同機會，選 **equally（一視同仁地）**；相同機會不一定代表每人最終成績相同。",
+    "elementarySummary": "老師讓每個小朋友都有機會回答、學習，不因為喜歡誰就偏心，所以叫 **equally**，也就是公平地對待。",
+    "memory": "**same opportunity → equally**；公平給機會，不等於結果全一樣。",
+    "concept": "英文**副詞修飾動詞**：treat + someone + equally；題目的 same opportunity 是判斷意義的主要線索。注意 equally 強調同等對待，而不是保證同樣結果。",
+    "extension": "反向思考：若改成「The teacher gives more opportunities only to her favorites」，便不是 **equally**；想一想『公平提供機會』和『強迫成績都一樣』有什麼不同。",
+    "source": {
+      "originalExam": "115-00-E-03",
+      "originalImagePinnedSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+      "officialAnswerPortal": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+      "candidateOfficialAnswerPdf": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLWUtc3RhbmRhcmQucGRm",
+      "textbook": "彰化高商適用英文教材之版本、單元、章節與頁數待核對",
+      "textbookVersion": "待核對",
+      "textbookChapter": "待核對",
+      "textbookPage": "待核對",
+      "officialIssueExplanation": "英文科官方最終答案及確認說明已有既存核實證據（official-final-evidence-20261023.json）；此輪未重下官方PDF，教學及UI仍待完整獨立QA。",
+      "officialFinalVerification": "官方現行答案及確認說明已核對；見 official-final-evidence-20261023.json。既有待查文字保留為歷史，教學與UI驗收仍待完成。"
+    },
+    "highlightTerms": [
+      "treats",
+      "equally",
+      "the same opportunity"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "**carelessly** 是粗心地。老師粗心處理學生事務，不代表將每人視為相同；與 same opportunity 的正面公平線索衝突。",
+        "elementary": "粗心會忘東忘西，不是公平對大家。",
+        "reason": "**carelessly** 是粗心地。老師粗心處理學生事務，不代表將每人視為相同；與 same opportunity 的正面公平線索衝突。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "**equally** 表同等地、公平地；treat all students equally 是固定而自然的搭配，呼應每人有同樣機會。",
+        "elementary": "每個人都輪得到，不偏心，就是 equally。",
+        "reason": "**equally** 表同等地、公平地；treat all students equally 是固定而自然的搭配，呼應每人有同樣機會。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "**instantly** 是立即地，只描述速度，不說明學生是否獲得同等機會。",
+        "elementary": "做得很快不一定公平。",
+        "reason": "**instantly** 是立即地，只描述速度，不說明學生是否獲得同等機會。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "**silently** 是安靜地，描述聲音方式；就算老師很安靜，也不能證明一視同仁。",
+        "elementary": "不說話和對大家公平是兩回事。",
+        "reason": "**silently** 是安靜地，描述聲音方式；就算老師很安靜，也不能證明一視同仁。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "這位老師一視同仁地對待所有學生，讓每位學生都有相同的成功機會。",
+      "answerWord": "equally",
+      "pronunciationIPA": "/ˈiː.kwə.li/",
+      "optionMeaningZh": {
+        "A": "粗心地",
+        "B": "平等地／一視同仁地",
+        "C": "立即地",
+        "D": "安靜地"
+      },
+      "synonyms": {
+        "初級": [
+          "fairly（公平地）"
+        ],
+        "中級": [
+          "evenly（均等地）"
+        ],
+        "高級": [
+          "impartially（不偏袒地）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "unfairly（不公平地）"
+        ],
+        "中級": [
+          "unequally（不平等地）"
+        ],
+        "高級": [
+          "preferentially（偏向某一方地；語境相反）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "同／反意詞僅作語境教學，分級是本課程的教學難度，不等於官方CEFR評定。evenly 偏向數量均分，不能在所有『平等對待』情境直接替換 equally；preferentially 有時依語境而非一律反義。",
+      "exampleEnglish": "The coach treated every player equally during practice.",
+      "exampleChinese": "教練在練習時一視同仁地對待每位球員。",
+      "exampleHighlightedSurfaceForm": "equally",
+      "exampleType": "自行撰寫的教學例句（非新聞）",
+      "newsExampleStatus": "SOURCE_VERIFIED_NEWS_CONTEXT__ORIGINAL_PEDAGOGICAL_PARAPHRASE",
+      "newsExampleEnglish": "In September 2026, UN Women called for decision-making power to be shared equally with women.",
+      "newsExampleChinese": "2026年9月，聯合國婦女署呼籲讓女性平等分享決策權。",
+      "newsExampleHighlightedSurfaceForm": "equally",
+      "newsExampleSourceUrl": "https://www.un.org/en/desa/one-in-three-institutions-built-to-advance-gender-equality-stripped-of-power-in-just-two-years-new-un-report-reveals",
+      "newsExampleSourceTitle": "Gender Snapshot 2026 press release",
+      "newsExampleSourceOrganization": "United Nations / UN Women",
+      "newsExampleSourceDate": "2026-09-17",
+      "newsExampleKind": "根據近三年可信賴的報告／新聞自行改寫的英文教學句，非來源逐字引述",
+      "newsExampleSourceScope": "UN/UN Women calls for political and economic decision-making power to be shared more equally"
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316",
+  "legacyTeaching": {
+    "path": "sudu/teaching-drafts/preview-128-20261023/115-00-E-03.json",
+    "ref": "draft/preview-128-explanations-20261023",
+    "blobSha": "2ab1d99950159cd09b6f903d199d59011901ff75",
+    "previousSourceDataCommit": "5b8cf76cab16e0121d819a5654473c5c1e9f3678",
+    "unchangedTeachingJson": true,
+    "oldClaimsOfTeacherOrAnswerApprovalNotRevalidated": true
+  },
+  "review": {
+    "author": "GPT-6 Role C (legacy teaching reuse + source bind, not new blind solve)",
+    "answerAlreadyKnown": true,
+    "newBlindSolveClaimed": false,
+    "externalIndependentReview": "PENDING",
+    "authorizedHumanTeacherApproval": "PENDING",
+    "officialFinalAdmission": "PENDING",
+    "formalImageSourceQa": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_NOTICE_AND_SOURCE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_APPROVAL_AND_SIGNATURE_PENDING",
+    "CURRENT_EXACT_TEACHING_DIGEST_V4_8x2_UI_PENDING"
+  ]
+}
