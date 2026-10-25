@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-01",
+  "subject": "國文",
+  "answer": "A",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "333b6ce5199af42fcec6ca78422b7af6af520925441d07a80f5866b9a6d3cf08",
+    "questionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpPath": "sudu/data/processed/114/qa-drafts/webp-v2/00-C/114-00-C-01.webp",
+    "webpSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+    "sourcePageWebpSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+    "baseTeachingEvidencePath": null,
+    "baseTeachingGitBlobSha": null,
+    "baseTeachingCanonicalSha256": null,
+    "existingHistoricalPrekeySolveEvidence": null,
+    "sourceEvidenceStatus": "INDIVIDUAL_FINAL_ANSWER_IMAGE_QA_PENDING"
+  },
+  "teaching": {
+    "topic": "國文字形｜無量與無諒",
+    "teacherSummary": "題目要找錯別字。A『功德無諒』把表示數量不可估計的『量』誤寫為表示體諒的『諒』，正確應是『功德無量』；其餘選項詞形正確。",
+    "elementarySummary": "『很多很多，多到算不出來』要寫『無量』，不是『原諒』的『諒』，所以 A 有寫錯字。",
+    "concept": "量＝衡量、數量；諒＝體諒、諒解，讀音相近而字義不同。",
+    "extension": "『功德無量』是固定搭配；要靠整句意思辨識同音形近字。",
+    "memory": "功德多得數不清 → 『無量』的量，不能寫『諒』。",
+    "source": "114 統測國文原題及單題 WebP 目視 QA；官方最終答案影像個別核對、教材版本與頁碼待核對。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確，是有錯字的選項：『無諒』應作『無量』，表示功德不可估量。",
+        "elementary": "把原諒的『諒』錯放在數量的『量』位置。",
+        "reason": "用錯同音形近字。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "錯誤，『豐饒』形容物產豐富，『饑饉』表示荒年缺糧，兩詞字形皆正確。",
+        "elementary": "有很多東西叫豐饒，沒糧食叫饑饉，字沒有寫錯。",
+        "reason": "固定詞語字形正確。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "錯誤，『千頭萬緒』指事情線索紛繁，與『意念紛雜』相應，沒有錯別字。",
+        "elementary": "想法好多條線纏在一起，正是千頭萬緒。",
+        "reason": "成語字形與語義正確。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "錯誤，『倨傲』指傲慢，『招搖過市』為公開炫耀走過街市，兩詞字形皆正確。",
+        "elementary": "態度驕傲、故意引人注意，這些字都寫對。",
+        "reason": "形容詞與成語字形無誤。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "功德無諒",
+      "豐饒",
+      "饑饉",
+      "千頭萬緒",
+      "倨傲"
+    ]
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "錯別字",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "功德無諒",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "饑饉",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "千頭萬緒",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "倨傲",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "攢錢",
+        "level": "初級",
+        "meaning": "把錢慢慢存起來"
+      },
+      {
+        "term": "千頭萬緒",
+        "level": "中級",
+        "meaning": "事情或想法很多，線索複雜"
+      },
+      {
+        "term": "倨傲",
+        "level": "高級",
+        "meaning": "態度傲慢、不謙遜"
+      }
+    ],
+    "correction": {
+      "originalForm": "功德無諒",
+      "correctForm": "功德無量",
+      "wrongCharacter": "諒",
+      "rightCharacter": "量",
+      "explanation": "『無量』表示無法估量；『諒』表示體諒、諒解，不能代替『量』。"
+    }
+  },
+  "composedTeachingSha256": "a045a01ed5eebcfb05a8ab0aa1b873f73ff10a1eacf5b1ffe3ffe8b90d990bf1",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": false,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "INDEPENDENT_OFFICIAL_FINAL_ANSWER_IMAGE_QA_PENDING",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "EXACT_V4_UI_CONTENT_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}

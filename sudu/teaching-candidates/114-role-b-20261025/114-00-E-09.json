@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-09",
+  "subject": "英文",
+  "answer": "D",
+  "kind": "PRESERVE_BASE_AND_ENRICH",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-09.webp",
+    "webpSha256": "393dbdbfbd59220a18fd11d2c09d1b07cd9daf5816d32bbe91a6ec1a335c204b",
+    "sourcePageWebpSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-09-teaching.json",
+    "baseTeachingGitBlobSha": "bcc92961d5b180fe89fa0b8a138b9c72cd3757fd",
+    "baseTeachingCanonicalSha256": "f9d0ee9f2aea79c8baebbcca7d1214b636b8612ccd97f62b699f9f28af220f01",
+    "existingHistoricalPrekeySolveEvidence": "sudu/data/processed/114/review-evidence/114-00-E-09-blind.json",
+    "sourceEvidenceStatus": "PR21_INDIVIDUAL_SOURCE_AND_FINAL_ANSWER_AI_QA_EXISTS"
+  },
+  "teaching": null,
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "introduced herself again",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "Apparently",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "obviously",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "Apparently",
+        "ipa": "/əˈpær.ənt.li/",
+        "level": "中級",
+        "meaningZh": "看來、據所知；說話者根據線索作推測",
+        "synonyms": [
+          "seemingly",
+          "from what it appears"
+        ],
+        "antonyms": [
+          "certainly",
+          "definitely"
+        ],
+        "usageNote": "選項 obviously 是最接近的考題答案，但 obviously 通常較肯定，apparently 常保留資訊來源與推測語氣，不能在所有句子中直接互換。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/apparently"
+      }
+    ],
+    "newsExample": {
+      "kind": "SELF_WRITTEN_NEWS_CONTEXT_EXAMPLE",
+      "english": "Fans lined the streets during the team's Taipei parade. Apparently, many people were eager to celebrate the Premier12 title.",
+      "chinese": "台灣隊在台北遊行時，球迷站滿街道。看來很多人都很想慶祝十二強冠軍。",
+      "highlightActualForm": "Apparently",
+      "source": {
+        "publicationDate": "2024-11-26",
+        "title": "Fans cheer as Taiwan’s baseball team parades in Taipei",
+        "url": "https://t.media/2698863?from=sports_content_pack",
+        "factSupportedBySource": "新聞報導球迷沿街歡迎台灣隊並慶祝奪冠；apparently 的推測表述由教材作者自編"
+      },
+      "notAnArticleQuote": true,
+      "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
+    }
+  },
+  "composedTeachingSha256": "56d8304cf2b15079b5120c7316a0862681a19d5726b9bdf43631b6a28fab7557",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": true,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "NEW_ENRICHMENT_NOT_IN_PRIOR_UI_OR_TEACHING_APPROVAL",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}
