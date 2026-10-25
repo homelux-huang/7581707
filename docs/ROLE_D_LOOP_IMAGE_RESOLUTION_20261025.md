@@ -35,3 +35,10 @@
 - 115英文只含28張image-preview-only，完整矩陣448case，沒有可作答教學題，不能提升教學UIQA。115數學B既有5題可作答＋25張預覽，完整應480case；精確提交診斷在第一題的計算重複檢查失敗，已隔離並轉最小修復，沒有改內容或期望答案。
 - 真實HTML的alignGuideToCorrectAnswer會用target.after(guide)把唯一guide放入answerCard內。測試原先要求整個answerCard內0條計算，誤把正常guide視為重複。修正要求：唯一guide、全部來源步驟逐條一致、option-detail內0條計算、整頁計算步驟數恰等於來源行數。真重複仍會失敗；既有V4位置維持不變。
 - VSCODE-05租約以Issue36留言為準，基底74f26f1；修改僅本matrix與本交接。須重跑最後精確SHA，舊成功不冒用至新的測試版本。
+
+## D-OPTION-METADATA-CONTRACT-20261025-VSCODE-06
+
+- 基底 `c8d694ff049a98cad25fe6f00985220277ff9770`；租約 `6393666197`。該精確MathB診斷已越過計算重複誤判，前3題跨12個profile完成36case，之後MB05的boolean isCorrect被當成顯示字串而失敗。已停止同類重試，完整480case尚未通過。
+- 新helper嚴格要求teacher/elementary/reason為非空字串並逐字核對。可選isCorrect必須是boolean且等於該選項是否正解；字串true/false、數字/null、衝突布林、未知欄位或缺文字皆拒絕。metadata仍包含在原始教學digest中，不把false改成畫面占位字。
+- contract負測PASS5，包含歷史5題全部20個選項。新增CI觸發與負測，報告綁定optionContractSha256。source/lesson/HTML/runtime及發布門檻不變。
+- 先前115英文精確74f26f1完整448/448 image-preview-only PASS／448截圖，approvedRows=0；此成功不提升新題教學UIQA，不移用為本批新測試版本的正式證書。最終SHA CI及MathB完整480case須實際核對。

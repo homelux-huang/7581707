@@ -10,6 +10,8 @@ on:
       - 'tests/sudu_role_d_per_question_browser.cjs'
       - 'tests/sudu_role_d_image_source.cjs'
       - 'tests/sudu_role_d_image_source.test.cjs'
+      - 'tests/sudu_role_d_option_detail.cjs'
+      - 'tests/sudu_role_d_option_detail.test.cjs'
       - 'docs/ROLE_D_V4_DEMO_35_BASELINE_20261025.json'
       - '.github/workflows/sudu-role-d-per-question-ui-qa.yml'
   workflow_dispatch:
@@ -83,6 +85,7 @@ jobs:
           python scripts/sudu_verified_publish.py check
           python scripts/build.py
           node --test tests/sudu_role_d_image_source.test.cjs
+          node --test tests/sudu_role_d_option_detail.test.cjs
           python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/role-d-http.log 2>&1 &
           server=$!
           trap 'kill "$server"' EXIT

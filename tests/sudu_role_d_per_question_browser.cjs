@@ -10,6 +10,7 @@ const crypto=require('node:crypto');
 const cp=require('node:child_process');
 const {chromium}=require('playwright');
 const {resolveOriginal,inlineBytes,webp}=require('./sudu_role_d_image_source.cjs');
+const {visibleOptionFields}=require('./sudu_role_d_option_detail.cjs');
 
 const ROOT=process.cwd();
 const BASE=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
@@ -56,6 +57,7 @@ const report={
   baselineSha256:fileHash('docs/ROLE_D_V4_DEMO_35_BASELINE_20261025.json'),
   browserTestSha256:fileHash('tests/sudu_role_d_per_question_browser.cjs'),
   imageResolverSha256:fileHash('tests/sudu_role_d_image_source.cjs'),
+  optionContractSha256:fileHash('tests/sudu_role_d_option_detail.cjs'),
   approvedJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/'+YEAR+'.json'),
   previewJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/preview/'+YEAR+'.json'),
   approvedSourceRevision:approved?.sourceSha||null,
@@ -267,7 +269,7 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
       const x=page.locator('#answerCard .opt[data-a="'+letter+'"] + .option-detail');
       check(await x.count()===1,'missing separate option detail '+letter);
       const actual=(await x.innerText()).replace(/\s+/g,'');
-      for(const [name,value] of Object.entries(detail)){
+      for(const [name,value] of visibleOptionFields(detail,letter,q.answer)){
         check(actual.includes(String(value).replace(/反向檢查/g,'相反意思').replace(/\s+/g,'')),
           letter+' '+name+' exact teaching text differs from source');
       }
