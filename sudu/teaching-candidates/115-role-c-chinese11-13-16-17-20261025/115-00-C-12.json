@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-C-12",
+  "year": 115,
+  "paperCode": "00-C",
+  "originalQuestionNumber": 12,
+  "subject": "國文",
+  "taskId": "C-115-C11-13-C16-17-DUAL-LEVEL-20261025-05",
+  "claimedAtUtc": "2026-10-25T05:20:54Z",
+  "status": "ROLE_C_AUTHOR_DRAFT_PENDING_DISTINCT_AI_AND_ORIGINAL_SOURCE",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "coordinatorLedgerBlobSha": "3e2f07f8b9e1c6cd64ec18d50d27b868a1c5cfb6",
+  "question": "關於甲、乙二文寫作內容與手法的比較，何者正確？",
+  "options": [
+    "甲文的臨終者住院兩週後返家，乙文的臨終者住院六天後返家",
+    "甲、乙二文均透過醫護人員在救護車上的作為，呈現照護的用心",
+    "甲文主要寫臨終者返家後的情形，乙文主要寫送臨終者返家的路程",
+    "甲、乙二文均藉親屬商議、宗教儀式規劃等細節，襯托治喪事宜繁雜"
+  ],
+  "answerCandidate": "C",
+  "answerAlreadyKnownBeforeAuthorReasoning": true,
+  "newBlindSolveClaimed": false,
+  "sourceTextRevision": "c4e6891c02cd68e3b0af38b178cbd96a9453b057fc88092398fd03af9bc3fa92",
+  "sourceRevisionMethod": "publisher text_revision SHA256 sorted UTF8 JSON: question/options/singleQuestionWebpSha256; answer excluded",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": true,
+  "sourceImageQuestionRecordQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "sourceImageManifestQa": "PASS",
+  "image": "sudu/data/processed/115/webp-v2/00-C/115-00-C-12.webp",
+  "imageSha256": "ac9b20198dea3530262fa9c35b2ecd46e17d1ef8a05a705d2c4255a243dc7f5e",
+  "imageOriginalQuestionPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "originalImageBytesRehashedThisSession": false,
+  "sharedMaterial": {
+    "id": "115-00-C-SHARED-11-15",
+    "sourceText": "▲閱讀下文，回答第11-15 題\n【甲】\n  不到兩個禮拜的時間，粉娘又不省人事，急急地被送到醫院。醫院對上一次的迴光能\n拖這麼久，表示意外神奇。不過這一次醫院又說，還是快點回去，恐怕時間來不及在家裡\n過世。\n  粉娘又彌留在廳頭。隨救護車來的醫師按她的脈搏，聽聽她的心跳，用手電筒看她的\n瞳孔。他說：「快了。」\n  炎坤請人到么女的高中學校，用機車把她接回來，要她打電話連絡親戚。大部分的親\n戚都要求跟炎坤直接通話。\n  「會不會和上一次一樣？」\n  「我做兒子的當然希望和上一次一樣，但是這一次醫生也說了，我也看了，①大概天\n不從人願吧。」炎坤說。②對方言語支吾，炎坤又說，「你是內孫，父親又不在，你一定\n要回來。上次你們回來，老人家高興得天天唸著。」\n  幾乎每一個要求跟炎坤通話的，都是類似這樣的對答。而對方想表示即時回去有困\n難，又不好直說。結果，六個也算老女人的女兒輩都回來了，在世的三個兒子也回來，孫\n子輩的內孫外孫，沒回來的較多，曾孫都被拿來當年幼，又被他們的母親拿來當著需要照\n顧他們的理由，全都沒回來了。（黃春明〈死去活來〉）\n\n\n【乙】\n  我們到的時候，那些插到你身體的管子和儀器都拔掉了。僅留你左邊鼻孔拉出的一條\n管子，與一只虛妄的兩公升保特瓶連結。名義上說，留著一口氣，回到家裡了。\n  那是你以前最愛講的冷笑話――聽到救護車的鳴笛，要分辨一下啊，如果是有醫〜有\n醫〜，就要趕快讓路；如果是無醫〜無醫〜，就不用讓了。一干親戚朋友被你逗得哈哈大\n笑時，往往只有我敢挑戰你：如果是無醫，幹嘛還要坐救護車？要送回家啊！你說。所\n以，我們與你一起坐上救護車，回家。名義上說，子女有送你最後一程了。\n  上車後，救護車司機平板的聲音問：小姐你家是拜佛祖還是信耶穌的？我會意不過\n來，司機更直白一點：你家有沒有拿香拜拜啦？我僵硬點頭。司機倏地把一捲卡帶翻面推\n進音響，南無阿彌陀佛。那另一面是什麼？難道哈利路亞？我知道我人生最荒謬的一趟旅\n程已經啟動。（③無醫〜無醫〜）\n  我好想把我看到的告訴你。男護士正規律地一張一縮壓著保特瓶，你的偽呼吸。相對\n於前面六天你受的各種複雜又專業的治療，這一最後步驟的名稱，顯得平易近人許多。\n  這叫做，最後一口氣。\n  到家。荒謬之旅的導遊旗子交棒給葬儀社、道士以及左鄰右舍。（有人斥責，怎不趕\n快說，爸我們到家了。我們說，爸我們到家了。）男護士取出工具，抬手看錶，來！大家\n對一下時喔，十七點三十五分好不好？好不好？我們能說什麼？好。④我們說好。我們竟\n然說好。（改寫自劉梓潔〈父後七日〉）\nˉ",
+    "textSha256": "91e2590c9635d351a571798124867ad02d3b8ccae8ee530233dbf9cbc7f41f5f",
+    "image": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp",
+    "imageSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sourcePage": 4,
+    "sharedMaterialRevision": "9d0735b8c397d8a9c384410e13eb5b83e60b32becd5022cc5f6c69092c08d18f",
+    "originalSharedWebpBytesRehashedThisSession": false
+  },
+  "teaching": {
+    "teacherSummary": "甲文重點落在**粉娘返家彌留後**，醫師確認、炎坤通知親戚、兒女趕回；乙文重點則在**陪父親由醫院乘救護車返家**，包含司機詢問信仰、佛號卡帶及男護士維持「最後一口氣」的荒謬感。主軸比較選 **C**。時間、醫護作為與治喪安排不能張冠李戴。",
+    "elementarySummary": "甲故事是在寫奶奶被送回家後，家人怎麼通知親戚、大家怎麼趕回；乙故事重點是小孩陪爸爸搭救護車回家的過程，所以選C。",
+    "memory": "**甲重「返家後」；乙重「返家途中」＝C。**",
+    "concept": "比較敘事手法時可畫出**事件地點**與**文章主要篇幅**，辨識哪些是核心敘事、哪些只是路程或時間的細節。",
+    "extension": "「不到兩個禮拜」不是住院天數，是粉娘經前一次病危後**不到兩個禮拜再度不省人事**；資訊題需判清修飾對象。",
+    "highlights": [
+      "粉娘又彌留在廳頭",
+      "通知親戚",
+      "六個女兒輩都回來",
+      "一起坐上救護車",
+      "荒謬之旅"
+    ],
+    "chineseLevelVocabulary": {
+      "初級": [
+        "彌留：生命最後、意識不清的狀態"
+      ],
+      "中級": [
+        "敘事重心：一篇文章花力氣寫的主要事件"
+      ],
+      "高級": [
+        "時空對照：比較敘事的時間順序與情境轉換"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A誤把甲文「**不到兩個禮拜的時間**」讀為住院兩週。該句指前次危急後不到兩週又不省人事；乙文確有「前面六天」治療，但不足以讓整組說法成立。",
+        "elementary": "甲是說不到兩個禮拜又生病，不是說住院兩個禮拜；雖然乙提到六天，A還是不對。",
+        "reason": "A誤把甲文「**不到兩個禮拜的時間**」讀為住院兩週。該句指前次危急後不到兩週又不省人事；乙文確有「前面六天」治療，但不足以讓整組說法成立。",
+        "sourceEvidence": "甲文：不到兩個禮拜的時間，粉娘又不省人事；乙文：相對於前面六天你受的各種複雜又專業的治療。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B說**兩文都用救護車上醫護行動呈現照護用心**不符。甲文醫師隨救護車到家檢視脈搏、心跳後說「快了」；乙文男護士按壓瓶子形成「偽呼吸」，凸顯荒謬與無奈，不是共同歌頌醫護。",
+        "elementary": "甲的醫生只確認病人的狀況，乙的護士按寶特瓶是在呈現難過的情景，不是兩篇都在稱讚醫護很用心。",
+        "reason": "B說**兩文都用救護車上醫護行動呈現照護用心**不符。甲文醫師隨救護車到家檢視脈搏、心跳後說「快了」；乙文男護士按壓瓶子形成「偽呼吸」，凸顯荒謬與無奈，不是共同歌頌醫護。",
+        "sourceEvidence": "甲文：隨救護車來的醫師按她的脈搏、聽聽心跳；乙文：男護士正規律地一張一縮壓著保特瓶，你的偽呼吸。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C甲文從「**粉娘又彌留在廳頭**」展開，重寫**返家後**告知親屬與眾人奔喪；乙文從醫院移回家，重寫**救護車返家途中**的對話、卡帶與護士動作，正確。",
+        "elementary": "甲是回家後家人的反應，乙是回家路上遇到的事，這才是兩篇真正的差別。",
+        "reason": "C甲文從「**粉娘又彌留在廳頭**」展開，重寫**返家後**告知親屬與眾人奔喪；乙文從醫院移回家，重寫**救護車返家途中**的對話、卡帶與護士動作，正確。",
+        "sourceEvidence": "甲文：粉娘又彌留在廳頭；乙文：所以，我們與你一起坐上救護車，回家……我知道我人生最荒謬的一趟旅程已經啟動。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D把**親屬商議、宗教儀式規劃**說成兩文共同著重的治喪繁瑣。甲主要電話聯絡返家，乙有司機播放佛號、到家後交接葬儀社等，但未見兩文均以規劃繁雜為寫作主題。",
+        "elementary": "甲是在通知家人回來，乙有宗教音樂和喪葬人員，不代表兩篇都在講安排葬禮有多麻煩。",
+        "reason": "D把**親屬商議、宗教儀式規劃**說成兩文共同著重的治喪繁瑣。甲主要電話聯絡返家，乙有司機播放佛號、到家後交接葬儀社等，但未見兩文均以規劃繁雜為寫作主題。",
+        "sourceEvidence": "甲文：炎坤請人……要她打電話連絡親戚；乙文：救護車司機……你家是拜佛祖還是信耶穌的？"
+      }
+    },
+    "stepByStep": [
+      "先找甲的地點和事件：在廳頭彌留、醫師查看、家人返家。",
+      "再找乙的場景和篇幅：救護車上回家，司機與護士動作。",
+      "A誤讀時間，B和D把次要素材誇大成共同重心，選C。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "115年國文第11–15題共用兩篇文本；課本來源頁碼尚待核對。"
+  },
+  "teachingCanonicalSha256": "2e919b259b8fe386f707547c8ef2217c5a00027137bb81f2699b8e6b5efe414a",
+  "review": {
+    "authorIdentity": "GPT-6 Role C / AI teaching author",
+    "authorRole": "C",
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "reviewNotes": null,
+    "sourceOfficialEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialAnswerAndNoticeAdmission": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "v4ExactDigestEightViewportsTwoThemes": "PENDING",
+    "policyAuthority": "ISSUE36_2026-10-25_USER_OVERRIDE_NO_HUMAN_TEACHER_REQUIREMENT"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "FULL_OFFICIAL_SOURCE_TEXT_AND_FINAL_ANSWER_CORRECTION_SCOPE_ADMISSION_PENDING",
+    "SHARED_ORIGINAL_PIXEL_WEBP_INDIVIDUAL_VISUAL_QA_PENDING",
+    "DISTINCT_AI_CONTENT_REVIEW_EXACT_SOURCE_IMAGE_LESSON_EVIDENCE_PENDING",
+    "V4_SAME_DIGEST_EIGHT_VIEWPORT_TWO_THEME_AND_FINAL_CI_PENDING"
+  ]
+}
