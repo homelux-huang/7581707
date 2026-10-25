@@ -24,6 +24,13 @@ class RoleB114Batch02(unittest.TestCase):
     def test_scope_and_blocking(self):
         b=self.batch
         self.assertEqual(b["role"],"B")
+        self.assertEqual(b["policyVersion"],"ISSUE36-OWNER-OVERRIDE-2026-10-25")
+        self.assertIs(b["requiresHumanTeacher"],False)
+        self.assertEqual(b["independentAiContentReview"],"PENDING_DISTINCT_ROLE_E")
+        self.assertFalse(b["policyMigrationIsStudentApproval"])
+        self.assertEqual(b["legacyIndependentHumanTeacherVerifiedUse"],
+                         "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE")
+
         self.assertEqual((b["itemCount"],b["newReady"],b["newLive"]),(5,0,0))
         self.assertEqual({r["questionId"] for r in b["items"]},IDS)
         self.assertFalse(b["independentHumanTeacherVerified"])
@@ -107,6 +114,21 @@ class RoleB114Batch02(unittest.TestCase):
         for r in self.batch["items"]:
             d=read(ROOT/r["path"]); v=d["review"]
             self.assertEqual(v["status"],"BLOCKED")
+            self.assertIs(v["requiresHumanTeacher"],False)
+            self.assertEqual(v["policyVersion"],"ISSUE36-OWNER-OVERRIDE-2026-10-25")
+            self.assertEqual(v["legacyHumanTeacherVerifiedUse"],
+                             "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE")
+            ai=v["independentAiContentReview"]
+            self.assertEqual(ai["status"],"PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW")
+            self.assertEqual(ai["requiredReviewerRole"],"E")
+            for key in ("reviewerSessionId","reviewTaskId","reviewIssueCommentId",
+                        "trustedEvidencePath","reviewNotesSha256","sourceRevisionReviewed",
+                        "webpSha256Reviewed","teachingDigestReviewed","officialEvidenceSha256Reviewed"):
+                self.assertIsNone(ai[key])
+            self.assertIn("DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",v["blockers"])
+            self.assertFalse(any("HUMAN_TEACHER" in reason or "ED25519" in reason or
+                                 "SIGNATURE" in reason for reason in v["blockers"]))
+
             self.assertIsNone(v["independentReviewer"])
             self.assertIs(v["humanTeacherVerified"],False)
             self.assertIs(v["studentReleaseApproved"],False)

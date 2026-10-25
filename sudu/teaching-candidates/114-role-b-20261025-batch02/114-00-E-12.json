@@ -157,10 +157,27 @@
     "uiQaExactDigest": false,
     "blockers": [
       "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
-      "AUTHORIZED_DIFFERENT_HUMAN_TEACHER_REVIEW_MISSING",
       "EXACT_DIGEST_V4_QA_PENDING",
-      "MASTER_ADMISSION_NOT_GRANTED"
-    ]
+      "MASTER_ADMISSION_NOT_GRANTED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "MASTER_OWNER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
   },
   "textbook": {
     "publisher": null,

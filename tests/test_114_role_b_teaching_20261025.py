@@ -100,6 +100,23 @@ class TestRoleB114Draft(unittest.TestCase):
                 self.assertEqual(c["review"]["status"], "BLOCKED")
                 self.assertFalse(c["review"]["studentReleaseApproved"])
                 self.assertFalse(c["review"]["humanTeacherVerified"])
+                self.assertIs(c["review"]["requiresHumanTeacher"], False)
+                self.assertEqual(c["review"]["policyVersion"], "ISSUE36-OWNER-OVERRIDE-2026-10-25")
+                self.assertEqual(c["review"]["legacyHumanTeacherVerifiedUse"],
+                                 "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE")
+                pending = c["review"]["independentAiContentReview"]
+                self.assertEqual(pending["status"], "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW")
+                self.assertEqual(pending["requiredReviewerRole"], "E")
+                for field in ("reviewerSessionId","reviewTaskId","reviewIssueCommentId",
+                              "trustedEvidencePath","reviewNotesSha256","sourceRevisionReviewed",
+                              "webpSha256Reviewed","teachingDigestReviewed","officialEvidenceSha256Reviewed"):
+                    self.assertIsNone(pending[field])
+                self.assertIn("DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+                              c["review"]["blockers"])
+                self.assertFalse(any("HUMAN_TEACHER" in blocker or
+                                     "ED25519" in blocker or "SIGNATURE" in blocker
+                                     for blocker in c["review"]["blockers"]))
+
                 self.assertIsNone(c["review"]["independentReviewer"])
                 self.assertIs(c["reasoningAudit"]["answerAlreadyKnown"], True)
                 self.assertIs(c["reasoningAudit"]["blindSolveClaimedThisBatch"], False)
@@ -157,6 +174,21 @@ class TestRoleB114Draft(unittest.TestCase):
                       else {ch: c["teaching"]["optionExplanations"][ch]["reason"]
                             for ch in LETTERS})
             self.assertTrue(specific(actual), qid)
+
+    def test_owner_override_keeps_all_seven_canonical_digests_immutable(self):
+        self.assertIs(self.batch["requiresHumanTeacher"], False)
+        self.assertEqual(self.batch["policyVersion"], "ISSUE36-OWNER-OVERRIDE-2026-10-25")
+        self.assertEqual(self.batch["independentAiContentReview"], "PENDING_DISTINCT_ROLE_E")
+        self.assertFalse(self.batch["policyMigrationIsStudentApproval"])
+        for row in self.batch["items"]:
+            d = load(ROOT / row["path"])
+            self.assertEqual(row["sourceRevision"], d["source"]["questionRevision"])
+            self.assertEqual(row["webpSha256"], d["source"]["webpSha256"])
+            self.assertEqual(row["composedTeachingSha256"], d["composedTeachingSha256"])
+            self.assertIs(d["review"]["formalReady"], False)
+            self.assertIs(d["review"]["studentReleaseApproved"], False)
+            self.assertIsNone(d["review"]["independentReviewer"])
+            self.assertNotEqual(d["review"]["independentAiContentReview"]["status"], "VERIFIED")
 
     def test_only_actual_source_forms_highlighted(self):
         for entry in self.batch["items"]:
