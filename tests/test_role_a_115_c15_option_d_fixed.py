@@ -104,30 +104,32 @@ class OnlyQ15TextAndDBCorrection(unittest.TestCase):
                                answer_verified,question_verified FROM questions""").fetchall()
         self.assertEqual(len(rows),205)
         self.assertEqual({r[0] for r in rows},set(self.qmap))
-        denormalized_drift=[]
+        denormalized_drift={}
         for id_,stem,payload,digest,answer,av,qv in rows:
             with self.subTest(question=id_):
                 q=self.qmap[id_]
-                self.assertEqual(stem,q["question"])
                 self.assertEqual(payload,canonical(q))
                 self.assertEqual(sha(payload.encode("utf-8")),digest)
                 self.assertEqual(json.loads(payload),q)
-                self.assertEqual(answer,q["answer"])
                 self.assertIn(av,(0,1))
                 self.assertIn(qv,(0,1))
-                if bool(av)!=q["answerVerified"] or bool(qv)!=q["questionVerified"]:
-                    denormalized_drift.append(id_)
-        self.assertEqual(denormalized_drift,self.report["preexistingSqliteDenormalizedFlagDivergences"])
-        self.assertEqual(len(denormalized_drift),self.report["preexistingSqliteDenormalizedFlagDivergenceCount"])
+                mismatches=[]
+                if stem!=q["question"]: mismatches.append("question")
+                if answer!=q["answer"]: mismatches.append("answer")
+                if bool(av)!=bool(q["answerVerified"]): mismatches.append("answer_verified")
+                if bool(qv)!=bool(q["questionVerified"]): mismatches.append("question_verified")
+                if mismatches: denormalized_drift[id_]=mismatches
+        self.assertEqual(denormalized_drift,self.report["preexistingSqliteDenormalizedFieldDivergences"])
+        self.assertEqual(len(denormalized_drift),self.report["preexistingSqliteDenormalizedFieldDivergenceCount"])
 
     def test_only_q15_sql_payload_changed_against_exact_original_git_base(self):
         with tempfile.TemporaryDirectory() as td:
             original_db=Path(td)/"previous.sqlite3"
             original_db.write_bytes(old_git_file("sudu/data/processed/115/question-bank.sqlite3"))
             with sqlite3.connect(original_db.as_uri()+"?mode=ro",uri=True) as cx:
-                past={id_:(body,digest,av,qv) for id_,body,digest,av,qv in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions")}
+                past={r[0]:tuple(r[1:]) for r in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified,question,answer FROM questions")}
             with sqlite3.connect(DB.as_uri()+"?mode=ro",uri=True) as cx:
-                curr={id_:(body,digest,av,qv) for id_,body,digest,av,qv in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions")}
+                curr={r[0]:tuple(r[1:]) for r in cx.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified,question,answer FROM questions")}
             self.assertEqual(set(past),set(curr))
             self.assertEqual({qid for qid in past if past[qid]!=curr[qid]},{QID})
             self.assertEqual({qid for qid in past if past[qid][2:]!=curr[qid][2:]},set())
