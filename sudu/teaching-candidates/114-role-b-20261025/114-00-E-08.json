@@ -108,9 +108,26 @@
     "status": "BLOCKED",
     "blockers": [
       "NEW_ENRICHMENT_NOT_IN_PRIOR_UI_OR_TEACHING_APPROVAL",
-      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
-      "P0_RELEASE_GATE_NOT_SATISFIED"
-    ]
+      "P0_RELEASE_GATE_NOT_SATISFIED",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "YEAR_SPECIFIC_FINAL_OFFICIAL_ANSWER_NOTICE_ADMISSION_PENDING"
+    ],
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "legacyHumanTeacherVerifiedUse": "DEPRECATED_INFORMATION_ONLY_NOT_AN_ADMISSION_GATE",
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null,
+      "sourceRevisionReviewed": null,
+      "webpSha256Reviewed": null,
+      "teachingDigestReviewed": null,
+      "officialEvidenceSha256Reviewed": null
+    }
   },
   "sourceAndTextbook": {
     "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
