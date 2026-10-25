@@ -20,6 +20,8 @@ class GhAwBootstrapTest(unittest.TestCase):
         self.assertIn('create-issue: false',fm)
         self.assertIn('report-failure-as-issue: false',fm)
         self.assertIn('report-failed-jobs: false',fm)
+        for key in ('report-incomplete:', 'report-missing-tool:', 'report-missing-data:', 'noop:'):
+            self.assertIn(key,fm)
         for forbidden in ('create-pull-request:', 'add-comment:', 'create-issue: true'):
             self.assertNotIn(forbidden,fm)
     def test_not_misrepresented_as_running(self):
