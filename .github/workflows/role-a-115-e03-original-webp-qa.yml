@@ -1,0 +1,45 @@
+name: Role A 115 English03 immutable original WebP and Demo visual QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-e03-original-webp-receipt-20261025
+    paths:
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-03.webp
+      - tests/test_role_a_115_e03_original_webp_receipt.py
+      - docs/ROLE_A_115_E03_ORIGINAL_WEBP_RECEIPT_20261025.md
+      - .github/workflows/role-a-115-e03-original-webp-qa.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-e03-original-webp-20261025
+  cancel-in-progress: false
+
+jobs:
+  verify_original_image_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-e03-original-webp-receipt-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Read only check out original Role A branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow for actual WebP image format and dimensions
+        run: python -m pip install -q pillow
+      - name: Confirm byte-original QA image and E03 source/DB strict gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_e03_original_webp_receipt.py scripts/sudu_verified_publish.py
+          python -m unittest discover -s tests -p test_role_a_115_e03_original_webp_receipt.py -v
+      - name: Verify zero writes or unauthorized release changes
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Role A immutable archived-original-WebP receipt; NO fresh PASS and no Pages/main mutation."
