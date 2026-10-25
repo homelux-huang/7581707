@@ -86,9 +86,9 @@ class ThreeNewRoleC(unittest.TestCase):
     def test_passage_anchors_c14_table_and_actual_news_highlights(self):
         for qid,q in self.q.items():
             with self.subTest(qid=qid):
-                text=" ".join(q["sharedMaterial"]["sourceText"].split()).lower()
+                text="".join(q["sharedMaterial"]["sourceText"].split()).lower()
                 for anchor in ANCHORS[qid]:
-                    self.assertIn(" ".join(anchor.split()).lower(),text)
+                    self.assertIn("".join(anchor.split()).lower(),text)
                 t=q["teaching"]
                 if qid=="115-00-C-14":
                     for term in ("何者不適當","第一人稱敘述觀點","第三人稱全知敘述觀點"):
