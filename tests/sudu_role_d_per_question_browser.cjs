@@ -11,6 +11,7 @@ const cp=require('node:child_process');
 const {chromium}=require('playwright');
 const {resolveOriginal,inlineBytes,webp}=require('./sudu_role_d_image_source.cjs');
 const {visibleOptionFields}=require('./sudu_role_d_option_detail.cjs');
+const {verifyCjkReadability}=require('./sudu_role_d_cjk_readability.cjs');
 
 const ROOT=process.cwd();
 const BASE=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
@@ -58,6 +59,7 @@ const report={
   browserTestSha256:fileHash('tests/sudu_role_d_per_question_browser.cjs'),
   imageResolverSha256:fileHash('tests/sudu_role_d_image_source.cjs'),
   optionContractSha256:fileHash('tests/sudu_role_d_option_detail.cjs'),
+  cjkReadabilitySha256:fileHash('tests/sudu_role_d_cjk_readability.cjs'),
   approvedJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/'+YEAR+'.json'),
   previewJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/preview/'+YEAR+'.json'),
   approvedSourceRevision:approved?.sourceSha||null,
@@ -372,6 +374,7 @@ function dump(){
           assert.deepEqual(
             await page.locator('#homeSubjectSel option').evaluateAll(xs=>xs.slice(1).map(x=>x.value)),
             SUBJECTS,'different 35-Demo courses replaced by generic UI');
+          const cjkReadability=await verifyCjkReadability(page);
           // A subject with approved lessons intentionally routes to those lessons.
           // Its raw images remain accessible through the existing all-subject chips.
           const previewThroughAll=mode==='image-preview-only'&&approvedRows.length>0;
@@ -413,6 +416,7 @@ function dump(){
               questionId:q.canonicalId||SUBJECT+'|'+q.id,
               questionNumber:assertOriginalQuestionNumber(q,mode),mode,
               viewport:{width,height},theme,input:touch?'real_touch_tap':'real_mouse_click',
+              cjkReadability,
               checks:{noHorizontalOverflow:true,textUnclipped:true,webpAspect:true,
                 originalWebpBytes:true,digestBound:mode!=='image-preview-only',
                 fourOptions:mode!=='image-preview-only',dualLevel:mode==='approved',

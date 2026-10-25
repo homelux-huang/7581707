@@ -49,3 +49,10 @@
 - 該精確基底五題MathB已完成80/80 approved案例；接著預覽選MathB會依既有規格優先回approved，與matrix預期不同。未改runtime。另經360×800真實tap證明「國文唯讀→全部科目→數學B第1題chip」會保持view=images、canonicalId=115-00-MB-01、選項0。
 - 因此matrix對同時有approved的科目，使用既有唯讀科目入口、全部科目及真實題號chip逐題到達原圖；保留全部25張預覽×16＋5題approved×16＝480個預期案例，不縮減、不以來源檢查代替UI。每題仍驗canonicalId、read-only/無答案、HTTP/WebP/SHA、decode、原圖比例、版面及共享材料。
 - workflow補上demo-question-crops.json、原始圖／題圖、build.py的直接依賴路徑觸發，避免變更後漏跑矩陣；只讀權限與全部斷言維持。最終提交CI／完整MathB結果以Issue36 RETURN為準，未完成時不可稱PASS。
+
+## D-CJK-MATRIX-FONT-20261025-VSCODE-08
+
+- 基底 `2ea80c7a432b47a5defafba5e9b55b31563b2ee1`；租約 `6393766419`（負測檔追加 `6393769432`）。只修PR38 workflow／matrix／新glyph helper與負測，不碰另一D PR40字型租約。
+- Linux CI安裝fonts-noto-cjk/fontconfig，保存fc-match繁中字型結果，要求Noto CJK fallback；本機未改全域字型。每個profile等待document.fonts.ready，以實際body font繪製12個繁中字，檢查非空、彼此不同且不同於兩個缺字控制；保存字形raster SHA與helper檔案SHA。
+- 負測拒絕重複方框、空白、缺對照、與missing-glyph相同字形。Node合計PASS14（原圖7＋選項5＋glyph2）；本機真實Chromium body font glyph preflight PASS，390×844首頁截圖目視繁中可讀。此為作者技術檢查，不是E獨立截圖驗收，也不證明尚未完成的Linux CI截圖可讀；須交E抽查最終artifact手機/桌面×深淺。
+- 原先精確2ea80c7 MathB480矩陣在本次字型修改前已啟動，執行中report綁定其啟動時測試SHA；不能套成本批提交的glyph已驗證證書。最終SHA必須跑新的完整matrix，所有新候選UIQA/READY/main/LIVE仍0。
