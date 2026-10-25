@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-12",
+  "taskId": "B-114-C08-C11-14-20261025-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "甲、乙文畫底線處的解釋，何者最適當？",
+  "options": [
+    "①意謂秦得參對於自售的貨品頗有信心",
+    "②意謂巡警故意設圈套誘使秦得參犯罪",
+    "③意謂查大人視啼哭為諷刺他執法無能",
+    "④意謂民眾介入反令查大人懲罰無辜者"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "07f96351c930540c3537de1a1c1c11108715001d39913ee96b28496a4b531692",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "f1003ada024dda5c06f25cb8c1af78a0af13414d8383a56437fa8020e24337aa",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-12.webp",
+    "sourcePageWebpSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+    "qaStatusFromExistingManifest": "PASS",
+    "originalImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+    "finalOfficialAnswerDirectQaThisBatch": false,
+    "readingContext": {
+      "originalReadingPage4Path": "sudu/data/original/114/00-C/p004-f7c8a4b732-v2-w1400-q66.webp",
+      "originalReadingPage4GitBlob": "84980ba031aa5d9da12402f3bb0b11b3e558d753",
+      "originalQuestionPage5Path": "sudu/data/original/114/00-C/p005-f7c8a4b732-v2-w1400-q66.webp",
+      "originalQuestionPage5GitBlob": "381f2df6bb4b8e35691db229d611bb4681f1bd5c",
+      "questionPage5PixelSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+      "readingScope": "甲文賴和〈一桿秤仔〉、乙文改寫自賴和〈不如意的過年〉",
+      "checkedByAuthorFromExistingOriginalPixels": true,
+      "formalIndependentSharedMaterialQaAdded": false,
+      "ocrRecreated": false,
+      "recropPerformed": false
+    }
+  },
+  "teaching": {
+    "topic": "國文閱讀｜①至④底線含義與情勢逆轉",
+    "teacherSummary": "乙文④『被人們的同情心，拖累得更不幸了』意謂旁人為受欺的孩童求情，反令查大人覺得官威受損，決意把孩童帶往衙門，因此 D 正確。甲文①是巡警恃權索取，②是對巡警逼秤的質疑；乙文③指孩童哭泣令官員覺得難以控制，非諷刺執法無能。",
+    "elementarySummary": "大家想幫被打的小孩，結果那個官員為了面子更不肯放人，反而害小孩被帶走；所以④的 D 才對。",
+    "concept": "反諷與因果：善意介入未必改善處境；應從人物行動與權力心理解釋底線句，不憑字面猜。",
+    "extension": "評論作品的官威與群眾同情不能被寫成真實個案法律結論。",
+    "memory": "④群眾同情介入→查大人更想立威→孩子受害更深；選 D。",
+    "solvingSteps": [
+      "找到甲文①巡警稱『不用問價，要拿東西』與②秤重對話，確認它們的發話者與情境。",
+      "再看乙文③孩童哭泣、查大人責打，不能當成孩童主動譏諷。",
+      "乙文④是旁人好意求情卻觸發官員維持尊嚴的意圖，害孩童處境更差，所以 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 把甲文①解作秦得參對貨品質量很有信心，但原文①是巡警自恃權力，聲稱想要便可不付錢取走貨品；發話者與意思都錯。",
+        "elementary": "①明明是警察仗勢要菜，不是老闆誇自己的商品。",
+        "reason": "①說話的是巡警，展現無理索取，選項誤換成秦得參自我肯定。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 把甲文②說成巡警設圈套讓攤販犯罪；原文②是在與秤重與價錢相關的衝突中逞威，沒有明示一套事先設計的誘捕計畫。",
+        "elementary": "警察在當場找麻煩，不等於早就設好陷阱騙人犯罪。",
+        "reason": "乙說『故意設圈套』比原文可證實的當場刁難多加了未交代的犯案計畫。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 認為乙文③孩童啼哭在諷刺官員執法無能；原文描寫的是孩童受驚害怕與被責打，查大人也沒有把眼淚解讀成嘲諷其法律本領。",
+        "elementary": "小朋友是被嚇哭，不是在笑官員不會辦案。",
+        "reason": "③呈現恐懼與權力欺壓，不是兒童主動以哭聲批評查大人的執法能力。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 表示乙文④民眾想幫孩童卻導致查大人為維護官威而加重處置；原文旁人說情後他仍堅持帶人去衙門，與之符合。",
+        "elementary": "旁人好心求情，卻讓官員更要面子，小孩反而更倒楣。",
+        "reason": "④正是同情介入造成官員更堅持訊問的諷刺性後果，D 的因果敘述最精確。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原題／甲乙原文；官方最終答案與年度更正公告逐題獨立核對待完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "①意謂",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "②意謂",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "③意謂",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "④意謂",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "巡警",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "查大人",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "民眾介入",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "懲罰無辜者",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "隱瞞",
+        "level": "初級",
+        "meaning": "知道事情卻不說出來。",
+        "usageNote": "受驚說不出話不等於有意隱瞞。"
+      },
+      {
+        "term": "無辜者",
+        "level": "中級",
+        "meaning": "沒有做錯事卻遭受牽連的人。",
+        "usageNote": "此題是乙文孩童遭官威波及。"
+      },
+      {
+        "term": "設圈套",
+        "level": "中級",
+        "meaning": "預先布置陷阱誘使別人上當。",
+        "usageNote": "必須有預謀證據，不能把現場欺負直接說成設局。"
+      },
+      {
+        "term": "反諷",
+        "level": "高級",
+        "meaning": "表面說法或結果和真正意思相反，形成批判效果。",
+        "usageNote": "民眾本想幫忙卻讓孩童遭到更嚴重對待。"
+      }
+    ],
+    "readingFacts": [
+      "乙文有人替受驚孩童求情，查大人反認為官員尊嚴受質疑，決意將孩童帶到衙門。"
+    ]
+  },
+  "teachingCanonicalSha256": "b49f52162214ad0f1c8f508783bd0feeef7482a8b7740515fa2038c06bf589ee",
+  "composedTeachingSha256": "c49616a4423b76b2e5878e042381a98b1b77c1164f639e72766d6975bd5e5cb5",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "reasoningAgreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_AND_CORRECTION_IMAGE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "SAME_DIGEST_V4_8_VIEWPORT_2_THEME_QA_PENDING",
+      "MASTER_PUBLISHER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

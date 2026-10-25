@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-11",
+  "taskId": "B-114-C08-C11-14-20261025-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "關於甲文巡警、乙文查大人的逞威尋釁，下列敘述何者正確？",
+  "options": [
+    "巡警因秦得參對斤兩錙銖必較而不滿",
+    "巡警捏造毀損公物之罪而嚴懲秦得參",
+    "查大人因兒童隱瞞事實而怒摑他巴掌",
+    "查大人為立官威而須讓兒童接受訊問"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "72406765ad4503ddc99f178109804ac3772fe08ac70e45e2c5b5d9445e65e15a",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "6bdef9b6a13dc3a0a9327e79c69e92a968e38e250543170b6d9febff8530b1c0",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-11.webp",
+    "sourcePageWebpSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+    "qaStatusFromExistingManifest": "PASS",
+    "originalImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C11_15_20261023.json",
+    "finalOfficialAnswerDirectQaThisBatch": false,
+    "readingContext": {
+      "originalReadingPage4Path": "sudu/data/original/114/00-C/p004-f7c8a4b732-v2-w1400-q66.webp",
+      "originalReadingPage4GitBlob": "84980ba031aa5d9da12402f3bb0b11b3e558d753",
+      "originalQuestionPage5Path": "sudu/data/original/114/00-C/p005-f7c8a4b732-v2-w1400-q66.webp",
+      "originalQuestionPage5GitBlob": "381f2df6bb4b8e35691db229d611bb4681f1bd5c",
+      "questionPage5PixelSha256": "6925c630949ad1e62a01924b274c5efcecc92bee1a1309aab4267e04c26a91f7",
+      "readingScope": "甲文賴和〈一桿秤仔〉、乙文改寫自賴和〈不如意的過年〉",
+      "checkedByAuthorFromExistingOriginalPixels": true,
+      "formalIndependentSharedMaterialQaAdded": false,
+      "ocrRecreated": false,
+      "recropPerformed": false
+    }
+  },
+  "teaching": {
+    "topic": "國文閱讀｜巡警和查大人濫用威勢的動機",
+    "teacherSummary": "甲文巡警並非單因菜販『錙銖必較』不滿，而是無理索取菜品又藉磅秤刁難；乙文查大人為彰顯官威，在孩童受驚哭泣且旁人求情後，反要求帶去衙門受審。只有 D 符合乙文描寫。",
+    "elementarySummary": "甲文警察想白拿菜又欺負攤販；乙文官員怕別人說他不對，竟把小朋友抓去問話。D 講到官員要立威，才正確。",
+    "concept": "閱讀題須分清『官員實際動機』和『選項替官員編造的理由』；官威不是公平查明真相。",
+    "extension": "甲乙皆是文學敘事與權力批評，不代表對當代所有執法人員的概括判斷。",
+    "memory": "甲巡警藉權勢刁難，乙查大人為保官威讓孩童去衙門；選 D。",
+    "solvingSteps": [
+      "先讀甲文：巡警要菜不付錢，因秤重問題責罵、奪秤，重點在恃勢凌人。",
+      "再讀乙文：官員掌摑孩童，旁人求情後又以『做官的尊嚴』為由要求帶人到衙門。",
+      "逐項核查，只有 D 對應乙文真實行動與立官威的心理。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 把巡警不滿說成秦得參斤兩錙銖必較，但原文先寫巡警想不付錢拿菜，還挑剔磅秤；根本動機是恃權侵害而非菜販苛求。",
+        "elementary": "警察是想占便宜又找麻煩，不是因為老闆太計較。",
+        "reason": "甲文巡警先無理索菜、再藉秤找藉口；說單純不滿菜販斤兩計較混淆動機。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 說巡警捏造『毀損公物』罪嚴懲秦得參；甲文實際爭點是稱重不公、磅秤被奪和被控不服警察，並無公物毀損的指控。",
+        "elementary": "警察鬧的是秤和菜，不是有人把公家的東西弄壞。",
+        "reason": "甲文沒有『毀損公物』這項罪名，不能加入不存在的刑事事由。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 說查大人因孩童隱瞞事實而怒摑；乙文孩童受驚哭泣，官員要求坦白與阻止哭泣，無證據孩童故意隱瞞犯罪經過。",
+        "elementary": "小朋友是嚇哭了，不等於故意說謊。",
+        "reason": "乙文孩童因恐懼而無法應答，不能推論有意隱瞞事實才被打。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 描述查大人為確立官威，堅持令孩童到衙門接受訊問；乙文明示官員尊嚴及不可讓民眾過問的想法，與此完全相符。",
+        "elementary": "官員怕沒面子，就算小朋友害怕，也硬要帶去問話。",
+        "reason": "乙文詳寫查大人為維持官威，決意把孩童帶到衙門，和選項因果一致。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原題／甲乙原文；官方最終答案與年度更正公告逐題獨立核對待完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "巡警",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "查大人",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "斤兩錙銖必較",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "毀損公物",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "隱瞞事實",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "立官威",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "兒童接受訊問",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "巡警",
+        "level": "初級",
+        "meaning": "負責巡邏的警察。",
+        "usageNote": "在甲文是角色身分，不表示其行為必然合法。"
+      },
+      {
+        "term": "立官威",
+        "level": "中級",
+        "meaning": "以官員身分向他人展示權力與威嚴。",
+        "usageNote": "乙文中的濫權行為動機，不等於依法公平辦事。"
+      },
+      {
+        "term": "錙銖必較",
+        "level": "高級",
+        "meaning": "連非常細小的差異或利益都計較。",
+        "usageNote": "本題A用來誤導巡警真正刁難人的理由。"
+      }
+    ],
+    "readingFacts": [
+      "甲文巡警無理要求菜販送菜，質疑秤重並奪秤；乙文查大人認為民眾不可質疑官員，要求孩童赴衙門。"
+    ]
+  },
+  "teachingCanonicalSha256": "2c5ba7f6115e0655911d4d530ffef00e58816301bff3bff375369e02c46f94d9",
+  "composedTeachingSha256": "96d657fb92d88cdb29827468a21c78c8f34ea9b195d3a376dbfa9680a26882ae",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "reasoningAgreesWithKnownCandidate": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_AND_CORRECTION_IMAGE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "SAME_DIGEST_V4_8_VIEWPORT_2_THEME_QA_PENDING",
+      "MASTER_PUBLISHER_POLICY_MIGRATION_AND_RELEASE_GATE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
