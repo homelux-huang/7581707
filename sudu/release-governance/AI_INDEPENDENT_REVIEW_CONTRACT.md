@@ -1,29 +1,26 @@
-# 114/115 independent AI content review — isolated contract candidate (NO RELEASE)
+# 7581707｜獨立 AI E 內容複核證據契約（隔離發布器提案）
 
-Policy provenance: [Issue #36](https://github.com/homelux-huang/7581707/issues/36), new owner rule prefixed on 2026-10-25. “High school teacher explanation” means a pedagogic style, not a teacher credential. Do not request or fabricate a human/Ed25519/GitHub APPROVED certification as the pedagogic gate. Do not treat this as a student admission.
+**最新權限：** Issue #36 使用者 2026-10-25 統一指令取消真人教師資格、授權簽章／名錄與 GitHub 真人 APPROVED 的教學前置條件。「高職老師」只代表教學角度。此文件屬 **Draft PR**；不代表審查通過或 main 已上線。
 
-## Implemented in this bounded branch
-- Added additive function `scripts/sudu_independent_review_gate.py::separate_ai_content_receipt_verified`. **It is inactive**: existing publisher `certified` and default `independent-review-policy.json` are NOT changed by this batch. Until a separately reviewed integration migrates publisher and policy, new admissions still fail closed under the old code.
-- An independent-role E AI content-review **evidence file** (source-bound, in `sudu/data/processed/<year>/review-evidence/`) is necessary but is NOT enough. Its exact **Git Blob SHA**, source revision, image SHA, teaching digest, official evidence SHA, reviewer/author task and session IDs and note SHA must appear in a separately controlled trusted-main registry. An author-controlled QA branch cannot authorize itself by adding its own record or review string.
-- Required evidence: canonical questionId/year; exact source `questionRevision`; unchanged original WebP SHA; SHA256 of teaching content and original teaching JSON bytes; official evidence file SHA256 and candidate answer; reviewedAt; source author B/C session+task; distinct E reviewer session+task and real Issue36 review comment number; original source commit; substantive **different** A/B/C/D findings; math/full calculation or justified non-calculation, official corrections, two-layer language checks; immutable MD review notes with SHA.
-- Missing registry, malformed or changed Blob, untrusted/symlinked path, modified answer/revision/WebP/teaching digest, same author/reviewer, duplicate/generic option findings, missing notes, claimed future timestamp, invalid calculation/status must fail closed.
-- Initial trusted registry is **empty and no real E certificate has been admitted**. Current E Issue comments are useful independent review observations, but do not automatically establish a complete signed/trusted release certificate. Do not fabricate task IDs or notes.
-- Unit tests use deliberately **synthetic** adversarial fixtures and are not real student lessons, AI audit events or formal reviewer approvals. Their synthetic positive case validates parsing/consistency only; the current publisher still rejects that synthetic record.
+## 實作狀態與繼承邊界
 
-## Next separate gated integration
-1. Owner/master and independent E must agree how the registry is controlled on protected `main`, how real Issue36 claim+return provenance is checked, and whether its GitHub writer identity establishes meaningful reviewer separation (different AI sessions may share the same GitHub login).
-2. After independently reviewed end-to-end tests, migrate `independent-review-policy.json` and `scripts/sudu_independent_review_gate.py::certified` / publisher to the new branch, removing old teacher/Ed25519/APPROVED-only dead path **without** disabling source, official notices, wrong-answer checks, per-option explanations, calculations, UIQA, and same-SHA Pages gates.
-3. Register real independently validated E receipts only for exact verified source/digest candidates; zero blanket READY/APPROVED flags. Re-run all existing historical-five, negative and release regression tests. Do not merge directly to `main` from this draft.
-4. PR30 remains the only canonical per-question ledger; no second ledger in this workstream.
+- 基礎：已經角色 E 唯讀檢核並補足其 P0 負測之 Draft PR #46，原代碼 `separate_ai_content_receipt_verified()` 驗證真實 Issue #36 留言、原始來源 commit、官方答案證據的內容（不僅是 SHA）、獨立 A–D 筆記與 protected-main 信任；測試中的虛構 GitHub API 回應均為隔離 mock，非真實 E 核准。
+- 此隔離分支 `governance/114-115-ai-publisher-gate-20261025` 在 **`certified()` 與 `sudu_verified_publish.py` 實際引入 `reviewMode=DISTINCT_AI_CONTENT_RECEIPT_V1`**。只有當 E 的原始複核完整且被精確版本註冊於受保護的 main 時，新題才可能通過「內容審查階段」。不再以授權教師、簽章或真人 GitHub APPROVED 事件作為新題前置條件。
+- 此新模式對 B/C 的 `humanTeacherVerified` 舊資料欄位不予判斷：false／缺值都不代表教學不合格；true 也不得自動批准。
+- 已存在正式版本的五題仍需完整比對各自的 **questionRevision、WebP SHA、teaching Git Blob**，不能將 5 題例外擴張為新題發布。
 
-This file is an implementation handoff, not an assertion that the migration or external verification has happened.
+## 真實獨立 AI 複核證據
 
-## E independent audit P0 remediation (same Draft PR, still inactive)
+`trustedAiReviewReceipts` 僅允許經正常 main 治理接納的 **真實 Role E** 原始 JSON Git Blob 和逐題狀態，不從可修改的來源 QA 分支取得授權。
 
-After independent Role E's Issue36 return [#6393716388](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393716388), this prospective helper now additionally:
-- Checks original official-answer JSON **contents**, not only a rehashed SHA: the exact questionId/year, candidate finalAnswer, official PDF SHA when claimed, officialPage, `correctionNoticeReviewed` and `officialFinalAnswerImageQaPassed` must match. This is NOT a substitute for publisher's TCTE scope/PDF-image/correction gates.
-- Fetches a **real** GitHub Issue36 comment by exact integer ID via GitHub REST, checks the issue URL, GitHub reviewer's trusted-main pinned login/user ID, timestamp, real `RETURN` body and required question/revision/WebP/teaching/official evidence SHA plus independent role E task/session bindings.
-- Fetches a real GitHub source commit matching the pinned `sourceCommit`, and refuses an unprotected `main` as a trust root. A bare integer comment ID or 40-character commit string can no longer pass by format alone.
-- Tests synthetic acceptance **only with explicitly mocked GitHub API responses**, plus negative mocks for nonexistent IDs, wrong issue, wrong author, changed content, forged SHA/commit and unprotected main. All tests are artificial contract exercises; no synthetic comment, GitHub actor or source commit is claimed real.
+每張證書綁定：`year`、`questionId`、`questionRevision`、`webpSha256`、`teachingDigest`、`teachingEvidenceSha256`、`officialEvidenceSha256`、官答候選、B/C 作者 session/task、**不同** E reviewer session/task、來源 commit、Issue #36 真實 RETURN comment ID 與 GitHub 帳戶、4 個彼此不同且具實質內容的選項理由、計算驗算（或確實非計算）、高職／國小雙層內容審查、官方更正範圍及可讀 MD 複核筆記 SHA。
 
-**Remaining before active integration:** same GitHub login may operate multiple ChatGPT sessions, so GitHub actor checks alone do not prove distinct AI review sessions. A separately owned, protected trusted-main session/task ledger and real E submitted content are required; registry provenance must be validated at the caller boundary. Meaningful option-by-option correctness, math, source/original WebP pixels and exact 8×2 V4 still need independent QA; a cryptographically intact review note is not true content QA. The existing publisher remains unchanged, active `requireHumanTeacher=true`, and **new READY/main/LIVE = 0** until a distinct, fully reviewed migration occurs.
+單看主檔 reviewer 字串、簽章或 PASS、任意整數留言 ID 都不足以核准。對新題的 trusted registry 必須與**protected main 真實 GitHub Blob**完全一致；不是從作者 PR 可任意改寫的本地 JSON。若 main 未受保護、API 不可用、身分／session／SHA 不一致，仍須 fail-closed，這是**程式碼可信度**而非教師資格要求。
+
+**仍應後續完善：** 若多個 AI Session 共用同一 GitHub login，GitHub 身分只能證明 API 回傳者帳號，不能獨自證明 Session 的獨立性；主指揮仍須將任務租約、真實 E 留言和 reviewer／作者 session 狀態納入不可由同作者改寫的可信配對。僅不同選項文字或 SHA 通過機器檢查並不等於 E 做了實質內容複核。
+
+## 發布仍保留的獨立閘門
+
+`sudu_verified_publish.py` 的逐題 OCR／原圖尺寸裁切／表格／圖像 SHA、官方最終答案及更正公告、不得捏造的來源解題證據、雙層 4 選項、計算完整性、V4 同 revision／digest 的 8×2 實際互動與 CI 及最終 Pages LIVE 同版驗證皆獨立保留。
+
+**尚未發布：** 本 Draft 新政策 registry 初始為 `{}`，實際未具備可驗收的新 E 複核憑證，故新 READY=0、main=0、LIVE=0。不得直接改 main、自己設 true、移除 fail assertion 或重用不同教學版本的舊 UIQA。須由唯一主指揮在各題確實完整通過後分題增量部署。
