@@ -61,7 +61,7 @@ class OwnerAiReviewPolicyMigrationTests(unittest.TestCase):
         self.audit["review"]["status"] = "APPROVED"
         self.assertEqual(self.review(), (False, "distinct_ai_content_review_missing"))
 
-    def test_legacy_five_stay_exact_blob_exceptions_not_blanket_approved(self):
+    def test_synthetic_resealing_of_legacy_row_is_rejected(self):
         q = {"year": 115, "questionId": "115-00-MB-02", "answer": "A"}
         original = b'SYNTHETIC_LEGACY_TEST_EVIDENCE_NOT_STUDENT_CONTENT'
         teaching = {"questionRevision": "a"*64, "content": {"teacherSummary": "fixture"}}
@@ -72,13 +72,36 @@ class OwnerAiReviewPolicyMigrationTests(unittest.TestCase):
             "teachingEvidenceGitBlob": gate.blob_oid(original)}
         self.assertEqual(gate.certified(ROOT, None, q, manifest, teaching,
                                         original, policy=policy)[1],
-                         "exact_five_historical_students_preserved")
+                         "historical_exception_registry_not_immutable_exact_five")
         self.assertEqual(gate.certified(ROOT, None, q, manifest, teaching,
                                         original + b"edited", policy=policy)[1],
-                         "legacy_content_changed_must_be_reapproved")
+                         "historical_exception_registry_not_immutable_exact_five")
         manifest["sha256"]="c"*64
         self.assertFalse(gate.certified(ROOT,None,q,manifest,teaching,
                                         original,policy=policy)[0])
+
+    def test_original_five_archived_blobs_remain_exact_byte_exceptions(self):
+        # Genuine historical bytes, not a newly authored synthetic grant.
+        # Preserving history does not approve any new independent AI lesson.
+        fixture=json.loads((ROOT / "tests/fixtures/loop-historical-five-original-blobs.json").read_text())
+        self.assertEqual(set(fixture["records"]), EXPECTED_FIVE)
+        for qid,record in fixture["records"].items():
+            with self.subTest(questionId=qid):
+                raw=record["rawUtf8"].encode("utf-8")
+                pins=self.policy["legacyAlreadyPublished"][qid]
+                self.assertEqual(gate.blob_oid(raw), record["gitBlobSha"])
+                self.assertEqual(record["gitBlobSha"],pins["teachingEvidenceGitBlob"])
+                teaching=json.loads(raw)
+                q={"year":115,"questionId":qid}
+                manifest={"sha256":pins["webpSha256"]}
+                self.assertEqual(gate.certified(ROOT,None,q,manifest,teaching,raw,
+                                               policy=self.policy),
+                                 (True,"exact_five_historical_students_preserved"))
+                self.assertEqual(gate.certified(ROOT,None,q,manifest,teaching,
+                                               raw+b"edited",policy=self.policy),
+                                 (False,"legacy_content_changed_must_be_reapproved"))
+                self.assertFalse(gate.certified(ROOT,None,q,{"sha256":"0"*64},
+                                                teaching,raw,policy=self.policy)[0])
 
     def test_registration_without_real_protected_main_never_grants(self):
         self.policy["trustedAiReviewReceipts"] = {self.question["questionId"]: {
@@ -260,3 +283,4 @@ class OwnerAiReviewPolicyMigrationTests(unittest.TestCase):
 
 if __name__=="__main__":
     unittest.main()
+

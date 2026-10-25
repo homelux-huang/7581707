@@ -171,9 +171,11 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
               "webpSha256":"b"*64,"teachingEvidenceGitBlob":gate.blob_oid(self.raw)}
         policy={"schemaVersion":1,"githubRepository":"homelux-huang/7581707",
                 "legacyAlreadyPublished":{self.q["questionId"]:item},"authorizedReviewers":{}}
-        self.assertTrue(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
+        # A caller-created one-row registry is not the immutable historical five.
+        self.assertEqual(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy),
+                         (False,"historical_exception_registry_not_immutable_exact_five"))
         self.teaching["content"]["teacherSummary"]="changed"
-        self.assertTrue(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
+        self.assertFalse(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
         self.raw=b'edited old teaching document'
         self.assertFalse(gate.certified(self.root,None,self.q,self.manifest,self.teaching,self.raw,policy=policy)[0])
     def test_unconfigured_main_policy_cannot_approve_new_questions(self):
@@ -183,3 +185,4 @@ class DistinctAuthorizedReviewerTests(unittest.TestCase):
                            "requireHumanTeacher":True,"authorizedReviewers":{}})[0])
 if __name__=="__main__":
     unittest.main()
+

@@ -17,6 +17,30 @@ from urllib.request import Request, urlopen
 ROOT=Path(__file__).resolve().parents[1]
 POLICY=ROOT/"sudu/release-governance/independent-review-policy.json"
 REPO="homelux-huang/7581707"
+
+# Immutable pre-AI grandfathered baseline. These are the exact five published
+# Math B records captured before new admissions; changing policy JSON cannot
+# create a sixth exception or reseal any original source/lesson triple.
+# Canonical UTF-8 JSON of legacyAlreadyPublished at PR57 8c998e00, matching
+# the five previously recorded historical source/image/teaching-blob pins.
+LEGACY_FIVE_IDS=frozenset("115-00-MB-"+n for n in ("02","03","04","05","09"))
+LEGACY_FIVE_CANONICAL_SHA256="7d8dea8867db26159d0cc2934c10c4ee2854699990b8d0b2566e9edcd4d3841f"
+
+def _legacy_five_registry_is_original(rows):
+    if not isinstance(rows,dict) or set(rows)!=LEGACY_FIVE_IDS:
+        return False
+    try:
+        raw=json.dumps(rows,ensure_ascii=False,sort_keys=True,
+                       separators=(",",":")).encode("utf-8")
+        return hashlib.sha256(raw).hexdigest()==LEGACY_FIVE_CANONICAL_SHA256
+    except (ValueError,TypeError):
+        return False
+
+def _has_role_e_token(body):
+    # Accept genuine role capitalization/separators, not "role Evil"/"troll E".
+    return bool(isinstance(body,str) and re.search(
+        r"(?<![\w])role(?:\s*[:=]\s*|\s+)E(?![\w])",body,re.I))
+
 HEX40=re.compile(r"^[0-9a-f]{40}$")
 
 def _no_duplicate_keys(pairs):
@@ -240,7 +264,7 @@ def _ai_real_issue36_return_verified(statement,registry):
             return False,"ai_review_issue36_comment_identity_mismatch"
         body=comment.get("body")
         if (not isinstance(body,str) or not body.lstrip().upper().startswith("RETURN")
-                or "role E" not in body and "role: E" not in body
+                or not _has_role_e_token(body)
                 or any(str(statement[key]) not in body for key in (
                     "reviewTaskId","reviewerSessionId","questionId",
                     "questionRevision","webpSha256","teachingDigest",
@@ -412,8 +436,11 @@ def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,po
             or not isinstance(teaching_document.get("content"),dict)
             or not isinstance(raw_teaching,(bytes,bytearray))):
         return False,"invalid_review_source"
-    previous=(trust.get("legacyAlreadyPublished") or {}).get(qid)
+    legacy=trust.get("legacyAlreadyPublished")
+    previous=legacy.get(qid) if isinstance(legacy,dict) else None
     if previous is not None:
+        if qid not in LEGACY_FIVE_IDS or not _legacy_five_registry_is_original(legacy):
+            return False,"historical_exception_registry_not_immutable_exact_five"
         if (previous.get("year")==question.get("year")
                 and previous.get("questionRevision")==revision
                 and previous.get("webpSha256")==webp
@@ -520,3 +547,4 @@ def certified(source,audit,question,manifest,teaching_document,raw_teaching,*,po
     except (ValueError,TypeError,ImportError,InvalidSignature):
         return False,"signed_review_not_validated"
     return True,"trusted_distinct_reviewer_signed_material_and_substantive_notes"
+

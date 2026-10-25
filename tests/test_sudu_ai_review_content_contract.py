@@ -111,7 +111,7 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
             "issue_url": "https://api.github.com/repos/homelux-huang/7581707/issues/36",
             "user": {"id": 444111, "login": "synthetic-e-reviewer"},
             "created_at": "2026-10-24T15:00:00Z",
-            "body": "RETURN — synthetic source inspection only\\nrole E\\n" + binding
+            "body": "RETURN — synthetic source inspection only\nrole E\n" + binding
         }
 
     def mock_github(self, path):
@@ -259,3 +259,4 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
