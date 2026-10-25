@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-05",
+  "taskId": "B-113-C01-05-A72-PROVENANCE-LESSONS-20261025-11",
+  "subject": "國文",
+  "question": "關於下文運用空間事物的寫作手法，何者敘述最適當？\n  從那以後，我就墊著矮凳替母親梳頭，梳那最簡單的鮑魚頭。我點起腳尖，從鏡子裡望\n  著母親。她的臉容已不像在鄉下廚房裡忙來忙去時那麼豐潤亮麗了，她的眼睛停在鏡子\n  裡，望著自己出神，不再是瞇縫眼兒的笑了。我手中捏著母親的頭髮，一綹綹地梳理，\n  可是我已懂得，一把小小黃楊木梳，再也理不清母親心中的愁緒。因為在走廊的那一\n  邊，不時飄來父親和姨娘琅琅的笑語聲。 ( 琦君〈髻〉 )",
+  "options": [
+    "以「從鏡子裡望著母親」的殷切，暗示渴望獲得母親關愛",
+    "以「不像在鄉下廚房裡」的環境對比，暗示母親不耐寂寞",
+    "以「眼睛停在鏡子裡」的失神，暗示母親的行為不近人情",
+    "以「走廊的那一邊」相隔甚遠，暗示母親與父親內心疏離"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourcePR72Head": "481734d51928c8e47303718034479feafdf7e45e",
+    "sourceRevision": "232ee18447551bd6e8c7b46ad4d4984a9ec766881bf8e224aed2d16ca3ae399f",
+    "sourceWebpPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp",
+    "webpSha256": "ff1f548bead9b1850688f99b74e1946e2a2e0f5f1c83b299b5002801a51e9cd3",
+    "sourceManifestG1Status": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+    "sourceTextQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+    "finalOfficialAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+    "roleAImageEvidencePath": "sudu/data/processed/113/role-a-c01-05/VISUAL_QA_ASSISTANT_20261025.json",
+    "originalImageQaReceipt": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "finalNoticeScopeVerified": false
+  },
+  "teaching": {
+    "topic": "113國文5｜琦君〈髻〉鏡子與走廊的情感空間",
+    "teacherSummary": "作者替母親梳頭、從鏡中望她憔悴失神，表達體貼而非單純渴求關愛；昔日鄉下廚房的豐潤亮麗與如今失神形成反差，不能推為母親不耐寂寞；母親凝望鏡子是憂傷，並不是不近人情。D 的『**走廊的那一邊**』傳來父親與姨娘的笑語，和母親**愁緒**形成對比，利用**空間相隔**象徵夫妻心理隔閡。選項的『相隔甚遠』是文學象徵，不是在量走廊距離，因此選 D。",
+    "elementarySummary": "小孩在鏡子前幫媽媽梳頭，媽媽很難過；另一邊的爸爸和姨娘卻笑得很開心。走廊可能不長，可是兩人感覺心離得很遠。所以 D 是對的。",
+    "concept": "用空間位置寫心理距離：母親鏡前愁苦、父親走廊另一邊歡笑；一近一遠的意象反襯感情疏離。",
+    "memory": "鏡前媽媽愁，走廊另一邊笑；**人近心遠＝D**。",
+    "solvingSteps": [
+      "作者墊凳替母親梳頭是關心母親，沒有索愛的明確證據，排除 A。",
+      "以前鄉下廚房的模樣與現在對比，不代表母親個性不耐寂寞，排除 B。",
+      "鏡中失神顯示愁緒，不是不近人情，排除 C。",
+      "走廊兩邊的笑與愁反襯父母內心疏離，選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『從鏡子裡望著母親』是孩子留心並替媽媽梳頭，沒有證據顯示她是在要求母親更多關愛。",
+        "elementary": "A 把照顧媽媽當成只想媽媽更疼自己，沒有證據。",
+        "why": "A 錯把關注母親的憂愁解成索求母愛。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B『不像在鄉下廚房裡』對照過去豐潤亮麗與目前憔悴失神，不能直接推論母親不耐寂寞。",
+        "elementary": "B 說媽媽怕寂寞，文章並沒有說這個性格。",
+        "why": "B 由前後環境差異武斷推成不耐寂寞。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 眼睛停在鏡子裡描寫母親失神與難以排解的愁緒，不表示母親不近人情或缺乏同理心。",
+        "elementary": "C 把傷心發呆說成冷漠，弄錯意思。",
+        "why": "C 將悲傷錯當冷酷，與作者對母親的體貼相反。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D『走廊的那一邊』父親與姨娘笑語和母親鏡前失神形成空間與情緒的對照，暗示夫妻心靈疏遠；『相隔甚遠』非真量距離。",
+        "elementary": "D 是一邊笑一邊難過，爸媽的心離得很遠，所以對。",
+        "why": "D 以空間落差暗示心理疏離，能扣住文本關鍵。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "chineseVocabulary": [
+      {
+        "level": "初級",
+        "term": "愁緒",
+        "meaning": "心中難過的情緒"
+      },
+      {
+        "level": "中級",
+        "term": "空間對照",
+        "meaning": "以不同位置呈現情感差異"
+      },
+      {
+        "level": "高級",
+        "term": "心理疏離",
+        "meaning": "身邊很近感情卻遙遠"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "從鏡子裡望著母親",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不像在鄉下廚房裡",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "眼睛停在鏡子裡",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "走廊的那一邊",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "母親心中的愁緒",
+        "bold": true,
+        "highlight": true
+      }
+    ]
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "knownAnswerBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "roleE": "PENDING_DISTINCT_AI_REVIEW",
+    "roleD": "PENDING_SAME_SHA_8X2",
+    "requiresRealHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerVerified": false,
+    "sourceFinalQaVerified": false,
+    "formalReady": false,
+    "newMain": false,
+    "newLive": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
