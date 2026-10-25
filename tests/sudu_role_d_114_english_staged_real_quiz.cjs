@@ -250,7 +250,15 @@ async function fontGate(page,qid,label){
       assert.equal(expected.answer,q.answer);
       assert.deepEqual(expected.explanations,q.optionExplanations,
         label+' actual B authored four option teaching changed');
-      assert.equal((await page.locator('#questionCard h1').innerText()).trim(),q.question.trim());
+      // CSS must preserve actual exam cloze spacing; comparing only a
+      // whitespace-normalized DOM string would conceal the real V4 defect.
+      const stem=await page.locator('#questionCard h1').evaluate(el=>({
+        text:el.textContent,visible:el.innerText,whiteSpace:getComputedStyle(el).whiteSpace
+      }));
+      assert.equal(stem.text,q.question,label+' original source stem bytes changed');
+      assert.equal(stem.whiteSpace,'pre-wrap',label+' meaningful official exam whitespace collapsed');
+      if(/ {5,}/.test(q.question))assert(/ {5,}/.test(stem.visible),
+        label+' full original cloze blank is no longer visible in Chromium');
       const options=page.locator('#answerCard .opt');
       assert.equal(await options.count(),4);
       for(let k=0;k<4;k++){
