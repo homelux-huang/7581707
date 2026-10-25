@@ -1,0 +1,40 @@
+name: 7581707 required PR validation
+
+on:
+  pull_request:
+    branches: [main]
+  merge_group:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: required-pr-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  required-pr-validation:
+    name: 7581707 required PR gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate existing source and published allowlist without publishing
+        run: |
+          set -euo pipefail
+          python scripts/check_sudu.py
+          python scripts/sudu_verified_publish.py check
+          python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python -m unittest discover -s backend/tests -v
+          node --test tests/share.test.cjs
+          node tests/sudu_scoring_test.cjs
+          node tests/sudu_dashboard_test.cjs
+          git diff --exit-code
