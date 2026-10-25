@@ -1,0 +1,80 @@
+name: Role D 104-113 existing V4 year-route fail-closed 10x8x2 (NO RELEASE)
+on:
+  push:
+    branches:
+      - ui/role-d-104-113-v4-year-route-gate-20261025
+  pull_request:
+    branches:
+      - fix/master-v4-noncalc-guide-20261025
+    paths:
+      - 'sudu/v4-115-multisubject-review-demo.html'
+      - 'sudu/verified-questions-runtime.js'
+      - 'tests/sudu_role_d_104_113_year_route.cjs'
+      - '.github/workflows/sudu-role-d-104-113-year-route.yml'
+      - 'docs/ROLE_D_104_113_YEAR_ROUTE_GATE_20261025.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: d-104-113-v4-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  historic_year_nonrelease_10x8x2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      SUDU_D_EXPECT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      SUDU_D_OUTPUT: test-results/role-d-104-113-year-route
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect strict exact tested V4 and historic source revision
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SUDU_D_EXPECT_SHA"
+          node --check tests/sudu_role_d_104_113_year_route.cjs
+          node --check sudu/verified-questions-runtime.js
+          git diff --exit-code
+          test -f sudu/data/years/104.json
+          test -f sudu/data/years/113.json
+      - name: Install real Chromium and Traditional Chinese fallback
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
+          fc-cache -f
+          family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
+          printf 'Runner zh-TW fallback: %s\n' "$family"
+          printf '%s\n' "$family" | grep -Eq '^Noto (Sans|Serif) CJK'
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Build original only, enforce existing verified publisher
+        run: |
+          set -euo pipefail
+          python scripts/sudu_verified_publish.py check
+          python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/role-d104-history.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/sudu/v4-115-multisubject-review-demo.html >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/sudu_role_d_104_113_year_route.cjs
+      - name: Upload exact-HEAD source hashes and 160 genuine no-release screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-104-113-V4-YEARS-FAILCLOSED-${{ github.run_id }}
+          path: test-results/role-d-104-113-year-route/
+          if-no-files-found: warn
+          retention-days: 14
