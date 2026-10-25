@@ -1523,7 +1523,7 @@
         "sourceQuestionsBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b"
       },
       "source": {
-        "status": "IMAGE_QA_CANDIDATE_PASS__FULL_SOURCE_PENDING",
+        "status": "SHA_INCONSISTENT_QUESTION_PROVENANCE_VS_MANIFEST__BLOCKED",
         "questionRevision": null,
         "revisionType": "TEXT_OPTIONS_SINGLE_WEBP_SHA",
         "webpSha256": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
@@ -1532,7 +1532,12 @@
         "webpQuestionRecordSha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
         "originalQuestionVerificationFlag": false,
         "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
-        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b"
+        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+        "shaMismatchDetail": {
+          "assetAndManifestSha": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
+          "staleQuestionProvenanceWebpSha": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
+          "reason": "assets.sha256 == manifest.sha256, but questionProvenance.webpSha256 is a different SHA; publisher image_sha prefers questionProvenance"
+        }
       },
       "officialAnswerEvidence": {
         "status": "FINAL_ANSWER_DIRECT_QA_NOT_ESTABLISHED",
@@ -1578,6 +1583,7 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
+        "P0_114_00_C_19_RECONCILE_STALE_QUESTIONPROVENANCE_SHA_NO_AUTO_APPROVAL",
         "TRUE_AUTHORIZED_DISTINCT_TEACHER_SIGNATURE_MISSING",
         "COMPLETE_DUAL_LEVEL_FOUR_OPTION_TEACHING_NOT_DELIVERED"
       ]
@@ -32876,6 +32882,20 @@
       "newLive": 0,
       "existingMainApproved": 5
     },
-    "scopeNote": "410 source-branch candidate IDs; no claim that official question count per year was independently enumerated from official PDFs. 114 09-1 source subject labelled professional course; split by candidate original question number without declaring official boundary confirmation."
+    "scopeNote": "410 source-branch candidate IDs; no claim that official question count per year was independently enumerated from official PDFs. 114 09-1 source subject labelled professional course; split by candidate original question number without declaring official boundary confirmation.",
+    "sourceShaCrosscheck": {
+      "scanned": 410,
+      "manifestVsQuestionProvenanceMismatches": 1,
+      "affected": [
+        "114-00-C-19"
+      ],
+      "policy": "Keep blocked until A verifies and repairs exact source field and SQLite; never hand-edit READY"
+    },
+    "existingMainHistoricFive": {
+      "source": "current QA file blobs + policy exact sha",
+      "teachingEvidenceGitBlobMatchesPolicy": 5,
+      "webpShaInCurrentApprovedMatchesPolicy": 5,
+      "currentLiveSameShaNotVerified": true
+    }
   }
 }
