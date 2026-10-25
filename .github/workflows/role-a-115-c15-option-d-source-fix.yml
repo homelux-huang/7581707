@@ -1,0 +1,64 @@
+name: Role A 115 C15 single-option text and 205 SQLite surgical fix (BRANCH ONLY / NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-c15-text-sqlite-correction-20261025
+    paths:
+      - scripts/role_a_115_c15_option_d_fix.py
+      - tests/test_role_a_115_c15_option_d_fixed.py
+      - tests/test_role_a_115_c11_15_shared_receipts.py
+      - docs/ROLE_A_115_C15_OPTION_D_CORRECTION_20261025.md
+      - .github/workflows/role-a-115-c15-option-d-source-fix.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: role-a-115-c15-isolated-fix-20261025
+  cancel-in-progress: false
+
+jobs:
+  scoped_bank_db_one_record_repair:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-c15-text-sqlite-correction-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact isolated Role A branch, never main
+        uses: actions/checkout@v4
+        with:
+          ref: qa/role-a-115-c15-text-sqlite-correction-20261025
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source pixel decoder required for SHA and crop tests
+        run: python -m pip install -q pillow
+      - name: Verify branch guard, exact files and safely repair only C15 option D / one SQL row
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/role-a-115-c15-text-sqlite-correction-20261025"
+          python -m py_compile scripts/role_a_115_c15_option_d_fix.py tests/test_role_a_115_c15_option_d_fixed.py
+          python scripts/role_a_115_c15_option_d_fix.py --apply
+          python scripts/role_a_115_c15_option_d_fix.py --verify
+          python -m unittest discover -s tests -p test_role_a_115_c15_option_d_fixed.py -v
+          python -m unittest discover -s tests -p test_role_a_115_c11_15_shared_receipts.py -v
+      - name: Validate no other files will be committed; write only on exact isolated branch
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 sudu/data/processed/115/QA_115_C15_OPTION_D_CROSSPAGE_CORRECTION_20261025.json
+          allowed="$(printf '%s\n' 'sudu/data/processed/115/QA_115_C15_OPTION_D_CROSSPAGE_CORRECTION_20261025.json' 'sudu/data/processed/115/question-bank.sqlite3' 'sudu/data/processed/115/questions.json')"
+          actual="$(git diff --cached --name-only)"
+          if test -z "$actual"; then
+            echo "Idempotent verified exact source, nothing to commit"
+          else
+            test "$actual" = "$allowed" || { echo "Unexpected path diff; refuse write"; git diff --cached --name-only; exit 1; }
+            git diff --cached --check
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m "fix(source A): C15 option D cross-page only, update canonical 205 SQLite payload SHA [NO RELEASE]"
+            git push origin HEAD:refs/heads/qa/role-a-115-c15-text-sqlite-correction-20261025
+          fi
+          test "$(git ls-remote origin refs/heads/qa/role-a-115-c15-text-sqlite-correction-20261025 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo "Source-only same remote HEAD; no Pages/main/teacher or other Session edits."

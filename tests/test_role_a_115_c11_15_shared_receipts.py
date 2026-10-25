@@ -202,17 +202,17 @@ class C11To15ImmutableOriginalReceipts(unittest.TestCase):
             self.assertEqual(publisher.source_proof(self.bank[qid],True,True,
                               publisher.text_revision(self.bank[qid],self.man[qid]["sha256"])),(False,False))
 
-    def test_q15_cross_page_text_pollution_remains_quarantined_not_pass(self):
+    def test_q15_source_option_d_surgical_correction_retains_raw_and_no_release(self):
         q=self.bank["115-00-C-15"]
         self.assertEqual(len(q["options"]),4)
-        self.assertTrue(q["options"][3].startswith("拘泥禮法 ／ 不知變通"))
-        # Genuine newly identified source-text defect: D appends p5 footer and p6 Q16-18 article.
-        self.assertIn("▲閱讀下文，回答第16-18 題",q["options"][3])
-        self.assertIn("公告試題僅供參考",q["options"][3])
+        self.assertEqual(q["options"][3],"拘泥禮法 ／ 不知變通")
+        # The original raw extraction is immutable evidence of the original cross-page leak.
+        self.assertIn("▲閱讀下文，回答第16-18 題",q["extraction"]["rawOptions"][3])
+        self.assertIn("公告試題僅供參考",q["extraction"]["rawOptions"][3])
         self.assertFalse(q["questionVerified"])
         self.assertFalse(q["integrationReady"])
         self.assertEqual(q["assets"]["visualQa"],"PENDING_INDIVIDUAL_VISUAL_QA")
-        self.assertEqual(q["imageQaStatus"],"PASS") # image-only historical
+        self.assertEqual(q["imageQaStatus"],"PASS") # historical image QA only
         self.assertNotEqual("PASS_TEXT",q.get("ocrTextQaStatus"))
         with self.assertRaises(AssertionError):
             check_image(self.man["115-00-C-15"]["output"],"0"*64,[1220,239])
