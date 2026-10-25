@@ -176,6 +176,44 @@ class Original113Chinese07To10(unittest.TestCase):
             "4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49")
         self.assertLess(self.q[9]["asset"]["cropPixels"][3],self.q[10]["asset"]["cropPixels"][1])
 
+    def test_four_actual_source_visual_observations_exact_sha_and_explicit_not_e(self):
+        receipt=ROOT/"sudu/data/processed/113/role-a-c07-10/VISUAL_QA_ASSISTANT_20261025.json"
+        self.assertTrue(receipt.exists())
+        j=a.read(receipt)
+        self.assertEqual(j["taskId"],a.TASK)
+        self.assertEqual(j["originalSourcePage"]["sha256"],self.man["originalPage"]["sha256"])
+        self.assertEqual(j["originalAnswerPage"]["sha256"],self.man["originalAnswerPage"]["sha256"])
+        self.assertEqual(j["oldRejectedCrops"],self.man["rejectedInitialCrops"])
+        self.assertEqual(j["newSourceImageAssistantPassCount"],4)
+        for key in ("newAnswerVerified","newQuestionVerified","newTeachingVerified",
+                    "newIndependentRoleEReview","newReady","newLive"):
+            self.assertEqual(j[key],0)
+        for key in ("independentHumanReview","independentRoleEContentReview",
+                    "officialFinalAmendmentChecked","originalPdfBytesRehashedThisBatch",
+                    "wholeYearOriginalQuestionVerified"):
+            self.assertFalse(j[key])
+        self.assertTrue(j["observedQ09OriginalFigureComplete"])
+        self.assertTrue(j["observedQ10FishboneAndOptionTableComplete"])
+        byid={x["questionId"]:x for x in j["questionResults"]}
+        self.assertEqual(len(byid),4)
+        for n,q in self.q.items():
+            with self.subTest(number=n):
+                item=byid[q["questionId"]]
+                self.assertEqual(item["asset"],q["asset"])
+                self.assertEqual(item["sourceRevisionSha256"],q["sourceRevisionSha256"])
+                self.assertEqual(item["originalPublishedAnswerCandidate"],q["answerCandidate"])
+                self.assertEqual(item["visualSourceResult"],"PASS_ROLE_A_SOURCE_IMAGE_ONLY")
+                self.assertFalse(item["answerVerified"])
+                self.assertFalse(item["questionVerified"])
+                self.assertFalse(item["independentRoleEReview"])
+                self.assertTrue(all(item["criteria"].values()))
+                self.assertGreater(len(item["observation"]),100)
+                self.assertEqual(item["figureReview"],"PASS_ORIGINAL_PX_FIGURE_FULL" if n in (9,10) else "NOT_APPLICABLE")
+                self.assertEqual(item["tableReview"],"PASS_ALL_FOUR_COLUMN_LABELS_AND_AD_ROWS" if n==10 else "NOT_APPLICABLE")
+                # Despite actual image inspection, the publisher candidate remains
+                # unapproved pending per-year original official answer corrections.
+                self.assertEqual(q["visualQaStatus"],"DRAFT_NEEDS_INDIVIDUAL_SOURCE_PIXEL_IMAGE_QA")
+
     def test_never_treat_four_image_candidates_or_auto_answers_as_final_ready(self):
         for key in ("newQuestionVerified","newAnswerVerified","newTeachingVerified","newIndependentEReview","newReady","newLive"):
             self.assertEqual(self.man[key],0)
