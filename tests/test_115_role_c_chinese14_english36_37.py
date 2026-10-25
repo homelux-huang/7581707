@@ -107,7 +107,7 @@ class ThreeNewRoleC(unittest.TestCase):
                     self.assertTrue(e["newsExampleSourceUrl"].startswith("https://www.unicef.org/"))
                     self.assertTrue(e["newsExampleSourceDate"].startswith("2025-"))
         self.assertIn("no clear proof",self.q["115-00-E-37"]["teaching"]["english"]["newsExampleEnglish"])
-        self.assertIn("screen time alone",self.q["115-00-E-36"]["teaching"]["extension"])
+        self.assertIn("螢幕時間本身",self.q["115-00-E-36"]["teaching"]["extension"])
     def test_independent_review_source_approval_shared_still_pending(self):
         for qid,q in self.q.items():
             r=q["review"]
