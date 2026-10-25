@@ -7,6 +7,7 @@ on:
     paths:
       - sudu/v4-115-multisubject-review-demo.html
       - tests/sudu_role_d_english_bilingual_news.cjs
+      - docs/ROLE_D_ENGLISH_BILINGUAL_NEWS_HANDOFF_20261025.md
       - .github/workflows/sudu-role-d-english-news-gate.yml
       - sudu/teaching-candidates/114-role-b-20261025/**
   workflow_dispatch:
