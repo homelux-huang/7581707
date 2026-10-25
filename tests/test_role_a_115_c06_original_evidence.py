@@ -138,7 +138,9 @@ class C06OriginalAndOfficialReceipt(unittest.TestCase):
         self.assertFalse(qa["questionVerified"])
         self.assertEqual(qa["officialNoticeStatus"],"NO_ENTRY_IN_FULL_10_PAGE_00_C_CONFIRMATION_PDF")
         path=self.answerqa["originalFinalAnswerPageWebp"]
-        self.assertGreater(verify_webp(path,ANSWER_PAGE_SHA,[1400,1981]),0)
+        self.assertGreater(verify_webp(path,ANSWER_PAGE_SHA,[1400,1980]),0)
+        with self.assertRaises(AssertionError):
+            verify_webp(path,ANSWER_PAGE_SHA,[1400,1981])  # rejected wrong height
         official=load(BASE/"QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json")
         doc=next(x for x in official["docs"] if x["paperCode"]=="00-C")
         self.assertEqual(doc["pdfSha256"],CONFIRM_PDF_SHA_RECORDED)
