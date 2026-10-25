@@ -373,7 +373,13 @@ function formatStudyValue(q,key,value){
   const at=term?text.toLowerCase().indexOf(term.toLowerCase()):-1;
   const safe=at<0?esc(text):esc(text.slice(0,at))+
    '<mark class="exam-highlight">'+esc(text.slice(at,at+term.length))+'</mark>'+esc(text.slice(at+term.length));
-  return '<span class="news-en">'+safe+'</span>';
+  // The matching annual candidate's Chinese sentence belongs in the same
+  // existing guide field. guideEntries() already removes its separate title;
+  // never silently discard that translation or borrow Demo news by q.id.
+  const zh=q.extra?.['新聞時事中文翻譯'];
+  const bilingual=hasStudyValue(zh)&&!text.includes(zh)?
+    '<span class="news-zh"><b>中文：</b>'+esc(zh)+'</span>':'';
+  return '<span class="news-en">'+safe+'</span>'+bilingual;
  }
  if(q.subject==='英文'&&key==='新聞時事例句'){
   const news=((window.DEMO_LEARNING_CONFIG||{}).englishNewsExamples||{})[String(q.id)];
