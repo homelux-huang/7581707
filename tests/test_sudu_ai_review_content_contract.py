@@ -7,6 +7,7 @@ import copy
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from scripts import sudu_independent_review_gate as gate
@@ -21,7 +22,8 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
         self.official_path = prefix + "115-MB23-official.json"
         self.ai_path = prefix + "115-MB23-independent-ai.json"
         self.notes_path = prefix + "115-MB23-independent-ai.md"
-        self.q = {"year": 115, "questionId": "115-00-MB-23", "answer": "B"}
+        self.q = {"year": 115, "questionId": "115-00-MB-23", "answer": "B",
+                  "answerProvenance": {"officialPdfSha256": "d" * 64}}
         self.asset = {"sha256": "a" * 64}
         self.lesson = {
             "questionRevision": "b" * 64,
@@ -32,8 +34,12 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
         self.teaching_raw = json.dumps(self.lesson, ensure_ascii=False).encode("utf-8")
         self.audit = {"evidence": {"official": self.official_path},
                       "independentAiContentEvidence": self.ai_path}
-        self.write(self.official_path, {"questionId": self.q["questionId"],
-                                        "finalAnswer": "B", "source": "UNIT_TEST_NOT_OFFICIAL"})
+        self.write(self.official_path, {"year": 115, "questionId": self.q["questionId"],
+                                        "finalAnswer": "B", "source": "UNIT_TEST_NOT_OFFICIAL",
+                                        "officialPdfSha256": "d" * 64,
+                                        "correctionNoticeReviewed": True,
+                                        "officialFinalAnswerImageQaPassed": True,
+                                        "officialPage": "https://web1.tcte.edu.tw/EXAM/115_4y/"})
         self.write_bytes(self.notes_path, b"115 MB23 unit test independent findings, source table, source revision and exact four options. Not real QA.")
         self.statement = {
             "schemaVersion": 1, "year": 115, "questionId": self.q["questionId"],
@@ -62,6 +68,8 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
             "reviewNotesSha256": gate.digest((self.root / self.notes_path).read_bytes()),
         }
         self.reseal()
+        self.mock_main_protected = True
+        self.mock_comment = self.build_mock_comment()
 
     def write_bytes(self, path, raw):
         target = self.root / path
@@ -86,13 +94,43 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
             "teachingDigest": s["teachingDigest"],
             "officialEvidenceSha256": s["officialEvidenceSha256"],
             "reviewNotesSha256": s["reviewNotesSha256"],
+            "reviewIssueCommentId": s["reviewIssueCommentId"],
+            "sourceCommit": s["sourceCommit"],
+            "reviewerGithubUserId": 444111,
+            "reviewerGithubLogin": "synthetic-e-reviewer",
         }}
 
+    def build_mock_comment(self):
+        s = self.statement
+        binding = "\\n".join(str(s[key]) for key in (
+            "reviewTaskId", "reviewerSessionId", "questionId",
+            "questionRevision", "webpSha256", "teachingDigest",
+            "officialEvidenceSha256", "sourceCommit"))
+        return {
+            "id": 123456789,
+            "issue_url": "https://api.github.com/repos/homelux-huang/7581707/issues/36",
+            "user": {"id": 444111, "login": "synthetic-e-reviewer"},
+            "created_at": "2026-10-24T15:00:00Z",
+            "body": "RETURN — synthetic source inspection only\\nrole E\\n" + binding
+        }
+
+    def mock_github(self, path):
+        if path == "/branches/main":
+            return {"name": "main", "protected": self.mock_main_protected}
+        if path == "/issues/comments/123456789":
+            return copy.deepcopy(self.mock_comment)
+        if path == "/commits/" + "c" * 40:
+            return {"sha": "c" * 40, "commit": {"tree": {"sha": "f" * 40}}}
+        raise ValueError("GitHub API 404 mocked; no real comment/commit created")
+
     def verify(self, registry=None):
-        return gate.separate_ai_content_receipt_verified(
-            self.root, self.audit, self.q, self.asset,
-            self.lesson, self.teaching_raw,
-            trusted_receipts=self.registry if registry is None else registry)
+        # Strictly offline mock; synthetic GitHub comments/commits are NEVER
+        # authentic evidence of a real human or separate AI session.
+        with patch.object(gate, "_github_json", side_effect=self.mock_github):
+            return gate.separate_ai_content_receipt_verified(
+                self.root, self.audit, self.q, self.asset,
+                self.lesson, self.teaching_raw,
+                trusted_receipts=self.registry if registry is None else registry)
 
     def test_valid_synthetic_contract_only_not_publisher_admission(self):
         self.assertEqual(self.verify(),
@@ -165,6 +203,51 @@ class SeparateAiContentReceiptContract(unittest.TestCase):
         self.statement["reviewTaskId"] = "C-pretending-to-be-E"
         self.reseal()
         self.assertEqual(self.verify()[1], "ai_review_author_or_reviewer_not_distinct")
+
+    def test_resealed_official_final_answer_conflict_fails_not_just_sha(self):
+        original = json.loads((self.root / self.official_path).read_text())
+        original["finalAnswer"] = "A"  # source candidate remains B, SHA is recomputed
+        self.write(self.official_path, original)
+        self.statement["officialEvidenceSha256"] = gate.digest(
+            (self.root / self.official_path).read_bytes())
+        self.reseal()
+        self.assertEqual(self.verify()[1], "ai_review_official_document_missing_or_answer_conflict")
+        original["finalAnswer"] = "B"
+        original["correctionNoticeReviewed"] = False
+        self.write(self.official_path, original)
+        self.statement["officialEvidenceSha256"] = gate.digest(
+            (self.root / self.official_path).read_bytes())
+        self.reseal()
+        self.assertEqual(self.verify()[1], "ai_review_official_document_missing_or_answer_conflict")
+
+    def test_nonexistent_integer_issue36_comment_or_source_commit_rejected(self):
+        self.statement["reviewIssueCommentId"] = 123456790  # integer > 0, but no such comment
+        self.reseal()
+        self.assertEqual(self.verify()[1], "ai_review_github_verification_unavailable")
+        self.statement["reviewIssueCommentId"] = 123456789
+        self.statement["sourceCommit"] = "e" * 40  # well-formed but nonexistent Git SHA
+        self.reseal()
+        self.assertEqual(self.verify()[1], "ai_review_github_verification_unavailable")
+
+    def test_wrong_issue36_author_body_or_timestamp_rejected(self):
+        self.mock_comment["issue_url"] = "https://api.github.com/repos/homelux-huang/7581707/issues/35"
+        self.assertEqual(self.verify()[1], "ai_review_issue36_comment_identity_mismatch")
+        self.mock_comment = self.build_mock_comment()
+        self.mock_comment["user"]["login"] = "synthetic-author-same-as-reviewer"
+        self.assertEqual(self.verify()[1], "ai_review_issue36_comment_identity_mismatch")
+        self.mock_comment = self.build_mock_comment()
+        self.mock_comment["body"] = "RETURN — role E but WITHOUT source or digest proof"
+        self.assertEqual(self.verify()[1], "ai_review_comment_not_bound_to_actual_findings")
+        self.mock_comment = self.build_mock_comment()
+        self.mock_comment["created_at"] = "2026-10-23T11:00:00Z"  # before reviewedAt
+        self.assertEqual(self.verify()[1], "ai_review_comment_timestamp_not_valid")
+
+    def test_unprotected_main_registry_and_untrusted_reviewer_identity_rejected(self):
+        self.mock_main_protected = False
+        self.assertEqual(self.verify()[1], "ai_review_main_registry_unprotected")
+        self.mock_main_protected = True
+        self.registry[self.q["questionId"]]["reviewerGithubUserId"] = 444222
+        self.assertEqual(self.verify()[1], "ai_review_issue36_comment_identity_mismatch")
 
     def test_invalid_path_or_missing_report_rejected(self):
         self.audit["independentAiContentEvidence"] = "../../outside.json"
