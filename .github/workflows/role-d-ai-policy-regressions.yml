@@ -1,0 +1,32 @@
+name: Role D AI policy quality regressions
+on:
+  pull_request:
+    branches: [main, governance/114-115-ai-publisher-gate-20261025]
+    paths:
+      - scripts/sudu_independent_review_gate.py
+      - scripts/sudu_verified_publish.py
+      - sudu/release-governance/**
+      - tests/test_role_d_ai_policy_quality_regressions.py
+      - tests/test_sudu_ai_review_content_contract.py
+      - tests/test_sudu_ai_publisher_policy_migration.py
+      - tests/test_sudu_verified_publish.py
+      - .github/workflows/role-d-ai-policy-regressions.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify distinct AI chain and retained publisher rejection paths
+        run: |
+          python -X utf8 -m unittest discover -s tests -p 'test_sudu_ai_review_content_contract.py' -v
+          python -X utf8 -m unittest discover -s tests -p 'test_sudu_ai_publisher_policy_migration.py' -v
+          python -X utf8 -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+          python -X utf8 -m unittest discover -s tests -p 'test_role_d_ai_policy_quality_regressions.py' -v
