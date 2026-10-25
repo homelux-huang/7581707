@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-08",
+  "subject": "英文",
+  "answer": "D",
+  "kind": "PRESERVE_BASE_AND_ENRICH",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp",
+    "webpSha256": "5a9ebec3dbb4cacf3bbb2cd2f6121f69319d042e3c716f41fdbe96f30bfd9c85",
+    "sourcePageWebpSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-08-teaching.json",
+    "baseTeachingGitBlobSha": "260dfe0ad8953a1d19bcdf934009231e8448f7b3",
+    "baseTeachingCanonicalSha256": "8269a1872b03c696cb578f4534b613592d1c966a8928dc4336f1bd5afffcefd9",
+    "existingHistoricalPrekeySolveEvidence": "sudu/data/processed/114/review-evidence/114-00-E-08-blind.json",
+    "sourceEvidenceStatus": "PR21_INDIVIDUAL_SOURCE_AND_FINAL_ANSWER_AI_QA_EXISTS"
+  },
+  "teaching": null,
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "due to",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "magnificent performance",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "stood out as",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "stood out as",
+        "ipa": "/stʊd aʊt æz/",
+        "level": "中級",
+        "meaningZh": "以某種身分脫穎而出；此題為 stand out as 的過去式",
+        "synonyms": [
+          "distinguished himself as",
+          "excelled as"
+        ],
+        "antonyms": [
+          "blended in"
+        ],
+        "usageNote": "不能把 was named after（以……命名）誤認為獲選 MVP；blend in 的語法不能直接替換 stood out as。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/stand-out"
+      },
+      {
+        "headword": "magnificent",
+        "ipa": "/mæɡˈnɪf.ɪ.sənt/",
+        "level": "高級",
+        "meaningZh": "卓越的；值得稱讚的",
+        "synonyms": [
+          "excellent",
+          "splendid"
+        ],
+        "antonyms": [
+          "poor",
+          "unimpressive"
+        ],
+        "usageNote": "此處修飾 performance（表現）；高級為本平台教學分級，不宣稱是字典的 CEFR 等級。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/magnificent"
+      }
+    ],
+    "newsExample": {
+      "kind": "SELF_WRITTEN_NEWS_CONTEXT_EXAMPLE",
+      "english": "Chen Chieh-hsien stood out as the MVP of the 2024 Premier12 tournament.",
+      "chinese": "陳傑憲在2024年世界十二強棒球賽中脫穎而出，成為最有價值球員。",
+      "highlightActualForm": "stood out as",
+      "source": {
+        "publicationDate": "2024-11-24",
+        "title": "12強賽台灣隊長陳傑憲對日韓開轟 超猛打擊率獲MVP",
+        "url": "https://www.cna.com.tw/news/aspt/202411240226.aspx",
+        "factSupportedBySource": "中央社2024-11-24確認陳傑憲獲得2024 Premier12 MVP"
+      },
+      "notAnArticleQuote": true,
+      "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
+    }
+  },
+  "composedTeachingSha256": "7415aab85aa8b693ff430b63dde9ebe641652b985a577ee93854aa50493bb3f5",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": true,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "NEW_ENRICHMENT_NOT_IN_PRIOR_UI_OR_TEACHING_APPROVAL",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}
