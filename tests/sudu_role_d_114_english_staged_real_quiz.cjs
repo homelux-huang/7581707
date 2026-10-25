@@ -9,6 +9,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
+const {URL:NativeURL}=require('node:url');
 const cp=require('node:child_process');
 const {chromium}=require('playwright');
 const ROOT=path.resolve(__dirname,'..');
@@ -278,7 +279,7 @@ async function fontGate(page,qid,label){
         label+' original image missing or overflows');
       assert(Math.abs(decoded.w/decoded.h-decoded.nw/decoded.nh)/(decoded.nw/decoded.nh)<0.025,
         label+' original WebP aspect changed');
-      const imageHTTP=await page.request.get(new URL('./'+q.image,URL).href);
+      const imageHTTP=await page.request.get(new NativeURL('./'+q.image,URL).href);
       assert(imageHTTP.ok(),label+' WebP HTTP '+imageHTTP.status());
       assert.equal(SHA(await imageHTTP.body()),r.imageSha256);
       await layout(page,label+' before answer');
