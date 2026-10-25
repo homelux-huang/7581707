@@ -157,13 +157,12 @@ class Original113Chinese11To15(unittest.TestCase):
         prior=prev.read(prev.MANIFEST)
         self.assertEqual(len(prior["questions"]),5)
         q6=ROOT/"sudu/data/processed/113/role-a-c06/manifest.json"
-        self.assertEqual(json.loads(q6.read_text(encoding="utf-8"))["questions"][0]["sourceAsset"]["sha256"]
-                         if False else json.loads(q6.read_text(encoding="utf-8"))["questions"][0]["asset"]["sha256"],
+        self.assertEqual(json.loads(q6.read_text(encoding="utf-8"))["questions"][0]["asset"]["sha256"],
                          "57064b9f8da602c2894216b5f0ce7577988c2e534272d5da02affd5080f1a071")
         old=ROOT/"sudu/data/processed/113/role-a-c07-10/manifest.json"
         base=json.loads(old.read_text(encoding="utf-8"))
         self.assertEqual(len(base["questions"]),4)
-        self.assertEqual(base["questions"][2]["sourceAsset"]["sha256"] if False else base["questions"][2]["asset"]["sha256"],
+        self.assertEqual(base["questions"][2]["asset"]["sha256"],
                          "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b")
 
 if __name__=="__main__":
