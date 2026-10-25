@@ -28,7 +28,8 @@
     "text": "ˉ\n▲閱讀下文，回答第23-24 題\n    甲公司會計基礎採權責發生基礎之記虛轉實法，依據X5 年底資產負債表得知，資產\n  總額為$1,950,000，流動比率為3，速動比率為0.8，非流動負債為流動負債1.6 倍，權益\n  總額為負債總額1.5 倍。",
     "image": "sudu/data/processed/115/webp-v3/shared/115-09-2-SHARED-23-24.webp",
     "imageSha256": "18031e91e12d7083d5d9c0fa39b60191fe6c13a295d102e4f27d8cd916ff7343",
-    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "sharedMaterialRevision": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
   },
   "teaching": {
     "teacherSummary": "採**記虛轉實法**，期末要把**未賺租金6,000元**轉為流動負債，將**未耗保險費30,000元**轉為流動資產（非速動資產）。漏調整時的流動比率**3倍低於正確約3.0392倍**；速動比率**0.8倍高於正確約0.7843倍**，因此選**B：流動比率低估、速動比率高估**。",
@@ -127,7 +128,11 @@
     "officialAnswerEvidenceSha256": null,
     "sourceAdmission": "PENDING",
     "sharedSourceQa": "PENDING",
-    "v4ExactDigestQa": "PENDING"
+    "v4ExactDigestQa": "PENDING",
+    "knownSourceRevisionForReview": "10418a4048adfca3d3201fb5ad5aafdc19b45e62c2e1a0b410a90d4d6560a6b9",
+    "knownTeachingDigestForReview": "6d620446cbbbf4965b378421f8f8c00fa46a7e04adb73d4bbb772a568ea6c3ac",
+    "knownOriginalImageSha256ForReview": "3de9bc054cbbcc29f600801c35b35764c09032a8f26d9c083e92217cdd11cf3f",
+    "sharedMaterialRevisionForReview": "8873b357f2ba6e7626f74aa7505aaaa114536d5d424ba6d8e2d656daec427cb1"
   },
   "studentReleaseApproved": false,
   "deploy": false,
@@ -136,5 +141,8 @@
     "ORIGINAL_SHARED_23_24_IMAGE_VISUAL_QA_PENDING",
     "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING",
     "V4_EXACT_DIGEST_8X2_UI_PENDING"
-  ]
+  ],
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "sourceTextRevision": "10418a4048adfca3d3201fb5ad5aafdc19b45e62c2e1a0b410a90d4d6560a6b9",
+  "teachingCanonicalSha256": "6d620446cbbbf4965b378421f8f8c00fa46a7e04adb73d4bbb772a568ea6c3ac"
 }
