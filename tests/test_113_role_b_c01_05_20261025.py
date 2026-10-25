@@ -55,7 +55,7 @@ class RoleB113(unittest.TestCase):
         self.assertEqual(b["distinctAiEReview"], "PENDING")
         self.assertFalse(b["officialPdfRehashPerformed"])
 
-    def test_true_original_webp_sha_git_blob_and_qa_receipt():
+    def test_true_original_webp_sha_git_blob_and_qa_receipt(self):
         for i, qid in enumerate(IDS):
             with self.subTest(qid=qid):
                 q = self.q[qid]
@@ -167,7 +167,7 @@ class RoleB113(unittest.TestCase):
             self.assertNotEqual(h(dict(bound, teaching=dict(d["teaching"], memory="tampered"))), row["composedTeachingSha256"])
             self.assertNotEqual(h(dict(bound, enrichment={"tampered": True})), row["composedTeachingSha256"])
 
-    def test_strict_separate_e_review_and_source_official_d_master_blocks():
+    def test_strict_separate_e_review_and_source_official_d_master_blocks(self):
         for d in self.d.values():
             r = d["review"]
             self.assertEqual(r["status"], "BLOCKED")

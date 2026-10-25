@@ -43,13 +43,13 @@
       "A": {
         "teacher": "『斟酌損益』衡量得失，『改弦易轍』是改變做法，兩個詞中斟酌和弦轍都是正字。",
         "elementary": "A 是仔細想想利弊、再改變方法，字沒有錯。",
-        "why": "A 的成語用字正確。",
+        "why": "A 的『斟酌損益』和『改弦易轍』都是正確成語用字，沒有題目要求的形似字混用。",
         "isCorrect": false
       },
       "B": {
         "teacher": "『抓耳撓腮』是搔耳抓臉，『身形臃腫』形容形體肥厚，各字都正確。",
         "elementary": "B 是搔耳朵和臉、形容身材，沒有錯字。",
-        "why": "B 的撓腮臃腫都是正字。",
+        "why": "B 的『抓耳撓腮』與『身形臃腫』皆為正字，語意正確，沒有寫錯字。",
         "isCorrect": false
       },
       "C": {
@@ -124,8 +124,8 @@
       }
     ]
   },
-  "teachingCanonicalSha256": "cfd211210514c5ba1e1245a9bd9a13f97bb0b599948b8042afc10074dcc62411",
-  "composedTeachingSha256": "254af793a93e6231f5218428834279622dbfcacd64b42418df328b3846dddf21",
+  "teachingCanonicalSha256": "f317d3c86144c632a66b285729c3bdd6072c44c874c7ad3a3ad2748f067884e8",
+  "composedTeachingSha256": "786cd98331c46b07719087522148805975fc32aa199aaf9fdfed80d42afc0c8d",
   "reasoningAudit": {
     "knownAnswerBeforeAuthoring": true,
     "blindSolveClaimed": false
