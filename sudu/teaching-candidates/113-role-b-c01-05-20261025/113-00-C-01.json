@@ -124,8 +124,8 @@
       }
     ]
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "cfd211210514c5ba1e1245a9bd9a13f97bb0b599948b8042afc10074dcc62411",
+  "composedTeachingSha256": "254af793a93e6231f5218428834279622dbfcacd64b42418df328b3846dddf21",
   "reasoningAudit": {
     "knownAnswerBeforeAuthoring": true,
     "blindSolveClaimed": false
