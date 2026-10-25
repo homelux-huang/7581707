@@ -1,0 +1,34 @@
+name: Role B 114 next-five author candidate CI (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch02/**"
+      - "tests/test_114_role_b_batch02_20261025.py"
+      - ".github/workflows/114-role-b-batch02-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lesson-draft-readonly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate 5 original source revisions, WebP SHA and detailed teaching
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch02_20261025.py' -v
+      - name: Explicitly block unreviewed teacher drafts
+        run: |
+          python - <<'PY'
+          import pathlib,json
+          base=pathlib.Path('sudu/teaching-candidates/114-role-b-20261025-batch02')
+          b=json.loads((base/'batch.json').read_text(encoding='utf-8'))
+          assert b['itemCount']==5 and b['newReady']==b['newLive']==0
+          for row in b['items']:
+              d=json.loads(pathlib.Path(row['path']).read_text(encoding='utf-8'))
+              assert d['review']['status']=='BLOCKED'
+              assert d['review']['humanTeacherVerified'] is False
+              assert d['review']['studentReleaseApproved'] is False
+          print('NO RELEASE: five author candidates only.')
+          PY
