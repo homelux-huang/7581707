@@ -230,6 +230,11 @@ async function fontGate(page,qid,label){
        'z-index:100000;pointer-events:none;border-radius:3px}'});
      assert(await page.locator('#homeView').isVisible());
      assert.equal(await page.locator('#studyView').isVisible(),false);
+     // The original 35-Demo V4 can seed an unanswered default record at
+     // boot even on an annual route. Preserve its ACTUAL baseline byte-for-byte
+     // rather than assuming the Demo localStorage key never exists.
+     const demoOriginal=await page.evaluate(()=>
+       localStorage.getItem('tvet-115-multisubject-demo-v1'));
      await page.locator('#homeSubjectSel').selectOption('英文');
      await page.locator('#studyView').waitFor({state:'visible',timeout:12000});
      if(theme==='dark')await act(page.locator('#themeBtn'),touch);
@@ -354,7 +359,8 @@ async function fontGate(page,qid,label){
        demo:localStorage.getItem('tvet-115-multisubject-demo-v1')
      }));
      assert(stored.annual&&JSON.parse(stored.annual).records,'annual isolated student data missing');
-     assert.equal(stored.demo,null,'annual practice polluted Demo 35-question progress');
+     assert.equal(stored.demo,demoOriginal,
+       '114 yearly answering mutated original 35-Demo progress from startup baseline');
      assert.deepEqual(errors,[],'uncaught browser errors');
     }catch(e){
       report.errors.push({width,height,theme,error:String(e.stack||e),browserErrors:errors});
