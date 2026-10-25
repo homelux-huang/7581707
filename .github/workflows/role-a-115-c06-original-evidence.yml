@@ -1,0 +1,47 @@
+name: Role A 115 C06 original source image and final answer receipts (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-c06-original-evidence-20261025
+    paths:
+      - sudu/data/processed/115/webp-v2/00-C/115-00-C-06.webp
+      - sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json
+      - sudu/data/processed/115/QA_115_C_6_FINAL_OFFICIAL_ANSWERS_20261023.json
+      - tests/test_role_a_115_c06_original_evidence.py
+      - docs/ROLE_A_115_C06_ORIGINAL_EVIDENCE_20261025.md
+      - .github/workflows/role-a-115-c06-original-evidence.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-c06-original-qa-receipts-20261025
+  cancel-in-progress: false
+
+jobs:
+  source_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-c06-original-evidence-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Read-only existing source branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Decode original WebP source and official answer pages
+        run: python -m pip install -q pillow
+      - name: Original Git-blob and per-question image/answer SHA + 205 SQLite checks
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_c06_original_evidence.py scripts/sudu_verified_publish.py
+          python -m unittest discover -s tests -p test_role_a_115_c06_original_evidence.py -v
+      - name: Enforce no source bank, student state or release writes
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "No main, pages, source source-bank, or approved data writes; receipts only."
