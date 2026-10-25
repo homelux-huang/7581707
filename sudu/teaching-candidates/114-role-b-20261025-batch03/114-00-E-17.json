@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-EN16-19-C05-20261025-04",
+  "year": 114,
+  "questionId": "114-00-E-17",
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Mom:  Guess what? A high school student offered his seat to me on the bus today. He’s so sweet!\n    Son:   ____________\n   Mom:  That’s true, because I’d been working all day and I could hardly keep my eyes open.",
+  "options": [
+    "Did you say anything?",
+    "Maybe you looked tired.",
+    "Surely he liked standing.",
+    "Was he getting off the bus?"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "7072b1bd3b847a6a05c8f1a11de80fa2bcbddf835974b7cd8c6ec19ff5fb6032",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-17.webp",
+    "webpSha256": "889cf3a7156ca6261f9ea485ae48454ae9a11f39d836ae1f9ae01a83a90275a8",
+    "originalManifestQaStatus": "PASS",
+    "finalOfficialAnswerDirectImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文情境對話｜為什麼高中生讓座",
+    "teacherSummary": "媽媽說高中生在公車讓座，兒子空格後她回答 That’s true, because I’d been working all day and I could hardly keep my eyes open；這是承認自己看起來很累，所以應選 B Maybe you looked tired。",
+    "elementarySummary": "兒子猜『媽媽，你可能看起來很累吧？』媽媽說『真的，我工作整天眼睛都快睜不開』。",
+    "concept": "That's true 是確認前一句的判斷，because 補上證據；hardly keep my eyes open 表疲倦到難以睜眼。",
+    "extension": "友善讓座依實際需求；不代表疲累與任何特定疾病畫上等號。",
+    "memory": "working all day＋眼睛快睜不開 → looked tired（B）。",
+    "solvingSteps": [
+      "媽媽稱讚公車上的高中生主動讓座。",
+      "由後句 because 可知理由是工作一整天，非常疲累。",
+      "兒子空格應說媽媽看起來累，B 符合。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Did you say anything? 問媽媽是否有回答或道謝，後句卻只解釋自己工作整天很累，沒有提供她說過什麼。",
+        "elementary": "問有沒有說話，不能用自己累了來直接回答。",
+        "reason": "say anything 要回答言語內容，和媽媽因疲勞被讓座的線索無關。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Maybe you looked tired 猜媽媽看起來疲倦；媽媽用 That's true 承認，並以長時間工作解釋疲勞。",
+        "elementary": "孩子猜媽媽累，媽媽回答真的很累。",
+        "reason": "looked tired 與 could hardly keep my eyes open 形成直接語義對應。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "Surely he liked standing 猜高中生喜歡站著，但媽媽有沒有疲勞不能證明學生喜好，故與後句不連貫。",
+        "elementary": "媽媽累，不代表讓座的人喜歡站著。",
+        "reason": "liked standing 是他人的偏好，而 because I’d been working all day 描述媽媽自身狀態。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "Was he getting off the bus? 問學生是不是要下車，媽媽回答的是工作後很累，完全沒有說學生到站。",
+        "elementary": "問那個學生要不要下車，媽媽卻講自己工作很累。",
+        "reason": "getting off 是行程資訊，無法解釋 hardly keep my eyes open。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測英文原題與候選答案；官方答案個別原頁及更正公告、教科書章節頁碼仍待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "offered his seat",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "looked tired",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "working all day",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "hardly keep my eyes open",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "offered his seat",
+        "ipa": "/ˈɑː.fɚd hɪz siːt/",
+        "level": "中級",
+        "meaningZh": "主動把座位讓給別人",
+        "synonyms": [
+          "gave up his seat",
+          "let someone sit"
+        ],
+        "antonyms": [
+          "kept his seat"
+        ],
+        "usageNote": "offer sth to sb，讓座不表示對方一定喜歡站著。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/offer",
+        "accent": "US",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/offer",
+        "ipaEvidenceScope": "Cambridge 美式 offer 原形 /ˈɑː.fɚ/；offered 過去式加 /d/、his seat 為教學組合推導，不是 Cambridge 直接錄製整個短語。"
+      },
+      {
+        "headword": "tired",
+        "ipa": "/taɪɚd/",
+        "level": "初級",
+        "meaningZh": "疲倦的",
+        "synonyms": [
+          "exhausted",
+          "worn out"
+        ],
+        "antonyms": [
+          "energetic",
+          "rested"
+        ],
+        "usageNote": "looked tired 只是外觀判斷，並非醫療診斷。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/tired"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_CONTEXT_NOT_ARTICLE_QUOTE",
+      "english": "Taiwan introduced updated priority-seat signs in 2025 for people with real needs; a tired passenger might also appreciate a seat.",
+      "chinese": "臺灣2025年推出新版優先席標示，照顧真正有需求者；疲憊旅客也可能感謝讓座。",
+      "highlightActualForm": "tired",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2025-09-09",
+        "title": "大眾運輸年底前更換優先席圖示 違者最高罰5萬",
+        "url": "https://www.cna.com.tw/news/ahel/202509090232.aspx",
+        "factSupportedBySource": "中央社證實新增對有實際需要或隱性需求者的優先席標示；疲勞者片語為作者自編，不指稱所有疲勞者必然有法定優先權。"
+      },
+      "note": "報導只佐證背景事實，考點英文句子自行編寫。"
+    }
+  },
+  "teachingCanonicalSha256": "3c5cabae218b6dee8b468df65479ed9e1cf9083db9cde29e72bb7bad2f30bcf6",
+  "composedTeachingSha256": "1d4351364e254f4d811717f008a82811421d99b6765f98a9cdadb4823f95bf6a",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_DIGEST_V4_8x2_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_REVIEW_MIGRATION_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-EN16-19-C05-20261025-04",
+  "year": 114,
+  "questionId": "114-00-C-05",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "若要使下文的理路連貫有序，①、②、③、④、⑤最適當的排列應是：\n  韓劇 《 魷魚遊戲 》 的成功之處，\n  ①不僅在於劇情緊湊刺激，\n  ②與無情的生存遊戲形成對比，\n  ③也運用「英熙娃娃」的純真童年形象，\n  ④既透過多種人們熟悉的遊戲喚起普遍經驗，\n  ⑤更在於它將韓國文化融入全球觀眾能理解的語境中，\n  為全劇帶來強烈的視覺與情感衝擊。",
+  "options": [
+    "①③④⑤②",
+    "①⑤④③②",
+    "④②③①⑤",
+    "④⑤③②①"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "3fe36bb6417bc3f6f5be79aabfe85be39e445b769b0e4b460ca98f3933aee30a",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "9791124eb82655a379b09da6fb7b7bbaab89061c51c9a4110b0897ffdcbfb651",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-05.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalOfficialAnswerDirectImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "國文句序｜關聯詞與對比銜接",
+    "teacherSummary": "先配對①『不僅在於』與⑤『更在於』，再配對④『既透過』與③『也運用』，最後讓②『與無情的生存遊戲形成對比』承接③純真英熙娃娃形象，因此順序為①⑤④③②，答案B。",
+    "elementarySummary": "像組句子積木：不僅後面要接更；既後面要接也；講可愛娃娃才能接跟殘酷遊戲比一比，選B。",
+    "concept": "『不僅…更在於』是遞進，『既…也…』是並列，最後以純真與殘酷形成語義對比。",
+    "extension": "文章談劇本文化符號的呈現手法，不能從此推斷所有觀眾都產生同一感受。",
+    "memory": "①不僅→⑤更；④既→③也；③純真→②殘酷對比：選 B①⑤④③②。",
+    "solvingSteps": [
+      "①不僅在於後應承接⑤更在於，強調文化價值。",
+      "④既透過與③也運用說明兩項並列文化呈現手法。",
+      "②與無情遊戲形成對比要緊接③娃娃的純真形象。",
+      "完整排序①⑤④③②，最後自然銜接『為全劇帶來強烈的視覺與情感衝擊』。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A排列①③④⑤②使③『也運用』出現在④『既透過』前，而且拆散①不僅和⑤更在於，違反兩組關聯詞的先後搭配。",
+        "elementary": "這像把『也』放在『既』前，又把『不僅』和『更』拆開，句子接不順。",
+        "reason": "①不僅與⑤更在於宜相連，④既與③也宜相連，A將兩組句式的前後關係都打亂。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B排列①⑤④③②先接『不僅…更在於』，再接『既…也…』，最後由③英熙娃娃的純真形象承接②殘酷遊戲對比。",
+        "elementary": "先配好兩對詞語，再讓可愛娃娃和殘酷遊戲作比較，就全部接上了。",
+        "reason": "B同時符合①⑤遞進、④③並列，以及③純真娃娃與②無情遊戲形成對比的語意連接。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C排列④②③①⑤把②對比放在③純真娃娃出現之前，④『既』與③『也』之間被②打斷，段落推理顛倒。",
+        "elementary": "還沒說可愛娃娃，就先說跟恐怖遊戲比較，還打斷『既…也…』。",
+        "reason": "②需要③已提及純真形象才有清楚的對比對象，④既與③也被錯誤插入②，不能連貫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D排列④⑤③②①讓④『既』錯接⑤『更在於』，最後①『不僅』沒有後續『更在於』呼應，語法與邏輯都不完整。",
+        "elementary": "把『更』放在『不僅』前面，最後只說『不僅』卻沒說更重要的是什麼。",
+        "reason": "①不僅不能在⑤更在於之後，且④既應接③也而非⑤，D兩組搭配都不成立。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文官方原題與選項；官方最終答案與更正公告範圍及教材章節待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "不僅在於",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "更在於",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "既透過",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "也運用",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "與無情的生存遊戲形成對比",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "①⑤④③②",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "既…也…",
+        "level": "初級",
+        "meaning": "兩件事情都一起成立",
+        "usageNote": "④既透過接③也運用。"
+      },
+      {
+        "term": "不僅…更在於…",
+        "level": "中級",
+        "meaning": "先介紹一項，再凸顯另一項更重要的重點",
+        "usageNote": "①不僅接⑤更在於。"
+      },
+      {
+        "term": "理路",
+        "level": "高級",
+        "meaning": "說話或文章的前後推理條理",
+        "usageNote": "同時檢查詞語搭配與③②對比。"
+      },
+      {
+        "term": "對比",
+        "level": "中級",
+        "meaning": "把性質不同的兩者並列，凸顯差別",
+        "usageNote": "③純真童年形象對②殘酷遊戲。"
+      }
+    ]
+  },
+  "teachingCanonicalSha256": "5c0eff22be85ea86dbfa3301b1cd51d81c1d13445265fa6ce060efb7a0699d94",
+  "composedTeachingSha256": "42e1ae957473a95bd5f0440effa22a2d3ced6c70d4b366b57675a7075dcb3ef8",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "reviewNotesSha256": null,
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_DIGEST_V4_8x2_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_REVIEW_MIGRATION_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

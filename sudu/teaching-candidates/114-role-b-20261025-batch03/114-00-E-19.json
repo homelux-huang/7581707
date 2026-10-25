@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-EN16-19-C05-20261025-04",
+  "year": 114,
+  "questionId": "114-00-E-19",
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Ms. Lee:   Are you an art lover, Johnson?\n    Johnson:   I’m passionate about art. I majored in art history and modern sculpture.\n   Ms. Lee:   Impressive! ____________\n    Johnson:  Your focus on modern art matches my background and interests. I’m excited to use\n             what I’ve learned at this job.\n   Ms. Lee:   That’s great to hear. We’ll let you know the outcome as soon as possible.",
+  "options": [
+    "Have you heard the outcome yet?",
+    "Are you majoring in modern history?",
+    "What’s your educational background?",
+    "Why do you want to work at my gallery?"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "12dcfe7f82053128a191ee4fb36996001f1dc2d9f13ef932368aca660a3d1bcd",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-19.webp",
+    "webpSha256": "6b5cda2c1825c707dd5b10a1b167dad09fac6ba7e11a313064568326616058f8",
+    "originalManifestQaStatus": "PASS",
+    "finalOfficialAnswerDirectImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文面試對話｜應徵畫廊的工作動機",
+    "teacherSummary": "Johnson 已講他主修 art history、modern sculpture；空格後回答 Your focus on modern art matches my background and interests，還說期待在 this job 運用所學。應選 D Why do you want to work at my gallery?。",
+    "elementarySummary": "畫廊老闆問為什麼要來工作，他說自己學過藝術，也剛好喜歡畫廊做的事。",
+    "concept": "回答為何想做此工作，要說自己能力／興趣與組織方向的契合；由 because 或 matches 反推 why 問句。",
+    "extension": "We’ll let you know the outcome 表尚未公布錄取結果，不能把面試完等同錄取。",
+    "memory": "my background＋your focus＋this job → Why work at my gallery? 選 D。",
+    "solvingSteps": [
+      "前句 Johnson 已說明主修藝術史與現代雕塑。",
+      "後句他講畫廊主題與背景、興趣匹配，說想應用所學。",
+      "這是在回答求職動機，故選 D，不重複問背景或先問未公布結果。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Have you heard the outcome yet? 是問求職結果，但對話結尾才說 We’ll let you know the outcome，表示結果還沒通知。",
+        "elementary": "還沒宣布錄取結果，不會先問知不知道。",
+        "reason": "outcome 尚待通知，與回答自己的專長和畫廊契合完全不同。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Are you majoring in modern history? 問是不是現在主修現代史，Johnson 明確說過主修 art history、modern sculpture 的已完成經歷。",
+        "elementary": "他講藝術史，不是一般的現代史。",
+        "reason": "modern history 與 art history 不同，are majoring 的時態亦不對應 majored。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "What's your educational background? 是問學歷背景，但他前一句已說主修什麼，後一句強調想在畫廊用所學，並非重複列學歷。",
+        "elementary": "學什麼早講完了，現在說的是想來工作的原因。",
+        "reason": "educational background 已回答，不能自然導出 excited to use what I've learned at this job。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "Why do you want to work at my gallery? 問應徵動機，他回答畫廊專注現代藝術，正與自己學歷和興趣合拍。",
+        "elementary": "問為什麼想來畫廊，他說我很適合這裡。",
+        "reason": "gallery 的工作動機直接對應 your focus matches my background and interests。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114統測英文官方原題與候選答案；官方最終答案頁、確認公告及教材版本章節待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "passionate about art",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "majored in",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "modern sculpture",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "Why do you want to work at my gallery?",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "outcome",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "passionate",
+        "ipa": "/ˈpæʃ.ən.ət/",
+        "level": "中級",
+        "meaningZh": "熱衷於、有強烈興趣",
+        "synonyms": [
+          "enthusiastic",
+          "deeply interested"
+        ],
+        "antonyms": [
+          "indifferent",
+          "uninterested"
+        ],
+        "usageNote": "passionate about art 表熱愛藝術，不一定表示有專業證照。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/passionate"
+      },
+      {
+        "headword": "majored in",
+        "ipa": "/ˈmeɪ.dʒɚd ɪn/",
+        "level": "中級",
+        "meaningZh": "主修某一科系（過去式）",
+        "synonyms": [
+          "specialized in",
+          "studied as a major"
+        ],
+        "antonyms": [
+          "minored in (academic contrast)"
+        ],
+        "usageNote": "主修科系是既有求學背景，不可當作所有職位資格的保證。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/major"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_CONTEXT_NOT_ARTICLE_QUOTE",
+      "english": "In 2025, Taipei Fine Arts Museum planned exhibitions for visitors passionate about art, including solo shows by Taiwanese artists.",
+      "chinese": "臺北市立美術館2025年規劃多檔展覽，包括臺灣藝術家的個展，供熱愛藝術的觀眾欣賞。",
+      "highlightActualForm": "passionate",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2025-01-02",
+        "title": "The Taipei Fine Arts Museum Announces the Highlights for 2025",
+        "url": "https://www.tfam.museum/News/News_page.aspx?ddlLang=en-us&id=1917",
+        "factSupportedBySource": "臺北市立美術館公布2025年度典藏研究展、藝術家個展與雙年展等項目；passionate visitors 為教學作者自編情境。"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "ec0b16926e2715944a2cb2d5786b0f930ec279080e0d45289d991fde1e2e04e9",
+  "composedTeachingSha256": "b5ff1d1e46681014a9a2e06a699d1fe840dfad3a6bffe950e9079569f1142c7a",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_DIGEST_V4_8x2_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_REVIEW_MIGRATION_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

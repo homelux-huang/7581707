@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-EN16-19-C05-20261025-04",
+  "year": 114,
+  "questionId": "114-00-E-16",
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Anna:  Hey Terry, do you know that Lee Yang ( 李洋 ) and Wang Chi-lin ( 王齊麟 ) won a gold\n           medal at the Paris Olympics?\n    Terry:  Yeah! That makes two gold medals, including the one from the Tokyo Olympics.\n   Anna:   Their skills are incredible. And their teamwork is super impressive, too!\n    Terry:  ____________\n   Anna:   Exactly! That’s why badminton is getting more popular in Taiwan these days.",
+  "options": [
+    "They have decided not to work together.",
+    "Some people say their success was just luck.",
+    "I believe they don’t need to practice anymore.",
+    "I think their success has motivated many people."
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "80ec9a0a7d533fbf5608b5b7d56ef86e366f14e77c872cd58906efc27c9d3c34",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-16.webp",
+    "webpSha256": "d621ec14c6e0555b0ec5232c20309d8a3fc9200dec89bb851d0fc74f85326b11",
+    "originalManifestQaStatus": "PASS",
+    "finalOfficialAnswerDirectImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文情境對話｜奧運雙金帶動羽球熱潮",
+    "teacherSummary": "兩人提到李洋、王齊麟拿下東京與巴黎奧運男雙金牌，也稱讚技能和團隊默契；下一句 Anna 以 Exactly 表示贊同，接著說羽球日益受歡迎。因此 D 的成功激勵大眾才最能說明原因。",
+    "elementarySummary": "羽球選手拿金牌讓很多人想學他們打球，朋友才會說『對呀，所以羽球變熱門了』。",
+    "concept": "Exactly! 表對上句的認同；their success has motivated many people 是引起 badminton getting more popular 的原因。",
+    "extension": "金牌事實可查，『每個人都受激勵』則是語境推論，不能當成運動參與率的統計結果。",
+    "memory": "金牌＋球技＋默契 → 激勵民眾（motivated）→ 羽球更受歡迎。",
+    "solvingSteps": [
+      "先確認兩次奧運金牌、技能與默契獲得稱讚。",
+      "後句 Exactly 表示對空格整句的認同。",
+      "後句更受歡迎表示空格應講成功激勵更多人，故選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "They have decided not to work together 代表兩人打算拆夥；前句卻正稱讚他們的 teamwork，文中也沒有分開的證據。",
+        "elementary": "前面誇默契好，突然說要拆夥很奇怪。",
+        "reason": "not to work together 與團隊默契優秀的敘述方向相反，無法合理帶出更受歡迎。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Some people say their success was just luck 把奪金歸因於運氣，但 Anna 明白稱讚技巧與合作，不能同時否定努力。",
+        "elementary": "剛誇他們很會打，不能忽然說全是靠運氣。",
+        "reason": "just luck 與 skills、teamwork 的因果說法相衝突。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "I believe they don't need to practice anymore 是說再也不用練習，金牌不代表後續不用訓練，也沒解釋羽球受歡迎。",
+        "elementary": "拿金牌也不是以後就不用練習。",
+        "reason": "don't need to practice anymore 是無來源的過度推論，與後句更多人愛羽球沒有合理聯繫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "I think their success has motivated many people 明說成績鼓舞大眾，Anna 用 Exactly 呼應，並指出羽球因此更受歡迎。",
+        "elementary": "他們的成功讓大家都想練羽球，對話就接得起來。",
+        "reason": "motivated many people 和 badminton is getting more popular 構成上下句因果。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測英文原題與候選答案；官方答案個別原頁及更正公告、教科書章節頁碼仍待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "two gold medals",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "teamwork",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "motivated many people",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "badminton",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "motivated",
+        "ipa": "/ˈmoʊ.t̬ə.veɪ.t̬ɪd/",
+        "level": "中級",
+        "meaningZh": "激勵、引起行動意願",
+        "synonyms": [
+          "inspired",
+          "encouraged"
+        ],
+        "antonyms": [
+          "discouraged"
+        ],
+        "usageNote": "has motivated 是現在完成式，後面可接受激勵的人；不能混為強迫。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/motivate"
+      },
+      {
+        "headword": "teamwork",
+        "ipa": "/ˈtiːm.wɝːk/",
+        "level": "中級",
+        "meaningZh": "團隊合作、默契",
+        "synonyms": [
+          "cooperation",
+          "collaboration"
+        ],
+        "antonyms": [
+          "poor coordination"
+        ],
+        "usageNote": "teamwork 指協作能力而非單純 luck。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/teamwork",
+        "accent": "US",
+        "ipaEvidenceUrl": "https://dictionary.cambridge.org/pronunciation/english/teamwork",
+        "ipaEvidenceScope": "Cambridge 美式 teamwork 單字發音；與英式 /ˈtiːm.wɜːk/ 區分，未混用兩種口音。"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_CONTEXT_NOT_ARTICLE_QUOTE",
+      "english": "Lee Yang and Wang Chi-lin defended their Olympic doubles title in Paris in 2024, and their success motivated many badminton fans.",
+      "chinese": "李洋、王齊麟在2024年巴黎奧運衛冕羽球男雙金牌，這樣的成就也激勵許多球迷。",
+      "highlightActualForm": "motivated",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2024-08-04",
+        "title": "Chinese Taipei men’s doubles team defend badminton gold",
+        "url": "https://oca.asia/news/5336-chinese-taipei-mens-doubles-team-defend-badminton-gold.html",
+        "factSupportedBySource": "亞洲奧會核實巴黎衛冕金牌；球迷是否受激勵是教學作者的情境延伸。"
+      },
+      "note": "報導只佐證背景事實，考點英文句子自行編寫。"
+    }
+  },
+  "teachingCanonicalSha256": "30501e6acaa3dc24306c328e888218fe2a5f9a2f09b997e3edc8bc39eb0434c6",
+  "composedTeachingSha256": "eefbd140412a393706243f6edf90807fa01a8fdf610219a13a32c8db39daafdf",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_DIGEST_V4_8x2_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_REVIEW_MIGRATION_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

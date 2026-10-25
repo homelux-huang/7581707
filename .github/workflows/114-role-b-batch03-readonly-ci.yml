@@ -1,0 +1,35 @@
+name: Role B 114 third author candidate batch CI (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch03/**"
+      - "tests/test_114_role_b_batch03_20261025.py"
+      - ".github/workflows/114-role-b-batch03-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-bound-author-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify original source and image SHAs, 5 four-choice lessons, independent AI pending, zero admission
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch03_20261025.py' -v
+      - name: Explicitly assert release remains blocked
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('sudu/teaching-candidates/114-role-b-20261025-batch03')
+          b=json.loads((p/'batch.json').read_text(encoding='utf-8'))
+          assert b['newReady']==0 and b['newLive']==0
+          for x in b['items']:
+              d=json.loads(Path(x['path']).read_text(encoding='utf-8'))
+              assert d['review']['status']=='BLOCKED'
+              assert d['review']['independentAiContentReview']['status']=='PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW'
+              assert d['review']['studentReleaseApproved'] is False
+          print('NO RELEASE: five unreviewed author drafts')
+          PY
