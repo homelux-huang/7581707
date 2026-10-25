@@ -19,6 +19,8 @@ PR #57 scripts/sudu_independent_review_gate.py 第415～422行先從 **本地的
 - 新對抗負測2：傳入一份只在測試記憶體重新封裝 115-00-MB-02 舊歷史題的假 source+teaching triple，**必須拒絕**，不可將新字節當成 immutable 舊題。
 - 現有 tests/test_sudu_ai_publisher_policy_migration.py 只核已簽入的政策剛好五筆；其測試第70～75行還容許修改本地歷史行再 PASS，未檢測此攻擊。
 
+**實際工作流程邊界（重要限定）**：現行 sudu-verified-autopublish.yml 會分別 checkout main 的發布器／政策與 _source_qa 的來源題庫；只修改 QA 題庫分支不會在這條正常工作流程中自動置換本地政策。本次紅燈證實的是 certified() API 在收到*被污染的政策物件*時未 fail-closed，不是已證實正式工作流程遭到外部來源修改而放行。main 目前又未受保護，且其它呼叫路徑可能誤用此 API，因此仍需 MASTER 修正歷史信任根及補足跨流程負測，不能據此虛報實際未審題上線。
+
 **安全補修方向**：歷史豁免只允許在可信受保護 main 真實固定五筆 ID 與原始 triplet 上做逐 byte 比對，禁止第六題、臨時改政策或用不同內容重新封裝五題。其他既有 official/source/image/OCR/teacher-style/D UI/CI gates 仍保持，不能說此 P0 已造成正式學生網站未審題被發布。
 
 ## P1：Issue36 的真實 E RETURN 文字辨識大小寫
@@ -37,4 +39,6 @@ scripts/sudu_independent_review_gate.py 第241～247行用大小寫敏感子字�
 
 執行：python -m unittest discover -s tests -p 'test_role_e_pr57_adversarial_review_20261025.py' -v
 
-**在 MASTER 實際修正前，此獨立安全回歸預期 RED。絕不刪除斷言、改為 skip、continue-on-error 或 fake green。** 精確 E 分支 HEAD 與 CI job 將於本任務 GitHub Issue36 RETURN 確認。
+**真正 E CI 第一次結果**：run 40168669561 / job 121094866867，在原 E HEAD a4491027c1f4f3fe3a02d8e8f7ae1a23091e9a26 上執行 5 tests，2 PASS、3 FAIL（上述兩個歷史信任邊界拒絕失敗、一個合法 Role E 大小寫被誤拒）。失敗是安全測試中的產品程式行為，不是 checkout/ Python/語法錯誤；原 PR57 的 78 PASS 仍是真實的既有測試。
+
+**MASTER 修正前本 E 安全回歸必須保持 RED，不刪斷言、不改 skip/continue-on-error。** 本文件補充後會觸發新 HEAD 的同一測試，最終 SHA/run 以 Issue36 RETURN 為準。
