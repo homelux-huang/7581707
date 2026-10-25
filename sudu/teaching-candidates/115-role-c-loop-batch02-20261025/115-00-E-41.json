@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-41",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 41,
+  "subject": "英文",
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "status": "NEW_ROLE_C_DUAL_LEVEL_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "Which is closest in meaning to “ride the wave of change” in paragraph 4?",
+  "options": [
+    "let go of these new opportunities",
+    "have trouble with making the change",
+    "end up with missing new opportunities",
+    "take advantage of the new change"
+  ],
+  "answerCandidate": "D",
+  "sourceTextRevision": "b5b2282057f093845c8745986a9e034e1bdfb6e6df10c18ab8d445507a68f0fd",
+  "sourceRevisionMethod": "publisher text_revision canonical question/options/singleQuestionWebpSha256 excludes answer",
+  "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-41.webp",
+  "imageSha256": "b10a8ba84292df22dc481107280522e8f8dc168ef0496f9af3f4bf71329740a4",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalPageWebpSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+  "imageManifestQaStatus": "PASS",
+  "originalImageRehashedThisSession": false,
+  "sharedMaterialId": "115-00-E-SHARED-39-42",
+  "sharedMaterial": {
+    "path": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+    "sha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+    "textSha256": "fd9606cc566e17cb4ca60ecc9062ef05ddc0bd56554594b53470f60f37ba2013",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "officialSourcePage": 10
+  },
+  "teaching": {
+    "teacherSummary": "原文寫製造商迎接AI需求、賺到新的營收，**ride the wave of change**是把握趨勢、**善用變化帶來的商機**，意義接近D **take advantage of the new change**。A/C為錯失，B為適應困難，都與後句making more money相反。",
+    "elementarySummary": "像衝浪要順著浪前進，公司看到AI的新機會也跟著改變產品，於是做出成果，這就是抓住機會。",
+    "memory": "**ride the wave of change → seize opportunities → take advantage of change**。",
+    "concept": "片語義要由**前後文正負結果**推論；本題後句making more money證明是在抓到新商機，而非碰到障礙。",
+    "extension": "若後文改成companies failed to adapt，才有機會出現missed opportunities等負向意義；不能單憑wave一字猜答案。",
+    "highlights": [
+      "ride the wave of change",
+      "take advantage of",
+      "AI",
+      "new business opportunities",
+      "making more money"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **let go of these new opportunities**意為放開新機會，與原文把握AI新需求、獲利增加的結果衝突。",
+        "elementary": "公司是抓到機會，不是放手讓機會跑掉。",
+        "reason": "A **let go of these new opportunities**意為放開新機會，與原文把握AI新需求、獲利增加的結果衝突。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B **have trouble with making the change**表示難以改變；本文指出業者順應AI市場而增加收入，並未描寫困難阻礙。",
+        "elementary": "文章說廠商抓到AI新商機、賺到更多錢，並沒有說它們面對改變時覺得困難。",
+        "reason": "B **have trouble with making the change**表示難以改變；本文指出業者順應AI市場而增加收入，並未描寫困難阻礙。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C **end up with missing new opportunities**表示最後錯過商機，與原文製造商透過AI伺服器獲利矛盾。",
+        "elementary": "他們已經賺到錢，所以不是錯過機會。",
+        "reason": "C **end up with missing new opportunities**表示最後錯過商機，與原文製造商透過AI伺服器獲利矛盾。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D **take advantage of the new change**就是利用新變化而得到機會，與ride the wave和後文收益增加完全一致。",
+        "elementary": "順著浪往前、抓住新商機，就是D。",
+        "reason": "D **take advantage of the new change**就是利用新變化而得到機會，與ride the wave和後文收益增加完全一致。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "第4段ride the wave of change最接近哪個意思？",
+      "answerWord": "take advantage of",
+      "pronunciationIPA": "/teɪk ədˈvæn.tɪdʒ əv/",
+      "optionMeaningZh": {
+        "A": "放棄新機會",
+        "B": "難以完成改變",
+        "C": "錯失新機會",
+        "D": "善用新變化"
+      },
+      "synonyms": {
+        "初級": [
+          "use（利用）"
+        ],
+        "中級": [
+          "make the most of（充分利用）"
+        ],
+        "高級": [
+          "capitalize on（善用商機）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "miss（錯過）"
+        ],
+        "中級": [
+          "let pass（讓其溜走）"
+        ],
+        "高級": [
+          "forgo（放棄）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "原始英文官方新聞描述2026 Semicon Network Summit討論AI快速發展帶來的機會和挑戰；此英文例句為自行改寫，非官方新聞的逐字引句。",
+      "newsExampleEnglish": "At a September 2026 semiconductor summit, participants considered how to **take advantage of** new opportunities created by AI.",
+      "newsExampleChinese": "2026年9月的半導體峰會討論如何善用AI帶來的新商機。",
+      "newsExampleHighlightedSurfaceForm": "take advantage of",
+      "newsExampleSourceUrl": "https://mnscdn.moea.gov.tw/Mns/english/news/News.aspx?kind=6&menu_id=176&news_id=123966",
+      "newsExampleSourceOrganization": "Taiwan Ministry of Economic Affairs – International Trade Administration",
+      "newsExampleSourceDate": "2026-09-14",
+      "newsExampleKind": "依近三年官方公開報導自行改寫的英文教學例句，非來源逐字引述；詞形為原例句實際出現形式"
+    },
+    "stepByStep": [
+      "定位第4段AI需求帶來商機與業者收益增加。",
+      "以衝浪比喻順勢發展，推得善用新變化。",
+      "A/C放棄、錯過機會；B改變受阻；僅D符合原文正向結果。"
+    ],
+    "source": "115年四技統測官方原卷及共用閱讀原文（來源枝分支候選）；彰化高商使用之教材版本、章節、頁碼均待核對，不得編造。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "b46c697373efc8e2641b42c4c9df6e6eda14848faf8f2bd4f9f0aa94c2f20f6c",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "review": {
+    "author": "GPT-6 role C",
+    "isIndependentHumanReviewer": false,
+    "knownAnswerUsed": true,
+    "newBlindSolveClaimed": false,
+    "authorizedHumanTeacherApproval": "PENDING",
+    "independentTeachingQa": "PENDING",
+    "officialFinalAnswerAdmission": "PENDING",
+    "sharedMaterialIndependentVisualQa": "PENDING",
+    "v4ExactDigestQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_SOURCE_TEXT_AND_FINAL_NOTICE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_SIGNATURE_PENDING",
+    "CURRENT_EXACT_SOURCE_TEACHING_SHA_V4_UI_PENDING",
+    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-40",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 40,
+  "subject": "英文",
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "status": "NEW_ROLE_C_DUAL_LEVEL_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "According to the passage, which is NOT an important reason for the strength of Taiwan’s\n    electronics industry?",
+  "options": [
+    "Labor pool",
+    "Government support",
+    "Business network",
+    "Product price"
+  ],
+  "answerCandidate": "D",
+  "sourceTextRevision": "1066b79c8271d1882e9f443609665de1dab0f6a0a49553349e1d65904091fb31",
+  "sourceRevisionMethod": "publisher text_revision canonical question/options/singleQuestionWebpSha256 excludes answer",
+  "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-40.webp",
+  "imageSha256": "afa2a88eb2574bae17aad8d4a16f662e889b906f024b8950e45439f12210fbef",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalPageWebpSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+  "imageManifestQaStatus": "PASS",
+  "originalImageRehashedThisSession": false,
+  "sharedMaterialId": "115-00-E-SHARED-39-42",
+  "sharedMaterial": {
+    "path": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+    "sha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+    "textSha256": "fd9606cc566e17cb4ca60ecc9062ef05ddc0bd56554594b53470f60f37ba2013",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "officialSourcePage": 10
+  },
+  "teaching": {
+    "teacherSummary": "題幹的**NOT**要求找文章**未列為成功原因**的因素。第三段有ready pool of professionals（人才）、official policies（政府支持）、local suppliers（供應網絡），並明說**high-quality products rather than competing on price**，故選D **Product price**。",
+    "elementarySummary": "文章說有專業人才、政府政策和供應商幫忙，還很重視品質，不是靠價格競爭。所以問『哪個不是重要原因』，答案是產品價格。",
+    "memory": "**NOT → 圈出否定；人才＋政府＋供應鏈＋品質；rather than price → D**。",
+    "concept": "英文否定證據定位題要逐一對照原文，重視**NOT**及**rather than**；不能依常識覺得低價重要就選。",
+    "extension": "改成Which IS mentioned?時，A/B/C都在原文；此題問NOT只選D。",
+    "highlights": [
+      "NOT",
+      "Labor pool",
+      "Government support",
+      "Business network",
+      "rather than competing on price"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **Labor pool**對應原文ready pool of professionals，是明確列出的產業優勢，所以不能選為NOT的答案。",
+        "elementary": "文章清楚說臺灣有足夠的專業人才，是產業成功的原因之一，因此A不是未提到的項目。",
+        "reason": "A **Labor pool**對應原文ready pool of professionals，是明確列出的產業優勢，所以不能選為NOT的答案。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B **Government support**對應原文official policies provide the necessary industrial support，政府支持有被列出。",
+        "elementary": "文章第二項原因就寫政府政策幫忙電子產業，所以B確實是成功原因，不能選。",
+        "reason": "B **Government support**對應原文official policies provide the necessary industrial support，政府支持有被列出。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C **Business network**對應原文wide network of local suppliers，可改善效率與創新，是提到的成功因素。",
+        "elementary": "文章說很多供應商合作，確實是優勢。",
+        "reason": "C **Business network**對應原文wide network of local suppliers，可改善效率與創新，是提到的成功因素。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D **Product price**被原文rather than competing on price排除；文章強調製造高品質產品而非以價格競爭作成功主因，符合NOT題。",
+        "elementary": "文章說不是靠便宜價格搶客，所以選D。",
+        "reason": "D **Product price**被原文rather than competing on price排除；文章強調製造高品質產品而非以價格競爭作成功主因，符合NOT題。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "根據本文，下列哪項**不是**臺灣電子產業強盛的重要原因？",
+      "answerWord": "important",
+      "pronunciationIPA": "/ɪmˈpɔːr.tənt/",
+      "optionMeaningZh": {
+        "A": "人才供給",
+        "B": "政府支持",
+        "C": "企業／供應網絡",
+        "D": "產品價格"
+      },
+      "synonyms": {
+        "初級": [
+          "key（關鍵的）"
+        ],
+        "中級": [
+          "significant（重要的）"
+        ],
+        "高級": [
+          "crucial（關鍵且重要的）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "minor（次要的）"
+        ],
+        "中級": [
+          "insignificant（不重要的）"
+        ],
+        "高級": [
+          "irrelevant（無關的）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "官方來源報導技術成果與產業供應鏈，此句依其核心意思重寫，不是官方原文直接引述。",
+      "newsExampleEnglish": "In September 2026, Taiwan's economic ministry called advanced semiconductor innovation **important** for reinforcing the local technology supply chain.",
+      "newsExampleChinese": "2026年9月，臺灣經濟部強調先進半導體技術創新對強化本地科技供應鏈的重要性。",
+      "newsExampleHighlightedSurfaceForm": "important",
+      "newsExampleSourceUrl": "https://mnscdn.moea.gov.tw/MNS/Populace/news/News.aspx?kind=1&menu_id=40&news_id=123853",
+      "newsExampleSourceOrganization": "Taiwan Ministry of Economic Affairs",
+      "newsExampleSourceDate": "2026-09-02",
+      "newsExampleKind": "依近三年官方公開報導自行改寫的英文教學例句，非來源逐字引述；詞形為原例句實際出現形式"
+    },
+    "stepByStep": [
+      "先圈題幹**NOT**，此題不是要找哪一項正確，而是找沒被列為原因的。",
+      "回到第三段逐項核對人才、政策、供應網絡。",
+      "找到rather than competing on price，因此D符合否定題；A/B/C都在原文。"
+    ],
+    "source": "115年四技統測官方原卷及共用閱讀原文（來源枝分支候選）；彰化高商使用之教材版本、章節、頁碼均待核對，不得編造。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "5816e15304cd0e7084c41347cc4a40a3d9afd995ed132848bfd717eeca53556b",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "review": {
+    "author": "GPT-6 role C",
+    "isIndependentHumanReviewer": false,
+    "knownAnswerUsed": true,
+    "newBlindSolveClaimed": false,
+    "authorizedHumanTeacherApproval": "PENDING",
+    "independentTeachingQa": "PENDING",
+    "officialFinalAnswerAdmission": "PENDING",
+    "sharedMaterialIndependentVisualQa": "PENDING",
+    "v4ExactDigestQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_SOURCE_TEXT_AND_FINAL_NOTICE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_SIGNATURE_PENDING",
+    "CURRENT_EXACT_SOURCE_TEACHING_SHA_V4_UI_PENDING",
+    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING"
+  ]
+}

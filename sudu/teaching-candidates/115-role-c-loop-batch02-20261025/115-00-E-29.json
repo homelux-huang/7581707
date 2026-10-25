@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "questionId": "115-00-E-29",
+  "year": 115,
+  "paperCode": "00-E",
+  "originalQuestionNumber": 29,
+  "subject": "英文",
+  "taskId": "C-115-NEW-FIVE-20261025-02",
+  "claimedAtUtc": "2026-10-25T04:54:20Z",
+  "status": "NEW_ROLE_C_DUAL_LEVEL_AUTHOR_DRAFT_BLOCKED",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceRecordBlobSha": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlobSha": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "What did Elsa post on her blog?",
+  "options": [
+    "Family life",
+    "Pasta menu",
+    "Movie reviews",
+    "School activities"
+  ],
+  "answerCandidate": "A",
+  "sourceTextRevision": "23952dc29ed2622029cce5b7a431e4c9209ca99c41f25fc7eea5b15af56f883d",
+  "sourceRevisionMethod": "publisher text_revision canonical question/options/singleQuestionWebpSha256 excludes answer",
+  "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-29.webp",
+  "imageSha256": "200722eaba0530fc8f3963cfe9c72e2749630de188ad538d5ce23200d949717d",
+  "originalQuestionPdfSha256": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+  "originalPageWebpSha256": "b34b9c3c8d94d8d54589634a4403cfa14810b8736e1a9a3202b240a1490423df",
+  "imageManifestQaStatus": "PASS",
+  "originalImageRehashedThisSession": false,
+  "sharedMaterialId": "115-00-E-SHARED-29-30",
+  "sharedMaterial": {
+    "path": "sudu/data/processed/115/webp-v2/shared/115-00-E-SHARED-29-30.webp",
+    "sha256": "e932d3fc246b55604cabd6fa1716d0fa6f8f67d658ed6a16c6d88f91bfdb49b6",
+    "textSha256": "da7fee7adbe1c540f43e79a3d3bd4e24dbc11b62d5240e0d33dabe1c49018bbe",
+    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "officialSourcePage": 6
+  },
+  "teaching": {
+    "teacherSummary": "部落格列出**4月2日和父母看電影、4月6日阿姨探訪、4月8日與媽媽用餐**，三則貼文的共同主題是**family life（家庭生活）**。不可把她預計連結的他人影評誤認為自己刊登電影評論。",
+    "elementarySummary": "她寫了跟爸媽看電影、阿姨來訪、和媽媽吃飯，都是家人的日常生活，所以選家庭生活。",
+    "memory": "**posted on her blog 是「自己寫的」；三則都與家人有關 → family life**。",
+    "concept": "多篇短文歸納題要尋找**共通上位主題**，並區分作者自己寫的內容（posts）與指向別人的連結（links）。",
+    "extension": "如果改問「她打算連結到什麼內容」，才可回頭看評論、podcast等連結資訊，不可混淆題幹動詞posted。",
+    "highlights": [
+      "posted",
+      "blog",
+      "family life",
+      "Mom and Dad",
+      "Aunt Nancy"
+    ],
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A **Family life**能同時涵蓋與爸媽看電影、阿姨來訪、與母親用餐；是三篇貼文共同的主題。",
+        "elementary": "三篇日記都寫到家人，所以家庭生活正確。",
+        "reason": "A **Family life**能同時涵蓋與爸媽看電影、阿姨來訪、與母親用餐；是三篇貼文共同的主題。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B **Pasta menu**不是貼文主題。4月8日雖提到義大利餐點，卻沒有列出餐廳菜單，也無法涵蓋其餘日期。",
+        "elementary": "寫有吃義大利麵不等於在貼菜單。",
+        "reason": "B **Pasta menu**不是貼文主題。4月8日雖提到義大利餐點，卻沒有列出餐廳菜單，也無法涵蓋其餘日期。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C **Movie reviews**是她4月2日表示讀過有趣的評論、未來想加入別人文章的連結；不等於她的部落格主題是自行撰寫影評。",
+        "elementary": "她想連到別人的影評，不表示自己的日記都在寫影評。",
+        "reason": "C **Movie reviews**是她4月2日表示讀過有趣的評論、未來想加入別人文章的連結；不等於她的部落格主題是自行撰寫影評。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D **School activities**沒有出現在三天實際貼文的主題，沒有課業或社團活動的敘述。",
+        "elementary": "三篇部落格都在記錄家人的日常生活，完全沒有上課或學校社團活動的內容。",
+        "reason": "D **School activities**沒有出現在三天實際貼文的主題，沒有課業或社團活動的敘述。"
+      }
+    },
+    "english": {
+      "sentenceTranslationZh": "Elsa 在她的部落格貼了什麼內容？",
+      "answerWord": "family life",
+      "pronunciationIPA": "/ˈfæm.əl.i laɪf/",
+      "optionMeaningZh": {
+        "A": "家庭生活",
+        "B": "義大利麵菜單",
+        "C": "電影評論",
+        "D": "學校活動"
+      },
+      "synonyms": {
+        "初級": [
+          "home life（家庭日常）"
+        ],
+        "中級": [
+          "domestic life（家庭生活）"
+        ],
+        "高級": [
+          "household life（家戶日常）"
+        ]
+      },
+      "antonyms": {
+        "初級": [
+          "school life（學校生活，情境對比）"
+        ],
+        "中級": [
+          "working life（職業生活，情境對比）"
+        ],
+        "高級": [
+          "public life（公共生活，情境對比）"
+        ]
+      },
+      "relatedWordsLevelLabels": [
+        "初級",
+        "中級",
+        "高級"
+      ],
+      "note": "family life沒有真正一字對一字的固定反義詞；上述為主題比較。**families** 是 family 的複數詞形，與 family life 有詞形關聯，但不應宣稱它們是同一個片語。",
+      "newsExampleEnglish": "In June 2025, UNICEF encouraged **families** to talk with children about sharing personal information safely online.",
+      "newsExampleChinese": "2025年6月，聯合國兒童基金會鼓勵家庭和孩子討論如何在網路安全分享個人資訊。",
+      "newsExampleHighlightedSurfaceForm": "families",
+      "newsExampleSourceUrl": "https://www.unicef.org/asia-pacific/place-for-parents/netiquettes-your-child",
+      "newsExampleSourceOrganization": "UNICEF Asia Pacific",
+      "newsExampleSourceDate": "2025-06-05",
+      "newsExampleKind": "依近三年官方公開報導自行改寫的英文教學例句，非來源逐字引述；詞形為原例句實際出現形式"
+    },
+    "stepByStep": [
+      "分別讀4月2日、6日、8日部落格三則post。",
+      "依人物和活動找到共同點：父母／阿姨／母親都是家庭生活。",
+      "核對其他選項只能描述某餐、未來連結或不存在的學校活動。"
+    ],
+    "source": "115年四技統測官方原卷及共用閱讀原文（來源枝分支候選）；彰化高商使用之教材版本、章節、頁碼均待核對，不得編造。",
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "50ceae4c440af17b06d0ef31ac4bd7c83edca796fe153f26a0e2c339665912d6",
+  "sourceQuestionVerified": false,
+  "sourceAnswerVerified": false,
+  "review": {
+    "author": "GPT-6 role C",
+    "isIndependentHumanReviewer": false,
+    "knownAnswerUsed": true,
+    "newBlindSolveClaimed": false,
+    "authorizedHumanTeacherApproval": "PENDING",
+    "independentTeachingQa": "PENDING",
+    "officialFinalAnswerAdmission": "PENDING",
+    "sharedMaterialIndependentVisualQa": "PENDING",
+    "v4ExactDigestQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_SOURCE_TEXT_AND_FINAL_NOTICE_ADMISSION_PENDING",
+    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_SIGNATURE_PENDING",
+    "CURRENT_EXACT_SOURCE_TEACHING_SHA_V4_UI_PENDING",
+    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING"
+  ]
+}
