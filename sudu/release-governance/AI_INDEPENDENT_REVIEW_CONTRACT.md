@@ -17,3 +17,13 @@ Policy provenance: [Issue #36](https://github.com/homelux-huang/7581707/issues/3
 4. PR30 remains the only canonical per-question ledger; no second ledger in this workstream.
 
 This file is an implementation handoff, not an assertion that the migration or external verification has happened.
+
+## E independent audit P0 remediation (same Draft PR, still inactive)
+
+After independent Role E's Issue36 return [#6393716388](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6393716388), this prospective helper now additionally:
+- Checks original official-answer JSON **contents**, not only a rehashed SHA: the exact questionId/year, candidate finalAnswer, official PDF SHA when claimed, officialPage, `correctionNoticeReviewed` and `officialFinalAnswerImageQaPassed` must match. This is NOT a substitute for publisher's TCTE scope/PDF-image/correction gates.
+- Fetches a **real** GitHub Issue36 comment by exact integer ID via GitHub REST, checks the issue URL, GitHub reviewer's trusted-main pinned login/user ID, timestamp, real `RETURN` body and required question/revision/WebP/teaching/official evidence SHA plus independent role E task/session bindings.
+- Fetches a real GitHub source commit matching the pinned `sourceCommit`, and refuses an unprotected `main` as a trust root. A bare integer comment ID or 40-character commit string can no longer pass by format alone.
+- Tests synthetic acceptance **only with explicitly mocked GitHub API responses**, plus negative mocks for nonexistent IDs, wrong issue, wrong author, changed content, forged SHA/commit and unprotected main. All tests are artificial contract exercises; no synthetic comment, GitHub actor or source commit is claimed real.
+
+**Remaining before active integration:** same GitHub login may operate multiple ChatGPT sessions, so GitHub actor checks alone do not prove distinct AI review sessions. A separately owned, protected trusted-main session/task ledger and real E submitted content are required; registry provenance must be validated at the caller boundary. Meaningful option-by-option correctness, math, source/original WebP pixels and exact 8×2 V4 still need independent QA; a cryptographically intact review note is not true content QA. The existing publisher remains unchanged, active `requireHumanTeacher=true`, and **new READY/main/LIVE = 0** until a distinct, fully reviewed migration occurs.
