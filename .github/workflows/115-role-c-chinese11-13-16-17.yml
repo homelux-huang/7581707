@@ -1,0 +1,25 @@
+name: 115 Role C Chinese 11-13 and 16-17 source-bound lesson checks (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/115-role-c-chinese11-13-16-17-20261025
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-chinese11-13-16-17-20261025/**'
+      - 'tests/test_115_role_c_chinese_11_13_16_17.py'
+      - '.github/workflows/115-role-c-chinese11-13-16-17.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-chinese11-13-16-17-20261025/**'
+      - 'tests/test_115_role_c_chinese_11_13_16_17.py'
+      - '.github/workflows/115-role-c-chinese11-13-16-17.yml'
+permissions:
+  contents: read
+jobs:
+  content-author-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_115_role_c_chinese_11_13_16_17.py' -v
