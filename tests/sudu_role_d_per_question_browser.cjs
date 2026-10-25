@@ -9,6 +9,9 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const cp=require('node:child_process');
 const {chromium}=require('playwright');
+const {resolveOriginal,inlineBytes,webp}=require('./sudu_role_d_image_source.cjs');
+const {visibleOptionFields}=require('./sudu_role_d_option_detail.cjs');
+const {verifyCjkReadability}=require('./sudu_role_d_cjk_readability.cjs');
 
 const ROOT=process.cwd();
 const BASE=process.env.SUDU_TEST_URL||'http://127.0.0.1:8765/sudu/';
@@ -45,7 +48,7 @@ const report={
   year:YEAR,subject:SUBJECT,sourceMode:'ACTUAL_GITHUB_CHECKOUT_NOT_FIXTURE',
   actualCommitSha:git(),expectedCommitSha:expect||null,
   mainBaseSha:process.env.SUDU_D_MAIN_SHA||null,
-  commandDocRef:'PR30:27f13aef46588e0eacd9c50edddae90f982e0d86',
+  commandDocRef:'PR30:97d351202fe01de8fdb7c34d94cf36d64b646d17',
   ciRunId:process.env.GITHUB_RUN_ID||null,
   ciRunUrl:process.env.GITHUB_RUN_ID?
     'https://github.com/homelux-huang/7581707/actions/runs/'+process.env.GITHUB_RUN_ID:null,
@@ -53,6 +56,10 @@ const report={
   runtimeSha256:fileHash('sudu/verified-questions-runtime.js'),
   demoLearningSha256:fileHash('sudu/demo-subject-learning.js'),
   baselineSha256:fileHash('docs/ROLE_D_V4_DEMO_35_BASELINE_20261025.json'),
+  browserTestSha256:fileHash('tests/sudu_role_d_per_question_browser.cjs'),
+  imageResolverSha256:fileHash('tests/sudu_role_d_image_source.cjs'),
+  optionContractSha256:fileHash('tests/sudu_role_d_option_detail.cjs'),
+  cjkReadabilitySha256:fileHash('tests/sudu_role_d_cjk_readability.cjs'),
   approvedJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/'+YEAR+'.json'),
   previewJsonSha256:YEAR==='demo'?null:fileHash('sudu/data/approved/preview/'+YEAR+'.json'),
   approvedSourceRevision:approved?.sourceSha||null,
@@ -81,11 +88,7 @@ function demoFields(q){
     formula:q.formula,extra:q.extra,image:q.image};
 }
 function localImageDigest(item){
-  const full=sourcePath(item.image);
-  check(fs.existsSync(full),'missing actual original image: '+item.image);
-  const actual=fileHash(path.join('sudu',item.image));
-  if(item.sha256)assert.equal(actual,item.sha256,'image bytes fail supplied SHA: '+item.image);
-  return actual;
+  return resolveOriginal(ROOT,item).sha256;
 }
 function sourceAudit(){
   if(YEAR==='demo'){
@@ -119,6 +122,25 @@ async function act(locator,touch){
   if(touch)await locator.tap({timeout:15000});
   else await locator.click({timeout:15000});
 }
+async function waitForOriginalImages(page,q,mode){
+  const expected=mode==='image-preview-only'?
+    [{image:q.image},...(q.sharedImages||[])].map(x=>'./'+x.image):[q.image];
+  await page.waitForFunction(({number,sources})=>{
+    const card=document.querySelector('#questionCard');
+    const images=card?[...card.querySelectorAll('img')]:[];
+    return Number(card?.querySelector('.qnum')?.textContent)===number&&
+      images.length===sources.length&&images.every((el,i)=>el.getAttribute('src')===sources[i]);
+  },{number:assertOriginalQuestionNumber(q,mode),sources:expected},{timeout:15000});
+  for(let i=0;i<expected.length;i++){
+    const image=page.locator('#questionCard img').nth(i);
+    await image.scrollIntoViewIfNeeded();
+    await page.waitForFunction(({index,source})=>{
+      const el=document.querySelectorAll('#questionCard img')[index];
+      return el?.getAttribute('src')===source&&el.complete&&el.naturalWidth>0&&el.naturalHeight>0;
+    },{index:i,source:expected[i]},{timeout:15000});
+    await image.evaluate(el=>el.decode());
+  }
+}
 async function layoutQA(page,label){
   const geometry=await page.evaluate(()=>{
     const ids=['#questionCard h1','#questionCard img','.opt-text','#guideCard .calculation-step'];
@@ -150,10 +172,16 @@ async function layoutQA(page,label){
   return geometry;
 }
 async function verifyImageOverHTTP(page,p,expectedSha){
+  if(p.startsWith('data:')){
+    const actual=hash(inlineBytes(p));
+    assert.equal(actual,expectedSha,'inline original WebP SHA mismatch');
+    return actual;
+  }
   const res=await page.request.get(new URL(p,BASE).href);
-  check(res.ok(),'original WebP HTTP failure '+p+': '+res.status());
-  const actual=hash(await res.body());
-  if(expectedSha)assert.equal(actual,expectedSha,'staged original WebP SHA mismatch '+p);
+  assert.equal(res.status(),200,'original WebP HTTP failure '+p);
+  assert.match(res.headers()['content-type']||'',/^image\/webp(?:;|$)/i,'original WebP MIME');
+  const actual=hash(webp(await res.body(),p));
+  assert.equal(actual,expectedSha,'staged original WebP SHA mismatch '+p);
   return actual;
 }
 async function verifyImagePreview(page,q,geometry){
@@ -194,7 +222,8 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
   const img=page.locator('#questionCard .source-figure img').first();
   assert.equal(await img.getAttribute('src'),q.image,'question mismatch: source WebP');
   await img.evaluate(i=>i.decode());
-  const imageSha256=await verifyImageOverHTTP(page,q.image,q.imageSha256);
+  const imageSha256=await verifyImageOverHTTP(page,q.image,
+    localImageDigest({...q,sha256:q.imageSha256}));
   check(geometry.imgs.length>=1,'original single-question WebP missing from question card');
   const draft=mode==='approved'?lessonFields(q):demoFields(q);
   const expectedDigest=hash(Buffer.from(JSON.stringify(draft),'utf8'));
@@ -242,7 +271,7 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
       const x=page.locator('#answerCard .opt[data-a="'+letter+'"] + .option-detail');
       check(await x.count()===1,'missing separate option detail '+letter);
       const actual=(await x.innerText()).replace(/\s+/g,'');
-      for(const [name,value] of Object.entries(detail)){
+      for(const [name,value] of visibleOptionFields(detail,letter,q.answer)){
         check(actual.includes(String(value).replace(/反向檢查/g,'相反意思').replace(/\s+/g,'')),
           letter+' '+name+' exact teaching text differs from source');
       }
@@ -254,8 +283,11 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
       'full calculation lines missing or unwanted calculation shown');
     for(let i=0;i<lines.length;i++)
       check((await calc.nth(i).innerText()).includes(lines[i]),'calculation step lost '+i);
-    assert.equal(await page.locator('#answerCard .calculation-step').count(),0,
-      'duplicate calculation in answer and guide');
+    assert.equal(await page.locator('#guideCard').count(),1,'only one subject guide is allowed');
+    assert.equal(await page.locator('#answerCard .option-detail .calculation-step').count(),0,
+      'calculation must not be duplicated inside option explanations');
+    assert.equal(await page.locator('.calculation-step').count(),lines.length,
+      'all calculation steps must occur exactly once in the single guide');
     const headings=await page.locator('#guideCard .guide-block h3').allInnerTexts();
     assert.equal(new Set(headings).size,headings.length,'duplicate explanation guide fields');
     if(q.sourceTable){
@@ -288,6 +320,15 @@ async function verifyActiveQuestion(page,q,mode,touch,geometry){
     teachingDigest:expectedDigest,imageSha256,sharedImageSHA:[]};
 }
 async function screenshot(page,year,subject,mode,q,width,height,theme){
+  // Preserve the student's transient scoring feedback, but capture reading state
+  // only after its own timer hides it. Never remove the UI to make evidence pass.
+  await page.waitForFunction(()=>{
+    const toast=document.getElementById('scoreToast');
+    if(!toast)return true;
+    const style=getComputedStyle(toast);
+    return !toast.classList.contains('is-visible')&&
+      (style.visibility==='hidden'||style.display==='none'||Number(style.opacity)===0);
+  },null,{timeout:5000});
   const slug=SUBJECT_SLUG[subject];
   const id=q.canonicalId||'demo-'+slug+'-'+String(q.id).padStart(2,'0');
   const rel=path.join(year,slug,mode,
@@ -342,14 +383,37 @@ function dump(){
           assert.deepEqual(
             await page.locator('#homeSubjectSel option').evaluateAll(xs=>xs.slice(1).map(x=>x.value)),
             SUBJECTS,'different 35-Demo courses replaced by generic UI');
-          await page.locator('#homeSubjectSel').selectOption({label:SUBJECT});
+          const cjkReadability=await verifyCjkReadability(page);
+          // A subject with approved lessons intentionally routes to those lessons.
+          // Its raw images remain accessible through the existing all-subject chips.
+          const previewThroughAll=mode==='image-preview-only'&&approvedRows.length>0;
+          const entrySubject=previewThroughAll?
+            SUBJECTS.find(s=>preview.questions.some(q=>q.subject===s)&&
+              !approved.questions.some(q=>q.subject===s)):SUBJECT;
+          check(entrySubject,'no existing read-only subject entry for original-image navigation');
+          await page.locator('#homeSubjectSel').selectOption({label:entrySubject});
           await page.locator('#studyView').waitFor({state:'visible',timeout:15000});
+          if(previewThroughAll){
+            await page.locator('#subjectSel').selectOption({label:'全部科目'});
+            assert.equal(new URL(page.url()).searchParams.get('view'),'images',
+              'all-subject original-image route must stay read-only');
+            assert.equal(await page.locator('#questionCard').getAttribute('data-qa-preview'),'read-only');
+          }
           if(theme==='dark')await act(page.locator('#themeBtn'),touch);
           assert.equal(await page.locator('html').getAttribute('data-theme'),theme,
             'visible real theme control failed');
           for(let index=0;index<rows.length;index++){
             q=rows[index];
+            if(previewThroughAll){
+              const handle=page.locator('#navHandle');
+              if(await handle.getAttribute('aria-expanded')!=='true')await act(handle,touch);
+              assert.equal(await handle.getAttribute('aria-expanded'),'true');
+              await act(page.getByRole('button',{
+                name:q.subject+'第 '+q.questionNumber+' 題唯讀原圖',exact:true
+              }),touch);
+            }
             const label=YEAR+' '+SUBJECT+' '+mode+' '+(q.canonicalId||q.id)+' '+width+'x'+height+' '+theme;
+            await waitForOriginalImages(page,q,mode);
             const geometry=await layoutQA(page,label+' (pre-answer)');
             const evidence=mode==='image-preview-only'?
               await verifyImagePreview(page,q,geometry):
@@ -361,17 +425,21 @@ function dump(){
               questionId:q.canonicalId||SUBJECT+'|'+q.id,
               questionNumber:assertOriginalQuestionNumber(q,mode),mode,
               viewport:{width,height},theme,input:touch?'real_touch_tap':'real_mouse_click',
+              cjkReadability,
               checks:{noHorizontalOverflow:true,textUnclipped:true,webpAspect:true,
                 originalWebpBytes:true,digestBound:mode!=='image-preview-only',
                 fourOptions:mode!=='image-preview-only',dualLevel:mode==='approved',
                 readOnly:mode==='image-preview-only',realQuestionData:true},
               ...evidence,screenshot:screenshotFile});
-            if(index<rows.length-1){
+            if(index<rows.length-1&&!previewThroughAll){
               await act(page.locator('#nextBtn'),touch);
             }
           }
           if(mode!=='image-preview-only'){
-            await act(page.locator('#navHandle'),touch);
+            const handle=page.locator('#navHandle');
+            if(await handle.getAttribute('aria-expanded')!=='true')await act(handle,touch);
+            assert.equal(await handle.getAttribute('aria-expanded'),'true',
+              'real navigation must be expanded before returning home');
             await act(page.locator('#navHomeBtn'),touch);
             await act(page.locator('#homeReviewBtn'),touch);
             await page.locator('#reviewList .wrong-card').first().waitFor({timeout:15000});
