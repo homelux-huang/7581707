@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "questionId": "114-00-E-14",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "Ken:  The line is too long! Let’s cut in line, so we can get into the theater in time.\n    July:  No way. ____________\n   Ken:  OK. Let’s go to the back of the line.",
+  "options": [
+    "Which theater do you prefer?",
+    "Which movie are we going to see?",
+    "How much do you pay for two adults?",
+    "How can you even think of doing that?"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "6164a310c7d38229aaaf52df678121ee88f6242cf6611310badfb5b1b46714dd",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpSha256": "388773561e436315452bdf0c28c792efa0983eb25538e8b3119926cd338f3a94",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-14.webp",
+    "originalManifestQaStatus": "PASS",
+    "finalAnswerDirectQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "英文｜No way 為強烈拒絕，How can you even think of... 是責備式反問，並非真的想知道思考過程。",
+    "teacherSummary": "Ken 想 cut in line 插隊，July 說 No way，Ken 最後決定 go to the back of the line。D How can you even think of doing that? 以反問強烈反對插隊，最能解釋他改變行動。",
+    "elementarySummary": "有人想插隊，朋友說不行，怎麼會想到這樣？他才回到隊伍最後面。",
+    "concept": "No way 為強烈拒絕，How can you even think of... 是責備式反問，並非真的想知道思考過程。",
+    "extension": "cut in line 是美式『插隊』，英式常說 jump the queue，不是剪斷線。",
+    "memory": "cut in line → No way → back of the line：只能是 D 的責備。",
+    "solvingSteps": [
+      "先找 Ken 說 cut in line 的問題。",
+      "July 說 No way，表示反對。",
+      "Ken 改去隊伍後面，故需要能責備插隊的 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Which theater do you prefer? 只是問喜歡哪家戲院，沒有否定不守排隊秩序。",
+        "elementary": "問戲院偏好，不是叫人不要插隊。",
+        "reason": "問地點無法解釋 Ken 隨後自願去隊伍後面。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Which movie are we going to see? 是問電影片名，不能回應插隊是否適當。",
+        "elementary": "問要看哪部片，不是在制止插隊。",
+        "reason": "電影片名無法引出 Ken 的道歉式讓步。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "How much do you pay for two adults? 問兩張成人票價，應收到金額而非行為改變。",
+        "elementary": "問票價，和排隊禮貌無關。",
+        "reason": "票價問題與回到隊尾的反應不連貫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "How can you even think of doing that? 強烈責備『怎麼可以想插隊』，使 Ken 回去排隊。",
+        "elementary": "朋友說這樣不行，他才改去後面排。",
+        "reason": "反問語氣符合 No way 與 Ken 改過的後續。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年官方原始試題；最終答案影像QA／教科書出版社與頁碼待核。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "cut in line",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "No way",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "go to the back of the line",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "How can you even think of doing that?",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "cut in line",
+        "ipa": "/kʌt ɪn laɪn/",
+        "level": "中級",
+        "meaningZh": "插隊",
+        "synonyms": [
+          "jump the queue",
+          "push ahead unfairly"
+        ],
+        "antonyms": [
+          "wait your turn",
+          "go to the back of the line"
+        ],
+        "usageNote": "此為美式排隊片語，cut 不是真的拿刀剪。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/cut-in-line"
+      },
+      {
+        "headword": "No way",
+        "ipa": "/noʊ weɪ/",
+        "level": "初級",
+        "meaningZh": "絕對不行／我不同意",
+        "synonyms": [
+          "absolutely not",
+          "certainly not"
+        ],
+        "antonyms": [
+          "sure",
+          "yes"
+        ],
+        "usageNote": "口語用法，不是字面的沒有道路。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/no-way"
+      }
+    ],
+    "newsExample": {
+      "kind": "AUTHOR_COMPOSED_NEWS_CONTEXT_NOT_QUOTE",
+      "english": "Some visitors said others tried to cut in line for shuttle buses outside a crowded Taiwan amusement park in April 2025.",
+      "chinese": "有旅客表示，2025年4月臺灣一處擁擠的遊樂園外，有人試圖插隊搭接駁車。",
+      "highlightActualForm": "cut in line",
+      "notAnArticleQuote": true,
+      "source": {
+        "publicationDate": "2025-04-04",
+        "title": "少年回不了家！六福村免費玩　百人等嘸車",
+        "url": "https://news.tvbs.com.tw/life/2829644",
+        "factSupportedBySource": "TVBS報導六福村接駁車久候與插隊抱怨；英文措辭自編。",
+        "webCheckedAt": "2026-10-25"
+      }
+    }
+  },
+  "teachingCanonicalSha256": "f398d45bcca81e672fe38261704f1108e9560dc5af47fa020799a487a9871efa",
+  "composedTeachingSha256": "01c3e3dea298bc0d5fea17107167718b3f328bf29692de5f8127e165625c7088",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "D",
+    "agreesWithKnownAnswer": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorSelfCheck": true,
+    "authorRole": "B",
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "independentReviewer": null,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "FINAL_OFFICIAL_ANSWER_IMAGE_QA_PENDING",
+      "AUTHORIZED_DIFFERENT_HUMAN_TEACHER_REVIEW_MISSING",
+      "EXACT_DIGEST_V4_QA_PENDING",
+      "MASTER_ADMISSION_NOT_GRANTED"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
