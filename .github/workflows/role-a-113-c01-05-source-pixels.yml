@@ -1,0 +1,67 @@
+name: Role A 113 Chinese C01-05 exact archival pixel crops and 5-row SQLite candidate (NO RELEASE)
+on:
+  push:
+    branches:
+      - data/role-a-113-c01-05-original-pixels-20261025
+    paths:
+      - scripts/role_a_113_c01_05_source_pixels.py
+      - tests/test_role_a_113_c01_05_source_receipts.py
+      - docs/ROLE_A_113_C01_05_ORIGINAL_SOURCE_20261025.md
+      - .github/workflows/role-a-113-c01-05-source-pixels.yml
+      - sudu/data/processed/113/role-a-c01-05/**
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: role-a-113-c01-05-source-pixels-isolated-20261025
+  cancel-in-progress: false
+jobs:
+  only_new_historical_113_source_assets:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/data/role-a-113-c01-05-original-pixels-20261025'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact isolated Role A branch (no main/Pages)
+        uses: actions/checkout@v4
+        with:
+          ref: data/role-a-113-c01-05-original-pixels-20261025
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original-pixel renderer, never OCR or image generation
+        run: python -m pip install -q Pillow==11.3.0
+      - name: Verify branch and build five lossless source pixel originals and candidate SQLite
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "data/role-a-113-c01-05-original-pixels-20261025"
+          python -m py_compile scripts/role_a_113_c01_05_source_pixels.py tests/test_role_a_113_c01_05_source_receipts.py
+          python scripts/role_a_113_c01_05_source_pixels.py --apply
+          python scripts/role_a_113_c01_05_source_pixels.py --verify
+          python -m unittest discover -s tests -p test_role_a_113_c01_05_source_receipts.py -v
+      - name: Only commit seven original-pixel/candidate-DB owned paths on isolated ref
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/113/role-a-c01-05/manifest.json
+          git add -- sudu/data/processed/113/role-a-c01-05/question-bank.sqlite3
+          git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp
+          git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp
+          git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp
+          git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp
+          git add -- sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp
+          expected="$(printf '%s\n' 'sudu/data/processed/113/role-a-c01-05/manifest.json' 'sudu/data/processed/113/role-a-c01-05/question-bank.sqlite3' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-02.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-03.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-04.webp' 'sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp')"
+          changed="$(git diff --cached --name-only)"
+          if test -n "$changed"; then
+            test "$changed" = "$expected" || { echo 'ONLY exact seven owned source outputs may change'; git diff --cached --name-only; exit 1; }
+            git diff --cached --check
+            test -z "$(git diff --name-only)" || { echo 'Other tracked files modified'; exit 1; }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'data(role A): 113 C01-05 exact original-page lossless crops + deterministic five-row candidate SQL [NO RELEASE]'
+            git push origin HEAD:refs/heads/data/role-a-113-c01-05-original-pixels-20261025
+          else
+            echo 'IDEMPOTENT: unchanged original pixels and five-row database'
+          fi
+          test "$(git ls-remote origin refs/heads/data/role-a-113-c01-05-original-pixels-20261025 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo 'SOURCE ONLY, no current official final answer QA and no main/Pages student release'
