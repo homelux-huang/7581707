@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-113-C06-ORIGINAL-DIAGRAM-OCR-20261025-11",
+  "date": "2026-10-25",
+  "questionId": "113-00-C-06",
+  "reviewer": "ChatGPT Role A original source/image QA only",
+  "reviewerType": "AI_ASSISTANT_SOURCE_VISUAL",
+  "independentHumanReview": false,
+  "independentRoleEContentReview": false,
+  "officialFinalAnswerReviewed": false,
+  "officialFullCorrectionNoticeReviewed": false,
+  "sourcePdfRehashedThisBatch": false,
+  "originalSourcePage": {
+    "path": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
+    "webpSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+    "gitBlobSha1": "6796adb4df977d064baae8a3e066238014d096f6",
+    "page": 2
+  },
+  "originalAnswerPage": {
+    "path": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "webpSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "gitBlobSha1": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "page": 1
+  },
+  "candidate": {
+    "path": "sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp",
+    "webpSha256": "57064b9f8da602c2894216b5f0ce7577988c2e534272d5da02affd5080f1a071",
+    "gitBlobSha1": "5e53721a28fd4847430b23839554b1ff808ffd3f",
+    "cropPixels": [
+      90,
+      1450,
+      1310,
+      1881
+    ],
+    "pixelSize": [
+      1220,
+      431
+    ],
+    "sourceRevisionSha256": "f5dd92e4d8b3184590011569c08977d59e3454d18b7489c3d60aca01f3343730"
+  },
+  "previousRejected": {
+    "cropPixels": [
+      90,
+      1472,
+      1310,
+      1881
+    ],
+    "sha256": "289e16a96ceeeb1c691075b0b553adbd9e31652af0821ab24ad77cf8e15daeb7",
+    "result": "FAIL_INCOMPLETE_TOP_RIGHT_COUPLET",
+    "reason": "Top characters of right-hand original poem were touching initial WebP top edge; candidate rejected and original-pixel crop expanded upward only."
+  },
+  "observations": {
+    "visibleQuestionNumber6": true,
+    "visibleEntireQuestionStem": true,
+    "visibleFourOptionsAtoD": true,
+    "visibleCompleteOriginalRightVerticalCoupletFigure": true,
+    "visibleBothFullBlankSquaresAndCircles": true,
+    "noAdjacentQuestion5Or7": true,
+    "noWholePage": true,
+    "noPageHeaderOrFooter": true,
+    "legibleOriginalPixels": true,
+    "byteAndRgbSourcePixelComparisonPass": true,
+    "notes": "True original official p2 reused. Final image displays Q06 label, both lines of printed right-side calligraphy, two lower hollow squares, two circles, and A/B/C/D without other numbered questions. First image was rejected for cropped/touching top calligraphy and replaced by [90,1450,1310,1881]. Q05 finalized image ends at y1450 and has zero overlap. Source image QA only."
+  },
+  "result": "PASS_ROLE_A_SOURCE_IMAGE_ONLY",
+  "originalArchivedOptionsKept": true,
+  "correctedStructuredD": "齊物、無為",
+  "originalArchivedDContainsNextPageHeader": true,
+  "answerBObservedOriginalAnnouncementImage": true,
+  "finalCorrectionPdfScopeStatus": "PENDING",
+  "newAnswerVerified": 0,
+  "newQuestionVerified": 0,
+  "newIndependentTeachingReview": 0,
+  "newReady": 0,
+  "newLive": 0
+}
