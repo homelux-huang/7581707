@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-01",
+  "taskId": "B-113-C01-05-A72-PROVENANCE-LESSONS-20261025-11",
+  "subject": "國文",
+  "question": "下列文句，何者有錯別字？",
+  "options": [
+    "斟酌損益，改弦易轍",
+    "抓耳撓腮，身形臃腫",
+    "摒息凝視，倏乎消逝",
+    "蓊鬱遠山，橫亙千里"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourcePR72Head": "481734d51928c8e47303718034479feafdf7e45e",
+    "sourceRevision": "0d979723a0cfd9f689c135ae84a9e198522d66ddc5ab4d1a5e7221310ba9ed47",
+    "sourceWebpPath": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-01.webp",
+    "webpSha256": "7530812fb36120a00f1df784da804cb85e8c7cdd03c6eb78fcf886d95625d784",
+    "sourceManifestG1Status": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
+    "sourceTextQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
+    "finalOfficialAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
+    "roleAImageEvidencePath": "sudu/data/processed/113/role-a-c01-05/VISUAL_QA_ASSISTANT_20261025.json",
+    "originalImageQaReceipt": "PASS_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_QA",
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "finalNoticeScopeVerified": false
+  },
+  "teaching": {
+    "topic": "113國文1｜屏息與摒息錯別字",
+    "teacherSummary": "題目問唯一有錯別字的句子。A 斟酌損益、改弦易轍，B 抓耳撓腮、身形臃腫，D 蓊鬱遠山、橫亙千里，都是正字。C 的官方原圖印『摒息凝視』，但表示屏住呼吸應用『屏息凝視』；『摒』常見於摒除而不是屏息。保留原選項錯字，不把它直接修進題庫。",
+    "elementarySummary": "C 寫『摒息凝視』，但是停住呼吸認真看，要用『屏息凝視』的屏。A、B、D 都寫對，所以 C。原圖的錯字是要讓你找到它。",
+    "concept": "屏息是屏住呼吸；摒除是排除事物。兩字形近，不能混用。",
+    "memory": "屏住呼吸用屏，摒除雜念用摒；『摒息』有錯，選 C。",
+    "solvingSteps": [
+      "先確認題目問錯別字。",
+      "逐一核 A 斟酌與改弦易轍，B 抓耳撓腮與臃腫。",
+      "C 的摒息應寫屏息，字義對不上。",
+      "D 蓊鬱、橫亙也是正字，選 C。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "『斟酌損益』衡量得失，『改弦易轍』是改變做法，兩個詞中斟酌和弦轍都是正字。",
+        "elementary": "A 是仔細想想利弊、再改變方法，字沒有錯。",
+        "why": "A 的成語用字正確。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "『抓耳撓腮』是搔耳抓臉，『身形臃腫』形容形體肥厚，各字都正確。",
+        "elementary": "B 是搔耳朵和臉、形容身材，沒有錯字。",
+        "why": "B 的撓腮臃腫都是正字。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "原題『摒息凝視』的摒字用錯，表示停住呼吸時應寫『屏息凝視』；摒常用於摒除。",
+        "elementary": "C 本來想說屏住呼吸，卻把屏寫成摒，所以 C 正確。",
+        "why": "C 把屏息的屏誤寫成摒，是實際錯字。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "『蓊鬱』是草木繁茂，『橫亙』是橫跨延伸，用來形容遠山沒有寫錯。",
+        "elementary": "D 的兩個字難寫，但都寫對了。",
+        "why": "D 形容林木繁茂、綿延的字形正確。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "chineseVocabulary": [
+      {
+        "level": "初級",
+        "term": "屏息",
+        "meaning": "止住呼吸"
+      },
+      {
+        "level": "中級",
+        "term": "摒除",
+        "meaning": "排開去除"
+      },
+      {
+        "level": "高級",
+        "term": "改弦易轍",
+        "meaning": "改換辦法"
+      }
+    ],
+    "highlights": [
+      {
+        "text": "斟酌損益",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "改弦易轍",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "抓耳撓腮",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "摒息凝視",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "倏乎消逝",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "蓊鬱遠山",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "橫亙千里",
+        "bold": true,
+        "highlight": true
+      }
+    ]
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "knownAnswerBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "roleE": "PENDING_DISTINCT_AI_REVIEW",
+    "roleD": "PENDING_SAME_SHA_8X2",
+    "requiresRealHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "officialFinalAnswerVerified": false,
+    "sourceFinalQaVerified": false,
+    "formalReady": false,
+    "newMain": false,
+    "newLive": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
