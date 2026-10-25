@@ -146,16 +146,27 @@
     "answerAlreadyKnown": true,
     "newBlindSolveClaimed": false,
     "externalIndependentReview": "PENDING",
-    "authorizedHumanTeacherApproval": "PENDING",
     "officialFinalAdmission": "PENDING",
     "formalImageSourceQa": "PENDING",
-    "uiQa": "PENDING"
+    "uiQa": "PENDING",
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewNotes": null,
+    "reviewEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialEvidenceSha256ForReview": null,
+    "knownSourceRevisionForReview": "c7e7262a3d5283d547f1dda35f1070c21d432314069286b305265aad9fa8977e",
+    "knownTeachingDigestForReview": "c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316",
+    "knownOriginalImageSha256ForReview": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
+    "policyAuthority": "ISSUE_36_TOP_LEVEL_USER_OVERRIDE_2026-10-25",
+    "authorIdentityCategory": "AI_LESSON_AUTHOR_NOT_INDEPENDENT_REVIEWER"
   },
   "studentReleaseApproved": false,
   "deploy": false,
   "blockers": [
     "OFFICIAL_FINAL_ANSWER_NOTICE_AND_SOURCE_ADMISSION_PENDING",
-    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_APPROVAL_AND_SIGNATURE_PENDING",
-    "CURRENT_EXACT_TEACHING_DIGEST_V4_8x2_UI_PENDING"
+    "CURRENT_EXACT_TEACHING_DIGEST_V4_8x2_UI_PENDING",
+    "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING"
   ]
 }

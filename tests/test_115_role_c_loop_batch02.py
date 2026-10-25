@@ -76,7 +76,13 @@ class TestRoleCFive(unittest.TestCase):
                 self.assertFalse(item["ready"])
                 self.assertFalse(q["sourceFormalAdmissionThisBatch"]) if qid == "115-00-C-06" else self.assertFalse(q["sourceAnswerVerified"])
                 self.assertFalse(q["review"]["newBlindSolveClaimed"])
-                self.assertIn("AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW", " ".join(q["blockers"]))
+                self.assertEqual(q["review"]["independentAiContentReview"], "PENDING")
+                self.assertTrue(q["review"]["distinctAuthorRequired"])
+                self.assertFalse(q["review"]["selfReviewAllowedAsIndependentQa"])
+                self.assertIsNone(q["review"]["independentAiReviewerIdentity"])
+                self.assertIsNone(q["review"]["reviewEvidenceSha256"])
+                self.assertNotIn("authorizedHumanTeacherApproval", q["review"])
+                self.assertIn("DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING", q["blockers"])
 
     def test_shared_visual_qa_is_never_promoted(self):
         for qid, q in self.lessons.items():

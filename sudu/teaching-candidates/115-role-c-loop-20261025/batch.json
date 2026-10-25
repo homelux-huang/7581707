@@ -16,7 +16,7 @@
     {
       "questionId": "115-00-E-03",
       "path": "sudu/teaching-candidates/115-role-c-loop-20261025/115-00-E-03.json",
-      "fileSha256": "2e643942342cba25c3fd4e84c3d9c15ebe44e5045a159de6e2ea56eed1d92da0",
+      "fileSha256": "f92078c1f7ba83de680078b7f7fcbef63bbf86975c45e0093f243b3d843cd29b",
       "teachingSha256": "c7bce2469356f95e929b19d5275cd3ca1a4ff8f2c9f89cd858b61e5c8cdc3316",
       "sourceTextRevision": "c7e7262a3d5283d547f1dda35f1070c21d432314069286b305265aad9fa8977e",
       "imageSha256": "16c8e37d3f169f0488398844030bf4922c4f4639633ee7a4d9a9af83466d8ebd",
@@ -26,12 +26,13 @@
     {
       "questionId": "115-09-2-34",
       "path": "sudu/teaching-candidates/115-role-c-loop-20261025/115-09-2-34.json",
-      "fileSha256": "0a2ca20570df748fb4a34a67b4529181218a53f928933062df73fa47d3fd17dc",
+      "fileSha256": "4e589e5fa500e40c4852d8a0013a9b7f6221071477e7611c9886d19867246ee3",
       "teachingSha256": "968607d17fa6a9dfd8ca913f958e5afb9536e3f4dd57bbca1722b32707d19fe3",
       "sourceTextRevision": "162c9a4f4d16d25e77a6c09034eb87f9a27b1b5775ac334274f6447c3c957cc8",
       "imageSha256": "5141e911e1925cc80d8f0f464688be2c333edb30994cce535f7c378485567b02",
       "legacyBlobSha": "77b9621e47c736091910e600381e3481567170c3",
       "ready": false
     }
-  ]
+  ],
+  "policyMetadataAlignment": "ISSUE36_2026_10_25_DISTINCT_AI_REVIEW_REQUIRED_NO_HUMAN_TEACHER"
 }

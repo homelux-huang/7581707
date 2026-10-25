@@ -134,21 +134,31 @@
   "sourceAnswerVerified": false,
   "review": {
     "author": "GPT-6 role C",
-    "isIndependentHumanReviewer": false,
     "knownAnswerUsed": true,
     "newBlindSolveClaimed": false,
-    "authorizedHumanTeacherApproval": "PENDING",
     "independentTeachingQa": "PENDING",
     "officialFinalAnswerAdmission": "PENDING",
     "sharedMaterialIndependentVisualQa": "PENDING",
-    "v4ExactDigestQa": "PENDING"
+    "v4ExactDigestQa": "PENDING",
+    "independentAiContentReview": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "reviewNotes": null,
+    "reviewEvidenceSha256": null,
+    "distinctAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "officialEvidenceSha256ForReview": null,
+    "knownSourceRevisionForReview": "b5b2282057f093845c8745986a9e034e1bdfb6e6df10c18ab8d445507a68f0fd",
+    "knownTeachingDigestForReview": "b46c697373efc8e2641b42c4c9df6e6eda14848faf8f2bd4f9f0aa94c2f20f6c",
+    "knownOriginalImageSha256ForReview": "b10a8ba84292df22dc481107280522e8f8dc168ef0496f9af3f4bf71329740a4",
+    "policyAuthority": "ISSUE_36_TOP_LEVEL_USER_OVERRIDE_2026-10-25",
+    "authorIdentityCategory": "AI_LESSON_AUTHOR_NOT_INDEPENDENT_REVIEWER"
   },
   "studentReleaseApproved": false,
   "deploy": false,
   "blockers": [
     "OFFICIAL_SOURCE_TEXT_AND_FINAL_NOTICE_ADMISSION_PENDING",
-    "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_SIGNATURE_PENDING",
     "CURRENT_EXACT_SOURCE_TEACHING_SHA_V4_UI_PENDING",
-    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING"
+    "SHARED_MATERIAL_INDEPENDENT_VISUAL_QA_PENDING",
+    "DISTINCT_INDEPENDENT_AI_CONTENT_REVIEW_EVIDENCE_PENDING"
   ]
 }

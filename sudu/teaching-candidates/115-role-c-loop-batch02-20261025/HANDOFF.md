@@ -1,3 +1,13 @@
+# 2026-10-25 Issue #36 user policy override (CURRENT, supersedes historical note below)
+
+**Role C is an AI teaching AUTHOR, never its own independent reviewer.** Per Issue #36 latest top-level user instruction, a real teacher, credential roster, teacher Ed25519 key or human GitHub APPROVED event is **NO LONGER required for the teaching gate**. In all seven C-owned candidate JSONs, any former human-review-only blocker has been removed; a different, identifiable AI author/reviewer must conduct substantive option-by-option review bound to the exact current questionId, sourceTextRevision, teachingCanonicalSha256, original WebP SHA256, official final notice/evidence SHA and review notes. The reviewer identity, work, official evidence SHA and written independent review are **not present yet** and remain explicit PENDING / null; author C has NOT performed independent review or claimed blind solving. Teacher-perspective professional explanation text remains without teacher identity claims.
+
+The source/official/image/shared-material gates, 35-question Demo subject-specific V4 8 viewport × 2 theme exact source/teaching digest tests, normal CI/PR security and same-SHA LIVE still apply. Current production publisher/governance code still reflects the previous teacher policy until Master/PR46 really migrates and tests it; this Role C patch is only candidate metadata and own tests. It is NOT a release certificate, schema-policy bypass, actual review, source quality check, teacher-signature simulation, or deployment. All existing sources/teaching JSON content and the canonical teaching digests remain unchanged; only review annotations/fileSHA/batch metadata and own tests are aligned. New READY = 0 / new LIVE = 0.
+
+---
+
+## Historical handoff details retained below (earlier teacher dependency is superseded)
+
 # 115 Role C / Issue 36 – bounded five NEW teaching lessons, no release
 
 ## Task lease / base
