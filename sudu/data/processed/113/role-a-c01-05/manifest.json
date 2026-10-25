@@ -240,17 +240,17 @@
       "studentReady": false,
       "asset": {
         "path": "sudu/data/processed/113/role-a-c01-05/webp/113-00-C-05.webp",
-        "sha256": "c749bb5993921d303fc8d59b1c849b2a68f366dbb4e3ff76696d9830b4626a81",
-        "gitBlobSha1": "bfc76ea354c2fbc2a4ed8a2f4374c5c9debaf2ce",
+        "sha256": "ff1f548bead9b1850688f99b74e1946e2a2e0f5f1c83b299b5002801a51e9cd3",
+        "gitBlobSha1": "8112af81a1c61f07de5b3649dd771cf254218b32",
         "cropPixels": [
           90,
           1085,
           1310,
-          1475
+          1450
         ],
         "pixelSize": [
           1220,
-          390
+          365
         ],
         "originalPageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134"
       },
@@ -262,7 +262,7 @@
       "individualImageQa": "DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA",
       "textQa": "PENDING_FULL_OFFICIAL_PDF_PAGE_REVIEW",
       "officialFinalAnswerQa": "PENDING_CORRECTION_PDF_SCOPE",
-      "sourceRevisionSha256": "486307000c44b4cea6573272425f8de2c90866dbf9d5ee83645bb4fd116cc85b"
+      "sourceRevisionSha256": "232ee18447551bd6e8c7b46ad4d4984a9ec766881bf8e224aed2d16ca3ae399f"
     }
   ],
   "partialCandidateRows": 5,
