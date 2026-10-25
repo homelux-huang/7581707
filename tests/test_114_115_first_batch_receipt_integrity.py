@@ -111,7 +111,7 @@ class CandidateIntegrityOnly(unittest.TestCase):
                     doc = json.loads(path.read_text(encoding="utf-8"))
                     self.assertIn(item["questionId"], self.q)
                     self.assertEqual(doc["questionId"], item["questionId"])
-                    if folder.startswith("114-"):
+                    if folder == "114-role-b-20261025":
                         self.assertFalse(doc["review"]["humanTeacherVerified"])
                         self.assertFalse(doc["review"]["studentReleaseApproved"])
                     else:
