@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-22",
+  "taskId": "B-114-C20-22-SHARED-20261025-07",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "上文作者說完此故事後，認為焦奇並非「大敵勇而小敵怯」，而是「函牛之鼎不可以烹小\n  鮮，千斤之弩不可以中鼷鼠」，這句話的意思與何者最接近？",
+  "options": [
+    "不斫柱以為椽",
+    "幸於始者怠於終",
+    "人為刀俎，我為魚肉",
+    "不凝滯於物，而能與世推移"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "b78a3e7f300621fa64217d420476c195fa6a3f44050a344dbf2eb20292c1aea1",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "b795e87aabd5b3d3ea07b32afc7ebc51a983afaa72351fe1eebaace49772482b",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-22.webp",
+    "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "originalManifestQaStatus": "PASS",
+    "archivedImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "sharedMaterialId": "114-00-C-SHARED-20-23",
+    "sharedMaterialWebpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+    "finalOfficialAnswerPerQuestionImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "國文成語寓意｜大材小用與器物用途不相稱",
+    "teacherSummary": "『函牛之鼎不可以烹小鮮，千斤之弩不可以中鼷鼠』意為巨大器具並不適合處理微小任務，說的是才具或器用要適當，不能不分情境硬用；A『不斫柱以為椽』指不拿粗大的柱材砍成較小椽木，意義最接近。",
+    "elementarySummary": "很大的鍋不適合煮很小的魚，超大的弓也不適合射小老鼠；就像不該砍大柱子去做小屋椽，工具和工作要配得剛剛好，所以 A。",
+    "concept": "辨析譬喻必須找共同核心：大器材、大本領與小任務不相稱；而不是只看到成敗、生死或隨遇而安。",
+    "extension": "這句話解釋焦奇能對付虎，卻未必擅長打靈巧的貓；不能因此說他面對小動物就是『怯懦』。大才能也應有適合用途。",
+    "memory": "大鼎≠小魚，大弩≠小鼠，大柱≠小椽：不斫柱以為椽（A）。",
+    "solvingSteps": [
+      "解出函牛之鼎（大鼎）不能恰當烹小鮮，千斤重弩不便射細小鼷鼠，重點在器用與目標大小不匹配。",
+      "從故事看焦奇擒虎有長處，卻無法順利制伏機敏小貓，作者以大材不適小用說明。",
+      "尋找同樣不該拿大型材料做小用途的格言『不斫柱以為椽』，選 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『不斫柱以為椽』指不應把較大而重要的柱材削作細小椽木，與原句大鼎不烹小魚、巨弩不中鼷鼠同是大材不應勉強用在小事。",
+        "elementary": "大柱子別砍來做小橫木，就像大鍋不適合煮小魚，意思接近。",
+        "reason": "A 的柱與椽呈現器材尺度和用途不相稱，呼應鼎/弩不適小任務的譬喻。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B『幸於始者怠於終』說一開始順利的人後來容易鬆懈，是對態度由勤而怠的提醒，不在討論工具大小和用途是否相稱。",
+        "elementary": "這句是警告人別前面認真後面偷懶，不是在說大工具做小工作。",
+        "reason": "B 核心是始終態度的轉變，與原文器用與目標大小不搭無關。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C『人為刀俎，我為魚肉』指他人掌握生殺處置權而自己任人宰割，屬權力和處境強弱懸殊，而不是才具如何分配用途。",
+        "elementary": "這是別人像拿刀的人、我像被切的魚，講的是被控制，不是工具太大。",
+        "reason": "C 是權力主宰者和受害者的對比，不等於大型器材不宜處理細小工作。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D『不凝滯於物，而能與世推移』強調隨環境變化而調整、不固守成見；雖也談處世，但原句是大材與小用途不適配，並未著重心態變通。",
+        "elementary": "D 說做人要懂得隨情況調整，這題更在講大器材不適合做小事。",
+        "reason": "D 重點在隨世變通，A 才直接呼應鼎與弩的材質尺度及使用情境。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原始閱讀〈壯夫縛虎〉；原始共享影像及單題WebP沿用既有SHA證據；官方最終答案與更正公告逐題核對待角色A/E完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "大敵勇而小敵怯",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "函牛之鼎",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不斫柱以為椽",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "幸於始者怠於終",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "人為刀俎，我為魚肉",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不凝滯於物，而能與世推移",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "柱",
+        "level": "初級",
+        "meaning": "支撐房子的主要直立木材。",
+        "usageNote": "斫柱為椽會把重要的大材料改作較小用途。"
+      },
+      {
+        "term": "鼷鼠",
+        "level": "中級",
+        "meaning": "一種很小的老鼠，古文用來表示細小對象。",
+        "usageNote": "千斤之弩不中鼷鼠比喻能力/器具和目標不配。"
+      },
+      {
+        "term": "斫",
+        "level": "高級",
+        "meaning": "砍削、用刀斧削木。",
+        "usageNote": "『不斫柱以為椽』的斫不是採用而是砍削。"
+      },
+      {
+        "term": "材不適用",
+        "level": "高級",
+        "meaning": "材料或能力和工作所需不相稱。",
+        "usageNote": "大鼎烹小鮮和大弩射小鼠都強調尺度不適配。"
+      }
+    ],
+    "readingFacts": [
+      "共享閱讀故事焦奇擒虎勇猛，對靈巧的貓反而無計可施；作者以大鼎小魚與大弩小鼠比喻。"
+    ],
+    "sharedReading": {
+      "sharedMaterialId": "114-00-C-SHARED-20-23",
+      "originalPage7Path": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage7Sha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "webpPath": "sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp",
+      "webpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+      "qaStatusInherited": "PASS",
+      "archivedImageQaPath": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+      "sourceAlreadyOriginalNotRegenerated": true
+    }
+  },
+  "teachingCanonicalSha256": "fe5065e2a659d60bd86de5074528625e742f39c6adfb09b32d66ceb9eb22474a",
+  "composedTeachingSha256": "8ab9eeb1b8d522111a67cf52d952d1d2a505233de1ca498d0222b42096d554d6",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "A",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_YEAR_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_SHARED_READING_AND_NEW_DIGEST_V4_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_POLICY_MIGRATION_AND_RELEASE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

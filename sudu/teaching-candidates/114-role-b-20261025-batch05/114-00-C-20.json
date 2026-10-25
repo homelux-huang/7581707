@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-20",
+  "taskId": "B-114-C20-22-SHARED-20261025-07",
+  "subject": "國文",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "question": "關於焦奇的人物形象解讀，何者最符合上文所述？",
+  "options": [
+    "「連斃兩虎，生擒小虎」暗示他雖暴戾，仍有好生之德",
+    "「眾皆辟易」暗示來自外地的他過於驕橫，遂遭排擠",
+    "「富家設筵款之」暗示打虎使他成名，漸開啟社交",
+    "「口講指畫」暗示他雖性格粗豪，但思慮縝密"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionRevision": "c31503c4314d5d1ad6686edeb45991ae602275013e6cae4555b65f4d3c1edc09",
+    "originalQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "webpSha256": "13ceb4e57baa428cfa09a59e381b84d7f3bf114d6ff60fe1df20f0fe527ae19c",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-20.webp",
+    "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "originalManifestQaStatus": "PASS",
+    "archivedImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "sharedMaterialId": "114-00-C-SHARED-20-23",
+    "sharedMaterialWebpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+    "finalOfficialAnswerPerQuestionImageQaThisBatch": false
+  },
+  "teaching": {
+    "topic": "國文閱讀｜焦奇人物形象與英雄名聲",
+    "teacherSummary": "原文寫焦奇接連打死兩虎、擒小虎，眾人驚避；富家專門設筵款待他，他向客人敘述搏虎經過，言談指畫且自豪。富家宴請是因擒虎出名而進入社交場合，故 C 最符合文本。",
+    "elementarySummary": "焦奇會打老虎，大家都知道他厲害，有錢人就請他吃飯，讓他說故事、認識大家。所以 C 說打虎出名、開始交際最貼近。",
+    "concept": "從人物行動推性格，不把『抓小虎』硬推成仁慈，也不能把眾人避讓直接解讀為排擠或把說得生動解讀為深思熟慮。",
+    "extension": "焦奇對貓發怒與擒虎時的勇猛是故事反差；本題問『最符合』，須辨別引文能否支持選項加上的性格評斷。",
+    "memory": "富家設筵款之 → 打虎成名有人宴請 → 開啟社交，選 C。",
+    "solvingSteps": [
+      "從共享文章讀到焦奇連斃兩虎、擒一虎，眾人因他勇猛而避讓。",
+      "再看富家為他設宴，他口講指畫回憶搏虎、意氣自豪，反映名聲與人際往來。",
+      "逐一排除對於仁慈、被排擠與思慮縝密缺乏證據的推論，留下 C。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 用『生擒小虎』推論焦奇有好生之德，但原文只呈現他殺兩虎又活捉幼虎的行動，沒有寫他因不忍而放生或保護幼虎。",
+        "elementary": "他抓活的小老虎，不表示他是因為慈悲才沒殺，沒有這個證據。",
+        "reason": "連斃兩虎生擒小虎是勇猛事件，不能由捕捉方式直接推出仁愛動機。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 從『眾皆辟易』推斷焦奇因外地人身分而驕橫、遭人排擠；原文寫人們因勇猛而退避，並無排擠外地人的社會態度。",
+        "elementary": "大家是怕他的威猛才讓開，不是覺得外地人不好所以排擠他。",
+        "reason": "辟易是退避反應，不等於因外地身分受到排斥，選項添了原文沒有的因果。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 的『富家設筵款之』直接顯示富人宴請打虎有名的焦奇，席上焦奇敘述往事、展示膽識，因名聲接觸新交際圈的理解合理。",
+        "elementary": "有錢人請出名的打虎英雄吃飯，大家聽他說故事，這就是開始社交。",
+        "reason": "富家款待和焦奇席間侃侃而談能支持成名並參與社交，四項中符合文本最完整。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 把『口講指畫』理解成思慮縝密，但這成語只描寫說話時配合手勢、敘事生動，無法證明他做事一定深思熟慮。",
+        "elementary": "他很會邊講邊比手勢，不代表每件事都想得非常仔細。",
+        "reason": "口講指畫是外在敘述動作，而思慮縝密屬推斷內在思考，文章沒直接支持。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測國文原始閱讀〈壯夫縛虎〉；原始共享影像及單題WebP沿用既有SHA證據；官方最終答案與更正公告逐題核對待角色A/E完成。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "連斃兩虎，生擒小虎",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "眾皆辟易",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "富家設筵款之",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "口講指畫",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "擒",
+        "level": "初級",
+        "meaning": "抓住、捉拿。",
+        "usageNote": "生擒指活捉，不能自動推出出於仁慈。"
+      },
+      {
+        "term": "設筵款之",
+        "level": "中級",
+        "meaning": "設宴席招待某人。",
+        "usageNote": "富家請焦奇吃飯，反映成名後有人結交。"
+      },
+      {
+        "term": "辟易",
+        "level": "高級",
+        "meaning": "驚懼、退避或避開。",
+        "usageNote": "這裡描寫旁人看焦奇勇猛而退，不是地域排擠。"
+      },
+      {
+        "term": "口講指畫",
+        "level": "高級",
+        "meaning": "邊說邊比手勢，描述得生動。",
+        "usageNote": "不能直接證明深思熟慮。"
+      }
+    ],
+    "readingFacts": [
+      "共享文章寫富家設筵款焦奇，他於席上自述擒虎經過、口講指畫，意氣自豪。"
+    ],
+    "sharedReading": {
+      "sharedMaterialId": "114-00-C-SHARED-20-23",
+      "originalPage7Path": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "originalPage7Sha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "webpPath": "sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp",
+      "webpSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+      "qaStatusInherited": "PASS",
+      "archivedImageQaPath": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+      "sourceAlreadyOriginalNotRegenerated": true
+    }
+  },
+  "teachingCanonicalSha256": "a091462ef336b923eff3365a2a40c88fee66dcdb0d4ffc14ed64fefe69ed9fc8",
+  "composedTeachingSha256": "d28e20c96d6156b67560cdf4379cc3479bd0f880fc60c71154b2610d02a64d62",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "C",
+    "agreesWithKnownCandidate": true
+  },
+  "review": {
+    "policyVersion": "ISSUE36-OWNER-OVERRIDE-2026-10-25",
+    "requiresHumanTeacher": false,
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "requiredReviewerRole": "E",
+      "reviewerSessionId": null,
+      "reviewTaskId": null,
+      "reviewIssueCommentId": null,
+      "trustedEvidencePath": null,
+      "reviewNotesSha256": null
+    },
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "OFFICIAL_FINAL_ANSWER_IMAGE_AND_YEAR_NOTICE_PENDING",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_CONTENT_REVIEW_RECEIPT_PENDING",
+      "EXACT_SHARED_READING_AND_NEW_DIGEST_V4_UI_QA_PENDING",
+      "MASTER_PUBLISHER_AI_POLICY_MIGRATION_AND_RELEASE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
