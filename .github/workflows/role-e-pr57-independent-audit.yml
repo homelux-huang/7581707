@@ -1,0 +1,38 @@
+name: Role E PR57 independent adversarial review (HONEST RED UNTIL FIXED)
+on:
+  push:
+    branches:
+      - qa/role-e-pr57-ai-gate-adversarial-20261025
+    paths:
+      - tests/test_role_e_pr57_adversarial_review_20261025.py
+      - docs/ROLE_E_PR57_INDEPENDENT_AUDIT_20261025.md
+      - .github/workflows/role-e-pr57-independent-audit.yml
+  pull_request:
+    branches:
+      - governance/114-115-ai-publisher-gate-20261025
+    paths:
+      - tests/test_role_e_pr57_adversarial_review_20261025.py
+      - scripts/sudu_independent_review_gate.py
+      - sudu/release-governance/independent-review-policy.json
+      - .github/workflows/role-e-pr57-independent-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-e-pr57-trust-boundary
+  cancel-in-progress: false
+jobs:
+  role_e_adversarial_tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Show exact commit under test
+        run: |
+          git rev-parse HEAD
+          python --version
+      - name: REAL fail-closed regression -- never mask failures for green
+        run: python -m unittest discover -s tests -p 'test_role_e_pr57_adversarial_review_20261025.py' -v
