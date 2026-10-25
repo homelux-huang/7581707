@@ -37,7 +37,7 @@ const sorted=x=>Array.isArray(x)?x.map(sorted):
   x!==null&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,sorted(x[k])])):x;
 const canonicalSha=x=>sha(Buffer.from(JSON.stringify(sorted(x)),'utf8'));
 const gitBlobSha=bytes=>crypto.createHash('sha1').update(
-  Buffer.concat([Buffer.from('blob '+bytes.length+'\\0'),bytes])).digest('hex');
+  Buffer.concat([Buffer.from('blob '+bytes.length),Buffer.from([0]),bytes])).digest('hex');
 const expectedCurrentB={
  '114-00-E-07':'f65c50e011f57025f2ffc9ff7df107f16f4bd6c6e3b1c64c75169bb77c35dd5b',
  '114-00-E-08':'6dd7125dddf83293dc52a0fcbc35b113918f92f9b2fca9e6b0dc0ca06442d5b1',
