@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -20,7 +21,7 @@ SRC_GIT="6796adb4df977d064baae8a3e066238014d096f6"
 ANS_GIT="938f88435a9b21e257f11dfcfda71655e8a7a0c6"
 SRC_PDF_RECORDED="67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f"
 ANS_PDF_RECORDED="9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a"
-CROPS={1:[90,212,1310,335],2:[90,340,1310,530],3:[90,535,1310,768],4:[90,770,1310,1080],5:[90,1085,1310,1475]}
+CROPS={1:[90,212,1310,335],2:[90,340,1310,530],3:[90,535,1310,768],4:[90,770,1310,1080],5:[90,1085,1310,1450]}
 ANS=dict(zip(range(1,6),"CDDCD"))
 def sha(x):return hashlib.sha256(x).hexdigest()
 def gitsha(x):return hashlib.sha1(b"blob "+str(len(x)).encode()+b"\0"+x).hexdigest()
@@ -184,8 +185,31 @@ def main():
         man=make();DEST.mkdir(parents=True,exist_ok=True)
         text=json.dumps(man,ensure_ascii=False,indent=2)+"\n"
         if MANIFEST.exists():
-            assert MANIFEST.read_text(encoding="utf-8")==text,"manifest changed; refuse blind write"
-        else:MANIFEST.write_text(text,encoding="utf-8")
+            prev=read(MANIFEST)
+            if prev!=man:
+                # QA found source pixel Q05 candidate shows the top of Q06.
+                # Correct Q05 only; four successful original crops unchanged.
+                assert DB.exists(),"prior manifest without a database"
+                check_db(DB,prev)
+                oldq=prev["questions"][4]
+                assert oldq["questionId"]=="113-00-C-05"
+                assert oldq["individualImageQa"]=="DRAFT_NEEDS_DIRECT_ASSISTANT_VISUAL_QA"
+                assert oldq["asset"]["cropPixels"]==[90,1085,1310,1475]
+                assert oldq["asset"]["sha256"]=="c749bb5993921d303fc8d59b1c849b2a68f366dbb4e3ff76696d9830b4626a81"
+                assert prev["questions"][:4]==man["questions"][:4]
+                immutable=json.loads(json.dumps(prev))
+                immutable["questions"][4]=man["questions"][4]
+                assert immutable==man,"unapproved modifications outside C05"
+                staged=DB.with_suffix(".sqlite3.stage")
+                make_db(staged,man)
+                check_db(staged,man)
+                os.replace(staged,DB)
+                MANIFEST.write_text(text,encoding="utf-8")
+                print("FIXED_C05_BOUNDARY_OLD_SHA",oldq["asset"]["sha256"],
+                      "NEW_SHA",man["questions"][4]["asset"]["sha256"],
+                      "ORIGINAL_C01_C04_UNCHANGED")
+        else:
+            MANIFEST.write_text(text,encoding="utf-8")
         if DB.exists():check_db(DB,man)
         else:make_db(DB,man)
         print("CREATED_ARCHIVED_PIXELS",json.dumps({"ids":[x["questionId"] for x in man["questions"]],"sha":[x["asset"]["sha256"] for x in man["questions"]],"sourceWebpSha256":man["originalPage"]["sha256"],"answerWebpSha256":man["answerPage"]["sha256"],"qa":"DRAFT_NOT_PUBLISHED"},ensure_ascii=False))
