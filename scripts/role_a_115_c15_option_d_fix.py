@@ -17,6 +17,9 @@ from pathlib import Path
 from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
+import sys
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
 DIR=ROOT/"sudu/data/processed/115"
 BANK=DIR/"questions.json"
 DB=DIR/"question-bank.sqlite3"
