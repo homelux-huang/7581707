@@ -1,0 +1,59 @@
+name: Tested lazy original WebP positive-browser regression (NO RELEASE)
+on:
+  push:
+    branches:
+      - fix/sudu-positive-lazy-image-wait-20261026
+  pull_request:
+    paths:
+      - 'tests/sudu_certified_positive_browser.cjs'
+      - 'tests/sudu_real_reviewed_browser.cjs'
+      - 'tests/test_sudu_lazy_loading_browser_contract.py'
+      - '.github/workflows/sudu-lazy-positive-image-regression.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: original-webp-positive-browser-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  real-positive-two-questions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assert no lost WebP decode and non-calculation gates
+        run: |
+          python -m unittest discover -s tests -p 'test_sudu_lazy_loading_browser_contract.py' -v
+          node --check tests/sudu_certified_positive_browser.cjs
+      - name: Build same approved source image files; do not publish
+        run: |
+          python -m pip install -q pillow requests beautifulsoup4 pymupdf
+          python scripts/build.py
+      - name: Install real headless Chromium
+        run: |
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Run actual lazy-loaded ORIGINAL WebP browser test with 8 widths
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site > /tmp/sudu-lazy-test-server.log 2>&1 &
+          trap 'kill $!' EXIT
+          node tests/sudu_certified_positive_browser.cjs
+          node tests/sudu_real_reviewed_browser.cjs
+      - name: Retain error evidence if test fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lazy-webp-failure-${{ github.run_id }}
+          path: /tmp/sudu-lazy-test-server.log
+          if-no-files-found: warn
+          retention-days: 1
