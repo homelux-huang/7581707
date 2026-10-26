@@ -124,7 +124,7 @@ class RoleB113Shared(unittest.TestCase):
         self.assertTrue(q15['doNotRegenerateWakaOriginalPicture'])
         self.assertEqual(q15['poemPersonPositions'],['甲','乙','丙','丁'])
         self.assertEqual(q15['resultClaims'],[True,True])
-        self.assertEqual(self.qa['questions'][2]['originalTableReview'],'PASS_ORIGINAL_TWO_COLUMN_COMPARISON_TABLE_FULL')
+        self.assertEqual(self.qa['questions'][2]['originalTableReview'],'PASS_ORIGINAL_SIDE_BY_SIDE_TABLE_COMPLETE')
         self.assertEqual(self.qa['questions'][3]['originalPoetryReview'],'PASS_TWO_PRINTED_BOXES_COMPLETE')
     def test_09_negative_author_self_review_cannot_publish(self):
         for d in self.docs.values():
