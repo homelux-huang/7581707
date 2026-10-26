@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-01-11-13-17-21-20261026-07",
+  "claimedAtUtc": "2026-10-26T05:30:00Z",
+  "questionId": "115-09-2-01",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 1,
+  "subject": "會計學",
+  "status": "ROLE_C_SOURCE_BOUND_AUTHOR_DRAFT_NO_RELEASE",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "關於財務報表之敘述，下列哪幾項正確？\n  ① 現金流量表：表達企業特定期間內營業、投資及籌資活動對現金流入、流出之影響\n  ② 權益變動表：表達企業特定期間內權益的變動情形及其結果\n  ③ 綜合損益表：根據收益與費損類帳戶編製而成，表達企業特定期間內的財務績效\n  ④ 資產負債表：根據資產、負債與權益類帳戶編製而成，表達企業特定期間內的財務狀況",
+  "options": [
+    "僅 ①",
+    "僅 ①、②",
+    "僅 ①、②、③",
+    "僅 ②、③、④"
+  ],
+  "answerCandidate": "C",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "b53d89b8f3299cd67adb5409d6db2df9fe3fc40a9346e72d622671201d760a83",
+  "sourceTextRevisionMethod": "SHA256 of sorted minified UTF8 JSON containing question, options, singleQuestionWebpSha256",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-01.webp",
+  "individualImageSha256": "065531b2bca6a6a5fa8d6c7a2ef15722acb4f32e945badf48ebcc2be75c705b2",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "imageManifestHistoricalQa": "PASS",
+  "imageQuestionAssetHistoricalQa": "PASS",
+  "originalImageBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "關鍵是區分財務報表的**期間**與**時點**。①**現金流量表**揭露一段期間的營業、投資、籌資現金流；②**權益變動表**揭露期間內權益的增減；③**綜合損益表**呈現期間內財務績效，三者都對。④**資產負債表**呈現的是**特定日期／時點**的資產、負債與權益，題目卻說「特定期間內」，因此錯誤，選 **C（僅①②③）**。",
+    "elementarySummary": "前三張表是看一段時間發生了什麼：錢怎麼進出、老闆的權益怎麼變、這段日子賺賠多少。第四張比較像某一天拍的財產照片，不是整個月的影片，所以①②③對、④錯，選C。",
+    "memory": "**現金流量、權益變動、綜合損益看『期間』；資產負債表拍『日期／時點』。前三對、第四錯→C。**",
+    "concept": "**期間報表**反映期間內變動、流量或經營績效；**時點報表**反映結帳日的資產、負債與權益存量。③由收益、費損構成的財務績效包括適用的其他綜合損益表達。",
+    "extension": "遇見「特定期間」請先警覺：財務狀況表／資產負債表是**某日**狀況，即使其編製用的是資產、負債、權益帳戶，也不代表文字整句正確。",
+    "highlights": [
+      "①現金流量表",
+      "②權益變動表",
+      "③綜合損益表",
+      "④資產負債表",
+      "特定期間",
+      "特定日期",
+      "①②③"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "期間：一段日子，例如一年"
+      ],
+      "中級": [
+        "財務績效：這段期間賺賠和其他相關收益費損"
+      ],
+      "高級": [
+        "財務狀況時點表達：在資產負債表日衡量存量"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 只保留①**現金流量表**雖無錯，卻漏掉同樣正確的②權益變動表及③綜合損益表；題目問「哪幾項正確」，因此A不完整。",
+        "elementary": "①看錢怎麼進出是對的，可是②和③也都對，不能只選第一項。",
+        "reason": "A 只保留①**現金流量表**雖無錯，卻漏掉同樣正確的②權益變動表及③綜合損益表；題目問「哪幾項正確」，因此A不完整。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 列①②均正確，但**漏掉③綜合損益表**依收益與費損表達一段期間的經營績效，故不是完整的正確組合。",
+        "elementary": "第一、第二張表說對了，但第三張表也在講一段時間的賺賠，不能漏掉。",
+        "reason": "B 列①②均正確，但**漏掉③綜合損益表**依收益與費損表達一段期間的經營績效，故不是完整的正確組合。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C 收錄①營業／投資／籌資現金流、②期間權益變動、③期間綜合損益績效，**正確排除④把時點財務狀況誤說為期間的錯誤**，因此C符合題意。",
+        "elementary": "前三種都像在看一段時間的紀錄，第四種是某一天的照片；C剛好選前三種。",
+        "reason": "C 收錄①營業／投資／籌資現金流、②期間權益變動、③期間綜合損益績效，**正確排除④把時點財務狀況誤說為期間的錯誤**，因此C符合題意。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 除②③正確外，將④也列入；**④雖採資產、負債、權益類帳戶，卻應表達『特定日期』財務狀況**，非題述的「特定期間內」，且D還漏掉正確①。",
+        "elementary": "資產負債表是某一天的狀態，D把它也算對、又沒選①，所以D錯。",
+        "reason": "D 除②③正確外，將④也列入；**④雖採資產、負債、權益類帳戶，卻應表達『特定日期』財務狀況**，非題述的「特定期間內」，且D還漏掉正確①。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "stepByStep": [
+      "將四個敘述分別看表名與時間範圍。",
+      "①現金流、②權益變動、③綜合損益都描述一段時間，判正確。",
+      "④內容的帳戶類別正確，但「特定期間內」不對，應改「某一特定日期」。",
+      "排除包含④或遺漏①②③的組合，得C。"
+    ],
+    "outsideReferences": [],
+    "source": "115 年商管群專業科目二會計學第1題官方候選原文，教材版次與頁碼未驗證。"
+  },
+  "teachingCanonicalSha256": "4b07acf56dbb2fa28c13378f8b38efb6784e0ab3fbd8366f440fb9356bdda4f5",
+  "review": {
+    "authorIdentity": "GPT-6 Role C author",
+    "authorRole": "C",
+    "answersKnownBeforeAuthoring": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorAiReviewerRequired": true,
+    "authorSelfReviewProhibited": true,
+    "independentAiReviewStatus": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "independentAiReviewEvidenceSha256": null,
+    "officialFinalAnswerAndCorrectionProofSha256": null,
+    "sourceImageOfficialAcceptance": "PENDING",
+    "v4ExactSameSourceAndTeachingDigest8x2": "PENDING",
+    "latestPolicy": "ISSUE36_NO_HUMAN_TEACHER_CREDENTIAL_GATING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_IMAGE_AND_CORRECTION_NOTICE_SHA_NOT_ADMITTED",
+    "ORIGINAL_SINGLE_IMAGE_QA_MANIFEST_PASS_REQUIRES_FINAL_SOURCE_INDEPENDENT_ADMISSION",
+    "DISTINCT_E_AI_CONTENT_REVIEW_NOT_RECEIVED",
+    "D_V4_EIGHT_VIEWPORT_TWO_THEME_SAME_DIGEST_NOT_RECEIVED",
+    "MASTER_ONLY_PUBLISHER_MAIN_LIVE_GATE_NOT_SATISFIED"
+  ]
+}
