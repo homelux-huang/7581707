@@ -3,6 +3,8 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
+from scripts import sudu_independent_review_gate as gate
 
 from scripts import sudu_verified_publish as publish
 
@@ -62,6 +64,7 @@ class StudentOverlayTests(unittest.TestCase):
                   "rwdPassed":True,"verifiedYearQaMode":True,
                   "ciRunUrl":"https://github.com/homelux-huang/7581707/actions/runs/123"}
         }
+        self.docs['ui']['testedTeachingDigest']=gate.digest(gate.canonical(self.docs['teaching']['content']))
         self.evidence={}
         for name,content in self.docs.items():
             p=f"sudu/data/processed/115/review-evidence/115-00-MB-03-{name}.json"
@@ -74,9 +77,30 @@ class StudentOverlayTests(unittest.TestCase):
                     "webpSha256":"f"*64,"officialPdfSha256":"a"*64,
                     "questionPdfSha256":"b"*64,"originalAnswerCandidate":"A","evidence":self.evidence}
 
-    def admitted(self,audit=None):
-        return publish.apply_independently_certified_review(
-            self.source,115,self.question,self.manifest,self.audit if audit is None else audit)
+    def admitted(self,audit=None,authorize_fixture=True):
+        def apply():
+            return publish.apply_independently_certified_review(
+                self.source,115,self.question,self.manifest,self.audit if audit is None else audit)
+        if not authorize_fixture:
+            return apply()
+        # Unit-isolate the SOURCE/NOTICE/UI contract after an authenticated
+        # reviewer dependency. This mock is NEVER a real receipt or READY.
+        # Actual AI authorization is tested separately, including unchanged
+        # independent E adversarial tests and immutable real-five fixtures.
+        with patch.object(gate,'policy_from_trusted_main',return_value={
+                'reviewMode':'DISTINCT_AI_CONTENT_RECEIPT_V1'}), \
+             patch.object(gate,'certified',return_value=(True,'synthetic_unit_dependency_only')):
+            return apply()
+
+    def test_source_fixture_without_real_ai_authorization_never_admits(self):
+        self.assertIs(self.admitted(authorize_fixture=False),self.question)
+
+    def test_changed_teaching_invalidates_previous_ui_digest(self):
+        p=self.source/self.evidence['teaching']
+        content=json.loads(p.read_text())
+        content['content']['memory']='changed teaching after UI test'
+        publish.dump(p,content)
+        self.assertIs(self.admitted(),self.question)
 
     def test_complete_evidence_is_per_question_student_eligible(self):
         q=self.admitted()
