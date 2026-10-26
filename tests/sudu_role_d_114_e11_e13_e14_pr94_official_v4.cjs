@@ -102,7 +102,7 @@ const buildSource=()=>QS.map(qid=>{
  assert.deepEqual(finalProof.officialConfirmationNamedQuestionIds,['114-00-E-26']);
  assert(!finalProof.officialConfirmationNamedQuestionIds.includes(qid));
  assert.equal(finalProof.confirmationPdfSha256,
-  '79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53cbc');
+  '79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc');
  assert.equal(finalProof.officialPdfSha256,b.source.answerPdfSha256);
  assert.equal(finalProof.reviewedSingleQuestionWebpSha256,EXPECT_IMAGE[qid]);
  assert.equal(finalProof.originalQuestionPdfSha256PreviouslyRecorded,b.source.questionPdfSha256);
