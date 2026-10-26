@@ -1,0 +1,71 @@
+name: Role A 114 C20-22 official original answer QA with real shared WebP and 205 SQLite (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-c20-c22-final-answers-20261026
+    paths:
+      - scripts/role_a_114_c20_c22_final_official.py
+      - tests/test_role_a_114_c20_c22_official.py
+      - docs/ROLE_A_114_C20_C22_OFFICIAL_20261026.md
+      - .github/workflows/role-a-114-c20-c22-official.yml
+      - sudu/data/processed/114/questions.json
+      - sudu/data/processed/114/question-bank.sqlite3
+      - sudu/data/processed/114/review-evidence/114-00-C-20-official.json
+      - sudu/data/processed/114/review-evidence/114-00-C-21-official.json
+      - sudu/data/processed/114/review-evidence/114-00-C-22-official.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: role-a-114-c20-c22-official-answer-source-only-20261026
+  cancel-in-progress: false
+
+jobs:
+  official_source_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-c20-c22-final-answers-20261026'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - name: Read exact isolated ROLE A source branch, never protected main
+        uses: actions/checkout@v4
+        with:
+          ref: qa/role-a-114-c20-c22-final-answers-20261026
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original source and answer image decoder
+        run: python -m pip install -q pillow==11.3.0
+      - name: Apply fail-closed original C20-22 answer+correction scope and only 3 SQLite rows
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/role-a-114-c20-c22-final-answers-20261026"
+          python -m py_compile scripts/role_a_114_c20_c22_final_official.py tests/test_role_a_114_c20_c22_official.py
+          python -m scripts.role_a_114_c20_c22_final_official --apply
+          python -m scripts.role_a_114_c20_c22_final_official --verify
+          python -m unittest discover -s tests -p test_role_a_114_c20_c22_official.py -v
+      - name: Commit ONLY exact C20/21/22 evidence and three source/SQL payloads to own branch
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/114/questions.json sudu/data/processed/114/question-bank.sqlite3
+          git add -- sudu/data/processed/114/review-evidence/114-00-C-20-official.json
+          git add -- sudu/data/processed/114/review-evidence/114-00-C-21-official.json
+          git add -- sudu/data/processed/114/review-evidence/114-00-C-22-official.json
+          expected="$(printf '%s\n' 'sudu/data/processed/114/question-bank.sqlite3' 'sudu/data/processed/114/questions.json' 'sudu/data/processed/114/review-evidence/114-00-C-20-official.json' 'sudu/data/processed/114/review-evidence/114-00-C-21-official.json' 'sudu/data/processed/114/review-evidence/114-00-C-22-official.json')"
+          changed="$(git diff --cached --name-only)"
+          if test -n "$changed"; then
+            test "$changed" = "$expected" || { echo "Unleased source changes rejected"; git diff --cached --name-only; exit 1; }
+            git diff --cached --check
+            test -z "$(git diff --name-only)" || { echo "Nonstaged source changes rejected"; exit 1; }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m "data(role A): 114 C20-22 actual published official C/C/A + scoped 5pg notice and 3 SQLite payloads [NO RELEASE]"
+            git push origin HEAD:refs/heads/qa/role-a-114-c20-c22-final-answers-20261026
+          else
+            echo "IDEMPOTENT read-only source, no additional changes"
+          fi
+          test "$(git ls-remote origin refs/heads/qa/role-a-114-c20-c22-final-answers-20261026 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo "No main, Pages, E author, UI, teaching, questionVerified or student promotion"
