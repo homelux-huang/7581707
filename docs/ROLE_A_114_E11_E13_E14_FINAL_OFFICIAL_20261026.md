@@ -32,7 +32,7 @@
 - 只在原始 `sudu/data/processed/114/questions.json` 中對 E11/E13/E14 設 `answerVerified=true`、`officialFinalAnswer`、`officialCorrectionChecked=true`、`answerProvenance.independentVisualVerification=true`、`officialFinalQaEvidence`（綁題號／官方 PDF SHA／審核身分／收據路徑）。
 - 新增三份獨立真實來源憑證於 `sudu/data/processed/114/review-evidence/114-00-E-{11,13,14}-official.json`，明確記錄**本輪曾開啟官方已存答案 WebP 原圖，而非本輪重新渲染官方答案 PDF**、驗證者是 GPT-6 Role A source QA、非真人教師/非 Role E、公告命中僅 E26、各題答 A/A/D。
 - `questionVerified=false`、`reviewStatus=needs_review`、`studentReleaseApproved` 未設定；E12（已有 IPA 問題）及其餘 **202 題完全不修改**。既有來源題幹、四選項、WebP SHA、shared 原圖、OCR raw 也不更動。
-- SQLite `question-bank.sqlite3` 只更新上述三題 `payload_json`、`payload_sha256` 及 `answer_verified`，其餘 202 筆和所有其他展開欄位 **實際 base SQL 位元組欄位比較不變**。維持 205 筆 `PRAGMA integrity_check=ok`、canonical JSON/DB 讀回全部一致、兩次隔離重新匯入來源完全一致的整庫 SHA。
+- SQLite `question-bank.sqlite3` 只更新上述三題 `payload_json` 與 `payload_sha256`；**114 原庫實際 schema 只有 7 欄（`question_id/year/paper_code/original_number/subject/payload_json/payload_sha256`），不存在獨立 `answer_verified` 展開欄**，答案驗證旗標只存在經過 SHA256 驗證的完整 `payload_json` 內。其餘 202 筆及所有 SQL 既有欄位 **與精確 base Git 版本逐欄比較不變**。維持 205 筆 `PRAGMA integrity_check=ok`、canonical JSON/DB 讀回全部一致、兩次隔離重新匯入來源完全一致的整庫 SHA。
 - `scripts/sudu_verified_publish.text_revision()` 特意只綁定題幹、A～D、原圖 SHA：此批**只修答案驗證**，不應更改 Role B 已撰教學 sourceRevision 或 D 既有相同題幹的 UI renderer digest；仍必須由 MASTER 與 D/E 重新對最新合法 CI 認證，不能直接移用舊 UIQA 當發布票。
 - 新腳本 `scripts/role_a_114_e11_e13_e14_final_official.py`、回歸 `tests/test_role_a_114_e11_e13_e14_final_official.py`，隔離分支專屬 Action `.github/workflows/role-a-114-e11-e13-e14-final-official.yml`。包含 205 題對 Git 原始 PR50 **唯一三筆 diff**、SQL 展開欄位限制、官方 E26 反向測試、錯誤圖片 SHA／答案負測，禁止批次設 PASS、不得自認 E AI 內容審核。
 
@@ -41,3 +41,7 @@
 本輪 A 可以修補**官方公布答案逐題核對與更正範圍**這一關；它**不是**完整來源／解說與同版 UI 的最後批准。後續 B 教學新版本 digest 必須完整 A-D／雙層解說並由不同 Session E AI 以真實記錄逐題複核，D 以 35 題 Demo 相同科目 V4 進行同來源+教學摘要 8×2，MASTER 檢查保護 main、PR CI、Pages 真正發布及 LIVE 實際作答。未檢驗則隔離，已合格者可分題發布而不等整年。新 READY=0，新 LIVE=0。
 
 **下一批 ROLE A：** 優先處理 114 E12 官方答來源（仍不得把有疑義 IPA/教學當過關）、115 C15 已修結構化 D 的來源對接，以及 115 SQLite 81 題既有展開欄位落差；再依 113→104 年順序查缺補漏。
+
+### 實際來源結構稽核補充
+
+本輪最初 CI [#40277072937](https://github.com/homelux-huang/7581707/actions/runs/40277072937) 在**任何 Git 提交前**因預期 115 型態 SQL 展開旗標而停止。隨後明確診斷 [#40277165369](https://github.com/homelux-huang/7581707/actions/runs/40277165369) 證實 114 原 SQLite 資料表 `questions` 僅上述七個欄位，與 115 年資料表不同。沒有為了通過測試去新增虛假欄位、修改教學或批准資料；已改為保留 114 原 schema，僅根據真正核對的 3 題更改其 canonical `payload_json` / payload SHA，並維持**205 題**及原驗收的十進位原題號、年度等欄位。測試同時加強對資料表七欄完整精確比對與另 202 題逐欄不動的回歸要求。**必須取得修補後最新 SHA 的真正 CI SUCCESS 才算本批交付。**
