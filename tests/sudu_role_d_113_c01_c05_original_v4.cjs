@@ -353,7 +353,7 @@ async function glyph(page,label){
     for(const term of x.words)assert(guide.includes(term.term)&&guide.includes(term.level),
       label+' original author graded vocabulary lost '+term.term);
     assert(!guide.includes(q.teacherSummary)&&!guide.includes(q.elementarySummary),
-      label+' repeated original answer's full teacher/child summary in guide');
+      label+' repeated original answer full teacher/child summary in guide');
     const marks=await page.locator('#answerCard mark.exam-highlight').allInnerTexts();
     assert(marks.length>0,label+' authored source-literal highlights are not visible');
     for(const m of marks)assert(x.highlights.some(t=>t.includes(m)||m.includes(t)),
