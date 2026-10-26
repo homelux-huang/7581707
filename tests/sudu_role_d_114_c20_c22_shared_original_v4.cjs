@@ -142,6 +142,7 @@ const real=QIDS.map((id,i)=>{
   optionExplanations:t.optionExplanations,formula:'',
   examCalculation:null,highlights:b.enrichment.highlights.map(x=>x.text),
   extra,image:destRoot+id+'.webp',imageSha256:m.sha256,
+  sharedMaterialIds:[SHARED_ID],
   sharedImages:[{sharedMaterialId:SHARED_ID,image:sharedUrl,sha256:sharedSHA}],
   qaOnlySourceRevision:rev,qaOnlyComposedTeachingSha256:digest
  };
@@ -258,7 +259,7 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
      const x=real[i],q=x.publicQuestion,label=x.id+' '+width+'x'+height+' '+theme;
      const dom=await page.evaluate(()=>({
       id:qnow()?.canonicalId,question:qnow()?.question,options:qnow()?.options,
-      shared:qnow()?.sharedImages,sourceRev:qnow()?.qaOnlySourceRevision,
+      shared:qnow()?.sharedImages,requiredSharedIds:qnow()?.sharedMaterialIds,sourceRev:qnow()?.qaOnlySourceRevision,
       digest:qnow()?.qaOnlyComposedTeachingSha256,answer:qnow()?.answer
      }));
      assert.equal(dom.id,x.id);
@@ -266,6 +267,7 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
      assert.deepEqual(dom.options,q.options);
      assert.equal(dom.answer,q.answer);
      assert.deepEqual(dom.shared,q.sharedImages);
+     assert.deepEqual(dom.requiredSharedIds,[SHARED_ID],'publisher source required shared-original pointer lost');
      assert.equal(dom.sourceRev,x.revision);
      assert.equal(dom.digest,x.digest);
      assert.equal(await page.locator('#questionCard h1').textContent(),q.question);
@@ -359,9 +361,11 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
    ['foreign_year',{...payload.questions[0].sharedImages[0],image:'data/approved/webp/115/'+SHARED_ID+'.webp'}],
    ['foreign_range',{...payload.questions[0].sharedImages[0],sharedMaterialId:'114-00-C-SHARED-21-22',image:destRoot+'114-00-C-SHARED-21-22.webp'}],
    ['malformed_sha',{...payload.questions[0].sharedImages[0],sha256:'0'}],
-   ['missing_material_id',{...payload.questions[0].sharedImages[0],sharedMaterialId:null}]
+   ['missing_material_id',{...payload.questions[0].sharedImages[0],sharedMaterialId:null}],
+   ['missing_required_article',null]
   ]){
-    const tampered=structuredClone(payload);tampered.questions[0].sharedImages=[bad];
+    const tampered=structuredClone(payload);
+    tampered.questions[0].sharedImages=bad===null?[]:[bad];
     const ctx=await browser.newContext({viewport:{width:390,height:844},locale:'zh-TW'});
     const page=await ctx.newPage();
     try{
@@ -384,8 +388,8 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
  if(report.errors.length)console.error('ORIGINAL_SHARED_REAL_BROWSER_FAILURE',JSON.stringify(report.errors.slice(0,6),null,2));
  assert.equal(report.errors.length,0,'original source shared article/4 answers V4 browser gate failed');
  assert.equal(report.cases.length,48,'must test 3 real Chinese questions x 8 viewports x 2 themes');
- assert.equal(report.negatives.length,4,'negative annual shared guards not tested');
- console.log('PASS ROLE D QA-ONLY 114 C20/C21/C22 original article single+shared real V4 48/48 + 4 negative; NOT READY/LIVE');
+ assert.equal(report.negatives.length,5,'all foreign and missing-required original shared guards must be tested');
+ console.log('PASS ROLE D QA-ONLY 114 C20/C21/C22 original article single+shared real V4 48/48 + 5 negative; NOT READY/LIVE');
 })().catch(error=>{
  report.status='FAIL_ORIGINAL_SHARED_V4';report.errors.push({fatal:String(error.stack||error)});
  save();console.error(error.stack||error);process.exitCode=1;
