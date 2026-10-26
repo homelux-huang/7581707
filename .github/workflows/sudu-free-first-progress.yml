@@ -1,0 +1,54 @@
+name: 104-115 free-first source and approved allowlist audit (NO AI)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+  push:
+    branches:
+      - main
+      - infra/7581707-free-first-progress-20261026
+    paths:
+      - 'sudu/data/years/*.json'
+      - 'sudu/data/approved/*.json'
+      - 'scripts/sudu_free_first_progress.py'
+      - 'tests/test_sudu_free_first_progress.py'
+      - '.github/workflows/sudu-free-first-progress.yml'
+  pull_request:
+    paths:
+      - 'sudu/data/years/*.json'
+      - 'sudu/data/approved/*.json'
+      - 'scripts/sudu_free_first_progress.py'
+      - 'tests/test_sudu_free_first_progress.py'
+      - '.github/workflows/sudu-free-first-progress.yml'
+      - 'docs/7581707-FREE-FIRST-STRATEGY-20261026.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: 7581707-free-first-source-inventory
+  cancel-in-progress: true
+
+jobs:
+  annual-raw-source-and-approved-inventory:
+    name: Audit 104-115 raw candidates and 114/115 main allowlist ONLY
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fail-closed regression test (no model or network)
+        run: python -m unittest discover -s tests -p 'test_sudu_free_first_progress.py' -v
+      - name: Read source JSON and main allowlist without QA promotion
+        run: python scripts/sudu_free_first_progress.py --root . --output-dir audit/free-first
+      - name: Preserve reproducible, non-release inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: sudu-free-first-104-115-${{ github.run_id }}
+          path: audit/free-first/
+          if-no-files-found: error
+          retention-days: 1
