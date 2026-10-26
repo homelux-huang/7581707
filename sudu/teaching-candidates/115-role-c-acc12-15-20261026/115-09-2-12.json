@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-12-15-20261026-09",
+  "claimedAtUtc": "2026-10-26T05:56:08Z",
+  "questionId": "115-09-2-12",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 12,
+  "subject": "會計學",
+  "status": "ROLE_C_AI_LESSON_AUTHOR_CANDIDATE_ONLY",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "關於編製銀行存款調節表之敘述，下列哪幾項正確？\n  ① 若公司帳上銀行存款餘額與銀行對帳單餘額相同時，表示一定無需要調節項目\n  ② 保付支票不需要調節\n  ③ 公司做完調整分錄之後，帳上銀行存款餘額必須等於銀行對帳單之餘額\n  ④ 公司本月底存入銀行之支票，銀行尚未入帳者為在途存款，公司調整分錄需借記銀行\n   存款\n  ⑤ 上個月的在途存款會出現在本月的銀行對帳單中",
+  "options": [
+    "僅②、⑤",
+    "僅①、③、④",
+    "僅①、②、④",
+    "僅②、③、④、⑤"
+  ],
+  "answerCandidate": "A",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "e431011f012171ed2c5786802cbb7db7dd124796b331ecea26edb4a4ff29e714",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-12.webp",
+  "individualImageSha256": "53fe56b7680c29c8b1da0589569f2308630b78fcaa417214c01fa7474e432cf0",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "originalSingleWebpHistoricalManifestQa": "PASS",
+  "sourceBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "銀行存款調節表要把**銀行對帳單已記與公司帳簿已記**的差異分成兩邊調節。①即使原餘額相等，也可能有**不同項目的金額抵銷**，不代表一定沒調節項。②**保付支票**由銀行確認並保留支付款項，依本題銀行調節原則通常不是一般未兌現支票調節項，正確。③做完**公司應作調整分錄**，帳上正確餘額應與**銀行調節後餘額**一致，不一定等於**未調整的銀行對帳單數**，錯。④**在途存款**公司已入帳、銀行尚未列，應加在**銀行對帳單側**，公司**不須重作借記銀行存款**，錯。⑤**上月底在途存款**正常清算會在本月銀行對帳單反映，正確。故僅②⑤正確，選 **A**。",
+    "elementarySummary": "公司跟銀行都有一本記錢的帳，就像兩本作業簿。有時兩邊總數剛好一樣，仍可能各漏了一些事情；把錢交給銀行但銀行還沒登記，要調銀行那邊，不要公司又寫一筆收入。保付支票已由銀行保證付款；上個月還沒登記的存款通常會在這個月出現，所以②⑤對。",
+    "memory": "**對帳單與公司帳剛好相等≠沒差異；保付支票②免一般調節；公司調後對『銀行調後』；在途存款加銀行側、不再借公司；上月在途本月銀行列⑤。→ A。**",
+    "concept": "**在途存款**：公司已收到/存入並入公司帳、銀行尚未入對帳單，應調銀行對帳單端。**未兌現支票**：公司已記、銀行尚未扣，也調銀行側。**銀行代收、手續費、退票**等公司未記才由公司調整分錄。**保付支票**銀行已確認付款並保留資金，不再當一般未兌現支票。",
+    "extension": "③容易誤解：帳簿調完後，等於『**銀行對帳單經未兌現支票和在途存款等調節之正確金額**』，不能要求公司帳一定等於原始對帳單面額。⑤以正常入帳清算流程為前提，實際若銀行久久不入帳則需查帳，不能把銀行延誤自動認作公司又要存一次。",
+    "highlights": [
+      "何者正確",
+      "①同額不代表沒差異",
+      "②保付支票",
+      "③銀行調整後餘額",
+      "④在途存款",
+      "⑤上月在途本月入帳",
+      "公司帳",
+      "銀行側"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "對帳：比較公司和銀行記錄的錢是否對得起來"
+      ],
+      "中級": [
+        "在途存款：公司記了、銀行還沒記的存入款項"
+      ],
+      "高級": [
+        "保付支票：銀行已確認款項足以兌付並承諾支付的支票"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": true,
+        "teacher": "A 選②⑤正確：**保付支票**不再按一般未兌現支票調節，前月**在途存款**通常會在本月銀行對帳單出現。排除①『同額必無項目』、③『公司調後等於未調銀行餘額』及④『在途再記公司存款』的誤解，A是唯一正確組合。",
+        "elementary": "銀行已經保證支付的保付支票不用像沒兌現的普通支票那樣調；上月趕不及記的存款本月通常會出現，這兩句對，所以A對。",
+        "reason": "A 選②⑤正確：**保付支票**不再按一般未兌現支票調節，前月**在途存款**通常會在本月銀行對帳單出現。排除①『同額必無項目』、③『公司調後等於未調銀行餘額』及④『在途再記公司存款』的誤解，A是唯一正確組合。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 包含錯誤①、③與④：**公司餘額和銀行原餘額碰巧一樣**也可能有未兌現支票與在途存款等互抵；公司帳分錄後對的是**銀行調節餘額**；在途款公司已記，不可再借銀行存款。B錯。",
+        "elementary": "B把『兩邊金額一樣』當作沒差別，還把銀行沒有記的存款又在公司多寫一筆，帳會錯，所以B不能選。",
+        "reason": "B 包含錯誤①、③與④：**公司餘額和銀行原餘額碰巧一樣**也可能有未兌現支票與在途存款等互抵；公司帳分錄後對的是**銀行調節餘額**；在途款公司已記，不可再借銀行存款。B錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 選②本身正確，然而同時選①『餘額相等一定沒需調整』與④『在途存款需公司再借銀行存款』都不對，且漏掉⑤上月在途於本月銀行對帳單反映。故C錯。",
+        "elementary": "C雖然講對保付支票，但另外兩句會算錯，而且漏掉上個月的在途存款，所以整組不對。",
+        "reason": "C 選②本身正確，然而同時選①『餘額相等一定沒需調整』與④『在途存款需公司再借銀行存款』都不對，且漏掉⑤上月在途於本月銀行對帳單反映。故C錯。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 含②⑤正確，卻多選錯誤③④。**③公司應對銀行調節後餘額，而非未調銀行對帳單**；**④在途存款公司已記，只調銀行側，不須再次借記**，D錯。",
+        "elementary": "D多選了第三、第四句，那兩句把公司的帳和銀行的帳弄混了，所以D整組錯。",
+        "reason": "D 含②⑤正確，卻多選錯誤③④。**③公司應對銀行調節後餘額，而非未調銀行對帳單**；**④在途存款公司已記，只調銀行側，不須再次借記**，D錯。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "stepByStep": [
+      "先看清題目是『哪幾項正確』，各判斷②⑤，不直接從答案組合猜。",
+      "①兩邊總數即使一樣，仍可能有互相抵銷的未達帳項，所以錯。",
+      "②保付支票銀行已保留支付款，不當一般未兌現支票；⑤上月在途存款正常會在本月銀行列示，兩者對。",
+      "③調節前與調節後混淆，④把只調銀行側的在途款重記公司帳，兩者錯。",
+      "只有②⑤正確，對應A；完整題目不涉及具體金額計算，數學卡應隱藏。"
+    ],
+    "externalReferences": [],
+    "source": "115年統測商管群專二會計學第12題現存題幹/選項候選；銀行對帳單與保付支票實際版次、官方最終答案公告仍待 A/E 核對。"
+  },
+  "teachingCanonicalSha256": "68facef95164bcddaa876a1ddafc9bf85ac2d878c8836b87605f662627bbc6fe",
+  "review": {
+    "authorIdentity": "GPT-6 Role C AI teaching author",
+    "answerKnownBeforeDerivation": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
+    "independentAiContentReview": "PENDING",
+    "independentReviewerIdentity": null,
+    "reviewEvidenceSha256": null,
+    "officialFinalAnswerEvidenceSha256": null,
+    "originalPixelSourceQa": "PENDING_A_FORMAL",
+    "v4RealEightViewportTwoThemeExactDigest": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_AND_APPLICABLE_CORRECTIONS_NOT_VERIFIED",
+    "A_ORIGINAL_PIXEL_QA_IS_HISTORICAL_CANDIDATE_ONLY",
+    "DISTINCT_E_AI_ALL_OPTIONS_REVIEW_PENDING",
+    "D_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_PENDING",
+    "MASTER_ONLY_SAFE_MAIN_PAGES_LIVE_PENDING"
+  ]
+}
