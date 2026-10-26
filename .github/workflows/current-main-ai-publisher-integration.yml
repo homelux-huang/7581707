@@ -25,6 +25,8 @@ jobs:
           python scripts/sudu_verified_publish.py check
       - name: Reject source self-attestation through real full snapshot (independent E)
         run: python tests/role_e_pr101_snapshot_no_self_approval.py --publisher scripts/sudu_verified_publish.py
+      - name: Preserve exact original five and reject final authorization tampering
+        run: python -m unittest discover -s tests -p test_sudu_final_admission.py -v
       - name: Re-run unchanged independent E adversarial tests from exact original commit
         run: |
           set -eu

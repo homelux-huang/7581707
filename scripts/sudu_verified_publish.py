@@ -599,6 +599,53 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
     return reviewed
 
 
+
+def final_review_authorized(source: Path, q: dict, item: dict, audit: dict | None,
+                            revision: str) -> tuple[bool, str]:
+    """Final admission guard: source PASS flags and overlay pass-through are not authority."""
+    try:
+        try:
+            from scripts import sudu_independent_review_gate as reviewer_gate
+        except ModuleNotFoundError:
+            import sudu_independent_review_gate as reviewer_gate
+        policy = reviewer_gate.policy_from_trusted_main()
+        if not isinstance(policy, dict) or policy.get("reviewMode") != "DISTINCT_AI_CONTENT_RECEIPT_V1":
+            return False, "trusted_ai_review_policy_missing"
+        def evidence(proof):
+            if not isinstance(proof, dict) or not certificate_exists(
+                    source, proof, "evidencePath", "evidenceSha256"):
+                raise ValueError("missing SHA-pinned evidence")
+            rel = Path(proof["evidencePath"])
+            path = source / rel
+            root = source.resolve()
+            if (rel.suffix != ".json" or not path.resolve().is_relative_to(root)
+                    or any(p.is_symlink() for p in (path, *path.parents) if p != root.parent)):
+                raise ValueError("unsafe evidence path")
+            raw = path.read_bytes()
+            doc = json.loads(raw, object_pairs_hook=reviewer_gate._no_duplicate_keys)
+            if not isinstance(doc, dict):
+                raise ValueError("invalid evidence object")
+            return doc, raw
+        teaching, raw_teaching = evidence(q.get("teachingQaEvidence"))
+        if (teaching.get("questionRevision") != revision
+                or teaching.get("content") != q.get("teaching")):
+            return False, "teaching_document_not_current_content"
+        authorized, reason = reviewer_gate.certified(
+            source, audit, q, item, teaching, raw_teaching, policy=policy)
+        if not authorized:
+            return False, reason
+        ui, _ = evidence(q.get("uiQaEvidence"))
+        if ui.get("testedQuestionRevision") != revision:
+            return False, "ui_question_revision_mismatch"
+        digest_now = reviewer_gate.digest(reviewer_gate.canonical(q["teaching"]))
+        tested = ui.get("testedTeachingDigest")
+        if tested != digest_now and not (
+                reason == "exact_five_historical_students_preserved" and tested is None):
+            return False, "ui_teaching_digest_mismatch"
+        return True, reason
+    except (OSError, ValueError, TypeError, KeyError, AttributeError, UnicodeError):
+        return False, "independent_final_admission_evidence_invalid"
+
 def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
     d = src / f"sudu/data/processed/{year}"
     bank, manifest = read(d / "questions.json"), read(d / "webp-manifest.json")
@@ -661,6 +708,11 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
             continue
         if not certificates_complete(src,q,item,shared):
             blocked.append({"id":qid,"reason":"sha_pinned_qa_certificate_missing"})
+            continue
+        authorized, authorization_reason = final_review_authorized(
+            src, q, item, certified_reviews.get(qid), revision)
+        if not authorized:
+            blocked.append({"id":qid,"reason":"independent_review_"+authorization_reason})
             continue
         rel = item["output"]
         if not verify_bytes(src,rel,item["sha256"]):
