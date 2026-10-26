@@ -2,10 +2,10 @@ name: Role D 114 C20-C22 ORIGINAL shared reading V4 3x8x2 and negative routing
 on:
   push:
     branches:
-      - qa/role-d-114-c20-c22-shared-v4-20261026
+      - fix/master-shared-material-1to1-20261026
   pull_request:
     branches:
-      - qa/role-d-114-e11-e13-e14-pr94-source-v4-20261026
+      - qa/role-d-114-c20-c22-shared-v4-20261026
     paths:
       - 'sudu/v4-115-multisubject-review-demo.html'
       - 'sudu/verified-questions-runtime.js'
@@ -111,7 +111,7 @@ jobs:
           # 115 Math B students still render every AUTHORED full equation
           # using untouched authentic HTTP /approved/115.json (NO intercept).
           SUDU_D_REAL_OUT=test-results/role-d-114-c20-22-shared-v4/regression-115-existing node tests/sudu_role_d_115_mathb_real_approved_8x2.cjs
-      - name: Archive 48 original Chinese shared QA PNG + 5 negative and 80 genuine unchanged 115 original maths PNG
+      - name: Archive 48 original Chinese shared QA PNG + 8 negative and 80 genuine unchanged 115 original maths PNG
         if: always()
         uses: actions/upload-artifact@v4
         with:

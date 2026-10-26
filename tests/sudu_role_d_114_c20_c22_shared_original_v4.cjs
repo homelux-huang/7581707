@@ -362,10 +362,18 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
    ['foreign_range',{...payload.questions[0].sharedImages[0],sharedMaterialId:'114-00-C-SHARED-21-22',image:destRoot+'114-00-C-SHARED-21-22.webp'}],
    ['malformed_sha',{...payload.questions[0].sharedImages[0],sha256:'0'}],
    ['missing_material_id',{...payload.questions[0].sharedImages[0],sharedMaterialId:null}],
-   ['missing_required_article',null]
+   ['missing_required_article',null],
+   ['declared_none_extra_image',{...payload.questions[0].sharedImages[0]}],
+   ['foreign_paper',{...payload.questions[0].sharedImages[0],
+     sharedMaterialId:'114-00-E-SHARED-20-23',
+     image:destRoot+'114-00-E-SHARED-20-23.webp'}],
+   ['duplicate_material_id',{...payload.questions[0].sharedImages[0]}]
   ]){
     const tampered=structuredClone(payload);
     tampered.questions[0].sharedImages=bad===null?[]:[bad];
+    if(tag==='declared_none_extra_image')tampered.questions[0].sharedMaterialIds=[];
+    if(tag==='duplicate_material_id')
+      tampered.questions[0].sharedImages=[bad,structuredClone(bad)];
     const ctx=await browser.newContext({viewport:{width:390,height:844},locale:'zh-TW'});
     const page=await ctx.newPage();
     try{
@@ -388,8 +396,8 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
  if(report.errors.length)console.error('ORIGINAL_SHARED_REAL_BROWSER_FAILURE',JSON.stringify(report.errors.slice(0,6),null,2));
  assert.equal(report.errors.length,0,'original source shared article/4 answers V4 browser gate failed');
  assert.equal(report.cases.length,48,'must test 3 real Chinese questions x 8 viewports x 2 themes');
- assert.equal(report.negatives.length,5,'all foreign and missing-required original shared guards must be tested');
- console.log('PASS ROLE D QA-ONLY 114 C20/C21/C22 original article single+shared real V4 48/48 + 5 negative; NOT READY/LIVE');
+ assert.equal(report.negatives.length,8,'all foreign and missing-required original shared guards must be tested');
+ console.log('PASS ROLE D QA-ONLY 114 C20/C21/C22 original article single+shared real V4 48/48 + 8 negative; NOT READY/LIVE');
 })().catch(error=>{
  report.status='FAIL_ORIGINAL_SHARED_V4';report.errors.push({fatal:String(error.stack||error)});
  save();console.error(error.stack||error);process.exitCode=1;
