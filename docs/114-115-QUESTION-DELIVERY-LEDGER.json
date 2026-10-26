@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-27",
   "repository": "homelux-huang/7581707",
   "sourceOfTruth": "GitHub canonical branches and official TCTE PDFs; NOT historical counts",
   "yearInventory": {
@@ -4274,8 +4274,8 @@
         "sourceQuestionsBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b"
       },
       "source": {
-        "status": "IMAGE_QA_CANDIDATE_PASS__FULL_SOURCE_PENDING",
-        "questionRevision": null,
+        "status": "ORIGINAL_SINGLE_WEBP_QA_PASS__QUESTION_TEXT_VERIFICATION_PENDING",
+        "questionRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
         "revisionType": "TEXT_OPTIONS_SINGLE_WEBP_SHA",
         "webpSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
         "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
@@ -4283,40 +4283,51 @@
         "webpQuestionRecordSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
         "originalQuestionVerificationFlag": false,
         "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
-        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b"
+        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+        "originalImageQaPR": 50,
+        "officialAnswerSourcePR": 94
       },
       "officialAnswerEvidence": {
-        "status": "FINAL_ANSWER_DIRECT_QA_NOT_ESTABLISHED",
+        "status": "PUBLISHED_ANSWER_IMAGE_AND_CORRECTION_SCOPE_QA_PASS__STUDENT_ADMISSION_PENDING",
         "candidateLetter": "A",
-        "sourceAnswerVerifiedFlag": false,
+        "sourceAnswerVerifiedFlag": true,
         "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "sourceQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
-        "evidencePath": null
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+        "sourcePR": 94,
+        "sourceCommit": "a6da19064b0603da498c015300504095bfc4ca61",
+        "noCorrectionForThisQuestion": true,
+        "noObjectionForPaper": false
       },
       "teachingDraft": {
-        "status": "NOT_DELIVERED",
+        "status": "AUTHOR_DUAL_LAYER_A_TO_D_CONTENT_RECEIVED__FINAL_E_PENDING",
         "authorRole": "B",
-        "sourcePR": null,
-        "sourceCommit": null,
-        "path": null,
-        "teachingDigest": null
+        "sourcePR": 44,
+        "sourceCommit": "e0d4532c751127204e73af9cd9d3a95c52449131",
+        "path": "sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-11.json",
+        "teachingDigest": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee"
       },
       "independentTeachingQA": {
-        "status": "DISTINCT_AI_CONTENT_REVIEW_NOT_RECEIVED",
+        "status": "EXACT_SOURCE_E_FINAL_REVIEW_CLAIMED__NOT_YET_RETURNED",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
         "teachingDigestReviewed": null,
         "reviewMode": "OWNER_POLICY_DISTINCT_AI_SUBSTANTIVE_REVIEW",
         "aiReviewEvidenceGitBlob": null,
-        "reviewTaskId": null,
-        "reviewIssue36CommentId": null
+        "reviewTaskId": "E-114-EN11-INDEPENDENT-CONTENT-20261027-01",
+        "reviewIssue36CommentId": 6429493578
       },
       "uiQA": {
-        "status": "NOT_RECEIVED_EXACT_DIGEST",
-        "sourcePR": 27,
+        "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
+        "sourcePR": 95,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "qaOnlyTestedSourcePR": 94,
+        "qaOnlyTestedTeachingPR": 44,
+        "qaOnlyTestedTeachingDigest": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee",
+        "qaOnlyCiRun": 40278062640,
+        "qaOnlyEightViewportsTwoThemes": true
       },
       "ready": {
         "status": "BLOCKED",
@@ -4333,9 +4344,10 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
-        "DISTINCT_AI_CONTENT_REVIEW_NOT_YET_CERTIFIED",
-        "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
-        "COMPLETE_DUAL_LEVEL_FOUR_OPTION_TEACHING_NOT_DELIVERED"
+        "OFFICIAL_ORIGINAL_STEM_OPTIONS_QUESTION_VERIFICATION_PENDING",
+        "TRUSTED_DISTINCT_E_FINAL_CONTENT_RECEIPT_AND_PROTECTED_REGISTRY_PENDING",
+        "PUBLISHER_ACTUAL_APPROVED_ARTIFACT_8X2_V4_UIQA_PENDING",
+        "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN"
       ]
     },
     "114-00-E-12": {
@@ -4442,8 +4454,8 @@
         "sourceQuestionsBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b"
       },
       "source": {
-        "status": "IMAGE_QA_CANDIDATE_PASS__FULL_SOURCE_PENDING",
-        "questionRevision": null,
+        "status": "ORIGINAL_SINGLE_WEBP_QA_PASS__QUESTION_TEXT_VERIFICATION_PENDING",
+        "questionRevision": "074fb9847eda936d31dfd4503f3a7a12cbde9f89ddc888957d8eba4f17fa746c",
         "revisionType": "TEXT_OPTIONS_SINGLE_WEBP_SHA",
         "webpSha256": "81f4487c4012456b4f1c3449aa388f16d12de19b72cc844ae6b6269be76e9be7",
         "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-13.webp",
@@ -4451,26 +4463,32 @@
         "webpQuestionRecordSha256": "81f4487c4012456b4f1c3449aa388f16d12de19b72cc844ae6b6269be76e9be7",
         "originalQuestionVerificationFlag": false,
         "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
-        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b"
+        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+        "originalImageQaPR": 50,
+        "officialAnswerSourcePR": 94
       },
       "officialAnswerEvidence": {
-        "status": "FINAL_ANSWER_DIRECT_QA_NOT_ESTABLISHED",
+        "status": "PUBLISHED_ANSWER_IMAGE_AND_CORRECTION_SCOPE_QA_PASS__STUDENT_ADMISSION_PENDING",
         "candidateLetter": "A",
-        "sourceAnswerVerifiedFlag": false,
+        "sourceAnswerVerifiedFlag": true,
         "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "sourceQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
-        "evidencePath": null
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-13-official.json",
+        "sourcePR": 94,
+        "sourceCommit": "a6da19064b0603da498c015300504095bfc4ca61",
+        "noCorrectionForThisQuestion": true,
+        "noObjectionForPaper": false
       },
       "teachingDraft": {
-        "status": "NOT_DELIVERED",
+        "status": "AUTHOR_DUAL_LAYER_A_TO_D_CONTENT_RECEIVED__FINAL_E_PENDING",
         "authorRole": "B",
-        "sourcePR": null,
-        "sourceCommit": null,
-        "path": null,
-        "teachingDigest": null
+        "sourcePR": 44,
+        "sourceCommit": "e0d4532c751127204e73af9cd9d3a95c52449131",
+        "path": "sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-13.json",
+        "teachingDigest": "e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1"
       },
       "independentTeachingQA": {
-        "status": "DISTINCT_AI_CONTENT_REVIEW_NOT_RECEIVED",
+        "status": "TRUSTED_DISTINCT_E_FINAL_REVIEW_NOT_RECEIVED",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
@@ -4481,10 +4499,15 @@
         "reviewIssue36CommentId": null
       },
       "uiQA": {
-        "status": "NOT_RECEIVED_EXACT_DIGEST",
-        "sourcePR": 27,
+        "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
+        "sourcePR": 95,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "qaOnlyTestedSourcePR": 94,
+        "qaOnlyTestedTeachingPR": 44,
+        "qaOnlyTestedTeachingDigest": "e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1",
+        "qaOnlyCiRun": 40278062640,
+        "qaOnlyEightViewportsTwoThemes": true
       },
       "ready": {
         "status": "BLOCKED",
@@ -4501,9 +4524,10 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
-        "DISTINCT_AI_CONTENT_REVIEW_NOT_YET_CERTIFIED",
-        "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
-        "COMPLETE_DUAL_LEVEL_FOUR_OPTION_TEACHING_NOT_DELIVERED"
+        "OFFICIAL_ORIGINAL_STEM_OPTIONS_QUESTION_VERIFICATION_PENDING",
+        "TRUSTED_DISTINCT_E_FINAL_CONTENT_RECEIPT_AND_PROTECTED_REGISTRY_PENDING",
+        "PUBLISHER_ACTUAL_APPROVED_ARTIFACT_8X2_V4_UIQA_PENDING",
+        "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN"
       ]
     },
     "114-00-E-14": {
@@ -4526,8 +4550,8 @@
         "sourceQuestionsBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b"
       },
       "source": {
-        "status": "IMAGE_QA_CANDIDATE_PASS__FULL_SOURCE_PENDING",
-        "questionRevision": null,
+        "status": "ORIGINAL_SINGLE_WEBP_QA_PASS__QUESTION_TEXT_VERIFICATION_PENDING",
+        "questionRevision": "6164a310c7d38229aaaf52df678121ee88f6242cf6611310badfb5b1b46714dd",
         "revisionType": "TEXT_OPTIONS_SINGLE_WEBP_SHA",
         "webpSha256": "388773561e436315452bdf0c28c792efa0983eb25538e8b3119926cd338f3a94",
         "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-14.webp",
@@ -4535,26 +4559,32 @@
         "webpQuestionRecordSha256": "388773561e436315452bdf0c28c792efa0983eb25538e8b3119926cd338f3a94",
         "originalQuestionVerificationFlag": false,
         "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
-        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b"
+        "manifestBlobSha": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+        "originalImageQaPR": 50,
+        "officialAnswerSourcePR": 94
       },
       "officialAnswerEvidence": {
-        "status": "FINAL_ANSWER_DIRECT_QA_NOT_ESTABLISHED",
+        "status": "PUBLISHED_ANSWER_IMAGE_AND_CORRECTION_SCOPE_QA_PASS__STUDENT_ADMISSION_PENDING",
         "candidateLetter": "D",
-        "sourceAnswerVerifiedFlag": false,
+        "sourceAnswerVerifiedFlag": true,
         "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "sourceQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
-        "evidencePath": null
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-14-official.json",
+        "sourcePR": 94,
+        "sourceCommit": "a6da19064b0603da498c015300504095bfc4ca61",
+        "noCorrectionForThisQuestion": true,
+        "noObjectionForPaper": false
       },
       "teachingDraft": {
-        "status": "NOT_DELIVERED",
+        "status": "AUTHOR_DUAL_LAYER_A_TO_D_CONTENT_RECEIVED__FINAL_E_PENDING",
         "authorRole": "B",
-        "sourcePR": null,
-        "sourceCommit": null,
-        "path": null,
-        "teachingDigest": null
+        "sourcePR": 44,
+        "sourceCommit": "e0d4532c751127204e73af9cd9d3a95c52449131",
+        "path": "sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-14.json",
+        "teachingDigest": "b9c464e05fcec6969ef298d5744a9599af8e17612fc5cde2615a6a090e3c560e"
       },
       "independentTeachingQA": {
-        "status": "DISTINCT_AI_CONTENT_REVIEW_NOT_RECEIVED",
+        "status": "TRUSTED_DISTINCT_E_FINAL_REVIEW_NOT_RECEIVED",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
@@ -4565,10 +4595,15 @@
         "reviewIssue36CommentId": null
       },
       "uiQA": {
-        "status": "NOT_RECEIVED_EXACT_DIGEST",
-        "sourcePR": 27,
+        "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
+        "sourcePR": 95,
         "exactDigestPassed": false,
-        "currentEightViewportsTwoThemes": false
+        "currentEightViewportsTwoThemes": false,
+        "qaOnlyTestedSourcePR": 94,
+        "qaOnlyTestedTeachingPR": 44,
+        "qaOnlyTestedTeachingDigest": "b9c464e05fcec6969ef298d5744a9599af8e17612fc5cde2615a6a090e3c560e",
+        "qaOnlyCiRun": 40278062640,
+        "qaOnlyEightViewportsTwoThemes": true
       },
       "ready": {
         "status": "BLOCKED",
@@ -4585,9 +4620,10 @@
         "sameShaVerified": false
       },
       "blockingIssues": [
-        "DISTINCT_AI_CONTENT_REVIEW_NOT_YET_CERTIFIED",
-        "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
-        "COMPLETE_DUAL_LEVEL_FOUR_OPTION_TEACHING_NOT_DELIVERED"
+        "OFFICIAL_ORIGINAL_STEM_OPTIONS_QUESTION_VERIFICATION_PENDING",
+        "TRUSTED_DISTINCT_E_FINAL_CONTENT_RECEIPT_AND_PROTECTED_REGISTRY_PENDING",
+        "PUBLISHER_ACTUAL_APPROVED_ARTIFACT_8X2_V4_UIQA_PENDING",
+        "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN"
       ]
     },
     "114-00-E-15": {
