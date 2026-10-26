@@ -1135,7 +1135,7 @@
       ],
       "answer": "D",
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "reviewStatus": "needs_review",
       "sharedMaterialIds": [
@@ -1173,12 +1173,21 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
       "textQaStatus": "PARTIAL_OPTION_D_CORRECTED_NOT_FULL_TEXT_QA",
       "ocrCorrectionEvidence": "sudu/data/processed/114/qa-drafts/OCR_VISUAL_114_C19_C23_20261023.json",
       "integrationReady": false,
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "ChatGPT Role A direct original TCTE published-answer image QA, NOT different-author Role E teaching QA or human teacher",
+        "reviewedAt": "2026-10-26",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-C-23-official.json",
+        "answerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
