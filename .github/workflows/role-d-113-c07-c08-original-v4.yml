@@ -1,0 +1,98 @@
+name: Role D 113 Chinese C07-C08 each 8x2 real original V4 QA-only
+on:
+  push:
+    branches:
+      - qa/role-d-113-c07-c08-original-v4-20261027
+  pull_request:
+    branches:
+      - qa/role-d-113-c01-c05-real-v4-20261027
+    paths:
+      - 'tests/sudu_role_d_113_c07_c08_original_v4.cjs'
+      - '.github/workflows/role-d-113-c07-c08-original-v4.yml'
+      - 'docs/ROLE_D_113_C07_C08_V4_HANDOFF_20261027.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: d113-chinese07-08-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  two_source_exact_questions_8x2_each:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SUDU_D_QA_ONLY: '1'
+      SUDU_D_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+      SUDU_D_OUT: 'test-results/role-d-113-c07-c08'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fail closed if tested exact head moved or source script invalid
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SUDU_D_HEAD"
+          node --check tests/sudu_role_d_113_c07_c08_original_v4.cjs
+          node --check sudu/verified-questions-runtime.js
+          git diff --exit-code
+      - uses: actions/checkout@v4
+        with:
+          ref: '08cb5a503b6f53be0e7e4de285d1cb2e0a8beaf3'
+          path: '_source113_next'
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/years/113.json
+            sudu/data/processed/113/role-a-c07-10
+            sudu/data/original/113/00-C
+            sudu/data/original/113/00-C-answers
+            sudu/teaching-candidates/113-role-b-c06-10-20261026
+          sparse-checkout-cone-mode: false
+      - name: Check real archived A images and B authored source checkout
+        run: |
+          set -euo pipefail
+          test "$(git -C _source113_next rev-parse HEAD)" = 08cb5a503b6f53be0e7e4de285d1cb2e0a8beaf3
+          test -f _source113_next/sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp
+          test -f _source113_next/sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp
+          test -f _source113_next/sudu/teaching-candidates/113-role-b-c06-10-20261026/113-00-C-07.json
+          test -f _source113_next/sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp
+      - name: Install genuine Chrome and inspect Traditional Chinese font raster
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
+          fc-cache -f
+          family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
+          printf '%s\n' "$family" | grep -Eq '^Noto (Sans|Serif) CJK'
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Original verified publisher no-release check plus 32 genuine V4 browser checks
+        run: |
+          set -euo pipefail
+          python scripts/sudu_verified_publish.py check
+          python scripts/build.py
+          test ! -e _site/sudu/data/approved/113.json
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/role-d113c0708.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/sudu/v4-115-multisubject-review-demo.html >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/sudu_role_d_113_c07_c08_original_v4.cjs
+          test ! -e _site/sudu/data/approved/113.json
+      - name: Save two distinct per-question results and 32 watermarked real screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-113-chinese-C07-C08-each-8x2-NO-RELEASE-${{ github.run_id }}
+          path: test-results/role-d-113-c07-c08/
+          if-no-files-found: warn
+          retention-days: 14
