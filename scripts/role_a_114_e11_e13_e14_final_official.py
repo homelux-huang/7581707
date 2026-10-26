@@ -276,6 +276,11 @@ def verify_final(bank):
         assert e["reviewer"]==OFFICIAL_REVIEWER
         assert q["questionVerified"] is False and q["reviewStatus"]=="needs_review"
         assert q.get("studentReleaseApproved") is not True
+    print("ROLE_A_114_E11_E13_E14_SOURCE_REVISIONS",json.dumps({
+        qid:{"sourceRevisionSha256":publisher.text_revision(mapping[qid],WEBP[qid]),
+             "webpSha256":WEBP[qid],"officialPdfSha256":PDF_A_SHA,
+             "answer":ANSWER[qid],"questionVerified":False}
+        for qid in sorted(ANSWER)},sort_keys=True))
     precheck_db(DB,bank)
     with tempfile.TemporaryDirectory() as td:
         first=Path(td)/"x.sqlite3";second=Path(td)/"y.sqlite3"
