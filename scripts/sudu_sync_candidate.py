@@ -18,7 +18,7 @@ def run(*args, input=None):
     return subprocess.check_output(args, input=input, text=True).strip()
 
 def validate_paths(paths):
-    if not paths or any(not p.startswith(PREFIX) or '..' in p.split('/') for p in paths):
+    if not paths or any(not p.startswith(PREFIX) or '..' in p.split('/') or any(ord(c)<32 or ord(c)==127 for c in p) for p in paths):
         raise ValueError('Only approved data changes may enter a sync candidate')
 
 def branch_name(base, tree):
@@ -29,7 +29,7 @@ def branch_name(base, tree):
 def publish(artifact):
     artifact.mkdir(parents=True, exist_ok=True)
     base = run('git', 'rev-parse', 'HEAD')
-    paths = run('git', 'diff', '--cached', '--name-only', '-z').rstrip('\0').split('\0')
+    paths = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z'], text=True).rstrip('\0').split('\0')
     if paths == ['']:
         print('NO_CHANGE: no new approved output')
         return

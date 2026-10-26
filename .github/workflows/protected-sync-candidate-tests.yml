@@ -1,7 +1,7 @@
 name: Protected approved sync candidate transport (NO RELEASE)
 on:
   push:
-    branches: [fix/protected-approved-sync-pr-20261027]
+    branches: [main, fix/protected-approved-sync-pr-20261027]
   pull_request:
     branches: [main]
 permissions:
@@ -18,3 +18,5 @@ jobs:
           python-version: '3.11'
       - name: Local Git transport and isolated gh fixture (not actual PR permission proof)
         run: python -m unittest discover -s tests -p test_sudu_sync_candidate.py -v
+      - name: Unchanged independent E path-scope attack
+        run: python tests/role_e_pr102_path_scope.py --root .

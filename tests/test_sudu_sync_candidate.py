@@ -88,6 +88,22 @@ else:
         self.git('add','sudu/data/approved/link')
         with self.assertRaisesRegex(ValueError,'Symlink'):self.execute()
 
+    def test_real_leading_space_outside_path_is_not_normalized(self):
+        path=self.repo/' sudu/data/approved/escape.py'
+        path.parent.mkdir(parents=True);path.write_text('outside')
+        self.git('add','.')
+        raw=subprocess.check_output(['git','diff','--cached','--name-only','-z'],cwd=self.repo)
+        self.assertIn(b' sudu/data/approved/escape.py\0',raw)
+        with self.assertRaisesRegex(ValueError,'Only approved'):self.execute()
+        self.assertNotIn('sync/qa-approved-',self.git('ls-remote','origin','refs/heads/*'))
+
+    def test_control_character_path_is_rejected_before_push(self):
+        path=self.repo/'sudu/data/approved/escape\n.py'
+        path.write_text('control')
+        self.git('add','.')
+        with self.assertRaisesRegex(ValueError,'Only approved'):self.execute()
+        self.assertNotIn('sync/qa-approved-',self.git('ls-remote','origin','refs/heads/*'))
+
     def test_invalid_oids_and_path_traversal_rejected(self):
         with self.assertRaises(ValueError):sync.branch_name('main','a'*40)
         with self.assertRaises(ValueError):sync.validate_paths(['sudu/data/approved/../else'])
