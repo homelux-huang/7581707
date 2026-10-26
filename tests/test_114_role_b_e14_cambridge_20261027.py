@@ -18,7 +18,7 @@ EXPECTED_WEBP="388773561e436315452bdf0c28c792efa0983eb25538e8b3119926cd338f3a94"
 TEACHING_UNCHANGED="27c9028082da7aa5d7b8bc1897d5eabfc40d21506b463ced08938841cfcf8811"
 OTHERS={
  "114-00-E-11":"6b365291eb43fd37377891149470f3bff9d8a6db5997eaff13295fb36fc402e8",
- "114-00-E-12":"0a7c490b59d4ea985f20ea3919891f7779dcbf98afd9c1f30a12e1d0d6fa9cc4",
+ "114-00-E-12":"a5f26e28dfecccadc607100720711c3e972ffb90b2ae9bc131bb1098fb48d8df",
  "114-00-E-13":"2e6cdb929a573008a00abf08c510f2c29b590dc0991cd1c65ff2ee5b6a940567",
  "114-00-C-04":"d8750b5df8fcb41250ed5b2143afcc80506cee15036117a493020e08f00433eb",
 }
@@ -75,7 +75,9 @@ class CambridgeLinkE14(unittest.TestCase):
         self.assertEqual(digest,d["composedTeachingSha256"])
         self.assertEqual(digest,r["composedTeachingSha256"])
         self.assertEqual(sha((DIR/(QID+".json")).read_bytes()),r["fileSha256"])
-    def test_other_four_original_B_lessons_completely_untouched(self):
+    def test_other_four_B_lessons_pin_exact_verified_versions(self):
+        # E12 was independently corrected on this stacked B branch; pin its NEW exact
+        # fileSHA rather than weakening any full-file comparison. Parent PR106 is unchanged.
         self.assertEqual(self.batch["itemCount"],5)
         for row in self.batch["items"]:
             if row["questionId"]==QID:continue
