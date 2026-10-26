@@ -312,8 +312,20 @@ async function assertImage(page,locator,expectedSha,expectedSrc,label){
        label+' original Chinese reading must not have numeric calculation');
      assert.equal(await page.locator('#guideCard .guide-block h3').filter({hasText:'考題計算式'}).count(),0);
      const guide=await page.locator('#guideCard').innerText();
-     assert(guide.includes(q.memory)&&guide.includes(q.teacherSummary)&&guide.includes(q.elementarySummary),
-       label+' actual high-school/child/memory guide lost');
+     // Authoritative V4 guideEntries keeps high-school/elementary A-D under
+     // the four answer explanations, never duplicates those paragraphs in
+     // the singular subject guide. Check the SAME full education content
+     // in its actual intended location, not a deprecated duplicate card.
+     assert(guide.includes(q.memory)&&guide.includes(q.concept),
+       label+' original Chinese mnemonic/concept guide lost');
+     assert(!guide.includes(q.teacherSummary)&&!guide.includes(q.elementarySummary),
+       label+' duplicate full high-school/child summaries were reintroduced into guide');
+     const optionDetails=await page.locator('#answerCard .option-detail').allInnerTexts();
+     assert.equal(optionDetails.length,4);
+     for(const detailText of optionDetails){
+       assert(detailText.includes('高職生理解')&&detailText.includes('國小學生也聽得懂'),
+         label+' original four-option two-level educational explanation labels lost');
+     }
      const font=await fontRaster(page,label);
      await layout(page,label+' after answer');
      const filename=x.id+'-'+width+'x'+height+'-'+theme+'.png';
