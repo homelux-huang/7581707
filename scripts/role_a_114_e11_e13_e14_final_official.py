@@ -209,18 +209,19 @@ def precheck_db(path,bank):
     with sqlite3.connect(path.as_uri()+"?mode=ro",uri=True) as db:
         assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
         cols={c[1] for c in db.execute("PRAGMA table_info(questions)")}
-        assert {"question_id","payload_json","payload_sha256","answer_verified","question_verified"}<=cols, f"SQL schema mismatch, actual columns={sorted(cols)}"
-        rows=db.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions").fetchall()
+        # Actual 114 database has NO flattened answer_verified/question_verified:
+        # exact normalized seven-column schema, all per-question approval flags
+        # live only inside cryptographically checked canonical payload_json.
+        required={"question_id","year","paper_code","original_number","subject","payload_json","payload_sha256"}
+        assert cols==required, f"Unexpected 114 source SQLite schema: {sorted(cols)}"
+        rows=db.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
     assert len(rows)==205
     assert {x[0] for x in rows}=={q["questionId"] for q in bank["questions"]}
     qs={q["questionId"]:q for q in bank["questions"]}
-    for qid,payload,digest,av,qv in rows:
+    for qid,payload,digest in rows:
         assert sha(payload.encode("utf-8"))==digest,qid
         assert json.loads(payload)==qs[qid],qid
         assert payload==canonical(qs[qid]),qid
-        if qid in ANSWER:
-            assert bool(av)==bool(qs[qid]["answerVerified"]),qid
-            assert bool(qv)==bool(qs[qid]["questionVerified"]),qid
 
 def update_three_sqlite(src,target,updates):
     shutil.copy2(src,target)
@@ -228,16 +229,23 @@ def update_three_sqlite(src,target,updates):
         assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
         assert db.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==205
         for qid,q in sorted(updates.items()):
-            row=db.execute("SELECT payload_json,answer_verified,question_verified FROM questions WHERE question_id=?",(qid,)).fetchone()
-            assert row is not None and not bool(row[1]) and not bool(row[2])
-            assert json.loads(row[0])["answerVerified"] is False
+            row=db.execute("SELECT payload_json,payload_sha256 FROM questions WHERE question_id=?",(qid,)).fetchone()
+            assert row is not None and sha(row[0].encode("utf-8"))==row[1]
+            previous=json.loads(row[0])
+            assert previous["answerVerified"] is False and previous["questionVerified"] is False
+            assert q["answerVerified"] is True and q["questionVerified"] is False
             payload=canonical(q)
-            result=db.execute("UPDATE questions SET payload_json=?,payload_sha256=?,answer_verified=? WHERE question_id=? AND answer_verified=0",
-                 (payload,sha(payload.encode("utf-8")),1,qid))
+            result=db.execute("UPDATE questions SET payload_json=?,payload_sha256=? WHERE question_id=?",
+                 (payload,sha(payload.encode("utf-8")),qid))
             assert result.rowcount==1
         db.commit()
         assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
-        assert db.execute("SELECT count(*) FROM questions WHERE question_id IN (?,?,?) AND answer_verified=1",tuple(sorted(ANSWER))) .fetchone()[0]==3
+        records=db.execute("SELECT question_id,payload_json,payload_sha256 FROM questions WHERE question_id IN (?,?,?)",tuple(sorted(ANSWER))).fetchall()
+        assert len(records)==3
+        for qid,payload,digest in records:
+            assert sha(payload.encode("utf-8"))==digest
+            assert json.loads(payload)["answerVerified"] is True
+            assert json.loads(payload)["questionVerified"] is False
     return sha(target.read_bytes())
 
 def verify_final(bank):
