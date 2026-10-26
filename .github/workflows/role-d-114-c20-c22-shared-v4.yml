@@ -91,6 +91,8 @@ jobs:
           echo "playwright-install-start-$(date -u +%FT%TZ)"
           timeout 180s npm install --no-save --prefer-offline playwright@1.51.1
           timeout 180s npx playwright install --only-shell chromium
+          timeout 180s python -m pip install -q pillow
+          python -c 'from PIL import Image; print("Original WebP decoder ready: Pillow",Image.__version__)'
           echo "playwright-install-end-$(date -u +%FT%TZ)"
       - name: Existing publisher check and REAL A-B original WebP and shared source V4
         run: |
