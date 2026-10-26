@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-14",
+  "taskId": "B-113-C11-15-A78-SHARED-MEIHUA-20261026-02",
+  "subject": "國文",
+  "question": "若山上憶良讀過下列兩首詩，①、②、③、④何者屬於文末他說「早知要由此著筆」的\n  「此」的範圍？\n\n      梅嶺花初發，天山雪未開。   窗外一株梅，寒花五出開。\n      ①雪處疑花滿，花邊似雪回。  ③影隨朝日遠，香逐便風來。\n      因風入舞袖，雜粉向妝臺。   ④泣對銅鉤障，愁看玉鏡臺。\n      ②匈奴幾萬里，春至不知來。  行人斷消息，春恨幾裴回。",
+  "options": [
+    "①、③",
+    "②、④",
+    "①、②、④",
+    "②、③、④"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourcePR78Commit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c11-15/manifest.json",
+    "sourceManifestGitBlob": "247787043362a81143b284d95f62b75a4f3eb059",
+    "sourceRevision": "285199fa48018d8c8cd86ae89b4315b0af6f591f8386f42882ebd136cad1792a",
+    "webpPath": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-14.webp",
+    "webpSha256": "8c0e426a3b4a40fa31e0391b74663511648f7bb3f4734824d437efbcd419abf5",
+    "webpGitBlobSha1": "9c7972771d539c08669ad4a64e45fc8bf97b3efc",
+    "sourcePagePath": "sudu/data/original/113/00-C/p005-67c0d477e9-v2-w1400-q66.webp",
+    "sourcePageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+    "sharedMaterialId": "113-00-C-SHARED-11-15",
+    "sharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+    "sharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+    "sourceSharedPageNumber": 4,
+    "officialAnnouncedAnswerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "officialAnnouncedAnswerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
+    "questionVerified": false,
+    "answerVerified": false,
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
+  },
+  "teaching": {
+    "topic": "梅花詩兩首：純粹欣賞景物與思鄉愁緒區別",
+    "teacherSummary": "文章最後大伴旅人認為若早知以純粹欣賞梅花、充滿美感聯想的方向著筆，歌就不必只呼籲珍惜相聚。①『雪處疑花滿，花邊似雪回』是梅花與雪的視覺比擬；③『影隨朝日遠，香逐便風來』是影、香、日、風構成的景色美感，都可作『此』的範圍。②『匈奴幾萬里，春至不知來』牽出遙遠邊地與離愁；④『泣對銅鉤障，愁看玉鏡臺』直接寫泣與愁，反與旅人期待的單純賞梅相反。因此①③，選 A。",
+    "elementarySummary": "要挑出光是在欣賞梅花漂亮的句子。①把梅花比成雪；③說陽光下花影變長、花香被風吹來，都很美。②想到遠方，④哭得很傷心，不是單純賞花，所以選 A。",
+    "concept": "賞梅純美重視色彩、形狀、香氣等感官觀察；一旦詩句帶出思鄉、怨別、哭泣或愁情，就不屬本文期待的純粹即景欣賞。",
+    "memory": "①雪與梅、③日影與花香＝純賞梅；②遠方、④泣愁＝離思，A。",
+    "solvingSteps": [
+      "看共享文章最後旅人說的『早知要由此著筆』，結合他欣賞純粹美感、不希望又抒鄉愁的回應。",
+      "①用雪、花相似作畫面想像，③用陽光、花影、香氣和風造景，均符合賞梅美感。",
+      "②涉及匈奴遙遠和春來不知，④直接含『泣』『愁』，不是純粹賞梅。",
+      "所以選 ①＋③ 的 A，其餘選項均混入情緒惆悵的詩句。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 的①寫雪與梅花相似的清麗景象，③寫朝日、花影、梅香與風的動態美感，兩句皆著眼即景賞梅，符合大伴旅人希望純賞花的期待。",
+        "elementary": "A 兩句都在看梅花漂亮的樣子與香味，沒有夾帶傷心。",
+        "reason": "①以雪喻梅、③以日影花香寫景，二者都符合純粹美感。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 把②匈奴萬里、春至不知和④泣對銅鉤、愁看鏡臺放在一起，兩句均帶有遙遠惆悵與哭泣愁思，不是本文希望的單純梅花美景。",
+        "elementary": "B 兩句都想到遠方和難過的事情，不是只欣賞梅花。",
+        "reason": "②④的離愁情緒與旅人要求的即景美感相反，因此 B 不符。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 包含①雪梅景物這個正確句，但又選入②遙遠匈奴和④泣愁鏡臺，混合了思鄉離別與悲傷，不能說全都屬『此』的純賞花範圍。",
+        "elementary": "C 雖有看梅花的①，還多選兩句傷心的②④，所以整組不對。",
+        "reason": "C 的②、④具有離情愁緒，整組無法符合純粹欣賞梅景。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 雖有③朝日、風來、花香等純景物描寫，卻把②遠方邊地與④泣愁的詩句一併列入，與題目要求的純美著筆方向不合。",
+        "elementary": "D 有③寫景是對的，但又加②和④兩句難過的，就變成錯。",
+        "reason": "D 的②、④帶悲思，不應和③並列為純即景賞梅。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "雪處疑花滿",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "花邊似雪回",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "影隨朝日遠",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "香逐便風來",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "匈奴幾萬里",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "泣對銅鉤障",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "愁看玉鏡臺",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "梅花",
+        "level": "初級",
+        "meaning": "梅樹開出的花。"
+      },
+      {
+        "term": "即景",
+        "level": "中級",
+        "meaning": "眼前看到景物就以它為題描寫。"
+      },
+      {
+        "term": "借景抒情",
+        "level": "高級",
+        "meaning": "借自然景象來表達自己難過或想念等感情。"
+      }
+    ],
+    "originalVisual": {
+      "type": "OFFICIAL_ORIGINAL_TWO_POEM_BOXES",
+      "goodSentences": [
+        "①",
+        "③"
+      ],
+      "excludedEmotiveSentences": [
+        "②",
+        "④"
+      ],
+      "originalVerseBoxesPreserved": true
+    },
+    "sharedReading": {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalSharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "originalSharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelOnlyRoleAQa": true
+    }
+  },
+  "teachingCanonicalSha256": "1a85643f32664a037952cce77bdad4b773a76ea411beeccc68da99d1fd02eee6",
+  "composedTeachingSha256": "e031def75161a956fcf3912417fa70456952476cce4260091dc712ca44ee50b0",
+  "reasoningAudit": {
+    "answerCandidateAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentEContentReview": "PENDING_DISTINCT_AI_ROLE_E",
+    "sourceFullTextAndOfficialFinalAnswer": "PENDING_ROLE_A",
+    "realV4SameDigest8x2": "PENDING_ROLE_D",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "ROLE_A_113_FINAL_ANSWER_CORRECTION_SCOPE_MISSING",
+      "ROLE_A_113_FULL_SOURCE_QA_PENDING",
+      "DISTINCT_ROLE_E_CONTENT_NOT_REVIEWED",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_SHA_8X2_PENDING",
+      "MASTER_MAIN_PAGES_LIVE_NOT_READY"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

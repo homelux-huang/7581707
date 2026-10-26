@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-12",
+  "taskId": "B-113-C11-15-A78-SHARED-MEIHUA-20261026-02",
+  "subject": "國文",
+  "question": "依據上文，山上憶良認為大伴旅人從〈蘭亭集序〉得到的啟發，主要為何？",
+  "options": [
+    "藉景抒情的筆法",
+    "欣於所遇的自適",
+    "生死齊一的領悟",
+    "樂以天下的胸懷"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourcePR78Commit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c11-15/manifest.json",
+    "sourceManifestGitBlob": "247787043362a81143b284d95f62b75a4f3eb059",
+    "sourceRevision": "07bdd90a06e947bdb32cb1f542abc28a8bbc9367f0dea58c02a60949fb8206a5",
+    "webpPath": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-12.webp",
+    "webpSha256": "0370950412243fd6e2cae905c155cecfb81c90ea17eb34c995f5693a4fc87e51",
+    "webpGitBlobSha1": "9a19cdac29bbed6f1b721d87fd556b193bc7dc6a",
+    "sourcePagePath": "sudu/data/original/113/00-C/p004-67c0d477e9-v2-w1400-q66.webp",
+    "sourcePageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+    "sharedMaterialId": "113-00-C-SHARED-11-15",
+    "sharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+    "sharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+    "sourceSharedPageNumber": 4,
+    "officialAnnouncedAnswerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "officialAnnouncedAnswerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
+    "questionVerified": false,
+    "answerVerified": false,
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
+  },
+  "teaching": {
+    "topic": "〈蘭亭集序〉的欣於所遇：享受當下、自適之樂",
+    "teacherSummary": "山上憶良明指大伴旅人用了《蘭亭集序》相同的『快然自足』四字，希望大家在梅花宴**一同體驗『欣於所遇』**。這是欣賞眼前美景、把握短暫相遇的滿足，而非談藉景抒情技巧、把生死視作同一、或政治式樂以天下。B 的『欣於所遇的自適』最切合。",
+    "elementarySummary": "大家難得一起賞梅、唱歌，覺得現在這一刻很開心、很滿足。這就是『欣於所遇』，選 B，不是講死亡或天下大事。",
+    "concept": "『快然自足』=當下愉快而滿足；『欣於所遇』=對眼前遇到的人和事感到喜悅。本題問得到的思想啟發，非單一寫作修辭。",
+    "memory": "快然自足＋欣於所遇＝把握眼前的快樂，B。",
+    "solvingSteps": [
+      "找原文山上憶良提起的詞『快然自足』，確認它指心裡滿足的感覺。",
+      "再讀山上憶良明說希望梅花宴眾人一同體驗『欣於所遇』。",
+      "四選項中 B 指眼前遭逢的自得，A文法、C生死、D天下胸懷都不對焦。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 的藉景抒情可說是一種文學手法，但山上憶良這段明白指出『快然自足』與『欣於所遇』，問的是當下情緒與生命感受，不是景物如何寫法。",
+        "elementary": "A 只談寫文章的方法，原文是在說大家現在一起賞花有多開心。",
+        "reason": "問題問啟發的心境而非修辭技巧，A 未抓住明示的兩組關鍵詞。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 的『欣於所遇的自適』直接呼應山上憶良希望眾人當下共同感受、快然自足的說話用意，也吻合梅花宴的歡愉場景。",
+        "elementary": "B 就是珍惜此刻大家相聚、欣賞梅花的喜悅，因此正確。",
+        "reason": "原文明示快然自足與欣於所遇，B 是直接而非推測的語意。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 的『生死齊一』說不分生死，但故事反而提王羲之『死生亦大矣，豈不痛哉』帶出的痛感；山上憶良要珍惜當下，並不是把生死完全看作相同。",
+        "elementary": "C 說生與死沒有差別，文章沒有這樣教，反而說人會因生死傷感。",
+        "reason": "『快然自足』不能推導出生命與死亡齊一的領悟，C 偏離焦點。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 的『樂以天下』是把天下人的幸福當作志業的宏大胸懷，而文本說的是席間一起賞梅、體會相遇喜樂，沒有談普天下的政治抱負。",
+        "elementary": "D 把賞梅聚會說成為全世界幸福著想，主題變得太遠。",
+        "reason": "宴會共同喜悅不同於以天下為己任的道德政治理想，D 沒有原文支持。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "蘭亭集序",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "藉景抒情的筆法",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "欣於所遇的自適",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "生死齊一的領悟",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "樂以天下的胸懷",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "自適",
+        "level": "初級",
+        "meaning": "自己感到舒服、開心。"
+      },
+      {
+        "term": "欣於所遇",
+        "level": "中級",
+        "meaning": "為當下相遇的人事物感到欣喜。"
+      },
+      {
+        "term": "快然自足",
+        "level": "高級",
+        "meaning": "心中愉快而滿足，不覺得有所欠缺。"
+      }
+    ],
+    "originalVisual": {
+      "type": "ORIGINAL_SHARED_MEIHUA_READING",
+      "keywords": [
+        "快然自足",
+        "欣於所遇"
+      ],
+      "authorOnly": true
+    },
+    "sharedReading": {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalSharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "originalSharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelOnlyRoleAQa": true
+    }
+  },
+  "teachingCanonicalSha256": "458c8b27c35fc523f499681226a30ef470b8411a5f8c964e0e6d0041a3b11b74",
+  "composedTeachingSha256": "5387954d4006f361fc07cd498ed51b192a6b2fd4b7be46c20957e5a745b0d9d5",
+  "reasoningAudit": {
+    "answerCandidateAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentEContentReview": "PENDING_DISTINCT_AI_ROLE_E",
+    "sourceFullTextAndOfficialFinalAnswer": "PENDING_ROLE_A",
+    "realV4SameDigest8x2": "PENDING_ROLE_D",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "ROLE_A_113_FINAL_ANSWER_CORRECTION_SCOPE_MISSING",
+      "ROLE_A_113_FULL_SOURCE_QA_PENDING",
+      "DISTINCT_ROLE_E_CONTENT_NOT_REVIEWED",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_SHA_8X2_PENDING",
+      "MASTER_MAIN_PAGES_LIVE_NOT_READY"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

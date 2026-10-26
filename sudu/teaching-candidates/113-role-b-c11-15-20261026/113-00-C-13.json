@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-13",
+  "taskId": "B-113-C11-15-A78-SHARED-MEIHUA-20261026-02",
+  "subject": "國文",
+  "question": "若將大伴旅人〈梅花歌序〉、王羲之〈蘭亭集序〉的部分文字相比較，何者理解不適當？\n\n    大伴旅人〈梅花歌序〉           王羲之〈蘭亭集序〉\n①天平二年正月十三日，萃于帥老之 永和九年，歲在癸丑，暮春之初，會於會稽山\n宅，申宴會也。②于時，初春令月，氣 陰之蘭亭，脩禊事也。……是日也，天朗氣\n淑風和。梅披鏡前之粉，蘭薰珮後之 清，惠風和暢。……夫人之相與，俯仰一世，\n香。……於是蓋天坐地，促膝飛觴。③ 或取諸懷抱，悟言一室之內；或因寄所託，放浪\n忘言一室之裡，開衿烟霞之外。④淡然 形骸之外。雖趣舍萬殊，靜躁不同，當其欣於所\n身放，快然自足。          遇，暫得於己，快然自足，不知老之將至。",
+  "options": [
+    "①與，皆依「時間→地點→事件」敘寫",
+    "②與，皆寫當日氣候給人的感受",
+    "③與，皆強調自然美景令人忘我",
+    "④與，皆形容內心獲得愉悅和滿足"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourcePR78Commit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c11-15/manifest.json",
+    "sourceManifestGitBlob": "247787043362a81143b284d95f62b75a4f3eb059",
+    "sourceRevision": "be8c57345bf5aba57a68f07f401e239767a5770ec618cce3b31fc07a909afa7f",
+    "webpPath": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-13.webp",
+    "webpSha256": "6e4f5b84f8c9e83aa1e3e22681c266a5b6b268e8551ae7266cc33c5ed94b7ad4",
+    "webpGitBlobSha1": "511c530e497277f1cf76aaaead972dec153d83d5",
+    "sourcePagePath": "sudu/data/original/113/00-C/p004-67c0d477e9-v2-w1400-q66.webp",
+    "sourcePageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+    "sharedMaterialId": "113-00-C-SHARED-11-15",
+    "sharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+    "sharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+    "sourceSharedPageNumber": 4,
+    "officialAnnouncedAnswerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "officialAnnouncedAnswerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
+    "questionVerified": false,
+    "answerVerified": false,
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
+  },
+  "teaching": {
+    "topic": "〈梅花歌序〉與〈蘭亭集序〉四組對照：取諸懷抱、悟言與快然自足",
+    "teacherSummary": "題目問『理解不適當』。①與❶確有時間、地點、宴集事件的交代；②與❷都描寫初春風和氣清；④與❹『淡然身放，快然自足』和『暫得於己，快然自足』都寫滿足。惟③『忘言一室之裡，開襟烟霞之外』與❸『或取諸懷抱，悟言一室之內；或因寄所託，放浪形骸之外』對應的是室內交談、室外放懷兩種**表達心志與交往方式**，不是『自然美景令人忘我』；故 C 是錯誤理解。",
+    "elementarySummary": "A說兩篇都有交代什麼時候、在哪裡聚會；B說天氣舒服；D說心情很開心，這些都對。C卻把『室內談心、室外自在表達』說成單純看風景忘記自己，意思不一樣，所以選 C。",
+    "concept": "比較古文句子要看具體主語與行動：室內悟言、室外放浪是人的交往和心情表現；不能看到『烟霞』就說整段只在強調自然美景。",
+    "memory": "①時間地點、②天氣、④自足都吻合；③是**室內外交流方式**，不是美景忘我 → C。",
+    "solvingSteps": [
+      "先看第①對照的時間、地點、集會事由，都有排列敘述，A成立。",
+      "看第②兩邊寫初春天氣、風氣和暢，B成立。",
+      "看第③與❸描述室內交談、室外抒懷等人際與表達方式，並未只強調自然美景令人忘我，故 C 不適當。",
+      "再核第④與❹都明寫快然自足的心理狀態，D成立，所以唯一選 C。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 指①與❶皆依時間、地點、事件介紹宴會背景：天平二年正月十三日與永和九年暮春、帥老之宅與蘭亭、宴會與修禊，對照成立，並非本題錯項。",
+        "elementary": "A 兩段都有說何時、何地、做什麼，這個理解正確。",
+        "reason": "兩篇首段均依聚會日期、場合與活動敘述，A 有逐句證據。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 指②和❷都描寫當天氣候的舒適，梅花歌序的『氣淑風和』與蘭亭的『天朗氣清、惠風和暢』均有明確風和氣佳的感受，故成立。",
+        "elementary": "B 兩篇都說天氣好、風吹得很舒服，沒有看錯。",
+        "reason": "②氣淑風和與❷天朗氣清、惠風和暢都支持 B 的天候描述。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 說③與❸皆強調自然美景使人忘我，但原文是室內『忘言/悟言』、室外『開襟/放浪』對比人的表達及交往方式，不能把人的兩種活動簡化成賞景忘我。",
+        "elementary": "C 把室內聊天、室外自在活動，硬說成只因風景太美而忘掉自己，講錯重點。",
+        "reason": "③與❸重點在人與人的交流、志趣和行動樣態，非共同的自然景觀忘我效果。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 指④與❹描述內心喜悅而滿足，兩邊都直接出現『快然自足』，梅花歌序另有『淡然身放』，所以比對完全合理，不能選為不適當。",
+        "elementary": "D 兩篇都說心裡很快樂、很滿足，而且都有快然自足四字。",
+        "reason": "④與❹共享快然自足原詞，D 的心理感受判斷有直接引文。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "時間→地點→事件",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "當日氣候給人的感受",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "自然美景令人忘我",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "內心獲得愉悅和滿足",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "快然自足",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "忘言一室之裡",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "時間地點",
+        "level": "初級",
+        "meaning": "事情發生的時候和所在地方。"
+      },
+      {
+        "term": "悟言",
+        "level": "中級",
+        "meaning": "面對面談話，交換心中想法。"
+      },
+      {
+        "term": "放浪形骸",
+        "level": "高級",
+        "meaning": "不受世俗拘束，自由表露性情和行動。"
+      }
+    ],
+    "originalVisual": {
+      "type": "ORIGINAL_TWO_COLUMN_COMPARISON_TABLE",
+      "left": "大伴旅人〈梅花歌序〉",
+      "right": "王羲之〈蘭亭集序〉",
+      "rowNumbers": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ],
+      "meaningOfIncorrectPair": "③、❸比對兩種交往方式，不是自然景色令人忘我",
+      "sourceOriginalTableRequired": true
+    },
+    "sharedReading": {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalSharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "originalSharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelOnlyRoleAQa": true
+    }
+  },
+  "teachingCanonicalSha256": "606d42300b988927b946056f3ab2d73a34e46a32c58f24db1f866fd2dd48a879",
+  "composedTeachingSha256": "eedc29cc8079c0acb188561fdfa5023eebd7e9ffa3350eb5469736fe1ba863e6",
+  "reasoningAudit": {
+    "answerCandidateAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentEContentReview": "PENDING_DISTINCT_AI_ROLE_E",
+    "sourceFullTextAndOfficialFinalAnswer": "PENDING_ROLE_A",
+    "realV4SameDigest8x2": "PENDING_ROLE_D",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "ROLE_A_113_FINAL_ANSWER_CORRECTION_SCOPE_MISSING",
+      "ROLE_A_113_FULL_SOURCE_QA_PENDING",
+      "DISTINCT_ROLE_E_CONTENT_NOT_REVIEWED",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_SHA_8X2_PENDING",
+      "MASTER_MAIN_PAGES_LIVE_NOT_READY"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
