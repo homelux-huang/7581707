@@ -18,11 +18,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install -q cryptography
+      - run: python -m pip install -q cryptography pillow
       - name: Syntax and unchanged formal allowlist
         run: |
           python -m py_compile scripts/sudu_independent_review_gate.py scripts/sudu_verified_publish.py
           python scripts/sudu_verified_publish.py check
+      - name: Reject source self-attestation through real full snapshot (independent E)
+        run: python tests/role_e_pr101_snapshot_no_self_approval.py --publisher scripts/sudu_verified_publish.py
       - name: Re-run unchanged independent E adversarial tests from exact original commit
         run: |
           set -eu
