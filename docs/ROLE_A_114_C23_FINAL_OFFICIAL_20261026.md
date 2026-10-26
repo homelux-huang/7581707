@@ -18,3 +18,12 @@
 - `tests/test_role_a_114_c23_final_official.py` 含 7 項來源、官答、公告年別正反、完整 205 SQL、PR98 前三題不倒退、C23 end-page 文字疑義保留、錯 SHA 與 options 篡改拒絕。專屬 workflow `.github/workflows/role-a-114-c23-final-official.yml` 只寫本隔離分支三個目標成果（source JSON、SQL、C23 official JSON），不會更改正式 V4 或部署。
 
 **後續由 MASTER：** 以精確 SHA 收件，指派 Role E 不同作者逐題教學及原題文字複核，Role D 以最新來源與教學 digest 對現有 35 題 Demo V4 做真正 8×2 瀏覽器驗證，通過完整源答／UI／CI Gate 後再逐題增量發布；不能把 Role A 公布答案 QA 當作 E 或教師核准。**本批新 READY=0；新 LIVE=0。**
+
+## 實際執行與跨版本嚴格回歸
+
+- 來源候選 C23 預先補回與現有 manifest 完全相同的原始單題圖，不曾重裁；QA 來源是歷史 AI 單題原圖 QA，沒有冒稱真人或 E。
+- 最終正式來源修補由限定分支的 [GitHub Actions #40296621406](https://github.com/homelux-huang/7581707/actions/runs/40296621406) 產生，job `121484128189`。執行輸出 **C23 新來源／官方答案／SQL 測試 7/7 PASS**；同時將前一批 [PR #98](https://github.com/homelux-huang/7581707/pull/98) 完全相同 HEAD `e448bf0c814ae3a2075faea23ba75b244519928d` 放進**獨立 Git worktree**，原本 8 項嚴格 C20～22 官方 SHA 與原 SQL 的回歸 **8/8 PASS**，合計 15 項成功。每個基底自己的 SHA／SQL 假設均不降格，後繼 Q23 相對 PR98 的 205 筆另實測只有 **C23 一筆 payload+SHA** 不同。
+- 先前 CI #40296001025、#40296291313 的失敗是把 PR98「**恰好只有三筆差異**」的舊版 SQL SHA 對上有第四筆新增合法 C23 變更的 DB；兩次都先 fail-closed 且沒有提交錯誤資料，已更改**新 C23 擁有的測試**在現在版本核對三筆歷史官答不變，並在舊版本完整執行原來八項測試，**沒有刪 assert**。新 CI 確認全部 PASS。
+- 實際 GitHub Actions 新增一個單獨的 C23 官方答案 D 證據 `review-evidence/114-00-C-23-official.json`、更新單題 JSON／DB，來源文字 revision 維持 **`32b411266f4bfd82ff72e0aaa0954cdb0ed93e36b0a4ac338cfc4afeabcb1773`**，原始單題 WebP `50547b2a2daa71dea457bd11bf4ebb1a4bcc780e0443ac6cda15374829e67cc1`、原始公告答案 p1 `7a0be40000064817a59aa8d049c783004f82d7fd13ee1e0de5b20a8ed9986331` 及共用文章 `7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a` 完全不變。
+- 原始 C23 問題 `last_on_page_check_possible_continuation_or_footer` 依然保留，**`questionVerified=false`、`reviewStatus=needs_review`**，沒有 E AI 內容審核、D 新 digest UIQA、MASTER READY、Pages 部署或 LIVE 進度。上一批 C20～22 官答通過也**不等於**內容發布可用。
+- 目前本次文件補充會產生新的 HEAD，**必須重跑最新 HEAD 的冪等 source/205 SQL/PR98 pin worktree 測試後方可 RETURN**。新 READY 0、新 LIVE 0。
