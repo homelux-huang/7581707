@@ -104,6 +104,15 @@ else:
         with self.assertRaisesRegex(ValueError,'Only approved'):self.execute()
         self.assertNotIn('sync/qa-approved-',self.git('ls-remote','origin','refs/heads/*'))
 
+    def test_rename_from_outside_prefix_cannot_hide_source_deletion(self):
+        self.git('reset','--hard',self.base)
+        (self.repo/'outside.py').write_text('outside source')
+        self.git('add','outside.py');self.git('commit','-m','existing outside file')
+        self.base=self.git('rev-parse','HEAD');self.git('push','origin','main')
+        self.git('mv','outside.py','sudu/data/approved/inside.py')
+        with self.assertRaisesRegex(ValueError,'Only approved'):self.execute()
+        self.assertNotIn('sync/qa-approved-',self.git('ls-remote','origin','refs/heads/*'))
+
     def test_invalid_oids_and_path_traversal_rejected(self):
         with self.assertRaises(ValueError):sync.branch_name('main','a'*40)
         with self.assertRaises(ValueError):sync.validate_paths(['sudu/data/approved/../else'])

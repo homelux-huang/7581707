@@ -29,7 +29,7 @@ def branch_name(base, tree):
 def publish(artifact):
     artifact.mkdir(parents=True, exist_ok=True)
     base = run('git', 'rev-parse', 'HEAD')
-    paths = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z'], text=True).rstrip('\0').split('\0')
+    paths = subprocess.check_output(['git', 'diff', '--cached', '--no-renames', '--name-only', '-z'], text=True).rstrip('\0').split('\0')
     if paths == ['']:
         print('NO_CHANGE: no new approved output')
         return
