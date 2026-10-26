@@ -53,7 +53,7 @@ class RoleB113SourceBound(unittest.TestCase):
                 self.assertEqual(git_blob_sha((ROOT/s['answerPagePath']).read_bytes()),s['answerPageGitBlob'])
                 self.assertIs(s['officialYearCorrectionNoticeVerified'],False)
                 self.assertIs(s['roleAImageOnlyCheck'],True)
-        self.assertEqual(self.qa6['result'],'PASS_ASSISTANT_DIRECT_ORIGINAL_SOURCE_IMAGE_ONLY')
+        self.assertEqual(self.qa6['result'],'PASS_ROLE_A_SOURCE_IMAGE_ONLY')
         self.assertFalse(self.qa6['newAnswerVerified'])
         self.assertFalse(self.qa7['officialFinalAmendmentChecked'])
         self.assertFalse(self.qa7['newAnswerVerified'])
