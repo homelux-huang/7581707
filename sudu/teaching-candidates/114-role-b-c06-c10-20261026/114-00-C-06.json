@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "taskId": "B-114-C06-C10-ORIGINAL-TABLE-G2-20261026-03",
+  "questionId": "114-00-C-06",
+  "subject": "國文",
+  "question": "下表四種因果論證圖解，是比爾茲利 ( Monroe Curtis Beardsley ) 在1950 年所提出。表中\n  搭配的例句，何者最適當？\n\n論                              Ⅰ導致了Ⅱ與Ⅲ      Ⅰ與Ⅱ導致了Ⅲ       Ⅰ導致了Ⅱ      Ⅰ導致了Ⅱ，Ⅱ導致了Ⅲ                                                Ⅱ                       Ⅰ\n證             Ⅰ   Ⅱ                      Ⅰ   Ⅱ  Ⅲ                 Ⅰ   Ⅲ           Ⅱ   Ⅲ",
+  "options": [
+    "彼節者有間，而",
+    "搭客一等座，洋",
+    "餘音嫋嫋，不絕",
+    "句讀之不知，惑之\n例  刀刃者無厚    三角；二等座，  如縷。舞幽壑之  不解，或師焉，\n句         洋二角；三等  潛蛟，泣孤舟之  或不焉\n             座，洋一角     嫠婦\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考"
+  ],
+  "imageTranscribedOptions": [
+    "彼節者有間，而刀刃者無厚",
+    "搭客一等座，洋三角；二等座，洋二角；三等座，洋一角",
+    "餘音嫋嫋，不絕如縷。舞幽壑之潛蛟，泣孤舟之嫠婦",
+    "句讀之不知，惑之不解，或師焉，或不焉"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "sourceRevision": null,
+    "imageTranscriptRevision": null,
+    "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-06.webp",
+    "webpSha256": "56ec8d06a181ba76e6b5a67f115b469ab49f2f63dc3b0224ed9e0f07bc5474ee",
+    "sourcePagePath": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
+    "sourcePageSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+    "archivePixelQaStatus": "PASS",
+    "roleAOriginalPixelQaReference": "sudu/data/processed/114/VISUAL_QA_BATCH_01_2026-10-22.json",
+    "sourceIssueCodes": [
+      "last_on_page_check_possible_continuation_or_footer"
+    ],
+    "sourceNeedsRoleAOfficialG2TableCorrection": true,
+    "authorOnlyPixelTranscription": true,
+    "officialQuestionPdfSha256RecordedOnly": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "officialAnswerPdfSha256RecordedOnly": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "officialAnswerImagePath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "officialAnswerImageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "officialAnswerFinalCorrectionNoticeVerified": false,
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "四種因果論證圖解｜一個原因導致兩個結果",
+    "teacherSummary": "此題先讀原像素四欄論證圖的箭頭，不把 OCR 錯欄文字當成答案。C 欄是**Ⅰ同時導致Ⅱ和Ⅲ**的放射式因果。蘇軾〈前赤壁賦〉寫簫聲『**餘音嫋嫋，不絕如縷**』，又寫『**舞幽壑之潛蛟，泣孤舟之嫠婦**』，同一個簫聲同時帶出潛蛟起舞與嫠婦哭泣兩種效果，符合一因兩果，所以 C。A 的兩項物理狀況不自動代表第一者導致第二者；B 是三種船座等級與票價的並列；D 是兩項學習問題分別選擇師從，不是共同引出一件單一結果。",
+    "elementarySummary": "圖表問的是『一件事會不會造成兩件不同的事』。C 的簫聲讓龍跳舞，也讓寡婦流淚，同一個聲音造成兩個結果，箭頭從同一點分成兩條，所以選 **C**。",
+    "concept": "因果圖必須對齊原像素箭頭：一因一果、連鎖因果、一因兩果、兩因共一果不可混淆。原題 C『簫聲→潛蛟舞、嫠婦泣』是同源分岔的兩種效果，而非前一效果造成後一效果。",
+    "extension": "〈前赤壁賦〉使用誇飾描寫簫聲感人；『舞幽壑之潛蛟，泣孤舟之嫠婦』屬文學修辭，不是科學聲學實驗證明蛟龍真的起舞。本題重點是修辭句子的因果論證形式。",
+    "memory": "一個簫聲Ⅰ→潛蛟舞Ⅱ＋嫠婦泣Ⅲ，**一因兩果＝C**。",
+    "solvingSteps": [
+      "從原始單題圖片逐欄辨別箭頭：有單箭頭、連鎖箭頭、從同一點分岔兩箭頭、以及多原因匯聚一結果。",
+      "讀四組例句，先排 A：節間有空隙與刀刃薄是兩項條件，未明確構成圖示中的直接一因一果。",
+      "再排 B 三種座位票價是並列分類，D 的句讀／惑與師從選擇是不同情形，均非一個共同原因產生兩個結果。",
+      "C 在『餘音嫋嫋』之後接『舞潛蛟』及『泣嫠婦』，同一簫聲影響兩個對象，對應一因兩果圖。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『彼節者有間，而刀刃者無厚』是描述關節留有間隙、刀刃很薄的兩項性質，並非單獨『有間隙』這一原因直接造成刀刃無厚，不能配成一因一果圖。",
+        "elementary": "A 說骨頭中間有空隙、刀刃很薄，是兩件原本的條件，不能說第一個造成第二個。",
+        "reason": "原文並列兩個不同對象的物理條件，A 所配箭頭會把條件當成因果。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 依一等、二等、三等座位列出票價洋三角、洋二角、洋一角，資料呈三種等級的並列比較；二等價不是因一等價而產生，三等也不是二等造成。",
+        "elementary": "B 是三種車票價格，一等貴、二等中、三等便宜，不是一個接一個造成的。",
+        "reason": "票價級距是類別與對應價格，不符合圖中由Ⅰ導致Ⅱ、再由Ⅱ導致Ⅲ的連鎖因果。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 用簫聲『餘音嫋嫋』作同一原因，帶出『舞幽壑之潛蛟』與『泣孤舟之嫠婦』兩個不同效果，正與Ⅰ向Ⅱ、Ⅲ分叉的圖形吻合。",
+        "elementary": "C 同一個聲音讓龍跳舞、寡婦掉眼淚，一個原因造成兩種結果，完全符合。",
+        "reason": "同一簫聲導出潛蛟起舞與嫠婦悲泣，是一因兩果的直接文本證據。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D『句讀之不知，惑之不解，或師焉，或不焉』說兩類不懂的事，其人或向老師學、或不向老師求教，表達兩種學習行為的反差，非兩原因共同導致單一結果。",
+        "elementary": "D 說這個不懂去問、那個不懂卻不問，是兩種不同做法，不是兩件事一起造成同一結果。",
+        "reason": "原句有兩項困惑與不一致的師從決定，沒有共同指向Ⅲ的單一因果結果。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "originalPixelVisual": {
+      "type": "ORIGINAL_OFFICIAL_FOUR_COLUMN_CAUSAL_DIAGRAM_AND_QUOTATION_TABLE",
+      "columnHeaders": [
+        "Ⅰ導致了Ⅱ",
+        "Ⅰ導致了Ⅱ，Ⅱ導致了Ⅲ",
+        "Ⅰ導致了Ⅱ與Ⅲ",
+        "Ⅰ與Ⅱ導致了Ⅲ"
+      ],
+      "diagramForms": [
+        "ONE_TO_ONE",
+        "CHAIN",
+        "ONE_TO_TWO",
+        "TWO_TO_ONE"
+      ],
+      "answerColumn": "C",
+      "exampleCells": {
+        "A": "彼節者有間，而刀刃者無厚",
+        "B": "搭客一等座，洋三角；二等座，洋二角；三等座，洋一角",
+        "C": "餘音嫋嫋，不絕如縷。舞幽壑之潛蛟，泣孤舟之嫠婦",
+        "D": "句讀之不知，惑之不解，或師焉，或不焉"
+      },
+      "originalPixelsMustBeDisplayed": true,
+      "authorPixelTranscriptionNotCertifiedText": true
+    },
+    "imageTranscribedOptions": [
+      "彼節者有間，而刀刃者無厚",
+      "搭客一等座，洋三角；二等座，洋二角；三等座，洋一角",
+      "餘音嫋嫋，不絕如縷。舞幽壑之潛蛟，泣孤舟之嫠婦",
+      "句讀之不知，惑之不解，或師焉，或不焉"
+    ],
+    "highlights": [
+      {
+        "text": "因果論證圖解",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "餘音嫋嫋",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "不絕如縷",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "舞幽壑之",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "泣孤舟之",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "句讀之不知",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      },
+      {
+        "text": "Ⅰ導致了Ⅱ與Ⅲ",
+        "bold": true,
+        "highlight": true,
+        "renderMode": "LITERAL_SAFE_TEXT_ONLY"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "因果",
+        "level": "初級",
+        "meaning": "因是原因，果是發生的結果。",
+        "usage": "用同一聲音引出兩種不同結果。"
+      },
+      {
+        "term": "嫠婦",
+        "level": "中級",
+        "meaning": "寡婦，丈夫已經過世的婦女。",
+        "usage": "原文寫簫聲令孤舟上的嫠婦感動流淚。"
+      },
+      {
+        "term": "放射式因果",
+        "level": "高級",
+        "meaning": "同一個原因經多條箭頭通向兩個以上結果的論證形式。",
+        "usage": "原圖第 C 欄Ⅰ→Ⅱ且Ⅰ→Ⅲ，切勿誤認為連鎖。"
+      }
+    ],
+    "preserveOriginalWebp": true
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "answerKnownBeforeAuthoring": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceTextStatus": "ROLE_A_CANONICAL_G2_FOOTER_INTERLEAVED_TABLE_NOT_VERIFIED",
+    "requiresHumanTeacher": false,
+    "roleBAuthorSelfReviewOnly": true,
+    "independentAiRoleEReview": "PENDING_DISTINCT_AUTHOR",
+    "roleDRealV48x2": "PENDING_EXACT_SOURCE_TEACHING_DIGEST",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "RAW_CANONICAL_OPTIONS_MIXED_WITH_TABLE_FOOTER_OR_NEXT_PAGE",
+      "ROLE_A_SOURCE_G2_AND_SQLITE_REPAIR_REQUIRED",
+      "OFFICIAL_YEAR114_FINAL_ANSWER_NOTICE_QA_PENDING",
+      "DISTINCT_ROLE_E_AI_A_TO_D_CONTENT_REVIEW_PENDING",
+      "ROLE_D_TRUE_V4_8X2_SAME_DIGEST_PENDING",
+      "MASTER_PROTECTED_MAIN_TRUSTED_E_RECEIPT_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
