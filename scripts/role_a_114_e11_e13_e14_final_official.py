@@ -209,7 +209,7 @@ def precheck_db(path,bank):
     with sqlite3.connect(path.as_uri()+"?mode=ro",uri=True) as db:
         assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
         cols={c[1] for c in db.execute("PRAGMA table_info(questions)")}
-        assert {"question_id","payload_json","payload_sha256","answer_verified","question_verified"}<=cols, f"SQL schema mismatch, actual columns={sorted(cols)}, known tables={[r[0] for r in db.execute(\"SELECT name FROM sqlite_master WHERE type=\'table\'\")]}";
+        assert {"question_id","payload_json","payload_sha256","answer_verified","question_verified"}<=cols, f"SQL schema mismatch, actual columns={sorted(cols)}"
         rows=db.execute("SELECT question_id,payload_json,payload_sha256,answer_verified,question_verified FROM questions").fetchall()
     assert len(rows)==205
     assert {x[0] for x in rows}=={q["questionId"] for q in bank["questions"]}
