@@ -20,3 +20,5 @@ jobs:
         run: python -m unittest discover -s tests -p test_sudu_sync_candidate.py -v
       - name: Unchanged independent E path-scope attack
         run: python tests/role_e_pr102_path_scope.py --root .
+      - name: Unchanged independent E rename-scope attack
+        run: python tests/role_e_pr102_rename_scope.py --root .
