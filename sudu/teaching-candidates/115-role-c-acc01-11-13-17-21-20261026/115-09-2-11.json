@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-01-11-13-17-21-20261026-07",
+  "claimedAtUtc": "2026-10-26T05:30:00Z",
+  "questionId": "115-09-2-11",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 11,
+  "subject": "會計學",
+  "status": "ROLE_C_SOURCE_BOUND_AUTHOR_DRAFT_NO_RELEASE",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "關於零用金制度之敘述，下列何者錯誤？",
+  "options": [
+    "零用金額度可以視公司使用狀況增加或減少，皆不會影響現金及約當現金之餘額",
+    "保管員在動支零用金時，需報銷費用並撥補零用金至定額，若期末只有報銷未撥補，\n   則次期不得再行撥補",
+    "公司為因應日常零星支出而採用定額預付之方式設置專款，並交由專人保管，專人\n   通常為出納人員",
+    "若支用零用金之憑證總額與手存現金的合計數不等於零用金額度時，就會產生現金\n   短溢，屬於營業外支出或收入"
+  ],
+  "answerCandidate": "B",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "e0b11389d7daf8964c003349b047b965cffc8b87ba20127dae872818f70544cc",
+  "sourceTextRevisionMethod": "SHA256 of sorted minified UTF8 JSON containing question, options, singleQuestionWebpSha256",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-11.webp",
+  "individualImageSha256": "4d26c23e9c41f7c2aeb67564834dc3a02cb36ebd20157ea7617d0d1712de2a09",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "imageManifestHistoricalQa": "PASS",
+  "imageQuestionAssetHistoricalQa": "PASS",
+  "originalImageBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "定額零用金制度包含**設置／動支／費用報銷／撥補／期末調整**。B 說「若期末只有報銷未撥補，則**次期不得再行撥補**」，錯在『**不得**』；已報銷表示費用獲確認，下一期仍可依制度補足零用金，**只是不能對同一憑證重複認列費用**。因此選 **B（錯誤敘述）**。",
+    "elementarySummary": "零用金像辦公室放的一個小錢盒，買文具會拿收據記帳。年底先報了花費、錢還沒補進盒子，明年還是可以把錢補回來，只不能同張收據算兩次。B說以後都不能補錢，所以錯。",
+    "memory": "**報銷＝確認已花費；撥補＝把零用金補回定額。年底只報銷 ≠ 隔年禁止撥補！**",
+    "concept": "**定額零用金**是小額支出之內控制度；**現金短溢**是零用金手存與有效單據合計不等於定額時之差額。內部由銀行存款改存零用金，通常不改變公司「現金及約當現金」總額。**不得重複入帳同一支出**。",
+    "extension": "期末調整認列費用與次期補足現金是兩個會計及內控動作。教材常用「先記費用、隔期轉回或補款」描述；實際作法以企業之帳務制度為準，原題的絕對用語「不得」才是判錯核心。",
+    "highlights": [
+      "何者錯誤",
+      "定額零用金",
+      "報銷",
+      "撥補",
+      "期末",
+      "次期不得",
+      "現金短溢"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "零用金：日常小額買東西用的錢"
+      ],
+      "中級": [
+        "報銷：提出支出憑證並作費用核銷"
+      ],
+      "高級": [
+        "現金短溢：手存現金加合法憑證與定額不符的差額"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **增減額度若只是銀行存款與零用金之間的內部挪移**，兩者都屬現金，通常不影響合併的**現金及約當現金總額**，是本題正確敘述。不能誤當公司現金憑空增減。",
+        "elementary": "只是把錢從銀行帳戶拿來放進小錢盒，都是公司自己的現金，總量沒變，所以A對。",
+        "reason": "A **增減額度若只是銀行存款與零用金之間的內部挪移**，兩者都屬現金，通常不影響合併的**現金及約當現金總額**，是本題正確敘述。不能誤當公司現金憑空增減。"
+      },
+      "B": {
+        "isCorrect": true,
+        "teacher": "B 期末已報銷而尚未撥補，只代表當期已確認支出、現金尚未補回；**次期仍可按制度補回定額**，不得對相同費用重複記帳。說**『次期不得再行撥補』**過於絕對且錯誤，故選B。",
+        "elementary": "今年有記買東西的收據，但還沒補錢，明年仍能補；不能把同一筆花費重複算兩次，所以B的『不能補』錯。",
+        "reason": "B 期末已報銷而尚未撥補，只代表當期已確認支出、現金尚未補回；**次期仍可按制度補回定額**，不得對相同費用重複記帳。說**『次期不得再行撥補』**過於絕對且錯誤，故選B。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 設置零用金是因應零星支出，常採**定額預付、專人保管**，通常由出納或指定保管人執行，符合制度，C為正確敘述。",
+        "elementary": "小錢盒用來付零星小費用，讓專人管、付完留收據，C說的做法正常。",
+        "reason": "C 設置零用金是因應零星支出，常採**定額預付、專人保管**，通常由出納或指定保管人執行，符合制度，C為正確敘述。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D 若支出憑證合計加手存現金**不等於核定零用金額度**，差額稱為**現金短溢**；一般依制度作**其他收入／其他費用**等適當認列，D在本題脈絡屬正確描述。",
+        "elementary": "小錢盒應有的金額和收據、剩餘現金加起來不同，要記錄多了或少了多少錢，D說的對。",
+        "reason": "D 若支出憑證合計加手存現金**不等於核定零用金額度**，差額稱為**現金短溢**；一般依制度作**其他收入／其他費用**等適當認列，D在本題脈絡屬正確描述。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "stepByStep": [
+      "題幹問**錯誤**，不是問正確。",
+      "檢查A與C：現金內部調撥不影響總現金、零用金確實用定額專款保管。",
+      "檢查D：憑證加現金不等於核定額度，屬現金短溢，需記錄。",
+      "檢查B：把期末費用報銷誤認成次期不能撥補。**報銷、撥補是兩個不同動作**，選B。"
+    ],
+    "outsideReferences": [
+      {
+        "url": "https://0800280280.sme.gov.tw/accounting/run.php?file=detail&id=329&name=kw",
+        "title": "經濟部中小及新創企業署財會諮詢服務網，2025 定額零用金制度",
+        "purpose": "支持期末結帳後次期仍可補回零用金與短溢處理；不可代替當年官方答案影像"
+      }
+    ],
+    "source": "115 年會計學第11題原題文字與選項，官方最終答案與更正公告尚待 A 實際核對。"
+  },
+  "teachingCanonicalSha256": "7721820b33bf4e95fab18737998187dd1625fbff90c206b7a1e562cc72d12c37",
+  "review": {
+    "authorIdentity": "GPT-6 Role C author",
+    "authorRole": "C",
+    "answersKnownBeforeAuthoring": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorAiReviewerRequired": true,
+    "authorSelfReviewProhibited": true,
+    "independentAiReviewStatus": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "independentAiReviewEvidenceSha256": null,
+    "officialFinalAnswerAndCorrectionProofSha256": null,
+    "sourceImageOfficialAcceptance": "PENDING",
+    "v4ExactSameSourceAndTeachingDigest8x2": "PENDING",
+    "latestPolicy": "ISSUE36_NO_HUMAN_TEACHER_CREDENTIAL_GATING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_IMAGE_AND_CORRECTION_NOTICE_SHA_NOT_ADMITTED",
+    "ORIGINAL_SINGLE_IMAGE_QA_MANIFEST_PASS_REQUIRES_FINAL_SOURCE_INDEPENDENT_ADMISSION",
+    "DISTINCT_E_AI_CONTENT_REVIEW_NOT_RECEIVED",
+    "D_V4_EIGHT_VIEWPORT_TWO_THEME_SAME_DIGEST_NOT_RECEIVED",
+    "MASTER_ONLY_PUBLISHER_MAIN_LIVE_GATE_NOT_SATISFIED"
+  ]
+}
