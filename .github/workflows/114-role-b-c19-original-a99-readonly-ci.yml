@@ -1,0 +1,35 @@
+name: Role B 114 C19 source-corrected original lamp lesson (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-c19-original-a99-20261027/**"
+      - "tests/test_114_role_b_c19_original_a99_20261027.py"
+      - ".github/workflows/114-role-b-c19-original-a99-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-original-c19-author-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Real original C19 v2/old mixed SHA, original p6 reading, official picture and full A-D content negative tests
+        run: python -m unittest discover -s tests -p 'test_114_role_b_c19_original_a99_20261027.py' -v
+      - name: Author cannot self-approve or publish
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f=Path("sudu/teaching-candidates/114-role-b-c19-original-a99-20261027")
+          b=json.loads((f/"batch.json").read_text(encoding="utf-8"))
+          q=json.loads((f/"114-00-C-19.json").read_text(encoding="utf-8"))
+          assert b["newReady"]==b["newMain"]==b["newLive"]==0
+          assert b["sourceSharedReadingAssociationPending"]
+          assert q["review"]["status"]=="BLOCKED"
+          assert not q["review"]["formalReady"] and not q["review"]["studentReleaseApproved"]
+          assert q["review"]["independentAiReview"]=="PENDING_ROLE_E"
+          print("NO RELEASE: source+official answer+E+D+MASTER pending for 114-00-C-19")
+          PY

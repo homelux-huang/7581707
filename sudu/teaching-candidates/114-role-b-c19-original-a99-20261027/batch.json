@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-C19-CORRECTED-ORIGINAL-LESSON-20261027-02",
+  "role": "B",
+  "year": 114,
+  "questionIds": [
+    "114-00-C-19"
+  ],
+  "claimedAt": "2026-10-26T23:13:42Z",
+  "claimIssueCommentId": 6429550570,
+  "branch": "teaching/114-role-b-c19-original-a99-20261027",
+  "baseSHA": "92407ba1a683690b805542f373a5447d022912f8",
+  "sourceCommit": "92407ba1a683690b805542f373a5447d022912f8",
+  "sourceBankGitBlob": "eec89fc6665f661e9e0b249e6714dbdc48ed94e4",
+  "originalReadingPage6Sha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+  "oldRejectedWebpSha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
+  "reviewPolicy": "DISTINCT_AI_E_NO_HUMAN_TEACHER",
+  "knownAnswerNotBlind": true,
+  "originalImageQaInheritedOnly": true,
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceSharedReadingAssociationPending": true,
+  "independentEReview": "PENDING",
+  "DRealV4Review": "PENDING",
+  "itemCount": 1,
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "items": [
+    {
+      "questionId": "114-00-C-19",
+      "path": "sudu/teaching-candidates/114-role-b-c19-original-a99-20261027/114-00-C-19.json",
+      "answerCandidate": "B",
+      "sourceRevision": "7da9f5195f5c9d2348d14c0f58062e4263e1076b908f9b5caeacefdc2602aa2c",
+      "webpSha256": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
+      "webpGitBlobSha": "3e72b0581ad4908bc24487d115f670c8af793939",
+      "teachingCanonicalSha256": "1160ea0ec2cccdb4a9501e6ab3a98900fbfb4d39691d9616896b62a6e05cf463",
+      "composedTeachingSha256": "d8ef5f207bfbac9344c38c2d37c38f6fa3d6e79a5fa983c76fdaa44e0b3e7910",
+      "fileSha256": "0eea3c99e563d675e491e72e209288e285046a45371a213a2e8bf843a147cd26",
+      "status": "BLOCKED"
+    }
+  ]
+}

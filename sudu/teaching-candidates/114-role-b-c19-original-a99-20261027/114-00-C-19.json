@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-C-19",
+  "taskId": "B-114-C19-CORRECTED-ORIGINAL-LESSON-20261027-02",
+  "subject": "國文",
+  "kind": "AUTHOR_DRAFT_SOURCE_ORIGINAL_QA_ONLY",
+  "question": "依據上文，下列①、②兩項陳述是否適當，正確的研判是：\n  ①由〈桃花源記〉「自云先世避秦時亂，率妻子、邑人來此絕境，……乃不知有漢，無\n   論魏、晉」來看，桃花源中的居民不知有油燈，也不知桃花源外使用青銅燈。\n  ②由 《 天工開物 》「草木之實，其中韞藏膏液，而不能自流；假媒水火，憑藉木石，而\n   後傾注而出焉」可知，因油品生產不易，為了省油，夾燈盞越做越大。",
+  "options": [
+    "①、②皆正確",
+    "①、②皆錯誤",
+    "①正確，②錯誤",
+    "①錯誤，②正確"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "92407ba1a683690b805542f373a5447d022912f8",
+    "questionBankGitBlob": "eec89fc6665f661e9e0b249e6714dbdc48ed94e4",
+    "questionRevision": "7da9f5195f5c9d2348d14c0f58062e4263e1076b908f9b5caeacefdc2602aa2c",
+    "webpSha256": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
+    "webpPath": "sudu/data/processed/114/webp-v2/00-C/114-00-C-19.webp",
+    "webpGitBlob": "3e72b0581ad4908bc24487d115f670c8af793939",
+    "originalPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "answerPdfSha256": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "answerPageWebpPath": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "answerPageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "archivedImageQaEvidence": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "answerVerified": false,
+    "questionVerified": false,
+    "sharedReadingLinkPendingRoleA": true
+  },
+  "teaching": {
+    "topic": "古代三種油燈、年代與省油尺寸的推論",
+    "teacherSummary": "先看第6頁三種燈具的共用閱讀。①〈桃花源記〉說居民先祖避秦、不知漢，卻不能證明不知油燈，因文章明示油燈在商、周已有，早於秦；不知漢朝也不能推知某人實際見過什麼青銅燈。②《天工開物》說植物油脂須藉水火木石提取，但無法推出燈盞一定越做越大；閱讀還說夾燈盞並非水越多省油越強，所以夾燈盞也不用太大。兩項推論都不成立，答案 B。",
+    "elementarySummary": "第一句說桃花源的人不知道漢朝，就猜他們不知道油燈，可是油燈在更早的商周就有了。第二句說榨油很難，所以燈要越做越大，原文卻說燈不必太大。兩個猜法都不對，所以選 B。",
+    "concept": "年代不等於知識：不知道漢朝不代表不知道漢朝以前的油燈。省油程度與燈盞大小不能直接畫上等號，必須看原文的實際裝置和效果。",
+    "memory": "①油燈商周就有：不知漢≠不知油燈。②夾層水不是越多越省油：夾燈盞不用太大。兩項都錯→B。",
+    "solvingSteps": [
+      "由原始第6頁找出『油燈在商、周時代就有了』，判定①把不知漢推成不知油燈缺乏依據。",
+      "再查夾燈盞：上層盛油、下層加水降溫，省油還受季節等條件影響，不能只比較燈大小。",
+      "核對原文『不是夾層水多就省油效果強，所以夾燈盞也不用太大』，直接否定②越做越大的說法。",
+      "將①錯②錯與 A 都對、B 都錯、C 一對二錯、D 一錯二對逐一比對，選 B。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 認為兩項皆對，但①忽略商周已有油燈的年代，②又與夾燈盞不用做大的原文相反，兩項都有明確反例。",
+        "elementary": "A 說兩句都對，但油燈早就有了，燈也不用做越大，所以錯。",
+        "reason": "①誤用年代，②誤用尺寸與省油的關係，A 雙雙不符。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 判定兩項皆錯：居民不知漢不等於不知已有的油燈；夾燈盞的水量也非越多越省油，原文更說燈不必太大。",
+        "elementary": "第一句猜錯，第二句也跟文章相反，B 才是兩句都不對。",
+        "reason": "兩項都可用原始閱讀的商周年代與夾燈盞大小限制否定。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 將②判錯雖符合原文，但誤將①判對；不知有漢不是對商周已存在的油燈一無所知的證據。",
+        "elementary": "C 說燈不用變大是對的，卻亂猜桃花源的人一定不知道油燈。",
+        "reason": "C 只有②判定符合，①對古代年代作了不被支持的推論。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 的①判錯方向正確，但②判對違反原文『夾燈盞也不用太大』；榨油困難不表示容器尺寸越大越有效率。",
+        "elementary": "D 第一半猜對，第二半卻說燈變大更省油，文章根本沒這樣講。",
+        "reason": "②將榨油工序與燈盞尺寸硬接成因果，原文已明確否定。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年TCTE原國文試卷p6三燈閱讀與p7第19題原像素；來源角色A修復單題WebP v2，作者未重OCR、重裁或假冒官方公告核對。"
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "桃花源記",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "不知有漢",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "油燈",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "青銅燈",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "天工開物",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "草木之實",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "韞藏膏液",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "夾燈盞越做越大",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "①、②皆錯誤",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "油燈",
+        "level": "初級",
+        "meaning": "以油作燃料的照明工具",
+        "usageNote": "商周已出現，不能用不知漢推定不知油燈"
+      },
+      {
+        "term": "夾燈盞",
+        "level": "中級",
+        "meaning": "上下油水分層、利用水降溫的省油燈具",
+        "usageNote": "水多不一定更省油，亦無須一味加大"
+      },
+      {
+        "term": "絕境",
+        "level": "中級",
+        "meaning": "古文中指與外界隔絕之地",
+        "usageNote": "不可直接等同現代走投無路"
+      },
+      {
+        "term": "韞藏",
+        "level": "高級",
+        "meaning": "內部含藏",
+        "usageNote": "種子中含有油脂，不等於燈必須越做越大"
+      }
+    ],
+    "originalReading": {
+      "required": true,
+      "originalOfficialPage6": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+      "page6Sha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+      "page6GitBlob": "8719fddcdb4ddd835a573828710994936d329b80",
+      "page7Sha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "articleFactOne": "油燈在商、周時代就有了",
+      "articleFactTwo": "也不是夾層水多就省油效果強，所以夾燈盞也不用太大",
+      "canonicalSharedMaterialIds": [],
+      "requiredSourceAssociationPendingRoleA": true,
+      "notNewImageQa": true
+    }
+  },
+  "teachingCanonicalSha256": "1160ea0ec2cccdb4a9501e6ab3a98900fbfb4d39691d9616896b62a6e05cf463",
+  "composedTeachingSha256": "d8ef5f207bfbac9344c38c2d37c38f6fa3d6e79a5fa983c76fdaa44e0b3e7910",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "derivedCandidate": "B",
+    "officialAnswerImageSeenByAuthor": true,
+    "officialFinalAnswerCertifiedThisBatch": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentAiReview": "PENDING_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_OFFICIAL_FINAL_ANSWER_AND_YEAR_CORRECTION_QA",
+      "A_QUESTION_TEXT_AND_SHARED_READING_LINK",
+      "E_INDEPENDENT_SUBSTANTIVE_A_D",
+      "D_SAME_DIGEST_V4_8x2",
+      "MASTER_PROTECTED_MAIN_LIVE"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
