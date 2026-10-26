@@ -45,7 +45,15 @@ jobs:
           python -m scripts.role_a_114_c23_final_official --apply
           python -m scripts.role_a_114_c23_final_official --verify
           python -m unittest discover -s tests -p test_role_a_114_c23_final_official.py -v
-          python -m unittest discover -s tests -p test_role_a_114_c20_c22_official.py -v
+          # Original 8 strict PR98 tests require precisely THREE historical
+          # changes and MUST run on the original 114 C20-22 exact SHA.
+          # The current next-stage C23 test independently requires precisely
+          # ONE additional C23 change vs that immutable PR98 Git snapshot.
+          olddir="$(mktemp -d)"
+          rmdir "$olddir"
+          git worktree add --detach "$olddir" e448bf0c814ae3a2075faea23ba75b244519928d
+          (cd "$olddir" && python -m unittest discover -s tests -p test_role_a_114_c20_c22_official.py -v)
+          git worktree remove --force "$olddir"
       - name: Only own isolated source/DB/C23 evidence, no other sessions or main
         run: |
           set -euo pipefail
