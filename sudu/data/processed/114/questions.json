@@ -2185,7 +2185,7 @@
       ],
       "answer": "A",
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "reviewStatus": "needs_review",
       "sharedMaterialIds": [],
@@ -2207,9 +2207,18 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "A",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "GPT-6 ChatGPT ROLE A actual official-announced answer WebP image QA (NOT human or ROLE E independent teaching review)",
+        "reviewedAt": "2026-10-26",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
@@ -2269,7 +2278,7 @@
       ],
       "answer": "A",
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "reviewStatus": "needs_review",
       "sharedMaterialIds": [],
@@ -2291,9 +2300,18 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "A",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "GPT-6 ChatGPT ROLE A actual official-announced answer WebP image QA (NOT human or ROLE E independent teaching review)",
+        "reviewedAt": "2026-10-26",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-13-official.json",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
@@ -2311,7 +2329,7 @@
       ],
       "answer": "D",
       "answerMatched": true,
-      "answerVerified": false,
+      "answerVerified": true,
       "questionVerified": false,
       "reviewStatus": "needs_review",
       "sharedMaterialIds": [],
@@ -2333,9 +2351,18 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "GPT-6 ChatGPT ROLE A actual official-announced answer WebP image QA (NOT human or ROLE E independent teaching review)",
+        "reviewedAt": "2026-10-26",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-14-official.json",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
