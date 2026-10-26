@@ -125,8 +125,13 @@ class RoleA114PublishedFinalAnswerTests(unittest.TestCase):
         with sqlite3.connect(a.DB.as_uri()+"?mode=ro",uri=True) as db:
             self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0],"ok")
             self.assertEqual(db.execute("SELECT COUNT(*) FROM questions").fetchone()[0],205)
-            self.assertEqual(db.execute("SELECT COUNT(*) FROM questions WHERE question_id IN (?,?,?) AND answer_verified=1",
-                tuple(sorted(a.ANSWER))).fetchone()[0],3)
+            rows=db.execute("SELECT question_id,payload_json FROM questions WHERE question_id IN (?,?,?)",tuple(sorted(a.ANSWER))).fetchall()
+            self.assertEqual(len(rows),3)
+            for qid,payload in rows:
+                self.assertTrue(json.loads(payload)["answerVerified"],qid)
+                self.assertFalse(json.loads(payload)["questionVerified"],qid)
+            cols={c[1] for c in db.execute("PRAGMA table_info(questions)")}
+            self.assertEqual(cols,{"question_id","year","paper_code","original_number","subject","payload_json","payload_sha256"})
     def test_original_sqlite_row_level_diff_only_three_exact_fields(self):
         orig=oldblob("sudu/data/processed/114/question-bank.sqlite3")
         self.assertEqual(a.gitsha(orig),a.BASE_DB_GIT)
@@ -147,11 +152,13 @@ class RoleA114PublishedFinalAnswerTests(unittest.TestCase):
                     diffs[qid]=set(changed)
             self.assertEqual(set(diffs),set(a.ANSWER))
             for qid in a.ANSWER:
-                self.assertEqual(diffs[qid],{"payload_json","payload_sha256","answer_verified"})
-                self.assertEqual(records_before[qid]["answer_verified"],0)
-                self.assertEqual(records_after[qid]["answer_verified"],1)
-                self.assertEqual(records_before[qid]["question_verified"],
-                                 records_after[qid]["question_verified"])
+                self.assertEqual(diffs[qid],{"payload_json","payload_sha256"})
+                original=json.loads(records_before[qid]["payload_json"])
+                updated=json.loads(records_after[qid]["payload_json"])
+                self.assertFalse(original["answerVerified"])
+                self.assertTrue(updated["answerVerified"])
+                self.assertFalse(original["questionVerified"])
+                self.assertFalse(updated["questionVerified"])
     def test_binary_replay_two_isolated_imports_exact_same_sha(self):
         baseline=oldblob("sudu/data/processed/114/question-bank.sqlite3")
         with tempfile.TemporaryDirectory() as td:
