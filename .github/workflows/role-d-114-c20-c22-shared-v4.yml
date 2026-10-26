@@ -72,16 +72,26 @@ jobs:
           test "$(git -C _role_a_chineseoriginal rev-parse HEAD)" = 9944759e339ef2d3c002042798f7fe696d861d96
           test -f sudu/data/processed/114/questions.json
           test -f sudu/data/processed/114/webp-manifest.json
-      - name: True Chromium and native Chinese font (no paid model inference)
+      - name: Install or verify authentic zh-TW CJK font (fail-closed)
         run: |
           set -euo pipefail
-          sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
-          fc-cache -f
-          fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1 | grep -Eq '^Noto (Sans|Serif) CJK'
-          python -m pip install -q pillow
-          npm install --no-save playwright@1.51.1
-          npx playwright install --only-shell chromium
+          echo "fonts-install-start-$(date -u +%FT%TZ)"
+          family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
+          if ! printf '%s\n' "$family" | grep -Eq '^Noto (Sans|Serif) CJK'; then
+            timeout 180s sudo apt-get update -qq
+            timeout 180s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
+          fi
+          family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
+          printf 'ACTUAL zh-TW original glyph family: %s\n' "$family"
+          printf '%s\n' "$family" | grep -Eq '^Noto (Sans|Serif) CJK'
+          echo "fonts-install-end-$(date -u +%FT%TZ)"
+      - name: Install real pinned Playwright and browser with bounded network time
+        run: |
+          set -euo pipefail
+          echo "playwright-install-start-$(date -u +%FT%TZ)"
+          timeout 180s npm install --no-save --prefer-offline playwright@1.51.1
+          timeout 180s npx playwright install --only-shell chromium
+          echo "playwright-install-end-$(date -u +%FT%TZ)"
       - name: Existing publisher check and REAL A-B original WebP and shared source V4
         run: |
           set -euo pipefail
