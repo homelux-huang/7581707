@@ -9,7 +9,7 @@ on:
     - cron: '0 18 * * 0'
 permissions:
   contents: write
-  actions: write
+  pull-requests: read
 concurrency:
   group: tcte-corpus-update
   cancel-in-progress: false
@@ -40,24 +40,48 @@ jobs:
         run: |
           python scripts/tcte_manifest.py
           python scripts/check_tcte_corpus.py --decode-images --json sudu/data/corpus-audit.json --markdown docs/SUDU_CORPUS_AUDIT.md
-      - name: Commit compact WebP originals and disable old OCR code
+      - name: Stage compact WebP originals in an isolated candidate branch
+        id: stage
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_BRANCH: automation/tcte-original-image-candidate
         run: |
+          set -euo pipefail
           git config user.name '7581707 original PDF image bot'
           git config user.email '7581707-bot@users.noreply.github.com'
           git add sudu/data/original sudu/data/years sudu/data/index.json sudu/data/corpus-audit.json docs/SUDU_CORPUS_AUDIT.md
-          if ! git diff --cached --quiet; then
-            git commit -m 'Render original TCTE PDF pages as shared WebP; prohibit OCR'
-            git pull --rebase origin main
-            git push origin HEAD:main
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
           fi
-      - name: Publish original images and run data audit
+          git commit -m 'Stage rendered original TCTE PDF pages for review'
+          remote_sha="$(git ls-remote --heads origin "refs/heads/$CANDIDATE_BRANCH" | awk '{print $1}')"
+          if [ -n "$remote_sha" ]; then
+            git push --force-with-lease="refs/heads/$CANDIDATE_BRANCH:$remote_sha" origin "HEAD:refs/heads/$CANDIDATE_BRANCH"
+          else
+            git push origin "HEAD:refs/heads/$CANDIDATE_BRANCH"
+          fi
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+          echo "branch=$CANDIDATE_BRANCH" >> "$GITHUB_OUTPUT"
+      - name: Link the existing Draft PR or report the staged branch
+        if: steps.stage.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          CANDIDATE_BRANCH: ${{ steps.stage.outputs.branch }}
         run: |
-          gh workflow run pages.yml --ref main -f target_sha="$(git rev-parse HEAD)"
-          gh workflow run tcte-data-audit.yml --ref main
+          set -euo pipefail
+          number="$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --base main --head "$CANDIDATE_BRANCH" --json number --jq '.[0].number // empty')"
+          if [ -n "$number" ]; then
+            echo "Retaining existing Draft PR #$number for $CANDIDATE_BRANCH"
+          else
+            echo "::notice title=TCTE candidate staged::Open a Draft PR from $CANDIDATE_BRANCH to main through the authorized MASTER connector. GitHub Actions PR creation is intentionally disabled by repository policy."
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: original-image-report
-          path: sudu/data/original/index.json
+          path: |
+            sudu/data/original/index.json
+            sudu/data/corpus-audit.json
+            docs/SUDU_CORPUS_AUDIT.md
+

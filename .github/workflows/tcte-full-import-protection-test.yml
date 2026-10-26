@@ -1,0 +1,32 @@
+name: TCTE full-import protected-main contract
+on:
+  pull_request:
+    paths:
+      - .github/workflows/tcte-full-import.yml
+      - .github/workflows/tcte-full-import-protection-test.yml
+      - tests/test_tcte_full_import_protected_main.py
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest tests/test_tcte_full_import_protected_main.py -v
+      - name: Verify this PR does not change student content
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
+          changed="$(git diff --name-only "${{ github.event.pull_request.base.sha }}" HEAD)"
+          printf '%s\n' "$changed"
+          if printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/tcte-full-import\.yml|\.github/workflows/tcte-full-import-protection-test\.yml|tests/test_tcte_full_import_protected_main\.py|docs/TCTE_FULL_IMPORT_PROTECTED_MAIN_20261026\.md)$' | grep -q .; then
+            echo 'Unexpected content path in infrastructure-only PR' >&2
+            exit 1
+          fi
+
