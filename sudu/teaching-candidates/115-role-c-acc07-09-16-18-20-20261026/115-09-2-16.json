@@ -63,7 +63,7 @@
       "B": {
         "isCorrect": false,
         "teacher": "B的X2**51,000元**雖與全部5,200股出售後的處分收益相符，但X1**59,900元**忘記股票股利新增200股，X1應為67,900元，因此B錯。",
-        "elementary": "B第二年對、第一年少算了送的股票，所以不行。",
+        "elementary": "B第二年對、第一年少算了送的股票，所以不行。 新增200股還要算進第一年年底股票價值。",
         "reason": "B的X2**51,000元**雖與全部5,200股出售後的處分收益相符，但X1**59,900元**忘記股票股利新增200股，X1應為67,900元，因此B錯。"
       },
       "C": {
@@ -122,7 +122,7 @@
     "externalReferences": [],
     "source": "115年商管群專二會計學第16題候選，官方答案與更正公告尚未經獨立驗證。"
   },
-  "teachingCanonicalSha256": "9c7e55b79ec71616b5f70860820f5aaf074b48d5a3f46ad6051da98d4f7892a9",
+  "teachingCanonicalSha256": "0b3c0a73541f8ca98147123a0e5fc3b289c689c88beaacf07e17541804e2b210",
   "review": {
     "authorIdentity": "GPT-6 Role C AI teaching author",
     "authorRole": "C",
