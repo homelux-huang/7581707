@@ -92,6 +92,38 @@
   };
   const imagePath=id=>'data/approved/webp/'+activeYear+'/'+id+'.webp';
   const shaValid=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
+  // Original shared materials in approved-year questions must match this
+  // paper/year and cover the current original question number.
+  const approvedSharedImagesValid=(q,identity)=>{
+    // If the canonical approved source declares required original materials,
+    // accepting an absent/empty sharedImages array would hide essential
+    // reading/table context from the student. Publisher MUST carry this field.
+    if(q.sharedMaterialIds!==undefined){
+      if(!Array.isArray(q.sharedMaterialIds)||q.sharedMaterialIds.length>8||
+         q.sharedMaterialIds.some(id=>typeof id!=='string')||
+         new Set(q.sharedMaterialIds).size!==q.sharedMaterialIds.length)return false;
+      if(q.sharedMaterialIds.length){
+        if(!Array.isArray(q.sharedImages)||!q.sharedMaterialIds.every(id=>
+          q.sharedImages.some(v=>v&&v.sharedMaterialId===id)))return false;
+        if(q.sharedImages.some(v=>!q.sharedMaterialIds.includes(v?.sharedMaterialId)))return false;
+      }
+    }
+    if(q.sharedImages===undefined)return true;
+    if(!Array.isArray(q.sharedImages)||q.sharedImages.length>8)return false;
+    const prefix='data/approved/webp/'+activeYear+'/'+activeYear+'-'+identity.paper+'-SHARED-';
+    const seen=new Set();
+    return q.sharedImages.every(v=>{
+      if(!v||typeof v.image!=='string'||!v.image.startsWith(prefix)||!shaValid(v.sha256))return false;
+      const range=/^([0-9]{2})-([0-9]{2})[.]webp$/.exec(v.image.slice(prefix.length));
+      if(!range)return false;
+      const first=Number(range[1]),last=Number(range[2]);
+      if(first<1||first>identity.n||identity.n>last||last>99)return false;
+      const expectedId=activeYear+'-'+identity.paper+'-SHARED-'+range[1]+'-'+range[2];
+      if(v.sharedMaterialId!==expectedId||seen.has(v.image))return false;
+      seen.add(v.image);return true;
+    });
+  };
+
 
   // All seven commerce-group subjects use the SAME V4 UI as the 35-question
   // Demo. The annual subject menu reflects course coverage, not permission
@@ -382,7 +414,7 @@
       const identity=parsedIdentity(q);
       const calc=q.examCalculation;
       if(!identity||identity.id!==id||q.id!==identity.n||expectedIds.has(id)||
-         q.image!==imagePath(id)||!shaValid(q.imageSha256)||
+         q.image!==imagePath(id)||!shaValid(q.imageSha256)||!approvedSharedImagesValid(q,identity)||
          !useful(q.question)||!useful(q.topic)||!useful(q.teacherSummary)||
          !useful(q.elementarySummary)||!useful(q.memory)||!useful(q.sourceText)||
          !Array.isArray(q.options)||q.options.length!==4||!q.options.every(useful)||!/^[ABCD]$/.test(q.answer)||!q.optionExplanations ||
