@@ -1,0 +1,36 @@
+name: Role B 113 Chinese original source + teacher/elementary five lessons (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/113-role-b-c06-10-20261026/**'
+      - 'tests/test_113_role_b_c06_10_20261026.py'
+      - '.github/workflows/113-role-b-c06-10-readonly-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-image-source-revision-teaching-sha-no-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test 113 C06-C10 real original WebP SHA and source/teaching digests
+        run: python -m unittest discover -s tests -p 'test_113_role_b_c06_10_20261026.py' -v
+      - name: Assert drafts are not formally admitted
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('sudu/teaching-candidates/113-role-b-c06-10-20261026/batch.json')
+          batch=json.loads(p.read_text(encoding='utf-8'))
+          assert batch['newReady']==batch['newMain']==batch['newLive']==0
+          assert batch['itemCount']==5
+          for row in batch['items']:
+              doc=json.loads(Path(row['path']).read_text(encoding='utf-8'))
+              assert doc['review']['status']=='BLOCKED'
+              assert doc['review']['independentEContent']=='PENDING'
+              assert doc['review']['studentReleaseApproved'] is False
+          print('NO RELEASE: 113 C06-10 author candidates only, A/E/D/MASTER pending')
+          PY

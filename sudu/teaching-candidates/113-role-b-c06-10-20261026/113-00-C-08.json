@@ -30,7 +30,10 @@
     "roleAImageOnlyCheck": true,
     "officialYearCorrectionNoticeVerified": false,
     "answerVerified": false,
-    "questionVerified": false
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
   },
   "teaching": {
     "topic": "文言虛詞『而』：轉折相當於『卻』",
@@ -142,8 +145,8 @@
     },
     "originalImageMustRemainUnmodified": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "3185736f30ee8a0f223b7e1c79cee00f0e91134073fa39faf841845267012080",
+  "composedTeachingSha256": "2d7cb668a1c12edf79e19fcc234968325b669eb38327eff38c24d9678d95fd82",
   "reasoningAudit": {
     "alreadyKnewCandidateAnswer": true,
     "blindSolveClaimed": false

@@ -30,7 +30,10 @@
     "roleAImageOnlyCheck": true,
     "officialYearCorrectionNoticeVerified": false,
     "answerVerified": false,
-    "questionVerified": false
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
   },
   "teaching": {
     "topic": "〈燭之武退秦師〉與〈漁父〉：五種衝突策略雙軸圖",
@@ -152,8 +155,8 @@
     },
     "originalImageMustRemainUnmodified": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "5a4f6e80845857552e71b6afed3b71c0144af1bc29b802e1a5f368faf784f729",
+  "composedTeachingSha256": "2de3234f48295af5f385c4df86f963916ed545bcde7290513905eb9621617daa",
   "reasoningAudit": {
     "alreadyKnewCandidateAnswer": true,
     "blindSolveClaimed": false

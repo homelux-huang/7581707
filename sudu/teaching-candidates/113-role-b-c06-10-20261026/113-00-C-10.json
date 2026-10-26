@@ -30,7 +30,10 @@
     "roleAImageOnlyCheck": true,
     "officialYearCorrectionNoticeVerified": false,
     "answerVerified": false,
-    "questionVerified": false
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
   },
   "teaching": {
     "topic": "《天工開物．舟車》魚骨圖與四欄表：主因、次因及交通需求",
@@ -155,8 +158,8 @@
     },
     "originalImageMustRemainUnmodified": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "117b51338da8b00536b42fbe99a87d1ec429fbd73bff016d906cc2aaae2e2e67",
+  "composedTeachingSha256": "8a653215ea3fd45367569f8b57318dab3ae2ab6538fd03cdb30d0c6064ac64ce",
   "reasoningAudit": {
     "alreadyKnewCandidateAnswer": true,
     "blindSolveClaimed": false

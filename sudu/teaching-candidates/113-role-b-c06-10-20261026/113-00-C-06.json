@@ -30,7 +30,10 @@
     "roleAImageOnlyCheck": true,
     "officialYearCorrectionNoticeVerified": false,
     "answerVerified": false,
-    "questionVerified": false
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
   },
   "teaching": {
     "topic": "儒家對聯：孝弟、詩書與上/下聯",
@@ -138,8 +141,8 @@
     },
     "originalImageMustRemainUnmodified": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "f1f97f3c124d6d35c3e242822d87eac568f6fc71ea5c6218e34217b82c92aa55",
+  "composedTeachingSha256": "1166ba1c58655a2bf150d669adeb5b93c50a2d4bae640f65d4c89b6c7a884e57",
   "reasoningAudit": {
     "alreadyKnewCandidateAnswer": true,
     "blindSolveClaimed": false

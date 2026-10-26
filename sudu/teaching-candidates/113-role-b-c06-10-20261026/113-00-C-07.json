@@ -30,7 +30,10 @@
     "roleAImageOnlyCheck": true,
     "officialYearCorrectionNoticeVerified": false,
     "answerVerified": false,
-    "questionVerified": false
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
   },
   "teaching": {
     "topic": "梁實秋〈講價〉：句序、前因後果與承接語",
@@ -148,8 +151,8 @@
     },
     "originalImageMustRemainUnmodified": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "8df74f31a92e70ad3b5ba5acf061e430b1c6cd0a037416ac3fbf900d0565d1b4",
+  "composedTeachingSha256": "1e04c8e4d7e72aa5ecb16fe49bc22c3dc9e049c713a28da8fefa0f9182a31020",
   "reasoningAudit": {
     "alreadyKnewCandidateAnswer": true,
     "blindSolveClaimed": false
