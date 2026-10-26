@@ -1,0 +1,69 @@
+name: Role A 114 E11 E13 E14 real official-answer + correction scope / 205 bank SQL (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e11-e13-e14-final-answers-20261026
+    paths:
+      - scripts/role_a_114_e11_e13_e14_final_official.py
+      - tests/test_role_a_114_e11_e13_e14_final_official.py
+      - docs/ROLE_A_114_E11_E13_E14_FINAL_OFFICIAL_20261026.md
+      - .github/workflows/role-a-114-e11-e13-e14-final-official.yml
+      - sudu/data/processed/114/review-evidence/114-00-E-11-official.json
+      - sudu/data/processed/114/review-evidence/114-00-E-13-official.json
+      - sudu/data/processed/114/review-evidence/114-00-E-14-official.json
+      - sudu/data/processed/114/questions.json
+      - sudu/data/processed/114/question-bank.sqlite3
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: role-a-114-E11-E13-E14-exact-official-no-release-20261026
+  cancel-in-progress: false
+jobs:
+  original_final_official_answer_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e11-e13-e14-final-answers-20261026'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact isolated Role A source branch only
+        uses: actions/checkout@v4
+        with:
+          ref: qa/role-a-114-e11-e13-e14-final-answers-20261026
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original source-pixel decoder, no new OCR
+        run: python -m pip install -q Pillow==11.3.0
+      - name: Verify source provenance, make only three authentic official answer admissions, test 205 rows
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/role-a-114-e11-e13-e14-final-answers-20261026"
+          python -m py_compile scripts/role_a_114_e11_e13_e14_final_official.py tests/test_role_a_114_e11_e13_e14_final_official.py
+          python -m scripts.role_a_114_e11_e13_e14_final_official --apply
+          python -m scripts.role_a_114_e11_e13_e14_final_official --verify
+          python -m unittest discover -s tests -p test_role_a_114_e11_e13_e14_final_official.py -v
+      - name: Only stage three exact original-answer receipts and canonical bank DB, never other role files
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/114/questions.json
+          git add -- sudu/data/processed/114/question-bank.sqlite3
+          git add -- sudu/data/processed/114/review-evidence/114-00-E-11-official.json
+          git add -- sudu/data/processed/114/review-evidence/114-00-E-13-official.json
+          git add -- sudu/data/processed/114/review-evidence/114-00-E-14-official.json
+          expected="$(printf '%s\n' 'sudu/data/processed/114/question-bank.sqlite3' 'sudu/data/processed/114/questions.json' 'sudu/data/processed/114/review-evidence/114-00-E-11-official.json' 'sudu/data/processed/114/review-evidence/114-00-E-13-official.json' 'sudu/data/processed/114/review-evidence/114-00-E-14-official.json')"
+          changed="$(git diff --cached --name-only)"
+          if test -n "$changed"; then
+            test "$changed" = "$expected" || { echo 'Only five Role A exclusive official evidence/SQL source paths permitted'; git diff --cached --name-only; exit 1; }
+            git diff --cached --check
+            test -z "$(git diff --name-only)" || { echo 'Other tracked files altered: FAIL-CLOSED'; git diff --name-only; exit 1; }
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'fix(role A): verify only 114 E11/E13/E14 final answer and actual scoped notice in canonical bank + 205 SQL [NO RELEASE]'
+            git push origin HEAD:refs/heads/qa/role-a-114-e11-e13-e14-final-answers-20261026
+          else
+            echo 'IDEMPOTENT: source evidence and 205 SQL already verified, no write'
+          fi
+          test "$(git ls-remote origin refs/heads/qa/role-a-114-e11-e13-e14-final-answers-20261026 | cut -f1)" = "$(git rev-parse HEAD)"
+          echo 'No student release; E12 quarantined; question source/teaching/E/D/READY/main/Pages unchanged'
