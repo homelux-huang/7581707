@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "policy": "NEW_ADMISSIONS_REQUIRE_DISTINCT_AI_SUBSTANTIVE_REVIEW_AND_SOURCE_UI_RELEASE_GATES",
+  "requireHumanTeacher": false,
+  "legacyAlreadyPublished": {
+    "115-00-MB-02": {
+      "year": 115,
+      "questionRevision": "e773c34c83007af4bac0e1567262acfd0a5369b1c7be21bfdc14b44ac13c4459",
+      "webpSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+      "teachingEvidenceGitBlob": "cc8c4f7716c261e374796d19c9b6da4972cf573f"
+    },
+    "115-00-MB-03": {
+      "year": 115,
+      "questionRevision": "ca22881177ea237464044c3390aae43b58517e28e20f5a8cfb9f17efbd0b2653",
+      "webpSha256": "03d5f494eb30b1fc452586e5bf1d1de5a917ba2cc98291e8bace8273b8a6872b",
+      "teachingEvidenceGitBlob": "cc595e724e7b7def17f59e41831e654ea8b8ef59"
+    },
+    "115-00-MB-04": {
+      "year": 115,
+      "questionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+      "webpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+      "teachingEvidenceGitBlob": "207327b0a313bdff158f8b11be235ce70616d3b6"
+    },
+    "115-00-MB-05": {
+      "year": 115,
+      "questionRevision": "3b0a4236f9298edd225b445592faee3b222c8ecfc1b62425278a0de576cc1df9",
+      "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+      "teachingEvidenceGitBlob": "fedf263a7466ecdd2e189bce0f4e6d7ee987513b"
+    },
+    "115-00-MB-09": {
+      "year": 115,
+      "questionRevision": "354a437dac1b26c8eb290262948c72eee72b649a685e8bf448ee59b3df58b9e7",
+      "webpSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+      "teachingEvidenceGitBlob": "5c968cab99302ff0942b9ac5673a87230caddb5a"
+    }
+  },
+  "configurationStatus": "NO_INDEPENDENT_AI_E_REVIEW_RECEIPTS_REGISTERED__NEW_READY_ZERO__NOT_A_TEACHER_BLOCK",
+  "notes": "Owner Issue36 policy: no teacher certificate, teacher Ed25519 key or human GitHub APPROVED event is required. Never accept a B/C author self-review. Each independent AI Role E content receipt must be independently evaluated against the original question revision, WebP SHA, teaching digest, official final-answer evidence SHA, four distinct options, calculations, and real audit notes; exact receipt Git Blob and author/reviewer task identities must be recorded in protected main. The current registry is intentionally empty: no new admission has passed. Five historical published records remain exact-byte exceptions only.",
+  "githubRepository": "homelux-huang/7581707",
+  "identityPolicy": "Only owner-coordinated, protected-main immutable AI E review receipts verified against actual Issue36 RETURN identity/session/commit can authorize an AI CONTENT review; signed human-teacher roster/APPROVED events no longer participate. Source/TCTE/answer, independent solve, exact-digest V4, original WebP QA, release CI and LIVE validation are independent mandatory gates.",
+  "reviewMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+  "teacherStyleMeans": "TEACHING_PERSPECTIVE_NOT_REAL_TEACHER_IDENTITY",
+  "trustedAiReviewReceipts": {}
+}
