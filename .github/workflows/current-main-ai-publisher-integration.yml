@@ -1,0 +1,42 @@
+name: Current main minimal AI publisher integration (NO RELEASE)
+on:
+  push:
+    branches: [integration/ai-publisher-current-main-20261027]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q cryptography
+      - name: Syntax and unchanged formal allowlist
+        run: |
+          python -m py_compile scripts/sudu_independent_review_gate.py scripts/sudu_verified_publish.py
+          python scripts/sudu_verified_publish.py check
+      - name: Re-run unchanged independent E adversarial tests from exact original commit
+        run: |
+          set -eu
+          git fetch --depth=1 origin f762bc7d356cecd67a1ff993c222b24f92a493fa
+          git show f762bc7d356cecd67a1ff993c222b24f92a493fa:tests/test_role_e_pr57_adversarial_review_20261025.py > tests/test_role_e_pr57_adversarial_review_20261025.py
+          python -m unittest discover -s tests -p test_role_e_pr57_adversarial_review_20261025.py -v
+      - name: Additional immutable rows and role-token negatives
+        run: python -m unittest discover -s tests -p test_loop_pr57_immutable_baseline.py -v
+      - name: Existing publisher and AI gates must remain strict
+        run: |
+          set -eu
+          python -m unittest discover -s tests -p test_sudu_ai_publisher_policy_migration.py -v
+          python -m unittest discover -s tests -p test_sudu_ai_review_content_contract.py -v
+          python -m unittest discover -s tests -p test_sudu_independent_review_gate.py -v
+          python -m unittest discover -s tests -p test_sudu_verified_publish.py -v
+          python scripts/sudu_verified_publish.py check
+      - run: git diff --exit-code && git diff --cached --exit-code

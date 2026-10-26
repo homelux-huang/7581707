@@ -508,6 +508,25 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
             return q
         docs[key]=value
     ocr,off,blind,teach,ui=[docs[key][0] for key in ("ocr","official","blind","teaching","ui")]
+    # P0: source-authored PASS, a reviewer field or a signed-teacher string
+    # cannot certify a new student question. The active owner's policy uses a
+    # DIFFERENT AI content reviewer with an authenticated exact evidence receipt.
+    # The distinct-AI reviewer gate is additional to every source/answer/UI
+    # check below; old five remain exact-Git-blob exceptions inside certified().
+    try:
+        from scripts import sudu_independent_review_gate as reviewer_gate
+    except ModuleNotFoundError:
+        import sudu_independent_review_gate as reviewer_gate
+    policy=reviewer_gate.policy_from_trusted_main()
+    if (not isinstance(policy,dict)
+            or policy.get("reviewMode")!="DISTINCT_AI_CONTENT_RECEIPT_V1"):
+        return q  # Never fall back to old human-teacher signer admission.
+    teaching_rel=audit["evidence"]["teaching"]
+    teaching_raw=(source/teaching_rel).read_bytes()
+    independently_authorized,identity_reason=reviewer_gate.certified(
+        source,audit,q,manifest,teach,teaching_raw,policy=policy)
+    if not independently_authorized:
+        return q
     revision=text_revision(q,manifest["sha256"])
     if not all((
         ocr.get("questionRevision") == revision,
@@ -531,6 +550,14 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         teach.get("calculationReviewed") is True,
         isinstance(teach.get("content"),dict),
         ui.get("testedQuestionRevision") == revision,
+        # A changed four-option lesson/calculation MUST invalidate the old V4
+        # browser receipt even if the original question/text/WebP did not move.
+        # Missing digest remains allowed ONLY for the five immutable historic
+        # published byte-for-byte review blobs, never for a new AI-E admission.
+        (ui.get("testedTeachingDigest") ==
+             reviewer_gate.digest(reviewer_gate.canonical(teach.get("content"))) or
+         (identity_reason == "exact_five_historical_students_preserved"
+          and ui.get("testedTeachingDigest") is None)),
         ui.get("browserSmokePassed") is True,
         ui.get("rwdPassed") is True,
         ui.get("verifiedYearQaMode") is True,
