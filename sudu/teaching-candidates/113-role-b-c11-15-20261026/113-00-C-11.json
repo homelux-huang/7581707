@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-11",
+  "taskId": "B-113-C11-15-A78-SHARED-MEIHUA-20261026-02",
+  "subject": "國文",
+  "question": "下列何者最符合上文所述？",
+  "options": [
+    "大宰府的梅花宴，通常是為送別或迎接遣唐使而舉行",
+    "山上憶良與大伴旅人曾同往唐朝，故能先識梅花之美",
+    "唐朝賞梅之風傳入日本後，成為上層社會的時尚活動",
+    "長屋王因謀反獲罪，大伴旅人亦受牽連而貶為大宰帥"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourcePR78Commit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c11-15/manifest.json",
+    "sourceManifestGitBlob": "247787043362a81143b284d95f62b75a4f3eb059",
+    "sourceRevision": "e9d5169deebd85df28f61a9dc1288588581a478152e0fdb66764b9f6f04606c5",
+    "webpPath": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-11.webp",
+    "webpSha256": "fef1fa4be3d594ef7fadf774af7f475602917ddfb99a15b58f29296a69d3203f",
+    "webpGitBlobSha1": "46c8932f6b2aaebb96f08ea1390c4291f5ad8265",
+    "sourcePagePath": "sudu/data/original/113/00-C/p004-67c0d477e9-v2-w1400-q66.webp",
+    "sourcePageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+    "sharedMaterialId": "113-00-C-SHARED-11-15",
+    "sharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+    "sharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+    "sourceSharedPageNumber": 4,
+    "officialAnnouncedAnswerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "officialAnnouncedAnswerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
+    "questionVerified": false,
+    "answerVerified": false,
+    "fullYearCorrectionNoticeScopePending": true
+  },
+  "teaching": {
+    "topic": "梅花宴閱讀：日本大宰府賞梅文化與人物經歷",
+    "teacherSummary": "原文開頭『唐朝人愛牡丹，也賞梅花』，山上憶良談日本『賞梅之風』受唐朝影響；九州大宰府因往來朝鮮、中國使節而易接觸外來文化，貴族競相模仿，所以 C 的唐朝賞梅傳入日本後成上層時尚符合。A 將宴會硬說成通常送迎遣唐使；B 說山上憶良與大伴旅人共同赴唐無據；D 誤以長屋王謀反牽連當作旅人赴大宰府的原因，和故事前後時間不合。",
+    "elementarySummary": "日本的貴族學到唐朝人賞梅花的風氣，大家覺得很流行，這就是 C。聚會不是專門接送使者，文章也沒說兩個人一起去唐朝；旅人被調走更早發生。",
+    "concept": "閱讀時將『受唐朝文化影響』與『是否曾同去唐朝』區分；政治時間線是旅人先因藤原家排擠離京，後來長屋王才被處死，不能倒置因果。",
+    "memory": "唐人賞梅→日本上層模仿→大宰府梅花宴；C。",
+    "solvingSteps": [
+      "在共用文章首段找『賞梅之風開始吹到國內，貴族競相模仿』，直接支援 C。",
+      "辨識宴會背景是文化交流與聚會，非固定為送迎遣唐使。",
+      "注意只說山上憶良曾隨遣唐使赴唐，沒有說大伴旅人與他同行。",
+      "依時間線大伴旅人先被排擠離京、後長屋王被賜死，排除 D，選 C。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 說梅花宴通常為迎接或送別遣唐使，但文中這次是大宰府官員邀集賓客在正月賞梅賦歌，沒有建立所有梅花宴均為送迎使者的規則。",
+        "elementary": "A 把看梅花聚會說成專門接送去唐朝的人，文章沒有說。",
+        "reason": "文章有文化使節背景，卻沒有給『通常為送迎遣唐使』這項宴會目的。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 將山上憶良與大伴旅人說成曾共同赴唐，但原文明確說三十年前赴唐的是山上憶良，並沒有兩人同去的事實。",
+        "elementary": "B 多說兩個人一起去唐朝，文章只確實提到山上憶良去過。",
+        "reason": "由一人隨遣唐使赴唐不能推出旅人也同行，B 加上原文沒有的資訊。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 指唐朝賞梅風氣傳入日本之後，貴族競相模仿成為上層社會的時尚；這與文章開頭山上憶良回憶的敘述吻合。",
+        "elementary": "C 說日本貴族學唐朝人賞梅花，大家都跟著喜歡，所以正確。",
+        "reason": "『賞梅之風開始吹到國內，貴族競相模仿』直接支持 C。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 以長屋王謀反案牽連大伴旅人、使其被貶為大宰帥作因果，與原文時間不符：旅人先因藤原家排擠離京，到職後才發生長屋王案。",
+        "elementary": "D 把後來發生的事情說成旅人先被調走的理由，順序弄反。",
+        "reason": "旅人赴大宰府早於長屋王被賜死，不能由後來案件推定先前的貶調原因。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "大宰府的梅花宴",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "山上憶良",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "大伴旅人",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "唐朝賞梅之風",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "上層社會的時尚活動",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "賞梅",
+        "level": "初級",
+        "meaning": "觀賞梅花。"
+      },
+      {
+        "term": "競相模仿",
+        "level": "中級",
+        "meaning": "許多人爭著照別人的做法去做。"
+      },
+      {
+        "term": "遣唐使",
+        "level": "高級",
+        "meaning": "日本派往唐朝學習交流的使者。"
+      }
+    ],
+    "originalVisual": {
+      "type": "SHARED_ORIGINAL_PLUM_BANQUET_READING",
+      "requiredPassage": "113-00-C-SHARED-11-15",
+      "narrativeLogic": [
+        "唐朝賞梅文化",
+        "日本貴族模仿",
+        "宴會創作",
+        "旅人政治生命經歷"
+      ],
+      "authorOnly": true
+    },
+    "sharedReading": {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalSharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "originalSharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelOnlyRoleAQa": true
+    }
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "answerCandidateAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentEContentReview": "PENDING_DISTINCT_AI_ROLE_E",
+    "sourceFullTextAndOfficialFinalAnswer": "PENDING_ROLE_A",
+    "realV4SameDigest8x2": "PENDING_ROLE_D",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "ROLE_A_113_FINAL_ANSWER_CORRECTION_SCOPE_MISSING",
+      "ROLE_A_113_FULL_SOURCE_QA_PENDING",
+      "DISTINCT_ROLE_E_CONTENT_NOT_REVIEWED",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_SHA_8X2_PENDING",
+      "MASTER_MAIN_PAGES_LIVE_NOT_READY"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

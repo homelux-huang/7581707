@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-15",
+  "taskId": "B-113-C11-15-A78-SHARED-MEIHUA-20261026-02",
+  "subject": "國文",
+  "question": "下圖為公元730 年大宰府梅花宴的部分歌詞。依據上文，關於①、②的研判應是：\n\n\n\n\n\n  ①甲可能是大伴旅人；丙可能是山上憶良。\n  ②丁比乙符合大伴旅人對以梅賦歌的期待。",
+  "options": [
+    "①、②皆正確",
+    "①、②皆錯誤",
+    "①正確，②錯誤",
+    "①錯誤，②正確"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourcePR78Commit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c11-15/manifest.json",
+    "sourceManifestGitBlob": "247787043362a81143b284d95f62b75a4f3eb059",
+    "sourceRevision": "e8b5a029f0cbf08b0fa1c0d8ea454281ab864de1e10c26d2dd98277f0fa61052",
+    "webpPath": "sudu/data/processed/113/role-a-c11-15/webp/113-00-C-15.webp",
+    "webpSha256": "c2320b02faeb81e70d9e06a001105e11a204129a23635dbd3bc40559b9085599",
+    "webpGitBlobSha1": "83c69a80c823bb146dcce2ff1eaa769236f797d0",
+    "sourcePagePath": "sudu/data/original/113/00-C/p005-67c0d477e9-v2-w1400-q66.webp",
+    "sourcePageSha256": "9f6f2e3be9f2f92eb0a647d95a38a5237890026998b51f76afb18cdf1debbadb",
+    "sharedMaterialId": "113-00-C-SHARED-11-15",
+    "sharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+    "sharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+    "sourceSharedPageNumber": 4,
+    "officialAnnouncedAnswerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "officialAnnouncedAnswerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
+    "questionVerified": false,
+    "answerVerified": false,
+    "fullYearCorrectionNoticeScopePending": true
+  },
+  "teaching": {
+    "topic": "梅花宴角色與和歌：人物推測、單純賞景與懷念京城",
+    "teacherSummary": "共用文章大伴旅人希望『純粹投入欣賞』梅花之美，不把心情又引向邊地鄉愁；山上憶良則希望大家共享快然自足的歡樂。圖中甲寫『園中梅花飄零，直似雪傾，降自天空』，專注梅景，推旅人合理；丙說『院中梅春光綻枝頭，怎能獨自觀賞』，重分享，推憶良合理，①正確。乙『折梅插上頭，見眾人遊，憶起京城時候』仍回想京城，丁『園中梅花伴翠柳，折來插滿頭，整日盡興遊』純賞梅、歡遊，所以丁比乙更符合旅人期待，②亦正確，選 A。",
+    "elementarySummary": "甲只描寫梅花像下雪一樣漂亮，可能是想專心賞花的旅人；丙想跟大家一起欣賞，像憶良。乙看到梅花還想念京城，丁只想整天賞花玩得開心，所以丁更合旅人的想法。兩句都對，選 A。",
+    "concept": "把人名判斷視為『可能』而非已驗證歷史作者身分；據文章人物發言和圖片歌詞比對：旅人重純賞花，憶良重共享喜悅；區分乙懷念京城和丁即景歡遊。",
+    "memory": "甲像旅人（純景）、丙像憶良（分享）；丁純遊勝乙思京，兩項正確＝A。",
+    "solvingSteps": [
+      "從文章抓兩人理念：旅人想純賞梅，憶良希望眾人一起欣於所遇。",
+      "看原像素甲寫雪梅純景、丙問怎能獨自觀賞，分別能推測旅人與憶良，①合理。",
+      "看乙提『憶起京城時候』夾帶思鄉；丁寫園梅、翠柳、折梅、盡興遊，較純粹投入賞梅，②合理。",
+      "①和②都能由原文章與和歌圖對照支持，選 A；這是可能性推斷非歷史身分證明。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 判①②都正確：甲專寫梅花如雪的純景合旅人理念，丙希望分享春光合憶良邀大家同歡；丁只談折梅遊賞，較乙憶起京城更合旅人期待。",
+        "elementary": "A 甲、丙對得上兩人的想法，丁又比乙少了想家的心情，所以兩句都對。",
+        "reason": "A 的人物語氣比較和丁、乙是否思鄉，都能從原圖歌詞與共用文章支持。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 判①②都錯，但①甲純景、丙分享的個性推測有直接文本線索，②丁純遊比乙思鄉更合旅人之意，也有歌詞依據，所以 B 反向錯判。",
+        "elementary": "B 說兩句全錯，實際兩句都可從圖裡看出道理，所以 B 不對。",
+        "reason": "B 否定兩項各有證據的判斷，不符合原始梅花和歌與人物對話。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 承認①合理，卻把②判錯；乙明說『憶起京城時候』而丁強調整日盡興遊，丁更符合旅人不想寫思鄉的期待，故②不應判錯。",
+        "elementary": "C 說第二句錯，但乙還在想家，丁只賞花玩樂，第二句其實對。",
+        "reason": "C 忽略乙的懷京與丁的純享樂對比，②判斷錯誤。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 承認②丁比乙合旅人期待，卻否定①；甲只寫梅花如雪的美景可推旅人，丙強調不能獨賞、大家同歡可推憶良，所以①有根據。",
+        "elementary": "D 的第二句是對的，但甲和丙的個性推測也合理，不能說第一句錯。",
+        "reason": "D 把①判錯，未利用甲的純景與丙的共賞情緒線索。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "甲可能是大伴旅人",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "丙可能是山上憶良",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "丁比乙符合大伴旅人",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "①、②皆正確",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "和歌",
+        "level": "初級",
+        "meaning": "日本的一種短詩。"
+      },
+      {
+        "term": "懷京",
+        "level": "中級",
+        "meaning": "懷念京城或離開的故地。"
+      },
+      {
+        "term": "歌序",
+        "level": "高級",
+        "meaning": "為詩歌作品寫的序文，說明緣起與想法。"
+      }
+    ],
+    "originalVisual": {
+      "type": "OFFICIAL_ORIGINAL_FOUR_PEOPLE_WAKA_CALLIGRAPHY",
+      "poemPersonPositions": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "sourceLiteralInImageNotes": {
+        "甲": "梅花飄零似雪從天空降下",
+        "乙": "折梅思京城",
+        "丙": "不願獨自賞梅，希望分享",
+        "丁": "梅柳折枝整日盡興遊"
+      },
+      "resultClaims": [
+        true,
+        true
+      ],
+      "doNotRegenerateWakaOriginalPicture": true
+    },
+    "sharedReading": {
+      "sharedMaterialId": "113-00-C-SHARED-11-15",
+      "originalSharedWebpPath": "sudu/data/processed/113/role-a-c11-15/shared/113-00-C-SHARED-11-15.webp",
+      "originalSharedWebpSha256": "5ec8a53ab2cefde309a7b70a52a1bc12203d85ab6212e8b644b834bb2ce21c01",
+      "sourceOriginalPageSha256": "964ada897c9d1a93fd81d21fa6a4d02e94cb91999e173906afe84b77a824ded7",
+      "pixelOnlyRoleAQa": true
+    }
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "answerCandidateAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "authorRole": "B",
+    "authorSelfCheckOnly": true,
+    "independentEContentReview": "PENDING_DISTINCT_AI_ROLE_E",
+    "sourceFullTextAndOfficialFinalAnswer": "PENDING_ROLE_A",
+    "realV4SameDigest8x2": "PENDING_ROLE_D",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "ROLE_A_113_FINAL_ANSWER_CORRECTION_SCOPE_MISSING",
+      "ROLE_A_113_FULL_SOURCE_QA_PENDING",
+      "DISTINCT_ROLE_E_CONTENT_NOT_REVIEWED",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_SHA_8X2_PENDING",
+      "MASTER_MAIN_PAGES_LIVE_NOT_READY"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
