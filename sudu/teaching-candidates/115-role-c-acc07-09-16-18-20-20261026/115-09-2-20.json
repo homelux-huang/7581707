@@ -122,15 +122,19 @@
   },
   "teachingCanonicalSha256": "ae686933dc238847e3d56f9285c315e6322e36656bfe7c6cc8496c6084adc829",
   "review": {
-    "author": "GPT-6 Role C AI author",
+    "authorIdentity": "GPT-6 Role C AI teaching author",
+    "authorRole": "C",
     "answerKnownBeforeReasoning": true,
-    "falseBlindSolveClaim": false,
-    "differentAuthorAiEReview": "PENDING",
+    "newBlindSolveClaimed": false,
+    "independentAiContentReview": "PENDING",
+    "differentAuthorRequired": true,
+    "selfReviewAllowedAsIndependentQa": false,
     "independentReviewerIdentity": null,
     "reviewEvidenceSha256": null,
-    "officialAnswerProofSha256": null,
-    "sourceOfficialGate": "PENDING",
-    "realV4ExactShaEightByTwo": "PENDING"
+    "officialAnswerEvidenceSha256": null,
+    "sourceOriginalImageQa": "PENDING_FINAL_A_ADMISSION",
+    "v4ExactDigest8x2": "PENDING",
+    "policy": "Issue36: teacher perspective, no human teacher credentials or signature as educational gate"
   },
   "studentReleaseApproved": false,
   "deploy": false,
@@ -138,6 +142,9 @@
     "OFFICIAL_FINAL_ANSWER_NOTICE_AND_ORIGINAL_SOURCE_QA_PENDING",
     "INDEPENDENT_E_AI_CONTENT_REVIEW_PENDING",
     "D_EXACT_SHA_V4_8X2_PENDING",
-    "MASTER_RELEASE_MAIN_LIVE_PENDING"
-  ]
+    "MASTER_RELEASE_MAIN_LIVE_PENDING",
+    "Q20_COORDINATOR_LEDGER_SOURCE_REVISION_DISCREPANCY_REQUIRES_A_MASTER_RECONCILIATION"
+  ],
+  "coordinatorLedgerPriorQuestionRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+  "coordinatorLedgerPriorRevisionMatchesCurrentSource": false
 }
