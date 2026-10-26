@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-01-11-13-17-21-20261026-07",
+  "claimedAtUtc": "2026-10-26T05:30:00Z",
+  "questionId": "115-09-2-17",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 17,
+  "subject": "會計學",
+  "status": "ROLE_C_SOURCE_BOUND_AUTHOR_DRAFT_NO_RELEASE",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "關於不動產、廠房及設備成本之敘述，下列何者正確？",
+  "options": [
+    "接受政府附帶補助條件而取得之土地，須待完成條件時始得以完成當時該土地之公允\n   價值入帳",
+    "自行建造之廠房成本若高於可回收金額，則該廠房之帳面金額應以自建成本為主，並\n   認列自建資產利益",
+    "拆除公司已有之舊屋改建新屋時，舊屋之拆除支出應列為新屋之成本，不得認列為\n   舊屋之處分損益",
+    "向外購買之機器設備成本應以購買價格扣除最大現金折扣後的淨額入帳，未取得之\n   現金折扣則視為營業外支出"
+  ],
+  "answerCandidate": "D",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "a98f1c3c7f311d952702fa08a345566ef00c71429eba2580054bf9aaf3eada5d",
+  "sourceTextRevisionMethod": "SHA256 of sorted minified UTF8 JSON containing question, options, singleQuestionWebpSha256",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-17.webp",
+  "individualImageSha256": "189634b5ecbefed9e5b253bb66c380ca4cfe8079e8b2bf024bcd8fabb8bcd370",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "imageManifestHistoricalQa": "PASS",
+  "imageQuestionAssetHistoricalQa": "PASS",
+  "originalImageBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "本題考**不動產、廠房及設備（PPE）的取得成本**。A政府補助的判斷不是「條件都實際履行完畢才以當時公允價值入帳」，一般依有**合理確信**可遵循條件、將收到補助時進行認列判斷；B不能因自建成本高於可回收金額就認**自建利益**，反須評估減損；C拆除企業原有舊屋的支出也不當然全部資本化到新屋。D符合本考題教材的**最大現金折扣淨額法**：設備購置成本以可享最大現金折扣後金額入帳，沒享到的折扣屬**額外財務／營業外負擔**，選 **D**，但須由 E 對教材採行方法和官答版本確認。",
+    "elementarySummary": "這題問買機器、蓋廠房時，哪些錢該算成設備成本。拿到政府補助不用死等所有事情完成才開始判斷；自己蓋太貴也不能把超出的錢叫作賺到。D說買設備可扣的折扣先扣，沒拿到折扣就記成多花的錢，比較符合題目規則。",
+    "memory": "**補助看合理確信；自建超過可回收看減損；拆舊屋分清除列；設備成本採最大現金折扣淨額→D。**",
+    "concept": "**取得成本**包含使資產達到預定可使用狀態的必要支出；**可回收金額**低於帳面金額時評估減損而非認列自建利益；**政府補助 IAS 20**依合理確信條件判斷；**PPE 現金折扣**此題依商業會計教材淨額法處理，未享折扣的差額不能自動加到設備成本。",
+    "extension": "**本題是統測指定課程與用語的單一選擇題**。不同準則或發票條款可能影響機器購買折扣科目歸屬；不能把題目選項D寫成所有國際財報準則下的無條件絕對規定，須由獨立 E／角色 A 查官方答案與適用課綱。",
+    "highlights": [
+      "何者正確",
+      "不動產、廠房及設備",
+      "政府補助",
+      "合理確信",
+      "可回收金額",
+      "自建資產利益",
+      "最大現金折扣",
+      "營業外支出"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "取得成本：讓資產買好、裝好可以用要花的錢"
+      ],
+      "中級": [
+        "現金折扣：在約定期限付錢可少付的價款"
+      ],
+      "高級": [
+        "減損：資產帳面價值無法回收時必須調低其帳面金額"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A 把政府**附條件補助的土地**說成「必須等所有條件完成，才能以完成當時公允價值入帳」。**IAS 20**採合理確信會符合條件且可獲補助之認列門檻，且非貨幣性補助存在公允價值／名目金額處理方式，不是選項的僵化時點，故A不當。",
+        "elementary": "不是一定要等政府交代的每件事都全部做完，才可以開始認列收到的土地；會計要先看是不是很有把握符合條件，所以A講太死。",
+        "reason": "A 把政府**附條件補助的土地**說成「必須等所有條件完成，才能以完成當時公允價值入帳」。**IAS 20**採合理確信會符合條件且可獲補助之認列門檻，且非貨幣性補助存在公允價值／名目金額處理方式，不是選項的僵化時點，故A不當。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B 自行建造廠房若帳面成本**高於可回收金額**，應檢視並認列**減損損失**，不可以把多花的成本當成**自建資產利益**，因此B錯。",
+        "elementary": "自己蓋房子花得比能收回的價值還多，不叫賺錢；多出的風險要看是不是虧損，不是利益。",
+        "reason": "B 自行建造廠房若帳面成本**高於可回收金額**，應檢視並認列**減損損失**，不可以把多花的成本當成**自建資產利益**，因此B錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C 拆掉公司原本就有的舊房屋，其舊屋帳面金額及拆除清理支出需依**舊資產除列／處分損益**等性質處理；不能一概說拆舊屋費用**必須列入新屋成本、不得處分損益**。C的絕對說法錯誤。",
+        "elementary": "以前公司的舊房子拆掉，舊房子的損失和清理費不一定都能塞進新房子的成本；C說全部只能那樣記，不對。",
+        "reason": "C 拆掉公司原本就有的舊房屋，其舊屋帳面金額及拆除清理支出需依**舊資產除列／處分損益**等性質處理；不能一概說拆舊屋費用**必須列入新屋成本、不得處分損益**。C的絕對說法錯誤。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D 依本題商業會計的**淨額法**，外購機器成本用**購價扣最大可得現金折扣**的金額；因公司沒有利用折扣而多付的差額，作為**營業外支出／額外融資成本**而非機器取得成本，符合選項D。",
+        "elementary": "機器本來可以趁早付錢省折扣，考題規則把便宜後的價格當機器成本；晚付多花的部分另記，所以D對。",
+        "reason": "D 依本題商業會計的**淨額法**，外購機器成本用**購價扣最大可得現金折扣**的金額；因公司沒有利用折扣而多付的差額，作為**營業外支出／額外融資成本**而非機器取得成本，符合選項D。"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "stepByStep": [
+      "先把四項拆成政府補助、自建減損、拆舊屋處理、機器購價淨額法。",
+      "A以實際履約完才認列為絕對規定，不符合理確信概念。",
+      "B把超過可回收金額當自建利益，與減損方向相反。",
+      "C把舊屋拆除支出強制全部歸新屋，忽略舊屋除列／處分性質。",
+      "D符合本題選用的機器現金折扣淨額法，選D並待 E 核適用準則與官方最終答案。"
+    ],
+    "outsideReferences": [
+      {
+        "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-20-accounting-for-government-grants-and-disclosure-of-government-assistance/",
+        "title": "IFRS IAS 20 政府補助，認列合理確信條件與非貨幣性資產補助",
+        "purpose": "外部準則背景，不取代商管群當年課綱及官方最終答案核對"
+      }
+    ],
+    "source": "115年專業科目二會計學第17題，正解D仍待 TCTE 官方最終答案影像及不同作者 E 複核。"
+  },
+  "teachingCanonicalSha256": "e0b776b2490d225a0fa3412b577c7d7be42e6502276e364bb512c96f1637bb19",
+  "review": {
+    "authorIdentity": "GPT-6 Role C author",
+    "authorRole": "C",
+    "answersKnownBeforeAuthoring": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorAiReviewerRequired": true,
+    "authorSelfReviewProhibited": true,
+    "independentAiReviewStatus": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "independentAiReviewEvidenceSha256": null,
+    "officialFinalAnswerAndCorrectionProofSha256": null,
+    "sourceImageOfficialAcceptance": "PENDING",
+    "v4ExactSameSourceAndTeachingDigest8x2": "PENDING",
+    "latestPolicy": "ISSUE36_NO_HUMAN_TEACHER_CREDENTIAL_GATING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_IMAGE_AND_CORRECTION_NOTICE_SHA_NOT_ADMITTED",
+    "ORIGINAL_SINGLE_IMAGE_QA_MANIFEST_PASS_REQUIRES_FINAL_SOURCE_INDEPENDENT_ADMISSION",
+    "DISTINCT_E_AI_CONTENT_REVIEW_NOT_RECEIVED",
+    "D_V4_EIGHT_VIEWPORT_TWO_THEME_SAME_DIGEST_NOT_RECEIVED",
+    "MASTER_ONLY_PUBLISHER_MAIN_LIVE_GATE_NOT_SATISFIED"
+  ]
+}
