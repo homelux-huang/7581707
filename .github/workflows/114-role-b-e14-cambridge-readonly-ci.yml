@@ -1,0 +1,39 @@
+name: Role B 114 English 14 dictionary source correction (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-14.json"
+      - "sudu/teaching-candidates/114-role-b-20261025-batch02/batch.json"
+      - "docs/B-114-E14-CAMBRIDGE-LINK-20261027.md"
+      - "tests/test_114_role_b_e14_cambridge_20261027.py"
+      - ".github/workflows/114-role-b-e14-cambridge-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-lesson-minimal-diff-and-no-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Retain original five 114 author lesson source and SHA safeguards
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch02_20261025.py' -v
+      - name: Exactly one dictionary URI correction vs old immutable original, all digests, no false release
+        run: python -m unittest discover -s tests -p 'test_114_role_b_e14_cambridge_20261027.py' -v
+      - name: Explicit Q14 not publishable without role E and same digest UI
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('sudu/teaching-candidates/114-role-b-20261025-batch02')
+          d=json.loads((root/'114-00-E-14.json').read_text(encoding='utf-8'))
+          b=json.loads((root/'batch.json').read_text(encoding='utf-8'))
+          assert d['review']['status']=='BLOCKED'
+          assert d['review']['studentReleaseApproved'] is False
+          assert d['review']['independentAiContentReview']['status']=='PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW'
+          assert d['review']['uiQaExactDigest'] is False
+          assert b['newReady']==b['newLive']==0
+          print('NO RELEASE: exact E14 new digest needs distinct E, A and D and MASTER')
+          PY
