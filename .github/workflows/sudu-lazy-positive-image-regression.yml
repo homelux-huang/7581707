@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - 'tests/sudu_certified_positive_browser.cjs'
+      - 'tests/sudu_real_reviewed_browser.cjs'
       - 'tests/test_sudu_lazy_loading_browser_contract.py'
       - '.github/workflows/sudu-lazy-positive-image-regression.yml'
 
@@ -47,6 +48,7 @@ jobs:
           python -m http.server 8765 --bind 127.0.0.1 --directory _site > /tmp/sudu-lazy-test-server.log 2>&1 &
           trap 'kill $!' EXIT
           node tests/sudu_certified_positive_browser.cjs
+          node tests/sudu_real_reviewed_browser.cjs
       - name: Retain error evidence if test fails
         if: failure()
         uses: actions/upload-artifact@v4
