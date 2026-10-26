@@ -32,7 +32,10 @@
     "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
     "questionVerified": false,
     "answerVerified": false,
-    "fullYearCorrectionNoticeScopePending": true
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
   },
   "teaching": {
     "topic": "〈蘭亭集序〉的欣於所遇：享受當下、自適之樂",
@@ -140,8 +143,8 @@
       "pixelOnlyRoleAQa": true
     }
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "458c8b27c35fc523f499681226a30ef470b8411a5f8c964e0e6d0041a3b11b74",
+  "composedTeachingSha256": "5387954d4006f361fc07cd498ed51b192a6b2fd4b7be46c20957e5a745b0d9d5",
   "reasoningAudit": {
     "answerCandidateAlreadyKnown": true,
     "blindSolveClaimed": false

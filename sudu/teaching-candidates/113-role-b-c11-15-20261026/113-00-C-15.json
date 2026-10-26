@@ -32,7 +32,10 @@
     "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
     "questionVerified": false,
     "answerVerified": false,
-    "fullYearCorrectionNoticeScopePending": true
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
   },
   "teaching": {
     "topic": "梅花宴角色與和歌：人物推測、單純賞景與懷念京城",
@@ -147,8 +150,8 @@
       "pixelOnlyRoleAQa": true
     }
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "ecdcc8aaeaf80d65f5eee3351a23e5559e7d2483326bc66fa3bd9ed00ad0c79c",
+  "composedTeachingSha256": "3d4559aabb6ece7b710aa2192ddd22a2a21b81c71068db8a91d7b9379807933c",
   "reasoningAudit": {
     "answerCandidateAlreadyKnown": true,
     "blindSolveClaimed": false

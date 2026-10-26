@@ -32,7 +32,10 @@
     "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
     "questionVerified": false,
     "answerVerified": false,
-    "fullYearCorrectionNoticeScopePending": true
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
   },
   "teaching": {
     "topic": "〈梅花歌序〉與〈蘭亭集序〉四組對照：取諸懷抱、悟言與快然自足",
@@ -152,8 +155,8 @@
       "pixelOnlyRoleAQa": true
     }
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "606d42300b988927b946056f3ab2d73a34e46a32c58f24db1f866fd2dd48a879",
+  "composedTeachingSha256": "eedc29cc8079c0acb188561fdfa5023eebd7e9ffa3350eb5469736fe1ba863e6",
   "reasoningAudit": {
     "answerCandidateAlreadyKnown": true,
     "blindSolveClaimed": false

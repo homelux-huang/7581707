@@ -32,7 +32,10 @@
     "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
     "questionVerified": false,
     "answerVerified": false,
-    "fullYearCorrectionNoticeScopePending": true
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
   },
   "teaching": {
     "topic": "梅花宴閱讀：日本大宰府賞梅文化與人物經歷",
@@ -144,8 +147,8 @@
       "pixelOnlyRoleAQa": true
     }
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "5826eb5ff0ffed6076d3fa70798292a1531b5f881e0273931cac27a06ac9f7a6",
+  "composedTeachingSha256": "f4b51ce5571b7f5591990ca5e440d4e4b3fd41994e44cd594790d0e3bf9e2ba9",
   "reasoningAudit": {
     "answerCandidateAlreadyKnown": true,
     "blindSolveClaimed": false

@@ -32,7 +32,10 @@
     "roleAOnlyImageQa": "sudu/data/processed/113/role-a-c11-15/VISUAL_QA_ASSISTANT_20261025.json",
     "questionVerified": false,
     "answerVerified": false,
-    "fullYearCorrectionNoticeScopePending": true
+    "fullYearCorrectionNoticeScopePending": true,
+    "officialQuestionPdfRecordedSha256": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "officialAnswerPdfRecordedSha256": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "originalPdfWasNotRehashedThisBatch": true
   },
   "teaching": {
     "topic": "梅花詩兩首：純粹欣賞景物與思鄉愁緒區別",
@@ -157,8 +160,8 @@
       "pixelOnlyRoleAQa": true
     }
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "1a85643f32664a037952cce77bdad4b773a76ea411beeccc68da99d1fd02eee6",
+  "composedTeachingSha256": "e031def75161a956fcf3912417fa70456952476cce4260091dc712ca44ee50b0",
   "reasoningAudit": {
     "answerCandidateAlreadyKnown": true,
     "blindSolveClaimed": false

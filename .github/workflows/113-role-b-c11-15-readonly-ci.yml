@@ -1,0 +1,35 @@
+name: Role B 113 C11-C15 shared Mei-hua original pixel/source teaching (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/113-role-b-c11-15-20261026/**'
+      - 'tests/test_113_role_b_c11_15_20261026.py'
+      - '.github/workflows/113-role-b-c11-15-readonly-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-shared-article-and-five-q-sha-no-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rehash original 5 WebPs and shared article, original pages, verify source/teaching canonical digest and blocked author status
+        run: python -m unittest discover -s tests -p 'test_113_role_b_c11_15_20261026.py' -v
+      - name: Negative release check
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path('sudu/teaching-candidates/113-role-b-c11-15-20261026')
+          b=json.loads((root/'batch.json').read_text(encoding='utf-8'))
+          assert b['newReady']==b['newMain']==b['newLive']==0 and b['questionCount']==5
+          for row in b['items']:
+              doc=json.loads(Path(row['path']).read_text(encoding='utf-8'))
+              assert doc['review']['status']=='BLOCKED'
+              assert doc['review']['studentReleaseApproved'] is False
+              assert doc['review']['independentEContentReview']=='PENDING_DISTINCT_AI_ROLE_E'
+          print('NO RELEASE: five Role B shared Mei-hua author drafts pending independent A/E/D/MASTER.')
+          PY
