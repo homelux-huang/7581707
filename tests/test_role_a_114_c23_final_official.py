@@ -25,7 +25,7 @@ class RoleA114C23FinalOfficial(unittest.TestCase):
         cls.proof=earlier.read(a.PROOF)
 
     def test_114_c20_to22_existing_sha_and_205_precondition_still_valid(self):
-        earlier.verify_final()
+        a.verify_previous_c20_to22_with_fixed_pr98_baseline()
         self.assertEqual(self.bank["year"],114)
         self.assertEqual(len(self.bank["questions"]),205)
         self.assertEqual(len({q["questionId"] for q in self.bank["questions"]}),205)
