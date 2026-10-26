@@ -1,0 +1,26 @@
+name: 115 Role C accounting 07 09 16 18 20 author-only QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/115-role-c-acc07-09-16-18-20-20261026
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-acc07-09-16-18-20-20261026/**'
+      - 'tests/test_115_role_c_acc07_09_16_18_20.py'
+      - '.github/workflows/115-role-c-acc07-09-16-18-20.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-acc07-09-16-18-20-20261026/**'
+      - 'tests/test_115_role_c_acc07_09_16_18_20.py'
+      - '.github/workflows/115-role-c-acc07-09-16-18-20.yml'
+permissions:
+  contents: read
+jobs:
+  role-c-author-content-and-arithmetic-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check canonical provenance and real accounting calculations (never approval)
+        run: python -m unittest discover -s tests -p 'test_115_role_c_acc07_09_16_18_20.py' -v
