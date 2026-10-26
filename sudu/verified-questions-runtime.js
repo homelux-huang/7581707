@@ -95,6 +95,19 @@
   // Original shared materials in approved-year questions must match this
   // paper/year and cover the current original question number.
   const approvedSharedImagesValid=(q,identity)=>{
+    // If the canonical approved source declares required original materials,
+    // accepting an absent/empty sharedImages array would hide essential
+    // reading/table context from the student. Publisher MUST carry this field.
+    if(q.sharedMaterialIds!==undefined){
+      if(!Array.isArray(q.sharedMaterialIds)||q.sharedMaterialIds.length>8||
+         q.sharedMaterialIds.some(id=>typeof id!=='string')||
+         new Set(q.sharedMaterialIds).size!==q.sharedMaterialIds.length)return false;
+      if(q.sharedMaterialIds.length){
+        if(!Array.isArray(q.sharedImages)||!q.sharedMaterialIds.every(id=>
+          q.sharedImages.some(v=>v&&v.sharedMaterialId===id)))return false;
+        if(q.sharedImages.some(v=>!q.sharedMaterialIds.includes(v?.sharedMaterialId)))return false;
+      }
+    }
     if(q.sharedImages===undefined)return true;
     if(!Array.isArray(q.sharedImages)||q.sharedImages.length>8)return false;
     const prefix='data/approved/webp/'+activeYear+'/'+activeYear+'-'+identity.paper+'-SHARED-';
