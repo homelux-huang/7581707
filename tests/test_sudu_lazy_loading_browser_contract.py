@@ -34,5 +34,19 @@ class LazyOriginalWebpContract(unittest.TestCase):
         self.assertIn("for(const theme of ['light','dark'])",JS)
 
 
+    def test_original_approved_five_not_old_four_and_all_decode(self):
+        real = (ROOT/"tests"/"sudu_real_reviewed_browser.cjs").read_text(encoding="utf-8")
+        self.assertIn("const IDs=['115-00-MB-02','115-00-MB-03','115-00-MB-04','115-00-MB-05','115-00-MB-09']", real)
+        self.assertIn("const answers=['A','A','C','B','A']", real)
+        self.assertIn("assert.equal(source.approvedCount,IDs.length)", real)
+        self.assertIn("for(let i=0;i<IDs.length;i++)", real)
+        self.assertIn("i===IDs.length-1", real)
+        self.assertIn("i<IDs.length-1", real)
+        self.assertIn("await img.scrollIntoViewIfNeeded()", real)
+        self.assertIn("await el.decode();return el.naturalWidth>0&&el.naturalHeight>0", real)
+        self.assertNotIn("source.approvedCount,4", real)
+        self.assertNotIn("for(let i=0;i<4;i++)", real)
+        self.assertNotIn("catch(()=>true)", real)
+
 if __name__=="__main__":
     unittest.main()
