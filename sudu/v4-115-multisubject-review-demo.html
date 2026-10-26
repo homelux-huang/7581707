@@ -487,6 +487,14 @@ function sourceTableForStudent(q){
    '"><summary>原始表格文字版（輔助閱讀，原題 WebP 已保留）</summary><table><thead><tr>'+th+
    '</tr></thead><tbody>'+rows+'</tbody></table></details>';
 }
+// Original source shared-reading/chart images belong to the SAME existing V4.
+// All annual sharedImages must be source verified by the runtime before rendering.
+function sharedImagesForStudent(q){
+ if(!q.canonicalId||!Array.isArray(q.sharedImages)||!q.sharedImages.length)return '';
+ return q.sharedImages.map(shared=>'<figure class="source-figure" data-shared-material-webp="true" data-shared-material-id="'+esc(shared.sharedMaterialId)+'" data-image-sha256="'+esc(shared.sha256)+'">'+
+  '<img src="'+esc(shared.image)+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題所需官方原始共用文章或圖表">'+
+  '<figcaption>本題必需的官方原始共用材料｜'+esc(shared.sharedMaterialId)+'（獨立原像素 WebP；未重畫或 OCR 補圖）</figcaption></figure>').join('');
+}
 function renderQuestion(){
  $('studyView').appendChild($('guideCard'));hideGuide();
  $('answerScrollSpace').style.height='0px';
@@ -500,7 +508,7 @@ function renderQuestion(){
  // Only verified-year English original cloze questions preserve source whitespace.
  // Demo35 and other subjects retain their original V4 typography.
  const stemAttrs=q.canonicalId&&q.subject==='英文'?' class="official-english-stem"':'';
- $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1'+stemAttrs+'>'+esc(q.question)+'</h1>'+img+sourceTableForStudent(q);
+ $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1'+stemAttrs+'>'+esc(q.question)+'</h1>'+img+sharedImagesForStudent(q)+sourceTableForStudent(q);
  $('answerCard').innerHTML='<h2>答案選項</h2><div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
  renderGuide();
