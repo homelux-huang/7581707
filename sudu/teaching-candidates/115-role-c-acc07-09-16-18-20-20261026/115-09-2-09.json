@@ -64,7 +64,7 @@
       "B": {
         "isCorrect": false,
         "teacher": "B的④流動比率上升確實合理，但①將進項稅額寫成**343,350元**而正確稅額為**320,850元**；B含錯項①，所以不對。",
-        "elementary": "B第二個理由是對的，第一個稅額算錯，整組仍然錯。",
+        "elementary": "B第二個理由是對的，第一個稅額算錯，整組仍然錯。 所以即使它的後半句對，這組仍不能選。",
         "reason": "B的④流動比率上升確實合理，但①將進項稅額寫成**343,350元**而正確稅額為**320,850元**；B含錯項①，所以不對。"
       },
       "C": {
@@ -137,7 +137,7 @@
     ],
     "source": "115 年會計學09原始官方題文字候選，需角色A/E以實際原圖、原卷官答及法規版本獨立確認。"
   },
-  "teachingCanonicalSha256": "81e0210ece5cc2450b678dc8e0005b13b352712552a3c85b2fc468ae20771bf1",
+  "teachingCanonicalSha256": "47051cecc75f54a8b72dae8b1290a36d9d1a88bec14ee63f6aaf94c67e8dfa27",
   "review": {
     "authorIdentity": "GPT-6 Role C AI teaching author",
     "authorRole": "C",
