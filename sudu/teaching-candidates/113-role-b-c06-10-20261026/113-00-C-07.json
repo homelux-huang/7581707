@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-07",
+  "taskId": "B-113-C06-10-A75-A77-PIXEL-LESSONS-20261026-01",
+  "subject": "國文",
+  "question": "若要使下文的理路連貫有序，①、②、③、④、⑤最適當的排列應是：\n  進得店來，\n  ①夥計於氣餒之餘，\n  ②自然歡天喜地的捧出他的貨色，\n  ③看準了他沒有什麼你就要什麼，\n  ④使得他顯著寒傖，先有幾分慚愧，\n  ⑤然後無精打采的道出你所真心要買的東西，\n  價錢根本不會太高。 ( 梁實秋〈講價〉 )",
+  "options": [
+    "③④⑤①②",
+    "③⑤④②①",
+    "⑤①②③④",
+    "⑤④①③②"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "originalSourceCommit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c07-10/manifest.json",
+    "manifestGitBlobSha": "ca3e7839f9811b6cae7ae92a229e9c8709e887bb",
+    "sourceRevision": "ff4d5109a27db1bff06d28df802051167915a627ac116e75ce5c456df21dfc26",
+    "originalSingleWebpPath": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-07.webp",
+    "webpSha256": "dc654891d368033b5b422cf01181231aefc62e9a31452ad1e64aaca478291b4a",
+    "webpGitBlobSha1": "8cc29669d5146ebd2ea0aa58460f73d61194972b",
+    "sourcePageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "sourcePagePath": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "answerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "answerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "answerPageGitBlob": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "roleAVisualQaPath": "sudu/data/processed/113/role-a-c07-10/VISUAL_QA_ASSISTANT_20261025.json",
+    "roleAImageOnlyCheck": true,
+    "officialYearCorrectionNoticeVerified": false,
+    "answerVerified": false,
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
+  },
+  "teaching": {
+    "topic": "梁實秋〈講價〉：句序、前因後果與承接語",
+    "teacherSummary": "進得店來後先③看準店家沒有的貨就故意要，④使夥計拿不出來而難堪慚愧，⑤『然後』才說真正想買的東西；①夥計在氣餒之餘承接之前失敗，②『自然』歡喜捧出自己有的貨。最後再接價錢不會太高，所以順序③④⑤①②，選 A。",
+    "elementarySummary": "先故意問店裡沒有的東西③，讓店員覺得不好意思④，然後才說真正要買什麼⑤。店員雖然剛剛有點沮喪①，但現在終於有貨能賣，很開心地拿出來②，所以選 A。",
+    "concept": "先有『要求店家沒有的→使其難堪』，才有『然後說真需求→氣餒之餘→自然捧出』，不能把『然後』放在故事第一句。",
+    "memory": "③故意問沒有→④店員羞愧→⑤說真要的→①氣餒→②開心捧貨，選 A。",
+    "solvingSteps": [
+      "進得店來之後第一個動作是③故意挑對方沒有的東西。",
+      "④『使得他』須承接③的事件，故先造成難堪，再談下一步。",
+      "⑤有『然後』，置於④後才順；①氣餒之餘接前述挫折。",
+      "②歡天喜地捧出貨物作最後結果，完整③④⑤①②對照 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 先要求沒有的③再造成羞愧④，然後⑤提出真正需求，①氣餒心理接前因，②開心捧貨收尾，能接題幹價格不高的結果。",
+        "elementary": "A 的故事按先讓店員難堪、再說真正要買、最後拿出貨物的順序說完。",
+        "reason": "A 的③④⑤①②依序接起『使得、然後、氣餒之餘、自然』的因果。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 的③後立刻⑤說真正要買的東西，卻將④使店員羞愧放到後面，讓本該先造成的心理效果在結果之後才發生。",
+        "elementary": "B 還沒有讓店員不好意思，就太早說出真正想買的東西。",
+        "reason": "B 使④因果效果晚於⑤真正需求，不符合原文鋪排。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 以⑤『然後無精打采』起首，但前面只有進得店來，沒有事件讓『然後』有所指；①氣餒也缺少讓他沮喪的原因。",
+        "elementary": "C 故事還沒開始就說『然後』，連店員為什麼沮喪也沒先交代。",
+        "reason": "C 把需要前文的然後、氣餒放在首段，③④卻後到，無法連貫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 同樣從⑤然後開始，接著先④難堪、①氣餒，卻到後面才③要求店員沒有的東西，因與果先後完全反向。",
+        "elementary": "D 先說店員難過，後面才說為什麼他難過，事情順序倒了。",
+        "reason": "D 將心理結果④①放在觸發事件③之前，而且⑤無前文可承接。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "進得店來",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "夥計於氣餒之餘",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "自然歡天喜地的捧出他的貨色",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "看準了他沒有什麼你就要什麼",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "使得他顯著寒傖",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "然後無精打采",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "③④⑤①②",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "講價",
+        "level": "初級",
+        "meaning": "和店員商量價錢。"
+      },
+      {
+        "term": "氣餒",
+        "level": "中級",
+        "meaning": "因受挫而失去信心。"
+      },
+      {
+        "term": "寒傖",
+        "level": "高級",
+        "meaning": "讓人難堪、顯得失面子的樣子。"
+      }
+    ],
+    "originalVisual": {
+      "type": "ORIGINAL_FIVE_SENTENCE_ORDER",
+      "sequence": [
+        "③",
+        "④",
+        "⑤",
+        "①",
+        "②"
+      ],
+      "reason": "先故意要求沒有的→使其難堪→說真正需求→氣餒→高興拿貨"
+    },
+    "originalImageMustRemainUnmodified": true
+  },
+  "teachingCanonicalSha256": "8df74f31a92e70ad3b5ba5acf061e430b1c6cd0a037416ac3fbf900d0565d1b4",
+  "composedTeachingSha256": "1e04c8e4d7e72aa5ecb16fe49bc22c3dc9e049c713a28da8fefa0f9182a31020",
+  "reasoningAudit": {
+    "alreadyKnewCandidateAnswer": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceImageCertification": "ROLE_A_ASSISTANT_ONLY",
+    "independentEContent": "PENDING",
+    "roleDExactDigest8x2": "PENDING",
+    "officialFinalAnswerQa": "PENDING_YEAR113_CORRECTION",
+    "requiresHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "YEAR113_FINAL_OFFICIAL_ANSWER_CORRECTION_SCOPE_PENDING",
+      "ROLE_A_SOURCE_QA_NOT_FINAL",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_REVIEW_MISSING",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_MISSING",
+      "MASTER_PROTECTED_MAIN_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

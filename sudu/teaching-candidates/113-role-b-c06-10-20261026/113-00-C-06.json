@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-06",
+  "taskId": "B-113-C06-10-A75-A77-PIXEL-LESSONS-20261026-01",
+  "subject": "國文",
+  "question": "右圖是一副具有儒家內涵的對聯，依上、下聯規則，\n  ○○、□□最適當的詞語應是：",
+  "options": [
+    "詩書、孝弟",
+    "孝弟、詩書",
+    "無為、齊物",
+    "齊物、無為"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "originalSourceCommit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c06/manifest.json",
+    "manifestGitBlobSha": "7ab0e3e27cfcd68c13bd0a783131f0ef05500db7",
+    "sourceRevision": "f5dd92e4d8b3184590011569c08977d59e3454d18b7489c3d60aca01f3343730",
+    "originalSingleWebpPath": "sudu/data/processed/113/role-a-c06/webp/113-00-C-06.webp",
+    "webpSha256": "57064b9f8da602c2894216b5f0ce7577988c2e534272d5da02affd5080f1a071",
+    "webpGitBlobSha1": "5e53721a28fd4847430b23839554b1ff808ffd3f",
+    "sourcePageSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+    "sourcePagePath": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
+    "answerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "answerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "answerPageGitBlob": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "roleAVisualQaPath": "sudu/data/processed/113/role-a-c06/VISUAL_QA_ASSISTANT_20261025.json",
+    "roleAImageOnlyCheck": true,
+    "officialYearCorrectionNoticeVerified": false,
+    "answerVerified": false,
+    "questionVerified": false,
+    "originalQuestionPdfSha256RecordedOnly": "67c0d477e99d07cd59af0e9c75b261692c3089fd5559185f41945de32316093f",
+    "originalAnswerPdfSha256RecordedOnly": "9a6ce177b0aec3f22957635cc9abc21539cf3356471b2e3dec65e550e8f9559a",
+    "sourceQaNotIndependentlyPublished": true
+  },
+  "teaching": {
+    "topic": "儒家對聯：孝弟、詩書與上/下聯",
+    "teacherSummary": "官方單題原像素右聯是『萬石家風惟○○』，左聯『百年世業在□□』。家風強調儒家所重的孝弟（孝親、友愛兄弟），世業用詩書象徵世代讀書傳家，因此圓圈填孝弟、方框填詩書；兩句結尾『弟』與『書』也符合常見上仄下平的對聯形式，所以 B。",
+    "elementarySummary": "右邊是說一家人要孝順、友愛，填『孝弟』；左邊說家族代代讀書，填『詩書』。圓圈放孝弟、方框放詩書，選 B。",
+    "concept": "讀對聯要看原圖的左右位置和詞義：右上聯家風偏家庭倫理，左下聯世業偏文化傳承。道家常用的無為、齊物與儒家家訓主題不符。",
+    "memory": "家風惟**孝弟**、世業在**詩書**，○○孝弟、□□詩書＝B。",
+    "solvingSteps": [
+      "原圖依右聯到左聯讀，右側萬石家風惟○○，左側百年世業在□□。",
+      "右聯要表家族倫理，選孝弟：孝親與手足友愛。",
+      "左聯談世代家業與文化傳承，選詩書：讀書傳家。",
+      "選項 B 的先後恰為孝弟／詩書；其他順序或思想脈絡不合。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 將詩書放在家風、孝弟放在世業，文意比不上『家風重孝弟、世業承詩書』，上下聯末字平仄次序也較不恰當。",
+        "elementary": "A 把孝順和讀書放錯了右、左位置，讀起來沒有 B 自然。",
+        "reason": "詩書與孝弟的語義位置互換，沒有正確回應兩句的家風、世業。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 讓右側的萬石家風以孝弟為根本，左側百年世業以詩書傳承；既符合儒家教育倫理，也與原圖兩種符號的位置吻合。",
+        "elementary": "B 右邊孝弟、左邊詩書，各自放在最適合的句子裡。",
+        "reason": "B 同時對應原始圓圈、方框與儒家孝弟及詩書家業的寓意。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 的無為、齊物是道家思想相關語彙，雖能形式上放入兩個雙字空格，卻不能合理說明儒家家風的孝悌及詩書傳家。",
+        "elementary": "C 說的是道家觀念，題目要的是儒家講孝順與讀書。",
+        "reason": "無為與齊物沒有對應家風與世業的儒家教育主題。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 把齊物、無為交換位置，仍然採用道家詞彙，而非題幹所指定的儒家內涵；順序對調不能消除思想來源不符的問題。",
+        "elementary": "D 只是把兩個道家的詞交換，仍然沒有講到孝順和詩書。",
+        "reason": "D 的詞義仍與題幹儒家家風、讀書傳家不一致，並非正解。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "儒家內涵",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "上、下聯",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "詩書",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "孝弟",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "無為",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "齊物",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "孝弟",
+        "level": "初級",
+        "meaning": "孝順父母、友愛手足；弟在此通悌。"
+      },
+      {
+        "term": "詩書",
+        "level": "中級",
+        "meaning": "借指典籍讀書與文化傳承。"
+      },
+      {
+        "term": "平仄",
+        "level": "高級",
+        "meaning": "古典詩文和對聯字音的平聲與仄聲分類。"
+      }
+    ],
+    "originalVisual": {
+      "type": "RIGHT_TO_LEFT_ORIGINAL_VERTICAL_COUPLET",
+      "right": "萬石家風惟○○",
+      "left": "百年世業在□□",
+      "circle": "孝弟",
+      "square": "詩書"
+    },
+    "originalImageMustRemainUnmodified": true
+  },
+  "teachingCanonicalSha256": "f1f97f3c124d6d35c3e242822d87eac568f6fc71ea5c6218e34217b82c92aa55",
+  "composedTeachingSha256": "1166ba1c58655a2bf150d669adeb5b93c50a2d4bae640f65d4c89b6c7a884e57",
+  "reasoningAudit": {
+    "alreadyKnewCandidateAnswer": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceImageCertification": "ROLE_A_ASSISTANT_ONLY",
+    "independentEContent": "PENDING",
+    "roleDExactDigest8x2": "PENDING",
+    "officialFinalAnswerQa": "PENDING_YEAR113_CORRECTION",
+    "requiresHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "YEAR113_FINAL_OFFICIAL_ANSWER_CORRECTION_SCOPE_PENDING",
+      "ROLE_A_SOURCE_QA_NOT_FINAL",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_REVIEW_MISSING",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_MISSING",
+      "MASTER_PROTECTED_MAIN_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
