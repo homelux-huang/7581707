@@ -1,0 +1,77 @@
+name: Role D 115 original approved Math B five real V4 5x8x2 (NO NEW RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-d-115-mathb-five-approved-real-v4-20261026
+  pull_request:
+    branches:
+      - qa/role-d-114-e11-e13-e14-v4-20261026
+    paths:
+      - 'tests/sudu_role_d_115_mathb_real_approved_8x2.cjs'
+      - '.github/workflows/role-d-115-mathb-five-real-v4.yml'
+      - 'docs/ROLE_D_115_MATHB_FIVE_REAL_APPROVED_V4_20261026.md'
+      - 'sudu/v4-115-multisubject-review-demo.html'
+      - 'sudu/verified-questions-runtime.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-d-115-mb-real-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  existing_published_five_full_v4_8x2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      SUDU_D_EXPECT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      SUDU_D_REAL_OUT: test-results/role-d-115-mb-real
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact original protected publisher five source artifact and JS syntax
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SUDU_D_EXPECT_SHA"
+          node --check tests/sudu_role_d_115_mathb_real_approved_8x2.cjs
+          node --check sudu/verified-questions-runtime.js
+          git diff --exit-code
+          test -f sudu/data/approved/115.json
+      - name: Install real Chromium and zh-TW CJK glyph support
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
+          fc-cache -f
+          fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1 | grep -Eq '^Noto (Sans|Serif) CJK'
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Verify real publisher original five and launch original single V4
+        run: |
+          set -euo pipefail
+          python scripts/sudu_verified_publish.py check
+          python scripts/build.py
+          python -m http.server 8765 --bind 127.0.0.1 --directory _site >/tmp/role-d115-real.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/sudu/data/approved/115.json >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/sudu_role_d_115_mathb_real_approved_8x2.cjs
+      - name: Preserve 80 genuine existing-student-publisher screenshots and exact SHA proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-115-MathB-FIVE-ALREADY-APPROVED-${{ github.run_id }}
+          path: test-results/role-d-115-mb-real/
+          if-no-files-found: warn
+          retention-days: 14
