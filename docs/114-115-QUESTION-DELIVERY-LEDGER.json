@@ -4308,7 +4308,7 @@
         "teachingDigest": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee"
       },
       "independentTeachingQA": {
-        "status": "EXACT_SOURCE_E_FINAL_REVIEW_CLAIMED__NOT_YET_RETURNED",
+        "status": "AI_E_INDEPENDENT_CONTENT_REASONING_PASS__TRUSTED_PROTECTED_REGISTRY_RECEIPT_PENDING",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
@@ -4316,7 +4316,8 @@
         "reviewMode": "OWNER_POLICY_DISTINCT_AI_SUBSTANTIVE_REVIEW",
         "aiReviewEvidenceGitBlob": null,
         "reviewTaskId": "E-114-EN11-INDEPENDENT-CONTENT-20261027-01",
-        "reviewIssue36CommentId": 6429493578
+        "reviewIssue36CommentId": 6429526998,
+        "trustedRegistryReceiptStatus": "NOT_RECEIVED"
       },
       "uiQA": {
         "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
@@ -4488,15 +4489,16 @@
         "teachingDigest": "e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1"
       },
       "independentTeachingQA": {
-        "status": "TRUSTED_DISTINCT_E_FINAL_REVIEW_NOT_RECEIVED",
+        "status": "AI_E_INDEPENDENT_CONTENT_REASONING_PASS__TRUSTED_PROTECTED_REGISTRY_RECEIPT_PENDING",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
         "teachingDigestReviewed": null,
         "reviewMode": "OWNER_POLICY_DISTINCT_AI_SUBSTANTIVE_REVIEW",
         "aiReviewEvidenceGitBlob": null,
-        "reviewTaskId": null,
-        "reviewIssue36CommentId": null
+        "reviewTaskId": "E-114-EN13-INDEPENDENT-CONTENT-20261027-02",
+        "reviewIssue36CommentId": 6429550544,
+        "trustedRegistryReceiptStatus": "NOT_RECEIVED"
       },
       "uiQA": {
         "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
@@ -4584,15 +4586,16 @@
         "teachingDigest": "b9c464e05fcec6969ef298d5744a9599af8e17612fc5cde2615a6a090e3c560e"
       },
       "independentTeachingQA": {
-        "status": "TRUSTED_DISTINCT_E_FINAL_REVIEW_NOT_RECEIVED",
+        "status": "AI_E_ANSWER_OPTIONS_PASS__P2_DICTIONARY_SOURCE_LINK_AUTHOR_REVISION_NEEDED__TRUSTED_REGISTRY_PENDING",
         "reviewerGitHubId": null,
         "signatureEvidence": null,
         "sourceRevisionReviewed": null,
         "teachingDigestReviewed": null,
         "reviewMode": "OWNER_POLICY_DISTINCT_AI_SUBSTANTIVE_REVIEW",
         "aiReviewEvidenceGitBlob": null,
-        "reviewTaskId": null,
-        "reviewIssue36CommentId": null
+        "reviewTaskId": "E-114-EN14-INDEPENDENT-CONTENT-20261027-03",
+        "reviewIssue36CommentId": 6429580217,
+        "trustedRegistryReceiptStatus": "NOT_RECEIVED"
       },
       "uiQA": {
         "status": "QA_ONLY_ORIGINAL_8X2_48_CASES_PASS__FINAL_PUBLISHER_8X2_PENDING",
@@ -4623,7 +4626,8 @@
         "OFFICIAL_ORIGINAL_STEM_OPTIONS_QUESTION_VERIFICATION_PENDING",
         "TRUSTED_DISTINCT_E_FINAL_CONTENT_RECEIPT_AND_PROTECTED_REGISTRY_PENDING",
         "PUBLISHER_ACTUAL_APPROVED_ARTIFACT_8X2_V4_UIQA_PENDING",
-        "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN"
+        "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN",
+        "B_AUTHOR_ENGLISH_CAMBRIDGE_DICTIONARY_URL_P2_CORRECTION_AND_REBOUND_REQUIRED"
       ]
     },
     "114-00-E-15": {
