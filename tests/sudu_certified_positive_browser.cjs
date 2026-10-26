@@ -57,7 +57,16 @@ const snapshot={schemaVersion:1,year:115,expected:205,approvedCount:2,questions:
    assert.equal(await page.locator('#verifiedPreviewToggle').count(),0);
    assert.equal(await page.locator('#studyView .opt').count(),4);
    const img=page.locator('#questionCard img[data-mock-asset], #questionCard img').first();
-   assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0}));
+   // The original WebP is intentionally loading="lazy" and decoding="async":
+   // bring it into view, require a real load and THEN check decode.
+   // Missing/corrupted original bytes must still cause a FAIL.
+   await img.scrollIntoViewIfNeeded();
+   await page.waitForFunction(()=>{
+    const el=document.querySelector('#questionCard img[data-mock-asset], #questionCard img');
+    return Boolean(el && el.complete && el.naturalWidth>0);
+   },null,{timeout:20000});
+   assert(await img.evaluate(async el=>{await el.decode();return el.naturalWidth>0}),
+       'Original approved WebP must decode with naturalWidth>0');
    assert(await page.locator('#prevBtn').isDisabled());
    assert(await page.locator('#nextBtn').isEnabled());
    await page.locator('#studyView .opt[data-a="B"]').click();
