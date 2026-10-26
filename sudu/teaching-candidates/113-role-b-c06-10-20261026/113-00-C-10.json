@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-10",
+  "taskId": "B-113-C06-10-A75-A77-PIXEL-LESSONS-20261026-01",
+  "subject": "國文",
+  "question": "《 天工開物‧舟車 》：「人有貴而必出，行畏周行；物有賤而必須，坐窮負販。四海之\n  內，南資舟而北資車。」這段話若依下框所示，繪製常用於「分析原因」的「魚骨\n  圖」，｛｝、〔〕最適合填入何者？\n\n\n\n  就魚頭所提出的【問題】，\n  先於 寫出｛主因｝，\n  再於    寫出各主因的〔小原因〕。\n\n\n\n\n\n\n         ①      ①－1      ②          ②－1",
+  "options": [
+    "載人 ／ 重視人權 ／ 運貨 ／ 貶抑物價",
+    "載人 ／ 怕走路累 ／ 運貨 ／ 互通有無",
+    "北方 ／ 重視人權 ／ 南方 ／ 貶抑物價",
+    "北方 ／ 怕走路累 ／ 南方 ／ 互通有無"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "originalSourceCommit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c07-10/manifest.json",
+    "manifestGitBlobSha": "ca3e7839f9811b6cae7ae92a229e9c8709e887bb",
+    "sourceRevision": "48154f29ead5dd768337d005273a43815bef736d59857c4415d5306af0d2bb15",
+    "originalSingleWebpPath": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-10.webp",
+    "webpSha256": "6d02e6a8bcc051c764bd6147f9f49c5b6edee7ea6b78be3ec9c3c439cb997936",
+    "webpGitBlobSha1": "5d31062165ac00e52f418d7c9fa89c26096238eb",
+    "sourcePageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "sourcePagePath": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "answerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "answerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "answerPageGitBlob": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "roleAVisualQaPath": "sudu/data/processed/113/role-a-c07-10/VISUAL_QA_ASSISTANT_20261025.json",
+    "roleAImageOnlyCheck": true,
+    "officialYearCorrectionNoticeVerified": false,
+    "answerVerified": false,
+    "questionVerified": false
+  },
+  "teaching": {
+    "topic": "《天工開物．舟車》魚骨圖與四欄表：主因、次因及交通需求",
+    "teacherSummary": "原文『人有貴而必出，行畏周行』說人要出行，畏懼徒步奔波辛苦；『物有賤而必須，坐窮負販』反映物資需要運送與交易流通。魚骨圖魚頭問『需要交通工具的原因』，兩條主骨應為①**載人**、②**運貨**，其小原因①－1**怕走路累**、②－1**互通有無**。四欄按①／①－1／②／②－1排列只有 B 完整吻合。『南資舟而北資車』是交通形式的地域差異，不能誤作交通必要性的兩個大主因。",
+    "elementarySummary": "大家為什麼需要交通工具？一是載人，因為走路太累；二是運貨，因為各地要送貨交換東西。大原因是『載人、運貨』，小原因是『怕走路累、互通有無』，所以 B。",
+    "concept": "魚骨圖先看魚頭問題、魚大骨主因、魚小骨細節；在此主因是載人和運貨，南北之別只是用舟還是車的差異。",
+    "memory": "兩大骨：**載人→怕走路累；運貨→互通有無**，四格 B。",
+    "solvingSteps": [
+      "先看原圖魚頭的問題是需要交通工具的原因，釐清主因和小原因兩種層級。",
+      "讀原文『人有貴而必出，行畏周行』，人要出門卻怕徒步勞累，得到①載人、①－1怕走路累。",
+      "讀『物有賤而必須，坐窮負販』，商品需交易運送，得到②運貨、②－1互通有無。",
+      "依原始印刷四欄①／①－1／②／②－1逐選項核對，只有 B 四個位置全正確。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 的主因載人與運貨符合交通用途，但把小原因寫成『重視人權』『貶抑物價』，原文只談出行奔波與物資流通，沒有這兩項政策主張。",
+        "elementary": "A 大原因對了，小原因卻硬加人權和壓低物價，文章沒有說。",
+        "reason": "A 的人權、物價小因缺原文依據，不能由『貴、賤』二字妄推政策。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 的四欄以載人、運貨作主因，以怕走路累、互通有無作小原因，分別承接原文人有必出與物有必須的兩段，魚骨因果層級相符。",
+        "elementary": "B 大原因和小原因都對：人要坐車少走路，貨要運送互相交換。",
+        "reason": "B 在四欄對應出行和運貨兩功能，兩個小原因也與原文一致。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 把北方、南方填成主要原因，混淆使用舟或車的地區差別與交通工具存在的功能；又加入重視人權、貶抑物價，完全缺少文本支持。",
+        "elementary": "C 只看南北方，卻忘了真正原因是載人運貨，小原因也亂加。",
+        "reason": "C 的南北屬地區差異而非需求主因，人權與物價也非原文理由。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 的小原因怕走路累、互通有無有部分根據，但①與②填北方、南方，使魚骨主因從交通用途錯變為地域分類，主從關係不符合題目。",
+        "elementary": "D 小原因有對，但大原因不應是南北，而是載人和運貨。",
+        "reason": "D 把地域當作交通必要性主因，未回應魚頭要求的人與貨運輸。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "人有貴而必出",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "物有賤而必須",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "南資舟而北資車",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "載人",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "怕走路累",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "運貨",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "互通有無",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "載人",
+        "level": "初級",
+        "meaning": "運送乘客或要出行的人。"
+      },
+      {
+        "term": "互通有無",
+        "level": "中級",
+        "meaning": "不同地方交換彼此有、對方缺的物品。"
+      },
+      {
+        "term": "魚骨圖",
+        "level": "高級",
+        "meaning": "魚頭放問題、主骨放大原因、分枝放細節的分析圖。"
+      }
+    ],
+    "originalVisual": {
+      "type": "OFFICIAL_ORIGINAL_FISHBONE_AND_FOUR_COLUMN_A_TO_D_TABLE",
+      "fishHead": "需要交通工具的原因",
+      "headers": [
+        "①",
+        "①－1",
+        "②",
+        "②－1"
+      ],
+      "correctRowB": [
+        "載人",
+        "怕走路累",
+        "運貨",
+        "互通有無"
+      ],
+      "officialOriginalFigureRequired": true,
+      "sourceImageDoNotRedraw": true
+    },
+    "originalImageMustRemainUnmodified": true
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "alreadyKnewCandidateAnswer": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceImageCertification": "ROLE_A_ASSISTANT_ONLY",
+    "independentEContent": "PENDING",
+    "roleDExactDigest8x2": "PENDING",
+    "officialFinalAnswerQa": "PENDING_YEAR113_CORRECTION",
+    "requiresHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "YEAR113_FINAL_OFFICIAL_ANSWER_CORRECTION_SCOPE_PENDING",
+      "ROLE_A_SOURCE_QA_NOT_FINAL",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_REVIEW_MISSING",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_MISSING",
+      "MASTER_PROTECTED_MAIN_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}

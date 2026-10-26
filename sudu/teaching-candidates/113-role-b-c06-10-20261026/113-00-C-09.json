@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-09",
+  "taskId": "B-113-C06-10-A75-A77-PIXEL-LESSONS-20261026-01",
+  "subject": "國文",
+  "question": "雙方立場不一致時，通常會就下圖所示五種策略擇一回應。依據〈燭之武退秦師〉、\n  〈漁父〉，對①、②的研判應是：\n  ①秦穆公與燭之武對談後，以「對立」策略                        高   對立      合作\n   回應燭之武。                      堅\n  ②屈原與漁父對談時，以「順應」策略回應                      持\n   漁父。                 自        妥協",
+  "options": [
+    "①、②皆正確",
+    "①、②皆錯誤",
+    "①正確，②錯誤",
+    "①錯誤，②正確"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "originalSourceCommit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c07-10/manifest.json",
+    "manifestGitBlobSha": "ca3e7839f9811b6cae7ae92a229e9c8709e887bb",
+    "sourceRevision": "826ea6153ea63de6a74bc95b747b88701b613df1d117f894c10844c2322d15be",
+    "originalSingleWebpPath": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-09.webp",
+    "webpSha256": "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b",
+    "webpGitBlobSha1": "f57d9bf5799f72589929f268d4ab2b175f53edfe",
+    "sourcePageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "sourcePagePath": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "answerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "answerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "answerPageGitBlob": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "roleAVisualQaPath": "sudu/data/processed/113/role-a-c07-10/VISUAL_QA_ASSISTANT_20261025.json",
+    "roleAImageOnlyCheck": true,
+    "officialYearCorrectionNoticeVerified": false,
+    "answerVerified": false,
+    "questionVerified": false
+  },
+  "teaching": {
+    "topic": "〈燭之武退秦師〉與〈漁父〉：五種衝突策略雙軸圖",
+    "teacherSummary": "原印刷圖的縱軸為『堅持自我的程度』，橫軸為『配合他人的程度』，位置分別有對立、合作、妥協、迴避、順應。①秦穆公與燭之武談後，接受利害分析，退兵並與鄭盟約，並非繼續以『對立』回應。②屈原面對漁父勸他隨世浮沉，仍堅持清白與自身原則，也沒有採『順應』。兩項敘述皆錯，答案 B。『對談前曾敵對』不等於『對談後仍對立』，須抓最後回應。",
+    "elementarySummary": "秦穆公聽燭之武說完後不再打鄭國，還跟鄭國結盟，所以不是繼續對立。屈原沒有聽漁父勸他改變自己，也不是順應。①和②都不對，因此 B。",
+    "concept": "對立是高度堅持自己而低度配合對方；順應是高度配合而降低自己的堅持。圖中軸線不是裝飾，要用人物最後實際行動判斷。",
+    "memory": "秦穆公**撤軍、盟鄭**不是對立；屈原**堅守原則**不是順應；①錯②錯，B。",
+    "solvingSteps": [
+      "先讀完原始雙軸圖：縱軸高到低表示自我堅持，橫軸左低右高表示配合他人的程度。",
+      "釐清①時間是『與燭之武對談後』；秦國撤軍、與鄭盟約，故不是持續對立，①錯。",
+      "釐清②屈原不肯隨俗，未接受漁父想法，因此並非以順應策略回應，②錯。",
+      "把兩項真假結果與四個選項逐一核對，『①②皆錯誤』對應 B。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 認為兩項皆正確，但秦穆公談後不再對立而與鄭國結盟，屈原也拒絕漁父隨俗的建議，因此兩項都與文本結局相反。",
+        "elementary": "A 說兩個人都照題目講的做，其實秦穆公與屈原都不是這樣。",
+        "reason": "A 同時錯認秦穆公的盟鄭撤軍與屈原不隨俗的回應。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 判兩項都錯誤：秦穆公不再維持原先對立而退兵結盟，屈原也沒有順著漁父改變原則，這兩件事可由原篇對話結果分別確認。",
+        "elementary": "秦穆公沒有繼續對立，屈原也沒有順應，所以兩句都是錯的，B。",
+        "reason": "B 的雙錯判斷分別有秦鄭盟約、屈原堅持理想的文本根據。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 只把②判錯，雖然知道屈原並未順應漁父，但仍把秦穆公在對話之後撤兵盟鄭說成對立，忽略最後已改變回應策略。",
+        "elementary": "C 看對屈原那一題，但忘了秦穆公已經不打鄭國、改成結盟。",
+        "reason": "C 的①仍把退兵盟鄭誤當對立，第一部分不符合原文結局。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 把①判錯合理，卻將②判為正確，誤把屈原不願隨世浮沉的堅持當成順應，與其明言不改志節的立場正好相反。",
+        "elementary": "D 知道秦穆公沒繼續對立，但屈原沒有照漁父的話做，所以後半錯。",
+        "reason": "D 的②將屈原堅守立場誤作順應，未區別圖上的堅持與配合。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "對立",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "順應",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "秦穆公",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "燭之武",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "屈原",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "漁父",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "①、②皆錯誤",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "對立",
+        "level": "初級",
+        "meaning": "與對方立場衝突，雙方不願讓步。"
+      },
+      {
+        "term": "順應",
+        "level": "中級",
+        "meaning": "降低自己的堅持，改採配合對方的方式。"
+      },
+      {
+        "term": "衝突策略矩陣",
+        "level": "高級",
+        "meaning": "用兩個軸比較對立、合作、妥協、迴避與順應的處理方式。"
+      }
+    ],
+    "originalVisual": {
+      "type": "OFFICIAL_ORIGINAL_TWO_AXIS_CONFLICT_STRATEGY",
+      "verticalAxis": "堅持自我的程度（低→高）",
+      "horizontalAxis": "配合他人的程度（低→高）",
+      "zones": {
+        "左上": "對立",
+        "右上": "合作",
+        "中央": "妥協",
+        "左下": "迴避",
+        "右下": "順應"
+      },
+      "sourceFinalPixelSha256": "428585747ee518a3e2d0e2d206bffd26a9b124402081cc5c504c16bfe7d3784b",
+      "rejectedClippedOldSha256": "2c42042d8f75bba4123e76e151e088659d769c90ad665fb26589f3fff87c54ac",
+      "sourceImageDoNotRedraw": true
+    },
+    "originalImageMustRemainUnmodified": true
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "alreadyKnewCandidateAnswer": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceImageCertification": "ROLE_A_ASSISTANT_ONLY",
+    "independentEContent": "PENDING",
+    "roleDExactDigest8x2": "PENDING",
+    "officialFinalAnswerQa": "PENDING_YEAR113_CORRECTION",
+    "requiresHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "YEAR113_FINAL_OFFICIAL_ANSWER_CORRECTION_SCOPE_PENDING",
+      "ROLE_A_SOURCE_QA_NOT_FINAL",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_REVIEW_MISSING",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_MISSING",
+      "MASTER_PROTECTED_MAIN_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
