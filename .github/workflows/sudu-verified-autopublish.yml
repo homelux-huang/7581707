@@ -18,6 +18,7 @@ on:
 permissions:
   contents: write
   actions: write
+  pull-requests: write
 concurrency:
   group: sudu-verified-autopublish
   cancel-in-progress: false
@@ -104,7 +105,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$SRC_COMMIT" --signature "$SRC_SIGNATURE"
           python scripts/sudu_verified_publish.py check
-      - name: Non-force push and dispatch SAME official Pages release gate
+      - name: Stage approved output for a normal independently reviewed Draft PR
         if: steps.snapshot.outputs.updated == 'true'
         shell: bash
         env:
@@ -112,18 +113,15 @@ jobs:
         run: |
           set -euo pipefail
           git add -A sudu/data/approved
-          if git diff --cached --quiet; then
-            echo "No new approved-data or progress changes"
-            exit 0
-          fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'sync: QA-approved 114/115 data and yearly progress'
-          git pull --rebase origin main
-          git push origin HEAD:main
-          RELEASE_SHA="$(git rev-parse HEAD)"
-          # A GITHUB_TOKEN bot push does NOT fire push-triggered GitHub Actions.
-          # Explicit workflow_dispatch is required to deploy this new exact SHA.
-          gh workflow run pages.yml --ref main -f target_sha="$RELEASE_SHA"
-          echo "Main updated at $RELEASE_SHA; dispatched mandatory Pages same-commit release gate."
+          python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate
+
+      - name: Retain pinned candidate even if token cannot create a PR
+        if: always() && steps.snapshot.outputs.updated == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: approved-sync-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          path: _sync_candidate/
 
       - name: Automatically recover failed, cancelled or missing same-SHA Pages release
         # No QA data change is required to recover a previously cancelled deploy.
@@ -154,4 +152,5 @@ jobs:
               exit 1
               ;;
           esac
+
 
