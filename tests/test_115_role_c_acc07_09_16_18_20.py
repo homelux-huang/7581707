@@ -33,7 +33,7 @@ class RoleCAuthorFiveAccounting(unittest.TestCase):
     def setUpClass(cls):
         cls.batch=json.loads((DIR/"batch.json").read_text(encoding="utf-8"))
         cls.items={r["questionId"]:r for r in cls.batch["items"]}
-        cls.records={id:json.loads((ROOT[r["path"]).read_text(encoding="utf-8"))
+        cls.records={id:json.loads((ROOT/r["path"]).read_text(encoding="utf-8"))
                      for id,r in cls.items.items()}
 
     def test_actual_claim_scope_versions_and_zero_release(self):
