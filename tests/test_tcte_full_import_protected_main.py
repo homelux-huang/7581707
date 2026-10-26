@@ -15,11 +15,12 @@ class ProtectedMainImportWorkflowTests(unittest.TestCase):
         self.assertNotIn('gh workflow run tcte-data-audit.yml',self.text)
 
     def test_candidate_is_lease_safe_and_reviewable(self):
-        self.assertIn('pull-requests: write',self.text)
+        self.assertIn('pull-requests: read',self.text)
         self.assertIn('automation/tcte-original-image-candidate',self.text)
         self.assertIn('--force-with-lease=',self.text)
-        self.assertIn('gh pr create',self.text)
-        self.assertIn('--draft',self.text)
+        self.assertNotIn('gh pr create',self.text)
+        self.assertIn('gh pr list',self.text)
+        self.assertIn('GitHub Actions PR creation is intentionally disabled',self.text)
         self.assertIn('--base main',self.text)
 
     def test_original_no_ocr_and_audit_gates_remain(self):

@@ -9,7 +9,7 @@ on:
     - cron: '0 18 * * 0'
 permissions:
   contents: write
-  pull-requests: write
+  pull-requests: read
 concurrency:
   group: tcte-corpus-update
   cancel-in-progress: false
@@ -63,7 +63,7 @@ jobs:
           fi
           echo 'changed=true' >> "$GITHUB_OUTPUT"
           echo "branch=$CANDIDATE_BRANCH" >> "$GITHUB_OUTPUT"
-      - name: Open or retain a Draft PR for source review
+      - name: Link the existing Draft PR or report the staged branch
         if: steps.stage.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -71,15 +71,10 @@ jobs:
         run: |
           set -euo pipefail
           number="$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --base main --head "$CANDIDATE_BRANCH" --json number --jq '.[0].number // empty')"
-          if [ -z "$number" ]; then
-            printf '%s\n' \
-              'This automated candidate contains rendered official-source images and corpus audit output only.' \
-              '' \
-              'It is intentionally a Draft PR. Review source provenance, image integrity and the audit before normal protected-main integration. Its existence is not per-question G1, READY or deployment approval. Pages is not dispatched from the import workflow.' \
-              > /tmp/tcte-pr-body.md
-            gh pr create --repo "$GITHUB_REPOSITORY" --draft --base main --head "$CANDIDATE_BRANCH" --title 'Stage official TCTE source-image corpus update' --body-file /tmp/tcte-pr-body.md
-          else
+          if [ -n "$number" ]; then
             echo "Retaining existing Draft PR #$number for $CANDIDATE_BRANCH"
+          else
+            echo "::notice title=TCTE candidate staged::Open a Draft PR from $CANDIDATE_BRANCH to main through the authorized MASTER connector. GitHub Actions PR creation is intentionally disabled by repository policy."
           fi
       - uses: actions/upload-artifact@v4
         if: always()
