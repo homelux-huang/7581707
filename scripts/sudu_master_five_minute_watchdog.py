@@ -24,9 +24,12 @@ TASKS = (
     ("D-104-113-V4-ROUTING-CONTRACT-20261025-01", "D"),
 )
 TASK_ID = re.compile(r"\btaskId\s*[:=]?\s*[\x60*_]*([A-Z][A-Z0-9_-]{5,})", re.I)
-EVENT_HEAD = re.compile(r"^\s*(CLAIMED|RETURN)\b", re.I)
+EVENT_HEAD = re.compile(
+    r"^\s*\ufeff?\s*(?:#{1,6}\s*)?(?:\*{1,2})?(CLAIMED|CLAIM|RETURN)\b", re.I
+)
 LINE_ID = re.compile(
-    r"^\s*(?:CLAIMED|RETURN)\b[^\n]{0,75}?"
+    r"^\s*\ufeff?\s*(?:#{1,6}\s*)?(?:\*{1,2})?"
+    r"(?:CLAIMED|CLAIM|RETURN)\b[^\n]{0,140}?"
     r"\b((?:MASTER|[ABCDE])-[A-Z0-9]+(?:-[A-Z0-9]+){2,})\b", re.I,
 )
 
@@ -34,7 +37,7 @@ LINE_ID = re.compile(
 def events_from_comments(comments: list[dict]) -> dict[str, dict]:
     """An Issue dispatch mention is not a role ACK."""
     events = {}
-    for item in comments:
+    for item in sorted(comments, key=lambda c: int(c.get("id") or 0)):
         body = item.get("body") or ""
         match = EVENT_HEAD.search(body)
         if not match:
@@ -42,8 +45,8 @@ def events_from_comments(comments: list[dict]) -> dict[str, dict]:
         task = TASK_ID.search(body[:1200]) or LINE_ID.search(body[:250])
         if not task:
             continue
-        events[task.group(1)] = {
-            "event": "CLAIM" if match.group(1).upper() == "CLAIMED" else "RETURN",
+        events[task.group(1).upper()] = {
+            "event": "CLAIM" if match.group(1).upper().startswith("CLAIM") else "RETURN",
             "commentId": item.get("id"),
             "createdAt": item.get("created_at"),
             "url": item.get("html_url"),
@@ -86,6 +89,20 @@ def make_report(main_sha: str, issue: dict, comments: list[dict],
                     "fetchedComments": len(comments)},
         "pullRequests": snapshots,
         "workQueue": queue,
+        "recentActualTaskEvents": sorted(
+            ({
+                "taskId": task_id,
+                "role": task_id.split("-")[0] if task_id.split("-")[0] in
+                        {"MASTER", "A", "B", "C", "D", "E"} else "UNVERIFIED",
+                "state": "CLAIM_RECORDED_NOT_PROOF_RUNNING"
+                         if event["event"] == "CLAIM" else
+                         "RETURN_RECORDED_REVIEW_PENDING",
+                "issueEvidence": event,
+            } for task_id, event in events.items()),
+            key=lambda x: int(x["issueEvidence"].get("commentId") or 0),
+            reverse=True
+        )[:60],
+        "openPullRequestCount": sum(1 for p in prs.values() if p.get("state") == "open"),
         "release": {
             "newReady": "NOT_VERIFIED",
             "newMain": "NOT_VERIFIED",
@@ -114,6 +131,10 @@ def summary_markdown(report: dict) -> str:
     for t in report["workQueue"]:
         lines.append("| " + t["role"] + " | " + t["taskId"] +
                      " | " + t["state"] + " |")
+    lines.append("")
+    lines.append("Recent explicit CLAIM/RETURN receipts: " +
+                 str(len(report.get("recentActualTaskEvents", []))))
+    lines.append("Open PR snapshots: " + str(report.get("openPullRequestCount", 0)))
     return "\n".join(lines) + "\n"
 
 
@@ -143,6 +164,22 @@ def get_comments(path: str, token: str) -> list[dict]:
     raise RuntimeError("pagination limit reached; refuse partial Issue evidence")
 
 
+def get_open_pulls(path: str, token: str) -> list[dict]:
+    """Discover fresh A/B/C/D/E PRs instead of relying on frozen PR numbers."""
+    pulls = []
+    for page in range(1, 7):
+        batch = api_get(
+            path + f"?state=open&sort=updated&direction=desc&per_page=100&page={page}",
+            token,
+        )
+        if not isinstance(batch, list):
+            raise ValueError("missing paginated pull-request list")
+        pulls.extend(batch)
+        if len(batch) < 100:
+            return pulls
+    raise RuntimeError("open PR pagination limit reached; refusing partial snapshot")
+
+
 def collect(token: str) -> dict:
     base = "/repos/" + REPO
     issue = api_get(base + f"/issues/{ISSUE}", token)
@@ -151,6 +188,12 @@ def collect(token: str) -> dict:
         raise RuntimeError("Issue comments changed mid-snapshot; retry next tick")
     main_sha = api_get(base + "/branches/main", token)["commit"]["sha"]
     prs = {n: api_get(base + f"/pulls/{n}", token) for n in PRS}
+    for pull in get_open_pulls(base + "/pulls", token):
+        number = pull.get("number")
+        if not isinstance(number, int):
+            raise ValueError("open pull request missing numeric ID")
+        # Critical PR snapshots preserve exact original fetch results.
+        prs.setdefault(number, pull)
     return make_report(main_sha, issue, comments, prs,
                        datetime.now(timezone.utc).isoformat())
 
