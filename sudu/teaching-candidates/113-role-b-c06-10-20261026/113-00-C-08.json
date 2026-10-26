@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 113,
+  "questionId": "113-00-C-08",
+  "taskId": "B-113-C06-10-A75-A77-PIXEL-LESSONS-20261026-01",
+  "subject": "國文",
+  "question": "「視而不見」、「口惠而實不至」的「而」，相當於「卻」，用來表示其前、後詞語有\n  轉折關係。下列文句中的「而」，何者有相同用法？",
+  "options": [
+    "提刀「而」立，為之四顧",
+    "滿目蕭然，感極「而」悲者矣",
+    "郁離子之市，見壞宅「而」哭之慟",
+    "惑「而」不從師，其為惑也終不解矣"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "originalSourceCommit": "1f76d702dd00ff2bcfef7bccf7afa33b3dbc7ad5",
+    "sourceManifestPath": "sudu/data/processed/113/role-a-c07-10/manifest.json",
+    "manifestGitBlobSha": "ca3e7839f9811b6cae7ae92a229e9c8709e887bb",
+    "sourceRevision": "052e45e52d7f966f0f4e249522a63dfb1813124b93c2a09239b7848c1a0298d5",
+    "originalSingleWebpPath": "sudu/data/processed/113/role-a-c07-10/webp/113-00-C-08.webp",
+    "webpSha256": "4ea59fb90d9bbec2f255944b0a5fc6be4f9a25257e3f74caa7aa3b5e10e88e49",
+    "webpGitBlobSha1": "e89669211f06f9f0f62f4a301085e846cfcb3c39",
+    "sourcePageSha256": "3ccfa972ff173e8d4cf8c40448a7dc8a8092570b943d8c9b6a8d171d60e5fc33",
+    "sourcePagePath": "sudu/data/original/113/00-C/p003-67c0d477e9-v2-w1400-q66.webp",
+    "answerPagePath": "sudu/data/original/113/00-C-answers/p001-9a6ce177b0-v2-w1400-q66.webp",
+    "answerPageSha256": "a3c8154f5186c925a9408e4c4b50cd9a0c2b92db2fe3375d3d13d8491b9c7bc3",
+    "answerPageGitBlob": "938f88435a9b21e257f11dfcfda71655e8a7a0c6",
+    "roleAVisualQaPath": "sudu/data/processed/113/role-a-c07-10/VISUAL_QA_ASSISTANT_20261025.json",
+    "roleAImageOnlyCheck": true,
+    "officialYearCorrectionNoticeVerified": false,
+    "answerVerified": false,
+    "questionVerified": false
+  },
+  "teaching": {
+    "topic": "文言虛詞『而』：轉折相當於『卻』",
+    "teacherSummary": "題幹明示『視而不見』『口惠而實不至』的『而』表前後語意轉折，約等於『卻』。D『惑而不從師』即『有疑惑卻不向老師求教』，含違反預期的對比，故 D。A是提刀站立的動作連接，B是感極導致悲傷，C是見壞宅後哭的順承，皆不相同。",
+    "elementarySummary": "找能把『而』換成『卻』的句子。D 就是『明明有問題，卻不問老師』，最符合。A拿刀站立、B感動而悲傷、C見屋子壞了就哭都不是反過來的意思，所以 D。",
+    "concept": "轉折的『而』可解作『卻』，前後看起來不符合預期；連接動作、因果或先後則不能硬譯成『卻』。",
+    "memory": "**惑而不從師**＝有疑問**卻**不問老師，轉折 D。",
+    "solvingSteps": [
+      "由題幹固定這次要找的是前後轉折、相當於『卻』的而。",
+      "看 A 提刀而立只是動作連接，B 感極而悲是感觸深後悲傷。",
+      "看 C 見壞宅而哭表示看見後接著哭，是順承而非轉折。",
+      "D 惑而不從師說有疑問卻不求教，與『視而不見』同功能，選 D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『提刀而立』連結提刀、站立兩個動作，沒有前後意思相反的情況，若譯為『提刀卻站立』反而不自然。",
+        "elementary": "A 只是拿刀站著，沒有『卻』那種反過來的味道。",
+        "reason": "A 的而表動作連接，不是題目所問的語意轉折。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B『感極而悲』因感觸深重而感到悲傷，前後是原因到結果，並非本題要求的意料之外的對照。",
+        "elementary": "B 因為感觸很深所以悲傷，不是在說『卻』。",
+        "reason": "B 的而更接近因果承接，前後沒有違反預期。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C『見壞宅而哭之慟』是見到毀壞房子之後痛哭，動作依事件先後承接，沒有『明明如此卻相反』的意思。",
+        "elementary": "C 看到壞掉的房子就哭，是後面接著做的事。",
+        "reason": "C 的而表看到後哭泣的順承，不能當轉折使用。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D『惑而不從師』是明明有疑惑應去請教，卻不跟從老師學習，符合有期待卻相反的轉折關係，與題幹一致。",
+        "elementary": "D 有不懂的問題卻不請教老師，這個『而』就是『卻』。",
+        "reason": "D 的而可自然換成卻而不改變語意，唯一符合。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "視而不見",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "口惠而實不至",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "轉折關係",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "提刀「而」立",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "感極「而」悲",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "見壞宅「而」哭之慟",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      },
+      {
+        "text": "惑「而」不從師",
+        "bold": true,
+        "highlight": true,
+        "renderAs": "safe-literal-text"
+      }
+    ],
+    "chineseVocabulary": [
+      {
+        "term": "卻",
+        "level": "初級",
+        "meaning": "表示和前面意思相反或出乎意料。"
+      },
+      {
+        "term": "順承",
+        "level": "中級",
+        "meaning": "先後發生的動作或事情相接。"
+      },
+      {
+        "term": "虛詞",
+        "level": "高級",
+        "meaning": "主要用來表達語法關係的字。"
+      }
+    ],
+    "originalVisual": {
+      "type": "ORIGINAL_GRAMMAR_FOUR_CHOICES",
+      "correctPhrase": "惑而不從師",
+      "gloss": "有疑惑卻不求教"
+    },
+    "originalImageMustRemainUnmodified": true
+  },
+  "teachingCanonicalSha256": null,
+  "composedTeachingSha256": null,
+  "reasoningAudit": {
+    "alreadyKnewCandidateAnswer": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "sourceImageCertification": "ROLE_A_ASSISTANT_ONLY",
+    "independentEContent": "PENDING",
+    "roleDExactDigest8x2": "PENDING",
+    "officialFinalAnswerQa": "PENDING_YEAR113_CORRECTION",
+    "requiresHumanTeacher": false,
+    "authorSelfCheckOnly": true,
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "newMain": false,
+    "newLive": false,
+    "blockers": [
+      "YEAR113_FINAL_OFFICIAL_ANSWER_CORRECTION_SCOPE_PENDING",
+      "ROLE_A_SOURCE_QA_NOT_FINAL",
+      "DISTINCT_ROLE_E_AI_SUBSTANTIVE_REVIEW_MISSING",
+      "D_REAL_V4_SAME_SOURCE_AND_TEACHING_DIGEST_8X2_MISSING",
+      "MASTER_PROTECTED_MAIN_AND_LIVE_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null,
+    "verification": "待核對"
+  }
+}
