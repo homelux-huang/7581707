@@ -27,8 +27,37 @@ ORIGINAL_SHA="50547b2a2daa71dea457bd11bf4ebb1a4bcc780e0443ac6cda15374829e67cc1"
 ORIGINAL_CROP=[90,1582,1310,1823]
 ORIGINAL_PATH=ROOT/"sudu/data/processed/114/webp-v1/00-C/114-00-C-23.webp"
 PROOF=earlier.EVIDENCE/(QID+"-official.json")
+def verify_previous_c20_to22_with_fixed_pr98_baseline():
+    # Prior PR98's OWN 8 tests are independently replayed at their immutable
+    # original worktree/DB by CI. On this successor branch, require all three
+    # exact SHA-bound source and official proofs to remain byte/semantic equal
+    # to PR98, while allowing ONLY newly leased C23 to change.
+    earlier.verify_archives()
+    original=subprocess.run(["git","show",BASE_SHA+":sudu/data/processed/114/questions.json"],
+        cwd=ROOT,capture_output=True,check=True).stdout
+    assert earlier.gitsha(original)==BASE_BANK_GIT
+    was={q["questionId"]:q for q in json.loads(original)["questions"]}
+    now=earlier.read(BANK)
+    present={q["questionId"]:q for q in now["questions"]}
+    assert len(was)==len(present)==205
+    assert set(was)==set(present)
+    for qid,letter in earlier.ANSWER.items():
+        old=was[qid];q=present[qid]
+        assert q==old,(qid,"previous official admission mutated")
+        proof=earlier.read(earlier.receipt_path(qid))
+        assert proof["questionId"]==qid and proof["finalAnswer"]==letter
+        assert proof["officialAnswerImageSha256"]==earlier.sha(earlier.ORIGINAL_ANSWER.read_bytes())
+        assert proof["officialAnswerImageGitBlobSha1"]==earlier.ORIGINAL_ANSWER_GIT
+        assert proof["reviewedSingleQuestionWebpSha256"]==earlier.IMAGE[qid][1]
+        assert proof["confirmationPdfSha256"]==earlier.NOTICE_PDF_SHA
+        assert earlier.publisher.official_notice_scope_certified(ROOT,114,q,proof)
+        assert q["answerVerified"] is True and q["officialFinalAnswer"]==letter
+        assert q["questionVerified"] is False
+        assert not proof["independentRoleEContentQaPerformed"]
+        assert not proof["readyOrLivePromoted"]
+    earlier.db_precheck(DB,now)
 def source():
-    earlier.verify_final()
+    verify_previous_c20_to22_with_fixed_pr98_baseline()
     sha=earlier.assert_webp(ORIGINAL_PATH,ORIGINAL_GIT,ORIGINAL_SHA,[1220,241])
     assert sha==ORIGINAL_SHA
     qa=earlier.read(earlier.VISUAL)
