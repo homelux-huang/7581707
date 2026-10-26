@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "subject": "英文",
+  "answer": "A",
+  "kind": "PRESERVE_BASE_AND_ENRICH",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-07.webp",
+    "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+    "sourcePageWebpSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "baseTeachingEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-07-teaching.json",
+    "baseTeachingGitBlobSha": "03b1686ca549f72d1f999de5b99656273e0c1e05",
+    "baseTeachingCanonicalSha256": "d40bb97b85de499b63a3eeea1aa4c808f295f8e4ae6515cf597fdf9d40152eaf",
+    "existingHistoricalPrekeySolveEvidence": "sudu/data/processed/114/review-evidence/114-00-E-07-blind.json",
+    "sourceEvidenceStatus": "PR21_INDIVIDUAL_SOURCE_AND_FINAL_ANSWER_AI_QA_EXISTS"
+  },
+  "teaching": null,
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "sensor lights",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "by themselves",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "automatically",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "automatically",
+        "ipa": "/ˌɔː.təˈmæt.ɪ.kəl.i/",
+        "level": "中級",
+        "meaningZh": "自動地；在沒有人工操作下自行運作",
+        "synonyms": [
+          "by itself",
+          "without manual control"
+        ],
+        "antonyms": [
+          "manually",
+          "by hand"
+        ],
+        "usageNote": "修飾 turn on；重點是感應燈自行啟動，不是 organically 的自然生長。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/automatically"
+      }
+    ],
+    "newsExample": {
+      "kind": "SELF_WRITTEN_NEWS_CONTEXT_EXAMPLE",
+      "english": "At some Taichung crossings, sensor lights automatically turn on when pedestrians cross during a green signal.",
+      "chinese": "臺中部分路口在行人綠燈通行時，感應照明會自動亮起。",
+      "highlightActualForm": "automatically",
+      "source": {
+        "publicationDate": "2024-09-28",
+        "title": "中市23處路口試辦行穿道照明 市府規劃擴大增設",
+        "url": "https://www.cna.com.tw/news/aloc/202409280174.aspx",
+        "factSupportedBySource": "臺中試辦23處行人感應照明，綠燈時偵測到行人即亮燈"
+      },
+      "notAnArticleQuote": true,
+      "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
+    }
+  },
+  "composedTeachingSha256": "f65c50e011f57025f2ffc9ff7df107f16f4bd6c6e3b1c64c75169bb77c35dd5b",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": true,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "NEW_ENRICHMENT_NOT_IN_PRIOR_UI_OR_TEACHING_APPROVAL",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}

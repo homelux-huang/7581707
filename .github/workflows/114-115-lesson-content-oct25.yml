@@ -1,0 +1,20 @@
+name: 114-115 teaching candidate math checks (NO RELEASE)
+on:
+  push:
+    branches: [teaching/114-115-source-bound-lessons-20261025]
+    paths:
+      - sudu/teaching-candidates/114-115-20261025/**
+      - tests/test_114_115_lesson_batch_oct25.py
+      - .github/workflows/114-115-lesson-content-oct25.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  content:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v

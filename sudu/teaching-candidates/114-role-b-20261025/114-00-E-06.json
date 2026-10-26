@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-E-06",
+  "subject": "英文",
+  "answer": "A",
+  "kind": "NEW_AUTHOR_DRAFT",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceRevisionAlgorithm": "sha256-json-sortkeys-text-options-webp-v1",
+    "questionRevision": "f30333bf1bcd080123576b1363bf4f6fa16d47c3dcf5b347140d1944b95fa5fb",
+    "questionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "officialAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-06.webp",
+    "webpSha256": "4cb58ff5d8eccc71a33d7f78f3401e2ba4fe0fcfcaf2c5d820c4885a96992eac",
+    "sourcePageWebpSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "baseTeachingEvidencePath": null,
+    "baseTeachingGitBlobSha": null,
+    "baseTeachingCanonicalSha256": null,
+    "existingHistoricalPrekeySolveEvidence": null,
+    "sourceEvidenceStatus": "INDIVIDUAL_FINAL_ANSWER_IMAGE_QA_PENDING"
+  },
+  "teaching": {
+    "topic": "字彙搭配｜authority to punish",
+    "teacherSummary": "句型 have the authority to + 原形動詞表示『有做某事的合法權限』。政府能依法處罰酒後駕車，因此選 authority。",
+    "elementarySummary": "政府依法律可以處理酒駕，就像學校老師有權維持秩序。空格是在問『有沒有這個權力』。",
+    "concept": "authority 表權限；to punish 是不定詞補述這個權限可用來做什麼。",
+    "extension": "the authorities 是『主管機關／執法機關』，不等於這題抽象的 authority（權限）。",
+    "memory": "政府有權依法處罰 → have the authority to punish。",
+    "source": "114 統測英文原題與單題原圖；官方最終答案影像個別核對、教材版本、章節及頁碼待核對。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確。authority（權限）可和 have the ... to punish 搭配，符合依法處罰酒駕的句意。",
+        "elementary": "政府有權照法律處理酒駕，所以選『權限』。",
+        "reason": "權限與後面的 to punish 在語法、語意上都吻合。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "錯誤。bargain 是交易或討價還價，不表示政府的法定處罰權。",
+        "elementary": "政府不是在和酒駕者討價還價。",
+        "reason": "名詞語義不符合依法處罰。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "錯誤。courtesy 是禮貌、好意，不能表達依法執法的權力。",
+        "elementary": "有禮貌不等於有法律授權。",
+        "reason": "禮貌並非權限。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "錯誤。infection 是感染／傳染，與酒駕處罰或法定權限無關。",
+        "elementary": "生病感染和警察處理酒駕是兩回事。",
+        "reason": "領域與語意完全不符。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "authority",
+      "to punish",
+      "drink and drive"
+    ]
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "Governments",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "authority",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "punish",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "drink and drive",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "authority",
+        "ipa": "/ɔːˈθɒr.ə.ti/",
+        "level": "中級",
+        "meaningZh": "合法的權力、權限",
+        "synonyms": [
+          "legal power",
+          "permission to act"
+        ],
+        "antonyms": [
+          "lack of authority"
+        ],
+        "usageNote": "have the authority to + 動詞原形；此處表示政府依法有處理權限，不是權威專家或機關名稱。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/authority"
+      }
+    ],
+    "newsExample": {
+      "kind": "SELF_WRITTEN_NEWS_CONTEXT_EXAMPLE",
+      "english": "Police have the authority to investigate drunk-driving offenses; officers carried out a crackdown in Kaohsiung in May 2025.",
+      "chinese": "警察有權調查酒駕違規案件；高雄警方在2025年5月展開酒駕大執法。",
+      "highlightActualForm": "authority",
+      "source": {
+        "publicationDate": "2025-05-14",
+        "title": "高市連3天酒駕大執法 2天已取締61件",
+        "url": "https://www.cna.com.tw/news/asoc/202505140145.aspx",
+        "factSupportedBySource": "中央社報導2025年5月高雄警方酒駕大執法；調查權限為教學語境說明"
+      },
+      "notAnArticleQuote": true,
+      "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
+    }
+  },
+  "composedTeachingSha256": "f7c3dd659c320a80109d26c31a9b3e0f0eac702c9b934ce5860bffef0e2982c4",
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimedThisBatch": false,
+    "historicalBlindSolveReused": false,
+    "candidateAnswerComparedToKnown": true,
+    "reasoningAgreesWithKnownCandidate": true,
+    "answerConflict": false
+  },
+  "review": {
+    "author": "GPT-6 | Role B (AI)",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "humanTeacherVerified": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiReviewForThisExactEnrichment": "PENDING",
+    "status": "BLOCKED",
+    "blockers": [
+      "INDEPENDENT_OFFICIAL_FINAL_ANSWER_IMAGE_QA_PENDING",
+      "AUTHORIZED_DISTINCT_HUMAN_TEACHER_REVIEW_PENDING",
+      "EXACT_V4_UI_CONTENT_REVIEW_PENDING",
+      "P0_RELEASE_GATE_NOT_SATISFIED"
+    ]
+  },
+  "sourceAndTextbook": {
+    "officialQuestionPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "textbookPublisher": null,
+    "textbookEdition": null,
+    "textbookChapter": null,
+    "textbookPage": null,
+    "textbookVerificationStatus": "待核對"
+  }
+}

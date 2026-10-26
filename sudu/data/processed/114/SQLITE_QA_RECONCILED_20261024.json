@@ -1,0 +1,53 @@
+{
+  "answerVerifiedOrQaApprovalChanged": false,
+  "changedQuestionCount": 25,
+  "changedQuestionIds": [
+    "114-00-C-11",
+    "114-00-C-12",
+    "114-00-C-13",
+    "114-00-C-14",
+    "114-00-C-15",
+    "114-00-C-19",
+    "114-00-C-20",
+    "114-00-C-21",
+    "114-00-C-22",
+    "114-00-C-23",
+    "114-00-E-06",
+    "114-00-E-07",
+    "114-00-E-08",
+    "114-00-E-09",
+    "114-00-E-10",
+    "114-00-E-11",
+    "114-00-E-12",
+    "114-00-E-13",
+    "114-00-E-14",
+    "114-00-E-15",
+    "114-00-E-16",
+    "114-00-E-17",
+    "114-00-E-18",
+    "114-00-E-19",
+    "114-00-E-20"
+  ],
+  "firstPass": {
+    "logicalBankSha256": "1ea877341d77572a5ddbb21a58b60b1690813ca1c5bd4aa6343e7bfda0846f36",
+    "questionCount": 205,
+    "sharedMaterialCount": 1
+  },
+  "isolatedImportPasses": 2,
+  "newSqliteSha256": "a7748cfaef79709534602e6e6c013deef196715d894aaa9ff33847a8f5978633",
+  "oldSqliteSha256": "2c752077c6df5a8a85ebcaca097eb0a98c68a7664279449e1566c13ef38f27a4",
+  "originalTableRows": 205,
+  "releaseAllowedByThisDbReconciliation": false,
+  "roundtripPass": true,
+  "schemaVersion": 1,
+  "secondPass": {
+    "logicalBankSha256": "1ea877341d77572a5ddbb21a58b60b1690813ca1c5bd4aa6343e7bfda0846f36",
+    "questionCount": 205,
+    "sharedMaterialCount": 1
+  },
+  "sharedMaterialRowsUnchanged": true,
+  "sourceQuestionTextAndOptionsModified": false,
+  "sourceQuestionsSha256": "96be27e8d562abf4aa34e409b41106cb9f6168590fcecef8c86494e7778a4a60",
+  "twoIndependentBackups": true,
+  "year": 114
+}

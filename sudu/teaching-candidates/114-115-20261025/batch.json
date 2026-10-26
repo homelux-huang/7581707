@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "questionId": "115-00-MB-20",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-20.json",
+      "fileSha256": "90dbaf2ddbc7ca640fafd48476c62a68674daf8fff450d558bf339eb39d8b109",
+      "teachingSha256": "5eb8bdeeea69701b4c8c990c361b796f3377280b94481fbb54b4802c8362f1c8",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-MB-21",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-21.json",
+      "fileSha256": "69b3be1060b39e8005d4d5d6a07c68379b54153d9c265ec57304ac58583ea86d",
+      "teachingSha256": "4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-MB-22",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-22.json",
+      "fileSha256": "664688dfe510691f6e3943dd8a1b47abdec7cb072e03c8fa65e85780990968f7",
+      "teachingSha256": "5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-MB-23",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-23.json",
+      "fileSha256": "cfbff0c1f7b2f338187d0b739033eb7d08f2c95004e1f1b1d522a2c7dcceafb3",
+      "teachingSha256": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6",
+      "ready": false,
+      "sourceTextRevisionWithTable": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+      "formalIndependentSourceTableQa": false
+    },
+    {
+      "questionId": "115-00-MB-24",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-24.json",
+      "fileSha256": "66b90334fcbea92c4f2858908a685fee76e22ae449c38a44eac4332d2cc49f76",
+      "teachingSha256": "317fe1d731f29e9634ec17f0fc1dc5c308b804de5759991a005f94f81bbffd06",
+      "ready": false
+    },
+    {
+      "questionId": "115-00-MB-25",
+      "path": "sudu/teaching-candidates/114-115-20261025/115-00-MB-25.json",
+      "fileSha256": "275becf2e902aedb747cca291255d2621d0aa3c30a109985e0137e1653b2cb3c",
+      "teachingSha256": "a860b08a6f5b76fe1331dc4204a46a3135e511449d9b6004cc4f99be020e4d32",
+      "ready": false
+    }
+  ],
+  "newApprovals": 0,
+  "newDeployments": 0,
+  "lastRoleCNonDestructivePatch": "115-00-MB-23 original 2x3 source table, no teaching text changes, independent review pending"
+}

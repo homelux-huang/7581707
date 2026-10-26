@@ -54,6 +54,10 @@ html[data-theme="dark"] .opt.correct{background:var(--correct-bg);color:var(--co
 .option-detail-grid em{display:block;color:var(--blue);font-style:normal;font-size:12px;font-weight:1000;margin-bottom:2px}
 .source-priority{font-size:12px;color:var(--muted);margin-top:5px}.news-en,.news-zh{display:block}.news-zh{margin-top:5px;color:var(--muted)}.exam-highlight{background:#ffe66d;color:#111;padding:0 .18em;border-radius:4px;font-weight:1000;box-decoration-break:clone;-webkit-box-decoration-break:clone}.level-vocab{font-weight:760;word-spacing:.04em}
 @media(max-width:620px){.option-detail-grid{grid-template-columns:1fr}}
+.official-source-table{margin:8px 0 12px;border:1px solid var(--line);border-radius:12px;padding:7px 10px;max-width:100%;overflow-x:auto}
+.official-source-table summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--muted)}
+.official-source-table table{border-collapse:collapse;width:100%;min-width:360px;margin-top:6px;font-size:13px}
+.official-source-table th,.official-source-table td{padding:6px 8px;border:1px solid var(--line);text-align:left;white-space:normal;word-break:keep-all}
 .source-figure{margin:14px 0 16px;border:1px solid color-mix(in srgb,var(--blue) 26%,var(--line));border-radius:18px;padding:10px;background:var(--option-bg);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--blue) 7%,transparent)} .source-figure img{width:100%;height:auto;display:block;border-radius:12px} .source-figure figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .option-wrap.correct-wrap>.opt.correct{border-color:var(--green);border-top-width:4px;box-shadow:0 0 0 2px rgba(19,121,91,.13)}
 .option-wrap.correct-wrap{scroll-margin-top:calc(var(--navH) + 17px)}
@@ -360,6 +364,17 @@ function formatStudyValue(q,key,value){
  if(q.subject==='英文'&&(key==='同意相關單字'||key==='反意相關單字')){
   return '<span class="level-vocab">'+esc(text.replace(/\blow\s*:/gi,'初級：').replace(/\bmid\s*:/gi,'中級：').replace(/\bhigh\s*:/gi,'高級：'))+'</span>';
  }
+ if(q.subject==='英文'&&key==='新聞時事例句'&&q.canonicalId){
+  // The Demo sample is keyed by QUESTION NUMBER, not year or canonical ID.
+  // Never substitute a 115 Demo sample for another year's real exam question.
+  // Use only this admitted question's author-reviewed text and highlights.
+  const terms=Array.isArray(q.highlights)?q.highlights.filter(t=>typeof t==='string'&&t.trim()):[];
+  const term=terms.find(t=>text.toLowerCase().includes(t.toLowerCase()));
+  const at=term?text.toLowerCase().indexOf(term.toLowerCase()):-1;
+  const safe=at<0?esc(text):esc(text.slice(0,at))+
+   '<mark class="exam-highlight">'+esc(text.slice(at,at+term.length))+'</mark>'+esc(text.slice(at+term.length));
+  return '<span class="news-en">'+safe+'</span>';
+ }
  if(q.subject==='英文'&&key==='新聞時事例句'){
   const news=((window.DEMO_LEARNING_CONFIG||{}).englishNewsExamples||{})[String(q.id)];
   if(news){
@@ -433,6 +448,19 @@ function renderProgress(){
   round:state.rounds[currentSubject]||1,year:pageYear()
  });
 }
+function sourceTableForStudent(q){
+ const t=q.sourceTable;
+ if(!t)return '';
+ if(!Array.isArray(t.heading)||t.heading.length<2||!Array.isArray(t.rows)||
+    t.rows.length<1||!t.rows.every(r=>Array.isArray(r)&&r.length===t.heading.length)||
+    typeof t.sourceWebpSha256!=='string'||t.sourceWebpSha256!==q.imageSha256)
+     throw Error('官方表格版本、欄列或單題原圖 SHA 不一致：'+q.canonicalId);
+ const th=t.heading.map(v=>'<th scope="col">'+esc(String(v))+'</th>').join('');
+ const rows=t.rows.map(r=>'<tr>'+r.map(v=>'<td>'+esc(String(v))+'</td>').join('')+'</tr>').join('');
+ return '<details class="official-source-table" data-source-table-id="'+esc(q.canonicalId)+
+   '"><summary>原始表格文字版（輔助閱讀，原題 WebP 已保留）</summary><table><thead><tr>'+th+
+   '</tr></thead><tbody>'+rows+'</tbody></table></details>';
+}
 function renderQuestion(){
  $('studyView').appendChild($('guideCard'));hideGuide();
  $('answerScrollSpace').style.height='0px';
@@ -443,7 +471,7 @@ function renderQuestion(){
   const L=LETTERS[i]; let cls='opt'; if(r.status&&L===q.answer)cls+=' correct'; if(r.status==='bad'&&L===r.selected)cls+=' wrong';
   const wrapCls='option-wrap'+(r.status&&L===q.answer?' correct-wrap':''); optionsHtml+='<div class="'+wrapCls+'"'+(r.status&&L===q.answer?' id="correctAnswer"':'')+'><button class="'+cls+'" data-a="'+L+'"><span class="letter">'+L+'</span><span class="opt-body"><span class="opt-text">'+esc(o)+'</span></span></button>'+(r.status?renderOptionDetail(q,L):'')+'</div>';
  });
- $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img;
+ $('questionCard').innerHTML='<div class="qmeta"><span>第</span><span class="qnum">'+String(q.id).padStart(2,'0')+'</span><span>題</span><span class="pill">'+esc(q.subject)+'</span><span class="pill">'+esc(q.topic)+'</span></div><h1>'+esc(q.question)+'</h1>'+img+sourceTableForStudent(q);
  $('answerCard').innerHTML='<h2>答案選項</h2><div class="options">'+optionsHtml+'</div><div class="result">'+(r.status==='ok'?'<span class="good">✓ 答對了</span>':r.status==='bad'?'<span class="bad">× 答錯了，正確答案是 '+q.answer+'</span>':'')+'</div>';
  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.a));
  renderGuide();
@@ -594,9 +622,11 @@ function refreshHomeSubjects(){
  const validYear=year&&year===pageYear();
  const ready=year==='demo'||document.body.dataset.verifiedReadyYear===year;
  const loading=validYear&&!ready;
- const candidates=document.body.classList.contains('qa-image-mode')?
-  [...$('subjectSel').options].map(o=>o.value).filter(s=>s&&s!=='全部科目'):
-  SUBJECTS.slice();
+ const annualSubjects=year!=='demo'&&Array.isArray(window.suduAnnualSubjects)?window.suduAnnualSubjects:null;
+ const candidates=annualSubjects||(
+  document.body.classList.contains('qa-image-mode')?
+   [...$('subjectSel').options].map(o=>o.value).filter(s=>s&&s!=='全部科目'):
+   SUBJECTS.slice());
  const previous=select.value;
  select.replaceChildren();
  const first=document.createElement('option');
@@ -619,6 +649,12 @@ function updateJumpButtons(){
 }
 function openSubjectFromHome(subject){
  if(!subject)return;
+ // The 114/115 adapter owns the QA-gated subject route: READY is playable,
+ // G1 image-only is read-only, and missing subjects never fall back to Demo.
+ if(pageYear()!=='demo'&&typeof window.suduOpenYearSubject==='function'){
+  window.suduOpenYearSubject(subject);
+  return;
+ }
  if(document.body.classList.contains('qa-image-mode')){
   if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(subject);
   return;
@@ -742,6 +778,10 @@ $('yearSel').onchange=e=>{
  else showHome();
 };
 $('subjectSel').onchange=e=>{
+ if(pageYear()!=='demo'&&typeof window.suduOpenYearSubject==='function'){
+  window.suduOpenYearSubject(e.target.value);
+  return;
+ }
  if(document.body.classList.contains('qa-image-mode')){
   if(typeof window.suduOpenImageSubject==='function')window.suduOpenImageSubject(e.target.value);
   return;
