@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-01-11-13-17-21-20261026-07",
+  "claimedAtUtc": "2026-10-26T05:30:00Z",
+  "questionId": "115-09-2-21",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 21,
+  "subject": "會計學",
+  "status": "ROLE_C_SOURCE_BOUND_AUTHOR_DRAFT_NO_RELEASE",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "甲公司於X2 年 12 月 1 日發現X1 年的折舊費用多提$3,000。若不考慮所得稅，X2 年發現\n  錯誤時應作的更正分錄為何？",
+  "options": [
+    "借：累計折舊－機器設備$3,000，貸：折舊費用$3,000",
+    "借：折舊費用$3,000，貸：累計折舊－機器設備$3,000",
+    "借：累計折舊－機器設備$3,000，貸：追溯適用及追溯重編之影響數$3,000",
+    "借：追溯適用及追溯重編之影響數$3,000，貸：累計折舊－機器設備$3,000"
+  ],
+  "answerCandidate": "C",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "f04f7633507952b782104985f921fa596bace3616a3d725e0eabb1f24ae394ed",
+  "sourceTextRevisionMethod": "SHA256 of sorted minified UTF8 JSON containing question, options, singleQuestionWebpSha256",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-21.webp",
+  "individualImageSha256": "ab84aebcc2c1c7481708884de96f15e2419f9beb767f71d2549150815e48bd07",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "imageManifestHistoricalQa": "PASS",
+  "imageQuestionAssetHistoricalQa": "PASS",
+  "originalImageBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "題目明確指**X2發現X1年的折舊多提3,000元**，屬**前期錯誤更正**。X1費用多3,000，導致X1獲利與期末權益**少3,000**；累計折舊（資產抵減帳戶）**多3,000**。X2改正應**借記「累計折舊－機器設備」3,000元**（沖減過高的貸方抵減額），**貸記「追溯適用及追溯重編之影響數」3,000元**（更正前期保留盈餘／權益效果），不得沖回X2自己的折舊費用。選 **C**。",
+    "elementarySummary": "去年把機器折舊多算3千元，結果去年看起來少賺3千、機器價值又被減太多。現在發現就把多算的累計折舊減回3千，並把去年的權益補回3千；不要假裝是今年少花3千，所以C。",
+    "memory": "**X1折舊多提3,000 → 累計折舊多3,000、前期權益少3,000。X2：借累計折舊3,000／貸追溯重編影響數3,000（C）。**",
+    "concept": "**折舊費用**屬當期損益；**累計折舊**是資產抵減帳戶，貸方增加、借方減少；**前期錯誤**不應任意改記為發現年度的正常當期費用，須依適用準則回溯更正先前財務報表。題目已指不考慮所得稅。",
+    "extension": "此題不是X2當期折舊估計變動（通常未來適用），而是X1已發生的**錯誤**；分辨錯誤更正（追溯）與估計變動（推延）可避免選A。正式對外報表也需要比較期間重編或適當揭露，不能只看一張分錄就宣稱所有財報程序完成。",
+    "highlights": [
+      "X2年12月1日",
+      "X1年的折舊費用多提$3,000",
+      "前期錯誤",
+      "累計折舊",
+      "追溯適用及追溯重編之影響數",
+      "借$3,000",
+      "貸$3,000"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "折舊：機器用久了，分年記下使用成本"
+      ],
+      "中級": [
+        "累計折舊：多年已認列的折舊合計，是資產抵減項目"
+      ],
+      "高級": [
+        "追溯重編：把過去年度的錯誤依正確數據重述並修正期初權益"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **借累計折舊3,000**方向正確，可以減少多列的累計折舊；但**貸X2折舊費用**會把前期錯誤錯誤地認成發現年度當期利益，應改貸**追溯適用及追溯重編之影響數**，所以A錯。",
+        "elementary": "A有把機器折舊累積的多餘3千減回來，但卻改今年的費用；錯的是去年，所以A只對一半。",
+        "reason": "A **借累計折舊3,000**方向正確，可以減少多列的累計折舊；但**貸X2折舊費用**會把前期錯誤錯誤地認成發現年度當期利益，應改貸**追溯適用及追溯重編之影響數**，所以A錯。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B **借折舊費用3,000、貸累計折舊3,000**會進一步增加本期費用及累計折舊，與「原本已經多提3,000」的修正方向完全相反，B錯。",
+        "elementary": "本來就多扣了機器折舊，B還要再多記3千，不但沒改錯，還越記越錯。",
+        "reason": "B **借折舊費用3,000、貸累計折舊3,000**會進一步增加本期費用及累計折舊，與「原本已經多提3,000」的修正方向完全相反，B錯。"
+      },
+      "C": {
+        "isCorrect": true,
+        "teacher": "C **借：累計折舊－機器設備3,000元；貸：追溯適用及追溯重編之影響數3,000元**，同時沖減累計折舊過高的貸方餘額、修正先前年度權益受低估效果，兩邊借貸相等且不誤動X2折舊，C正確。",
+        "elementary": "把舊帳上多扣的3千加回，去年少算的權益也補回3千，借貸兩邊一樣，所以選C。",
+        "reason": "C **借：累計折舊－機器設備3,000元；貸：追溯適用及追溯重編之影響數3,000元**，同時沖減累計折舊過高的貸方餘額、修正先前年度權益受低估效果，兩邊借貸相等且不誤動X2折舊，C正確。"
+      },
+      "D": {
+        "isCorrect": false,
+        "teacher": "D **借追溯重編影響數、貸累計折舊**恰好與正確C的方向相反：會**減少**前期權益並**增加**已過高的累計折舊，令錯誤擴大，故D錯。",
+        "elementary": "D把要減的變成增加，把要補的變成減少，完全反過來了。",
+        "reason": "D **借追溯重編影響數、貸累計折舊**恰好與正確C的方向相反：會**減少**前期權益並**增加**已過高的累計折舊，令錯誤擴大，故D錯。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "錯誤發生在前年度X1；在X2年12月1日發現",
+        "X1折舊費用『多提』3,000元",
+        "累計折舊為資產抵減帳戶；不考慮所得稅"
+      ],
+      "formulaUse": "把多提折舊金額定為更正額，判斷資產抵減及前期權益方向，寫出借貸雙方並以會計恆等式驗算。",
+      "substitution": [
+        "前期折舊錯誤＝已列X1折舊－應列X1折舊＝＋3,000元（多列）",
+        "應沖減累計折舊＝3,000元（借方）",
+        "應增加前期權益／追溯重編影響數＝3,000元（貸方）",
+        "分錄借方合計3,000元＝貸方合計3,000元"
+      ],
+      "steps": [
+        "辨認期間：錯誤屬X1，雖在X2年發現，**不等於X2折舊費用減少**。",
+        "X1費用**多列3,000元**，因此X1損益／權益**少列3,000元**（忽略所得稅）。",
+        "累計折舊正常餘額在貸方；X1折舊多提使貸方累計折舊**多3,000元**。",
+        "要減少該抵減帳戶，分錄**借：累計折舊－機器設備3,000元**。",
+        "要補正先前年度權益影響，分錄**貸：追溯適用及追溯重編之影響數3,000元**。",
+        "核對借貸：**借方3,000元＝貸方3,000元**；總資產因累計折舊減少而增加3,000元，權益因前期重編增加3,000元，**資產＝負債＋權益**不變。",
+        "驗算：若原累計折舊為任意值A，正確值為A－3,000；原前期權益為E，正確值為E＋3,000；不影響X2正常折舊費用。故**C**。"
+      ],
+      "result": "借：累計折舊－機器設備3,000元／貸：追溯適用及追溯重編之影響數3,000元，選C",
+      "unit": "元",
+      "option": "C",
+      "verification": "借貸各3,000元；累計折舊降低3,000元使資產增3,000元，前期權益增3,000元，X2費用不被錯誤改動。"
+    },
+    "stepByStep": [
+      "X1折舊多提3,000，先得出X1獲利與權益少3,000。",
+      "累計折舊是貸方正常餘額，要減少它就借記3,000。",
+      "X1的權益受低估，所以貸記追溯重編影響數3,000。",
+      "核對借貸都3,000、前期權益和資產同增，排除A/B/D而選C。"
+    ],
+    "outsideReferences": [],
+    "source": "115 年會計學第21題，會計課程前期錯誤更正，原始官答候選 C 尚待實際公告與不同作者複核。"
+  },
+  "teachingCanonicalSha256": "6a63f2f89101f658a5d51644feaf5319717393ca844949703ba0660813f8b5c0",
+  "review": {
+    "authorIdentity": "GPT-6 Role C author",
+    "authorRole": "C",
+    "answersKnownBeforeAuthoring": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorAiReviewerRequired": true,
+    "authorSelfReviewProhibited": true,
+    "independentAiReviewStatus": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "independentAiReviewEvidenceSha256": null,
+    "officialFinalAnswerAndCorrectionProofSha256": null,
+    "sourceImageOfficialAcceptance": "PENDING",
+    "v4ExactSameSourceAndTeachingDigest8x2": "PENDING",
+    "latestPolicy": "ISSUE36_NO_HUMAN_TEACHER_CREDENTIAL_GATING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_IMAGE_AND_CORRECTION_NOTICE_SHA_NOT_ADMITTED",
+    "ORIGINAL_SINGLE_IMAGE_QA_MANIFEST_PASS_REQUIRES_FINAL_SOURCE_INDEPENDENT_ADMISSION",
+    "DISTINCT_E_AI_CONTENT_REVIEW_NOT_RECEIVED",
+    "D_V4_EIGHT_VIEWPORT_TWO_THEME_SAME_DIGEST_NOT_RECEIVED",
+    "MASTER_ONLY_PUBLISHER_MAIN_LIVE_GATE_NOT_SATISFIED",
+    "Q21_COORDINATOR_LEDGER_REVISION_DIFFERS_FROM_CURRENT_SOURCE_REVISION_A_MASTER_RECONCILIATION_REQUIRED"
+  ],
+  "coordinatorLedgerPriorQuestionRevision": "817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9",
+  "coordinatorLedgerPriorRevisionMatchesCurrentSource": false,
+  "coordinatorLedgerPriorRevisionType": "TEXT_OPTIONS_SINGLE_WEBP_SHA"
+}

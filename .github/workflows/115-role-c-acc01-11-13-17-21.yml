@@ -1,0 +1,26 @@
+name: 115 Role C Accounting 01 11 13 17 21 author-only source and arithmetic QA
+on:
+  push:
+    branches:
+      - teaching/115-role-c-accounting01-11-13-17-21-20261026
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-acc01-11-13-17-21-20261026/**'
+      - 'tests/test_115_role_c_acc01_11_13_17_21.py'
+      - '.github/workflows/115-role-c-acc01-11-13-17-21.yml'
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-acc01-11-13-17-21-20261026/**'
+      - 'tests/test_115_role_c_acc01_11_13_17_21.py'
+      - '.github/workflows/115-role-c-acc01-11-13-17-21.yml'
+permissions:
+  contents: read
+jobs:
+  teaching-author-regressions-no-release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify real candidate records, math and negative gates
+        run: python -m unittest discover -s tests -p 'test_115_role_c_acc01_11_13_17_21.py' -v

@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-ACC-01-11-13-17-21-20261026-07",
+  "claimedAtUtc": "2026-10-26T05:30:00Z",
+  "questionId": "115-09-2-13",
+  "year": 115,
+  "paperCode": "09-2",
+  "originalQuestionNumber": 13,
+  "subject": "會計學",
+  "status": "ROLE_C_SOURCE_BOUND_AUTHOR_DRAFT_NO_RELEASE",
+  "sourceCommit": "b6c449629efc80d37fa2e6dbb9e680e321367c14",
+  "sourceBranch": "qa/role-a-115-c15-text-sqlite-correction-20261025",
+  "question": "甲公司於 2 月 1 日銷貨取得一張面額$50,000 不附息票據，九個月後到期。若甲公司因\n  資金問題於到期日前持該票據至銀行貼現，貼現率為6 %，取得貼現金額$49,000，則\n  貼現日為何？",
+  "options": [
+    "4 月 1 日",
+    "6 月 1 日",
+    "6 月 15 日",
+    "7 月 1 日"
+  ],
+  "answerCandidate": "D",
+  "sourceAnswerVerified": false,
+  "sourceQuestionVerified": false,
+  "sourceIssues": [],
+  "sourceTextRevision": "4f1adca9d34fbd20b5e5339d62773b8376ffba54b6405d9ca0e3251d4499447f",
+  "sourceTextRevisionMethod": "SHA256 of sorted minified UTF8 JSON containing question, options, singleQuestionWebpSha256",
+  "individualImage": "sudu/data/processed/115/webp-v2/09-2/115-09-2-13.webp",
+  "individualImageSha256": "d23ae731fe5590f7235d21a163054498ffb0f9a49c8f4ab3a6b8425e7db06243",
+  "originalPaperPdfSha256": "fc88e0109ec074c625f255883ac9980785248edffb2a75264a721330f8a2a14e",
+  "imageManifestHistoricalQa": "PASS",
+  "imageQuestionAssetHistoricalQa": "PASS",
+  "originalImageBytesRehashedByRoleC": false,
+  "teaching": {
+    "teacherSummary": "**到期日**是2月1日加9個月＝**11月1日**。銀行以面額50000元為基準算**貼現息**：50,000－49,000＝**1,000元**；以年貼現率6%反推貼現期間，**1,000＝50,000×0.06×(月數÷12)**，得**4個月**，所以11月1日往前4個月是**7月1日**，選D。不要把原票據存續九個月誤作銀行貼現九個月。",
+    "elementarySummary": "這張票到11月1日才能拿5萬元。銀行先給4萬9，等於提早領錢被扣了1千元。按一年扣6%來倒算，是提前4個月拿，因此從11月1日倒退4個月，就是7月1日。",
+    "memory": "**到期 11/1、貼現息 1,000、年息 6% → 4 個月倒推到 7/1（D）。**",
+    "concept": "**不附息票據**到期領面額；**銀行貼現**於到期前取得扣掉貼現息的金額。以本題商業會計慣用**單利與月比例**：貼現息＝票面金額×年貼現率×貼現距到期時間（年）。",
+    "extension": "題目問**貼現日**，不是票據開立日或到期日。期限9個月是從2月1日到11月1日，銀行貼現剩餘4個月；若誤把九個月代入會得過高的貼現息2,250元。",
+    "highlights": [
+      "2月1日",
+      "九個月後到期",
+      "11月1日",
+      "貼現率6%",
+      "貼現金額$49,000",
+      "貼現息$1,000",
+      "7月1日"
+    ],
+    "gradedVocabulary": {
+      "初級": [
+        "貼現：把還沒到期的票據提早拿去銀行換錢"
+      ],
+      "中級": [
+        "貼現息：銀行因提前付錢而扣的金額"
+      ],
+      "高級": [
+        "貼現期間：貼現日至到期日的剩餘時間，與原票據全期分開"
+      ]
+    },
+    "optionExplanations": {
+      "A": {
+        "isCorrect": false,
+        "teacher": "A **4月1日至11月1日**尚有7個月，貼現息＝50,000×6%×7/12＝**1,750元**，實收48,250元，與49,000不符，因此A錯。",
+        "elementary": "4月1日提前太久，銀行會扣1750元，拿不到題目說的49,000元。",
+        "reason": "A **4月1日至11月1日**尚有7個月，貼現息＝50,000×6%×7/12＝**1,750元**，實收48,250元，與49,000不符，因此A錯。"
+      },
+      "B": {
+        "isCorrect": false,
+        "teacher": "B **6月1日至11月1日**有5個月，貼現息＝50,000×6%×5/12＝**1,250元**，實收48,750元，不符合49,000，因此B錯。",
+        "elementary": "6月1日提早5個月，銀行扣1250元，最後只有48,750元，還是和題目不同。",
+        "reason": "B **6月1日至11月1日**有5個月，貼現息＝50,000×6%×5/12＝**1,250元**，實收48,750元，不符合49,000，因此B錯。"
+      },
+      "C": {
+        "isCorrect": false,
+        "teacher": "C **6月15日至11月1日**約有4.5個月，以本題月比率估算貼現息約50,000×6%×4.5/12＝**1,125元**，實收約48,875元，並非題目的49,000元；依日數法亦不會恰為1,000。",
+        "elementary": "6月15日比正確日期早半個月，扣款大約1125元，不是1000元，所以C不是。",
+        "reason": "C **6月15日至11月1日**約有4.5個月，以本題月比率估算貼現息約50,000×6%×4.5/12＝**1,125元**，實收約48,875元，並非題目的49,000元；依日數法亦不會恰為1,000。"
+      },
+      "D": {
+        "isCorrect": true,
+        "teacher": "D **7月1日至11月1日**剛好4個月，貼現息＝50,000×6%×4/12＝**1,000元**，實收＝50,000－1,000＝**49,000元**，與題目完全相符，D正確。",
+        "elementary": "7月1日剛好早4個月，銀行扣1千元，拿回4萬9千元，完全對上，所以選D。",
+        "reason": "D **7月1日至11月1日**剛好4個月，貼現息＝50,000×6%×4/12＝**1,000元**，實收＝50,000－1,000＝**49,000元**，與題目完全相符，D正確。"
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "銷貨收取不附息票據：2月1日",
+        "票面（到期可領）50,000元",
+        "原票期9個月，故到期日11月1日",
+        "年貼現率6%，銀行實際付49,000元"
+      ],
+      "formulaUse": "先由票面與貼現所得的差額取得銀行扣息；再以單利貼現公式反推到期前剩餘月數，最後由到期日倒推貼現日。",
+      "substitution": [
+        "到期日＝2月1日＋9個月＝11月1日",
+        "貼現息＝50,000－49,000＝1,000元",
+        "1,000＝50,000×0.06×(m/12)",
+        "m＝1,000×12/(50,000×0.06)＝4個月",
+        "貼現日＝11月1日往前4個月＝7月1日"
+      ],
+      "steps": [
+        "確認本題**不附息**：票據到期面額仍是50,000元。",
+        "從2月1日向後數9個月，到期日為**11月1日**。",
+        "銀行扣貼現息＝票面50,000－實收49,000＝**1,000元**。",
+        "貼現率為年率6%，假設到期前尚有m個月：貼現息＝50,000×0.06×m/12。",
+        "代入1,000＝50,000×0.06×m/12；先算50,000×0.06＝**3,000元／年**。",
+        "m＝1,000×12/3,000＝**4個月**。",
+        "由11月1日往前倒數4個月：10/1→9/1→8/1→**7/1**。",
+        "**驗算**：50,000×6%×4/12＝1,000元；50,000－1,000＝49,000元；日期7月1日到11月1日=4個月。選D。"
+      ],
+      "result": "貼現日7月1日，選項D",
+      "unit": "元、%、月、日期",
+      "option": "D",
+      "verification": "4個月×年息6%×面額50,000=1,000元；貼現所得49,000元；原票據2/1→11/1共9個月。"
+    },
+    "stepByStep": [
+      "由2月1日及九個月推到期日11月1日。",
+      "用50,000－49,000得到銀行扣的1,000元。",
+      "用年率6%與貼現息反算銀行提前付錢4個月。",
+      "從到期日倒數4個月得7月1日，代回金額驗算。"
+    ],
+    "outsideReferences": [],
+    "source": "115年會計學第13題來源原題候選，採本題隱含月比例單利計算，不假稱外部教材頁碼或官方已複核。"
+  },
+  "teachingCanonicalSha256": "54b0a52b3178f9d84c92e690bb6a5253b33a338e0e55c74e024cf9ac69b1a54d",
+  "review": {
+    "authorIdentity": "GPT-6 Role C author",
+    "authorRole": "C",
+    "answersKnownBeforeAuthoring": true,
+    "newBlindSolveClaimed": false,
+    "differentAuthorAiReviewerRequired": true,
+    "authorSelfReviewProhibited": true,
+    "independentAiReviewStatus": "PENDING",
+    "independentAiReviewerIdentity": null,
+    "independentAiReviewEvidenceSha256": null,
+    "officialFinalAnswerAndCorrectionProofSha256": null,
+    "sourceImageOfficialAcceptance": "PENDING",
+    "v4ExactSameSourceAndTeachingDigest8x2": "PENDING",
+    "latestPolicy": "ISSUE36_NO_HUMAN_TEACHER_CREDENTIAL_GATING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "OFFICIAL_FINAL_ANSWER_IMAGE_AND_CORRECTION_NOTICE_SHA_NOT_ADMITTED",
+    "ORIGINAL_SINGLE_IMAGE_QA_MANIFEST_PASS_REQUIRES_FINAL_SOURCE_INDEPENDENT_ADMISSION",
+    "DISTINCT_E_AI_CONTENT_REVIEW_NOT_RECEIVED",
+    "D_V4_EIGHT_VIEWPORT_TWO_THEME_SAME_DIGEST_NOT_RECEIVED",
+    "MASTER_ONLY_PUBLISHER_MAIN_LIVE_GATE_NOT_SATISFIED"
+  ]
+}
