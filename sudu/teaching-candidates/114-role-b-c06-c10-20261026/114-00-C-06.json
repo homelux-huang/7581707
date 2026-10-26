@@ -23,8 +23,8 @@
     "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
     "questionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
     "manifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
-    "sourceRevision": null,
-    "imageTranscriptRevision": null,
+    "sourceRevision": "15be0f0a62ca7e556221f9a2c09070b70be74e98c235cbf8de09e65705b247e9",
+    "imageTranscriptRevision": "1239bbe344f9d603171a9c4fff23bfafcdf3c95455c04e7879070aba32c1e77d",
     "webpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-06.webp",
     "webpSha256": "56ec8d06a181ba76e6b5a67f115b469ab49f2f63dc3b0224ed9e0f07bc5474ee",
     "sourcePagePath": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
@@ -183,8 +183,8 @@
     ],
     "preserveOriginalWebp": true
   },
-  "teachingCanonicalSha256": null,
-  "composedTeachingSha256": null,
+  "teachingCanonicalSha256": "1938eae69f13ad459edb48bc6b9a2d1df2c453db8dc9b9500e59d271ada2b3e9",
+  "composedTeachingSha256": "6f84a45c9b55ca222e8fdc68f7437e8a9ae71faca3a4d1cd127cb056e6a41f53",
   "reasoningAudit": {
     "answerKnownBeforeAuthoring": true,
     "blindSolveClaimed": false
