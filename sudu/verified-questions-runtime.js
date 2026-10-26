@@ -102,11 +102,13 @@
       if(!Array.isArray(q.sharedMaterialIds)||q.sharedMaterialIds.length>8||
          q.sharedMaterialIds.some(id=>typeof id!=='string')||
          new Set(q.sharedMaterialIds).size!==q.sharedMaterialIds.length)return false;
-      if(q.sharedMaterialIds.length){
-        if(!Array.isArray(q.sharedImages)||!q.sharedMaterialIds.every(id=>
-          q.sharedImages.some(v=>v&&v.sharedMaterialId===id)))return false;
-        if(q.sharedImages.some(v=>!q.sharedMaterialIds.includes(v?.sharedMaterialId)))return false;
-      }
+      // An explicit empty declaration must also fail closed: no extra images.
+      // Preserve absent legacy metadata compatibility, but enforce a bijection
+      // whenever the publisher provides the canonical material ID list.
+      const images=q.sharedImages===undefined?[]:q.sharedImages;
+      if(!Array.isArray(images)||images.length!==q.sharedMaterialIds.length||
+         !q.sharedMaterialIds.every(id=>images.some(v=>v&&v.sharedMaterialId===id))||
+         images.some(v=>!q.sharedMaterialIds.includes(v?.sharedMaterialId)))return false;
     }
     if(q.sharedImages===undefined)return true;
     if(!Array.isArray(q.sharedImages)||q.sharedImages.length>8)return false;

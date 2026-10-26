@@ -2,10 +2,10 @@ name: Role D 114 C20-C22 ORIGINAL shared reading V4 3x8x2 and negative routing
 on:
   push:
     branches:
-      - qa/role-d-114-c20-c22-shared-v4-20261026
+      - fix/master-shared-material-1to1-20261026
   pull_request:
     branches:
-      - qa/role-d-114-e11-e13-e14-pr94-source-v4-20261026
+      - qa/role-d-114-c20-c22-shared-v4-20261026
     paths:
       - 'sudu/v4-115-multisubject-review-demo.html'
       - 'sudu/verified-questions-runtime.js'
@@ -44,6 +44,7 @@ jobs:
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$SUDU_D_EXPECT_SHA"
           node --check sudu/verified-questions-runtime.js
+          node tests/sudu_master_noncalc_guide_20261025.cjs
           node --check tests/sudu_role_d_114_c20_c22_shared_original_v4.cjs
           git diff --exit-code
       - name: Pin original ROLE B full Chinese teacher-child lessons source
@@ -78,8 +79,8 @@ jobs:
           echo "fonts-install-start-$(date -u +%FT%TZ)"
           family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
           if ! printf '%s\n' "$family" | grep -Eq '^Noto (Sans|Serif) CJK'; then
-            timeout 180s sudo apt-get update -qq
-            timeout 180s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y fonts-noto-cjk
+            timeout 180s sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update -qq
+            timeout 300s sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y fonts-noto-cjk
           fi
           family="$(fc-match -f '%{family}\n' 'sans-serif:lang=zh-tw' | head -n 1)"
           printf 'ACTUAL zh-TW original glyph family: %s\n' "$family"
@@ -111,7 +112,7 @@ jobs:
           # 115 Math B students still render every AUTHORED full equation
           # using untouched authentic HTTP /approved/115.json (NO intercept).
           SUDU_D_REAL_OUT=test-results/role-d-114-c20-22-shared-v4/regression-115-existing node tests/sudu_role_d_115_mathb_real_approved_8x2.cjs
-      - name: Archive 48 original Chinese shared QA PNG + 5 negative and 80 genuine unchanged 115 original maths PNG
+      - name: Archive 48 original Chinese shared QA PNG + 8 negative and 80 genuine unchanged 115 original maths PNG
         if: always()
         uses: actions/upload-artifact@v4
         with:
