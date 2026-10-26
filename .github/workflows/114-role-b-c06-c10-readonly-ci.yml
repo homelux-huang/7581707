@@ -1,0 +1,37 @@
+name: Role B 114 C06 C10 original tables & G2 quarantine (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/114-role-b-c06-c10-20261026/**'
+      - 'tests/test_114_role_b_c06_c10_20261026.py'
+      - '.github/workflows/114-role-b-c06-c10-readonly-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-original-pixel-and-content-integrity-no-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate archived source WebP SHA, raw G2 OCR text remains blocked and A-D lesson SHA
+        run: python -m unittest discover -s tests -p 'test_114_role_b_c06_c10_20261026.py' -v
+      - name: Confirm author-only BLOCKED not READY
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('sudu/teaching-candidates/114-role-b-c06-c10-20261026/batch.json')
+          b=json.loads(p.read_text(encoding='utf-8'))
+          assert b['itemCount']==2
+          assert b['newReady']==b['newMain']==b['newLive']==0
+          assert b['sourceG2PollutionUnresolved'] is True
+          for x in b['items']:
+              d=json.loads(Path(x['path']).read_text(encoding='utf-8'))
+              assert d['review']['status']=='BLOCKED'
+              assert d['review']['studentReleaseApproved'] is False
+              assert d['review']['independentAiRoleEReview']=='PENDING_DISTINCT_AUTHOR'
+          print('NO RELEASE: original pixel-based 114 C06/C10 teaching drafts; canonical source OCR G2 pending.')
+          PY
