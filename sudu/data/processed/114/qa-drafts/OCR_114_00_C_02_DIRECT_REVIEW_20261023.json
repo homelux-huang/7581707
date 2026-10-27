@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-C-02",
+  "paperCode": "00-C",
+  "originalQuestionNumber": 2,
+  "reviewDate": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "reviewMethod": "direct_visual_original_official_page_render_and_existing_single_question_webp",
+  "sourceQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWMucGRm",
+  "sourceQuestionPdfSha256": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+  "sourcePage": 2,
+  "sourcePageWebp": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
+  "sourcePageWebpSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+  "reviewedWebpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-02.webp",
+  "reviewedWebpSha256": "f156e266648642110226ccd4acafb7df028107685b27af91e06cca6332de0274",
+  "originalLegacyQuestion": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為\n  ②的例句？\n                     ①處置：例如「我把門打開了」，「打",
+  "originalLegacyOptions": [
+    "妳要把岳飛的精神演出來        開門」是「我」有意識的處置行為。",
+    "余燕翼把盛好的半碗飯倒回鍋裡    ②導致：例如「樹把路擋住了」，「擋",
+    "船身把墨藍海水掘犁成翻花的白浪    住路」是「樹」所導致，但非有意識",
+    "母親只好把稀稀疏疏的幾根短髮剪去   的行為。"
+  ],
+  "correctedQuestion": "「把」做為介詞，可表達右框所示的兩種意義。下列含「把」的文句，何者最適合列為②的例句？",
+  "correctedOptions": [
+    "妳要把岳飛的精神演出來",
+    "余燕翼把盛好的半碗飯倒回鍋裡",
+    "船身把墨藍海水掘犁成翻花的白浪",
+    "母親只好把稀稀疏疏的幾根短髮剪去"
+  ],
+  "stemSupplementalBox": [
+    {
+      "label": "①處置",
+      "text": "例如「我把門打開了」，「打開門」是「我」有意識的處置行為。"
+    },
+    {
+      "label": "②導致",
+      "text": "例如「樹把路擋住了」，「擋住路」是「樹」所導致，但非有意識的行為。"
+    }
+  ],
+  "correctionType": "legacy_native_pdf_text_cross_column_contamination_not_new_ocr",
+  "textReview": "DIRECT_VISUAL_CORRECTION_EVIDENCED",
+  "imageQaStatusUnchanged": "PASS",
+  "officialAnswerCandidateUnchanged": "C",
+  "answerVerified": false,
+  "answerCorrectionChecked": false,
+  "integrationReady": false,
+  "releaseAllowed": false,
+  "note": "Original legacy question/options preserved verbatim; corrected four choices and two-definition box from original official page render and corresponding single-question WebP. This is text-correction evidence only, not final answer verification."
+}

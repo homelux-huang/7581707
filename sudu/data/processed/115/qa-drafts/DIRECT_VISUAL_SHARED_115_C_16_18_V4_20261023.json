@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "sharedMaterialId": "115-00-C-SHARED-16-18",
+  "questionIds": [
+    "115-00-C-16",
+    "115-00-C-17",
+    "115-00-C-18"
+  ],
+  "sourcePage": 6,
+  "reviewedOn": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "reviewMethod": "direct_visual_comparison_archived_TCTE_official_question_page_to_exact_source_pixel_shared_paper_image",
+  "sourcePdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "sourcePageWebp": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+  "sourcePageWebpSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+  "oldWebp": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+  "oldWebpSha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+  "newWebp": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
+  "newWebpSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+  "oldCrop": [
+    90,
+    161,
+    1310,
+    1049
+  ],
+  "newCrop": [
+    90,
+    161,
+    1310,
+    1059
+  ],
+  "result": "PASS_DIRECT_ORIGINAL_OFFICIAL_PAGE_SHARED_MATERIAL_VISUAL",
+  "criteria": {
+    "readingPassageComplete": true,
+    "entireBylineComplete": true,
+    "sideNotesComplete": true,
+    "noNeighborQ16": true,
+    "noQuestionStemOrChoices": true,
+    "sourcePageAndCropShasRecorded": true,
+    "legible": true,
+    "sharedLinkIdsRecorded": true
+  },
+  "sourceComparisonDetails": "The original passage begins after ▲閱讀下文 and ends with (王安祈《紅樓夢中人·探春》); v3 had a too-tight bottom edge, v4 includes complete byline and no part of Q16 question. Original full page and final v4 WebP visually compared in this session.",
+  "sharedQaPassAdded": 1,
+  "questionImageQaAdded": 0,
+  "questionVerifiedAdded": 0,
+  "answerVerifiedAdded": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

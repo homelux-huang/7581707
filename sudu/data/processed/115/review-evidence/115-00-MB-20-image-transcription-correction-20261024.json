@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-20",
+  "subject": "數學 B",
+  "questionNumber": 20,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 7,
+  "sourceWebp": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-20.webp",
+  "sourceWebpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980751,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "阿雄想測量農地裡一個稻草人C 到工寮A 的距離，如圖 ( 四 ) 所示。他先在A 點和田埂上\n  另一處B 點拉出基準線，測得A、B 兩點的距離為100 公尺，接著測得角度∠CAB = 60°，\n\n  以及∠CBA = 75°。試求A、C 兩點的距離為多少公尺？",
+    "options": [
+      "50(  3  1)",
+      "50( 3  1)                                        C",
+      "20(  3  1)\n                                                             60°",
+      "20(  3  1)                                A\n                                                100m  75°\n                       圖 ( 四 )          B"
+    ]
+  },
+  "correctedText": {
+    "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
+    "options": [
+      "50(√3＋1)",
+      "50(√3－1)",
+      "20(√3＋1)",
+      "20(√3－1)"
+    ],
+    "figureRequired": true,
+    "figureDescription": "圖（四）：工寮 A、基準點 B 與稻草人 C 構成三角形；AB＝100 公尺，∠CAB＝60°、∠CBA＝75°。保留既有原始 WebP 示意圖。"
+  },
+  "knownOfficialAnswer": "A",
+  "postAnswerMathCheck": "∠C＝45°；AC＝100 sin75°／sin45°＝50(√3＋1) 公尺。A",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}

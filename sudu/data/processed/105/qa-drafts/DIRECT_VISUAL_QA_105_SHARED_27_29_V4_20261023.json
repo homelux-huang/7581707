@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "year": 105,
+  "kind": "MANUAL_DIRECT_ORIGINAL_PAGE_TO_SHARED_WEBP_VISUAL_QA",
+  "assetId": "105-00-C-SHARED-27-29",
+  "questionIds": [
+    "105-00-C-27",
+    "105-00-C-28",
+    "105-00-C-29"
+  ],
+  "qaReviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "qaReviewedAt": "2026-10-23",
+  "method": "DIRECT_VISUAL_INSPECTION_OF_ORIGINAL_OFFICIAL_SOURCE_PAGE_AND_EXACT_GENERATED_CROP",
+  "sourceGitHubActionsRun": "https://github.com/homelux-huang/7581707/actions/runs/39894068726",
+  "sourceOfficialPdfUrl": "https://web1.tcte.edu.tw/EXAM/105_4y/downloader.php?obj=MTA1LTR5LTAwLWMucGRm",
+  "sourceOfficialPdfSha256": "0a170905cb1d48f2921b42f19696ae6cc1d7bdcfbc46bfb0fd2c422ba16eaf02",
+  "sourcePage": 6,
+  "sourcePageWebp": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+  "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+  "oldV3Webp": "sudu/data/processed/105/qa-drafts/webp-v3/shared/105-00-C-SHARED-27-29.webp",
+  "oldV3WebpSha256": "7f5dfdd7d34b20136cc0943d92639575aeb24dc49cae78b6e64d1926e78a5566",
+  "reviewedWebpPath": "sudu/data/processed/105/qa-drafts/webp-v4/shared/105-00-C-SHARED-27-29.webp",
+  "reviewedWebpSha256": "3f48561583f36d993358e436af4e028bd5b23e85c314b4f2db2dea1330246318",
+  "cropPixels": [
+    90,
+    1050,
+    1310,
+    1608
+  ],
+  "sourceOriginalShaConfirmed": true,
+  "cropOutputShaConfirmed": true,
+  "pixelExactSourceCropMatch": true,
+  "criteria": [
+    "both_passages_甲乙_complete",
+    "reading_heading_and_text_complete",
+    "no_Q27_stem_or_adjacent_illustration",
+    "no_page_header_footer",
+    "legible",
+    "source_and_output_hashes_match"
+  ],
+  "imageQaStatus": "PASS",
+  "details": "Directly inspected source page 6 against the GitHub-generated v4 image: passages 甲 and 乙 and their last line are complete. Unlike v3, the image has no black arc from Q27 illustration or adjacent-question text. Existing v3 FAIL evidence retained.",
+  "textVerified": false,
+  "answerVerified": false,
+  "questionVerified": false,
+  "integrationReady": false
+}

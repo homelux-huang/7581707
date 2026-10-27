@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "year": 107,
+  "paperCode": "00-E",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "reviewedAt": "2026-10-24T23:10:33+08:00",
+  "sourceOfficialPageSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+  "officialPdfBytesFreshDownloaded": false,
+  "newIndividualG1Pass": 2,
+  "newG2Pass": 2,
+  "newG3AnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "Q37LegacyImageContaminationWasRepaired": true,
+  "relatedExistingSharedMaterialId": "107-00-E-SHARED-34-37",
+  "sharedMaterialQaNoChange": true,
+  "Q38To41OwnReviewStatusesNotModified": true,
+  "records": [
+    {
+      "questionId": "107-00-E-36",
+      "sourcePage": 7,
+      "sourcePageWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
+      "sourcePageSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+      "sourceGitBlob": "dacba885baae37a8290476026df3a2cf0eda2be3",
+      "officialPdfSha256FromExistingRepository": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "cropPixels": [
+        90,
+        156,
+        1310,
+        372
+      ],
+      "reviewedCurrentCandidate": "sudu/data/processed/107/webp-v1/00-E/107-00-E-36.webp",
+      "reviewedSha256": "2814146a40347909f38095c125c14fab019893dcfc683bff899bb62d00f202f8",
+      "pixelDifferenceZero": true,
+      "observed": "Q36 NOT and full Beyond Beauty: Taiwan from Above stem and A-D present, no Q37",
+      "legacyQuestion": "Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from\n   Above?",
+      "legacyOptions": [
+        "Chi refused to accept funds from others.",
+        "Chi tried to borrow money from banks.",
+        "Chi had a hard time finding enough money.",
+        "Chi spent all his money producing the film."
+      ],
+      "correctedQuestion": "Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from Above?",
+      "correctedOptions": [
+        "Chi refused to accept funds from others.",
+        "Chi tried to borrow money from banks.",
+        "Chi had a hard time finding enough money.",
+        "Chi spent all his money producing the film."
+      ],
+      "legacyToCorrectedUnifiedDiff": "--- legacy-extraction-preserved\n+++ new-direct-image-reviewed\n@@ -1,4 +1,4 @@\n-Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from\n   Above?\n+Which of the following is NOT true when Chi was making Beyond Beauty: Taiwan from Above?\n Chi refused to accept funds from others.\n Chi tried to borrow money from banks.\n Chi had a hard time finding enough money.\n",
+      "originalRawOcrText": null,
+      "newG1HumanCertification": false,
+      "textQaResult": "PASS_ASSISTANT_SOURCE_PAGE_DIRECT_TEXT"
+    },
+    {
+      "questionId": "107-00-E-37",
+      "sourcePage": 7,
+      "sourcePageWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
+      "sourcePageSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+      "sourceGitBlob": "dacba885baae37a8290476026df3a2cf0eda2be3",
+      "officialPdfSha256FromExistingRepository": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "cropPixels": [
+        90,
+        372,
+        1310,
+        568
+      ],
+      "reviewedCurrentCandidate": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp",
+      "reviewedSha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
+      "pixelDifferenceZero": true,
+      "observed": "Q37 stem A-D complete, unrelated Q38-41 reading header and robots article excluded in new v2; old v1 preserved",
+      "legacyQuestion": "What is this passage mainly about?",
+      "legacyOptions": [
+        "Chi and his concern about the environment.",
+        "The success of Chi’s documentary abroad.",
+        "What Chi went through to save typhoon victims.",
+        "The scenery recorded by Chi in his documentary.\n\n▲ 閱讀下文，回答第38 － 41 題\n\n        In 2017, when she became a citizen, a robot named Sophia attracted worldwide attention to\n   her human-like look and manners. Sophia is one model of a new invention known as social\n   robots, a smart machine created to interact and work closely with people in different areas.\n      The service industry is among the first users of social robots. In 2020, friendly robots will\n   assist human volunteers in hotels and at tourist attractions during the Tokyo Olympic Games.\n   Social robots are also tested out in Japan to care for the elderly in nursing homes. There, gentle\n   robot caregivers help to serve food and entertain lonely residents. Still another type of social\n   robots does all the housework. As their prices fall, these hardworking housekeepers may become\n   a common home appliance. Researchers even tried out robot teachers at elementary schools to\n   engage students in learning, or to patiently help children with communication difficulties learn\n   social skills.\n      However, not everyone welcomes social robots with open arms. Some people are\n   afraid that human partners may be disappointed when robots do not behave exactly\n   like humans. Others are not sure if children learning from robots will be able to handle\n   surprises in real-world communication. These and many other questions are being\n   asked, but researchers will not stop efforts to develop effective social robots."
+      ],
+      "correctedQuestion": "What is this passage mainly about?",
+      "correctedOptions": [
+        "Chi and his concern about the environment.",
+        "The success of Chi’s documentary abroad.",
+        "What Chi went through to save typhoon victims.",
+        "The scenery recorded by Chi in his documentary."
+      ],
+      "legacyToCorrectedUnifiedDiff": "--- legacy-extraction-preserved\n+++ new-direct-image-reviewed\n@@ -2,4 +2,4 @@\n Chi and his concern about the environment.\n The success of Chi’s documentary abroad.\n What Chi went through to save typhoon victims.\n-The scenery recorded by Chi in his documentary.\n\n▲ 閱讀下文，回答第38 － 41 題\n\n        In 2017, when she became a citizen, a robot named Sophia attracted worldwide attention to\n   her human-like look and manners. Sophia is one model of a new invention known as social\n   robots, a smart machine created to interact and work closely with people in different areas.\n      The service industry is among the first users of social robots. In 2020, friendly robots will\n   assist human volunteers in hotels and at tourist attractions during the Tokyo Olympic Games.\n   Social robots are also tested out in Japan to care for the elderly in nursing homes. There, gentle\n   robot caregivers help to serve food and entertain lonely residents. Still another type of social\n   robots does all the housework. As their prices fall, these hardworking housekeepers may become\n   a common home appliance. Researchers even tried out robot teachers at elementary schools to\n   engage students in learning, or to patiently help children with communication difficulties learn\n   social skills.\n      However, not everyone welcomes social robots with open arms. Some people are\n   afraid that human partners may be disappointed when robots do not behave exactly\n   like humans. Others are not sure if children learning from robots will be able to handle\n   surprises in real-world communication. These and many other questions are being\n   asked, but researchers will not stop efforts to develop effective social robots.\n+The scenery recorded by Chi in his documentary.\n",
+      "originalRawOcrText": null,
+      "newG1HumanCertification": false,
+      "textQaResult": "PASS_ASSISTANT_SOURCE_PAGE_DIRECT_TEXT"
+    }
+  ]
+}

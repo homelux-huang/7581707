@@ -1,0 +1,92 @@
+name: 107 Chinese v4 exact-pixel crop boundary corrections (DRAFT NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/refine_107_chinese_six_source_crops_v4.py
+      - .github/workflows/107-chinese-v4-boundary-refinement-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa107-chinese-v4-refine-no-release
+  cancel-in-progress: false
+jobs:
+  refine:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow for source-pixel proofs
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin inspected branch SHA and check original DRAFTs
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/refine_107_chinese_six_source_crops_v4.py
+          python scripts/refine_107_chinese_six_source_crops_v4.py
+      - name: Stage six versioned corrected crops only
+        run: python scripts/refine_107_chinese_six_source_crops_v4.py --stage
+      - name: Verify G1 still pending, G2 and G3 unchanged, all G5
+        run: |
+          python - <<'PY_VERIFY'
+          import json,sys,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          b=Path('sudu/data/processed/107')
+          def rd(f):return json.loads((b/f).read_text(encoding='utf8'))
+          m=rd('webp-manifest.json');q=rd('questions.json')
+          inv=rd('inventory.json');v=rd('VISUAL_QA.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          proof=rd('qa-drafts/DRAFT_107_CHINESE_V4_BOUNDARY_REFINEMENT_20261024.json')
+          assert inv['webpGeneratedDrafts']==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==6
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert len(proof['cropRefinements'])==6 and proof['newG1Pass']==0
+          imgs={x['questionId']:x for x in m['items']}
+          rows={x['questionId']:x for x in q['questions']}
+          shared={x['sharedMaterialId']:x for x in m['sharedMaterialCrops']}
+          for id,e in proof['cropRefinements'].items():
+              i=shared[id] if id in shared else imgs[id]
+              assert i['output']==e['newCropPath'] and i['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert hashlib.sha256(Path(i['output']).read_bytes()).hexdigest()==e['newSha256']==i['outputSha256']
+              assert hashlib.sha256(Path(e['oldCropPath']).read_bytes()).hexdigest()==e['oldSha256']
+              if id in rows:
+                  assert rows[id]['imageQaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+                  assert not rows[id]['answerVerified'] and not rows[id]['integrationReady']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert all(audit_year(y)['g5Pass'] for y in range(105,116))
+          print('107 six corrected v4 draft pixels, old v3 preserved, G1 6 G2 5 G5 11/11 NO RELEASE')
+          PY_VERIFY
+      - name: Save only six corrected versions and evidence with SHA-lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/qa-drafts/webp-v4/
+          git add sudu/data/processed/107/qa-drafts/DRAFT_107_CHINESE_V4_BOUNDARY_REFINEMENT_20261024.json
+          git add sudu/data/processed/107/webp-manifest.json
+          git add sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/ocr-raw-candidates.json
+          git add sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json
+          git add sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Branch changed; stale push refused"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(data107): versioned boundary-safe six Chinese v4 DRAFT WebPs, G5 only"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

@@ -1,0 +1,89 @@
+name: 105 v3 immutable image repair (DRAFT ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/repair_105_gaps_v3_drafts.py
+      - .github/workflows/105-v3-immutable-crop-repair.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-105-v3-immutable-draft
+  cancel-in-progress: false
+jobs:
+  repair:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow
+        run: python -m pip install --quiet Pillow
+      - name: Verify script and source SHA
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'qa/114-115-official-visual-review'
+          python -m py_compile scripts/repair_105_gaps_v3_drafts.py
+          python scripts/repair_105_gaps_v3_drafts.py --validate-spec
+          python scripts/repair_105_gaps_v3_drafts.py --check
+      - name: Generate five unverified v3 candidates; confirm idempotency
+        run: |
+          set -euo pipefail
+          python scripts/repair_105_gaps_v3_drafts.py --stage
+          python scripts/repair_105_gaps_v3_drafts.py --stage
+          python - <<'PY'
+          import hashlib, json, pathlib
+          base=pathlib.Path('sudu/data/processed/105/qa-drafts')
+          d=json.loads((base/'UNVERIFIED_105_GAPS_V3_20261023.json').read_text())
+          assert len(d['items'])==5 and d['imageQaPassAdded']==0 and d['answerVerifiedAdded']==0
+          assert not d['integrationReady']
+          for row in d['items']:
+              f=pathlib.Path(row['v3CandidateWebp'])
+              assert f.is_file()
+              assert hashlib.sha256(f.read_bytes()).hexdigest()==row['v3CandidateSha256']
+              assert row['imageQaStatus'].startswith('DRAFT_')
+          inv=json.loads(pathlib.Path('sudu/data/processed/105/inventory.json').read_text())
+          assert inv['visualQaPass']>=0 and inv['answerOfficialFinalVerified']==0 and not inv['integrationReady']
+          manifest=json.loads(pathlib.Path('sudu/data/processed/105/webp-manifest.json').read_text())
+          qa_count=sum(row.get('qaStatus')=='PASS' and row.get('visualReviewEvidence',{}).get('reviewedSha256')==(row.get('sha256') or row.get('outputSha256')) for row in manifest['items'])
+          assert inv['visualQaPass']==qa_count, 'Inventory G1 count must match SHA-bound manifest PASS, without promoting draft crops'
+          print('PASS: 5 immutable v3 image drafts SHA verified, no QA promotion')
+          PY
+      - name: Commit only new immutable v3 drafts to QA branch
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 QA Draft Images"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add sudu/data/processed/105/qa-drafts/webp-v3/ sudu/data/processed/105/qa-drafts/UNVERIFIED_105_GAPS_V3_20261023.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(105): generate five corrected v3 WebP drafts (NOT QA)"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 105-v3-sha-evidence
+          retention-days: 30
+          if-no-files-found: ignore
+          path: sudu/data/processed/105/qa-drafts/UNVERIFIED_105_GAPS_V3_20261023.json
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: 105-v3-visual-review-images
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp
+            sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp
+            sudu/data/processed/105/qa-drafts/webp-v2/**/*.webp
+            sudu/data/processed/105/qa-drafts/webp-v3/**/*.webp
+            sudu/data/processed/105/qa-drafts/UNVERIFIED_105_GAPS_V3_20261023.json

@@ -1,0 +1,115 @@
+{
+  "year": 106,
+  "paperCode": "00-E",
+  "sourcePage": 3,
+  "sourcePageWebp": "sudu/data/original/106/00-E/p003-190985dceb-v2-w1400-q66.webp",
+  "sourcePageGitBlobSha1": "5f11bcb73a2dac4c30dccf276e4199f8e130fc47",
+  "method": "Direct assistant visual transcription of existing versioned official-source page, 2026-10-23; not engine OCR",
+  "note": "Candidates only. Never replace raw OCR, original question, official answer, or release flags without independent line-by-line QA, immutable WebP crop and source SHA.",
+  "rawOcrStatus": "PENDING",
+  "singleQuestionWebpQaStatus": "BLOCKED_MISSING_CROP",
+  "finalOfficialAnswerCorrectionStatus": "PENDING",
+  "count": 6,
+  "items": [
+    {
+      "questionId": "106-00-E-13",
+      "originalQuestionNumber": 13,
+      "sourcePage": 3,
+      "draftQuestion": "Clerk: How can I help you?\nCustomer: Yes, this desk lamp was broken when I tried to turn it on at home.\nClerk: __________\nCustomer: Great, thanks for your assistance.",
+      "draftOptions": [
+        "Believe it or not, it’s just been bought.",
+        "I’m sorry, but I can replace it for you.",
+        "It seems you’re interested in the house.",
+        "The mechanic will fix your car in no time."
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-E-14",
+      "originalQuestionNumber": 14,
+      "sourcePage": 3,
+      "draftQuestion": "Fred: Oops! I left my workbook at home!\nJamie: __________ Ms. Kim reminded us just yesterday about it.\nFred: There isn’t much I can do. It’s too late for me to go back home now.\nJamie: Ms. Kim will be very upset.",
+      "draftOptions": [
+        "Salaries have not gone up.",
+        "You are in trouble, my friend.",
+        "He left the bookstore yesterday.",
+        "Consider the assignment done."
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-E-15",
+      "originalQuestionNumber": 15,
+      "sourcePage": 3,
+      "draftQuestion": "Zax: What are today’s headlines?\nClaire: Super Junior canceled tomorrow’s concert.\nZax: __________\nClaire: You bet. So many fans like me were very excited about seeing their show.",
+      "draftOptions": [
+        "It sounds like you’re not into music.",
+        "How many fans will be attending it?",
+        "Who are the members of the band?",
+        "You must feel terribly disappointed."
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-E-16",
+      "originalQuestionNumber": 16,
+      "sourcePage": 3,
+      "draftQuestion": "Dora: Where can I get that novel?\nDavid: I just ordered it online.\nDora: __________\nDavid: Anyone can! It’s so easy to use online bookstores nowadays.",
+      "draftOptions": [
+        "I’m amazed you can do that.",
+        "How’s the store’s service quality?",
+        "It’s actually about storytelling.",
+        "The system has a virus, doesn’t it?"
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-E-17",
+      "originalQuestionNumber": 17,
+      "sourcePage": 3,
+      "draftQuestion": "Jill: When is your monthly test?\nLarry: Next Thursday. Oh, I’m running out of time!\nJill: Relax! There are still five more days to prepare.\nLarry: Easy for you to say. __________\nJill: I have confidence in you.",
+      "draftOptions": [
+        "I can’t believe he spoke to you this way.",
+        "I’m not sure if I can be ready by that time.",
+        "But it’s kind of dangerous to run here.",
+        "The monthly treatment takes too long."
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-E-18",
+      "originalQuestionNumber": 18,
+      "sourcePage": 3,
+      "draftQuestion": "Operator: City Hall. How may I direct your call?\nCitizen: __________\nOperator: And the reason for your call?\nCitizen: Well, the park in our neighborhood looks terrible. I mean, there’s litter everywhere and nobody has picked it up.\nOperator: I see. One moment please.",
+      "draftOptions": [
+        "I’d like to speak to Environmental Services, please.",
+        "Yes, you may hand the problem to our department.",
+        "Read it before you hand it in to the director, please.",
+        "Please turn right at the next corner to find the center."
+      ],
+      "textQaStatus": "DRAFT_ASSISTANT_VISUAL_SOURCE_TRANSCRIPTION_NEEDS_INDEPENDENT_SECOND_REVIEW",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    }
+  ],
+  "qaPassAdded": 0,
+  "answerVerifiedAdded": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

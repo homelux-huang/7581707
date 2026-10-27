@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI visual QA, not human",
+  "stage": "SOURCE_WEBP_TO_TEXT_CORRECTION_EVIDENCE_ONLY",
+  "imagePath": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-05.webp",
+  "imageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "questionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "originalCandidateQuestion": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
+  "originalCandidateOptions": [
+    "(     ,      )\n        2   2\n        3   7",
+    "(     ,      )\n        2   2\n        5   5",
+    "(     ,      )\n        2   2\n        5   7",
+    "(     ,      )\n        2   2"
+  ],
+  "verifiedFromOriginalSingleQuestionImage": {
+    "question": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+    "options": [
+      "(3/2, -5/2)",
+      "(3/2, -7/2)",
+      "(5/2, -5/2)",
+      "(5/2, -7/2)"
+    ]
+  },
+  "identifiedDefect": "Existing OCR options contain vertically detached denominators/numerators and a private-use glyph; cannot render correctly as string options until corrected and separately QA checked.",
+  "noReOCR": true,
+  "noReCrop": true,
+  "noDatabaseOrOriginalMutation": true,
+  "correctionNeeded": true,
+  "independentReviewStatus": "AI_IMAGE_COMPARISON_NEEDS_SOURCE_BANK_QA_ADMISSION",
+  "studentReleaseApproved": false
+}

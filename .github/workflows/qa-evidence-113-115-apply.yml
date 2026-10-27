@@ -1,0 +1,68 @@
+name: Apply SHA-bound QA Evidence 113-115 (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_105_115_reviewed_image_evidence_20261022.py
+      - .github/workflows/qa-evidence-113-115-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-evidence-113-115-apply
+  cancel-in-progress: false
+jobs:
+  evidence:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image verifier
+        run: python -m pip install --quiet Pillow
+      - name: Validate immutable review evidence first
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/apply_105_115_reviewed_image_evidence_20261022.py
+          for year in 113 114 115; do
+            python scripts/apply_105_115_reviewed_image_evidence_20261022.py --year "$year" --check
+          done
+      - name: Apply each reviewed year and commit separately
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          git config user.name "7581707 QA evidence bot"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          for year in 113 114 115; do
+            git pull --rebase origin qa/114-115-official-visual-review
+            python scripts/apply_105_115_reviewed_image_evidence_20261022.py --year "$year" --apply
+            git add "sudu/data/processed/$year"
+            if ! git diff --cached --quiet; then
+              git commit -m "qa($year): bind existing source-crop visual evidence, no release"
+              git push origin HEAD:qa/114-115-official-visual-review
+            fi
+          done
+          python scripts/audit_105_115_release_gates.py > release-gates-after-evidence.json
+          python - <<'PY'
+          import json
+          r=json.load(open("release-gates-after-evidence.json"))
+          assert not r["allYearsReady"]
+          for y in (113,114,115):
+              row=next(z for z in r["years"] if z["year"]==y)
+              assert row["answerVerified"]==0
+              assert not row["integrationReady"]
+              print(y,row["webpVisualPass"],row["blockers"])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-113-115-after-evidence
+          path: release-gates-after-evidence.json
+          if-no-files-found: ignore

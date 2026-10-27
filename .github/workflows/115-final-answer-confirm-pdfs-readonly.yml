@@ -1,0 +1,76 @@
+name: 115 TCTE final confirmation PDFs (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/115-final-answer-confirm-pdfs-readonly.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet requests
+      - name: Fetch exact official PDFs linked in TCTE 115 confirmation table
+        run: |
+          set -euo pipefail
+          mkdir -p tcte-115-confirmations
+          python - <<'PY'
+          import base64,hashlib,json,pathlib,re
+          from urllib.parse import urljoin,urlsplit
+          import requests
+          root="https://web1.tcte.edu.tw/EXAM/115_4y/"
+          page=requests.get(root,timeout=60)
+          page.raise_for_status()
+          source=page.content.decode(page.encoding or "utf8",errors="replace")
+          targets=("00-C","00-E","09-2")
+          folder=pathlib.Path("tcte-115-confirmations")
+          records=[]
+          for code in targets:
+              marker="<tr><td>4-"+code
+              pos=source.find(marker)
+              assert pos>=0,code+" row not found"
+              segment=source[pos:pos+450]
+              m=re.search(r"downloader\.php\?obj=([A-Za-z0-9+/=]+)",segment)
+              assert m,code+" confirmation link missing"
+              token=m.group(1)
+              pdfname=base64.b64decode(token).decode("ascii")
+              assert pdfname==f"115-4y-{code}-confirm.pdf",(code,pdfname)
+              url=urljoin(root,"downloader.php?obj="+token)
+              response=requests.get(url,timeout=90)
+              response.raise_for_status()
+              assert urlsplit(response.url).hostname=="web1.tcte.edu.tw","Offsite redirect not allowed"
+              assert response.content.startswith(b"%PDF") and len(response.content)<20_000_000
+              fname=folder/pdfname
+              fname.write_bytes(response.content)
+              records.append({"paperCode":code,"sourceTcteIndex":root,
+                              "officialDownloadedUrl":url,"officialFileName":pdfname,
+                              "sourceIndexSha256":hashlib.sha256(page.content).hexdigest(),
+                              "pdfSha256":hashlib.sha256(response.content).hexdigest(),
+                              "pdfByteCount":len(response.content),
+                              "officialFinalCorrectionContentReviewed":False,
+                              "answerVerified":False})
+              print("OFFICIAL_CONFIRMATION_PDF",code,pdfname,len(response.content),records[-1]["pdfSha256"])
+          (folder/"DOWNLOAD_PROVENANCE.json").write_text(
+              json.dumps({"year":115,"count":len(records),"records":records,
+                          "releaseAllowed":False,"answerVerified":False,
+                          "note":"Downloaded exact official PDFs, SHA-pinned; still require page-by-page visual reading."},
+                         ensure_ascii=False,indent=2),encoding="utf8")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 115-official-confirmation-three-subject-PDFs
+          retention-days: 30
+          if-no-files-found: ignore
+          path: tcte-115-confirmations/

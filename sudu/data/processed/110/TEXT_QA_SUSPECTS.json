@@ -1,0 +1,1495 @@
+{
+  "schemaVersion": 1,
+  "year": 110,
+  "generatedAt": "2026-10-22T13:36:48.022804+00:00",
+  "inspection": "DETERMINISTIC_TEXT_SCAN_ONLY_NOT_MANUAL_QA",
+  "suspectQuestionCount": 49,
+  "suspectIds": [
+    "110-00-C-07",
+    "110-00-C-10",
+    "110-00-C-14",
+    "110-00-C-19",
+    "110-00-C-22",
+    "110-00-C-25",
+    "110-00-C-26",
+    "110-00-C-31",
+    "110-00-C-34",
+    "110-00-C-38",
+    "110-00-E-12",
+    "110-00-E-18",
+    "110-00-E-22",
+    "110-00-E-23",
+    "110-00-E-24",
+    "110-00-E-25",
+    "110-00-E-26",
+    "110-00-E-27",
+    "110-00-E-28",
+    "110-00-E-29",
+    "110-00-E-30",
+    "110-00-E-31",
+    "110-00-E-35",
+    "110-00-E-41",
+    "110-00-MB-01",
+    "110-00-MB-05",
+    "110-00-MB-10",
+    "110-00-MB-14",
+    "110-00-MB-15",
+    "110-00-MB-16",
+    "110-00-MB-23",
+    "110-00-MB-25",
+    "110-09-1-08",
+    "110-09-1-17",
+    "110-09-1-27",
+    "110-09-1-34",
+    "110-09-1-42",
+    "110-09-1-44",
+    "110-09-1-49",
+    "110-09-1-50",
+    "110-09-2-07",
+    "110-09-2-13",
+    "110-09-2-20",
+    "110-09-2-25",
+    "110-09-2-30",
+    "110-09-2-34",
+    "110-09-2-40",
+    "110-09-2-47",
+    "110-09-2-50"
+  ],
+  "findingCount": 179,
+  "findings": [
+    {
+      "questionId": "110-00-C-07",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-07",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "③ ①\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-07",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-07",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-2-\n",
+      "excerpt": "④ ② ⑤ ③ ①\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-07",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "④ ② ⑤ ③ ①\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-10",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第11 - 12 題\n  【甲】\n    臺地亦有產婆，家有妊婦則聘之。婆隔日來而診之，及分娩，洗兒護母，懇篤盡仁\n  術。其謝金大抵自一圓至五、六圓，雖富豪者，不過二十餘金。唯貧家不能聘婆者，近\n  鄰老婦有經歷者往而舉之，曰先生媽，年齒大抵三十歲以上，妙齡者殆稀。今也泰西產\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-10",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-10",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第11 - 12 題\n  【甲】\n    臺地亦有產婆，家有妊婦則聘之。婆隔日來而診之，及分娩，洗兒護母，懇篤盡仁\n  術。其謝金大抵自一圓至五、六圓，雖富豪者，不過二",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-10",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第11 - 12 題\n  【甲】\n    臺地亦有產婆，家有妊婦則聘之。婆隔日來而診之，及分娩，洗兒護母，懇篤盡仁\n  術。其謝金大抵自一圓至五、六圓，雖富",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-14",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第15 - 16 題\n    飛車劉八，從孫樹珊之御者也。其御車極鞭策之威，盡馳驅之力，遇同行者，必驀\n  越其前而後已，故得此名。馬之強弱所不問，馬之饑飽所不問，馬之生死亦所不問也。\n  歷數主，殺馬頗多。一日，御樹珊往群從家，以空車返。中路馬軼，為輪所軋，仆轍\n  中，其傷頗",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-14",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "背\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第15 - 16 題\n    飛車劉八，從孫樹珊之御者也。其御車極鞭策之威，盡馳驅之力，遇同行者，必驀\n  越其前而後已，故得此名。馬之強弱所不問，馬之饑",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-14",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第15 - 16 題\n    飛車劉八，從孫樹珊之御者也。其御車極鞭策之威，盡馳驅之力，遇同行者，必驀\n  越其前而後已，故得此名。馬之強弱所不問，馬之饑飽所不問，馬之生死亦所不問也。\n  歷數主，殺馬頗多。一日，御樹珊往群從家，以空車返。中路馬軼，為輪所軋",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-14",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-4-\n",
+      "excerpt": "讚對方筆力超凡難望項背\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第15 - 16 題\n    飛車劉八",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-14",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "讚對方筆力超凡難望項背\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第15 - 16 題\n    飛車劉八，從孫樹珊之御者",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-19",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第20 - 22 題\n  【甲】\n    水潺潺巉石間，與石皆作藍靛色。導人謂此水源出硫穴下，是沸泉也。余以一指試\n  之，猶熱甚。（郁永河《裨海紀遊》）\n  【乙】\n    湯泉，在湯圍，廳治南四十里。遠望熱氣蒸騰，泉中若沸，附近田園多被泡傷。土\n  人無冬夏，澡浴於此。（柯培",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-19",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-19",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第20 - 22 題\n  【甲】\n    水潺潺巉石間，與石皆作藍靛色。導人謂此水源出硫穴下，是沸泉也。余以一指試\n  之，猶熱甚。（郁永河《裨海紀遊》）\n  【乙】\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-19",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 5-\n",
+      "excerpt": "乙文作者似未置評論，實藉「天下名士」的反應來表達自己的看法\n\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-19",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第20 - 22 題\n  【甲】\n    水潺潺巉石間，與石皆作藍靛色。導人謂此水源出硫穴下，是沸泉也。余以一指試\n  之，猶熱甚。（郁永河《裨海紀遊》）\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-22",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第23 - 25 題\n  【甲】\n       2020 年適逢臺灣毛豆外銷50 周年。有「臺灣綠金」之稱的毛豆，①在日本的市占\n  率相當高。這個產業曾因中國大陸進入市場而大幅衰退─ ②從1991 年狂銷日本4.4 萬\n  公噸，到2007 年只剩2 萬公噸。最終在智慧科技協助",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-22",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "近\n\n\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第23 - 25 題\n  【甲】\n       2020 年適逢臺灣毛豆外銷50 周年。有「臺灣綠金」之稱的毛豆，①在日本的市占\n  率相當高。這個產業曾",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-22",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第23 - 25 題\n  【甲】\n       2020 年適逢臺灣毛豆外銷50 周年。有「臺灣綠金」之稱的毛豆，①在日本的市占\n  率相當高。這個產業曾因中國大陸進入市場而大幅衰退─ ②從1991 年狂銷日本4.4 萬\n  公噸，到2007 年只剩2 萬公",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-22",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-6-\n",
+      "excerpt": "乙文「泉中若沸」與丙詩「泉滾滾」水溫熱度相近\n\n\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第23 - 25 題\n  【甲】\n  ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-22",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "乙文「泉中若沸」與丙詩「泉滾滾」水溫熱度相近\n\n\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第23 - 25 題\n  【甲】\n       202",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-25",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第26 - 29 題\n  【甲】\n    白居易29 歲進京考中進士，32 歲經吏部銓選，授秘書省校書郎（九品）。剛上班收入\n  有限，白居易選擇租屋。當時的長安，商人、官員、考生等來來去去，人口流動大，租屋\n  盛行，而且房價極高，一般人根本買不起。白居易36 歲結婚時，年薪約",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-25",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第26 - 29 題\n  【甲】\n    白居易29 歲進京考中進士，32 歲經吏部銓選，授秘書省校書郎（九品）。剛上班收入\n  有限，白居易選擇租屋。當時的長安，商人",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n                                                         - 7-\n",
+      "excerpt": "減少資源投入，自給自足\n\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-25",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第26 - 29 題\n  【甲】\n    白居易29 歲進京考中進士，32 歲經吏部銓選，授秘書省校書郎（九品）。剛上班收入\n  有限，白居易選擇租屋。當時",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-26",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第9 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-26",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第9 頁",
+      "excerpt": "都洛陽\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-26",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第9 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-26",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-8-\n",
+      "excerpt": "為購得柳宗元岳父的園林宅院，乃自請調職東都洛陽\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-26",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "為購得柳宗元岳父的園林宅院，乃自請調職東都洛陽\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-31",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第32 - 35 題\n  【甲】\n    同樣是命運之神，〈少司命〉比「紛總總兮九州，何壽夭兮在予？」的〈大司命〉\n  更貼近尋常兒女的悲歡人生。詩中巫對神的追求，極盡低迴婉轉、纏綿悱惻。她尤其喜\n  愛「滿堂兮美人，忽獨與余兮目成」句，彷彿茫茫人海藏著看不見的線索，那命中注定\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-31",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第10 頁",
+      "excerpt": "\n\n                                                         - 9-\n\n第10 頁                                                                                110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-31",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第32 - 35 題\n  【甲】\n    同樣是命運之神，〈少司命〉比「紛總總兮九州，何壽夭兮在予？」的〈大司命〉\n  更貼近尋常兒女的悲歡人生。詩中巫對神的追求，極盡",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-31",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 9-\n",
+      "excerpt": "材質環保，設計簡約\n\n\n\n\n\n                                                         - 9-\n\n第10 頁                                                                                110 年四技\n共12 頁                                      國文 共同科目   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-31",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第32 - 35 題\n  【甲】\n    同樣是命運之神，〈少司命〉比「紛總總兮九州，何壽夭兮在予？」的〈大司命〉\n  更貼近尋常兒女的悲歡人生。詩中巫對神",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-34",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第11 頁",
+      "excerpt": "10-\n\n110 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-34",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-10-\n",
+      "excerpt": "①錯誤，②正確\n\n\n-10-\n\n110 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-34",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "①錯誤，②正確\n\n\n-10-\n\n110 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-38",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n\n   下列資料提供了「不好意思」這句話與群己關係、社會氛圍、處世態度的幾種觀\n  察。請就「不好意思」的運用與影響，寫一篇完整的文章。文章不用訂題目。\n\n      在什麼情況下，你會說「不好意思」？      聽者可能有何感受？\n\n   道歉  不好意思，我弄錯了，請您見諒。 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-38",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第12 頁",
+      "excerpt": "\n\n                                                        - 11-\n\n第12 頁                                                                                110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-38",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n\n   下列資料提供了「不好意思」這句話與群己關係、社會氛圍、處世態度的幾種觀\n  察。請就「不好意思」的運用與影響，寫一篇完整的文章。文章不用訂題目。\n\n      在",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-38",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                        - 11-\n",
+      "excerpt": "「牠是牠，我是我」意謂放手讓小熊自由，無須重逢\n\n\n\n                                                        - 11-\n\n第12 頁                                                                                110 年四技\n共12 頁                                      國文 共同科目   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-C-38",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n\n   下列資料提供了「不好意思」這句話與群己關係、社會氛圍、處世態度的幾種觀\n  察。請就「不好意思」的運用與影響，寫一篇完整的文章。文章不用訂題目。\n\n ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-12",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "       第3 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-12",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "e.\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-12",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "               第3 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-12",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-2-\n",
+      "excerpt": "Speaking in my native language.\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-12",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "Speaking in my native language.\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                 110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-22",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-22",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-23",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-23",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-24",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-24",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-25",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-25",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-28",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-28",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-29",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-29",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-30",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-30",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-31",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-E-31",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-E-35",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "       第7 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-35",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "er.\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-35",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "               第7 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-35",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-6-\n",
+      "excerpt": "hopes that it will draw attention to\n     the problem of hunger.\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-35",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "at it will draw attention to\n     the problem of hunger.\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n英文 共同科目                                      共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-41",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n 說明：\n ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )，分別作答於\n\n  答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n ▲ 請勿抄題，每格限填一字，超過一字者視為錯誤，不予計",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-41",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-41",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n 說明：\n ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )，分別作答於\n\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-41",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 7-\n",
+      "excerpt": "Self-driving car technology was fully developed.\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共8 頁                                      英文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-E-41",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n 說明：\n ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )，分別",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-01",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-MB-05",
+      "field": "option_1",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "8.5             名人代號 出生年月日  星座   星座代號",
+      "excerpt": "8.5             名人代號 出生年月日  星座   星座代號",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-05",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第3 頁\n數學(B) 共同科目                                     共 4 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-05",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": " 8\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n數學(B) 共同科目                                     共 4 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-05",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-2-\n",
+      "excerpt": "   6\n                           H       1956/08/31  處女座        8\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n數學(B) 共同科目                                     共 4 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-05",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                       H       1956/08/31  處女座        8\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n數學(B) 共同科目                                     共 4 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-10",
+      "field": "option_1",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "1、4、7、10、13",
+      "excerpt": "1、4、7、10、13",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-10",
+      "field": "option_2",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "55、57、58、59、61",
+      "excerpt": "55、57、58、59、61",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-14",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-MB-14",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-MB-15",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "                                                    數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-15",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                 110 年四技\n共4 頁                                                       數學",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-15",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共4 頁                                                       數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-00-MB-16",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-MB-16",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-MB-23",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-00-MB-23",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-00-MB-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-4-",
+      "excerpt": "31\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-4-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-08",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-08",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "本\n\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-08",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "             第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-08",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-2-\n",
+      "excerpt": "多層次傳銷主要以人員銷售及口耳相傳方式經營，可以節省廣告、租金等營運成本\n\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-08",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "多層次傳銷主要以人員銷售及口耳相傳方式經營，可以節省廣告、租金等營運成本\n\n\n\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-17",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-17",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                 110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-17",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-17",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-27",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-27",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "址\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-27",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "             第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-27",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-4-\n",
+      "excerpt": "PC 用來暫存下一個要執行指令的位址\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-27",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "PC 用來暫存下一個要執行指令的位址\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-34",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-09-1-34",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-09-1-42",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "110-09-1-42",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "110-09-1-44",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-44",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "為白色\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-44",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "             第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-44",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-6-\n",
+      "excerpt": "以 ( 100 % , 100 % , 100 % , 0 % ) 比例混合所得顏色為白色\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-44",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "以 ( 100 % , 100 % , 100 % , 0 % ) 比例混合所得顏色為白色\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                   共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-49",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-49",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-49",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-49",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 7-\n",
+      "excerpt": "12\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-49",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-1-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-8-",
+      "excerpt": "    以下做      臺中\n              10 次      以北？\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-8-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-07",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-07",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": ",000\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-07",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "   第3 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-07",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-2-\n",
+      "excerpt": "假設該交換具商業價值，X 公司認列處分利益$500,000，Y 公司認列處分損失$200,000\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-07",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "假設該交換具商業價值，X 公司認列處分利益$500,000，Y 公司認列處分損失$200,000\n\n\n-2-\n\n110 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-13",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-13",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-13",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-13",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-20",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-20",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "0\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-20",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "   第5 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-20",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-4-\n",
+      "excerpt": "400,000\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-20",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "400,000\n\n\n\n\n\n-4-\n\n110 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-25",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考\n\n第二部份：經濟學 ( 第26 至50 題，每題2 分，共50 分 )",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-25",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考\n\n第二部份：經濟學 ( 第26 至50 題，每題2 分，共50 分 )",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 5-\n",
+      "excerpt": "應付帳款          72\n     應收帳款          851         銀行存款          72\n\n\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-25",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考\n\n第二部份：經濟學 ( 第26 至50 題，每題2 分，共50 分 )",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-30",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-30",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "際效用\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-30",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "   第7 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-30",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-6-\n",
+      "excerpt": "Q ＝ 70 之邊際效用會小於Q ＝ 75 之邊際效用\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-30",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "Q ＝ 70 之邊際效用會小於Q ＝ 75 之邊際效用\n\n\n\n-6-\n\n110 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-34",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-34",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 7-\n",
+      "excerpt": "暫時歇業\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-34",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-40",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-40",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第9 頁",
+      "excerpt": "C\n\n\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-40",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "   第9 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-40",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-8-\n",
+      "excerpt": "若MPC 下降0.1 後，當Y ＝ 150 時， APC ＜ MPC\n\n\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-40",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "若MPC 下降0.1 後，當Y ＝ 150 時， APC ＜ MPC\n\n\n\n\n\n-8-\n\n110 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-47",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-47",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第10 頁",
+      "excerpt": "\n\n                                                         - 9-\n\n第10 頁                                                                                110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-47",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-47",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 9-\n",
+      "excerpt": "若E ＝ 1.35，此變動將不利於英國之進口\n\n\n\n                                                         - 9-\n\n第10 頁                                                                                110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-47",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "                                                                 110 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-50",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-50",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第11 頁",
+      "excerpt": "10-\n\n110 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁  ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-50",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "  第11 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-10-\n",
+      "excerpt": "新古典成長理論強調勞動成長、資本累積、技術進步三者會影響經濟成長\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-10-\n\n110 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考\n\n\n\n\n\n    ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "110-09-2-50",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "110 年四技",
+      "excerpt": "新古典成長理論強調勞動成長、資本累積、技術進步三者會影響經濟成長\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-10-\n\n110 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                           共12 頁   公告試題僅供參考\n\n\n\n\n\n            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    }
+  ],
+  "rules": "Do not auto-strip text: footer-like text could be quote/content. Inspect official source first.",
+  "readyForIntegration": false
+}
