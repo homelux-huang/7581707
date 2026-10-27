@@ -2,6 +2,7 @@ name: Test 114/115 verified V4 integration
 on:
   push:
     branches:
+      - 'sync/qa-approved-**'
       - integration/114-115-auto-verified-pages
       - feature/partial-qa-preview-114-115-20261022
       - release/114-115-qa-incremental-20261022
@@ -12,6 +13,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - sudu/data/approved/**
       - sudu/v4-115-multisubject-review-demo.html
       - sudu/verified-questions-runtime.js
       - sudu/demo-subject-learning.js
@@ -151,3 +153,4 @@ jobs:
       # PR events use a synthetic merge SHA in github.sha; pin the real PR head
       # so Browser Smoke and release gates prove the exact feature commit.
       target_sha: ${{ github.event.pull_request.head.sha || github.sha }}
+
