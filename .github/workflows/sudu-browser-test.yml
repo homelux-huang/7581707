@@ -3,6 +3,7 @@ name: Browser smoke test Sudu
 on:
   push:
     paths:
+      - sudu/data/approved/**
       - sudu/workspace.js
       - sudu/workspace.css
       - sudu/index.html
@@ -31,6 +32,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - sudu/data/approved/**
       - sudu/workspace.js
       - sudu/workspace.css
       - sudu/index.html
@@ -93,3 +95,4 @@ jobs:
         with:
           name: sudu-demo-evidence-${{ github.sha }}
           path: test-results/
+
