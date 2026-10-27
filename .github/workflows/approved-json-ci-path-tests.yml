@@ -1,0 +1,24 @@
+name: Approved dataset CI trigger contract (NO RELEASE)
+on:
+  push:
+    branches: [fix/approved-json-v4-ci-paths-20261027]
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/sudu-browser-test.yml
+      - .github/workflows/sudu-verified-integration-checks.yml
+      - .github/workflows/approved-json-ci-path-tests.yml
+      - tests/test_sudu_approved_ci_paths.py
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_sudu_approved_ci_paths.py -v
