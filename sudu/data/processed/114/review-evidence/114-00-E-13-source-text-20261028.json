@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-E13-E14-SOURCE-QUESTION-FINAL-20261028-02",
+  "questionId": "114-00-E-13",
+  "role": "A",
+  "reviewDate": "2026-10-28",
+  "reviewer": "ChatGPT ROLE A; independently inspected original p3 and per-question WebP already archived, not different-author Role E teaching auditor",
+  "reviewType": "ROLE_A_DIRECT_ORIGINAL_PIXEL_AND_TEXT_ONLY_NOT_SOURCE_BANK_ADMISSION",
+  "official": {
+    "year": 114,
+    "paperCode": "00-E",
+    "page": 3,
+    "originalPaperSourcePdfShaPreviouslyRecorded": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "originalPdfBytesRehashedNow": false,
+    "originalSourcePageWebp": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "originalSourcePageGitBlob": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "originalSourcePageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-13.webp",
+    "originalSingleWebpSha256": "81f4487c4012456b4f1c3449aa388f16d12de19b72cc844ae6b6269be76e9be7",
+    "originalSingleWebpGitBlob": "d3a37cc4ecb6c72b06fa19919a376a34203ed739",
+    "originalCropPixels": [
+      90,
+      870,
+      1310,
+      1120
+    ]
+  },
+  "directPrintedSourceObservation": {
+    "actualVisualCheck": true,
+    "originalQuestionNumber": 13,
+    "exactCanonicalQuestion": "Vendor:    These vegetables are chemical free.\n    Customer:  They look great. But what about the eggs? ____________\n    Vendor:   Of course! We get them straight from the farm every morning. They are the best.",
+    "exactPrintedOptions": [
+      "Are they fresh?",
+      "How much are they?",
+      "Do you plant them?",
+      "How do you cook them?"
+    ],
+    "allFourChoicesComplete": true,
+    "wholeQuestionComplete": true,
+    "dialogueRolesAndBlankComplete": true,
+    "noAdjacentQuestionOrWholePage": true,
+    "noGraphicOrSharedArticleRequired": true,
+    "originalPixelRGBMatchRequired": true,
+    "sourceTextMatchesExistingArchivedYearJson": true,
+    "note": "Original p3 Vendor/Customer Q13 exchange about vegetables and fresh eggs, full blank, all A-D choices, no Q12/Q14 or page footer. Source says 'chemical free' and answer A; no new OCR or crop.",
+    "sourceImageVisualQa": "PASS_ROLE_A_DIRECT_VISUAL_SOURCE_ORIGINAL_PIXELS_NOT_ROLE_E"
+  },
+  "bindings": {
+    "sourceRevisionExpected": "074fb9847eda936d31dfd4503f3a7a12cbde19b72cc844ae6b6269be76e9be7",
+    "sourceBankGitBlobSha1": "1535754345a08d25636e00b4ba3270a1f764bf66",
+    "sourceManifestGitBlobSha1": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "existingAnswerReceiptPath": "sudu/data/processed/114/review-evidence/114-00-E-13-official.json",
+    "originalAnswerVerifiedInPR94": true,
+    "originalAnswerLetter": "A",
+    "originalAnswerPageWebpSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "officialEnglishConfirmationPdfShaPreviouslyRecorded": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+    "officialEnglishOnlyNamedConfirmationId": "114-00-E-26",
+    "noCorrectionForThisSpecificQuestion": true,
+    "doNotAssertNoObjectionsWholePaper": true
+  },
+  "previousRoleBAuthorReadOnly": {
+    "pr": 44,
+    "authorComposedTeachingDigestCandidate": "e62d80dd377d6dcd8872b416f2499dc6c1c6f185f14644b5bdab188ff5a910d1",
+    "independentEPostAuthorRevisionTrusted": false,
+    "actualPublisherProducedV4Browser8x2SameDigest": false
+  },
+  "rawOriginalYearJSONUnchanged": true,
+  "sourceQuestionsJSONUnchanged": true,
+  "originalWebpUnchanged": true,
+  "existingAnswerEvidenceUnchanged": true,
+  "sqlite205CanonicalPayloadUnchanged": true,
+  "authoritativeSourceQuestionVerified": false,
+  "newOfficialAnswerReviewGranted": false,
+  "newQuestionVerifiedGranted": false,
+  "newlyApproved114": 0,
+  "newReady": 0,
+  "newLive": 0,
+  "teacherIdentityClaimed": false,
+  "blockers": [
+    "Original PDF bytes not freshly downloaded/rehashed in this batch",
+    "Source questionVerified flag remains false for formal admission",
+    "Different-author Role E review after latest B digest change and protected-main trusted receipt missing",
+    "Actual official publisher-emitted same revision and teaching digest V4 8x2 browser and main Pages SAME SHA not validated"
+  ]
+}
