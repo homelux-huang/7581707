@@ -19,8 +19,8 @@ PASSAGE_SHA = {
     "115-00-C-11": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
     "115-00-C-12": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
     "115-00-C-13": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
-    "115-00-C-16": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
-    "115-00-C-17": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+    "115-00-C-16": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+    "115-00-C-17": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
 }
 ANCHORS = {
     "115-00-C-11": ("六個也算老女人的女兒輩都回來", "所以，我們與你一起坐上救護車"),
@@ -132,10 +132,16 @@ class NewFiveChineseAuthorOnly(unittest.TestCase):
                 raw="".join(q["sharedMaterial"]["sourceText"].split())
                 for anchor in ANCHORS[qid]:
                     self.assertIn("".join(anchor.split()),raw)
-                self.assertEqual(q["sharedMaterial"]["qaStatus"],
-                                 "PENDING_INDIVIDUAL_VISUAL_QA")
-                self.assertEqual(self.items[qid]["sharedImageQa"],
-                                 "PENDING_INDIVIDUAL_VISUAL_QA")
+                expected_qa = ("PASS_DIRECT_ORIGINAL_OFFICIAL_PAGE_SHARED_MATERIAL_VISUAL"
+                               if qid in ("115-00-C-16", "115-00-C-17")
+                               else "PENDING_INDIVIDUAL_VISUAL_QA")
+                self.assertEqual(q["sharedMaterial"]["qaStatus"], expected_qa)
+                self.assertEqual(self.items[qid]["sharedImageQa"], expected_qa)
+                if qid in ("115-00-C-16", "115-00-C-17"):
+                    self.assertEqual(q["sharedMaterial"]["image"],
+                        "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp")
+                    self.assertIn("SHARED_SOURCE_TEXT_TWO_COLUMN_G2_OCR_RECONCILIATION_PENDING",
+                                  q["blockers"])
                 self.assertTrue(q["sourceImageManifestQa"]=="PASS")
                 self.assertFalse(q["sharedMaterial"]["originalSharedWebpBytesRehashedThisSession"])
                 self.assertFalse(q["originalImageBytesRehashedThisSession"])
@@ -158,7 +164,10 @@ class NewFiveChineseAuthorOnly(unittest.TestCase):
                 self.assertIsNone(r["reviewEvidenceSha256"])
                 self.assertIsNone(r["sourceOfficialEvidenceSha256"])
                 self.assertEqual(r["officialAnswerAndNoticeAdmission"],"PENDING")
-                self.assertEqual(r["originalTextAndSharedImageIndependentQa"],"PENDING")
+                self.assertEqual(
+                    r["originalTextAndSharedImageIndependentQa"],
+                    ("G1_V4_IMAGE_ONLY_PASS_G2_TEXT_PENDING"
+                     if qid in ("115-00-C-16","115-00-C-17") else "PENDING"))
                 self.assertEqual(r["v4ExactDigestEightViewportsTwoThemes"],"PENDING")
                 self.assertTrue(all("HUMAN_TEACHER" not in b for b in q["blockers"]))
                 self.assertIn("DISTINCT_AI_CONTENT_REVIEW_EXACT_SOURCE_IMAGE_LESSON_EVIDENCE_PENDING",

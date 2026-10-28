@@ -36,11 +36,11 @@
     "id": "115-00-C-SHARED-16-18",
     "sourceText": "▲閱讀下文，回答第16-18 題\n趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n探 春：府中家僕趙國基。                                        趙姨娘原是賈府小廝的女兒，\n趙姨娘：給了多少？                    後為賈政之妾。\n探 春：紋銀二十，按例而行。                    文中「夫人」、「太太」指賈\n趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？   政正室王夫人。\n探 春：四十兩。                            「老祖宗」指賈政母親。\n                                        襲人是賈寶玉的丫鬟，鴛鴦是趙姨娘：鴛鴦母親呢？\n                              賈母的丫鬟。探 春：也是四十。\n趙姨娘：這都叫按例而行嗎？\n探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而\n    行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正\n    好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也\n    失了臉面，那可真叫人看笑話囉！\n探 春：依禮行事，與臉面又有何干哪？\n趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親\n    娘舅。\n探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，\n    姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，\n    哪個又有光彩？\n趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n                         （王安祈〈紅樓夢中人‧探春〉）",
     "textSha256": "cf44ba29b44872af4bed426dd6d2c50489b12ed7b8e0b64482915c9b37c82f25",
-    "image": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
-    "imageSha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
-    "qaStatus": "PENDING_INDIVIDUAL_VISUAL_QA",
+    "image": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
+    "imageSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+    "qaStatus": "PASS_DIRECT_ORIGINAL_OFFICIAL_PAGE_SHARED_MATERIAL_VISUAL",
     "sourcePage": 6,
-    "sharedMaterialRevision": "f23678717fa4b5ffb6be1226d2f7d800adcf5b6cd7e825de3d3058cac793678d",
+    "sharedMaterialRevision": "c5b72a44260c2e322a9f5d060834b7462c5250bab15b1ef63eb4be3167ab1728",
     "originalSharedWebpBytesRehashedThisSession": false
   },
   "teaching": {
@@ -118,7 +118,7 @@
     "distinctAuthorRequired": true,
     "selfReviewAllowedAsIndependentQa": false,
     "officialAnswerAndNoticeAdmission": "PENDING",
-    "originalTextAndSharedImageIndependentQa": "PENDING",
+    "originalTextAndSharedImageIndependentQa": "G1_V4_IMAGE_ONLY_PASS_G2_TEXT_PENDING",
     "v4ExactDigestEightViewportsTwoThemes": "PENDING",
     "policyAuthority": "ISSUE36_2026-10-25_USER_OVERRIDE_NO_HUMAN_TEACHER_REQUIREMENT"
   },
@@ -126,8 +126,9 @@
   "deploy": false,
   "blockers": [
     "FULL_OFFICIAL_SOURCE_TEXT_AND_FINAL_ANSWER_CORRECTION_SCOPE_ADMISSION_PENDING",
-    "SHARED_ORIGINAL_PIXEL_WEBP_INDIVIDUAL_VISUAL_QA_PENDING",
     "DISTINCT_AI_CONTENT_REVIEW_EXACT_SOURCE_IMAGE_LESSON_EVIDENCE_PENDING",
-    "V4_SAME_DIGEST_EIGHT_VIEWPORT_TWO_THEME_AND_FINAL_CI_PENDING"
+    "V4_SAME_DIGEST_EIGHT_VIEWPORT_TWO_THEME_AND_FINAL_CI_PENDING",
+    "SHARED_SOURCE_TEXT_TWO_COLUMN_G2_OCR_RECONCILIATION_PENDING",
+    "V4_SHARED_WEBP_NOT_INTEGRATED_TO_CANONICAL_SOURCE_TREE"
   ]
 }
