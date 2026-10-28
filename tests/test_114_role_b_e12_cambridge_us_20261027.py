@@ -9,7 +9,7 @@ F=ROOT/"sudu/teaching-candidates/114-role-b-20261025-batch02"
 BANK=ROOT/"sudu/data/processed/114"
 ID="114-00-E-12"
 BEFORE="/ˈwɔː.t̬ɚ ˌbɑː.t̬əl/"
-AFTER="/ˈwɑː.t̬ɚ ˈbɑː.t̬əl/"
+AFTER="/ˈwɑː.t̬ɚ ˌbɑː.t̬ə l/"
 OLD_COMPOSED="335fa42da12236564daf4304522b454f6788d36be9bb1c50361d88bb23180263"
 OLD_FILE_SHA="0a7c490b59d4ea985f20ea3919891f7779dcbf98afd9c1f30a12e1d0d6fa9cc4"
 SOURCE_REV="0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec"
@@ -40,7 +40,7 @@ class RoleB114E12IPA(unittest.TestCase):
         w=entries[0]
         self.assertEqual(w["ipa"],AFTER)
         self.assertNotEqual(w["ipa"],BEFORE)
-        self.assertEqual(w["dictionaryUrl"],"https://dictionary.cambridge.org/dictionary/english/bottle")
+        self.assertEqual(w["dictionaryUrl"],"https://dictionary.cambridge.org/dictionary/english/water-bottle")
         self.assertEqual(w["level"],"初級")
         self.assertEqual(w["meaningZh"],"水壺／水瓶")
         self.assertIn("refillable bottle",w["synonyms"])
@@ -61,6 +61,7 @@ class RoleB114E12IPA(unittest.TestCase):
         d=copy.deepcopy(self.lesson)
         word=next(x for x in d["enrichment"]["englishVocabulary"] if x["headword"]=="water bottle")
         word["ipa"]=BEFORE
+        word["dictionaryUrl"]="https://dictionary.cambridge.org/dictionary/english/bottle"
         d["composedTeachingSha256"]=OLD_COMPOSED
         raw=(json.dumps(d,ensure_ascii=False,indent=2)+"\n").encode("utf-8")
         self.assertEqual(sha(raw),OLD_FILE_SHA)
@@ -105,6 +106,12 @@ class RoleB114E12IPA(unittest.TestCase):
         previous=copy.deepcopy(base)
         next(x for x in previous["enrichment"]["englishVocabulary"] if x["headword"]=="water bottle")["ipa"]=BEFORE
         self.assertNotEqual(digest(previous),h)
+        wrong_stress=copy.deepcopy(base)
+        next(x for x in wrong_stress["enrichment"]["englishVocabulary"] if x["headword"]=="water bottle")["ipa"]="/ˈwɑː.t̬ɚ ˈbɑː.t̬əl/"
+        self.assertNotEqual(digest(wrong_stress),h)
+        wrong_link=copy.deepcopy(base)
+        next(x for x in wrong_link["enrichment"]["englishVocabulary"] if x["headword"]=="water bottle")["dictionaryUrl"]="https://dictionary.cambridge.org/dictionary/english/bottle"
+        self.assertNotEqual(digest(wrong_link),h)
         self.assertNotEqual(digest(dict(base,sourceRevision="0"*64)),h)
         self.assertNotEqual(digest(dict(base,webpSha256="1"*64)),h)
 if __name__=="__main__":unittest.main()
