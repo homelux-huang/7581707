@@ -1,0 +1,55 @@
+name: Role A 114 E13 E14 authentic archived source text & original WebP (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e13-e14-source-text-20261028
+    paths:
+      - sudu/data/processed/114/review-evidence/114-00-E-13-source-text-20261028.json
+      - sudu/data/processed/114/review-evidence/114-00-E-14-source-text-20261028.json
+      - tests/test_role_a_114_e13_e14_source_text_receipts.py
+      - docs/ROLE_A_114_E13_E14_SOURCE_TEXT_20261028.md
+      - .github/workflows/role-a-114-e13-e14-source-text.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-114-e13-e14-original-source-20261028
+  cancel-in-progress: false
+
+jobs:
+  immutable_source_verification_no_student_deploy:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e13-e14-source-text-20261028'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact isolated Role A source branch read-only
+        uses: actions/checkout@v4
+        with:
+          ref: qa/role-a-114-e13-e14-source-text-20261028
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original WebP decoding only
+        run: python -m pip install -q Pillow==11.3.0
+      - name: Verify both unchanged 114 E13 E14 original pixels, A-D and SHA 205 SQLite
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_114_e13_e14_source_text_receipts.py
+          python -m unittest discover -s tests -p test_role_a_114_e13_e14_source_text_receipts.py -v
+      - name: Retain previous 114 E11 final original source text and original answer scope QA
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_e11_final_source_text_receipt.py -v
+          python -m unittest discover -s tests -p test_role_a_114_e11_e13_e14_final_official.py -v
+      - name: No original source/image/SQLite/PR30/MAIN/Pages changes
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/role-a-114-e13-e14-source-text-20261028"
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+          echo "SOURCE A ONLY. 114 Q13/Q14 official A/D inherited PR94; questionVerified remains false; no new E/D/READY/LIVE."
