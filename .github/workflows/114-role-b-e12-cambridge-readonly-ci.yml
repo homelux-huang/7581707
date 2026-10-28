@@ -1,0 +1,39 @@
+name: Role B 114 E12 Cambridge American IPA source correction (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - "sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-12.json"
+      - "sudu/teaching-candidates/114-role-b-20261025-batch02/batch.json"
+      - "docs/B-114-E12-CAMBRIDGE-US-IPA-20261027.md"
+      - "tests/test_114_role_b_e12_cambridge_us_20261027.py"
+      - ".github/workflows/114-role-b-e12-cambridge-readonly-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-and-phonetic-verified-not-admitted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Original 5 candidate strict source/WebP/teaching hash checks remain
+        run: python -m unittest discover -s tests -p 'test_114_role_b_batch02_20261025.py' -v
+      - name: New E12 Cambridge US IPA source and exact minimal content-delta negatives
+        run: python -m unittest discover -s tests -p 'test_114_role_b_e12_cambridge_us_20261027.py' -v
+      - name: Explicit E12 and E14 cannot self-approve or publish
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('sudu/teaching-candidates/114-role-b-20261025-batch02')
+          b=json.loads((root/'batch.json').read_text(encoding='utf-8'))
+          assert b['newReady']==b['newLive']==0
+          for name in ('114-00-E-12','114-00-E-14'):
+              q=json.loads((root/(name+'.json')).read_text(encoding='utf-8'))
+              assert q['review']['status']=='BLOCKED'
+              assert q['review']['independentAiContentReview']['status']=='PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW'
+              assert q['review']['studentReleaseApproved'] is False
+          print('NO RELEASE: E12/E14 need distinct E, D, official A and MASTER')
+          PY
