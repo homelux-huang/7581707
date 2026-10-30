@@ -1,0 +1,88 @@
+name: 114 source-only WebP OCR answer and SQLite draft
+on:
+  push:
+    branches: [data/114-full-year-question-assets]
+    paths:
+      - scripts/build_114_full_assets.py
+      - scripts/build_114_question_bank.py
+      - .github/workflows/114-data-assets.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: 114-data-assets
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/data/114-full-year-question-assets'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/114-full-year-question-assets
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image, PDF and OCR dependencies
+        run: |
+          python -m pip install --quiet pymupdf pillow numpy requests pytesseract
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra tesseract-ocr-eng
+      - name: Check script syntax
+        run: python -m py_compile scripts/build_114_full_assets.py scripts/build_114_question_bank.py
+      - name: Generate source-only candidate crops and OCR gaps
+        run: python scripts/build_114_full_assets.py
+      - name: Import twice and verify isolated SQLite
+        run: |
+          python scripts/build_114_question_bank.py
+          python scripts/build_114_question_bank.py
+      - name: Strict draft inventory, source SHA and visual QA distinction
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from PIL import Image
+          d=Path("sudu/data/processed/114")
+          m=json.loads((d/"webp-manifest.json").read_text())
+          q=json.loads((d/"questions.json").read_text())
+          assert len(q["questions"])==len(m["items"])==205
+          assert len({x["questionId"] for x in m["items"]})==205
+          for x in m["items"]:
+              if not x.get("output"): continue
+              src=Path(x["source"]); dest=Path(x["output"])
+              assert src.exists() and dest.exists()
+              assert hashlib.sha256(src.read_bytes()).hexdigest()==x["sourceSha256"]
+              assert hashlib.sha256(dest.read_bytes()).hexdigest()==x["sha256"]
+              with Image.open(dest) as im:
+                  im.load()
+                  assert im.format=="WEBP" and list(im.size)==x["outputSize"]
+              if x["qaStatus"]=="PASS":
+                  assert x["visualReviewEvidence"]["reviewedSha256"]==x["sha256"]
+          assert not any(x["answerVerified"] or x["questionVerified"] for x in q["questions"])
+          assert not Path("backend/private.sqlite3").exists()
+          print("PASS structural draft audit; does NOT confer visual QA")
+          PY
+      - name: Commit 114-only data drafts (never main)
+        run: |
+          set -eu
+          git config user.name "114 exam data bot"
+          git config user.email "114-data-bot@users.noreply.github.com"
+          git add sudu/data/processed/114
+          if ! git diff --cached --quiet; then
+            git commit -m "data(114): generate official-source draft crops and QA inventory"
+            git pull --rebase origin data/114-full-year-question-assets
+            git push origin HEAD:data/114-full-year-question-assets
+          fi
+      - name: Preserve audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 114-draft-evidence
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/114/inventory.json
+            sudu/data/processed/114/webp-manifest.json
+            sudu/data/processed/114/official-answer-evidence.json
+            sudu/data/processed/114/VISUAL_QA.json

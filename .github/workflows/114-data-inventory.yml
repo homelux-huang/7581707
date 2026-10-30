@@ -1,0 +1,23 @@
+name: Audit 114 source inventory without publication
+on:
+  push:
+    branches: [data/114-full-year-question-assets]
+    paths:
+      - scripts/audit_114_inventory.py
+      - .github/workflows/114-data-inventory.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/audit_114_inventory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 114-source-inventory-only
+          path: sudu/data/processed/114/inventory.json
