@@ -1,0 +1,47 @@
+name: Role A 115 Chinese C16 C17 official shared text G2 and WebP (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-c16-c17-shared-g2-20261102
+    paths:
+      - sudu/data/processed/115/review-evidence/115-00-C-SHARED-16-18-G2-COLUMNS-20261102.json
+      - sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp
+      - sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json
+      - tests/test_role_a_115_c16_c17_shared_g2.py
+      - .github/workflows/role-a-115-c16-c17-g2.yml
+      - docs/ROLE_A_115_C16_C17_SHARED_G2_20261102.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-c16-c17-source-g2-20261102
+  cancel-in-progress: false
+
+jobs:
+  exact_source_g2:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-c16-c17-shared-g2-20261102'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact Role A candidate, not protected main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Full exact G2 source and immutable WebP SHA negative tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_c16_c17_shared_g2.py
+          python -m unittest discover -s tests -p test_role_a_115_c16_c17_shared_g2.py -v
+      - name: Working tree remains unchanged; release not authorized
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          git status --porcelain
+          echo "SOURCE_G2_ASSISTANT_VISUAL_REPAIR_CANDIDATE; G3/E/D/READY/LIVE remain pending."

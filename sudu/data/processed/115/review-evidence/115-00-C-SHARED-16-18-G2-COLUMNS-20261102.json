@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-C16-C17-SHARED-G2-20261102-01",
+  "role": "A",
+  "questionIds": [
+    "115-00-C-16",
+    "115-00-C-17"
+  ],
+  "sharedMaterialId": "115-00-C-SHARED-16-18",
+  "alsoReferencedByUnreviewedQuestion": "115-00-C-18",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6569071086",
+  "sourceBaseCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "status": "ROLE_A_SOURCE_G2_ASSISTANT_VISUAL_REPAIR_CANDIDATE_NO_RELEASE",
+  "officialSource": {
+    "year": 115,
+    "paperCode": "00-C",
+    "sourcePage": 6,
+    "originalQuestionPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+    "originalPageWebp": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+    "originalPageGitBlob": "442195469f22bf49c993271633f24ad9eafbc937",
+    "originalPageWebpSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+    "pdfWasReDownloadedThisTask": false
+  },
+  "sourceImage": {
+    "id": "115-00-C-SHARED-16-18",
+    "path": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
+    "sha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+    "gitBlobSha": "6a844f0bd1e843a22f972d425be7c0167bec37c3",
+    "sourceOriginalQACommit": "fbd7756b995e3d27dc31a99ecc54fe66af4d82c6",
+    "sourceG1CertificatePath": "sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json",
+    "sourceG1CertificateGitBlob": "c4566ac2857f1f5ab3920c48c1a7809b35261e83",
+    "cropOriginalPixels": [
+      90,
+      161,
+      1310,
+      1059
+    ],
+    "sourceMaterialHasQuestions": [
+      16,
+      17,
+      18
+    ],
+    "imageStatus": "REUSED_IMMUTABLE_ORIGINAL_G1_CERTIFICATE",
+    "originalWebpRecreated": false
+  },
+  "rawOcr": {
+    "fromRoleCAuthorPr": 112,
+    "sourceBlobC16": "b8c63868328e579adf68fdc95d3e8f2d13edf8dd",
+    "sourceBlobC17": "36c7c0d13071fcd830fb66b66cd6ea37445a306e",
+    "oldSharedTextSha256Recorded": "cf44ba29b44872af4bed426dd6d2c50489b12ed7b8e0b64482915c9b37c82f25",
+    "oldSharedMaterialRevision": "c5b72a44260c2e322a9f5d060834b7462c5250bab15b1ef63eb4be3167ab1728",
+    "rawSourceText": "▲閱讀下文，回答第16-18 題\n趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n探 春：府中家僕趙國基。                                        趙姨娘原是賈府小廝的女兒，\n趙姨娘：給了多少？                    後為賈政之妾。\n探 春：紋銀二十，按例而行。                    文中「夫人」、「太太」指賈\n趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？   政正室王夫人。\n探 春：四十兩。                            「老祖宗」指賈政母親。\n                                        襲人是賈寶玉的丫鬟，鴛鴦是趙姨娘：鴛鴦母親呢？\n                              賈母的丫鬟。探 春：也是四十。\n趙姨娘：這都叫按例而行嗎？\n探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而\n    行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正\n    好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也\n    失了臉面，那可真叫人看笑話囉！\n探 春：依禮行事，與臉面又有何干哪？\n趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親\n    娘舅。\n探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，\n    姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，\n    哪個又有光彩？\n趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n                         （王安祈〈紅樓夢中人‧探春〉）",
+    "rawSourceTextSha256": "cf44ba29b44872af4bed426dd6d2c50489b12ed7b8e0b64482915c9b37c82f25",
+    "rawOcrModified": false
+  },
+  "g2SourceText": {
+    "reviewMethod": "AI Assistant Source Visual Review — directly compared unchanged original page6 and shared v4 original-pixel WebP, not independent E teaching review",
+    "header": "▲閱讀下文，回答第16-18題",
+    "dialogueTurns": [
+      {
+        "speaker": "趙姨娘",
+        "text": "姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？"
+      },
+      {
+        "speaker": "探春",
+        "text": "府中家僕趙國基。"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "給了多少？"
+      },
+      {
+        "speaker": "探春",
+        "text": "紋銀二十，按例而行。"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "倒要請教，前不久，襲人母親過世，給了多少？"
+      },
+      {
+        "speaker": "探春",
+        "text": "四十兩。"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "鴛鴦母親呢？"
+      },
+      {
+        "speaker": "探春",
+        "text": "也是四十。"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "這都叫按例而行嗎？"
+      },
+      {
+        "speaker": "探春",
+        "text": "襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也失了臉面，那可真叫人看笑話囉！"
+      },
+      {
+        "speaker": "探春",
+        "text": "依禮行事，與臉面又有何干哪？"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親娘舅。"
+      },
+      {
+        "speaker": "探春",
+        "text": "探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，哪個又有光彩？"
+      },
+      {
+        "speaker": "趙姨娘",
+        "text": "太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？"
+      },
+      {
+        "speaker": "探春",
+        "text": "我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？"
+      }
+    ],
+    "rightColumnBoxedNotes": [
+      "趙姨娘原是賈府小廝的女兒，後為賈政之妾。",
+      "文中「夫人」、「太太」指賈政正室王夫人。",
+      "「老祖宗」指賈政母親。",
+      "襲人是賈寶玉的丫鬟，鴛鴦是賈母的丫鬟。"
+    ],
+    "byline": "（王安祈〈紅樓夢中人‧探春〉）",
+    "correctedSourceText": "▲閱讀下文，回答第16-18題\n趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n探 春：府中家僕趙國基。\n趙姨娘：給了多少？\n探 春：紋銀二十，按例而行。\n趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？\n探 春：四十兩。\n趙姨娘：鴛鴦母親呢？\n探 春：也是四十。\n趙姨娘：這都叫按例而行嗎？\n探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也失了臉面，那可真叫人看笑話囉！\n探 春：依禮行事，與臉面又有何干哪？\n趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親娘舅。\n探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，哪個又有光彩？\n趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n（王安祈〈紅樓夢中人‧探春〉）\n【右欄方框旁註】\n■趙姨娘原是賈府小廝的女兒，後為賈政之妾。\n■文中「夫人」、「太太」指賈政正室王夫人。\n■「老祖宗」指賈政母親。\n■襲人是賈寶玉的丫鬟，鴛鴦是賈母的丫鬟。",
+    "correctedTextSha256": "5a77c522cc03bdda530e03bbef9df1955f4910fe860cbff1b6eb3aafcdcd43f4",
+    "correctedTextSha256Method": "SHA256(UTF8(correctedSourceText))",
+    "sharedMaterialRevision": "c82824bbc016fbe0649bb8220be6afd2ffffdf90287968712139ed5a7aa39d12",
+    "sharedMaterialRevisionMethod": "SHA256(UTF8('ROLE_A_G2_TWO_COLUMN_V1\\n'+correctedTextSha256+'\\n'+sharedWebpSha256+'\\n'+originalPageWebpSha256))",
+    "sharedMaterialRevisionSeed": "ROLE_A_G2_TWO_COLUMN_V1\n5a77c522cc03bdda530e03bbef9df1955f4910fe860cbff1b6eb3aafcdcd43f4\nf1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c\n8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+    "beforeAfterUnifiedDiff": "--- raw-PR112-shared-sourceText\n+++ role-A-corrected-two-column-sourceText\n@@ -1,24 +1,23 @@\n-▲閱讀下文，回答第16-18 題\n-趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n-探 春：府中家僕趙國基。                                        趙姨娘原是賈府小廝的女兒，\n-趙姨娘：給了多少？                    後為賈政之妾。\n-探 春：紋銀二十，按例而行。                    文中「夫人」、「太太」指賈\n-趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？   政正室王夫人。\n-探 春：四十兩。                            「老祖宗」指賈政母親。\n-                                        襲人是賈寶玉的丫鬟，鴛鴦是趙姨娘：鴛鴦母親呢？\n-                              賈母的丫鬟。探 春：也是四十。\n-趙姨娘：這都叫按例而行嗎？\n-探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n-趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而\n-    行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正\n-    好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也\n-    失了臉面，那可真叫人看笑話囉！\n-探 春：依禮行事，與臉面又有何干哪？\n-趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親\n-    娘舅。\n-探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，\n-    姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，\n-    哪個又有光彩？\n-趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n-探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n-                         （王安祈〈紅樓夢中人‧探春〉）\n+▲閱讀下文，回答第16-18題\n+趙姨娘：姑娘當家理事，頭一樁，發放了二十兩喪葬銀子，這是給誰的呀？\n+探 春：府中家僕趙國基。\n+趙姨娘：給了多少？\n+探 春：紋銀二十，按例而行。\n+趙姨娘：倒要請教，前不久，襲人母親過世，給了多少？\n+探 春：四十兩。\n+趙姨娘：鴛鴦母親呢？\n+探 春：也是四十。\n+趙姨娘：這都叫按例而行嗎？\n+探 春：襲人原是老祖宗房中之人，鴛鴦也有老祖宗額外恩賞。\n+趙姨娘：鴛鴦、襲人都有額外恩賞，到了我這兒，怎麼，斬釘截鐵乾乾淨淨，就「按例而行」四個字？我在這府裡，熬油似的熬到這麼大年紀，這會兒連丫頭都不如了，正好攔腰打了個對折，叫我這張臉往哪兒擱啊？我這張臉不值錢，要是連累姑娘妳也失了臉面，那可真叫人看笑話囉！\n+探 春：依禮行事，與臉面又有何干哪？\n+趙姨娘：妳剛才說什麼，「府中家僕趙國基」。別忘了，趙國基是我親兄弟，是姑娘妳的親娘舅。\n+探 春：探春當家，豈能逾矩？皆因夫人看重，才命我代管家務，如今還未做出一樁半件，姨娘倒來作踐於我。倘或夫人知道，怕我為難，不叫我管，那時非但我失了臉面，哪個又有光彩？\n+趙姨娘：太太疼妳，妳越發該拉拔拉拔我們。妳只顧討太太疼，就把我們忘了嗎？\n+探 春：我怎麼忘了？叫我怎樣拉拔？哪有個行端理正的，要人拉拔？\n+（王安祈〈紅樓夢中人‧探春〉）\n+【右欄方框旁註】\n+■趙姨娘原是賈府小廝的女兒，後為賈政之妾。\n+■文中「夫人」、「太太」指賈政正室王夫人。\n+■「老祖宗」指賈政母親。\n+■襲人是賈寶玉的丫鬟，鴛鴦是賈母的丫鬟。\n",
+    "diffExplanation": [
+      "OLD left speaker line 探春：府中家僕趙國基 was followed by right boxed note 趙姨娘原是賈府小廝的女兒.",
+      "OLD right note 襲人是賈寶玉的丫鬟，鴛鴦是… included embedded 趙姨娘：鴛鴦母親呢 and 探春：也是四十.",
+      "NEW preserves all 16 consecutive dialogue turns in left-column order and all four boxed notes separately in right-column order, retains the author byline and recorded raw OCR bytes.",
+      "Paragraph continuations are joined without changing spoken sentence order; printed line breaks are not represented as separate semantic turns."
+    ],
+    "noNewOCRModelUsed": true,
+    "sourceG2Assessment": "ASSISTANT_DIRECT_ORIGINAL_PIXEL_REVIEW_CANDIDATE",
+    "officialFinalAnswerG3": "PENDING_SEPARATE_PER_QUESTION_CORRECTION_SCOPE_VALIDATION"
+  },
+  "downstream": {
+    "canonicalQuestionsJsonModified": false,
+    "sqliteModified": false,
+    "canonicalManifestModified": false,
+    "roleCOriginalTeachingModified": false,
+    "roleEContentReview": "PENDING_NEW_SOURCE_REVISION",
+    "roleDV4EightSizesTwoThemes": "PENDING_NEW_SOURCE_REVISION",
+    "individualQuestion18G2": "NOT_REVIEWED",
+    "officialG3PerQuestion": "PENDING",
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}
