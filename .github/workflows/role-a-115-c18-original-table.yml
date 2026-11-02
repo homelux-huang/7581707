@@ -1,0 +1,46 @@
+name: Role A 115 Chinese C18 original table and cross-page source QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-c18-original-table-g2-20261102
+    paths:
+      - sudu/data/processed/115/webp-v2/00-C/115-00-C-18.webp
+      - sudu/data/processed/115/review-evidence/115-00-C-18-G1-G2-TABLE-CROSSPAGE-20261102.json
+      - tests/test_role_a_115_c18_original_table_source.py
+      - .github/workflows/role-a-115-c18-original-table.yml
+      - docs/ROLE_A_115_C18_G1_G2_TABLE_20261102.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-c18-original-table-20261102
+  cancel-in-progress: false
+
+jobs:
+  original_c18_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-c18-original-table-g2-20261102'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact isolated original source candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check immutable Q18 original image and official answer, source table G1 G2 SHA negative tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_c18_original_table_source.py
+          python -m unittest discover -s tests -p test_role_a_115_c18_original_table_source.py -v
+      - name: Source candidate only, no student release and no runtime mutation
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          git status --porcelain
+          echo "Q18 source candidate, official answer D from recorded real official image and confirmation. Canonical Q18 G2/G3 / E / D / READY not advanced."

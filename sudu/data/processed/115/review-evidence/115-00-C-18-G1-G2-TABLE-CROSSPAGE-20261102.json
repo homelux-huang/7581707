@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-C18-TABLE-CROSSPAGE-G1-G2-20261102-02",
+  "role": "A",
+  "questionId": "115-00-C-18",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6569141535",
+  "baseSourceCommit": "1fc5607290653f0acb9b93de5ced9ec0cfc60f08",
+  "status": "SOURCE_G1_AI_VISUAL_QA_AND_G2_STRUCTURED_REPAIR_CANDIDATE_NO_RELEASE",
+  "officialSource": {
+    "year": 115,
+    "paperCode": "00-C",
+    "sourcePage": 6,
+    "sourcePdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+    "page6Webp": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+    "page6GitBlob": "442195469f22bf49c993271633f24ad9eafbc937",
+    "page6WebpSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+    "nextPageWebp": "sudu/data/original/115/00-C/p007-6b454d6590-v2-w1400-q66.webp",
+    "nextPageGitBlob": "3d9d530fcb5939c0697a7fb2791dcab2fb0defca",
+    "nextPageWebpSha256": "bc13fa1e97391a69c1a72f5d2c0653f12e36f77f10b218a3a92dd0f803a17039",
+    "paperPdfWasReDownloadedThisTask": false
+  },
+  "sourceImage": {
+    "path": "sudu/data/processed/115/webp-v2/00-C/115-00-C-18.webp",
+    "gitBlob": "3bb1ae6740746959a74c22cf9c8e70fbc19eed6e",
+    "sha256": "d62b403392a55eaf435a3d58f8ffa3113b94efa2de4df34090ce29b53bae8f32",
+    "sourceRevision": "115-draft-pixelcrop-v2",
+    "crop": [
+      90,
+      1433,
+      1310,
+      1768
+    ],
+    "sizePixels": [
+      1220,
+      335
+    ],
+    "originalManifestQaStatus": "DRAFT_AUTOMATED_NEEDS_INDIVIDUAL_VISUAL_QA",
+    "newVisualReview": "PASS_AI_ASSISTANT_DIRECT_ORIGINAL_SOURCE_ONLY",
+    "visualObservation": "Directly compared actual Q18 v2 crop with archived official p6 and checked next p7. Q18 crop contains entire stem, emotional-leverage 甲乙 boxes, four numbered responses, (A)-(D) pair matrix; no Q17 or page7 Q19-22 or footer.",
+    "reviewer": "ChatGPT GPT-6 Role A — AI Assistant Source Visual Review",
+    "differentHumanReviewer": false,
+    "originalBinaryReused": true
+  },
+  "rawOcr": {
+    "legacySource": "sudu/data/years/115.json",
+    "legacyBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+    "oldQuestion": "上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種\n  方式回擊？\n                趙姨娘的情勒術      探春思考：用什麼回擊？\n     回擊甲 回擊乙               因為我們是親人，所以：                           ①府裡人多嘴雜，照顧必招閒話。",
+    "oldOptions": [
+      "①   ③               甲、親人應多照顧親人。",
+      "①   ④                ②人人按禮守分，何須格外照顧。",
+      "②   ③                ③您向來形象差，早已無面子可言。               乙、我若沒面子，探春",
+      "②   ④      你也沒面子。\n                           ④我若當家犯錯，才是讓您沒面子。\n\n\n\n\n\n-6-\n\n115 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第19-22 題\n                專家座談會會議紀錄\n\n討論案例：\n鄭之鄙人學為蓋，三年藝成而大旱，蓋無所用，乃棄而為桔槔。又三年藝成而大雨，桔槔\n無所用，則又還為蓋焉。未幾而盜起，民盡改戎服，鮮有用蓋者。欲學為兵，則老矣。\n\n與會人員意見摘要：\n一、程產品經理：\n  鄭國匠人按消費者需要什麼就學什麼，想藉所學生財，符合今日常說的「讓趨勢成為\n你的朋友」，「市場永遠是對的」。他本該是把握時機、順勢而為的受益者，卻因時運不\n濟而被郁離子批評為目光短淺。戰國時的白圭是「人棄我取，人取我與」的高手：穀類豐\n收時價格低，他進場收購，販賣市面上較少的蠶絲；蠶絲盛產時價格低，他進貨儲存，銷\n售市面上較少的穀類。這完全是逆向操作，一般人很難做到。鄭國匠人當然比不上白圭洞\n察先機，但若因此說他投機，似乎過於嚴苛。\n二、蔡農會理事：\n  白圭能收購量大價跌的農產品，原因之一是農民的決策存在「時間落後」。農作物成\n長需要時間，農民要決定這一期的種植數量，必會參考上一期的市場價格。例如某種水果\n去年價格好，但消費者去年愛吃，今年未必依然，供過於求便價格崩跌。來年參考這項資\n訊減少產量，又可能物以稀為貴。學習技能同樣要花時間，鄭國匠人依目前市場需求投資\n自己，即使按計畫三年學成，也難免遭遇類似農產品市場的問題。\n三、薛職涯顧問：\n  專用技能因用於特定職場，學或不學，的確可從「時間落後」考量。但今日企業招募\n人才，也重視「可轉移技能」。它是無論從事哪一種職業或職位都需要具備的能力，長時\n間累積而來的共通職能。鄭國匠人雖然轉職碰壁，但不用擔心「可轉移技能」從零開始。"
+    ],
+    "oldQuestionAndOptionsText": "上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種\n  方式回擊？\n                趙姨娘的情勒術      探春思考：用什麼回擊？\n     回擊甲 回擊乙               因為我們是親人，所以：                           ①府裡人多嘴雜，照顧必招閒話。\n--- 原始四選項 OCR ---\n(A) ①   ③               甲、親人應多照顧親人。\n(B) ①   ④                ②人人按禮守分，何須格外照顧。\n(C) ②   ③                ③您向來形象差，早已無面子可言。               乙、我若沒面子，探春\n(D) ②   ④      你也沒面子。\n                           ④我若當家犯錯，才是讓您沒面子。\n\n\n\n\n\n-6-\n\n115 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第19-22 題\n                專家座談會會議紀錄\n\n討論案例：\n鄭之鄙人學為蓋，三年藝成而大旱，蓋無所用，乃棄而為桔槔。又三年藝成而大雨，桔槔\n無所用，則又還為蓋焉。未幾而盜起，民盡改戎服，鮮有用蓋者。欲學為兵，則老矣。\n\n與會人員意見摘要：\n一、程產品經理：\n  鄭國匠人按消費者需要什麼就學什麼，想藉所學生財，符合今日常說的「讓趨勢成為\n你的朋友」，「市場永遠是對的」。他本該是把握時機、順勢而為的受益者，卻因時運不\n濟而被郁離子批評為目光短淺。戰國時的白圭是「人棄我取，人取我與」的高手：穀類豐\n收時價格低，他進場收購，販賣市面上較少的蠶絲；蠶絲盛產時價格低，他進貨儲存，銷\n售市面上較少的穀類。這完全是逆向操作，一般人很難做到。鄭國匠人當然比不上白圭洞\n察先機，但若因此說他投機，似乎過於嚴苛。\n二、蔡農會理事：\n  白圭能收購量大價跌的農產品，原因之一是農民的決策存在「時間落後」。農作物成\n長需要時間，農民要決定這一期的種植數量，必會參考上一期的市場價格。例如某種水果\n去年價格好，但消費者去年愛吃，今年未必依然，供過於求便價格崩跌。來年參考這項資\n訊減少產量，又可能物以稀為貴。學習技能同樣要花時間，鄭國匠人依目前市場需求投資\n自己，即使按計畫三年學成，也難免遭遇類似農產品市場的問題。\n三、薛職涯顧問：\n  專用技能因用於特定職場，學或不學，的確可從「時間落後」考量。但今日企業招募\n人才，也重視「可轉移技能」。它是無論從事哪一種職業或職位都需要具備的能力，長時\n間累積而來的共通職能。鄭國匠人雖然轉職碰壁，但不用擔心「可轉移技能」從零開始。",
+    "oldQuestionAndOptionsTextSha256": "6728dab3f0d82ef5b30937c974a68e8fa3f919867b0a0e490cb3c554161059d0",
+    "unmodifiedLegacy": true,
+    "contamination": "Old Q18 D option includes page6 footer, page7 header and full Q19–22 specialist-meeting article; four A-D OCR options also contain illustration column fragments."
+  },
+  "g2StructuredSource": {
+    "question": "上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種方式回擊？",
+    "chart": {
+      "leftTitle": "趙姨娘的情勒術",
+      "intro": "因為我們是親人，所以：",
+      "emotionalLeverage": [
+        {
+          "label": "甲",
+          "text": "親人應多照顧親人。"
+        },
+        {
+          "label": "乙",
+          "text": "我若沒面子，探春你也沒面子。"
+        }
+      ],
+      "rightTitle": "探春思考：用什麼回擊？",
+      "replies": [
+        {
+          "label": "①",
+          "text": "府裡人多嘴雜，照顧必招閒話。"
+        },
+        {
+          "label": "②",
+          "text": "人人按禮守分，何須格外照顧。"
+        },
+        {
+          "label": "③",
+          "text": "您向來形象差，早已無面子可言。"
+        },
+        {
+          "label": "④",
+          "text": "我若當家犯錯，才是讓您沒面子。"
+        }
+      ]
+    },
+    "optionColumns": [
+      "選項",
+      "回擊甲",
+      "回擊乙"
+    ],
+    "optionRows": [
+      {
+        "option": "A",
+        "responseForJia": "①",
+        "responseForYi": "③"
+      },
+      {
+        "option": "B",
+        "responseForJia": "①",
+        "responseForYi": "④"
+      },
+      {
+        "option": "C",
+        "responseForJia": "②",
+        "responseForYi": "③"
+      },
+      {
+        "option": "D",
+        "responseForJia": "②",
+        "responseForYi": "④"
+      }
+    ],
+    "correctedOptions": [
+      "回擊甲①；回擊乙③",
+      "回擊甲①；回擊乙④",
+      "回擊甲②；回擊乙③",
+      "回擊甲②；回擊乙④"
+    ],
+    "correctedCanonicalText": "18. 上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種方式回擊？\n【趙姨娘的情勒術】\n因為我們是親人，所以：\n甲、親人應多照顧親人。\n乙、我若沒面子，探春你也沒面子。\n【探春思考：用什麼回擊？】\n①府裡人多嘴雜，照顧必招閒話。\n②人人按禮守分，何須格外照顧。\n③您向來形象差，早已無面子可言。\n④我若當家犯錯，才是讓您沒面子。\n【選項對應表：回擊甲／回擊乙】\n(A) ①／③\n(B) ①／④\n(C) ②／③\n(D) ②／④",
+    "correctedCanonicalTextSha256": "2c1d4ce6bfb3bb42cda8581bbf856f4ae794eabddb3de0f35d2229e34c03dc89",
+    "correctedCanonicalTextSha256Method": "SHA256(UTF8(correctedCanonicalText))",
+    "sourceRevision": "2a4404fd3f695e5425e224839860d849bbd6c377de445a7bda361fc6c49e4b00",
+    "sourceRevisionSeed": "ROLE_A_115_C18_G2_STRUCTURED_CHART_V1\n2c1d4ce6bfb3bb42cda8581bbf856f4ae794eabddb3de0f35d2229e34c03dc89\nd62b403392a55eaf435a3d58f8ffa3113b94efa2de4df34090ce29b53bae8f32\nc82824bbc016fbe0649bb8220be6afd2ffffdf90287968712139ed5a7aa39d12",
+    "sourceRevisionMethod": "SHA256(UTF8('ROLE_A_115_C18_G2_STRUCTURED_CHART_V1\\n'+correctedCanonicalTextSha256+'\\n'+singleWebpSha256+'\\n'+upstreamSharedMaterialRevision))",
+    "upstreamSharedMaterialRevision": "c82824bbc016fbe0649bb8220be6afd2ffffdf90287968712139ed5a7aa39d12",
+    "upstreamSharedMaterialG2Status": "ROLE_A_C16_C17_SOURCE_CANDIDATE_NOT_INDEPENDENTLY_ACCEPTED_FOR_C18",
+    "rawToCorrectedUnifiedDiff": "--- raw-115-00-C-18-question-options\n+++ corrected-115-00-C-18-original-table\n@@ -1,45 +1,15 @@\n-上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種\n-  方式回擊？\n-                趙姨娘的情勒術      探春思考：用什麼回擊？\n-     回擊甲 回擊乙               因為我們是親人，所以：                           ①府裡人多嘴雜，照顧必招閒話。\n---- 原始四選項 OCR ---\n-(A) ①   ③               甲、親人應多照顧親人。\n-(B) ①   ④                ②人人按禮守分，何須格外照顧。\n-(C) ②   ③                ③您向來形象差，早已無面子可言。               乙、我若沒面子，探春\n-(D) ②   ④      你也沒面子。\n-                           ④我若當家犯錯，才是讓您沒面子。\n-\n-\n-\n-\n-\n--6-\n-\n-115 年四技                                              第7 頁\n-國文 共同科目                                      共 12 頁   公告試題僅供參考\n-\n-▲閱讀下文，回答第19-22 題\n-                專家座談會會議紀錄\n-\n-討論案例：\n-鄭之鄙人學為蓋，三年藝成而大旱，蓋無所用，乃棄而為桔槔。又三年藝成而大雨，桔槔\n-無所用，則又還為蓋焉。未幾而盜起，民盡改戎服，鮮有用蓋者。欲學為兵，則老矣。\n-\n-與會人員意見摘要：\n-一、程產品經理：\n-  鄭國匠人按消費者需要什麼就學什麼，想藉所學生財，符合今日常說的「讓趨勢成為\n-你的朋友」，「市場永遠是對的」。他本該是把握時機、順勢而為的受益者，卻因時運不\n-濟而被郁離子批評為目光短淺。戰國時的白圭是「人棄我取，人取我與」的高手：穀類豐\n-收時價格低，他進場收購，販賣市面上較少的蠶絲；蠶絲盛產時價格低，他進貨儲存，銷\n-售市面上較少的穀類。這完全是逆向操作，一般人很難做到。鄭國匠人當然比不上白圭洞\n-察先機，但若因此說他投機，似乎過於嚴苛。\n-二、蔡農會理事：\n-  白圭能收購量大價跌的農產品，原因之一是農民的決策存在「時間落後」。農作物成\n-長需要時間，農民要決定這一期的種植數量，必會參考上一期的市場價格。例如某種水果\n-去年價格好，但消費者去年愛吃，今年未必依然，供過於求便價格崩跌。來年參考這項資\n-訊減少產量，又可能物以稀為貴。學習技能同樣要花時間，鄭國匠人依目前市場需求投資\n-自己，即使按計畫三年學成，也難免遭遇類似農產品市場的問題。\n-三、薛職涯顧問：\n-  專用技能因用於特定職場，學或不學，的確可從「時間落後」考量。但今日企業招募\n-人才，也重視「可轉移技能」。它是無論從事哪一種職業或職位都需要具備的能力，長時\n-間累積而來的共通職能。鄭國匠人雖然轉職碰壁，但不用擔心「可轉移技能」從零開始。\n+18. 上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種方式回擊？\n+【趙姨娘的情勒術】\n+因為我們是親人，所以：\n+甲、親人應多照顧親人。\n+乙、我若沒面子，探春你也沒面子。\n+【探春思考：用什麼回擊？】\n+①府裡人多嘴雜，照顧必招閒話。\n+②人人按禮守分，何須格外照顧。\n+③您向來形象差，早已無面子可言。\n+④我若當家犯錯，才是讓您沒面子。\n+【選項對應表：回擊甲／回擊乙】\n+(A) ①／③\n+(B) ①／④\n+(C) ②／③\n+(D) ②／④\n",
+    "crossPageQ19To22Removed": true,
+    "sourceG2Status": "ROLE_A_AI_ASSISTANT_DIRECT_VISUAL_CANDIDATE"
+  },
+  "officialAnswer": {
+    "candidateAndOfficialPrinted": "D",
+    "publishedAnswerImage": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+    "publishedAnswerGitBlob": "aecdee7444cba6b0eba738dc6b7c58f0bb793be8",
+    "publishedAnswerImageSha256Recorded": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+    "publishedAnswerPdfSha256Recorded": "ec9871b659d81726de5b6412ed5252d62541afb287951b5d6cf923c1ea763e64",
+    "officialConfirmationLedgerPath": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",
+    "confirmationLedgerGitBlob": "1a21701647627bc1dcaa39a835bf90a4459c9424",
+    "confirmationPdfSha256Recorded": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+    "confirmationPdfPages": [
+      4,
+      5
+    ],
+    "confirmationStatement": "Q18 D matches originally published answer; no answer change observed in recorded confirmation document",
+    "reDownloadedOrRehashedPdfThisTask": false,
+    "formalG3AnswerVerifiedFlagSet": false
+  },
+  "downstream": {
+    "canonicalQuestionBankEdited": false,
+    "canonicalImageManifestEdited": false,
+    "sqliteEdited": false,
+    "authorCSourceRevisionRebind": "PENDING",
+    "independentRoleEReview": "PENDING_NEW_SOURCE_REVISION",
+    "roleDV4EightViewportsTwoThemes": "PENDING",
+    "roleMasterCanonicalSourceAndSqliteIntegration": "PENDING",
+    "q18OfficialG3RevalidationByAdmissionFlow": "PENDING",
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}
