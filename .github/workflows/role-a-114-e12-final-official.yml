@@ -1,0 +1,46 @@
+name: Role A 114 E12 exact official answer and confirmation scope (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e12-final-official-20261102
+    paths:
+      - sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json
+      - sudu/data/processed/114/QA_114_EN_Q06_Q20_OFFICIAL_ANSWER_IMAGE_VISUAL_20261023.json
+      - tests/test_role_a_114_e12_final_official.py
+      - .github/workflows/role-a-114-e12-final-official.yml
+      - docs/ROLE_A_114_E12_FINAL_OFFICIAL_20261102.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-114-e12-official-notice-20261102
+  cancel-in-progress: false
+
+jobs:
+  exact_e12:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e12-final-official-20261102'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout isolated Role A source only
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify actual official printed answer C, unchanged WebP, English E26-only correction
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_114_e12_final_official.py
+          python -m unittest discover -s tests -p test_role_a_114_e12_final_official.py -v
+      - name: Fail closed if tests mutate files or source student-release objects
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          git status --porcelain
+          echo "Only Role A source answer/correction evidence receipt; no E/READY/main/LIVE approval."
