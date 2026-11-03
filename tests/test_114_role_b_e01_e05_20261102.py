@@ -22,7 +22,7 @@ class TestB114English(unittest.TestCase):
     self.assertEqual(row["sourceRevision"],sh({"question":qq["question"],"options":qq["options"],"singleQuestionWebpSha256":mm["sha256"]}))
     self.assertEqual(row["composedTeachingSha256"],sh({"questionId":id,"sourceRevision":row["sourceRevision"],"webpSha256":mm["sha256"],"teaching":v["teaching"],"enrichment":v["enrichment"]}))
     opts=v["teaching"]["optionExplanations"]
-    self.assertEqual(set(opts),"ABCD")
+    self.assertEqual(set(opts),set("ABCD"))
     self.assertEqual([k for k,x in opts.items() if x["isCorrect"]],[v["answer"]])
     self.assertEqual(len(set(x["reason"] for x in opts.values())),4)
     self.assertTrue(all(len(x["reason"])>24 and len(x["teacher"])>24 and len(x["elementary"])>8 for x in opts.values()))
