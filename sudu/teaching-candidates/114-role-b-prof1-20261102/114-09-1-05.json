@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-05",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_NOT_VERIFIED",
+  "question": "小明計畫投資 200 萬元於雞排生產線，每片雞排單位成本為 60 元，預計賣出 4 萬片雞排，\n  若目標投資報酬率為 50 %，則 ① 每片雞排的訂價應為多少？此外，小方成立布偶工作\n  室，每個布偶的單位成本為 60 元，若採用成本加成訂價法，當加成百分比為 50 % 時，則\n  ② 每個布偶的訂價應為多少？上述兩位業者的訂價，依序何者正確？",
+  "options": [
+    "① 85 元、② 85 元",
+    "① 85 元、② 90 元",
+    "① 90 元、② 85 元",
+    "① 90 元、② 90 元"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "d8e5b36e21ea192bc77864bd42fd99d193b814d7e67716c11cc3b155453cd653",
+    "webpSha256": "b86945c0e22e90df9e0044ec0f5a0e389b15630de725d2e018a939023530c15c",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-05.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "投資報酬與成本加成兩種定價",
+    "teacherSummary": "雞排投資200萬元，目標報酬50%＝100萬元利潤，分攤4萬片每片25元，訂85元。布偶60元成本加50%=90元，所以B。",
+    "elementarySummary": "雞排想多賺一百萬，分給四萬片每片多25元；布偶只要在60元上再加30元。",
+    "concept": "ROI訂價=成本+(投資×ROI)/銷量；成本加成=成本×(1+加成率)。",
+    "memory": "雞排85、布偶90，B。",
+    "highlights": [
+      "目標投資報酬率"
+    ],
+    "solvingSteps": [
+      "雞排目標利潤=2,000,000×50%=1,000,000元。",
+      "每片雞排要分攤利潤1,000,000÷40,000=25元，60+25=85元。",
+      "布偶以成本加成：60×(1+50%)=90元。",
+      "①85②90對應B；反驗(85−60)×40,000/2,000,000=50%，(90−60)/60=50%。"
+    ],
+    "formula": "目標ROI價＝60+(2000000×0.5)/40000；成本加成＝60×1.5",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "投資200萬元、ROI50%、數量4萬片、成本60元",
+        "布偶成本60元加成50%"
+      ],
+      "formulaUse": "目標ROI價＝60+(2000000×0.5)/40000；成本加成＝60×1.5",
+      "substitution": [
+        "1000000÷40000=25",
+        "60+25=85",
+        "60×1.5=90"
+      ],
+      "steps": [
+        "目標雞排利潤2000000×0.5=1000000元。",
+        "每片分攤1000000÷40000=25元。",
+        "雞排60+25=85元。",
+        "布偶60×1.5=90元。",
+        "答案B，組合85／90。",
+        "驗算雞排(85−60)×40000=1000000，ROI50%。",
+        "驗算布偶(90−60)/60=50%。"
+      ],
+      "result": "85元與90元",
+      "unit": "新臺幣元",
+      "option": "B"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_MATH_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 雞排85元符合ROI目標，但布偶85元只加25元，成本加成率約41.67%而非50%。",
+        "elementary": "雞排對了，布偶少5元。",
+        "reason": "A 雞排85元符合ROI目標，但布偶85元只加25元，成本加成率約41.67%而非50%。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 雞排60+(2,000,000×0.5)/40,000=85；布偶60×1.5=90，兩法分別正確。",
+        "elementary": "一個85、一個90，B正確。",
+        "reason": "B 雞排60+(2,000,000×0.5)/40,000=85；布偶60×1.5=90，兩法分別正確。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 雞排90元使單位利潤30元，40,000片可賺120萬元，ROI60%而非50%；布偶85也不足50%加成。",
+        "elementary": "雞排太貴、布偶太便宜。",
+        "reason": "C 雞排90元使單位利潤30元，40,000片可賺120萬元，ROI60%而非50%；布偶85也不足50%加成。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 布偶90元正確，但雞排90元誤把ROI50%當作單位成本加成50%，應是85元。",
+        "elementary": "兩家公司算法不同，雞排不能直接乘1.5。",
+        "reason": "D 布偶90元正確，但雞排90元誤把ROI50%當作單位成本加成50%，應是85元。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 A來源候選原卷，官方單題G1、文字G2、最終公告G3仍未核准"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_G2_G3_OFFICIAL_SOURCE_PENDING",
+      "E_DISTINCT_AI_CONTENT_PENDING",
+      "D_YEAR114_V4_REAL_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "2340793c5042af54f836d87daa020194a260df0c32b1b99128b540ed61fa5800"
+}

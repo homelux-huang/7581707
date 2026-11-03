@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-28",
+  "subject": "數位科技",
+  "kind": "AUTHOR_DRAFT_SOURCE_NOT_VERIFIED",
+  "question": "公司資訊部正在開發一項新專案，希望能靈活管理伺服器和儲存資源，但不想自行管理\n  硬體設備。同時希望有更多控制權來安裝自訂的軟體和設定環境。基於這些需求，該公\n  司應選擇以下哪一種雲端運算服務模式？",
+  "options": [
+    "軟體即服務 ( SaaS ) ：提供現成的應用程式，讓使用者直接使用，無需進行任何開發\n   或安裝工作",
+    "虛擬私人伺服器 ( VPS ) ：提供專屬的機櫃空間置放私人購買的主機，讓使用者遠端自\n   行管理及維護",
+    "基礎設施即服務 ( IaaS ) ：提供虛擬伺服器、儲存和網路資源，讓使用者自行管理並安\n   裝所需的軟體和設定環境",
+    "平台即服務 ( PaaS ) ：提供一個已建置好的開發平台，使用者僅需專注於開發應用程\n   式，而不需要管理底層伺服器或系統設定"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "6fa72d83e6921204adc92170796828f5e7d8f049e58fe004d71d83a1c47c9b9c",
+    "webpSha256": "465a91091e877055d60039d1894fdddee395e08da2bf7c4da530158208438ee2",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-28.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "雲端IaaS需求分析",
+    "teacherSummary": "企業不想自管實體硬體，但要可管理虛擬伺服器、安裝自訂軟體和配置環境；IaaS提供虛擬基礎設施，符合C。",
+    "elementarySummary": "雲端商幫你管真機器，你能自己在虛擬主機安裝程式，選IaaS。",
+    "concept": "IaaS虛擬資源自管系統；SaaS現成軟體；PaaS已設好的開發平台。",
+    "memory": "免實體硬體＋自裝程式＝IaaS C。",
+    "highlights": [
+      "安裝自訂的軟體"
+    ],
+    "solvingSteps": [
+      "抓到『不想自行管理硬體』，需要雲商提供實體設備。",
+      "還想『安裝自訂軟體和設定環境』，所以需虛擬伺服器層級控制。",
+      "A SaaS只是用成品；B對VPS描述的是自購主機租機櫃；D PaaS專注已管理的開發平台。",
+      "C IaaS提供虛擬伺服器、儲存、網路，讓企業裝程式和自行設定虛擬環境。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NON_CALCULATION_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A SaaS是直接使用完成的應用軟體，不提供題目要求的自管伺服器與自訂系統環境能力。",
+        "elementary": "SaaS用做好程式，不能自己管那麼多。",
+        "reason": "A SaaS是直接使用完成的應用軟體，不提供題目要求的自管伺服器與自訂系統環境能力。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B VPS是虛擬伺服器，選項卻說要買實體主機租機櫃，較近主機代管，且仍需管理硬體。",
+        "elementary": "B還要自己買機器放機櫃。",
+        "reason": "B VPS是虛擬伺服器，選項卻說要買實體主機租機櫃，較近主機代管，且仍需管理硬體。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C IaaS提供虛擬運算、儲存與網路，企業可安裝所需軟體而不用自行管理物理硬體。",
+        "elementary": "租雲端虛擬機自己裝軟體，C對。",
+        "reason": "C IaaS提供虛擬運算、儲存與網路，企業可安裝所需軟體而不用自行管理物理硬體。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D PaaS提供預建平台給開發者，通常不開放像IaaS那樣管理底層作業環境。",
+        "elementary": "PaaS是搭好的平台，不給那麼多底層控制。",
+        "reason": "D PaaS提供預建平台給開發者，通常不開放像IaaS那樣管理底層作業環境。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 A來源候選原卷，官方單題G1、文字G2、最終公告G3仍未核准"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_G2_G3_OFFICIAL_SOURCE_PENDING",
+      "E_DISTINCT_AI_CONTENT_PENDING",
+      "D_YEAR114_V4_REAL_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "912244ca952be6582f1e30ac45a7f59f7183d3944b000edca129628a9c0c9d29"
+}
