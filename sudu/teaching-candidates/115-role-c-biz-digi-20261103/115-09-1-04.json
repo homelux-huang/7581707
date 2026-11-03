@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "questionId": "115-09-1-04",
+  "year": 115,
+  "paperCode": "09-1",
+  "originalQuestionNumber": 4,
+  "subject": "商業概論",
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_G1_G2_G3_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "全家便利商店業者①總部統籌規劃連鎖賣場商品陳列及動線設計的環節，其涉及連鎖經營管理的範圍；以及②為了提高議價空間，向上整合發展成立物流中心，該物流中心的經營型態。關於上述情境，依序何者正確？",
+  "options": [
+    "①營業管理、②批發商型物流中心",
+    "①營業管理、②零售商型物流中心",
+    "①行銷管理、②批發商型物流中心",
+    "①行銷管理、②零售商型物流中心"
+  ],
+  "answerCandidate": "B",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "sourceQuestionVerified": false,
+  "sourceAnswerAutoMatchedHistoricalFlag": true,
+  "sourceAnswerFormalFinalVerified": false,
+  "officialCorrectionNoticeIndependentQa": false,
+  "sourceTextRevision": "ee30748cba808403074e37d09423cde89ae411debb2f7cb21c4cf77ef9b77177",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py text_revision (question + original options + immutable individual webp sha; excludes answer)",
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-04.webp",
+  "imageSha256": "7472d9969ad5c60ea6574566f3b0ac807b0f07a7c95e2e7f8a4de764f20a5751",
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "originalImageBytesRehashedByC": false,
+  "sharedMaterial": null,
+  "teaching": {
+    "teacherSummary": "題目有兩個判斷：**總部統一規劃貨架陳列與顧客動線**，屬連鎖門市日常營運與**營業管理**；由便利商店零售業者自行向上整合設立、配送自家門市的物流中心，屬**零售商型物流中心**，故選B。",
+    "elementarySummary": "第一件事是總公司幫每一家店安排貨架怎麼放、客人怎麼走，是管店的工作。第二件事是便利商店自己蓋送貨中心，幫自己的店補貨，仍是零售店成立的物流中心。",
+    "memory": "**貨架與動線＝營業管理；零售連鎖自己成立的物流中心＝零售商型 → B。**",
+    "concept": "連鎖經營管理可區分店面營業、行銷、財務等工作；物流中心分類要看**設立與服務主體**，並非只看有沒有大量進貨。",
+    "extension": "別把『向上整合』直接誤認為『批發商型』；應看物流中心由哪一類通路業者主導及供應哪些門市。",
+    "highlights": [
+      "營業管理",
+      "零售商型物流中心",
+      "總部統籌",
+      "商品陳列與動線設計",
+      "向上整合"
+    ],
+    "reasoningSteps": [
+      "先依工作內容判定①：規劃店內陳列、動線是營業管理。",
+      "再依物流中心的設立者判定②：便利商店本身是零售連鎖，採零售商型。",
+      "核對四選項，兩個分類都吻合的是B。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "①營業管理正確，但便利商店**零售業者**主導成立物流中心，不能僅因採購量大就稱為批發商型。",
+        "elementary": "前半對，後半把零售店自己設的物流中心認成批發商的中心，所以不選。",
+        "reason": "①營業管理正確，但便利商店**零售業者**主導成立物流中心，不能僅因採購量大就稱為批發商型。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "①由總部規範商品陳列與動線屬**營業管理**；②零售連鎖自行成立並服務其門市的物流中心屬**零售商型**，兩者皆符合。",
+        "elementary": "總部管店的貨架，自己開送貨中心供店家使用，兩個名稱都對。",
+        "reason": "①由總部規範商品陳列與動線屬**營業管理**；②零售連鎖自行成立並服務其門市的物流中心屬**零售商型**，兩者皆符合。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "把賣場動線規劃誤當行銷管理；此題問連鎖門市的**營業管理**。物流中心也誤判為批發商型，故兩處皆不合。",
+        "elementary": "把怎麼整理店面看成廣告工作，又把零售店的倉庫看成批發商的，兩個都錯。",
+        "reason": "把賣場動線規劃誤當行銷管理；此題問連鎖門市的**營業管理**。物流中心也誤判為批發商型，故兩處皆不合。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "②零售商型正確，但①是連鎖總部對門市營業流程及陳列動線的管理，不能以**行銷管理**代替。",
+        "elementary": "送貨中心的分類對了，但貨架與走道的安排是管店面，不是做促銷，所以仍錯。",
+        "reason": "②零售商型正確，但①是連鎖總部對門市營業流程及陳列動線的管理，不能以**行銷管理**代替。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "a48447b439f4999b9494b076229f677d51672f04d132ba5cf244d1c3cdd978b9",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only, not independently credentialed E reviewer",
+    "authorSelfCheck": "STRUCTURAL_AND_CALCULATION",
+    "sourceOriginalImageViewedByThisAuthor": false,
+    "officialAnswerPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "sourceFormalQa": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_NOTICE_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING"
+  ]
+}

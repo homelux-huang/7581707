@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "questionId": "115-09-1-35",
+  "year": 115,
+  "paperCode": "09-1",
+  "originalQuestionNumber": 35,
+  "subject": "數位科技",
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_G1_G2_G3_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "在網路上傳送資料，會使用加解密技術保護資料，下列敘述何者正確？",
+  "options": [
+    "數位簽章在接收端使用發送端的公鑰解密",
+    "數位簽章的運作流程中接收端是以發送端的私鑰解密",
+    "公開金鑰加密法(Public key Cryptography)為對稱式加密法",
+    "私密金鑰加密法(Secret key Cryptography)為非對稱式加密法"
+  ],
+  "answerCandidate": "A",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "sourceQuestionVerified": false,
+  "sourceAnswerAutoMatchedHistoricalFlag": true,
+  "sourceAnswerFormalFinalVerified": false,
+  "officialCorrectionNoticeIndependentQa": false,
+  "sourceTextRevision": "4c60de5964c0bab3156eda7e0b12946b9cd5a0845e3475d6e67d94db4eafb5b1",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py text_revision (question + original options + immutable individual webp sha; excludes answer)",
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-35.webp",
+  "imageSha256": "7a42bf7dc5c3fec75962386fbf47ebe140035be6a2070640e9cb73a9e699bb9c",
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "originalImageBytesRehashedByC": false,
+  "sharedMaterial": null,
+  "teaching": {
+    "teacherSummary": "依傳統教材判法，**數位簽章**由發送端以**私鑰**產生，接收端用發送端的**公鑰**驗證真偽，因此四項中以A最接近正確。**嚴格密碼學術語是『驗證簽章』，不是公鑰解密整份訊息**；本題使用的『解密』字樣須由獨立 E 依官方原題語境確認。",
+    "elementarySummary": "寄件人用只有自己知道的專屬印章蓋章，收件人拿公開的驗證方法確認章是真的。大家不能拿到寄件人的秘密印章；公開鑰匙和秘密鑰匙的角色不能搞反。",
+    "memory": "**簽章：發送者私鑰產生，接收者用發送者公鑰驗證；公鑰系統是非對稱，秘密金鑰系統是對稱。**",
+    "concept": "數位簽章通常藉由雜湊、私鑰簽署、公鑰驗證提供來源認證與完整性。加密保密是相關但不同目的；**公開金鑰密碼術＝非對稱式**，**共用秘密金鑰密碼術＝對稱式**。",
+    "extension": "發送方私鑰不可交給接收方；若某題把『公鑰解密簽章』口語化，應澄清實務流程其實是簽章驗證，避免誤教成公鑰解密所有資料。",
+    "highlights": [
+      "數位簽章",
+      "發送端私鑰",
+      "發送端公鑰",
+      "驗證簽章",
+      "非對稱式",
+      "對稱式"
+    ],
+    "reasoningSteps": [
+      "先確認數位簽章：私鑰由簽署者持有，公鑰供他人查驗。",
+      "再確認加密類型：公開金鑰為非對稱式，共用秘密金鑰為對稱式。",
+      "B混用他人私鑰、C與D顛倒類型；A為本題預定答案，需 E 核對『解密』教科書用語。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "按題目舊式表述，接收端使用**發送者公鑰**檢驗其數位簽章，是預定正解；嚴格術語是**驗證簽章**而非『解密整份原文』，需獨立E確認。",
+        "elementary": "寄件人用自己的秘密鑰匙簽名，收件人用公開鑰匙核對，這題把『核對』寫成『解密』，要記得差別。",
+        "reason": "按題目舊式表述，接收端使用**發送者公鑰**檢驗其數位簽章，是預定正解；嚴格術語是**驗證簽章**而非『解密整份原文』，需獨立E確認。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "接收端不應取得發送者**私鑰**；私鑰是簽署者保管，用其**公鑰**驗證，因此把私鑰交給接收者的說法錯。",
+        "elementary": "秘密鑰匙不能隨便交給別人，收件人應拿公開的驗證鑰匙，所以B弄錯了。",
+        "reason": "接收端不應取得發送者**私鑰**；私鑰是簽署者保管，用其**公鑰**驗證，因此把私鑰交給接收者的說法錯。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "Public key cryptography使用數學上成對的公鑰與私鑰，屬**非對稱式**，選項稱對稱式與概念相反。",
+        "elementary": "公開鑰匙和私人鑰匙不是同一把，叫非對稱，C把名稱說反了。",
+        "reason": "Public key cryptography使用數學上成對的公鑰與私鑰，屬**非對稱式**，選項稱對稱式與概念相反。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "Secret key cryptography的雙方共享同一組秘密金鑰，屬**對稱式**加解密，而不是選項所稱非對稱式。",
+        "elementary": "兩邊都用同一把秘密鑰匙比較像『對稱』，D把它說成不同鑰匙就錯了。",
+        "reason": "Secret key cryptography的雙方共享同一組秘密金鑰，屬**對稱式**加解密，而不是選項所稱非對稱式。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "12c45f57ad6baca69959ad0888a98ed79cf9200ed9e686a846efb57c88a754ae",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only, not independently credentialed E reviewer",
+    "authorSelfCheck": "STRUCTURAL_AND_CALCULATION",
+    "sourceOriginalImageViewedByThisAuthor": false,
+    "officialAnswerPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "sourceFormalQa": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_NOTICE_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING",
+    "E_DIGITAL_SIGNATURE_VERIFICATION_VS_DECRYPTION_TERMINOLOGY_REVIEW"
+  ]
+}

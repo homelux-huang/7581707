@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "questionId": "115-09-1-36",
+  "year": 115,
+  "paperCode": "09-1",
+  "originalQuestionNumber": 36,
+  "subject": "數位科技",
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_G1_G2_G3_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "關於電子商務的經營模式，下列敘述何者正確？\n  ①小吳到線上拍賣網買日用品是屬於C2C\n  ②老李在博客來網路商店購買辭典是屬於B2C\n  ③陳老闆的公司利用網路向個人進行採購是屬於B2B\n  ④林同學升級電腦後，將舊配備利用校內二手物品交易網進行銷售屬於C2B",
+  "options": [
+    "①、②",
+    "②、③",
+    "③、④",
+    "①、④"
+  ],
+  "answerCandidate": "A",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "sourceQuestionVerified": false,
+  "sourceAnswerAutoMatchedHistoricalFlag": true,
+  "sourceAnswerFormalFinalVerified": false,
+  "officialCorrectionNoticeIndependentQa": false,
+  "sourceTextRevision": "9f98f18e10881641ed8490708584373ea7db3acb904862acff2443a71f910e74",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py text_revision (question + original options + immutable individual webp sha; excludes answer)",
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-36.webp",
+  "imageSha256": "383ea1c90a972db1699bb9a9d46d0f7335c55bf3613d14f08cc4ef2c71e89627",
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "originalImageBytesRehashedByC": false,
+  "sharedMaterial": null,
+  "teaching": {
+    "teacherSummary": "辨識電子商務應看**交易雙方身分**：①題目預設個人在拍賣平台向個人買東西為**C2C**；②公司經營的博客來網路書店賣辭典給消費者為**B2C**；③公司向個人採購應屬**C2B**而非B2B；④學生個人賣舊電腦配件給其他人是**C2C**而非C2B。故僅①②正確，選A。",
+    "elementarySummary": "先看誰賣給誰：同學賣給同學是個人對個人；書店公司賣書給你是公司對個人。公司向個人買、同學賣二手電腦，都不能把方向搞混。",
+    "memory": "**B＝企業，C＝消費者；C2C個人對個人，B2C企業賣個人，C2B個人提供企業。①②對→A。**",
+    "concept": "電子商務依交易參與者可分B2B、B2C、C2C、C2B；**平台名稱不自動決定所有交易類型**，要以題目描述的賣方、買方身分判定。",
+    "extension": "真實線上拍賣平台可能同時容納商家和個人賣家；①應按考題情境所假設的個人間交易理解，不能概括所有拍賣都是C2C。",
+    "highlights": [
+      "C2C",
+      "B2C",
+      "C2B",
+      "交易雙方",
+      "①②正確"
+    ],
+    "reasoningSteps": [
+      "用B企業、C消費者辨認交易方向。",
+      "①按個人拍賣買賣為C2C；②企業書店賣給個人為B2C。",
+      "③企業向個人採購應是C2B；④個人二手出售給個人應是C2C。",
+      "只有①②符合，因此答案A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "①個人間透過拍賣平台買賣可視為**C2C**；②網路書店企業向消費者販售為**B2C**，題設下兩項均正確。",
+        "elementary": "個人向個人買，還有商店賣給你，這兩項方向都對，所以是A。",
+        "reason": "①個人間透過拍賣平台買賣可視為**C2C**；②網路書店企業向消費者販售為**B2C**，題設下兩項均正確。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "②B2C正確，但③公司向**個人**採購在題設中是**C2B**，不是企業向企業的B2B，因此不能選。",
+        "elementary": "B裡面書店那句對，企業買個人的東西卻不叫公司跟公司買，所以錯。",
+        "reason": "②B2C正確，但③公司向**個人**採購在題設中是**C2B**，不是企業向企業的B2B，因此不能選。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "③將公司向個人採購誤作B2B，④又將個人轉售舊配件給其他個人誤作C2B；兩者均混淆買賣者身分。",
+        "elementary": "公司向個人買與同學向同學賣都被貼錯標籤，所以C不合題意。",
+        "reason": "③將公司向個人採購誤作B2B，④又將個人轉售舊配件給其他個人誤作C2B；兩者均混淆買賣者身分。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "①在題設下為C2C正確，但④學生在二手交易網出售給其他個人也是**C2C**，並非C2B，故此組不成立。",
+        "elementary": "D第一個正確，第二個同學賣給同學還是個人對個人，沒有公司買，所以不選。",
+        "reason": "①在題設下為C2C正確，但④學生在二手交易網出售給其他個人也是**C2C**，並非C2B，故此組不成立。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "a56f2d74f7d3e6dc2f0fd7e7abc86e3f6198e65da5d67e92a7f6935a83784bfe",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only, not independently credentialed E reviewer",
+    "authorSelfCheck": "STRUCTURAL_AND_CALCULATION",
+    "sourceOriginalImageViewedByThisAuthor": false,
+    "officialAnswerPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "sourceFormalQa": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_NOTICE_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING"
+  ]
+}

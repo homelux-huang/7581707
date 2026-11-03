@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "questionId": "115-09-1-37",
+  "year": 115,
+  "paperCode": "09-1",
+  "originalQuestionNumber": 37,
+  "subject": "數位科技",
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_G1_G2_G3_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "依ASCII 碼表，相關字元碼值：A 是 4116 、小寫 a 是 A 碼值加 3210 、阿拉伯數字 1 是 A 碼\n  值減 1016 、符號 @ 是 A 碼值減 1，其他大小寫字母及數字的編碼值依序遞增，如小寫\n      i 是小寫 a 碼值加 8 成為 105 10 。若有一密碼為 o 6 Lig @ tE，其ASCII 碼值以 10 進制表示為\n  何？( 註：為方便閱讀，在答案選項中各ASCII 碼值間增加「、」區隔 )",
+  "options": [
+    "079、098、076、105、071、064、116、101",
+    "079、098、108、105、071、064、116、069",
+    "111、054、108、105、103、064、116、101",
+    "111、054、076、105、103、064、116、069"
+  ],
+  "answerCandidate": "D",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "sourceQuestionVerified": false,
+  "sourceAnswerAutoMatchedHistoricalFlag": true,
+  "sourceAnswerFormalFinalVerified": false,
+  "officialCorrectionNoticeIndependentQa": false,
+  "sourceTextRevision": "a14a5ca765e8e9208d940ea1ea075fb1bbf0e4509fce2e3c217cc708227f6537",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py text_revision (question + original options + immutable individual webp sha; excludes answer)",
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-37.webp",
+  "imageSha256": "3326343f41711d5e4d748203a123cf4bce10effb2d804e02026dcd314445c4ee",
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "originalImageBytesRehashedByC": false,
+  "sharedMaterial": null,
+  "teaching": {
+    "teacherSummary": "以**ASCII 十進位**逐字對應，題示密碼 `o6Lig@tE` 的八個字元依序為 **111、054、076、105、103、064、116、069**，故選D。要特別注意**大寫L＝76**、小寫l＝108，以及大寫E＝69**、小寫e＝101** 的差異。",
+    "elementarySummary": "密碼每個英文字和數字都有自己的號碼，像每個人有不同座號。大小寫字母的號碼也不同，必須從左到右一個一個核對，八個都對才是D。",
+    "memory": "**o=111、6=054、L=076、i=105、g=103、@=064、t=116、E=069 → D。大小寫差32。**",
+    "concept": "ASCII中A=65 (0x41)、a=97、0=48、1=49、@=64。字母連續編碼；大寫與相對小寫相差32。顯示為三位數如054，不會改變ASCII值54。",
+    "extension": "若把L看成小寫l，76會錯成108；把E看成e，69會錯成101。原OCR將進位下標攤平，需由A依官方像素重新核對。",
+    "highlights": [
+      "ASCII",
+      "十進位",
+      "o6Lig@tE",
+      "L＝076",
+      "E＝069",
+      "111、054、076、105、103、064、116、069"
+    ],
+    "reasoningSteps": [
+      "先把題目給的基準A=65、a=97、1=49與@=64換成十進位。",
+      "依字母順序求o=111、L=76、i=105、g=103、t=116、E=69，數字6為54。",
+      "依原字串由左至右排列8個碼值，選D。",
+      "把八個碼值逆轉回ASCII字元，應得到原密碼o6Lig@tE。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A從079、098開始，分別對應大寫O與小寫b，與原字串開頭的**小寫o、數字6**不符，其他位置也混淆大小寫。",
+        "elementary": "原密碼先是小寫o和數字6，A卻給了別的字母號碼，一開始就不對。",
+        "reason": "A從079、098開始，分別對應大寫O與小寫b，與原字串開頭的**小寫o、數字6**不符，其他位置也混淆大小寫。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B的079、098並非o=111和6=054，第三碼108是小寫l而非原本大寫L=076，大小寫與數字辨識都錯。",
+        "elementary": "B把前兩格和大寫L都看錯了，雖然後面有些號碼對，整串仍不能選。",
+        "reason": "B的079、098並非o=111和6=054，第三碼108是小寫l而非原本大寫L=076，大小寫與數字辨識都錯。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C前兩碼111、054正確，但第三碼108是小寫l不是大寫L=076，末碼101是小寫e不是大寫E=069。",
+        "elementary": "C前兩格對了，但把大寫L及E看成小寫，號碼差很多，所以不能選。",
+        "reason": "C前兩碼111、054正確，但第三碼108是小寫l不是大寫L=076，末碼101是小寫e不是大寫E=069。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "逐一轉回碼值：**o111、6=054、L=076、i=105、g=103、@=064、t=116、E=069**，八格與原密碼完全吻合。",
+        "elementary": "D每一個座號都對，連字母大小寫也沒有弄錯，正確。",
+        "reason": "逐一轉回碼值：**o111、6=054、L=076、i=105、g=103、@=064、t=116、E=069**，八格與原密碼完全吻合。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "基準ASCII：A=65、a=97、1=49、@=64。",
+        "原字串o6Lig@tE，8個字元，大寫L、E與小寫字母要分開。"
+      ],
+      "formulaUse": "以基準碼值加上英文字母／數字的順序差求十進位ASCII，三位顯示時可在前面補0；最後用相同碼值反向轉字元確認。",
+      "substitution": [
+        "o=97+14=111、6=49+5=54",
+        "L=65+11=76、i=97+8=105、g=97+6=103",
+        "@=64、t=97+19=116、E=65+4=69"
+      ],
+      "steps": [
+        "已知A十進位65、a十進位97、數字1十進位49、@十進位64。",
+        "第1碼小寫o＝97＋14＝111；第2碼字元6＝49＋5＝54，顯示054。",
+        "第3碼大寫L＝65＋11＝76，顯示076；第4碼小寫i＝97＋8＝105。",
+        "第5碼小寫g＝97＋6＝103；第6碼@＝64，顯示064。",
+        "第7碼小寫t＝97＋19＝116；第8碼大寫E＝65＋4＝69，顯示069。",
+        "從左到右得到111、054、076、105、103、064、116、069，對應D。",
+        "逆向驗算：ASCII數值111 54 76 105 103 64 116 69轉回字元恰好為o6Lig@tE，大小寫完全一致。"
+      ],
+      "result": "111、054、076、105、103、064、116、069",
+      "unit": "ASCII十進位碼值（無物理單位）",
+      "option": "D",
+      "verification": "111→o，54→6，76→L，105→i，103→g，64→@，116→t，69→E；串接後o6Lig@tE等於原密碼。"
+    }
+  },
+  "teachingCanonicalSha256": "cde3197f610d1e0165343f78b896c54f59c09ffe71a0b82a4749ce2b0dd26696",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only, not independently credentialed E reviewer",
+    "authorSelfCheck": "STRUCTURAL_AND_CALCULATION",
+    "sourceOriginalImageViewedByThisAuthor": false,
+    "officialAnswerPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "sourceFormalQa": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_NOTICE_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING",
+    "A_OFFICIAL_ORIGINAL_ASCII_BASE_SUBSCRIPT_OCR_RECHECK"
+  ]
+}

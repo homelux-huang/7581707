@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "items": [
+    {
+      "questionId": "115-09-1-04",
+      "path": "sudu/teaching-candidates/115-role-c-biz-digi-20261103/115-09-1-04.json",
+      "sourceRevision": "ee30748cba808403074e37d09423cde89ae411debb2f7cb21c4cf77ef9b77177",
+      "webpSha256": "7472d9969ad5c60ea6574566f3b0ac807b0f07a7c95e2e7f8a4de764f20a5751",
+      "teachingSha256": "a48447b439f4999b9494b076229f677d51672f04d132ba5cf244d1c3cdd978b9",
+      "fileSha256": "85fbce425c1602e7bebce7e43d3743196621971b8bd53cb7d6a10257d8889fd2",
+      "g1": "PENDING",
+      "g2": "PENDING",
+      "g3": "PENDING",
+      "e": "PENDING",
+      "ui": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-08",
+      "path": "sudu/teaching-candidates/115-role-c-biz-digi-20261103/115-09-1-08.json",
+      "sourceRevision": "a286d82c528b549163eecd362701f2f7ceb09e5d75fc77c74cb67ed001f3f85b",
+      "webpSha256": "567575ca2f6eac12b57117375501b1ac79a6a547f447f2a7a86e13f09611e6d5",
+      "teachingSha256": "ae07e182b5110f39e6b5a70bf933a62aca81b2ade793c236c1d03fd8cd5204de",
+      "fileSha256": "85f84f5a395b568a6fbc7d4048a0a74748f352a2effbf627948dbbbe15385387",
+      "g1": "PENDING",
+      "g2": "PENDING",
+      "g3": "PENDING",
+      "e": "PENDING",
+      "ui": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-35",
+      "path": "sudu/teaching-candidates/115-role-c-biz-digi-20261103/115-09-1-35.json",
+      "sourceRevision": "4c60de5964c0bab3156eda7e0b12946b9cd5a0845e3475d6e67d94db4eafb5b1",
+      "webpSha256": "7a42bf7dc5c3fec75962386fbf47ebe140035be6a2070640e9cb73a9e699bb9c",
+      "teachingSha256": "12c45f57ad6baca69959ad0888a98ed79cf9200ed9e686a846efb57c88a754ae",
+      "fileSha256": "44b066f8363a26bdc7c538c95fc31c9d863c02d78ba2e8c329657cf1bda4a03c",
+      "g1": "PENDING",
+      "g2": "PENDING",
+      "g3": "PENDING",
+      "e": "PENDING",
+      "ui": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-36",
+      "path": "sudu/teaching-candidates/115-role-c-biz-digi-20261103/115-09-1-36.json",
+      "sourceRevision": "9f98f18e10881641ed8490708584373ea7db3acb904862acff2443a71f910e74",
+      "webpSha256": "383ea1c90a972db1699bb9a9d46d0f7335c55bf3613d14f08cc4ef2c71e89627",
+      "teachingSha256": "a56f2d74f7d3e6dc2f0fd7e7abc86e3f6198e65da5d67e92a7f6935a83784bfe",
+      "fileSha256": "59c7f3cd4a51bd1105c04c8b9a6d2fff03fe200a7193fcc5e99b629fc0ebf923",
+      "g1": "PENDING",
+      "g2": "PENDING",
+      "g3": "PENDING",
+      "e": "PENDING",
+      "ui": "PENDING",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-37",
+      "path": "sudu/teaching-candidates/115-role-c-biz-digi-20261103/115-09-1-37.json",
+      "sourceRevision": "a14a5ca765e8e9208d940ea1ea075fb1bbf0e4509fce2e3c217cc708227f6537",
+      "webpSha256": "3326343f41711d5e4d748203a123cf4bce10effb2d804e02026dcd314445c4ee",
+      "teachingSha256": "cde3197f610d1e0165343f78b896c54f59c09ffe71a0b82a4749ce2b0dd26696",
+      "fileSha256": "8a7839036ee78dee5fc369ef6019d0c2fef2e2871fcc126203f18a99f9a29cb4",
+      "g1": "PENDING",
+      "g2": "PENDING",
+      "g3": "PENDING",
+      "e": "PENDING",
+      "ui": "PENDING",
+      "ready": false
+    }
+  ],
+  "newApprovals": 0,
+  "newDeployments": 0
+}
