@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-114-C19-LAMP-SHARED-SOURCE-LINK-20261103-03",
+  "questionId": "114-00-C-19",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595476292",
+  "sourceBaseCommit": "0962e76af3d7379fa1cf0e6577d7aa86f35b200f",
+  "status": "ROLE_A_SOURCE_IMAGE_AND_SHARED_LAMP_114_C19_ASSOCIATION_CANDIDATE_NO_RELEASE",
+  "sourceImage": {
+    "originalPage": 7,
+    "originalOfficialPageWebp": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+    "originalOfficialPageGitBlob": "eddea1c33102085accd4a33cc5835e2a70188800",
+    "originalOfficialPageSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+    "originalPdfSha256PreviouslyRecorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+    "originalSingleWebp": "sudu/data/processed/114/webp-v2/00-C/114-00-C-19.webp",
+    "sha256": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
+    "gitBlob": "3e72b0581ad4908bc24487d115f670c8af793939",
+    "crop": [
+      90,
+      284,
+      1310,
+      563
+    ],
+    "size": [
+      1220,
+      279
+    ],
+    "rejectedOldWebpSha256": "8147b8baad0b1757a4d4793cfc3ce225fbc21d9597a5c75220165a9c256b2fd6",
+    "rejectedOldIssue": "Q19 v1 crop included independent C20-23 shared reading; MUST use exact v2 source G1 PASS",
+    "oldG1CertificatePath": "sudu/data/processed/114/qa-drafts/DIRECT_VISUAL_114_C19_23_SHARED_20261023.json",
+    "oldG1CertificateGitBlob": "ccb9e0dd590e5649d57832a728552fbe88d2efac",
+    "oldG2RawQaPath": "sudu/data/processed/114/qa-drafts/OCR_VISUAL_114_C19_C23_20261023.json",
+    "oldG2RawQaGitBlob": "ef6a0ac52e11ee8c75702a229a0d8f2c9e716ee8",
+    "originalQAStatus": "PASS_ASSISTANT_DIRECT_ORIGINAL_20261023",
+    "newImageCreated": false,
+    "rawOCRRecreated": false
+  },
+  "sharedMaterial": {
+    "id": "114-00-C-SHARED-16-19",
+    "path": "sudu/data/processed/114/source-receipts/114-00-C-SHARED-16-19.webp",
+    "sha256": "b27e23f0c33fdfc4843dac6b6b5aff8fae5a40254c986b8705d73813c147e403",
+    "gitBlob": "000a72926ff25cfbd4016cce5378ecd194534deb",
+    "sourceOriginalPage": 6,
+    "sourcePixelsCrop": [
+      90,
+      155,
+      1310,
+      1360
+    ],
+    "outputSize": [
+      1220,
+      1205
+    ],
+    "sourceRevision": "0d7aa9c1ccf627e326aa2edac0e6c61b4436d49e9313246275365f2d41be27eb",
+    "sourceQaReference": "sudu/data/processed/114/review-evidence/114-00-C-16-18-original-lamps-20261103.json",
+    "visualStatus": "PASS_AI_ASSISTANT_DIRECT_VISUAL_ORIGINAL",
+    "question19UsesThisShared": true,
+    "explicitlyForbiddenDifferentSharedId": "114-00-C-SHARED-20-23",
+    "originalArticleIsReusedNotReconstructed": true
+  },
+  "sourceLinkRevisionSeed": "ROLE_A_114_C19_LAMP_LINK_G1_V1\n4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1\nb27e23f0c33fdfc4843dac6b6b5aff8fae5a40254c986b8705d73813c147e403\n0d7aa9c1ccf627e326aa2edac0e6c61b4436d49e9313246275365f2d41be27eb",
+  "sourceLinkRevisionSha256": "095f682f8f3098e23992967ad11b03eaf5aef5e2dd27a8afc28045e421e7407f",
+  "officialAnswer": {
+    "printedAnswer": "B",
+    "answerPage": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "answerPageGitBlob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "publishedOfficialAnswerPdfSha256Recorded": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+    "confirmationLedger": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+    "confirmationLedgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "confirmationPdfSha256Recorded": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+    "noticeNamesOnly": [
+      "114-00-C-14",
+      "114-00-C-24",
+      "114-00-C-28",
+      "114-00-C-30"
+    ],
+    "noticeForQ19": false,
+    "formalG3SourceAdmitted": false
+  },
+  "sourceG2FullText": "NOT_NEWLY_VERIFIED_IN_THIS_TASK",
+  "reviewer": "GPT-6 Role A AI Assistant Source Visual Review; not B author, E reviewer or human teacher",
+  "pdfReDownloadedRehashedThisTask": false,
+  "downstream": {
+    "q16To18StatusChanged": false,
+    "canonical114JsonEdited": false,
+    "canonical114SqliteEdited": false,
+    "manifestEdited": false,
+    "q20To23MaterialEdited": false,
+    "roleBPr105LessonEdited": false,
+    "roleEIndependentContentApproval": false,
+    "roleDReal8x2": false,
+    "formalG3Approved": false,
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}
