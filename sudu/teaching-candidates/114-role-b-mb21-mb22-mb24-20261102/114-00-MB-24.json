@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-00-MB-24",
+  "subject": "數學 B",
+  "kind": "NEW_MATH_B_AUTHOR_DRAFT_G1_G2_G3_PENDING",
+  "question": "某次高三數學模擬考有1000 位同學應考，老師在甲班提及：「我們全班50 位同學這次\n\n  數學考得真不錯，平均為80 分。而且其他班共950 位同學的平均分數，比所有1000 位應\n\n  考同學的平均分數少1 分。」依據老師的提示，1000 位同學的總平均為幾分？",
+  "options": [
+    "61",
+    "66",
+    "71",
+    "76"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "fe7675b3d528ce25c7144c756970124de8a52d8580b2840e4661cc1c5578613d",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-24.webp",
+    "webpSha256": "a23839465b07a77320cc84878a37c59d129f968b6becb818e4ea8c454fe3d22d",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerAndCorrectionsNotVerified": true
+  },
+  "teaching": {
+    "topic": "兩群學生的加權平均｜由『其他班比總平均少一分』求總平均",
+    "teacherSummary": "設全體平均 M，其他950人平均M−1。全體總分 1000M，亦等於甲班50×80加其他班950×(M−1)，移項得50M=3050，M=61分，A 正確。",
+    "elementarySummary": "1000人的平均要算總分，50人的平均80，另外950人的平均比大平均少1。把兩組人數乘分數後相加，就算出全體平均61。",
+    "concept": "加權平均 (n1×μ1+n2×μ2)/(n1+n2)；總平均 M 是未知數，別把其他班平均當已知常數。",
+    "memory": "1000M=50×80+950(M−1) ⇒50M=3050 ⇒ M=61。",
+    "formula": "總分=人數×平均；總分可由甲班與其餘學生總分相加。",
+    "highlights": [
+      "1000 位",
+      "50 位",
+      "平均為80 分",
+      "少1 分",
+      "總平均"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "總共1000位同學，總平均M分",
+        "甲班50人平均80分",
+        "其他950人平均M−1分"
+      ],
+      "formulaUse": "總分=人數×平均；總分可由甲班與其餘學生總分相加。",
+      "substitution": [
+        "1000M=50×80+950(M−1)",
+        "1000M=4000+950M−950=950M+3050"
+      ],
+      "steps": [
+        "先設1000人的總平均為 M 分，題目要求的就是 M。",
+        "甲班50人的總分＝50×80＝4000分。",
+        "其餘950人的平均『比全體少1分』，所以是 M−1，不能直接當作79分。",
+        "根據總分守恆：1000M=4000+950(M−1)。",
+        "展開：1000M=4000+950M−950=950M+3050。",
+        "兩邊減950M：50M=3050；再除50：M=61分，答案A。",
+        "反向驗算：其他人平均是60分，甲班總分4000，其餘總分950×60=57000，全體合計61000分。",
+        "61000÷1000=61分，且其他人60分恰好比總平均61少1分。"
+      ],
+      "result": "61 分",
+      "unit": "分",
+      "option": "A"
+    },
+    "solvingSteps": [
+      "先設1000人的總平均為 M 分，題目要求的就是 M。",
+      "甲班50人的總分＝50×80＝4000分。",
+      "其餘950人的平均『比全體少1分』，所以是 M−1，不能直接當作79分。",
+      "根據總分守恆：1000M=4000+950(M−1)。",
+      "展開：1000M=4000+950M−950=950M+3050。",
+      "兩邊減950M：50M=3050；再除50：M=61分，答案A。",
+      "反向驗算：其他人平均是60分，甲班總分4000，其餘總分950×60=57000，全體合計61000分。",
+      "61000÷1000=61分，且其他人60分恰好比總平均61少1分。"
+    ],
+    "calculationReviewed": "B_AUTHOR_ARITHMETIC_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 61分正確；若其他950人的平均為60分，50×80+950×60=61000，全體1000人平均61分，完全符合『少1分』。",
+        "elementary": "一千人的總分61000，平均就是61。",
+        "reason": "A 61分正確；若其他950人的平均為60分，50×80+950×60=61000，全體1000人平均61分，完全符合『少1分』。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 66分若為總平均，其他950人平均應65分，加權總平均會是(50×80+950×65)/1000=65.75分，不等66。",
+        "elementary": "假設總平均66，重算只得65.75，不對。",
+        "reason": "B 66分若為總平均，其他950人平均應65分，加權總平均會是(50×80+950×65)/1000=65.75分，不等66。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 71分若為總平均，其他950人應平均70分，重算(4000+950×70)/1000=70.5分，不等71。",
+        "elementary": "假設71，實際重算70.5，不符合。",
+        "reason": "C 71分若為總平均，其他950人應平均70分，重算(4000+950×70)/1000=70.5分，不等71。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 76分若為總平均，其他950人應平均75分，重算(4000+950×75)/1000=75.25分，不等76。",
+        "elementary": "假設76，重算只有75.25，所以錯。",
+        "reason": "D 76分若為總平均，其他950人應平均75分，重算(4000+950×75)/1000=75.25分，不等76。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official source bank preliminary only, not official G1/G2/G3/admitted answer. Same SHA original WebP G1 must be assessed independently by A."
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "sourceAnswerCandidate": true,
+    "independentReviewByAuthor": false,
+    "authorCalculationReverseCheck": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_SOURCE_G1_DRAFT_G2_G3_PENDING",
+      "DISTINCT_AI_E_MATH_QA_PENDING",
+      "D_114_ORIGINAL_V4_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "c54d2fed80a5e018fe078094cd64a0536130b90b8aea6af2703ba9e91ddf5ecb"
+}

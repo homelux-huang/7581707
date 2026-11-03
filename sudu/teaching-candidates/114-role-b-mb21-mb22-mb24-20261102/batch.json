@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "taskId": "B-114-MB21-MB22-MB24-20261102-05",
+  "date": "2026-11-02",
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "items": [
+    {
+      "questionId": "114-00-MB-21",
+      "path": "sudu/teaching-candidates/114-role-b-mb21-mb22-mb24-20261102/114-00-MB-21.json",
+      "candidateAnswer": "C",
+      "sourceRevision": "da40c1e083d4720dc956bfd92b6982965833cfa7e0ce87ce8733a88f011451b8",
+      "webpSha256": "ecf1d5f0ea75714e52afa06db5035ba86b051d3a462483b91d1e7746b4cc54ad",
+      "composedTeachingSha256": "04a6f9309cf742c977b20b99f3025a7f6b1ec6c0f251bd0c44481b6e792e20d7",
+      "fileSha256": "42800c8c85c5fe9e3f9eaf46108555f7ca10a61bc0130ec5ba2a48bd920bd3c2",
+      "sourceAdmission": false,
+      "independentE": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-22",
+      "path": "sudu/teaching-candidates/114-role-b-mb21-mb22-mb24-20261102/114-00-MB-22.json",
+      "candidateAnswer": "A",
+      "sourceRevision": "fe2b92f13fb4cca3e795825d5801421150d27bef14f978c8ab49a35a502c3c79",
+      "webpSha256": "e06f9d535f9383c085c7d40bf44aec43749de97ae1469109f7cb79341f368040",
+      "composedTeachingSha256": "b3ef9efc55e103bafb432d30e38d133d83bd25acd75a155b75704ff903d8880a",
+      "fileSha256": "e4e0525e1f3a029c37ecd6b42fab06a224741359d25dd28bb0af3afe66d0d47c",
+      "sourceAdmission": false,
+      "independentE": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-24",
+      "path": "sudu/teaching-candidates/114-role-b-mb21-mb22-mb24-20261102/114-00-MB-24.json",
+      "candidateAnswer": "A",
+      "sourceRevision": "fe7675b3d528ce25c7144c756970124de8a52d8580b2840e4661cc1c5578613d",
+      "webpSha256": "a23839465b07a77320cc84878a37c59d129f968b6becb818e4ea8c454fe3d22d",
+      "composedTeachingSha256": "c54d2fed80a5e018fe078094cd64a0536130b90b8aea6af2703ba9e91ddf5ecb",
+      "fileSha256": "eb0917a6a5c8e407ac1bf8e9303272a3b54917e0d448fe402fffd75aa47cc7d0",
+      "sourceAdmission": false,
+      "independentE": false,
+      "ready": false
+    }
+  ],
+  "total": 3,
+  "authorMathCrosschecks": 3,
+  "officialG1G2G3Ready": 0,
+  "independentRoleETrustedPass": 0,
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "requiresHumanTeacher": false,
+  "noRelease": true
+}
