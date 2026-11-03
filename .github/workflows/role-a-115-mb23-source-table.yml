@@ -1,0 +1,39 @@
+name: ROLE A 115 MB23 source original 2x3 trip table and official B (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-mb23-table-g2-proof-20261103
+    paths:
+      - sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json
+      - sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json
+      - sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json
+      - tests/test_role_a_115_mb23_source_table_proof.py
+      - .github/workflows/role-a-115-mb23-source-table.yml
+      - docs/ROLE_A_115_MB23_G2_G3_TABLE_20261103.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_mb23_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb23-table-g2-proof-20261103'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact original MB23 table SHA & image, official final answer, original 205 SQLite and negative gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb23_source_table_proof.py
+          python -m unittest discover -s tests -p test_role_a_115_mb23_source_table_proof.py -v
+      - name: Immutable source candidate only
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Official original 2x3 source table evidence only. No QID READY, no canonical bank writes."
