@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-114-E11-FINAL-SOURCE-ADMISSION-20261103-07",
+  "questionId": "114-00-E-11",
+  "masterDispatch": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595534199",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595690727",
+  "baseSourceCommit": "0bb49eab86fd0619b9aecb801dc570a37103e985",
+  "status": "ROLE_A_Q11_G1_G2_G3_SOURCE_EVIDENCE_RECONCILED_CANONICAL_ADMISSION_PENDING",
+  "source": {
+    "year": 114,
+    "paperCode": "00-E",
+    "originalNumber": 11,
+    "originalPage": 3,
+    "originalPdfSha256PreviouslyRecorded": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "originalPageWebp": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "originalPageGitBlob": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "originalPageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
+    "singleQuestionGitBlob": "50f8fde174f4f0e66dc0f2315c11c5a73cec6b7a",
+    "singleQuestionSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+    "crop": [
+      90,
+      275,
+      1310,
+      591
+    ],
+    "rawOriginalEvidenceBlob": "bd90a3c3814353379eacf89759fcd3153099fa53",
+    "rawOfficialAnswerEvidenceBlob": "bc3d19885e2ebc3d27092b673636bd84c89f65c6",
+    "sourceTextRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "question": "Dad:  Hey, you’re always on your phone!\n    Son:   I know. I just like playing games and watching videos.\n   Dad:  But if you use the phone too much, you might hurt your eyes.\n    Son:  ____________\n   Dad:  Yeah, let’s go jogging. It’s more fun.",
+    "options": [
+      "Then I should use it less.",
+      "Should I use a new phone?",
+      "Do you like to watch videos, too?",
+      "So you should play online games."
+    ],
+    "G1": "HISTORIC_ASSISTANT_DIRECT_VISUAL_SHA_BOUND",
+    "G2": "PR110_EXISTING_ROLE_A_SOURCE_TEXT_VISUAL_VERIFIED",
+    "sourceOriginalPdfRehashedThisTask": false,
+    "sourcePixelsRecreatedThisTask": false
+  },
+  "official": {
+    "answer": "A",
+    "officialAnswerImage": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+    "officialAnswerImageGitBlob": "5f2920313607af4e756095cd3d6098c8a3ab7440",
+    "officialAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "answerPdfSha256PreviouslyRecorded": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "confirmationPdfSha256PreviouslyRecorded": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+    "confirmationNamedQuestionIds": [
+      "114-00-E-26"
+    ],
+    "onlyCorrectionNamedForEnglish": "114-00-E-26",
+    "q11ChangedByNotice": false,
+    "existingRoleAOfficialSourceReceipt": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+    "G3": "PR94_EXISTING_Q11_SOURCE_FINAL_OFFICIAL_ANSWER_EVIDENCE",
+    "formalNewSourceApprovalFlagSet": false,
+    "originalAnswerPdfRehashedThisTask": false,
+    "confirmationPdfRehashedThisTask": false
+  },
+  "canonical": {
+    "sourcePath": "sudu/data/processed/114/questions.json",
+    "manifestPath": "sudu/data/processed/114/webp-manifest.json",
+    "sqlitePath": "sudu/data/processed/114/question-bank.sqlite3",
+    "originalSourceBankGitBlob": "1535754345a08d25636e00b4ba3270a1f764bf66",
+    "originalManifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "expectedSqliteCount": 205,
+    "questionRevisionPinned": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "canonicalG2QuestionVerifiedExpected": false,
+    "canonicalG3AnswerVerifiedExpected": true,
+    "canonicalStudentReleaseApprovedExpected": false,
+    "sourceFilesModifiedInThisTask": false,
+    "sqliteModifiedInThisTask": false,
+    "noOtherQuestionIdChanged": true
+  },
+  "downstream": {
+    "BAuthorSourceLatestPr": 106,
+    "EIndependentlyReviewedLatestSource": "PENDING_VALID_TRUSTED_E_RECEIPT",
+    "DCurrentSameDigestEightSizesTwoThemes": "PR127_QA_ONLY_NOT_PUBLISHER_ADMISSION",
+    "MASTERCanonicalAdmission": "PENDING",
+    "READY": false,
+    "LIVE": false,
+    "summary": "Original source G1/G2 and original printed A with official English correction E26-only reconciled against immutable PR110/PR94 and 205-row SQLite. Do not treat this ROLE A evidence as independent E or student release."
+  }
+}
