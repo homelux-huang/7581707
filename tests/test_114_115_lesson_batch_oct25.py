@@ -19,6 +19,9 @@ class Lessons(unittest.TestCase):
    q=json.loads(path.read_text());t=q['teaching']
    self.assertFalse(q['studentReleaseApproved']);self.assertFalse(q['deploy'])
    self.assertEqual(digest(t),item['teachingSha256'])
+   self.assertEqual(digest(t),q['teachingCanonicalSha256'])
+   self.assertIn('DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING',q['blockers'])
+   self.assertNotIn('AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING',q['blockers'])
    self.assertEqual(q['review']['externalIndependentReview'],'PENDING')
    self.assertFalse(q['review']['newBlindSolveClaimed'])
    self.assertEqual(len(q['options']),4)
@@ -29,6 +32,13 @@ class Lessons(unittest.TestCase):
  def test20_sine_ratio(self):
   x=100*math.sin(math.radians(75))/math.sin(math.radians(45))
   self.assertAlmostEqual(x,50*(math.sqrt(3)+1))
+  q=json.loads((BASE/'115-00-MB-20.json').read_text())
+  ex=q['teaching']['examCalculation']
+  self.assertIn('AC×sin45°÷sin75°',ex['verification'])
+  self.assertIn('100.00000',ex['verification'])
+  self.assertTrue(any('逆向驗算' in line and '100公尺' in line for line in ex['steps']))
+  self.assertAlmostEqual(x*math.sin(math.radians(45))/math.sin(math.radians(75)),100,places=8)
+  self.assertNotEqual(q['teachingCanonicalSha256'],'5eb8bdeeea69701b4c8c990c361b796f3377280b94481fbb54b4802c8362f1c8')
  def test21_both_roots_and_all_options(self):
   roots=[x for x in range(1,20) if 8**2+x*x-2*8*x*0.5==49]
   self.assertEqual(roots,[3,5]);self.assertEqual([x for x in roots if x>4],[5])

@@ -1,0 +1,22 @@
+name: Role C 115 Math B20-25 source-bound author checks (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-mb20-25-exact-verification-20261103]
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/114-115-20261025/**'
+      - 'tests/test_114_115_lesson_batch_oct25.py'
+      - '.github/workflows/115-role-c-mb20-25-20261103.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate-arithmetic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run exact six question hash, MB20 reverse check, MB23 table and fail-closed tests
+        run: python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v

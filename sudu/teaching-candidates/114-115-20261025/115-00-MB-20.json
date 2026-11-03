@@ -45,11 +45,14 @@
         "sin75°＝sin(45°＋30°)＝sin45°cos30°＋cos45°sin30°＝(√6＋√2)／4。",
         "AC＝100×sin75°／sin45°。",
         "AC＝100×[(√6＋√2)／4]／(√2／2)＝50(√3＋1)。",
-        "AC 約為136.60公尺，選 A。"
+        "AC 約為136.60公尺，選 A。",
+        "**逆向驗算**：由 AC＝50(√3＋1)公尺代回正弦定理，AC×sin45°÷sin75°＝100公尺，與已知 AB＝100公尺相同。",
+        "**大小合理性檢查**：∠B＝75°＞∠C＝45°，所以其對邊 AC 應大於 AB；136.60公尺＞100公尺，方向符合。"
       ],
       "result": "50(√3＋1)公尺",
       "unit": "公尺",
-      "option": "A"
+      "option": "A",
+      "verification": "**驗算**：AC＝50(√3＋1)≈136.60254公尺，AC×sin45°÷sin75°≈136.60254×0.70710678÷0.96592583≈100.00000公尺＝AB。因75°＞45°，故AC＞AB亦符合。"
     },
     "optionExplanations": {
       "A": {
@@ -78,7 +81,7 @@
       }
     }
   },
-  "teachingCanonicalSha256": "5eb8bdeeea69701b4c8c990c361b796f3377280b94481fbb54b4802c8362f1c8",
+  "teachingCanonicalSha256": "2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d",
   "review": {
     "reviewer": "GPT-6.1 AI teaching author and arithmetic self-review; not independent teacher",
     "reviewedAt": "2026-10-25",
@@ -88,12 +91,13 @@
     "externalIndependentReview": "PENDING",
     "officialFinalDirectReviewThisSession": false,
     "uiQa": "PENDING",
-    "hasRequiredSourceTable": true
+    "hasRequiredSourceTable": true,
+    "roleCRepair": "E comment #6556051097 required explicit reverse check. Core math and all A-D explanations unchanged; updated digest must be re-reviewed by E and D."
   },
   "studentReleaseApproved": false,
   "deploy": false,
   "blockers": [
-    "AUTHORIZED_INDEPENDENT_HUMAN_TEACHER_SIGNATURE_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
     "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
     "OFFICIAL_FINAL_ADMISSION_PENDING"
   ]
