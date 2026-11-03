@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-02",
+  "subject": "會計學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "下列兩者分別違反何種會計假設？\n  ① 公司董事長提取企業現金繳納個人貸款，記錄為清償公司的負債\n  ② 企業運輸設備期末評價，採用清算價值",
+  "options": [
+    "①會計期間假設、②企業個體假設",
+    "①貨幣評價假設、②繼續經營假設",
+    "①繼續經營假設、②貨幣評價假設",
+    "①企業個體假設、②繼續經營假設"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "a6265d4e40d539220b286b1e3b3b56e7056f70a1d2a5dc5d7aabac8e986c390a",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-02.webp",
+    "webpSha256": "459579f036a616f4205e7bec96dae132a2fe86731b436ec01cbcf7de3830f2de",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "會計假設｜企業個體與繼續經營",
+    "teacherSummary": "董事長個人貸款是私人負債，不可用公司借貸記成清償企業負債，違反企業個體假設。設備以清算價值評估，假定公司將結束營運，違反繼續經營假設，答案D。",
+    "elementarySummary": "老闆自己的借款不是公司的借款；如果公司還打算正常營運，就不能把設備當馬上倒閉要賣掉來算價錢。",
+    "concept": "企業個體：公司財務和老闆個人分開。繼續經營：預期企業正常持續營運，非立即清算。",
+    "memory": "①董事長私人貸款→企業個體；②清算價值→繼續經營，D。",
+    "highlights": [
+      "會計假設"
+    ],
+    "solvingSteps": [
+      "先辨認①是董事長將企業現金拿去付『個人』貸款，卻記成還公司負債。",
+      "企業個體假設要求公司和董事長分開核算；個人債務不是企業負債，所以①違反企業個體。",
+      "②運輸設備期末直接採清算價值，表示用企業即將結束、變賣資產的角度估價。",
+      "正常會計假定企業會繼續經營，故②違反繼續經營假設。",
+      "對照四選項，只有D為『①企業個體假設、②繼續經營假設』。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NONCALC_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A把①說成會計期間假設，但①爭點是董事長私人負債與公司負債混帳，不是年度時間分期；②也非企業個體。",
+        "elementary": "不是算哪一年，是老闆和公司錢混在一起。",
+        "reason": "A把①說成會計期間假設，但①爭點是董事長私人負債與公司負債混帳，不是年度時間分期；②也非企業個體。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B把①說成貨幣評價假設，錯把錢是否以貨幣衡量與私人借款混淆；②繼續經營雖對，整組仍錯。",
+        "elementary": "第二個對，但第一個不是貨幣問題。",
+        "reason": "B把①說成貨幣評價假設，錯把錢是否以貨幣衡量與私人借款混淆；②繼續經營雖對，整組仍錯。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C將①誤列繼續經營、②誤列貨幣評價，沒有抓到個人債務混同與清算的關鍵。",
+        "elementary": "C兩個重點都放錯位置。",
+        "reason": "C將①誤列繼續經營、②誤列貨幣評價，沒有抓到個人債務混同與清算的關鍵。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D①董事長個人借款不得記作公司債務，違反企業個體；②設備採清算價值與繼續經營矛盾，兩項都對。",
+        "elementary": "公司和老闆分開，正常公司不能亂用清算價。",
+        "reason": "D①董事長個人借款不得記作公司債務，違反企業個體；②設備採清算價值與繼續經營矛盾，兩項都對。",
+        "isCorrect": true
+      }
+    },
+    "source": "114 專業科目二原題來源候選，A官方原圖/文字/最終官答公告未准入，不冒稱正式答案"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_FINAL_TEXT_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_AND_CALCULATION_PENDING",
+      "D_REAL_YEAR_V4_8x2_PENDING",
+      "MASTER_TRUSTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "5df3708e2dd3d3e0bc2b60ece58bcfea531e89128c0a4bca317bd1c6f0bf3356"
+}

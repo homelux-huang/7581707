@@ -1,0 +1,14 @@
+name: "114 ROLE B Prof2 accounting economics strict SHA calculations (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-prof2-ac01-ac02-ac06-econ28-econ29-20261102
+  workflow_dispatch:
+jobs:
+  readonly-b:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest discover -s tests -p 'test_114_role_b_prof2_20261102.py' -v

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-06",
+  "subject": "會計學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "甲公司賒購商品乙批，付款信用條件為「2 / 10，1 / 20，n / 30」。下列付款方式，何者支\n  付現金金額最多？",
+  "options": [
+    "成交後第 11 天付一半款項，成交後第 21 天付另一半款項",
+    "成交後第 9 天付一半款項，成交後第 25 天付另一半款項",
+    "成交後第 10 天付一半款項，成交後第 19 天付另一半款項",
+    "成交後第 21 天付一半款項，成交後第 30 天付另一半款項"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "e092de6a2f98762245bafa6aa6b3cf0fa85d2c05a77228f77edb13f0d6a3dbea",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-06.webp",
+    "webpSha256": "035a3fb38bacd9db8c959f6a20e951ce3ff959b2e01604d99aba393c01c89513",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "付款信用條件 2/10、1/20、n/30",
+    "teacherSummary": "2/10代表10天內可折2%、1/20代表20天內可折1%、30天內付清無折扣。每個選項都分兩半付款：A付款99.5%，B99%，C98.5%，D在第21與30天付款都無折扣付100%，最多選D。",
+    "elementarySummary": "越早付錢越有折扣，越晚付折扣越少。D兩次都過了折扣期，所以要付最多。",
+    "concept": "2/10,1/20,n/30：前10天折2%；第11～20天折1%；第21～30天按原價付。",
+    "memory": "A99.5%、B99%、C98.5%、D100%，最大D。",
+    "highlights": [
+      "2 / 10，1 / 20，n / 30"
+    ],
+    "solvingSteps": [
+      "把信用條件翻譯成付款規則：第1～10天折2%，第11～20天折1%，第21～30天無折扣。",
+      "各選項都是一半貨款分兩次付，所以以原價總貨款P計算每半0.5P。",
+      "A第11天付半款有1%折扣、第21天付半款無折扣，0.5×0.99+0.5×1=0.995P。",
+      "B第9天半款折2%、第25天半款無折扣，0.5×0.98+0.5×1=0.99P。",
+      "C第10天半款折2%、第19天半款折1%，0.5×0.98+0.5×0.99=0.985P。",
+      "D第21天與第30天半款都無折扣，0.5×1+0.5×1=1.0P，金額最大。",
+      "反向驗算若原價為1000元，四方案依次付995、990、985、1000元，因此D。"
+    ],
+    "formula": "總現金支出＝各期支付原價比例×(1−適用折扣率)加總。",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "全部貨款P，分兩筆各0.5P",
+        "2/10表示前10天2%折扣、1/20表示20天內1%折扣、n/30到30天應全額付清"
+      ],
+      "formulaUse": "總現金支出＝各期支付原價比例×(1−適用折扣率)加總。",
+      "substitution": [
+        "A=0.5×0.99+0.5×1=0.995",
+        "B=0.5×0.98+0.5×1=0.99",
+        "C=0.5×0.98+0.5×0.99=0.985",
+        "D=0.5×1+0.5×1=1"
+      ],
+      "steps": [
+        "付款條件10日內可折2%、11～20日內折1%、21～30日內不折扣。",
+        "每次都付半款，兩期合計原價P。",
+        "A第11天折1%，第21天不折，付0.995P。",
+        "B第9天折2%，第25天不折，付0.99P。",
+        "C第10天折2%，第19天折1%，付0.985P。",
+        "D第21及30天都無折扣，付1P，最大。",
+        "用P=1000元驗算：A995、B990、C985、D1000，D最多。"
+      ],
+      "result": "D 支付原價100%，金額最多",
+      "unit": "原價P之比例",
+      "option": "D"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A第11天付半款尚可享1%折扣、第21天另一半無折扣，總付原價的99.5%，小於D。",
+        "elementary": "A早一點付，至少有半筆打99折。",
+        "reason": "A第11天付半款尚可享1%折扣、第21天另一半無折扣，總付原價的99.5%，小於D。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B第9天半款享2%折扣、第25天半款無折扣，總付99%，比D100%便宜。",
+        "elementary": "B有半筆打98折，少付一些。",
+        "reason": "B第9天半款享2%折扣、第25天半款無折扣，總付99%，比D100%便宜。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C第10天半款享2%、第19天半款享1%，合計只付98.5%，四方案中更低。",
+        "elementary": "C兩半都有折扣，所以不是付最多。",
+        "reason": "C第10天半款享2%、第19天半款享1%，合計只付98.5%，四方案中更低。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D第21天與第30天都已過20日折扣期限，兩次皆付全額各半款，總付100%，最多。",
+        "elementary": "D完全沒有折扣，付最多。",
+        "reason": "D第21天與第30天都已過20日折扣期限，兩次皆付全額各半款，總付100%，最多。",
+        "isCorrect": true
+      }
+    },
+    "source": "114 專業科目二原題來源候選，A官方原圖/文字/最終官答公告未准入，不冒稱正式答案"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_FINAL_TEXT_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_AND_CALCULATION_PENDING",
+      "D_REAL_YEAR_V4_8x2_PENDING",
+      "MASTER_TRUSTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "8a4564f15bfda2f69689e1fce447a278c1c2d5462a122bd076d54de0129a5466"
+}

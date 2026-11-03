@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-29",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "小方對甜甜圈的需求曲線為一條負斜率的直線，若小方在 P = 20 元時，購買 10 個，消費\n  者剩餘為 100，若甜甜圈店家週年慶打對折 ( P = 10 元 ) ，此時消費者剩餘為多少？",
+  "options": [
+    "150",
+    "200",
+    "225",
+    "375"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "5ce639b95e63682bdf00c7f9a10c31d96afbb3e3bbf86512c0df50a14fdf6e40",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-29.webp",
+    "webpSha256": "7ae146cbf055074e9dd3a06f045eaabcf6452f3bc4dca459e97bce45ee9c2d9b",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "直線需求與消費者剩餘三角形",
+    "teacherSummary": "P=20、Q=10、消費者剩餘100是三角形面積：100=½(最高願付價−20)×10 ⇒最高願付價40。直線需求從(價格40,Q0)至(價格20,Q10)，價格降10至P10，Q升至15；新CS=½(40−10)×15=225，選C。",
+    "elementarySummary": "需求曲線像往下斜的線，消費者剩餘是三角形。原本面積100可算出最上面價格40，再降價後面積變225。",
+    "concept": "線性需求消費者剩餘 CS=½(截距價格−市場價格)×購買量；價格變動時需求量也必須跟著變。",
+    "memory": "截距40、降到P10時Q15，CS=30×15÷2=225（C）。",
+    "highlights": [
+      "消費者剩餘為 100"
+    ],
+    "solvingSteps": [
+      "畫出負斜率直線需求，消費者剩餘是需求曲線下、價格線上的三角形面積。",
+      "已知P20、Q10、CS100，用100=½(Pmax−20)×10。",
+      "解得Pmax−20=20，因此需求曲線的價格截距Pmax=40元。",
+      "直線斜率從(P40,Q0)到(P20,Q10)，價格每降20元需求量增10個。",
+      "當價格從20降到10，再降10元，數量增加5個，所以Q新=10+5=15。",
+      "新消費者剩餘=½(40−10)×15=½×30×15=225元，選C。",
+      "反向驗算舊三角形½×(40−20)×10=100，正好吻合題意；降價後也合理增加至225。"
+    ],
+    "formula": "CS=½(Pmax−P)×Q；線性需求Q隨價格等比例變動。",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "原P20元、Q10個、CS100元",
+        "需求曲線是直線且斜率為負",
+        "折扣後新P10元"
+      ],
+      "formulaUse": "CS=½(Pmax−P)×Q；線性需求Q隨價格等比例變動。",
+      "substitution": [
+        "100=½(Pmax−20)×10 ⇒Pmax=40",
+        "P降20使Q增10 ⇒P再降10使Q增5",
+        "CS新=½(40−10)×15"
+      ],
+      "steps": [
+        "原CS=100，P20Q10反推Pmax40。",
+        "從價格40、數量0至價格20、數量10是一段直線。",
+        "斜率ΔQ/ΔP=10/(20−40)=−0.5個/元。",
+        "新價格10比原價格20低10，Q新增5，得到15個。",
+        "CS新＝(40−10)×15÷2=225元。",
+        "答案C。",
+        "反驗P20Q10原CS=(40−20)×10/2=100元。"
+      ],
+      "result": "消費者剩餘NT$225",
+      "unit": "元",
+      "option": "C"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 150元是把新高度40−10=30元仍乘『舊數量10』再除2，忽略降價後需求量增加至15。",
+        "elementary": "降價後買15個，不能還用原本10個。",
+        "reason": "A 150元是把新高度40−10=30元仍乘『舊數量10』再除2，忽略降價後需求量增加至15。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 200元若只把原CS100翻倍，沒有依新價格和新需求量重新算三角形面積。",
+        "elementary": "三角形不是只放大兩倍，要重算長寬。",
+        "reason": "B 200元若只把原CS100翻倍，沒有依新價格和新需求量重新算三角形面積。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 225元=½×(截距40−新價10)×新量15，符合直線需求新的消費者剩餘。",
+        "elementary": "三角形高30、底15，面積225。",
+        "reason": "C 225元=½×(截距40−新價10)×新量15，符合直線需求新的消費者剩餘。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 375元大於依直線需求新三角形算出的225，常因把增量面積或矩形重複加計而高估。",
+        "elementary": "新三角形面積只有225，375多算了。",
+        "reason": "D 375元大於依直線需求新三角形算出的225，常因把增量面積或矩形重複加計而高估。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 專業科目二原題來源候選，A官方原圖/文字/最終官答公告未准入，不冒稱正式答案"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_FINAL_TEXT_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_AND_CALCULATION_PENDING",
+      "D_REAL_YEAR_V4_8x2_PENDING",
+      "MASTER_TRUSTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "1f6324746dc526f1e15e93d00baf5301febfe060b865e8f5c3101824dfe87e04"
+}

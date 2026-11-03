@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-28",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "商品 X 個別生產者的供給表如表 ( 四 )所示，若市場有 10 個相同的生產者，則市場的\n  供給函數為何？\n                 p        1        2        3\n  表 ( 四 )      q        8       18       28",
+  "options": [
+    "Q = – 20 + 100 P",
+    "Q = – 20 + 200 P",
+    "Q = – 2 + 10 P",
+    "Q = 10 P"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "5886e91e41b3945d9c0e9346db0e3b1086d3b1943ecf0b841932b7c9fa7d74dd",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-28.webp",
+    "webpSha256": "8851a1556d7073d9a4164c84ae742925b11c59f9a6d02e60086d545469e7b68d",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "供給表推導十家相同廠商市場供給",
+    "teacherSummary": "個別廠商P從1升2、3時，q從8升18、28，線性斜率Δq/ΔP=10，個別供給q=10P−2；市場10家相同廠商，Q=10q=100P−20，選A。",
+    "elementarySummary": "一間店價格每加1元就多供應10件，十間一樣的店把供應數乘10，得到總供給。",
+    "concept": "同價格下市場供給量＝每家供給量橫向加總；10家相同廠商Q=10q。",
+    "memory": "單家q=10P−2，十家Q=100P−20（A）。",
+    "highlights": [
+      "10 個相同的生產者"
+    ],
+    "solvingSteps": [
+      "先看表格P=1、2、3時每家q=8、18、28，價增1元產量增10。",
+      "設個別供給q=aP+b，斜率a=(18−8)/(2−1)=10。",
+      "代入P=1、q=8得到8=10+b，因此b=−2，個別q=10P−2。",
+      "市場有10家完全相同的廠商，市場總供給Q=10×q=10(10P−2)=100P−20。",
+      "對照A為Q=−20+100P；B斜率200太大、C僅個別供給、D漏截距。",
+      "反向驗算P=1時市場Q=80，10家每家8；P=2時Q=180，每家18，全部吻合。"
+    ],
+    "formula": "個別供給q=aP+b；同價格市場Q=10q。",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "單家(P,q)=(1,8),(2,18),(3,28)",
+        "10家相同生產者"
+      ],
+      "formulaUse": "個別供給q=aP+b；同價格市場Q=10q。",
+      "substitution": [
+        "a=(18−8)/(2−1)=10",
+        "b=8−10×1=−2",
+        "Q=10(10P−2)=100P−20"
+      ],
+      "steps": [
+        "P加1時q由8至18增10，因此斜率10。",
+        "個別q=10P+b，代P1、q8得b=−2。",
+        "所以q=10P−2。",
+        "十家相同廠商Q=10q=100P−20。",
+        "對照A的Q=−20+100P相同。",
+        "驗算P1：Q80=10×8。",
+        "驗算P3：Q280=10×28。"
+      ],
+      "result": "Q=100P−20",
+      "unit": "市場供給量Q（商品X數量）",
+      "option": "A"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A Q=−20+100P 就是個別q=10P−2乘10家而得的市場供給，與表格每個價格對應。",
+        "elementary": "十家店相加，A的公式正確。",
+        "reason": "A Q=−20+100P 就是個別q=10P−2乘10家而得的市場供給，與表格每個價格對應。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B Q=−20+200P 把市場供給斜率誤設200；價格每增1單家只多供10、十家只多100。",
+        "elementary": "十家總共每漲1元多100，不是200。",
+        "reason": "B Q=−20+200P 把市場供給斜率誤設200；價格每增1單家只多供10、十家只多100。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C Q=−2+10P 是單一生產者的供給函數，忘記有10家相同廠商需要乘10。",
+        "elementary": "C只算一家店，忘了其他九家。",
+        "reason": "C Q=−2+10P 是單一生產者的供給函數，忘記有10家相同廠商需要乘10。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D Q=10P 不僅沒有將斜率乘10，也漏了個別供給的截距−2，代P=1會算10而非市場80。",
+        "elementary": "D既漏家數，也漏原本的減2。",
+        "reason": "D Q=10P 不僅沒有將斜率乘10，也漏了個別供給的截距−2，代P=1會算10而非市場80。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 專業科目二原題來源候選，A官方原圖/文字/最終官答公告未准入，不冒稱正式答案"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_FINAL_TEXT_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_AND_CALCULATION_PENDING",
+      "D_REAL_YEAR_V4_8x2_PENDING",
+      "MASTER_TRUSTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "64e8c31ede157e7b00f89ba4b869055388d67a35d88374063b1c639769e3eac1"
+}
