@@ -80,6 +80,19 @@ class RoleA114LampsSource(unittest.TestCase):
         self.assertEqual(shared["sourceRevisionSeed"],seed)
         self.assertEqual(shared["sourceRevisionSha256"],sha(seed.encode("utf-8")))
         self.assertFalse(shared["containsQ16Question"])
+    def test_shared_has_actual_direct_source_visual_review_not_auto_inherited(self):
+        r=self.ev
+        self.assertEqual(r["status"],"ROLE_A_SOURCE_IMAGE_VISUAL_REVIEW_CANDIDATE_NO_RELEASE")
+        shared=r["sharedMaterial"]
+        self.assertEqual(shared["visualReviewStatus"],"PASS_AI_ASSISTANT_DIRECT_VISUAL_ORIGINAL")
+        self.assertTrue(all(shared["visualReviewResult"][name] for name in (
+            "headingComplete", "threeOriginalLampIllustrations", "allThreeReadingParagraphGroupsComplete",
+            "lastReadingSentenceComplete", "noQ16QuestionOrOptions", "noExamPageHeaderFooter",
+            "losslessPixelEqualityVerifiedByCI"
+        )))
+        self.assertFalse(shared["visualReviewResult"]["independentHumanExaminer"])
+        self.assertEqual(shared["sourceTextG2Status"],"PENDING_SEPARATE_VERIFICATION")
+
     def test_source_confirmation_nothing_in_16_to18_without_fabrication(self):
         r=self.ev
         notice=BASE/"QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json"

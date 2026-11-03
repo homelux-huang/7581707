@@ -4,7 +4,7 @@
   "taskId": "A-114-C16-C18-LAMPS-ORIGINAL-G1-G3-20261103-01",
   "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595357915",
   "baseSHA": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
-  "status": "ROLE_A_SOURCE_G1_SHARED_PIXEL_GENERATED_PENDING_DIRECT_VISUAL_REVIEW_NO_RELEASE",
+  "status": "ROLE_A_SOURCE_IMAGE_VISUAL_REVIEW_CANDIDATE_NO_RELEASE",
   "reviewer": "GPT-6 Role A / AI Assistant Source Visual Review (not human and not independent E teaching QA)",
   "imageReviewMethod": "Viewed archived original official 114 Chinese p6/p7 + exactly three isolated original WebP and announced-answer image",
   "pdfDownloadedOrRehashedThisTask": false,
@@ -109,11 +109,22 @@
     "sourcePageNoRecreation": true,
     "reusedSingleImageG1AllThree": true,
     "generationMethod": "PIL.Image.crop original TCTE p6 decoded pixels -> deterministic lossless WebP; compare exact RGB pixel array",
-    "visualReviewStatus": "PENDING_DIRECT_ASSISTANT_INSPECTION",
+    "visualReviewStatus": "PASS_AI_ASSISTANT_DIRECT_VISUAL_ORIGINAL",
     "containsQ16Question": false,
     "sourceTextG2Status": "PENDING_SEPARATE_VERIFICATION",
     "sourceRevisionSeed": "ROLE_A_114_LAMPS_SHARED_G1_V1\nb27e23f0c33fdfc4843dac6b6b5aff8fae5a40254c986b8705d73813c147e403\nd04b2f4b9bd7bb2a1212fdb12da4ee7d9b0cee14afd3e17d4bd1733061952d4a\n9fd277ec092fe55fb9bc12080b6bce9749ffe9f6b7cb468e33439ae5b23c985e\n50c3718fc832c152e735ad773272fd4466888d57cc18b6b319c85218773c53ed",
-    "sourceRevisionSha256": "0d7aa9c1ccf627e326aa2edac0e6c61b4436d49e9313246275365f2d41be27eb"
+    "sourceRevisionSha256": "0d7aa9c1ccf627e326aa2edac0e6c61b4436d49e9313246275365f2d41be27eb",
+    "visualReviewMethod": "GPT-6 Role A AI Assistant Source Visual Review: directly opened newly generated WebP and official original p6; all three lamp illustration + paragraph blocks and source heading present; complete final buffalo-lamp paragraph; no Q16 question or options, no p6 exam header/footer, no other question.",
+    "visualReviewResult": {
+      "headingComplete": true,
+      "threeOriginalLampIllustrations": true,
+      "allThreeReadingParagraphGroupsComplete": true,
+      "lastReadingSentenceComplete": true,
+      "noQ16QuestionOrOptions": true,
+      "noExamPageHeaderFooter": true,
+      "losslessPixelEqualityVerifiedByCI": true,
+      "independentHumanExaminer": false
+    }
   },
   "officialNotice": {
     "ledgerPath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
