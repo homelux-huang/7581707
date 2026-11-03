@@ -1,0 +1,29 @@
+name: Role A 114 E11 exact source G1 G2 G3 205 SQLite admission evidence (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-114-e11-final-source-admission-20261103]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_exact:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e11-final-source-admission-20261103'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact source answer notice and 205 SQLite checks (NO RELEASE)
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_e11_final_admission.py -v
+      - name: Fail closed on dirty source checkout
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
