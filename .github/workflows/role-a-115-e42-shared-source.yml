@@ -1,0 +1,38 @@
+name: ROLE A 115 English Q42 exact original single and p10 shared source QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-e42-shared-source-g1-20261103
+    paths:
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-42.webp
+      - sudu/data/processed/115/review-evidence/115-00-E-42-original-shared-G1-20261103.json
+      - tests/test_role_a_115_e42_shared_source.py
+      - .github/workflows/role-a-115-e42-shared-source.yml
+      - docs/ROLE_A_115_E42_SHARED_SOURCE_20261103.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  q42_original:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-e42-shared-source-g1-20261103'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Q42 source SHA, shared original/published answer, no release negative tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_e42_shared_source.py
+          python -m unittest discover -s tests -p test_role_a_115_e42_shared_source.py -v
+      - name: Source QA only, no published or QA mutation
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "No Q42 source/text/answer formal admission; no READY."
