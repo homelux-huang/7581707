@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "questionId": "114-00-E-04",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT_SOURCE_PENDING",
+  "question": "After looking at his grandfather’s           on the wall, John was happy to discover that his\n    grandfather and he really looked alike.",
+  "options": [
+    "cattle",
+    "jewelry",
+    "portrait",
+    "whistle"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "895536f2643838124889d2331a7ce56058ca8f91f3da0e227f91d734f009e7e8",
+    "webpSha256": "2623bf3b038d5730d081e59fbef321ba2c9a24742bbba4fd65788544464e29bd",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-04.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerEvidence": "BANK_CANDIDATE_ONLY_NOT_FINAL_ADMISSION"
+  },
+  "teaching": {
+    "topic": "祖父肖像與相像 looked alike",
+    "teacherSummary": "牆上的物品讓 John 看出自己和祖父外貌相似，只有 portrait 能呈現祖父的臉，選 C。",
+    "elementarySummary": "看爺爺的畫像才知道兩個人長得像；portrait 就是肖像。",
+    "concept": "portrait：肖像；肖像畫；依原句上下文及詞語搭配判斷。",
+    "memory": "on the wall＋looked alike＝portrait（C）",
+    "solvingSteps": [
+      "從 grandfather's ___ on the wall 找到牆上供觀看的物品。",
+      "從 looked alike 得知 John 比較自己和祖父的外貌。",
+      "代入 portrait，肖像可以呈現祖父的臉，兩個線索都符合。",
+      "排除 cattle、jewelry、whistle，這些都不會提供祖父肖像，因此 C。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "cattle 是牛或牛群，不能當作祖父的肖像供 John 觀看並比較五官。",
+        "elementary": "看牛不會知道爺爺的臉。",
+        "reason": "cattle 是牛或牛群，不能當作祖父的肖像供 John 觀看並比較五官。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "jewelry 是珠寶或首飾，即使可以展示，也不能直接呈現祖父的臉。",
+        "elementary": "首飾也不能讓人比對長相。",
+        "reason": "jewelry 是珠寶或首飾，即使可以展示，也不能直接呈現祖父的臉。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "portrait 是肖像圖像，可以掛牆並顯示祖父長相，John 才能發現 looked alike。",
+        "elementary": "畫像能看到祖父長相，正確。",
+        "reason": "portrait 是肖像圖像，可以掛牆並顯示祖父長相，John 才能發現 looked alike。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "whistle 是哨子、發聲器，並不提供祖父外貌影像讓 John 比對。",
+        "elementary": "哨子拿來吹，沒有祖父的臉。",
+        "reason": "whistle 是哨子、發聲器，並不提供祖父外貌影像讓 John 比對。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "looked alike",
+      "portrait"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測官方原題資料候選；原圖 G1 及正式答案 G2/G3 仍待角色 A 完成，作者不是來源核准者。"
+  },
+  "enrichment": {
+    "sourceHighlights": [
+      {
+        "text": "looked alike",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "portrait",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "portrait",
+        "ipa": "/ˈpɔːr.trɪt/",
+        "accent": "Cambridge US",
+        "level": "中級",
+        "meaning": "肖像；肖像畫",
+        "synonyms": [
+          "likeness",
+          "picture of a person"
+        ],
+        "antonyms": [
+          "landscape（不同繪畫題材，非嚴格反義）"
+        ],
+        "usageNote": "必須按原句語境使用同反義字；反義可能只是概念對照，不代表任何句子均可互換。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/pronunciation/english/portrait"
+      }
+    ],
+    "newsExample": {
+      "english": "A portrait of a 2025 honoree was announced for display at the National Portrait Gallery.",
+      "chinese": "國家肖像藝廊宣布將展出 2025 年獲表揚者的肖像。",
+      "highlightActualForm": "portrait",
+      "sourceUrl": "https://www.si.edu/newsdesk/releases/national-portrait-gallery-announces-portrait-nation-2025-honorees",
+      "sourceIsContextOnly": true,
+      "notAnArticleQuote": true
+    }
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_SINGLE_WEBP_VISUAL_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_SOURCE_ANSWER_NOTICE_PENDING",
+      "ROLE_E_DISTINCT_AI_PENDING",
+      "ROLE_D_CURRENT_SHA_V4_8X2_PENDING",
+      "MASTER_APPROVED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "1a64e3ec8b7d43bafe9c372e34f66a3a3695039ee7bb2458c79e1013f842dcf0"
+}

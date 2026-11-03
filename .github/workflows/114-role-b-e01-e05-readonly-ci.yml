@@ -1,0 +1,14 @@
+name: "114 Role B E01-E05 author QA (SOURCE PENDING / NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-e01-e05-20261102
+  workflow_dispatch:
+jobs:
+  author-readonly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest discover -s tests -p 'test_114_role_b_e01_e05_20261102.py' -v

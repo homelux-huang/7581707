@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "taskId": "B-114-E01-E05-NEW-SOURCE-BOUND-DRAFT-20261102-02",
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "total": 5,
+  "items": [
+    {
+      "questionId": "114-00-E-01",
+      "path": "sudu/teaching-candidates/114-role-b-e01-e05-20261102/114-00-E-01.json",
+      "candidateAnswer": "A",
+      "sourceRevision": "08f4f55b9083a07fe51811c1596eac3bcf35dd801a624a30ca191f7aac961b49",
+      "webpSha256": "388ee2ac0b2eabbc2641b96161e315baf1ab0f29f10dfaaae8969bb4848f7043",
+      "composedTeachingSha256": "3ae355d7b7097795d86f31d4f6ec0ca902226ebaac883122153dcf5e56408a5c",
+      "fileSha256": "0a8a2ae66b79cb25e385bc314e6146b4fa1ba90fd21836f2fa2ba7acbab436ff",
+      "sourceAdmission": false,
+      "roleEPass": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-E-02",
+      "path": "sudu/teaching-candidates/114-role-b-e01-e05-20261102/114-00-E-02.json",
+      "candidateAnswer": "B",
+      "sourceRevision": "a925a4a2f8a8945459e6c5086d6028e628c3ceed4ebf25a7b5426d205fb43e95",
+      "webpSha256": "6b2bd0eccfe234352137e400c62499daf678c78aca6ccbc425b3b50ffe4be0a8",
+      "composedTeachingSha256": "185b79a4c4883d0b8395aa1d95da74e08e590e04f32c2f2da27632b200e681b3",
+      "fileSha256": "7ebf84b057ee86e1c459aa1990b8a8ab7fd76d2e7b4effc2fba5b49288fbd45f",
+      "sourceAdmission": false,
+      "roleEPass": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-E-03",
+      "path": "sudu/teaching-candidates/114-role-b-e01-e05-20261102/114-00-E-03.json",
+      "candidateAnswer": "B",
+      "sourceRevision": "44d34e025eac5075b54fa65e3095380df727f2b93d27059e14107c7ebda78455",
+      "webpSha256": "da6e74d559712e9caf115082bdaf80d18990a51c0399085719b8995e55608444",
+      "composedTeachingSha256": "2796b2a27bdf22314f84690e89d7a0b9cb072a03611434b3fffe2e493cf79b5b",
+      "fileSha256": "e5cd8e1a86560810292ac0ae0a0662ee19145a7d35694c6cc210d6697d4fdc89",
+      "sourceAdmission": false,
+      "roleEPass": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-E-04",
+      "path": "sudu/teaching-candidates/114-role-b-e01-e05-20261102/114-00-E-04.json",
+      "candidateAnswer": "C",
+      "sourceRevision": "895536f2643838124889d2331a7ce56058ca8f91f3da0e227f91d734f009e7e8",
+      "webpSha256": "2623bf3b038d5730d081e59fbef321ba2c9a24742bbba4fd65788544464e29bd",
+      "composedTeachingSha256": "1a64e3ec8b7d43bafe9c372e34f66a3a3695039ee7bb2458c79e1013f842dcf0",
+      "fileSha256": "faf820340e09a6741a2f9a5ce2ab6a7b1dc9a2807a6759f2deb689bff6b1befa",
+      "sourceAdmission": false,
+      "roleEPass": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-E-05",
+      "path": "sudu/teaching-candidates/114-role-b-e01-e05-20261102/114-00-E-05.json",
+      "candidateAnswer": "C",
+      "sourceRevision": "b69ffbde3185a8abf0194fe3cc47d31b2ad9e9f5bfb8d3a502b80ce7d33d052e",
+      "webpSha256": "29d45788dd4bfc23b1f593348069d38edd54c835c30f52d7cc934e6e58cdc061",
+      "composedTeachingSha256": "abaac0f99f3100526fac8e6557f7545780bb9fe13d4618b470c6ea70117c9923",
+      "fileSha256": "b48ee6dbc2bf103c66dd280752792fd6148d59182864c1031146c5c17a2d105f",
+      "sourceAdmission": false,
+      "roleEPass": false,
+      "ready": false
+    }
+  ],
+  "sourceStatus": "ORIGINAL_G1_DRAFT_QUESTION_AND_ANSWER_G2_G3_NOT_VERIFIED",
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "requiresHumanTeacher": false,
+  "roleEReview": "PENDING_INDEPENDENT_ROLE_E",
+  "noRelease": true
+}
