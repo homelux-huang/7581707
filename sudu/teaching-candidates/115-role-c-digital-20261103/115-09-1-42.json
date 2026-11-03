@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "questionId": "115-09-1-42",
+  "year": 115,
+  "subject": "數位科技",
+  "paperCode": "09-1",
+  "originalQuestionNumber": 42,
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_QA_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "關於雲端服務的敘述，下列何者正確？",
+  "options": [
+    "Office 辦公室套裝軟體可開啟遠端桌面控制功能來啟動檔案總管，進行檔名瀏覽",
+    "參加Google Meet 線上網路視訊會議，可免除往返的交通時間",
+    "行事曆可用Dropbox 來建立不同的帳號，並管理不同的行事曆",
+    "若要建立兩個Google 日曆，一定要再申請另一個新的Google 帳號"
+  ],
+  "answerCandidate": "B",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-42.webp",
+  "imageSha256": "3aeeb6689ff63ccc9fc0f27c14779e6ccbdf2371b6a7712c6a89c3239b435a6e",
+  "sourceTextRevision": "3f00efda8ddb1604a8481bc5fc0dd5dbf71d238cdf39468147067d37c5376813",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "sourceQuestionVerified": false,
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "officialAnswerAutoMatchedOnly": true,
+  "officialFinalDirectVerified": false,
+  "officialCorrectionNoticeVerified": false,
+  "teaching": {
+    "teacherSummary": "**Google Meet** 的視訊會議讓參與者在不同地點線上討論，可以免去特地前往會議地點的交通時間，故 B 正確。Dropbox 偏向雲端檔案，Google 日曆同帳號可建立多個日曆。",
+    "elementarySummary": "大家開視訊會議，就不一定要搭車到同一棟樓。雲端硬碟是放檔案的地方，同一帳號也能有好幾本日曆。",
+    "memory": "**Meet＝線上開會省交通，Dropbox＝雲端檔案，同帳號可有多 Google 日曆 → B。**",
+    "concept": "不同雲端服務有視訊溝通、檔案同步、行事曆等不同功能。應按服務實際用途判定，不宜把各工具功能混為一談。",
+    "extension": "是否真的完全不用交通取決於參與方式；題目比較的是遠端參與視訊與現場赴會的一般差別。",
+    "source": "115年官方候選題庫；原始WebP/官方最終答案及更正仍待A G1–G3獨立驗證。",
+    "formula": null,
+    "highlights": [
+      "Google Meet",
+      "視訊會議",
+      "交通時間",
+      "Dropbox",
+      "Google 日曆"
+    ],
+    "reasoningSteps": [
+      "辨認 Meet 是可遠端參與的視訊會議。",
+      "確認Dropbox不是專門的多日曆管理工具，Office文書軟體也不等於遠端桌面控制。",
+      "確認同一 Google 帳號可以新增多本日曆，故選B。"
+    ],
+    "hasExamCalculation": false,
+    "calculationReviewed": false,
+    "examCalculation": null,
+    "optionExplanations": {
+      "A": {
+        "teacher": "文書套裝軟體的基本用途不是開啟遠端桌面控制並操作另一台電腦的檔案總管。",
+        "elementary": "寫文件的軟體不等於能遙控別人的電腦，所以A錯。",
+        "reason": "文書套裝軟體的基本用途不是開啟遠端桌面控制並操作另一台電腦的檔案總管。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "Meet讓參與者遠端開視訊會議，免去赴同一地點的來回交通，答案B。",
+        "elementary": "不用跑到會議現場，在家連線就能省下搭車時間。",
+        "reason": "Meet讓參與者遠端開視訊會議，免去赴同一地點的來回交通，答案B。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "Dropbox主要提供檔案儲存與同步，不是題述的多帳號行事曆管理服務。",
+        "elementary": "它比較像網路置物櫃，不是專門管理好多本日曆。",
+        "reason": "Dropbox主要提供檔案儲存與同步，不是題述的多帳號行事曆管理服務。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "Google Calendar同一帳號能建立不只一本日曆，不一定要另開帳號，故D錯。",
+        "elementary": "同一人能有學校與生活兩本日曆，不必再辦新帳號。",
+        "reason": "Google Calendar同一帳號能建立不只一本日曆，不一定要另開帳號，故D錯。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "86494aebef4217cb52e2165c74dd3bbc126182e683782a295d1108a9bf94f269",
+  "review": {
+    "reviewer": "GPT-6 ROLE C AUTHOR (not A or independent E)",
+    "sourceOriginalImageViewedByAuthor": false,
+    "officialPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_CORRECTION_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_8X2_EXACT_DIGEST_PENDING"
+  ],
+  "studentReleaseApproved": false,
+  "deploy": false
+}

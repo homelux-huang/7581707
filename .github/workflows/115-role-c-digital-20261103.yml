@@ -1,0 +1,18 @@
+name: ROLE C 115 Digital new five candidate author QA (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-digital38-41-42-43-45-20261103]
+  pull_request:
+    paths: ['sudu/teaching-candidates/115-role-c-digital-20261103/**','tests/test_115_role_c_digital_20261103.py','.github/workflows/115-role-c-digital-20261103.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_115_role_c_digital_20261103.py' -v

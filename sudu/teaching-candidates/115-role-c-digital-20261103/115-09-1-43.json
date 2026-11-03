@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "questionId": "115-09-1-43",
+  "year": 115,
+  "subject": "數位科技",
+  "paperCode": "09-1",
+  "originalQuestionNumber": 43,
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_QA_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "尤工程師正在為公司設計網站標誌(Logo)，並被要求將檔案儲存為SVG(Scalable Vector\n   Graphics)格式。關於SVG 的敘述，下列何者正確？",
+  "options": [
+    "是一種能在Logo 中嵌入語音一起呈現的格式",
+    "一旦儲存後，檔案很難被他人修改，安全性非常高",
+    "這種圖檔最高可提供220種顏色，適合表現Logo 的顏色細節",
+    "是以文字描述影像的圖檔格式，能呈現向量圖形特性，且適用於網頁上"
+  ],
+  "answerCandidate": "D",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-43.webp",
+  "imageSha256": "612bd1e35cb43c5b96387981bd1126c770687d1085de209cd8e4a16391357447",
+  "sourceTextRevision": "96e2ce5afa898c3288a50d5ebcf2c8261616a4ac1ea16f426c061c71985b4424",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "sourceQuestionVerified": false,
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "officialAnswerAutoMatchedOnly": true,
+  "officialFinalDirectVerified": false,
+  "officialCorrectionNoticeVerified": false,
+  "teaching": {
+    "teacherSummary": "**SVG (Scalable Vector Graphics)** 是使用**文字/XML** 描述路徑、線條及圖形的**向量圖**格式，能縮放而維持清晰，適用網頁 Logo；正解 D。",
+    "elementarySummary": "SVG像一本用文字寫的畫圖說明書：畫線、畫圓、填顏色。圖案放大時不必把小方格一起變大，所以適合網站圖示。",
+    "memory": "**SVG＝XML文字描述向量圖，可縮放、適合網頁Logo → D。**",
+    "concept": "向量圖以幾何形狀描述畫面，不像點陣圖倚賴固定像素。SVG 通常是可讀的文字/XML，並非天生不能修改或具有固定很少的顏色上限。",
+    "extension": "SVG可修改，因此不能從檔案類型推論天然防竄改；來源不可信的SVG仍需遵守網站安全處理方式。",
+    "source": "115年官方候選題庫；原始WebP/官方最終答案及更正仍待A G1–G3獨立驗證。",
+    "formula": null,
+    "highlights": [
+      "SVG",
+      "XML",
+      "向量圖",
+      "Scalable Vector Graphics",
+      "Logo"
+    ],
+    "reasoningSteps": [
+      "辨認SVG名稱中的Scalable Vector代表可縮放的向量圖。",
+      "確認圖形以文字/XML描述形狀。",
+      "排除專門嵌音訊、存檔後難以修改、固定最高顏色數的說法，選D。"
+    ],
+    "hasExamCalculation": false,
+    "calculationReviewed": false,
+    "examCalculation": null,
+    "optionExplanations": {
+      "A": {
+        "teacher": "SVG主要描述向量影像，不是為Logo直接內嵌音訊而設的音訊容器，A不合。",
+        "elementary": "它是畫圖格式，不是特地用來裝聲音的。",
+        "reason": "SVG主要描述向量影像，不是為Logo直接內嵌音訊而設的音訊容器，A不合。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "SVG一般是可編輯文字/XML資料，不能說一存檔就很難修改或天然安全，B錯。",
+        "elementary": "圖案的文字說明能被改動，並沒有自動上鎖。",
+        "reason": "SVG一般是可編輯文字/XML資料，不能說一存檔就很難修改或天然安全，B錯。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "SVG並非選項所稱的固定220色上限，顏色與向量表示不受這個數字限制，C錯。",
+        "elementary": "它沒有題目說的這種小小顏色限制。",
+        "reason": "SVG並非選項所稱的固定220色上限，顏色與向量表示不受這個數字限制，C錯。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "SVG以文字/XML描述向量形狀，可縮放且適合網頁呈現Logo，D正確。",
+        "elementary": "用文字說明畫法，放大依然清楚，所以D對。",
+        "reason": "SVG以文字/XML描述向量形狀，可縮放且適合網頁呈現Logo，D正確。",
+        "isCorrect": true
+      }
+    }
+  },
+  "teachingCanonicalSha256": "8583805a35d541c6c4168cb7a6238a15447183ff0a7167d7ec19264fde4d0094",
+  "review": {
+    "reviewer": "GPT-6 ROLE C AUTHOR (not A or independent E)",
+    "sourceOriginalImageViewedByAuthor": false,
+    "officialPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_CORRECTION_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_8X2_EXACT_DIGEST_PENDING"
+  ],
+  "studentReleaseApproved": false,
+  "deploy": false
+}

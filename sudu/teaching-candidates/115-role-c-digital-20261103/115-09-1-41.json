@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "questionId": "115-09-1-41",
+  "year": 115,
+  "subject": "數位科技",
+  "paperCode": "09-1",
+  "originalQuestionNumber": 41,
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_QA_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "劉老師為鼓勵學生的學習，對平時成績擇優計算，於是在Excel 儲存格中撰寫公式為：\n   「=ROUND(AVERAGE(LARGE(E4:N4,{1,2,3,4,5,6})),0)」。下列敘述何者正確？\n  (註：本題中LARGE 函數是用來取得前6 大的值)\n  ①ROUND 函數是用來取平均值\n  ②公式中的0 讓AVERAGE 取整數\n  ③資料範圍為E4 到N4\n  ④最後得到的值是整數",
+  "options": [
+    "①、②",
+    "①、③",
+    "③、④",
+    "②、④"
+  ],
+  "answerCandidate": "C",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-41.webp",
+  "imageSha256": "12d84f7468102abd64cc2319501c3dbdf046d2ce839607dbd88c47509bc0465b",
+  "sourceTextRevision": "a195c1a235c0121c745590e3b415dde4c29c3815838bbc5ec8ed160519e9633f",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "sourceQuestionVerified": false,
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "officialAnswerAutoMatchedOnly": true,
+  "officialFinalDirectVerified": false,
+  "officialCorrectionNoticeVerified": false,
+  "teaching": {
+    "teacherSummary": "公式由內向外：**LARGE** 取得 E4:N4 的前六大；**AVERAGE** 取平均；**ROUND(...,0)** 四捨五入到整數。因此③資料範圍及④結果為整數正確，選 C。",
+    "elementarySummary": "先挑十筆成績裡最高六筆，算六筆平均，最後四捨五入到沒有小數。ROUND不是平均，AVERAGE不是四捨五入。",
+    "memory": "**LARGE 前六大 → AVERAGE 平均 → ROUND(…,0) 變整數；③④→C。**",
+    "concept": "LARGE(array,k) 取第k大；{1,2,3,4,5,6} 選六個名次；AVERAGE 算平均；ROUND(number,0) 將平均四捨五入到個位數。",
+    "extension": "以下算例只為示範函數運作，原題**未提供實際十筆成績**；不得把示例數字當成題目數據。",
+    "source": "115年官方候選題庫；原始WebP/官方最終答案及更正仍待A G1–G3獨立驗證。",
+    "formula": "先LARGE選六大，再AVERAGE求平均，最後ROUND(number,0)四捨五入個位數。",
+    "highlights": [
+      "LARGE",
+      "AVERAGE",
+      "ROUND",
+      "E4:N4",
+      "前6大",
+      "整數"
+    ],
+    "reasoningSteps": [
+      "E4:N4 是第4列 E 到 N 欄資料，③成立。",
+      "LARGE(E4:N4,{1,2,3,4,5,6}) 取第1至第6大。",
+      "AVERAGE 對六個值求平均，ROUND(...,0) 對平均四捨五入成整數，④成立。",
+      "示例前六大為93、88、87、80、79、76，總和503，平均503÷6≈83.833，四捨五入得84。",
+      "驗算：ROUND(83.833,0)=84，而AVERAGE只得83.833，證明0控制ROUND，選 C。"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": false,
+    "examCalculation": {
+      "given": [
+        "原式=ROUND(AVERAGE(LARGE(E4:N4,{1,2,3,4,5,6})),0)",
+        "無實際成績，以下用獨立教學示例"
+      ],
+      "formulaUse": "先LARGE選六大，再AVERAGE求平均，最後ROUND(number,0)四捨五入個位數。",
+      "substitution": [
+        "示例前六大93、88、87、80、79、76",
+        "(93+88+87+80+79+76)÷6=503÷6≈83.833",
+        "ROUND(83.833,0)=84"
+      ],
+      "steps": [
+        "LARGE 的排名陣列有六項，因此選六個最大值。",
+        "示例加總93+88+87+80+79+76=503分。",
+        "求平均503÷6≈83.833分。",
+        "ROUND(...,0)四捨五入得84分，因此④正確。",
+        "③ E4:N4 直接由原式核對，選C。",
+        "逆向驗算：83.833 四捨五入至個位確為84，與③④的函數功能一致。"
+      ],
+      "result": "③④正確；教學示例為84分",
+      "unit": "示例為分；選項判斷無單位",
+      "option": "C",
+      "verification": "503÷6≈83.833，ROUND(83.833,0)=84；E4:N4明示資料範圍。"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "①錯：ROUND是四捨五入函數，不負責取平均；②錯：0是ROUND的小數位數參數。",
+        "elementary": "A把求平均與變整數兩件事都說錯了。",
+        "reason": "①錯：ROUND是四捨五入函數，不負責取平均；②錯：0是ROUND的小數位數參數。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "③ E4:N4 正確，但①誤將ROUND當AVERAGE，不能選B。",
+        "elementary": "資料範圍講對了，可是平均函數的名字說錯了。",
+        "reason": "③ E4:N4 正確，但①誤將ROUND當AVERAGE，不能選B。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "③ E4:N4 是資料範圍；④ ROUND(...,0) 輸出整數，兩句皆正確，答案C。",
+        "elementary": "先在這十格選六個最高分，最後會得到整數，所以C正確。",
+        "reason": "③ E4:N4 是資料範圍；④ ROUND(...,0) 輸出整數，兩句皆正確，答案C。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "④正確，但②把參數0說成AVERAGE的動作；實際是ROUND到個位數，D不成立。",
+        "elementary": "後半句對了，前半卻把0的作用說錯，所以D不能選。",
+        "reason": "④正確，但②把參數0說成AVERAGE的動作；實際是ROUND到個位數，D不成立。",
+        "isCorrect": false
+      }
+    }
+  },
+  "teachingCanonicalSha256": "5f99ac8b1d1c68ed69e1f93bf19b5c60498d6d8c8358b77b40c99e66ae81fe75",
+  "review": {
+    "reviewer": "GPT-6 ROLE C AUTHOR (not A or independent E)",
+    "sourceOriginalImageViewedByAuthor": false,
+    "officialPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_CORRECTION_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_8X2_EXACT_DIGEST_PENDING"
+  ],
+  "studentReleaseApproved": false,
+  "deploy": false
+}

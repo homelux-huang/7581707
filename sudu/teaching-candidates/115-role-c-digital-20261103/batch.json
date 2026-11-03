@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "items": [
+    {
+      "questionId": "115-09-1-38",
+      "path": "sudu/teaching-candidates/115-role-c-digital-20261103/115-09-1-38.json",
+      "sourceRevision": "af8f4b9a8ba8d417daf01a22298b358aedbea50c735af9c0ed42dee99cec2b4a",
+      "webpSha256": "8334fa0a049344e8dd3247df9d080a92b7975b68a90dd186b33b4d7707d61b0d",
+      "teachingSha256": "a0692d5035f8c6bb0e3c553e2dcef71fd14a267344b4db1eb36e24ab113a48c7",
+      "fileSha256": "10759f451a40b02a84c688ec941defe3506cd076872eff599e83dbdcf465a322",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-41",
+      "path": "sudu/teaching-candidates/115-role-c-digital-20261103/115-09-1-41.json",
+      "sourceRevision": "a195c1a235c0121c745590e3b415dde4c29c3815838bbc5ec8ed160519e9633f",
+      "webpSha256": "12d84f7468102abd64cc2319501c3dbdf046d2ce839607dbd88c47509bc0465b",
+      "teachingSha256": "5f99ac8b1d1c68ed69e1f93bf19b5c60498d6d8c8358b77b40c99e66ae81fe75",
+      "fileSha256": "6466a8185f979d15f767468f0428364d66263262f0e51c87e569906b4b719e53",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-42",
+      "path": "sudu/teaching-candidates/115-role-c-digital-20261103/115-09-1-42.json",
+      "sourceRevision": "3f00efda8ddb1604a8481bc5fc0dd5dbf71d238cdf39468147067d37c5376813",
+      "webpSha256": "3aeeb6689ff63ccc9fc0f27c14779e6ccbdf2371b6a7712c6a89c3239b435a6e",
+      "teachingSha256": "86494aebef4217cb52e2165c74dd3bbc126182e683782a295d1108a9bf94f269",
+      "fileSha256": "42aae839aafcfc0f7d3f22638779513f2e9669193c3e8c58ffad243a44de16c5",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-43",
+      "path": "sudu/teaching-candidates/115-role-c-digital-20261103/115-09-1-43.json",
+      "sourceRevision": "96e2ce5afa898c3288a50d5ebcf2c8261616a4ac1ea16f426c061c71985b4424",
+      "webpSha256": "612bd1e35cb43c5b96387981bd1126c770687d1085de209cd8e4a16391357447",
+      "teachingSha256": "8583805a35d541c6c4168cb7a6238a15447183ff0a7167d7ec19264fde4d0094",
+      "fileSha256": "f837c09dd3484c79ed26cb8fc0844eb632a693a72f8d17e915d79c3d1298a09b",
+      "ready": false
+    },
+    {
+      "questionId": "115-09-1-45",
+      "path": "sudu/teaching-candidates/115-role-c-digital-20261103/115-09-1-45.json",
+      "sourceRevision": "548b0610af190be200a91b2f10a184083bb2e987c9de25043caa4aade121cc75",
+      "webpSha256": "b5bc7dbc847aab124667f0a5984bbe39cbf9a82292c26b4b2706e91100c5547f",
+      "teachingSha256": "20d68a467cdf3974db10284648e593ab4d53a025c78fc7bf2ecab9286001cb93",
+      "fileSha256": "4af64d675cc5f3174cef684ad2b788059b247840ee0ff6b458dd76cd87738ea7",
+      "ready": false
+    }
+  ],
+  "newApprovals": 0,
+  "newDeployments": 0
+}
