@@ -472,7 +472,7 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
         # The historical 114/115 document dates are intentionally not hardcoded.
         ledger_relative = status.get("officialNoticeEvidencePath")
         pattern = (rf"sudu/data/processed/{year}/"
-                   rf"QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_[0-9]{{8}}\\.json")
+                   rf"QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_[0-9]{{8}}\.json")
         if not isinstance(ledger_relative, str) or not re.fullmatch(pattern, ledger_relative):
             return False
         ledger_path = source / ledger_relative
