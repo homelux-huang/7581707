@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-E42-ORIGINAL-SHARED-G1-20261103-05",
+  "role": "A",
+  "questionId": "115-00-E-42",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595565569",
+  "baseCommit": "3882a59b91f5ab0fb6cdefc6a1b07c1c025a5f0e",
+  "status": "ROLE_A_SOURCE_G1_SINGLE_ORIGINAL_AND_SHARED_ORIGINAL_LINK_CANDIDATE_NO_RELEASE",
+  "originalExam": {
+    "year": 115,
+    "paperCode": "00-E",
+    "page": 10,
+    "officialQuestionPdfSha256PreviouslyRecorded": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+    "originalPageWebp": "sudu/data/original/115/00-E/p010-c13e298c3b-v2-w1400-q66.webp",
+    "originalPageSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+    "originalPageGitBlob": "078dfb51a6b32d652926d4495967791d938ecb37"
+  },
+  "singleQuestion": {
+    "path": "sudu/data/processed/115/webp-v2/00-E/115-00-E-42.webp",
+    "sha256": "a7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0",
+    "gitBlob": "ee72360d9aad58fade391fa260269b0222efcc0c",
+    "crop": [
+      90,
+      1436,
+      1310,
+      1623
+    ],
+    "sizePixels": [
+      1220,
+      187
+    ],
+    "historicalManifestQa": "PASS",
+    "aiAssistantRecheckedOriginal": true,
+    "reviewNotes": "Directly opened exact original Q42 true WebP and original official page10; contains printed Q42 number/stem and original A-D, including complete last line, no other question or page footer.",
+    "reCroppingPerformed": false
+  },
+  "sharedMaterial": {
+    "id": "115-00-E-SHARED-39-42",
+    "path": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+    "sha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+    "gitBlob": "4aaac02b7ed9390b8ff7c8a4c4272e74996bd595",
+    "sourceRevision": "c94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2",
+    "sourceQaReference": "sudu/data/processed/115/review-evidence/115-00-E-29-30-39-41-shared-G1-20261103.json",
+    "aiAssistantOriginalVisualReview": true,
+    "previousIndividualQAQuestionIds": [
+      39,
+      40,
+      41
+    ],
+    "newlyReviewedQuestionIds": [
+      42
+    ],
+    "otherQuestionQaChanges": false
+  },
+  "sourceLinkRevisionSeed": "ROLE_A_115_E42_SHARED_LINK_G1_V1\na7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0\n5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b\nc94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2",
+  "sourceLinkRevisionSha256": "2b161f35ebccef5eeee3caff4a3688ccb5e1eefd881305993c9db3af5b24fcbe",
+  "officialAnswer": {
+    "publishedAnswer": "C",
+    "originalSourceAnswerPdfSha256PreviouslyRecorded": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+    "officialAnswerPage": "sudu/data/original/115/00-E-answers/p001-185b1c8503-v2-w1400-q66.webp",
+    "officialAnswerGitBlob": "b8da0d2f8024eb8da2bdb2b096f97d59c0a6609d",
+    "officialConfirmationPdfShaPreviouslyRecorded": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+    "confirmationLedgerPath": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",
+    "confirmationLedgerGitBlob": "1a21701647627bc1dcaa39a835bf90a4459c9424",
+    "namedOfficialEnglishNoticeQids": [
+      "115-00-E-34"
+    ],
+    "q42ListedInCorrection": false,
+    "formalG3NewlySet": false,
+    "officialPdfReDownloadedOrRehashed": false
+  },
+  "reviewer": "ROLE A GPT-6 AI Assistant Source Visual Review, not human or distinct-role E review",
+  "downstream": {
+    "originalImageModified": false,
+    "canonical205QuestionsEdited": false,
+    "sqliteEdited": false,
+    "manifestEdited": false,
+    "authorLessonEdited": false,
+    "officialFormalG3Admitted": false,
+    "independentEReviewedCurrentSource": false,
+    "roleDReal8x2SameDigest": false,
+    "masterReady": false,
+    "live": false
+  }
+}
