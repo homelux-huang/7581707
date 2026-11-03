@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-00-MB-21",
+  "subject": "數學 B",
+  "kind": "NEW_MATH_B_AUTHOR_DRAFT_G1_G2_G3_PENDING",
+  "question": "某幼兒園規劃在畢業典禮時，安排即將畢業的西瓜班表演3 個不同節目，中班鳳梨班與\n\n  小班蘋果班則各表演2 個不同節目。由於西瓜班的所有演出都需要換裝，所以西瓜班表\n\n  演3個的節目中，任意兩個都不會連著表演。試問這7個節目的安排順序共有幾種可能性？",
+  "options": [
+    "240",
+    "720",
+    "1440",
+    "5040"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "da40c1e083d4720dc956bfd92b6982965833cfa7e0ce87ce8733a88f011451b8",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-21.webp",
+    "webpSha256": "ecf1d5f0ea75714e52afa06db5035ba86b051d3a462483b91d1e7746b4cc54ad",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerAndCorrectionsNotVerified": true
+  },
+  "teaching": {
+    "topic": "7個不同節目排序｜3個西瓜班節目不可相鄰",
+    "teacherSummary": "先把鳳梨班與蘋果班的 4 個不同節目排好，有 4!＝24 種；這四節目前、之間及後共 5 個空隙，選 3 個不同空隙放西瓜班節目 C(5,3)=10，再排西瓜班三個不同節目 3!＝6。總數 24×10×6＝1440，選 C。",
+    "elementarySummary": "先排另外四個節目，中間有五個可以插入西瓜班的空檔。挑三個不同空檔，各放一個不同的西瓜節目，就不會連在一起。",
+    "concept": "不同事件排列 4!；不相鄰時先排其他節目，再選間隙 C(5,3)，排入不同物件 3!。",
+    "memory": "非西瓜4!×5空隙選3×西瓜3!＝24×10×6＝1440。",
+    "formula": "間隔法：先排列非受限制的4個節目，再從5個間隙選3個並排列3個不同的西瓜節目。",
+    "highlights": [
+      "3 個不同節目",
+      "各表演2 個不同節目",
+      "任意兩個都不會連著",
+      "7個節目"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "西瓜班 W1,W2,W3 三個不同節目，彼此不能相鄰",
+        "鳳梨班 P1,P2 與蘋果班 A1,A2 共四個不同節目",
+        "總共七個不同節目"
+      ],
+      "formulaUse": "間隔法：先排列非受限制的4個節目，再從5個間隙選3個並排列3個不同的西瓜節目。",
+      "substitution": [
+        "4!=4×3×2×1=24",
+        "C(5,3)=5!/(3!2!)=10",
+        "3!=3×2×1=6"
+      ],
+      "steps": [
+        "先將鳳梨班2個與蘋果班2個『不同』節目視為4個可辨識事件，其內部排列4!=24種。",
+        "在排好的四個節目前、三個間隔與後，共有5個可插入空隙。",
+        "為避免西瓜班任兩個節目相鄰，三個西瓜節目必須各占不同的空隙。",
+        "從5個空隙任取3個有 C(5,3)=10 種，空隙選擇不計順序。",
+        "西瓜班的三個節目也『不同』，可在選定的三個空隙內安排3!=6種順序。",
+        "乘法原理得到24×10×6=1440種，對應 C，單位『種演出順序』。",
+        "反驗：若忽略不相鄰，7!=5040總排列；合法數必小於5040，而1440/5040=2/7，符合以固定三項不相鄰的機率 5×4×3/(7×6×5)=2/7。"
+      ],
+      "result": "1440 種",
+      "unit": "種",
+      "option": "C"
+    },
+    "solvingSteps": [
+      "先將鳳梨班2個與蘋果班2個『不同』節目視為4個可辨識事件，其內部排列4!=24種。",
+      "在排好的四個節目前、三個間隔與後，共有5個可插入空隙。",
+      "為避免西瓜班任兩個節目相鄰，三個西瓜節目必須各占不同的空隙。",
+      "從5個空隙任取3個有 C(5,3)=10 種，空隙選擇不計順序。",
+      "西瓜班的三個節目也『不同』，可在選定的三個空隙內安排3!=6種順序。",
+      "乘法原理得到24×10×6=1440種，對應 C，單位『種演出順序』。",
+      "反驗：若忽略不相鄰，7!=5040總排列；合法數必小於5040，而1440/5040=2/7，符合以固定三項不相鄰的機率 5×4×3/(7×6×5)=2/7。"
+    ],
+    "calculationReviewed": "B_AUTHOR_ARITHMETIC_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 240=4!×C(5,3)只排另外四場並選三個空隙，漏乘西瓜班三個不同節目的3!=6種順序。",
+        "elementary": "選好空隙後西瓜節目還能互換位置，240太少。",
+        "reason": "A 240=4!×C(5,3)只排另外四場並選三個空隙，漏乘西瓜班三個不同節目的3!=6種順序。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 720=4!×5×3! 只把三個空隙選擇誤作5種，實際從5個不同空隙選3個有10種。",
+        "elementary": "選三個空檔的方法不是只有五種，所以720少一半。",
+        "reason": "B 720=4!×5×3! 只把三個空隙選擇誤作5種，實際從5個不同空隙選3個有10種。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 1440=4!×C(5,3)×3!=24×10×6，先排其他四節目、分散插入三個不同西瓜節目。",
+        "elementary": "空檔不同又能交換三個節目，剛好1440。",
+        "reason": "C 1440=4!×C(5,3)×3!=24×10×6，先排其他四節目、分散插入三個不同西瓜節目。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 5040=7! 是把全部七個不同節目無限制排列，包含西瓜班連在一起的違規情況。",
+        "elementary": "直接7!會把西瓜節目排在一起，也算進錯誤情況。",
+        "reason": "D 5040=7! 是把全部七個不同節目無限制排列，包含西瓜班連在一起的違規情況。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official source bank preliminary only, not official G1/G2/G3/admitted answer. Same SHA original WebP G1 must be assessed independently by A."
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "sourceAnswerCandidate": true,
+    "independentReviewByAuthor": false,
+    "authorCalculationReverseCheck": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_SOURCE_G1_DRAFT_G2_G3_PENDING",
+      "DISTINCT_AI_E_MATH_QA_PENDING",
+      "D_114_ORIGINAL_V4_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "04a6f9309cf742c977b20b99f3025a7f6b1ec6c0f251bd0c44481b6e792e20d7"
+}

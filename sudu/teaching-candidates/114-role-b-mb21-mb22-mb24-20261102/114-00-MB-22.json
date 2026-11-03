@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-00-MB-22",
+  "subject": "數學 B",
+  "kind": "NEW_MATH_B_AUTHOR_DRAFT_G1_G2_G3_PENDING",
+  "question": "某甜品店提供兩款盒裝甜品，如表 ( 二 ) 所示。小銘舉辦活動，需要至少48 個焦糖布丁與\n\n  至少72 個芒果奶酪。若小銘只跟這間甜品店訂購盒裝甜品，在符合小銘的需求下，所需\n\n  的最低花費為多少元？\n\n          品項         內容物        每盒價格\n\n          盒裝A        3 個焦糖布丁、3 個芒果奶酪        200 元\n\n    表 ( 二 )   盒裝B        2 個焦糖布丁、4 個芒果奶酪        210 元",
+  "options": [
+    "4120",
+    "4800",
+    "5040",
+    "5480"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "fe2b92f13fb4cca3e795825d5801421150d27bef14f978c8ab49a35a502c3c79",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-22.webp",
+    "webpSha256": "e06f9d535f9383c085c7d40bf44aec43749de97ae1469109f7cb79341f368040",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerAndCorrectionsNotVerified": true
+  },
+  "teaching": {
+    "topic": "盒裝甜品最低成本｜兩種需求不等式",
+    "teacherSummary": "設 A 盒 a 個、B 盒 b 個，需求 3a+2b≥48（布丁）、3a+4b≥72（奶酪），成本 200a+210b。選 a=8,b=12 剛好48/72，花費 4120；再用非負權數對兩需求建立總成本下界 4120，證明是全域最小，A 正確。",
+    "elementarySummary": "買8盒A和12盒B，布丁、奶酪都剛好夠，花4120元。不只找到一種能買的辦法，還能證明沒有更便宜的搭配。",
+    "concept": "整數線性規劃：至少的限制須用≥；先找交點，再以非負組合導出成本下界來證明最小。",
+    "memory": "A8盒+B12盒 ⇒布丁48、奶酪72，費用4120元；非負下界也等於4120。",
+    "formula": "目標最小 200a+210b，限制 3a+2b≥48、3a+4b≥72。把兩個限制以非負權重相加證明成本下界。",
+    "highlights": [
+      "至少48 個焦糖布丁",
+      "至少72 個芒果奶酪",
+      "3 個焦糖布丁",
+      "2 個焦糖布丁",
+      "最低花費"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "A盒：3布丁+3奶酪、每盒NT$200",
+        "B盒：2布丁+4奶酪、每盒NT$210",
+        "至少布丁48及奶酪72；a,b為非負整數"
+      ],
+      "formulaUse": "目標最小 200a+210b，限制 3a+2b≥48、3a+4b≥72。把兩個限制以非負權重相加證明成本下界。",
+      "substitution": [
+        "3a+2b=48、3a+4b=72 兩式相減得2b=24 ⇒ b=12",
+        "3a+2×12=48 ⇒ 3a=24 ⇒ a=8",
+        "成本200×8+210×12=1600+2520=4120"
+      ],
+      "steps": [
+        "設 a 是 A 盒數、b 是 B 盒數，兩者只能是非負整數。",
+        "按表格列布丁數 3a+2b≥48，奶酪數 3a+4b≥72，總價 P=200a+210b。",
+        "先找兩條需求邊界的交點：兩式相減，2b=72−48=24，所以 b=12。",
+        "代入布丁式 3a+2×12=48，得到 a=8；這組數量均為整數且非負。",
+        "實物驗算：布丁3×8+2×12=24+24=48；奶酪3×8+4×12=24+48=72，兩需求剛好達標。",
+        "金額 P=200×8+210×12=1600+2520=4120元，對應 A。",
+        "證明這不是只找到一組可行解：因兩需求均是『至少』，以非負權重85/3與115/3分別相乘後相加，左邊剛好變(85/3)(3a+2b)+(115/3)(3a+4b)=200a+210b=P。",
+        "因此 P≥(85/3)×48+(115/3)×72=1360+2760=4120元；前述a=8,b=12達到下界，故是全域最低。",
+        "獨立反驗：列舉所有a,b非負且需求達標的盒數，最小組同樣是(8,12)成本4120；其他選項金額更高。"
+      ],
+      "result": "最低 NT$4,120（A盒8、B盒12）",
+      "unit": "新臺幣元",
+      "option": "A"
+    },
+    "solvingSteps": [
+      "設 a 是 A 盒數、b 是 B 盒數，兩者只能是非負整數。",
+      "按表格列布丁數 3a+2b≥48，奶酪數 3a+4b≥72，總價 P=200a+210b。",
+      "先找兩條需求邊界的交點：兩式相減，2b=72−48=24，所以 b=12。",
+      "代入布丁式 3a+2×12=48，得到 a=8；這組數量均為整數且非負。",
+      "實物驗算：布丁3×8+2×12=24+24=48；奶酪3×8+4×12=24+48=72，兩需求剛好達標。",
+      "金額 P=200×8+210×12=1600+2520=4120元，對應 A。",
+      "證明這不是只找到一組可行解：因兩需求均是『至少』，以非負權重85/3與115/3分別相乘後相加，左邊剛好變(85/3)(3a+2b)+(115/3)(3a+4b)=200a+210b=P。",
+      "因此 P≥(85/3)×48+(115/3)×72=1360+2760=4120元；前述a=8,b=12達到下界，故是全域最低。",
+      "獨立反驗：列舉所有a,b非負且需求達標的盒數，最小組同樣是(8,12)成本4120；其他選項金額更高。"
+    ],
+    "calculationReviewed": "B_AUTHOR_ARITHMETIC_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A NT$4,120 可買 A盒8組與 B盒12組，布丁48、奶酪72正好夠；而由需求不等式推出的成本下界也是4,120，因此最便宜。",
+        "elementary": "八盒A加十二盒B剛好買夠，還能證明沒更省。",
+        "reason": "A NT$4,120 可買 A盒8組與 B盒12組，布丁48、奶酪72正好夠；而由需求不等式推出的成本下界也是4,120，因此最便宜。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B NT$4,800 比已驗證的可行最低成本4,120多出680元，所以無法成為題問的最低花費。",
+        "elementary": "花4800比4120多680元，不是最便宜。",
+        "reason": "B NT$4,800 比已驗證的可行最低成本4,120多出680元，所以無法成為題問的最低花費。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C NT$5,040 比可行且已證下界的4,120多920元，即使能滿足需求也非最低。",
+        "elementary": "5040多付920元，不能選最少錢。",
+        "reason": "C NT$5,040 比可行且已證下界的4,120多920元，即使能滿足需求也非最低。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D NT$5,480 比4,120多1,360元；題目要滿足至少需求下的最低花費而不是買越多越好。",
+        "elementary": "多花1360元沒有必要，最低是4120。",
+        "reason": "D NT$5,480 比4,120多1,360元；題目要滿足至少需求下的最低花費而不是買越多越好。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official source bank preliminary only, not official G1/G2/G3/admitted answer. Same SHA original WebP G1 must be assessed independently by A."
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "sourceAnswerCandidate": true,
+    "independentReviewByAuthor": false,
+    "authorCalculationReverseCheck": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_SOURCE_G1_DRAFT_G2_G3_PENDING",
+      "DISTINCT_AI_E_MATH_QA_PENDING",
+      "D_114_ORIGINAL_V4_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "b3ef9efc55e103bafb432d30e38d133d83bd25acd75a155b75704ff903d8880a"
+}
