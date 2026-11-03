@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-CHINESE18-A115-STRUCTURED-TEACHING-20261103-04",
+  "sourceCommit": "19f8ad339ae6bf83a6a36e5a56a3235562f7f049",
+  "sourceEvidenceGitBlob": "ccdfabefc0641283c7eed13f563a109880739efb",
+  "items": [
+    {
+      "questionId": "115-00-C-18",
+      "path": "sudu/teaching-candidates/115-role-c-chinese18-20261103/115-00-C-18.json",
+      "sourceRevision": "2a4404fd3f695e5425e224839860d849bbd6c377de445a7bda361fc6c49e4b00",
+      "webpSha256": "d62b403392a55eaf435a3d58f8ffa3113b94efa2de4df34090ce29b53bae8f32",
+      "sharedWebpSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+      "teachingSha256": "605c12f319d60b9f7c315c85097e4a68561dd092084e0d84894785a6aee481d2",
+      "fileSha256": "44143aa43b1ea5916b96c5e38076060c51918d376549f25befa1e5365b160eba",
+      "ready": false
+    }
+  ],
+  "newApprovals": 0,
+  "newDeployments": 0
+}

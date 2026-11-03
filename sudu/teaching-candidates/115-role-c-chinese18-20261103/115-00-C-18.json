@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-CHINESE18-A115-STRUCTURED-TEACHING-20261103-04",
+  "questionId": "115-00-C-18",
+  "year": 115,
+  "subject": "國文",
+  "paperCode": "00-C",
+  "originalQuestionNumber": 18,
+  "status": "ROLE_C_AUTHOR_DRAFT_A_STRUCTURED_SOURCE_CANDIDATE_NO_RELEASE",
+  "sourceCommit": "19f8ad339ae6bf83a6a36e5a56a3235562f7f049",
+  "sourceEvidence": {
+    "path": "sudu/data/processed/115/review-evidence/115-00-C-18-G1-G2-TABLE-CROSSPAGE-20261102.json",
+    "gitBlob": "ccdfabefc0641283c7eed13f563a109880739efb",
+    "role": "A",
+    "originalImageAssistantVisualQaOnly": true,
+    "canonicalQuestionBankUpdated": false
+  },
+  "sharedEvidence": {
+    "path": "sudu/data/processed/115/review-evidence/115-00-C-SHARED-16-18-G2-COLUMNS-20261102.json",
+    "gitBlob": "ff719e9c45075ed908cd3cef97fc6f9da228e667",
+    "sourceG2OriginalSharedTextSha256": "5a77c522cc03bdda530e03bbef9df1955f4910fe860cbff1b6eb3aafcdcd43f4"
+  },
+  "question": "上文趙姨娘為達到目的，利用「我們是親人」發展兩項情緒勒索說辭，探春分別以何種方式回擊？",
+  "options": [
+    "回擊甲①；回擊乙③",
+    "回擊甲①；回擊乙④",
+    "回擊甲②；回擊乙③",
+    "回擊甲②；回擊乙④"
+  ],
+  "sourceChart": {
+    "leftTitle": "趙姨娘的情勒術",
+    "intro": "因為我們是親人，所以：",
+    "emotionalLeverage": [
+      {
+        "label": "甲",
+        "text": "親人應多照顧親人。"
+      },
+      {
+        "label": "乙",
+        "text": "我若沒面子，探春你也沒面子。"
+      }
+    ],
+    "rightTitle": "探春思考：用什麼回擊？",
+    "replies": [
+      {
+        "label": "①",
+        "text": "府裡人多嘴雜，照顧必招閒話。"
+      },
+      {
+        "label": "②",
+        "text": "人人按禮守分，何須格外照顧。"
+      },
+      {
+        "label": "③",
+        "text": "您向來形象差，早已無面子可言。"
+      },
+      {
+        "label": "④",
+        "text": "我若當家犯錯，才是讓您沒面子。"
+      }
+    ]
+  },
+  "sourceTables": [
+    {
+      "heading": [
+        "選項",
+        "回擊甲",
+        "回擊乙"
+      ],
+      "rows": [
+        {
+          "option": "A",
+          "responseForJia": "①",
+          "responseForYi": "③"
+        },
+        {
+          "option": "B",
+          "responseForJia": "①",
+          "responseForYi": "④"
+        },
+        {
+          "option": "C",
+          "responseForJia": "②",
+          "responseForYi": "③"
+        },
+        {
+          "option": "D",
+          "responseForJia": "②",
+          "responseForYi": "④"
+        }
+      ]
+    }
+  ],
+  "sourceTextRevision": "2a4404fd3f695e5425e224839860d849bbd6c377de445a7bda361fc6c49e4b00",
+  "sourceTextRevisionSeed": "ROLE_A_115_C18_G2_STRUCTURED_CHART_V1\n2c1d4ce6bfb3bb42cda8581bbf856f4ae794eabddb3de0f35d2229e34c03dc89\nd62b403392a55eaf435a3d58f8ffa3113b94efa2de4df34090ce29b53bae8f32\nc82824bbc016fbe0649bb8220be6afd2ffffdf90287968712139ed5a7aa39d12",
+  "sourceCanonicalTextSha256": "2c1d4ce6bfb3bb42cda8581bbf856f4ae794eabddb3de0f35d2229e34c03dc89",
+  "sourceSharedMaterialId": "115-00-C-SHARED-16-18",
+  "sharedMaterialWebp": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
+  "sharedMaterialWebpSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+  "sharedMaterialTextRevision": "c82824bbc016fbe0649bb8220be6afd2ffffdf90287968712139ed5a7aa39d12",
+  "image": "sudu/data/processed/115/webp-v2/00-C/115-00-C-18.webp",
+  "imageSha256": "d62b403392a55eaf435a3d58f8ffa3113b94efa2de4df34090ce29b53bae8f32",
+  "individualWebpOriginalGitBlob": "3bb1ae6740746959a74c22cf9c8e70fbc19eed6e",
+  "answerCandidate": "D",
+  "officialOriginalAnswerPrintedDInRoleASourceEvidence": true,
+  "officialFinalAnswerG3Admitted": false,
+  "teaching": {
+    "teacherSummary": "第18題要把**趙姨娘的兩種情緒勒索**分開看。甲說**親人應多照顧親人**，探春用『**依禮行事、當家豈能逾矩**』回應，對應**②人人按禮守分，何須格外照顧**。乙說**自己失了臉面會連累探春**，探春指出真正讓人丟臉的是**當家違規犯錯**，對應**④我若當家犯錯，才是讓您沒面子**。因此甲②、乙④，選D。",
+    "elementarySummary": "趙姨娘先說「我們是親人，你應該特別幫我」，探春說「管事情要守規矩，親人也不例外」。趙姨娘又說「你不幫我，我沒面子，你也沒面子」，探春回說「真正丟臉的是我做錯事」。所以是**②和④**。",
+    "memory": "**甲講親情要特別照顧→②守禮不能徇私；乙講面子綁在一起→④犯錯才失面子。D＝②④。**",
+    "concept": "文章考人物對話的**論點與回應配對**。趙姨娘以親情要求特權，又以面子施壓；探春堅持按規矩辦事，把『是否有面子』重新連結到職責與行為是否正當。",
+    "extension": "比較①和②：①談『怕別人說閒話』，②談『制度與禮法』，原文強調『豈能逾矩』所以②更有直接依據。③以人身攻擊代替道理，不符探春據理堅持的語氣。",
+    "source": "115 年官方原題王安祈〈紅樓夢中人‧探春〉閱讀材料及 ROLE A 原始圖文 G1/G2 結構候選 PR114/PR115；正式 G3/E/D 尚待獨立收件。",
+    "highlights": [
+      "情緒勒索",
+      "親人應多照顧親人",
+      "人人按禮守分",
+      "當家豈能逾矩",
+      "我若當家犯錯",
+      "回擊甲②／回擊乙④"
+    ],
+    "reasoningSteps": [
+      "先分甲乙：甲訴諸『親人就要特別照顧』；乙訴諸『我沒面子你也沒面子』。",
+      "尋甲的對應原文：探春說『依禮行事』、『當家豈能逾矩』、『哪有個行端理正的，要人拉拔』，所以甲應選回擊②。",
+      "尋乙的對應原文：探春說若夫人因違矩責難，使自己不能管家才真正失臉面，對應回擊④。",
+      "把回擊甲②與回擊乙④依原表配對，只有D是②／④。",
+      "排除①只從閒話角度、③以侮辱對方代替原文的守禮論證。"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "optionExplanations": {
+      "A": {
+        "teacher": "A配甲①、乙③。**甲①『怕招閒話』**並非探春最直接訴諸的『按禮守分』；乙③更把她的理性辯駁誤寫為攻擊趙姨娘形象，兩組皆不符原文。",
+        "elementary": "A先說怕旁人說閒話，後面又罵對方很沒面子；探春不是這樣回話，所以A錯。",
+        "reason": "A配甲①、乙③。**甲①『怕招閒話』**並非探春最直接訴諸的『按禮守分』；乙③更把她的理性辯駁誤寫為攻擊趙姨娘形象，兩組皆不符原文。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B的乙④符合『當家有失才丟臉』，但甲①只說特別照顧會招閒話；文章更著重**『豈能逾矩』『依禮行事』**，應選甲②。",
+        "elementary": "B的第二句說對了，但第一句該說不能為親人破壞規矩，不能只說怕別人講話。",
+        "reason": "B的乙④符合『當家有失才丟臉』，但甲①只說特別照顧會招閒話；文章更著重**『豈能逾矩』『依禮行事』**，應選甲②。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C的甲②符合『親人也不能違規』，但乙③『您向來形象差』是**人身攻擊**，探春並未用這句話回應『一起沒面子』的威脅；乙應選④。",
+        "elementary": "C的第一句對，第二句卻變成罵人，探春講的是做錯事才丟臉，所以C錯。",
+        "reason": "C的甲②符合『親人也不能違規』，但乙③『您向來形象差』是**人身攻擊**，探春並未用這句話回應『一起沒面子』的威脅；乙應選④。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "甲②**人人按禮守分**對應『當家豈能逾矩』；乙④**我若當家犯錯才讓您沒面子**對應探春論失職與臉面的關係。兩個回擊同時符合原文，選D。",
+        "elementary": "不能因為是親人就破壞規矩；真正讓大家丟臉的是我做錯事。兩句都對，所以D。",
+        "reason": "甲②**人人按禮守分**對應『當家豈能逾矩』；乙④**我若當家犯錯才讓您沒面子**對應探春論失職與臉面的關係。兩個回擊同時符合原文，選D。",
+        "isCorrect": true
+      }
+    }
+  },
+  "teachingCanonicalSha256": "605c12f319d60b9f7c315c85097e4a68561dd092084e0d84894785a6aee481d2",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only",
+    "originalImageViewedByAuthor": false,
+    "sourceAOriginalAssistantReportUsed": true,
+    "externalIndependentReview": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "A_SOURCE_STRUCTURED_C18_NOT_CANONICAL_205_SQLITE_YET",
+    "A_SHARED_G2_C16_C17_C18_NOT_FORMALLY_ADMITTED",
+    "OFFICIAL_FINAL_G3_NOT_FORMALLY_ACCEPTED",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "D_V4_EXACT_SOURCE_TABLE_SHARED_8X2_PENDING"
+  ]
+}

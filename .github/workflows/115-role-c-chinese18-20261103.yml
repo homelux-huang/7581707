@@ -1,0 +1,18 @@
+name: ROLE C 115 Chinese C18 A-source-bound teaching draft (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-c18-table-original-20261103]
+  pull_request:
+    paths: ['sudu/teaching-candidates/115-role-c-chinese18-20261103/**','tests/test_115_role_c_chinese18_20261103.py','.github/workflows/115-role-c-chinese18-20261103.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_115_role_c_chinese18_20261103.py' -v
