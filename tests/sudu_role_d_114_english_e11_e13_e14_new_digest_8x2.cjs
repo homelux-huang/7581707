@@ -54,7 +54,13 @@ const EXPECT_IMAGE={
 };
 // Read NEW Role A PR94 official-verified source bank, not stale PR50 bank.
 const source=read(roleARoot+'/sudu/data/processed/114/questions.json');
-const originalBankBeforeA94=read('sudu/data/processed/114/questions.json');
+const SOURCE_BASELINE_SHA='e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5';
+const BASELINE_BANK='074bff8cbb9ca7bbc0aefd8580454892d21f7d6b';
+const originalSourceBaselinePath='_role_source_baseline/sudu/data/processed/114/questions.json';
+assert.equal(git('_role_source_baseline'),SOURCE_BASELINE_SHA,'A/B independent base original is not PR35');
+assert.equal(blobSHA(fs.readFileSync(abs(originalSourceBaselinePath))),BASELINE_BANK,
+  'PR35 original full 114 bank Git Blob mismatch; do NOT bypass the 205-question invariant');
+const originalBankBeforeA94=read(originalSourceBaselinePath);
 const originalRows=new Map(originalBankBeforeA94.questions.map(q=>[q.questionId,q]));
 assert.equal(source.questions.length,205,'Role A official evidence inadvertently removed archive questions');
 assert.equal(originalRows.size,205,'old question baseline incomplete');
