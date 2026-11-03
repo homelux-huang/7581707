@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-BIZ04-08-DIGI35-37-NEW-FIVE-20261103-02",
+  "questionId": "115-09-1-08",
+  "year": 115,
+  "paperCode": "09-1",
+  "originalQuestionNumber": 8,
+  "subject": "商業概論",
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_G1_G2_G3_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "sourceManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "question": "甲公司 2025 年的流動比率為 1.5，若該公司的流動負債為$100,000，應收帳款為$20,000，\n  存貨為$15,000，預付款項為$5,000；乙公司2025 年的銷貨收入$1,005,000，銷貨退回\n  $5,000，銷貨成本$200,000，應收帳款週轉率為5 次。上述①甲公司的酸性測驗比率、\n  ②乙公司的平均應收帳款，依序何者正確？",
+  "options": [
+    "① 1.1、②$160,000",
+    "① 1.1、②$200,000",
+    "① 1.3、②$160,000",
+    "① 1.3、②$200,000"
+  ],
+  "answerCandidate": "D",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "sourceQuestionVerified": false,
+  "sourceAnswerAutoMatchedHistoricalFlag": true,
+  "sourceAnswerFormalFinalVerified": false,
+  "officialCorrectionNoticeIndependentQa": false,
+  "sourceTextRevision": "a286d82c528b549163eecd362701f2f7ceb09e5d75fc77c74cb67ed001f3f85b",
+  "sourceTextRevisionMethod": "scripts/sudu_verified_publish.py text_revision (question + original options + immutable individual webp sha; excludes answer)",
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-08.webp",
+  "imageSha256": "567575ca2f6eac12b57117375501b1ac79a6a547f447f2a7a86e13f09611e6d5",
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "originalImageBytesRehashedByC": false,
+  "sharedMaterial": null,
+  "teaching": {
+    "teacherSummary": "**酸性測驗比率＝速動資產÷流動負債**。流動資產為1.5×100,000＝150,000元，扣除**存貨15,000**與**預付款5,000**，速動資產130,000元，酸性測驗比率＝**1.3**。乙公司銷貨淨額1,005,000−5,000＝1,000,000元，以應收帳款週轉率5次求平均應收帳款＝**200,000元**，選D。",
+    "elementarySummary": "甲公司短期需要還10萬元，手上比較快能變現的資產有13萬元，比例是1.3。乙公司一年真正賣了100萬元，平均欠款每年轉5次，所以平均被客人欠20萬元。",
+    "memory": "**流動資產15萬−存貨1.5萬−預付0.5萬＝速動資產13萬；13÷10＝1.3；銷貨淨額100萬÷5＝平均應收20萬 → D。**",
+    "concept": "酸性測驗比率排除存貨與預付費用；**應收帳款週轉率＝銷貨淨額÷平均應收帳款**（本題依題目資料）。**銷貨成本**與本題平均應收帳款計算無關。",
+    "extension": "看清楚應收帳款20,000元是甲公司資訊，不是乙公司的平均應收帳款；兩家公司不能混在一起算。",
+    "highlights": [
+      "酸性測驗比率",
+      "速動資產",
+      "存貨",
+      "預付款項",
+      "銷貨淨額",
+      "應收帳款週轉率",
+      "1.3",
+      "200,000元"
+    ],
+    "reasoningSteps": [
+      "先算甲公司流動資產150,000元。",
+      "扣存貨及預付，得速動資產130,000元，算比率1.3。",
+      "再求乙公司銷貨淨額1,000,000元，依週轉率5次回推平均應收帳款200,000元。",
+      "兩項均正確的為選項D。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "把速動資產誤減成110,000，酸性測驗比率1.1不符；乙平均應收160,000若除淨銷貨1,000,000會得到6.25次，不是5次。",
+        "elementary": "A的兩個數字都不合：短期資產不是11萬，應收款算回去也不是每年轉5次。",
+        "reason": "把速動資產誤減成110,000，酸性測驗比率1.1不符；乙平均應收160,000若除淨銷貨1,000,000會得到6.25次，不是5次。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "②平均應收200,000元正確，但①速動資產150,000−15,000−5,000＝130,000，比率應為**1.3**而非1.1。",
+        "elementary": "B後面20萬元算對了，前面的比率卻算小了，所以不可以選。",
+        "reason": "②平均應收200,000元正確，但①速動資產150,000−15,000−5,000＝130,000，比率應為**1.3**而非1.1。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "①酸性測驗比率1.3正確；②若平均應收160,000，週轉率為1,000,000÷160,000＝6.25次，與已知5次衝突。",
+        "elementary": "C第一個數字對，第二個把客人平均欠款算成16萬，驗算就變6.25次，不合題目。",
+        "reason": "①酸性測驗比率1.3正確；②若平均應收160,000，週轉率為1,000,000÷160,000＝6.25次，與已知5次衝突。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "①速動資產130,000÷流動負債100,000＝**1.3**；②銷貨淨額1,000,000÷5次＝**200,000元**，兩者都吻合。",
+        "elementary": "兩個答案都算對：甲是1.3倍，乙是平均20萬元，所以選D。",
+        "reason": "①速動資產130,000÷流動負債100,000＝**1.3**；②銷貨淨額1,000,000÷5次＝**200,000元**，兩者都吻合。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "甲：流動比率1.5、流動負債100,000元、存貨15,000元、預付款5,000元。",
+        "乙：銷貨收入1,005,000元、銷貨退回5,000元、週轉率5次。"
+      ],
+      "formulaUse": "流動資產＝流動比率×流動負債；速動資產＝流動資產−存貨−預付款；酸性測驗比率＝速動資產／流動負債；平均應收帳款＝銷貨淨額／應收帳款週轉率。",
+      "substitution": [
+        "CA＝1.5×100,000",
+        "QA＝150,000−15,000−5,000",
+        "銷貨淨額＝1,005,000−5,000",
+        "平均應收＝1,000,000÷5"
+      ],
+      "steps": [
+        "甲：流動資產CA＝1.5×100,000＝150,000元。",
+        "甲：速動資產QA＝150,000−15,000−5,000＝130,000元。",
+        "甲：酸性測驗比率＝130,000÷100,000＝1.3倍。",
+        "乙：銷貨淨額＝1,005,000−5,000＝1,000,000元。",
+        "乙：平均應收帳款＝1,000,000÷5＝200,000元。",
+        "選項核對：①1.3，②200,000元，選D。",
+        "驗算：130,000÷100,000＝1.3；1,000,000÷200,000＝5次，兩條件均回代吻合。"
+      ],
+      "result": "酸性測驗比率1.3倍；平均應收帳款200,000元",
+      "unit": "比率為倍；應收帳款為元",
+      "option": "D",
+      "verification": "13萬／10萬＝1.3；100萬／20萬＝5次，回代兩個原條件皆成立。"
+    }
+  },
+  "teachingCanonicalSha256": "ae07e182b5110f39e6b5a70bf933a62aca81b2ade793c236c1d03fd8cd5204de",
+  "review": {
+    "reviewer": "GPT-6 ROLE C teaching author only, not independently credentialed E reviewer",
+    "authorSelfCheck": "STRUCTURAL_AND_CALCULATION",
+    "sourceOriginalImageViewedByThisAuthor": false,
+    "officialAnswerPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "sourceFormalQa": "PENDING",
+    "officialG3": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_NOTICE_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_EXACT_DIGEST_8X2_UI_PENDING"
+  ]
+}

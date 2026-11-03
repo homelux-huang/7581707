@@ -1,0 +1,22 @@
+name: Role C 115 business digital five candidate source/digest QA (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-biz04-08-digital35-37-20261103]
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-biz-digi-20261103/**'
+      - 'tests/test_115_role_c_biz_digi_20261103.py'
+      - '.github/workflows/115-role-c-biz-digi-20261103.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-bound-lesson-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify 5 draft lessons with exact official raw candidate bindings and no release
+        run: python -m unittest discover -s tests -p 'test_115_role_c_biz_digi_20261103.py' -v
