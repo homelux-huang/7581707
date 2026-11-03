@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-01",
+  "subject": "會計學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "下列何者不屬於費損類會計項目？\n  ① 預付費用\n  ② 備抵損失—應收票據\n  ③ 銷項稅額\n  ④ 進項稅額\n  ⑤ 投資損失\n  ⑥ 各項攤提\n  ⑦ 銷貨成本",
+  "options": [
+    "②、③、⑥、⑦",
+    "①、②、③、④",
+    "②、③、④、⑦",
+    "①、③、④、⑦"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "cc64d79e9b0e84eb5625f4792e42b3f7c7410ae2e6635e6a1632d226b6ab1d98",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-01.webp",
+    "webpSha256": "e4e30042e915c47cf9257695e87c85792ccce02f18a212c888aa346d2e9af75e",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "費損與非費損會計項目",
+    "teacherSummary": "預付費用為資產、應收票據備抵損失為抵減資產、銷項稅額通常是待繳稅負債、進項稅額為可扣抵稅額；①②③④都不是費損，答案B。⑤投資損失、⑥各項攤提、⑦銷貨成本則是費損。",
+    "elementarySummary": "有些是先付的錢、還可收的錢或欠政府的稅，不能當成本；真正花掉或損失的才是費用。",
+    "concept": "資產、抵減資產、負債、費損須分清；備抵損失是抵減資產，不等於費損。",
+    "memory": "不是費損：①預付②備抵③銷項稅④進項稅 ⇒ B。",
+    "highlights": [
+      "費損類會計項目"
+    ],
+    "solvingSteps": [
+      "題目問『不屬於費損類』，先對 ①～⑦ 各判一次會計分類。",
+      "①預付費用還有未來受益，列資產；②備抵損失—應收票據屬抵減資產科目。",
+      "③銷項稅額為待繳稅額相關負債；④進項稅額可用來扣抵銷項稅，非費損。",
+      "⑤投資損失、⑥各項攤提、⑦銷貨成本皆屬損失、費用或成本類，不能列在『非費損』。",
+      "所以非費損恰好①②③④，對照 B；A/C/D各混入至少一個真正費損。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NONCALC_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A列②③⑥⑦，但⑥各項攤提與⑦銷貨成本都是費損，不符要找『非費損』的要求。",
+        "elementary": "A把攤提和銷貨成本當不是費用，錯。",
+        "reason": "A列②③⑥⑦，但⑥各項攤提與⑦銷貨成本都是費損，不符要找『非費損』的要求。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B恰列①預付費用、②應收票據備抵損失、③銷項稅額、④進項稅額，四者均非費損。",
+        "elementary": "B四個都不是費損，正確。",
+        "reason": "B恰列①預付費用、②應收票據備抵損失、③銷項稅額、④進項稅額，四者均非費損。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C列②③④⑦，其中⑦銷貨成本直接屬費損，且漏列非費損的①預付費用。",
+        "elementary": "C多了銷貨成本，漏了預付。",
+        "reason": "C列②③④⑦，其中⑦銷貨成本直接屬費損，且漏列非費損的①預付費用。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D列①③④⑦，⑦銷貨成本不是非費損，且漏列②抵減資產備抵損失。",
+        "elementary": "D也誤放銷貨成本，漏備抵。",
+        "reason": "D列①③④⑦，⑦銷貨成本不是非費損，且漏列②抵減資產備抵損失。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 專業科目二原題來源候選，A官方原圖/文字/最終官答公告未准入，不冒稱正式答案"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_FINAL_TEXT_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_AND_CALCULATION_PENDING",
+      "D_REAL_YEAR_V4_8x2_PENDING",
+      "MASTER_TRUSTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "691b040ab60a0c6f8431995b165f00c31f32ed98c487cd6b9473b7fd02a349f9"
+}
