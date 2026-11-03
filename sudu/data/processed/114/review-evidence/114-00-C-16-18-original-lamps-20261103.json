@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-114-C16-C18-LAMPS-ORIGINAL-G1-G3-20261103-01",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595357915",
+  "baseSHA": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "status": "ROLE_A_SOURCE_IMAGE_VISUAL_REVIEW_CANDIDATE_NO_RELEASE",
+  "reviewer": "GPT-6 Role A / AI Assistant Source Visual Review (not human and not independent E teaching QA)",
+  "imageReviewMethod": "Viewed archived original official 114 Chinese p6/p7 + exactly three isolated original WebP and announced-answer image",
+  "pdfDownloadedOrRehashedThisTask": false,
+  "sourceOfficialPaperPDFSha256Recorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+  "officialPublishedAnswerPDFSha256Recorded": "455eae60e7c8f943ada011bac3f488520a460432310448dc531dee7f0fd9e1e0",
+  "officialQuestionImages": [
+    {
+      "page": 6,
+      "path": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+      "sha256": "a7b74caa809a87696bdb8b657cd5a77968d61cea1d8d4ccb8a37c4384a688df4",
+      "blob": "8719fddcdb4ddd835a573828710994936d329b80"
+    },
+    {
+      "page": 7,
+      "path": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "sha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "blob": "eddea1c33102085accd4a33cc5835e2a70188800"
+    }
+  ],
+  "originalAnswerPage": {
+    "path": "sudu/data/original/114/00-C-answers/p001-455eae60e7-v2-w1400-q66.webp",
+    "blob": "c3090e94ab1cbf7adf9f7efd0581529eff00e26b",
+    "sourcePage": 1,
+    "directReadAnswerForClaimedQuestions": {
+      "114-00-C-16": "B",
+      "114-00-C-17": "D",
+      "114-00-C-18": "A"
+    }
+  },
+  "questionImageRecords": [
+    {
+      "qid": "114-00-C-16",
+      "number": 16,
+      "originalPage": 6,
+      "officialAnswer": "B",
+      "image": "sudu/data/processed/114/webp-v1/00-C/114-00-C-16.webp",
+      "gitBlob": "07698a20aa5b8fafbb8fa234989f7a8c5add388c",
+      "sha256": "d04b2f4b9bd7bb2a1212fdb12da4ee7d9b0cee14afd3e17d4bd1733061952d4a",
+      "originalManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "g1Review": "AI_ASSISTANT_DIRECT_VISUAL_SOURCE_IMAGE_CANDIDATE",
+      "g2Text": "PENDING_FULL_OCR_DIAGRAM_RECONCILIATION",
+      "formalG3": false
+    },
+    {
+      "qid": "114-00-C-17",
+      "number": 17,
+      "originalPage": 6,
+      "officialAnswer": "D",
+      "image": "sudu/data/processed/114/webp-v1/00-C/114-00-C-17.webp",
+      "gitBlob": "7fe2f81756e4b6a631a3f5a0327f95b58bffbe23",
+      "sha256": "9fd277ec092fe55fb9bc12080b6bce9749ffe9f6b7cb468e33439ae5b23c985e",
+      "originalManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "g1Review": "AI_ASSISTANT_DIRECT_VISUAL_SOURCE_IMAGE_CANDIDATE",
+      "g2Text": "PENDING_FULL_OCR_DIAGRAM_RECONCILIATION",
+      "formalG3": false
+    },
+    {
+      "qid": "114-00-C-18",
+      "number": 18,
+      "originalPage": 7,
+      "officialAnswer": "A",
+      "image": "sudu/data/processed/114/webp-v1/00-C/114-00-C-18.webp",
+      "gitBlob": "fbca5e2317f8e99f4f817ea528122d8af8c7a61a",
+      "sha256": "50c3718fc832c152e735ad773272fd4466888d57cc18b6b319c85218773c53ed",
+      "originalManifestQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "g1Review": "AI_ASSISTANT_DIRECT_VISUAL_SOURCE_IMAGE_CANDIDATE",
+      "g2Text": "PENDING_FULL_OCR_DIAGRAM_RECONCILIATION",
+      "formalG3": false
+    }
+  ],
+  "sharedMaterial": {
+    "id": "114-00-C-SHARED-16-19",
+    "originalSourcePage": 6,
+    "linkedQuestionIds": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "claimedQuestionIds": [
+      16,
+      17,
+      18
+    ],
+    "q19SourceQaInThisTask": "NOT_REVIEWED_OR_PROMOTED",
+    "sourcePage": "sudu/data/original/114/00-C/p006-f7c8a4b732-v2-w1400-q66.webp",
+    "sourcePageGitBlob": "8719fddcdb4ddd835a573828710994936d329b80",
+    "cropPixels": [
+      90,
+      155,
+      1310,
+      1360
+    ],
+    "cropWidthHeight": [
+      1220,
+      1205
+    ],
+    "isolatedSharedWebp": "sudu/data/processed/114/source-receipts/114-00-C-SHARED-16-19.webp",
+    "sha256": "b27e23f0c33fdfc4843dac6b6b5aff8fae5a40254c986b8705d73813c147e403",
+    "gitBlob": "000a72926ff25cfbd4016cce5378ecd194534deb",
+    "losslessSourcePixelCrop": true,
+    "sourcePageNoRecreation": true,
+    "reusedSingleImageG1AllThree": true,
+    "generationMethod": "PIL.Image.crop original TCTE p6 decoded pixels -> deterministic lossless WebP; compare exact RGB pixel array",
+    "visualReviewStatus": "PASS_AI_ASSISTANT_DIRECT_VISUAL_ORIGINAL",
+    "containsQ16Question": false,
+    "sourceTextG2Status": "PENDING_SEPARATE_VERIFICATION",
+    "sourceRevisionSeed": "ROLE_A_114_LAMPS_SHARED_G1_V1\nb27e23f0c33fdfc4843dac6b6b5aff8fae5a40254c986b8705d73813c147e403\nd04b2f4b9bd7bb2a1212fdb12da4ee7d9b0cee14afd3e17d4bd1733061952d4a\n9fd277ec092fe55fb9bc12080b6bce9749ffe9f6b7cb468e33439ae5b23c985e\n50c3718fc832c152e735ad773272fd4466888d57cc18b6b319c85218773c53ed",
+    "sourceRevisionSha256": "0d7aa9c1ccf627e326aa2edac0e6c61b4436d49e9313246275365f2d41be27eb",
+    "visualReviewMethod": "GPT-6 Role A AI Assistant Source Visual Review: directly opened newly generated WebP and official original p6; all three lamp illustration + paragraph blocks and source heading present; complete final buffalo-lamp paragraph; no Q16 question or options, no p6 exam header/footer, no other question.",
+    "visualReviewResult": {
+      "headingComplete": true,
+      "threeOriginalLampIllustrations": true,
+      "allThreeReadingParagraphGroupsComplete": true,
+      "lastReadingSentenceComplete": true,
+      "noQ16QuestionOrOptions": true,
+      "noExamPageHeaderFooter": true,
+      "losslessPixelEqualityVerifiedByCI": true,
+      "independentHumanExaminer": false
+    }
+  },
+  "officialNotice": {
+    "ledgerPath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+    "ledgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "paperCode": "00-C",
+    "year": 114,
+    "confirmationPdfSha256PreviouslyRecorded": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+    "namedChineseCorrections": [
+      "114-00-C-14",
+      "114-00-C-24",
+      "114-00-C-28",
+      "114-00-C-30"
+    ],
+    "claimedQuestionsListedInNotice": false,
+    "answerChangesForClaimedQuestionsObserved": false,
+    "independentPdfRerenderedByThisTask": false,
+    "formalG3QuestionAnswersPromoted": false
+  },
+  "downstream": {
+    "canonicalBankEdited": false,
+    "canonicalSqliteEdited": false,
+    "manifestEdited": false,
+    "rawOcrEdited": false,
+    "otherQ19Edited": false,
+    "lessonEdited": false,
+    "EContentReview": false,
+    "DV4EightByTwo": false,
+    "officialFinalAnswerFormalG3": false,
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}
