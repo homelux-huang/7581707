@@ -1,0 +1,60 @@
+name: ROLE A 114 115 annual 410 candidate read-only G1 G2 G3 source gap inventory (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-115-full-source-gate-inventory-20261103
+    paths:
+      - scripts/role_a_114_115_source_gate_inventory.py
+      - tests/test_role_a_114_115_source_gate_inventory.py
+      - docs/ROLE_A_114_115_SOURCE_GATES_20261103.md
+      - docs/ROLE_A_114_115_SOURCE_GATES_20261103.json
+      - .github/workflows/role-a-114-115-annual-source-gates.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: role-a-114-115-source-gates-inventory-one-branch
+  cancel-in-progress: false
+
+jobs:
+  read_only_410:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-115-full-source-gate-inventory-20261103'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout isolated source inventory branch, not protected main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build deterministic 410-row read-only source file and G2/G3 flag report (NEVER QUALITY PASS)
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/role_a_114_115_source_gate_inventory.py
+          python scripts/role_a_114_115_source_gate_inventory.py
+      - name: Test exact per-QID original WebP SHA, 205/205 IDs and untouched SQLite
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_115_source_gate_inventory.py -v
+      - name: Save only own deterministic report in isolated branch
+        env:
+          BRANCH: qa/role-a-114-115-full-source-gate-inventory-20261103
+        run: |
+          set -euo pipefail
+          [ "$GITHUB_REF" = "refs/heads/$BRANCH" ]
+          git add docs/ROLE_A_114_115_SOURCE_GATES_20261103.json
+          if git diff --cached --quiet; then
+            echo "Already carries byte-identical 410 QID source inventory; no new commit."
+          else
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "report(A): freeze 410 exact source candidates missing-asset and QA flags [NO RELEASE]"
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "No source/original/DB files touched. Report is NOT source QA PASS or student admission."
