@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-03",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "已知平面上兩向量 AB = ( 2 , 3 ) , AC = ( 3 , y ) 。若 – 2 ≤ y ≤ 2，則 AB  ‧ AC 的最大值為何？",
+  "options": [
+    "– 6",
+    "0",
+    "6",
+    "12\n\n\n\n\n\n- 2-\n\n114 年四技                                              第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "a2d8d662227f9b9272771954b0c55a7aacf98ca9a4eeb3d886b7ff035b29aa04",
+    "webpSha256": "7e8ecade9aa9fdaeb0481a73e2264f94d1807d57678090fcff32cf3115e1af96",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-03.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "向量內積｜求線性式最大值",
+    "teacherSummary": "AB=(2,3)、AC=(3,y)，內積6+3y；y在−2到2，係數3正，故y=2時最大12（D）。",
+    "elementarySummary": "把兩個橫向數乘，再把兩個縱向數乘，合起來是6+3y；y取最大的2就得到12。",
+    "concept": "平面內積(a,b)·(c,d)=ac+bd；一次式的最大值要檢查斜率方向與定義域端點。",
+    "memory": "6+3y，y=2→12，D",
+    "highlights": [
+      "最大值",
+      "y"
+    ],
+    "formula": "AB·AC=2×3+3y=6+3y，因係數3>0，最大在y=2",
+    "solvingSteps": [
+      "列出向量 AB=(2,3) 與 AC=(3,y)。",
+      "套內積公式，將對應分量相乘後相加。",
+      "得到AB·AC=2×3+3y=6+3y。",
+      "y介於−2與2，且y係數3為正，所以y最大時內積最大。",
+      "代入y=2得6+6=12，候選D。",
+      "逆向檢查y=−2時得0、y=0得6，都不比12大。",
+      "D原始選項OCR混入頁面文字，A仍須看原圖核對。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "AB=(2,3)",
+        "AC=(3,y)",
+        "−2≤y≤2"
+      ],
+      "formulaUse": "AB·AC=2×3+3y=6+3y，因係數3>0，最大在y=2",
+      "substitution": [
+        "6+3×2=12"
+      ],
+      "steps": [
+        "列出向量 AB=(2,3) 與 AC=(3,y)。",
+        "套內積公式，將對應分量相乘後相加。",
+        "得到AB·AC=2×3+3y=6+3y。",
+        "y介於−2與2，且y係數3為正，所以y最大時內積最大。",
+        "代入y=2得6+6=12，候選D。",
+        "逆向檢查y=−2時得0、y=0得6，都不比12大。",
+        "D原始選項OCR混入頁面文字，A仍須看原圖核對。"
+      ],
+      "result": "12",
+      "unit": "內積值，原題無指定單位",
+      "option": "D"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A −6 低於本題可取得的最小內積0，與6+3y在−2≤y≤2的範圍矛盾。",
+        "elementary": "這題最少都0，不可能最大是負6。",
+        "reason": "A −6 低於本題可取得的最小內積0，與6+3y在−2≤y≤2的範圍矛盾。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 0 對應y=−2，是最小端點值；題問最大不能選0。",
+        "elementary": "0是最小，不是最大。",
+        "reason": "B 0 對應y=−2，是最小端點值；題問最大不能選0。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 6 只對應y=0；將y調到可用最大2時會得到12，所以6不最大。",
+        "elementary": "y等於0才是6，還能增加。",
+        "reason": "C 6 只對應y=0；將y調到可用最大2時會得到12，所以6不最大。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 12 是y=2時的6+3×2；因係數正，這是區間最大值。",
+        "elementary": "把y用2，算得12，正確。",
+        "reason": "D 12 是y=2時的6+3×2；因係數正，這是區間最大值。",
+        "isCorrect": true
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "a9c19ab07e54537ba378bf23b5519a9fee6d7c6a06e858f888ad2709b1d0382a"
+}

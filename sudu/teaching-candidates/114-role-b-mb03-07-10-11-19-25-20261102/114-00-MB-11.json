@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-11",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "若 log 25 2 = a 且 log 25 3 = b，則 5 3 a + 2 b + 1 =？",
+  "options": [
+    "30",
+    "30 2",
+    "45",
+    "45 2"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "18640d2a98f4ecd3de1f8f396d782fe11da4bee6f70b9db9cb8c5fa5d45628ca",
+    "webpSha256": "9bc55ae859f768cba4c7343f698508e95ceb23f5b3c33aa84547e62feffe332e",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-11.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "log₂₅轉5的指數｜對數與平方根",
+    "teacherSummary": "a=log₂₅2⇒5^(2a)=2，所以5^a=√2；b=log₂₅3⇒5^(2b)=3。故5^(3a+2b+1)=(√2)³×3×5=30√2，對應B（OCR缺根號）。",
+    "elementarySummary": "25是5的平方，先讓5的2a次方變成2，就知道5的a次方是根號2。最後乘出30根號2。",
+    "concept": "log_A B=c⇔A^c=B，x^(u+v)=x^ux^v。",
+    "memory": "5^a=√2，5^(2b)=3，得30√2",
+    "highlights": [
+      "log",
+      "5"
+    ],
+    "formula": "25^a=2，25^b=3；5^a=√2，5^(2b)=3。",
+    "solvingSteps": [
+      "依對數定義，25^a=2、25^b=3。",
+      "因25=5²，所以5^(2a)=2、5^(2b)=3。",
+      "5^a為正，從(5^a)²=2得5^a=√2。",
+      "將5^(3a+2b+1)拆成(5^a)³×5^(2b)×5。",
+      "代入(√2)³=2√2，乘3×5得到30√2，候選B。",
+      "近似值30×1.414≈42.426，與原指數算式的值一致。",
+      "原始選項OCR少了根號，請A核實B是否確實印成30√2，才可作正式答案。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "a=log₂₅2",
+        "b=log₂₅3",
+        "求5^(3a+2b+1)"
+      ],
+      "formulaUse": "25^a=2，25^b=3；5^a=√2，5^(2b)=3。",
+      "substitution": [
+        "5^(3a+2b+1)=(√2)³×3×5",
+        "=2√2×15"
+      ],
+      "steps": [
+        "依對數定義，25^a=2、25^b=3。",
+        "因25=5²，所以5^(2a)=2、5^(2b)=3。",
+        "5^a為正，從(5^a)²=2得5^a=√2。",
+        "將5^(3a+2b+1)拆成(5^a)³×5^(2b)×5。",
+        "代入(√2)³=2√2，乘3×5得到30√2，候選B。",
+        "近似值30×1.414≈42.426，與原指數算式的值一致。",
+        "原始選項OCR少了根號，請A核實B是否確實印成30√2，才可作正式答案。"
+      ],
+      "result": "30√2（字形待A核）",
+      "unit": "無量綱",
+      "option": "B"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 30 少了√2，錯把(5^a)³=(√2)³=2√2中的根號因子省掉。",
+        "elementary": "答案應有根號2，不能只有30。",
+        "reason": "A 30 少了√2，錯把(5^a)³=(√2)³=2√2中的根號因子省掉。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 30√2 正好是5×3×2√2，由定義推導得到；但OCR根號必須經A原圖核對。",
+        "elementary": "乘好就是三十根號二。",
+        "reason": "B 30√2 正好是5×3×2√2，由定義推導得到；但OCR根號必須經A原圖核對。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 45 不含√2，且係數45不是原式5×3×2=30，不符對數指數換算。",
+        "elementary": "既沒有根號，數字也太大。",
+        "reason": "C 45 不含√2，且係數45不是原式5×3×2=30，不符對數指數換算。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 45√2 保留了根號但係數多50%，5×3×2應等於30而非45。",
+        "elementary": "前面只能30，不是45。",
+        "reason": "D 45√2 保留了根號但係數多50%，5×3×2應等於30而非45。",
+        "isCorrect": false
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "4504a837c098c60db05b2f794f853f1cfd1bbda9d51d42134740a33dfe2f7933"
+}

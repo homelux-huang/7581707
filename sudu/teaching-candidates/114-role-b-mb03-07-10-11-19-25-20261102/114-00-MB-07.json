@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-07",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "試求sin 2 10 ° + 2 sin 2 20 ° + 4 sin 2 30 ° + 2 sin 2 70 ° + sin 2 80 ° =？",
+  "options": [
+    "7",
+    "6",
+    "5",
+    "4\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考\n\n                                                x   y\n                                                                                                           1 的直線方程式可 8. 在坐標平面上，若直線 L 1 跟其平行線 L 2 ：5 − 12 = 1 的距離為 1，則 L\n\n  為下列何者？\n              47    (A) y =12 x −\n          5    5\n              47    (B) y =12 x +\n          5     5\n    (C) 12 𝑥 – 5 y + 73 = 0\n    (D) 5 𝑥 – 12 y + 73 = 0"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "019d03e572cee5835934b3a00e78f9617fc6a80a136bfee3367e5ad0877c2935",
+    "webpSha256": "4ef9fefd216df6bbe0a7c13697a0f9de2c589b194d490311a41853c390dcad3d",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-07.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "三角恆等式｜互補角正弦平方",
+    "teacherSummary": "sin²10°+sin²80°=1，2(sin²20°+sin²70°)=2，4sin²30°=1，合計4（D）。",
+    "elementarySummary": "10度和80度湊一組等於1，20度和70度也湊一組；30度那項又等於1，加起來4。",
+    "concept": "sin²θ+cos²θ=1，sin(90°−θ)=cosθ，sin30°=1/2。",
+    "memory": "10/80→1；20/70→2；30→1，總4",
+    "highlights": [
+      "sin",
+      "30"
+    ],
+    "formula": "sin²θ+sin²(90°−θ)=1",
+    "solvingSteps": [
+      "先認出sin²10°是sin10°的平方，不是sin20°。",
+      "將sin²10°與sin²80°配對，因為兩角互補，和是1。",
+      "將2sin²20°與2sin²70°配對，得到2×1=2。",
+      "sin30°=1/2，4sin²30°=4×1/4=1。",
+      "原式合計1+2+1=4，選D。",
+      "用近似正弦數值反查，10與80平方和接近1、20與70平方和接近1。",
+      "D的OCR選項混入頁尾，須A原圖G2修復後才能展示。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "sin²10+2sin²20+4sin²30+2sin²70+sin²80"
+      ],
+      "formulaUse": "sin²θ+sin²(90°−θ)=1",
+      "substitution": [
+        "sin²10+sin²80=1",
+        "2(sin²20+sin²70)=2",
+        "4sin²30=1"
+      ],
+      "steps": [
+        "先認出sin²10°是sin10°的平方，不是sin20°。",
+        "將sin²10°與sin²80°配對，因為兩角互補，和是1。",
+        "將2sin²20°與2sin²70°配對，得到2×1=2。",
+        "sin30°=1/2，4sin²30°=4×1/4=1。",
+        "原式合計1+2+1=4，選D。",
+        "用近似正弦數值反查，10與80平方和接近1、20與70平方和接近1。",
+        "D的OCR選項混入頁尾，須A原圖G2修復後才能展示。"
+      ],
+      "result": "4",
+      "unit": "無量綱",
+      "option": "D"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 7 可能把項前係數直接相加，卻沒有計算sin²各角度，違反原式運算。",
+        "elementary": "不是把題目看見的係數全部加起來。",
+        "reason": "A 7 可能把項前係數直接相加，卻沒有計算sin²各角度，違反原式運算。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 6 高估了30度的4sin²30°；實際它等於1，不是4。",
+        "elementary": "30度那項只會得到1。",
+        "reason": "B 6 高估了30度的4sin²30°；實際它等於1，不是4。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 5 比正確1+2+1多1，表示互補角配對或30度平方時多算了。",
+        "elementary": "三組加完只有4，不是5。",
+        "reason": "C 5 比正確1+2+1多1，表示互補角配對或30度平方時多算了。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 4 正好是互補角的1、兩倍互補角的2與30度項的1相加。",
+        "elementary": "1加2加1是4，選D。",
+        "reason": "D 4 正好是互補角的1、兩倍互補角的2與30度項的1相加。",
+        "isCorrect": true
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "a0d5c366053c7293864dbda2a343f9e766dd3f4693ff6543ce2b512d87c36554"
+}
