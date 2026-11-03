@@ -77,6 +77,18 @@ class RoleA115EnglishSourceQA(unittest.TestCase):
         self.assertEqual(q["sha256"],x["sha256"])
         self.assertEqual(q["qaStatus"],"PASS")
         self.assertEqual(EXPECTED_Q[x["number"]],x["originalAnswer"])
+  def test_pdf_source_sha_and_original_year_answer_candidates(self):
+    year=read(ROOT/"sudu/data/years/115.json")
+    paper=next(p for p in year["papers"] if p["paper"]=="00-E")
+    qids={q["id"]:q for q in paper["questions"]}
+    for x in self.ev["questionRecords"]:
+      with self.subTest(qid=x["questionId"]):
+        source=qids[x["questionId"]]
+        self.assertEqual(source["sourceVersion"]["questionPdfSha256"],self.ev["officialSource"]["officialOriginalQuestionPdfSha256PreviouslyRecorded"])
+        self.assertEqual(source["sourceVersion"]["answerPdfSha256"],self.ev["officialSource"]["officialStandardAnswerPdfSha256PreviouslyRecorded"])
+        self.assertEqual(source["officialAnswerCandidate"],x["originalAnswer"])
+        self.assertFalse(source["answerVerified"])
+
   def test_no_q42_falsely_inherited(self):
     s=self.ev["sharedReviewScope"]
     self.assertFalse(s["sharedContainsQuestion42ButQ42QaThisTask"])
