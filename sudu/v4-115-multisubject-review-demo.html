@@ -38,7 +38,7 @@ main{max-width:900px;margin:auto;padding:18px 14px 38px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;margin-bottom:14px;min-width:0}#questionCard{background:var(--question-bg);border-color:color-mix(in srgb,var(--blue) 32%,var(--line));box-shadow:0 10px 28px rgba(49,93,245,.06)}
 #answerCard{background:var(--option-section);border-color:#c8a76b}#answerCard>h2{font-size:22px;margin-bottom:14px}.qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:850} .qnum{font-size:37px;color:var(--blue);font-weight:1000}
 .pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:14px;background:var(--bg)}
-h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} h2{font-size:25px;margin:0 0 12px}
+h1{font-size:29px;line-height:1.25;margin:13px 0 15px;overflow-wrap:break-word} #questionCard.annual-source-english h1{white-space:pre-wrap} h2{font-size:25px;margin:0 0 12px}
 .options{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:21px;background:var(--option-section)} .opt{width:100%;display:flex;gap:13px;align-items:flex-start;text-align:left;border:1px solid var(--line);background:var(--option-bg);color:var(--text);border-radius:18px;padding:15px 17px;min-height:66px;font-size:20px;line-height:1.28;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
 @media(hover:hover) and (pointer:fine){ .opt:not(.correct):not(.wrong):hover{background:var(--option-hover);border-color:var(--option-hover-border);transform:translateY(-2px);box-shadow:0 9px 22px rgba(49,93,245,.16)} .opt:not(.correct):not(.wrong):hover .letter{border-color:var(--option-hover-border);background:color-mix(in srgb,var(--option-hover-border) 12%,var(--option-bg))}}
 
@@ -472,6 +472,10 @@ function renderQuestion(){
  $('studyView').appendChild($('guideCard'));hideGuide();
  $('answerScrollSpace').style.height='0px';
  const q=qnow(),r=record(q);
+ // Official year English dialogues preserve printed line breaks and underscores.
+ // 35-question Demo has no canonical annual QID; leave its layout untouched.
+ $('questionCard').classList.toggle('annual-source-english',
+   q.subject==='英文'&&typeof q.canonicalId==='string'&&/^11[45]-00-E-\d{2}$/.test(q.canonicalId));
  const img=q.image?'<figure class="source-figure" data-single-question-webp="true"><img src="'+q.image+'" loading="lazy" decoding="async" alt="'+esc(q.subject)+'第 '+q.id+' 題單題原圖"><figcaption>官方原始 WebP 單題裁切：只保留本題題號、題目／必要圖表與 A～D 選項；沒有重新 OCR。</figcaption></figure>':'';
  let optionsHtml='';
  q.options.forEach((o,i)=>{
