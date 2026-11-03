@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-18",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_PENDING_AUTHOR_MATH",
+  "question": "若 ( x , y ) = ( p , q ) 為二元一次聯立方程式         的唯一解，則一元二次方程式\n                                        65 x + 54 y = −25\n   20 x 2 + ( p + q ) x – 114 = 0 的兩根和為何？",
+  "options": [
+    "– 1000",
+    "– 1",
+    "1",
+    "1000"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "b5c78d6a22fafea25192b0a441f2946941be45812d86c06a9e4be473eaf37aff",
+    "webpSha256": "3bef937a37eca3e6d9abad21a6d52cff6122c0f1b49eb9064e38ba7dfaea434a",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-18.webp",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialCorrectionScopeNotVerified": true
+  },
+  "teaching": {
+    "topic": "聯立方程式＋韋達定理｜求根和",
+    "teacherSummary": "聯立式 35p+46q=2025、65p+54q=−25 直接相加得 100(p+q)=2000，故 p+q=20。二次式 20x²+(p+q)x−114=0 根和為 −(p+q)/20=−1，答案 B。",
+    "elementarySummary": "兩個式子相加，p 的係數變 100、q 也變 100，就知道 p+q=20。兩個根的和等於中間項係數換負號再除以最前面 20，所以 −1。",
+    "concept": "聯立式先尋找相加消去困難：35+65=100、46+54=100；韋達定理 ax²+bx+c=0 ⇒ 根和=−b/a。",
+    "formula": "聯立式線性相加求 p+q；韋達定理：ax²+bx+c=0 的兩根和 =−b/a。",
+    "memory": "兩方程直接相加 ⇒ 100(p+q)=2000 ⇒ 根和=−20/20=−1。",
+    "highlights": [
+      "35 x + 46 y",
+      "65 x + 54 y",
+      "20 x",
+      "兩根和"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": "AUTHOR_SELF_CALCULATION_CHECK_ONLY",
+    "examCalculation": {
+      "given": [
+        "35p+46q=2025",
+        "65p+54q=−25",
+        "20x²+(p+q)x−114=0"
+      ],
+      "formulaUse": "聯立式線性相加求 p+q；韋達定理：ax²+bx+c=0 的兩根和 =−b/a。",
+      "substitution": [
+        "(35p+46q)+(65p+54q)=2025+(−25)",
+        "100p+100q=2000",
+        "−(p+q)/20=−20/20"
+      ],
+      "steps": [
+        "將聯立式的 x,y 唯一解記成 p,q：35p+46q=2025、65p+54q=−25。",
+        "兩式直接相加，因 35+65=100、46+54=100，左側變 100p+100q；右側 2025−25=2000。",
+        "因此 100(p+q)=2000，兩邊除以 100 得 p+q=20。",
+        "對二次方程式 20x²+(p+q)x−114=0 套韋達定理，根和=−b/a，其中 a=20、b=p+q=20。",
+        "所以兩根和=−20/20=−1，對應 B（根和沒有單位）。",
+        "逆向驗算聯立式：用 p+q=20，令 p=20−q，代入第一式 35(20−q)+46q=2025，得 q=1325/11、p=−1105/11；代回第二式 65p+54q=(−71825+71550)/11=−25，吻合。",
+        "再用二次式驗算：20x²+20x−114=0 的兩根是 (−5±√595)/10，兩根相加等於 −1。"
+      ],
+      "result": "兩根和 = −1",
+      "unit": "無單位",
+      "option": "B"
+    },
+    "solvingSteps": [
+      "將聯立式的 x,y 唯一解記成 p,q：35p+46q=2025、65p+54q=−25。",
+      "兩式直接相加，因 35+65=100、46+54=100，左側變 100p+100q；右側 2025−25=2000。",
+      "因此 100(p+q)=2000，兩邊除以 100 得 p+q=20。",
+      "對二次方程式 20x²+(p+q)x−114=0 套韋達定理，根和=−b/a，其中 a=20、b=p+q=20。",
+      "所以兩根和=−20/20=−1，對應 B（根和沒有單位）。",
+      "逆向驗算聯立式：用 p+q=20，令 p=20−q，代入第一式 35(20−q)+46q=2025，得 q=1325/11、p=−1105/11；代回第二式 65p+54q=(−71825+71550)/11=−25，吻合。",
+      "再用二次式驗算：20x²+20x−114=0 的兩根是 (−5±√595)/10，兩根相加等於 −1。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A −1000 與韋達定理 −b/a=−20/20 不符；把聯立結果或根和係數誤放大可能出現離譜數值。",
+        "elementary": "20 除以 20 只有1，不可能得到負一千。",
+        "reason": "A −1000 與韋達定理 −b/a=−20/20 不符；把聯立結果或根和係數誤放大可能出現離譜數值。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B −1 正確，聯立式直接相加得 p+q=20，而二次方程式根和為 −(p+q)/20=−1。",
+        "elementary": "兩個式子算出20，再算負20除20就是−1。",
+        "reason": "B −1 正確，聯立式直接相加得 p+q=20，而二次方程式根和為 −(p+q)/20=−1。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 1 少了韋達根和公式中的負號；ax²+bx+c=0 根和是 −b/a，不是 b/a。",
+        "elementary": "公式前面有負號，不能選正1。",
+        "reason": "C 1 少了韋達根和公式中的負號；ax²+bx+c=0 根和是 −b/a，不是 b/a。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 1000 誤把兩式係數 100 與 p+q=20 或正負號混用，不能通過 −20/20 的根和公式。",
+        "elementary": "根和是負1，不是很大的正一千。",
+        "reason": "D 1000 誤把兩式係數 100 與 p+q=20 或正負號混用，不能通過 −20/20 的根和公式。",
+        "isCorrect": false
+      }
+    },
+    "source": "A PR21 114 原試題OCR/WebP SHA候選；ROLE B作者公式驗算不代表官方源卷/答案公告核准。"
+  },
+  "reasoningAudit": {
+    "sourceAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorArithmeticCrosscheckDone": true,
+    "independentMathEReview": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_QUESTION_ANSWER_NOTICE_REQUIRED",
+      "ROLE_E_DISTINCT_AI_MATH_VERIFICATION_PENDING",
+      "D_REAL_ORIGINAL_YEAR_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "5a39aadcde9ff48e28de51cb3774dda5dacc1ad301726d8494a71a1ec98c2da7"
+}

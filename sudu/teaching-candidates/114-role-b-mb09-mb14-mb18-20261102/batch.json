@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-MB09-MB14-MB18-SOURCE-BOUND-MATH-20261102-03",
+  "role": "B",
+  "year": 114,
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "scope": "114 MathB MB09 MB14 MB18 AUTHOR ONLY",
+  "total": 3,
+  "items": [
+    {
+      "questionId": "114-00-MB-09",
+      "candidateAnswer": "C",
+      "path": "sudu/teaching-candidates/114-role-b-mb09-mb14-mb18-20261102/114-00-MB-09.json",
+      "sourceRevision": "17d179a1b2168faaaabf5add887a0231488c4873eb668c9eeb902eb80b0496f6",
+      "webpSha256": "65e31c4f940e63ae9d62b8bf864c59e7839d3f262e36bdd947d2570c5893f967",
+      "composedTeachingSha256": "e5e77ea32460a6b309543ec148ec2b57fcfb4b9396d2501e26b50777aefa4cf5",
+      "fileSha256": "f2a202c8ab60d87850244fb89ed6b8d34d08439b9eaaabaa2e37a4650f991b6b",
+      "independentQA": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-14",
+      "candidateAnswer": "C",
+      "path": "sudu/teaching-candidates/114-role-b-mb09-mb14-mb18-20261102/114-00-MB-14.json",
+      "sourceRevision": "0d1bbec772292b115b2893e3ef87c2088daabbbcc7b650a636ad70ec55ffb67c",
+      "webpSha256": "1a0a01b5f75e37c5fd8feed03a686d2bdf9f6399d060eae07616c0803a53b91a",
+      "composedTeachingSha256": "b577fdef37b2778c54fee495c3367efa6b6c89521455ed2a120deb9c05e602f2",
+      "fileSha256": "7d3b562f636bf6fc1b97fd5d4182e1913b9b425085de7fb7929ff1bf92380e13",
+      "independentQA": false,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-18",
+      "candidateAnswer": "B",
+      "path": "sudu/teaching-candidates/114-role-b-mb09-mb14-mb18-20261102/114-00-MB-18.json",
+      "sourceRevision": "b5c78d6a22fafea25192b0a441f2946941be45812d86c06a9e4be473eaf37aff",
+      "webpSha256": "3bef937a37eca3e6d9abad21a6d52cff6122c0f1b49eb9064e38ba7dfaea434a",
+      "composedTeachingSha256": "5a39aadcde9ff48e28de51cb3774dda5dacc1ad301726d8494a71a1ec98c2da7",
+      "fileSha256": "4d936c59192ae86e91d3a3585c79f38097b44702f5e48f013910b098c3b73a98",
+      "independentQA": false,
+      "ready": false
+    }
+  ],
+  "authorCalculationCrosschecked": 3,
+  "independentETrustedPass": 0,
+  "sourceStatus": "G1_DRAFT_G2_G3_NOT_VERIFIED",
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "noRelease": true,
+  "requiresHumanTeacher": false
+}

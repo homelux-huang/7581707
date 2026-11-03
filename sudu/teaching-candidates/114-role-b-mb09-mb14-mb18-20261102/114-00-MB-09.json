@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-09",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_PENDING_AUTHOR_MATH",
+  "question": "已知一根頭髮的直徑是 0.017 毫米，而晶圓製程是以奈米為單位。若某半導體大廠採用\n  3奈米製程，試問3奈米約為一根頭髮直徑的幾倍？ ( 一毫米 = 10 − 3 公尺，1奈米 = 10 −公尺9       )",
+  "options": [
+    "6 × 10 3",
+    "6 × 10 4",
+    "1.8 × 10 – 4",
+    "1.8 × 10 – 5"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "17d179a1b2168faaaabf5add887a0231488c4873eb668c9eeb902eb80b0496f6",
+    "webpSha256": "65e31c4f940e63ae9d62b8bf864c59e7839d3f262e36bdd947d2570c5893f967",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-09.webp",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialCorrectionScopeNotVerified": true
+  },
+  "teaching": {
+    "topic": "科學記號｜3 奈米相對頭髮直徑的倍數",
+    "teacherSummary": "比較不同長度先統一單位：0.017 毫米＝1.7×10⁻⁵ 公尺；3 奈米＝3×10⁻⁹ 公尺。相除得到約 1.7647×10⁻⁴，四捨五入為 1.8×10⁻⁴ 倍，選 C。",
+    "elementarySummary": "先讓奈米與毫米都變成公尺，再做『晶片線寬 ÷ 頭髮粗度』。結果是很小很小的數，約十萬分之十八，所以 C。",
+    "concept": "比值＝被比較長度／基準長度；1 mm＝10⁻³ m、1 nm＝10⁻⁹ m；科學記號的指數要用除法相減。",
+    "formula": "倍數＝製程尺寸／頭髮直徑；同單位的長度相除，單位會抵消。",
+    "memory": "奈米比毫米小 10⁶ 倍；3÷17000≈0.00018＝1.8×10⁻⁴。",
+    "highlights": [
+      "0.017 毫米",
+      "3奈米",
+      "10 − 3",
+      "10 −",
+      "一根頭髮"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": "AUTHOR_SELF_CALCULATION_CHECK_ONLY",
+    "examCalculation": {
+      "given": [
+        "頭髮直徑 0.017 毫米",
+        "製程尺度 3 奈米",
+        "1 毫米=10⁻³ 公尺；1 奈米=10⁻⁹ 公尺"
+      ],
+      "formulaUse": "倍數＝製程尺寸／頭髮直徑；同單位的長度相除，單位會抵消。",
+      "substitution": [
+        "3 奈米 = 3×10⁻⁹ 公尺",
+        "0.017 毫米 = 0.017×10⁻³ 公尺 = 1.7×10⁻⁵ 公尺",
+        "(3×10⁻⁹)÷(1.7×10⁻⁵)"
+      ],
+      "steps": [
+        "先把題目中的 3 奈米轉成公尺：3×10⁻⁹ 公尺。",
+        "將 0.017 毫米換算：0.017×10⁻³=1.7×10⁻⁵ 公尺。",
+        "題問『3奈米是頭髮直徑的幾倍』，用 3×10⁻⁹ ÷ 1.7×10⁻⁵。",
+        "分開計算係數及指數：(3÷1.7)×10^(-9-(-5))≈1.7647×10⁻⁴。",
+        "依選項近似為 1.8×10⁻⁴ 倍，答案 C（沒有單位，因是兩長度之比）。",
+        "反向驗算：1.8×10⁻⁴ ×0.017 mm≈0.00000306 mm＝3.06 nm，與 3nm 接近。"
+      ],
+      "result": "約 1.8×10⁻⁴ 倍",
+      "unit": "倍（無量綱）",
+      "option": "C"
+    },
+    "solvingSteps": [
+      "先把題目中的 3 奈米轉成公尺：3×10⁻⁹ 公尺。",
+      "將 0.017 毫米換算：0.017×10⁻³=1.7×10⁻⁵ 公尺。",
+      "題問『3奈米是頭髮直徑的幾倍』，用 3×10⁻⁹ ÷ 1.7×10⁻⁵。",
+      "分開計算係數及指數：(3÷1.7)×10^(-9-(-5))≈1.7647×10⁻⁴。",
+      "依選項近似為 1.8×10⁻⁴ 倍，答案 C（沒有單位，因是兩長度之比）。",
+      "反向驗算：1.8×10⁻⁴ ×0.017 mm≈0.00000306 mm＝3.06 nm，與 3nm 接近。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 6×10³ 倍比 1 大得多；3 奈米明顯遠小於 0.017 毫米，不可能是頭髮直徑的幾千倍。",
+        "elementary": "3 奈米很小，不能比頭髮粗幾千倍。",
+        "reason": "A 6×10³ 倍比 1 大得多；3 奈米明顯遠小於 0.017 毫米，不可能是頭髮直徑的幾千倍。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 6×10⁴ 倍更不合理；將 mm→nm 換算反向，或把除數與被除數顛倒，才可能誤得巨大正指數。",
+        "elementary": "頭髮比 3 奈米粗，不能說 3 奈米比頭髮粗幾萬倍。",
+        "reason": "B 6×10⁴ 倍更不合理；將 mm→nm 換算反向，或把除數與被除數顛倒，才可能誤得巨大正指數。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 1.8×10⁻⁴ 倍與 (3×10⁻⁹ m)/(1.7×10⁻⁵ m)≈1.7647×10⁻⁴ 相符，長度單位相除後抵消。",
+        "elementary": "兩個都換成公尺相除，約 0.00018，選 C。",
+        "reason": "C 1.8×10⁻⁴ 倍與 (3×10⁻⁹ m)/(1.7×10⁻⁵ m)≈1.7647×10⁻⁴ 相符，長度單位相除後抵消。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 1.8×10⁻⁵ 倍比正確估值小 10 倍，常見原因是 0.017 mm 換成公尺時多錯一個 10 的因子。",
+        "elementary": "這個答案少了一個 10 倍，應是 10⁻⁴ 不是 10⁻⁵。",
+        "reason": "D 1.8×10⁻⁵ 倍比正確估值小 10 倍，常見原因是 0.017 mm 換成公尺時多錯一個 10 的因子。",
+        "isCorrect": false
+      }
+    },
+    "source": "A PR21 114 原試題OCR/WebP SHA候選；ROLE B作者公式驗算不代表官方源卷/答案公告核准。"
+  },
+  "reasoningAudit": {
+    "sourceAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorArithmeticCrosscheckDone": true,
+    "independentMathEReview": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_QUESTION_ANSWER_NOTICE_REQUIRED",
+      "ROLE_E_DISTINCT_AI_MATH_VERIFICATION_PENDING",
+      "D_REAL_ORIGINAL_YEAR_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "e5e77ea32460a6b309543ec148ec2b57fcfb4b9396d2501e26b50777aefa4cf5"
+}
