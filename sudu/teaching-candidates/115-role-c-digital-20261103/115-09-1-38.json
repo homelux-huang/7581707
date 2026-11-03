@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "questionId": "115-09-1-38",
+  "year": 115,
+  "subject": "數位科技",
+  "paperCode": "09-1",
+  "originalQuestionNumber": 38,
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_QA_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "某甲要製作活動識別證，使用Word 的啟動合併列印中標籤功能，設定所需表格及其版\n  面大小( 如1×2 )格式，合併列印的資料來源從Excel 學員資料檔匯入。關於合併列印的敘\n  述，下列何者正確？",
+  "options": [
+    "學員照片只能透過手動貼入Word 的表格中",
+    "表格中所有儲存格都必須顯示所有框線，Word 才能辨識欄位",
+    "必須先將Excel 檔案轉存成PDF，才能確保合併後維持原版面",
+    "資料來源清單的第一列必須是標題列 (如編號、姓名及照片) ，才能呈現所有學員"
+  ],
+  "answerCandidate": "D",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-38.webp",
+  "imageSha256": "8334fa0a049344e8dd3247df9d080a92b7975b68a90dd186b33b4d7707d61b0d",
+  "sourceTextRevision": "af8f4b9a8ba8d417daf01a22298b358aedbea50c735af9c0ed42dee99cec2b4a",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "sourceQuestionVerified": false,
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "officialAnswerAutoMatchedOnly": true,
+  "officialFinalDirectVerified": false,
+  "officialCorrectionNoticeVerified": false,
+  "teaching": {
+    "teacherSummary": "**Word 合併列印**把 Excel 學員表的每筆資料填進標籤主文件；第一列用**欄位標題**（姓名、編號、照片）讓合併欄位對應正確。答案 D。",
+    "elementarySummary": "像做全班姓名貼紙，表格第一排先寫清楚「名字、編號」，Word 才知道每位同學的哪個資料放在哪個位置。",
+    "memory": "**Excel 首列欄名 → Word 合併欄位 → 一筆資料一張標籤，選 D。**",
+    "concept": "合併列印有標籤主文件與結構化資料來源；Excel 首行欄名可供欄位辨認。表格框線和 PDF 轉檔並非資料來源必要條件。",
+    "extension": "圖片也可經適當圖片欄位及檔案路徑設定導入，並非只能人工一張張貼；實際做法依 Word 版本有所不同。",
+    "source": "115年官方候選題庫；原始WebP/官方最終答案及更正仍待A G1–G3獨立驗證。",
+    "formula": null,
+    "highlights": [
+      "合併列印",
+      "標籤",
+      "Excel",
+      "欄位標題",
+      "第一列"
+    ],
+    "reasoningSteps": [
+      "辨認 Word 標籤是主文件，Excel 是資料來源。",
+      "依第一列欄位標題讓 Word 辨認每個人的姓名與編號。",
+      "排除只能手貼、必須顯示框線、必須轉PDF等絕對敘述，選 D。"
+    ],
+    "hasExamCalculation": false,
+    "calculationReviewed": false,
+    "examCalculation": null,
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 的『只能』錯誤；照片可用適當合併欄位與路徑設定，不一定只能手動貼上。",
+        "elementary": "照片不一定每張都要用手貼，所以不能選 A。",
+        "reason": "A 的『只能』錯誤；照片可用適當合併欄位與路徑設定，不一定只能手動貼上。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "表格框線是否顯示不決定 Word 能否識別合併欄位，因此 B 混淆版面與資料。",
+        "elementary": "畫不畫格子的線，不影響 Word 看懂欄位名稱。",
+        "reason": "表格框線是否顯示不決定 Word 能否識別合併欄位，因此 B 混淆版面與資料。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "Word 可使用 Excel 作資料來源，沒有先轉成 PDF 的必要；C 把流程說反了。",
+        "elementary": "Excel 已經能用來合併，不必先做成 PDF。",
+        "reason": "Word 可使用 Excel 作資料來源，沒有先轉成 PDF 的必要；C 把流程說反了。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "Excel 第一列作姓名、編號等標題，Word 可依欄名合併每個學員資料，符合 D。",
+        "elementary": "第一行把各欄叫什麼寫清楚，Word 就能做出每個人的貼紙。",
+        "reason": "Excel 第一列作姓名、編號等標題，Word 可依欄名合併每個學員資料，符合 D。",
+        "isCorrect": true
+      }
+    }
+  },
+  "teachingCanonicalSha256": "a0692d5035f8c6bb0e3c553e2dcef71fd14a267344b4db1eb36e24ab113a48c7",
+  "review": {
+    "reviewer": "GPT-6 ROLE C AUTHOR (not A or independent E)",
+    "sourceOriginalImageViewedByAuthor": false,
+    "officialPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_CORRECTION_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_8X2_EXACT_DIGEST_PENDING"
+  ],
+  "studentReleaseApproved": false,
+  "deploy": false
+}

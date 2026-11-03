@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-DIGITAL38-41-42-43-45-NEW-FIVE-20261103-03",
+  "questionId": "115-09-1-45",
+  "year": 115,
+  "subject": "數位科技",
+  "paperCode": "09-1",
+  "originalQuestionNumber": 45,
+  "status": "ROLE_C_AUTHOR_DRAFT_SOURCE_QA_PENDING",
+  "sourceCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "sourceQuestionBankGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+  "question": "在網頁設計中採用行內頁框可載入其他網頁的內容，其HTML 程式碼如下，其中①的內\n  容應為下列何者？\n\n         < ①  src=\"網頁檔名.html\" width=\"600\" height=\"400\">網頁提示</ ①  >",
+  "options": [
+    "href",
+    "frame set",
+    "form",
+    "iframe"
+  ],
+  "answerCandidate": "D",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "image": "sudu/data/processed/115/webp-v2/09-1/115-09-1-45.webp",
+  "imageSha256": "b5bc7dbc847aab124667f0a5984bbe39cbf9a82292c26b4b2706e91100c5547f",
+  "sourceTextRevision": "548b0610af190be200a91b2f10a184083bb2e987c9de25043caa4aade121cc75",
+  "originalPaperPdfSha256": "db3f83aa7976597de7da62f9b40a61401f834a655dc9e9cf0d9381483e43a4e9",
+  "sourceQuestionVerified": false,
+  "sourceIndividualVisualQa": "PENDING_INDIVIDUAL_VISUAL_QA",
+  "officialAnswerAutoMatchedOnly": true,
+  "officialFinalDirectVerified": false,
+  "officialCorrectionNoticeVerified": false,
+  "teaching": {
+    "teacherSummary": "HTML 在頁面中嵌入其他網頁的**行內頁框**標籤是 **`iframe`**。搭配 `src` 指定內嵌網頁，`width`／`height` 設定顯示範圍，故填入 D。",
+    "elementarySummary": "iframe像在自己的網頁上開一扇小窗，裡面看到另一張網頁；src告訴小窗該看哪個網址。",
+    "memory": "**嵌入另一網頁：`<iframe src=\"...\" width=\"600\" height=\"400\"></iframe>` → D。**",
+    "concept": "`iframe` 是 HTML 行內框架元素；`href` 常是連結屬性，`form` 是表單元素，舊式 `frameset` 不等於行內框架。",
+    "extension": "實際網站使用iframe也需考量title無障礙標示、sandbox安全與跨來源嵌入限制，但不影響本題的元素名稱。",
+    "source": "115年官方候選題庫；原始WebP/官方最終答案及更正仍待A G1–G3獨立驗證。",
+    "formula": null,
+    "highlights": [
+      "iframe",
+      "行內頁框",
+      "src",
+      "HTML",
+      "width",
+      "height"
+    ],
+    "reasoningSteps": [
+      "從題目『載入其他網頁』及行內頁框辨認iframe。",
+      "src指定內嵌頁面，width/height設定顯示區尺寸。",
+      "排除href屬性、form表單與舊frameset結構，選D。"
+    ],
+    "hasExamCalculation": false,
+    "calculationReviewed": false,
+    "examCalculation": null,
+    "optionExplanations": {
+      "A": {
+        "teacher": "href通常是超連結網址屬性，不是可以替代iframe的標籤名稱，A錯。",
+        "elementary": "href像地址，不是小窗子的名字。",
+        "reason": "href通常是超連結網址屬性，不是可以替代iframe的標籤名稱，A錯。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "frameset是舊式頁框集合結構，與題目的行內iframe不同，B錯。",
+        "elementary": "它不是在文章裡嵌一個小窗的那個標籤。",
+        "reason": "frameset是舊式頁框集合結構，與題目的行內iframe不同，B錯。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "form用來建立輸入及提交表單，不是載入外部網頁的行內頁框，C錯。",
+        "elementary": "form是填資料的地方，不是看另一個網頁的小窗。",
+        "reason": "form用來建立輸入及提交表單，不是載入外部網頁的行內頁框，C錯。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "iframe用src載入外部HTML並可設寬高，符合題目開閉標籤，D正確。",
+        "elementary": "iframe就是放另一張網頁的小窗子，所以D對。",
+        "reason": "iframe用src載入外部HTML並可設寬高，符合題目開閉標籤，D正確。",
+        "isCorrect": true
+      }
+    }
+  },
+  "teachingCanonicalSha256": "20d68a467cdf3974db10284648e593ab4d53a025c78fc7bf2ecab9286001cb93",
+  "review": {
+    "reviewer": "GPT-6 ROLE C AUTHOR (not A or independent E)",
+    "sourceOriginalImageViewedByAuthor": false,
+    "officialPdfRedownloadedByAuthor": false,
+    "externalIndependentReview": "PENDING",
+    "uiQa": "PENDING"
+  },
+  "blockers": [
+    "SOURCE_ORIGINAL_SINGLE_WEBP_G1_G2_PENDING",
+    "OFFICIAL_FINAL_ANSWER_CORRECTION_G3_PENDING",
+    "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
+    "V4_8X2_EXACT_DIGEST_PENDING"
+  ],
+  "studentReleaseApproved": false,
+  "deploy": false
+}
