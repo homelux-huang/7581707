@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-E29-E30-E39-E41-SHARED-G1-20261103-02",
+  "role": "A",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595427352",
+  "baseSourceCommit": "6fb4f48fd6d64d9b6e3dc5eba2dd56f1b8592c50",
+  "status": "ROLE_A_G1_ORIGINAL_SHARED_PASSAGES_ASSISTANT_DIRECT_VISUAL_CANDIDATES_NOT_RELEASE",
+  "reviewer": "GPT-6 ROLE A AI Assistant Source Visual Review — not independent E",
+  "method": "Directly compared actual archived original 115 English source page6 and page10 with immutable original source cropped WebPs, plus standard published answer page; previous PR54 images reused without re-crop.",
+  "officialSource": {
+    "year": 115,
+    "paperCode": "00-E",
+    "officialOriginalQuestionPdfSha256PreviouslyRecorded": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+    "officialStandardAnswerPdfSha256PreviouslyRecorded": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+    "pdfActuallyDownloadedAndRehashedThisTask": false,
+    "officialAnswerOriginalPage": "sudu/data/original/115/00-E-answers/p001-185b1c8503-v2-w1400-q66.webp",
+    "answerOriginalGitBlob": "b8da0d2f8024eb8da2bdb2b096f97d59c0a6609d"
+  },
+  "shared": [
+    {
+      "id": "115-00-E-SHARED-29-30",
+      "sourcePage": 6,
+      "originalQuestionNumbers": [
+        29,
+        30
+      ],
+      "currentTaskQuestionNumbers": [
+        29,
+        30
+      ],
+      "source": "sudu/data/original/115/00-E/p006-c13e298c3b-v2-w1400-q66.webp",
+      "sourceSha256": "b34b9c3c8d94d8d54589634a4403cfa14810b8736e1a9a3202b240a1490423df",
+      "sourceBlob": "ad82b507d618aa30e6773731f962e4365e226094",
+      "path": "sudu/data/processed/115/webp-v2/shared/115-00-E-SHARED-29-30.webp",
+      "sha256": "e932d3fc246b55604cabd6fa1716d0fa6f8f67d658ed6a16c6d88f91bfdb49b6",
+      "gitBlob": "1938fe2a22233a82528c111547ec3f1a522d201b",
+      "crop": [
+        90,
+        165,
+        1310,
+        1498
+      ],
+      "outputSize": [
+        1220,
+        1333
+      ],
+      "originalManifestQa": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "newReview": "PASS_AI_ASSISTANT_DIRECT_ORIGINAL_VISUAL_SOURCE_ONLY",
+      "visualObserved": "Full Elsas's blog graphic, conversation, site navigation, three dated blog paragraphs through Happy time! and source section heading. No Q29/Q30 stems/options, footer or other question.",
+      "contentsComplete": true,
+      "context": "Elsa new blog / personal privacy conversation and blog entries",
+      "otherQidsQAChanged": false,
+      "sourceRevisionSeed": "ROLE_A_115_ENGLISH_SHARED_G1_V1\ne932d3fc246b55604cabd6fa1716d0fa6f8f67d658ed6a16c6d88f91bfdb49b6\nb34b9c3c8d94d8d54589634a4403cfa14810b8736e1a9a3202b240a1490423df",
+      "sourceRevisionSha256": "48389f4a87e303d0fd3badfe138dfaa74cfa569e1454f41a7705710b78e45f4a"
+    },
+    {
+      "id": "115-00-E-SHARED-39-42",
+      "sourcePage": 10,
+      "originalQuestionNumbers": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "currentTaskQuestionNumbers": [
+        39,
+        40,
+        41
+      ],
+      "source": "sudu/data/original/115/00-E/p010-c13e298c3b-v2-w1400-q66.webp",
+      "sourceSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+      "sourceBlob": "078dfb51a6b32d652926d4495967791d938ecb37",
+      "path": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+      "sha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+      "gitBlob": "4aaac02b7ed9390b8ff7c8a4c4272e74996bd595",
+      "crop": [
+        90,
+        166,
+        1310,
+        978
+      ],
+      "outputSize": [
+        1220,
+        812
+      ],
+      "originalManifestQa": "DRAFT_NEEDS_INDIVIDUAL_VISUAL_QA",
+      "newReview": "PASS_AI_ASSISTANT_DIRECT_ORIGINAL_VISUAL_SOURCE_ONLY",
+      "visualObserved": "Entire Taiwan electronic manufacturing/AI industry four paragraphs including final sentence, original formatting and bold ride the wave of change. Excludes question39–42 texts, footer and other question.",
+      "contentsComplete": true,
+      "context": "Taiwan electronics manufacturing historical and AI transition",
+      "otherQidsQAChanged": false,
+      "unreviewedQid": "115-00-E-42",
+      "sourceRevisionSeed": "ROLE_A_115_ENGLISH_SHARED_G1_V1\n5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b\n6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+      "sourceRevisionSha256": "c94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2"
+    }
+  ],
+  "questionRecords": [
+    {
+      "questionId": "115-00-E-29",
+      "number": 29,
+      "originalAnswer": "A",
+      "sharedId": "115-00-E-SHARED-29-30",
+      "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-29.webp",
+      "sha256": "200722eaba0530fc8f3963cfe9c72e2749630de188ad538d5ce23200d949717d",
+      "gitBlob": "122436f959d7ed8ce5e8c2f8f5e5c2711f81f889",
+      "imageSource": "PR54"
+    },
+    {
+      "questionId": "115-00-E-30",
+      "number": 30,
+      "originalAnswer": "C",
+      "sharedId": "115-00-E-SHARED-29-30",
+      "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-30.webp",
+      "sha256": "01dc82ad8bb24c5f2a149783b55bf8393ecf32e192d25eff065986f06440fbca",
+      "gitBlob": "0e07933e2d28ab967a5f6817c70df9227151f7dd",
+      "imageSource": "QA source fbd7756b"
+    },
+    {
+      "questionId": "115-00-E-39",
+      "number": 39,
+      "originalAnswer": "B",
+      "sharedId": "115-00-E-SHARED-39-42",
+      "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-39.webp",
+      "sha256": "0e71395b101b6e255d48b3eea86e8a4a1086cafabab62104ade3474b32f11d3c",
+      "gitBlob": "6af1245cc9e866192eef312be9c3463739b31282",
+      "imageSource": "PR54"
+    },
+    {
+      "questionId": "115-00-E-40",
+      "number": 40,
+      "originalAnswer": "D",
+      "sharedId": "115-00-E-SHARED-39-42",
+      "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-40.webp",
+      "sha256": "afa2a88eb2574bae17aad8d4a16f662e889b906f024b8950e45439f12210fbef",
+      "gitBlob": "63a608f38943cd3919afb31a628cd00b2104ad93",
+      "imageSource": "PR54"
+    },
+    {
+      "questionId": "115-00-E-41",
+      "number": 41,
+      "originalAnswer": "D",
+      "sharedId": "115-00-E-SHARED-39-42",
+      "image": "sudu/data/processed/115/webp-v2/00-E/115-00-E-41.webp",
+      "sha256": "b10a8ba84292df22dc481107280522e8f8dc168ef0496f9af3f4bf71329740a4",
+      "gitBlob": "cfb8001f89418c2f5a12cf7c68384aa9d48230a4",
+      "imageSource": "PR54"
+    }
+  ],
+  "sharedReviewScope": {
+    "roleAQuestionIds": [
+      "115-00-E-29",
+      "115-00-E-30",
+      "115-00-E-39",
+      "115-00-E-40",
+      "115-00-E-41"
+    ],
+    "sharedContainsQuestion42ButQ42QaThisTask": false,
+    "sharedContainsQ30AndQ30Reviewed": true,
+    "originalImagesAllReuse": true,
+    "sharedTextG2ProofOfFullTranscription": false
+  },
+  "officialNotice": {
+    "confirmationLedgerPath": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",
+    "confirmationLedgerGitBlob": "1a21701647627bc1dcaa39a835bf90a4459c9424",
+    "officialEnglishConfirmationPdfSha256PreviouslyRecorded": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+    "namedQids": [
+      "115-00-E-34"
+    ],
+    "namedOfficialAnswer": "B",
+    "noNamedNoticeForClaimedQids": true,
+    "pdfNotRedownloadedOrRehashed": true,
+    "formalG3AdmissionPerformed": false
+  },
+  "downstream": {
+    "originalSharedCropsModified": false,
+    "existingSingleQuestionWebpsModified": false,
+    "canonical205BankEdited": false,
+    "sqliteEdited": false,
+    "manifestQaStatusChanged": false,
+    "legacyArchiveEdited": false,
+    "roleCTeachingEdited": false,
+    "roleEIndependentContent": false,
+    "roleDReal8x2": false,
+    "masterAdmittedToReady": false,
+    "approved": false,
+    "live": false,
+    "q42IndividualG1G2G3State": "NOT_REVIEWED_IN_THIS_TASK"
+  }
+}
