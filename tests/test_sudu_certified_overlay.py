@@ -22,6 +22,7 @@ class StudentOverlayTests(unittest.TestCase):
         publish.dump(
             self.source/"sudu/data/processed/115/official-confirmation-status.json",
             {"schemaVersion":1,"year":115,
+             "source":publish.official_source_index(115),
              "confirmations":{"00-MB":{
                  "officialStatus":"no_objection_submitted",
                  "revisionDocumentContent":"not_applicable"}}})
