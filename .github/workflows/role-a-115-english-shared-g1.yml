@@ -1,0 +1,46 @@
+name: ROLE A 115 English 29-30 39-41 original grouped reading G1 QA only (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-english29-30-39-41-shared-g1-20261103
+    paths:
+      - sudu/data/processed/115/webp-v2/00-E/115-00-E-30.webp
+      - sudu/data/processed/115/review-evidence/115-00-E-29-30-39-41-shared-G1-20261103.json
+      - tests/test_role_a_115_english_shared_g1.py
+      - .github/workflows/role-a-115-english-shared-g1.yml
+      - docs/ROLE_A_115_ENGLISH_SHARED_G1_20261103.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-a-115-english-shared-g1-20261103
+  cancel-in-progress: false
+
+jobs:
+  five_exact_original_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-english29-30-39-41-shared-g1-20261103'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Read-only checkout of exact source Draft candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install Pillow==11.3.0
+      - name: Exact two original passages, five questions, original answer and fail closed
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_english_shared_g1.py
+          python -m unittest discover -s tests -p test_role_a_115_english_shared_g1.py -v
+      - name: No file rewrite, no G2/G3/READY flags
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Original shared G1 source QA ONLY. No C/E/D/MASTER RELEASE."
