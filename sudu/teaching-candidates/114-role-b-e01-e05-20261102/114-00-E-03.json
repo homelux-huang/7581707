@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "questionId": "114-00-E-03",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT_SOURCE_PENDING",
+  "question": "Many people have climbed the main             of Mount Jade in Taiwan, which is the highest\n    point on the island.",
+  "options": [
+    "base",
+    "peak",
+    "shore",
+    "valley"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "44d34e025eac5075b54fa65e3095380df727f2b93d27059e14107c7ebda78455",
+    "webpSha256": "da6e74d559712e9caf115082bdaf80d18990a51c0399085719b8995e55608444",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-03.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerEvidence": "BANK_CANDIDATE_ONLY_NOT_FINAL_ADMISSION"
+  },
+  "teaching": {
+    "topic": "玉山主峰 main peak",
+    "teacherSummary": "Mount Jade 與 highest point 表示全島最高的山頂，peak 才是主峰，答案 B。",
+    "elementarySummary": "玉山最高的地方是山頂，不是山腳、海岸或山谷，選 peak。",
+    "concept": "peak：山峰；最高點；依原句上下文及詞語搭配判斷。",
+    "memory": "highest point＝peak（B）",
+    "solvingSteps": [
+      "先找 Mount Jade，知道主題是臺灣玉山及登山。",
+      "讀 which is the highest point on the island，知道空格指最高處。",
+      "代入 main peak of Mount Jade，意思是玉山主峰，完全符合。",
+      "排除 base 山腳、shore 岸邊、valley 山谷，答案 B。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "base 是底部或山腳，雖可當登山起點，但不是 Mount Jade 的最高點。",
+        "elementary": "山腳在低處，不是最高點。",
+        "reason": "base 是底部或山腳，雖可當登山起點，但不是 Mount Jade 的最高點。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "peak 是山頂或山峰，main peak 正是主峰，和 highest point 完全對應。",
+        "elementary": "山頂才是最高處，peak 正確。",
+        "reason": "peak 是山頂或山峰，main peak 正是主峰，和 highest point 完全對應。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "shore 指海岸或湖岸，題目沒有水邊線索，也不是玉山的最高峰。",
+        "elementary": "海岸不是玉山最高峰。",
+        "reason": "shore 指海岸或湖岸，題目沒有水邊線索，也不是玉山的最高峰。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "valley 是兩山之間較低的山谷，和最高山峰的高度方向相反。",
+        "elementary": "山谷通常比山峰低很多。",
+        "reason": "valley 是兩山之間較低的山谷，和最高山峰的高度方向相反。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "highest",
+      "peak"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測官方原題資料候選；原圖 G1 及正式答案 G2/G3 仍待角色 A 完成，作者不是來源核准者。"
+  },
+  "enrichment": {
+    "sourceHighlights": [
+      {
+        "text": "highest",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "peak",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "peak",
+        "ipa": "/piːk/",
+        "accent": "Cambridge US",
+        "level": "中級",
+        "meaning": "山峰；最高點",
+        "synonyms": [
+          "summit",
+          "top"
+        ],
+        "antonyms": [
+          "base",
+          "foot（山腳）"
+        ],
+        "usageNote": "必須按原句語境使用同反義字；反義可能只是概念對照，不代表任何句子均可互換。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/pronunciation/english/peak"
+      }
+    ],
+    "newsExample": {
+      "english": "Officials warned that snow could make the main peak of Mount Jade hazardous in winter.",
+      "chinese": "主管機關提醒冬季積雪可能使玉山主峰登山有危險。",
+      "highlightActualForm": "peak",
+      "sourceUrl": "https://hike.taiwan.gov.tw/en/news_0_HISmain.aspx?id=4377",
+      "sourceIsContextOnly": true,
+      "notAnArticleQuote": true
+    }
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_SINGLE_WEBP_VISUAL_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_SOURCE_ANSWER_NOTICE_PENDING",
+      "ROLE_E_DISTINCT_AI_PENDING",
+      "ROLE_D_CURRENT_SHA_V4_8X2_PENDING",
+      "MASTER_APPROVED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "2796b2a27bdf22314f84690e89d7a0b9cb072a03611434b3fffe2e493cf79b5b"
+}

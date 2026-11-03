@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "questionId": "114-00-E-02",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT_SOURCE_PENDING",
+  "question": "The room was so               that I couldn’t even find space for these new chairs.",
+  "options": [
+    "available",
+    "crowded",
+    "empty",
+    "positive"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "a925a4a2f8a8945459e6c5086d6028e628c3ceed4ebf25a7b5426d205fb43e95",
+    "webpSha256": "6b2bd0eccfe234352137e400c62499daf678c78aca6ccbc425b3b50ffe4be0a8",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-02.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerEvidence": "BANK_CANDIDATE_ONLY_NOT_FINAL_ADMISSION"
+  },
+  "teaching": {
+    "topic": "程度結果 so crowded that",
+    "teacherSummary": "so ... that 後面沒有空間放椅子，顯示房間擁擠，應選 crowded（B）。",
+    "elementarySummary": "房間擠到新椅子都放不下；crowded 就是太擠了。",
+    "concept": "crowded：擁擠的；塞滿的；依原句上下文及詞語搭配判斷。",
+    "memory": "no space for new chairs → crowded（B）",
+    "solvingSteps": [
+      "先看 The room was so ___ that，空格需放形容房間狀態的形容詞。",
+      "讀後半句 couldn't even find space for these new chairs，找到沒位置的結果。",
+      "代入 crowded，因為太擠而沒有空間，符合 so ... that 的因果。",
+      "比較 available、empty、positive 都不能解釋空間不足，答案 B。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "available 是可取得、可用，無法說明房間已沒有空間放新椅子的結果。",
+        "elementary": "有空可用不代表會擠得放不下。",
+        "reason": "available 是可取得、可用，無法說明房間已沒有空間放新椅子的結果。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "crowded 是擁擠的，so crowded that ... couldn't find space 的因果恰好一致。",
+        "elementary": "太擁擠才會找不到地方放椅子。",
+        "reason": "crowded 是擁擠的，so crowded that ... couldn't find space 的因果恰好一致。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "empty 是空的，空房間通常能放入新椅子，和題目找不到空間相反。",
+        "elementary": "空房間應該可以放椅子。",
+        "reason": "empty 是空的，空房間通常能放入新椅子，和題目找不到空間相反。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "positive 是正面、積極，通常描述態度，不能說明房間的物理空間不足。",
+        "elementary": "想法積極不會讓房間變擁擠。",
+        "reason": "positive 是正面、積極，通常描述態度，不能說明房間的物理空間不足。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "new chairs",
+      "crowded"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測官方原題資料候選；原圖 G1 及正式答案 G2/G3 仍待角色 A 完成，作者不是來源核准者。"
+  },
+  "enrichment": {
+    "sourceHighlights": [
+      {
+        "text": "new chairs",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "crowded",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "crowded",
+        "ipa": "/ˈkraʊ.dɪd/",
+        "accent": "Cambridge US",
+        "level": "初級",
+        "meaning": "擁擠的；塞滿的",
+        "synonyms": [
+          "packed",
+          "full"
+        ],
+        "antonyms": [
+          "spacious",
+          "empty"
+        ],
+        "usageNote": "必須按原句語境使用同反義字；反義可能只是概念對照，不代表任何句子均可互換。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/pronunciation/english/crowded"
+      }
+    ],
+    "newsExample": {
+      "english": "Metro stations can become crowded during major New Year celebrations.",
+      "chinese": "大型跨年活動時，捷運車站可能變得擁擠。",
+      "highlightActualForm": "crowded",
+      "sourceUrl": "https://www.taiwannews.com.tw/news/6274993",
+      "sourceIsContextOnly": true,
+      "notAnArticleQuote": true
+    }
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_SINGLE_WEBP_VISUAL_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_SOURCE_ANSWER_NOTICE_PENDING",
+      "ROLE_E_DISTINCT_AI_PENDING",
+      "ROLE_D_CURRENT_SHA_V4_8X2_PENDING",
+      "MASTER_APPROVED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "185b79a4c4883d0b8395aa1d95da74e08e590e04f32c2f2da27632b200e681b3"
+}

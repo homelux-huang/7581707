@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "questionId": "114-00-E-01",
+  "year": 114,
+  "subject": "英文",
+  "kind": "NEW_AUTHOR_DRAFT_SOURCE_PENDING",
+  "question": "This child is using colored chalks to              pictures on a blank piece of paper.",
+  "options": [
+    "draw",
+    "heat",
+    "mail",
+    "type"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "08f4f55b9083a07fe51811c1596eac3bcf35dd801a624a30ca191f7aac961b49",
+    "webpSha256": "388ee2ac0b2eabbc2641b96161e315baf1ab0f29f10dfaaae8969bb4848f7043",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-01.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerEvidence": "BANK_CANDIDATE_ONLY_NOT_FINAL_ADMISSION"
+  },
+  "teaching": {
+    "topic": "使用粉筆畫畫 draw pictures",
+    "teacherSummary": "空白紙與彩色粉筆是畫畫的工具；draw pictures 表在紙上畫圖，因此選 A。",
+    "elementarySummary": "粉筆用來畫圖，不是加熱、寄信、打字；draw 就是畫畫。",
+    "concept": "draw：畫；描繪；依原句上下文及詞語搭配判斷。",
+    "memory": "chalks＋paper＋pictures＝draw（A）",
+    "solvingSteps": [
+      "找 colored chalks（彩色粉筆）和 a blank piece of paper（空白紙），先確認工具。",
+      "看空格後面 pictures，選一個能讓人在紙上做出圖片的動詞。",
+      "代入 draw pictures＝畫圖，整個句子可以順暢地翻譯。",
+      "逐一排除 heat 加熱、mail 寄出、type 打字，三者都不符合粉筆畫畫，故 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "draw pictures 是用彩色粉筆在空白紙上畫圖，工具與動作搭配一致。",
+        "elementary": "粉筆可以畫圖，所以 draw 最合理。",
+        "reason": "draw pictures 是用彩色粉筆在空白紙上畫圖，工具與動作搭配一致。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "heat 是加熱，colored chalks 和 blank paper 並不是用來把圖畫加熱的設備。",
+        "elementary": "這是在畫圖，不是拿圖去烤。",
+        "reason": "heat 是加熱，colored chalks 和 blank paper 並不是用來把圖畫加熱的設備。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "mail 是郵寄，mail pictures 指把現成圖畫寄走，並非拿粉筆創作圖畫。",
+        "elementary": "寄東西和在紙上畫東西不一樣。",
+        "reason": "mail 是郵寄，mail pictures 指把現成圖畫寄走，並非拿粉筆創作圖畫。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "type 是打字，一般靠鍵盤輸入文字，不符合用彩色粉筆在紙上作畫的情境。",
+        "elementary": "用鍵盤才是打字，粉筆不是鍵盤。",
+        "reason": "type 是打字，一般靠鍵盤輸入文字，不符合用彩色粉筆在紙上作畫的情境。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "colored chalks",
+      "draw"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114 統測官方原題資料候選；原圖 G1 及正式答案 G2/G3 仍待角色 A 完成，作者不是來源核准者。"
+  },
+  "enrichment": {
+    "sourceHighlights": [
+      {
+        "text": "colored chalks",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "draw",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "draw",
+        "ipa": "/drɑː/",
+        "accent": "Cambridge US",
+        "level": "初級",
+        "meaning": "畫；描繪",
+        "synonyms": [
+          "sketch",
+          "illustrate"
+        ],
+        "antonyms": [
+          "erase（此情境下的對照動作）"
+        ],
+        "usageNote": "必須按原句語境使用同反義字；反義可能只是概念對照，不代表任何句子均可互換。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/pronunciation/english/draw"
+      }
+    ],
+    "newsExample": {
+      "english": "Students can draw portraits after viewing a 2025 portrait exhibition.",
+      "chinese": "參觀 2025 年肖像展後，學生可以畫人物肖像。",
+      "highlightActualForm": "draw",
+      "sourceUrl": "https://my.si.edu/exhibitions/bld-1736263885222-1736263886636-1",
+      "sourceIsContextOnly": true,
+      "notAnArticleQuote": true
+    }
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_SINGLE_WEBP_VISUAL_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_SOURCE_ANSWER_NOTICE_PENDING",
+      "ROLE_E_DISTINCT_AI_PENDING",
+      "ROLE_D_CURRENT_SHA_V4_8X2_PENDING",
+      "MASTER_APPROVED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "3ae355d7b7097795d86f31d4f6ec0ca902226ebaac883122153dcf5e56408a5c"
+}
