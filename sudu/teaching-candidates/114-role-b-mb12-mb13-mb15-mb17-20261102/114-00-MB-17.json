@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-17",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_QA_PENDING_MATH",
+  "question": "小諳到火鍋餐廳點了一份海陸套餐 ( 包含湯底、菜盤、肉盤、海鮮盤與副餐 )。此套餐的\n\n  湯底與菜盤已固定，小諳需從4 類肉品 ( 牛肉、雞肉、豬肉、羊肉 ) 任選一種做為肉盤，\n\n  從5 類海鮮 ( 鯛魚、蛤蠣、鮮蚵、草蝦、小卷 ) 任選三種不同的海鮮做為海鮮盤，從4 類\n\n  餐點 ( 白飯、王子麵、烏龍麵、冬粉 ) 任選一種做為副餐。試問此海陸套餐的搭配共有幾\n\n  種可能性？",
+  "options": [
+    "13",
+    "80",
+    "120",
+    "160\n\n                                        35 x + 46 y = 2025"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "a2a49872ee13eda7a18d1dbd2b913d7b7642ea390106fe8c547b38eedd802cf2",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-17.webp",
+    "webpSha256": "a7135c3376bc6dae962a203bb00e657db72e9c5e35d3f00a9962e2e4f7dd7398",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "originalTextIssue": "OPTION_D_INCLUDES_NEXT_Q18",
+    "authorImageTranscriptNotOfficial": true
+  },
+  "teaching": {
+    "topic": "排列組合｜4種肉×海鮮選3種×4種副餐",
+    "teacherSummary": "肉選1種有4法；海鮮從5種挑3種且不重複、不計順序，組合 C(5,3)=10 法；副餐選1有4法。三步獨立相乘4×10×4=160種，選 D（OCR D 選項混入下一題，須 A 正式修）。",
+    "elementarySummary": "一種肉有4選法，三種不同海鮮有10組，副餐又有4種選法；每組都可以搭配，因此4×10×4=160。",
+    "concept": "分階段選法相乘；從5種不同海鮮中選3種不考慮順序，用組合數 C(5,3)。",
+    "memory": "肉4 × 海鮮10 × 副餐4 ＝160（D）。",
+    "formula": "乘法原理：總選法=肉選法×海鮮組合×副餐選法；C(5,3)=5!/(3!2!)。",
+    "highlights": [
+      "4 類肉品",
+      "5 類海鮮",
+      "任選三種不同",
+      "4 類"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "4種肉類任選1",
+        "5種不同海鮮任選3（不重複、不分順序）",
+        "4種副餐任選1，湯底與菜盤固定"
+      ],
+      "formulaUse": "乘法原理：總選法=肉選法×海鮮組合×副餐選法；C(5,3)=5!/(3!2!)。",
+      "substitution": [
+        "肉盤=4",
+        "海鮮盤 C(5,3)=5×4×3/(3×2×1)=10",
+        "副餐=4"
+      ],
+      "steps": [
+        "固定湯底與菜盤已確定，不需要增加選法。",
+        "肉盤有牛雞豬羊四種，任選1，所以有4種選法。",
+        "海鮮有5類，需任選3種且各不相同；順序不重要，因此不是5×4×3而是C(5,3)。",
+        "計算 C(5,3)=5!/(3!2!)=(5×4)/(2×1)=10種組合。",
+        "副餐有白飯、王子麵、烏龍麵、冬粉四種，任選1，有4法。",
+        "依乘法原理：4×10×4=160種不同套餐，對照答案候選 D。",
+        "逆向驗算：三種海鮮等價於從5種中『排除2種』，C(5,2)=10；因此4×10×4仍為160。",
+        "原始 OCR 的 D 選項混入下題方程式，ROLE B 僅保存原始來源並在教學中將 D 視為160候選；須 ROLE A 先從官方原圖修正 G2 與 SQLite 後才能進 E/D/發布。"
+      ],
+      "result": "160 種套餐",
+      "unit": "種",
+      "option": "D"
+    },
+    "solvingSteps": [
+      "固定湯底與菜盤已確定，不需要增加選法。",
+      "肉盤有牛雞豬羊四種，任選1，所以有4種選法。",
+      "海鮮有5類，需任選3種且各不相同；順序不重要，因此不是5×4×3而是C(5,3)。",
+      "計算 C(5,3)=5!/(3!2!)=(5×4)/(2×1)=10種組合。",
+      "副餐有白飯、王子麵、烏龍麵、冬粉四種，任選1，有4法。",
+      "依乘法原理：4×10×4=160種不同套餐，對照答案候選 D。",
+      "逆向驗算：三種海鮮等價於從5種中『排除2種』，C(5,2)=10；因此4×10×4仍為160。",
+      "原始 OCR 的 D 選項混入下題方程式，ROLE B 僅保存原始來源並在教學中將 D 視為160候選；須 ROLE A 先從官方原圖修正 G2 與 SQLite 後才能進 E/D/發布。"
+    ],
+    "calculationReviewed": "ROLE_B_AUTHOR_ARITHMETIC_CHECK_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 13 若將三類選擇數量4、5、4直接相加是4+5+4=13，忽略海鮮要選3種及分階段乘法原理。",
+        "elementary": "不能只把4、5、4加成13，要算每種搭配。",
+        "reason": "A 13 若將三類選擇數量4、5、4直接相加是4+5+4=13，忽略海鮮要選3種及分階段乘法原理。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 80 可由4×5×4得出，但那只把海鮮當成單選一類，漏掉『任選三種不同』的組合要求。",
+        "elementary": "海鮮要選三種，不是只挑一種，所以80少算。",
+        "reason": "B 80 可由4×5×4得出，但那只把海鮮當成單選一類，漏掉『任選三種不同』的組合要求。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 120 若誤把副餐的4種當3種，會算4×10×3=120，漏掉第四種副餐的可能性。",
+        "elementary": "副餐有四種，不是三種，120漏掉了一種。",
+        "reason": "C 120 若誤把副餐的4種當3種，會算4×10×3=120，漏掉第四種副餐的可能性。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 160=4×C(5,3)×4=4×10×4，滿足肉1種、海鮮3種不同、副餐1種；原始 D 來源 OCR 污染須 A 修正。",
+        "elementary": "海鮮有10組，再配4種肉和4種主食，160種。",
+        "reason": "D 160=4×C(5,3)×4=4×10×4，滿足肉1種、海鮮3種不同、副餐1種；原始 D 來源 OCR 污染須 A 修正。",
+        "isCorrect": true
+      }
+    },
+    "source": "114 official OCR candidate only; A G1 image, G2 original text and G3 official current answer/corrections pending; do not claim exact official final."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 | Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_G1_ORIGINAL_SINGLE_WEBP_QA_DRAFT",
+      "A_G2_OCR_OPTION_TABLE_SOURCE_RECONCILIATION",
+      "A_G3_FINAL_ANSWER_AND_CORRECTIONS_NOT_ADMITTED",
+      "ROLE_E_DISTINCT_MATH_QA_PENDING",
+      "D_REAL_YEAR_V4_8X2_SHA_PENDING",
+      "MASTER_TRUSTED_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "mathRecomputedByAuthor": true
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "page": null
+  },
+  "composedTeachingSha256": "0a313a3aa411f162ef1593014335d8bfc5b618c0b0c0ea967e8b09e97696778b"
+}

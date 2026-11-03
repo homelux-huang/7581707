@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-15",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_QA_PENDING_MATH",
+  "question": "在坐標平面上，一位遊戲角色以 ( 1 , 4 ) 為起點。每按一次A 鍵後，該角色就會往右走3 個\n\n  單位長，再往下走1 個單位長，走完之後才可以再按A 鍵。已知第一次按A 鍵之後，角\n\n  色的路徑就會經過 ( 2 , 4 )、( 3 , 4 )、( 4 , 4 )，最後走到 ( 4 , 3 )，若接著繼續一直按A 鍵四次\n\n  以上，試問下列的哪一個點是角色不會經過的點？",
+  "options": [
+    "( 5 , 3 )",
+    "( 7 , 2 )",
+    "( 10 , 0 )",
+    "( 16 , – 1 )"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "f91f82829e39f813adc88fc46f257f9584769c43d9e48cb386ab60817fd05931",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-15.webp",
+    "webpSha256": "b2a56212057700c9e6639730c8b26902bdf9707ab424e03130f572055305dc2e",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "originalTextIssue": null,
+    "authorImageTranscriptNotOfficial": true
+  },
+  "teaching": {
+    "topic": "平面座標規律｜每按 A 鍵右走3再下走1",
+    "teacherSummary": "從(1,4)開始，按第1次終點(4,3)、第2次(7,2)、第3次(10,1)、第4次(13,0)、第5次(16,−1)。行進中 x=10 出現 y=2 與1，但不會出現 y=0，所以 (10,0) 不經過，選 C。",
+    "elementarySummary": "每回合先向右3格，再向下1格。走到 x=10 時高度還是2或1，不會是0；其他三個點都真的會路過。",
+    "concept": "第k次按鍵的水平段：從 x=1+3(k−1) 到 1+3k，固定 y=5−k；末端再向下到 y=4−k。",
+    "memory": "終點依次(4,3)(7,2)(10,1)(13,0)(16,−1)；(10,0)不存在。",
+    "formula": "第 k 回合終點為 (1+3k,4−k)；第 k 回合水平路徑 y=5−k，x 從 1+3(k−1) 到 1+3k。",
+    "highlights": [
+      "( 1 , 4 )",
+      "往右走3",
+      "往下走1",
+      "不會經過"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "初始座標 (1,4)",
+        "每一次先水平右移 3 格（逐格經過），再向下 1 格",
+        "可以連續按鍵至少五回合（含題目要求的四次以上續按）"
+      ],
+      "formulaUse": "第 k 回合終點為 (1+3k,4−k)；第 k 回合水平路徑 y=5−k，x 從 1+3(k−1) 到 1+3k。",
+      "substitution": [
+        "k=1 終點(4,3)",
+        "k=2 終點(7,2)",
+        "k=3 終點(10,1)",
+        "k=4 終點(13,0)",
+        "k=5 終點(16,−1)"
+      ],
+      "steps": [
+        "起點是(1,4)，按一次 A 鍵先依序經(2,4)、(3,4)、(4,4)，再下降至(4,3)。",
+        "第二次從(4,3)向右經(5,3)、(6,3)、(7,3)，再往下到(7,2)。",
+        "第三次從(7,2)向右經(8,2)、(9,2)、(10,2)，再往下到(10,1)。",
+        "第四次從(10,1)向右經(11,1)、(12,1)、(13,1)，再往下到(13,0)。",
+        "第五次從(13,0)向右經(14,0)、(15,0)、(16,0)，再往下到(16,−1)。",
+        "選項 A (5,3) 第二次水平路過；B (7,2) 第二次終點；D (16,−1) 第五次終點，全部會經過。",
+        "選項 C (10,0)：x=10 只在第三次路上/末端出現，那時 y=2或1；等 y=0 已走到 x=13，故 C 永不經過。",
+        "反向通式驗算：終點 x=1+3k、y=4−k；要 y=0 ⇒ k=4、x=13，而 x=10 ⇒ k=3、y=1，不可能同時得到(10,0)。"
+      ],
+      "result": "不會經過 (10,0)",
+      "unit": "座標單位",
+      "option": "C"
+    },
+    "solvingSteps": [
+      "起點是(1,4)，按一次 A 鍵先依序經(2,4)、(3,4)、(4,4)，再下降至(4,3)。",
+      "第二次從(4,3)向右經(5,3)、(6,3)、(7,3)，再往下到(7,2)。",
+      "第三次從(7,2)向右經(8,2)、(9,2)、(10,2)，再往下到(10,1)。",
+      "第四次從(10,1)向右經(11,1)、(12,1)、(13,1)，再往下到(13,0)。",
+      "第五次從(13,0)向右經(14,0)、(15,0)、(16,0)，再往下到(16,−1)。",
+      "選項 A (5,3) 第二次水平路過；B (7,2) 第二次終點；D (16,−1) 第五次終點，全部會經過。",
+      "選項 C (10,0)：x=10 只在第三次路上/末端出現，那時 y=2或1；等 y=0 已走到 x=13，故 C 永不經過。",
+      "反向通式驗算：終點 x=1+3k、y=4−k；要 y=0 ⇒ k=4、x=13，而 x=10 ⇒ k=3、y=1，不可能同時得到(10,0)。"
+    ],
+    "calculationReviewed": "ROLE_B_AUTHOR_ARITHMETIC_CHECK_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A (5,3) 會經過，因第2回合起於(4,3)，先往右走時第一格即(5,3)。",
+        "elementary": "第二次往右走第一格就是A點。",
+        "reason": "A (5,3) 會經過，因第2回合起於(4,3)，先往右走時第一格即(5,3)。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B (7,2) 會經過，它正好是第2回合走完向右3與向下1的終點。",
+        "elementary": "第二回合走完就站在(7,2)。",
+        "reason": "B (7,2) 會經過，它正好是第2回合走完向右3與向下1的終點。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C (10,0) 不會經過；第3回合到x=10時高度先2再1，第4回合高度0時已在x=13。",
+        "elementary": "x到10時還沒下到0，所以C點永遠不到。",
+        "reason": "C (10,0) 不會經過；第3回合到x=10時高度先2再1，第4回合高度0時已在x=13。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D (16,−1) 會經過，因第5回合終點由(13,0)向右到(16,0)再向下到(16,−1)。",
+        "elementary": "第五次走完就在D點。",
+        "reason": "D (16,−1) 會經過，因第5回合終點由(13,0)向右到(16,0)再向下到(16,−1)。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official OCR candidate only; A G1 image, G2 original text and G3 official current answer/corrections pending; do not claim exact official final."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 | Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_G1_ORIGINAL_SINGLE_WEBP_QA_DRAFT",
+      "A_G2_OCR_OPTION_TABLE_SOURCE_RECONCILIATION",
+      "A_G3_FINAL_ANSWER_AND_CORRECTIONS_NOT_ADMITTED",
+      "ROLE_E_DISTINCT_MATH_QA_PENDING",
+      "D_REAL_YEAR_V4_8X2_SHA_PENDING",
+      "MASTER_TRUSTED_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "mathRecomputedByAuthor": true
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "page": null
+  },
+  "composedTeachingSha256": "b7e241cdaec3735df2c61b942ad6acd777890aec568d8b862498edd9ac3dec7d"
+}

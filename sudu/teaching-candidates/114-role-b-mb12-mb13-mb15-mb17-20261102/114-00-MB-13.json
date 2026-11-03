@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-13",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_QA_PENDING_MATH",
+  "question": "從某職棒球員歷年的全壘打數紀錄中，隨機抽選5 年的紀錄，把這5 年的全壘打數由小\n\n  到大排列如下：3、4、α、10、β。若此組數據資料的中位數為6，全距為9，算術平均數\n\n  為7，樣本標準差為γ，則α + β +γ=？",
+  "options": [
+    "18 + 8",
+    "18 + 15",
+    "20 +  8",
+    "20 + 15"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "e29c44f5caa9614e6dcff75fd96c32f42ed05b87500c3fb042059dcfeb32cc6d",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-13.webp",
+    "webpSha256": "906c071d33790a70dcefbdf8231669bc859480c8cfa0bce9ccc0212353c6baf8",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "originalTextIssue": "ROOT_SYMBOL_MISSING_IN_OCR_CHOICES",
+    "authorImageTranscriptNotOfficial": true
+  },
+  "teaching": {
+    "topic": "資料統計｜中位數、全距、平均與樣本標準差",
+    "teacherSummary": "由中位數知 α=6，全距 β−3=9 知 β=12，資料為3、4、6、10、12，平均7。離均差平方和 60，樣本標準差 γ=√(60/4)=√15，故 α+β+γ=18+√15，符合 B（√ 字形須由 A 原像素確認）。",
+    "elementarySummary": "五個數中間的是6；最大的比3多9，所以是12。再算五個數離平均7有多遠，得到標準差√15。6+12+√15就是答案。",
+    "concept": "排好序五筆資料中位數為第3筆；全距最大−最小；樣本標準差使用 n−1 為分母。",
+    "memory": "α=6，β=12，平方差和60除4=15 ⇒ 18+√15（B）。",
+    "formula": "樣本標準差 s=√[Σ(x_i−x̄)²/(n−1)]；五筆時 n=5。",
+    "highlights": [
+      "中位數",
+      "全距",
+      "算術平均數",
+      "樣本標準差",
+      "α + β"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "升冪資料 3、4、α、10、β",
+        "中位數6、全距9、平均7",
+        "樣本標準差 γ（須與母體標準差 n 分母區別）"
+      ],
+      "formulaUse": "樣本標準差 s=√[Σ(x_i−x̄)²/(n−1)]；五筆時 n=5。",
+      "substitution": [
+        "α=6（第3筆）",
+        "β−3=9 ⇒ β=12",
+        "x̄=(3+4+6+10+12)/5=7",
+        "Σ(x_i−7)²=(−4)²+(−3)²+(−1)²+3²+5²=16+9+1+9+25=60"
+      ],
+      "steps": [
+        "先看排序資料共有五筆，因此第三個數 α 就是中位數 6。",
+        "全距是最大減最小，β−3=9，得到 β=12。",
+        "用平均數驗證：(3+4+6+10+12)/5=35/5=7，符合題目。",
+        "每筆減平均7：−4、−3、−1、3、5；分別平方 16、9、1、9、25。",
+        "平方和為60，因題目明示『樣本』標準差，分母 n−1=5−1=4。",
+        "γ=√(60/4)=√15，因此 α+β+γ=6+12+√15=18+√15，對應 B 的原字形候選。",
+        "再做反向檢查：中位數 6、全距12−3=9、平均7與已知全吻合；若誤用母體標準差除5，會得√12而非√15。",
+        "特別注意原 OCR 答案選項的根號符號不完整，作者版本解讀為『18+√15』；正式放行須 A 原始單題圖目視核實 B 選項確實為此值。"
+      ],
+      "result": "18+√15（原試卷選項根號待 A 目視核對）",
+      "unit": "原題資料單位（無指定）",
+      "option": "B"
+    },
+    "solvingSteps": [
+      "先看排序資料共有五筆，因此第三個數 α 就是中位數 6。",
+      "全距是最大減最小，β−3=9，得到 β=12。",
+      "用平均數驗證：(3+4+6+10+12)/5=35/5=7，符合題目。",
+      "每筆減平均7：−4、−3、−1、3、5；分別平方 16、9、1、9、25。",
+      "平方和為60，因題目明示『樣本』標準差，分母 n−1=5−1=4。",
+      "γ=√(60/4)=√15，因此 α+β+γ=6+12+√15=18+√15，對應 B 的原字形候選。",
+      "再做反向檢查：中位數 6、全距12−3=9、平均7與已知全吻合；若誤用母體標準差除5，會得√12而非√15。",
+      "特別注意原 OCR 答案選項的根號符號不完整，作者版本解讀為『18+√15』；正式放行須 A 原始單題圖目視核實 B 選項確實為此值。"
+    ],
+    "calculationReviewed": "ROLE_B_AUTHOR_ARITHMETIC_CHECK_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 在 α=6、β=12 時前段為18，但若把 γ 當 √8，無法由樣本平方差和60除以4求得。",
+        "elementary": "前面18對，後面的根號8不對。",
+        "reason": "A 在 α=6、β=12 時前段為18，但若把 γ 當 √8，無法由樣本平方差和60除以4求得。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B α+β=6+12=18，樣本標準差 γ=√15，故 B 的候選式18+√15為正確，但正式符號需 A 原像素確認。",
+        "elementary": "中間數6、大數12、標準差根號15，加起來就是B。",
+        "reason": "B α+β=6+12=18，樣本標準差 γ=√15，故 B 的候選式18+√15為正確，但正式符號需 A 原像素確認。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 前段20就與 α+β=18 不符，且若用 √8 亦非樣本標準差 √15。",
+        "elementary": "6+12不是20，後面根號也不對。",
+        "reason": "C 前段20就與 α+β=18 不符，且若用 √8 亦非樣本標準差 √15。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 雖可能含 √15，但 α+β 一定是18而非20，因此『20+√15』錯在前段總和。",
+        "elementary": "算出6+12只能是18，不能選20。",
+        "reason": "D 雖可能含 √15，但 α+β 一定是18而非20，因此『20+√15』錯在前段總和。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official OCR candidate only; A G1 image, G2 original text and G3 official current answer/corrections pending; do not claim exact official final."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 | Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_G1_ORIGINAL_SINGLE_WEBP_QA_DRAFT",
+      "A_G2_OCR_OPTION_TABLE_SOURCE_RECONCILIATION",
+      "A_G3_FINAL_ANSWER_AND_CORRECTIONS_NOT_ADMITTED",
+      "ROLE_E_DISTINCT_MATH_QA_PENDING",
+      "D_REAL_YEAR_V4_8X2_SHA_PENDING",
+      "MASTER_TRUSTED_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "mathRecomputedByAuthor": true
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "page": null
+  },
+  "composedTeachingSha256": "8289987caa3869aead01f47bd801602d96f726138f21ddd54bbe85ae240c3b6e"
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-12",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_QA_PENDING_MATH",
+  "question": "真心高中某委員會的委員總數為 x 人，其中6 ≤ x ≤ 8。若這 x 人中有 y 人為學生委員，且\n\n  學生委員人數占了委員總數的二分之一以上 ( 含 ) ，則 ( x , y ) 的可能性共有幾種？",
+  "options": [
+    "9",
+    "13",
+    "17",
+    "20\n\n\n\n\n\n- 4-\n\n114 年四技                                              第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "80037d49437cade6b38433dfcf55b79d2034bf0779b433329d150007294b56bc",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-12.webp",
+    "webpSha256": "c10c9b753ec0eb0916c81d228a6e49ae5a5176f243a50f2ef27925c87229adcc",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "originalTextIssue": "OPTION_D_PAGE_FOOTER_MIXED",
+    "authorImageTranscriptNotOfficial": true
+  },
+  "teaching": {
+    "topic": "委員人數條件列舉｜過半數（含一半）",
+    "teacherSummary": "每個總人數 x=6,7,8 都允許學生人數 y 達到至少一半且最多 x。x=6 有4種、x=7 有4種、x=8 有5種，總共 4+4+5=13 種，選 B。",
+    "elementarySummary": "先數六人委員會有幾種學生人數，再數七人和八人的情況，加起來就是13種。",
+    "concept": "y 為整數，滿足 0≤y≤x 且 y≥x/2，因此 y_min=ceil(x/2)。",
+    "memory": "6人4種＋7人4種＋8人5種＝13種（B）。",
+    "formula": "固定 x 時，y 從 ceil(x/2) 到 x 的整數個數為 x−ceil(x/2)+1。",
+    "highlights": [
+      "6 ≤ x ≤ 8",
+      "二分之一以上",
+      "( x , y )"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "x 為委員人數，6≤x≤8 且為整數",
+        "y 為學生委員人數，0≤y≤x 且 y≥x/2"
+      ],
+      "formulaUse": "固定 x 時，y 從 ceil(x/2) 到 x 的整數個數為 x−ceil(x/2)+1。",
+      "substitution": [
+        "x=6：y=3,4,5,6，共4種",
+        "x=7：y=4,5,6,7，共4種",
+        "x=8：y=4,5,6,7,8，共5種"
+      ],
+      "steps": [
+        "從題意確認 x 可能是 6、7 或 8 人，不能把 x 當任意大小。",
+        "因為學生至少占半數（含），y≥x/2；又 y 是學生人數，必須是整數且不能超過 x。",
+        "x=6 時，學生 y=3、4、5、6，共 4 組 (x,y)。",
+        "x=7 時，因 y≥3.5，整數 y=4、5、6、7，共 4 組。",
+        "x=8 時，學生 y=4、5、6、7、8，共 5 組。",
+        "合計 4+4+5=13 組，對應 B『13』，單位是『種可能性』。",
+        "逆向驗算：對每個 x 用 x−ceil(x/2)+1 計算，分別是 4、4、5；而所有 y 均介於 ceil(x/2) 與 x，不重複、不漏計。"
+      ],
+      "result": "13 種 (x,y) 可能性",
+      "unit": "種",
+      "option": "B"
+    },
+    "solvingSteps": [
+      "從題意確認 x 可能是 6、7 或 8 人，不能把 x 當任意大小。",
+      "因為學生至少占半數（含），y≥x/2；又 y 是學生人數，必須是整數且不能超過 x。",
+      "x=6 時，學生 y=3、4、5、6，共 4 組 (x,y)。",
+      "x=7 時，因 y≥3.5，整數 y=4、5、6、7，共 4 組。",
+      "x=8 時，學生 y=4、5、6、7、8，共 5 組。",
+      "合計 4+4+5=13 組，對應 B『13』，單位是『種可能性』。",
+      "逆向驗算：對每個 x 用 x−ceil(x/2)+1 計算，分別是 4、4、5；而所有 y 均介於 ceil(x/2) 與 x，不重複、不漏計。"
+    ],
+    "calculationReviewed": "ROLE_B_AUTHOR_ARITHMETIC_CHECK_NOT_E",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 9 種少算了至少 4 組；必須包含學生超過半數的所有 y，不能只計剛好一半。",
+        "elementary": "不是只有剛好一半才算，9種太少。",
+        "reason": "A 9 種少算了至少 4 組；必須包含學生超過半數的所有 y，不能只計剛好一半。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 13 種由 x=6 的4組、x=7 的4組、x=8 的5組合成；每組都符合學生至少占半數。",
+        "elementary": "4+4+5＝13，學生數都夠一半。",
+        "reason": "B 13 種由 x=6 的4組、x=7 的4組、x=8 的5組合成；每組都符合學生至少占半數。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C 17 種比正確的13組多4組，表示把至少一種 y 不符合半數的情況錯算進去。",
+        "elementary": "有些學生不夠半數的組合不能算，所以17太多。",
+        "reason": "C 17 種比正確的13組多4組，表示把至少一種 y 不符合半數的情況錯算進去。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 20 種比所有有效可列的 13 組多7組；不能把 y 低於 ceil(x/2) 的學生人數也列入。",
+        "elementary": "學生少於半數不行，20是多算了。",
+        "reason": "D 20 種比所有有效可列的 13 組多7組；不能把 y 低於 ceil(x/2) 的學生人數也列入。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 official OCR candidate only; A G1 image, G2 original text and G3 official current answer/corrections pending; do not claim exact official final."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 | Role B AI teaching author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "requiresHumanTeacher": false,
+    "blockers": [
+      "A_G1_ORIGINAL_SINGLE_WEBP_QA_DRAFT",
+      "A_G2_OCR_OPTION_TABLE_SOURCE_RECONCILIATION",
+      "A_G3_FINAL_ANSWER_AND_CORRECTIONS_NOT_ADMITTED",
+      "ROLE_E_DISTINCT_MATH_QA_PENDING",
+      "D_REAL_YEAR_V4_8X2_SHA_PENDING",
+      "MASTER_TRUSTED_PROTECTED_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "answerAlreadyKnown": true,
+    "blindSolveClaimed": false,
+    "mathRecomputedByAuthor": true
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "page": null
+  },
+  "composedTeachingSha256": "79c22771194b45b9d58413429d1742b8fbbc1d62db73e01b1dda464510b61d89"
+}

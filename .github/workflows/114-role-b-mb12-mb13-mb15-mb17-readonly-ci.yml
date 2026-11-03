@@ -1,0 +1,14 @@
+name: "114 Role B math B12 B13 B15 B17 author-only exact SHA and math (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-mb12-mb13-mb15-mb17-20261102
+  workflow_dispatch:
+jobs:
+  readonly-author:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest discover -s tests -p 'test_114_role_b_mb12_mb13_mb15_mb17_20261102.py' -v
