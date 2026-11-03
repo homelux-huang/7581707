@@ -61,6 +61,12 @@
       "類出國",
       "有「類」橐駝者",
       "品「類」之盛"
+    ],
+    "solvingSteps": [
+      "先把題幹『類出國航班』改成白話：飛到國外上空又返航，體驗『好像出國』而不是真正出國；此『類』是相似。",
+      "分辨 A『菜蔬稻稗之類』、B『品類之盛』、C『群類』：三句都在講事物種類、類別或同類群體，不是『很像』。",
+      "讀 D『病僂，隆然伏行，有類橐駝者』，背駝而彎身走路的樣子『像駱駝』，『類』正是近似的意思。",
+      "把 D『有類橐駝者』的『類』替換成『像』，再替換題幹『類出國』也通順，所以答案 D。"
     ]
   },
   "enrichment": {
@@ -108,7 +114,7 @@
       "category": "種類、類別（稻稗之類／品類／群類）"
     }
   },
-  "composedTeachingSha256": "7cee3b44dce15d2177b1bd2d9081455087d1403dc3948e5a32e1c63d5af0783f",
+  "composedTeachingSha256": "9228dddaad06d78da6b42cb6fdbdd72bc44ee5314146021818a2572d2aa5afa5",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -158,9 +164,12 @@
     "textbookVerificationStatus": "待核對"
   },
   "authorCorrection": {
-    "taskId": "B-114-OPTION-REASONS-20261025-01",
+    "taskId": "B-114-C01-C03-E06-EXPLICIT-REASONING-20261102-01",
     "role": "B",
+    "scope": "SOURCE_PRESERVING_EXPLICIT_SOLVING_STEPS_AND_OPTION_REASONS",
+    "priorComposedTeachingSha256": "7cee3b44dce15d2177b1bd2d9081455087d1403dc3948e5a32e1c63d5af0783f",
+    "sourceRevisionUnchanged": "81a17175e7e4d87b278b568068aff54b8352a9e564b618d63171ff88163223aa",
     "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
-    "priorCiRun": 40162791292
+    "requiresIndependentRoleE": true
   }
 }

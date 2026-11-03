@@ -33,25 +33,25 @@
       "A": {
         "teacher": "正確，是有錯字的選項：『無諒』應作『無量』，表示功德不可估量。",
         "elementary": "把原諒的『諒』錯放在數量的『量』位置。",
-        "reason": "用錯同音形近字。",
+        "reason": "原題『攢錢行善，功德無諒』要說善行功德大到難以估量，應寫『無量』；『諒』表示體諒、諒解，放在此處才是錯別字。",
         "isCorrect": true
       },
       "B": {
         "teacher": "錯誤，『豐饒』形容物產豐富，『饑饉』表示荒年缺糧，兩詞字形皆正確。",
         "elementary": "有很多東西叫豐饒，沒糧食叫饑饉，字沒有寫錯。",
-        "reason": "固定詞語字形正確。",
+        "reason": "『四海豐饒』的『豐饒』是富足，『民無饑饉』的『饑饉』是缺糧饑荒，兩個詞的字形都正確，所以不能選作錯別字。",
         "isCorrect": false
       },
       "C": {
         "teacher": "錯誤，『千頭萬緒』指事情線索紛繁，與『意念紛雜』相應，沒有錯別字。",
         "elementary": "想法好多條線纏在一起，正是千頭萬緒。",
-        "reason": "成語字形與語義正確。",
+        "reason": "『意念紛雜』對應『千頭萬緒』：想法或事情的線索很多而紛亂，成語四字寫法正確，並沒有把同音字寫錯。",
         "isCorrect": false
       },
       "D": {
         "teacher": "錯誤，『倨傲』指傲慢，『招搖過市』為公開炫耀走過街市，兩詞字形皆正確。",
         "elementary": "態度驕傲、故意引人注意，這些字都寫對。",
-        "reason": "形容詞與成語字形無誤。",
+        "reason": "『倨傲』指傲慢，『招搖過市』指公開張揚走過街市；兩個詞皆是既有正確字形，文句語氣不等於錯別字。",
         "isCorrect": false
       }
     },
@@ -63,6 +63,12 @@
       "饑饉",
       "千頭萬緒",
       "倨傲"
+    ],
+    "solvingSteps": [
+      "先圈出題目關鍵『何者有錯別字』：要查字形是否正確，而不是選自己不喜歡的語氣。",
+      "檢查 A『功德無諒』：功德多得無法估計是『功德無量』；量表示估量，諒表示體諒，因此 A 用錯字。",
+      "核對 B『豐饒／饑饉』、C『千頭萬緒』、D『倨傲／招搖過市』的固定寫法與各句語義，三項沒有錯字。",
+      "回到題幹核查只有 A 的『諒』須換成『量』，所以答案 A；口訣是『功德多到無法估量』。"
     ]
   },
   "enrichment": {
@@ -118,7 +124,7 @@
       "explanation": "『無量』表示無法估量；『諒』表示體諒、諒解，不能代替『量』。"
     }
   },
-  "composedTeachingSha256": "a045a01ed5eebcfb05a8ab0aa1b873f73ff10a1eacf5b1ffe3ffe8b90d990bf1",
+  "composedTeachingSha256": "34b0018455c5bbd3d0e0be94c7a7c3c9855a08333804e62dbd5d2a042ce9e014",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -166,5 +172,14 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "authorCorrection": {
+    "taskId": "B-114-C01-C03-E06-EXPLICIT-REASONING-20261102-01",
+    "role": "B",
+    "scope": "SOURCE_PRESERVING_EXPLICIT_SOLVING_STEPS_AND_OPTION_REASONS",
+    "priorComposedTeachingSha256": "a045a01ed5eebcfb05a8ab0aa1b873f73ff10a1eacf5b1ffe3ffe8b90d990bf1",
+    "sourceRevisionUnchanged": "333b6ce5199af42fcec6ca78422b7af6af520925441d07a80f5866b9a6d3cf08",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "requiresIndependentRoleE": true
   }
 }
