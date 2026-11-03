@@ -1,0 +1,17 @@
+name: "Role B 114 explicit reasoning read-only CI (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-explicit-reasoning-c01-c03-e06-20261102
+  workflow_dispatch:
+jobs:
+  no-release-content-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Existing seven-question source-contract test
+        run: python -m unittest discover -s tests -p 'test_114_role_b_teaching_20261025.py' -v
+      - name: Four-question new pedagogy and SHA regression
+        run: python -m unittest discover -s tests -p 'test_114_role_b_explicit_reasoning_20261102.py' -v

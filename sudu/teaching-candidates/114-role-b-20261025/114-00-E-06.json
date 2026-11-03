@@ -33,25 +33,25 @@
       "A": {
         "teacher": "正確。authority（權限）可和 have the ... to punish 搭配，符合依法處罰酒駕的句意。",
         "elementary": "政府有權照法律處理酒駕，所以選『權限』。",
-        "reason": "權限與後面的 to punish 在語法、語意上都吻合。",
+        "reason": "authority 是『權限、授權』，放回原句 Governments have the authority to punish，表示政府依法有權處罰酒駕者，句法和意思都吻合。",
         "isCorrect": true
       },
       "B": {
         "teacher": "錯誤。bargain 是交易或討價還價，不表示政府的法定處罰權。",
         "elementary": "政府不是在和酒駕者討價還價。",
-        "reason": "名詞語義不符合依法處罰。",
+        "reason": "bargain 表『交易、討價還價』；have the bargain to punish 並不是『有法定處罰權』的自然搭配，酒駕執法也不是和違規者談價錢。",
         "isCorrect": false
       },
       "C": {
         "teacher": "錯誤。courtesy 是禮貌、好意，不能表達依法執法的權力。",
         "elementary": "有禮貌不等於有法律授權。",
-        "reason": "禮貌並非權限。",
+        "reason": "courtesy 是『禮貌、好意』；即使 have the courtesy to 表示出於禮貌做某事，政府處罰酒駕所需的是法定權限而非客套。",
         "isCorrect": false
       },
       "D": {
         "teacher": "錯誤。infection 是感染／傳染，與酒駕處罰或法定權限無關。",
         "elementary": "生病感染和警察處理酒駕是兩回事。",
-        "reason": "領域與語意完全不符。",
+        "reason": "infection 表『感染』；have the infection to punish 既不能自然表示處罰權，也和酒駕法規及政府執法無關。",
         "isCorrect": false
       }
     },
@@ -61,6 +61,13 @@
       "authority",
       "to punish",
       "drink and drive"
+    ],
+    "solvingSteps": [
+      "先把題幹讀成 Governments have the ___ to punish people who drink and drive：政府有某種資格或能力去處罰酒後開車的人。",
+      "抓語法提示 have the ___ to punish，空格是名詞；再看 punish（處罰）與 Governments（政府）應連到『法律權限』。",
+      "代入 A authority（權限），得到 have the authority to punish = 有權處罰，語法自然且符合政府執法情境。",
+      "反查 B bargain 是討價還價，C courtesy 是禮貌，D infection 是感染；三者都不能表達法定處罰權，所以答案 A。",
+      "再用中文驗算整句：『政府有權處罰酒後駕車者』，語意完整，並記住 authority to + 原形動詞。"
     ]
   },
   "enrichment": {
@@ -118,7 +125,7 @@
       "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
     }
   },
-  "composedTeachingSha256": "f7c3dd659c320a80109d26c31a9b3e0f0eac702c9b934ce5860bffef0e2982c4",
+  "composedTeachingSha256": "068424d56eb461cff6965571667043bc152c5ddfb91bae73e410ee529f30985d",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -166,5 +173,14 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "authorCorrection": {
+    "taskId": "B-114-C01-C03-E06-EXPLICIT-REASONING-20261102-01",
+    "role": "B",
+    "scope": "SOURCE_PRESERVING_EXPLICIT_SOLVING_STEPS_AND_OPTION_REASONS",
+    "priorComposedTeachingSha256": "f7c3dd659c320a80109d26c31a9b3e0f0eac702c9b934ce5860bffef0e2982c4",
+    "sourceRevisionUnchanged": "f30333bf1bcd080123576b1363bf4f6fa16d47c3dcf5b347140d1944b95fa5fb",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "requiresIndependentRoleE": true
   }
 }

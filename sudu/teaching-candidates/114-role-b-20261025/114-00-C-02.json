@@ -33,25 +33,25 @@
       "A": {
         "teacher": "錯誤。『妳要把岳飛的精神演出來』，演出者有意識地展現精神，屬①處置。",
         "elementary": "演員自己決定怎麼演，這是主動做。",
-        "reason": "人的有意行為。",
+        "reason": "『妳要把岳飛的精神演出來』有演出者依要求刻意展現岳飛精神，動作可由人主動安排，故是①有意識『處置』，不是②。",
         "isCorrect": false
       },
       "B": {
         "teacher": "錯誤。『余燕翼把……飯倒回鍋裡』，人刻意倒飯，屬①處置。",
         "elementary": "他自己把飯倒回去，是主動做的。",
-        "reason": "人的有意行為。",
+        "reason": "『余燕翼把盛好的半碗飯倒回鍋裡』有余燕翼自己決定倒飯，明確把飯移回鍋裡，是人主動施作的①『處置』。",
         "isCorrect": false
       },
       "C": {
         "teacher": "正確。『船身把墨藍海水掘犁成翻花的白浪』是船身造成波浪，並非船身有意安排，屬②導致。",
         "elementary": "船前進，海水自然翻出白浪；船身不會故意想事情。",
-        "reason": "無意識主語造成結果。",
+        "reason": "『船身把墨藍海水掘犁成翻花的白浪』是船體航行造成海水變成白浪；船身不能思考或刻意安排，符合②『導致』。",
         "isCorrect": true
       },
       "D": {
         "teacher": "錯誤。『母親只好把……短髮剪去』有人的剪髮決定，屬①處置。",
         "elementary": "媽媽拿剪刀把頭髮剪掉，是自己決定做的。",
-        "reason": "有意識剪去頭髮。",
+        "reason": "『母親只好把稀稀疏疏的幾根短髮剪去』雖說『只好』透露無奈，剪髮仍由母親有意執行，屬①『處置』。",
         "isCorrect": false
       }
     },
@@ -61,6 +61,12 @@
       "處置",
       "導致",
       "船身把墨藍海水掘犁成翻花的白浪"
+    ],
+    "solvingSteps": [
+      "讀右框兩種定義：①處置是主語有意識主動做；②導致是主語造成結果但沒有有意識的安排。",
+      "逐項找『把』前的主語：A 演出者、B 余燕翼、D 母親都是人，且各自有主動演出、倒飯、剪髮的行為。",
+      "看 C『船身把墨藍海水掘犁成翻花的白浪』：船體行駛碰到水，白浪自然出現，船身並無主觀意圖。",
+      "對照右框樹把路擋住的例子，C 和樹一樣是物體無意造成結果，因此選 C（②導致）。"
     ]
   },
   "enrichment": {
@@ -108,7 +114,7 @@
       "causal": "主語造成結果，不一定有意識，如『樹把路擋住了』"
     }
   },
-  "composedTeachingSha256": "64e72d943280762ae3d9cdd807e9d249f4d81651ae2d5e971aadafa3880e4c64",
+  "composedTeachingSha256": "b6fa1e3def9b55befb0a94c10de70aa7c86b3067ca2882c104205380f67b998c",
   "reasoningAudit": {
     "answerAlreadyKnown": true,
     "blindSolveClaimedThisBatch": false,
@@ -156,5 +162,14 @@
     "textbookChapter": null,
     "textbookPage": null,
     "textbookVerificationStatus": "待核對"
+  },
+  "authorCorrection": {
+    "taskId": "B-114-C01-C03-E06-EXPLICIT-REASONING-20261102-01",
+    "role": "B",
+    "scope": "SOURCE_PRESERVING_EXPLICIT_SOLVING_STEPS_AND_OPTION_REASONS",
+    "priorComposedTeachingSha256": "64e72d943280762ae3d9cdd807e9d249f4d81651ae2d5e971aadafa3880e4c64",
+    "sourceRevisionUnchanged": "856c8e8da262960ad365b50bb398420bbe40135134f6c1e39ec5360cd52fce4f",
+    "reviewLevel": "AUTHOR_SELF_CHECK_ONLY",
+    "requiresIndependentRoleE": true
   }
 }
