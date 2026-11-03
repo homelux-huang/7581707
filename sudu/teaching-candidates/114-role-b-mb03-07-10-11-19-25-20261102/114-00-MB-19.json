@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-19",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "在坐標平面上，已知有三個圓分別為 C1 ：x 2 + ( y – 1 ) 2 = 1、 C 2 ：x 2 + ( y – 2 ) 2 = 4、\n   C 3 ：x 2 + ( y – 3 ) 2 = 9，如圖 ( 三 ) 所示。試問下列哪一條直線同時跟 C1 相離、 C 2 相切以及\n   C 3 相割？\n                                                                           y",
+  "options": [
+    "5 𝑥 + 12 y + 1 = 0                                                                           6",
+    "7 𝑥 – 24 y – 1 = 0                                                   5",
+    "3 𝑥 + 4 y + 2 = 0                                                    4          C3",
+    "8 𝑥 – 15 y – 5 = 0                                                   3      C2\n                                                                           2  C1\n                                                                           1\n\n                                                                                          x\n                     圖 ( 三 ) –3  –2  –1      1   2   3"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "d0ac8bcf1fc23ecffdd410967c9ede9744dd29625bc403c8db6e89168e7d55dd",
+    "webpSha256": "eef94559c7f9bdc94621ddd8a39af81dcfe168ff3a86350ae7c794ab90e7223d",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-19.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "圓心到直線距離｜相離、相切、相割",
+    "teacherSummary": "三圓圓心(0,1)(0,2)(0,3)，半徑1、2、3。C線3x+4y+2=0距離6/5>1、2=2、14/5<3，恰依序相離／相切／相割。",
+    "elementarySummary": "圓心離線比半徑遠就碰不到，剛好等半徑就碰一下，比半徑近就穿過。C三個圓都符合。",
+    "concept": "d=|Ax₀+By₀+C|/√(A²+B²)；d>r相離，d=r相切，d<r相交兩點。",
+    "memory": "C線的距離6/5、2、14/5 ⇒>1、=2、<3",
+    "highlights": [
+      "C1",
+      "C2",
+      "C3",
+      "相切"
+    ],
+    "formula": "點到直線距離d=|Ax₀+By₀+C|/√(A²+B²)。",
+    "solvingSteps": [
+      "從(x²+(y−1)²=1),(x²+(y−2)²=4),(x²+(y−3)²=9)讀出三個圓心和半徑。",
+      "同時需要第一圓距離>1、第二圓距離=2、第三圓距離<3。",
+      "C候選3x+4y+2=0分母√(3²+4²)=5。",
+      "第一圓距離|4+2|/5=6/5>1，故外離。",
+      "第二圓距離|8+2|/5=2，故相切。",
+      "第三圓距離|12+2|/5=14/5<3，故相割，答案C。",
+      "另三選項在第二圓心距離分別25/13、49/25、35/17，都不等於2，反驗不會相切。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "C₁中心(0,1)半徑1",
+        "C₂中心(0,2)半徑2",
+        "C₃中心(0,3)半徑3",
+        "找同時相離、相切、相割的直線"
+      ],
+      "formulaUse": "點到直線距離d=|Ax₀+By₀+C|/√(A²+B²)。",
+      "substitution": [
+        "C線3x+4y+2=0分母5",
+        "d₁=6/5",
+        "d₂=10/5=2",
+        "d₃=14/5"
+      ],
+      "steps": [
+        "從(x²+(y−1)²=1),(x²+(y−2)²=4),(x²+(y−3)²=9)讀出三個圓心和半徑。",
+        "同時需要第一圓距離>1、第二圓距離=2、第三圓距離<3。",
+        "C候選3x+4y+2=0分母√(3²+4²)=5。",
+        "第一圓距離|4+2|/5=6/5>1，故外離。",
+        "第二圓距離|8+2|/5=2，故相切。",
+        "第三圓距離|12+2|/5=14/5<3，故相割，答案C。",
+        "另三選項在第二圓心距離分別25/13、49/25、35/17，都不等於2，反驗不會相切。"
+      ],
+      "result": "C滿足相離/相切/相割",
+      "unit": "座標長度",
+      "option": "C"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的5x+12y+1=0到(0,2)距離25/13≈1.923<2，第二圓是相割而非相切。",
+        "elementary": "A第二圓被線切進去了。",
+        "reason": "A的5x+12y+1=0到(0,2)距離25/13≈1.923<2，第二圓是相割而非相切。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B的7x−24y−1=0到第二圓心距離49/25=1.96<2，也非相切。",
+        "elementary": "B第二圓沒有剛好碰一次。",
+        "reason": "B的7x−24y−1=0到第二圓心距離49/25=1.96<2，也非相切。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C的3x+4y+2=0距離分別6/5>1、2=2、14/5<3，三個相對關係全部正確。",
+        "elementary": "第一沒碰、第二剛碰、第三穿過，C對。",
+        "reason": "C的3x+4y+2=0距離分別6/5>1、2=2、14/5<3，三個相對關係全部正確。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D的8x−15y−5=0到第二圓心距離35/17≈2.059>2，是相離而非相切。",
+        "elementary": "D第二圓離得太遠。",
+        "reason": "D的8x−15y−5=0到第二圓心距離35/17≈2.059>2，是相離而非相切。",
+        "isCorrect": false
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "59b80539e314a59fe27cbd0c16806c1e2815325a5faaf20da3d0da620098a0db"
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-25",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "已知數列 a n 的奇數項為一個公比為 – 3的等比數列，偶數項為一個公差為3的等差數列。\n  若 a 99 = 5 × 3 49、 a 100 = 202，則 a 1 + a 2 + … + a 9 + a 10 = ？",
+  "options": [
+    "3 5 + 5",
+    "3 5 – 5",
+    "610",
+    "0\n\n\n\n\n          【以下空白】\n\n\n\n\n\n- 8-"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "5c6def425043f36eda2b3b7b03e55798003a4caea593a32219fc99addfc151cc",
+    "webpSha256": "ddd4d51b2bdd6b15da1c747159dc432c2f3546896730eb42a615b595111c9be9",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-25.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "奇偶項等比與等差分組｜首十項和",
+    "teacherSummary": "奇數位置至a99共50項公比−3，a99=5×3⁴⁹⇒a1=−5；前五奇數項和−305。偶數位置至a100共50項公差3，a100=202⇒a2=55；前五偶數項和305。總和0，選D。",
+    "elementarySummary": "單數位置那一隊加起來負305，雙數位置那一隊加起來正305，兩隊剛好抵銷，總和零。",
+    "concept": "奇數與偶數子數列各有50項；末項公式的指數是49不是99。",
+    "memory": "奇數−305＋偶數305＝0",
+    "highlights": [
+      "奇數項",
+      "偶數項",
+      "公差為3"
+    ],
+    "formula": "奇數a_{2n−1}=a1(−3)^(n−1)；偶數a_{2n}=a2+3(n−1)。",
+    "solvingSteps": [
+      "把奇數位置a1,a3,…,a99獨立看成50項等比子數列。",
+      "末項a99=a1(−3)^49=5×3^49，因49是奇數，a1=−5。",
+      "前五奇數位置是−5、15、−45、135、−405，和−305。",
+      "偶數位置a2,a4,…,a100也是50項，a100=a2+49×3=202，故a2=55。",
+      "前五偶數位置是55、58、61、64、67，和305。",
+      "第一到第十項等於兩組各五項之和，−305+305=0，選D。",
+      "反驗a1(−3)^49=5×3^49、a2+49×3=202，分組沒有誤算；原始選項冪次與頁尾仍待A G2。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "奇數位置a1到a99為等比公比−3，末項5×3⁴⁹",
+        "偶數位置a2到a100為等差公差3，末項202"
+      ],
+      "formulaUse": "奇數a_{2n−1}=a1(−3)^(n−1)；偶數a_{2n}=a2+3(n−1)。",
+      "substitution": [
+        "a1(−3)^49=5×3^49⇒a1=−5",
+        "a2+49×3=202⇒a2=55"
+      ],
+      "steps": [
+        "把奇數位置a1,a3,…,a99獨立看成50項等比子數列。",
+        "末項a99=a1(−3)^49=5×3^49，因49是奇數，a1=−5。",
+        "前五奇數位置是−5、15、−45、135、−405，和−305。",
+        "偶數位置a2,a4,…,a100也是50項，a100=a2+49×3=202，故a2=55。",
+        "前五偶數位置是55、58、61、64、67，和305。",
+        "第一到第十項等於兩組各五項之和，−305+305=0，選D。",
+        "反驗a1(−3)^49=5×3^49、a2+49×3=202，分組沒有誤算；原始選項冪次與頁尾仍待A G2。"
+      ],
+      "result": "0",
+      "unit": "原數列數值，未指定單位",
+      "option": "D"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A若表示3⁵+5=248，與奇數和−305加偶數和305的0不符；原OCR指數字形須核。",
+        "elementary": "A是正數，兩組已抵銷。",
+        "reason": "A若表示3⁵+5=248，與奇數和−305加偶數和305的0不符；原OCR指數字形須核。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B若表示3⁵−5=238，也不等於首十項總和0；原OCR指數字形待A修。",
+        "elementary": "B算出正數，真正是零。",
+        "reason": "B若表示3⁵−5=238，也不等於首十項總和0；原OCR指數字形待A修。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 610 是把305與−305的絕對值相加，忘記奇數項和帶負號。",
+        "elementary": "負305不能當成正305去加。",
+        "reason": "C 610 是把305與−305的絕對值相加，忘記奇數項和帶負號。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 0 正確，奇數五項和−305、偶數五項和305，正負剛好抵銷。",
+        "elementary": "負305加正305剛好零。",
+        "reason": "D 0 正確，奇數五項和−305、偶數五項和305，正負剛好抵銷。",
+        "isCorrect": true
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "87fda8fce07c081c14459b3223c06bbe01ea955acdfdf2cc8e542673ef56a620"
+}
