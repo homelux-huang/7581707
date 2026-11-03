@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-MB12-MB13-MB15-MB17-20261102-04",
+  "year": 114,
+  "role": "B",
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "total": 4,
+  "items": [
+    {
+      "questionId": "114-00-MB-12",
+      "path": "sudu/teaching-candidates/114-role-b-mb12-mb13-mb15-mb17-20261102/114-00-MB-12.json",
+      "candidateAnswer": "B",
+      "sourceRevision": "80037d49437cade6b38433dfcf55b79d2034bf0779b433329d150007294b56bc",
+      "webpSha256": "c10c9b753ec0eb0916c81d228a6e49ae5a5176f243a50f2ef27925c87229adcc",
+      "composedTeachingSha256": "79c22771194b45b9d58413429d1742b8fbbc1d62db73e01b1dda464510b61d89",
+      "fileSha256": "ef871e08fef36edfaadaa1850261de4a8ccc360da3899b396c2f7ecfb8c559a7",
+      "sourceG2Issue": "OPTION_D_PAGE_FOOTER_MIXED",
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-13",
+      "path": "sudu/teaching-candidates/114-role-b-mb12-mb13-mb15-mb17-20261102/114-00-MB-13.json",
+      "candidateAnswer": "B",
+      "sourceRevision": "e29c44f5caa9614e6dcff75fd96c32f42ed05b87500c3fb042059dcfeb32cc6d",
+      "webpSha256": "906c071d33790a70dcefbdf8231669bc859480c8cfa0bce9ccc0212353c6baf8",
+      "composedTeachingSha256": "8289987caa3869aead01f47bd801602d96f726138f21ddd54bbe85ae240c3b6e",
+      "fileSha256": "f1ae973f513357961cfbef53524e5337c6141b2cce53dcf8e2e4e16c147a8363",
+      "sourceG2Issue": "ROOT_SYMBOL_MISSING_IN_OCR_CHOICES",
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-15",
+      "path": "sudu/teaching-candidates/114-role-b-mb12-mb13-mb15-mb17-20261102/114-00-MB-15.json",
+      "candidateAnswer": "C",
+      "sourceRevision": "f91f82829e39f813adc88fc46f257f9584769c43d9e48cb386ab60817fd05931",
+      "webpSha256": "b2a56212057700c9e6639730c8b26902bdf9707ab424e03130f572055305dc2e",
+      "composedTeachingSha256": "b7e241cdaec3735df2c61b942ad6acd777890aec568d8b862498edd9ac3dec7d",
+      "fileSha256": "65e0e4da48532bf3cc65406132bb27183681336d3f842aa4b98ca51959d4285a",
+      "sourceG2Issue": null,
+      "ready": false
+    },
+    {
+      "questionId": "114-00-MB-17",
+      "path": "sudu/teaching-candidates/114-role-b-mb12-mb13-mb15-mb17-20261102/114-00-MB-17.json",
+      "candidateAnswer": "D",
+      "sourceRevision": "a2a49872ee13eda7a18d1dbd2b913d7b7642ea390106fe8c547b38eedd802cf2",
+      "webpSha256": "a7135c3376bc6dae962a203bb00e657db72e9c5e35d3f00a9962e2e4f7dd7398",
+      "composedTeachingSha256": "0a313a3aa411f162ef1593014335d8bfc5b618c0b0c0ea967e8b09e97696778b",
+      "fileSha256": "5c3083ca722339476dad3f8bd662fc2ce6178b47e8fe29d215ad768e54eedba6",
+      "sourceG2Issue": "OPTION_D_INCLUDES_NEXT_Q18",
+      "ready": false
+    }
+  ],
+  "authorMathCrosschecks": 4,
+  "sourceAdmitted": 0,
+  "independentETrusted": 0,
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "noRelease": true,
+  "requiresHumanTeacher": false
+}
