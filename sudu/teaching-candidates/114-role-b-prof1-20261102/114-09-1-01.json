@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-01",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_NOT_VERIFIED",
+  "question": "若水國際有限公司是一家提供建築資訊建模服務的社會企業，專門訓練身障者成為建築\n  物 3D 建模師，並聘雇為員工，不但創造身障者就業機會，也解決建築業資訊建模人才短\n  缺的問題。關於若水公司之敘述，下列何者錯誤？",
+  "options": [
+    "透過營運自給自足",
+    "所得投入企業營運",
+    "倚賴各界捐款協助身障者就業",
+    "具法人資格且股東為一人以上"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "026db722bfa482cd046be651c43d7a30e1f18ea03071e18ab812bffcaf2e741b",
+    "webpSha256": "a21da73be9bcc3749fc00c53d9f063560fee5a8a43ad522e4f7b87defa7c7948",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-01.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "社會企業與募款的差異",
+    "teacherSummary": "若水提供建築3D建模服務並聘用身障者，以可持續營運解決就業問題。錯項C宣稱依賴各界捐款，無法由案例支持。",
+    "elementarySummary": "公司做3D模型服務有收入，也幫身障朋友就業，不是主要靠別人捐錢。",
+    "concept": "社會企業=商業營運＋社會使命，不一定靠慈善捐款。",
+    "memory": "有營運收入，不是靠捐款 C。",
+    "highlights": [
+      "社會企業"
+    ],
+    "solvingSteps": [
+      "找題幹『何者錯誤』，要找和社會企業營運不相符的選項。",
+      "案例明說公司提供建築資訊建模服務，並訓練與雇用身障者。",
+      "A自給自足與B所得投入營運可符合持續提供服務的模式。",
+      "C宣稱依賴捐款，忽略案例的有償服務；D為有限公司法人型態，故C錯。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NON_CALCULATION_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 提供3D建模服務可取得營運收入，維持公司運作，符合透過營運自給自足。",
+        "elementary": "接案做模型可以賺收入。",
+        "reason": "A 提供3D建模服務可取得營運收入，維持公司運作，符合透過營運自給自足。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 將所得再投入服務、員工訓練與營運，有助社會企業持續創造工作機會。",
+        "elementary": "賺到的錢可再拿去做服務。",
+        "reason": "B 將所得再投入服務、員工訓練與營運，有助社會企業持續創造工作機會。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 若水案例重點是靠建築建模服務及雇用創造價值，不能推論它倚賴各界捐款。",
+        "elementary": "不是只有靠大家捐錢，C錯。",
+        "reason": "C 若水案例重點是靠建築建模服務及雇用創造價值，不能推論它倚賴各界捐款。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 公司名稱已明示『有限公司』，這是依法設立的法人企業類型，可以有一人以上股東。",
+        "elementary": "有限公司能依法成立有股東。",
+        "reason": "D 公司名稱已明示『有限公司』，這是依法設立的法人企業類型，可以有一人以上股東。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 A來源候選原卷，官方單題G1、文字G2、最終公告G3仍未核准"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_G2_G3_OFFICIAL_SOURCE_PENDING",
+      "E_DISTINCT_AI_CONTENT_PENDING",
+      "D_YEAR114_V4_REAL_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "43b5c199f37a316604fca0e53fb2a8cd04ec770c42f76bbb1dac50f458f6277d"
+}

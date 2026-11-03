@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS01-02-05-DIGI26-28-20261102-06",
+  "role": "B",
+  "year": 114,
+  "total": 5,
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "items": [
+    {
+      "questionId": "114-09-1-01",
+      "path": "sudu/teaching-candidates/114-role-b-prof1-20261102/114-09-1-01.json",
+      "subject": "商業概論",
+      "candidateAnswer": "C",
+      "sourceRevision": "026db722bfa482cd046be651c43d7a30e1f18ea03071e18ab812bffcaf2e741b",
+      "webpSha256": "a21da73be9bcc3749fc00c53d9f063560fee5a8a43ad522e4f7b87defa7c7948",
+      "composedTeachingSha256": "43b5c199f37a316604fca0e53fb2a8cd04ec770c42f76bbb1dac50f458f6277d",
+      "fileSha256": "f6407debf7103b305560cac03cc3586cc17a34ee6dad8a0ca903c5d021dd522e",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-02",
+      "path": "sudu/teaching-candidates/114-role-b-prof1-20261102/114-09-1-02.json",
+      "subject": "商業概論",
+      "candidateAnswer": "A",
+      "sourceRevision": "a36c7fa6de6d0e9cad2ba97fd8ee2f97375ecf0ec3ab6eeef4dab58a78d5398d",
+      "webpSha256": "6f5685bd58ebe5209bd9924a13799e34f7b1c76e2b07b2b955363bf5895aa6a1",
+      "composedTeachingSha256": "88a5c4531a3a63781533aba9929809ec4bdaeecfe4430789d2085b6be4990f8d",
+      "fileSha256": "7cdad55d01eb1a232f44f29f6bf9eef3c8c9d814916ea23296ed429fc8f5ae7a",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-05",
+      "path": "sudu/teaching-candidates/114-role-b-prof1-20261102/114-09-1-05.json",
+      "subject": "商業概論",
+      "candidateAnswer": "B",
+      "sourceRevision": "d8e5b36e21ea192bc77864bd42fd99d193b814d7e67716c11cc3b155453cd653",
+      "webpSha256": "b86945c0e22e90df9e0044ec0f5a0e389b15630de725d2e018a939023530c15c",
+      "composedTeachingSha256": "2340793c5042af54f836d87daa020194a260df0c32b1b99128b540ed61fa5800",
+      "fileSha256": "9a4d9105dd5300b80349fcbbdb2691c36a373c80848063edf7120bef04c5b125",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-26",
+      "path": "sudu/teaching-candidates/114-role-b-prof1-20261102/114-09-1-26.json",
+      "subject": "數位科技",
+      "candidateAnswer": "C",
+      "sourceRevision": "d89bcfe776fd1dff85fddf337c3e930e81c54328446028df90f2211029eda850",
+      "webpSha256": "dfe10e94f7c984ad636295d90b9c8e158c8f047ae814fcfbfad7f319024e2be7",
+      "composedTeachingSha256": "3577eba88a6b04dbdfdacc67d9e3a90f0ad22cf4ab80a28698e2b270714cd492",
+      "fileSha256": "68ac852f23f1347db8831e78f092c98732eba02a762ea92c0f97eb300be13fdd",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-28",
+      "path": "sudu/teaching-candidates/114-role-b-prof1-20261102/114-09-1-28.json",
+      "subject": "數位科技",
+      "candidateAnswer": "C",
+      "sourceRevision": "6fa72d83e6921204adc92170796828f5e7d8f049e58fe004d71d83a1c47c9b9c",
+      "webpSha256": "465a91091e877055d60039d1894fdddee395e08da2bf7c4da530158208438ee2",
+      "composedTeachingSha256": "912244ca952be6582f1e30ac45a7f59f7183d3944b000edca129628a9c0c9d29",
+      "fileSha256": "49167cca2545b91c97e797161b1ac08a0017958e40b63ec4985633ef25f5466d",
+      "ready": false
+    }
+  ],
+  "sourceAdmitted": false,
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "independentE": false,
+  "noRelease": true
+}

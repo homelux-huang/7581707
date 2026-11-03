@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-02",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_NOT_VERIFIED",
+  "question": "知名電商平台蝦皮近年來陸續推出全年無休的無人服務「智取店」，當消費者完成付款，\n  就能在取貨期間，於店內自助取回網購商品。針對此項「智取店」服務，下列敘述何者\n  正確？",
+  "options": [
+    "提供消費者空間效用的生產價值",
+    "此服務屬於無店舖經營型態的自動販賣",
+    "智取店內沒有銷售人員及銷售行為，故屬於貨運型物流中心",
+    "智取店提供賣家與買家之間的貨物配送，故屬於獨家式配銷通路"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "a36c7fa6de6d0e9cad2ba97fd8ee2f97375ecf0ec3ab6eeef4dab58a78d5398d",
+    "webpSha256": "6f5685bd58ebe5209bd9924a13799e34f7b1c76e2b07b2b955363bf5895aa6a1",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-02.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "智取店空間效用",
+    "teacherSummary": "網購完成付款後，商品送到實體自助取貨店讓買家取得，主要創造商品位於便利地點的空間效用。",
+    "elementarySummary": "網購的東西送到方便你拿的店，就是讓商品到對的位置。",
+    "concept": "空間效用是將商品放到消費者需要的地點。",
+    "memory": "取貨點方便拿貨=空間效用A。",
+    "highlights": [
+      "智取店"
+    ],
+    "solvingSteps": [
+      "題幹網購付款已完成，消費者在實體智取店自助取回商品。",
+      "商品由賣家移動到適當取貨地點，因此產生空間效用。",
+      "B混淆實體取貨與無店舖自動販賣；C混淆消費者取貨店與貨運中心。",
+      "D獨家配銷需有獨家通路安排，單憑配送不能證明，因此A正確。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NON_CALCULATION_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 智取店使商品到達可供買家自助取貨的實體位置，符合流通中的空間效用。",
+        "elementary": "商品放在容易取到的地方。",
+        "reason": "A 智取店使商品到達可供買家自助取貨的實體位置，符合流通中的空間效用。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 智取店是實體取貨據點，且不是現場用販賣機賣商品，不宜列為無店舖型自動販賣。",
+        "elementary": "有店能取貨，不是在自動販賣機買。",
+        "reason": "B 智取店是實體取貨據點，且不是現場用販賣機賣商品，不宜列為無店舖型自動販賣。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 沒有店員仍提供顧客取貨服務，不等於只供貨物調度的貨運型物流中心。",
+        "elementary": "店沒人顧也還是在給客人拿貨。",
+        "reason": "C 沒有店員仍提供顧客取貨服務，不等於只供貨物調度的貨運型物流中心。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 提供賣家與買家間配送不代表『獨家式配銷』；是否獨家要看限定經銷商策略。",
+        "elementary": "幫送貨不代表只能這家賣。",
+        "reason": "D 提供賣家與買家間配送不代表『獨家式配銷』；是否獨家要看限定經銷商策略。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 A來源候選原卷，官方單題G1、文字G2、最終公告G3仍未核准"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_G2_G3_OFFICIAL_SOURCE_PENDING",
+      "E_DISTINCT_AI_CONTENT_PENDING",
+      "D_YEAR114_V4_REAL_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "88a5c4531a3a63781533aba9929809ec4bdaeecfe4430789d2085b6be4990f8d"
+}
