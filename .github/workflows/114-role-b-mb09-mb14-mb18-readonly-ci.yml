@@ -1,0 +1,15 @@
+name: "114 Role B MathB 09 14 18 strict calculation CI (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-mb09-mb14-mb18-20261102
+  workflow_dispatch:
+jobs:
+  author-readonly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify source bound calculations and no release
+        run: python -m unittest discover -s tests -p 'test_114_role_b_mb09_mb14_mb18_20261102.py' -v

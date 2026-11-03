@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-14",
+  "subject": "數學 B",
+  "kind": "NEW_SOURCE_PENDING_AUTHOR_MATH",
+  "question": "某便利商店推出一項優惠活動：來店消費的顧客，在結帳時，可抽籤一次，讓結帳金額\n\n  套用籤上的折扣。已知籤筒裡共有50 支籤，其中折扣與籤的數量關係如表 ( 一 )。若每支\n\n  籤被抽中的機率皆相同，則每抽籤一次獲得折扣的期望值最接近下列哪個選項？\n\n        折扣        9 折      8 折      6 折      3 折      1 折\n\n  表 ( 一 ) 籤的數量 ( 支 )     32        10        5         2         1",
+  "options": [
+    "5 折",
+    "6 折",
+    "8 折",
+    "9 折"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "0d1bbec772292b115b2893e3ef87c2088daabbbcc7b650a636ad70ec55ffb67c",
+    "webpSha256": "1a0a01b5f75e37c5fd8feed03a686d2bdf9f6399d060eae07616c0803a53b91a",
+    "originalWebpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-14.webp",
+    "originalWebpQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialCorrectionScopeNotVerified": true
+  },
+  "teaching": {
+    "topic": "機率期望值｜抽折扣籤的平均折數",
+    "teacherSummary": "50 支籤中 9 折 32 支、8 折 10 支、6 折 5 支、3 折 2 支、1 折 1 支。每支均等機率，付款比例的加權平均為 0.81，即 8.1 折，最接近 8 折 C。",
+    "elementarySummary": "假設抽 50 次恰好每支抽一次，把每種折數乘上支數，再平均。平均約付原價的八成，所以選 8 折。",
+    "concept": "期望值＝Σ(結果×機率)；『9折』是付 90% 原價，不是『省 90%』。",
+    "formula": "付款比例 X 的期望值 E(X)=Σ(付款比例_i × 抽中支數_i/50)。",
+    "memory": "9折佔32/50的大宗，平均再降一些到8.1折，靠近8折（C）。",
+    "highlights": [
+      "50 支",
+      "9 折",
+      "8 折",
+      "期望值",
+      "表 ( 一 )"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": "AUTHOR_SELF_CALCULATION_CHECK_ONLY",
+    "examCalculation": {
+      "given": [
+        "9折×32支、8折×10支、6折×5支、3折×2支、1折×1支",
+        "總數 32+10+5+2+1=50 支，等機率抽取"
+      ],
+      "formulaUse": "付款比例 X 的期望值 E(X)=Σ(付款比例_i × 抽中支數_i/50)。",
+      "substitution": [
+        "E(X)=(0.9×32+0.8×10+0.6×5+0.3×2+0.1×1)/50"
+      ],
+      "steps": [
+        "先確認表格五類支數合計：32+10+5+2+1=50，與題目一致。",
+        "把 9折、8折、6折、3折、1折換成應付原價的 0.9、0.8、0.6、0.3、0.1。",
+        "用每種折數乘出現次數：0.9×32=28.8；0.8×10=8；0.6×5=3；0.3×2=0.6；0.1×1=0.1。",
+        "全部加總 28.8+8+3+0.6+0.1=40.5，再除以總支數 50：E(X)=40.5÷50=0.81。",
+        "0.81 表示付款是原價 81%，即 8.1 折，最接近 C『8折』。",
+        "反向驗算：平均省下比例 1−0.81=0.19（19%）；等價地 (0.1×32+0.2×10+0.4×5+0.7×2+0.9×1)/50=9.5/50=0.19，兩種算法相同。"
+      ],
+      "result": "8.1 折，選最近的 8 折",
+      "unit": "折（付款比例）",
+      "option": "C"
+    },
+    "solvingSteps": [
+      "先確認表格五類支數合計：32+10+5+2+1=50，與題目一致。",
+      "把 9折、8折、6折、3折、1折換成應付原價的 0.9、0.8、0.6、0.3、0.1。",
+      "用每種折數乘出現次數：0.9×32=28.8；0.8×10=8；0.6×5=3；0.3×2=0.6；0.1×1=0.1。",
+      "全部加總 28.8+8+3+0.6+0.1=40.5，再除以總支數 50：E(X)=40.5÷50=0.81。",
+      "0.81 表示付款是原價 81%，即 8.1 折，最接近 C『8折』。",
+      "反向驗算：平均省下比例 1−0.81=0.19（19%）；等價地 (0.1×32+0.2×10+0.4×5+0.7×2+0.9×1)/50=9.5/50=0.19，兩種算法相同。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 5 折代表平均只付原價 50%；32/50 的籤就是 9 折，整體期望不會低到 5 折。",
+        "elementary": "大多數抽到9折，不可能平均才付一半。",
+        "reason": "A 5 折代表平均只付原價 50%；32/50 的籤就是 9 折，整體期望不會低到 5 折。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 6 折代表付款 60%，低於逐支加權算出的付款比例 81%，不是最接近期望值。",
+        "elementary": "真正平均是八成多，不是六成。",
+        "reason": "B 6 折代表付款 60%，低於逐支加權算出的付款比例 81%，不是最接近期望值。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 8 折是四個選項中最接近期望付款比例 0.81（8.1折），因此正確。",
+        "elementary": "平均 8.1 折，最靠近 8 折。",
+        "reason": "C 8 折是四個選項中最接近期望付款比例 0.81（8.1折），因此正確。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 9 折雖然支數最多，但期望值不是眾數，還要計入 8/6/3/1 折等 18 支籤，平均降到 8.1 折。",
+        "elementary": "最多人拿到9折，不代表平均也是9折。",
+        "reason": "D 9 折雖然支數最多，但期望值不是眾數，還要計入 8/6/3/1 折等 18 支籤，平均降到 8.1 折。",
+        "isCorrect": false
+      }
+    },
+    "source": "A PR21 114 原試題OCR/WebP SHA候選；ROLE B作者公式驗算不代表官方源卷/答案公告核准。"
+  },
+  "reasoningAudit": {
+    "sourceAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorArithmeticCrosscheckDone": true,
+    "independentMathEReview": false
+  },
+  "review": {
+    "status": "BLOCKED",
+    "requiresHumanTeacher": false,
+    "author": "GPT-6 Role B author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_G3_OFFICIAL_QUESTION_ANSWER_NOTICE_REQUIRED",
+      "ROLE_E_DISTINCT_AI_MATH_VERIFICATION_PENDING",
+      "D_REAL_ORIGINAL_YEAR_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "composedTeachingSha256": "b577fdef37b2778c54fee495c3367efa6b6c89521455ed2a120deb9c05e602f2"
+}
