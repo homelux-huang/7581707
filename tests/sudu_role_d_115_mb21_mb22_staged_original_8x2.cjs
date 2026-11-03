@@ -68,7 +68,7 @@ const source=[...IDS].map(id=>{
  assert.equal(m.sha256,expected.image);
  assert.equal(m.qaStatus,'PASS','historical pixel G1 must be PASS; does not imply G2/READY');
  assert.equal(m.visualReviewEvidence.reviewedSha256,expected.image);
- assert.equal(m.sourcePdfSha256,'e82e34d9cda67c8d28f556d7eb0cd8486b66ccfbe4423d7a40857d7289082');
+ assert.equal(m.sourcePdfSha256,'e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082');
  assert.equal(sha(raw(A+'/'+m.output)),expected.image,'actual original one-question WebP bytes differ');
  assert.equal(q.question,t.question,'source original stem vs author teaching mismatch');
  assert.deepEqual(q.options,t.options,'source original A-D options vs C author mismatch');
