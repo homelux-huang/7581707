@@ -62,11 +62,20 @@ jobs:
             sudu/data/processed/114/review-evidence/114-00-E-13-official.json
             sudu/data/processed/114/review-evidence/114-00-E-14-official.json
             sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json
+      - name: Checkout immutable pre-A original 205-row PR35 comparison source
+        uses: actions/checkout@v4
+        with:
+          ref: e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5
+          path: _role_source_baseline
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/questions.json
       - name: Assert source/author immutable SHA (fail closed)
         run: |
           set -euo pipefail
           test "$(git -C _role_b_batch02 rev-parse HEAD)" = 2ae0af298bb803547698ebd279efe8a291f89e63
           test "$(git -C _role_a_original rev-parse HEAD)" = 57f2c1709431e906a5405e8008337330704cc4ef
+          test "$(git -C _role_source_baseline rev-parse HEAD)" = e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
