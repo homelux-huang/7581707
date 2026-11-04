@@ -1,5 +1,5 @@
 'use strict';
-/* ROLE D 115 MB21/22 original source + authentic C teaching exact-SHA V4 8x2.
+/* ROLE D 115 MB20 corrected v5 original + freshly independently E-reviewed C teaching exact-SHA V4 8x2.
  * QA-ONLY browser-local HTTP interception; NOT a publisher emission, E, READY, or LIVE.
  */
 const assert=require('node:assert/strict');
@@ -12,8 +12,8 @@ const {chromium}=require('playwright');
 const ROOT=path.resolve(__dirname,'..');
 const SITE=process.env.SUDU_D_SITE||'http://127.0.0.1:8765/sudu/';
 const OUT=path.resolve(process.env.SUDU_D_OUT||'test-results/role-d-115-mb20-new-digest');
-const A=process.env.SUDU_D_A_DIR||'_role_a_115_mb21_mb22';
-const C=process.env.SUDU_D_C_DIR||'_role_c_115_mb21_mb22';
+const A=process.env.SUDU_D_A_DIR||'_role_a_115_mb20';
+const C=process.env.SUDU_D_C_DIR||'_role_c_115_mb20';
 const AHEAD='fbd7756b995e3d27dc31a99ecc54fe66af4d82c6';
 const CHEAD='e50198cad6821a5252008bd474d8240510832f85';
 const IDS=['115-00-MB-20'];
@@ -44,8 +44,8 @@ const main115raw=raw('sudu/data/approved/115.json');
 assert.equal(blob(main115raw),'51e7b4e73e2d46b4c8b1672c6af20477cc90d44e',
  'actual five formal 115 approved rows changed; stop and re-evaluate');
 const main115=JSON.parse(main115raw.toString('utf8'));
-assert.equal(main115.approvedCount,5,'no new MB21/22 formal emission permitted by this test');
-assert(!main115.questions.some(q=>IDS.includes(q.canonicalId)),'MB21/22 already formally emitted: QA-only test is obsolete');
+assert.equal(main115.approvedCount,5,'no new MB20 formal emission permitted by this test');
+assert(!main115.questions.some(q=>IDS.includes(q.canonicalId)),'MB20 already formally emitted: QA-only test is obsolete');
 const bank=read(A+'/sudu/data/processed/115/questions.json');
 const manifest=read(A+'/sudu/data/processed/115/webp-manifest.json');
 const official=read(A+'/sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json');
@@ -298,5 +298,5 @@ async function fontGate(page,label){
  assert.equal(report.errors.length,0,'115 Math B20 staged original + new author digest V4 8x2 error remains');
  assert.equal(report.cases.length,16,'one authentic source MB20 × 8 viewports × 2 themes required');
  console.log('PASS 16/16 TRUE ORIGINAL 115 MB20 NEW E-REVIEWED CALC DIGEST V4 QA-ONLY; ACTUAL APPROVED=5, NEW READY/LIVE=0');
-})().catch(e=>{report.status='QA_ONLY_115_MB21_MB22_FAIL';report.errors.push({fatal:String(e.stack||e)});
+})().catch(e=>{report.status='QA_ONLY_115_MB20_FAIL';report.errors.push({fatal:String(e.stack||e)});
  save();console.error(e.stack||e);process.exitCode=1;});
