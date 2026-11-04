@@ -238,6 +238,7 @@ class YearRoutedOfficialNoticeSafetyTests(unittest.TestCase):
         paper = "00-E"
         qid = f"{year}-{paper}-26" if year == 114 else f"{year}-{paper}-34"
         candidate = {"questionId": qid, "officialConfirmedAnswer": "C",
+                     "publishedFinalAnswerImageIndependentlyVerified": year == 114,
                      "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
                      "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
                      "comparedToOfficialPublishedTableCandidate": "MATCHED",
@@ -307,6 +308,40 @@ class YearRoutedOfficialNoticeSafetyTests(unittest.TestCase):
                 if year == 114:
                     self.assertFalse(v.official_notice_scope_certified(
                         root, year, named, {**named_proof, "officialFinalAnswerImageQaPassed": False}))
+
+    def test_114_named_image_receipt_cannot_be_forged_by_source_boolean(self):
+        # The real historic 114 named E26 row currently has false image QA.
+        # Even a forged source-authored True must not pass without the
+        # independently reviewed named official correction ledger row.
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            p, filename, _, catalog, sha, qid = self.fixture(root, 114)
+            q = {"questionId": qid, "paperCode": "00-E", "answer": "C"}
+            proof = {"confirmationPdfSha256": sha, "finalAnswer": "C",
+                     "correctionForQuestionReviewed": True,
+                     "officialFinalAnswerImageQaPassed": True}
+            self.assertTrue(v.official_notice_scope_certified(root, 114, q, proof))
+            for flag in (False, None, "true", 1):
+                with self.subTest(independent_flag=flag):
+                    candidate = dict(catalog["docs"][0]["confirmed"][0])
+                    if flag is None:
+                        candidate.pop("publishedFinalAnswerImageIndependentlyVerified")
+                    else:
+                        candidate["publishedFinalAnswerImageIndependentlyVerified"] = flag
+                    changed = {**catalog, "docs": [
+                        {**catalog["docs"][0], "confirmed": [candidate]}]}
+                    v.dump(p/filename, changed)
+                    self.assertFalse(v.official_notice_scope_certified(root, 114, q, proof))
+            # An unaffected QID (E12/E11) must still pass individual
+            # no-correction checks even when another named row lacks image QA.
+            other = {"questionId": "114-00-E-12", "paperCode": "00-E", "answer": "C"}
+            self.assertTrue(v.official_notice_scope_certified(
+                root, 114, other, {"confirmationPdfSha256": sha,
+                                  "finalAnswer": "C",
+                                  "noCorrectionForThisQuestion": True}))
+            v.dump(p/filename, catalog)
+            self.assertFalse(v.official_notice_scope_certified(
+                root, 114, q, {**proof, "officialFinalAnswerImageQaPassed": False}))
 
     def test_wrong_year_path_pdf_document_and_flags_fail_closed(self):
         for year in v.YEARS:
