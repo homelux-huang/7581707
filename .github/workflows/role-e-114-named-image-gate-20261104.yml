@@ -1,0 +1,36 @@
+name: ROLE E 114 named original-answer image gate (NO RELEASE)
+
+on:
+  push:
+    branches:
+      - qa/role-e-114-named-image-proof-gate-20261104
+    paths:
+      - scripts/sudu_verified_publish.py
+      - tests/test_sudu_verified_publish.py
+      - docs/ROLE_E_114_NAMED_IMAGE_EVIDENCE_GATE_20261104.md
+      - .github/workflows/role-e-114-named-image-gate-20261104.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-e-114-named-image-proof-no-release
+  cancel-in-progress: true
+
+jobs:
+  independently_hardened_official_notice:
+    name: Verify both-year official notice and E image evidence (no release)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run unchanged 114 and 115 official publisher tests plus negative new cases
+        run: python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
+      - name: Run certified overlay author-trust negative tests
+        run: python -m unittest discover -s tests -p 'test_sudu_certified_overlay.py' -v
+      - name: Assert no unauthorized new approved question entered student data
+        run: python scripts/sudu_verified_publish.py check
