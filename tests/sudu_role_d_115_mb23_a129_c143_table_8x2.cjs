@@ -63,8 +63,8 @@ const main115raw=raw('sudu/data/approved/115.json');
 assert.equal(blob(main115raw),'51e7b4e73e2d46b4c8b1672c6af20477cc90d44e',
  'actual five formal 115 approved rows changed; stop and re-evaluate');
 const main115=JSON.parse(main115raw.toString('utf8'));
-assert.equal(main115.approvedCount,5,'no new MB20 formal emission permitted by this test');
-assert(!main115.questions.some(q=>IDS.includes(q.canonicalId)),'MB20 already formally emitted: QA-only test is obsolete');
+assert.equal(main115.approvedCount,5,'no new MB23 formal emission permitted by this test');
+assert(!main115.questions.some(q=>IDS.includes(q.canonicalId)),'MB23 already formally emitted: QA-only test is obsolete');
 const bank=read(A+'/sudu/data/processed/115/questions.json');
 const manifest=read(A+'/sudu/data/processed/115/webp-manifest.json');
 const official=read(A+'/sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json');
@@ -313,7 +313,7 @@ async function fontGate(page,label){
     await action(page.locator('#reviewTop'),touch);
     await page.locator('#reviewView.show').waitFor({timeout:12000});
     assert.equal(await page.locator('#reviewList .wrong-card').count(),1,
-     'staged MB20 wrong question missing from review');
+     'staged MB23 wrong question missing from review');
     const local=await page.evaluate(()=>({
      annual:localStorage.getItem('tvet-verified-115-v1'),
      demo:localStorage.getItem('tvet-115-multisubject-demo-v1')
