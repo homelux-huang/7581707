@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-34",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "某軌道運輸業者為完全獨占廠商。該廠商針對具有不同特性的乘用者訂出不同的價格，\n  下列敘述何者正確？",
+  "options": [
+    "此作法為第三級差別訂價法",
+    "平均邊際收益等於邊際成本",
+    "常見於旅展拍賣競價販售乘用券",
+    "純粹為廠商實踐企業社會責任所採用"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "a32b0c7fef1aa7d30e252bff3393f2c57088101767c4b99430cde4924f562eb8",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-34.webp",
+    "webpSha256": "8cc554a83c66210351200d0686d08cba6d27bf94bf8a075bed3ae59c521ffab4",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "完全獨占廠商的第三級差別訂價",
+    "teacherSummary": "業者按乘客可辨識的不同類型（如身分、購買者群體）分群定價，是第三級差別訂價，故A。獨占利潤最大化通常分別考量各群的MR與共同MC，而非把平均收益、邊際收益、邊際成本混稱相等。",
+    "elementarySummary": "同一班車，對學生和一般大人訂不同票價，就像把客人分成不同組收費，這叫第三級差別訂價。",
+    "concept": "第一級依個別支付意願、第二級依購買數量/方案自我選擇、第三級按可辨識顧客市場分類；獨占MR通常小於P=AR。",
+    "memory": "按『乘客種類』分組訂價→第三級差別訂價（A）。",
+    "highlights": [
+      "具有不同特性的乘用者",
+      "不同的價格",
+      "第三級差別訂價法"
+    ],
+    "solvingSteps": [
+      "題目先給完全獨占及依乘客特性收取不同價格的情境。",
+      "區分依『顧客群體』訂價（第三級），與依數量或方案訂價（第二級）。",
+      "A描述第三級差別訂價，與題幹一致。",
+      "B把AR、MR、MC混淆；獨占價格一般不等於邊際收益。",
+      "C的拍賣競價不等於固定按乘客類型分組；D把可能追求利潤的商業訂價誤判為純CSR，因此選A。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A按可辨識的乘客特性分割市場、對各群收不同價格，符合第三級差別訂價。",
+        "elementary": "不同身分有不同車票價錢，就是把客人分組收費。",
+        "reason": "A按可辨識的乘客特性分割市場、對各群收不同價格，符合第三級差別訂價。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B獨占利潤最大化條件是各市場邊際收益與邊際成本協調，通常不是『平均邊際收益等於邊際成本』；平均收益AR及MR概念不能互代。",
+        "elementary": "一張票收多少和多賣一張增加多少錢，並不是同一數字。",
+        "reason": "B獨占利潤最大化條件是各市場邊際收益與邊際成本協調，通常不是『平均邊際收益等於邊際成本』；平均收益AR及MR概念不能互代。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C拍賣時消費者競價依個別投標/支付意願與拍賣機制形成價差，不能直接當作按乘客類別定價的典型案例。",
+        "elementary": "拍賣讓大家自己喊價，不是先分學生和大人。",
+        "reason": "C拍賣時消費者競價依個別投標/支付意願與拍賣機制形成價差，不能直接當作按乘客類別定價的典型案例。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D差別訂價可為提高收益、分割市場的策略，不能斷言純粹為實踐企業社會責任。",
+        "elementary": "收不同票價可能想賺錢，不一定全是做公益。",
+        "reason": "D差別訂價可為提高收益、分割市場的策略，不能斷言純粹為實踐企業社會責任。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 題庫候選，G1 單題原圖目視、G2 逐字OCR、G3 官答更正公告均待核；字母不屬正式核准答案。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_OCR_TEXT_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_REVIEW_PENDING",
+      "D_YEAR114_REAL_BROWSER_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "7e817f5eb63a2a308f49746854b5614d01d4878a26bc7ffb017aff0d905e0b02"
+}

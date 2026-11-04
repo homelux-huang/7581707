@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-27",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "有一家完全競爭廠商，面對市場價格P = 14 元。該廠商在產量q = 8 時，MC = AC；\n  在q = 9 時，MC = AR；在q = 10 時，AC = AR，其中MC、AC、AR 分別代表邊際成本、平\n  均成本、平均收益。已知 AC = q2 – 16 q + 74，則該廠商在最適產量之下的超額利潤為何？",
+  "options": [
+    "0",
+    "10",
+    "27",
+    "36"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "18a06efa2ffc91c87baaf4943e72972efe8be04ac3533d20ab2ae49ab9efb76f",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-27.webp",
+    "webpSha256": "0a3525d35ce5f169d7bfd8fe62a4c08e43e467c50ba2458bbacfd840e4240b74",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "完全競爭最適產量與超額利潤",
+    "teacherSummary": "依來源候選題幹所給 q=9 時 MC=AR，且完全競爭 P=AR=14 元，選 q=9；以題幹 AC=q²−16q+74 暫讀計得 AC(9)=11 元，單位超額利潤3元，總利潤(14−11)×9=27元，故候選C。但原OCR寫為 q2，平方符號及此公式與邊際成本條件的整體一致性須由A確認原圖、E再審，不宣告官方正解。",
+    "elementarySummary": "先照題目告訴你的『賣9個剛好最適合』算：每個賣14元，平均每個成本11元，一個多賺3元，9個共27元。可是原圖的平方記號還沒確認，所以現在只能當待核稿。",
+    "concept": "完全競爭廠商最適條件通常是MR=P=MC，總利潤=(價格−平均總成本)×產量；本題題幹另給q=9條件，原圖與邊際成本函數一致性另列阻塞。",
+    "memory": "已知q=9 ⇒ AC(9)=11；(P−AC)×q=(14−11)×9=27元（候選C）。",
+    "highlights": [
+      "P = 14 元",
+      "q = 9 時，MC = AR",
+      "AC = q2 – 16 q + 74",
+      "27"
+    ],
+    "solvingSteps": [
+      "先看完全競爭廠商的MR=AR=P=14元；題幹指定q=9時MC=AR，用這個給定最適產量計算。",
+      "題面OCR暫把AC=q2−16q+74中的q2解作q²，代入q=9：9²−16×9+74。",
+      "依序得到81−144+74=11元/單位，售價14元高於平均成本11元。",
+      "單位超額利潤=14−11=3元，總利潤=3×9=27元。",
+      "反算TR=14×9=126元、TC=11×9=99元、TR−TC=27元，與利潤式一致。",
+      "注意原題q2的平方排版及AC與題幹另給的MC資料可能有一致性問題，交A核實真實原卷與官答，不能自行變更來源。"
+    ],
+    "formula": "利潤π=TR−TC=(P−AC)×q；依題幹條件最適q=9",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "P=14元/單位",
+        "題幹指明q=9時MC=AR",
+        "AC OCR為q2−16q+74，暫解讀為q²−16q+74（原圖未核實）"
+      ],
+      "formulaUse": "完全競爭下按題幹MR=MC選q=9；再以π=(P−AC)×q求超額利潤",
+      "substitution": [
+        "AC(9)=9²−16×9+74=11元/單位",
+        "π=(14−11)×9=27元"
+      ],
+      "steps": [
+        "q=9是題幹已給定的MC=AR條件對應產量",
+        "AC(9)=81−144+74=11（元/單位）",
+        "每單位差額=14−11=3（元/單位）",
+        "π=3×9=27（元）",
+        "反向驗算：TR=14×9=126元；TC=11×9=99元；126−99=27元"
+      ],
+      "result": "27",
+      "unit": "元",
+      "reverseCheck": "總收益126−總成本99=27元；另需A核原圖平方與題幹MC一致性",
+      "option": "C"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 0元等同把超額利潤誤當收支平衡；本題依已給q=9，P14與AC11之間有每單位3元差額。",
+        "elementary": "0元代表沒賺也沒賠，但每個多賺3元，9個就不會是0。",
+        "reason": "A 0元等同把超額利潤誤當收支平衡；本題依已給q=9，P14與AC11之間有每單位3元差額。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 10元不是(14−11)×9的結果；把成本與單位利潤混淆會低估總超額利潤。",
+        "elementary": "一個賺3元、9個賺27元，不會只有10元。",
+        "reason": "B 10元不是(14−11)×9的結果；把成本與單位利潤混淆會低估總超額利潤。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 27元符合依題幹q=9與AC(9)=11的計算：單位利潤3元乘9單位。",
+        "elementary": "賣9個，每個多賺3元，總共27元；目前是待核來源的候選答案。",
+        "reason": "C 27元符合依題幹q=9與AC(9)=11的計算：單位利潤3元乘9單位。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D 36元若以q=9換算等於每單位4元，與14−AC(9)=3元不一致。",
+        "elementary": "36除9是每個賺4元，可是算出來每個只賺3元。",
+        "reason": "D 36元若以q=9換算等於每單位4元，與14−AC(9)=3元不一致。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 題庫候選，G1 單題原圖目視、G2 逐字OCR、G3 官答更正公告均待核；字母不屬正式核准答案。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_OCR_TEXT_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_NOTICE_PENDING",
+      "A_G2_MATH_Q_SQUARED_SYMBOL_AND_MC_CONSISTENCY_CONFIRM",
+      "E_DISTINCT_AI_REVIEW_PENDING",
+      "D_YEAR114_REAL_BROWSER_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "4d663c40642e5b64d9ea017106af3ed9e2dfff20563a5c16e5f650f0369f8897"
+}

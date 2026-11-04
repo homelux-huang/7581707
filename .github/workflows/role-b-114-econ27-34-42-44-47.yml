@@ -1,0 +1,18 @@
+name: ROLE B 114 Econ27-34-42-44-47 author CI (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/114-role-b-econ27-34-42-44-47-20261104
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/114-role-b-econ27-34-42-44-47-20261104/**'
+      - 'tests/test_role_b_114_econ27_34_42_44_47_20261104.py'
+      - '.github/workflows/role-b-114-econ27-34-42-44-47.yml'
+  workflow_dispatch:
+jobs:
+  author-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test source/OCR fail-closed SHA and actual arithmetic
+        run: python -m unittest discover -s tests -p 'test_role_b_114_econ27_34_42_44_47_20261104.py' -v

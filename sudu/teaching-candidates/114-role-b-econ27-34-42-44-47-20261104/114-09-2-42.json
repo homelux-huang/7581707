@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-42",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "某國將於 2025 年公告調整貨幣政策，在未來可能採取「階段性調升短期利率以達到連續\n  升息的效果」，以及「減少向市場注入資金的公開市場操作政策」，關於此貨幣政策，\n  下列推論何者正確？",
+  "options": [
+    "政府可能增加貨幣供給量以配合未來貨幣政策",
+    "預計經由調節貨幣供給量以達成景氣降溫的目標",
+    "調整貨幣政策的目的為提振景氣以促進經濟繁榮發展",
+    "政府亦可經由降低重貼現率以配合未來貨幣政策的調整方向"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "5cc43c73eed5e1516fcd4405f19d6f497f1ba831ace041a7b191564d3e39bfc3",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-42.webp",
+    "webpSha256": "953618b45b43756c0f525b3090a78bd1eaba6c2e386c47a37534f1647ce68f15",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "緊縮性貨幣政策與景氣降溫",
+    "teacherSummary": "題幹假設階段性升息、減少向市場注入資金，方向皆偏緊縮貨幣政策，可能抑制信用擴張與總需求，使景氣降溫，故B。這是考題假設情境，不是對2025年政策實際發生的斷言。",
+    "elementarySummary": "銀行借錢變貴，市場又比較少拿到新錢，大家可能少借少花，過熱的景氣就會慢下來。",
+    "concept": "緊縮政策方向：政策利率提高、央行減少流動性供給、信用或總支出受抑制；降低重貼現率通常偏向寬鬆。",
+    "memory": "升息＋減少市場注資→緊縮→景氣降溫，選B。",
+    "highlights": [
+      "調升短期利率",
+      "減少向市場注入資金",
+      "景氣降溫"
+    ],
+    "solvingSteps": [
+      "辨認題幹是假設升息與減少注資，不是先查2025年歷史新聞。",
+      "升息通常使借貸成本提高，抑制部分消費與投資。",
+      "減少流動性注入同樣傾向使資金條件變緊，屬緊縮政策。",
+      "因此B提到透過貨幣供給/金融條件調節使景氣降溫，方向一致。",
+      "A與C偏擴張；D降重貼現率偏寬鬆，不合題幹。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A增加貨幣供給量通常偏寬鬆，與升息及減少資金注入的緊縮訊號不一致。",
+        "elementary": "題目說收緊錢，A卻說多放錢，方向相反。",
+        "reason": "A增加貨幣供給量通常偏寬鬆，與升息及減少資金注入的緊縮訊號不一致。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B緊縮性貨幣政策藉較高利率和較少流動性抑制部分支出，可能以抑制過熱、景氣降溫為目的。",
+        "elementary": "借錢比較貴、資金少一點，大家就可能少花，讓景氣慢下來。",
+        "reason": "B緊縮性貨幣政策藉較高利率和較少流動性抑制部分支出，可能以抑制過熱、景氣降溫為目的。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C提振景氣通常需要較寬鬆金融條件；題幹升息減資金供應並非典型擴張方向。",
+        "elementary": "想讓大家更敢花錢，通常不會故意讓借錢更貴。",
+        "reason": "C提振景氣通常需要較寬鬆金融條件；題幹升息減資金供應並非典型擴張方向。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D降低重貼現率一般鼓勵銀行取得央行資金，方向偏寬鬆，與題幹緊縮政策不一致。",
+        "elementary": "D是把借錢成本降下來，與題目的升息相反。",
+        "reason": "D降低重貼現率一般鼓勵銀行取得央行資金，方向偏寬鬆，與題幹緊縮政策不一致。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 題庫候選，G1 單題原圖目視、G2 逐字OCR、G3 官答更正公告均待核；字母不屬正式核准答案。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_OCR_TEXT_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_REVIEW_PENDING",
+      "D_YEAR114_REAL_BROWSER_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "76e5c254d0c3ff8754536a0c1753f30ae7103e88fa6235e7024333ed38e22d11"
+}
