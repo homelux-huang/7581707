@@ -5,7 +5,7 @@ on:
       - qa/role-d-115-mb23-original-table-8x2-20261104
   pull_request:
     branches:
-      - qa/role-d-115-mb23-new-digest-8x2-20261104
+      - qa/role-d-115-mb20-new-digest-8x2-20261104
     paths:
       - 'tests/sudu_role_d_115_mb23_a129_c143_table_8x2.cjs'
       - '.github/workflows/role-d-115-mb23-a129-c143-source-table.yml'
@@ -26,7 +26,7 @@ jobs:
       SUDU_D_A_DIR: _role_a_115_mb23
       SUDU_D_C_DIR: _role_c_115_mb23
       SUDU_D_TABLE_DIR: _role_a_115_mb23_table
-      SUDU_D_OUT: test-results/role-d-115-mb23-new-digest
+      SUDU_D_OUT: test-results/role-d-115-mb23-original-table
     steps:
       - uses: actions/checkout@v4
         with:
@@ -100,6 +100,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: role-d-115-MB23-16SCREEN-TABLE-A129-C143-QA-ONLY-${{ github.run_id }}
-          path: test-results/role-d-115-mb23-new-digest/
+          path: test-results/role-d-115-mb23-original-table/
           if-no-files-found: warn
           retention-days: 14
