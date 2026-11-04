@@ -89,7 +89,10 @@ assert.equal(t.sourceTableProvenance?.sourceEvidenceGitBlob,A_TABLE_BLOB);
 assert.equal(t.sourceTableProvenance?.sourceEvidenceCommit,A_TABLE_HEAD);
 assert.equal(t.sourceTableProvenance?.masterCanonicalQuestionSqliteAdmitted,false);
 assert.equal(t.review.sourceRevisionAccepted,false,'source must remain not formally admitted');
-assert.equal(t.review.sourceTableFormalQaPass,false,'do not forge independent A table approval');
+assert.equal(t.sourceTableProvenance?.sourceTableFormalQaPass,false,
+  'A PR129 source-table evidence is a candidate, not officially admitted G2');
+ assert.equal(t.review.formalIndependentTableQa,false,
+  'C author cannot self-certify independent original table QA');
 assert.equal(t.sourceTables.length,1);
 assert.deepEqual(t.sourceTables[0].heading,tableEvidence.originalTextAndTable.sourceTable.columns,
   'C original 3 table headers differ from A');
