@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-41",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "關於投資乘數的敘述，下列何者正確？",
+  "options": [
+    "所得增加所引起的投資變動稱為投資乘數",
+    "投資乘數的大小與邊際消費傾向( MPC )無關",
+    "邊際消費傾向 ( MPC ) 越大，均衡所得增加越多",
+    "邊際儲蓄傾向 ( MPS ) 越大，均衡所得增加越多"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "7f5f4ae87d01a874c616244233ce2bfad0ca656a9f322dc100b14f66f32b21dd",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-41.webp",
+    "webpSha256": "edd716390acd02f8fb5d9d7df0aca572443ee9e05873274a681a40a3af11c493",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "簡單投資乘數與 MPC、MPS",
+    "teacherSummary": "在其他條件不變且適用簡單凱因斯模型時，投資乘數k=1/(1−MPC)=1/MPS。MPC越大，k越大，同額自主投資增加造成更大的均衡所得增量，因此C正確。",
+    "elementarySummary": "一個人多賺100元，如果很願意拿去買東西，商店又收到錢、再付別人，錢就多轉好幾次；越願意消費，總收入增加越多。",
+    "concept": "乘數是自主投資增量對均衡所得增量的放大倍率；MPC與MPS互補，MPC+MPS=1。",
+    "memory": "投資乘數1/(1−MPC)；MPC↑→乘數↑，MPS↑→乘數↓。",
+    "highlights": [
+      "邊際消費傾向 ( MPC ) 越大",
+      "均衡所得增加越多",
+      "投資乘數"
+    ],
+    "solvingSteps": [
+      "先辨識乘數是ΔY/ΔI，而不是投資因所得變動的比例。",
+      "簡單模型k=1/(1−MPC)，且MPS=1−MPC。",
+      "MPC提高使分母1−MPC變小，因此k提高。",
+      "同額投資增量ΔI，所得增加ΔY=k×ΔI，所以C正確。",
+      "反例驗算：MPC從0.5增到0.8，乘數從2增到5；MPS增大則乘數變小。"
+    ],
+    "formula": "k=ΔY/ΔI=1/(1−MPC)=1/MPS",
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A把投資乘數說成『所得增加造成投資變動』，那是加速原理相關方向，非自主投資對所得的乘數效果。",
+        "elementary": "A把箭頭方向說反了；這題看投資增加會帶來多少收入。",
+        "reason": "A把投資乘數說成『所得增加造成投資變動』，那是加速原理相關方向，非自主投資對所得的乘數效果。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B說乘數與MPC無關錯誤；k=1/(1−MPC)，消費傾向直接在分母。",
+        "elementary": "越願意把多賺的錢拿去花，效果就越大，當然有關。",
+        "reason": "B說乘數與MPC無關錯誤；k=1/(1−MPC)，消費傾向直接在分母。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C在簡單模型其他條件不變時，MPC越大則k越大，同額投資增加的所得效果越大。",
+        "elementary": "買東西的意願更高，錢多轉幾圈，大家收入變多。",
+        "reason": "C在簡單模型其他條件不變時，MPC越大則k越大，同額投資增加的所得效果越大。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D說MPS越大所得增加越多錯誤；k=1/MPS，儲蓄傾向提高會使乘數減小。",
+        "elementary": "若大家更愛把錢存起來，錢少流動，放大效果就縮小。",
+        "reason": "D說MPS越大所得增加越多錯誤；k=1/MPS，儲蓄傾向提高會使乘數減小。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 候選來源：尚未完成 G1/G2/G3 官方原圖與最終答案獨立驗證；不得作正式答案使用。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_AND_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_AND_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "7023d61a4e561529a0285836fb4ae614e691dac4e2cf2b25f3ec9668e95243f2"
+}
