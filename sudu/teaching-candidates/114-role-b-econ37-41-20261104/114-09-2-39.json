@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-39",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "關於經濟福利衡量，下列敘述何者正確？",
+  "options": [
+    "經濟福利淨額 ( NEW ) 的計算未計入未上市的產品及勞務價值",
+    "經濟福利為總體指標，衡量時無須考量物價水準及人口變動因素",
+    "綠色國民所得帳強調 GDP 應整合環境與經濟才是符合永續目標的福利指標",
+    "計算經濟福利淨額(NEW)為國民所得淨額 / 國民生產淨額(NNI / NNP)減去休閒價值"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "e3fc4d627378cf826bdf36e540e11ec788144c850502e8575d29757e64a59a2a",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-39.webp",
+    "webpSha256": "a4d249ceb9739af415119ddb64d3e18fe282a72a6576ec6d7998d9aede385629",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "經濟福利淨額 NEW 與綠色國民所得",
+    "teacherSummary": "綠色國民所得帳把自然資源耗損、環境退化與經濟產出併同思考，C符合永續與福利指標的方向。NEW嘗試補入非市場活動及休閒價值，不能把休閒當作一律扣減。",
+    "elementarySummary": "只看一家店賣了多少東西，不代表大家過得好；如果賺很多卻把河流污染了，也要把環境損失算進去，所以C對。",
+    "concept": "GDP衡量市場產出，未完整反映生活品質；NEW調整非市場/休閒及不利項；綠色所得帳納入環境資源成本。",
+    "memory": "綠色國民所得＝經濟＋環境成本；NEW不是只算市場成交。",
+    "highlights": [
+      "綠色國民所得帳",
+      "環境與經濟",
+      "永續目標"
+    ],
+    "solvingSteps": [
+      "先區分一般市場產出指標與經濟福利衡量。",
+      "A錯：NEW會嘗試考慮部分未經市場交易的服務或活動價值。",
+      "B錯：比較生活福利時物價變化與人口規模不可全忽略。",
+      "C對：綠色帳將環境損害與資源耗損納入經濟活動的衡量。",
+      "D錯：NEW一般會加計有助福利的休閒價值等調整項，不是直接一律減去。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的『未計入未上市的產品及勞務價值』過度排除非市場活動；NEW為修正傳統所得侷限，會考量部分非市場產出。",
+        "elementary": "家人自己照顧家務沒有買賣，也可能有生活價值。",
+        "reason": "A的『未計入未上市的產品及勞務價值』過度排除非市場活動；NEW為修正傳統所得侷限，會考量部分非市場產出。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B說不用考量物價和人口變動不正確：名目數字與每人平均福利可能因物價與人口而產生差異。",
+        "elementary": "同樣的錢遇到漲價、人口變多，感受可能不一樣。",
+        "reason": "B說不用考量物價和人口變動不正確：名目數字與每人平均福利可能因物價與人口而產生差異。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C把環境破壞及資源使用納入國民所得帳的永續衡量，符合綠色國民所得的核心精神。",
+        "elementary": "賺錢時也算污染的代價，才知道有沒有真的過得更好。",
+        "reason": "C把環境破壞及資源使用納入國民所得帳的永續衡量，符合綠色國民所得的核心精神。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D把休閒價值直接當成NEW的扣項，方向錯誤；休閒增加通常提高福利，應視特定調整方法作正向考量。",
+        "elementary": "有休息時間是好處，不該不分情況直接當扣分。",
+        "reason": "D把休閒價值直接當成NEW的扣項，方向錯誤；休閒增加通常提高福利，應視特定調整方法作正向考量。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 候選來源：尚未完成 G1/G2/G3 官方原圖與最終答案獨立驗證；不得作正式答案使用。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_AND_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_AND_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "55d4a40c2ea42bee4708c4066ccdc56788c962d1a1e65eb7b939a81f2d2c8e57"
+}

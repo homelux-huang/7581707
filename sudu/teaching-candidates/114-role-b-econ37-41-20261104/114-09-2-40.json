@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-40",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "假設均衡所得 ( Y ) = 消費 ( C ) + 投資 ( I ) + 政府支出 ( G ) ，C = 100 + 0.5 Yd 、可支配所得\n     ( Yd ) = Y – T、稅 ( T ) = 50、I = 300、G = 100，則均衡所得為何？",
+  "options": [
+    "750",
+    "800",
+    "950",
+    "1000"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "8eec787fbdc274853a7c27f79cff48122fc78955a545ee25cb5c83f31c39f68e",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-40.webp",
+    "webpSha256": "de221559db08486b2ee5a78448ac8910a1adcadeca2e9f859ceb95b42305adaa",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "三部門凱因斯均衡所得：稅與邊際消費傾向",
+    "teacherSummary": "在Y=C+I+G且C=100+0.5(Y−50)、I=300、G=100時，代入得Y=100+0.5Y−25+300+100=475+0.5Y，故0.5Y=475，Y=950，選C。",
+    "elementarySummary": "總收入等於大家買東西、企業投資和政府花的錢；扣完50元稅後，人們只花剩下的一半加100。把這些錢放進算式，就得到950。",
+    "concept": "定額稅T先從Y扣除，Yd=Y−T；線性消費C=a+bYd；均衡時Y=C+I+G。",
+    "memory": "先算可支配所得Y−50，再乘0.5；移項得0.5Y=475→950。",
+    "highlights": [
+      "Yd = Y – T",
+      "0.5",
+      "T = 50",
+      "950"
+    ],
+    "solvingSteps": [
+      "寫均衡所得Y=C+I+G。",
+      "題目定額稅為50，故Yd=Y−50。",
+      "代入消費C=100+0.5(Y−50)=75+0.5Y。",
+      "代回均衡式Y=75+0.5Y+300+100=475+0.5Y。",
+      "移項0.5Y=475，兩邊÷0.5，Y=950。",
+      "反向驗算：Yd=900、C=550、C+I+G=550+300+100=950，與Y相等。"
+    ],
+    "formula": "Y=C+I+G；C=100+0.5(Y−T)",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "C=100+0.5Yd",
+        "Yd=Y−T，T=50",
+        "I=300，G=100"
+      ],
+      "formulaUse": "三部門均衡所得Y=C+I+G，把消費函數與定額稅代入",
+      "substitution": [
+        "C=100+0.5(Y−50)=75+0.5Y",
+        "Y=75+0.5Y+300+100",
+        "0.5Y=475，Y=950"
+      ],
+      "steps": [
+        "Yd=Y−50",
+        "C=100+0.5(Y−50)=100+0.5Y−25=75+0.5Y",
+        "Y=75+0.5Y+300+100=475+0.5Y",
+        "Y−0.5Y=475，0.5Y=475",
+        "Y=475÷0.5=950",
+        "反向：Yd=950−50=900，C=100+0.5×900=550，550+300+100=950"
+      ],
+      "result": "950",
+      "unit": "所得單位（題目未明訂貨幣）",
+      "reverseCheck": "950−50=900；100+0.5×900=550；550+300+100=950",
+      "option": "C"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的750不符均衡式：若Y=750，Yd=700、C=450、總支出850≠750。",
+        "elementary": "假設750，算出大家總共要花850，對不起來。",
+        "reason": "A的750不符均衡式：若Y=750，Yd=700、C=450、總支出850≠750。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B的800不符均衡式：若Y=800，Yd=750、C=475、總支出875≠800。",
+        "elementary": "假設800，花費會是875，還差75。",
+        "reason": "B的800不符均衡式：若Y=800，Yd=750、C=475、總支出875≠800。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C的950代入Yd=900、C=550，總支出550+300+100=950，正好符合均衡。",
+        "elementary": "950代回算式，兩邊一模一樣，所以對。",
+        "reason": "C的950代入Yd=900、C=550，總支出550+300+100=950，正好符合均衡。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D的1000不符均衡式：Yd=950、C=575，總支出975≠1000。",
+        "elementary": "1000帶進去只算出975，不能選。",
+        "reason": "D的1000不符均衡式：Yd=950、C=575，總支出975≠1000。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 候選來源：尚未完成 G1/G2/G3 官方原圖與最終答案獨立驗證；不得作正式答案使用。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_AND_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_AND_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "a807c9c8d9474aeed5520223f5d905702ac82001794123316dd335dcb239b73f"
+}
