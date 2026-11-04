@@ -26,6 +26,12 @@ jobs:
           ref: 9ade29d9eabae54a92b82cc036f448ace06f1186
           path: frozen-source
           persist-credentials: false
+      - name: Read only archived historical original v2 (negative cropped evidence)
+        uses: actions/checkout@v4
+        with:
+          ref: fbd7756b995e3d27dc31a99ecc54fe66af4d82c6
+          path: historical-source
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -37,7 +43,7 @@ jobs:
       - name: Ensure read-only checkout cleaned and source-only bank unchanged
         run: |
           set -euo pipefail
-          rm -rf frozen-source
+          rm -rf frozen-source historical-source
           git diff --exit-code
           git diff --cached --exit-code
           test -z "$(git status --porcelain)"

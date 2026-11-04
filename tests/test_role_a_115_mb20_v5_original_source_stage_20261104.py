@@ -57,7 +57,7 @@ class OriginalMB20V5(unittest.TestCase):
   validate_image(ROOT/s["officialOriginalPageWebp"],"7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d","c8e3e806d812a01d417abe83dac7f46adcf84ff7")
   validate_image(ROOT/s["originalCorrectedSingleWebp"],SOURCE_IMAGE,SOURCE_BLOB)
   validate_image(ROOT/self.r["official"]["oldPublishedAnswerFullImage"],"1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d","5ea4b86e929506d595f96fa162d1aae021f68440")
-  old=FROZEN/"webp-v2/00-MB/115-00-MB-20.webp"
+  old=ROOT/"historical-source/sudu/data/processed/115/webp-v2/00-MB/115-00-MB-20.webp"
   self.assertEqual(blob(old.read_bytes()),BAD_OLD_V2_BLOB)
   self.assertNotEqual(blob(old.read_bytes()),blob((ROOT/s["originalCorrectedSingleWebp"]).read_bytes()))
   self.assertFalse(s["formalIndependentVisualReviewRecheckRecorded"])
