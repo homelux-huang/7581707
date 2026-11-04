@@ -1,0 +1,17 @@
+name: "114 ROLE B Ac07-09 Econ31-32 author-only QA NO RELEASE"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-ac07-09-econ31-32-20261104
+  workflow_dispatch:
+jobs:
+  author-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -p 'test_114_role_b_prof2_ac07_09_ec31_32_20261104.py' -v

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "year": 114,
+  "questionId": "114-09-2-31",
+  "subject": "經濟學",
+  "kind": "NEW_AUTHOR_ONLY_SOURCE_QA_PENDING",
+  "question": "下列哪個因素不會使電動車廠商的長期平均成本線 LAC 整條線移動？",
+  "options": [
+    "車用晶片的市場價格變動",
+    "政府增建充電樁設施",
+    "政府實施購買電動車補貼",
+    "電動車廠商增加產量"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "d54b01c0103bb5328014484fa75ad845a7aef3061055e9b6fbe5ac6976ac7938",
+    "webpSha256": "5a937b5600f5018c85d9948bd2249e6325198d742671ed62177abad709d598f5",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-31.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "長期平均成本 LAC 移位和沿曲線移動",
+    "teacherSummary": "在技術、投入價格等成本條件不變時，廠商增加自身產量，是沿同一條長期平均成本曲線選不同產量點，不必使整條LAC移動。因此題問『不會使整條線移動』選D。",
+    "elementarySummary": "同一張路線圖上往右走，並不是整張地圖搬家。工廠多生產是沿原成本線換位置。",
+    "concept": "投入價格/技術等成本條件變化可能使LAC曲線位移；單純產量變動通常沿LAC移動。",
+    "memory": "產量自己增加→沿LAC移動，不是整條位移（D）。",
+    "highlights": [
+      "長期平均成本線 LAC",
+      "整條線移動",
+      "增加產量"
+    ],
+    "solvingSteps": [
+      "先明白LAC描述在固定成本條件下，不同產量對應的最低長期平均成本。",
+      "『整條線移動』代表相同產量下成本條件整體改變，與只改產量不同。",
+      "A晶片投入價格改變，生產成本可能改變；B充電公共設施與產業外部環境可能影響成本條件。",
+      "C購車補貼可能改變產業需求與長期生產經營環境，並非題目最明確的單一廠商增產情況。",
+      "D廠商增加產量，在假定技術和投入價格不變時，只是沿原本LAC移到另一產量點。",
+      "反查同一條LAC可標出原產量Q1和新產量Q2兩點，不需因生產更多就重畫整條成本曲線。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A車用晶片屬電動車投入，晶片價格變動可能改變各產量的平均成本，使LAC位移。",
+        "elementary": "重要零件漲價，做一台車的成本可能變。",
+        "reason": "A車用晶片屬電動車投入，晶片價格變動可能改變各產量的平均成本，使LAC位移。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B政府增建充電樁會改變產業公共設施、外部經濟與經營條件，可能影響長期平均成本環境。",
+        "elementary": "公共設施變多，生產和營運環境可能變。",
+        "reason": "B政府增建充電樁會改變產業公共設施、外部經濟與經營條件，可能影響長期平均成本環境。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C購車補貼可改變產業需求及長期經營環境，可能間接影響生產成本條件，與單純在曲線上增產不同。",
+        "elementary": "政府補貼會讓市場環境不同。",
+        "reason": "C購車補貼可改變產業需求及長期經營環境，可能間接影響生產成本條件，與單純在曲線上增產不同。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D廠商自身提高產量，在成本條件未變下是沿著同一條LAC移向另一產量點，不使整條曲線因而必然平移。",
+        "elementary": "多做一些車只是換成本線的位置，選D。",
+        "reason": "D廠商自身提高產量，在成本條件未變下是沿著同一條LAC移向另一產量點，不使整條曲線因而必然平移。",
+        "isCorrect": true
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "Role A 114 original candidate source; single WebP G1 DRAFT and G2 official OCR, G3 final answer/notice not formally admitted."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_WEBP_DIRECT_G1_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_AND_NOTICE_NOT_ADMITTED",
+      "ROLE_E_DIFFERENT_AUTHOR_EXACT_SHA_PENDING",
+      "D_V4_REAL_EMITTED_8X2_PENDING",
+      "MASTER_TRUSTED_PROTECTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "teachingCanonicalSha256": "93c70afbb67d54e44fc8990b95d8bb35797d7fbdf3a840f87ddc3878d602979f",
+  "composedTeachingSha256": "c08a2d8530d6a1ba7bfb7482ef36a632f5dba993daf8c48ce0f78542416fd2ca"
+}
