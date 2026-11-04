@@ -1,0 +1,27 @@
+name: Role C 115 MB23 original A PR129 source pin (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-mb23-a129-revision-reconcile-20261104]
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/114-115-20261025/115-00-MB-23.json'
+      - 'sudu/teaching-candidates/114-115-20261025/batch.json'
+      - 'tests/test_114_115_lesson_batch_oct25.py'
+      - 'tests/fixtures/role_c_115_mb23_a_pr129_source_evidence_20261104.json'
+      - 'tests/test_115_role_c_mb23_pr129_reconcile_20261104.py'
+      - '.github/workflows/115-role-c-mb23-a-pr129-reconcile-20261104.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-original-revision:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Six existing Math B author regression
+        run: python -m unittest discover -s tests -p 'test_114_115_lesson_batch_oct25.py' -v
+      - name: MB23 A PR129 Git blob source table and no-release
+        run: python -m unittest discover -s tests -p 'test_115_role_c_mb23_pr129_reconcile_20261104.py' -v
