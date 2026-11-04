@@ -1,0 +1,22 @@
+name: ROLE C 115 English E42 original shared G1/author lesson check (NO RELEASE)
+on:
+  push:
+    branches: [teaching/115-role-c-english42-original-shared-20261104]
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/115-role-c-english42-20261104/**'
+      - 'tests/test_115_role_c_english42_20261104.py'
+      - '.github/workflows/115-role-c-english42-20261104.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate-not-release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original G1 link, article, four bilingual options and fail-closed gates
+        run: python -m unittest discover -s tests -p 'test_115_role_c_english42_20261104.py' -v
