@@ -512,7 +512,8 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
                     and row.get(rules["candidateCompared"]) == "MATCHED"
                     and row.get(rules["answerChange"]) == "NONE_OBSERVED"
                     and (not rules["requiresNamedFinalAnswerImageQa"]
-                         or proof.get("officialFinalAnswerImageQaPassed") is True)
+                         or (proof.get("officialFinalAnswerImageQaPassed") is True
+                             and row.get("publishedFinalAnswerImageIndependentlyVerified") is True))
                     and row.get("officialConfirmedAnswer") ==
                         proof.get("finalAnswer") == q.get("answer"))
     except (OSError, ValueError, TypeError, KeyError, AttributeError):
