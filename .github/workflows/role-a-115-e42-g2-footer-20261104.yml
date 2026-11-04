@@ -1,0 +1,30 @@
+name: Role A 115 English E42 original source D-footer G2 negative gate (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-e42-g2-option-d-source-20261104]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_g2:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-e42-g2-option-d-source-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Real original Q42, full common article, original OCR, official final C and negative gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_e42_g2_footer_20261104.py
+          python -m unittest discover -s tests -p test_role_a_115_e42_g2_footer_20261104.py -v
+      - name: Read only, do not release student content
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
