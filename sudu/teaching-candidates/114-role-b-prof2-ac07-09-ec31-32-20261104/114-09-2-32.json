@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "year": 114,
+  "questionId": "114-09-2-32",
+  "subject": "經濟學",
+  "kind": "NEW_AUTHOR_ONLY_SOURCE_QA_PENDING",
+  "question": "關於獨占廠商價格與收益的敘述，下列何者正確？",
+  "options": [
+    "價格 P ＞平均收益 AR",
+    "邊際收益 MR ＜平均收益 AR",
+    "平均收益 AR 及邊際收益MR 為水平線",
+    "總收益 TR 達到最大時，邊際收益 MR ＞ 0"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "742ea970e49a5710e173d9784a8b312194f185262b127173c923765eccf7e6eb",
+    "webpSha256": "2dfadd0a0f70ef2730727b9485e4a29a0da24447a62a8706d586e11d2970e212",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-32.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "獨占廠商的 P、AR、MR 與 TR",
+    "teacherSummary": "單一定價時總收益TR=P×Q、平均收益AR=TR/Q=P；獨占廠商一般面對下降需求，多賣須降價，邊際收益MR<平均收益AR，因此B。TR最大處MR=0。",
+    "elementarySummary": "每件賣多少錢，平均每件收到就多少；如果想多賣得降價，新增一件帶來的錢通常比原價少。",
+    "concept": "單一定價 P=AR；下降需求 MR<AR；總收益最高且可微的內點 MR=0。",
+    "memory": "獨占下降需求：P=AR>MR；TR最大MR=0（B）。",
+    "highlights": [
+      "獨占廠商",
+      "邊際收益 MR",
+      "平均收益 AR",
+      "總收益 TR"
+    ],
+    "solvingSteps": [
+      "先列總收益TR=P×Q，平均收益AR=TR/Q，所以單一定價下P=AR。",
+      "A主張價格P>AR，與這個平均收益定義不符，先排除。",
+      "獨占一般面對向右下傾斜需求，為多賣一單位通常要降低價格。",
+      "因此增加一單位帶來的邊際收益MR，小於每件平均收益AR，選B。",
+      "C說兩條收益線皆水平，較像完全競爭價格接受者，而非有向下需求曲線的獨占。",
+      "TR達極大時MR=0；若MR仍>0代表再多賣還能增加TR，D錯。",
+      "用P=100−Q示例：AR=100−Q、MR=100−2Q，Q>0時MR<AR，TR最大Q=50時MR=0。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A若同一市場單一定價，AR=TR/Q=(P×Q)/Q=P，不可能單純說價格大於平均收益。",
+        "elementary": "平均每件收入就是那件的售價。",
+        "reason": "A若同一市場單一定價，AR=TR/Q=(P×Q)/Q=P，不可能單純說價格大於平均收益。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B獨占廠商對下降需求增加銷量時需降價，邊際收益MR小於平均收益AR，符合B。",
+        "elementary": "要多賣就可能降價，新增加的收入比較少。",
+        "reason": "B獨占廠商對下降需求增加銷量時需降價，邊際收益MR小於平均收益AR，符合B。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C獨占廠商面對下降需求時AR與MR一般向下，不會像完全競爭者那樣兩者均為水平線。",
+        "elementary": "獨占不能永遠固定價格就想賣多少都能賣。",
+        "reason": "C獨占廠商面對下降需求時AR與MR一般向下，不會像完全競爭者那樣兩者均為水平線。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D總收益最高的可微內點滿足MR=0，若MR>0則增加銷量還會讓總收益變更多。",
+        "elementary": "多賣一件還能加收入，就未到最大。",
+        "reason": "D總收益最高的可微內點滿足MR=0，若MR>0則增加銷量還會讓總收益變更多。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "Role A 114 original candidate source; single WebP G1 DRAFT and G2 official OCR, G3 final answer/notice not formally admitted."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_WEBP_DIRECT_G1_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_AND_NOTICE_NOT_ADMITTED",
+      "ROLE_E_DIFFERENT_AUTHOR_EXACT_SHA_PENDING",
+      "D_V4_REAL_EMITTED_8X2_PENDING",
+      "MASTER_TRUSTED_PROTECTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "teachingCanonicalSha256": "cbc955c1bf6440d9d65a37f21c8474bd6d6553e99c853960c06f095232833c8e",
+  "composedTeachingSha256": "75a8d48fbb600639fa63325b15989abcab8e447cd094089e0cb776889567a5a3"
+}

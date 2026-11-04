@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "year": 114,
+  "questionId": "114-09-2-09",
+  "subject": "會計學",
+  "kind": "NEW_AUTHOR_ONLY_SOURCE_QA_PENDING",
+  "question": "採用定期盤存制之下，本年期初存貨為 $ 58,000，期末經盤點後存貨為 $ 60,000，本年進\n  貨 $ 127,000，進貨退出 $ 5,000，進貨運費 $ 30,000，則在期末調整及結帳前，「存貨」之\n  餘額為何？",
+  "options": [
+    "$ 58,000",
+    "$ 60,000",
+    "$ 125,000",
+    "$ 150,000"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "625f73e2245e9580dfb341f00df38af3183129818ff76803de76b5f71c5ca037",
+    "webpSha256": "2a45f77df7213765f01a21f581beb625a3212a33284192da0790c93c1e3f6c94",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-09.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "定期盤存制調整結帳前存貨帳",
+    "teacherSummary": "定期盤存制期間以進貨、進貨退出、運費等科目登帳，原存貨帳在期末調整結帳前仍是期初58000；實際盤點期末60000須待期末調整入帳，故A。",
+    "elementarySummary": "用這種記帳法時，年中買貨記在另一個帳，年底還沒整理帳前，『存貨』帳仍寫年初58000元。",
+    "concept": "定期盤存制期末才依盤點調整存貨，永續盤存制期間逐筆調整存貨；調整前不把進貨與盤點直接加進存貨餘額。",
+    "memory": "『定期盤存』＋『調整結帳前』⇒期初存貨58000（A）。",
+    "highlights": [
+      "定期盤存制",
+      "期初存貨",
+      "期末調整及結帳前",
+      "存貨"
+    ],
+    "solvingSteps": [
+      "抓關鍵字『定期盤存制』，其存貨帳在日常期間不逐筆反映進貨與銷貨。",
+      "進貨127000、退出5000及進貨運費30000另用相關會計項目記錄。",
+      "期末實地盤點60000是調整結帳時要用的新存貨資料，不代表調整前帳上已更新。",
+      "因題目明確說『期末調整及結帳前』，存貨帳面餘額仍是期初58000元。",
+      "A為58000，B為未調整的期末盤點60000，C/D把其他項目誤混入存貨帳。",
+      "如果改問期末完成調整後的存貨，才會以期末盤點60000為基礎，藉此驗證題目時點。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A在定期盤存制調整結帳前，存貨帳還留期初58000元，不因進貨或期末盤點尚未結轉而改變。",
+        "elementary": "還沒結帳，帳上仍是年初58000。",
+        "reason": "A在定期盤存制調整結帳前，存貨帳還留期初58000元，不因進貨或期末盤點尚未結轉而改變。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 60000是實際期末盤點金額，應在期末調整後才反映在存貨帳，題幹問的是調整前。",
+        "elementary": "實際數到60000，但帳還沒改。",
+        "reason": "B 60000是實際期末盤點金額，應在期末調整後才反映在存貨帳，題幹問的是調整前。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 125000混入進貨相關金額，忽略定期盤存制期間進貨列其他會計項目，不能用來當調整前存貨帳。",
+        "elementary": "進貨記在另外的帳，不能直接加。",
+        "reason": "C 125000混入進貨相關金額，忽略定期盤存制期間進貨列其他會計項目，不能用來當調整前存貨帳。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 150000也是錯誤把進貨和期末資料混加，未遵照定期盤存制調整前保留期初餘額的規則。",
+        "elementary": "買賣貨物不是直接把帳上58000改成150000。",
+        "reason": "D 150000也是錯誤把進貨和期末資料混加，未遵照定期盤存制調整前保留期初餘額的規則。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "Role A 114 original candidate source; single WebP G1 DRAFT and G2 official OCR, G3 final answer/notice not formally admitted."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_WEBP_DIRECT_G1_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_AND_NOTICE_NOT_ADMITTED",
+      "ROLE_E_DIFFERENT_AUTHOR_EXACT_SHA_PENDING",
+      "D_V4_REAL_EMITTED_8X2_PENDING",
+      "MASTER_TRUSTED_PROTECTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "teachingCanonicalSha256": "cb74ce4066f820f771bf3abcf1c0e647779fbdf8e22560066bb9b5f5dd57687b",
+  "composedTeachingSha256": "2614ea75b1749ecfde978d93dba0484a28a5db8fb25230297c23229300769da0"
+}

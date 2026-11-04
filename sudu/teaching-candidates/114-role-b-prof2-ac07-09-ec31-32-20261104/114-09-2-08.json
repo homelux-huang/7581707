@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "year": 114,
+  "questionId": "114-09-2-08",
+  "subject": "會計學",
+  "kind": "NEW_AUTHOR_ONLY_SOURCE_QA_PENDING",
+  "question": "公司採用權責基礎下，本期租金收入為 $ 400,000，且公司預收租金期初餘額為 $ 22,500，\n  期末餘額為 $ 42,500，則採現金基礎與權責基礎之下，本期租金收入的差異為何？",
+  "options": [
+    "現金基礎比權責基礎少 $ 20,000",
+    "現金基礎比權責基礎多 $ 20,000",
+    "現金基礎比權責基礎少 $ 22,500",
+    "現金基礎比權責基礎多 $ 22,500"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "2abd8b59a651e4aba1682d682ff7c663b11b7b767120da6c9d6b88ffcce967be",
+    "webpSha256": "b59b15f96296f76b1472400e50c7e9159096e2f34f9ce4921e087d1b16c3ffea",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-08.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "現金基礎與權責基礎租金收入差異",
+    "teacherSummary": "預收租金期末42500−期初22500=淨增加20000元，表示現金收入比已賺得的權責收入400000多20000；現金收入420000，比權責多20000，選B。",
+    "elementarySummary": "這年租金算真正賺到40萬，但先收還沒賺到的部分比年初多2萬，所以收到現金42萬。",
+    "concept": "現金基礎看實收，權責基礎看當期已賺得；預收增加表示實收現金可高於當期收入。",
+    "memory": "預收增加2萬→現金420000、權責400000，多2萬B。",
+    "highlights": [
+      "權責基礎",
+      "預收租金",
+      "現金基礎",
+      "租金收入"
+    ],
+    "solvingSteps": [
+      "先認出權責基礎租金收入是400000元，並非本期所有收到的現金。",
+      "預收租金期初22500、期末42500，差額增加20000元。",
+      "預收是先收現金但本期尚未賺得，因此淨增加部分使現金收款多於權責收入。",
+      "現金租金=400000+20000=420000元，差額=420000−400000=20000。",
+      "B的『現金比權責多20000』正確，其他方向或差額不符。",
+      "反驗現金420000+期初預收22500−期末預收42500=權責收入400000。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A方向錯；預收餘額增加20000元代表現金收到比已賺得租金多，不是少20000。",
+        "elementary": "多收到先付租金，現金應更多。",
+        "reason": "A方向錯；預收餘額增加20000元代表現金收到比已賺得租金多，不是少20000。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B期末預收增加20000元，所以現金420000比權責400000多20000元。",
+        "elementary": "收進42萬，認列40萬，多2萬。",
+        "reason": "B期末預收增加20000元，所以現金420000比權責400000多20000元。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C錯把期初預收22500當成本期差額，且說現金較少，與期末預收增加的方向相反。",
+        "elementary": "C既拿錯數字，也搞錯多或少。",
+        "reason": "C錯把期初預收22500當成本期差額，且說現金較少，與期末預收增加的方向相反。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D雖然現金較多方向正確，但本期預收變動42500−22500=20000，並非22500。",
+        "elementary": "D方向對但應多2萬，不是22500。",
+        "reason": "D雖然現金較多方向正確，但本期預收變動42500−22500=20000，並非22500。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "權責基礎本期租金400000",
+        "預收租金期初22500、期末42500"
+      ],
+      "formulaUse": "實收現金=權責收入+期末預收−期初預收（此題無其他應收租金資料）。",
+      "substitution": [
+        "預收增加42500−22500=20000",
+        "實收=400000+20000=420000"
+      ],
+      "steps": [
+        "預收期末42500減期初22500=20000元。",
+        "權責基礎認列收入400000元。",
+        "實收現金包含新增預收20000，所以420000元。",
+        "比較420000−400000=20000元。",
+        "答案B，現金基礎比權責多20000元。",
+        "反驗420000+22500−42500=400000元，與已知權責收入相等。"
+      ],
+      "result": "現金比權責多 NT$20000",
+      "unit": "新臺幣元",
+      "option": "B"
+    },
+    "source": "Role A 114 original candidate source; single WebP G1 DRAFT and G2 official OCR, G3 final answer/notice not formally admitted."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_WEBP_DIRECT_G1_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_AND_NOTICE_NOT_ADMITTED",
+      "ROLE_E_DIFFERENT_AUTHOR_EXACT_SHA_PENDING",
+      "D_V4_REAL_EMITTED_8X2_PENDING",
+      "MASTER_TRUSTED_PROTECTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "teachingCanonicalSha256": "37adba2256ddcb30dd0dbf2178a72b44f95fa0eb9eb05a52edcc3de5aae766da",
+  "composedTeachingSha256": "0e1cd97b5d3232b684222f1222fec1769044d1aa3362942c715e9f5b2ef76922"
+}

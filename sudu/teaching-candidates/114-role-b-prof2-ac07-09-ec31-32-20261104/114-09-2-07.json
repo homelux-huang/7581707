@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "year": 114,
+  "questionId": "114-09-2-07",
+  "subject": "會計學",
+  "kind": "NEW_AUTHOR_ONLY_SOURCE_QA_PENDING",
+  "question": "某公司之會計項目資訊如表 ( 一 )：\n\n       銷貨收入              $ ①  進貨退出             $  15,000\n       銷貨退回                  30,000 期末存貨                  35,000\n       銷貨淨額                250,000 銷貨成本                180,000\n       期初存貨         ②  銷貨毛利         ③\n  表 ( 一 ) 進貨                     170,000\n  上述①、②、③等三項之金額為何？",
+  "options": [
+    "① $ 280,000、② $ 45,000、③ $ 70,000",
+    "① $ 220,000、② $ 45,000、③ $ 100,000",
+    "① $ 280,000、② $ 60,000、③ $ 70,000",
+    "① $ 220,000、② $ 60,000、③ $ 100,000"
+  ],
+  "knownAnswerCandidate": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "84525695a1b0df74c8f817d555162c36b13304f7898ba4dc3162d3c752d8cdf2",
+    "webpSha256": "9128453135355c0d2be02c55dd7d91a6faf550a60fe43a8ca1ab00ab4acc9874",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-07.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false
+  },
+  "teaching": {
+    "topic": "銷貨淨額、期初存貨與銷貨毛利",
+    "teacherSummary": "①銷貨收入=淨額250000+銷貨退回30000=280000；進貨淨額170000−15000=155000；銷貨成本180000=②期初存貨+155000−35000，得②60000；③毛利=250000−180000=70000，故C。",
+    "elementarySummary": "原本賣28萬元，扣掉退貨3萬元才變25萬。算進貨和剩下的貨可找出年初存貨6萬，毛賺7萬元。",
+    "concept": "銷貨淨額=原銷貨−退回；銷貨成本=期初+淨進貨−期末；毛利=淨銷貨−銷貨成本。",
+    "memory": "①28萬②6萬③7萬 → C。",
+    "highlights": [
+      "銷貨淨額",
+      "進貨退出",
+      "銷貨成本",
+      "銷貨毛利"
+    ],
+    "solvingSteps": [
+      "先用銷貨淨額250000加退回30000，得到原銷貨收入①280000元。",
+      "進貨170000減進貨退出15000，得淨進貨155000元。",
+      "成本公式180000=期初存貨②+155000−期末35000。",
+      "移項得②=180000−155000+35000=60000元。",
+      "毛利③=銷貨淨額250000−成本180000=70000元。",
+      "①280000②60000③70000只有C全部一致。",
+      "驗算期初60000+淨進貨155000−期末35000=180000，與表格一致。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的銷貨收入280000與毛利70000雖對，但期初45000會讓成本只算165000，不等已知180000。",
+        "elementary": "A的年初存貨少算15000元。",
+        "reason": "A的銷貨收入280000與毛利70000雖對，但期初45000會讓成本只算165000，不等已知180000。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B的銷貨收入220000不可能比已知淨銷貨250000還少30000退貨，且毛利100000也不符。",
+        "elementary": "B連原銷貨都比淨銷貨少，明顯錯。",
+        "reason": "B的銷貨收入220000不可能比已知淨銷貨250000還少30000退貨，且毛利100000也不符。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C的280000=250000+30000，60000=180000−155000+35000，70000=250000−180000，全部成立。",
+        "elementary": "C三個數都能算回原題，正確。",
+        "reason": "C的280000=250000+30000，60000=180000−155000+35000，70000=250000−180000，全部成立。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D的期初60000正確，但原銷貨應280000而非220000，毛利應70000而非100000，兩處錯。",
+        "elementary": "D雖有一個對，另外兩個都錯。",
+        "reason": "D的期初60000正確，但原銷貨應280000而非220000，毛利應70000而非100000，兩處錯。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "淨銷貨250000、退回30000",
+        "進貨170000、退出15000、期末存貨35000",
+        "銷貨成本180000"
+      ],
+      "formulaUse": "原銷貨=淨銷貨+退回；成本=期初+淨進貨−期末；毛利=淨銷貨−成本。",
+      "substitution": [
+        "①=250000+30000",
+        "②=180000−(170000−15000)+35000",
+        "③=250000−180000"
+      ],
+      "steps": [
+        "①原銷貨=250000+30000=280000元。",
+        "淨進貨=170000−15000=155000元。",
+        "成本方程180000=②+155000−35000。",
+        "解②=60000元。",
+        "毛利③=250000−180000=70000元。",
+        "選項C的三個金額依序匹配。",
+        "驗算60000+155000−35000=180000；280000−30000=250000。"
+      ],
+      "result": "①NT$280000、②NT$60000、③NT$70000",
+      "unit": "新臺幣元",
+      "option": "C"
+    },
+    "source": "Role A 114 original candidate source; single WebP G1 DRAFT and G2 official OCR, G3 final answer/notice not formally admitted."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_WEBP_DIRECT_G1_QA_DRAFT",
+      "A_G2_G3_FINAL_OFFICIAL_AND_NOTICE_NOT_ADMITTED",
+      "ROLE_E_DIFFERENT_AUTHOR_EXACT_SHA_PENDING",
+      "D_V4_REAL_EMITTED_8X2_PENDING",
+      "MASTER_TRUSTED_PROTECTED_MAIN_PAGES_PENDING"
+    ]
+  },
+  "teachingCanonicalSha256": "043a735fd3b98cd11fdc1f9c12a54026b7a246cbf07729e116c3827b33767bde",
+  "composedTeachingSha256": "5fcf06e332ad0349f07ca2f03fcb623798344f700f93bafc4e40efaf52717b83"
+}

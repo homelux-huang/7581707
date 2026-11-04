@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "taskId": "B-114-AC07-09-ECON31-32-20261104-02",
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "total": 5,
+  "items": [
+    {
+      "questionId": "114-09-2-07",
+      "path": "sudu/teaching-candidates/114-role-b-prof2-ac07-09-ec31-32-20261104/114-09-2-07.json",
+      "subject": "會計學",
+      "sourceRevision": "84525695a1b0df74c8f817d555162c36b13304f7898ba4dc3162d3c752d8cdf2",
+      "webpSha256": "9128453135355c0d2be02c55dd7d91a6faf550a60fe43a8ca1ab00ab4acc9874",
+      "answer": "C",
+      "teachingCanonicalSha256": "043a735fd3b98cd11fdc1f9c12a54026b7a246cbf07729e116c3827b33767bde",
+      "composedTeachingSha256": "5fcf06e332ad0349f07ca2f03fcb623798344f700f93bafc4e40efaf52717b83",
+      "fileSha256": "db1400fc32223c3eb9903e5f45e3c8e8b6c0d379db20593d9339885786af5e38",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-2-08",
+      "path": "sudu/teaching-candidates/114-role-b-prof2-ac07-09-ec31-32-20261104/114-09-2-08.json",
+      "subject": "會計學",
+      "sourceRevision": "2abd8b59a651e4aba1682d682ff7c663b11b7b767120da6c9d6b88ffcce967be",
+      "webpSha256": "b59b15f96296f76b1472400e50c7e9159096e2f34f9ce4921e087d1b16c3ffea",
+      "answer": "B",
+      "teachingCanonicalSha256": "37adba2256ddcb30dd0dbf2178a72b44f95fa0eb9eb05a52edcc3de5aae766da",
+      "composedTeachingSha256": "0e1cd97b5d3232b684222f1222fec1769044d1aa3362942c715e9f5b2ef76922",
+      "fileSha256": "2aa20211e2109c8539d4d0bbe8a3301d1c148af8377d11956d4ffe54d0fb498a",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-2-09",
+      "path": "sudu/teaching-candidates/114-role-b-prof2-ac07-09-ec31-32-20261104/114-09-2-09.json",
+      "subject": "會計學",
+      "sourceRevision": "625f73e2245e9580dfb341f00df38af3183129818ff76803de76b5f71c5ca037",
+      "webpSha256": "2a45f77df7213765f01a21f581beb625a3212a33284192da0790c93c1e3f6c94",
+      "answer": "A",
+      "teachingCanonicalSha256": "cb74ce4066f820f771bf3abcf1c0e647779fbdf8e22560066bb9b5f5dd57687b",
+      "composedTeachingSha256": "2614ea75b1749ecfde978d93dba0484a28a5db8fb25230297c23229300769da0",
+      "fileSha256": "b6f67010ed087810f2f6ef1ea379b0f6bb35b6007088920fb509a9997d7789cd",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-2-31",
+      "path": "sudu/teaching-candidates/114-role-b-prof2-ac07-09-ec31-32-20261104/114-09-2-31.json",
+      "subject": "經濟學",
+      "sourceRevision": "d54b01c0103bb5328014484fa75ad845a7aef3061055e9b6fbe5ac6976ac7938",
+      "webpSha256": "5a937b5600f5018c85d9948bd2249e6325198d742671ed62177abad709d598f5",
+      "answer": "D",
+      "teachingCanonicalSha256": "93c70afbb67d54e44fc8990b95d8bb35797d7fbdf3a840f87ddc3878d602979f",
+      "composedTeachingSha256": "c08a2d8530d6a1ba7bfb7482ef36a632f5dba993daf8c48ce0f78542416fd2ca",
+      "fileSha256": "0a2a09e6bdb0faa3f4b2f485a69b3eb2d1a5efa4ed34d4592c1ecc121dae20fc",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-2-32",
+      "path": "sudu/teaching-candidates/114-role-b-prof2-ac07-09-ec31-32-20261104/114-09-2-32.json",
+      "subject": "經濟學",
+      "sourceRevision": "742ea970e49a5710e173d9784a8b312194f185262b127173c923765eccf7e6eb",
+      "webpSha256": "2dfadd0a0f70ef2730727b9485e4a29a0da24447a62a8706d586e11d2970e212",
+      "answer": "B",
+      "teachingCanonicalSha256": "cbc955c1bf6440d9d65a37f21c8474bd6d6553e99c853960c06f095232833c8e",
+      "composedTeachingSha256": "75a8d48fbb600639fa63325b15989abcab8e447cd094089e0cb776889567a5a3",
+      "fileSha256": "10bf7a12ad048529fd3321f61b802c917d242413e5b8f90da4a86299670da9dd",
+      "ready": false
+    }
+  ],
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "requiresHumanTeacher": false,
+  "sourceAdmitted": false,
+  "independentE": false,
+  "noRelease": true
+}
