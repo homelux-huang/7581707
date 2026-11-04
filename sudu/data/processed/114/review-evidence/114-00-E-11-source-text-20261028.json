@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-E11-SOURCE-QUESTION-FINAL-20261027-01",
+  "role": "A",
+  "questionId": "114-00-E-11",
+  "reviewDate": "2026-10-28",
+  "reviewer": "ChatGPT ROLE A independently inspected actual original archived question page and exact single image pixels; source/QA only",
+  "reviewerType": "AI_SOURCE_IMAGE_AND_STRUCTURED_TEXT_EXAMINER_NOT_ROLE_E_TEACHING_REVIEWER",
+  "historicalOriginal": {
+    "officialIndex": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "sourceQuestionPdfUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUucGRm",
+    "sourcePdfSha256PreviouslyRecorded": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "originalQuestionPdfDownloadedAndRehashedThisTask": false,
+    "originalPageNumber": 3,
+    "originalSourcePagePath": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "originalPageImageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "originalPageImageGitBlobSha1": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "singleQuestionWebpPath": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
+    "singleQuestionWebpSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+    "singleQuestionWebpGitBlobSha1": "50f8fde174f4f0e66dc0f2315c11c5a73cec6b7a",
+    "originalCropPixels": [
+      90,
+      275,
+      1310,
+      591
+    ],
+    "originalCropSize": [
+      1220,
+      316
+    ],
+    "archivedVisualQaPath": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json",
+    "archivedVisualQaGitBlobSha1": "c1154562fa30cb4b2720a6000a970cf09ef460ff"
+  },
+  "directStructuredSourceTextVisualObservation": {
+    "questionIdPrinted": 11,
+    "paperCode": "00-E",
+    "yearPrinted": 114,
+    "sourcePagePrinted": 3,
+    "section": "II. 對話題 11–20",
+    "printedQuestionNormalized": "Dad: Hey, you’re always on your phone!\nSon: I know. I just like playing games and watching videos.\nDad: But if you use the phone too much, you might hurt your eyes.\nSon: ____________\nDad: Yeah, let’s go jogging. It’s more fun.",
+    "canonicalQuestionExact": "Dad:  Hey, you’re always on your phone!\n    Son:   I know. I just like playing games and watching videos.\n   Dad:  But if you use the phone too much, you might hurt your eyes.\n    Son:  ____________\n   Dad:  Yeah, let’s go jogging. It’s more fun.",
+    "printedOptionsExact": [
+      "Then I should use it less.",
+      "Should I use a new phone?",
+      "Do you like to watch videos, too?",
+      "So you should play online games."
+    ],
+    "dialogueRolesComplete": true,
+    "blankPreserved": true,
+    "allFourPrintedOptionsComplete": true,
+    "questionNumberInSourceImage": true,
+    "readableAndSharp": true,
+    "noAdjacentQ12": true,
+    "noHeaderOrFooterInSingleCrop": true,
+    "noSharedPassageRequired": true,
+    "noCalculationOrFigureRequired": true,
+    "originalPixelCropExactComparisonRequired": true,
+    "passType": "PASS_ROLE_A_DIRECT_ARCHIVED_SOURCE_PIXEL_AND_TEXT_MATCH_ONLY",
+    "note": "Direct inspection of the immutable original 114 English p3 image and current single Q11 WebP shows full printed Dad/Son five-turn dialogue, underline blank, English punctuation/apostrophes and exact A–D. Q12 begins below isolated crop, not part of Q11. Existing original QA and manifest already PASS for SAME SHA, no recrop or OCR change. This new Role A observation is not an independent Role E teaching/content certificate or full official PDF rehash."
+  },
+  "currentSourceAndAnswerBindings": {
+    "publisherQuestionRevisionSha256": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "sourceQuestionsGitBlobSha1": "1535754345a08d25636e00b4ba3270a1f764bf66",
+    "sourceManifestGitBlobSha1": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "sourceYearOriginalGitBlobSha1": "1e2e82854e7041011733eb2d3ab21c3d5c6e0a04",
+    "officialAnswerLetterExistingVerified": "A",
+    "officialAnswerSourcePdfSha256PreviouslyRecorded": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "officialAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "existingAnswerReceiptPath": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+    "existingAnswerReceiptGitBlobSha1": "bc3d19885e2ebc3d27092b673636bd84c89f65c6",
+    "scopedEnglishConfirmationPdfSha256PreviouslyRecorded": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+    "confirmationNamedQuestionIds": [
+      "114-00-E-26"
+    ],
+    "originalStatementNoCorrectionForE11": true,
+    "noPaperWideNoObjectionClaim": true
+  },
+  "externalOtherRoleAuthorCandidateReadOnly": {
+    "role": "B",
+    "draftPR": 44,
+    "authorHeadSha": "e0d4532c751127204e73af9cd9d3a95c52449131",
+    "originalCandidateGitBlobSha1": "a4aa8df70cf3f3fa8c4f62a568d73fe90511154b",
+    "composedTeachingDigest": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee",
+    "sourceRevisionMatchesThisReceipt": true,
+    "independentRoleEFinalContentQa": false,
+    "actualPublisherEmittedSameDigestV4UiQa": false
+  },
+  "databaseCheck": "205 row canonical 114 JSON/SQLite 7-column schema PRAGMA and SHA verified in prior PR94, rerun exact current branch CI; no source, SQLite or answer changes",
+  "noSourceBankMutation": true,
+  "noWebpRecrop": true,
+  "noNewRawOcr": true,
+  "questionVerifiedPromoted": false,
+  "answerVerifiedExistingPreviously": true,
+  "independentRoleEFinalQa": false,
+  "officialFullOriginalPdfByteRehashThisTask": false,
+  "officialFinalAnswerReverificationThisTask": false,
+  "teacherIdentityOrSignatureClaimed": false,
+  "canGiveBAuthorUnapprovedSourceCopy": true,
+  "newReady": 0,
+  "newApproved114Main": 0,
+  "newLive": 0,
+  "remainingBlockers": [
+    "Source full PDF byte SHA verification not repeated in this task; only source page WebP pixel SHA and historical original source evidence pinned",
+    "Formal source questionVerified remains false until adopted by reviewed master source-admission gate",
+    "Role E different-author AI review of exact Role B source+teaching digest not yet final trusted registry",
+    "Master final approved 114 English V4 publisher projection 8x2 and protected main+Pages same SHA not performed"
+  ]
+}
