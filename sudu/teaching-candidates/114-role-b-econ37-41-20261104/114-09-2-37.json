@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-37",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "小林擁有分屬甲地與乙地之兩筆土地租金。甲地與乙地之年租金分別為200 萬元及120\n  萬元。若年利率為 4 %，小林有意同時出售該兩筆土地，下列何者正確？",
+  "options": [
+    "甲地與乙地之地價合計為 8000 萬元",
+    "甲地與乙地之地價合計為 800 萬元",
+    "甲地與乙地之地價合計為 6000 萬元",
+    "甲地與乙地之地價合計為 320 萬元"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "c102aa12dbfe00e57d7576c9d820b2668f09a6e11e81f9c99b42e0e1fec3df0b",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-37.webp",
+    "webpSha256": "2314f6d0ae046ff9b05a416fbda11c1769637a17a8938dea2445699e4d3b8c80",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "土地年租金資本化與地價",
+    "teacherSummary": "土地地價可用預期每年固定地租除以利率估算。甲地200萬元、乙地120萬元，每年合收320萬元，若年利率4%，總價=320÷0.04=8000萬元，對應A。",
+    "elementarySummary": "兩塊地一年可以收320萬元；如果存錢一年有4%利息，要存8000萬元才會生出同樣的320萬元，因此地價合計約8000萬元。",
+    "concept": "資本化：地價=每年固定地租÷年利率；租金和價格需採相同貨幣單位。",
+    "memory": "年租320萬÷4%=8000萬；百分率先換成0.04。",
+    "highlights": [
+      "200 萬元",
+      "120 萬元",
+      "4 %",
+      "8000 萬元"
+    ],
+    "solvingSteps": [
+      "先把甲、乙地的每年租金相加：200+120=320（萬元/年）。",
+      "將4%寫為小數0.04（每年）。",
+      "依地租資本化公式，總地價=年租金÷年利率。",
+      "代入320÷0.04=8000（萬元）。",
+      "檢查8000×0.04=320（萬元/年），正好等於兩地租金和，故選A。"
+    ],
+    "formula": "地價P=年地租R÷年利率r（固定且可持續地租的簡化資本化模型）",
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "甲年租200萬元、乙年租120萬元",
+        "年利率r=4%=0.04"
+      ],
+      "formulaUse": "固定年租金的土地資本化：P=(R甲+R乙)/r",
+      "substitution": [
+        "R=200+120=320萬元/年",
+        "P=320÷0.04=8000萬元"
+      ],
+      "steps": [
+        "200+120=320（萬元/年）",
+        "4÷100=0.04（每年）",
+        "320÷0.04=8000（萬元）",
+        "反向：8000×0.04=320（萬元/年）"
+      ],
+      "result": "8000",
+      "unit": "萬元",
+      "reverseCheck": "8000萬元×4%=320萬元/年，與甲乙地租相加一致",
+      "option": "A"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的8000萬元等於(200+120)÷0.04；能用4%的年利息反推出320萬元年租金，符合題目。",
+        "elementary": "A是對的，8000萬元的4%剛好320萬元。",
+        "reason": "A的8000萬元等於(200+120)÷0.04；能用4%的年利息反推出320萬元年租金，符合題目。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B的800萬元乘0.04只得32萬元年收益，少了10倍；把4%換成小數或除法位數算錯會得此量級。",
+        "elementary": "800萬元一年只生32萬元，不夠付320萬元租金。",
+        "reason": "B的800萬元乘0.04只得32萬元年收益，少了10倍；把4%換成小數或除法位數算錯會得此量級。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C的6000萬元按4%僅得240萬元年收益，沒有包含兩筆年租金的320萬元總額。",
+        "elementary": "6000萬元每年只會有240萬元，少了80萬元。",
+        "reason": "C的6000萬元按4%僅得240萬元年收益，沒有包含兩筆年租金的320萬元總額。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D的320萬元只是每年租金的合計，沒有除以4%換算為土地總價。",
+        "elementary": "320萬元是每年收入，不是兩塊地的總價。",
+        "reason": "D的320萬元只是每年租金的合計，沒有除以4%換算為土地總價。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 候選來源：尚未完成 G1/G2/G3 官方原圖與最終答案獨立驗證；不得作正式答案使用。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_AND_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_AND_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "caf3d4f1535fa453af6fc01172e8c51a61c2e9b59dc3bef535ad8d949b5c5f53"
+}
