@@ -18,7 +18,7 @@ on:
 permissions:
   contents: write
   actions: write
-  pull-requests: write
+  pull-requests: read
 concurrency:
   group: sudu-verified-autopublish
   cancel-in-progress: false
@@ -105,7 +105,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$SRC_COMMIT" --signature "$SRC_SIGNATURE"
           python scripts/sudu_verified_publish.py check
-      - name: Stage approved output for a normal independently reviewed Draft PR
+      - name: Pin candidate and emit authorized Draft PR handoff (NO RELEASE)
         if: steps.snapshot.outputs.updated == 'true'
         shell: bash
         env:
@@ -113,7 +113,7 @@ jobs:
         run: |
           set -euo pipefail
           git add -A sudu/data/approved
-          python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate
+          # The repository forbids Actions GITHUB_TOKEN from POST /pulls.\n          # Preserve branch+SHA+artifact; an authorized connector must create PR.\n          python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual
 
       - name: Retain pinned candidate even if token cannot create a PR
         if: always() && steps.snapshot.outputs.updated == 'true'
