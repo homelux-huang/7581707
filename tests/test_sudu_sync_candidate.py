@@ -46,12 +46,12 @@ else:
     def git(self,*args,cwd=None):
         return subprocess.check_output(['git',*args],cwd=cwd or self.repo,text=True,stderr=subprocess.DEVNULL).strip()
 
-    def execute(self,fail=False):
+    def execute(self,fail=False,pr_mode='api'):
         old=Path.cwd()
         try:
             os.chdir(self.repo)
             with patch.dict(os.environ,{**self.env,**({'GH_FIXTURE_FAIL':'yes'} if fail else {})}):
-                sync.publish(self.root/'artifact')
+                sync.publish(self.root/'artifact',pr_mode=pr_mode)
         finally:os.chdir(old)
 
     def test_real_git_candidate_and_idempotent_pr_never_move_main(self):
@@ -63,6 +63,49 @@ else:
         self.assertEqual(self.git('show','-s','--format=%P',one['candidateSha']),self.base)
         self.assertFalse(one['ready']);self.assertFalse(one['deployed']);self.assertTrue(one['ciRequired'])
         self.assertFalse(one['botPrTriggersCi'])
+
+    def test_manual_pr_handoff_no_post_and_repeated_identical_candidate(self):
+        self.execute(pr_mode='manual')
+        a=json.loads((self.root/'artifact/receipt.json').read_text())
+        self.assertEqual(a['status'],'MANUAL_PR_HANDOFF_REQUIRED')
+        self.assertTrue(a['needsAuthorizedPrCreation'])
+        self.assertFalse(a['ready'])
+        self.assertFalse(a['deployed'])
+        self.assertTrue(a['ciRequired'])
+        self.assertIn('pull/new/sync/qa-approved-',a['handoffUrl'])
+        self.assertFalse((self.root/'pr.json').exists())
+        self.assertTrue((self.root/'artifact/candidate.patch').read_bytes())
+        self.execute(pr_mode='manual')
+        b=json.loads((self.root/'artifact/receipt.json').read_text())
+        self.assertEqual(a,b)
+        self.assertEqual(self.git('ls-remote','origin','refs/heads/main').split()[0],self.base)
+        self.assertEqual(self.git('rev-parse','HEAD'),self.base)
+
+    def test_manual_mode_recognizes_authorized_existing_exact_draft_pr(self):
+        self.execute(pr_mode='manual')
+        a=json.loads((self.root/'artifact/receipt.json').read_text())
+        self.assertEqual(a['status'],'MANUAL_PR_HANDOFF_REQUIRED')
+        # External authorized connector creates exact SHA-pinned PR.
+        # The script then GETs it; manual mode never does POST.
+        fixture={'head':{'sha':a['candidateSha']},'base':{'ref':'main'},
+                 'draft':True,'html_url':'https://example.invalid/existing-pr'}
+        (self.root/'pr.json').write_text(json.dumps(fixture))
+        self.execute(pr_mode='manual')
+        b=json.loads((self.root/'artifact/receipt.json').read_text())
+        self.assertEqual(b['status'],'DRAFT_PR_PENDING_INDEPENDENT_REVIEW_AND_CI')
+        self.assertEqual(b['prUrl'],'https://example.invalid/existing-pr')
+        self.assertFalse(b['ready'])
+        self.assertFalse(b['deployed'])
+        self.assertEqual(self.git('ls-remote','origin','refs/heads/main').split()[0],self.base)
+
+    def test_manual_mode_rejects_mismatched_existing_pr(self):
+        self.execute(pr_mode='manual')
+        fixture={'head':{'sha':'a'*40},'base':{'ref':'main'},
+                 'draft':True,'html_url':'https://example.invalid/wrong-pr'}
+        (self.root/'pr.json').write_text(json.dumps(fixture))
+        with self.assertRaisesRegex(ValueError,'Existing PR revision mismatch'):
+            self.execute(pr_mode='manual')
+        self.assertEqual(self.git('ls-remote','origin','refs/heads/main').split()[0],self.base)
 
     def test_permission_failure_keeps_patch_and_blocks_no_main_change(self):
         with self.assertRaises(subprocess.CalledProcessError):self.execute(fail=True)
