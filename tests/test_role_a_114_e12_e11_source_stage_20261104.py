@@ -83,7 +83,7 @@ class SourceStage(unittest.TestCase):
   self.assertEqual(gitsha(notice.read_bytes()),"6b9a919f224bec8dc3659052a404b4173b6ef366")
   g={i["questionId"]:i for i in load(g1)["items"]}
   e=next(x for x in load(notice)["docs"] if x["paperCode"]=="00-E")
-  self.assertEqual(e["pdfSha256"],"79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53cbc")
+  self.assertEqual(e["pdfSha256"],"79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc")
   self.assertEqual([i["questionId"] for i in e["confirmed"]],["114-00-E-26"])
   for qid in QIDS:
    self.assertEqual(g[qid]["result"],"PASS");self.assertEqual(g[qid]["reviewedWebpSha256"],PINS[qid][1])
@@ -111,6 +111,6 @@ class SourceStage(unittest.TestCase):
      else:x["downstream"]["newLive"]=True
      with self.assertRaises(ValueError):validate(x,self.rows[qid],self.images[qid])
  def test_exact_main_based_claimed_file_scope(self):
-  result=subprocess.run(["git","diff","--name-only","HEAD^","HEAD"],cwd=ROOT,check=True,text=True,capture_output=True)
+  result=subprocess.run(["git","diff","--name-only","ba2f3f0757dbf81eaaf125bd610b0f38de52fea9","HEAD"],cwd=ROOT,check=True,text=True,capture_output=True)
   self.assertEqual(set(result.stdout.splitlines()),EXPECTED)
 def load_payload(payload):return json.loads(payload)
