@@ -1,0 +1,30 @@
+name: ROLE A 114 English E10 E20 original source cross-page D G2 (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-114-e10-e20-crosspage-g2-stage-20261104]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_two_qid_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e10-e20-crosspage-g2-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original WebP and page, official answer, raw D correction, negative cases
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_114_e10_e20_source_g2_20261104.py
+          python -m unittest discover -s tests -p test_role_a_114_e10_e20_source_g2_20261104.py -v
+      - name: Read-only no student release
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
