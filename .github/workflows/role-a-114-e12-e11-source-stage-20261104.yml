@@ -18,7 +18,7 @@ jobs:
       - name: Checkout current protected-main-based source stage without write credentials
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
           persist-credentials: false
       - name: Checkout exact frozen PR135 canonical 205 bank and SQLite in separate read-only folder
         uses: actions/checkout@v4
