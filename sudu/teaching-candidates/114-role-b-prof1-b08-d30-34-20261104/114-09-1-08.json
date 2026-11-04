@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS08-DIGITAL30-31-33-34-20261104-01",
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-08",
+  "subject": "商業概論",
+  "kind": "NEW_B_AUTHOR_SOURCE_QA_PENDING",
+  "question": "關於工作評價方法的敘述，下列何者正確？",
+  "options": [
+    "在工作評價方法中，員工年資越長則該工作的評價也越高",
+    "因素比較法將工作依權責分類，是最普遍使用的工作評價方法",
+    "為了獲得精確的工作資料，完成工作評價後可接續進行工作分析",
+    "評分法又稱為點數法，將工作因素加以評分，點數越高薪資也越高"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "62dadc557b99e103cef5b497c29b84d8bf5e0a6f33a5d81ef3d240c1165f4902",
+    "originalQuestionWebpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-08.webp",
+    "webpSha256": "dc1158dd66f8aeb77db81da0fdf09e268157200a8f66d5e29ed8290bf7f50ee8",
+    "originalImageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerNoticeNotAdmitted": true
+  },
+  "teaching": {
+    "topic": "工作評價｜評分法與工作分析先後順序",
+    "teacherSummary": "工作評價評的是工作本身的相對價值，而不是員工個人年資。點數法先選工作評價因素並給分、加總點數再安排薪級；工作分析通常先提供資料，故 D 最符合。",
+    "elementarySummary": "要先看這份工作需要哪些技能、責任，給每一項打分數，再用總分決定工作的薪資等級；不是誰做比較久分數就比較高。",
+    "concept": "工作分析（職務資料）→ 工作評價（不同工作相對價值）→ 薪資結構。評分法又稱點數法。",
+    "memory": "工作分析先、工作評價後；因素打分加總是點數法（D）。",
+    "solvingSteps": [
+      "先釐清工作評價的對象是『工作職位的相對價值』，不是評員工個人表現或年資。",
+      "查 A：年資長可能影響個人年功薪，卻不能直接決定同一職務的工作評價價值。",
+      "查 B：因素比較法會比較不同工作關鍵因素，題述『依權責分類』屬於分類法的概念，不是其核心作法。",
+      "查 C：通常先做工作分析取得工作內容及資格，再進行工作評價；說完成評價後才接著分析，程序顛倒。",
+      "查 D：評分法＝點數法，選定工作因素並評定點數，點數總量用於工作相對價值和薪級設計，因此 D 正確。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A『員工年資越長則該工作的評價越高』混淆年功薪資與職務價值；工作評價衡量工作內容、責任與技能，不以個人任職年限直接評高。",
+        "elementary": "做很久可以累積經驗，但不代表這份工作的評價會因一個人做久而變高。",
+        "reason": "A『員工年資越長則該工作的評價越高』混淆年功薪資與職務價值；工作評價衡量工作內容、責任與技能，不以個人任職年限直接評高。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B因素比較法比較工作中技能、責任等報酬因素，不是單靠權責把工作分成類別；後者更像工作分類法。",
+        "elementary": "把工作分組和逐項比較不同因素，是兩種做法。",
+        "reason": "B因素比較法比較工作中技能、責任等報酬因素，不是單靠權責把工作分成類別；後者更像工作分類法。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C工作分析通常先取得工作職責、資格和環境資料，再做工作評價；題目把先後顛倒。",
+        "elementary": "先知道工作做什麼，才能評它值多少。",
+        "reason": "C工作分析通常先取得工作職責、資格和環境資料，再做工作評價；題目把先後顛倒。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D評分法又稱點數法，先選定工作因素、按因素給點數、加總後建立工作薪級，符合評價方法。",
+        "elementary": "每個項目評分再加總，分數多通常對應較高薪級。",
+        "reason": "D評分法又稱點數法，先選定工作因素、按因素給點數、加總後建立工作薪級，符合評價方法。",
+        "isCorrect": true
+      }
+    },
+    "highlights": [
+      "工作評價方法",
+      "評分法",
+      "點數法"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "authorReviewLevel": "SOURCE_CANDIDATE_REASONING_ONLY_NO_E",
+    "source": "114 official original A candidate Q bank / exact single-question WebP SHA pinned, but G1 direct visual, G2 words, G3 final published answer/correction require A independent verification."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_ORIGINAL_G1_DIRECT_IMAGE_VISUAL_QA_PENDING",
+      "A_SOURCE_G2_QUESTION_OPTIONS_QA_PENDING",
+      "A_OFFICIAL_FINAL_ANSWER_AND_NOTICE_G3_PENDING",
+      "DISTINCT_E_EXACT_COMPOSED_SHA_REVIEW_PENDING",
+      "D_REAL_V4_8x2_EMITTED_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "sourceBankKnownCandidateAnswer": true,
+    "blindSolveClaimed": false,
+    "calculationAuthorOnly": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "teachingCanonicalSha256": "a7aeab7c30992f069e3fda7082fe7f0d53e1187c6f3ff54913003df2db0bd50d",
+  "composedTeachingSha256": "33dca369092d65c4af3ce239add23276926a2cf09e617a40cbb02c15c65b332b"
+}

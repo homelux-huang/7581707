@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS08-DIGITAL30-31-33-34-20261104-01",
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-31",
+  "subject": "數位科技",
+  "kind": "NEW_B_AUTHOR_SOURCE_QA_PENDING",
+  "question": "網址「https://www.tcte.edu.tw」中的英文字母「s」可用下列何者技術來完成？",
+  "options": [
+    "SSD ( solid state disk )",
+    "SSL ( secure sockets layer )",
+    "SKC ( secret key cryptography )",
+    "SET ( secure electronic transaction )"
+  ],
+  "knownAnswerCandidate": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "c586f1468163667e4f6824013fe9d1878b07475aaa3ca8d67badaf29f293fcd1",
+    "originalQuestionWebpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-31.webp",
+    "webpSha256": "c721a57d2cd0384f508cc9418d0dffee9be4922d700472bb9849dfbc35eab0e9",
+    "originalImageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerNoticeNotAdmitted": true
+  },
+  "teaching": {
+    "topic": "HTTPS 的 S｜安全連線及 SSL／TLS",
+    "teacherSummary": "網址 https:// 的 s 表示 secure（安全），早期以 SSL（Secure Sockets Layer）加密安全傳輸，現代 HTTPS 實務多採 TLS（Transport Layer Security）取代舊 SSL。四選項中只有 B 指向正確技術家族。",
+    "elementarySummary": "網址有 https 代表使用安全加密連線。考題提供的舊名稱 SSL 最符合；現在網站多使用更新的 TLS 技術。",
+    "concept": "HTTPS＝HTTP over TLS（歷史上源自 SSL）；SSL 已淘汰，考題選項為歷史稱呼，不能宣稱現今仍主要使用舊版 SSL。",
+    "memory": "https 的 s＝secure；四選項選 SSL（B），現代實作多用 TLS。",
+    "solvingSteps": [
+      "先把網址拆成協定 https:// 與網域 www.tcte.edu.tw；題目問網址開頭的 s 所代表的安全連線技術。",
+      "HTTPS 的 s 是 secure，意義是瀏覽器與網站伺服器透過加密驗證的通訊層保護資料傳輸。",
+      "考題所列選項中 B 的 SSL 是早期該安全通訊機制的名稱，歷史上與 HTTPS 安全連線直接相關。",
+      "A SSD 是固態硬碟，屬儲存裝置；C SKC 是秘密金鑰密碼技術的籠統稱呼，不是題問的標準協定名稱；D SET 是電子交易協定，亦不是網址 s。",
+      "因此依題目四選項選 B；補充時必須說明現在 HTTPS 通常採更安全的 TLS，不應鼓勵使用已淘汰 SSL 版本。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A SSD（solid state disk）是用於儲存資料的固態硬碟，不是保護 HTTPS 傳輸的網路安全協定。",
+        "elementary": "SSD是硬碟，不是網頁安全連線。",
+        "reason": "A SSD（solid state disk）是用於儲存資料的固態硬碟，不是保護 HTTPS 傳輸的網路安全協定。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B SSL（secure sockets layer）是 HTTPS 安全傳輸技術的歷史名稱，四個選項中對應 secure；現代網站實際以 TLS 接替 SSL。",
+        "elementary": "題目選 SSL，記得現在常用更新的 TLS。",
+        "reason": "B SSL（secure sockets layer）是 HTTPS 安全傳輸技術的歷史名稱，四個選項中對應 secure；現代網站實際以 TLS 接替 SSL。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C SKC（secret key cryptography）描述使用秘密金鑰的密碼學方法，不是 HTTPS 名稱中 s 對應的特定安全通訊層協定。",
+        "elementary": "用鑰匙加密是一種方法，但不是題問協定名稱。",
+        "reason": "C SKC（secret key cryptography）描述使用秘密金鑰的密碼學方法，不是 HTTPS 名稱中 s 對應的特定安全通訊層協定。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D SET（secure electronic transaction）為早期電子交易安全方案，不是用於解釋 https:// 中 s 的通用安全傳輸層。",
+        "elementary": "這是交易安全的舊方案，不是一般網頁的 HTTPS。",
+        "reason": "D SET（secure electronic transaction）為早期電子交易安全方案，不是用於解釋 https:// 中 s 的通用安全傳輸層。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "https://www.tcte.edu.tw",
+      "英文字母「s」"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "authorReviewLevel": "SOURCE_CANDIDATE_REASONING_ONLY_NO_E",
+    "source": "114 official original A candidate Q bank / exact single-question WebP SHA pinned, but G1 direct visual, G2 words, G3 final published answer/correction require A independent verification."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_ORIGINAL_G1_DIRECT_IMAGE_VISUAL_QA_PENDING",
+      "A_SOURCE_G2_QUESTION_OPTIONS_QA_PENDING",
+      "A_OFFICIAL_FINAL_ANSWER_AND_NOTICE_G3_PENDING",
+      "DISTINCT_E_EXACT_COMPOSED_SHA_REVIEW_PENDING",
+      "D_REAL_V4_8x2_EMITTED_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "sourceBankKnownCandidateAnswer": true,
+    "blindSolveClaimed": false,
+    "calculationAuthorOnly": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "teachingCanonicalSha256": "b495386ab999cfe9afa8266b2dc1eb8e22b116ab2a4cc639204a19e380bc65be",
+  "composedTeachingSha256": "5771e5a0fbe82fb4fde4946cffe86e3db4b8c0d78687a0e09377475b3913d512"
+}

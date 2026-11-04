@@ -1,0 +1,18 @@
+name: "Role B 114 Business08 Digital30/31/33/34 author SHA only NO RELEASE"
+on:
+  push:
+    branches:
+      - teaching/114-role-b-bus08-digital30-31-33-34-20261104
+  workflow_dispatch:
+jobs:
+  author-source-check:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Confirm source SHA, genuine four-option reasons, IP and non-release
+        run: python -m unittest discover -s tests -p 'test_114_role_b_prof1_b08_d30_34_20261104.py' -v

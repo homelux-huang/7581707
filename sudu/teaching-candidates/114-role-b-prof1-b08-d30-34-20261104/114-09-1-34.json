@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS08-DIGITAL30-31-33-34-20261104-01",
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-34",
+  "subject": "數位科技",
+  "kind": "NEW_B_AUTHOR_SOURCE_QA_PENDING",
+  "question": "關於區塊鏈 ( blockchain ) 技術的敘述，下列何者正確？",
+  "options": [
+    "具有資料不可竄改的特性，可利用於虛擬貨幣的交易",
+    "臺灣 Pay 不能採用掃描支付，必須用區塊鏈技術完成",
+    "具有去中心化，所以使用區塊鏈技術交易不會被詐騙或牽涉金融犯罪",
+    "區塊鏈是一種分散式分類帳本技術，將交易紀錄儲存在主從式架構的網路中"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "2dc5afd648b413645bb307c480a7316611bf94e3e2e0bf660efc5920aa47dabd",
+    "originalQuestionWebpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-34.webp",
+    "webpSha256": "72d47bb169320269296748075dfc2b8e36959babefd75ac9697bbaa2b678a495",
+    "originalImageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerNoticeNotAdmitted": true
+  },
+  "teaching": {
+    "topic": "區塊鏈｜抗竄改與分散式帳本",
+    "teacherSummary": "區塊鏈將交易記錄以密碼學雜湊串接並由網路多節點驗證，提高紀錄被單方面竄改的難度，可用於虛擬貨幣交易。它不保證不會詐騙，也不是主從式集中存放；選 A。",
+    "elementarySummary": "像很多人一起保管同一本交易紀錄，想偷偷改一本很容易被發現，但壞人還是可能騙人，所以不能說用區塊鏈就不會被騙。",
+    "concept": "分散式帳本＋密碼學連結＋共識驗證＝抗竄改；抗竄改不等於絕對不可能修改，也不等於零金融犯罪。",
+    "memory": "區塊鏈可提高資料抗竄改性，但不能防止所有詐騙，分散式不是主從式；A。",
+    "solvingSteps": [
+      "先辨認區塊鏈主要特性：多個節點保存/驗證交易紀錄，區塊使用雜湊等機制串接。",
+      "若有人私下修改已記錄交易，雜湊關聯及其他節點紀錄會暴露不一致，因此具有抗竄改特性。",
+      "A 描述將抗竄改特性用於虛擬貨幣交易，符合課程常見用途；此處『不可竄改』宜理解為難以偷偷修改而非絕對無法改變。",
+      "B 誤把特定電子支付是否掃碼與必須使用區塊鏈畫上等號；C 誤以為去中心化自然防止詐騙，這是過度保證。",
+      "D 雖提分散式帳本，後段卻說交易紀錄存在主從式架構；一般區塊鏈不是倚靠單一主伺服器統一維護。",
+      "四項比對只有 A 符合；實務仍要注意私鑰外洩、智慧合約缺陷、社交工程與鏈上詐騙。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 區塊鏈以雜湊鏈結與多方共識維護分散帳本，具有較高抗竄改性，已被應用於虛擬貨幣交易，因此選 A。",
+        "elementary": "大家一起記錄、難偷偷改，可記虛擬貨幣交易。",
+        "reason": "A 區塊鏈以雜湊鏈結與多方共識維護分散帳本，具有較高抗竄改性，已被應用於虛擬貨幣交易，因此選 A。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B 臺灣 Pay 是否能掃描支付屬支付服務與功能設計，並非必須透過區塊鏈完成；『不能掃碼、一定得區塊鏈』不正確。",
+        "elementary": "手機掃碼付款不一定要用區塊鏈。",
+        "reason": "B 臺灣 Pay 是否能掃描支付屬支付服務與功能設計，並非必須透過區塊鏈完成；『不能掃碼、一定得區塊鏈』不正確。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 去中心化不會自動阻止假投資、釣魚、私鑰被騙走或其他金融犯罪；區塊鏈交易仍可能遭詐騙。",
+        "elementary": "很多人記帳不代表沒有人會騙錢。",
+        "reason": "C 去中心化不會自動阻止假投資、釣魚、私鑰被騙走或其他金融犯罪；區塊鏈交易仍可能遭詐騙。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 區塊鏈雖是分散式帳本，但通常以多節點共同維護紀錄，不是由單一主機控制從屬主機的主從式架構。",
+        "elementary": "不是一台大主機管其他機器，而是多處共同維護。",
+        "reason": "D 區塊鏈雖是分散式帳本，但通常以多節點共同維護紀錄，不是由單一主機控制從屬主機的主從式架構。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "區塊鏈",
+      "不可竄改",
+      "虛擬貨幣"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "authorReviewLevel": "SOURCE_CANDIDATE_REASONING_ONLY_NO_E",
+    "source": "114 official original A candidate Q bank / exact single-question WebP SHA pinned, but G1 direct visual, G2 words, G3 final published answer/correction require A independent verification."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_ORIGINAL_G1_DIRECT_IMAGE_VISUAL_QA_PENDING",
+      "A_SOURCE_G2_QUESTION_OPTIONS_QA_PENDING",
+      "A_OFFICIAL_FINAL_ANSWER_AND_NOTICE_G3_PENDING",
+      "DISTINCT_E_EXACT_COMPOSED_SHA_REVIEW_PENDING",
+      "D_REAL_V4_8x2_EMITTED_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "sourceBankKnownCandidateAnswer": true,
+    "blindSolveClaimed": false,
+    "calculationAuthorOnly": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "teachingCanonicalSha256": "8dc1cae626f82de6d50b0510506081fa4bd6b50d288bcce888c39437ea9853cd",
+  "composedTeachingSha256": "296ebaf304ffbabbc81fd6b90ddddf8445da81c2b2bb94a231376823d8378b1b"
+}
