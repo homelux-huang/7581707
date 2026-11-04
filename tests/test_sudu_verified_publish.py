@@ -145,6 +145,8 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
         p.mkdir(parents=True,exist_ok=True)
         official_sha="b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133"
         v.dump(p/"official-confirmation-status.json",{
+            "schemaVersion":1,"year":115,
+            "source":"https://web1.tcte.edu.tw/EXAM/115_4y/",
             "confirmations":{
                 "00-MB":{"officialStatus":"no_objection_submitted",
                          "revisionDocumentContent":"not_applicable"},
@@ -221,6 +223,166 @@ class PerQuestionOfficialCorrectionScopeTests(unittest.TestCase):
             file=root/"sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
             data=v.read(file);data["allPagesInThreeDocumentsReviewed"]=False;v.dump(file,data)
             self.assertFalse(v.official_notice_scope_certified(root,115,q,proof))
+
+
+
+class YearRoutedOfficialNoticeSafetyTests(unittest.TestCase):
+    """Synthetic 114/115 positive and negative tests; NEVER student approval."""
+
+    def fixture(self, root, year):
+        from copy import deepcopy
+        self.assertIn(year, v.YEARS)
+        p = root / f"sudu/data/processed/{year}"
+        p.mkdir(parents=True, exist_ok=True)
+        sha = "c" * 64
+        paper = "00-E"
+        qid = f"{year}-{paper}-26" if year == 114 else f"{year}-{paper}-34"
+        candidate = {"questionId": qid, "officialConfirmedAnswer": "C",
+                     "publishedFinalAnswerImageIndependentlyVerified": year == 114,
+                     "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+                     "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+                     "comparedToOfficialPublishedTableCandidate": "MATCHED",
+                     "changeFromPublishedAnswer": "NONE_OBSERVED"}
+        filename = f"QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261103.json"
+        rel = f"sudu/data/processed/{year}/{filename}"
+        status = {"schemaVersion": 1, "year": year,
+                  "source": v.official_source_index(year),
+                  "officialNoticeEvidencePath": rel,
+                  "confirmations": {
+                      "00-E": {"officialStatus": "question_or_answer_confirmation_document_exists",
+                               "revisionDocumentContent": "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED",
+                               "revisionDocumentSha256": sha,
+                               "revisionDocumentPages": 1,
+                               "perQuestionOfficialNoticeScopeEvidenceComplete": True},
+                      "00-MB": {"officialStatus": "no_objection_submitted",
+                                "revisionDocumentContent": "not_applicable",
+                                "perQuestionOfficialNoticeScopeEvidenceComplete": True}}}
+        catalog = {"schemaVersion": 1, "year": year,
+                   "sourceIndexUrl": v.official_source_index(year),
+                   "allPagesInFourDocumentsReviewed": True,
+                   "allPagesInThreeDocumentsReviewed": True,
+                   "docs": [{"paperCode": "00-E", "pdfSha256": sha,
+                             "noticeScopeOnly": True, "pageCount": 1,
+                             "confirmed": [deepcopy(candidate)]}]}
+        v.dump(p/"official-confirmation-status.json", status)
+        v.dump(p/filename, catalog)
+        return p, filename, status, catalog, sha, qid
+
+    def test_both_years_official_indexes_are_distinct(self):
+        self.assertEqual(v.official_source_index(114),
+                         "https://web1.tcte.edu.tw/EXAM/114_4y/")
+        self.assertEqual(v.official_source_index(115),
+                         "https://web1.tcte.edu.tw/EXAM/115_4y/")
+        self.assertIsNone(v.official_source_index(113))
+
+    def test_114_and_115_challenged_and_unchallenged(self):
+        for year in v.YEARS:
+            with self.subTest(year=year), tempfile.TemporaryDirectory() as td:
+                root = Path(td)
+                _, _, _, _, sha, named_qid = self.fixture(root, year)
+                named = {"questionId": named_qid, "paperCode": "00-E", "answer": "C"}
+                other = {"questionId": f"{year}-00-E-12", "paperCode": "00-E", "answer": "C"}
+                base = {"confirmationPdfSha256": sha, "finalAnswer": "C"}
+                named_proof = {**base, "correctionForQuestionReviewed": True,
+                               "officialFinalAnswerImageQaPassed": True}
+                self.assertTrue(v.official_notice_scope_certified(root, year, named, named_proof))
+                self.assertTrue(v.official_notice_scope_certified(
+                    root, year, other, {**base, "noCorrectionForThisQuestion": True}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, year, named, {**base, "noCorrectionForThisQuestion": True}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, year, other, {**base, "noObjectionForPaper": True}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, year, named, {**named_proof, "finalAnswer": "A"}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, year, named, {**named_proof, "confirmationPdfSha256": "0" * 64}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, 115 if year == 114 else 114, named, named_proof))
+                self.assertFalse(v.official_notice_scope_certified(root, 113, named, named_proof))
+                no_objection = {"questionId": f"{year}-00-MB-11",
+                                "paperCode": "00-MB", "answer": "B"}
+                self.assertTrue(v.official_notice_scope_certified(
+                    root, year, no_objection, {"noObjectionForPaper": True}))
+                self.assertFalse(v.official_notice_scope_certified(
+                    root, year, no_objection, {"noCorrectionForThisQuestion": True}))
+                if year == 114:
+                    self.assertFalse(v.official_notice_scope_certified(
+                        root, year, named, {**named_proof, "officialFinalAnswerImageQaPassed": False}))
+
+    def test_114_named_image_receipt_cannot_be_forged_by_source_boolean(self):
+        # The real historic 114 named E26 row currently has false image QA.
+        # Even a forged source-authored True must not pass without the
+        # independently reviewed named official correction ledger row.
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            p, filename, _, catalog, sha, qid = self.fixture(root, 114)
+            q = {"questionId": qid, "paperCode": "00-E", "answer": "C"}
+            proof = {"confirmationPdfSha256": sha, "finalAnswer": "C",
+                     "correctionForQuestionReviewed": True,
+                     "officialFinalAnswerImageQaPassed": True}
+            self.assertTrue(v.official_notice_scope_certified(root, 114, q, proof))
+            for flag in (False, None, "true", 1):
+                with self.subTest(independent_flag=flag):
+                    candidate = dict(catalog["docs"][0]["confirmed"][0])
+                    if flag is None:
+                        candidate.pop("publishedFinalAnswerImageIndependentlyVerified")
+                    else:
+                        candidate["publishedFinalAnswerImageIndependentlyVerified"] = flag
+                    changed = {**catalog, "docs": [
+                        {**catalog["docs"][0], "confirmed": [candidate]}]}
+                    v.dump(p/filename, changed)
+                    self.assertFalse(v.official_notice_scope_certified(root, 114, q, proof))
+            # An unaffected QID (E12/E11) must still pass individual
+            # no-correction checks even when another named row lacks image QA.
+            other = {"questionId": "114-00-E-12", "paperCode": "00-E", "answer": "C"}
+            self.assertTrue(v.official_notice_scope_certified(
+                root, 114, other, {"confirmationPdfSha256": sha,
+                                  "finalAnswer": "C",
+                                  "noCorrectionForThisQuestion": True}))
+            v.dump(p/filename, catalog)
+            self.assertFalse(v.official_notice_scope_certified(
+                root, 114, q, {**proof, "officialFinalAnswerImageQaPassed": False}))
+
+    def test_wrong_year_path_pdf_document_and_flags_fail_closed(self):
+        for year in v.YEARS:
+            with self.subTest(year=year), tempfile.TemporaryDirectory() as td:
+                root = Path(td)
+                p, filename, status, catalog, sha, qid = self.fixture(root, year)
+                q = {"questionId": qid, "paperCode": "00-E", "answer": "C"}
+                proof = {"confirmationPdfSha256": sha, "finalAnswer": "C",
+                         "correctionForQuestionReviewed": True,
+                         "officialFinalAnswerImageQaPassed": True}
+                for mutation in (
+                    {"officialNoticeEvidencePath": f"sudu/data/processed/{115 if year == 114 else 114}/{filename}"},
+                    {"officialNoticeEvidencePath": "../secrets/forged.json"},
+                    {"officialNoticeEvidencePath": f"sudu/data/processed/{year}/QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261103.json/evil"},
+                    {"year": 113},
+                    {"source": v.official_source_index(115 if year == 114 else 114)},
+                ):
+                    with self.subTest(mutation=mutation):
+                        v.dump(p/"official-confirmation-status.json", {**status, **mutation})
+                        self.assertFalse(v.official_notice_scope_certified(root, year, q, proof))
+                v.dump(p/"official-confirmation-status.json", status)
+                for mutation in (
+                    {"sourceIndexUrl": v.official_source_index(115 if year == 114 else 114)},
+                    {v.NOTICE_SCHEMA[year]["allPagesReviewed"]: False},
+                    {"year": 113},
+                ):
+                    with self.subTest(catalog_mutation=mutation):
+                        v.dump(p/filename, {**catalog, **mutation})
+                        self.assertFalse(v.official_notice_scope_certified(root, year, q, proof))
+                v.dump(p/filename, catalog)
+                tampered = {**catalog, "docs": [{**catalog["docs"][0], "pdfSha256": "0"*64}]}
+                v.dump(p/filename, tampered)
+                self.assertFalse(v.official_notice_scope_certified(root, year, q, proof))
+                v.dump(p/filename, catalog)
+                duplicate = {**catalog, "docs": [
+                    {**catalog["docs"][0], "confirmed":
+                     catalog["docs"][0]["confirmed"]*2}]}
+                v.dump(p/filename, duplicate)
+                self.assertFalse(v.official_notice_scope_certified(root, year, q, proof))
+                (p/filename).unlink()
+                self.assertFalse(v.official_notice_scope_certified(root, year, q, proof))
 
 
 if __name__ == "__main__":

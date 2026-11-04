@@ -16,6 +16,28 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 YEARS = (114, 115)
+# The exam years have distinct historical notice schemas; paths/dates come from
+# the verified annual status file, never from a hardcoded 115-only filename.
+NOTICE_SCHEMA = {
+    114: {
+        "allPagesReviewed": "allPagesInFourDocumentsReviewed",
+        "candidateCompared": "comparedToExistingOfficialPdfTextCandidate",
+        "answerChange": "changeFromExistingOfficialPdfTextCandidate",
+        "requiresNamedFinalAnswerImageQa": True,
+    },
+    115: {
+        "allPagesReviewed": "allPagesInThreeDocumentsReviewed",
+        "candidateCompared": "comparedToOfficialPublishedTableCandidate",
+        "answerChange": "changeFromPublishedAnswer",
+        "requiresNamedFinalAnswerImageQa": False,
+    },
+}
+
+
+def official_source_index(year: int) -> str | None:
+    """Year-specific TCTE 4-year exam index, never a cross-year fallback."""
+    return f"https://web1.tcte.edu.tw/EXAM/{year}_4y/" if year in YEARS else None
+
 PAPERS = {"00-C": "國文", "00-E": "英文", "00-MB": "數學 B"}
 COUNT = {114: 205, 115: 205}
 LETTERS = set("ABCD")
@@ -402,81 +424,98 @@ def review_document(source: Path, year: int, rel: object, qid: str) -> tuple[dic
 
 
 def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dict) -> bool:
-    """Verify TCTE confirmation-document scope for ONE question, fail-closed.
+    """Fail-closed TCTE notice-scope check for one 114/115 question.
 
-    A correction PDF for any other question in the same paper must never be
-    called a 'no-objection paper'. The SHA-pinned reviewed official ledger
-    explicitly lists each question in confirmation PDFs. The public answer
-    table and the individual original-answer review remain separate gates.
+    The official notice ledger is selected from the matching year's own status
+    file, while the *known* historical document schemas remain separately
+    validated. A paper containing one challenged question is NEVER treated as
+    a paper-wide no-objection statement.
     """
-    if year != 115:
-        # Prior 114 approvals require a separate year-specific reviewed ledger.
+    rules = NOTICE_SCHEMA.get(year)
+    if not rules or not isinstance(q, dict) or not isinstance(proof, dict):
+        return False
+    paper = q.get("paperCode")
+    qid = q.get("questionId")
+    if (not isinstance(paper, str) or paper not in (*PAPERS, "09-1", "09-2")
+            or not isinstance(qid, str) or not QID.fullmatch(qid)
+            or not qid.startswith(f"{year}-{paper}-")):
         return False
     base = source / f"sudu/data/processed/{year}"
     status_path = base / "official-confirmation-status.json"
     if not status_path.is_file() or status_path.is_symlink():
         return False
     try:
-        status=read(status_path)
-        paper=q.get("paperCode")
-        if not isinstance(paper,str) or not paper:
+        status = read(status_path)
+        if (status.get("schemaVersion") != 1 or status.get("year") != year
+                or status.get("source") != official_source_index(year)):
             return False
-        record=(status.get("confirmations") or {}).get(paper) or {}
-        state=record.get("officialStatus")
-        if state=="no_objection_submitted":
+        record = (status.get("confirmations") or {}).get(paper) or {}
+        state = record.get("officialStatus")
+        if year == 114 and record.get("perQuestionOfficialNoticeScopeEvidenceComplete") is not True:
+            return False
+        if state == "no_objection_submitted":
             return bool(proof.get("noObjectionForPaper") is True
-                        and record.get("revisionDocumentContent")=="not_applicable"
+                        and record.get("revisionDocumentContent") == "not_applicable"
                         and proof.get("noCorrectionForThisQuestion") is not True
                         and proof.get("correctionForQuestionReviewed") is not True)
-        if state!="question_or_answer_confirmation_document_exists":
+        if state != "question_or_answer_confirmation_document_exists":
             return False
         if proof.get("noObjectionForPaper") is True:
-            # Prevent claiming 09-2, 00-C or 00-E have no challenged questions.
             return False
-        if record.get("revisionDocumentContent")!="SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED":
+        if record.get("revisionDocumentContent") != "SHA_BOUND_OFFICIAL_PDF_ALL_PAGES_REVIEWED":
             return False
-        expected_sha=record.get("revisionDocumentSha256")
+        expected_sha = record.get("revisionDocumentSha256")
         if (not SHA.fullmatch(str(expected_sha))
-                or proof.get("confirmationPdfSha256")!=expected_sha):
+                or proof.get("confirmationPdfSha256") != expected_sha):
             return False
-        ledger_relative="sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json"
-        if status.get("officialNoticeEvidencePath")!=ledger_relative:
+        # Only a same-year, flat, dated official evidence filename is allowed.
+        # The historical 114/115 document dates are intentionally not hardcoded.
+        ledger_relative = status.get("officialNoticeEvidencePath")
+        pattern = (rf"sudu/data/processed/{year}/"
+                   rf"QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_[0-9]{{8}}\.json")
+        if not isinstance(ledger_relative, str) or not re.fullmatch(pattern, ledger_relative):
             return False
-        ledger_path=source/ledger_relative
-        if not ledger_path.is_file() or ledger_path.is_symlink():
+        ledger_path = source / ledger_relative
+        if (not ledger_path.is_file() or ledger_path.is_symlink()
+                or not ledger_path.resolve().is_relative_to(source.resolve())):
             return False
-        catalog=read(ledger_path)
-        if not (catalog.get("schemaVersion")==1
-                and catalog.get("year")==year
-                and catalog.get("allPagesInThreeDocumentsReviewed") is True
-                and catalog.get("sourceIndexUrl")=="https://web1.tcte.edu.tw/EXAM/115_4y/"):
+        catalog = read(ledger_path)
+        if (catalog.get("schemaVersion") != 1
+                or catalog.get("year") != year
+                or catalog.get("sourceIndexUrl") != official_source_index(year)
+                or catalog.get(rules["allPagesReviewed"]) is not True):
             return False
-        rows=[x for x in catalog.get("docs",[]) if x.get("paperCode")==paper]
-        if len(rows)!=1:
+        rows = [entry for entry in catalog.get("docs", [])
+                if isinstance(entry, dict) and entry.get("paperCode") == paper]
+        if len(rows) != 1:
             return False
-        doc=rows[0]
-        if not (doc.get("pdfSha256")==expected_sha
-                and doc.get("noticeScopeOnly") is True
-                and doc.get("pageCount")==record.get("revisionDocumentPages")
-                and isinstance(doc.get("confirmed"),list)
-                and len(doc["confirmed"])>=1):
+        doc = rows[0]
+        if (doc.get("pdfSha256") != expected_sha
+                or doc.get("noticeScopeOnly") is not True
+                or doc.get("pageCount") != record.get("revisionDocumentPages")
+                or not isinstance(doc.get("confirmed"), list)
+                or not doc["confirmed"]):
             return False
-        by_id={}
+        by_id = {}
         for item in doc["confirmed"]:
-            qid=item.get("questionId")
-            if not isinstance(qid,str) or not QID.fullmatch(qid) or qid in by_id or not qid.startswith(f"{year}-{paper}-"):
+            name = item.get("questionId") if isinstance(item, dict) else None
+            if (not isinstance(name, str) or not QID.fullmatch(name)
+                    or not name.startswith(f"{year}-{paper}-") or name in by_id):
                 return False
-            by_id[qid]=item
-        current=q.get("questionId")
-        if current not in by_id:
-            return proof.get("noCorrectionForThisQuestion") is True and proof.get("correctionForQuestionReviewed") is not True
-        row=by_id[current]
-        # A named correction is NOT omitted. Its answer, PDF and scope must all match.
+            by_id[name] = item
+        if qid not in by_id:
+            return (proof.get("noCorrectionForThisQuestion") is True
+                    and proof.get("correctionForQuestionReviewed") is not True)
+        row = by_id[qid]
         return bool(proof.get("correctionForQuestionReviewed") is True
                     and proof.get("noCorrectionForThisQuestion") is not True
-                    and row.get("comparedToOfficialPublishedTableCandidate")=="MATCHED"
-                    and row.get("changeFromPublishedAnswer")=="NONE_OBSERVED"
-                    and row.get("officialConfirmedAnswer")==proof.get("finalAnswer")==q.get("answer"))
+                    and row.get(rules["candidateCompared"]) == "MATCHED"
+                    and row.get(rules["answerChange"]) == "NONE_OBSERVED"
+                    and (not rules["requiresNamedFinalAnswerImageQa"]
+                         or (proof.get("officialFinalAnswerImageQaPassed") is True
+                             and row.get("publishedFinalAnswerImageIndependentlyVerified") is True))
+                    and row.get("officialConfirmedAnswer") ==
+                        proof.get("finalAnswer") == q.get("answer"))
     except (OSError, ValueError, TypeError, KeyError, AttributeError):
         return False
 
@@ -537,7 +576,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         off.get("officialPdfSha256") == pdf_sha(q,"answer"),
         off.get("finalAnswer") == q.get("answer"),
         off.get("correctionNoticeReviewed") is True,
-        off.get("officialPage") == "https://web1.tcte.edu.tw/EXAM/115_4y/",
+        off.get("officialPage") == official_source_index(year),
         official_notice_scope_certified(source,year,q,off),
         blind.get("questionRevision") == revision,
         blind.get("webpSha256") == manifest["sha256"],
