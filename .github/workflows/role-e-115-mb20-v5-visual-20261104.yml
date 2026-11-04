@@ -5,6 +5,7 @@ on:
       - qa/role-e-115-mb20-v5-direct-visual-20261104
     paths:
       - tests/role_e_115_mb20_original_pixel_verify_20261104.py
+      - docs/ROLE_E_115_MB20_DIRECT_PIXEL_QA_20261104.md
       - .github/workflows/role-e-115-mb20-v5-visual-20261104.yml
   workflow_dispatch:
 
