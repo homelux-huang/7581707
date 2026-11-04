@@ -242,6 +242,9 @@ class YearRoutedOfficialNoticeSafetyTests(unittest.TestCase):
                      "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
                      "comparedToOfficialPublishedTableCandidate": "MATCHED",
                      "changeFromPublishedAnswer": "NONE_OBSERVED"}
+        if year == 114:
+            # Separate archived named-item original answer-image QA is required.
+            candidate["publishedFinalAnswerImageIndependentlyVerified"] = True
         filename = f"QA_{year}_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261103.json"
         rel = f"sudu/data/processed/{year}/{filename}"
         status = {"schemaVersion": 1, "year": year,
@@ -307,6 +310,44 @@ class YearRoutedOfficialNoticeSafetyTests(unittest.TestCase):
                 if year == 114:
                     self.assertFalse(v.official_notice_scope_certified(
                         root, year, named, {**named_proof, "officialFinalAnswerImageQaPassed": False}))
+
+    def test_114_named_answer_requires_independent_image_ledger_confirmation(self):
+        """A named 114 correction cannot pass using a self-asserted proof flag."""
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            p, filename, _status, catalog, sha, qid = self.fixture(root, 114)
+            named = {"questionId": qid, "paperCode": "00-E", "answer": "C"}
+            proof = {
+                "confirmationPdfSha256": sha,
+                "finalAnswer": "C",
+                "correctionForQuestionReviewed": True,
+                "officialFinalAnswerImageQaPassed": True,
+            }
+            self.assertTrue(v.official_notice_scope_certified(root, 114, named, proof))
+            for kind in ("false", "missing", "string-true"):
+                with self.subTest(kind=kind):
+                    row = dict(catalog["docs"][0]["confirmed"][0])
+                    if kind == "missing":
+                        row.pop("publishedFinalAnswerImageIndependentlyVerified", None)
+                    elif kind == "string-true":
+                        row["publishedFinalAnswerImageIndependentlyVerified"] = "true"
+                    else:
+                        row["publishedFinalAnswerImageIndependentlyVerified"] = False
+                    changed = dict(catalog)
+                    changed["docs"] = [{**catalog["docs"][0], "confirmed": [row]}]
+                    v.dump(p / filename, changed)
+                    # Source-side official-answer evidence may not be promoted
+                    # by a writer's boolean when the named ledger says no QA.
+                    self.assertFalse(v.official_notice_scope_certified(
+                        root, 114, named, proof))
+            v.dump(p / filename, catalog)
+            # E11/E12 are UNNAMED in the original E26-only correction,
+            # therefore keep their truthful individual no-correction path.
+            unaffected = {"questionId": "114-00-E-11",
+                          "paperCode": "00-E", "answer": "A"}
+            self.assertTrue(v.official_notice_scope_certified(
+                root, 114, unaffected,
+                {"confirmationPdfSha256": sha, "noCorrectionForThisQuestion": True}))
 
     def test_wrong_year_path_pdf_document_and_flags_fail_closed(self):
         for year in v.YEARS:
