@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-38",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "關於利潤發生的原因，下列敘述何者正確？",
+  "options": [
+    "根據風險與不確定說，勞動保險能保障利潤",
+    "根據創新說，利潤是企業家從事創新活動的報酬",
+    "根據獨占說，利潤可經由資本的邊際生產力決定",
+    "根據剝削說，市場進入障礙有助於確保超額利潤"
+  ],
+  "answer": "B",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "4627bda34bf25464d1b6c423a6b2f26ef09e47d9a48e86c86b5dcf1acdc99e4f",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-38.webp",
+    "webpSha256": "de1d7de92fc3fc5a901ef4e7de1e2d1a3c9e0b5e4d3dbb5de30728ec09310598",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "利潤的創新說、風險說、獨占說與剝削說",
+    "teacherSummary": "創新說把利潤視為企業家推出新產品、新方法或新市場等創新活動的報酬，故B。其他敘述混淆了保險、資本邊際生產力、獨占進入障礙與剝削說的主張。",
+    "elementarySummary": "有人想到新的做法，做出大家想買的新東西，可能因為這份新點子賺到利潤；不是只要買保險就一定賺錢。",
+    "concept": "利潤理論需分辨：創新說重企業家創新；風險與不確定說重承擔不確定性；獨占說重市場力量；剝削說談生產成果分配。",
+    "memory": "創新賺利潤→B；進入障礙是獨占，不是剝削說的定義。",
+    "highlights": [
+      "創新說",
+      "創新活動的報酬",
+      "風險與不確定說"
+    ],
+    "solvingSteps": [
+      "抓題目問的是各種『利潤來源理論』之正確配對。",
+      "比對B：企業家創新得到報酬，正是創新說的核心。",
+      "A把可保險風險與必然有利潤混為一談；保險不能保證利潤。",
+      "C描述資本邊際生產力報酬，與獨占說的市場力量不同。",
+      "D描述進入障礙可支持獨占利潤，誤標為剝削說；故選B。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A的『勞動保險能保障利潤』不成立：保險通常補償特定損失，不會保證企業有盈餘；不確定利潤也不能完全靠保險固定。",
+        "elementary": "保險是遇到某些損失時幫忙，不是保證一定賺錢。",
+        "reason": "A的『勞動保險能保障利潤』不成立：保險通常補償特定損失，不會保證企業有盈餘；不確定利潤也不能完全靠保險固定。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B把利潤視為企業家從事產品、技術或經營方式創新的回報，符合創新說。",
+        "elementary": "想出新點子並成功賣出去，得到的回報可以叫創新利潤。",
+        "reason": "B把利潤視為企業家從事產品、技術或經營方式創新的回報，符合創新說。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "C的資本邊際生產力是生產要素報酬概念；獨占說著重限制競爭與訂價力量，兩者不能直接等同。",
+        "elementary": "機器多做一點產品，跟市場只有少數賣家，是兩回事。",
+        "reason": "C的資本邊際生產力是生產要素報酬概念；獨占說著重限制競爭與訂價力量，兩者不能直接等同。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D所說的市場進入障礙能維持超額利潤，是獨占說相關機制，不是剝削說關注的勞動與剩餘分配。",
+        "elementary": "擋住新店進來屬競爭太少的問題，不能叫剝削說。",
+        "reason": "D所說的市場進入障礙能維持超額利潤，是獨占說相關機制，不是剝削說關注的勞動與剩餘分配。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 候選來源：尚未完成 G1/G2/G3 官方原圖與最終答案獨立驗證；不得作正式答案使用。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_AND_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_AND_NOTICE_PENDING",
+      "E_DISTINCT_AI_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "7e16a3b567fd8f528d0be94b61e7555418d98f4073105342faccb7c7000e1ccf"
+}
