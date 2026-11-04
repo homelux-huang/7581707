@@ -1,0 +1,45 @@
+name: ROLE E 115 MB20 original v5 binary visual evidence (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-e-115-mb20-v5-direct-visual-20261104
+    paths:
+      - tests/role_e_115_mb20_original_pixel_verify_20261104.py
+      - .github/workflows/role-e-115-mb20-v5-visual-20261104.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: role-e-mb20-source-v5-direct-visual
+  cancel-in-progress: true
+
+jobs:
+  pin_original_source_and_export_pixel_qa:
+    name: Exact WebP binary SHA and original page image visual exhibit (no release)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Checkout exact Role A MB20 source-stage branch
+        uses: actions/checkout@v4
+      - name: Checkout immutable older defect source for comparison
+        uses: actions/checkout@v4
+        with:
+          ref: fbd7756b995e3d27dc31a99ecc54fe66af4d82c6
+          path: _old_source
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install WebP image decoder
+        run: python -m pip install -q pillow
+      - name: Validate all exact original binary hashes and export image exhibits
+        run: python tests/role_e_115_mb20_original_pixel_verify_20261104.py
+      - name: Retain verified original exhibits for a different E reviewer
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-e-115-mb20-v5-original-pixel-exhibits-${{ github.run_id }}
+          path: _role_e_mb20_pixel_qa/
+          if-no-files-found: error
+          retention-days: 14
