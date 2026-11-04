@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-23",
+  "subject": "數學 B",
+  "questionNumber": 23,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 8,
+  "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
+  "sourceWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980555,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表 ( 二 )。已知有兩名旅客預計結伴報名同\n  一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求x？\n\n               原價            優惠\n\n      行程Ⅰ 每位收費x 元      兩人同行，其中一人減免3000 元\n\n  表 ( 二 ) 行程Ⅱ 每位收費 ( x + 2000 ) 元  兩人同行，其中一人打八折",
+    "options": [
+      "32000",
+      "33000",
+      "34000",
+      "35000"
+    ]
+  },
+  "correctedText": {
+    "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
+    "options": [
+      "32000",
+      "33000",
+      "34000",
+      "35000"
+    ],
+    "figureRequired": true,
+    "figureDescription": "表（二）：兩欄「原價、優惠」，兩列「行程Ⅰ、行程Ⅱ」。須保留正式原始 WebP 的表格版面。",
+    "table": {
+      "heading": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    }
+  },
+  "knownOfficialAnswer": "B",
+  "postAnswerMathCheck": "2x－3000＝(x＋2000)＋0.8(x＋2000)；x＝33000 元，B",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}
