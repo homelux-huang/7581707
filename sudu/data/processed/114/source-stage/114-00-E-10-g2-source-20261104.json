@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-114-E10-E20-CROSSPAGE-OPTION-D-G2-STAGE-20261104-07",
+  "questionId": "114-00-E-10",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6624219621",
+  "isolatedBaseCommit": "cd4f644b2c896fa8f1a07b404e5686357e8710a4",
+  "originalSourcePR21Commit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "original": {
+    "paper": "114-00-E",
+    "originalQuestionNumber": 10,
+    "page": 2,
+    "originalQuestionPdfSha256PreviouslyRecorded": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "archivedOfficialPageWebp": "sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp",
+    "archivedOfficialPageGitBlob": "82a46f35df5f2a956a1499e3582a91c79dec1ce8",
+    "archivedOfficialPageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002",
+    "originalSingleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-10.webp",
+    "originalSingleGitBlob": "1117e9450b91f53905b03a007f378a5c6b67f1c4",
+    "originalSingleSha256": "b0a89c379254466524ff72308a751fe63ade9e85d037f8a46dc03a6727287275",
+    "originalCrop": [
+      90,
+      1401,
+      1310,
+      1491
+    ],
+    "originalPixelsPreserved": true,
+    "directSourceVisualReview": "AI Assistant directly compared original cropped image and archived page; actual question + A-D only, no page footer or adjacent question.",
+    "originalHistoricalG1QaBlob": "c1154562fa30cb4b2720a6000a970cf09ef460ff",
+    "originalG1HistoricalLabel": "PASS"
+  },
+  "raw": {
+    "frozenCanonicalSourceBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "frozenLegacyYear": "sudu/data/years/114.json",
+    "question": "My sister decided to abandon her old habits and start a fresh chapter in her life.",
+    "options": [
+      "bring about",
+      "carry on",
+      "give up",
+      "run into\n\n\n\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅡ. 對話題：第11 至20 題，請依對話內容選出一個最適合的答案，使其成為有意義\n     的對話。"
+    ],
+    "oldD": "run into\n\n\n\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅡ. 對話題：第11 至20 題，請依對話內容選出一個最適合的答案，使其成為有意義\n     的對話。",
+    "oldQuestionVerified": false,
+    "oldAnswerVerified": false
+  },
+  "sourceCorrection": {
+    "correctedQuestion": "My sister decided to abandon her old habits and start a fresh chapter in her life.",
+    "correctedOptions": [
+      "bring about",
+      "carry on",
+      "give up",
+      "run into"
+    ],
+    "correctedD": "run into",
+    "rawDToCleanDUnifiedDiff": "--- original contaminated D\n+++ original-pixel-corrected D\n-run into\n\n\n\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅡ. 對話題：第11 至20 題，請依對話內容選出一個最適合的答案，使其成為有意義\n     的對話。\n+run into\n",
+    "assistantG2Candidate": true,
+    "newOfficialCanonicalRevision": "PENDING_MASTER_ACCEPTED_SOURCE_SHA",
+    "oldBAuthorSourceRevision": "b85789e91d84539f09539e7e33c56f43a11efc622c81bd3ec1b297b5742c139c",
+    "oldBAuthorComposedTeachingDigest": "2818bfc1d82aa631712a5a92bee51949127d3532af86f5787abefacde72e4be6",
+    "roleBOldAuthorFileGitBlob": "3956f21c15d42f58daddd6165833c3c98683d652",
+    "originalTextAndNoNewOCR": true,
+    "imageTranscriptionBasedOnRealOriginalRatherThanNewAIImage": true
+  },
+  "official": {
+    "publishedOriginalPrintedAnswer": "C",
+    "archivedAnswerWebp": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+    "archivedAnswerImageGitBlob": "5f2920313607af4e756095cd3d6098c8a3ab7440",
+    "archivedAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "publishedAnswerPdfSha256PreviouslyRecorded": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "originalHistoricAnswerQaGitBlob": "0ae35ec3baac7ee4709ea652103db5666fee45a9",
+    "confirmationPdfSha256PreviouslyRecorded": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+    "historicalNoticeLedgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "englishCorrectionNamedQuestionIds": [
+      "114-00-E-26"
+    ],
+    "thisQuestionIsNamedCorrection": false,
+    "originalAnswerNotChanged": true,
+    "pdfDownloadedOrRehashedThisTask": false,
+    "originalHistoricalAnswerVerified": false,
+    "formalNewG3FlagSet": false
+  },
+  "downstream": {
+    "oldBOriginalSourceRevisionInvalidAfterAcceptingNewG2": true,
+    "BNeedsNewCanonicalSourceRevisionAndDigest": true,
+    "differentEReviewPending": true,
+    "DRealEmittedEightSizesTwoThemesPending": true,
+    "masterCanonical205JsonSqlitePending": "PENDING_114_C27_SHARED_LEASE",
+    "ready": false,
+    "approved": false,
+    "live": false,
+    "falseWebpRecropClaimed": false
+  },
+  "status": "ROLE_A_SOURCE_G1_G2_CROSSPAGE_D_ONLY_AND_OLD_G3_EVIDENCE_STAGE_NO_RELEASE"
+}
