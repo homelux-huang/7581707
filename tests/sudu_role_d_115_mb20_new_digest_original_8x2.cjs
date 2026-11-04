@@ -62,7 +62,7 @@ const source=[...IDS].map(id=>{
  assert.equal(t.questionId,id);assert.equal(t.year,115);assert.equal(t.sourceCommit,AHEAD);
  assert.equal(t.studentReleaseApproved,false);assert.equal(t.deploy,false);
  assert.equal(t.review.externalIndependentReview,'PENDING','must not fabricate review receipt');
- assert.equal(t.sourceRevision,expected.revision,'C authored source revision not latest A original MB20');
+ assert.equal(t.sourceTextRevisionWithoutTable,expected.revision,'C authored original stem source revision differs from A official MB20');
  assert.equal(t.imageSha256,expected.image);
  assert.equal(t.teachingCanonicalSha256,expected.teaching);
  assert.equal(canonical(t.teaching),expected.teaching,'actual author teaching content digest differs');
