@@ -1,0 +1,44 @@
+name: Role A 115 MathB23 exact original 2x3 travel-table and official B (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-mb23-original-table-stage-20261104
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-a-115-mb23-original-table-stage-20261104
+  cancel-in-progress: false
+jobs:
+  original_table_2x3:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb23-original-table-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Full protected-main ancestry source-only checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Read-only frozen original source PR129 for 205-row parity
+        uses: actions/checkout@v4
+        with:
+          ref: cd6fea6682554e4b0f25d41dca79a1532de92482
+          path: frozen-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Strict original 2x3 source table, official answer, hash and negative release tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb23_original_table_stage_20261104.py
+          python -m unittest discover -s tests -p test_role_a_115_mb23_original_table_stage_20261104.py -v
+      - name: Remove read-only prior SHA snapshot and ensure clean original source
+        run: |
+          set -euo pipefail
+          rm -rf frozen-source
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+          echo "G1/G2/G3 original source candidate only: canonical 205/Role E/approved release not modified."
