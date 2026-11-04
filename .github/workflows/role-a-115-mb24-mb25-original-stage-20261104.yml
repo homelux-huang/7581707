@@ -1,0 +1,30 @@
+name: ROLE A 115 MB24 MB25 original WebP G2 official C C source-only (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb24-mb25-source-stage-20261104]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_original_stage:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb24-mb25-source-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify original image byte SHA, G2 raw/corrected, official answer, numeric and negative gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb24_mb25_original_stage_20261104.py
+          python -m unittest discover -s tests -p test_role_a_115_mb24_mb25_original_stage_20261104.py -v
+      - name: No mutation, no student release
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
