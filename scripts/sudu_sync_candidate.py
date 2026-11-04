@@ -2,7 +2,7 @@
 
 Never pushes main, forces a ref, merges, or deploys. A bot-created PR does not
 trigger ordinary PR workflows; MASTER must independently trigger/read real CI.
-Artifacts survive permission/API failures. Such failures remain nonzero.
+Artifacts survive permission/API failures. Explicit manual mode retains an exact\nbranch+receipt and emits a clear handoff warning without pretending it is a PR.
 """
 import argparse
 import hashlib
@@ -26,7 +26,9 @@ def branch_name(base, tree):
         raise ValueError('Exact Git OIDs required')
     return 'sync/qa-approved-' + base + '-' + tree
 
-def publish(artifact):
+def publish(artifact, pr_mode='api'):
+    if pr_mode not in ('api', 'manual'):
+        raise ValueError('Invalid PR creation mode')
     artifact.mkdir(parents=True, exist_ok=True)
     base = run('git', 'rev-parse', 'HEAD')
     paths = subprocess.check_output(['git', 'diff', '--cached', '--no-renames', '--name-only', '-z'], text=True).rstrip('\0').split('\0')
@@ -79,6 +81,20 @@ def publish(artifact):
         if pr['head']['sha'] != commit or pr['base']['ref'] != 'main':
             raise ValueError('Existing PR revision mismatch')
     else:
+        if pr_mode == 'manual':
+            # The repo disallows GITHUB_TOKEN POST /pulls. Do not retry with a
+            # stronger token, silently create a release, or claim a Draft PR.
+            receipt.update(status='MANUAL_PR_HANDOFF_REQUIRED',
+                           needsAuthorizedPrCreation=True,
+                           handoffUrl='https://github.com/'+REPO+'/pull/new/'+branch)
+            save()
+            print('::warning title=Authorized PR handoff required::'
+                  'SHA-pinned candidate branch and patch retained; '
+                  'GitHub Actions token cannot create a PR. '
+                  'READY=false, DEPLOYED=false. '
+                  'Use an authorized connector to create/review a Draft PR.')
+            print(json.dumps(receipt))
+            return
         pr = json.loads(run('gh', 'api', '-X', 'POST', 'repos/'+REPO+'/pulls',
                             '-f', 'head='+branch, '-f', 'base=main',
                             '-F', 'draft=true',
@@ -96,4 +112,6 @@ def publish(artifact):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--artifact-dir', default='_sync_candidate')
-    publish(Path(parser.parse_args().artifact_dir))
+    parser.add_argument('--pr-mode', choices=('api', 'manual'), default='api')
+    args = parser.parse_args()
+    publish(Path(args.artifact_dir), pr_mode=args.pr_mode)
