@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-44",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "美國洛杉磯由於氣候乾燥經常發生森林野火，當地居民通常會為自己的房子投保野火防\n  治的相關保險，其可能發生之情況為下列哪幾項？\n  ① 居民投保野火防治險後會更重視房子的防火措施\n  ② 保險公司可能為資訊不對稱狀況中的資訊劣勢方\n  ③ 保險公司可經由設定保險自付額比率降低道德風險發生的機會\n  ④ 資訊不對稱的狀況可能迫使資訊劣勢方在契約成立之前做出逆選擇",
+  "options": [
+    "僅 ①②",
+    "僅 ③④",
+    "僅 ①②③",
+    "僅 ②③④"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "4b93d33b13a876dcd3598a3383e5ac832f1a03e061038ff4d1c3a00e016e6862",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-44.webp",
+    "webpSha256": "2668524a18296338c01618071c56eb1e9657cad17d9fee4f0b8446575ae42152",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "保險市場資訊不對稱：道德風險、逆選擇與自負額",
+    "teacherSummary": "保險公司未必知道每戶防火風險，可能是資訊劣勢方（②）；設自付額使保戶仍承擔部分損失，有助降低投保後的道德風險（③）；簽約前高風險者更傾向投保，資訊劣勢方可能遭遇逆選擇（④）。①『投保後更重視』並非典型道德風險推論，故候選D。",
+    "elementarySummary": "保險公司可能不知道誰家最容易失火。有人買保險後反而沒那麼小心，所以保險公司規定出事也要自己付一部分；而原本風險高的人也可能更想買保險。",
+    "concept": "道德風險主要在締約後誘因變動；逆選擇主要在締約前因資訊不對稱使高風險投保者更集中；自負額可降低道德風險但不能保證消失。",
+    "memory": "投保後→道德風險；簽約前→逆選擇；自付額→減少道德風險；②③④為候選D。",
+    "highlights": [
+      "資訊劣勢方",
+      "保險自付額比率",
+      "道德風險",
+      "逆選擇"
+    ],
+    "solvingSteps": [
+      "把每句分成投保前與投保後的行為或資訊。",
+      "①說投保後一定更重視防火，不是資訊不對稱下典型道德風險的方向，故不可納入。",
+      "②保險公司未必知道個別屋主的實際風險程度，可能是資訊劣勢方。",
+      "③自負額讓屋主仍需分攤損失，通常可減少投保後不注意防火的誘因。",
+      "④逆選擇發生在簽約前，掌握較少資訊的保險公司可能承擔偏高風險的投保組合。",
+      "②③④合在D；此為來源候選答案，仍須A核原圖與最終官答。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A僅有①②，含不成立的①：投保後未必更重視防火，若責任轉移反可能減少努力，且漏③④。",
+        "elementary": "A選了買保險就一定更小心，這沒有保證。",
+        "reason": "A僅有①②，含不成立的①：投保後未必更重視防火，若責任轉移反可能減少努力，且漏③④。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B僅③④兩項的方向正確但漏②：保險公司確實可能不清楚屋主的個別風險。",
+        "elementary": "B忘了保險公司有時不知道哪棟房子特別危險。",
+        "reason": "B僅③④兩項的方向正確但漏②：保險公司確實可能不清楚屋主的個別風險。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C列①②③，錯含①且漏了描述簽約前資訊問題的④逆選擇。",
+        "elementary": "C多放了一個沒保證的①，又漏掉④。",
+        "reason": "C列①②③，錯含①且漏了描述簽約前資訊問題的④逆選擇。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D列②③④：保險公司可能資訊較少、自付額降低道德風險，簽約前存在逆選擇；排除①。",
+        "elementary": "D三項都講得通，也不假設保險會讓人一定更小心。",
+        "reason": "D列②③④：保險公司可能資訊較少、自付額降低道德風險，簽約前存在逆選擇；排除①。",
+        "isCorrect": true
+      }
+    },
+    "source": "ROLE A 114 題庫候選，G1 單題原圖目視、G2 逐字OCR、G3 官答更正公告均待核；字母不屬正式核准答案。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_OCR_TEXT_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_REVIEW_PENDING",
+      "D_YEAR114_REAL_BROWSER_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "9d9ac3faab5cccd08a83f85176301950ed3154e8ba9aed74c65a0d44c7b86c88"
+}
