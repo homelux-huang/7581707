@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-115-E42-CROSSPAGE-G2-SOURCE-20261104-08",
+  "questionId": "115-00-E-42",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6624309944",
+  "originalSourceBaseCommit": "8febb199da16b560aa7b521ec0886847d66ed9ac",
+  "status": "ROLE_A_AI_ASSISTANT_ORIGINAL_SOURCE_G2_D_ONLY_REPAIR_CANDIDATE_NO_RELEASE",
+  "source": {
+    "originalPaperCode": "00-E",
+    "year": 115,
+    "officialPaperPage": 10,
+    "originalQuestionPdfSha256PreviouslyRecorded": "c13e298c3b05b890c410deac4f8f694905f19fcd3a63bb4fcc0662ee6cb2768a",
+    "originalPageWebp": "sudu/data/original/115/00-E/p010-c13e298c3b-v2-w1400-q66.webp",
+    "originalPageGitBlob": "078dfb51a6b32d652926d4495967791d938ecb37",
+    "originalPageSha256": "6c86c1fa3edd0eef061ac08c1f4155fa11fc442452efb603061badcc0358388c",
+    "originalSingleWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-42.webp",
+    "originalSingleGitBlob": "ee72360d9aad58fade391fa260269b0222efcc0c",
+    "originalSingleSha256": "a7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0",
+    "originalSingleOriginalPixelCrop": [
+      90,
+      1436,
+      1310,
+      1623
+    ],
+    "sharedMaterialId": "115-00-E-SHARED-39-42",
+    "originalSharedWebp": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+    "originalSharedGitBlob": "4aaac02b7ed9390b8ff7c8a4c4272e74996bd595",
+    "originalSharedSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+    "oldSharedSourceG1Revision": "c94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2",
+    "oldSourceLinkRevision": "2b161f35ebccef5eeee3caff4a3688ccb5e1eefd881305993c9db3af5b24fcbe",
+    "sourceG1ReceiptPath": "sudu/data/processed/115/review-evidence/115-00-E-42-original-shared-G1-20261103.json",
+    "sourceG1ReceiptGitBlob": "da429905c376db05432d09ae556f478f32a2dc6e",
+    "sourceReviewer": "GPT-6 AI Assistant Source Visual Review; NOT human teacher or distinct E content review",
+    "noImagesRecroppedOrReOcr": true
+  },
+  "legacy": {
+    "questionBankPath": "sudu/data/years/115.json",
+    "questionBankGitBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+    "oldQuestion": "According to the passage, which of the following is true?",
+    "oldOptions": [
+      "Ten Taiwanese companies are providing electronic manufacturing services.",
+      "Taiwan was the world’s largest market for AI-related products in the 1990s.",
+      "AI servers are selling better than smartphones for electronics manufacturers.",
+      "Contract manufacturers in the early days designed new products for customers.\n\n\n\n\n\n-10-\n\n115 年四技                                                     第11 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ題6 分；第 Ⅲ 題6 分；共16 分 )\n\nⅠ. 填充\n\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字首)，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n    ▲ 請勿抄題，每格限填一字，超過一字者視為錯誤，不予計分。"
+    ],
+    "oldAnswerNumeric": 2,
+    "oldAnswerVerified": false,
+    "oldQuestionVerified": false,
+    "oldRawQuestionAndOptionsText": "According to the passage, which of the following is true?\n(A) Ten Taiwanese companies are providing electronic manufacturing services.\n(B) Taiwan was the world’s largest market for AI-related products in the 1990s.\n(C) AI servers are selling better than smartphones for electronics manufacturers.\n(D) Contract manufacturers in the early days designed new products for customers.\n\n\n\n\n\n-10-\n\n115 年四技                                                     第11 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ題6 分；第 Ⅲ 題6 分；共16 分 )\n\nⅠ. 填充\n\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字首)，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n    ▲ 請勿抄題，每格限填一字，超過一字者視為錯誤，不予計分。",
+    "oldRawQuestionAndOptionsTextSha256": "533d7715ca95d7054d3551f7acd9e14a2a4b5c106a0b218b1515979e27df1845",
+    "oldOptionDIsContaminatedByNonMultipleChoicePage11": true,
+    "otherSourceG2Blockers": [
+      "Original 39–42 shared reading OCR in old Q38 option D is not corrected here.",
+      "Formal canonical JSON/SQLite 205-row G2 admission not part of this source-only candidate."
+    ]
+  },
+  "g2": {
+    "correctedQuestion": "According to the passage, which of the following is true?",
+    "correctedOptions": [
+      "Ten Taiwanese companies are providing electronic manufacturing services.",
+      "Taiwan was the world’s largest market for AI-related products in the 1990s.",
+      "AI servers are selling better than smartphones for electronics manufacturers.",
+      "Contract manufacturers in the early days designed new products for customers."
+    ],
+    "originalCleanOptionD": "Contract manufacturers in the early days designed new products for customers.",
+    "rawOptionDBeforeAfterDiff": "--- 115-00-E-42 D raw OCR\n+++ 115-00-E-42 D original-pixel source corrected\n-Contract manufacturers in the early days designed new products for customers.\n\n\n\n\n\n-10-\n\n115 年四技                                                     第11 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ題6 分；第 Ⅲ 題6 分；共16 分 )\n\nⅠ. 填充\n\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字首)，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n    ▲ 請勿抄題，每格限填一字，超過一字者視為錯誤，不予計分。\n+Contract manufacturers in the early days designed new products for customers.\n",
+    "correctedCanonicalQuestionAndOptionsText": "According to the passage, which of the following is true?\n(A) Ten Taiwanese companies are providing electronic manufacturing services.\n(B) Taiwan was the world’s largest market for AI-related products in the 1990s.\n(C) AI servers are selling better than smartphones for electronics manufacturers.\n(D) Contract manufacturers in the early days designed new products for customers.",
+    "correctedCanonicalTextSha256": "a5d8ce51098937eddc4a913800c6a5529d457f616789b4bab9524f14c6974530",
+    "sourceRevisionSeed": "ROLE_A_115_E42_D_ONLY_G2_V1\na5d8ce51098937eddc4a913800c6a5529d457f616789b4bab9524f14c6974530\na7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0\n5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b\nc94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2",
+    "sourceRevisionSha256": "4d91617387f22fd3487c86c13115c7393ca3df5def3104af7bd7c4201e8dc57d",
+    "sourceRevisionMethod": "SHA256(UTF8('ROLE_A_115_E42_D_ONLY_G2_V1\\n'+correctedCanonicalTextSha256+'\\n'+originalSingleWebpSha256+'\\n'+originalSharedWebpSha256+'\\n'+previousOriginalSharedG1Revision))",
+    "newTranscriptionModelUsed": false,
+    "reviewMethod": "Role A direct original individual and shared WebP visual inspection; Role C prior clean question/options used as cross-check, NOT proof of independent G2",
+    "authorSourceG2CandidateRevision": "a67016fce7608d04ace7cc8c6b4be6e3fb9c3f7a8d0a3ff7de464831f0371cee",
+    "authorSourceG2CandidateRevisionIsFormalApproval": false,
+    "sourceG2CurrentStatus": "AI_ASSISTANT_DIRECT_SOURCE_VISUAL_REPAIR_CANDIDATE_UNADMITTED_CANONICAL"
+  },
+  "officialAnswer": {
+    "originalAnnouncedAnswer": "C",
+    "originalOfficialAnswerImage": "sudu/data/original/115/00-E-answers/p001-185b1c8503-v2-w1400-q66.webp",
+    "officialOriginalAnswerGitBlob": "b8da0d2f8024eb8da2bdb2b096f97d59c0a6609d",
+    "originalAnswerPdfSha256PreviouslyRecorded": "185b1c8503898290862cc4ba87d220d9969c882e26d52c4939b72db1d3b1af04",
+    "noticeLedgerPath": "sudu/data/processed/115/QA_115_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261023.json",
+    "noticeLedgerGitBlob": "1a21701647627bc1dcaa39a835bf90a4459c9424",
+    "noticePdfSha256PreviouslyRecorded": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+    "officialNoticeNamedQuestionIds": [
+      "115-00-E-34"
+    ],
+    "q42IsNamedCorrection": false,
+    "publishedAnswerCCurrentlyUnaffected": true,
+    "noOfficialPdfDownloadedOrRehashedThisTask": true,
+    "formalCanonicalAnswerVerifiedChanged": false
+  },
+  "downstream": {
+    "canonical205JSONModified": false,
+    "sqlite205Modified": false,
+    "sharedManifestModified": false,
+    "roleCAuthorPR147FileModified": false,
+    "roleCOriginalTeachingDigest": "1b102d8559a4be0d68c3ffaaca4488f3409bbd96ddf7c09f95fdfee4634f65ad",
+    "roleCRebindRequiredForAcceptedG2": true,
+    "fullShared39To42SourceG2": "PENDING_SEPARATE_TEXT_QA_FOR_Q38_LINK",
+    "distinctRoleEContentQA": "PENDING_NEW_EXACT_SOURCE_SHA",
+    "roleDReal8x2ActualEmittedQuestion": "PENDING",
+    "MASTEROfficialAnswerAndSourceGate": "PENDING_CANONICAL_SOURCE_INTEGRATION",
+    "READY": false,
+    "APPROVED": false,
+    "LIVE": false
+  }
+}
