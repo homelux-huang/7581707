@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-2-47",
+  "subject": "經濟學",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "關於行政院國家發展委員會編製發佈之景氣動向指標中，下列何者為領先指標？",
+  "options": [
+    "總用電量",
+    "失業率",
+    "股價指數",
+    "批發營業額"
+  ],
+  "answer": "C",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "630c6ead483c93b455a698f4832a474402dc44f5524b0379fb490d94b6e3135d",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-47.webp",
+    "webpSha256": "82fecc527cadc19fdbd80082a3257026499b7af95e14329e4015f0a155d0c8be",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "景氣領先、同時與落後指標的判別",
+    "teacherSummary": "股價指數往往提前反映投資人對企業獲利與景氣的預期，依題目所指國發會景氣指標分類，屬領先指標，故C。失業率多屬落後指標；總用電量及批發營業額是對當期活動的觀察，非本題所列領先項。",
+    "elementarySummary": "股票價格常常在人們還沒看到景氣真的變好前，就因為預測未來而先漲或跌，所以它可能先提醒我們景氣方向。",
+    "concept": "領先指標試圖先於景氣循環轉折，落後指標在變化後才反映；指標分類應以該題年度國發會官方清單核實，不靠新聞臆測。",
+    "memory": "『股價先反映未來預期』→領先指標C；失業多落後。",
+    "highlights": [
+      "景氣動向指標",
+      "領先指標",
+      "股價指數"
+    ],
+    "solvingSteps": [
+      "題目問四個項目中何者屬景氣領先指標。",
+      "股價含未來獲利及景氣預期，常在實體活動數據變化前調整。",
+      "失業率通常隨企業人力決策在景氣改變後才明顯變化。",
+      "用電量與批發交易額大致反映生產/銷售當期活動，本題不列為先行股價指標。",
+      "因此選C；正式國發會年度分類和官方原題選項仍交A最終核對。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A總用電量大致反映當期生產與用電需求，雖可觀察景氣變化，但不是本題列出的典型領先指標。",
+        "elementary": "電用得多常表示現在工廠正在做事，不一定先知道未來。",
+        "reason": "A總用電量大致反映當期生產與用電需求，雖可觀察景氣變化，但不是本題列出的典型領先指標。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B失業率往往在經濟降溫或復甦後才逐步變化，通常作為落後或延後反應的指標。",
+        "elementary": "公司通常過一陣子才裁員或請新人，所以失業變化會比較慢。",
+        "reason": "B失業率往往在經濟降溫或復甦後才逐步變化，通常作為落後或延後反應的指標。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C股價指數受市場對未來營運與景氣的預期影響，有機會先於經濟活動轉折，是本題所問領先指標。",
+        "elementary": "大家先猜未來好不好，股票價格可能先動，所以選C。",
+        "reason": "C股價指數受市場對未來營運與景氣的預期影響，有機會先於經濟活動轉折，是本題所問領先指標。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "D批發營業額反映實際銷售活動，屬本題的當期交易量觀察，不能直接當作題目指定的領先指標。",
+        "elementary": "批發賣了多少是現在已經發生的生意，不是提前預測。",
+        "reason": "D批發營業額反映實際銷售活動，屬本題的當期交易量觀察，不能直接當作題目指定的領先指標。",
+        "isCorrect": false
+      }
+    },
+    "source": "ROLE A 114 題庫候選，G1 單題原圖目視、G2 逐字OCR、G3 官答更正公告均待核；字母不屬正式核准答案。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_OCR_TEXT_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_NOTICE_PENDING",
+      "E_DISTINCT_AI_REVIEW_PENDING",
+      "D_YEAR114_REAL_BROWSER_8X2_PENDING",
+      "MASTER_TRUSTED_RECEIPT_AND_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "9fd2c3baa31cd489a7f4b52d159598f3c3b43e0338825d6b30ffd714093f4d0c"
+}
