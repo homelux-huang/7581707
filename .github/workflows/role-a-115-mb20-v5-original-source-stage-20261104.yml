@@ -1,0 +1,44 @@
+name: Role A 115 MB20 original corrected v5 figure boundary and official A (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-mb20-v5-figure-source-stage-20261104
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-a-115-mb20-v5-source-20261104
+  cancel-in-progress: false
+jobs:
+  exact_v5_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb20-v5-figure-source-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Source stage with all protected-main history (no release)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Read-only prior source A full original 205 bank checkout
+        uses: actions/checkout@v4
+        with:
+          ref: 9ade29d9eabae54a92b82cc036f448ace06f1186
+          path: frozen-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original v5 pixel/Git blob v2 forbidden, G2, official A, SQL SHA and negative tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb20_v5_original_source_stage_20261104.py
+          python -m unittest discover -s tests -p test_role_a_115_mb20_v5_original_source_stage_20261104.py -v
+      - name: Ensure read-only checkout cleaned and source-only bank unchanged
+        run: |
+          set -euo pipefail
+          rm -rf frozen-source
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+          echo "MB20 v5 source figure staged only; independent G1/MASTER G2 G3, E/D trusted emitter and READY/LIVE not bypassed."
