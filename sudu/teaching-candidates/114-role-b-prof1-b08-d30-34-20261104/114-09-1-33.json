@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS08-DIGITAL30-31-33-34-20261104-01",
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-33",
+  "subject": "數位科技",
+  "kind": "NEW_B_AUTHOR_SOURCE_QA_PENDING",
+  "question": "某電腦教室的子網路遮罩是 255.255.255.0、預設閘道位址是 192.168.100.254，下列何\n  者可設定為該電腦教室中某一台電腦的 IP 位址來提供正常連網服務？",
+  "options": [
+    "192.168.100.0",
+    "192.168.100.255",
+    "192.168.100.254",
+    "192.168.100.194"
+  ],
+  "knownAnswerCandidate": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "43fac2368a844adbc488e2e58f38a7c0e25937aa715bdef3c41ed324b3d36475",
+    "originalQuestionWebpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-33.webp",
+    "webpSha256": "ded286749bd4f6a1b7377f640ec27c6e421b56c4065eb63ab692418d7ed161ef",
+    "originalImageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerNoticeNotAdmitted": true
+  },
+  "teaching": {
+    "topic": "IPv4 子網路｜255.255.255.0 與預設閘道",
+    "teacherSummary": "255.255.255.0 是 /24，192.168.100.0 為網路位址，192.168.100.255 為廣播位址，192.168.100.254 已被預設閘道使用；同一子網可用且未重複的選項只有 192.168.100.194，選 D。",
+    "elementarySummary": "同一條網路裡有一些特別的門牌號碼不能分給電腦：.0 是整個街區、.255 是廣播、.254 已給出入口路由器，.194 才能給這台電腦。",
+    "concept": "子網遮罩 /24＝前24位是網路，最後8位是主機；IPv4 /24 主機通常可用 .1～.254，但已配置的閘道 .254 不可再給其他電腦。",
+    "memory": "/24：.0網路、.255廣播、.254閘道；.194 可供主機（D）。",
+    "solvingSteps": [
+      "先把 255.255.255.0 轉成 /24：最後一個八位元組是主機位元，共有 2⁸=256 個位址。",
+      "以預設閘道 192.168.100.254 和 /24 遮罩相與，可知網路段是 192.168.100.0/24。",
+      "在典型 /24 中，.0 是網路識別位址不可當一般主機，.255 是定向廣播位址也不能當主機。",
+      "預設閘道已用 192.168.100.254，另一台電腦不能設定同一 IP 造成衝突。",
+      "候選 192.168.100.194 位於可用範圍 .1～.254、非網路/廣播/已配置閘道，因此選 D；實際部署仍須確認此位址未被其他設備使用。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 192.168.100.0 在 255.255.255.0 的 /24 子網中是整個網段的網路識別位址，不能分配一般主機。",
+        "elementary": "尾數0是網路的名字，不是這台電腦的門牌。",
+        "reason": "A 192.168.100.0 在 255.255.255.0 的 /24 子網中是整個網段的網路識別位址，不能分配一般主機。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B 192.168.100.255 是該 /24 的廣播位址，用來對整個網段傳送訊息，不可當普通電腦主機位址。",
+        "elementary": "尾數255要留給廣播，不能給一台電腦。",
+        "reason": "B 192.168.100.255 是該 /24 的廣播位址，用來對整個網段傳送訊息，不可當普通電腦主機位址。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 192.168.100.254 雖在主機可用數值範圍，但題目已將它指定為預設閘道，給另一台電腦會形成重複 IP 衝突。",
+        "elementary": "尾數254被出入口路由器用了，不可搶同門牌。",
+        "reason": "C 192.168.100.254 雖在主機可用數值範圍，但題目已將它指定為預設閘道，給另一台電腦會形成重複 IP 衝突。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 192.168.100.194 同在 192.168.100.0/24 主機範圍，既非網路/廣播也不同於 .254 閘道；在未被其他設備使用時適合設定。",
+        "elementary": "194沒被題目指定占用，可給電腦用。",
+        "reason": "D 192.168.100.194 同在 192.168.100.0/24 主機範圍，既非網路/廣播也不同於 .254 閘道；在未被其他設備使用時適合設定。",
+        "isCorrect": true
+      }
+    },
+    "highlights": [
+      "255.255.255.0",
+      "192.168.100.254",
+      "IP 位址"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "子網遮罩255.255.255.0 = /24",
+        "預設閘道192.168.100.254",
+        "候選 .0、.255、.254、.194"
+      ],
+      "formulaUse": "/24 前24位網路不變，後8位主機有2⁸=256個值；網路位址主機位全0，廣播全1。",
+      "substitution": [
+        "192.168.100.254 AND 255.255.255.0 = 192.168.100.0",
+        "2⁸=256個位址；主機位的典型範圍是1～254",
+        "192.168.100.194 AND 255.255.255.0=192.168.100.0"
+      ],
+      "steps": [
+        "遮罩 255.255.255.0 = /24，前24位固定，最後8位是主機位元。",
+        "最後八位元組共有2⁸=256個數值，0到255。",
+        "全部主機位為0的.0作網路識別，不可作一般主機。",
+        "全部主機位為1的.255作廣播，不可作一般主機。",
+        "題目指定.254為預設閘道，不能讓第二台電腦占同一位址。",
+        "候選.194位於主機範圍且不等於閘道，故可配置，答案D。",
+        "反向驗算 .194 按遮罩取網路段得192.168.100.0，與閘道.254同一子網，且.194 ≠ .0/.255/.254。"
+      ],
+      "result": "192.168.100.194（D）",
+      "unit": "IPv4 位址（無物理單位）",
+      "verification": "同網段、非保留且不同於指定閘道；實際使用尚需排除其他設備已佔用"
+    },
+    "authorReviewLevel": "SOURCE_CANDIDATE_REASONING_ONLY_NO_E",
+    "source": "114 official original A candidate Q bank / exact single-question WebP SHA pinned, but G1 direct visual, G2 words, G3 final published answer/correction require A independent verification."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_ORIGINAL_G1_DIRECT_IMAGE_VISUAL_QA_PENDING",
+      "A_SOURCE_G2_QUESTION_OPTIONS_QA_PENDING",
+      "A_OFFICIAL_FINAL_ANSWER_AND_NOTICE_G3_PENDING",
+      "DISTINCT_E_EXACT_COMPOSED_SHA_REVIEW_PENDING",
+      "D_REAL_V4_8x2_EMITTED_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "sourceBankKnownCandidateAnswer": true,
+    "blindSolveClaimed": false,
+    "calculationAuthorOnly": true
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "teachingCanonicalSha256": "9090f1de815b6da4904ea570e7db8f7db42dcd4b569253840fb37cb2f7bb0483",
+  "composedTeachingSha256": "2de29562a49039f2f56970fcd9ed2202bb229bcb9cf1eea22145cb24333fbdfb"
+}

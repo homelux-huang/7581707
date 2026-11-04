@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "taskId": "B-114-PROF1-BUS08-DIGITAL30-31-33-34-20261104-01",
+  "role": "B",
+  "year": 114,
+  "questionId": "114-09-1-30",
+  "subject": "數位科技",
+  "kind": "NEW_B_AUTHOR_SOURCE_QA_PENDING",
+  "question": "路人甲使用 Google Maps 的步行導航功能，同時啟用手機相機來獲取周邊環境的特徵，\n  進而更精準地提供導航方向指引。上述情境為下列哪一種技術的應用？",
+  "options": [
+    "擴增實境 ( augmented reality )",
+    "3 D 視覺實境 ( 3D vision reality )",
+    "真實實境 ( real reality )",
+    "虛擬實境 ( virtual reality )"
+  ],
+  "knownAnswerCandidate": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "questionBankGitBlobSha": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "questionRevision": "20598d7eb41841edb05314a06c22d75fab31614594d3bf6a56eb2619dd973ddc",
+    "originalQuestionWebpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-30.webp",
+    "webpSha256": "3d924da0dcb9eb574e9473994703b5b663e5babc5c495729c94fe0c99bbfade4",
+    "originalImageQaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialFinalAnswerNoticeNotAdmitted": true
+  },
+  "teaching": {
+    "topic": "手機步行導航｜擴增實境 AR",
+    "teacherSummary": "Google Maps 步行導航結合手機相機取得周遭實景，再把方向箭頭或路標等虛擬資訊疊加在實際環境的畫面上，屬擴增實境（Augmented Reality, AR），答案 A。",
+    "elementarySummary": "手機鏡頭拍到真的街道，螢幕又畫上電腦做的指路箭頭，把真世界和虛擬提示放在一起，就是 AR。",
+    "concept": "AR 是對現實景象疊加數位資訊；VR 則把使用者主要帶入虛擬環境，兩者不能混淆。",
+    "memory": "真實街道＋相機＋導航提示疊加＝AR（A）。",
+    "solvingSteps": [
+      "先抓『手機相機』取得周邊環境特徵，表示使用者仍看見真正的街道。",
+      "導航系統在現實道路畫面上增加方位箭頭或路線提示，是真實與虛擬資訊共同呈現。",
+      "這種在真實世界上疊加數位資訊的技術稱擴增實境（AR），符合 A。",
+      "B 的 3D vision reality 並不是題目所描述的正式技術分類；C 的 real reality 只強調現實本身，缺少數位疊加。",
+      "D 的 VR 通常以虛擬場景取代主要視覺環境，不是眼前真實街道上加箭頭，因此正解 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "A 擴增實境 AR 把電腦產生的導航指示疊在手機相機所見真實街道上，與題目情境相符。",
+        "elementary": "真的路上加上虛擬箭頭，就是 AR。",
+        "reason": "A 擴增實境 AR 把電腦產生的導航指示疊在手機相機所見真實街道上，與題目情境相符。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B『3D vision reality』不是此導航功能的標準技術名稱；題幹重點是實景疊加數位指引而非僅呈現立體畫面。",
+        "elementary": "看到立體圖不等於在真實路上加路標。",
+        "reason": "B『3D vision reality』不是此導航功能的標準技術名稱；題幹重點是實景疊加數位指引而非僅呈現立體畫面。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C『real reality』只表示真實環境，沒有說明電腦把導航方向指引疊加在手機實景畫面。",
+        "elementary": "只有真路景還不夠，還要有電腦畫的箭頭。",
+        "reason": "C『real reality』只表示真實環境，沒有說明電腦把導航方向指引疊加在手機實景畫面。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 虛擬實境 VR 通常把觀看者放進電腦生成的主要場景；本題仍以手機鏡頭真街景為底，故不選 VR。",
+        "elementary": "VR像進遊戲世界，但這題是在真實街道找路。",
+        "reason": "D 虛擬實境 VR 通常把觀看者放進電腦生成的主要場景；本題仍以手機鏡頭真街景為底，故不選 VR。",
+        "isCorrect": false
+      }
+    },
+    "highlights": [
+      "Google Maps",
+      "步行導航",
+      "手機相機"
+    ],
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "authorReviewLevel": "SOURCE_CANDIDATE_REASONING_ONLY_NO_E",
+    "source": "114 official original A candidate Q bank / exact single-question WebP SHA pinned, but G1 direct visual, G2 words, G3 final published answer/correction require A independent verification."
+  },
+  "review": {
+    "status": "BLOCKED",
+    "authorRole": "B",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": {
+      "status": "PENDING_DISTINCT_ROLE_E_SUBSTANTIVE_REVIEW",
+      "trustedEvidencePath": null
+    },
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "uiQaExactDigest": false,
+    "blockers": [
+      "A_ORIGINAL_G1_DIRECT_IMAGE_VISUAL_QA_PENDING",
+      "A_SOURCE_G2_QUESTION_OPTIONS_QA_PENDING",
+      "A_OFFICIAL_FINAL_ANSWER_AND_NOTICE_G3_PENDING",
+      "DISTINCT_E_EXACT_COMPOSED_SHA_REVIEW_PENDING",
+      "D_REAL_V4_8x2_EMITTED_PENDING",
+      "MASTER_TRUSTED_REGISTRY_AND_PAGES_PENDING"
+    ]
+  },
+  "reasoningAudit": {
+    "sourceBankKnownCandidateAnswer": true,
+    "blindSolveClaimed": false,
+    "calculationAuthorOnly": false
+  },
+  "textbook": {
+    "publisher": null,
+    "edition": null,
+    "chapter": null,
+    "page": null
+  },
+  "teachingCanonicalSha256": "1d166555d6d808bf4c79d4ced0cbc446a8ea7a2835e7e113b85106df1a33bb82",
+  "composedTeachingSha256": "e690581969f6712d83778cf9afccf9afdabd0a593ae926aa3eb5d58d95aa2679"
+}
