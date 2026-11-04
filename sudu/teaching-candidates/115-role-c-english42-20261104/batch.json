@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-E42-ORIGINAL-SHARED-TEACHING-20261104-02",
+  "sourceCommit": "8febb199da16b560aa7b521ec0886847d66ed9ac",
+  "items": [
+    {
+      "questionId": "115-00-E-42",
+      "path": "sudu/teaching-candidates/115-role-c-english42-20261104/115-00-E-42.json",
+      "fileSha256": "0c6613cf0cad7a08789952a5b4fb589ce45fef39d26f0a0bdc7dc39c8aa7c906",
+      "teachingSha256": "1b102d8559a4be0d68c3ffaaca4488f3409bbd96ddf7c09f95fdfee4634f65ad",
+      "sourceTextCandidateRevision": "a67016fce7608d04ace7cc8c6b4be6e3fb9c3f7a8d0a3ff7de464831f0371cee",
+      "roleASourceLinkRevision": "2b161f35ebccef5eeee3caff4a3688ccb5e1eefd881305993c9db3af5b24fcbe",
+      "individualWebpSha256": "a7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0",
+      "sharedWebpSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+      "ready": false
+    }
+  ],
+  "newApprovals": 0,
+  "newDeployments": 0
+}

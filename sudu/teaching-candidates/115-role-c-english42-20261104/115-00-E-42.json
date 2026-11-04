@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "taskId": "C-115-E42-ORIGINAL-SHARED-TEACHING-20261104-02",
+  "questionId": "115-00-E-42",
+  "year": 115,
+  "subject": "英文",
+  "paperCode": "00-E",
+  "originalQuestionNumber": 42,
+  "status": "ROLE_C_AUTHOR_DRAFT_A_ORIGINAL_G1_ONLY_NO_RELEASE",
+  "sourceCommit": "8febb199da16b560aa7b521ec0886847d66ed9ac",
+  "sourceAEvidence": {
+    "path": "sudu/data/processed/115/review-evidence/115-00-E-42-original-shared-G1-20261103.json",
+    "gitBlob": "da429905c376db05432d09ae556f478f32a2dc6e",
+    "upstreamPR": 131,
+    "upstreamCommit": "8febb199da16b560aa7b521ec0886847d66ed9ac"
+  },
+  "question": "According to the passage, which of the following is true?",
+  "options": [
+    "Ten Taiwanese companies are providing electronic manufacturing services.",
+    "Taiwan was the world’s largest market for AI-related products in the 1990s.",
+    "AI servers are selling better than smartphones for electronics manufacturers.",
+    "Contract manufacturers in the early days designed new products for customers."
+  ],
+  "answerCandidate": "C",
+  "answerAlreadyKnownBeforeAuthoring": true,
+  "newBlindSolveClaimed": false,
+  "legacyRawQuestionBankPath": "sudu/data/years/115.json",
+  "legacyRawQuestionBankGitBlob": "92ee267c849b9dcfd23aaf57958d4577c7280790",
+  "legacyOptionDHasCrossPageContamination": true,
+  "legacyQ38OptionDIncludesSharedArticle": true,
+  "legacySharedArticleTextSha256": "a3d19be52cd853525b12b05d7ed1935b1d67f3a1474f34503d78e043a7dacd1e",
+  "sourceG2CleanTextCandidateRevision": "a67016fce7608d04ace7cc8c6b4be6e3fb9c3f7a8d0a3ff7de464831f0371cee",
+  "individualOriginalWebp": "sudu/data/processed/115/webp-v2/00-E/115-00-E-42.webp",
+  "individualOriginalWebpSha256": "a7af2b810230975781ad2831b47ac2c977e70d0e4c4d42d263f7af5f1689e7d0",
+  "sharedMaterialId": "115-00-E-SHARED-39-42",
+  "sharedOriginalWebp": "sudu/data/processed/115/webp-v3/shared/115-00-E-SHARED-39-42.webp",
+  "sharedOriginalWebpSha256": "5cbbcf60882e7a3eef6ad4304c68a20cfc5c5930e06722ae0c20faf36138640b",
+  "sharedOriginalG1Revision": "c94b849dc5750a92106c4b5892007010a8ce8b0b41f3cdc9e20d6e590e9353b2",
+  "roleASourceLinkRevision": "2b161f35ebccef5eeee3caff4a3688ccb5e1eefd881305993c9db3af5b24fcbe",
+  "officialPrintedAnswerImageGitBlob": "b8da0d2f8024eb8da2bdb2b096f97d59c0a6609d",
+  "officialPrintedAnswerCandidate": "C",
+  "officialG3FormallyAccepted": false,
+  "teaching": {
+    "teacherSummary": "根據原文，臺灣電子製造商目前從 **AI servers** 賺到的錢超過 **iPhones** 相關業務；對應選項 C。**selling better** 本題應就文章的 **making more money** 來理解商業表現，而非自行推論 AI 伺服器銷售**台數**超過手機。",
+    "elementarySummary": "文章說，工廠現在從 AI 伺服器賺到的錢比從 iPhone 業務賺的多。這是比較**賺的錢**，不一定表示賣出的機器數量比較多。四個選項裡只有 C 符合文章。",
+    "memory": "**全球前十 EMS 有四家臺灣廠商（不是十家）；1990年代領先電腦筆電製造（不是 AI 市場）；早期照客戶設計製造（不是自己設計）；如今 AI 伺服器帶來更多收益 → C。**",
+    "concept": "英文閱讀辨識 **數字、時間、誰做什麼、經濟量詞**。原文 Four Taiwanese manufacturers ≠ ten；computer and notebook production ≠ AI market；customers’ designs ≠ own product design；making more money ≠ more units sold。",
+    "extension": "考題 C 的 selling better 要依本文『製造商從 AI 伺服器賺更多錢』的語境作答；如將它說成『AI 伺服器銷量台數超越全部智慧型手機』則超出原文證據。此差異列入 E 獨立語意 QA。",
+    "source": "115 年統測英文 Q39–42 共用文章；ROLE A PR131 真原圖 G1 候選，舊 OCR 的閱讀文章被接在 Q38 D 之後，待 A 做完整 G2。",
+    "highlights": [
+      "Four Taiwanese manufacturers",
+      "world’s top ten",
+      "1990s",
+      "customers’ designs",
+      "making more money",
+      "AI servers",
+      "iPhones",
+      "selling better"
+    ],
+    "reasoningSteps": [
+      "找到文章說全球前十 EMS 供應商中有四家臺灣公司，排除將四說成十的 A。",
+      "1990年代談電腦與筆電生產領先，並非 AI 相關產品市場，排除 B。",
+      "末段明言製造商從 AI servers 賺的錢比 iPhones 多，支持 C 的相對業務表現。",
+      "早期代工廠商依**客戶**設計要求生產零件，非自己設計新產品，排除 D。",
+      "相反意思核對：若要 D 正確，應寫廠商 early designed products；但文中寫 according to customers’ designs。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "文章指出 **Four Taiwanese manufacturers** 進入**全球前十** EMS 名單，不是十家臺灣公司進入名單；混淆臺灣公司的數量與全球排名總數。",
+        "elementary": "全世界前十名中有**四家**臺灣公司，A 卻說有**十家**臺灣公司，數字換掉了。",
+        "reason": "文章指出 **Four Taiwanese manufacturers** 進入**全球前十** EMS 名單，不是十家臺灣公司進入名單；混淆臺灣公司的數量與全球排名總數。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "By the 1990s 描述臺灣**電腦與筆電生產**居全球領先，不是1990年代成為 AI 相關產品全球最大**市場**；時間、產業及生產／市場概念皆遭偷換。",
+        "elementary": "九○年代是很會**做電腦筆電**，不是當時全世界最會**買 AI 商品**，所以 B 不對。",
+        "reason": "By the 1990s 描述臺灣**電腦與筆電生產**居全球領先，不是1990年代成為 AI 相關產品全球最大**市場**；時間、產業及生產／市場概念皆遭偷換。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "原文說今日製造商 **making more money from AI servers than from iPhones**，即 AI 伺服器相對 iPhone 業務的**收益表現較佳**，符合 C 在本篇的 selling better 語境；不能推論台數。",
+        "elementary": "工廠從 AI 伺服器**賺的錢比較多**，文章就是在比較這件事，所以選 C。",
+        "reason": "原文說今日製造商 **making more money from AI servers than from iPhones**，即 AI 伺服器相對 iPhone 業務的**收益表現較佳**，符合 C 在本篇的 selling better 語境；不能推論台數。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "早期代工廠 **produced components according to customers’ designs and requirements**，照客戶原有設計製造零件，沒有說早期自己設計新產品；D 反轉設計者身分。",
+        "elementary": "早期是**客戶畫設計圖、工廠照圖做**，D 卻說工廠自己設計，弄反了。",
+        "reason": "早期代工廠 **produced components according to customers’ designs and requirements**，照客戶原有設計製造零件，沒有說早期自己設計新產品；D 反轉設計者身分。",
+        "isCorrect": false
+      }
+    },
+    "englishSupport": {
+      "questionTranslation": "依據本文，下列哪一項敘述正確？",
+      "optionTranslations": {
+        "A": "十家臺灣公司提供電子製造服務。",
+        "B": "1990年代臺灣是全球AI相關產品最大的市場。",
+        "C": "對電子製造商而言，AI伺服器業務的表現比智慧型手機更佳。",
+        "D": "早期代工廠為客戶設計新產品。"
+      },
+      "ipaVocabulary": [
+        {
+          "word": "manufacturing",
+          "ipa": "/ˌmæn.jəˈfæk.tʃər.ɪŋ/",
+          "level": "中級",
+          "chinese": "製造業；製造",
+          "synonyms": [
+            "production"
+          ],
+          "antonyms": []
+        },
+        {
+          "word": "demand",
+          "ipa": "/dɪˈmænd/",
+          "level": "初級",
+          "chinese": "需求",
+          "synonyms": [
+            "need"
+          ],
+          "antonyms": []
+        },
+        {
+          "word": "initially",
+          "ipa": "/ɪˈnɪʃ.əl.i/",
+          "level": "中級",
+          "chinese": "起初",
+          "synonyms": [
+            "at first"
+          ],
+          "antonyms": [
+            "eventually"
+          ]
+        },
+        {
+          "word": "innovation",
+          "ipa": "/ˌɪn.əˈveɪ.ʃən/",
+          "level": "高級",
+          "chinese": "創新",
+          "synonyms": [
+            "new development"
+          ],
+          "antonyms": [
+            "stagnation"
+          ]
+        }
+      ],
+      "topicalExample": {
+        "type": "閱讀本文的時事語境示例，非當日新聞查核",
+        "english": "Growing demand for **AI servers** creates opportunities for electronics manufacturers.",
+        "chinese": "持續增加的 **AI 伺服器**需求為電子製造商創造商機。",
+        "highlightTerms": [
+          "AI servers",
+          "demand"
+        ],
+        "basis": "考題文章 AI 伺服器商機"
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null
+  },
+  "teachingCanonicalSha256": "1b102d8559a4be0d68c3ffaaca4488f3409bbd96ddf7c09f95fdfee4634f65ad",
+  "review": {
+    "author": "GPT-6 ROLE C author, not independent E",
+    "COriginalWebpPersonallyViewed": false,
+    "roleAOriginalG1EvidenceRead": true,
+    "legacySharedReadingArticleRead": true,
+    "sourceG2FormallyAccepted": false,
+    "independentE": "PENDING",
+    "roleD8x2": "PENDING"
+  },
+  "studentReleaseApproved": false,
+  "deploy": false,
+  "blockers": [
+    "A_39_42_READING_G2_AND_Q42_D_FOOTER_REPAIR_NOT_FORMALLY_ADMITTED",
+    "A_OFFICIAL_FINAL_G3_NOT_ADMITTED",
+    "DISTINCT_AI_E_CONTENT_REVIEW_PENDING",
+    "V4_8X2_EXACT_ORIGINAL_AND_TEACHING_PENDING"
+  ]
+}
