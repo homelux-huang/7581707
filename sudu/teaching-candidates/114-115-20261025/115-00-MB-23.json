@@ -123,7 +123,7 @@
     "DISTINCT_AI_CONTENT_E_REVIEW_RECEIPT_PENDING",
     "EXACT_TEACHING_DIGEST_V4_UI_PENDING",
     "OFFICIAL_FINAL_ADMISSION_PENDING",
-    "TABLE_INCLUSIVE_REVISION_PENDING_PR24_SOURCE_GATE_AND_DISTINCT_IMAGE_REVIEWER"
+    "TABLE_A_PR129_G2_G3_CANDIDATE_NOT_MASTER_ADMITTED"
   ],
   "originalSourceTableCandidate": {
     "heading": [
@@ -144,18 +144,22 @@
       ]
     ]
   },
-  "sourceTextRevisionWithTable": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
-  "sourceTextRevisionGate": "TABLE_INCLUSIVE_CANDIDATE_PENDING_UPSTREAM_SOURCE_ADMISSION",
+  "sourceTextRevisionWithTable": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+  "sourceTextRevisionGate": "ROLE_A_PR129_SOURCE_TABLE_G2_G3_CANDIDATE_PENDING_MASTER_CANONICAL_ADMISSION",
   "sourceTableProvenance": {
     "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
     "originalSingleQuestionWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
-    "sourceEvidence": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
-    "referencePR": 24,
-    "referenceSourceBranch": "qa/mb20-25-latest-source-sync-20261025",
+    "sourceEvidence": "sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json",
+    "referencePR": 129,
+    "referenceSourceBranch": "qa/role-a-115-mb23-table-g2-proof-20261103",
     "humanImageTableComparisonThisSession": false,
     "sourceTableFormalQaPass": false,
     "tableChangedFromOldLesson": true,
-    "originalTeachingDigestUnchanged": true
+    "originalTeachingDigestUnchanged": true,
+    "sourceEvidenceGitBlob": "0f63d6a5f91015dd2b146731c48dce08668c1fa2",
+    "sourceEvidenceCommit": "cd6fea6682554e4b0f25d41dca79a1532de92482",
+    "sourceAnswerPdfSha256PreviouslyRecorded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "masterCanonicalQuestionSqliteAdmitted": false
   },
   "roleCChangeLog": {
     "date": "2026-10-25",
@@ -163,5 +167,14 @@
     "operation": "Non-destructive source-table association; math prose and original teaching digest unchanged",
     "originalImageOrOCRRegenerated": false,
     "studentAdmitted": false
+  },
+  "roleCRevisionReconcile20261104": {
+    "taskId": "C-115-MB23-PR129-AUTHOR-SOURCE-RECONCILE-20261104-01",
+    "oldRoleCSourceRevision": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+    "newRoleASourceRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+    "roleASourceEvidenceGitBlob": "0f63d6a5f91015dd2b146731c48dce08668c1fa2",
+    "authorTeachingUnchanged": true,
+    "officialAdmissionPending": true,
+    "independentEAndDExactSourceRevisionPending": true
   }
 }

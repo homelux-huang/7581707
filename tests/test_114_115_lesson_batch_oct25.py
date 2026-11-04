@@ -60,7 +60,9 @@ class Lessons(unittest.TestCase):
   self.assertEqual(len(q['originalSourceTableCandidate']['rows']),2)
   self.assertEqual([len(row) for row in q['originalSourceTableCandidate']['rows']],[3,3])
   self.assertNotEqual(q['sourceTextRevisionWithTable'],q['sourceTextRevisionWithoutTable'])
-  self.assertIn('TABLE_INCLUSIVE_REVISION_PENDING_PR24_SOURCE_GATE_AND_DISTINCT_IMAGE_REVIEWER',q['blockers'])
+  self.assertIn('TABLE_A_PR129_G2_G3_CANDIDATE_NOT_MASTER_ADMITTED',q['blockers'])
+  self.assertEqual(q['sourceTextRevisionWithTable'],'9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4')
+  self.assertFalse(q['sourceTableProvenance']['masterCanonicalQuestionSqliteAdmitted'])
  def test24_ceiling_and_power_bounds(self):
   c=math.ceil(110/8);d=math.ceil(math.log(3)/math.log(1.08))
   self.assertEqual((c,d),(14,15));self.assertLess(1.08**14,3);self.assertGreater(1.08**15,3)
