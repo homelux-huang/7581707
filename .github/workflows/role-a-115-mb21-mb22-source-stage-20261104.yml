@@ -1,0 +1,44 @@
+name: Role A 115 MathB21 MB22 original G1 G2 and official A B proof (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-115-mb21-mb22-source-stage-20261104
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-a-115-mb21-mb22-source-stage-20261104
+  cancel-in-progress: false
+jobs:
+  exact_original_math_source:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb21-mb22-source-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout main-based isolated source-stage (full base ancestry)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Exact frozen prior A source candidate 205-row JSON SQLite (READ ONLY)
+        uses: actions/checkout@v4
+        with:
+          ref: 9ade29d9eabae54a92b82cc036f448ace06f1186
+          path: frozen-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: SHA/GitBlob original MathB21/22, official answer, 205 SQL and negative release gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_115_mb21_mb22_source_stage_20261104.py
+          python -m unittest discover -s tests -p test_role_a_115_mb21_mb22_source_stage_20261104.py -v
+      - name: Clean runner-only source files and prove no student code mutation
+        run: |
+          set -euo pipefail
+          rm -rf frozen-source
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+          echo "MB21/MB22 SOURCE IMAGE and historical official answer staged; no canonical 205 bank or READY/LIVE."
