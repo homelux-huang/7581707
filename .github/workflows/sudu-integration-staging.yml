@@ -1,0 +1,33 @@
+name: Sudu 115 isolated QA staging gate
+on:
+  push:
+    branches:
+      - integration/115-qa-gated-20261022
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate quarantined candidate data, legacy IDs and source gate
+        run: |
+          python -m unittest discover -s tests -p 'test_sudu_integration_gate.py' -v
+          python scripts/sudu_integration_gate.py --check --output test-results/staging-report.json
+          node --check sudu/verified_question_adapter.js
+          node tests/sudu_integration_gate_test.cjs
+      - name: Archive gate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sudu-isolated-data-gate
+          path: test-results/staging-report.json
+          if-no-files-found: ignore
