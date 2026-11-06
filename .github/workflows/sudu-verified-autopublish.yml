@@ -113,7 +113,9 @@ jobs:
         run: |
           set -euo pipefail
           git add -A sudu/data/approved
-          # The repository forbids Actions GITHUB_TOKEN from POST /pulls.\n          # Preserve branch+SHA+artifact; an authorized connector must create PR.\n          python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual
+          # The repository forbids Actions GITHUB_TOKEN from POST /pulls.
+          # Preserve branch+SHA+artifact; an authorized connector must create PR.
+          python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual
 
       - name: Retain pinned candidate even if token cannot create a PR
         if: always() && steps.snapshot.outputs.updated == 'true'
