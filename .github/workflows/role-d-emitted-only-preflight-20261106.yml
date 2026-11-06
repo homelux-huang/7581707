@@ -1,0 +1,58 @@
+name: ROLE D actual emitter 114 E12 E11 115 MB21 MB22 MB23 preflight (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-d-emitted-only-preflight-20261106
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-d-emitted-preflight-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify_publisher_only_formal_hold:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      SUDU_D_MODE: precheck
+      SUDU_D_EXPECT_SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify exact tested commit, syntax and no staged source mutation
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SUDU_D_EXPECT_SHA"
+          node --version
+          node --check tests/sudu_role_d_emitted_only_8x2_20261106.cjs
+          test "$(git hash-object sudu/data/approved/114.json)" = 874e47c72134b79778741d0c28a4f5c638e7626d
+          test "$(git hash-object sudu/data/approved/115.json)" = 51e7b4e73e2d46b4c8b1672c6af20477cc90d44e
+          test "$(git hash-object sudu/release-governance/independent-review-policy.json)" = c77ee2ec8ca1381388fbbbe6bd36e679750678eb
+          git diff --exit-code
+      - name: Fail-closed source-and-trust preflight (expected HOLD, never PASS)
+        run: |
+          set -euo pipefail
+          node tests/sudu_role_d_emitted_only_8x2_20261106.cjs
+          node -e "const a=require('./test-results/role-d-emitted-only-20261106/formal-uiqa-report.json');if(a.status!=='HOLD_UPSTREAM_ADMISSION')throw Error('unreviewed QID unexpectedly admissible');for(const q of ['114-00-E-12','114-00-E-11','115-00-MB-21','115-00-MB-22','115-00-MB-23']){if(a.outcomes[q].status!=='HOLD'||!a.outcomes[q].missing.some(x=>x.includes('trustedAiReviewReceipts')))throw Error('missing protected E gate for '+q)}if(a.cases.length||a.qaOnly||!a.noInterception)throw Error('invalid formal precheck');console.log('EXPECTED HOLD 5/5: NO REAL UIQA PASS, NO READY/LIVE')"
+      - name: Negative gate - cannot run formal without source/E/current digest
+        run: |
+          set -euo pipefail
+          if SUDU_D_MODE=formal SUDU_D_QID=114-00-E-12 node tests/sudu_role_d_emitted_only_8x2_20261106.cjs; then
+            echo "FAIL: unadmitted E12 unexpectedly produced formal PASS"
+            exit 1
+          fi
+          node -e "const a=require('./test-results/role-d-emitted-only-20261106/formal-uiqa-report.json');if(a.status!=='FAIL'||a.cases.length)throw Error('formal missing-receipt negative gate unexpectedly passed');console.log('PASS negative: formal E12 rejected, no screenshots counted')"
+      - name: Restore unmodified HOLD report
+        if: always()
+        run: |
+          SUDU_D_MODE=precheck node tests/sudu_role_d_emitted_only_8x2_20261106.cjs || true
+      - name: Archive honest admission blockers and negative proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-emitter-formal-HOLD-${{ github.run_id }}
+          path: test-results/role-d-emitted-only-20261106/
+          if-no-files-found: error
+          retention-days: 14
