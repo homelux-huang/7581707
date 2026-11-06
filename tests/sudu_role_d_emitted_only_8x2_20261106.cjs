@@ -128,6 +128,17 @@ async function formal(){
  check(q.question===proof.question&&JSON.stringify(q.options)===JSON.stringify(proof.options),
   'emitted official text/options differ from source');
  check(q.imageSha256===expected.image,'emitted original image SHA mismatch');
+ if(id==='115-00-MB-23'){
+  const table=proof.officialOriginalTable;
+  check(table&&table.title==='表（二）'&&Array.isArray(table.columns)&&table.columns.length===3
+    &&Array.isArray(table.rows)&&table.rows.length===2,
+   'MB23 exact original 2-row x 3-column table evidence missing');
+  check(JSON.stringify(table.columns).includes('行程')&&JSON.stringify(table.columns).includes('原價')
+    &&JSON.stringify(table.columns).includes('優惠'),
+   'MB23 official header/columns missing');
+  check(JSON.stringify(table.rows).includes('3000')&&JSON.stringify(table.rows).includes('2000'),
+   'MB23 official original discount and original price formula missing');
+ }
  const {chromium}=require('playwright');
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
  const url=SITE+'v4-115-multisubject-review-demo.html?year='+year;
@@ -186,7 +197,8 @@ async function formal(){
     assert.deepEqual(errs,[],'JS/image/API failures');
     const screenshot=label+'.png';
     await page.screenshot({path:path.join(OUT,screenshot),animations:'disabled'});
-    report.cases.push({qid:id,width,height,theme,screenshot,sourceRevision:expected.revision,
+    const screenshotSha256=hash(fs.readFileSync(path.join(OUT,screenshot)));
+    report.cases.push({qid:id,width,height,theme,screenshot,screenshotSha256,sourceRevision:expected.revision,
      testedTeachingDigest:expected.teaching,imageSha256:expected.image,result:'PASS'});
    }catch(err){
     report.errors.push({qid:id,width,height,theme,error:String(err.stack||err),browserErrors:errs});
