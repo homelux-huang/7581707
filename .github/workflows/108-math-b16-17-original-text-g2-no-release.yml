@@ -1,0 +1,93 @@
+name: 108 Math B16 B17 original-page formula text G2 (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/repair_108_math_b16_17_source_text_g2_20261024.py
+      - .github/workflows/108-math-b16-17-original-text-g2-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa108-math-b16-b17-source-text
+  cancel-in-progress: false
+jobs:
+  source_text:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-image decoder for G1 SHA and pixels
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin immutable QA HEAD; preflight source and PDF-layer G2 diff
+        run: |
+          set -euo pipefail
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/repair_108_math_b16_17_source_text_g2_20261024.py
+          python scripts/repair_108_math_b16_17_source_text_g2_20261024.py
+      - name: Stage only two exact source-image text G2 and rebuild isolated SQLite
+        run: python scripts/repair_108_math_b16_17_source_text_g2_20261024.py --stage
+      - name: Verify row-by-row determinants and remaining QA gates
+        run: |
+          python - <<'PY_STRICT'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          root=Path('sudu/data/processed/108')
+          def rd(n):return json.loads((root/n).read_text(encoding='utf8'))
+          inv=rd('inventory.json');b=rd('questions.json');o=rd('ocr-raw-candidates.json')
+          m=rd('webp-manifest.json');v=rd('VISUAL_QA.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          e=rd('qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json')
+          assert len(b['questions'])==len(o['items'])==len(m['items'])==len(v['items'])==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==26
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==7
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert e['newG2Pass']==2 and e['newG1Pass']==0 and e['newOfficialFinalAnswerVerified']==0
+          assert e['independentHumanReview'] is False
+          assert len(e['records'])==2
+          qs={x['questionId']:x for x in b['questions']}
+          os={x['questionId']:x for x in o['items']}
+          mm={x['questionId']:x for x in m['items']}
+          for n in (16,17):
+              id=f'108-00-MB-{n}'
+              q=qs[id];ocr=os[id];img=mm[id]
+              assert q['imageQaStatus']==img['qaStatus']=='PASS'
+              assert q['questionVerified'] and q['textQaStatus']=='PASS'
+              assert len(q['options'])==4 and all(q['options'])
+              assert ocr['qaStatus']=='PASS' and ocr['rawOcrText'] is None
+              assert ocr['diff'] and ocr['correctedQuestion']==q['question']
+              assert img['outputSha256']==q['assets']['sha256']==ocr['imageSha256']
+              assert not q['answerVerified'] and not q['integrationReady']
+          assert '1−x' in qs['108-00-MB-17']['question']
+          assert '−1' in qs['108-00-MB-17']['question']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('G2 Math B16-17 PASS, G1 still26, G3 0, G5 11/11, NO RELEASE')
+          PY_STRICT
+      - name: Commit source-bound G2 evidence with SHA lease, without deployment
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/108/questions.json
+          git add sudu/data/processed/108/ocr-raw-candidates.json
+          git add sudu/data/processed/108/inventory.json
+          git add sudu/data/processed/108/VALIDATION.json
+          git add sudu/data/processed/108/release-manifest.json
+          git add sudu/data/processed/108/question-bank.sqlite3
+          git add sudu/data/processed/108/qa-drafts/TEXT_QA_108_MATH_B16_17_ORIGINAL_IMAGE_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          test "$(git rev-parse FETCH_HEAD)" = "$QA_BASE" || { echo "QA changed concurrently, refuse stale push"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(108): original-pixel math B16 B17 G2 formula and matrix diff, G5 NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

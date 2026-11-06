@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "year": 107,
+  "paperCode": "09-1",
+  "sourcePage": 8,
+  "officialPdfSha256": "8e8d72b2016553f29184fd3795dab4a6f4ed0bc57e9cb861c9ce2ccf5b0bc2db",
+  "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+  "sourceGitBlob": "25d1ec2105a71286828f52d1d6af2dd6720f7424",
+  "candidateCrops": {
+    "107-09-1-49": {
+      "id": "107-09-1-49",
+      "year": 107,
+      "paperCode": "09-1",
+      "sourcePage": 8,
+      "source": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "bff3aa6563b77373e693556aeacba743afaf9a9565c0c303add88a2587f421a3",
+      "officialQuestionPdfSha256": "8e8d72b2016553f29184fd3795dab4a6f4ed0bc57e9cb861c9ce2ccf5b0bc2db",
+      "cropPixels": [
+        90,
+        169,
+        1310,
+        548
+      ],
+      "output": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp",
+      "outputSha256": "fafd23f04ab7c765beabfc9ea5aa1455ce279993741385b653df588a888356d4",
+      "outputSize": [
+        1220,
+        379
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-p008",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "REQUIRES_INDIVIDUAL_DIRECT_SOURCE_CROP_G1"
+      ]
+    },
+    "107-09-1-50": {
+      "id": "107-09-1-50",
+      "year": 107,
+      "paperCode": "09-1",
+      "sourcePage": 8,
+      "source": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "bff3aa6563b77373e693556aeacba743afaf9a9565c0c303add88a2587f421a3",
+      "officialQuestionPdfSha256": "8e8d72b2016553f29184fd3795dab4a6f4ed0bc57e9cb861c9ce2ccf5b0bc2db",
+      "cropPixels": [
+        90,
+        554,
+        1310,
+        944
+      ],
+      "output": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp",
+      "outputSha256": "1a3c63369850a8d12f5c35e04ced08ff08bbf145af638197304984b7e57d89bd",
+      "outputSize": [
+        1220,
+        390
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-p008",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "REQUIRES_INDIVIDUAL_DIRECT_SOURCE_CROP_G1"
+      ]
+    }
+  },
+  "newWebpDrafts": 2,
+  "newG1Pass": 0,
+  "newTextQA": 0,
+  "newFinalOfficialAnswerVerified": 0,
+  "sqliteG5Years": 11,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "note": "Page 8 contains Q49 Visual Basic and Q50 HTML table visual options; only separate original-pixel candidates are staged. Require actual QA before PASS."
+}

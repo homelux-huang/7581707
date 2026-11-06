@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "year": 106,
+  "questionIds": [
+    "106-00-C-36",
+    "106-00-C-37",
+    "106-00-C-38"
+  ],
+  "sharedMaterialId": "106-00-C-SHARED-36-38",
+  "questionCandidatesCreated": 3,
+  "sharedCandidatesCreated": 1,
+  "sourceOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+  "candidateCrops": {
+    "106-00-C-36": {
+      "id": "106-00-C-36",
+      "sourcePage": 8,
+      "source": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        155,
+        1310,
+        356
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-36.webp",
+      "outputSha256": "04c8ef87fb6274cb8a6997adba9c64a22d07e0cbc815e0b447b33e69dcad2a99",
+      "outputSize": [
+        1220,
+        201
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-crosspage",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "PENDING_INDIVIDUAL_VISUAL_SOURCE_TO_CROP_COMPARISON",
+        "PENDING_SHARED_PASSAGE_INDEPENDENT_QA"
+      ]
+    },
+    "106-00-C-37": {
+      "id": "106-00-C-37",
+      "sourcePage": 8,
+      "source": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        364,
+        1310,
+        568
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-37.webp",
+      "outputSha256": "882af62e1b001e298da67ea47aebe6e7472d9be52b2319f40fd5d827746f8a28",
+      "outputSize": [
+        1220,
+        204
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-crosspage",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "PENDING_INDIVIDUAL_VISUAL_SOURCE_TO_CROP_COMPARISON",
+        "PENDING_SHARED_PASSAGE_INDEPENDENT_QA"
+      ]
+    },
+    "106-00-C-38": {
+      "id": "106-00-C-38",
+      "sourcePage": 8,
+      "source": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        585,
+        1310,
+        682
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-38.webp",
+      "outputSha256": "8a105cbf88ad8cf1f760060c04e07611d918828dedada7d0e9c767eb2d6848cc",
+      "outputSize": [
+        1220,
+        97
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-crosspage",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "PENDING_INDIVIDUAL_VISUAL_SOURCE_TO_CROP_COMPARISON",
+        "PENDING_SHARED_PASSAGE_INDEPENDENT_QA"
+      ]
+    },
+    "106-00-C-SHARED-36-38": {
+      "id": "106-00-C-SHARED-36-38",
+      "sourcePage": 7,
+      "source": "sudu/data/original/106/00-C/p007-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "c2094dd3dc2d2c7221be4abf109bb19e0af7d546d79ed1f4a4505d75586fefc7",
+      "officialQuestionPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        1260,
+        1310,
+        1810
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v3/shared/106-00-C-SHARED-36-38.webp",
+      "outputSha256": "caa1e05684a21bc72b968bc5881be788ddb4f192e9915cc7d7ffe1df30a3d93d",
+      "outputSize": [
+        1220,
+        550
+      ],
+      "generationVersion": "manual-source-pixel-candidate-v3-crosspage",
+      "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+      "issues": [
+        "PENDING_INDIVIDUAL_VISUAL_SOURCE_TO_CROP_COMPARISON",
+        "PENDING_SHARED_PASSAGE_INDEPENDENT_QA"
+      ]
+    }
+  },
+  "origin": "direct inspected printed page 7 shared passage and printed page 8 Q36-Q38",
+  "actualVisualQaNotPromoted": true,
+  "needsQuestionAndSharedVisualQa": true,
+  "answerVerifiedChange": 0,
+  "textQaPassChange": 0,
+  "questionVerifiedChange": 0,
+  "visualQaPassChange": 0,
+  "sqliteG5Pass": true,
+  "sqliteRows": 204,
+  "sqliteImportPasses": 2,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

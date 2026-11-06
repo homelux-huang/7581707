@@ -1,0 +1,74 @@
+name: 105-115 SQLite round-trip and SHA audit (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/audit_105_115_sqlite_readonly.py
+      - .github/workflows/105-115-sqlite-readonly-audit.yml
+      - 'sudu/data/processed/**/questions.json'
+      - 'sudu/data/processed/**/question-bank.sqlite3'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-sqlite-g5-readonly-audit
+  cancel-in-progress: false
+jobs:
+  verify-isolated:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Read-only SQLite versus JSON and disposable two-pass import audit
+        run: |
+          python -m py_compile scripts/audit_105_115_sqlite_readonly.py
+          python scripts/audit_105_115_sqlite_readonly.py
+      - name: Assert report never promotes release or touches source databases
+        run: |
+          python - <<'PY'
+          import json
+          p='sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json'
+          j=json.load(open(p,encoding='utf-8'))
+          assert j['yearsReviewed']==11
+          assert j['sourceDatabasesModified'] is False
+          assert j['studentDataTouched'] is False
+          assert j['released'] is False
+          assert all(x['originalDbReadOnly'] is True for x in j['years'])
+          print('G5 report saved; outstanding mismatches remain BLOCKED, not waived')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 105-115-sqlite-readonly-audit
+          path: sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+      - name: Commit only read-only audit report to QA branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          git config user.name "Sudu SQLite QA auditor"
+          git config user.email "7581707-data-bot@users.noreply.github.com"
+          git add -- sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          if git diff --cached --quiet; then
+            echo 'Identical audit report; skip duplicate commit'
+            exit 0
+          fi
+          git commit -m "qa(g5): recorded readonly SQLite/JSON/SHA audit blockers (NO RELEASE)"
+          for attempt in 1 2 3; do
+            git fetch origin qa/114-115-official-visual-review
+            git rebase origin/qa/114-115-official-visual-review
+            if git push origin HEAD:qa/114-115-official-visual-review; then
+              exit 0
+            fi
+          done
+          echo 'No force-push permitted; safe push failed' >&2
+          exit 1

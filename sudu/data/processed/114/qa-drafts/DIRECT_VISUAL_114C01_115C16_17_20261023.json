@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "method": "direct_visual_original_official_page_render_against_exact_webp_crop",
+  "independentExternalHumanRecheck": false,
+  "scope": "image-only G1; shared passage, text OCR and final official answers separately gated",
+  "numberNewImageQaPass": 3,
+  "sharedMaterialQaPassAdded": 0,
+  "answerVerifiedAdded": 0,
+  "questionVerifiedAdded": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "items": [
+    {
+      "questionId": "114-00-C-01",
+      "sourcePagePath": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
+      "sourcePageSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+      "officialPdfSha256Recorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+      "sourcePage": 2,
+      "previousWebpPath": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
+      "previousWebpSha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e",
+      "reviewedWebpPath": "sudu/data/processed/114/qa-drafts/webp-v2/00-C/114-00-C-01.webp",
+      "reviewedWebpSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+      "cropSourcePixelBounds": [
+        90,
+        210,
+        1310,
+        329
+      ],
+      "compositionMethod": "source_pixel_crop_y_start_adjusted",
+      "result": "PASS_DIRECT_ORIGINAL_PAGE_CROP_VISUAL",
+      "criteria": {
+        "originalQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "diagramsAndFiguresComplete": true,
+        "noOtherQuestion": true,
+        "noHeaderOrFooter": true,
+        "readable": true,
+        "candidateAndSourceShasRecorded": true
+      },
+      "visualReview": "compared each archived official page render and exact candidate WebP in this ChatGPT session",
+      "notes": "Q1 heading fragment removed; exact Q1 number, stem and A-D legible, no neighbor.",
+      "independentHumanReview": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-16",
+      "sourcePagePath": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+      "officialPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 6,
+      "previousWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-16.webp",
+      "previousWebpSha256": "a09e042e11b0c1927bf8d0ff63ccc617230c0bf9d3011407c31fa0940f033400",
+      "reviewedWebpPath": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-16.webp",
+      "reviewedWebpSha256": "cc874e5f44e18ff05e7bb121e346eb4d1430a42dd8b061ad97b27f8339d5bff8",
+      "cropSourcePixelBounds": [
+        90,
+        1060,
+        1310,
+        1330
+      ],
+      "compositionMethod": "source_pixel_composite_preserving_full_diagram_only",
+      "result": "PASS_DIRECT_ORIGINAL_PAGE_CROP_VISUAL",
+      "criteria": {
+        "originalQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "diagramsAndFiguresComplete": true,
+        "noOtherQuestion": true,
+        "noHeaderOrFooter": true,
+        "readable": true,
+        "candidateAndSourceShasRecorded": true
+      },
+      "visualReview": "compared each archived official page render and exact candidate WebP in this ChatGPT session",
+      "notes": "Q16 social-emotional learning wheel is fully enclosed; Q17 text omitted. The reading passage for Q16-Q18 remains separate, pending shared-material QA.",
+      "independentHumanReview": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-17",
+      "sourcePagePath": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+      "officialPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 6,
+      "previousWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-17.webp",
+      "previousWebpSha256": "c195e20b574658c0e9ee0c4e10622c15f04f16f3376d8df09146b363eaef8350",
+      "reviewedWebpPath": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-17.webp",
+      "reviewedWebpSha256": "074a9f792c7b011f59606394ea2c521c2190143bce9d013fdf79b8703dbdad8a",
+      "cropSourcePixelBounds": [
+        90,
+        1302,
+        1310,
+        1432
+      ],
+      "compositionMethod": "source_pixel_crop_mask_previous_Q16_wheel_arc_only",
+      "result": "PASS_DIRECT_ORIGINAL_PAGE_CROP_VISUAL",
+      "criteria": {
+        "originalQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "diagramsAndFiguresComplete": true,
+        "noOtherQuestion": true,
+        "noHeaderOrFooter": true,
+        "readable": true,
+        "candidateAndSourceShasRecorded": true
+      },
+      "visualReview": "compared each archived official page render and exact candidate WebP in this ChatGPT session",
+      "notes": "Q17 stem and A-D complete, preceding Q16 wheel arc removed without changing Q17 text. Shared Q16-Q18 passage remains pending QA.",
+      "independentHumanReview": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    }
+  ],
+  "note": "G1 direct visual individual image only. No claim of PDF re-download, final corrections verification, OCR QA or shared-material QA."
+}

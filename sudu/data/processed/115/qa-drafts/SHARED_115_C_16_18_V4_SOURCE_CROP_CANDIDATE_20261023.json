@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "sharedMaterialId": "115-00-C-SHARED-16-18",
+  "sourcePage": 6,
+  "sourcePagePath": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+  "sourcePageSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+  "officialQuestionPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+  "oldCrop": [
+    90,
+    161,
+    1310,
+    1049
+  ],
+  "oldOutputPath": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-16-18.webp",
+  "oldSha256": "708a7236cdf91753bb86f385603922090105ace1a9f792c13b40869fd3686d45",
+  "newOutputPath": "sudu/data/processed/115/qa-drafts/webp-v4/shared/115-00-C-SHARED-16-18.webp",
+  "newSha256": "f1a3eac89b4f1db5d32a6511f070ef463a8759116a780257a7c213ab5d1fd77c",
+  "newCrop": [
+    90,
+    161,
+    1310,
+    1059
+  ],
+  "newSizePixels": [
+    1220,
+    898
+  ],
+  "purpose": "restore entire byline at bottom without including adjacent Q16",
+  "qaStatus": "PENDING_DIRECT_VISUAL_REVIEW",
+  "officialAnswerVerified": false,
+  "integrationReady": false,
+  "releaseAllowed": false
+}

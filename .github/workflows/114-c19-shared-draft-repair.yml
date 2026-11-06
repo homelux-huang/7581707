@@ -1,0 +1,76 @@
+name: 114 C19 and shared passage draft repair (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_114_c19_shared_drafts.py
+      - .github/workflows/114-c19-shared-draft-repair.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: 114-c19-immutable-draft-data-only
+  cancel-in-progress: false
+jobs:
+  candidate-only:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install lossless WebP crop dependency
+        run: python -m pip install --quiet 'Pillow>=10,<12'
+      - name: Generate immutable DRAFT only with source SHA guard
+        run: |
+          python -m py_compile scripts/stage_114_c19_shared_drafts.py
+          python scripts/stage_114_c19_shared_drafts.py
+      - name: Strictly ensure no false QA promotion
+        run: |
+          python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          p=Path('sudu/data/processed/114/qa-drafts/UNVERIFIED_114_C19_SHARED_20_23_20261023.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          assert len(data['generated'])==2
+          assert data['imageQaPassAdded']==0 and data['answerVerifiedAdded']==0
+          assert not data['releaseAllowed'] and not data['integrationReady']
+          for x in data['generated']:
+              f=Path(x['output'])
+              assert f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest()==x['outputSha256']
+              assert x['qaStatus']=='DRAFT_PENDING_DIRECT_ORIGINAL_VISUAL_QA'
+              assert x['answerVerified'] is False and x['questionVerified'] is False
+          print('PASS staging source/outputs only; visual and answer QA still blocked')
+          PY
+      - name: Commit draft files ONLY on dedicated QA branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          git config user.name "Sudu candidate data bot"
+          git config user.email "7581707-data-bot@users.noreply.github.com"
+          git add -- \
+            sudu/data/processed/114/webp-v2/00-C/114-00-C-19.webp \
+            sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp \
+            sudu/data/processed/114/qa-drafts/UNVERIFIED_114_C19_SHARED_20_23_20261023.json
+          if git diff --cached --quiet; then
+            echo 'Unchanged drafts/SHA: no repeat commit'
+            exit 0
+          fi
+          git commit -m "data(114): immutable Q19 and shared passage draft WebP (NOT QA)"
+          for attempt in 1 2 3; do
+            git fetch origin qa/114-115-official-visual-review
+            git rebase origin/qa/114-115-official-visual-review
+            if git push origin HEAD:qa/114-115-official-visual-review; then
+              exit 0
+            fi
+          done
+          echo 'Safe non-forced QA branch push failed' >&2
+          exit 1

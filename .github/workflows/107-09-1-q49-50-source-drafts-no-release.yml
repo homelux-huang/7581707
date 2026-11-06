@@ -1,0 +1,89 @@
+name: 107 commerce 09-1 Q49 Q50 exact official pixel drafts (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_107_09_1_q49_50_original_page_drafts.py
+      - .github/workflows/107-09-1-q49-50-source-drafts-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa107-09-1-49-50-candidates
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pillow original-pixel / SHA validation dependency
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin QA HEAD and check both original page8 crop boundaries
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python scripts/stage_107_09_1_q49_50_original_page_drafts.py --check
+      - name: Stage lossless two question WebPs and isolated G5
+        run: python scripts/stage_107_09_1_q49_50_original_page_drafts.py --stage
+      - name: Strict NO RELEASE and original candidate linkage verification
+        run: |
+          python - <<'PY_ASSERT'
+          import json,hashlib,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          base=Path('sudu/data/processed/107')
+          def rd(f):return json.loads((base/f).read_text(encoding='utf8'))
+          inv=rd('inventory.json');m=rd('webp-manifest.json')
+          q=rd('questions.json');v=rd('VISUAL_QA.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          e=rd('qa-drafts/DRAFT_107_09_1_Q49_50_P008_20261024.json')
+          assert inv['webpGeneratedDrafts']==191 and inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==4
+          assert inv['ocrTextIndependentlyVerified']==4 and inv['answerOfficialFinalVerified']==0
+          assert e['newWebpDrafts']==2 and e['newG1Pass']==0
+          assert inv['sourcePaperStats']['09-1']['imageDrafts']==50
+          assert len(q['questions'])==len(m['items'])==204
+          for n in (49,50):
+              id=f'107-09-1-{n:02d}'
+              img=next(x for x in m['items'] if x['questionId']==id)
+              row=next(x for x in q['questions'] if x['questionId']==id)
+              assert img['sourcePage']==8 and img['qaStatus']==row['imageQaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert hashlib.sha256(Path(img['output']).read_bytes()).hexdigest()==img['outputSha256']
+              assert img['outputSha256']==row['assets']['sha256']
+              assert not row['questionVerified'] and not row['answerVerified'] and not row['integrationReady']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert all(audit_year(y)['g5Pass'] for y in range(105,116))
+          print('107 09-1 Q49-Q50 candidate-only 2, G5 11/11, G1 unchanged, NO RELEASE')
+          PY_ASSERT
+      - name: Commit two draft candidates with nonforce lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp
+          git add sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp
+          git add sudu/data/processed/107/qa-drafts/DRAFT_107_09_1_Q49_50_P008_20261024.json
+          git add sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/webp-manifest.json
+          git add sudu/data/processed/107/ocr-raw-candidates.json
+          git add sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json
+          git add sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA commit; refuse stale push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa107): two exact P8 09-1 Q49-Q50 WebP DRAFTs and G5 only"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

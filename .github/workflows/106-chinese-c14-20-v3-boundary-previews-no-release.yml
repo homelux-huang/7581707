@@ -1,0 +1,80 @@
+name: 106 Chinese Q14-20 independent boundary repair v3 candidates (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/stage_106_chinese_14_20_v3_boundary_previews.py
+      - .github/workflows/106-chinese-c14-20-v3-boundary-previews-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa106-c14-20-v3-original-crops
+  cancel-in-progress: false
+jobs:
+  prepare_and_validate:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source pixel decoder
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin latest QA HEAD and preflight all source cropped pixels
+        run: |
+          set -euo pipefail
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/stage_106_chinese_14_20_v3_boundary_previews.py
+          python scripts/stage_106_chinese_14_20_v3_boundary_previews.py
+      - name: Stage only new v3 original-pixel candidates, not QA PASS
+        run: python scripts/stage_106_chinese_14_20_v3_boundary_previews.py --stage
+      - name: Assert every original old SHA is preserved and all gates still closed
+        run: |
+          python - <<'PY_GUARDS'
+          import hashlib,json
+          from pathlib import Path
+          root=Path("sudu/data/processed/106")
+          def rd(p):return json.loads((root/p).read_text("utf8"))
+          e=rd("qa-drafts/DRAFT_106_C14_20_V3_BOUNDARY_PREVIEWS_20261024.json")
+          m=rd("webp-manifest.json")
+          q=rd("questions.json")
+          v=rd("VISUAL_QA.json")
+          rel=rd("release-manifest.json")
+          inv=rd("inventory.json")
+          assert len(e["items"])==8 and e["candidateCount"]==7 and e["changedSharedCount"]==1
+          assert e["newG1Pass"]==e["newG2Pass"]==e["newFinalAnswerVerified"]==0
+          assert inv["visualQaPass"]==v["passCount"]==16
+          assert inv["answerOfficialFinalVerified"]==0
+          assert len(q["questions"])==len(m["items"])==204
+          for row in e["items"]:
+              src=Path(row["oldPath"]);out=Path(row["newPath"])
+              assert hashlib.sha256(src.read_bytes()).hexdigest()==row["oldSha256"]
+              assert hashlib.sha256(out.read_bytes()).hexdigest()==row["newSha256"]
+          assert not rel["releaseAllowed"] and not rel["integrationReady"]
+          print("Q14-20 V3 7 drafts + 1 shared; old unchanged; G1 unchanged 16; NO RELEASE")
+          PY_GUARDS
+      - name: Commit source crop candidates with exact nonforce HEAD lease
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-14.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-15.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-16.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-17.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-18.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-19.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-20.webp
+          git add sudu/data/processed/106/qa-drafts/webp-v3/shared/106-00-C-SHARED-17-18.webp
+          git add sudu/data/processed/106/qa-drafts/DRAFT_106_C14_20_V3_BOUNDARY_PREVIEWS_20261024.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          test "$(git rev-parse FETCH_HEAD)" = "$QA_BASE" || { echo "Concurrent QA update: abort"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa106): isolate original-pixel Q14-20 v3 and shared17-18 drafts without QA promotion"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

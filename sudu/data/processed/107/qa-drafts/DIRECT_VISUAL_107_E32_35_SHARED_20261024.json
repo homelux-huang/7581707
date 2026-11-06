@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "year": 107,
+  "paperCode": "00-E",
+  "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+  "reviewedAt": "2026-10-24T22:01:16+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "sourcePrintedPage": 6,
+  "method": "Assistant visually opened original TCTE printed page6 and all six SHA-bound lossless single/shared crops; compared exact A-D and passage text/table",
+  "criteria": {
+    "questionNumber": true,
+    "fullStem": true,
+    "allABCD": true,
+    "noAdjacentQuestion": true,
+    "noHeaderOrFooter": true,
+    "sharpness": true,
+    "completeSharedMaterial": true,
+    "sourceAndCandidateSHA": true
+  },
+  "specificObservations": {
+    "107-00-E-32": "Only question32 'On which day is it most likely to rain?' and Monday/Tuesday/Thursday/Friday options.",
+    "107-00-E-33": "Only question33 Hualien two-day trip and all four day-range options, no question34.",
+    "107-00-E-34": "Only question34 about Chi Po-lin recording Typhoon Morakot and complete A-D.",
+    "107-00-E-35": "Only question35 raising closest meaning with A collecting B lifting C moving D promoting.",
+    "107-00-E-SHARED-32-33": "Full Hualien five-day weather forecast, Monday through Friday, all 10%,0%,30%,80%,40%, diagrams and title. No Q32 stem.",
+    "107-00-E-SHARED-34-37": "Full Golden Horse Chi Po-lin Beyond Beauty Taiwan from Above English passage, glossary documentary, no Q34 stem. Linked to 34-37; 36-37 remain pending independent question QA."
+  },
+  "items": [
+    {
+      "questionIdOrSharedId": "107-00-E-32",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        649,
+        1310,
+        739
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-32.webp",
+      "reviewedSha256": "fe13465861d99e8f244f483929e25de7ab20783bc4fac9251dd8b061f4ef5e22",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    },
+    {
+      "questionIdOrSharedId": "107-00-E-33",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        745,
+        1310,
+        899
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-33.webp",
+      "reviewedSha256": "06a91330240b25dd3585995c59022b01eb930fbed79d572a9a958a8c43a32027",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    },
+    {
+      "questionIdOrSharedId": "107-00-E-34",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        1483,
+        1310,
+        1696
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-34.webp",
+      "reviewedSha256": "3316ec74a77ea9f6d4c60aadee3d91aee227a4f7b5d7560e0930c93b09c55df0",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    },
+    {
+      "questionIdOrSharedId": "107-00-E-35",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        1705,
+        1310,
+        1829
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-35.webp",
+      "reviewedSha256": "1910a827ec92a8a1b71cfad7ec5406d517b9731655d3d02381e1fc48621734b3",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    },
+    {
+      "questionIdOrSharedId": "107-00-E-SHARED-32-33",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        256,
+        1310,
+        645
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/shared/107-00-E-SHARED-32-33.webp",
+      "reviewedSha256": "23d74a1bad959acb650f3ab8c8d89686a4e0c27c2527ac548dff42545d8684bb",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    },
+    {
+      "questionIdOrSharedId": "107-00-E-SHARED-34-37",
+      "sourcePage": 6,
+      "officialPdfSha256": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+      "sourceWebp": "sudu/data/original/107/00-E/p006-6fa77b536c-v2-w1400-q66.webp",
+      "sourceWebpSha256": "9f5a401dac5adca8c3dfafb2f3efd2566abaddd1b4ef1f12582c20f85cfbb2af",
+      "cropPixels": [
+        90,
+        916,
+        1310,
+        1476
+      ],
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/shared/107-00-E-SHARED-34-37.webp",
+      "reviewedSha256": "8499d7f50c1c20d0ffaef3d452cc88652db28aed92f103c90f3b2169d24e1cd4",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T22:01:16+08:00"
+    }
+  ],
+  "newG1QuestionPass": 4,
+  "newG1SharedPass": 2,
+  "newOCRQA": 0,
+  "newVerifiedAnswers": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

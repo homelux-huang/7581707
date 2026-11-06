@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-24T21:28:40+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "year": 106,
+  "paperCode": "00-C",
+  "officialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+  "sourceInspectionPages": [
+    7,
+    8
+  ],
+  "imageVisualQaResult": "PASS_ASSISTANT_DIRECT_SOURCE_CROP",
+  "newIndividualQaPassCount": 3,
+  "newSharedQaPassCount": 1,
+  "method": "actual visual side-by-side of source original printed pages 7/8 and immutable lossless source-pixel WebPs; verified in chat session + GitHub cropped source byte/pixel SHA",
+  "notAnIndependentExternalHumanAudit": true,
+  "criteria": {
+    "originalQuestionNumber": true,
+    "completeStem": true,
+    "allOptionsABCD": true,
+    "allNecessaryTablesAndGraphics": true,
+    "noAdjacentQuestion": true,
+    "noPrintedHeaderOrFooter": true,
+    "sharpLegible": true,
+    "sourceAndCropShaBound": true,
+    "crossPageSharedPassageIndividuallyReviewed": true
+  },
+  "specificObservations": {
+    "106-00-C-36": "Image contains only printed question 36 and complete A-D comparing prose甲、乙, page 8. No question37.",
+    "106-00-C-37": "Image contains only printed question37 and complete A-D, 莊子藏天下於天下 vs 蘇軾自其不變者而觀之.",
+    "106-00-C-38": "Image contains only question38 and A心有拘執 B天下無道 C藏才隱智 D物我無盡. Excludes writing essay section.",
+    "106-00-C-SHARED-36-38": "Original printed page7 passage starting ▲閱讀下文回答第36–38題, complete 甲蘇軾赤壁賦 and 乙改寫李一冰蘇東坡新傳, ending exactly before page footer. Separately linked Q36-38."
+  },
+  "items": [
+    {
+      "questionIdOrSharedId": "106-00-C-36",
+      "sourcePage": 8,
+      "sourcePath": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "originalOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        155,
+        1310,
+        356
+      ],
+      "candidateWebpPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-36.webp",
+      "reviewedSha256": "04c8ef87fb6274cb8a6997adba9c64a22d07e0cbc815e0b447b33e69dcad2a99",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T21:28:40+08:00"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-37",
+      "sourcePage": 8,
+      "sourcePath": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "originalOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        364,
+        1310,
+        568
+      ],
+      "candidateWebpPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-37.webp",
+      "reviewedSha256": "882af62e1b001e298da67ea47aebe6e7472d9be52b2319f40fd5d827746f8a28",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T21:28:40+08:00"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-38",
+      "sourcePage": 8,
+      "sourcePath": "sudu/data/original/106/00-C/p008-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "5e89dbe1f535e1044436797e90511e74c7c98d16b2e6068ccec4e066d0fbc9d5",
+      "originalOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        585,
+        1310,
+        682
+      ],
+      "candidateWebpPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-38.webp",
+      "reviewedSha256": "8a105cbf88ad8cf1f760060c04e07611d918828dedada7d0e9c767eb2d6848cc",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T21:28:40+08:00"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-SHARED-36-38",
+      "sourcePage": 7,
+      "sourcePath": "sudu/data/original/106/00-C/p007-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "c2094dd3dc2d2c7221be4abf109bb19e0af7d546d79ed1f4a4505d75586fefc7",
+      "originalOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "cropPixels": [
+        90,
+        1260,
+        1310,
+        1810
+      ],
+      "candidateWebpPath": "sudu/data/processed/106/qa-drafts/webp-v3/shared/106-00-C-SHARED-36-38.webp",
+      "reviewedSha256": "caa1e05684a21bc72b968bc5881be788ddb4f192e9915cc7d7ffe1df30a3d93d",
+      "result": "PASS",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-24T21:28:40+08:00"
+    }
+  ],
+  "answerVerifiedChange": 0,
+  "questionVerifiedChange": 0,
+  "newOcrTextQaPass": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

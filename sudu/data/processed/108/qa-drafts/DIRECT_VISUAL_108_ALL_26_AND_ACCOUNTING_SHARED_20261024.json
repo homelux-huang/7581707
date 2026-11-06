@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "year": 108,
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "reviewedAt": "2026-10-24T22:39:21+08:00",
+  "method": "Assistant directly visually inspected four distinct official-source page rasters against all current 26 individual and 1 shared original pixel crops, correcting seven v3 and four v4 cuts first",
+  "officialPdfBytesReDownloadedForIndependentG0": false,
+  "items": [
+    {
+      "questionIdOrSharedId": "108-00-MB-11",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-11.webp",
+      "candidateSha256": "84f81cbb1674801ce9fc16b15771eb938f38b8c000f9e9cfbbb08e068ab37993",
+      "cropPixels": [
+        90,
+        169,
+        1310,
+        351
+      ],
+      "result": "PASS",
+      "observation": "chicken egg probability",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-12",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-12.webp",
+      "candidateSha256": "01a04ced7ea78bae93dffbbcd61b50bb098820922c139a5c9d6cfec580c709bc",
+      "cropPixels": [
+        90,
+        352,
+        1310,
+        524
+      ],
+      "result": "PASS",
+      "observation": "rebounds fraction",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-13",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-13.webp",
+      "candidateSha256": "2b4b72f7b08e0ed7d64483001315b01df29982009498f51f173944a9aa1f837e",
+      "cropPixels": [
+        90,
+        525,
+        1310,
+        918
+      ],
+      "result": "PASS",
+      "observation": "95 percent confidence interval",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-14",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-14.webp",
+      "candidateSha256": "4e488da14604b8b00158c3825fb404ad03f70f862834f1ebdb26a59b4976e188",
+      "cropPixels": [
+        90,
+        919,
+        1310,
+        1060
+      ],
+      "result": "PASS",
+      "observation": "parabola opening and intercept",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-15",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-15.webp",
+      "candidateSha256": "ea6e4129de7bdcd929549adf2d769c4a4b04bf3b86de02bf1216d1248da01ee9",
+      "cropPixels": [
+        90,
+        1061,
+        1310,
+        1248
+      ],
+      "result": "PASS",
+      "observation": "L1 L2 slopes and four fractions",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-16",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v4/00-MB/108-00-MB-16.webp",
+      "candidateSha256": "d472b5e3f0c9383ea0585dc7201feec57a050eba8652fa5d108d479b407c90e7",
+      "cropPixels": [
+        90,
+        1249,
+        1310,
+        1637
+      ],
+      "result": "PASS",
+      "observation": "five colored segment diagram A-E and permutations",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-00-MB-17",
+      "year": 108,
+      "paperCode": "00-MB",
+      "sourcePage": 3,
+      "originalQuestionPdfSha256FromRepository": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "sourceOriginalPageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v4/00-MB/108-00-MB-17.webp",
+      "candidateSha256": "8db038429ad97927dbfa8e989e497c8948254f058f755a09546b31ac8144222e",
+      "cropPixels": [
+        90,
+        1638,
+        1310,
+        1825
+      ],
+      "result": "PASS",
+      "observation": "two determinants and A-D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-15",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 4,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p004-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-15.webp",
+      "candidateSha256": "cb30a096711f952e0187d1cdf55930960fc5a391465a202933dd1fa675694acb",
+      "cropPixels": [
+        90,
+        163,
+        1310,
+        546
+      ],
+      "result": "PASS",
+      "observation": "personnel annual performance assessment",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-16",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 4,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p004-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-16.webp",
+      "candidateSha256": "acf8852abf3244a8aae31938b37b52b65cf0a6ae4bbfcd132bd4c2308809355e",
+      "cropPixels": [
+        90,
+        547,
+        1310,
+        1129
+      ],
+      "result": "PASS",
+      "observation": "complete industrial radar chart A vs industry",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-17",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 4,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p004-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-17.webp",
+      "candidateSha256": "2e8a7d9a4e2f525c790892c36bdf37e9e0ba8062101bd4f2fdefc354aae672a4",
+      "cropPixels": [
+        90,
+        1130,
+        1310,
+        1450
+      ],
+      "result": "PASS",
+      "observation": "self-service washing machine patent and A-D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-18",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 4,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p004-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "dcca594d476bd2aee55676ba0a45f52fab03229b358a28bd82f9a6f9195bac61",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-18.webp",
+      "candidateSha256": "039035d73423fefd94a0f049594ee03c3b28f3fb6239c94d9c02b373fd73af1a",
+      "cropPixels": [
+        90,
+        1451,
+        1310,
+        1782
+      ],
+      "result": "PASS",
+      "observation": "intellectual property law and four choices",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-26",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-26.webp",
+      "candidateSha256": "d5e9c23f19816a0d21c0b18260557958c87817f1da0fc75839cebea361420a26",
+      "cropPixels": [
+        90,
+        220,
+        1310,
+        497
+      ],
+      "result": "PASS",
+      "observation": "PowerPoint print-page icons in all A-D images",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-27",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-27.webp",
+      "candidateSha256": "31ff2e02836a78cbf2f95d7940b490b6a77c0fe63a63fbd8920cd894523f9687",
+      "cropPixels": [
+        90,
+        498,
+        1310,
+        585
+      ],
+      "result": "PASS",
+      "observation": "display connector formats",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-28",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v3/09-1/108-09-1-28.webp",
+      "candidateSha256": "27834b951409d3fe925de49a81e6147ad03a29cd639caa4a32807ae20aa1f968",
+      "cropPixels": [
+        90,
+        586,
+        1310,
+        795
+      ],
+      "result": "PASS",
+      "observation": "natural-person digital certificate full D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-29",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v3/09-1/108-09-1-29.webp",
+      "candidateSha256": "e2cc6bc69b027eea81edfb01ddcbb9f00fe9aed0c839a434787235394f5bed20",
+      "cropPixels": [
+        90,
+        796,
+        1310,
+        980
+      ],
+      "result": "PASS",
+      "observation": "OSI network model four options",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-30",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-30.webp",
+      "candidateSha256": "ffd7318c2c6240c6dd202b05df631a489810c361f14599ea5798853729f922db",
+      "cropPixels": [
+        90,
+        981,
+        1310,
+        1208
+      ],
+      "result": "PASS",
+      "observation": "HTML 1 row 2 column table and literal HTML choices",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-31",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-31.webp",
+      "candidateSha256": "e6b52d81ccb8720cd1987a312cd6e722ab5fb6f8489d9d567e40c5bf8bafce88",
+      "cropPixels": [
+        90,
+        1209,
+        1310,
+        1435
+      ],
+      "result": "PASS",
+      "observation": "Word tab stop symbols A-D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-32",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-32.webp",
+      "candidateSha256": "f11d400aecfd8e371a5412fc9b9cf33812da20063d817ef306f041c9a0218603",
+      "cropPixels": [
+        90,
+        1436,
+        1310,
+        1637
+      ],
+      "result": "PASS",
+      "observation": "SSL SET ecommerce four alternatives",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-1-33",
+      "year": 108,
+      "paperCode": "09-1",
+      "sourcePage": 6,
+      "originalQuestionPdfSha256FromRepository": "3556f26b5a84a3209ffe7d2dea638586fc717417a5618c2742739f8388dd12e3",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-1/p006-3556f26b5a-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "34cb74ddd2a117ef88e69e28b6a82cee936065fb24504e0c816fa15696783201",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-1/108-09-1-33.webp",
+      "candidateSha256": "b2387383703d1169efc14ac75b544e601658390a8277b11e3d776139268e65b0",
+      "cropPixels": [
+        90,
+        1638,
+        1310,
+        1785
+      ],
+      "result": "PASS",
+      "observation": "BIOS PC motherboard A-D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-23",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-23.webp",
+      "candidateSha256": "d77f72c014affc22221574afac5ff787b072925652987efe7c9fd000e0f83f52",
+      "cropPixels": [
+        90,
+        170,
+        1310,
+        359
+      ],
+      "result": "PASS",
+      "observation": "accounts receivable journal entry and all amounts",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-24",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v3/09-2/108-09-2-24.webp",
+      "candidateSha256": "05979b4c13cf090f01d5895c993ff8b3fbeaedab382fc012f5c76ea11319eeb1",
+      "cropPixels": [
+        90,
+        511,
+        1310,
+        612
+      ],
+      "result": "PASS",
+      "observation": "asset exchange with commercial substance A-D, separate common data",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-25",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-25.webp",
+      "candidateSha256": "d651038a74fd8160e15fb4411e47363b167b6c0691bc63767742e622fbfa93aa",
+      "cropPixels": [
+        90,
+        620,
+        1310,
+        690
+      ],
+      "result": "PASS",
+      "observation": "asset exchange without commercial substance A-D, separate common data",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-26",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-26.webp",
+      "candidateSha256": "d220fa6b218e223ae5e4308763eb2153e5a4ed3c86b2deabec5c382b0f07d99c",
+      "cropPixels": [
+        90,
+        737,
+        1310,
+        1134
+      ],
+      "result": "PASS",
+      "observation": "production possibility curve full graph and 4 choices",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-27",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/09-2/108-09-2-27.webp",
+      "candidateSha256": "91542828fa608bb6d414135c909cccd2232a73efde46bf5ed295715e3804ed46",
+      "cropPixels": [
+        90,
+        1135,
+        1310,
+        1380
+      ],
+      "result": "PASS",
+      "observation": "reserve deposit credit multiplier four choices",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-28",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v4/09-2/108-09-2-28.webp",
+      "candidateSha256": "07e5b08fbc80329be5fdd580acc73cc0e88a84cd5a563bc655a6f49589b19b4c",
+      "cropPixels": [
+        90,
+        1381,
+        1310,
+        1586
+      ],
+      "result": "PASS",
+      "observation": "elasticity and complete long D option",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-29",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v4/09-2/108-09-2-29.webp",
+      "candidateSha256": "fe8e293e17fbfe8b29180c57240af388a8246a645ab96ef830c359e0b7cd4c16",
+      "cropPixels": [
+        90,
+        1587,
+        1310,
+        1810
+      ],
+      "result": "PASS",
+      "observation": "supply-demand Qd Qs formulas A-D",
+      "pixelDifferenceZero": true
+    },
+    {
+      "questionIdOrSharedId": "108-09-2-SHARED-24-25",
+      "year": 108,
+      "paperCode": "09-2",
+      "sourcePage": 5,
+      "originalQuestionPdfSha256FromRepository": "bc374a3459c00327cc893560f39a696b589fa44be4c4c3e98d92f942aa3f9f6a",
+      "sourceOriginalPageWebp": "sudu/data/original/108/09-2/p005-bc374a3459-v2-w1400-q66.webp",
+      "sourceOriginalPageSha256": "fc477d48b3355fbc66047f2cb5140033ba075fa52efdfa546a28ccda8cb2c2a6",
+      "candidateWebp": "sudu/data/processed/108/qa-drafts/webp-v2/shared/108-09-2-SHARED-24-25.webp",
+      "candidateSha256": "e60d85733befb9a1ad118af72f75880c97b8c3777f6a1b57807e558a875dcd9f",
+      "cropPixels": [
+        90,
+        366,
+        1310,
+        510
+      ],
+      "result": "PASS",
+      "observation": "Complete equipment-exchange shared passage including costs, useful life, carrying value, exchanged fair value and cash",
+      "pixelDifferenceZero": true
+    }
+  ],
+  "newIndividualG1Pass": 26,
+  "newSharedMaterialG1Pass": 1,
+  "newTextQaPass": 0,
+  "newOfficialFinalAnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

@@ -1,0 +1,29 @@
+{
+  "year": 111,
+  "questionId": "111-00-E-30",
+  "sourcePage": 5,
+  "source": "sudu/data/original/111/00-E/p005-4fef546202-v2-w1400-q66.webp",
+  "old": {
+    "path": "sudu/data/processed/111/webp-v1/00-E/111-00-E-30.webp",
+    "sha256": "e02cf716985676dad960238a93f9e463877fec2c9859f831a9c35fc8dfc84b0e",
+    "crop": [
+      90,
+      781,
+      1310,
+      1554
+    ],
+    "visualFailure": "INCLUDED_SECTION_IV_AND_NEXT_Q31_Q32_GRAPH"
+  },
+  "new": {
+    "webp": "sudu/data/processed/111/webp-v2/00-E/111-00-E-30.webp",
+    "sha256": "44987b0328ac0f5fa412764b891b3d5259ae9af007eadb03a4ab43a1e20d487a",
+    "cropPixels": [
+      90,
+      781,
+      1310,
+      838
+    ],
+    "qaStatus": "PENDING_DIRECT_VISUAL_QA"
+  },
+  "note": "Old Q30 WebP visibly contained section IV and subsequent graph. New v2 is pixel-only crop; visual PASS cannot be presumed."
+}

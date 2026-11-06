@@ -1,0 +1,82 @@
+{
+  "year": 105,
+  "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
+  "imageVisualQaPass": 7,
+  "answerOfficialFinalVerified": 0,
+  "ocrTextVerified": 0,
+  "officialExpectedQuestionCountsConfirmed": false,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "sourceGaps": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 34,
+      "imageDrafts": 34,
+      "unresolvedAnchorNumbers": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 38,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 41,
+      "numberedAnchors": 41,
+      "imageDrafts": 41,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 41,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 49,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 47,
+      "imageDrafts": 47,
+      "unresolvedAnchorNumbers": [
+        48,
+        49,
+        50
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  },
+  "directVisualQaNote": "7 image WebP and 2 shared WebP directly inspected; source SHA and crop pixels verified; OCR, final answers and DB association still pending."
+}

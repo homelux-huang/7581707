@@ -1,0 +1,206 @@
+{
+  "year": 105,
+  "source": "existing SHA-pinned TCTE official page WebP",
+  "draftSingleQuestionCount": 7,
+  "draftSharedMaterialCount": 2,
+  "visualQaPassAdded": 0,
+  "answerVerifiedAdded": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "warning": "All coordinates are candidate estimates; visual QA and final-answer corrections remain pending.",
+  "items": [
+    {
+      "assetId": "105-00-C-24",
+      "questionIds": [
+        "105-00-C-24"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        692,
+        1310,
+        783
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/00-C/105-00-C-24.webp",
+      "outputSha256": "92ee8cb612313e428626e7125ac1d34c9d121eedcc65c6baa451ae495c72db96",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-00-C-25",
+      "questionIds": [
+        "105-00-C-25"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        783,
+        1310,
+        861
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/00-C/105-00-C-25.webp",
+      "outputSha256": "0132bfc387f878f069bd7b994622660a474973e106bfeef52e0d3d914680d5f1",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-00-C-26",
+      "questionIds": [
+        "105-00-C-26"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        861,
+        1310,
+        1043
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/00-C/105-00-C-26.webp",
+      "outputSha256": "fd98378523c7c468a34ecdd6bd74549b4799768be9a31d585420a9a48aa68ffb",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-00-C-27",
+      "questionIds": [
+        "105-00-C-27"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        1601,
+        1310,
+        1840
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/00-C/105-00-C-27.webp",
+      "outputSha256": "aa4942d443c657514663b1d3953b61a4bf498670fd9e9facd085b9e18e8bd084",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-09-2-48",
+      "questionIds": [
+        "105-09-2-48"
+      ],
+      "sourcePage": 8,
+      "source": "sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "9af1d1daa25694f1605b9b828b72b3e8cab1bdd713fd0c79e55a684987135410",
+      "cropPixels": [
+        90,
+        168,
+        1310,
+        372
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/09-2/105-09-2-48.webp",
+      "outputSha256": "269680e85c506d7d19c56dcb17639151e9add0fa632e069b92cf9412e8b58066",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-09-2-49",
+      "questionIds": [
+        "105-09-2-49"
+      ],
+      "sourcePage": 8,
+      "source": "sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "9af1d1daa25694f1605b9b828b72b3e8cab1bdd713fd0c79e55a684987135410",
+      "cropPixels": [
+        90,
+        372,
+        1310,
+        550
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/09-2/105-09-2-49.webp",
+      "outputSha256": "bd4f2d5eecbeecd2d7fe987bdabda6072e75a13682d58156aefc215c9fe0b0c7",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-09-2-50",
+      "questionIds": [
+        "105-09-2-50"
+      ],
+      "sourcePage": 8,
+      "source": "sudu/data/original/105/09-2/p008-e420528ee7-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "9af1d1daa25694f1605b9b828b72b3e8cab1bdd713fd0c79e55a684987135410",
+      "cropPixels": [
+        90,
+        550,
+        1310,
+        1128
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/09-2/105-09-2-50.webp",
+      "outputSha256": "b27be60925fe44cebbde03c734c76bb933cd38dd381067b09143425611bb0c60",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-00-C-SHARED-24-26",
+      "questionIds": [
+        "105-00-C-24",
+        "105-00-C-25",
+        "105-00-C-26"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        167,
+        1310,
+        690
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/shared/105-00-C-SHARED-24-26.webp",
+      "outputSha256": "6f7015a57c8150a57f9b4dd94bce531295c4b800a4659700bd82a8462d5a54ca",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "assetId": "105-00-C-SHARED-27-29",
+      "questionIds": [
+        "105-00-C-27",
+        "105-00-C-28",
+        "105-00-C-29"
+      ],
+      "sourcePage": 6,
+      "source": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+      "cropPixels": [
+        90,
+        1050,
+        1310,
+        1595
+      ],
+      "output": "sudu/data/processed/105/qa-drafts/webp-v2/shared/105-00-C-SHARED-27-29.webp",
+      "outputSha256": "59a77387c722ba11b4aadd6c1815f67b7b109146834065e05bb585a377c06d0f",
+      "imageQaStatus": "DRAFT_NEEDS_ORIGINAL_TO_CROP_DIRECT_VISUAL_QA",
+      "questionVerified": false,
+      "answerVerified": false,
+      "integrationReady": false
+    }
+  ]
+}

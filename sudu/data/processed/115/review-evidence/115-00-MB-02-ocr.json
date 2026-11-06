@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-02",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "e773c34c83007af4bac0e1567262acfd0a5369b1c7be21bfdc14b44ac13c4459",
+  "webpSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+  "question": "已知 α≠β。若 α+β 與 α−β 為 x²−8x+5(α−β)=0 之兩根，則 αβ＝？",
+  "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ],
+  "visualTextCompared": true,
+  "findings": "直接目視已 QA 單題 WebP，比對題號、完整題幹、四個選項、數學符號與負號；無鄰題混入；此處為人工式目視 QA，不重新執行 OCR。"
+}

@@ -1,0 +1,82 @@
+name: 106 Chinese Q35 v4 source-original G1 inspection (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/apply_106_c35_v4_direct_visual_g1.py
+      - .github/workflows/106-c35-v4-direct-visual-g1-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa106-c35-v4-visual-g1
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original-pixel verification prerequisite
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin SHA and inspect Q35 v4 source and output bytes before G1
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python scripts/apply_106_c35_v4_direct_visual_g1.py
+      - name: Verify G1 and G5 without changing G2 G3 G6 release
+        run: |
+          python - <<'PY_CHECK'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          d=Path('sudu/data/processed/106')
+          def read(p):return json.loads((d/p).read_text('utf8'))
+          inv=read('inventory.json');qa=read('VISUAL_QA.json')
+          m=read('webp-manifest.json');q=read('questions.json')
+          v=read('VALIDATION.json');rel=read('release-manifest.json')
+          e=read('qa-drafts/DIRECT_VISUAL_106_C35_V4_20261024.json')
+          x=next(i for i in m['items'] if i['questionId']=='106-00-C-35')
+          row=next(i for i in q['questions'] if i['questionId']=='106-00-C-35')
+          assert inv['visualQaPass']==qa['passCount']==v['imageVisualQaPass']==16
+          assert inv['ocrTextIndependentlyVerified']==v['ocrTextVerified']==10
+          assert inv['answerOfficialFinalVerified']==0
+          assert x['qaStatus']==row['imageQaStatus']=='PASS'
+          assert x['visualReviewEvidence']['reviewedSha256']==e['newCandidateWebpSha256']
+          assert e['independentHumanReview'] is False and e['reviewer']=='ChatGPT assistant'
+          assert row['questionVerified'] and not row['answerVerified'] and not row['integrationReady']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert all(audit_year(y)['g5Pass'] for y in range(105,116))
+          print('Q35 V4 G1 reviewed (assistant, not independent human), 106 G1=16, G5 11/11 NO RELEASE')
+          PY_CHECK
+      - name: Save G1 certificate and isolated DB with nonforce HEAD lease
+        run: |
+          set -eu
+          git add sudu/data/processed/106/webp-manifest.json
+          git add sudu/data/processed/106/questions.json
+          git add sudu/data/processed/106/VISUAL_QA.json
+          git add sudu/data/processed/106/inventory.json
+          git add sudu/data/processed/106/VALIDATION.json
+          git add sudu/data/processed/106/release-manifest.json
+          git add sudu/data/processed/106/question-bank.sqlite3
+          git add sudu/data/processed/106/qa-drafts/DIRECT_VISUAL_106_C35_V4_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "Existing G1 certificate unchanged"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "QA branch moved: refuse unleased write"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(106): Q35 v4 direct source visual PASS, preserve G3 and NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

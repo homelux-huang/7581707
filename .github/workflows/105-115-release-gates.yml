@@ -1,0 +1,46 @@
+name: 105-115 release gates audit (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/audit_105_115_release_gates.py
+      - scripts/test_audit_105_115_release_gates.py
+      - .github/workflows/105-115-release-gates.yml
+      - docs/SUDU_QUESTION_BANK_QA_GATE_105_115.md
+      - 'sudu/data/processed/**/inventory.json'
+      - 'sudu/data/processed/**/webp-manifest.json'
+      - 'sudu/data/processed/**/questions.json'
+      - 'sudu/data/processed/**/VISUAL_QA*.json'
+      - 'sudu/data/processed/**/release-manifest.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate release gate auditor
+        run: python -m py_compile scripts/audit_105_115_release_gates.py
+      - name: Exercise synthetic fail-closed regressions
+        run: python -m unittest discover -s scripts -p 'test_audit_105_115_release_gates.py' -v
+      - name: Print per-year blockers, with no false PASS
+        run: python scripts/audit_105_115_release_gates.py > release-gates-inspection.json
+      - name: Show compact blockers
+        run: |
+          python - <<'PY'
+          import json
+          j=json.load(open('release-gates-inspection.json'))
+          print(f"Candidate questions: {j['candidateQuestions']}; visually passed: {j['imageVisualQaPass']}; release-ready years: {j['yearsReady']}/11")
+          for y in j['years']:
+              print(y['year'], y['candidateQuestions'] if 'candidateQuestions' in y else '?', y['webpVisualPass'] if 'webpVisualPass' in y else '?', y['blockers'])
+          assert j['allYearsReady'] is False, "If full approval achieved, examine and update release flow explicitly"
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 105-115-release-gates-audit
+          path: release-gates-inspection.json

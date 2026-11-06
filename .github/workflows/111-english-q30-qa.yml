@@ -1,0 +1,39 @@
+name: 111 English Q30 v2 Direct Visual QA Apply (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_111_english_q30_visual_qa.py
+      - .github/workflows/111-english-q30-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - run: |
+          python -m py_compile scripts/apply_111_english_q30_visual_qa.py
+          python scripts/apply_111_english_q30_visual_qa.py
+      - name: Commit real Q30 visual QA
+        run: |
+          git config user.name '7581707 Q30 image QA'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/111
+          if ! git diff --cached --quiet; then
+            git commit -m 'qa(111): visually approve repaired Q30 against official source, keep answers pending'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin qa/114-115-official-visual-review
+              if git push origin HEAD:qa/114-115-official-visual-review; then exit 0; fi
+              sleep 3
+            done
+            exit 1
+          fi

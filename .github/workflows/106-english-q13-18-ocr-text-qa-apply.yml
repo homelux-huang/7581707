@@ -1,0 +1,74 @@
+name: 106 English six original OCR and text QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_106_english_q13_18_ocr_correction.py
+      - .github/workflows/106-english-q13-18-ocr-text-qa-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-106-en-q13-q18-ocr-text-qa
+  cancel-in-progress: false
+jobs:
+  apply:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check six exact source WebP SHA and raw OCR/manual-corrected text evidence
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          python -m py_compile scripts/apply_106_english_q13_18_ocr_correction.py
+          python scripts/apply_106_english_q13_18_ocr_correction.py --check
+      - name: Store only six OCR raw/corrected/diff and text QA, twice idempotently
+        run: |
+          set -euo pipefail
+          python scripts/apply_106_english_q13_18_ocr_correction.py --stage
+          sha256sum sudu/data/processed/106/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json > /tmp/106-text-before.sha
+          python scripts/apply_106_english_q13_18_ocr_correction.py --stage
+          sha256sum sudu/data/processed/106/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json > /tmp/106-text-after.sha
+          diff -u /tmp/106-text-before.sha /tmp/106-text-after.sha
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path("sudu/data/processed/106")
+          inv=json.loads((p/"inventory.json").read_text())
+          bank=json.loads((p/"questions.json").read_text())
+          ocr=json.loads((p/"ocr-raw-candidates.json").read_text())
+          assert inv["visualQaPass"]==6 and inv["ocrTextIndependentlyVerified"]==6
+          assert inv["answerOfficialFinalVerified"]==0
+          assert sum(x.get("questionVerified",False) for x in bank["questions"])==6
+          assert sum(x["qaStatus"]=="PASS" for x in ocr["items"])==6
+          assert all(not (x.get("answerVerified") or x.get("integrationReady")) for x in bank["questions"])
+          print("PASS: 106 English Q13-Q18 raw OCR and corrected text with preserved diff and staging DB; answer still pending final confirmation")
+          PY
+      - name: Commit six OCR QA records and staging SQLite to QA branch, not main
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 QA Text Ledger"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add sudu/data/processed/106/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(106): OCR and complete original English text verified for six questions, no answers"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 106-English-6-OCR-raw-corrected-diffs-and-QA
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/106/qa-drafts/QA_106_EN_Q13_18_OCR_DIRECT_TEXT_20261023.json
+            sudu/data/processed/106/inventory.json
