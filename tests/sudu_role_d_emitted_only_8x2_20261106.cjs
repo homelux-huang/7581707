@@ -21,7 +21,6 @@ const IDS=[
 ];
 const SHA=/^[0-9a-f]{64}$/;
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const canon=x=>JSON.stringify(x,Object.keys(x||{}).sort()); // not used for complex nested SHA
 const sort=x=>Array.isArray(x)?x.map(sort):(x&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,sort(x[k])])):x);
 const teachingSha=x=>hash(Buffer.from(JSON.stringify(sort(x)),'utf8'));
 const load=p=>JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'));
@@ -108,8 +107,17 @@ async function formal(){
  check(proof.authorSessionId&&proof.reviewerSessionId&&proof.authorSessionId!==proof.reviewerSessionId,
   'cannot reuse authored or unproven independent reviewer session');
  check(proof.testedTeachingDigest===expected.teaching,'evidence testedTeachingDigest differs from current content');
- check(proof.teaching&&teachingSha(proof.teaching)===expected.teaching,
-  'actual canonical authored teaching content digest mismatch');
+ check(proof.teaching&&typeof proof.teaching==='object',
+  'actual authored teaching object missing');
+ const digestBasis=proof.digestCanonicalPayload||proof.teaching;
+ if(proof.digestCanonicalPayload){
+  check(JSON.stringify(digestBasis.teaching)===JSON.stringify(proof.teaching),
+   'composed teaching SHA payload differs from current authored teaching');
+  check(digestBasis.sourceRevision===expected.revision&&digestBasis.webpSha256===expected.image,
+   'composed teaching SHA source/image pin mismatch');
+ }
+ check(teachingSha(digestBasis)===expected.teaching,
+  'actual canonical authored/composed teaching content digest mismatch');
  // Validate every emitted teaching-facing field against the original
  // SHA-pinned authored object; public publisher intentionally omits QA metadata.
  const t=proof.teaching;
