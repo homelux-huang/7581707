@@ -1,0 +1,27 @@
+name: ROLE A 114 business 04 09 10 original source SHA, answer, correction (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-114-bus04-09-10-source-g1-g2-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_qa:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_bus04_09_10_source_20261106.py -v
+      - run: |
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "G1/G2 assistant source candidate, original printed answer and notice only. Formal G3/E/D/READY/LIVE pending."

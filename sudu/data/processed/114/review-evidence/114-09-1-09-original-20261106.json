@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-BUS04-09-10-DIRECT-G1-G2-G3-SOURCE-20261106-01",
+  "role": "A",
+  "questionId": "114-09-1-09",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6689041229",
+  "baseSourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "status": "ROLE_A_AI_SOURCE_VISUAL_G1_G2_AND_PRINTED_ANSWER_G3_EVIDENCE_CANDIDATE_NO_ADMISSION",
+  "reviewMethod": "AI Assistant Source Visual Review: opened each immutable original isolated WebP and official printed answer WebP; no independent E review, no re-crop, no OCR model.",
+  "source": {
+    "officialPaper": "114 09-1 (4-09-1) 專業科目一商業概論",
+    "originalPage": 3,
+    "originalPdfSha256PreviouslyRecorded": "85c5bfcf88480a816433f538afdeb1f3a6ed9ace52c1593ea0b543ce8f56fc3d",
+    "originalPagePath": "sudu/data/original/114/09-1/p003-85c5bfcf88-v2-w1400-q66.webp",
+    "originalPageSha256": "f7b3a2a2e5121805d9e6da406c51ffdf03d23273a314fe827020b7d8749fce7c",
+    "originalPageGitBlob": "5ebd8047cda1af01d1074f307764a4979d5fc83c",
+    "exactOriginalSingleWebp": "sudu/data/processed/114/webp-v1/09-1/114-09-1-09.webp",
+    "originalWebpSha256": "d113c2511f2b89e4289c0c3ebb35bd81c9083a15c296cb69f2eaf41f2fe41049",
+    "originalWebpGitBlob": "ee76b9ed40b36bc4522e47009b3ca65906e2b92a",
+    "imageCrop": [
+      90,
+      566,
+      1310,
+      807
+    ],
+    "originalManifestG1": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "sourceWebpRecreated": false,
+    "questionRawKeptUnmodified": "根據 113 年統計資料，我國工作年齡人口比率已低於七成。為了減緩少子化及高齡者退\n  休潮帶來的產業衝擊，各企業紛紛提出人力資源的相關措施。下列敘述何者正確？",
+    "optionsRawKeptUnmodified": [
+      "回聘已退休員工屬於外部招募管道",
+      "提供托老或托幼津貼屬於設施性福利",
+      "與大專校院進行建教合作屬於在職訓練",
+      "讓員工增加同類型的工作項目屬於工作專業化"
+    ],
+    "originalQuestionAndOptionsVisuallyMatched": true,
+    "noAdjacentQuestionImage": true,
+    "sourceTextG2": "ROLE_A_DIRECT_VISUAL_MATCH_ORIGINAL_CANDIDATE_NO_CANONICAL_FLAG",
+    "originalQuestionPdfRedownloaded": false
+  },
+  "officialAnswer": {
+    "printedAnswer": "A",
+    "publishedAnswerSourceWebp": "sudu/data/original/114/09-1-answers/p001-f0cbc82606-v2-w1400-q66.webp",
+    "publishedAnswerSourceGitBlob": "88d42b12af03fc605f01bd1ff5df259686c055e7",
+    "publishedAnswerPdfSha256PreviouslyRecorded": "f0cbc8260638e416989fca31deac3d0b67d91969c27d5ba8db3336eaa9fa5ff6",
+    "officialNoticeEvidencePath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+    "officialNoticeLedgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "officialNoticePdfSha256PreviouslyRecorded": "5ea66797b68a00ea831bcbd645af747a4802298ae2fedcd5abe6a05705543246",
+    "noticeNamedForQuestion": true,
+    "noticePageNumbers": [
+      4
+    ],
+    "noticeAnswerIfNamed": "A",
+    "noticeChangesOriginalAnswer": false,
+    "formalAnswerVerifiedFlagPromoted": false,
+    "originalAnswerPdfRehashedThisTask": false
+  },
+  "canonical": {
+    "sourceBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "elligibleForActualSourceIntegration": true,
+    "questionVerifiedOriginally": false,
+    "answerVerifiedOriginally": false,
+    "canonicalJsonOrSqliteEdited": false
+  },
+  "next": {
+    "BAuthorStillOwnsLessons": "B-114-BUS04-09-10-20261106-02",
+    "distinctE": "PENDING_SUBSTANTIVE_A_D_CONTENT_AND_PROVENANCE",
+    "DRealV4": "PENDING_SAME_SOURCE_AND_TEACHING_8x2",
+    "MASTERAdmission": "PENDING",
+    "READY": false,
+    "LIVE": false
+  }
+}
