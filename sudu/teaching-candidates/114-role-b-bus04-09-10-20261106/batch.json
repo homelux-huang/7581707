@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "taskId": "B-114-BUS04-09-10-20261106-02",
+  "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "total": 3,
+  "items": [
+    {
+      "questionId": "114-09-1-04",
+      "path": "sudu/teaching-candidates/114-role-b-bus04-09-10-20261106/114-09-1-04.json",
+      "subject": "商業概論",
+      "candidateAnswer": "A",
+      "sourceRevision": "7d577666d914a30e26c83873d247adfe37c4b64e13b1f76b588880d6e80bcc65",
+      "webpSha256": "22b69bb2c6e72b69a2c47a2f2e973a6815cd986a1988c800becdf6ebc36da37a",
+      "composedTeachingSha256": "2730af8e1967155e5ec582693d4cb81dedcb5398b13224cf0d3664ae4dba48c4",
+      "fileSha256": "3c441b81c831cd6737676705cb3e7d232d91630b21be49b190bd4097dc328cd8",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-09",
+      "path": "sudu/teaching-candidates/114-role-b-bus04-09-10-20261106/114-09-1-09.json",
+      "subject": "商業概論",
+      "candidateAnswer": "A",
+      "sourceRevision": "529fa44e7169ba6d8779def87e2c1905297be699624f25eae0e8fefa3211952b",
+      "webpSha256": "d113c2511f2b89e4289c0c3ebb35bd81c9083a15c296cb69f2eaf41f2fe41049",
+      "composedTeachingSha256": "189c9589d2e1d637fee53f34bbf253e8ee6e7eda12f1b8c6650f7f4a9e054ddc",
+      "fileSha256": "aa40b504706bb8beb02ea75de0eb4adfad806c888411ad33fb03127ca2c6e22c",
+      "ready": false
+    },
+    {
+      "questionId": "114-09-1-10",
+      "path": "sudu/teaching-candidates/114-role-b-bus04-09-10-20261106/114-09-1-10.json",
+      "subject": "商業概論",
+      "candidateAnswer": "D",
+      "sourceRevision": "817ee721ec172254d464dc93fd4f232e76b8de2b4e4e3d64f560ddf56a64ef27",
+      "webpSha256": "10f37ad25ec30d3e01ba45fa8e2e51ab1a33071b89fc55d4bd409db464f6ab70",
+      "composedTeachingSha256": "a492eb3911fdcc096ac7e15bad1e64bed4cf50ff6cdef7d0d84bb0c23529a370",
+      "fileSha256": "1985eb61d44fcff276736c6f1247de26bcdaa809e0c1ebd736d844bcd3ae272e",
+      "ready": false
+    }
+  ],
+  "sourceApproved": false,
+  "independentE": false,
+  "newReady": 0,
+  "newMain": 0,
+  "newLive": 0,
+  "requiresHumanTeacher": false,
+  "noRelease": true
+}
