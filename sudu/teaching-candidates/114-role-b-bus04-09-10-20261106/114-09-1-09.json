@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-1-09",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "根據 113 年統計資料，我國工作年齡人口比率已低於七成。為了減緩少子化及高齡者退\n  休潮帶來的產業衝擊，各企業紛紛提出人力資源的相關措施。下列敘述何者正確？",
+  "options": [
+    "回聘已退休員工屬於外部招募管道",
+    "提供托老或托幼津貼屬於設施性福利",
+    "與大專校院進行建教合作屬於在職訓練",
+    "讓員工增加同類型的工作項目屬於工作專業化"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "529fa44e7169ba6d8779def87e2c1905297be699624f25eae0e8fefa3211952b",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-09.webp",
+    "webpSha256": "d113c2511f2b89e4289c0c3ebb35bd81c9083a15c296cb69f2eaf41f2fe41049",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "人力資源招募、員工福利、建教合作與工作設計",
+    "teacherSummary": "退休員工已不再屬企業現職內部員工，重新聘任可歸為向企業現職人力以外招募，因此A。托幼托老津貼是經濟性福利，不是提供實體設施；建教合作與在職訓練不同；增加同類工作是工作擴大化，非專業化。",
+    "elementarySummary": "一個人退休離開公司後，公司再請他回來，是從目前公司外找人。給托幼津貼是給錢，不是蓋托兒所；讓員工多做幾種類似的事，也不叫只專心做同一件。",
+    "concept": "外部招募＝向現有員工以外找人；津貼屬經濟性福利；建教合作多為學校/未任職人員職前培育；工作擴大化增加同層次任務，工作專業化縮小範圍深化分工。",
+    "memory": "已退休再回聘→外部招募 A；多做同層次事→工作擴大化。",
+    "highlights": [
+      "回聘已退休員工",
+      "外部招募管道",
+      "托老或托幼津貼",
+      "建教合作",
+      "增加同類型的工作項目"
+    ],
+    "solvingSteps": [
+      "先釐清在職員工與退休後離職人員身分的不同。",
+      "退休者不屬當下企業內部現職員工，重新回聘符合本題外部招募的概念，選A。",
+      "B的托老托幼『津貼』是金錢補助，不是直接興辦托育/托老設施。",
+      "C的學校建教合作著重學生/新進人才培養，不等同對既有員工的在職訓練。",
+      "D增加同層級類似工作項目屬工作擴大化，不是縮窄分工的工作專業化。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NONCALC_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A回聘已退休員工時，對象已退出當下企業內部現職人力，再聘雇可列外部招募，符合本題的人力資源分類。",
+        "elementary": "人已退休離開，再請回來，是從目前員工名單之外找人。",
+        "reason": "A回聘已退休員工時，對象已退出當下企業內部現職人力，再聘雇可列外部招募，符合本題的人力資源分類。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B津貼是支付補助款，應歸經濟性福利；設施性福利通常是企業提供育兒室、托兒場所等具體設備或設施。",
+        "elementary": "給托兒費用是一筆錢，不是提供一間托兒所。",
+        "reason": "B津貼是支付補助款，應歸經濟性福利；設施性福利通常是企業提供育兒室、托兒場所等具體設備或設施。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C建教合作涉及學校與產業培養學生或潛在新進人才，不等同對已在職員工進行工作能力訓練的在職訓練。",
+        "elementary": "跟學校合作教學生，不等於教公司原本的員工。",
+        "reason": "C建教合作涉及學校與產業培養學生或潛在新進人才，不等同對已在職員工進行工作能力訓練的在職訓練。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D增加相似且同層級的工作種類為工作擴大化；工作專業化偏向更細的分工和固定特定任務。",
+        "elementary": "多做一些相同層級的事叫擴大工作，不是只做一項更專門的事。",
+        "reason": "D增加相似且同層級的工作種類為工作擴大化；工作專業化偏向更細的分工和固定特定任務。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 專業科目（一）官方來源候選，原始試卷 G1、題目逐字 G2 與公告最終答案 G3 均由 ROLE A 另行驗收。B 作者不宣告來源合格。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_CORRECTION_PENDING",
+      "E_DISTINCT_SESSION_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "189c9589d2e1d637fee53f34bbf253e8ee6e7eda12f1b8c6650f7f4a9e054ddc"
+}

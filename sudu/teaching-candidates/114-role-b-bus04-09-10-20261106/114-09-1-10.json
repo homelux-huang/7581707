@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-1-10",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "關於財務管理，下列敘述何者正確？",
+  "options": [
+    "一般而言，有價證券的期限越短，利率風險會越高",
+    "企業願意給予客戶賒銷的最高金額，稱之為信用標準",
+    "企業為支付日常營運所產生之現金需求，屬於預防動機",
+    "衡量客戶履行其償債義務之意願，屬於信用 5 C 中的品德指標"
+  ],
+  "answer": "D",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "817ee721ec172254d464dc93fd4f232e76b8de2b4e4e3d64f560ddf56a64ef27",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-10.webp",
+    "webpSha256": "10f37ad25ec30d3e01ba45fa8e2e51ab1a33071b89fc55d4bd409db464f6ab70",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "財務管理：利率風險、信用政策、現金持有動機與信用 5C",
+    "teacherSummary": "信用5C中品德（Character）衡量顧客履行還款義務的信用及意願，故D。一般而言固定收益工具期限較短，對利率變化的價格敏感度較低；賒銷最高核准金額是信用限額；營運日常支付現金屬交易動機。",
+    "elementarySummary": "公司借東西給人先付錢以後還，要看這個人有沒有誠信、願不願意還錢，這就是信用5C的『品德』。買日用品需要的現金是每天做生意的錢，不是緊急備用金。",
+    "concept": "信用5C：Character品德、Capacity能力、Capital資本、Collateral擔保品、Conditions條件。信用標準定資格，信用限額定最高賒帳額；持有現金分交易、預防等動機。",
+    "memory": "有沒有意願還錢→Character品德 D；最高賒銷額=信用限額。",
+    "highlights": [
+      "利率風險",
+      "最高金額",
+      "日常營運",
+      "信用 5 C 中的品德指標"
+    ],
+    "solvingSteps": [
+      "先讀D問的是還款『意願』而非擔保或可支付能力。",
+      "信用5C中的Character（品德）評估信用紀錄、誠信與償還意願，因此D正確。",
+      "A把期限與利率敏感度方向顛倒，其他條件相近通常較長期工具的利率價格風險更高。",
+      "B把最高允許賒銷金額（信用限額）誤稱為是否給信用的資格門檻（信用標準）。",
+      "C日常付款需求屬交易動機；突發意外需求才是預防動機。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NONCALC_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A固定收益有價證券期限越短，一般利率變化造成的價格敏感度通常越低，非必然較高；需區分其他債券條件相同的比較前提。",
+        "elementary": "通常短期要拿回的錢，利率變動對價錢影響較小，A把方向說反。",
+        "reason": "A固定收益有價證券期限越短，一般利率變化造成的價格敏感度通常越低，非必然較高；需區分其他債券條件相同的比較前提。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "B客戶能賒銷的最高金額是『信用限額』，信用標準是決定客戶能否取得信用的資格或門檻，兩者不同。",
+        "elementary": "能不能先欠錢是一種規定，最多能欠多少錢是另一種限制。",
+        "reason": "B客戶能賒銷的最高金額是『信用限額』，信用標準是決定客戶能否取得信用的資格或門檻，兩者不同。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C平常支付進貨、薪資、日常營運需現金，是交易動機；為突發急需預留才是預防動機。",
+        "elementary": "每天買材料付錢是平常使用，不是發生意外才拿的備用金。",
+        "reason": "C平常支付進貨、薪資、日常營運需現金，是交易動機；為突發急需預留才是預防動機。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D品德Character檢查客戶的誠信及按時償還的『意願』，正好對應信用5C中的品德因素。",
+        "elementary": "願意守信用、把欠的錢還回來，就是這題說的品德。",
+        "reason": "D品德Character檢查客戶的誠信及按時償還的『意願』，正好對應信用5C中的品德因素。",
+        "isCorrect": true
+      }
+    },
+    "source": "114 專業科目（一）官方來源候選，原始試卷 G1、題目逐字 G2 與公告最終答案 G3 均由 ROLE A 另行驗收。B 作者不宣告來源合格。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_CORRECTION_PENDING",
+      "E_DISTINCT_SESSION_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "a492eb3911fdcc096ac7e15bad1e64bed4cf50ff6cdef7d0d84bb0c23529a370"
+}

@@ -1,0 +1,18 @@
+name: ROLE B 114 BUS04-09-10 author-only CI (NO RELEASE)
+on:
+  push:
+    branches:
+      - teaching/114-role-b-bus04-09-10-20261106
+  pull_request:
+    paths:
+      - 'sudu/teaching-candidates/114-role-b-bus04-09-10-20261106/**'
+      - 'tests/test_role_b_114_bus04_09_10_20261106.py'
+      - '.github/workflows/role-b-114-bus04-09-10-author-only.yml'
+  workflow_dispatch:
+jobs:
+  author-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify immutable source and four-option teaching (not release)
+        run: python -m unittest discover -s tests -p 'test_role_b_114_bus04_09_10_20261106.py' -v

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "role": "B",
+  "questionId": "114-09-1-04",
+  "subject": "商業概論",
+  "kind": "AUTHOR_DRAFT_SOURCE_UNVERIFIED",
+  "question": "周董舉辦巡迴演唱會，主辦單位透過電視、報章雜誌，以及 Facebook、Instagram 等社群\n  媒體傳遞活動消息，指定僅以某售票平台官網系統訂票，且依據座位與舞台的視野及距\n  離，訂定出不一樣的票價。依據上述情境，下列何者正確？",
+  "options": [
+    "推廣組合包含廣告與直效行銷",
+    "通路的密度策略是採取選擇性配銷",
+    "票價的訂價方法是採用認知價值訂價法",
+    "透過某售票平台官網系統訂票是歸屬於數位化商品"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "7d577666d914a30e26c83873d247adfe37c4b64e13b1f76b588880d6e80bcc65",
+    "webpPath": "sudu/data/processed/114/webp-v1/09-1/114-09-1-04.webp",
+    "webpSha256": "22b69bb2c6e72b69a2c47a2f2e973a6815cd986a1988c800becdf6ebc36da37a",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "推廣組合、配銷密度與售票服務",
+    "teacherSummary": "演唱會主辦透過電視、報章及社群媒體宣傳，並用指定官網售票讓消費者直接回應購買，符合廣告搭配直效行銷之推廣組合，候選答案A。其他敘述誤分通路密度、區域票價訂法及商品數位化。",
+    "elementarySummary": "辦演唱會先用電視、網路告訴大家，再讓想買票的人上網站訂票。這是用廣告宣傳，也讓人直接購買，所以選A。",
+    "concept": "廣告旨在向大眾傳達訊息；直效行銷引導顧客直接回應/訂購；只選一個通路偏獨家配銷；分座區票價不等於把實體演唱會變成數位商品。",
+    "memory": "多媒體打廣告＋指定官網直接訂票→A；單一通路不是選擇性配銷。",
+    "highlights": [
+      "電視、報章雜誌",
+      "Facebook、Instagram",
+      "僅以某售票平台官網系統訂票",
+      "座位與舞台的視野及距離"
+    ],
+    "solvingSteps": [
+      "先將情境切分為促銷宣傳、訂票通路及座席票價三個面向。",
+      "電視、報章與社群訊息主要是大眾廣告傳達。",
+      "指定官網讓有興趣的人直接回應、購票，與直效行銷的反應/交易功能相符，故A合理。",
+      "B把限定單一售票平台誤當多家選擇性配銷，密度類型不同。",
+      "C用位置/視野分票價不直接等於以消費者個別認知價值為基礎定價；D混淆數位訂票通路與商品本身。"
+    ],
+    "formula": null,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "calculationReviewed": "NONCALC_HIDE_CARD",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A把各媒體廣告與官方售票平台引導消費者直接回應訂購放入推廣組合，符合題幹所述宣傳和直接購票流程。",
+        "elementary": "先看廣告知道演唱會，再上網站買票，兩種推廣方式都用到了。",
+        "reason": "A把各媒體廣告與官方售票平台引導消費者直接回應訂購放入推廣組合，符合題幹所述宣傳和直接購票流程。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B只有某指定售票平台，較接近限定單一通路的獨家安排；選擇性配銷通常是在多個候選銷售商中選少數，不能僅憑『指定一個』判為選擇性。",
+        "elementary": "只准從一家網站買，並不是從很多家裡挑幾家來賣。",
+        "reason": "B只有某指定售票平台，較接近限定單一通路的獨家安排；選擇性配銷通常是在多個候選銷售商中選少數，不能僅憑『指定一個』判為選擇性。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C依座位與舞台視野和距離分級票價，是座位區域條件差別訂價的直接描述；不能自動等同企業先衡量每位顧客知覺價值再決價。",
+        "elementary": "離舞台近的位子比較貴，不表示知道每個人心裡覺得值多少錢。",
+        "reason": "C依座位與舞台視野和距離分級票價，是座位區域條件差別訂價的直接描述；不能自動等同企業先衡量每位顧客知覺價值再決價。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D官網系統訂票屬數位訂購或銷售通路；線下演唱會的現場觀賞服務不會因為透過網站售票就必然變成數位化商品。",
+        "elementary": "用網路買實體演唱會門票，不代表演唱會變成電腦裡的商品。",
+        "reason": "D官網系統訂票屬數位訂購或銷售通路；線下演唱會的現場觀賞服務不會因為透過網站售票就必然變成數位化商品。",
+        "isCorrect": false
+      }
+    },
+    "source": "114 專業科目（一）官方來源候選，原始試卷 G1、題目逐字 G2 與公告最終答案 G3 均由 ROLE A 另行驗收。B 作者不宣告來源合格。"
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 ROLE B AI author",
+    "authorSelfCheck": true,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "requiresHumanTeacher": false,
+    "studentReleaseApproved": false,
+    "formalReady": false,
+    "blockers": [
+      "A_G1_IMAGE_QA_DRAFT",
+      "A_G2_ORIGINAL_TEXT_FOUR_OPTIONS_PENDING",
+      "A_G3_OFFICIAL_FINAL_ANSWER_CORRECTION_PENDING",
+      "E_DISTINCT_SESSION_CONTENT_REVIEW_PENDING",
+      "D_REAL_YEAR114_V4_8X2_PENDING",
+      "MASTER_TRUSTED_REVIEW_MAIN_PAGES_PENDING"
+    ]
+  },
+  "composedTeachingSha256": "2730af8e1967155e5ec582693d4cb81dedcb5398b13224cf0d3664ae4dba48c4"
+}
