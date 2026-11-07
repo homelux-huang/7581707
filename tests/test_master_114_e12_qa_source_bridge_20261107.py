@@ -35,30 +35,39 @@ class SourceE12(unittest.TestCase):
         self.assertEqual(git_old("sudu/data/processed/114/webp-manifest.json"),
                          (BASE/"webp-manifest.json").read_bytes())
 
-    def test_real_sqlite_all_205_other_204_byte_equal(self):
+    def test_legacy_sqlite_schema_migrated_without_touching_other_204_canonical(self):
+        oldbank=json.loads(git_old("sudu/data/processed/114/questions.json"))
+        canonical_old={q["questionId"]:q for q in oldbank["questions"]}
         with tempfile.TemporaryDirectory() as tmp:
             old=Path(tmp)/"old.sqlite3"
             old.write_bytes(git_old("sudu/data/processed/114/question-bank.sqlite3"))
             with sqlite3.connect("file:"+old.as_posix()+"?mode=ro",uri=True) as db:
-                before=db.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
+                self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0],"ok")
+                legacy_cols=[x[1] for x in db.execute("PRAGMA table_info(questions)")]
+                legacy_ids={x[0] for x in db.execute("SELECT question_id FROM questions")}
+                self.assertNotIn("payload_json",legacy_cols)
+                self.assertEqual(legacy_ids,set(canonical_old))
             with sqlite3.connect("file:"+(BASE/"question-bank.sqlite3").as_posix()+"?mode=ro",uri=True) as db:
                 self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0],"ok")
+                normalized_cols=[x[1] for x in db.execute("PRAGMA table_info(questions)")]
+                self.assertEqual(len(normalized_cols),7)
+                self.assertIn("payload_json",normalized_cols)
                 after=db.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
-            self.assertEqual(len(before),205)
-            self.assertEqual(len(after),205)
-            self.assertEqual({q:(v,h) for q,v,h in before if q!=e12.QID},
-                             {q:(v,h) for q,v,h in after if q!=e12.QID})
-            q=json.loads((BASE/"questions.json").read_text())["questions"]
-            q=next(x for x in q if x["questionId"]==e12.QID)
-            payload,hashval=next((v,h) for name,v,h in after if name==e12.QID)
-            self.assertEqual(json.loads(payload),q)
+        self.assertEqual(len(after),205)
+        current={q["questionId"]:q for q in json.loads((BASE/"questions.json").read_text())["questions"]}
+        self.assertEqual(set(current),set(canonical_old))
+        for qid,payload,hashval in after:
+            self.assertEqual(json.loads(payload),current[qid],qid)
             self.assertEqual(e12.sha(payload.encode("utf-8")),hashval)
+            if qid!=e12.QID:
+                self.assertEqual(current[qid],canonical_old[qid],"altered another source QID")
 
     def test_source_provenance_and_no_release(self):
         proof=e12.load(ROOT/e12.REPORT)
         self.assertEqual(proof["gate"],"SOURCE_G1_G2_G3_ONLY_NOT_STUDENT_ADMISSION")
         self.assertEqual(proof["officialPublishedAnswer"],"C")
-        self.assertEqual(proof["other204SqlitePayloadsUnchanged"],True)
+        self.assertEqual(proof["other204CanonicalValuesUnchanged"],True)
+        self.assertEqual(proof["legacySqliteMigratedToSevenColumn"],True)
         self.assertEqual(proof["other204JsonRecordsUnchanged"],True)
         self.assertEqual(proof["correctionNamedOnly"],["114-00-E-26"])
         for key in ["studentReady","independentRoleETrustedReceipt",
@@ -80,7 +89,8 @@ class SourceE12(unittest.TestCase):
         proof=json.loads((ROOT/s["evidencePath"]).read_text(encoding="utf-8"))
         self.assertEqual(proof["databaseSha256"],s["dbSha256"])
         self.assertEqual(proof["sourceQuestionsSha256"],s["sourceQuestionsSha256"])
-        self.assertEqual(proof["other204PayloadsUnchanged"],True)
+        self.assertEqual(proof["other204CanonicalValuesUnchanged"],True)
+        self.assertEqual(proof["legacySqliteMigratedToSevenColumn"],True)
         self.assertFalse(proof["studentReleaseApproved"])
 
     def test_negative_receipt_mutations_fail_closed(self):
