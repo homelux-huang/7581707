@@ -38,7 +38,7 @@ class EvidenceTests(unittest.TestCase):
     def test_exact_notes_bytes_and_git_blob(self):
         raw = NOTES.read_bytes()
         self.assertEqual(hashlib.sha256(raw).hexdigest(), self.e["reviewNotesSha256"])
-        blob = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\\0" + raw).hexdigest()
+        blob = hashlib.sha1(b"blob " + str(len(raw)).encode() + bytes([0]) + raw).hexdigest()
         self.assertEqual(blob, self.e["reviewNotesGitBlob"])
 
     def test_distinct_four_option_review(self):
