@@ -60,14 +60,14 @@
   "independentBlindSolve": false,
   "independentBlindSolveEvidence": null,
   "reviewIssueNumber": 36,
-  "reviewIssueCommentId": 6710031408,
+  "reviewIssueCommentId": 6712572797,
   "reviewClaimCommentId": 6710006916,
   "reviewNotesPath": "sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/reviewer-notes.md",
   "reviewNotesSha256": "3ad64f45749ae501798d447b8ae5913b2cbf16e5ced807da7d528a42d99cce03",
   "reviewNotesGitBlob": "c3530fa033d0a524165d5c2a0068bb545bcbb521",
   "historicalIndependentReviewReturn": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595749811",
-  "reviewedAt": null,
-  "reviewedAtStatus": "NO_INDEPENDENTLY_VERIFIED_SESSION_TIMESTAMP__ISSUE_CREATED_AT_IS_AUTHORITATIVE",
+  "reviewedAt": "2026-11-07T20:24:00Z",
+  "reviewedAtStatus": "REAL_GITHUB_RETURN_CREATED_AT_NOT_SESSION_ID_AUTHENTICATION",
   "formalTrustedRegistryRegistered": false,
   "status": "HOLD_UNVERIFIED_DISTINCT_AI_SESSION_AND_BLIND_AND_PUBLISHER_TEACHING_AND_D_EMITTED_UI_AND_MAIN_TRUST",
   "studentReleaseApproved": false,
@@ -79,7 +79,6 @@
     "genuine blind-solve evidence from previously answer-naive session",
     "publisher-formal teachingEvidenceSha256 and teaching issuer document",
     "actual D publisher-emitted 8x2 UI evidence",
-    "verified reviewedAt from authenticated distinct reviewer provenance",
     "MASTER protected-main trustedAiReviewReceipts registry admission"
   ],
   "ocrEvidencePath": "sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json",
@@ -94,6 +93,7 @@
   "reviewAddendumClaimCommentId": 6712534842,
   "reviewAddendumClaimCreatedAt": "2026-11-07T20:20:27Z",
   "reviewOriginalCommentCreatedAt": "2026-11-07T16:41:30Z",
-  "reviewReturnCommentId": null,
-  "teachingEvidenceShaStatus": "ACTUAL_PUBLISHER_RAW_TEACHING_RECEIPT_NOT_YET_AVAILABLE_AUTHOR_B_DIGEST_NOT_A_SUBSTITUTE"
+  "reviewReturnCommentId": 6712572797,
+  "teachingEvidenceShaStatus": "ACTUAL_PUBLISHER_RAW_TEACHING_RECEIPT_NOT_YET_AVAILABLE_AUTHOR_B_DIGEST_NOT_A_SUBSTITUTE",
+  "reviewOriginalSubstantiveCommentId": 6710031408
 }

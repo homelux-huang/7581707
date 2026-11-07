@@ -102,7 +102,7 @@ class EvidenceTests(unittest.TestCase):
         self.assertIsNone(self.e["reviewerSessionId"])
         self.assertIsNone(self.e["sourceAuthorSessionId"])
         self.assertIsNone(self.e["teachingEvidenceSha256"])
-        self.assertIsNone(self.e["reviewedAt"])
+        self.assertEqual(self.e["reviewedAt"],"2026-11-07T20:24:00Z")
         self.assertIs(self.e["independentBlindSolve"],False)
         self.assertIs(self.e["formalTrustedRegistryRegistered"],False)
         self.assertIs(self.e["studentReleaseApproved"],False)
@@ -111,7 +111,8 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn("HOLD",self.e["status"])
         self.assertEqual(self.e["reviewClaimCommentId"],6710006916)
         self.assertEqual(self.e["reviewAddendumClaimCommentId"],6712534842)
-        self.assertTrue(self.e["reviewReturnCommentId"] is None or isinstance(self.e["reviewReturnCommentId"],int))
+        self.assertEqual(self.e["reviewReturnCommentId"],6712572797)
+        self.assertEqual(self.e["reviewIssueCommentId"],6712572797)
         self.assertEqual(self.e["sourceCommit"],"682e02e1084325a0422c117d90b70451fdd9ea22")
 
 if __name__=="__main__":
