@@ -2236,9 +2236,9 @@
       ],
       "answer": "C",
       "answerMatched": true,
-      "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "answerVerified": true,
+      "questionVerified": true,
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp",
@@ -2258,9 +2258,28 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "textQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "MASTER reconciled immutable ROLE A direct-source visual proof (not new visual inspection)",
+        "reviewedAt": "2026-11-07",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json",
+        "sourceImageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+        "questionRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+        "evidenceSha256": "b2fb18c6db58ec74d3c107728e7a042b9575a164ba501e5adf02780874736658"
+      },
+      "officialFinalAnswer": "C",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "MASTER reconciled ROLE A published-answer visual QA (NOT ROLE E AI review)",
+        "reviewedAt": "2026-11-07",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true,
+        "evidenceSha256": "b2fb18c6db58ec74d3c107728e7a042b9575a164ba501e5adf02780874736658"
+      }
     },
     {
       "schemaVersion": 1,
