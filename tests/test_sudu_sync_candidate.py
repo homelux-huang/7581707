@@ -170,7 +170,7 @@ else:
         invoke='python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual'
         matches=[line for line in shell_lines if line.strip()==invoke]
         self.assertEqual(len(matches),1,'Manual Draft PR handoff must be a distinct executable shell line')
-        self.assertNotIn('\\\\n',step,'YAML run block may not hide invocation inside a literal escaped newline')
+        self.assertNotIn('\\n',step,'YAML run block may not hide invocation inside a literal escaped newline')
         self.assertIn('          git add -A sudu/data/approved',shell_lines)
         self.assertTrue(any(line.strip().startswith('# The repository forbids') for line in shell_lines))
 
