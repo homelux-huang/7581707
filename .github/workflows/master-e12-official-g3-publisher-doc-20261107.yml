@@ -1,0 +1,123 @@
+name: MASTER 114 E12 original official-answer G3 publisher document (NO RELEASE)
+on:
+  push:
+    branches: [qa/master-e12-official-g3-publisher-doc-20261107]
+    paths:
+      - .github/workflows/master-e12-official-g3-publisher-doc-20261107.yml
+permissions:
+  contents: read
+jobs:
+  exact_official_g3_and_negative_tests:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E-answers
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Positively test real source official document and negatively test changed answer and correction scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C _publisher rev-parse HEAD)" = 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          python - <<'PY'
+          import copy,hashlib,json,sys,subprocess
+          from pathlib import Path
+          sys.path.insert(0,str(Path('_publisher/scripts').resolve()))
+          import sudu_verified_publish as publisher
+          import sudu_independent_review_gate as gate
+          root=Path('.').resolve()
+          prefix='sudu/data/processed/114/'
+          file=root/(prefix+'review-evidence/114-00-E-12-official-publisher-20261107.json')
+          old=root/(prefix+'review-evidence/114-00-E-12-official-20261102.json')
+          notice=root/(prefix+'official-confirmation-status.json')
+          ledger=root/(prefix+'QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json')
+          page=root/'sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp'
+          sha=lambda data:hashlib.sha256(data).hexdigest()
+          blob=lambda data:hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+          evidence=json.loads(file.read_text(encoding='utf-8'))
+          olddoc=json.loads(old.read_text(encoding='utf-8'))
+          qdb=json.loads((root/(prefix+'questions.json')).read_text(encoding='utf-8'))
+          qs=qdb['questions']
+          assert len(qs)==205 and len({q['questionId'] for q in qs})==205
+          q=next(q for q in qs if q['questionId']=='114-00-E-12')
+          assert q['questionVerified'] and q['answerVerified'] and q['textQaStatus']=='PASS'
+          assert q['answer']=='C' and q['officialFinalAnswer']=='C'
+          assert blob(old.read_bytes())=='e166524f2e3f6921c1ba55fb23862e739307b518'
+          assert blob(notice.read_bytes())=='ecfb5663d5af6008fb71f721ec5f23c69d557f5f'
+          assert blob(ledger.read_bytes())=='6b9a919f224bec8dc3659052a404b4173b6ef366'
+          assert blob(page.read_bytes())=='5f2920313607af4e756095cd3d6098c8a3ab7440'
+          assert sha(page.read_bytes())=='a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863'
+          assert olddoc['publishedOfficialAnswer']['answer']=='C'
+          assert olddoc['publishedOfficialAnswer']['originalAnswerWebpSha256']==sha(page.read_bytes())
+          assert olddoc['finalOfficialNoticeScope']['onlyExplicitlyNamedEnglishQuestionIds']==['114-00-E-26']
+          assert olddoc['finalOfficialNoticeScope']['q12ListedInOfficialCorrection'] is False
+          assert evidence['schemaVersion']==1 and evidence['year']==114 and evidence['questionId']=='114-00-E-12'
+          assert evidence['officialPdfSha256']==q['answerProvenance']['officialPdfSha256']
+          assert evidence['sourceQuestionRevision']==publisher.text_revision(q,q['questionProvenance']['webpSha256'])
+          assert evidence['sourceRoleAOfficialReceiptGitBlobSha1']==blob(old.read_bytes())
+          assert evidence['officialPrintedAnswerImageGitBlobSha1']==blob(page.read_bytes())
+          assert evidence['confirmationPdfSha256']=='79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc'
+          assert publisher.official_notice_scope_certified(root,114,q,evidence) is True
+          audit={'evidence':{'official':prefix+'review-evidence/114-00-E-12-official-publisher-20261107.json'}}
+          expected=sha(file.read_bytes())
+          assert gate._ai_official_receipt_consistent(root,audit,q)==expected
+          for key,val in [
+            ('noObjectionForPaper',True),
+            ('noCorrectionForThisQuestion',False),
+            ('correctionForQuestionReviewed',True),
+            ('confirmationPdfSha256','0'*64),
+          ]:
+              changed=copy.deepcopy(evidence)
+              changed[key]=val
+              assert publisher.official_notice_scope_certified(root,114,q,changed) is False,(key,val)
+          # The notice-scope helper only tests which question the official
+          # confirmation names; the independent official-answer helper must
+          # separately reject any changed C->A answer.
+          original_raw=file.read_bytes()
+          wrong_official=copy.deepcopy(evidence)
+          wrong_official['finalAnswer']='A'
+          try:
+              file.write_text(json.dumps(wrong_official,ensure_ascii=False,indent=2)+'\n',
+                              encoding='utf-8')
+              assert gate._ai_official_receipt_consistent(root,audit,q) is None
+          finally:
+              file.write_bytes(original_raw)
+          assert sha(file.read_bytes())==expected
+          wrongq=copy.deepcopy(q)
+          wrongq['answer']='A'
+          assert gate._ai_official_receipt_consistent(root,audit,wrongq) is None
+          check=set(subprocess.check_output(['git','diff','--name-only','81252176c9995c9d287450651d5681df66e4f454'],text=True).splitlines())
+          allowed={
+            '.github/workflows/master-e12-official-g3-publisher-doc-20261107.yml',
+            prefix+'review-evidence/114-00-E-12-official-publisher-20261107.json',
+          }
+          assert check==allowed,(check,allowed)
+          assert not evidence['independentRoleEContentReviewedThisTask']
+          assert not evidence['studentReleaseApproved']
+          print('PASS: real original official G3 C, E26-only correction, published answer source SHA, 205 original question rows untouched')
+          print('OFFICIAL_EVIDENCE_SHA256='+expected)
+          PY
+          git diff --exit-code
+          git diff --cached --exit-code
