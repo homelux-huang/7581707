@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-12",
+  "questionRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+  "webpSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "reviewer": "ROLE B original author QA (not independent ROLE E)",
+  "reviewedAt": "2026-11-07",
+  "sourceAuthorRole": "B",
+  "sourceAuthorTaskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "sourceAuthorReturnIssueCommentId": 6712537831,
+  "sourceAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/107",
+  "sourceAuthorCommit": "57d969888c57fdcd2b16c933e92c7a2c9eebb3a5",
+  "sourceAuthorGitBlobSha1": "3d8e3b7164b31cc6607c45baf9a3a644f128c0c0",
+  "sourceAuthorRawSha256": "cccc7c5fcc5491d4004c8e72d3e9fca696f2e1a9bdcca23ec7e28b298610c51d",
+  "canonicalTeachingSha256": "c6d27aad13dca2edf23d72c16b4bf357173ae052e0a42c89af7e3049e490dc4a",
+  "composedTeachingSha256": "fd503a9cbe82da0838859d059951988835d12604cffc95d8b0a8d76d34a9d9c4",
+  "status": "AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY",
+  "independentAiContentReviewed": false,
+  "sourceAuthorSessionId": null,
+  "reviewerSessionId": null,
+  "studentReleaseApproved": false,
+  "content": {
+    "topic": "英文｜That's why 意思是『這就是為什麼』；always carry my own water bottle 是可以模仿的減塑行為。",
+    "teacherSummary": "John 說要 use less plastic；Lucy 回 I agree，下一句應給能讓 John 說 Great idea! I'll try that, too 的減塑方法。選 C 自備水壺，與語境和後續反應相符。",
+    "elementarySummary": "兩個人說好要少用塑膠，露西說我都自帶水壺，朋友覺得這方法很好，也要跟著做。",
+    "concept": "That's why 意思是『這就是為什麼』；always carry my own water bottle 是可以模仿的減塑行為。",
+    "extension": "題目人物說塑膠需要20年分解僅為句中資訊；真實分解速度依材質與環境而不同。",
+    "memory": "use less plastic → own water bottle → I'll try that, too。",
+    "solvingSteps": [
+      "抓共同話題：塑膠垃圾與減塑。",
+      "找 Lucy 可實踐的少用塑膠行為。",
+      "其他選項持續使用或丟棄物品；C 自備水壺最合理。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "No wonder I prefer buying plastic containers 表示喜歡買塑膠容器，與少用塑膠完全相反。",
+        "elementary": "更多塑膠盒不是減塑。",
+        "reason": "prefer buying plastic containers 仍持續使用一次性塑膠，不是減少使用。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "So I keep using plastic straws 表示飲料繼續用塑膠吸管，不會被稱為減塑好點子。",
+        "elementary": "繼續用塑膠吸管沒有改善問題。",
+        "reason": "keep using plastic straws 和 John 要減少塑膠的建議方向相反。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "That's why I always carry my own water bottle 用自備水壺減少一次性容器，John 能模仿做法。",
+        "elementary": "帶自己的水壺可以少用塑膠瓶。",
+        "reason": "carry my own water bottle 是可跟著實行的行動，對應 Great idea。",
+        "isCorrect": true
+      },
+      "D": {
+        "teacher": "throw away everything I buy 是把買的東西全部丟掉，並非從源頭減少塑膠使用。",
+        "elementary": "全部丟掉東西不是環保方法。",
+        "reason": "throw away 描述丟棄而非減量，無法得到 I'll try that, too 的肯定。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方原題／候選答案；官方最終答案影像及教材版本、章節、頁碼待核。"
+  }
+}
