@@ -1,0 +1,57 @@
+name: MASTER E12 private native candidate fail-closed CI (NO LIVE)
+on:
+  push:
+    branches:
+      - fix/master-e12-private-publisher-emitter-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  private_native_publisher_preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pin merged original QA with B issuer
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+          path: _qa
+          fetch-depth: 1
+      - name: Pin original B author lesson
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 57d969888c57fdcd2b16c933e92c7a2c9eebb3a5
+          path: _author_b
+          sparse-checkout: |
+            sudu/teaching-candidates/114-role-b-20261025-batch02
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Real publisher fail-closed diagnosis (absence of E/blind)
+        run: |
+          set +e
+          python scripts/sudu_private_candidate_issuer.py --source _qa --author _author_b > "$RUNNER_TEMP/e12-private-diagnostic.json"
+          result=$?
+          set -e
+          if [ "$result" -ne 2 ]; then echo "Expected refusal exit 2; got $result"; exit 1; fi
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP'])/'e12-private-diagnostic.json'
+          d=json.loads(p.read_text())
+          assert d['QID']=='114-00-E-12'
+          assert d['status']=='FAIL_CLOSED_NOT_PUBLISHED'
+          reasons=[x['reason'] for x in d['failures']]
+          assert 'pre_ui_candidate_request_missing' in reasons, reasons
+          assert not Path('sudu/data/approved/114.json').read_text().find('114-00-E-12')>=0
+          print('GATED / NOT LIVE: ',reasons)
+          PY
+      - name: No public approved or trust writes
+        run: |
+          test ! -f _qa/sudu/data/approved/114.json || true
+          test ! -e private-run-metadata.json
+          git diff --exit-code -- sudu/data/approved sudu/release-governance
+          echo 'No Pages deploy, no public artifact, no fake trusted receipt'
