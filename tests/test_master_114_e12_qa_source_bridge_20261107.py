@@ -73,7 +73,15 @@ class SourceE12(unittest.TestCase):
         for key in ["studentReady","independentRoleETrustedReceipt",
                     "roleDFormalEmitter16of16","mainApprovedOrLive"]:
             self.assertIs(proof[key],False)
-        e12.main(STAGE,False)  # exact real source evidence still verifies after mutation
+        # Full admission is intentionally non-idempotent: the QA SQLite schema
+        # has been migrated. Recheck immutable A source bytes, not the old pre-state.
+        self.assertEqual(e12.blob((STAGE/e12.STAGE_RECEIPT).read_bytes()),
+                         e12.STAGE_RECEIPT_BLOB)
+        self.assertEqual(e12.blob((STAGE/e12.OFFICIAL_RECEIPT).read_bytes()),
+                         e12.OFFICIAL_RECEIPT_BLOB)
+        e12.check_image("sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp",
+                        e12.EXPECTED_IMAGE,
+                        "def397fcc0693d90de40b051fdf4c7c85b4567ce")
 
     def test_sqlite_inventory_hashes_are_true(self):
         inv=json.loads((BASE/"inventory.json").read_text(encoding="utf-8"))
