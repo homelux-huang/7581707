@@ -26,6 +26,21 @@ assert.equal(teachingSha({
  questionId:ID,sourceRevision:p.revision,webpSha256:p.image,
  teaching:a.teaching,enrichment:a.enrichment
 }),p.composedTeaching,'historical 114 enriched/composed SHA must remain separately auditable');
+
+const E11='114-00-E-11',p11=pins[E11];
+const b11path=path.resolve(__dirname,'../_role_b_e12/sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-11.json');
+assert(fs.existsSync(b11path),'original immutable E11 B lesson expected');
+const b11=JSON.parse(fs.readFileSync(b11path,'utf8'));
+assert.equal(b11.questionId,E11);
+assert.equal(b11.source.questionRevision,p11.revision);
+assert.equal(b11.source.webpSha256,p11.image);
+assert.equal(teachingSha(b11.teaching),p11.teaching,
+ 'E11 must also use canonical B lesson SHA rather than composed digest');
+assert.equal(teachingSha({
+ questionId:E11,sourceRevision:p11.revision,webpSha256:p11.image,
+ teaching:b11.teaching,enrichment:b11.enrichment
+}),p11.composedTeaching,'E11 historical composed B SHA kept independently pinned');
+
 const incomplete=[undefined,false,true,'trusted',{},[],null,123];
 for(const entry of incomplete)
  assert(trustedReceiptProblems(ID,entry).length>0,'non-object/truthy/fake E registry was incorrectly trusted');
