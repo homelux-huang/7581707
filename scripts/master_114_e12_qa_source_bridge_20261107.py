@@ -146,23 +146,48 @@ def main(source_root,apply):
            and accepted.get("uiQaStatus")!="PASS",
            "source must never claim E or D completed")
 
+    # The original official QA branch contains legacy SQLite WITHOUT payload_json.
+    # Preserve the complete 205 canonical JSON source, migrate the seven-column
+    # schema from the separate already audited source branch; reject any drift.
+    normalized=ROOT/"_source_admission/sudu/data/processed/114/question-bank.sqlite3"
+    ensure(normalized.is_file() and not normalized.is_symlink(),
+           "normalization template from accepted source branch missing")
+    ensure(blob(normalized.read_bytes())=="e51ccab99dfa1e3a87ce0f0b6616ae459f29de95",
+           "normalized source SQLite Git blob changed")
     with sqlite3.connect("file:"+dbpath.as_posix()+"?mode=ro",uri=True) as cx:
-        ensure(cx.execute("PRAGMA integrity_check").fetchone()[0]=="ok","original SQLite corruption")
-        ensure(cx.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==205,"SQLite count")
-        rows=cx.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
-    original_other={qid:(payload,digest) for qid,payload,digest in rows if qid!=QID}
-    # Existing QA branch must preserve all 205 canonical JSON <-> SQLite source rows.
-    # Refuse to silently repair other questions during an E12-only source bridge.
+        ensure(cx.execute("PRAGMA integrity_check").fetchone()[0]=="ok",
+               "original legacy QA SQLite corrupt")
+        ensure(cx.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==205,
+               "legacy SQLite count !=205")
+        legacy_columns=[x[1] for x in cx.execute("PRAGMA table_info(questions)")]
+        ensure("question_id" in legacy_columns and "payload_json" not in legacy_columns,
+               "unexpected legacy SQLite structure; do not overwrite")
+        legacy_ids={x[0] for x in cx.execute("SELECT question_id FROM questions")}
     current_bank={q["questionId"]:q for q in bank["questions"]}
-    ensure(set(current_bank)=={qid for qid,_,_ in rows},
-           "QA source 205 JSON/SQLite QID sets not identical")
-    ensure(all(json.loads(payload)==current_bank[qid] for qid,payload,_ in rows),
-           "QA source 205 JSON/SQLite payloads not identical")
-    original=next((row for row in rows if row[0]==QID),None)
-    ensure(original is not None and json.loads(original[1])==q,
-           "frozen Q12 source/SQLite mismatch before admission")
-    ensure(all(sha(payload.encode("utf-8"))==h for _,payload,h in rows),
-           "pre-existing SQLite payload hash bad")
+    ensure(set(current_bank)==legacy_ids,"legacy QA SQLite lost or duplicated QIDs")
+    with sqlite3.connect("file:"+normalized.as_posix()+"?mode=ro",uri=True) as cx:
+        ensure(cx.execute("PRAGMA integrity_check").fetchone()[0]=="ok",
+               "normalized source SQLite corruption")
+        source_columns=[x[1] for x in cx.execute("PRAGMA table_info(questions)")]
+        ensure(len(source_columns)==7 and
+               {"question_id","payload_json","payload_sha256"}<=set(source_columns),
+               "validated seven-column source SQLite schema missing")
+        source_rows=cx.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
+    ensure(len(source_rows)==205 and {qid for qid,_,_ in source_rows}==set(current_bank),
+           "normalized source SQLite IDs differ from QA source")
+    ensure(all(sha(payload.encode("utf-8"))==hashval for _,payload,hashval in source_rows),
+           "normalized source payload SHA mismatch")
+    # These three had historic source-answer confirmations in the normalized
+    # template that were not present in authoritative old QA branch.
+    # The exact E12-only rescue may not mutate their original QA canonical content.
+    expected_differences={"114-00-E-11","114-00-E-12","114-00-E-13","114-00-E-14"}
+    actual_differences={qid for qid,payload,_ in source_rows
+                        if json.loads(payload)!=current_bank[qid]}
+    ensure(actual_differences==expected_differences,
+           "unexpected non-E12 differences between normalized source and QA")
+    source_e12=next(json.loads(payload) for qid,payload,_ in source_rows if qid==QID)
+    ensure(source_e12==accepted,
+           "approved source-branch E12 is not the exact accepted JSON target")
     if not apply:
         print("PASS SOURCE P0 G1+G2+G3 observed archival receipts, Q12 candidate C, 205 SQLite read-only")
         return
@@ -174,20 +199,32 @@ def main(source_root,apply):
     ensure({q["questionId"]:canonical(q) for q in bank["questions"] if q["questionId"]!=QID}==before,
            "some other 204 question content changed")
     bankpath.write_text(json.dumps(bank,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    payload=canonical(accepted).decode("utf-8")
+    # Import only the validated seven-column SQLite file, then restore the
+    # three non-E12 historic source records to original QA JSON values.
+    import shutil
+    shutil.copyfile(normalized,dbpath)
+    restored_ids=sorted(expected_differences-{QID})
     with sqlite3.connect(dbpath) as cx:
-        cx.execute("UPDATE questions SET payload_json=?,payload_sha256=? WHERE question_id=?",
-                   (payload,sha(payload.encode("utf-8")),QID))
-        ensure(cx.total_changes==1,"SQLite did not update precisely one QID")
+        for other_id in restored_ids:
+            payload=canonical(current_bank[other_id]).decode("utf-8")
+            cx.execute("UPDATE questions SET payload_json=?,payload_sha256=? WHERE question_id=?",
+                       (payload,sha(payload.encode("utf-8")),other_id))
+        ensure(cx.total_changes==len(restored_ids),
+               "source schema migration did not restore precisely three unchanged QA rows")
         cx.commit()
     with sqlite3.connect("file:"+dbpath.as_posix()+"?mode=ro",uri=True) as cx:
-        ensure(cx.execute("PRAGMA integrity_check").fetchone()[0]=="ok","updated SQLite integrity failed")
-        ensure(cx.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==205,"updated SQLite rowcount")
+        ensure(cx.execute("PRAGMA integrity_check").fetchone()[0]=="ok",
+               "migrated source SQLite integrity failed")
+        ensure(cx.execute("SELECT COUNT(*) FROM questions").fetchone()[0]==205,
+               "migrated source SQLite count !=205")
         after_rows=cx.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
-    ensure({qid:(val,h) for qid,val,h in after_rows if qid!=QID}==original_other,
-           "other 204 SQLite payload bytes/hash changed")
-    ensure(json.loads(next(val for qid,val,_ in after_rows if qid==QID))==accepted,
-           "Q12 SQLite roundtrip diverges from canonical JSON")
+    new_bank={record["questionId"]:record for record in bank["questions"]}
+    ensure(all(json.loads(payload)==new_bank[qid] for qid,payload,_ in after_rows),
+           "migrated 205 SQLite values not identical to exact QA JSON")
+    ensure(all(sha(payload.encode("utf-8"))==h for _,payload,h in after_rows),
+           "migrated SQLite payload SHA mismatch")
+    ensure({qid:canonical(new_bank[qid]) for qid in new_bank if qid!=QID}==before,
+           "migration altered another 204 canonical question values")
     ensure(manifestpath.read_bytes()==rawmanifest,"manifest bytes changed")
     proof={
       "schemaVersion":1,"year":114,"questionId":QID,
@@ -205,7 +242,10 @@ def main(source_root,apply):
       "officialAnswerImageOriginalBytesMatched":True,
       "sourceQuestionVerified":True,"officialAnswerVerified":True,
       "sqliteIntegrityCheck":"ok","canonicalRows":205,"other204JsonRecordsUnchanged":True,
-      "other204SqlitePayloadsUnchanged":True,"manifestUnchanged":True,
+      "other204CanonicalValuesUnchanged":True,"legacySqliteMigratedToSevenColumn":True,
+      "legacySqliteColumns":legacy_columns,"restoredPriorQaQids":restored_ids,
+      "sourceNormalizedSqliteGitBlob":"e51ccab99dfa1e3a87ce0f0b6616ae459f29de95",
+      "manifestUnchanged":True,
       "studentReady":False,"independentRoleETrustedReceipt":False,
       "roleDFormalEmitter16of16":False,"mainApprovedOrLive":False,
       "comment":"Historic ROLE A direct visual evidence reconciled against actual Git bytes; no new PDF download or fresh human/AI visual inspection claimed. Full distinct-Session E receipt, actual D and protected release remain mandatory."
@@ -213,7 +253,7 @@ def main(source_root,apply):
     target=ROOT/REPORT
     ensure(not target.exists(),"admission report already exists; no replace")
     target.write_text(json.dumps(proof,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("SOURCE_ADMITTED_ONLY: 114-00-E-12 printed C, original QA exact, 205 SQLite ok, other 204 unchanged; NO E/D/READY/LIVE")
+    print("SOURCE_ADMITTED_ONLY: 114-00-E-12 printed C, original QA exact, 205 SQLite ok, 204 QA canonical records unchanged after legacy SQLite migration; NO E/D/READY/LIVE")
 
 if __name__=="__main__":
     ap=argparse.ArgumentParser()
