@@ -1,0 +1,26 @@
+name: MASTER E12 independent execution provenance V2 candidate tests (NOT RELEASE)
+on:
+  push:
+    branches:
+      - security/e12-execution-provenance-v2-candidate-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  strict_negative_security_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q cryptography
+      - name: Run real cryptographic positive and malicious negative tests
+        run: python -m unittest discover -s tests -p test_sudu_review_execution_provenance_v2_candidate.py -v
+      - name: Assert experimental helper cannot authorize a student
+        run: |
+          python - <<'PY'
+          from scripts.sudu_review_execution_provenance_v2_candidate import is_student_release_authorized
+          assert is_student_release_authorized() is False
+          print('SECURITY PROTOTYPE ONLY / NO LIVE RELEASE')
+          PY
