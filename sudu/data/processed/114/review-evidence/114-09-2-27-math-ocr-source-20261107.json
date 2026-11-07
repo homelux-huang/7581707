@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-ECON27-MATH-OCR-G1-G2-G3-SOURCE-20261107-01",
+  "role": "A",
+  "questionId": "114-09-2-27",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6710003921",
+  "sourceBaselineCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "reviewMethod": "AI Assistant Source Visual Review (not independent Role E review)",
+  "status": "SOURCE_G1_DIRECT_VISUAL_G2_SUPERSCRIPT_CORRECTION_CANDIDATE_WITH_PRINTED_G3_EVIDENCE_MATH_CONSISTENCY_HOLD_NO_RELEASE",
+  "source": {
+    "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTIucGRm",
+    "officialPdfSha256PreviouslyRecorded": "61db7a7dd614ff7a851f12d6bfb14d5cfd219cfcb68e68e772382c494fec2586",
+    "officialPaperPage": 7,
+    "originalPagePath": "sudu/data/original/114/09-2/p007-61db7a7dd6-v2-w1400-q66.webp",
+    "originalPageGitBlob": "3cfe02b538c5a277f81cea0b185ef6318a18aa31",
+    "originalPageSha256": "0791d9765ce4fe55f795c53aac6aafe5ef70b4788b6818f0a65c3f21eb915595",
+    "singleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-27.webp",
+    "singleWebpGitBlob": "3d6ef8fc94db65da0cef68ccf843c3d96fd2450f",
+    "singleWebpSha256": "0a3525d35ce5f169d7bfd8fe62a4c08e43e467c50ba2458bbacfd840e4240b74",
+    "sourceImageRecreated": false,
+    "originalCrop": [
+      90,
+      634,
+      1310,
+      800
+    ],
+    "rawOcrQuestionUnchanged": "有一家完全競爭廠商，面對市場價格P = 14 元。該廠商在產量q = 8 時，MC = AC；\n  在q = 9 時，MC = AR；在q = 10 時，AC = AR，其中MC、AC、AR 分別代表邊際成本、平\n  均成本、平均收益。已知 AC = q2 – 16 q + 74，則該廠商在最適產量之下的超額利潤為何？",
+    "sourceImageCorrectedQuestionCandidate": "有一家完全競爭廠商，面對市場價格P = 14 元。該廠商在產量q = 8 時，MC = AC；\n  在q = 9 時，MC = AR；在q = 10 時，AC = AR，其中MC、AC、AR 分別代表邊際成本、平\n  均成本、平均收益。已知 AC = q² – 16 q + 74，則該廠商在最適產量之下的超額利潤為何？",
+    "optionsRawKeptUnmodified": [
+      "0",
+      "10",
+      "27",
+      "36"
+    ],
+    "correctedExactSubstringOld": "AC = q2 – 16 q + 74",
+    "correctedExactSubstringNew": "AC = q² – 16 q + 74",
+    "rawSourceRevisionFromRoleB": "18a06efa2ffc91c87baaf4943e72972efe8be04ac3533d20ab2ae49ab9efb76f",
+    "proposedCorrectedSourceRevision": "516abf551e1896d6afb8b578733c38d44b06b1140b0e26fc32090bb8eba65b20",
+    "optionTextAndStemOtherwiseVisuallyMatched": true,
+    "oldManifestG1Status": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "canonicalBankOrManifestEdited": false
+  },
+  "officialAnswer": {
+    "printedAnswer": "C",
+    "originalPrintedAnswerPagePath": "sudu/data/original/114/09-2-answers/p001-1ea83163ea-v2-w1400-q66.webp",
+    "printedAnswerPageGitBlob": "1ed318724f70ad4f81e472a775cdb9e21fcba2fc",
+    "officialAnswerPdfSha256PreviouslyRecorded": "1ea83163ea9d270004b1212d5694e7a23b9fbe0fb7171d6333a97dd96adf73bc",
+    "noticeLedgerPath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+    "noticeLedgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "namedNoticePage": [
+      3
+    ],
+    "namedNoticeConfirmedAnswer": "C",
+    "noticeChangeFromCandidate": "NONE_OBSERVED",
+    "officialNoticePdfSha256PreviouslyRecorded": "70d95c1b4835c8410821543bbb4ed2fd92f3e31df502808deb5f50d72ef93762",
+    "newPdfDownloadOrRehash": false,
+    "formalAnswerVerifiedFlagPromoted": false
+  },
+  "mathConsistency": {
+    "status": "QUARANTINED_PRINTED_CONDITIONS_INCONSISTENT_UNLESS_OFFICIAL_EXPLANATION_RESOLVES",
+    "printedConditions": [
+      "q=8 MC=AC",
+      "q=9 MC=AR",
+      "q=10 AC=AR",
+      "P=AR=14"
+    ],
+    "inferredTotalCost": "TC(q)=q*AC=q^3-16q^2+74q",
+    "inferredMarginalCost": "MC(q)=3q^2-32q+74",
+    "q8MC": 10,
+    "q8AC": 10,
+    "q9MC": 29,
+    "q9ExpectedAR": 14,
+    "q10AC": 14,
+    "q10ExpectedAR": 14,
+    "authorCandidateArithmetic": "q9 AC=11; (14-11)*9=27; matches printed C but continuous-differentiation MC(9) conflicts with printed MC=AR",
+    "releaseRule": "Do not silently alter printed source; require independent subject-matter issue resolution and distinct E QA before formal teaching approval"
+  },
+  "existingTeaching": {
+    "authorDraftPR": "https://github.com/homelux-huang/7581707/pull/159",
+    "oldTeachingDigest": "4d663c40642e5b64d9ea017106af3ed9e2dfff20563a5c16e5f650f0369f8897",
+    "authorRevisionRequiresRebind": true,
+    "doNotModifyRoleBFiles": true
+  },
+  "canonical": {
+    "questionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "questionVerifiedOriginally": false,
+    "answerVerifiedOriginally": false,
+    "all205CanonicalAndSqliteUntouched": true
+  },
+  "next": {
+    "ROLE_B": "REPIN_AFTER_SOURCE_ADMISSION",
+    "ROLE_E": "SUBSTANTIVE_MATH_CONSISTENCY_AND_EXACT_SHA_QA_REQUIRED",
+    "ROLE_D": "HOLD",
+    "MASTER": "QUARANTINED_PENDING_MATH_RESOLUTION",
+    "READY": false,
+    "LIVE": false
+  }
+}
