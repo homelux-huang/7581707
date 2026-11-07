@@ -3,10 +3,10 @@
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
     "certificationSchemaVersion": "student-reviewed-batch-v1",
-    "commit": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+    "commit": "9aa4dc6b263e741a10bc33153e7a30aa566eb788",
     "publisherCodeSha256": "aa7a774e8f0dde288210a5c584b874a7ded3d45d008d023abf7494dc133232d8",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "30e368b6c4679f7f087b4f6c4908c0669963c1ec6c9c3f21d658aedab7021573"
+    "sourceTreeSignature": "f050d16c91936061198027e6333b5fe8b4e445dc842d19891a802e05d954d3c8"
   },
   "schemaVersion": 1,
   "years": {
@@ -18,22 +18,23 @@
       "approvedPercent": 0.0,
       "candidate": 205,
       "expected": 205,
-      "imagePreviewCount": 9,
-      "imagePreviewPercent": 4.4,
+      "imagePreviewCount": 10,
+      "imagePreviewPercent": 4.9,
       "imageQaPercent": 16.1,
       "ocrCandidate": 205,
-      "ocrQaPass": 0,
+      "ocrQaPass": 1,
       "officialCandidateMatches": 205,
-      "officialFinalQaPass": 0,
+      "officialFinalQaPass": 1,
       "pending": 205,
       "pendingReasonCounts": {
+        "ai_not_checked": 1,
         "image_pending": 172,
-        "ocr_or_db_pending": 33
+        "ocr_or_db_pending": 32
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 1,
       "sharedWebpTotal": 2,
-      "sourceSha": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+      "sourceSha": "9aa4dc6b263e741a10bc33153e7a30aa566eb788",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -92,9 +93,9 @@
         "英文": {
           "candidate": 42,
           "expected": 0,
-          "finalAnswerQaPass": 0,
-          "imagePreviewReady": 0,
-          "ocrQaPass": 0,
+          "finalAnswerQaPass": 1,
+          "imagePreviewReady": 1,
+          "ocrQaPass": 1,
           "studentReady": 0,
           "webpQaPass": 15
         }
@@ -126,7 +127,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 5,
       "sharedWebpTotal": 20,
-      "sourceSha": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+      "sourceSha": "9aa4dc6b263e741a10bc33153e7a30aa566eb788",
       "subjects": {
         "商業概論": {
           "candidate": 25,
