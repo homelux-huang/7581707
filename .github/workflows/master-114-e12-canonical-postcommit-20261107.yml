@@ -1,0 +1,55 @@
+name: MASTER 114 E12 canonical source post-commit proof (NO RELEASE)
+on:
+  push:
+    branches: [qa/master-emergency-114-e12-canonical-20261107]
+    paths:
+      - .github/workflows/master-114-e12-canonical-postcommit-20261107.yml
+      - sudu/data/processed/114/questions.json
+      - sudu/data/processed/114/question-bank.sqlite3
+      - sudu/data/processed/114/review-evidence/114-00-E-12-MASTER-SOURCE-ADMISSION-20261107.json
+permissions:
+  contents: read
+jobs:
+  immutable_source_exact_head:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E
+            sudu/data/original/114/00-E-answers
+            scripts
+            tests
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: bc625d5eba9bf67f29b236258754941f0c9d999e
+          path: _role_a_e12_stage
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114/source-stage
+            sudu/data/processed/114/review-evidence
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test true post-commit source bank 205 SQLite and fail-closed negatives
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python -m unittest discover -s tests -p test_master_114_e12_canonical_rescue_20261107.py -v
+          python scripts/master_114_e12_canonical_rescue_20261107.py --stage-root _role_a_e12_stage
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "PASSED EXACT POST-COMMIT E12 SOURCE: no E trust, UI approval, or new QID LIVE claimed"
