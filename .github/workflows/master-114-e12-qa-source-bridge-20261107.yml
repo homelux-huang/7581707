@@ -113,7 +113,11 @@ jobs:
             'verifiedSourceCommit':'621dd452b113a8fb5219d2784be6437a9095511c',
             'sourceQuestionsSha256':sha_bank,'databaseSha256':sha_db,
             'sqliteIntegrityCheck':'ok','rows':205,'jsonSqlitePayloadMatches':205,
-            'other204PayloadsUnchanged':True,'manifestOriginalUnchanged':True,
+            'other204CanonicalValuesUnchanged':True,'legacySqliteMigratedToSevenColumn':True,
+            'legacyDbBlob':'f841173ebc194ac24de4d49e2a056d769246e655',
+            'normalizedSourceDbBlob':'e51ccab99dfa1e3a87ce0f0b6616ae459f29de95',
+            'restoredNonE12QaQids':['114-00-E-11','114-00-E-13','114-00-E-14'],
+            'manifestOriginalUnchanged':True,
             'studentReleaseApproved':False,'separateRoleETrusted':False,
             'emittedUi16of16':False,
             'status':'CANONICAL_SOURCE_BRIDGED_NOT_STUDENT_READY'
