@@ -1,0 +1,29 @@
+name: ROLE A 114 Economics 34 original G1 G2 and printed answer (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-114-econ34-original-source-20261107]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_qa:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 5
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Original 114 economics 34 image, source text, answer and negatives
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_econ34_source_20261107.py -v
+      - name: Read-only no-release assertions
+        run: |
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "114 Econ34 original source QA candidate; answerVerified/E/D/READY/LIVE remain blocked."
