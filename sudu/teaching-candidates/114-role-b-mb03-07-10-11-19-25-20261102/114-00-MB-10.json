@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "role": "B",
+  "year": 114,
+  "questionId": "114-00-MB-10",
+  "subject": "數學 B",
+  "kind": "SOURCE_PENDING_MATH_AUTHOR_DRAFT",
+  "question": "在坐標平面上，已知直線 L 及其右側半平面為4 𝑥 – 3 y + a ≥0 的圖形，直線 L 及其左側半\n  平面為8 𝑥 + b y + 4 ≤0 的圖形，則a + b =？",
+  "options": [
+    "– 4",
+    "– 1",
+    "2",
+    "5"
+  ],
+  "answer": "A",
+  "source": {
+    "sourceCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "sourceQuestionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "sourceRevision": "0970bc9015d84e0fb4f81963be91db1bdc93a6e30470a302069bb66ed71dfa2a",
+    "webpSha256": "c5f1ae0d47896c13f79a8558ba4613c4965a91c607ed3b4e50184c8e00a812aa",
+    "webpPath": "sudu/data/processed/114/webp-v1/00-MB/114-00-MB-10.webp",
+    "qaStatus": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "questionVerified": false,
+    "answerVerified": false,
+    "officialAnswerAndNoticePending": true
+  },
+  "teaching": {
+    "topic": "同一直線兩個邊界方程式｜係數比例",
+    "teacherSummary": "4x−3y+a=0與8x+by+4=0是同一L，後者係數×2，所以b=−6、a=2，a+b=−4（A）。",
+    "elementarySummary": "同一條線的式子全乘2也一樣。x的4變8，y的負3變負6，a乘2等於4，所以a等於2。",
+    "concept": "兩直線同一直線時(A,B,C)成相同比例；比較係數時常數與正負號都要一起乘。",
+    "memory": "×2 ⇒a2，b−6，和−4",
+    "highlights": [
+      "4",
+      "8",
+      "a + b"
+    ],
+    "formula": "係數比例k=8/4=2；b=k×(−3)，4=ka。",
+    "solvingSteps": [
+      "不等式等號邊界都表示同一條直線L。",
+      "看x係數4變8，可知倍率k=2。",
+      "所有係數應等比例，故y係數b=2×(−3)=−6。",
+      "常數4=2a，因此a=2。",
+      "所以a+b=2−6=−4，選A。",
+      "驗算8x−6y+4=2(4x−3y+2)，同一直線。",
+      "兩半平面採相反不等號分別表示直線兩側，不影響邊界係數相同比例。"
+    ],
+    "hasExamCalculation": true,
+    "examCalculation": {
+      "given": [
+        "L邊界4x−3y+a=0",
+        "另一寫法8x+by+4=0"
+      ],
+      "formulaUse": "係數比例k=8/4=2；b=k×(−3)，4=ka。",
+      "substitution": [
+        "b=−6",
+        "a=2",
+        "a+b=−4"
+      ],
+      "steps": [
+        "不等式等號邊界都表示同一條直線L。",
+        "看x係數4變8，可知倍率k=2。",
+        "所有係數應等比例，故y係數b=2×(−3)=−6。",
+        "常數4=2a，因此a=2。",
+        "所以a+b=2−6=−4，選A。",
+        "驗算8x−6y+4=2(4x−3y+2)，同一直線。",
+        "兩半平面採相反不等號分別表示直線兩側，不影響邊界係數相同比例。"
+      ],
+      "result": "−4",
+      "unit": "無單位",
+      "option": "A"
+    },
+    "calculationReviewed": "ROLE_B_AUTHOR_ONLY",
+    "optionExplanations": {
+      "A": {
+        "teacher": "A −4=a+b=2+(−6)，同一直線的x、y、常數係數皆有相同比例2。",
+        "elementary": "a是2、b是負6，和負4。",
+        "reason": "A −4=a+b=2+(−6)，同一直線的x、y、常數係數皆有相同比例2。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "B −1 無法由b=−6與a=2相加得到，違反係數須同倍率的條件。",
+        "elementary": "負6加2不等於負1。",
+        "reason": "B −1 無法由b=−6與a=2相加得到，違反係數須同倍率的條件。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "C 選項 2 僅是由常數係數 4=2a 算出的 a 值；題目要求 a+b，尚須加入 b=−6，得 −4。",
+        "elementary": "2 只是 a 的數字，還要加上負 6 才是題目要的答案。",
+        "reason": "誤把 a=2 當作 a+b；因同一直線的 y 係數 b=2×(−3)=−6，所以 2+(−6)=−4，而非選項 C 的 2。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "D 5 是正數，與a=2、b=−6的和為負4矛盾。",
+        "elementary": "兩數相加不是正5。",
+        "reason": "D 5 是正數，與a=2、b=−6的和為負4矛盾。",
+        "isCorrect": false
+      }
+    },
+    "source": "Original A source is candidate pending official G1/G2/G3. OCR issue if present must be repaired by A and rebind digest."
+  },
+  "reasoningAudit": {
+    "originalAnswerCandidateOnly": true,
+    "blindSolveClaimed": false,
+    "authorReverseVerification": true
+  },
+  "review": {
+    "status": "BLOCKED",
+    "author": "GPT-6 Role B AI author",
+    "authorSelfCheck": true,
+    "requiresHumanTeacher": false,
+    "independentReviewer": null,
+    "independentAiContentReview": "PENDING_DISTINCT_ROLE_E",
+    "formalReady": false,
+    "studentReleaseApproved": false,
+    "blockers": [
+      "A_G1_ORIGINAL_WEBP_VISUAL_DRAFT",
+      "A_G2_OCR_OPTION_FORMULA_POLLUTION",
+      "A_G3_OFFICIAL_FINAL_KEY_NOTICE_PENDING",
+      "E_DISTINCT_AUTHOR_CONTENT_AND_MATH",
+      "D_REAL_YEAR114_V4_8X2",
+      "MASTER_PROTECTED_REVIEW_PAGES"
+    ]
+  },
+  "composedTeachingSha256": "4013fe01333186b7a783b097cc8030d699a2772525e31b2b620ab09c3a476ab9"
+}
