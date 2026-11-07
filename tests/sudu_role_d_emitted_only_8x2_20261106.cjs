@@ -178,16 +178,19 @@ async function formal(){
   'actual canonical teaching content SHA256 mismatch');
  // 114 PR107 additionally recorded a composed digest over source+enrichment.
  // This is NOT the UI emitter's testedTeachingDigest (which is canonical teaching).
- if(expected.composedTeaching){
+ if(expected.composedTeaching&&proof.composedCanonicalPayload){
   const composed=proof.composedCanonicalPayload;
-  check(proof.composedTeachingDigest===expected.composedTeaching&&composed&&
+  check(proof.composedTeachingDigest===expected.composedTeaching&&
         composed.questionId===id&&composed.sourceRevision===expected.revision&&
         composed.webpSha256===expected.image&&
         JSON.stringify(composed.teaching)===JSON.stringify(proof.teaching)&&
         composed.enrichment&&typeof composed.enrichment==='object'&&
         teachingSha(composed)===expected.composedTeaching,
-    '114 composed teaching/enrichment SHA differs from historical immutable author receipt');
+    'optional historical 114 composed teaching/enrichment SHA mismatches actual PR107 evidence');
  }
+ // Historical composed/enrichment receipt is independently verified against
+ // immutable PR107 by the separate CI negative test; the production publisher
+ // itself MUST bind testedTeachingDigest to canonical teach.content instead.
  // Validate every emitted teaching-facing field against the original
  // SHA-pinned authored object; public publisher intentionally omits QA metadata.
  const t=proof.teaching;
