@@ -16,8 +16,9 @@ jobs:
     env:
       EXPECTED_D_SHA: ${{ github.sha }}
       PIN_MAIN: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
-      PIN_PRIVATE: 0384933b97fe2eaa9372f99b4549b4a5d45d0076
+      PIN_PRIVATE: bc946e4a17c0172e21d9dd5710275c49523af990
       PIN_QA: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+      PIN_E: 36d33577d35455be91776e8b2f5d82bbcb2b38a6
     steps:
       - name: Checkout immutable D-only contract test from exact current HEAD
         uses: actions/checkout@v4
@@ -34,7 +35,7 @@ jobs:
       - name: Checkout MASTER issuer exact source read-only, no changes
         uses: actions/checkout@v4
         with:
-          ref: 0384933b97fe2eaa9372f99b4549b4a5d45d0076
+          ref: bc946e4a17c0172e21d9dd5710275c49523af990
           path: _master_private
           persist-credentials: false
           sparse-checkout: |
@@ -49,6 +50,14 @@ jobs:
             sudu/data/processed/114/review-evidence/114-00-E-12-teaching-publisher-20261107.json
             sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json
             sudu/data/processed/114/review-evidence/114-00-E-12-official-publisher-20261107.json
+      - name: Checkout latest independent ROLE E exact HOLD return (read only)
+        uses: actions/checkout@v4
+        with:
+          ref: 36d33577d35455be91776e8b2f5d82bbcb2b38a6
+          path: _role_e
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/independent-ai-review.json
       - name: Read-only real private issuer versus V4 static contract (no prior 16/24 rerun)
         run: |
           set -euo pipefail
@@ -62,11 +71,18 @@ jobs:
           assert a['externalGateState']['externalProviderBlindAttestationStillHardBlocked'] is True
           assert a['externalGateState']['protectedMainE12TrustPresent'] is False
           codes={p['code'] for p in a['integrationBlockers']}
-          assert 'PRIVATE_ADAPTER_NOT_INJECTED' in codes
-          assert 'PRIVATE_ASSET_NOT_COPIED:v4-score-feedback.css' in codes
-          print('PASS: discovered two genuine PRIVATE INTEGRATION BLOCKERS, not RELEASE UIQA')
+          assert not codes, 'MASTER native private V4 parity regression: '+repr(codes)
+          assert a['status']=='PRIVATE_V4_PARITY_PASS_EXTERNAL_G6_G7_HOLD'
+          assert a['v4Assets']['privateInjectorFound'] is True
+          assert not a['v4Assets']['missing']
+          assert 'v4-score-feedback.css' in a['v4Assets']['privateCopied']
+          assert a['roleEEvidence']['head']==a['source']['roleEHead']
+          assert a['roleEEvidence']['blindSolveOriginalTranscriptSha256'] is None
+          assert a['roleEEvidence']['sourceAuthorSessionId'] is None
+          assert a['roleEEvidence']['reviewerSessionId'] is None
+          print('PASS: MASTER fixed two V4 parity defects, true E G6/G7 HOLD; no browser/UIQA/release')
           PY
-      - name: Archive no-browser static contract SHA/blocked explanations
+      - name: Archive positive V4 parity static contract and exact G6/G7 HOLD proof (not UIQA)
         if: always()
         uses: actions/upload-artifact@v4
         with:
