@@ -3,6 +3,8 @@ import hashlib
 import json
 import subprocess
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts import sudu_verified_publish as pub
 from scripts import sudu_independent_review_gate as independent
 
