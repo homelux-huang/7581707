@@ -163,7 +163,11 @@ def evaluate(source: Path, author: Path, request: dict | None):
             "E12_protected_trusted_AI_receipt_absent",
             "trustedAiReviewReceipts."+QID,
             "sudu/release-governance/independent-review-policy.json")
-    # Only a verified, protected-main trusted receipt can authorize later review.\n    # No experimental or self-asserted review can satisfy this condition.\n    require(False,"formal_E_independent_gate_not_yet_integrated_fail_closed",\n            "sourceAuthorSessionId+reviewerSessionId+E original SHA",\n            "scripts/sudu_independent_review_gate.py")
+    # Only a verified, protected-main trusted receipt can authorize later review.
+    # No experimental or self-asserted review can satisfy this condition.
+    require(False,"formal_E_independent_gate_not_yet_integrated_fail_closed",
+            "sourceAuthorSessionId+reviewerSessionId+E original SHA",
+            "scripts/sudu_independent_review_gate.py")
     return failures,(q,item,teach)
 
 def emit_private(source: Path, author: Path, request: dict, dest: Path, *,
@@ -191,9 +195,27 @@ def emit_private(source: Path, author: Path, request: dict, dest: Path, *,
     destination.mkdir(parents=True,mode=0o700)
     shutil.copytree(ROOT/"sudu/data/approved",destination/"sudu/data/approved")
     runtime=["v4-115-multisubject-review-demo.html","verified-questions-runtime.js",
-             "v4-score-feedback.js","demo-subject-learning.js"]
+             "v4-score-feedback.js","v4-score-feedback.css","demo-subject-learning.js"]
     for name in runtime:
         shutil.copy2(ROOT/"sudu"/name,destination/"sudu"/name)
+    # Match original protected-main scripts/build.py adapter injection.
+    v4=destination/"sudu/v4-115-multisubject-review-demo.html"
+    original_v4=v4.read_text(encoding="utf-8")
+    if original_v4.count("</body>")!=1:
+        raise ValueError("Missing unique V4 closing body tag")
+    adapter=destination/"sudu/verified-questions-runtime.js"
+    if not adapter.is_file():
+        raise ValueError("Verified V4 adapter missing from private artifact")
+    adapter_revision=hashlib.sha256(adapter.read_bytes()).hexdigest()[:12]
+    v4.write_text(original_v4.replace(
+        "</body>",
+        f'<script src="./verified-questions-runtime.js?v={adapter_revision}"></script>\n</body>'
+    ),encoding="utf-8")
+    # Reject missing relative JS/CSS resources; no page.route mock.
+    import re
+    for rel in re.findall(r'(?:src|href)="\./([^"?#]+)(?:[?#][^"]*)?"',v4.read_text(encoding="utf-8")):
+        if rel.endswith((".js",".css")) and not (destination/"sudu"/rel).is_file():
+            raise ValueError("PRIVATE_ASSET_NOT_COPIED:"+rel)
     webp_dest=destination/"sudu"/image_rel
     webp_dest.parent.mkdir(parents=True,exist_ok=True)
     shutil.copyfile(source/item["output"],webp_dest)
