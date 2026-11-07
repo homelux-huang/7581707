@@ -1,0 +1,76 @@
+name: ROLE D private publisher E12 V4 integration contract only (NO BROWSER / NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-d-private-emitter-contract-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-d-private-contract-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  private_issuer_v4_static_contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      EXPECTED_D_SHA: ${{ github.sha }}
+      PIN_MAIN: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+      PIN_PRIVATE: 0384933b97fe2eaa9372f99b4549b4a5d45d0076
+      PIN_QA: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+    steps:
+      - name: Checkout immutable D-only contract test from exact current HEAD
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Pin protected main trust and runtime source
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_D_SHA"
+          git fetch --no-tags --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+          test "$(git rev-parse refs/remotes/origin/main)" = "$PIN_MAIN"
+          python -m py_compile tests/role_d_private_emitter_contract_20261107.py
+      - name: Checkout MASTER issuer exact source read-only, no changes
+        uses: actions/checkout@v4
+        with:
+          ref: 0384933b97fe2eaa9372f99b4549b4a5d45d0076
+          path: _master_private
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/sudu_private_candidate_issuer.py
+      - name: Checkout PR177 MERGED official source evidence exact read-only
+        uses: actions/checkout@v4
+        with:
+          ref: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+          path: _qa_source
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence/114-00-E-12-teaching-publisher-20261107.json
+            sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json
+            sudu/data/processed/114/review-evidence/114-00-E-12-official-publisher-20261107.json
+      - name: Read-only real private issuer versus V4 static contract (no prior 16/24 rerun)
+        run: |
+          set -euo pipefail
+          python tests/role_d_private_emitter_contract_20261107.py
+          python - <<'PY'
+          import json, pathlib
+          path=pathlib.Path('test-results/role-d-private-emitter-contract-20261107/private-emitter-contract-report.json')
+          a=json.loads(path.read_text())
+          assert not a['formalUiqaPassed'] and not a['newLive'] and not a['newReady']
+          assert not a['ranChromium'] and not a['ranOldHoldOr24Negatives']
+          assert a['externalGateState']['externalProviderBlindAttestationStillHardBlocked'] is True
+          assert a['externalGateState']['protectedMainE12TrustPresent'] is False
+          codes={p['code'] for p in a['integrationBlockers']}
+          assert 'PRIVATE_ADAPTER_NOT_INJECTED' in codes
+          assert 'PRIVATE_ASSET_NOT_COPIED:v4-score-feedback.css' in codes
+          print('PASS: discovered two genuine PRIVATE INTEGRATION BLOCKERS, not RELEASE UIQA')
+          PY
+      - name: Archive no-browser static contract SHA/blocked explanations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-e12-private-emitter-contract-HOLD-${{ github.run_id }}
+          path: test-results/role-d-private-emitter-contract-20261107/
+          if-no-files-found: error
+          retention-days: 14
