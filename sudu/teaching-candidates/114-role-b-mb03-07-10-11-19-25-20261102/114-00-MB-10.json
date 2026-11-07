@@ -85,9 +85,9 @@
         "isCorrect": false
       },
       "C": {
-        "teacher": "C 2 只是a本身，忘記題目要再加b=−6。",
-        "elementary": "2只是其中一個數。",
-        "reason": "C 2 只是a本身，忘記題目要再加b=−6。",
+        "teacher": "C 選項 2 僅是由常數係數 4=2a 算出的 a 值；題目要求 a+b，尚須加入 b=−6，得 −4。",
+        "elementary": "2 只是 a 的數字，還要加上負 6 才是題目要的答案。",
+        "reason": "誤把 a=2 當作 a+b；因同一直線的 y 係數 b=2×(−3)=−6，所以 2+(−6)=−4，而非選項 C 的 2。",
         "isCorrect": false
       },
       "D": {
@@ -122,5 +122,5 @@
       "MASTER_PROTECTED_REVIEW_PAGES"
     ]
   },
-  "composedTeachingSha256": "9b4ee9d937c18e6efd184dce7b6422f03200a2bff0b6edff9909b84bd732077c"
+  "composedTeachingSha256": "4013fe01333186b7a783b097cc8030d699a2772525e31b2b620ab09c3a476ab9"
 }
