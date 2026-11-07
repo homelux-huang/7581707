@@ -1,0 +1,49 @@
+name: MASTER 114 E12 genuine B teaching issuer QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/master-e12-authored-teaching-issuer-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact_original_author_and_issuer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout exact original B lesson evidence read only
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 57d969888c57fdcd2b16c933e92c7a2c9eebb3a5
+          path: _author_b
+          sparse-checkout: |
+            sudu/teaching-candidates/114-role-b-20261025-batch02
+          sparse-checkout-cone-mode: true
+      - name: Checkout unchanged protected main publisher read only
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          sparse-checkout: |
+            scripts
+            sudu/data/approved
+            sudu/release-governance
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test actual author file bytes + native publisher schema and negative SHA cases
+        run: python -m unittest discover -s tests -p test_master_e12_authored_teaching_issuer_20261107.py -v
+      - name: Calculate exact issuer bytes SHA and Git blob
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          p=Path('sudu/data/processed/114/review-evidence/114-00-E-12-teaching-publisher-20261107.json')
+          b=p.read_bytes()
+          print('E12 TEACHING ISSUER SHA256:',hashlib.sha256(b).hexdigest())
+          print('E12 TEACHING ISSUER GitBlob:',hashlib.sha1(b'blob '+str(len(b)).encode()+bytes([0])+b).hexdigest())
+          print('E12 author QA only / no E trust / no UI approval / no new LIVE')
+          PY
