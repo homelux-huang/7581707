@@ -160,4 +160,18 @@ else:
         with self.assertRaises(ValueError):sync.branch_name('main','a'*40)
         with self.assertRaises(ValueError):sync.validate_paths(['sudu/data/approved/../else'])
 
+    def test_workflow_manual_pr_handoff_is_executable_shell_line(self):
+        # Regression for a literal backslash-n embedded in a YAML run comment.
+        # The workflow can pass 'updated=false' CI while this path stays broken.
+        workflow=(SCRIPT.parent.parent/'.github/workflows/sudu-verified-autopublish.yml').read_text()
+        step=workflow.split('      - name: Pin candidate and emit authorized Draft PR handoff (NO RELEASE)',1)[1]
+        step=step.split('      - name: Retain pinned candidate even if token cannot create a PR',1)[0]
+        shell_lines=step.splitlines()
+        invoke='python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual'
+        matches=[line for line in shell_lines if line.strip()==invoke]
+        self.assertEqual(len(matches),1,'Manual Draft PR handoff must be a distinct executable shell line')
+        self.assertNotIn('\\n',step,'YAML run block may not hide invocation inside a literal escaped newline')
+        self.assertIn('          git add -A sudu/data/approved',shell_lines)
+        self.assertTrue(any(line.strip().startswith('# The repository forbids') for line in shell_lines))
+
 if __name__=='__main__':unittest.main()
