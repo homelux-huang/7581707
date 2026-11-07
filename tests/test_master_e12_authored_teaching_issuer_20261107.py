@@ -22,7 +22,7 @@ G2="8130e621a4328d006dab880fe62e9115899049a3fb4751020a0c1570c49ea2fc"
 G3="63056df18120597440feea7489522b6f6f9ba7b039a9b5748795f8b5081f8f12"
 
 def sha(x):return hashlib.sha256(x).hexdigest()
-def blob(x):return hashlib.sha1(b"blob "+str(len(x)).encode()+b"\\x00"+x).hexdigest()
+def blob(x):return hashlib.sha1(b"blob "+str(len(x)).encode()+bytes([0])+x).hexdigest()
 
 class E12TeachingIssuerTests(unittest.TestCase):
     @classmethod
