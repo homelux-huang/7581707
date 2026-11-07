@@ -1,0 +1,105 @@
+name: MASTER 114 E12 source G2 original OCR certificate (NO ANSWER NO RELEASE)
+on:
+  push:
+    branches: [qa/master-e12-source-g2-ocr-receipt-20261107]
+    paths:
+      - .github/workflows/master-e12-source-g2-ocr-receipt-20261107.yml
+permissions:
+  contents: read
+jobs:
+  original_g2_source_document:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original A bytes -> exact four-option source G2 doc and current publisher format
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C _publisher rev-parse HEAD)" = 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          python - <<'PY'
+          import copy,hashlib,json,subprocess,sys
+          from pathlib import Path
+          sys.path.insert(0,str(Path('_publisher/scripts').resolve()))
+          import sudu_verified_publish as pub
+          root=Path('.').resolve()
+          base=root/'sudu/data/processed/114'
+          rel='sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json'
+          file=root/rel
+          qr=json.loads(file.read_text(encoding='utf-8'))
+          raw=file.read_bytes()
+          SHA=lambda data:hashlib.sha256(data).hexdigest()
+          blob=lambda data:hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+          bank=json.loads((base/'questions.json').read_text(encoding='utf-8'))
+          manifest=json.loads((base/'webp-manifest.json').read_text(encoding='utf-8'))
+          a=json.loads((base/'source-stage/114-00-E-12-staged-20261104.json').read_text(encoding='utf-8'))
+          visual=json.loads((base/'QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json').read_text(encoding='utf-8'))
+          q=next(x for x in bank['questions'] if x['questionId']=='114-00-E-12')
+          m=next(x for x in manifest['items'] if x['questionId']==q['questionId'])
+          v=next(x for x in visual['items'] if x['questionId']==q['questionId'])
+          assert len(bank['questions'])==205 and len({x['questionId'] for x in bank['questions']})==205
+          assert blob((base/'source-stage/114-00-E-12-staged-20261104.json').read_bytes())=='3f0dc39251debf5f336edbcfa1b31c5e784e0dd3'
+          assert blob((base/'QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json').read_bytes())=='c1154562fa30cb4b2720a6000a970cf09ef460ff'
+          assert v['result']=='PASS' and all(v['criteria'][s] is True for s in ['original_number','complete_stem','all_four_options','no_neighboring_question','exact_source_crop_pixel_match'])
+          assert SHA((root/m['output']).read_bytes())==m['sha256']=='99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60'
+          assert SHA((root/m['source']).read_bytes())==m['sourceSha256']=='51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb'
+          assert a['source']['question']==q['question'] and a['source']['options']==q['options'] and len(q['options'])==4
+          assert qr['question']==q['question'] and qr['options']==q['options']
+          assert qr['questionId']==q['questionId'] and qr['year']==114 and qr['schemaVersion']==1
+          assert qr['visualTextCompared'] is True and qr['visualQaResult']=='PASS'
+          assert qr['sourceQuestionAndFourOptionsExactMatch'] is True and qr['studentReady'] is False
+          assert qr['webpSha256']==m['sha256'] and qr['questionRevision']==pub.text_revision(q,m['sha256'])
+          assert qr['archivedSourceStageGitBlob']==blob((base/'source-stage/114-00-E-12-staged-20261104.json').read_bytes())
+          assert qr['archivedVisualQaGitBlob']==blob((base/'QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json').read_bytes())
+          assert not ({'answer','officialAnswer','correctAnswer','officialFinalAnswer','selectedOption'} & set(qr))
+          parsed=pub.review_document(root,114,rel,q['questionId'])
+          assert parsed is not None and parsed[0]==qr and parsed[1]==SHA(raw)
+          tampered=copy.deepcopy(q)
+          tampered['options'][1]='Wrong modified option'
+          assert pub.text_revision(tampered,m['sha256'])!=qr['questionRevision']
+          tampered=copy.deepcopy(q)
+          tampered['question']='Wrong altered source statement'
+          assert pub.text_revision(tampered,m['sha256'])!=qr['questionRevision']
+          before=file.read_bytes()
+          try:
+            # A valid but wrong-QID JSON must fail closed; malformed JSON is
+            # also rejected, by raising JSONDecodeError from review_document.
+            invalid=copy.deepcopy(qr)
+            invalid['questionId']='114-00-E-11'
+            file.write_text(json.dumps(invalid,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+            assert SHA(file.read_bytes())!=SHA(before)
+            assert pub.review_document(root,114,rel,q['questionId']) is None
+          finally:
+            file.write_bytes(before)
+          changed=set(subprocess.check_output(['git','diff','--name-only','9aa4dc6b263e741a10bc33153e7a30aa566eb788'],text=True).splitlines())
+          expected={rel,'.github/workflows/master-e12-source-g2-ocr-receipt-20261107.yml'}
+          assert changed==expected,(sorted(changed),sorted(expected))
+          print('PASS archived A actual WebP and visual G2 4/4, no official answer in OCR doc, only two source paths')
+          print('SOURCE_G2_OCR_EVIDENCE_SHA256='+SHA(raw))
+          PY
+          git diff --exit-code
+          git diff --cached --exit-code
