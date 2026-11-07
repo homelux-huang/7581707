@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-ECON34-ORIGINAL-G1-G2-PRINTED-G3-20261107-02",
+  "role": "A",
+  "questionId": "114-09-2-34",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6710064860",
+  "sourceBaseCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "status": "ORIGINAL_G1_G2_DIRECT_MATCH_PRINTED_ANSWER_A_G3_EVIDENCE_CANDIDATE_CANONICAL_HOLD_NO_RELEASE",
+  "reviewMethod": "AI Assistant Source Visual Review, original single WebP, original official p8 and published answer p1 visually read, not independent ROLE E",
+  "source": {
+    "officialSourcePdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTIucGRm",
+    "officialPdfSha256HistoricallyRecorded": "61db7a7dd614ff7a851f12d6bfb14d5cfd219cfcb68e68e772382c494fec2586",
+    "originalPaperPage": 8,
+    "originalPagePath": "sudu/data/original/114/09-2/p008-61db7a7dd6-v2-w1400-q66.webp",
+    "originalPageGitBlob": "d85a342f16308437290154a8e69c4e1602432e2d",
+    "originalPageSha256": "57f08f6888f342433efebe245fdc826478ecb28889a6388c848927e3eee21dff",
+    "originalSingleWebpPath": "sudu/data/processed/114/webp-v1/09-2/114-09-2-34.webp",
+    "originalSingleWebpGitBlob": "99f307c959781003cb03d7b983e7932e645bc6e5",
+    "originalSingleWebpSha256": "8cc554a83c66210351200d0686d08cba6d27bf94bf8a075bed3ae59c521ffab4",
+    "crop": [
+      90,
+      959,
+      1310,
+      1128
+    ],
+    "rawOcrPreserved": "某軌道運輸業者為完全獨占廠商。該廠商針對具有不同特性的乘用者訂出不同的價格，\n  下列敘述何者正確？",
+    "correctedG2TextSameAsRaw": "某軌道運輸業者為完全獨占廠商。該廠商針對具有不同特性的乘用者訂出不同的價格，\n  下列敘述何者正確？",
+    "optionsAsPrinted": [
+      "此作法為第三級差別訂價法",
+      "平均邊際收益等於邊際成本",
+      "常見於旅展拍賣競價販售乘用券",
+      "純粹為廠商實踐企業社會責任所採用"
+    ],
+    "optionCount": 4,
+    "noCrossPageOrNeighborQuestion": true,
+    "visualG2AllOptionsMatched": true,
+    "sourceRevised": false,
+    "sourceRevisionB": "a32b0c7fef1aa7d30e252bff3393f2c57088101767c4b99430cde4924f562eb8",
+    "oldManifestQa": "DRAFT_NEEDS_DIRECT_VISUAL_QA",
+    "originalWebpRecreated": false
+  },
+  "official": {
+    "printedAnswer": "A",
+    "officialPublishedAnswerPage": "sudu/data/original/114/09-2-answers/p001-1ea83163ea-v2-w1400-q66.webp",
+    "officialPublishedAnswerGitBlob": "1ed318724f70ad4f81e472a775cdb9e21fcba2fc",
+    "officialAnswerPdfSha256HistoricallyRecorded": "1ea83163ea9d270004b1212d5694e7a23b9fbe0fb7171d6333a97dd96adf73bc",
+    "noticeLedgerPath": "sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json",
+    "noticeLedgerGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "officialNoticePdfSha256HistoricallyRecorded": "70d95c1b4835c8410821543bbb4ed2fd92f3e31df502808deb5f50d72ef93762",
+    "noticeNamedForThisQuestion": false,
+    "noticeNamedQuestionIds": [
+      "114-09-2-10",
+      "114-09-2-16",
+      "114-09-2-27",
+      "114-09-2-35"
+    ],
+    "claimOfEntirePaperFinality": false,
+    "officialPdfDownloadedOrRehashedThisTask": false,
+    "formalAnswerVerifiedPromoted": false
+  },
+  "canonical": {
+    "questionsGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "manifestGitBlob": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "canonical205QuestionJsonAndSqliteUnchanged": true,
+    "questionVerifiedPrior": false,
+    "answerVerifiedPrior": false
+  },
+  "teaching": {
+    "roleBPR": "https://github.com/homelux-huang/7581707/pull/159",
+    "composedTeachingSha256": "7e817f5eb63a2a308f49746854b5614d01d4878a26bc7ffb017aff0d905e0b02",
+    "sourceRevision": "a32b0c7fef1aa7d30e252bff3393f2c57088101767c4b99430cde4924f562eb8",
+    "ownerFilesUnchanged": true
+  },
+  "next": {
+    "canonicalAdmission": "PENDING_EXISTING_ACTIVE_OTHER_ROLE_A_LEASE",
+    "distinctE": "PENDING_SUBSTANTIVE_REVIEW_AND_EXACT_PROVENANCE",
+    "DFormalEmittedV4": "PENDING_8_SIZES_2_THEMES",
+    "MASTER": "PENDING_TRUST_GATE",
+    "READY": false,
+    "LIVE": false
+  }
+}
