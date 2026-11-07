@@ -1,0 +1,48 @@
+name: MASTER 114 E12 real publisher gate diagnostics (NO RELEASE)
+on:
+  push:
+    branches:
+      - audit/master-e12-publisher-gates-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  e12_real_publisher_diagnostics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout original protected-main publisher snapshot plus new diagnostic only
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Checkout exact independent source QA SHA, read only
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 682e02e1084325a0422c117d90b70451fdd9ea22
+          path: _qa_source
+          fetch-depth: 1
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/processed/115
+          sparse-checkout-cone-mode: true
+      - name: Checkout exact B original teaching SHA, read only
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 57d969888c57fdcd2b16c933e92c7a2c9eebb3a5
+          path: _author_b
+          fetch-depth: 1
+          sparse-checkout: |
+            sudu/teaching-candidates/114-role-b-20261025-batch02
+          sparse-checkout-cone-mode: true
+      - name: Python dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q pillow
+      - name: Actual protected-main publisher admission and evidence gate diagnosis
+        run: python tests/master_e12_publisher_gate_diagnostic_20261107.py
+      - name: Publish original diagnostic logs only (do not publish QIDs)
+        if: always()
+        run: |
+          echo "Only original GitHub Actions logs are authoritative; this workflow does not mutate protected main, approved or QA." >> "$GITHUB_STEP_SUMMARY"
