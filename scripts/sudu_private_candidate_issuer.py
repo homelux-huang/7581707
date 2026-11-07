@@ -106,8 +106,8 @@ def evaluate(source: Path, author: Path, request: dict | None):
     good_lesson=(sha(raw_author)==TEACHING_RAW_SHA and
                  actual_digest==TEACHING_CANONICAL and
                  lesson.get("questionId")==QID and
-                 lesson.get("sourceRevision")==REV and
-                 lesson.get("sourceImageSha256")==WEBP)
+                 lesson.get("source",{}).get("questionRevision")==REV and
+                 lesson.get("source",{}).get("webpSha256")==WEBP)
     require(good_lesson,"original_B_canonical_lesson_hash_mismatch",
             "content+authorSHA",B_REL)
     teach_matches=(teach and good_lesson and teach.get("content")==lesson["teaching"]
