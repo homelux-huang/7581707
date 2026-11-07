@@ -1,7 +1,6 @@
 {
   "scope": "105-115",
-  "sourceDatabasesModified": true,
-  "modificationScope": "QA isolated 105/114 database only, no student database",
+  "sourceDatabasesModified": false,
   "studentDataTouched": false,
   "released": false,
   "yearsG5Pass": 11,
@@ -248,7 +247,7 @@
       "sandboxImportPasses": 2,
       "blockers": [],
       "jsonRows": 205,
-      "sqliteSha256": "92087783705896add15beddec65ed67f63f187ead593f80f00b2d4f988e29150",
+      "sqliteSha256": "0182438a8f30da9a0e3dd58a1f838382d478b6da7b71c77efe6ad5adef5fe767",
       "onDiskTables": [
         "questions",
         "shared_materials"
@@ -256,13 +255,13 @@
       "onDiskQuestionColumns": [
         "original_number",
         "paper_code",
-        "payload",
+        "payload_json",
         "payload_sha256",
         "question_id",
         "subject",
         "year"
       ],
-      "onDiskPayloadColumn": "payload",
+      "onDiskPayloadColumn": "payload_json",
       "onDiskRows": 205,
       "onDiskMismatchCount": 0,
       "onDiskMismatchIdsFirst20": []
