@@ -132,6 +132,42 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn("NO_ORIGINAL_VERBATIM_FIRST_ANSWER", self.e["blindSolveProvenanceStatus"])
         self.assertIn("NOT_ADMISSIBLE", self.e["externalExecutionAttestationStatus"])
 
+    def test_user_paste_first_answer_exact_raw_bytes_and_g6_hold(self):
+        raw_path = DIR / "user-pasted-first-answer-20261107.txt"
+        metadata_path = DIR / "blind-candidate-intake-20261107.json"
+        raw = raw_path.read_bytes()
+        intake = json.loads(metadata_path.read_bytes())
+        expected_sha = "6cb2694fa6a20e0b913972c6b0a3cf9c1af07bb9b712494fc0cb4d25314e75ff"
+        expected_blob = "c673ae0acc0ba8a8080403abf996a21324e2cf90"
+        self.assertEqual(len(raw), 311)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), expected_sha)
+        self.assertEqual(blob_sha(raw), expected_blob)
+        self.assertEqual(intake["userPasteSha256"], expected_sha)
+        self.assertEqual(intake["userPasteGitBlobSha1"], expected_blob)
+        self.assertEqual(intake["userPasteByteLength"], len(raw))
+        self.assertEqual(intake["questionId"], QID)
+        self.assertEqual(intake["sourceQaCommit"], self.e["sourceCommit"])
+        self.assertEqual(intake["sourceQuestionRevision"], REV)
+        self.assertEqual(intake["webpSha256"], WEBP)
+        self.assertEqual(intake["officialEvidenceSha256"], G3_SHA)
+        self.assertEqual(intake["ocrEvidenceSha256"], G2_SHA)
+        self.assertEqual(intake["canonicalTeachingSha256"], self.e["teachingDigest"])
+        self.assertEqual(intake["teachingIssuerSha256"], G5_SHA)
+        self.assertTrue(raw.decode("utf-8").startswith("題號：114-00-E-12\\n\\n首次作答"))
+        self.assertIn("# C — That's why I always carry my own water bottle.", raw.decode("utf-8"))
+        self.assertIn("信心： 99%", raw.decode("utf-8"))
+        self.assertIn("官方答案核對： 尚未進行", raw.decode("utf-8"))
+        self.assertFalse(intake["fullABCDOriginalFirstReplyReasoningPresent"])
+        self.assertFalse(intake["originalFirstAssistantReplyEntireVerbatimAvailable"])
+        self.assertFalse(intake["verifiedAnswerNaiveChronology"])
+        self.assertFalse(intake["blindPass"])
+        self.assertFalse(intake["independentBlindSolve"])
+        self.assertIsNone(intake["originalSourceSessionId"])
+        self.assertIsNone(intake["originalFirstAnswerTimestamp"])
+        self.assertEqual(intake["g6Status"], "BLIND_SOLVE_NEW_INDEPENDENT_SESSION_REQUIRED")
+        self.assertFalse(self.e["blindCandidateQualified"])
+        self.assertEqual(self.e["blindCandidateUserPasteSha256"], expected_sha)
+
     def test_fail_closed_sessions_blind_ui_trust(self):
         self.assertIsNone(self.e["reviewerSessionId"])
         self.assertIsNone(self.e["sourceAuthorSessionId"])

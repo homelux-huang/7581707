@@ -69,7 +69,7 @@
   "reviewedAt": "2026-11-07T20:24:00Z",
   "reviewedAtStatus": "REAL_GITHUB_RETURN_CREATED_AT_NOT_SESSION_ID_AUTHENTICATION",
   "formalTrustedRegistryRegistered": false,
-  "status": "HOLD_G6_NO_VERIFIABLE_FIRST_BLIND_RESPONSE_G7_DISTINCT_SESSION_UNVERIFIED_G8_FORMAL_EMITTER_MISSING_G4_OVERLAY_AND_PROTECTED_MAIN",
+  "status": "HOLD_G6_UNAUTHENTICATED_USER_PASTE_INCOMPLETE_FOUR_OPTIONS_AND_G7_DISTINCT_IDENTITY_UNVERIFIED_G4_G8_G9",
   "studentReleaseApproved": false,
   "ready": false,
   "live": false,
@@ -106,6 +106,16 @@
   "reviewIssuerSupplementClaimCommentId": 6712766315,
   "blindSolveOriginalTranscriptSha256": null,
   "blindSolveOriginalTranscriptGitBlob": null,
-  "blindSolveProvenanceStatus": "NO_ORIGINAL_VERBATIM_FIRST_ANSWER_NO_AUTHENTICATED_ANSWER_NAIVE_RUN_PROVENANCE",
-  "externalExecutionAttestationStatus": "PENDING_MASTER_EXPERIMENTAL_V2_SECURITY_REVIEW_NOT_ADMISSIBLE_UNDER_CURRENT_V1"
+  "blindSolveProvenanceStatus": "USER_PASTE_C_99_PERCENT_SAVED_EXACTLY_EXTERNAL_ORIGINAL_FIRST_ASSISTANT_RESPONSE_NOT_AUTHENTICATED",
+  "externalExecutionAttestationStatus": "PENDING_MASTER_EXPERIMENTAL_V2_SECURITY_REVIEW_NOT_ADMISSIBLE_UNDER_CURRENT_V1",
+  "blindCandidateIntakePath": "sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/blind-candidate-intake-20261107.json",
+  "blindCandidateUserPastePath": "sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/user-pasted-first-answer-20261107.txt",
+  "blindCandidateUserPasteSha256": "6cb2694fa6a20e0b913972c6b0a3cf9c1af07bb9b712494fc0cb4d25314e75ff",
+  "blindCandidateUserPasteGitBlob": "c673ae0acc0ba8a8080403abf996a21324e2cf90",
+  "blindCandidateFirstAnswer": "C",
+  "blindCandidateConfidencePercent": 99,
+  "blindCandidateSourceAuthentication": "UNVERIFIED_ORIGINAL_TEMPORARY_CHAT_NOT_EXPORTED_OR_PROVIDER_ATTESTED",
+  "blindCandidateFirstReplyABCDReasoningComplete": false,
+  "blindCandidateQualified": false,
+  "blindCandidateIntakeClaimId": 6712927026
 }
