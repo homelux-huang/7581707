@@ -18,11 +18,13 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 MASTER = ROOT / "_master_private"
+E = ROOT / "_role_e"
 QA = ROOT / "_qa_source"
 OUT = ROOT / "test-results" / "role-d-private-emitter-contract-20261107"
 QID = "114-00-E-12"
 PIN_MAIN = "5546a603abfe0af2e62c0e5f63f775be0bfb24cf"
-PIN_MASTER = "0384933b97fe2eaa9372f99b4549b4a5d45d0076"
+PIN_MASTER = "bc946e4a17c0172e21d9dd5710275c49523af990"
+PIN_E = "36d33577d35455be91776e8b2f5d82bbcb2b38a6"
 PIN_QA = "3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2"
 REV = "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec"
 IMAGE_SHA = "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60"
@@ -60,15 +62,17 @@ def validate():
 
     report = {
         "schemaVersion": 1, "role": "D", "questionId": QID,
-        "taskId": "D-114-E12-PRIVATE-EMITTER-CONTRACT-20261107-02",
+        "taskId": "D-114-E12-PRIVATE-PARITY-REVERIFY-20261107-03",
         "formalUiqaPassed": False, "newReady": False, "newLive": False,
         "ranChromium": False, "ranOldHoldOr24Negatives": False,
-        "source": {"mainBase": PIN_MAIN, "privateEmitterHead": PIN_MASTER, "qaSourceAfterPR177": PIN_QA},
+        "source": {"mainBase": PIN_MAIN, "privateEmitterHead": PIN_MASTER, "qaSourceAfterPR177": PIN_QA, "roleEHead": PIN_E},
     }
     check(git("rev-parse", "HEAD", cwd=MASTER) == PIN_MASTER,
           "PRIVATE_HEAD_DRIFT", "MASTER private issuer must be re-audited on exact head")
     check(git("rev-parse", "HEAD", cwd=QA) == PIN_QA,
           "QA_HEAD_DRIFT", "QA teaching/G2/G3 must be audited on exact post-PR177 head")
+    check(git("rev-parse", "HEAD", cwd=E) == PIN_E,
+          "ROLE_E_HEAD_DRIFT", "The latest true E RETURN must be audited on exact PR173 HEAD")
     actual_main = git("rev-parse", "refs/remotes/origin/main", cwd=ROOT)
     check(actual_main == PIN_MAIN, "PROTECTED_MAIN_DRIFT",
           "Review protected main again and refresh exact SHA pins before any claim")
@@ -104,9 +108,15 @@ def validate():
                           ("replace(" in private_src or "write_text(" in private_src))
     check(production_adapter, "PRODUCTION_ADAPTER_NOT_IDENTIFIED",
           "Need the real build.py adapter injection as immutable V4 integration reference")
-    if production_adapter and not raw_has_adapter and not issuer_has_adapter:
-        check(False, "PRIVATE_ADAPTER_NOT_INJECTED",
-              "Private emitter copies source HTML and adapter JS but never injects adapter script tag; protected build.py injects it only when building")
+    check(issuer_has_adapter and not raw_has_adapter, "PRIVATE_ADAPTER_NOT_INJECTED",
+          "Private emitter must inject verified-year adapter into original raw V4 HTML, with source template unchanged")
+    script_revision = ('adapter_revision=hashlib.sha256(adapter.read_bytes()).hexdigest()[:12]' in private_src)
+    exact_script = ('<script src="./verified-questions-runtime.js?v={adapter_revision}"></script>' in private_src)
+    unique_body = ('original_v4.count("</body>")!=1' in private_src)
+    check(script_revision and exact_script and unique_body, "PRIVATE_ADAPTER_SHA_PARITY_MISMATCH",
+          "Exact production SHA-busted adapter and unique original </body> insertion must match")
+    check("v4-score-feedback.css" in runtime and not missing_assets,
+          "PRIVATE_RUNTIME_ASSETS_INCOMPLETE", "All original local CSS and JS must be in nonpublic emitter bundle")
     report["v4Assets"] = {
         "referenced": actual_refs, "privateCopied": runtime,
         "missing": missing_assets, "productionAdapterBuildInjection": production_adapter,
@@ -158,12 +168,42 @@ def validate():
 
     policy = json.loads((ROOT/"sudu/release-governance/independent-review-policy.json").read_text(encoding="utf-8"))
     registered = QID in (policy.get("trustedAiReviewReceipts") or {})
+    check(not registered, "PROTECTED_E_REVIEW_NOW_ADMITTED_RECHECK",
+          "If E trust is newly admitted, this static HOLD test must stop and switch to exact current admission checks")
     # This state is an expected external HOLD. Never create/mutate E receipts.
     blind_unimplemented = bool(gate and any(
         isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "require"
         and n.args and isinstance(n.args[0], ast.Constant) and n.args[0].value is False
         for n in ast.walk(gate)
     ))
+    epath = E / "sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/independent-ai-review.json"
+    ereview = json.loads(epath.read_text(encoding="utf-8"))
+    e_hold = (
+        ereview.get("questionId") == QID
+        and ereview.get("questionRevision") == REV
+        and ereview.get("webpSha256") == IMAGE_SHA
+        and ereview.get("sourceCommit") == PIN_QA
+        and ereview.get("teachingDigest") == TEACHING_SHA
+        and ereview.get("teachingEvidenceSha256") == EVIDENCE["teaching"][1]
+        and ereview.get("officialEvidenceSha256") == EVIDENCE["official"][1]
+        and ereview.get("independentBlindSolve") is False
+        and ereview.get("blindSolveOriginalTranscriptSha256") is None
+        and ereview.get("sourceAuthorSessionId") is None
+        and ereview.get("reviewerSessionId") is None
+        and ereview.get("formalTrustedRegistryRegistered") is False
+    )
+    check(e_hold, "E_G6_G7_EXTERNAL_HOLD_EVIDENCE_CHANGED",
+          "Actual latest E PR173 has unresolved G6 verbatim blind transcript / G7 independent principals; no E PASS")
+    report["roleEEvidence"] = {
+        "questionId": QID, "head": PIN_E, "evidenceGitBlob": git("hash-object", str(epath), cwd=ROOT),
+        "sourceSha": ereview.get("sourceCommit"),
+        "canonicalTeachingSha256": ereview.get("teachingDigest"),
+        "issuerTeachingSha256": ereview.get("teachingEvidenceSha256"),
+        "blindSolveOriginalTranscriptSha256": ereview.get("blindSolveOriginalTranscriptSha256"),
+        "sourceAuthorSessionId": ereview.get("sourceAuthorSessionId"),
+        "reviewerSessionId": ereview.get("reviewerSessionId"),
+        "status": ereview.get("status"),
+    }
     report["externalGateState"] = {
         "protectedMainE12TrustPresent": registered,
         "externalProviderBlindAttestationStillHardBlocked": blind_unimplemented,
@@ -173,7 +213,9 @@ def validate():
     # Do not mark any status as "formal" or "PASS"; no browser ran here.
     report["checks"] = checks
     report["integrationBlockers"] = problems
-    report["status"] = "PRIVATE_CONTRACT_BLOCKED_AND_EXTERNAL_E_HOLD" if problems or blind_unimplemented or not registered else "PRIVATE_STATIC_CONTRACT_PRESENT_BUT_NOT_UIQA"
+    report["status"] = ("PRIVATE_V4_PARITY_PASS_EXTERNAL_G6_G7_HOLD"
+                         if not problems and blind_unimplemented and not registered and e_hold
+                         else "PRIVATE_V4_PARITY_OR_EXTERNAL_E_STATE_FAIL_CLOSED")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT/"private-emitter-contract-report.json").write_text(
         json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2)+"\n", encoding="utf-8")
@@ -182,15 +224,12 @@ def validate():
                       "protectedETrust": registered,
                       "externalBlindHardBlock":blind_unimplemented,
                       "formalUiqaPassed":False}, ensure_ascii=False))
-    # Integrity violations beyond the two known integration gaps must fail CI.
-    allowed = {"PRIVATE_ASSET_NOT_COPIED:v4-score-feedback.css", "PRIVATE_ADAPTER_NOT_INJECTED"}
-    unexpected = [x["code"] for x in problems if x["code"] not in allowed]
-    if unexpected:
-        raise AssertionError("Unexpected private issuer source/contract drift: "+", ".join(unexpected))
-    if not problems:
-        print("STATIC INTEGRATION CONTRACT SATISFIED BUT EXTERNAL E/BLIND REMAINS HOLD.")
-    else:
-        print("EXPECTED REAL INTEGRATION BLOCKERS DETECTED; NO PRIVATE EMISSION OR BROWSER QA.")
+    if problems:
+        raise AssertionError("MASTER private V4 integration still broken: "
+                             + ", ".join(p["code"] for p in problems))
+    if report["status"] != "PRIVATE_V4_PARITY_PASS_EXTERNAL_G6_G7_HOLD":
+        raise AssertionError("Unexpected issuer external G6/G7 status, re-audit required")
+    print("PASS private V4 static parity after MASTER fixes; real G6/G7 HOLD, positive browser NOT RUN.")
     return report
 
 if __name__ == "__main__":
