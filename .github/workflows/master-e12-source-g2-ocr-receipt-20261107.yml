@@ -86,7 +86,11 @@ jobs:
           assert pub.text_revision(tampered,m['sha256'])!=qr['questionRevision']
           before=file.read_bytes()
           try:
-            file.write_bytes(before+b'\ninvalid alteration')
+            # A valid but wrong-QID JSON must fail closed; malformed JSON is
+            # also rejected, by raising JSONDecodeError from review_document.
+            invalid=copy.deepcopy(qr)
+            invalid['questionId']='114-00-E-11'
+            file.write_text(json.dumps(invalid,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
             assert SHA(file.read_bytes())!=SHA(before)
             assert pub.review_document(root,114,rel,q['questionId']) is None
           finally:
