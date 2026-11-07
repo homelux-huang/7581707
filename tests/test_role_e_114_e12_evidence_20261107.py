@@ -9,7 +9,8 @@ QID = "114-00-E-12"
 REV = "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec"
 WEBP = "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60"
 G2_SHA = "8130e621a4328d006dab880fe62e9115899049a3fb4751020a0c1570c49ea2fc"
-G3_SHA = "63056df18120597440feea7489522b6f6f9ba7b039a9b5748795f8b5081f8f12"
+G3_SHA = "63056df18120597440feea7489522b6f6f9ba7b039a9b5748795f8f12"
+G5_SHA = "6a9235ac6c1af701c9e414ec106ebc2e56b905ad3c61373041d5cb05b2f2714f"
 DIR = ROOT / "sudu/data/processed/114/review-evidence/role-e-114-e12-20261107"
 NOTES = DIR / "reviewer-notes.md"
 ADDENDUM = DIR / "reviewer-addendum-g2-g3-20261107.md"
@@ -18,6 +19,7 @@ SOURCE = ROOT / "sudu/data/processed/114/questions.json"
 IMAGE = ROOT / "sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp"
 G2 = ROOT / "sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json"
 G3 = ROOT / "sudu/data/processed/114/review-evidence/114-00-E-12-official-publisher-20261107.json"
+G5 = ROOT / "sudu/data/processed/114/review-evidence/114-00-E-12-teaching-publisher-20261107.json"
 
 def blob_sha(raw):
     return hashlib.sha1(b"blob " + str(len(raw)).encode() + bytes([0]) + raw).hexdigest()
@@ -98,10 +100,42 @@ class EvidenceTests(unittest.TestCase):
         self.assertIs(f["supersedesOldReviewWarning"],True)
         self.assertEqual(f["status"],"VERIFIED_CORRECT_EXACT_CAMBRIDGE_US_FULL_PHRASE_NO_AUTHOR_CHANGE")
 
+    def test_actual_merged_author_teaching_issuer_bytes(self):
+        raw = G5.read_bytes()
+        self.assertEqual(len(raw), 3905)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), G5_SHA)
+        self.assertEqual(blob_sha(raw), self.e["teachingEvidenceGitBlob"])
+        self.assertEqual(self.e["teachingEvidenceSha256"], G5_SHA)
+        self.assertEqual(self.e["teachingEvidenceByteLength"], len(raw))
+        lesson = json.loads(raw)
+        self.assertEqual(lesson["questionId"], QID)
+        self.assertEqual(lesson["questionRevision"], REV)
+        self.assertEqual(lesson["webpSha256"], WEBP)
+        self.assertEqual(lesson["canonicalTeachingSha256"], self.e["teachingDigest"])
+        self.assertEqual(lesson["composedTeachingSha256"], self.e["composedTeachingDigest"])
+        self.assertEqual(lesson["sourceAuthorCommit"], self.e["authorHead"])
+        self.assertEqual(lesson["sourceAuthorGitBlobSha1"], self.e["authorLessonGitBlob"])
+        self.assertEqual(set(lesson["content"]["optionExplanations"]), set("ABCD"))
+        self.assertIs(lesson["content"]["hasExamCalculation"], False)
+        self.assertIsNone(lesson["content"]["examCalculation"])
+        self.assertIs(lesson["independentAiContentReviewed"], False)
+        self.assertIsNone(lesson["sourceAuthorSessionId"])
+        self.assertIsNone(lesson["reviewerSessionId"])
+        self.assertIs(lesson["studentReleaseApproved"], False)
+        self.assertEqual(self.e["sourceCommit"], "3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2")
+
+    def test_no_forged_blind_solver_provenance_or_session_pass(self):
+        self.assertIsNone(self.e["blindSolveOriginalTranscriptSha256"])
+        self.assertIsNone(self.e["blindSolveOriginalTranscriptGitBlob"])
+        self.assertIsNone(self.e["independentBlindSolveEvidence"])
+        self.assertIs(self.e["independentBlindSolve"], False)
+        self.assertIn("NO_ORIGINAL_VERBATIM_FIRST_ANSWER", self.e["blindSolveProvenanceStatus"])
+        self.assertIn("NOT_ADMISSIBLE", self.e["externalExecutionAttestationStatus"])
+
     def test_fail_closed_sessions_blind_ui_trust(self):
         self.assertIsNone(self.e["reviewerSessionId"])
         self.assertIsNone(self.e["sourceAuthorSessionId"])
-        self.assertIsNone(self.e["teachingEvidenceSha256"])
+        self.assertEqual(self.e["teachingEvidenceSha256"], G5_SHA)
         self.assertEqual(self.e["reviewedAt"],"2026-11-07T20:24:00Z")
         self.assertIs(self.e["independentBlindSolve"],False)
         self.assertIs(self.e["formalTrustedRegistryRegistered"],False)
@@ -113,7 +147,7 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(self.e["reviewAddendumClaimCommentId"],6712534842)
         self.assertEqual(self.e["reviewReturnCommentId"],6712572797)
         self.assertEqual(self.e["reviewIssueCommentId"],6712572797)
-        self.assertEqual(self.e["sourceCommit"],"682e02e1084325a0422c117d90b70451fdd9ea22")
+        self.assertEqual(self.e["sourceCommit"], "3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2")
 
 if __name__=="__main__":
     unittest.main()
