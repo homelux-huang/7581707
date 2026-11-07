@@ -129,7 +129,7 @@ class EvidenceTests(unittest.TestCase):
         self.assertIsNone(self.e["blindSolveOriginalTranscriptGitBlob"])
         self.assertIsNone(self.e["independentBlindSolveEvidence"])
         self.assertIs(self.e["independentBlindSolve"], False)
-        self.assertIn("NO_ORIGINAL_VERBATIM_FIRST_ANSWER", self.e["blindSolveProvenanceStatus"])
+        self.assertIn("ORIGINAL_FIRST_ASSISTANT_RESPONSE_NOT_AUTHENTICATED", self.e["blindSolveProvenanceStatus"])
         self.assertIn("NOT_ADMISSIBLE", self.e["externalExecutionAttestationStatus"])
 
     def test_user_paste_first_answer_exact_raw_bytes_and_g6_hold(self):
