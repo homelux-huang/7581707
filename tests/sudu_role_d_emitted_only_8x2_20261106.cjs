@@ -306,7 +306,8 @@ async function main(){
  }
  await formal();
 }
-main().catch(err=>{
+module.exports={trustedReceiptProblems,teachingSha,pins};
+if(require.main===module)main().catch(err=>{
  report.status='FAIL';report.errors.push(String(err.stack||err));save();
  console.error(err.stack||err);process.exitCode=1;
 });
