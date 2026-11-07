@@ -67,3 +67,10 @@ ROLE D: when true source/E publisher emitted same SHA, run real Chromium 16/16; 
 MASTER: protected one-Q release PR/CI and Pages verify_live, then E11, 115 MB21/22/23.
 
 Current state: D guard code + actual Chromium negative HOLD tests complete; E12 FORMAL_UIQA_HOLD; NEW READY=0, NEW LIVE=0.
+
+
+## 2026-11-07 B/E evidence refresh after original precheck
+
+- ROLE B E12 true [RETURN #6712537831](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6712537831) verified Cambridge US full-phrase water bottle IPA including unusual secondary stress/space exactly matches immutable PR107 lesson. No B edit and no SHA reset. The prior IPA concern is **resolved**, not a publication blocker. Author ChatGPT Session provenance remains unverified.
+- ROLE E [RETURN #6712572797](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6712572797) and [exact-head CI addendum #6712592139](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6712592139) independently re-verified real G2/G3 bytes and withdrew the erroneous IPA concern. PR173 head ee9ced6c916427a9dea283d475fa875970110e99. Distinct genuine Session provenance, honest blinded solve, issuer teaching document, protected E receipt, and formal D emitted 16/16 remain HOLD.
+- B next-year [E11 frozen lesson RETURN #6712547567](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6712547567) gives **actual canonical teaching SHA** ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb, while historical composed SHA remains 3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee. D pin now stores these separately and the negative suite verifies both against original B PR107 source bytes, without pretending E11's canonical source is approved.
