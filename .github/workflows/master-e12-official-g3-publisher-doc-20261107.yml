@@ -88,11 +88,23 @@ jobs:
             ('noCorrectionForThisQuestion',False),
             ('correctionForQuestionReviewed',True),
             ('confirmationPdfSha256','0'*64),
-            ('finalAnswer','A'),
           ]:
               changed=copy.deepcopy(evidence)
               changed[key]=val
               assert publisher.official_notice_scope_certified(root,114,q,changed) is False,(key,val)
+          # The notice-scope helper only tests which question the official
+          # confirmation names; the independent official-answer helper must
+          # separately reject any changed C->A answer.
+          original_raw=file.read_bytes()
+          wrong_official=copy.deepcopy(evidence)
+          wrong_official['finalAnswer']='A'
+          try:
+              file.write_text(json.dumps(wrong_official,ensure_ascii=False,indent=2)+'\n',
+                              encoding='utf-8')
+              assert gate._ai_official_receipt_consistent(root,audit,q) is None
+          finally:
+              file.write_bytes(original_raw)
+          assert sha(file.read_bytes())==expected
           wrongq=copy.deepcopy(q)
           wrongq['answer']='A'
           assert gate._ai_official_receipt_consistent(root,audit,wrongq) is None
