@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-E12-E11-SOURCE-STAGE-20261104-01",
+  "role": "A",
+  "questionId": "114-00-E-12",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6623624130",
+  "mainBaseSHA": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "frozenReadOnlySourceCommit": "5be8fb19b104e2983ea58ba5e59baea7cad7b815",
+  "status": "SOURCE_ORIGINAL_WEBP_STAGED__SHARED_CANONICAL_DB_C27_LEASE_HOLD_NO_RELEASE",
+  "reviewer": "ChatGPT ROLE A source assistant visual review, NOT Role E independent teaching audit",
+  "source": {
+    "year": 114,
+    "paperCode": "00-E",
+    "number": 12,
+    "page": 3,
+    "question": "Lucy:  Do you know that plastics can take 20 years to break down?\n    John:   That’s awful! We really need to use less plastic.\n    Lucy:   I agree. ____________\n    John:   Great idea! I’ll try that, too.",
+    "options": [
+      "No wonder I prefer buying plastic containers.",
+      "So I keep using plastic straws for all my drinks.",
+      "That’s why I always carry my own water bottle.",
+      "And I make sure to throw away everything I buy."
+    ],
+    "revision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "originalPageWebp": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "originalPageGitBlob": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "originalPageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "originalSingleWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp",
+    "originalSingleGitBlob": "def397fcc0693d90de40b051fdf4c7c85b4567ce",
+    "originalSingleSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+    "crop": [
+      90,
+      589,
+      1310,
+      872
+    ],
+    "originalImageQAStatus": "PASS",
+    "originalSourceG1QaGitBlob": "c1154562fa30cb4b2720a6000a970cf09ef460ff",
+    "originalPixelsRecropped": false
+  },
+  "official": {
+    "publishedAnswer": "C",
+    "originalPublishedAnswerWebp": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+    "originalPublishedAnswerWebpSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "originalPublishedAnswerGitBlob": "5f2920313607af4e756095cd3d6098c8a3ab7440",
+    "originalAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "originalRoleAReceiptPath": "sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json",
+    "originalRoleAReceiptGitBlob": "e166524f2e3f6921c1ba55fb23862e739307b518",
+    "englishNoticePdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53cbc",
+    "englishNoticeGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "noticeQuestionIds": [
+      "114-00-E-26"
+    ],
+    "thisQuestionChangedByNotice": false,
+    "originalAnswerVerified": false,
+    "newPdfDownloadedOrRehashed": false,
+    "formalNewG3Approval": false
+  },
+  "frozenBank": {
+    "canonicalJsonSha1": "1535754345a08d25636e00b4ba3270a1f764bf66",
+    "manifestSha1": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "sqliteSha1": "27314572b3d18fd0bd20003297bccadbc6c59737",
+    "count": 205,
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": false,
+    "originalRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+    "sharedFilesImported": false,
+    "sharedFilesModified": false,
+    "sharedLease": "A-114-C27-CROSSPAGE-ANSWER-SOURCE-20261026-17",
+    "collisionIssue": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6412289875"
+  },
+  "downstream": {
+    "newReady": false,
+    "newLive": false,
+    "approved": false,
+    "roleBFreeze": "PENDING",
+    "roleETrust": "PENDING",
+    "roleDFormal8x2": "PENDING",
+    "masterSourceBankRelease": "BLOCKED_ACTIVE_SHARED_C27_WRITE_LEASE",
+    "publisherPR141": "OPEN_NOT_MERGED_REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "reviewDate": "2026-10-24",
+  "reviewer": "GPT-6 AI-assisted visual review of all exact TCTE PDF page images and text; not a human examiner",
+  "independentHumanReview": false,
+  "reviewMethod": "Downloaded exact TCTE confirmation PDF bytes; SHA256 matched locally; visually inspected all 19 rendered pages; cross-checked all 18 named announced answer values with the repository's 114 official-answer-evidence.json PDF-text-only candidates. No per-question final-answer, OCR, WebP or teaching release QA performed.",
+  "sourceIndexUrl": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+  "sourceIndexSha256": "e6a44ca0fc8b2945924c6d6f553df19904784dadfd693263fe427c5fc94302e2",
+  "officialDownloadWorkflow": "https://github.com/homelux-huang/7581707/actions/runs/40094431419",
+  "sourceArtifact": "https://github.com/homelux-huang/7581707/actions/runs/40094431419/artifacts/12560332353",
+  "automatedDownloadControl115": {
+    "paperCode": "09-2",
+    "pdfSha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+    "matchesExistingVerifiedSha": true
+  },
+  "allPagesInFourDocumentsReviewed": true,
+  "officialConfirmationNamedQuestionCount": 18,
+  "allNamedConfirmationAnswersMatchExistingOfficialPdfTextCandidates": true,
+  "independentFinalAnswerImageQa": false,
+  "perQuestionOfficialNoticeScopeOnly": true,
+  "releaseApproved": false,
+  "docs": [
+    {
+      "paperCode": "00-C",
+      "file": "114-4y-00-C-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUMtY29uZmlybS5wZGY=",
+      "pdfSha256": "afc4ad2e67004a40539d05406813ff361d99696607cf6fc71c62484cc3001a71",
+      "pageCount": 5,
+      "noticeScopeOnly": true,
+      "allPagesVisuallyReviewed": true,
+      "renderMethod": "PyMuPDF PDF -> 1.2x PNG, all pages inspected together with selectable PDF text",
+      "confirmed": [
+        {
+          "questionId": "114-00-C-14",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            1,
+            2
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-00-C-24",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            3
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-00-C-28",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            4
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-00-C-30",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            5
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        }
+      ]
+    },
+    {
+      "paperCode": "00-E",
+      "file": "114-4y-00-E-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLUUtY29uZmlybS5wZGY=",
+      "pdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+      "pageCount": 1,
+      "noticeScopeOnly": true,
+      "allPagesVisuallyReviewed": true,
+      "renderMethod": "PyMuPDF PDF -> 1.2x PNG, all pages inspected together with selectable PDF text",
+      "confirmed": [
+        {
+          "questionId": "114-00-E-26",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            1
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        }
+      ]
+    },
+    {
+      "paperCode": "09-1",
+      "file": "114-4y-09-1-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTEtY29uZmlybS5wZGY=",
+      "pdfSha256": "5ea66797b68a00ea831bcbd645af747a4802298ae2fedcd5abe6a05705543246",
+      "pageCount": 9,
+      "noticeScopeOnly": true,
+      "allPagesVisuallyReviewed": true,
+      "renderMethod": "PyMuPDF PDF -> 1.2x PNG, all pages inspected together with selectable PDF text",
+      "confirmed": [
+        {
+          "questionId": "114-09-1-02",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            1
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-07",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            2
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-08",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            3
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-09",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            4
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-18",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            5
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-21",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            6
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-24",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            7
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-32",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            8
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-1-43",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            9
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        }
+      ]
+    },
+    {
+      "paperCode": "09-2",
+      "file": "114-4y-09-2-confirm.pdf",
+      "url": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTA5LTItY29uZmlybS5wZGY=",
+      "pdfSha256": "70d95c1b4835c8410821543bbb4ed2fd92f3e31df502808deb5f50d72ef93762",
+      "pageCount": 4,
+      "noticeScopeOnly": true,
+      "allPagesVisuallyReviewed": true,
+      "renderMethod": "PyMuPDF PDF -> 1.2x PNG, all pages inspected together with selectable PDF text",
+      "confirmed": [
+        {
+          "questionId": "114-09-2-10",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            1
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-2-16",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            2
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-2-27",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            3
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        },
+        {
+          "questionId": "114-09-2-35",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            4
+          ],
+          "comparedToExistingOfficialPdfTextCandidate": "MATCHED",
+          "changeFromExistingOfficialPdfTextCandidate": "NONE_OBSERVED",
+          "publishedFinalAnswerImageIndependentlyVerified": false
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "These official confirmation PDFs contain 18 named questioned items. For other question numbers on the same paper, do NOT claim the whole paper received no objections.",
+    "The existing 114 published-answer PDF was only text-extracted, not independently visual-QA'ed; equality is to the existing unverified final answer text candidate, not answerVerified=true.",
+    "Keep 114 publication blocked until independent final-answer/image/solution/teaching/UI/evidence gates and a separately reviewed fail-closed year-specific notice admission validator pass.",
+    "The Math B 114 index states no objection, but this does not establish student approval or independently verified final answers."
+  ]
+}
