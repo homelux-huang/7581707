@@ -1,0 +1,32 @@
+name: ROLE A 114 Economics 27 source superscript and official answer HOLD (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-econ27-math-ocr-source-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_qa:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 5
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact original, answer notice, G2 and fail-closed source QA
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_role_a_114_econ27_math_ocr_source_20261107.py -v
+      - name: Assert no source bank edits and no student release
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "Q27 official original and G2 superscript evidence ONLY; MC(q=9)=29 versus AR=14 remains unresolved."
+          echo "QUARANTINED; NO canonical flag, E review, 8x2, READY or LIVE."
