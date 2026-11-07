@@ -33,12 +33,16 @@ const shape={
  evidencePath:'sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/independent-ai-review.json',
  evidenceGitBlobSha:'a'.repeat(40),sourceCommit:'b'.repeat(40),
  reviewNotesSha256:'c'.repeat(64),reviewTaskId:'E-114-E12-REAL-TRUSTED-RECEIPT-20261107-01',
- sourceAuthorSessionId:'test-B-source-session',reviewerSessionId:'test-E-review-session',
+ sourceAuthorSessionId:'session-Author-B-check-shape',reviewerSessionId:'session-Reviewer-E-check-shape',
  reviewIssueCommentId:6710069163,reviewerGithubUserId:268841848,reviewerGithubLogin:'homelux-huang',
  questionRevision:p.revision,webpSha256:p.image,teachingDigest:p.teaching,
  officialEvidenceSha256:p.officialEvidence
 };
-// Do not assert a fabricated positive trust receipt. All tests below must fail.
+// This is ONLY a structurally well-formed in-memory test fixture, never an actual trust receipt.
+assert.deepEqual(trustedReceiptProblems(ID,shape),[],
+ 'in-memory baseline should be well formed before the invalid-mutation regression');
+// The validated shape is not authentication; actual protected-main policy and
+// upstream publisher's independent GitHub verification remain mandatory.
 const reject=(name,changes)=>{
  const problems=trustedReceiptProblems(ID,{...shape,...changes});
  assert(problems.length>0,name+' must be rejected by current D preflight');
