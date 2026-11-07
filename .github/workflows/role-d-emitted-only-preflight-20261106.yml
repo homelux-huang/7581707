@@ -47,6 +47,7 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-12.json
+            sudu/teaching-candidates/114-role-b-20261025-batch02/114-00-E-11.json
       - name: Negative receipts + actual PR107 canonical-vs-composed teaching SHA
         run: |
           set -euo pipefail
