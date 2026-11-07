@@ -153,7 +153,7 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(intake["ocrEvidenceSha256"], G2_SHA)
         self.assertEqual(intake["canonicalTeachingSha256"], self.e["teachingDigest"])
         self.assertEqual(intake["teachingIssuerSha256"], G5_SHA)
-        self.assertTrue(raw.decode("utf-8").startswith("題號：114-00-E-12\\n\\n首次作答"))
+        self.assertTrue(raw.decode("utf-8").startswith("題號：114-00-E-12" + chr(10)*2 + "首次作答"))
         self.assertIn("# C — That's why I always carry my own water bottle.", raw.decode("utf-8"))
         self.assertIn("信心： 99%", raw.decode("utf-8"))
         self.assertIn("官方答案核對： 尚未進行", raw.decode("utf-8"))
