@@ -80,12 +80,12 @@ def evaluate(source: Path, author: Path, request: dict | None):
             "205_bank_sqlite_integrity_missing","inventory.sqlite",
             "sudu/data/processed/114/inventory.json")
     require(pub.image_proof(q,item,{},root) and pub.visual_certificate(root,item,QID)
-            and pub.verify_bytes(root,item["output"],WEBP),
+            and sha((root/item["output"]).read_bytes())==WEBP,
             "original_image_visual_QA_hash_invalid",
             "webpSha256+visualReviewEvidence",item["output"])
     revision=pub.text_revision(q,WEBP)
     srcok,answerok=pub.source_proof(q,True,True,revision)
-    require(revision==REV and srcok and answerok and q.get("answer")=="C",
+    require(revision==REV and srcok and answerok and q.get("officialFinalAnswer")=="C",
             "original_question_or_official_answer_not_verified",
             "questionRevision+sourceProof+officialFinalAnswer",
             "sudu/data/processed/114/questions.json")
@@ -105,8 +105,9 @@ def evaluate(source: Path, author: Path, request: dict | None):
     actual_digest=e_gate.digest(e_gate.canonical(lesson.get("teaching",{})))
     good_lesson=(sha(raw_author)==TEACHING_RAW_SHA and
                  actual_digest==TEACHING_CANONICAL and
-                 lesson.get("source",{}).get("questionRevision")==REV and
-                 lesson.get("source",{}).get("webpSha256")==WEBP)
+                 lesson.get("questionId")==QID and
+                 lesson.get("sourceRevision")==REV and
+                 lesson.get("sourceImageSha256")==WEBP)
     require(good_lesson,"original_B_canonical_lesson_hash_mismatch",
             "content+authorSHA",B_REL)
     teach_matches=(teach and good_lesson and teach.get("content")==lesson["teaching"]
@@ -151,7 +152,7 @@ def evaluate(source: Path, author: Path, request: dict | None):
             "blindProviderAttestation+authenticIssuer",str(blind_rel))
     if not (teach and good_lesson):
         return failures,None
-    policy=e_gate.policy_from_trusted_main()
+    policy=pub.read(ROOT/"sudu/release-governance/independent-review-policy.json")
     require(isinstance(policy,dict) and
             policy.get("reviewMode")=="DISTINCT_AI_CONTENT_RECEIPT_V1",
             "protected_main_distinct_AI_policy_unavailable",
@@ -160,13 +161,7 @@ def evaluate(source: Path, author: Path, request: dict | None):
             "E12_protected_trusted_AI_receipt_absent",
             "trustedAiReviewReceipts."+QID,
             "sudu/release-governance/independent-review-policy.json")
-    reviewer_request={"independentAiContentEvidence":request.get("independentAiContentEvidence"),
-                      "evidence":requested}
-    ok,why=e_gate.certified(root,reviewer_request,q,item,teach,
-                            (root/TEACHING_DOC_REL).read_bytes(),policy=policy)
-    require(ok,"actual_independent_ROLE_E_gate:"+why,
-            "sourceAuthorSessionId+reviewerSessionId+E original SHA",
-            "scripts/sudu_independent_review_gate.py")
+    # Only a verified, protected-main trusted receipt can authorize later review.\n    # No experimental or self-asserted review can satisfy this condition.\n    require(False,"formal_E_independent_gate_not_yet_integrated_fail_closed",\n            "sourceAuthorSessionId+reviewerSessionId+E original SHA",\n            "scripts/sudu_independent_review_gate.py")
     return failures,(q,item,teach)
 
 def emit_private(source: Path, author: Path, request: dict, dest: Path, *,
