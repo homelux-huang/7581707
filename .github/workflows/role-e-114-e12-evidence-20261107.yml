@@ -1,0 +1,20 @@
+name: ROLE E E12 provenance preflight (NO RELEASE)
+on:
+  pull_request:
+    paths:
+      - 'sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/**'
+      - 'tests/test_role_e_114_e12_evidence_20261107.py'
+      - '.github/workflows/role-e-114-e12-evidence-20261107.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify Q12 original image and E review note hash (HOLD gates preserved)
+        run: python -m unittest discover -s tests -p 'test_role_e_114_e12_evidence_20261107.py' -v
