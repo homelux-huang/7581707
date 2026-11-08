@@ -99,3 +99,5 @@ jobs:
           git diff --exit-code
           git diff --cached --exit-code
           echo 'SOURCE ONLY / NO STUDENT RELEASE'
+
+# Revalidate exact G3 text B corrected binary/JSON HEAD after Actions generated commit.
