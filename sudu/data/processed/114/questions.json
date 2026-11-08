@@ -2185,9 +2185,9 @@
       ],
       "answer": "A",
       "answerMatched": true,
-      "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "answerVerified": true,
+      "questionVerified": true,
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
@@ -2207,9 +2207,28 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "textQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A original official p3 + Q11 G2 source visual, no independent ROLE E",
+        "reviewedAt": "2026-11-07",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-11-source-text-20261028.json",
+        "sourceImageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+        "questionRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+        "evidenceSha256": "2b140ed39bcdfa87adc3916adb5a330b2b49e96730b7e2c3b99ab0d0934ceb5c"
+      },
+      "officialFinalAnswer": "A",
+      "officialCorrectionChecked": true,
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A original published official p1 A + E26-only notice (NOT ROLE E)",
+        "reviewedAt": "2026-11-07",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true,
+        "evidenceSha256": "bd4cdaff439a56cf1394f2ceec538eb19eac9a7b9b631defefe7cc31c69366ca"
+      }
     },
     {
       "schemaVersion": 1,
