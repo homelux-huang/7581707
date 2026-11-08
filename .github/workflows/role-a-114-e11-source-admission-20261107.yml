@@ -64,6 +64,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install real WebP image decoder required by publisher verify_bytes
+        run: python -m pip install -q pillow
       - name: Verify immutable baseline is exactly latest approved A lease
         shell: bash
         run: |
