@@ -74,10 +74,10 @@ jobs:
               b=pathlib.Path(d)/'base.sqlite3';b.write_bytes(git('question-bank.sqlite3'))
               with sqlite3.connect(b) as con:
                   assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
-                  oldrows=dict(con.execute('SELECT question_id, * FROM questions'))
+                  oldrows={row[0]:row[1:] for row in con.execute('SELECT * FROM questions')}
               with sqlite3.connect(stem+'question-bank.sqlite3') as con:
                   assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
-                  newrows=dict(con.execute('SELECT question_id, * FROM questions'))
+                  newrows={row[0]:row[1:] for row in con.execute('SELECT * FROM questions')}
                   cols=[x[1] for x in con.execute('PRAGMA table_info(questions)')]
                   data=con.execute('SELECT question_id,payload_json,payload_sha256 FROM questions').fetchall()
               assert len(cols)==14 and len(oldrows)==len(newrows)==205
