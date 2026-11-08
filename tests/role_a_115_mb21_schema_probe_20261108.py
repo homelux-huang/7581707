@@ -15,3 +15,12 @@ with sqlite3.connect("file:"+str(p/"question-bank.sqlite3")+"?mode=ro",uri=True)
   print("DB_COLUMNS",c.execute("PRAGMA table_info("+n+")").fetchall(),flush=True)
   print("DB_N",c.execute("SELECT COUNT(*) FROM "+n).fetchone(),flush=True)
   print("DB_21",c.execute("SELECT * FROM "+n+" WHERE question_id=?",("115-00-MB-21",)).fetchone(),flush=True)
+
+with sqlite3.connect("file:"+str(p/"question-bank.sqlite3")+"?mode=ro",uri=True) as c:
+ rows=c.execute("SELECT question_id, payload_json, payload_sha256, answer_verified,question_verified FROM questions").fetchall()
+ byid={x["questionId"]:x for x in o["questions"]}
+ eq=[qid for qid,payload,h,av,qv in rows if json.loads(payload)==byid[qid]]
+ print("DB_JSON_EQUAL_COUNT",len(eq),"MISMATCH_COUNT",len(rows)-len(eq),flush=True)
+ print("DB_Q21_JSON_EQUALS", "115-00-MB-21" in eq, "DB_Q22_JSON_EQUALS", "115-00-MB-22" in eq,flush=True)
+ print("DB_205_PAYLOAD_HASH_VALID", all(hashlib.sha256(payload.encode("utf-8")).hexdigest()==h for _,payload,h,_,_ in rows),flush=True)
+ print("DB_MB21_EXACT_FLAGS",[r[3:5] for r in rows if r[0]=="115-00-MB-21"],flush=True)
