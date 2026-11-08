@@ -132,7 +132,7 @@ def check_baseline():
     gate(blob(bytes_of(ANSWER_CERT_REL))==ANSWER_CERT_BLOB,"published MathB original answer record changed")
     cert=js(ANSWER_CERT_REL)
     record=[x for x in cert["records"] if x["questionId"]==QID]
-    gate(len(record)==1 and record[0]["officialFinalAnswerReadDirectlyFromPublishedImage"]=="B" and record[0]["answerVerified"] is True,"official published answer A not directly evidenced")
+    gate(len(record)==1 and record[0]["officialFinalAnswerReadDirectlyFromPublishedImage"]=="B" and record[0]["answerVerified"] is True,"official published answer B not directly evidenced")
     gate(blob(bytes_of(NOTICE_REL))==NOTICE_BLOB and js(NOTICE_REL)["confirmations"]["00-MB"]["officialStatus"]=="no_objection_submitted", "115 MathB no-objection correction notice invalid")
     gate(sha(bytes_of(G1_REL))==G1_CERT,"visual certificate SHA invalid")
     stage_file=ROOT/"_role_a_stage"/SRC_STAGE_REL
@@ -147,7 +147,7 @@ def check_baseline():
     gate(clean["singleSha256"]==author["imageSha256"]==ORIG_SHA and clean["singleWebp"]==author["image"]==SOURCE_WEBP,"A/C original graphic mismatch")
     gate(clean["roleCSourceRevisionForComparisonOnly"]==REVISION and rev(clean["originalCleanQuestion"],clean["originalCleanOptions"],ORIG_SHA)==REVISION,"source revision not C author's immutable original")
     gate(author["teachingCanonicalSha256"]=="5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600","C teaching digest changed")
-    gate(stage["officialAnswer"]["officialPublishedLetter"]==q["officialFinalAnswer"]==q["answer"]=="B","official source A mismatch")
+    gate(stage["officialAnswer"]["officialPublishedLetter"]==q["officialFinalAnswer"]==q["answer"]=="B","official source B mismatch")
     gate(stage["officialAnswer"]["officialNoObjectionForPaper"] is True,"official no-objection missing")
     db=rows(BASE/"question-bank.sqlite3")
     gate(set(db)=={r["questionId"] for r in original["questions"]},"DB QID mismatch")
@@ -159,7 +159,7 @@ def check_baseline():
 def receipts(q,stage):
     g2={
         "schemaVersion":1,"year":115,"questionId":QID,"role":"A_SOURCE_ONLY_NOT_DISTINCT_E",
-        "taskId":"A-115-MB22-CANONICAL-G2G3-20261108-01",
+        "taskId":"A-115-MB22-CANONICAL-G2G3-20261108-02",
         "questionRevision":REVISION,"webpSha256":ORIG_SHA,
         "question":q["question"],"options":q["options"],"visualTextCompared":True,
         "reviewer":"ROLE A direct original source and isolated figure image QA; not Role E reviewer",
@@ -274,7 +274,7 @@ def generate():
     (BASE/"inventory.json").write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     jwrite(SQL_REPORT,{
         "schemaVersion":1,"year":115,"questionId":QID,
-        "taskId":"A-115-MB22-CANONICAL-G2G3-20261108-01",
+        "taskId":"A-115-MB22-CANONICAL-G2G3-20261108-02",
         "qaOriginalBase":QA_BASE,"beforeBankGitBlob":QA_BANK_BLOB,
         "beforeSqliteGitBlob":QA_DB_BLOB,"beforeManifestGitBlob":QA_MANIFEST_BLOB,
         "afterQuestionBankSha256":sha(bytes_of("sudu/data/processed/115/questions.json")),
@@ -285,7 +285,7 @@ def generate():
         "manifestEntireFileUnchanged":True,"ready":False,"live":False
     })
     jwrite(REPORT_REL,{
-        "schemaVersion":1,"year":115,"questionId":QID,"role":"B","taskId":"A-115-MB22-CANONICAL-G2G3-20261108-01",
+        "schemaVersion":1,"year":115,"questionId":QID,"role":"A","taskId":"A-115-MB22-CANONICAL-G2G3-20261108-02",
         "claim":"https://github.com/homelux-huang/7581707/issues/36#issuecomment-6718375289",
         "baseCommit":QA_BASE,"originalSourceStageGitBlob":STAGE_BLOB,
         "questionRevision":REVISION,"originalSingleWebpSha256":ORIG_SHA,
