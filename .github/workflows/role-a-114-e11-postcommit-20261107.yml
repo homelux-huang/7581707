@@ -1,0 +1,69 @@
+name: ROLE A 114 E11 exact HEAD source postcommit G2 G3 and 205 SQLite QA (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e11-canonical-g2g3-20261107
+    paths:
+      - sudu/data/processed/114/questions.json
+      - sudu/data/processed/114/question-bank.sqlite3
+      - sudu/data/processed/114/webp-manifest.json
+      - sudu/data/processed/114/inventory.json
+      - docs/ROLE_A_114_E11_SOURCE_ADMISSION_20261107.md
+  pull_request:
+    branches:
+      - qa/114-115-official-visual-review
+permissions:
+  contents: read
+jobs:
+  e11_exact_head_postcommit:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout actual candidate code, bank, SQLite and exact original SHA history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E
+            sudu/data/original/114/00-E-answers
+            scripts
+            tests
+            docs
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - name: Checkout original protected-main publisher and gate read only
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            sudu/release-governance
+            sudu/data/approved
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Execute actual issuer G1/G2/G3 positive plus corrupt-source negatives
+        run: |
+          set -euo pipefail
+          python scripts/role_a_114_e11_canonical_g2g3_20261107.py --verify-post --negatives
+      - name: Verify 204 unchanged JSON, 204 SQLite original payload bytes, 205 count and exact allowed paths
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_role_a_114_e11_source_20261107.py' -v
+      - name: Confirm no approved, policy, source image or student V4 changes
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo 'E11 SOURCE G1/G2/G3 candidate: E trust, blind, D 16/16, READY, LIVE remain HOLD.'
