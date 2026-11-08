@@ -12128,12 +12128,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 21,
       "legacySubject": "數學 B",
-      "question": "探勘人員為確認一個新的優良漁場C 與港口B 的距離，從港口A 直線航行8 公里到漁場\n  C，此時在C 點經由儀器測定角度得知∠ACB 60°，且港口A 與港口B 相距7 公里，如圖\n     ( 五 ) 所示。若B、C 的距離大於4 公里，則B、C 的距離約為多少公里？",
+      "question": "探勘人員為確認一個新的優良漁場 C 與港口 B 的距離，從港口 A 直線航行 8 公里到漁場 C，此時在 C 點經由儀器測定角度得知 ∠ACB＝60°，且港口 A 與港口 B 相距 7 公里，如圖（五）所示。若 B、C 的距離大於 4 公里，則 B、C 的距離約為多少公里？",
       "options": [
-        "5\n                                                                             7 km",
-        "4.75                                              A\n                                                                       B",
+        "5",
+        "4.75",
         "4.50",
-        "4.25                                                             8 km\n                                                                                      60°\n                                                               C\n                      圖 ( 五 )"
+        "4.25"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -12141,19 +12141,20 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "A",
         "normalizedValue": "A",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 0,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
         "answerReconciledAt": "2026-10-22T09:45:36.682072+00:00",
-        "officialExtractedValue": "A"
+        "officialExtractedValue": "A",
+        "independentVisualVerification": true
       },
       "questionProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLnBkZg==",
@@ -12174,8 +12175,21 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "ROLE_A_ARCHIVED_DIRECT_ORIGINAL_WEBP_Q21",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-21-staged-20261104.json",
+          "sourceStageGitBlob": "1b466c1f0e5a0f96b08f39a8ddc467f35bf99004",
+          "sourceRevision": "817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9",
+          "originalFigureRetained": true,
+          "originalRawOcrUnchanged": true,
+          "options": [
+            "5",
+            "4.75",
+            "4.50",
+            "4.25"
+          ]
+        },
+        "correctedAt": "2026-11-08",
         "ocrRaw": "21. 探勘人員為確認一個新的優良漁場 C 與港口的距離,從港口 4直線航行 8公里到漁場\nC,此時在C點經由儀器測定角度得知/4CZ=60”,且港口4與港口相距7公里,如圖\n(五)所示。若58、C的距離大於4公里,則8、C的距離約為多少公里 ?\n\n(A)5                                                       _—~                          .\n(B) 4.75          A          Tkm\n(©) 4.50\n(D) 4.25                                                                    8 km\nJc\n圖(五)\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12183,7 +12197,7 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -12224,18 +12238,33 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "figure_or_table_recheck_pdf",
-        "single_question_crop_not_yet_generated"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_SOURCE_G2_SINGLE_QID_20261108",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "A",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A exact original visual source and authenticated GitHub stage; NOT Role E",
+        "reviewedAt": "2026-11-08",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-21-ocr-publisher-20261108.json",
+        "evidenceSha256": "fd8e0b2f60f60c69d40250a13449bef8fbfd28a9fd686239854f126c6fa6c6be",
+        "questionRevision": "817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9",
+        "sourceImageSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A original printed 115 MathB Q21 A; NOT Role E",
+        "reviewedAt": "2026-11-08",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-21-official-publisher-20261108.json",
+        "evidenceSha256": "227f14b683dcdb165bc1526bca5fdbef081b7af15ea80546e67aeaf68f08bb14",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
