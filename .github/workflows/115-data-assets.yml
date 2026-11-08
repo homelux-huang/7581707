@@ -1,0 +1,136 @@
+name: 115 data-only single-question WebP and OCR drafts
+on:
+  push:
+    branches:
+      - data/115-full-year-question-assets
+    paths:
+      - scripts/build_115_full_assets.py
+      - scripts/build_115_question_bank.py
+      - scripts/reconcile_115_answers.py
+      - scripts/merge_115_assets.py
+      - scripts/refine_115_webp.py
+      - scripts/fill_115_missing_ocr.py
+      - scripts/apply_115_visual_qa.py
+      - scripts/audit_115_processed.py
+      - .github/workflows/115-data-assets.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: "115-data-assets-draft"
+  cancel-in-progress: false
+jobs:
+  build-assets:
+    if: github.ref == 'refs/heads/data/115-full-year-question-assets'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/115-full-year-question-assets
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official image geometry tools and OCR
+        run: |
+          python -m pip install --quiet pymupdf pillow numpy requests pytesseract
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-tra tesseract-ocr-eng
+      - name: Check source-only script syntax
+        run: python -m py_compile scripts/build_115_full_assets.py scripts/build_115_question_bank.py scripts/reconcile_115_answers.py scripts/merge_115_assets.py scripts/refine_115_webp.py scripts/fill_115_missing_ocr.py scripts/apply_115_visual_qa.py
+      - name: Generate 115-only draft crops, source hashes and raw OCR candidates
+        run: python scripts/build_115_full_assets.py
+      - name: Correct source-only picture crops and prepare Chinese/professional shared materials
+        run: python scripts/refine_115_webp.py
+      - name: Fill missing OCR only after final source-pixel crop selection
+        run: python scripts/fill_115_missing_ocr.py
+      - name: Reconcile every candidate answer with official SHA-pinned PDF text
+        run: python scripts/reconcile_115_answers.py
+      - name: Apply exact-SHA source-page direct visual QA evidence
+        run: python scripts/apply_115_visual_qa.py
+      - name: Attach source-true WebP crops, OCR raw results and English shared passages
+        run: python scripts/merge_115_assets.py
+      - name: Rebuild isolated question-bank SQLite twice and verify roundtrips
+        run: |
+          python scripts/build_115_question_bank.py
+          python scripts/build_115_question_bank.py
+      - name: Audit per-subject 205 record inventory and strict image provenance
+        run: python scripts/audit_115_processed.py
+      - name: Verify every generated asset, manifest hash, canonical ID and student DB exclusion
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from PIL import Image
+          root=Path(".")
+          p=root/"sudu/data/processed/115/webp-manifest.json"
+          j=json.loads(p.read_text(encoding="utf-8"))
+          assert j["expected"]==205
+          ids=set()
+          for q in j["items"]:
+            assert q["questionId"] not in ids,q["questionId"]
+            ids.add(q["questionId"])
+            if not q.get("output"): continue
+            f=root/q["output"]
+            assert f.is_file(),f
+            b=f.read_bytes()
+            assert hashlib.sha256(b).hexdigest()==q["sha256"],f
+            with Image.open(f) as im:
+              im.load()
+              assert im.format=="WEBP" and list(im.size)==q["outputSize"]
+            assert q["qaStatus"].startswith("DRAFT_") or (
+            q["qaStatus"]=="PASS" and
+            q.get("visualReviewEvidence",{}).get("reviewedSha256")==q["sha256"] and
+            q.get("visualReviewEvidence",{}).get("reference") in ("sudu/DEMO_VISUAL_QA.md", "sudu/data/processed/115/VISUAL_QA_2026-10-22.json", "sudu/data/processed/115/VISUAL_QA_2026-10-22_B2.json")
+          ), q["questionId"]
+          assert len(ids)==205
+          assert j["generated"]==sum(bool(x.get("output")) for x in j["items"])
+          assert len(j["sharedMaterialCrops"])==20, "20 source-pixel reading groups required"
+          import hashlib
+          qa_shas={}
+          for qafile in ("VISUAL_QA_2026-10-22.json","VISUAL_QA_2026-10-22_B2.json"):
+            path=root/"sudu/data/processed/115"/qafile
+            qa_shas[path.as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
+          for x in j["items"]+j["sharedMaterialCrops"]:
+            if x.get("qaStatus")!="PASS":continue
+            evidence=x.get("visualReviewEvidence")
+            assert evidence and evidence["reviewedSha256"]==x["sha256"], x.get("questionId",x.get("sharedMaterialId"))
+            if evidence["reference"] in qa_shas:
+              assert evidence["referenceSha256"]==qa_shas[evidence["reference"]]
+          for q in j["items"]:
+            if q.get("output"):
+              assert q["outputSize"][1] < q["sourceSize"][1]*0.60, "full/oversized exam page crop: "+q["questionId"]
+              assert q["source"].startswith("sudu/data/original/115/"), q["questionId"]
+          qbank=json.loads((root/"sudu/data/processed/115/questions.json").read_text(encoding="utf-8"))
+          assert len(qbank["questions"])==205
+          assert all(q["assets"]["singleQuestionWebp"] for q in qbank["questions"])
+          assert not any(q["questionVerified"] or q["answerVerified"] for q in qbank["questions"])
+          assert not (root/"backend/private.sqlite3").exists()
+          print("PASS: 205 canonical IDs, draft asset hashes, WebP decoding, no private SQLite")
+          print("GENERATED:",j["generated"],"UNRESOLVED:",j["missing"])
+          PY
+      - name: Commit data-only generated assets on dedicated branch, not main
+        run: |
+          set -eu
+          git config user.name "115 offline exam-data bot"
+          git config user.email "115-data-bot@users.noreply.github.com"
+          git add sudu/data/processed/115
+          if git diff --cached --quiet; then
+            echo "No changed generated assets"
+          else
+            git commit -m "data(115): generate source-pixel single-question draft WebPs and OCR evidence"
+            git pull --rebase origin data/115-full-year-question-assets
+            git push origin HEAD:data/115-full-year-question-assets
+          fi
+      - name: Preserve runner QA logs as reviewable action artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 115-draft-webp-report
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/115/webp-manifest.json
+            sudu/data/processed/115/anchor-report.json
+            sudu/data/processed/115/ocr-raw-candidates.json
+            sudu/data/processed/115/official-answer-evidence.json
