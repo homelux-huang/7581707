@@ -1,0 +1,112 @@
+name: ROLE A 114 E11 original G2 G3 canonical SQLite single-Q admission (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e11-canonical-g2g3-20261107
+    paths:
+      - scripts/role_a_114_e11_canonical_g2g3_20261107.py
+      - tests/test_role_a_114_e11_source_20261107.py
+      - .github/workflows/role-a-114-e11-source-admission-20261107.yml
+permissions:
+  contents: write
+concurrency:
+  group: role-a-114-e11-source-admission-20261107
+  cancel-in-progress: false
+jobs:
+  e11_one_source_exact_sqlite:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e11-canonical-g2g3-20261107'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout exact original QA-based isolated branch (write ONLY this branch)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E
+            sudu/data/original/114/00-E-answers
+            scripts
+            tests
+            docs
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+      - name: Checkout historical ROLE A original exact E11 source QA receipts (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: bc625d5eba9bf67f29b236258754941f0c9d999e
+          path: _role_a_stage
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence
+            sudu/data/processed/114/source-stage
+          sparse-checkout-cone-mode: true
+      - name: Checkout published protected-main publisher without mutation
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            sudu/data/approved
+            sudu/release-governance
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify immutable baseline is exactly latest approved A lease
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse ${{ github.sha }}:sudu/data/processed/114/questions.json)" = '804a8b046e97b5fb4fc55f33af25c7a8c08e8a7d'
+          test "$(git rev-parse ${{ github.sha }}:sudu/data/processed/114/webp-manifest.json)" = 'f507470ac6ef36c653ed669d5a9c1a313f456e28'
+          test "$(git rev-parse ${{ github.sha }}:sudu/data/processed/114/question-bank.sqlite3)" = '6c3efd8c3d20507e09f76178fc6927951235a754'
+          test "$(git -C _role_a_stage rev-parse HEAD)" = 'bc625d5eba9bf67f29b236258754941f0c9d999e'
+          test "$(git -C _publisher_main rev-parse HEAD)" = '5546a603abfe0af2e62c0e5f63f775be0bfb24cf'
+      - name: Apply ONLY E11 original source changes to 205 JSON, manifest SHA and actual binary SQLite
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/role_a_114_e11_canonical_g2g3_20261107.py --apply
+      - name: Run native protected publisher positive/negative evidence check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/role_a_114_e11_canonical_g2g3_20261107.py --verify-post --negatives
+      - name: Stage EXACT authorized 114 E11 source and evidence files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add --             sudu/data/processed/114/questions.json             sudu/data/processed/114/webp-manifest.json             sudu/data/processed/114/question-bank.sqlite3             sudu/data/processed/114/inventory.json             sudu/data/processed/114/source-stage/114-00-E-11-staged-20261104.json             sudu/data/processed/114/review-evidence/114-00-E-11-source-text-20261028.json             sudu/data/processed/114/review-evidence/114-00-E-11-official.json             sudu/data/processed/114/review-evidence/114-00-E-11-ocr-publisher-20261107.json             sudu/data/processed/114/review-evidence/114-00-E-11-official-publisher-20261107.json             sudu/data/processed/114/review-evidence/114-00-E-11-MASTER-SOURCE-ADMISSION-20261107.json             sudu/data/processed/114/SQLITE_QA_E11_SOURCE_BRIDGE_20261107.json
+          test "$(git diff --cached --name-only | wc -l)" -eq 11
+          git diff --cached --name-only
+      - name: Commit only isolated source candidate, never main or Pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = 'refs/heads/qa/role-a-114-e11-canonical-g2g3-20261107'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'source(A): 114 E11 exact original G2/G3 and SQLite single row, NO release'
+      - name: Verify postcommit other 204 canonical/SQLite immutable and all negative cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_role_a_114_e11_source_20261107.py' -v
+      - name: Push only newly committed E11 isolated branch; MASTER must separately merge QA PR
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = 'refs/heads/qa/role-a-114-e11-canonical-g2g3-20261107'
+          git push origin HEAD:refs/heads/qa/role-a-114-e11-canonical-g2g3-20261107
+          echo 'E11 source evidence and canonical DB candidate committed, NOT official QA merged, NOT READY or LIVE'
