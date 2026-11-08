@@ -1,0 +1,101 @@
+name: ROLE A 115 MB22 final exact-HEAD 205 SQLite/source QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb22-canonical-g2g3-20261108]
+    paths:
+      - .github/workflows/role-a-115-mb22-postcommit-20261108.yml
+      - sudu/data/processed/115/questions.json
+      - sudu/data/processed/115/question-bank.sqlite3
+      - sudu/data/processed/115/inventory.json
+permissions:
+  contents: read
+jobs:
+  mb22_205_exact_source_gate:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115
+            sudu/data/original/115/00-MB
+            sudu/data/original/115/00-MB-answers
+            scripts
+            tests
+            docs
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            sudu/release-governance
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q pillow
+      - name: Validate original MB22 G1 G2 G3 and fail-closed negative mutations
+        run: |
+          set -euo pipefail
+          python scripts/role_a_115_mb22_source_admission_20261108.py --verify
+      - name: Verify MB21 and all other 204 immutable against exact frozen MB21 parent
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,sqlite3,subprocess,tempfile,pathlib
+          base='ebc25c5d7af72c246b3178f872b5371da92951ed'
+          stem='sudu/data/processed/115/'
+          def git(path):
+              return subprocess.check_output(['git','show',base+':'+stem+path])
+          old=json.loads(git('questions.json'))['questions']
+          new=json.loads(pathlib.Path(stem+'questions.json').read_bytes())['questions']
+          assert len(old)==len(new)==205
+          oo={x['questionId']:x for x in old}; nn={x['questionId']:x for x in new}
+          assert set(oo)==set(nn)
+          target='115-00-MB-22'
+          changes=[k for k in oo if oo[k]!=nn[k]]
+          assert changes==[target],changes
+          assert nn[target]['questionVerified'] is True and nn[target]['officialFinalAnswer']=='B'
+          assert nn[target]['options']==['32','31','16','5']
+          assert nn['115-00-MB-21']==oo['115-00-MB-21']
+          assert git('webp-manifest.json')==pathlib.Path(stem+'webp-manifest.json').read_bytes()
+          with tempfile.TemporaryDirectory() as d:
+              b=pathlib.Path(d)/'base.sqlite3';b.write_bytes(git('question-bank.sqlite3'))
+              with sqlite3.connect(b) as con:
+                  assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+                  oldrows=dict(con.execute('SELECT question_id, * FROM questions'))
+              with sqlite3.connect(stem+'question-bank.sqlite3') as con:
+                  assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+                  newrows=dict(con.execute('SELECT question_id, * FROM questions'))
+                  cols=[x[1] for x in con.execute('PRAGMA table_info(questions)')]
+                  data=con.execute('SELECT question_id,payload_json,payload_sha256 FROM questions').fetchall()
+              assert len(cols)==14 and len(oldrows)==len(newrows)==205
+              assert [k for k in oldrows if oldrows[k]!=newrows[k]]==[target]
+              assert all(hashlib.sha256(payload.encode()).hexdigest()==digest and json.loads(payload)==nn[qid] for qid,payload,digest in data)
+          inv=json.loads(pathlib.Path(stem+'inventory.json').read_text())
+          for key,path in [('sourceQuestionsSha256','questions.json'),('dbSha256','question-bank.sqlite3')]:
+              assert hashlib.sha256(pathlib.Path(stem+path).read_bytes()).hexdigest()==inv['sqlite'][key]
+          receipt=json.loads(pathlib.Path(stem+'review-evidence/115-00-MB-22-source-admission-20261108.json').read_text())
+          assert receipt['formalETrust'] is False and receipt['formalDRealEmitter16'] is False
+          assert receipt['studentReady'] is False and receipt['newLive'] is False
+          print('MB22 exact original 204 JSON/SQLite row values unchanged, MB21 preserved, 205 parity, formal release HOLD')
+          PY
+      - name: Assert only allowed MB22 source paths relative to MB21 parent
+        run: |
+          set -euo pipefail
+          git diff --name-only ebc25c5d7af72c246b3178f872b5371da92951ed HEAD > /tmp/changed
+          if grep -E '^sudu/(data/approved|release-governance)|^sudu/data/processed/114|^sudu/v4' /tmp/changed; then exit 1; fi
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo 'SOURCE ONLY / NO STUDENT RELEASE'
