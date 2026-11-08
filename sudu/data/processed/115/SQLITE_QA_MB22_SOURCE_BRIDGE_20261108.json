@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-22",
+  "taskId": "A-115-MB22-CANONICAL-G2G3-20261108-02",
+  "qaOriginalBase": "ebc25c5d7af72c246b3178f872b5371da92951ed",
+  "beforeBankGitBlob": "776c24614ca3a44f5092a4abbb261b2291f491ab",
+  "beforeSqliteGitBlob": "59012010d531e2be48b1357276c6550323c4d268",
+  "beforeManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "afterQuestionBankSha256": "5326d313e7df2deaa64f145f343d412fb6a8ac9bf650f7dde0768e9ba7ad8b22",
+  "afterSqliteSha256": "0fc690331bc52fdbf7f42091dd9669d687e67b4c9daefb2c55583b36850335a2",
+  "sqliteIntegrity": "ok",
+  "sqliteRows": 205,
+  "canonical205PayloadsMatched": true,
+  "onlyUpdatedQid": "115-00-MB-22",
+  "other204RowsOriginalBytesUnchanged": true,
+  "other204CanonicalSourceUnchanged": true,
+  "manifestEntireFileUnchanged": true,
+  "ready": false,
+  "live": false
+}
