@@ -12275,12 +12275,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 22,
       "legacySubject": "數學 B",
-      "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，\n\n  由左而右依序展現在螢幕上，且每一張卡片只會顯示「有ū」或「無bô」。為了讓玩家\n  都有獎勵，抽出的五張卡片中至少有一張會顯示「有ū」，圖 ( 六 ) 僅為其中一種可能。\n\n  試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+      "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，由左而右依序展現在螢幕上，且每一張卡片只會顯示「有 ū」或「無 bô」。為了讓玩家都有獎勵，抽出的五張卡片中至少有一張會顯示「有 ū」，圖（六）僅為其中一種可能。試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
       "options": [
-        "32\n                         無 無 無 無 有",
-        "31\n                                               bô  bô  bô  bô  ū",
-        "16                        圖 ( 六 )",
-        "5\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                115 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考"
+        "32",
+        "31",
+        "16",
+        "5"
       ],
       "answer": "B",
       "acceptedAnswers": [
@@ -12288,19 +12288,20 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "B",
         "normalizedValue": "B",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 1,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
         "answerReconciledAt": "2026-10-22T09:45:36.682072+00:00",
-        "officialExtractedValue": "B"
+        "officialExtractedValue": "B",
+        "independentVisualVerification": true
       },
       "questionProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLnBkZg==",
@@ -12321,8 +12322,21 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "ROLE_A_ARCHIVED_DIRECT_ORIGINAL_WEBP_Q22",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-22-staged-20261104.json",
+          "sourceStageGitBlob": "6234e3b426a5353e18797f0e24c0ab90cfaf8461",
+          "sourceRevision": "7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17",
+          "originalFigureRetained": true,
+          "originalRawOcrUnchanged": true,
+          "options": [
+            "32",
+            "31",
+            "16",
+            "5"
+          ]
+        },
+        "correctedAt": "2026-11-08",
         "ocrRaw": "22. 程式設計師設計了一個'台語文字與拼音」抽卡片換裝品的遊戲,每次都抽五張卡丘 ,\n由左而右依序展現在螢幕上,上且每一張卡片只會顯示有 a Be RR be」。為了讓玩家\n都有獎勵,抽出的五張卡片中至少有一張會顯示有aa」,圖(六)僅為其中一種可能。\n試問螢幕上由左而右的五張卡片 ,總共有幾種顯示的可能 ?\n(A) 32\n:          EERE\n(C) 16                         圖(六) Gee Je 人x Jas\n(D) 5\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12330,7 +12344,7 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -12371,19 +12385,33 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "suspected_cover_or_footer",
-        "single_question_crop_not_yet_generated",
-        "last_question_on_page_check_footer_and_continuation"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_SOURCE_G2_SINGLE_QID_20261108",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "B",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A exact original visual source and authenticated GitHub stage; NOT Role E",
+        "reviewedAt": "2026-11-08",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-22-ocr-publisher-20261108.json",
+        "evidenceSha256": "7b08398714a4c459cca4824db600ef00370c143365af09a89eb3fed86f6540fd",
+        "questionRevision": "7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17",
+        "sourceImageSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A original printed 115 MathB Q22 A; NOT Role E",
+        "reviewedAt": "2026-11-08",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-22-official-publisher-20261108.json",
+        "evidenceSha256": "9505ef9f63389cf517b8ffdc6c66c337756c56e9af08c3bd70ee4a249f5f12f7",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
