@@ -5386,7 +5386,7 @@
         "detectedOn": "2026-10-22",
         "originalCandidateVersion": "webp-v2",
         "finding": "previous_candidate_missing_figure_IV_lower_edge_and_caption",
-        "repairStatus": "generated_pending_independent_visual_recheck"
+        "repairStatus": "source_pixel_recheck_pass_original_v5_role_e_20261104"
       },
       "visualReviewEvidence": {
         "reviewedAt": "2026-10-22",
@@ -5397,6 +5397,36 @@
         "reviewer": "ChatGPT assistant",
         "independentHumanReview": false,
         "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
+      },
+      "originalIndependentSourceVisualRecheck": {
+        "evidencePrUrl": "https://github.com/homelux-huang/7581707/pull/156",
+        "evidenceHead": "4f70fe9fccbd2b783524d0f8a74290a39373c413",
+        "evidenceDocGitBlob": "51035f72487f24bb19ebcbd1a507f8d1b0dead22",
+        "evidenceWorkflowRun": 41784295447,
+        "pixelRecheck": {
+          "officialPageSize": [
+            1400,
+            1980
+          ],
+          "crop": [
+            90,
+            469,
+            1310,
+            902
+          ],
+          "v5Size": [
+            1220,
+            433
+          ],
+          "historicV2Size": [
+            1220,
+            386
+          ],
+          "oldMissingBottomPixels": 47,
+          "v5PixelDifference": "zero_each_RGB_channel"
+        },
+        "independentContentReviewerReceipt": false,
+        "studentReady": false
       }
     },
     {

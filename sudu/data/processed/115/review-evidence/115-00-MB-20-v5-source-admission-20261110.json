@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "role": "A",
+  "questionId": "115-00-MB-20",
+  "taskId": "A-115-MB20-CANONICAL-V5-PIXEL-G2G3-20261110-02",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6769081931",
+  "parentSourceSha": "24f8962b7fb51a8baa6f111abb1a7414a4b26420",
+  "originalSourceStageGitBlob": "1fbcf2bba4a46335f54f05d60e3a179db5f99244",
+  "sourceRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+  "webpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "sourceVisualOriginalPixel": {
+    "officialPageSize": [
+      1400,
+      1980
+    ],
+    "crop": [
+      90,
+      469,
+      1310,
+      902
+    ],
+    "v5Size": [
+      1220,
+      433
+    ],
+    "historicV2Size": [
+      1220,
+      386
+    ],
+    "oldMissingBottomPixels": 47,
+    "v5PixelDifference": "zero_each_RGB_channel"
+  },
+  "sourceImageIndependentRecheckEvidencePr": 156,
+  "sourceImageIndependentRecheckEvidenceBlob": "51035f72487f24bb19ebcbd1a507f8d1b0dead22",
+  "g1VisualCertificateSha256": "ca6507c62081bc1bbfa30cdd24172484a1c9b25b517ab04f7ae0f4caa74fa142",
+  "officialAnswer": "A",
+  "officialNoObjectionForPaper": true,
+  "noNewPdfDownloadOrRehash": true,
+  "noWebpRecreation": true,
+  "teacherCanonicalSha256Unchanged": "2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d",
+  "publisherOcrEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-20-ocr-publisher-20261110.json",
+  "publisherOcrEvidenceSha256": "c6f33db05c38e9fdb3abc682d27cf8f21550dbd638c84adafd396a2bf3f491e2",
+  "publisherOfficialEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-20-official-publisher-20261110.json",
+  "publisherOfficialEvidenceSha256": "67b554b4b1f5543d40ca0e455a209554a94792816916415002ee46d4fe59202c",
+  "other204JsonRowsUnchanged": true,
+  "other204SqliteRowsUnchanged": true,
+  "other204ManifestRowsUnchanged": true,
+  "sqliteRows": 205,
+  "formalETrust": false,
+  "formalDRealEmitter16": false,
+  "studentReady": false,
+  "newLive": false,
+  "status": "SOURCE_ONLY_ORIGINAL_V5_E_IMAGE_PIXEL_G1_G2_G3_COMPLETE_DISTINCT_E_TRUST_D_MASTER_HOLD"
+}

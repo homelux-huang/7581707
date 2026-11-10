@@ -12008,12 +12008,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 20,
       "legacySubject": "數學 B",
-      "question": "阿雄想測量農地裡一個稻草人C 到工寮A 的距離，如圖 ( 四 ) 所示。他先在A 點和田埂上\n  另一處B 點拉出基準線，測得A、B 兩點的距離為100 公尺，接著測得角度∠CAB = 60°，\n\n  以及∠CBA = 75°。試求A、C 兩點的距離為多少公尺？",
+      "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
       "options": [
-        "50(  3  1)",
-        "50( 3  1)                                        C",
-        "20(  3  1)\n                                                             60°",
-        "20(  3  1)                                A\n                                                100m  75°\n                       圖 ( 四 )          B"
+        "50(√3＋1)",
+        "50(√3－1)",
+        "20(√3＋1)",
+        "20(√3－1)"
       ],
       "answer": "A",
       "acceptedAnswers": [
@@ -12021,19 +12021,20 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "A",
         "normalizedValue": "A",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 0,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
         "answerReconciledAt": "2026-10-22T09:45:36.682072+00:00",
-        "officialExtractedValue": "A"
+        "officialExtractedValue": "A",
+        "independentVisualVerification": true
       },
       "questionProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLnBkZg==",
@@ -12054,8 +12055,22 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "ROLE_A_ORIGINAL_MB20_CORRECTED_V5_WITH_ROLE_E_INDEPENDENT_PIXEL_PROOF",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-20-v5-staged-20261104.json",
+          "sourceRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+          "originalVisualDefectHistoryPreservedInManifest": true,
+          "originalRawOcrUnchanged": true,
+          "sourceImageGitBlob": "bd77281f8ee755074cf3b7ebcada5c06f3720c12",
+          "independentVisualProofGitBlob": "51035f72487f24bb19ebcbd1a507f8d1b0dead22",
+          "options": [
+            "50(√3＋1)",
+            "50(√3－1)",
+            "20(√3＋1)",
+            "20(√3－1)"
+          ]
+        },
+        "correctedAt": "2026-11-10",
         "ocrRaw": "20. 阿雄想測量農地裡一個稻草人 C 到工寮 4 的距離,如圖(四)所示。他先在4點和田垣上\n另一處58點拉出基準線,測得4、2兩點的距離為 100 公尺,接著測得角度 2 CAB=60° >\nDAR ZCBA=75° ° ADK A > C 兩點的距離為多少公尺?\n\n(A) 50(V3+1)                                                                           @\npity\n(B) 50(V3-1)                                                                            C\n(C) 20(¥3 +1)                          as\n(D) 20(V3-1)                            AN60°\n100m   Cy\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12063,7 +12078,7 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2_ORIGINAL_V5"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -12104,20 +12119,33 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "figure_or_table_recheck_pdf",
-        "single_question_crop_not_yet_generated",
-        "long_gap_after_D_clipped_candidate",
-        "previous_candidate_missing_figure_IV_lower_edge_and_caption"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_MB20_ORIGINAL_V5_VISUAL_ONLY_20261110",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "A",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A source G2, actual frozen independent E image recheck only",
+        "reviewedAt": "2026-11-10",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-20-ocr-publisher-20261110.json",
+        "evidenceSha256": "c6f33db05c38e9fdb3abc682d27cf8f21550dbd638c84adafd396a2bf3f491e2",
+        "questionRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+        "sourceImageSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A original printed answer A (not E)",
+        "reviewedAt": "2026-11-10",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-20-official-publisher-20261110.json",
+        "evidenceSha256": "67b554b4b1f5543d40ca0e455a209554a94792816916415002ee46d4fe59202c",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
