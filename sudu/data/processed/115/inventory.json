@@ -117,7 +117,12 @@
   "sqlite": {
     "performed": true,
     "rows": 205,
-    "shaMismatches": []
+    "shaMismatches": [],
+    "roundtripPass": true,
+    "sourceQuestionsSha256": "91c79040e7d38f95f2d465443ef4e1d024a391e69b174c0cc323f9ee146492b5",
+    "dbSha256": "1c3dd93d2045748d0c94aed5d82b7b710215accce565e571f1a1c3ac7198ba28",
+    "evidencePath": "sudu/data/processed/115/SQLITE_QA_MB21_SOURCE_BRIDGE_20261108.json",
+    "releaseApproved": false
   },
   "pendingVisualReviewIds": [
     "115-00-C-18",
