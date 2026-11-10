@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -q cryptography
-      - name: Adversarial V2 limitations: NEVER a trust or release test
+      - name: 'Adversarial V2 limitations: NEVER a trust or release test'
         run: python -m unittest discover -s tests -p test_sudu_review_execution_provenance_v2_adversarial_20261110.py -v
       - name: Preserve unconditional experiment no-release
         run: |
