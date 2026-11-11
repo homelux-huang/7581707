@@ -136,3 +136,4 @@ class ContractTest(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 # Final PR-head regression: synthetic fixtures only, no external provider execution.
+# Run exact final HEAD negative tests after actual active-provider 401 network probe.
