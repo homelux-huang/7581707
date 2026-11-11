@@ -63,3 +63,15 @@ After run, preserve original Actions **artifact** with raw request and first res
 - This new branch does not edit official source, B teaching, E receipt, V2, private publisher, V4, protected review policy, student-approved files, \`main\` or Pages. Merely writing this handoff does not trigger separate ChatGPT sessions or a real external inference.
 
 **No real provider response at document creation; no B/E distinct identity attestation; G6=UNVERIFIED, G7=UNVERIFIED, TRUST_PASS=false, READY=false, LIVE=false.**
+
+## 5. Real provider network reachability receipt (NOT G6; 2026-11-11)
+
+Before requesting anyone to install a paid API key, MASTER ran a distinct **NO API KEY / NO MODEL INFERENCE** workflow from this isolated branch:
+
+- Actual [Actions #42944691936](https://github.com/homelux-huang/7581707/actions/runs/42944691936), exact probe commit `bb82e31bbf7dea025b9f9b0cacc15924da1d5ec6`, job `130274550328`: **COMPLETED SUCCESS**.
+- Request: `GET https://api.openai.com/v1/models` with **no credentials**, and no exam input.
+- Actual result: HTTP **401**, `application/json`, 151 response bytes, body SHA256 `020cefc21c2f2477bc862fb750a476414029d287454ca6a67d0b1d19d82d219d`; server-returned `x-request-id = 14533012-4b32-49eb-a278-740b28c3fe30` in runner log.
+- The body was **not** the retired GitHub Models four-byte `OK\\r\\n`; the official OpenAI endpoint correctly requests authentication. This verifies the route can return a real API JSON error from this runner, **not** that a model was invoked or any B/E execution identity exists.
+- Separate exact HEAD synthetic-only contract CI [#42944569697](https://github.com/homelux-huang/7581707/actions/runs/42944569697) completed SUCCESS at `b0e18c5ded72b024ebdbfad7be41ad94746b739f`; real paid external first-run job **SKIPPED**, not PASS.
+
+**Next external dependency remains one securely configured, narrow GitHub environment key plus independent approval and a real first OpenAI Responses API call.** Do not assert `G6=PASS` from an HTTP 401 or synthetic unit test. The ChatGPT key setup flow was opened but no key creation, GitHub environment secret installation or independent operator execution has been confirmed.
