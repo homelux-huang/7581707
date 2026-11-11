@@ -135,3 +135,4 @@ class ContractTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+# Final PR-head regression: synthetic fixtures only, no external provider execution.
