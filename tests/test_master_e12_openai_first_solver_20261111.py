@@ -65,7 +65,7 @@ class ContractTest(unittest.TestCase):
     def test_preflight_never_sends_model_request(self):
         with patch.object(h.urllib.request, "urlopen", side_effect=AssertionError("network forbidden")):
             h.preflight()
-        self.assertFalse(h.OUT.exists())
+        self.assertEqual(list(h.OUT.iterdir()), [])
 
     def test_missing_secret_never_calls_provider_and_cannot_forge_g6(self):
         with patch.dict(os.environ, {"E12_G6_OPENAI_API_KEY": ""}):
