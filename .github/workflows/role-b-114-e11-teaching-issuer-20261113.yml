@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Read original protected main publisher only into runner temp (no repo writes)
+        run: |
+          git fetch --depth=1 --no-tags origin 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          git show 5546a603abfe0af2e62c0e5f63f775be0bfb24cf:scripts/sudu_verified_publish.py > "$RUNNER_TEMP/sudu_verified_publish.py"
+          test -s "$RUNNER_TEMP/sudu_verified_publish.py"
+          echo "PUBLISHER_CHECKER_PATH=$RUNNER_TEMP/sudu_verified_publish.py" >> "$GITHUB_ENV"
       - name: Original E11 teaching + official source SHA + negative publisher gates
         run: python -m unittest discover -s tests -p 'test_role_b_114_e11_teaching_issuer_20261113.py' -v
       - name: Explicit no release from author-only proof
