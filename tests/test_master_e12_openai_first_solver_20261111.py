@@ -114,6 +114,17 @@ class ContractTest(unittest.TestCase):
                             h.first()
                 self.assertFalse((h.OUT / "provider_first_response.body").exists())
 
+    def test_real_workflow_has_explicit_owner_environment_and_actor_gate(self):
+        text = (ROOT / '.github/workflows/master-e12-openai-first-response-20261111.yml').read_text()
+        self.assertIn('environment: e12-g6-independent-operator', text)
+        self.assertIn('E12_G6_OWNER_OPERATOR_LOGIN: ${{ vars.E12_G6_OWNER_OPERATOR_LOGIN }}', text)
+        self.assertIn('E12_G6_OWNER_ARMED: ${{ vars.E12_G6_OWNER_ARMED }}', text)
+        self.assertIn('secrets.E12_G6_OPENAI_API_KEY', text)
+        self.assertIn("github.event.head_commit.message == 'execute(e12-g6): approved independent provider first-turn'", text)
+        self.assertIn('one_real_external_first_attempt:', text)
+        self.assertIn('needs: synthetics_only_contract', text)
+        # An admin must separately configure required reviewers and prevent self-review.
+
     def test_owner_gate_validity_not_independent_security_attestation(self):
         with patch.dict(os.environ, self.owner_mock, clear=False):
             observation = h.verified_operator_gate()
