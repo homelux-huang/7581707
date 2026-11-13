@@ -1,0 +1,118 @@
+name: E12 read-only GitHub Environment controls audit (NO RELEASE)
+on:
+  push:
+    branches:
+      - audit/master-e12-environment-readonly-20261113
+    paths:
+      - .github/workflows/master-e12-environment-readonly-audit-20261113.yml
+permissions:
+  contents: read
+jobs:
+  read_environment_public_metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read public environment policy without GitHub tokens, Secrets or changes
+        env:
+          RUN_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import datetime
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          base='https://api.github.com/repos/homelux-huang/7581707/environments/e12-g6-independent-operator'
+          def get(u):
+              req=urllib.request.Request(u,headers={
+                  'Accept':'application/vnd.github+json',
+                  'User-Agent':'7581707-E12-ReadOnlyEnvironmentAudit-20261113',
+              },method='GET')
+              try:
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      return r.status,json.loads(r.read())
+              except urllib.error.HTTPError as e:
+                  return e.code,{'code':'HTTP_STATUS_'+str(e.code)}
+              except Exception as e:
+                  return None,{'code':'TRANSPORT_'+type(e).__name__}
+
+          status,env=get(base)
+          result={
+              'task':'114-E12-G6',
+              'repo':'homelux-huang/7581707',
+              'requested_environment':'e12-g6-independent-operator',
+              'github_run_sha':os.environ.get('RUN_SHA'),
+              'time_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'environment_public_read_http_status':status,
+              'environment_exists':None,
+              'required_reviewers_count':None,
+              'prevent_self_review':None,
+              'required_reviewers_distinct_from_owner':None,
+              'can_admins_bypass':None,
+              'branch_policy_exact_match':None,
+              'operator_login_variable':'NOT_ACCESSIBLE_BY_PUBLIC_AUDIT',
+              'owner_armed_variable':'NOT_ACCESSIBLE_BY_PUBLIC_AUDIT',
+              'provider_secret_name_present':'NOT_ACCESSIBLE_BY_PUBLIC_AUDIT',
+              'independent_B_E_execution_principals':'UNVERIFIED',
+              'g6':'UNVERIFIED',
+              'g7':'UNVERIFIED',
+              'blindPass':False,
+              'trustedPass':False,
+              'ready':False,
+              'live':False
+          }
+          if status==404:
+              result['environment_exists']=False
+          elif status==200 and isinstance(env,dict):
+              result['environment_exists']=True
+              rules=[r for r in (env.get('protection_rules') or []) if isinstance(r,dict)]
+              reviewers=[r for r in rules if r.get('type')=='required_reviewers']
+              reviewer_entries=[]
+              for rule in reviewers:
+                  reviewer_entries.extend(rule.get('reviewers') or [])
+              # Do not expose reviewers' usernames in Actions logs or artifact.
+              result['required_reviewers_count']=len(reviewer_entries)
+              result['required_reviewers_distinct_from_owner']=(
+                  len(reviewer_entries)>0 and all(
+                      (x.get('reviewer') or {}).get('login','').lower()!='homelux-huang'
+                      for x in reviewer_entries
+                  )
+              )
+              result['prevent_self_review']=bool(
+                  reviewers and all(r.get('prevent_self_review') is True for r in reviewers)
+              )
+              if isinstance(env.get('can_admins_bypass'),bool):
+                  result['can_admins_bypass']=env['can_admins_bypass']
+              pol=env.get('deployment_branch_policy') or {}
+              if pol.get('custom_branch_policies') is True and pol.get('protected_branches') is False:
+                  bstatus,bdata=get(base+'/deployment-branch-policies')
+                  result['branch_policies_http_status']=bstatus
+                  if bstatus==200 and isinstance(bdata,dict):
+                      names=[x.get('name') for x in bdata.get('branch_policies',[]) if isinstance(x,dict)]
+                      result['branch_policy_exact_match']=names==[
+                        'security/master-e12-openai-first-response-harness-20261111'
+                      ]
+          result['full_security_configuration_verified']=(
+              result['environment_exists'] is True
+              and result['required_reviewers_count'] is not None
+              and result['required_reviewers_count']>=1
+              and result['prevent_self_review'] is True
+              and result['required_reviewers_distinct_from_owner'] is True
+              and result['can_admins_bypass'] is False
+              and result['branch_policy_exact_match'] is True
+              and False # Variables/secret metadata and real identities remain unverified
+          )
+          with open('e12_environment_public_readonly_audit.json','w',encoding='utf-8') as f:
+              json.dump(result,f,indent=2,sort_keys=True)
+          print(json.dumps(result,sort_keys=True))
+          print('READ_ONLY_METADATA_AUDIT_ONLY__NOT_A_G6_G7_RELEASE')
+          PY
+      - name: Save redacted read-only environment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: E12-ENV-READONLY-NOT-TRUST-${{ github.run_id }}
+          path: e12_environment_public_readonly_audit.json
+          if-no-files-found: warn
+          retention-days: 30
