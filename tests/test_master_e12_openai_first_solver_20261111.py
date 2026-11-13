@@ -40,6 +40,17 @@ class ContractTest(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.oldout = h.OUT
         h.OUT = Path(self.temp.name)
+        self.owner_mock = {
+            "GITHUB_REPOSITORY": "homelux-huang/7581707",
+            "GITHUB_REF": "refs/heads/security/master-e12-openai-first-response-harness-20261111",
+            "GITHUB_EVENT_NAME": "push",
+            "GITHUB_RUN_ATTEMPT": "1",
+            "GITHUB_SHA": "a" * 40,
+            "GITHUB_ACTOR": "unexposed-external-operator-fixture",
+            "GITHUB_TRIGGERING_ACTOR": "unexposed-external-operator-fixture",
+            "E12_G6_OWNER_OPERATOR_LOGIN": "unexposed-external-operator-fixture",
+            "E12_G6_OWNER_ARMED": "INDEPENDENT_OPERATOR_REVIEWED_ONE_SHOT",
+        }
 
     def tearDown(self):
         h.OUT = self.oldout
@@ -77,6 +88,40 @@ class ContractTest(unittest.TestCase):
         self.assertEqual(receipt["g7"], "UNVERIFIED")
         self.assertFalse((h.OUT / "provider_first_response.body").exists())
 
+
+    def test_owner_environment_not_armed_denies_before_network(self):
+        invalid = dict(self.owner_mock, E12_G6_OWNER_ARMED="")
+        with patch.dict(os.environ, dict(invalid, E12_G6_OPENAI_API_KEY="TEST_SYNTHETIC_KEY"), clear=False):
+            with patch.object(h.urllib.request, "urlopen", side_effect=AssertionError("network must not run")):
+                with self.assertRaisesRegex(RuntimeError, "owner_armed"):
+                    h.first()
+        report = self.read("operator_gate_denied.json")
+        self.assertEqual(report["g6"], "UNVERIFIED")
+        self.assertFalse(report["blindPass"])
+        self.assertFalse((h.OUT / "provider_first_response.body").exists())
+
+    def test_actor_mismatch_or_rerun_denies_before_network(self):
+        for invalid in (
+            dict(self.owner_mock, GITHUB_ACTOR="not-the-approved-operator"),
+            dict(self.owner_mock, GITHUB_RUN_ATTEMPT="2"),
+            dict(self.owner_mock, GITHUB_SHA="not-40-hex"),
+        ):
+            with self.subTest(invalid=invalid), tempfile.TemporaryDirectory() as isolated:
+                h.OUT = Path(isolated)
+                with patch.dict(os.environ, dict(invalid, E12_G6_OPENAI_API_KEY="TEST_SYNTHETIC_KEY"), clear=False):
+                    with patch.object(h.urllib.request, "urlopen", side_effect=AssertionError("network must not run")):
+                        with self.assertRaisesRegex(RuntimeError, "OWNER_OPERATOR_GATE_NOT_AUTHORIZED"):
+                            h.first()
+                self.assertFalse((h.OUT / "provider_first_response.body").exists())
+
+    def test_owner_gate_validity_not_independent_security_attestation(self):
+        with patch.dict(os.environ, self.owner_mock, clear=False):
+            observation = h.verified_operator_gate()
+        self.assertEqual(
+            observation["operatorGateType"],
+            "GITHUB_ENVIRONMENT_VARIABLE_AND_ACTOR_CHECK__NOT_A_SIGNED_ATTESTATION"
+        )
+
     def test_one_synthetic_model_post_preserves_bytes_but_never_approves(self):
         fake = {
             "id": "resp_SYNTHETIC_TEST_ONLY_NOT_PROVIDER",
@@ -95,7 +140,7 @@ class ContractTest(unittest.TestCase):
         def mock_urlopen(request, timeout=0):
             calls.append((request.full_url, request.data, timeout))
             return FakeHttp(original_bytes)
-        with patch.dict(os.environ, {"E12_G6_OPENAI_API_KEY": "KEY_SYNTHETIC_TEST_DO_NOT_USE", "GITHUB_RUN_ID": "SYNTHETIC"}, clear=False):
+        with patch.dict(os.environ, dict(self.owner_mock, E12_G6_OPENAI_API_KEY="KEY_SYNTHETIC_TEST_DO_NOT_USE", GITHUB_RUN_ID="SYNTHETIC"), clear=False):
             with patch.object(h.urllib.request, "urlopen", side_effect=mock_urlopen):
                 h.first()
         self.assertEqual(len(calls), 1)
@@ -116,7 +161,7 @@ class ContractTest(unittest.TestCase):
             self.assertNotIn(b"KEY_SYNTHETIC_TEST_DO_NOT_USE", p.read_bytes())
 
     def test_retired_service_plain_ok_body_is_rejected_not_g6_pass(self):
-        with patch.dict(os.environ, {"E12_G6_OPENAI_API_KEY": "KEY_SYNTHETIC_TEST_DO_NOT_USE"}, clear=False):
+        with patch.dict(os.environ, dict(self.owner_mock, E12_G6_OPENAI_API_KEY="KEY_SYNTHETIC_TEST_DO_NOT_USE"), clear=False):
             with patch.object(h.urllib.request, "urlopen", return_value=FakeHttp(b"OK\r\n", ctype="text/plain")):
                 with self.assertRaisesRegex(RuntimeError, "INVALID_FIRST_MODEL_REPLY"):
                     h.first()
