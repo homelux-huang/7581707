@@ -47,6 +47,46 @@ INSTRUCTIONS = (
 )
 
 
+def verified_operator_gate() -> dict:
+    """Reject real inference without OWNER-armed environment + distinct GitHub actor.
+
+    GitHub actors/environment variables are runner observations, NOT proof that
+    historic B and E used different independent execution sessions. Environment
+    reviewers and secret-policy rules must be separately verified by a real
+    security reviewer. No synthetic run can mint a V1 trusted receipt.
+    """
+    expected_actor = os.getenv("E12_G6_OWNER_OPERATOR_LOGIN", "").strip()
+    owner_armed = os.getenv("E12_G6_OWNER_ARMED", "")
+    actor = os.getenv("GITHUB_ACTOR", "")
+    triggering_actor = os.getenv("GITHUB_TRIGGERING_ACTOR", "")
+    checks = {
+        "owner_armed": owner_armed == "INDEPENDENT_OPERATOR_REVIEWED_ONE_SHOT",
+        "operator_configured": bool(expected_actor)
+            and expected_actor not in ("github-actions[bot]", "dependabot[bot]"),
+        "actor_separation": bool(actor) and actor == expected_actor,
+        "triggering_actor": bool(triggering_actor) and triggering_actor == expected_actor,
+        "correct_repo": os.getenv("GITHUB_REPOSITORY") == "homelux-huang/7581707",
+        "correct_branch": os.getenv("GITHUB_REF")
+            == "refs/heads/security/master-e12-openai-first-response-harness-20261111",
+        "only_push": os.getenv("GITHUB_EVENT_NAME") == "push",
+        "first_run_only": os.getenv("GITHUB_RUN_ATTEMPT") == "1",
+        "original_40hex_gitsha": bool(
+            re.fullmatch(r"[0-9a-f]{40}", os.getenv("GITHUB_SHA", ""))
+        ),
+    }
+    if not all(checks.values()):
+        raise RuntimeError(
+            "OWNER_OPERATOR_GATE_NOT_AUTHORIZED__NO_PROVIDER_CALL__"
+            + ",".join(k for k, value in checks.items() if not value)
+        )
+    return {
+        "operatorGithubActorClaim": actor,
+        "githubRunAttempt": "1",
+        "ownerApprovedOperatorLoginClaim": expected_actor,
+        "operatorGateType": "GITHUB_ENVIRONMENT_VARIABLE_AND_ACTOR_CHECK__NOT_A_SIGNED_ATTESTATION",
+    }
+
+
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -162,6 +202,17 @@ def first():
             "g6": "UNVERIFIED", "g7": "UNVERIFIED",
         })
         raise RuntimeError("MISSING_PROVIDER_SECRET__NO_INFERENCE_ATTEMPTED")
+    try:
+        operator_gate = verified_operator_gate()
+    except RuntimeError as error:
+        write_json("operator_gate_denied.json", {
+            "questionId": QID,
+            "status": "OWNER_OPERATOR_GATE_DENIED_NO_INFERENCE",
+            "reasonCodes": str(error),
+            "atUtc": utc(), "g6": "UNVERIFIED", "g7": "UNVERIFIED",
+            "blindPass": False, "ready": False, "live": False,
+        })
+        raise
     client_id = "e12-" + os.environ.get("GITHUB_RUN_ID", "unknown") + "-" + str(uuid.uuid4())
     started_utc = utc()
     started_ns = time.monotonic_ns()
@@ -250,6 +301,7 @@ def first():
         "githubRunId": os.getenv("GITHUB_RUN_ID"),
         "githubRunAttempt": os.getenv("GITHUB_RUN_ATTEMPT"),
         "githubHeadSha": os.getenv("GITHUB_SHA"),
+        "githubOperatorGateRunnerObservations": operator_gate,
         "officialAnswerReadAfterFirstResponse": "NOT_YET_READ",
         "providerServerRecordIndependentlyRetrieved": False,
         "runnerChronologyProviderSigned": False,
