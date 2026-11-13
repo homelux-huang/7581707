@@ -103,3 +103,5 @@ jobs:
           git diff --exit-code
           git diff --cached --exit-code
           echo 'STRICT SOURCE ONLY, NOT TRUST, NOT STUDENT READY, NOT LIVE'
+
+# Repeat exact-head source-only verification after cross-role handoff document update (2026-11-13).
