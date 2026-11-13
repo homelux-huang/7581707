@@ -62,6 +62,8 @@ jobs:
           python scripts/master_e12_openai_first_solver_20261111.py preflight
       - name: ONE real provider request (raw original bytes, NO prior chat / no official key)
         env:
+          E12_G6_OWNER_OPERATOR_LOGIN: ${{ vars.E12_G6_OWNER_OPERATOR_LOGIN }}
+          E12_G6_OWNER_ARMED: ${{ vars.E12_G6_OWNER_ARMED }}
           E12_G6_OPENAI_API_KEY: ${{ secrets.E12_G6_OPENAI_API_KEY }}
           E12_EVIDENCE_DIR: ${{ runner.temp }}/e12_first_model_raw
         run: |
