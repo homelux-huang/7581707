@@ -3,14 +3,21 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import importlib.util
 import json
-import sys
+import os
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-from scripts import sudu_verified_publish as publisher
+# QA source intentionally does not contain protected-main's publisher.
+# In CI load the exact read-only main SHA's publisher from a runner temp file.
+publisher_path = os.environ.get("PUBLISHER_CHECKER_PATH")
+if not publisher_path or not Path(publisher_path).is_file():
+    raise RuntimeError("Exact protected-main publisher not supplied by CI")
+spec = importlib.util.spec_from_file_location("role_b_pinned_main_publisher", publisher_path)
+publisher = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(publisher)
 
 QID = "114-00-E-11"
 BANK = ROOT / "sudu/data/processed/114"
