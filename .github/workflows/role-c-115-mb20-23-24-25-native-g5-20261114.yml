@@ -39,6 +39,10 @@ jobs:
           echo "ORIGINAL_ROLE_C_DIR=$RUNNER_TEMP/role-c-original" >> "$GITHUB_ENV"
       - name: Real native publisher issuer + source bank 205 + SHA + A-D + math + adversarial gates
         run: python -m unittest discover -s tests -p 'test_role_c_115_mb20_23_24_25_native_g5_20261114.py' -v
+      - name: Global-discovery simulation with no dedicated fixtures (safe explicit skip)
+        shell: bash
+        run: |
+          env -u PUBLISHER_CHECKER_PATH -u ORIGINAL_ROLE_C_DIR -u ROLE_C_REQUIRED_G5_IDS python -m unittest discover -s tests -p 'test_role_c_115_mb20_23_24_25_native_g5_20261114.py' -v
       - name: Print original raw issuer SHA and assert author only, no E trust, no release
         shell: bash
         run: |
