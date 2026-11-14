@@ -1,0 +1,24 @@
+name: 104-113 legacy candidate source audit (READ ONLY)
+on:
+  push:
+    branches:
+      - coord/104-113-official-baseline-20261025
+  pull_request:
+    paths:
+      - 'docs/104-113-SOURCE-BASELINE-20261025.md'
+      - 'tests/test_104_113_readonly_baseline.py'
+      - '.github/workflows/104-113-source-readonly-audit.yml'
+      - 'sudu/data/years/*.json'
+permissions:
+  contents: read
+jobs:
+  ten-year-raw-source-inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit 104-113 existing archive without QA promotion or deploy
+        run: python -m unittest discover -s tests -p 'test_104_113_readonly_baseline.py' -v
