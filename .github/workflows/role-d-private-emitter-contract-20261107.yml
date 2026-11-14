@@ -1,0 +1,92 @@
+name: ROLE D private publisher E12 V4 integration contract only (NO BROWSER / NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-d-private-emitter-contract-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-d-private-contract-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  private_issuer_v4_static_contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      EXPECTED_D_SHA: ${{ github.sha }}
+      PIN_MAIN: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+      PIN_PRIVATE: bc946e4a17c0172e21d9dd5710275c49523af990
+      PIN_QA: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+      PIN_E: 36d33577d35455be91776e8b2f5d82bbcb2b38a6
+    steps:
+      - name: Checkout immutable D-only contract test from exact current HEAD
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Pin protected main trust and runtime source
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_D_SHA"
+          git fetch --no-tags --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+          test "$(git rev-parse refs/remotes/origin/main)" = "$PIN_MAIN"
+          python -m py_compile tests/role_d_private_emitter_contract_20261107.py
+      - name: Checkout MASTER issuer exact source read-only, no changes
+        uses: actions/checkout@v4
+        with:
+          ref: bc946e4a17c0172e21d9dd5710275c49523af990
+          path: _master_private
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/sudu_private_candidate_issuer.py
+      - name: Checkout PR177 MERGED official source evidence exact read-only
+        uses: actions/checkout@v4
+        with:
+          ref: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+          path: _qa_source
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence/114-00-E-12-teaching-publisher-20261107.json
+            sudu/data/processed/114/review-evidence/114-00-E-12-ocr-publisher-20261107.json
+            sudu/data/processed/114/review-evidence/114-00-E-12-official-publisher-20261107.json
+      - name: Checkout latest independent ROLE E exact HOLD return (read only)
+        uses: actions/checkout@v4
+        with:
+          ref: 36d33577d35455be91776e8b2f5d82bbcb2b38a6
+          path: _role_e
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence/role-e-114-e12-20261107/independent-ai-review.json
+      - name: Read-only real private issuer versus V4 static contract (no prior 16/24 rerun)
+        run: |
+          set -euo pipefail
+          python tests/role_d_private_emitter_contract_20261107.py
+          python - <<'PY'
+          import json, pathlib
+          path=pathlib.Path('test-results/role-d-private-emitter-contract-20261107/private-emitter-contract-report.json')
+          a=json.loads(path.read_text())
+          assert not a['formalUiqaPassed'] and not a['newLive'] and not a['newReady']
+          assert not a['ranChromium'] and not a['ranOldHoldOr24Negatives']
+          assert a['externalGateState']['externalProviderBlindAttestationStillHardBlocked'] is True
+          assert a['externalGateState']['protectedMainE12TrustPresent'] is False
+          codes={p['code'] for p in a['integrationBlockers']}
+          assert not codes, 'MASTER native private V4 parity regression: '+repr(codes)
+          assert a['status']=='PRIVATE_V4_PARITY_PASS_EXTERNAL_G6_G7_HOLD'
+          assert a['v4Assets']['privateInjectorFound'] is True
+          assert not a['v4Assets']['missing']
+          assert 'v4-score-feedback.css' in a['v4Assets']['privateCopied']
+          assert a['roleEEvidence']['head']==a['source']['roleEHead']
+          assert a['roleEEvidence']['blindSolveOriginalTranscriptSha256'] is None
+          assert a['roleEEvidence']['sourceAuthorSessionId'] is None
+          assert a['roleEEvidence']['reviewerSessionId'] is None
+          print('PASS: MASTER fixed two V4 parity defects, true E G6/G7 HOLD; no browser/UIQA/release')
+          PY
+      - name: Archive positive V4 parity static contract and exact G6/G7 HOLD proof (not UIQA)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-d-e12-private-emitter-contract-HOLD-${{ github.run_id }}
+          path: test-results/role-d-private-emitter-contract-20261107/
+          if-no-files-found: error
+          retention-days: 14
