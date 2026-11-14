@@ -16,7 +16,12 @@ permissions:
   contents: read
 jobs:
   e11_exact_head_postcommit:
-    if: github.repository == 'homelux-huang/7581707'
+    # These assertions describe the frozen one-question PR, not future QA changes.
+    if: >-
+      github.repository == 'homelux-huang/7581707' &&
+      ((github.event_name == 'push' && github.ref == 'refs/heads/qa/role-a-114-e11-canonical-g2g3-20261107') ||
+       (github.event_name == 'pull_request' && github.head_ref == 'qa/role-a-114-e11-canonical-g2g3-20261107' &&
+        github.event.pull_request.head.repo.full_name == github.repository))
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
