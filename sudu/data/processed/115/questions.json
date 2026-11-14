@@ -12775,12 +12775,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 25,
       "legacySubject": "數學 B",
-      "question": "小晏想在坐標平面中創作一個卡通人物，如圖 ( 七 ) 所示。已知A、B、P 為圖 ( 七 ) 中的\n\n  三點，直線L 通過A、B 兩點，點P 的坐標為 ( h , 7 )，點P 到直線L 的距離為  2 。若小晏\n  要畫出以點P 為圓心，並與直線L 相切的圓，且此圓的方程式為 x 2  8 x  ( y  7) 2  a ，則\n   h + a？",
+      "question": "小晏想在坐標平面中創作一個卡通人物，如圖（七）所示。已知 A、B、P 為圖（七）中的三點，直線 L 通過 A、B 兩點，點 P 的坐標為 (h,7)，點 P 到直線 L 的距離為 √2。若小晏要畫出以點 P 為圓心，並與直線 L 相切的圓，且此圓的方程式為 x²－8x＋(y－7)²＝a，則 h＋a＝？",
       "options": [
-        "– 59",
-        "– 16",
-        "– 10",
-        "10\n\n                        圖 ( 七 )\n\n\n\n\n          【以下空白】\n\n\n\n\n-8-"
+        "－59",
+        "－16",
+        "－10",
+        "10"
       ],
       "answer": "C",
       "acceptedAnswers": [
@@ -12788,14 +12788,14 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "C",
         "normalizedValue": "C",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 2,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
@@ -12821,8 +12821,15 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "FROZEN_ROLE_A_PR157_SOURCE_ONLY",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-25-stage-20261104.json",
+          "sourceStageGitBlob": "cf1ef0d369e3aced81886a518b47cdeddd4ad175",
+          "sourceRevision": "8b29dffa0c37abd1b37989878a9f8d34392ba71a04017ca1591d6fa45ec9cb6f",
+          "originalRawOcrUnchanged": true,
+          "originalImageGitBlob": "10adb24ab36c35bd86b63c0d3ab4cb83b757393f"
+        },
+        "correctedAt": "2026-11-14",
         "ocrRaw": "25. 小晏想在坐標平面中創作一個卡通人物,如圖(七)所示。已知 A> By P 為圖( 七)中的\n三點,直線工通過4、2兩點,點的坐標為(#,7),點和到直線民的距離為2 。若小旻\n要畫出以點 P 為圓心,並與直線 L 相切的圓,且此圓的方程式為立一8x+(Gy-7)* =a > Gill\nh+a=?\nei                                                  y            UL\n圖                                                                                  P Av\n(B)—16                                                      wy\n(D) 10                                                    a\nx\n圖(七) O\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12830,7 +12837,7 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2_ORIGINAL_RADIUS_AND_FIGURE"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -12871,20 +12878,33 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "figure_or_table_recheck_pdf",
-        "single_question_crop_not_yet_generated",
-        "long_gap_after_D_clipped_candidate",
-        "last_question_on_page_check_footer_and_continuation"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_MB25_ORIGINAL_G2_SOURCE_ONLY_20261114",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "C",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A Work original source inspection; not authenticated E content review",
+        "reviewedAt": "2026-11-14",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-25-ocr-publisher-20261114.json",
+        "evidenceSha256": "eca8ece0babeae6886297dca98bd58ace45018cb289f925f44f3d9c44766a464",
+        "questionRevision": "8b29dffa0c37abd1b37989878a9f8d34392ba71a04017ca1591d6fa45ec9cb6f",
+        "sourceImageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A existing original published Q25 C/no-objection verification; not independent Role E",
+        "reviewedAt": "2026-11-14",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-25-official-publisher-20261114.json",
+        "evidenceSha256": "2179203705d3a089a1d43e3b4e8beb73eb3dffff6ce0a43e3c16149cf6e5a125",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
