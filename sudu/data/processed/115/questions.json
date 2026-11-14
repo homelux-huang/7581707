@@ -12635,12 +12635,12 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 24,
       "legacySubject": "數學 B",
-      "question": "小仲跟阿慈投資一筆資金，以年利率r % 複利計算，並想瞭解本利和達到三倍本金需要\n                                                110\n 幾年。小仲提問人工智慧得到快速估算值 A   ，阿慈用數學公式算出精確值\n                                                                r\n            log10 3   B        。若r8，且將A 以無條件進位至整數C，B 以無條件進位至整數D，\n                    r  \n        log10  1      \n                  100 \n\n  則下列何者正確？",
+      "question": "小仲跟阿慈投資一筆資金，以年利率 r% 複利計算，並想瞭解本利和達到三倍本金需要幾年。小仲提問人工智慧得到快速估算值 A＝110/r，阿慈用數學公式算出精確值 B＝log₁₀(3)／log₁₀(1＋r/100)。若 r＝8，且將 A 以無條件進位至整數 C，B 以無條件進位至整數 D，則下列何者正確？",
       "options": [
-        "D = C – 1",
-        "D = C",
-        "D = C+1",
-        "D = C+2"
+        "D＝C－1",
+        "D＝C",
+        "D＝C＋1",
+        "D＝C＋2"
       ],
       "answer": "C",
       "acceptedAnswers": [
@@ -12648,14 +12648,14 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "C",
         "normalizedValue": "C",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 2,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
@@ -12681,8 +12681,15 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "FROZEN_ROLE_A_PR157_SOURCE_ONLY",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-24-stage-20261104.json",
+          "sourceStageGitBlob": "88faf4ee767b20c15db603e91aa250bc59eba84c",
+          "sourceRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+          "originalRawOcrUnchanged": true,
+          "originalImageGitBlob": "cfe5c8eeaf4496d5d98856f96a2c310186ef5893"
+        },
+        "correctedAt": "2026-11-14",
         "ocrRaw": "24. 小仲跟阿慈投資一筆資金,以年利率 7%複利計算,並想瞭解本利和達到三倍本金需要\n幾年。小仲提間人工智慧得到快速估算值 4= Daya mi\n5一一2一,若/=8,且將4以無條件進位至整數C,有2以無條件進位至整數還,\n\nlogy [5]\n則下列何者正確?\n(A) D=C-1\n(B) D=C\n(C) D=C+1\n(D) D=C+2\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12690,7 +12697,7 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2_ORIGINAL_FULL_FRACTIONS"
       },
       "sharedMaterialId": null,
       "formulas": [],
@@ -12731,17 +12738,33 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "single_question_crop_not_yet_generated"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_MB24_ORIGINAL_G2_SOURCE_ONLY_20261114",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "C",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A Work original source inspection; not authenticated E content review",
+        "reviewedAt": "2026-11-14",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-24-ocr-publisher-20261114.json",
+        "evidenceSha256": "1caa3da4d5d6ce523f371709f944edaaacc2e5e2abf1240a545a385bfe1743ba",
+        "questionRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+        "sourceImageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A existing original published Q24 C/no-objection verification; not independent Role E",
+        "reviewedAt": "2026-11-14",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-24-official-publisher-20261114.json",
+        "evidenceSha256": "73ec23f02bd01ca625aca64b25641a4e46d224018d34ae6040d62eeaa2225ea4",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
