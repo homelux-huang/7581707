@@ -17,7 +17,7 @@ const SITE=process.env.SUDU_D_SITE||'http://127.0.0.1:8765/sudu/';
 const MODE=process.env.SUDU_D_MODE||'precheck';
 const SIZES=[[360,800],[375,812],[390,844],[412,915],[430,932],[768,1024],[1024,768],[1440,900]];
 const IDS=[
- '114-00-E-12','114-00-E-11','115-00-MB-21','115-00-MB-22','115-00-MB-23'
+ '114-00-E-12','114-00-E-11','115-00-MB-21','115-00-MB-22','115-00-MB-20','115-00-MB-23'
 ];
 const SHA=/^[0-9a-f]{64}$/;
 const HEX40=/^[0-9a-f]{40}$/;
@@ -32,6 +32,7 @@ const pins={
  '114-00-E-11':{image:'ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0',revision:'646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036',teaching:'ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb',composedTeaching:'3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee',answer:'A'},
  '115-00-MB-21':{image:'b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693',revision:'817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9',teaching:'4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4',answer:'A'},
  '115-00-MB-22':{image:'3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55',revision:'7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17',teaching:'5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600',answer:'B'},
+ '115-00-MB-20':{image:'f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf',revision:'2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c',teaching:'2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d',answer:'A'},
  '115-00-MB-23':{image:'2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51',revision:'9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4',teaching:'13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6',answer:'B'}
 };
 const report={role:'D',mode:MODE,headSHA:head,qaOnly:false,
