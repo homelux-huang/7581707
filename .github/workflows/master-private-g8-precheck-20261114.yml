@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      SOURCE_QA_SHA: 7140fa078cb51dcceaa98a0a4b07bac1f5feb29f
+      SOURCE_QA_SHA: f9a6bc84531b5a6a8b5d57cde3828323e500cbbc
       EXPECTED_MAIN_PUBLISHER_BLOB: 64db5dd620dec230287ff0ea92a64b6e181e45a9
     steps:
       - name: Checkout own isolated MASTER preview code (no approval)
@@ -62,10 +62,26 @@ jobs:
             --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
             --qid 115-00-MB-22 \
             --teaching-sha 5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600
+          python -m scripts.sudu_g8_private_precheck_20261114 \
+            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
+            --qid 115-00-MB-20 \
+            --teaching-sha 2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d
+          python -m scripts.sudu_g8_private_precheck_20261114 \
+            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
+            --qid 115-00-MB-23 \
+            --teaching-sha 13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6
+          python -m scripts.sudu_g8_private_precheck_20261114 \
+            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
+            --qid 115-00-MB-24 \
+            --teaching-sha 317fe1d731f29e9634ec17f0fc1dc5c308b804de5759991a005f94f81bbffd06
+          python -m scripts.sudu_g8_private_precheck_20261114 \
+            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
+            --qid 115-00-MB-25 \
+            --teaching-sha a860b08a6f5b76fe1331dc4204a46a3135e511449d9b6004cc4f99be020e4d32
           PREVIEW_ROOT="$PRIVATE" python - <<'PY'
           import hashlib, json, os, pathlib
           root=pathlib.Path(os.environ["PREVIEW_ROOT"])
-          expected={"114-00-E-11", "115-00-MB-21", "115-00-MB-22"}
+          expected={"114-00-E-11", "115-00-MB-20", "115-00-MB-21", "115-00-MB-22", "115-00-MB-23", "115-00-MB-24", "115-00-MB-25"}
           files=list(root.glob("*.technical-precheck.json"))
           assert {p.name.replace(".technical-precheck.json", "") for p in files}==expected
           for path in files:
@@ -81,7 +97,7 @@ jobs:
               im=root/"images"/(obj["questionId"]+".webp")
               assert hashlib.sha256(im.read_bytes()).hexdigest()==obj["originalWebpSha256"]
           assert not list(pathlib.Path(".").rglob("*.technical-precheck.json"))
-          print("PASS: 3 genuine source/G5 native-shaped PRIVATE technical previews; 0 G8/READY/LIVE")
+          print("PASS: 7 genuine source/G5 native-shaped PRIVATE technical previews; 0 G8/READY/LIVE")
           PY
           # Never upload or commit a preview: it includes answer-key data.
           test ! -d sudu/private-preview
