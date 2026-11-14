@@ -12422,7 +12422,7 @@
       "officialSubjectName": "數學B",
       "originalQuestionNumber": 23,
       "legacySubject": "數學 B",
-      "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表 ( 二 )。已知有兩名旅客預計結伴報名同\n  一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求x？\n\n               原價            優惠\n\n      行程Ⅰ 每位收費x 元      兩人同行，其中一人減免3000 元\n\n  表 ( 二 ) 行程Ⅱ 每位收費 ( x + 2000 ) 元  兩人同行，其中一人打八折",
+      "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
       "options": [
         "32000",
         "33000",
@@ -12435,19 +12435,20 @@
       ],
       "answerMatched": true,
       "answerVerified": true,
-      "questionVerified": false,
+      "questionVerified": true,
       "answerProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLXN0YW5kYXJkLnBkZg==",
         "sourcePage": 1,
         "pdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
         "rawValue": "B",
         "normalizedValue": "B",
-        "officialRevisionChecked": false,
+        "officialRevisionChecked": true,
         "matchMethod": "legacy_automatic_pairing",
         "originalLegacyIndex": 1,
         "matchingMethod": "sha_pinned_official_pdf_text_extraction_comparison",
         "answerReconciledAt": "2026-10-22T09:45:36.682072+00:00",
-        "officialExtractedValue": "B"
+        "officialExtractedValue": "B",
+        "independentVisualVerification": true
       },
       "questionProvenance": {
         "source": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLW1iLnBkZg==",
@@ -12468,8 +12469,38 @@
         "ocrPerformed": true,
         "ocrEngine": "tesseract",
         "ocrVersion": null,
-        "correctionOverlay": null,
-        "correctedAt": null,
+        "correctionOverlay": {
+          "origin": "ROLE_A_ARCHIVED_ORIGINAL_MATHB23_2X3_WEBP",
+          "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-23-staged-20261104.json",
+          "sourceStageGitBlob": "a96c73b60e5617b79166ae076a854341bae934c4",
+          "tableEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json",
+          "tableEvidenceGitBlob": "0f63d6a5f91015dd2b146731c48dce08668c1fa2",
+          "tableTextSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088",
+          "questionRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+          "sourceTables": [
+            {
+              "heading": [
+                "行程",
+                "原價",
+                "優惠"
+              ],
+              "rows": [
+                [
+                  "行程Ⅰ",
+                  "每位收費 x 元",
+                  "兩人同行，其中一人減免 3000 元"
+                ],
+                [
+                  "行程Ⅱ",
+                  "每位收費 (x＋2000) 元",
+                  "兩人同行，其中一人打八折"
+                ]
+              ]
+            }
+          ],
+          "originalRawOcrPreserved": true
+        },
+        "correctedAt": "2026-11-10",
         "ocrRaw": "23. 某旅行社推出兩種旅遊行程,其費用與優惠如表(二)。已知有兩名旅客預計結伴報名同\n一個行程,且兩人發現參加行程I的總費用等於參加行程廿的總費用,試求z=?\na ee ee: ee\n表(二)\n(A) 32000\n(B) 33000\n(C) 34000\n(D) 35000\n",
         "ocrEngineVersion": "runner_build_115_full_assets.py_psm6",
         "ocrLanguages": [
@@ -12477,11 +12508,31 @@
           "eng"
         ],
         "ocrDate": "2026-10-22T09:42:21.609274+00:00",
-        "ocrReviewStatus": "PENDING_INDIVIDUAL_VISUAL_QA"
+        "ocrReviewStatus": "PASS_SOURCE_G2_ORIGINAL_2X3_TABLE"
       },
       "sharedMaterialId": null,
       "formulas": [],
-      "tables": [],
+      "tables": [
+        {
+          "heading": [
+            "行程",
+            "原價",
+            "優惠"
+          ],
+          "rows": [
+            [
+              "行程Ⅰ",
+              "每位收費 x 元",
+              "兩人同行，其中一人減免 3000 元"
+            ],
+            [
+              "行程Ⅱ",
+              "每位收費 (x＋2000) 元",
+              "兩人同行，其中一人打八折"
+            ]
+          ]
+        }
+      ],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
         "sourcePageWebp": "sudu/data/original/115/00-MB/p008-e82e34d9cd-v2-w1400-q66.webp",
@@ -12518,18 +12569,34 @@
           "criteria": "official question number, full stem, 4 original options including figure choices, no adjacent question text, no page header/footer"
         }
       },
-      "correctionVersion": "legacy-unmodified",
-      "issues": [
-        "figure_or_table_recheck_pdf",
-        "single_question_crop_not_yet_generated"
-      ],
-      "reviewStatus": "needs_review",
+      "correctionVersion": "ROLE_A_ORIGINAL_2X3_TABLE_SINGLE_QID_20261110",
+      "issues": [],
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sourceDataCommit": "40ffa920d8efb8e7dc54471a62bb70ecb14ee096",
       "officialFinalAnswer": "B",
       "officialCorrectionChecked": true,
       "officialAnswerQaStatus": "PASS_FINAL_OFFICIAL_ANSWER_AND_NO_OBJECTION_NOTICE",
       "answerQaEvidence": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
-      "integrationReady": false
+      "integrationReady": false,
+      "textQaStatus": "PASS",
+      "imageQaStatus": "PASS",
+      "textQaEvidence": {
+        "reviewer": "ROLE A real archived original source/table evidence; not E",
+        "reviewedAt": "2026-11-10",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-ocr-publisher-20261110.json",
+        "evidenceSha256": "64fa11a8a40ff221a9b6cbc34a45ae8da14c9c5fa0a04d5b36f2a4012df7cde7",
+        "questionRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+        "sourceImageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+        "originalTableSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A original 115 MathB printed B; not E",
+        "reviewedAt": "2026-11-10",
+        "evidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-official-publisher-20261110.json",
+        "evidenceSha256": "a9c4b2f7e56f8ddb69aca1462af3e762029c5c2e78c6b92d473122b5ba943238",
+        "answerPdfSha256": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
