@@ -15,7 +15,7 @@ jobs:
   actual-original-g5-author-only:
     runs-on: ubuntu-latest
     env:
-      ROLE_C_REQUIRED_G5_IDS: "23"
+      ROLE_C_REQUIRED_G5_IDS: "23,20"
     steps:
       - name: Checkout exact issuer commit
         uses: actions/checkout@v4
