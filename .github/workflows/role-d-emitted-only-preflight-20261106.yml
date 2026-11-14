@@ -1,8 +1,9 @@
-name: ROLE D actual emitter 114 E12 E11 115 MB21 MB22 MB23 preflight (NO RELEASE)
+name: ROLE D actual emitter 114 E12 E11 115 MB21 MB22 MB20 MB23 preflight (NO RELEASE)
 on:
   push:
     branches:
       - qa/role-d-emitted-only-preflight-20261106
+      - qa/role-d-mb20-emitter-coverage-20261114
   workflow_dispatch:
 permissions:
   contents: read
@@ -56,7 +57,7 @@ jobs:
         run: |
           set -euo pipefail
           node tests/sudu_role_d_emitted_only_8x2_20261106.cjs
-          node -e "const a=require('./test-results/role-d-emitted-only-20261106/formal-uiqa-report.json');if(a.status!=='HOLD_UPSTREAM_ADMISSION')throw Error('unreviewed QID unexpectedly admissible');for(const q of ['114-00-E-12','114-00-E-11','115-00-MB-21','115-00-MB-22','115-00-MB-23']){if(a.outcomes[q].status!=='HOLD'||!a.outcomes[q].missing.some(x=>x.includes('trustedAiReviewReceipts')))throw Error('missing protected E gate for '+q)}if(a.cases.length||a.qaOnly||!a.noInterception)throw Error('invalid formal precheck');console.log('EXPECTED HOLD 5/5: NO REAL UIQA PASS, NO READY/LIVE')"
+          node -e "const a=require('./test-results/role-d-emitted-only-20261106/formal-uiqa-report.json');if(a.status!=='HOLD_UPSTREAM_ADMISSION')throw Error('unreviewed QID unexpectedly admissible');for(const q of ['114-00-E-12','114-00-E-11','115-00-MB-21','115-00-MB-22','115-00-MB-20','115-00-MB-23']){if(a.outcomes[q].status!=='HOLD'||!a.outcomes[q].missing.some(x=>x.includes('trustedAiReviewReceipts')))throw Error('missing protected E gate for '+q)}if(a.cases.length||a.qaOnly||!a.noInterception)throw Error('invalid formal precheck');console.log('EXPECTED HOLD 6/6: NO REAL UIQA PASS, NO READY/LIVE')"
       - name: Negative gate - cannot run formal without source/E/current digest
         run: |
           set -euo pipefail
