@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-24",
+  "role": "A_SOURCE_ONLY_NOT_DISTINCT_E",
+  "taskId": "A-115-MB24-NATIVE-SOURCE-ADMISSION-20261114-01",
+  "questionRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+  "webpSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+  "question": "小仲跟阿慈投資一筆資金，以年利率 r% 複利計算，並想瞭解本利和達到三倍本金需要幾年。小仲提問人工智慧得到快速估算值 A＝110/r，阿慈用數學公式算出精確值 B＝log₁₀(3)／log₁₀(1＋r/100)。若 r＝8，且將 A 以無條件進位至整數 C，B 以無條件進位至整數 D，則下列何者正確？",
+  "options": [
+    "D＝C－1",
+    "D＝C",
+    "D＝C＋1",
+    "D＝C＋2"
+  ],
+  "visualTextCompared": true,
+  "reviewer": "ROLE A Work original source inspection; not authenticated E content review",
+  "reviewedAt": "2026-11-14",
+  "originalPage": 8,
+  "originalPageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+  "originalSingleWebpGitBlob": "cfe5c8eeaf4496d5d98856f96a2c310186ef5893",
+  "sourcePageWebpGitBlob": "4c98df22dd3096c5d59178f4f2b6b3e88415bbee",
+  "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-24-stage-20261104.json",
+  "sourceStageGitBlob": "88faf4ee767b20c15db603e91aa250bc59eba84c",
+  "sourceCorrectionsPath": "sudu/data/processed/115/review-evidence/115-00-MB-24-image-transcription-correction-20261024.json",
+  "historicalCorrectionGitBlob": "ede8ce34695bc9e9429aab40079115f94610d669",
+  "sourcePdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourceCrop": [
+    90,
+    614,
+    1310,
+    1092
+  ],
+  "formulaDescription": "原卷印刷兩個完整分式：A＝110／r、B＝log₁₀(3)／log₁₀(1＋r/100)。不得以破碎的跨行字碼顯示。",
+  "sourcePixelDifference": "ZERO_RGB_ALL_CHANNELS",
+  "noNewOCR": true,
+  "noRecrop": true,
+  "originalRawOcrPreserved": true,
+  "independentE": false,
+  "studentReady": false,
+  "studentLive": false
+}
