@@ -6,9 +6,11 @@ from pathlib import Path
 import shutil
 import sqlite3
 import tempfile
+import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 spec = importlib.util.spec_from_file_location("integrity", ROOT / "scripts/qa_current_source_integrity_20261114.py")
 integrity = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(integrity)
@@ -55,6 +57,24 @@ class CurrentPayloadIntegrity(unittest.TestCase):
     def test_missing_manifest_id_rejected(self):
         self.update("webp-manifest.json", lambda data: data["items"].pop())
         with self.assertRaisesRegex(ValueError, "manifest IDs/count"):
+            integrity.check_year(self.root, 115)
+
+    def test_stale_denormalized_verification_flag_rejected(self):
+        with sqlite3.connect(self.base / "question-bank.sqlite3") as db:
+            db.execute("UPDATE questions SET answer_verified=1-answer_verified WHERE question_id=(SELECT question_id FROM questions LIMIT 1)")
+        with self.assertRaisesRegex(ValueError, "stale denormalized projection"):
+            integrity.check_year(self.root, 115)
+
+    def test_string_canonical_flag_rejected_even_with_matching_payload(self):
+        data = json.loads((self.base / "questions.json").read_text())
+        q = data["questions"][0]
+        q["answerVerified"] = "true"
+        payload = json.dumps(q, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        (self.base / "questions.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        with sqlite3.connect(self.base / "question-bank.sqlite3") as db:
+            db.execute("UPDATE questions SET payload_json=?,payload_sha256=? WHERE question_id=?",
+                       (payload, hashlib.sha256(payload.encode()).hexdigest(), q["questionId"]))
+        with self.assertRaisesRegex(ValueError, "must be a boolean"):
             integrity.check_year(self.root, 115)
 
     def test_stale_inventory_digest_rejected(self):
