@@ -139,13 +139,24 @@ class TestRoleC115NativeG5(unittest.TestCase):
                 self.assertTrue(self.publisher.official_notice_scope_certified(ROOT,115,q,g3))
                 self.assertEqual(m["sha256"],c["webp"])
                 self.assertEqual(sha((ROOT/m["output"]).read_bytes()),c["webp"])
-                self.assertEqual(self.publisher.text_revision(q,c["webp"]),c["rev"])
+                # Protected main text_revision intentionally covers only stem/options/WebP;
+                # MB23 source table revision MUST instead match native G2 + q.textQaEvidence.
+                if n != 23:
+                    self.assertEqual(self.publisher.text_revision(q,c["webp"]),c["rev"])
+                else:
+                    self.assertEqual(self.publisher.text_revision(q,c["webp"]),
+                                     orig["sourceTextRevisionWithoutTable"])
+                    self.assertNotEqual(self.publisher.text_revision(q,c["webp"]),c["rev"])
+                    self.assertEqual(q["textQaEvidence"]["questionRevision"],c["rev"])
+                    self.assertEqual(q["textQaEvidence"]["originalTableSha256"],
+                                     doc["sourceTableTextSha256"])
+                    self.assertEqual(self.publisher.source_proof(q,True,True,c["rev"]),(True,True))
                 self.assertEqual((sha(g2path.read_bytes()),sha(g3path.read_bytes())),(c["g2"],c["g3"]))
                 self.assertEqual((doc["sourceG2Sha256"],doc["sourceG3Sha256"]),(c["g2"],c["g3"]))
                 self.assertEqual(orig["imageSha256"],c["webp"])
                 rev=orig.get("sourceTextRevisionWithTable",orig.get("sourceTextRevisionWithoutTable"))
                 self.assertEqual(rev,c["rev"])
-                self.assertEqual(q.get("sourceTables") or [],orig["sourceTables"])
+                self.assertEqual(q.get("tables") or [],orig["sourceTables"])
                 if n==23:
                     self.assertNotEqual(orig["sourceTextRevisionWithoutTable"],c["rev"])
                     self.assertEqual(doc["sourceRevisionMode"],"WITH_ORIGINAL_2X3_TABLE")
@@ -219,8 +230,12 @@ class TestRoleC115NativeG5(unittest.TestCase):
                 self.assertNotEqual(g3["finalAnswer"],c["answer"])
                 if n==23:
                     bad=copy.deepcopy(next(x for x in self.bank if x["questionId"]==qid))
-                    bad["sourceTables"][0]["rows"][0][2]="其中一人減免 30000 元"
-                    self.assertNotEqual(self.publisher.text_revision(bad,c["webp"]),c["rev"])
+                    bad["tables"][0]["rows"][0][2]="其中一人減免 30000 元"
+                    original_g2=read(EVIDENCE/f"{qid}-ocr-publisher-{c['date']}.json")
+                    self.assertNotEqual(bad["tables"],original_g2["sourceTables"])
+                    self.assertNotEqual(bad["tables"],doc["sourceTables"])
+                    self.assertEqual(original_g2["sourceTables"],doc["sourceTables"])
+                    self.assertEqual(orig["sourceTextRevisionWithTable"],c["rev"])
                     self.assertNotEqual(orig["sourceTextRevisionWithoutTable"],c["rev"])
 
     def test_negative_no_e_trust_no_approval_or_invented_sessions(self):
