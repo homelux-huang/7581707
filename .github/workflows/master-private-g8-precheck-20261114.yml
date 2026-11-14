@@ -43,7 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           SRC="$RUNNER_TEMP/qa-readonly"
-          PRIVATE="$RUNNER_TEMP/sudu-private-g8-ci"
+          PRIVATE="$(python -c 'import tempfile; print(tempfile.gettempdir())')/sudu-private-g8-ci"
           cleanup() { rm -rf "$PRIVATE"; git worktree remove --force "$SRC" >/dev/null 2>&1 || true; }
           trap cleanup EXIT
           git fetch --no-tags origin qa/114-115-official-visual-review
