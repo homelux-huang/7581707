@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only current bank payload integrity; no historic one-PR whitelist or release verdict.
 
-Checks core row identity and payload SHA, not the legacy 115 denormalized QA flags.
+Checks all 14 SQLite columns for 115, including strict canonical boolean projections.
 A PASS is not complete source/answer/teaching admission.
 """
 import hashlib
@@ -50,11 +50,16 @@ def check_year(root, year):
                 if column in saved.keys():
                     demand(saved[column] == q.get(field),
                            f"{year}: denormalized {column} mismatch {saved['question_id']}")
+    if year == 115:
+        # Current-state projection checks; no frozen historic one-PR baseline.
+        from role_a_115_sqlite_denorm_repair_20261114 import plan
+        differences, _ = plan(root)
+        demand(not differences, "115: stale denormalized projection")
     inventory = json.loads((base / "inventory.json").read_text(encoding="utf-8"))["sqlite"]
     demand(inventory["rows"] == 205 and inventory["roundtripPass"] is True, f"{year}: inventory rows/status")
     demand(inventory["dbSha256"] == sha(dbpath), f"{year}: inventory database SHA")
     demand(inventory["sourceQuestionsSha256"] == sha(base / "questions.json"), f"{year}: inventory bank SHA")
-    return {"year": year, "rows": 205, "jsonSqlitePayloadManifestIntegrity": "PASS", "legacyDenormalizedQaFlags": "NOT_EVALUATED", "studentReleaseVerdict": "NOT_EVALUATED"}
+    return {"year": year, "rows": 205, "jsonSqlitePayloadManifestIntegrity": "PASS", "denormalizedColumnParity": "14_OF_14_PASS" if year == 115 else "CORE_METADATA_PASS", "studentReleaseVerdict": "NOT_EVALUATED"}
 
 
 if __name__ == "__main__":

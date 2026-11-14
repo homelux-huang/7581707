@@ -1,0 +1,507 @@
+{
+  "baseCommit": "099f26b120fa350c5d88beb8e4642996be1ceac2",
+  "scope": "115_SQLITE_DENORMALIZED_PROJECTIONS_ONLY",
+  "rows": 205,
+  "changedRows": 77,
+  "changedCells": 80,
+  "countsByColumn": {
+    "answer_verified": 77,
+    "question": 1,
+    "question_verified": 1,
+    "review_status": 1
+  },
+  "databaseSha256Before": "67f23da3358d27a8a439dbcdbddceb33d21754d6d37adfe4a0fbcc892aad8bb3",
+  "databaseSha256After": "41046eebb0b228538616b1f19c9cabbd9b8d9e19808ae34fc9703f23fd5adc17",
+  "inventorySha256Before": "fdcffa3424d1936d5580400aeeb810a6b41c7e3fe1c0a5ffa877a4acf8258dd1",
+  "canonicalQuestionsSha256": "b66c12558421399641d1ce483b0228684540c07ac3b39873e9876363573ec814",
+  "manifestSha256": "5b37bd1e8e4e31df8ea3f4e1f94c1bacf40c584cee7f2a3fa44510f394a64c4e",
+  "schemaUnchanged": true,
+  "payloadBytesAndHashesUnchanged": true,
+  "sharedMaterialsUnchanged": true,
+  "canonicalJsonUnchanged": true,
+  "sourceOrAnswerVerificationGranted": false,
+  "studentReady": false,
+  "live": false,
+  "changes": [
+    {
+      "questionId": "115-00-C-06",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-C-11",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-C-12",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-C-13",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-C-14",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-C-15",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-01",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-02",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-03",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-04",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-05",
+      "column": "question",
+      "before": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
+      "after": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？"
+    },
+    {
+      "questionId": "115-00-MB-05",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-05",
+      "column": "question_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-05",
+      "column": "review_status",
+      "before": "needs_review",
+      "after": "original_webp_text_reviewed_other_release_gates_pending"
+    },
+    {
+      "questionId": "115-00-MB-06",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-07",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-08",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-09",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-10",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-11",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-12",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-13",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-14",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-15",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-16",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-17",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-18",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-19",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-24",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-00-MB-25",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-01",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-02",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-03",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-04",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-05",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-06",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-07",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-08",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-09",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-10",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-11",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-12",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-13",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-14",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-15",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-16",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-17",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-18",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-19",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-20",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-21",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-22",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-23",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-24",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-25",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-26",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-27",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-28",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-29",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-30",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-31",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-32",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-33",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-34",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-35",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-36",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-37",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-38",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-39",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-40",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-41",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-42",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-43",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-44",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-45",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-46",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-47",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-48",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-49",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "questionId": "115-09-1-50",
+      "column": "answer_verified",
+      "before": 0,
+      "after": 1
+    }
+  ]
+}
