@@ -50,15 +50,15 @@ jobs:
           git worktree add --detach "$SRC" "$SOURCE_QA_SHA"
           test "$(git -C "$SRC" rev-parse HEAD)" = "$SOURCE_QA_SHA"
           test "$(sha256sum "$SRC/sudu/data/processed/115/questions.json" | cut -d ' ' -f1)" = "79aebbee28f83d31fa6d99ecce186973b0f4157284ba664a8072d250dca51c17"
-          python scripts/sudu_g8_private_precheck_20261114.py \
+          python -m scripts.sudu_g8_private_precheck_20261114 \
             --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
             --qid 114-00-E-11 \
             --teaching-sha ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb
-          python scripts/sudu_g8_private_precheck_20261114.py \
+          python -m scripts.sudu_g8_private_precheck_20261114 \
             --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
             --qid 115-00-MB-21 \
             --teaching-sha 4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4
-          python scripts/sudu_g8_private_precheck_20261114.py \
+          python -m scripts.sudu_g8_private_precheck_20261114 \
             --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
             --qid 115-00-MB-22 \
             --teaching-sha 5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600
