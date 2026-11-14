@@ -7,7 +7,7 @@ on:
         required: true
         default: "114"
       max_questions:
-        description: "Maximum billable model calls this run (1-30)"
+        description: "Maximum API request attempts, including failed or unusable replies (1-30)"
         required: true
         default: "10"
 permissions:

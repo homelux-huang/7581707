@@ -41,7 +41,8 @@ def ask(q):
         "max_tokens":1500
     }
     r=requests.post("https://api.openai.com/v1/chat/completions",json=payload,
-                    headers={"Authorization":"Bearer "+API,"Content-Type":"application/json"},timeout=65)
+                    headers={"Authorization":"Bearer "+API,"Content-Type":"application/json"},timeout=65,
+                    allow_redirects=False)
     r.raise_for_status()
     data=json.loads(r.json()["choices"][0]["message"]["content"])
     if data.get("unable") is True:return None
@@ -56,14 +57,17 @@ def ask(q):
     return data
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("--max-questions",type=int,default=30)
+    p.add_argument("--max-questions",type=int,default=30,
+                   help="Maximum API request attempts, including failed or unusable replies (1-30)")
     p.add_argument("--years",nargs="*",type=int)
     a=p.parse_args()
+    if not 1<=a.max_questions<=30:
+        p.error("--max-questions must be between 1 and 30 API request attempts")
     if not API:
         print("TUTORING_SKIPPED: OPENAI_API_KEY GitHub secret not configured. Official PDF import is independent.")
         return
-    maximum=min(max(0,a.max_questions),250)
-    count=0;errors=0
+    maximum=a.max_questions
+    count=0;attempts=0;errors=0
     for year in (a.years or list(range(115,89,-1))):
         f=DIR/(str(year)+".json")
         if not f.exists():continue
@@ -71,9 +75,12 @@ def main():
         changed=False
         for paper in data.get("papers",[]):
             for q in paper.get("questions",[]):
-                if count>=maximum:break
+                if attempts>=maximum:break
                 if not eligible(q):continue
                 try:
+                    # Consume the request allowance before the call. A provider
+                    # error, invalid JSON or unable reply still consumes it.
+                    attempts+=1
                     tutor=ask(q)
                     if tutor is None:
                         q["teachingStatus"]="needs_human_review";changed=True;continue
@@ -99,10 +106,12 @@ def main():
                     time.sleep(0.2)
                 except Exception as e:
                     errors+=1
-                    print("AI_FAILED",year,paper.get("paper"),q.get("number"),type(e).__name__,str(e)[:140],flush=True)
+                    # Provider exception text can contain credentials or response
+                    # data; retain only the error class in public Actions logs.
+                    print("AI_FAILED",year,paper.get("paper"),q.get("number"),type(e).__name__,flush=True)
                     if errors>=4:break
-            if count>=maximum or errors>=4:break
+            if attempts>=maximum or errors>=4:break
         if changed:f.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding="utf8")
-        if count>=maximum or errors>=4:break
-    print("DRAFT_SUMMARY",count,"errors",errors,flush=True)
+        if attempts>=maximum or errors>=4:break
+    print("DRAFT_SUMMARY",count,"request_attempts",attempts,"errors",errors,flush=True)
 if __name__=="__main__":main()

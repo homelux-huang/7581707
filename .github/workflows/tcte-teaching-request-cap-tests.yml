@@ -1,0 +1,26 @@
+name: TCTE teaching request cap (MOCK NETWORK ONLY)
+on:
+  push:
+    branches: [fix/tcte-teaching-request-cap-20261114]
+  pull_request:
+    paths:
+      - scripts/tcte_teaching.py
+      - tests/test_tcte_teaching_request_cap.py
+      - .github/workflows/tcte-teaching-drafts.yml
+      - .github/workflows/tcte-teaching-request-cap-tests.yml
+permissions:
+  contents: read
+jobs:
+  request_cap:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q requests
+      - name: Prove attempt cap using mocked HTTP only
+        run: python -m unittest discover -s tests -p test_tcte_teaching_request_cap.py -v
