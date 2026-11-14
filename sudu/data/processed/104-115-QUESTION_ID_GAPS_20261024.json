@@ -1,6 +1,6 @@
 {
-  "generatedAtUTC": "2026-11-10T13:05:23.799309+00:00",
-  "qaCommitAtStart": "9bf1c8ec69f7ca651ac46874c1a32564602fde50",
+  "generatedAtUTC": "2026-11-14T03:18:12.103788+00:00",
+  "qaCommitAtStart": "3b8dd5c47d5adcb5e8047189d25e58b20ea1bbef",
   "documentedOriginalScope": "105-114 inclusive = 10 years, plus 115; 104 is supplementary",
   "year104Status": "EXTRA_SOURCE_ONLY_UNVERIFIED_COUNT",
   "noNewQAFlagsOrAnswerFlagsSet": true,
@@ -1883,7 +1883,7 @@
       "missingFourTextOptionsIds": [],
       "ocrTextIndependentlyVerified": 1,
       "answerFinalVerified": 81,
-      "questionVerifiedFlagCount": 2,
+      "questionVerifiedFlagCount": 5,
       "sourceLegacyCanonicalMismatchIds": [],
       "sharedMaterialCandidates": 20,
       "sharedMaterialQaPassRecorded": 5,

@@ -2,7 +2,7 @@
 
 > 這是隔離 QA 分支唯讀 SHA/JSON/SQLite 核查，**不是**原卷人工目視 PASS 或正式題庫放行。歷史年度題數源自現有 years JSON，仍要獨立核對 TCTE 官方實際題數。
 
-- 基準 Commit：`9bf1c8ec69f7ca651ac46874c1a32564602fde50`。
+- 基準 Commit：`3b8dd5c47d5adcb5e8047189d25e58b20ea1bbef`。
 - 正式十年度定義：**105–114（含），加 115 年**。104 年另作範圍外來源-only 補充盤點。
 - 105–115 候選 `2249` 題；具檔案與 SHA 的 WebP `2249` 題；尚缺單題 WebP `0`；有既存 G1 PASS 及路徑證據 `275` 題；SQLite G5 `11/11` 年。
 - 所有年度仍 NO RELEASE，不因圖片解碼、候選答案或 SQLite PASS 宣告完整 QA。
