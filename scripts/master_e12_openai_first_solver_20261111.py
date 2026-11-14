@@ -59,6 +59,10 @@ def verified_operator_gate() -> dict:
     owner_armed = os.getenv("E12_G6_OWNER_ARMED", "")
     actor = os.getenv("GITHUB_ACTOR", "")
     triggering_actor = os.getenv("GITHUB_TRIGGERING_ACTOR", "")
+    approved_sha = os.getenv("E12_G6_APPROVED_COMMIT_SHA", "")
+    approved_run = os.getenv("E12_G6_APPROVED_RUN_ID", "")
+    actual_sha = os.getenv("GITHUB_SHA", "")
+    actual_run = os.getenv("GITHUB_RUN_ID", "")
     checks = {
         "owner_armed": owner_armed == "INDEPENDENT_OPERATOR_REVIEWED_ONE_SHOT",
         "operator_configured": bool(expected_actor)
@@ -71,8 +75,14 @@ def verified_operator_gate() -> dict:
         "only_push": os.getenv("GITHUB_EVENT_NAME") == "push",
         "first_run_only": os.getenv("GITHUB_RUN_ATTEMPT") == "1",
         "original_40hex_gitsha": bool(
-            re.fullmatch(r"[0-9a-f]{40}", os.getenv("GITHUB_SHA", ""))
+            re.fullmatch(r"[0-9a-f]{40}", actual_sha)
         ),
+        # A first attempt on a NEW run is still a replay unless the owner
+        # explicitly bound that exact waiting run and reviewed commit.
+        "approved_commit": bool(re.fullmatch(r"[0-9a-f]{40}", approved_sha))
+            and approved_sha == actual_sha,
+        "approved_run": bool(re.fullmatch(r"[1-9][0-9]*", approved_run))
+            and approved_run == actual_run,
     }
     if not all(checks.values()):
         raise RuntimeError(
@@ -83,6 +93,8 @@ def verified_operator_gate() -> dict:
         "operatorGithubActorClaim": actor,
         "githubRunAttempt": "1",
         "ownerApprovedOperatorLoginClaim": expected_actor,
+        "ownerApprovedCommitShaClaim": approved_sha,
+        "ownerApprovedRunIdClaim": approved_run,
         "operatorGateType": "GITHUB_ENVIRONMENT_VARIABLE_AND_ACTOR_CHECK__NOT_A_SIGNED_ATTESTATION",
     }
 

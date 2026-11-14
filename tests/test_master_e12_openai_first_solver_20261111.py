@@ -46,10 +46,13 @@ class ContractTest(unittest.TestCase):
             "GITHUB_EVENT_NAME": "push",
             "GITHUB_RUN_ATTEMPT": "1",
             "GITHUB_SHA": "a" * 40,
+            "GITHUB_RUN_ID": "123456789",
             "GITHUB_ACTOR": "unexposed-external-operator-fixture",
             "GITHUB_TRIGGERING_ACTOR": "unexposed-external-operator-fixture",
             "E12_G6_OWNER_OPERATOR_LOGIN": "unexposed-external-operator-fixture",
             "E12_G6_OWNER_ARMED": "INDEPENDENT_OPERATOR_REVIEWED_ONE_SHOT",
+            "E12_G6_APPROVED_COMMIT_SHA": "a" * 40,
+            "E12_G6_APPROVED_RUN_ID": "123456789",
         }
 
     def tearDown(self):
@@ -119,11 +122,46 @@ class ContractTest(unittest.TestCase):
         self.assertIn('environment: e12-g6-independent-operator', text)
         self.assertIn('E12_G6_OWNER_OPERATOR_LOGIN: ${{ vars.E12_G6_OWNER_OPERATOR_LOGIN }}', text)
         self.assertIn('E12_G6_OWNER_ARMED: ${{ vars.E12_G6_OWNER_ARMED }}', text)
+        self.assertIn('E12_G6_APPROVED_COMMIT_SHA: ${{ vars.E12_G6_APPROVED_COMMIT_SHA }}', text)
+        self.assertIn('E12_G6_APPROVED_RUN_ID: ${{ vars.E12_G6_APPROVED_RUN_ID }}', text)
         self.assertIn('secrets.E12_G6_OPENAI_API_KEY', text)
         self.assertIn("github.event.head_commit.message == 'execute(e12-g6): approved independent provider first-turn'", text)
+        self.assertIn("github.ref == 'refs/heads/security/master-e12-openai-first-response-harness-20261111'", text)
         self.assertIn('one_real_external_first_attempt:', text)
         self.assertIn('needs: synthetics_only_contract', text)
         # An admin must separately configure required reviewers and prevent self-review.
+
+    def test_new_push_or_same_commit_new_run_denied_before_provider(self):
+        cases = (
+            (dict(self.owner_mock, GITHUB_SHA="b" * 40, GITHUB_RUN_ID="123456790"), "approved_commit"),
+            (dict(self.owner_mock, GITHUB_RUN_ID="123456790"), "approved_run"),
+            (dict(self.owner_mock, GITHUB_RUN_ATTEMPT="2"), "first_run_only"),
+        )
+        for invalid, reason in cases:
+            with self.subTest(reason=reason), tempfile.TemporaryDirectory() as isolated:
+                h.OUT = Path(isolated)
+                with patch.dict(os.environ, dict(invalid, E12_G6_OPENAI_API_KEY="TEST_SYNTHETIC_KEY"), clear=False):
+                    with patch.object(h.urllib.request, "urlopen", side_effect=AssertionError("network forbidden")):
+                        with self.assertRaisesRegex(RuntimeError, reason):
+                            h.first()
+                self.assertFalse((h.OUT / "provider_first_response.body").exists())
+
+    def test_missing_or_malformed_exact_authorization_denied(self):
+        cases = (
+            {"E12_G6_APPROVED_COMMIT_SHA": ""},
+            {"E12_G6_APPROVED_COMMIT_SHA": "not-a-sha"},
+            {"E12_G6_APPROVED_RUN_ID": ""},
+            {"E12_G6_APPROVED_RUN_ID": "0"},
+            {"E12_G6_APPROVED_RUN_ID": "123456789\n"},
+            {"E12_G6_APPROVED_RUN_ID": "123456789.0"},
+            {"E12_G6_APPROVED_RUN_ID": "１２３４５６７８９"},
+            {"GITHUB_RUN_ID": ""},
+        )
+        for edit in cases:
+            with self.subTest(edit=edit):
+                with patch.dict(os.environ, dict(self.owner_mock, **edit), clear=False):
+                    with self.assertRaisesRegex(RuntimeError, "approved_commit|approved_run"):
+                        h.verified_operator_gate()
 
     def test_owner_gate_validity_not_independent_security_attestation(self):
         with patch.dict(os.environ, self.owner_mock, clear=False):
@@ -132,6 +170,8 @@ class ContractTest(unittest.TestCase):
             observation["operatorGateType"],
             "GITHUB_ENVIRONMENT_VARIABLE_AND_ACTOR_CHECK__NOT_A_SIGNED_ATTESTATION"
         )
+        self.assertEqual(observation["ownerApprovedCommitShaClaim"], self.owner_mock["GITHUB_SHA"])
+        self.assertEqual(observation["ownerApprovedRunIdClaim"], self.owner_mock["GITHUB_RUN_ID"])
 
     def test_one_synthetic_model_post_preserves_bytes_but_never_approves(self):
         fake = {
@@ -151,7 +191,7 @@ class ContractTest(unittest.TestCase):
         def mock_urlopen(request, timeout=0):
             calls.append((request.full_url, request.data, timeout))
             return FakeHttp(original_bytes)
-        with patch.dict(os.environ, dict(self.owner_mock, E12_G6_OPENAI_API_KEY="KEY_SYNTHETIC_TEST_DO_NOT_USE", GITHUB_RUN_ID="SYNTHETIC"), clear=False):
+        with patch.dict(os.environ, dict(self.owner_mock, E12_G6_OPENAI_API_KEY="KEY_SYNTHETIC_TEST_DO_NOT_USE"), clear=False):
             with patch.object(h.urllib.request, "urlopen", side_effect=mock_urlopen):
                 h.first()
         self.assertEqual(len(calls), 1)
