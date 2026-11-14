@@ -5,6 +5,7 @@ on:
     paths:
       - scripts/role_a_114115_mb25_gap_readonly_20261114.py
       - .github/workflows/role-a-114115-mb25-readonly-audit-20261114.yml
+      - docs/ROLE_A_114115_MB25_GAP_READONLY_RETURN_20261114.md
 permissions:
   contents: read
 jobs:
