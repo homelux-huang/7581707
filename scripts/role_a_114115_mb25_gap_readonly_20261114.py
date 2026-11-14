@@ -64,7 +64,7 @@ def snapshot_year(year:int):
         cols=[r[1] for r in con.execute("PRAGMA table_info(questions)")]
         db=con.execute("SELECT question_id,payload_json,payload_sha256 FROM questions").fetchall()
     check(intact=="ok",f"{year} DB integrity")
-    check(len(db)==205 and len(cols)==14,f"{year} DB 205/14")
+    check(len(db)==205 and len(cols)==14,f"{year} DB 205/14; actual rows={len(db)}, columns={len(cols)}, names={cols}")
     mapped={q["questionId"]:q for q in questions}
     db_qid=set(row[0] for row in db)
     check(db_qid==set(ids),f"{year} DB canonical QIDs")
