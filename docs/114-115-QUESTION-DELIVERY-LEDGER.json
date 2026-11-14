@@ -3960,7 +3960,58 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_PENDING_WORK_A_114_E07_LEASE_ACTIVE",
+          "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+          "originalWebpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+          "officialAnswerStatus": "CANDIDATE_A_NOT_VERIFIED",
+          "mergedSourcePrs": []
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_CONTENT_FROZEN_NATIVE_PENDING",
+          "originalCanonicalTeachingSha256": "d40bb97b85de499b63a3eeea1aa4c808f295f8e4ae6515cf597fdf9d40152eaf",
+          "nativeIssuerGitBlobSha1": null,
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "NO_CURRENT_TRUSTED_E_CONTENT_RECEIPT",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "NOT_TESTED_SOURCE_PENDING",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "WORK_ROLE_A",
+          "ROLE_B",
+          "ROLE_E",
+          "ROLE_D"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": null,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "114-00-E-08": {
       "questionId": "114-00-E-08",
@@ -4349,7 +4400,60 @@
         "TRUSTED_DISTINCT_E_FINAL_CONTENT_RECEIPT_AND_PROTECTED_REGISTRY_PENDING",
         "PUBLISHER_ACTUAL_APPROVED_ARTIFACT_8X2_V4_UIQA_PENDING",
         "REQUIRED_SOURCE_LESSON_REVIEW_ARTIFACTS_NOT_YET_IN_CURRENT_MAIN"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+          "originalWebpSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+          "officialAnswerStatus": "VERIFIED_A",
+          "mergedSourcePrs": [
+            179
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb",
+          "nativeIssuerGitBlobSha1": "e0adc349303a9cf3163b60d49f78671e2bb1be2e",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "SUBSTANTIVE_E_NOTES_PR200_QA_MERGED_NOT_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "WORK_AUTHOR_SESSION_PROVENANCE",
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": 200,
+          "pr201FourAuthorIssuers": null,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "114-00-E-12": {
       "questionId": "114-00-E-12",
@@ -4433,7 +4537,61 @@
         "DISTINCT_AI_CONTENT_REVIEW_NOT_YET_CERTIFIED",
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "COMPLETE_DUAL_LEVEL_FOUR_OPTION_TEACHING_NOT_DELIVERED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+          "originalWebpSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+          "officialAnswerStatus": "VERIFIED_C",
+          "mergedSourcePrs": [
+            168,
+            169
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_TEACHING_FROZEN_QA_ONLY",
+          "originalCanonicalTeachingSha256": "c6d27aad13dca2edf23d72c16b4bf357173ae052e0a42c89af7e3049e490dc4a",
+          "nativeIssuerGitBlobSha1": "27e2ebe27751f30a9743ee649cb4d566cee03166",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "E12_G6_G7_INDEPENDENT_HOLD_PR188",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "NO_CURRENT_FORMAL_D_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "WORK_INDEPENDENT_G6_G7",
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": null,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "114-00-E-13": {
       "questionId": "114-00-E-13",
@@ -26057,7 +26215,59 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+          "originalWebpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+          "officialAnswerStatus": "VERIFIED_A",
+          "mergedSourcePrs": [
+            187
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d",
+          "nativeIssuerGitBlobSha1": "26a914fcc963a5da69cdcf18b3f6809f48deecec",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "NOT_CURRENT_AUTHENTICATED_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": 201,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-00-MB-21": {
       "questionId": "115-00-MB-21",
@@ -26150,7 +26360,60 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9",
+          "originalWebpSha256": "b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693",
+          "officialAnswerStatus": "VERIFIED_A",
+          "mergedSourcePrs": [
+            181
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4",
+          "nativeIssuerGitBlobSha1": "eeb47800dc679e7c783af9e2f7412d38fb11e4ba",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "SUBSTANTIVE_E_NOTES_PR200_QA_MERGED_NOT_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "WORK_AUTHOR_SESSION_PROVENANCE",
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": 200,
+          "pr201FourAuthorIssuers": null,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-00-MB-22": {
       "questionId": "115-00-MB-22",
@@ -26243,7 +26506,60 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17",
+          "originalWebpSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+          "officialAnswerStatus": "VERIFIED_B",
+          "mergedSourcePrs": [
+            182
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600",
+          "nativeIssuerGitBlobSha1": "ef8fda5920e85889705dff0d85f738b7f870b770",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "SUBSTANTIVE_E_NOTES_PR200_QA_MERGED_NOT_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "WORK_AUTHOR_SESSION_PROVENANCE",
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": 200,
+          "pr201FourAuthorIssuers": null,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-00-MB-23": {
       "questionId": "115-00-MB-23",
@@ -26379,7 +26695,60 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_ORIGINAL_2X3_TABLE_VERIFIED_QA_ONLY",
+          "questionRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+          "originalWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+          "officialAnswerStatus": "VERIFIED_B",
+          "mergedSourcePrs": [
+            185
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6",
+          "nativeIssuerGitBlobSha1": "1e5676eb0a7ec8962de5017812500144ea0b2c50",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "NOT_CURRENT_AUTHENTICATED_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "TABLE_REVISION_MISMATCH_EXPECTED_HOLD_PR202__REPAIR_PR203_CI_PASS_REVIEW_PENDING",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": 203,
+          "sourceTableFixStatus": "FIX_TESTED_DRAFT_CODE_REVIEW_PENDING_NOT_MAIN"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "MASTER_PUBLISHER_CODE_REVIEW",
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": 201,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-00-MB-24": {
       "questionId": "115-00-MB-24",
@@ -26472,7 +26841,59 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "9357c0f8f30ab131f8450c8a9b45d34942fdd8207c6aac688f4f3847a55e8267",
+          "originalWebpSha256": "c022bdc2927532ef6ddb5601d692e2f6accc943d1cc5b0041c9515334295dfeb",
+          "officialAnswerStatus": "VERIFIED_C",
+          "mergedSourcePrs": [
+            197
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "317fe1d731f29e9634ec17f0fc1dc5c308b804de5759991a005f94f81bbffd06",
+          "nativeIssuerGitBlobSha1": "21bb0408bd0d598e280dd864768e2199a03ff19f",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "NOT_CURRENT_AUTHENTICATED_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": 201,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-00-MB-25": {
       "questionId": "115-00-MB-25",
@@ -26565,7 +26986,59 @@
         "PUBLISHER_AI_REVIEW_POLICY_MIGRATION_NOT_YET_ACTIVE",
         "EXACT_CURRENT_TEACHING_DIGEST_V4_8X2_NOT_VERIFIED",
         "LATEST_FINAL_ANSWER_CORRECTION_SOURCE_ADMISSION_NOT_ACCEPTED"
-      ]
+      ],
+      "currentVerifiedState20261114": {
+        "receiptType": "MASTER_QA_SOURCE_AND_AUTHOR_PROGRESS_ONLY_NOT_STUDENT_APPROVAL",
+        "evidenceAsOfQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+        "productionMainHead": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+        "officialSource": {
+          "status": "SOURCE_G1G2G3_VERIFIED_QA_ONLY",
+          "questionRevision": "8b29dffa0c37abd1b37989878a9f8d34392ba71a04017ca1591d6fa45ec9cb6f",
+          "originalWebpSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+          "officialAnswerStatus": "VERIFIED_C",
+          "mergedSourcePrs": [
+            198
+          ]
+        },
+        "originalAuthorG5": {
+          "status": "AUTHOR_NATIVE_G5_MERGED_QA_ONLY",
+          "originalCanonicalTeachingSha256": "a860b08a6f5b76fe1331dc4204a46a3135e511449d9b6004cc4f99be020e4d32",
+          "nativeIssuerGitBlobSha1": "58716e2f3abc1f2ada343ddb7d2ced7951a22709",
+          "originalAuthorSessionId": "UNVERIFIED"
+        },
+        "independentAiContent": {
+          "status": "NOT_CURRENT_AUTHENTICATED_V1_TRUST",
+          "reviewerSessionId": "UNVERIFIED",
+          "firstBlindRawResponse": "UNVERIFIED",
+          "protectedV1TrustedReceipt": "ABSENT",
+          "currentPolicyMode": "DISTINCT_AI_CONTENT_RECEIPT_V1",
+          "requireHumanTeacher": false
+        },
+        "v4": {
+          "status": "FORMAL_PUBLISHER_EMITTED_8X2_PENDING",
+          "privateTechnicalPrecheck": "PRIVATE_NATIVE_TECHNICAL_PRECHECK_PASS_NOT_FORMAL_G8",
+          "privateDraftPr": 202,
+          "formalSixteenVerified": false
+        },
+        "publisher": {
+          "sourceTableSpecificFixPr": null,
+          "sourceTableFixStatus": "NOT_APPLICABLE"
+        },
+        "studentReady": false,
+        "studentLive": false,
+        "nextRoles": [
+          "ROLE_E",
+          "ROLE_D",
+          "MASTER"
+        ],
+        "readOnlyEvidenceRefs": {
+          "issue36": "https://github.com/homelux-huang/7581707/issues/36",
+          "sourceQaHead": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+          "pr200EContentNotes": null,
+          "pr201FourAuthorIssuers": 201,
+          "runPrivatePrecheck": 43614191177
+        }
+      }
     },
     "115-09-1-01": {
       "questionId": "115-09-1-01",
@@ -35295,5 +35768,40 @@
       },
       "scopeNote": "Append-only latest receipt; all410 question entries unchanged. Older latestReceipt fields are historical snapshots, not present certification. D68 route/seed browser160 cases do not establish new annual exact-digest teaching UIQA."
     }
+  },
+  "verifiedIncrementalReceipt20261114": {
+    "taskId": "MASTER-PR30-410-LEDGER-DELTA-20261114-01",
+    "claimIssue36CommentId": 6880553808,
+    "sourceBranch": "qa/114-115-official-visual-review",
+    "sourceSha": "f9a6bc84531b5a6a8b5d57cde3828323e500cbbc",
+    "protectedMainSha": "0bc2b05ada43ef02983d56fc45ec3448189a318b",
+    "originalLedgerUpdatedAt": "2026-10-27",
+    "currentVerifiedQids": [
+      "114-00-E-07",
+      "114-00-E-11",
+      "114-00-E-12",
+      "115-00-MB-20",
+      "115-00-MB-21",
+      "115-00-MB-22",
+      "115-00-MB-23",
+      "115-00-MB-24",
+      "115-00-MB-25"
+    ],
+    "changedQidCount": 9,
+    "untouchedCandidateCount": 401,
+    "originalCandidateCount": 410,
+    "studentLive": {
+      "114": 0,
+      "115": 5
+    },
+    "newReady": 0,
+    "newLive": 0,
+    "evidence": [
+      "https://github.com/homelux-huang/7581707/pull/200",
+      "https://github.com/homelux-huang/7581707/pull/201",
+      "https://github.com/homelux-huang/7581707/pull/202",
+      "https://github.com/homelux-huang/7581707/pull/203"
+    ],
+    "interpretation": "Author/source QA progress only; trusted V1 receipt, blind-first, formal D 8x2 and student admission remain pending."
   }
 }
