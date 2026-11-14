@@ -131,7 +131,7 @@ def audit_mb(qid:str, current):
       "canonicalMatchesArchivedOriginalCleanG2":qcorrect,
       "canonicalCurrentOptions":q["options"],
       "canonicalHasOcrContamination":not qcorrect,
-      "currentQuestionRevision":(q.get("textQaEvidence") or {}).get("questionRevision") or (q.get("extraction") or {}).get("correctionOverlay",{}).get("sourceRevision"),
+      "currentQuestionRevision":(q.get("textQaEvidence") or {}).get("questionRevision") or ((q.get("extraction") or {}).get("correctionOverlay") or {}).get("sourceRevision"),
       "originalCorrectedQuestion":g2["correctedTextQuestion"],
       "originalCorrectedOptions":g2["correctedTextOptions"],
       "sourceOriginalStageGitBlob":ep["stage_blob"],
