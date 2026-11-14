@@ -1,0 +1,27 @@
+name: ROLE A 115 MB21 read-only actual SQLite schema probe (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb21-canonical-g2g3-20261108]
+    paths:
+      - tests/role_a_115_mb21_schema_probe_20261108.py
+      - .github/workflows/role-a-115-mb21-schema-probe-20261108.yml
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115
+            tests
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Read current official QA source and SQLite without writes
+        run: python tests/role_a_115_mb21_schema_probe_20261108.py

@@ -1,0 +1,43 @@
+name: ROLE A 115 MB23 original 205 JSON SQLite table baseline probe (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb23-canonical-table-20261110]
+    paths:
+      - .github/workflows/role-a-115-mb23-source-schema-probe-20261110.yml
+permissions:
+  contents: read
+jobs:
+  original_mb23_205_schema_readonly:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115
+          sparse-checkout-cone-mode: true
+      - name: Probe actual official QA Q23 raw canonical table fields and SQLite schema without edits
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,sqlite3,hashlib,pathlib
+          d=pathlib.Path('sudu/data/processed/115')
+          qdoc=json.loads((d/'questions.json').read_bytes())
+          q=next(x for x in qdoc['questions'] if x['questionId']=='115-00-MB-23')
+          print('MB23_CANONICAL_BEGIN')
+          print(json.dumps(q,ensure_ascii=False,indent=2))
+          print('MB23_CANONICAL_END')
+          print('205_QIDS',len(qdoc['questions']))
+          with sqlite3.connect(d/'question-bank.sqlite3') as c:
+              print('DB_SQLITE_PRAGMA',c.execute('PRAGMA integrity_check').fetchone()[0])
+              print('DB_SCHEMA',c.execute('PRAGMA table_info(questions)').fetchall())
+              print('DB_MB23',c.execute('SELECT * FROM questions WHERE question_id=?',('115-00-MB-23',)).fetchone())
+              print('DB_205',c.execute('SELECT count(*) FROM questions').fetchone()[0])
+          print('SRC_BANK_SHA256',hashlib.sha256((d/'questions.json').read_bytes()).hexdigest())
+          print('SRC_DB_SHA256',hashlib.sha256((d/'question-bank.sqlite3').read_bytes()).hexdigest())
+          PY

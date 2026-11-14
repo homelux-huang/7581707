@@ -1,0 +1,68 @@
+name: 106 Chinese Q15-20 second-pass v4 source boundary repair (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/refine_106_c14_20_v4_source_edges.py
+      - .github/workflows/106-chinese-c14-20-v4-second-pass-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa106-chinese-v4-source-edges
+  cancel-in-progress: false
+jobs:
+  verify_crops:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original-pixel decoder
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin HEAD and verify source/version checks
+        run: |
+          set -euo pipefail
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/refine_106_c14_20_v4_source_edges.py
+          python scripts/refine_106_c14_20_v4_source_edges.py
+      - name: Generate only versioned V4 pixel candidates
+        run: python scripts/refine_106_c14_20_v4_source_edges.py --stage
+      - name: Confirm original v2 v3 SHA unchanged, all G1/G2/G3 remain pending
+        run: |
+          python - <<'PY_ASSERT'
+          import hashlib,json
+          from pathlib import Path
+          d=Path("sudu/data/processed/106")
+          def rd(p):return json.loads((d/p).read_text(encoding="utf8"))
+          rec=rd("qa-drafts/DRAFT_106_C14_20_V4_SECOND_PASS_20261024.json")
+          manifest=rd("webp-manifest.json");v=rd("VISUAL_QA.json")
+          inv=rd("inventory.json");rel=rd("release-manifest.json")
+          assert len(rec["items"])==8 and rec["newV4Files"]==8
+          assert inv["visualQaPass"]==v["passCount"]==16
+          assert rec["newG1"]==rec["newG2"]==rec["newOfficialAnswerVerified"]==0
+          for item in rec["items"]:
+              assert hashlib.sha256(Path(item["newPath"]).read_bytes()).hexdigest()==item["newSha256"]
+              assert hashlib.sha256(Path(item["previousCandidatePath"]).read_bytes()).hexdigest()==item["previousSha256"]
+          assert inv["answerOfficialFinalVerified"]==0
+          assert not rel["releaseAllowed"] and not rel["integrationReady"]
+          print("106 eight V4 new draft images verified; old source images preserved, G1 unchanged, NO RELEASE")
+          PY_ASSERT
+      - name: Save new V4 image candidates and evidence using nonforce lease
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/106/qa-drafts/webp-v4/
+          git add sudu/data/processed/106/qa-drafts/DRAFT_106_C14_20_V4_SECOND_PASS_20261024.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          test "$(git rev-parse FETCH_HEAD)" = "$QA_BASE" || { echo "Concurrent QA HEAD; refuse stale push"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(qa106): eight corrected original-pixel V4 candidates with no QA promotion"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-23",
+  "taskId": "A-115-MB23-CANONICAL-G2G3-TABLE-20261110-01",
+  "qaBaseSha": "15108e8e657d070724889f1df3d3a6ae6da96d97",
+  "beforeBankGitBlob": "696ec3cba5ffd54717ae1b07985b2d332ecf1a19",
+  "beforeSqliteGitBlob": "758e2ebc993291ed8101549a750aa635a979f16b",
+  "beforeManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "afterQuestionBankSha256": "1a92d454f4f2bb85ddff6f3f585efbc65d75481928b320397e6d2e05041c5c93",
+  "afterSqliteSha256": "450153ad47907265c9ffbdcb56e7902e606c0abb4eda70d0ba606dcd78607e76",
+  "sqliteIntegrity": "ok",
+  "sqliteRows": 205,
+  "canonical205PayloadsMatched": true,
+  "onlyUpdatedQid": "115-00-MB-23",
+  "other204RowsOriginalFullTupleUnchanged": true,
+  "other204CanonicalSourceUnchanged": true,
+  "manifestEntireFileUnchanged": true,
+  "originalTableColumns": 3,
+  "originalTableDataRows": 2,
+  "ready": false,
+  "live": false
+}

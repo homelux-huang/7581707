@@ -1,0 +1,71 @@
+name: QA-only SQLite G5 reconcile 105 114 and inventory 110 (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/promote_105_114_g5_sqlite_v2.py
+      - .github/workflows/105-114-sqlite-g5-reconciliation.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-g5-105-114-reconcile
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pin HEAD before writes and verify SHA-bound v2 databases
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python scripts/promote_105_114_g5_sqlite_v2.py --check
+      - name: Repair only isolated question-bank.sqlite3 and stale inventory count
+        run: python scripts/promote_105_114_g5_sqlite_v2.py --stage
+      - name: Require all eleven years' real G5 and strict immutable release flags
+        run: |
+          python - <<'PY_AUDIT'
+          import json
+          from pathlib import Path
+          src=Path("sudu/data/processed")
+          report=json.loads((src/"105-115-SQLITE_G5_READONLY_AUDIT.json").read_text())
+          assert report["yearsG5Pass"]==report["yearsReviewed"]==11
+          for r in report["years"]:
+              assert r["g5Pass"] is True and r["sandboxImportPasses"]==2
+              v=json.loads((src/str(r["year"])/"release-manifest.json").read_text())
+              assert v["releaseAllowed"] is False and v["integrationReady"] is False
+          print("11/11 QA G5 PASS, all 11 release flags remain false")
+          PY_AUDIT
+      - name: Commit immutable G5 correction evidence only to QA branch
+        run: |
+          set -eu
+          git add sudu/data/processed/105/question-bank.sqlite3
+          git add sudu/data/processed/114/question-bank.sqlite3
+          git add sudu/data/processed/110/inventory.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git add sudu/data/processed/105/qa-drafts/SQLITE_105_G5_RECONCILED_20261024.json
+          git add sudu/data/processed/114/qa-drafts/SQLITE_114_G5_RECONCILED_20261024.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No change"
+            exit 0
+          fi
+          git fetch origin qa/114-115-official-visual-review
+          actual=$(git rev-parse FETCH_HEAD)
+          if [ "$actual" != "$QA_BASE" ]; then
+            echo "Concurrent update; refusing unleased push: $actual"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "fix(g5): reconcile 105 114 QA SQLite rows with JSON, correct 110 inventory"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

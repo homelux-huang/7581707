@@ -1,0 +1,62 @@
+name: 106 shark shared original-pixel top-edge V5 draft (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/stage_106_c19_20_shark_shared_v5.py
+      - .github/workflows/106-shark-shared-v5-source-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa106-shark-v5-shared
+  cancel-in-progress: false
+jobs:
+  stage_shark:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source pixel checker
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin base and check official original source
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/stage_106_c19_20_shark_shared_v5.py
+          python scripts/stage_106_c19_20_shark_shared_v5.py
+      - name: Stage V5 candidate, G1 unchanged
+        run: python scripts/stage_106_c19_20_shark_shared_v5.py --stage
+      - name: Re-read asset SHA and strict NO RELEASE
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          d=Path('sudu/data/processed/106')
+          p=d/'qa-drafts/DRAFT_106_C19_20_SHARED_V5_TOP_BOUNDARY_20261024.json'
+          e=json.loads(p.read_text())
+          assert hashlib.sha256(Path(e['newV5']).read_bytes()).hexdigest()==e['newV5Sha256']
+          assert hashlib.sha256(Path(e['oldV4']).read_bytes()).hexdigest()==e['oldV4Sha256']
+          r=json.loads((d/'release-manifest.json').read_text())
+          m=json.loads((d/'inventory.json').read_text())
+          assert m['visualQaPass']==16 and not r['releaseAllowed'] and not r['integrationReady']
+          assert e['status']=='DRAFT_PENDING_DIRECT_VISUAL' and not e['newG1']
+          PY
+      - name: Commit only V5 draft with lease, never publish
+        run: |
+          set -euo pipefail
+          git add sudu/data/processed/106/qa-drafts/webp-v5/shared/106-00-C-SHARED-19-20.webp
+          git add sudu/data/processed/106/qa-drafts/DRAFT_106_C19_20_SHARED_V5_TOP_BOUNDARY_20261024.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          test "$(git rev-parse FETCH_HEAD)" = "$QA_BASE" || { echo "Concurrent QA write"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa106): preserve complete shark shared image V5 candidate, G1 pending"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

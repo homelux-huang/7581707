@@ -1,0 +1,70 @@
+name: 115 Chinese Q06 Q11-15 official source image bundle (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/115-chinese-q06-q11-15-image-review-bundle.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Verify SHA pin and exact pixel-crop provenance, no QA promotion
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,pathlib
+          from PIL import Image, ImageChops
+          m=json.loads(pathlib.Path('sudu/data/processed/115/webp-manifest.json').read_text())
+          ids=["115-00-C-06","115-00-C-11","115-00-C-12","115-00-C-13","115-00-C-14","115-00-C-15"]
+          items=[x for x in m['items'] if x['questionId'] in ids]
+          assert len(items)==6 and len({x['questionId'] for x in items})==6
+          for item in items:
+              src=pathlib.Path(item['source'])
+              out=pathlib.Path(item['output'])
+              assert src.exists() and out.exists()
+              assert hashlib.sha256(src.read_bytes()).hexdigest()==item['sourceSha256'],item['questionId']
+              assert hashlib.sha256(out.read_bytes()).hexdigest()==item['sha256'],item['questionId']
+              with Image.open(src) as a, Image.open(out) as b:
+                  a.load();b.load()
+                  assert a.crop(tuple(item['crop'])).size==b.size
+                  assert ImageChops.difference(a.crop(tuple(item['crop'])).convert('RGB'),b.convert('RGB')).getbbox() is None,item['questionId']
+              assert item['qaStatus']!='PASS',item['questionId']
+          shared=next(x for x in m['sharedMaterialCrops'] if x['sharedMaterialId']=='115-00-C-SHARED-11-15')
+          assert shared['qaStatus']!='PASS'
+          assert pathlib.Path(shared['output']).is_file()
+          assert hashlib.sha256(pathlib.Path(shared['output']).read_bytes()).hexdigest()==shared['sha256']
+          assert hashlib.sha256(pathlib.Path(shared['source']).read_bytes()).hexdigest()==shared['sourceSha256']
+          inv=json.loads(pathlib.Path('sudu/data/processed/115/inventory.json').read_text())
+          assert inv['officialAnswerIndependentVerified']==0 and inv['imageVisualQaPass']==135
+          print('PASS: 6 pending question crops, original sources, shared passage, official answer page; SHA+exact pixels; NO visual QA claim')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 115-chinese-q06-q11-15-original-crops-passage-answer
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            sudu/data/original/115/00-C/p003-6b454d6590-v2-w1400-q66.webp
+            sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp
+            sudu/data/original/115/00-C/p004-6b454d6590-v2-w1400-q66.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-06.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-11.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-12.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-13.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-14.webp
+            sudu/data/processed/115/webp-v2/00-C/115-00-C-15.webp
+            sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp
+            sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp

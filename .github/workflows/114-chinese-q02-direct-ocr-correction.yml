@@ -1,0 +1,73 @@
+name: 114 Chinese Q02 native-text OCR correction + isolated SQLite (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_114_chinese_q02_direct_text_review.py
+      - .github/workflows/114-chinese-q02-direct-ocr-correction.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-114-c02-direct-text
+  cancel-in-progress: false
+jobs:
+  correct:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check preserved original SHA, visual QA and legacy text
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          python -m py_compile scripts/apply_114_chinese_q02_direct_text_review.py
+          python scripts/apply_114_chinese_q02_direct_text_review.py --check
+      - name: Correct one OCR/PDF text and prove second run idempotent
+        run: |
+          set -euo pipefail
+          python scripts/apply_114_chinese_q02_direct_text_review.py --stage
+          sha256sum sudu/data/processed/114/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/text-before.sha
+          python scripts/apply_114_chinese_q02_direct_text_review.py --stage
+          sha256sum sudu/data/processed/114/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/text-after.sha
+          diff -u /tmp/text-before.sha /tmp/text-after.sha
+          python - <<'PY'
+          import json,sqlite3
+          from pathlib import Path
+          root=Path("sudu/data/processed/114")
+          q=json.loads((root/"questions.json").read_text())
+          rec=next(x for x in q["questions"] if x["questionId"]=="114-00-C-02")
+          assert rec["questionVerified"] is True and rec["answerVerified"] is False
+          assert rec["imageQaStatus"]=="PASS" and rec["integrationReady"] is False
+          assert len(rec["options"])==4
+          assert all("②導致" not in option and "①處置" not in option for option in rec["options"])
+          assert json.loads((root/"VALIDATION.json").read_text())["integrationReady"] is False
+          print("PASS: one reviewed text, preserved image/answer, stable SQLite, no release")
+          PY
+      - name: Commit corrected QA text and isolated SQLite only
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 QA Text Review"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add -- sudu/data/processed/114/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3}
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(114): correct C02 text contamination with source-image evidence, answer pending"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 114-C02-source-reviewed-text-correction
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/114/qa-drafts/OCR_114_00_C_02_DIRECT_REVIEW_20261023.json
+            sudu/data/processed/114/VALIDATION.json

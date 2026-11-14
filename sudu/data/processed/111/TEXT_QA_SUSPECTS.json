@@ -1,0 +1,1704 @@
+{
+  "schemaVersion": 1,
+  "year": 111,
+  "generatedAt": "2026-10-22T13:36:48.027841+00:00",
+  "inspection": "DETERMINISTIC_TEXT_SCAN_ONLY_NOT_MANUAL_QA",
+  "suspectQuestionCount": 50,
+  "suspectIds": [
+    "111-00-C-06",
+    "111-00-C-08",
+    "111-00-C-09",
+    "111-00-C-12",
+    "111-00-C-17",
+    "111-00-C-19",
+    "111-00-C-24",
+    "111-00-C-30",
+    "111-00-C-34",
+    "111-00-C-38",
+    "111-00-E-11",
+    "111-00-E-17",
+    "111-00-E-21",
+    "111-00-E-22",
+    "111-00-E-23",
+    "111-00-E-24",
+    "111-00-E-25",
+    "111-00-E-26",
+    "111-00-E-27",
+    "111-00-E-28",
+    "111-00-E-29",
+    "111-00-E-30",
+    "111-00-E-32",
+    "111-00-E-34",
+    "111-00-E-36",
+    "111-00-E-42",
+    "111-00-MB-02",
+    "111-00-MB-10",
+    "111-00-MB-17",
+    "111-00-MB-18",
+    "111-00-MB-24",
+    "111-00-MB-25",
+    "111-09-1-09",
+    "111-09-1-14",
+    "111-09-1-18",
+    "111-09-1-22",
+    "111-09-1-31",
+    "111-09-1-38",
+    "111-09-1-45",
+    "111-09-1-48",
+    "111-09-1-50",
+    "111-09-2-06",
+    "111-09-2-12",
+    "111-09-2-18",
+    "111-09-2-25",
+    "111-09-2-31",
+    "111-09-2-36",
+    "111-09-2-41",
+    "111-09-2-46",
+    "111-09-2-50"
+  ],
+  "findingCount": 205,
+  "findings": [
+    {
+      "questionId": "111-00-C-06",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-06",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "點\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-06",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-06",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-2-\n",
+      "excerpt": "系統 ／ 要點\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-06",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "系統 ／ 要點\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-08",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-C-08",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-C-09",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-09",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-09",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-09",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-12",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-12",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "②符合\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-12",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-12",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-4-\n",
+      "excerpt": "①不符合，②符合\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-12",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "①不符合，②符合\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-17",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第18 - 21 題\n     蘇格蘭園藝家羅伯‧福鈞（Robert Fortune）從中國送出的華德箱，重繪了全球茶葉貿\n  易版圖。\n    英國東印度公司於1834 年失去將中國茶葉輸入英國的壟斷權後，並未停止在印度生產\n  茶葉的企圖。由於印度阿薩姆的茶葉品質不理想，他們",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-17",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-17",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第18 - 21 題\n     蘇格蘭園藝家羅伯‧福鈞（Robert Fortune）從中國送出的華德箱，重繪了全球茶葉貿\n  易版圖。\n    英國東印度公司於183",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-17",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 5-\n",
+      "excerpt": "影響了全球的生態環境與政局\n\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                      國文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-17",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第18 - 21 題\n     蘇格蘭園藝家羅伯‧福鈞（Robert Fortune）從中國送出的華德箱，重繪了全球茶葉貿\n  易版圖。\n    英國東印度",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-19",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-19",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "如數照付\n\n\n-6-\n\n111 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-19",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-19",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-6-\n",
+      "excerpt": "承諾在中國的所有開銷由公司如數照付\n\n\n-6-\n\n111 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-19",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "承諾在中國的所有開銷由公司如數照付\n\n\n-6-\n\n111 年四技                                              第7 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-24",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第25 - 27 題\n\n                           DIY 手作補給站留言板\n\n   學木工才知道，粗齒鋸因齒距寬，鋸切速度較快；細齒鋸則切面加工效果較好，但不\n   適合鋸切大尺寸木料。\n\n\n   鋸子是常見的手工具，鉗、鎚、起子、扳手……也是。\n\n\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-24",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-24",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第25 - 27 題\n\n                           DIY 手作補給站留言板\n\n   學木工才知道，粗齒鋸因齒距寬，鋸切速度較快；細齒鋸則切面",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-24",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 7-\n",
+      "excerpt": "朝廷聚斂苛徵賦稅\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                      國文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-24",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第25 - 27 題\n\n                           DIY 手作補給站留言板\n\n   學木工才知道，粗齒鋸因齒距寬，鋸切速度較快；",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-30",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第31 - 34 題\n\n         巧匠之制木，直者以為轅，曲者以為輪，長者以為棟梁，短者以為栱\n       角。無曲直長短，各有所施。明主之任人，亦由是也。智者取其謀，愚者\n       取其力，勇者取其威，怯者取其慎，無智愚勇怯，兼而用之。故良匠無棄\n  唐太宗  材",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-30",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第10 頁",
+      "excerpt": "\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-30",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第31 - 34 題\n\n         巧匠之制木，直者以為轅，曲者以為輪，長者以為棟梁，短者以為栱\n       角。無曲直長短，各有所施。明主之任人，亦由是也。智",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-30",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 9-\n",
+      "excerpt": "乙文「人不負礦，礦究何負於人？」，為向對方徵求答案以解惑的疑問句\n\n\n\n▲閱讀下文，回答第29-31 題\n\n\n\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                                      國文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-30",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n▲閱讀下文，回答第31 - 34 題\n\n         巧匠之制木，直者以為轅，曲者以為輪，長者以為棟梁，短者以為栱\n       角。無曲直長短，各有所施。明主之任人，",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-34",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第35 - 38 題\n    「你們在忙什麼？」眾人抬頭，但見孫天師提著一盞燈籠，站在樓梯口。狄公\n  （仁傑）道：「真智真人欲述一件舊事，希望陳述時您也在場。」孫天師瞥了真智一\n  眼，「這裡風冷，到貧道書房來吧！」他先上樓，真智緊隨，狄公、陶干、宗笠也在\n  幾步後跟著蜿蜒而",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第11 頁",
+      "excerpt": "10-\n\n111 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第35 - 38 題\n    「你們在忙什麼？」眾人抬頭，但見孫天師提著一盞燈籠，站在樓梯口。狄公\n  （仁傑）道：「真智真人欲述一件舊事，希望陳述時您也",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第35 - 38 題\n    「你們在忙什麼？」眾人抬頭，但見孫天師提著一盞燈籠，站在樓梯口。狄公\n  （仁傑）道：「真智真人欲述一件舊事，希望陳述時您也在場。」孫天師瞥了真智一\n  眼，「這裡風冷，到貧道書房來吧！」他先上樓，真智緊隨，狄公、陶干、宗笠也在",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-34",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-10-\n",
+      "excerpt": "①不合理，②合理\n\n\n\n\n                     業務     課長     襄理     經理\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第35 - 38 題\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-34",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "合理，②合理\n\n\n\n\n                     業務     課長     襄理     經理\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n國文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲閱讀下文，回答第35 - 38 題\n    「你們在",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-38",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n   遇到「壞心眼」或「玩心眼」的人，總有人提醒我們：別那麼「沒心眼」！提防那\n 些人不安「好心眼」！\n   不欺人是好心眼，不被人欺需要有心眼，但「心眼多」可能轉為心機，「心眼大」\n 可能流於輕率，缺乏彈性可能變成「小心眼」或「死心眼」。\n   也有人認為：完美，隱含著錙銖必較的",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-38",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第12 頁",
+      "excerpt": "\n\n                                                        - 11-\n\n第12 頁                                                                               111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-38",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n   遇到「壞心眼」或「玩心眼」的人，總有人提醒我們：別那麼「沒心眼」！提防那\n 些人不安「好心眼」！\n   不欺人是好心眼，不被人欺需要有心眼，但「心眼多」可能轉為心機",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-38",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                        - 11-\n",
+      "excerpt": "①錯誤，②正確   線，此正午貓眼也。」（《夢溪筆談》）\n\n\n\n                                                        - 11-\n\n第12 頁                                                                               111 年四技\n共12 頁                                      國文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-C-38",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      國文 共同科目   公告試題僅供參考\n\n二、寫作測驗\n   遇到「壞心眼」或「玩心眼」的人，總有人提醒我們：別那麼「沒心眼」！提防那\n 些人不安「好心眼」！\n   不欺人是好心眼，不被人欺需要有心眼，但「心眼多」",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-11",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-11",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": ".\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-11",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-11",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-2-\n",
+      "excerpt": "we need 50 grams of butter.\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-11",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "we need 50 grams of butter.\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-17",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-17",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-17",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-17",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-21",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-21",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-22",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-22",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-23",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-23",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-24",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-24",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-25",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-25",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-28",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-28",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-29",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-29",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-30",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "111-00-E-30",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-E-32",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考\n\n▲ 根據以下公告，回答第33 － 34 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-32",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-32",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考\n\n▲ 根據以下公告，回答第33 － 34 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-32",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n                                                         - 5-\n",
+      "excerpt": "More than 40 rooms in this hotel were occupied in April, 2020.\n\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                      英文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-32",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考\n\n▲ 根據以下公告，回答第33 － 34 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-34",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第7 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第35 － 37 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "law.\n\n\n-6-\n\n111 年四技                                              第7 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第35 － 37 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第7 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第35 － 37 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-34",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-6-\n",
+      "excerpt": "Participants can only use material as allowed by law.\n\n\n-6-\n\n111 年四技                                              第7 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第35 － 37 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-34",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "Participants can only use material as allowed by law.\n\n\n-6-\n\n111 年四技                                              第7 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第35 － 37 題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-36",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-36",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-36",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-36",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 7-\n",
+      "excerpt": "Machu Picchu\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                      英文 共同科目   公告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-36",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-42",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "      第9 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ 到 Ⅲ 題，每題6 分，共16 分 )\n\nⅠ.填充\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字首)，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n    ▲ 請勿",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-42",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第9 頁",
+      "excerpt": "\n\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ 到 Ⅲ 題，每題6 分，共16 分 )\n\nⅠ.填充\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-42",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "               第9 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ 到 Ⅲ 題，每題6 分，共16 分 )\n\nⅠ.填充\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字首)，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-42",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n\n-8-\n",
+      "excerpt": "There are enough CCUS projects to stop heating the world.\n\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-E-42",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "e are enough CCUS projects to stop heating the world.\n\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ題，每格2 分，共4 分；第 Ⅱ 到 Ⅲ 題，",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-02",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "111-00-MB-10",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-10",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "1\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-10",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "             第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-10",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-2-\n",
+      "excerpt": "1\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-10",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "1\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-17",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "                                                    數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-17",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                111 年四技\n共8 頁                                                       數學(",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-17",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         111 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-17",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-18",
+      "field": "option_1",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "1.01365  37 且 0.99365  0.03",
+      "excerpt": "1.01365  37 且 0.99365  0.03",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-18",
+      "field": "option_3",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "1.01365  63 且 0.99365  0.97",
+      "excerpt": "1.01365  63 且 0.99365  0.97",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-24",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-24",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "0000\n\n\n-4-\n\n111 年四技                                              第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-24",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 8 頁",
+      "excerpt": "             第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-24",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-4-\n",
+      "excerpt": "20000\n\n\n-4-\n\n111 年四技                                              第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-24",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "20000\n\n\n-4-\n\n111 年四技                                              第5 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-25",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "                                                    數學(B) 共同科目   公告試題僅供參考\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n數學(B) 共同科目                                     共 8 頁   公告試題僅供參考\n\n\n\n\n\n            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共8 頁                                                       數學(",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-25",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         111 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n數學(B)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 5-\n",
+      "excerpt": "同學想要抽中金色卡牌，抽了100 張，抽中金色卡牌80 張\n\n\n\n          【以下空白】\n\n\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共8 頁                                                     ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-00-MB-25",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-09",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-09",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "服務商品\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-09",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-09",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-2-\n",
+      "excerpt": "App Store 透過網路傳送之商品，屬於線上服務商品\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-09",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "App Store 透過網路傳送之商品，屬於線上服務商品\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-14",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-14",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-14",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-14",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n ▲閱讀下文，回答第 19 - 22 題\n    臺灣 A 光電與 B 電子兩家 LED 公司，整合 Mini LED 研發技術與生產製造資源，於\n   2021 年 1 月透過換股方式，合併成為 C 投資控股上市公司，以便爭取未來產業之龐大\n  商機。產品涵蓋磊晶、晶粒、封裝到模組，並可提供多",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "制\n\n\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n ▲閱讀下文，回答第 19 - 22 題\n    臺灣 A 光電與 B 電子兩家 LED 公司，整合 Mini LED 研發技術與生產製造資源，於\n   2021 年 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n ▲閱讀下文，回答第 19 - 22 題\n    臺灣 A 光電與 B 電子兩家 LED 公司，整合 Mini LED 研發技術與生產製造資源，於\n   2021 年 1 月透過換股方式，合併成為 C 投資控股上市公司，以便爭取未來產業之龐大\n  商機。產品涵蓋磊晶、晶粒、",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-18",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-4-\n",
+      "excerpt": "「質重於量」的工作，薪資計算通常採用考績制\n\n\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n ▲閱讀下文，回答第 19 - 22 題\n    臺",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "「質重於量」的工作，薪資計算通常採用考績制\n\n\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n ▲閱讀下文，回答第 19 - 22 題\n    臺灣 A 光電與 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-22",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 23 - 25 題\n    美國記憶體大廠美光於 2017 年指控臺灣聯電公司協助中國晉華竊取美光營業秘密，\n  於是在美國與臺灣兩地提出訴訟。 2020 年除 3 名涉嫌員工被判刑外，聯電也遭判罰 1 億元\n  罰金，隨後聯電又提起上訴。纏訟超過 4 年，美光與聯電於日前",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-22",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-22",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 23 - 25 題\n    美國記憶體大廠美光於 2017 年指控臺灣聯電公司協助中國晉華竊取美光營業秘密，\n  於是在美國與臺灣兩地提出訴訟。 2020 年除",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-22",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 5-\n",
+      "excerpt": "短期償債能力：A 公司優於 B 公司\n\n\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-22",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 23 - 25 題\n    美國記憶體大廠美光於 2017 年指控臺灣聯電公司協助中國晉華竊取美光營業秘密，\n  於是在美國與臺灣兩地提出訴訟。 2",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-31",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-31",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "互轉\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-31",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-31",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-6-\n",
+      "excerpt": "SMTP 通訊協定為網域名稱與 IP 位址的互轉\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-31",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "SMTP 通訊協定為網域名稱與 IP 位址的互轉\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-38",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-38",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-38",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-38",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 7-\n",
+      "excerpt": "① ② ③ ④\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-38",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-45",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第9 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-45",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第9 頁",
+      "excerpt": "力\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-45",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第9 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-45",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-8-\n",
+      "excerpt": "使用多圖層技術，具動畫能力\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-45",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "使用多圖層技術，具動畫能力\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-48",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 49 - 50 題\n    數學老師要請全班 50 位同學，每一位同學都喝一杯手搖飲。老師請小明用 Google\n  表單設計一份問卷，讓全班同學能各自上網登記，小明再依據登記後的資料進行採購，\n  數學老師並可做後續的統計分析。老師與小明討論 Google 表單設計理念須",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-48",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第10 頁",
+      "excerpt": "\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-48",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 49 - 50 題\n    數學老師要請全班 50 位同學，每一位同學都喝一杯手搖飲。老師請小明用 Google\n  表單設計一份問卷，讓全班同學能各自上網登記",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-48",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 9-\n",
+      "excerpt": "僅 ③ ④\n\n\n\n\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-48",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                  商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考\n\n ▲閱讀下文，回答第 49 - 50 題\n    數學老師要請全班 50 位同學，每一位同學都喝一杯手搖飲。老師請小明用 Google\n  表單設計一份問卷，讓全班同學能",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-50",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    第11 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-50",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第11 頁",
+      "excerpt": "10-\n\n111 年四技                                                     第11 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-50",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "             第11 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-10-\n",
+      "excerpt": "數學老師可用 Google 文件直接統計分析回覆資料，如：最受歡迎的飲料種類\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n\n\n\n\n              ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-1-50",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": " Google 文件直接統計分析回覆資料，如：最受歡迎的飲料種類\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                  共 12 頁   公告試題僅供參考\n\n\n\n\n\n                      ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-06",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第3 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-06",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "0\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-06",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第3 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-06",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-2-\n",
+      "excerpt": "$ 12,000\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-06",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "$ 12,000\n\n\n\n\n\n-2-\n\n111 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-12",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-12",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-12",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-12",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第5 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "000\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第5 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-18",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-4-\n",
+      "excerpt": "X2 年底資產負債表上，該投資之「透過損益按公允價值衡量之金融資產評價調整」\n   餘額為貸餘 $ 19,000\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "X2 年底資產負債表上，該投資之「透過損益按公允價值衡量之金融資產評價調整」\n   餘額為貸餘 $ 19,000\n\n\n\n-4-\n\n111 年四技                                              第5 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-25",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-25",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 5-\n",
+      "excerpt": "因應疫情可能使景氣衰退，政府研討發放五倍券等振興經濟的措施\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-25",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-31",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第7 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-31",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "0\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-31",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第7 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-31",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-6-\n",
+      "excerpt": "若 MR 與 MC 交點的數量 Q ＝ 10，則 TR ＝ 20000\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-31",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "若 MR 與 MC 交點的數量 Q ＝ 10，則 TR ＝ 20000\n\n\n\n\n\n-6-\n\n111 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-36",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-36",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-36",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-36",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n                                                         - 7-\n",
+      "excerpt": "⑦ = 15,000，⑧ = 65 %\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-36",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-41",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     第9 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-41",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第9 頁",
+      "excerpt": "資\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-41",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "              第9 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-41",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-8-\n",
+      "excerpt": "若市場利率為 15 %，兩方案都值得投資\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-41",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "若市場利率為 15 %，兩方案都值得投資\n\n\n\n\n\n-8-\n\n111 年四技                                              第9 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-46",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-46",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第10 頁",
+      "excerpt": "\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-46",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共12 頁",
+      "excerpt": "                                                         111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-46",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n                                                         - 9-\n",
+      "excerpt": "乙國對晶片及遊艇之生產皆具有絶對利益\n\n\n\n\n\n                                                         - 9-\n\n第10 頁                                                                               111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-46",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "                                                                 111 年四技\n共12 頁                                商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-50",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    第11 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-50",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第11 頁",
+      "excerpt": "10-\n\n111 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁            ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-50",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共 12 頁",
+      "excerpt": "             第11 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考\n\n\n\n\n\n                                                        - 11-\n\n第12 頁                                                                 ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-10-\n",
+      "excerpt": "若小李選擇創業，則該決策之機會成本包含廣告設計案件收入\n\n          【以下空白】\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考\n\n\n\n\n\n              ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "111-09-2-50",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "111 年四技",
+      "excerpt": "若小李選擇創業，則該決策之機會成本包含廣告設計案件收入\n\n          【以下空白】\n\n\n\n-10-\n\n111 年四技                                                     第11 頁\n商業與管理群 專業科目(二)                                共 12 頁   公告試題僅供參考\n\n\n\n\n\n                      ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    }
+  ],
+  "rules": "Do not auto-strip text: footer-like text could be quote/content. Inspect official source first.",
+  "readyForIntegration": false
+}

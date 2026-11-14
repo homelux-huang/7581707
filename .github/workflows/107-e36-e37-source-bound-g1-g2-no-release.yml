@@ -1,0 +1,119 @@
+name: 107 English E36 E37 direct visual G1 and corrected text G2 (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_107_e36_37_boundary_g1_and_text_g2_20261024.py
+      - .github/workflows/107-e36-e37-source-bound-g1-g2-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-107-e36-e37-g1-g2-no-release
+  cancel-in-progress: false
+jobs:
+  source_visual_and_text:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-pixel image test library
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Check new candidate, old contaminant, G1/G2 code and SHA lease
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/apply_107_e36_37_boundary_g1_and_text_g2_20261024.py
+          python scripts/apply_107_e36_37_boundary_g1_and_text_g2_20261024.py
+      - name: Apply ONLY reviewed current Q36/Q37 original-pixel G1 and G2
+        run: python scripts/apply_107_e36_37_boundary_g1_and_text_g2_20261024.py --stage
+      - name: Verify 202 old rows unchanged, old Q37 v1 retained, Q38-41 unmodified, G5 11/11
+        run: |
+          python - <<'PY_QA'
+          import json,subprocess,hashlib,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          folder=Path('sudu/data/processed/107')
+          def rd(s):return json.loads((folder/s).read_text('utf8'))
+          original=json.loads(subprocess.check_output(
+              ['git','show','HEAD:sudu/data/processed/107/questions.json'],text=True))
+          new=rd('questions.json')
+          index=lambda rows:{q['questionId']:q for q in rows}
+          before=index(original['questions']);after=index(new['questions'])
+          ids={'107-00-E-36','107-00-E-37'}
+          assert len(before)==len(after)==204 and set(before)==set(after)
+          assert {id for id in before if before[id]!=after[id]} in (set(),ids)
+          assert all(after[id]['questionVerified'] and not after[id]['answerVerified'] for id in ids)
+          for id in ['107-00-E-34','107-00-E-35','107-00-E-38','107-00-E-39','107-00-E-40','107-00-E-41']:
+              assert before[id]==after[id]
+          q37=after['107-00-E-37']
+          assert 'In 2017' not in q37['options'][3]
+          assert q37['options'][3]=='The scenery recorded by Chi in his documentary.'
+          assert all(not q['answerVerified'] and not q['integrationReady'] for q in new['questions'])
+          inv=rd('inventory.json');val=rd('VALIDATION.json')
+          v=rd('VISUAL_QA.json');m=rd('webp-manifest.json')
+          rel=rd('release-manifest.json');o=index(rd('ocr-raw-candidates.json')['items'])
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==21
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==7
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          evidence=rd('qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json')
+          assert evidence['newIndividualG1Pass']==2 and evidence['newG2Pass']==2
+          assert evidence['newG3AnswerVerified']==0 and evidence['independentHumanReview'] is False
+          assert len(evidence['records'])==2 and all(e['pixelDifferenceZero'] for e in evidence['records'])
+          mrow=index(m['items'])
+          assert all(mrow[id]['qaStatus']=='PASS' for id in ids)
+          assert mrow['107-00-E-37']['output']==q37['assets']['singleQuestionWebp']
+          assert hashlib.sha256(Path(mrow['107-00-E-37']['output']).read_bytes()).hexdigest()==mrow['107-00-E-37']['outputSha256']
+          assert hashlib.sha256(Path('sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp').read_bytes()).hexdigest()=='f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b'
+          assert all(o[id]['qaStatus']=='PASS' and o[id]['rawOcrText'] is None for id in ids)
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('PASS: Q36 Q37 source original v2 current G1/G2, old mixed Q37 v1 retained, 202 rows unchanged, G5 11/11, G3 0, NO RELEASE')
+          PY_QA
+      - name: Read-only G0-G6 audit and updated numbered-asset counts
+        run: |
+          python scripts/audit_104_115_numbered_assets.py --write
+          python scripts/audit_105_115_release_gates.py >/tmp/qa-107-gates.json
+          python - <<'PY_GATES'
+          import json
+          from pathlib import Path
+          counts=json.loads(Path('sudu/data/processed/104-115-QUESTION_ID_GAPS_20261024.json').read_text('utf8'))
+          assert counts['totals']['candidateQuestions105_115']==2249
+          assert counts['totals']['webpLinkedAndShaVerified105_115']==2249
+          assert counts['totals']['webpQaPassWithReference105_115']==268
+          assert counts['totals']['readyYears']==0
+          years={y['year']:y for y in counts['years']}
+          assert years[107]['webpQaPassWithSourceReference']==21
+          report=json.loads(Path('/tmp/qa-107-gates.json').read_text('utf8'))
+          assert not report['allYearsReady'] and report['yearsReady']==0
+          print('PASS: 105-115 G1 268/2249; no all-year READY and no G3 promotion')
+          PY_GATES
+      - name: Safe non-force submit only QA evidence with HEAD SHA lease
+        run: |
+          set -eu
+          for f in questions.json webp-manifest.json ocr-raw-candidates.json VISUAL_QA.json inventory.json VALIDATION.json release-manifest.json question-bank.sqlite3; do
+            git add "sudu/data/processed/107/$f"
+          done
+          git add sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_AND_TEXT_107_E36_E37_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git add sudu/data/processed/104-115-QUESTION_ID_GAPS_20261024.json
+          git add docs/SUDU_104_115_NUMBERED_QUESTION_ASSET_AUDIT_20261024.md
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "Already applied: no new commit"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA change: deny stale push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(107): fix E37 mixed article and verify E36/E37 source G1+text G2, NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

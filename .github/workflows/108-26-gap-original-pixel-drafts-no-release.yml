@@ -1,0 +1,97 @@
+name: 108 year 26 missing question original-pixel WebPs and shared draft (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_108_all_26_missing_original_page_webps.py
+      - .github/workflows/108-26-gap-original-pixel-drafts-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa108-26-draft-gaps
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-pixel Pillow
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin branch, compile and check 26 official PDF-page coordinates
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/stage_108_all_26_missing_original_page_webps.py
+          python scripts/stage_108_all_26_missing_original_page_webps.py --check
+      - name: Build only missing original-pixel candidates, G5 on isolated DB
+        run: python scripts/stage_108_all_26_missing_original_page_webps.py --stage
+      - name: Readback candidates and preserve all release gates
+        run: |
+          python - <<'PY_GUARDS'
+          import json,sys,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          b=Path('sudu/data/processed/108')
+          def rd(n):return json.loads((b/n).read_text('utf8'))
+          inv=rd('inventory.json');m=rd('webp-manifest.json')
+          bank=rd('questions.json');v=rd('VISUAL_QA.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          e=rd('qa-drafts/DRAFT_108_26_MISSING_AND_ACCOUNTING_SHARED_20261024.json')
+          assert len(m['items'])==len(bank['questions'])==len(v['items'])==204
+          assert inv['webpGeneratedDrafts']==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==0
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==0
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert e['newWebpDrafts']==26 and e['newSharedDrafts']==1
+          assert e['newG1Pass']==e['newG2Pass']==e['newOfficialFinalAnswerVerified']==0
+          assert len(bank['sharedMaterials'])==len(m['sharedMaterialCrops'])==len(v['sharedMaterials'])==1
+          rows={x['questionId']:x for x in bank['questions']}
+          images={x['questionId']:x for x in m['items']}
+          for id in e['ids']:
+              row=rows[id];item=images[id]
+              assert row['imageQaStatus']==item['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert item['outputSha256']==row['assets']['sha256']
+              assert hashlib.sha256(Path(item['output']).read_bytes()).hexdigest()==item['outputSha256']
+              assert not row['questionVerified'] and not row['answerVerified'] and not row['integrationReady']
+          shared=m['sharedMaterialCrops'][0]
+          assert shared['sharedMaterialId']==e['sharedId']=='108-09-2-SHARED-24-25'
+          assert shared['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+          assert hashlib.sha256(Path(shared['output']).read_bytes()).hexdigest()==shared['outputSha256']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('108 +26 numbered WebP DRAFT, +1 shared DRAFT; G5 11/11; G1 G2 G3 0 and NO RELEASE')
+          PY_GUARDS
+      - name: Commit only new WebP drafts and QA evidence with nonforce lease
+        run: |
+          set -eu
+          git add sudu/data/processed/108/qa-drafts/webp-v2/
+          git add sudu/data/processed/108/qa-drafts/DRAFT_108_26_MISSING_AND_ACCOUNTING_SHARED_20261024.json
+          git add sudu/data/processed/108/questions.json
+          git add sudu/data/processed/108/webp-manifest.json
+          git add sudu/data/processed/108/ocr-raw-candidates.json
+          git add sudu/data/processed/108/VISUAL_QA.json
+          git add sudu/data/processed/108/inventory.json
+          git add sudu/data/processed/108/VALIDATION.json
+          git add sudu/data/processed/108/question-bank.sqlite3
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "QA branch changed; abort stale nonforce push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(108): 26 missing per-question original-pixel DRAFT WebPs and one shared, G5 NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

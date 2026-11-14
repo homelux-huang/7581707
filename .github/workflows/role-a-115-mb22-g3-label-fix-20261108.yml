@@ -1,0 +1,40 @@
+name: ROLE A 115 MB22 G3 printed-answer prose-label correction (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb22-canonical-g2g3-20261108]
+    paths:
+      - scripts/role_a_115_mb22_g3_label_fix_20261108.py
+      - .github/workflows/role-a-115-mb22-g3-label-fix-20261108.yml
+permissions:
+  contents: write
+jobs:
+  correct_g3_q22_label:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb22-canonical-g2g3-20261108'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/115
+            scripts
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+      - name: Reject missing frozen MB21 source parent
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor ebc25c5d7af72c246b3178f872b5371da92951ed HEAD
+          python scripts/role_a_115_mb22_g3_label_fix_20261108.py
+      - name: Restrict correction to G3 issuer SHA chain + exact MB22 DB payload
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/115/review-evidence/115-00-MB-22-official-publisher-20261108.json sudu/data/processed/115/review-evidence/115-00-MB-22-source-admission-20261108.json sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 sudu/data/processed/115/inventory.json sudu/data/processed/115/SQLITE_QA_MB22_SOURCE_BRIDGE_20261108.json
+          test "$(git diff --cached --name-only | wc -l)" -eq 6
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'source(A): correct MB22 G3 textual answer B and rebind JSON SQLite SHA'
+          git push origin HEAD:refs/heads/qa/role-a-115-mb22-canonical-g2g3-20261108

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "scope": "Q19 single-question crop and Q20-23 independent shared passage",
+  "method": "pixel_crop_existing_SHA_pinned_official_page_webp",
+  "generated": [
+    {
+      "id": "114-00-C-19",
+      "sourcePageWebpPath": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "sourcePdfSha256Recorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+      "sourcePage": 7,
+      "cropSourcePixelBounds": [
+        90,
+        284,
+        1310,
+        563
+      ],
+      "output": "sudu/data/processed/114/webp-v2/00-C/114-00-C-19.webp",
+      "outputSha256": "4c549405cfef2061a42abdac873c6146bb61e52a5cccae2f232d1a5ca35baff1",
+      "qaStatus": "DRAFT_PENDING_DIRECT_ORIGINAL_VISUAL_QA",
+      "independentVisualReviewCompleted": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "id": "114-00-C-SHARED-20-23",
+      "sourcePageWebpPath": "sudu/data/original/114/00-C/p007-f7c8a4b732-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "63d68af4507fd198cd045a5a24b4efd4f33f95b1c234e991fe0f9ed65c76bfa2",
+      "sourcePdfSha256Recorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+      "sourcePage": 7,
+      "cropSourcePixelBounds": [
+        90,
+        565,
+        1310,
+        1020
+      ],
+      "output": "sudu/data/processed/114/webp-v2/shared/114-00-C-SHARED-20-23.webp",
+      "outputSha256": "7b7f592f01378a6fa9ece08d87291810420479c9529f2d5233f10ad458c47f8a",
+      "qaStatus": "DRAFT_PENDING_DIRECT_ORIGINAL_VISUAL_QA",
+      "independentVisualReviewCompleted": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    }
+  ],
+  "warning": "DRAFT ONLY; bounds are candidates, not visual QA PASS",
+  "imageQaPassAdded": 0,
+  "answerVerifiedAdded": 0,
+  "questionVerifiedAdded": 0,
+  "integrationReady": false,
+  "releaseAllowed": false
+}

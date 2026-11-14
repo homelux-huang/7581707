@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "year": 108,
+  "paperCode": "00-MB",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "reviewedAt": "2026-10-24T23:03:25+08:00",
+  "method": "Visible assistant reading of immutable official-source page3 raster and each exact single-question WebP; pixel SHA check executed by CI",
+  "sourcePdfBytesIndependentlyDownloadedThisRun": false,
+  "officialFinalAnswersIndependentlyVerifiedThisRun": 0,
+  "newTextQaPass": 5,
+  "newImageQaPass": 0,
+  "originalPagePixelSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+  "g2RequiresOriginalWebpWhenMathNotationLosesTypesetting": true,
+  "preserveHistoricalRawOcr": true,
+  "questionsStillBlockedForOfficialFinalAnswer": true,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "records": [
+    {
+      "questionId": "108-00-MB-11",
+      "originalPageNumber": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourcePageGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalQuestionPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        169,
+        1310,
+        351
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-11.webp",
+      "singleQuestionWebpSha256": "84f81cbb1674801ce9fc16b15771eb938f38b8c000f9e9cfbbb08e068ab37993",
+      "sourcePixelDifferenceZero": true,
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "originalLegacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "originalLegacyOptions": [],
+      "correctedQuestion": "一顆雞蛋從生產到運送至超市販售，所需的成本為4元，在超市的售價為5元，其獲利由蛋農與超市平分；但運送過程中破裂或超過保存期限等因素，超市會將雞蛋銷毀，雞蛋即無法成功銷售，超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為0.006，則蛋農一顆雞蛋之獲利的期望值為多少元？",
+      "correctedOptions": [
+        "0.473",
+        "0.5",
+        "0.967",
+        "0.97"
+      ],
+      "unifiedDiff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+一顆雞蛋從生產到運送至超市販售，所需的成本為4元，在超市的售價為5元，其獲利由蛋農與超市平分；但運送過程中破裂或超過保存期限等因素，超市會將雞蛋銷毀，雞蛋即無法成功銷售，超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為0.006，則蛋農一顆雞蛋之獲利的期望值為多少元？\n+0.473\n+0.5\n+0.967\n+0.97\n",
+      "status": "PASS_DIRECT_IMAGE_TEXT_REVIEW",
+      "officialFinalAnswerVerified": false,
+      "questionNumberAndFourOptionsDirectlyCompared": true
+    },
+    {
+      "questionId": "108-00-MB-12",
+      "originalPageNumber": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourcePageGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalQuestionPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        352,
+        1310,
+        524
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-12.webp",
+      "singleQuestionWebpSha256": "01a04ced7ea78bae93dffbbcd61b50bb098820922c139a5c9d6cfec580c709bc",
+      "sourcePixelDifferenceZero": true,
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "originalLegacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "originalLegacyOptions": [],
+      "correctedQuestion": "在理想環境下，將一球自離地面30公尺處垂直落下，球只會上下垂直來回彈跳。若每次反彈高度為前一次高度的2/5，則此球靜止前所經過的路程為多少公尺？",
+      "correctedOptions": [
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "unifiedDiff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+在理想環境下，將一球自離地面30公尺處垂直落下，球只會上下垂直來回彈跳。若每次反彈高度為前一次高度的2/5，則此球靜止前所經過的路程為多少公尺？\n+50\n+60\n+70\n+80\n",
+      "status": "PASS_DIRECT_IMAGE_TEXT_REVIEW",
+      "officialFinalAnswerVerified": false,
+      "questionNumberAndFourOptionsDirectlyCompared": true
+    },
+    {
+      "questionId": "108-00-MB-13",
+      "originalPageNumber": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourcePageGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalQuestionPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        525,
+        1310,
+        918
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-13.webp",
+      "singleQuestionWebpSha256": "2b4b72f7b08e0ed7d64483001315b01df29982009498f51f173944a9aa1f837e",
+      "sourcePixelDifferenceZero": true,
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "originalLegacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "originalLegacyOptions": [],
+      "correctedQuestion": "某校校長想知道全校學生贊成取消早自習的比例p，並將p在95%的信心水準下之信賴區間簡稱95%信賴區間，現從所有學生中隨機抽取樣本數為36的一組樣本，利用這36位學生的意見求得p之95%信賴區間為[0.642,0.914]。若學生對早自習是否取消的意見是固定不變的，則下列何者為正確解讀？",
+      "correctedOptions": [
+        "該校約有95%的學生贊成取消早自習",
+        "p落在64.2%與91.4%之間的機率為95%",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個p之95%信賴區間，其中約有950個區間會包含p",
+        "若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個學生贊成取消早自習的樣本比例，其中約有950個會落在64.2%與91.4%之間"
+      ],
+      "unifiedDiff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+某校校長想知道全校學生贊成取消早自習的比例p，並將p在95%的信心水準下之信賴區間簡稱95%信賴區間，現從所有學生中隨機抽取樣本數為36的一組樣本，利用這36位學生的意見求得p之95%信賴區間為[0.642,0.914]。若學生對早自習是否取消的意見是固定不變的，則下列何者為正確解讀？\n+該校約有95%的學生贊成取消早自習\n+p落在64.2%與91.4%之間的機率為95%\n+若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個p之95%信賴區間，其中約有950個區間會包含p\n+若進行1000次抽樣調查，每次皆隨機抽取樣本數為36的一組樣本，共可算得1000個學生贊成取消早自習的樣本比例，其中約有950個會落在64.2%與91.4%之間\n",
+      "status": "PASS_DIRECT_IMAGE_TEXT_REVIEW",
+      "officialFinalAnswerVerified": false,
+      "questionNumberAndFourOptionsDirectlyCompared": true
+    },
+    {
+      "questionId": "108-00-MB-14",
+      "originalPageNumber": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourcePageGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalQuestionPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        919,
+        1310,
+        1060
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-14.webp",
+      "singleQuestionWebpSha256": "4e488da14604b8b00158c3825fb404ad03f70f862834f1ebdb26a59b4976e188",
+      "sourcePixelDifferenceZero": true,
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "originalLegacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "originalLegacyOptions": [],
+      "correctedQuestion": "若拋物線y=ax²+b之開口向上且與x軸沒有交點，則下列敘述何者正確？",
+      "correctedOptions": [
+        "a>0，b>0",
+        "a>0，b<0",
+        "a<0，b>0",
+        "a<0，b<0"
+      ],
+      "unifiedDiff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+若拋物線y=ax²+b之開口向上且與x軸沒有交點，則下列敘述何者正確？\n+a>0，b>0\n+a>0，b<0\n+a<0，b>0\n+a<0，b<0\n",
+      "status": "PASS_DIRECT_IMAGE_TEXT_REVIEW",
+      "officialFinalAnswerVerified": false,
+      "questionNumberAndFourOptionsDirectlyCompared": true
+    },
+    {
+      "questionId": "108-00-MB-15",
+      "originalPageNumber": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourcePageGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalQuestionPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        1061,
+        1310,
+        1248
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v2/00-MB/108-00-MB-15.webp",
+      "singleQuestionWebpSha256": "ea6e4129de7bdcd929549adf2d769c4a4b04bf3b86de02bf1216d1248da01ee9",
+      "sourcePixelDifferenceZero": true,
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "originalLegacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "originalLegacyOptions": [],
+      "correctedQuestion": "已知直線L₁為y=m₁x、直線L₂為y=m₂x。若m₁、m₂的值皆為2、1/2或−1/2三種數字之一，彼此取值互為獨立，且三種數字出現的機率相同，則L₁和L₂相互垂直的機率為何？",
+      "correctedOptions": [
+        "4/9",
+        "1/3",
+        "2/9",
+        "1/9"
+      ],
+      "unifiedDiff": "--- legacy-placeholders-preserved\n+++ direct-image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+已知直線L₁為y=m₁x、直線L₂為y=m₂x。若m₁、m₂的值皆為2、1/2或−1/2三種數字之一，彼此取值互為獨立，且三種數字出現的機率相同，則L₁和L₂相互垂直的機率為何？\n+4/9\n+1/3\n+2/9\n+1/9\n",
+      "status": "PASS_DIRECT_IMAGE_TEXT_REVIEW",
+      "officialFinalAnswerVerified": false,
+      "questionNumberAndFourOptionsDirectlyCompared": true
+    }
+  ]
+}

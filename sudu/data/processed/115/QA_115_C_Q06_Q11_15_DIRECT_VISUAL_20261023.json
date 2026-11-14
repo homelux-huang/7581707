@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "batchId": "115-C-visual-20261023-Q06-Q11-Q15",
+  "year": 115,
+  "reviewedAt": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "originalPageVsExactWebpDirectlyVisuallyCompared": true,
+  "sourceImageBundleWorkflow": "https://github.com/homelux-huang/7581707/actions/runs/39896451685",
+  "purpose": "Image only QA and official-answer IMAGE candidate comparison, NOT final official correction clearance or text/teaching QA",
+  "questionWebpPassAdded": 6,
+  "sharedMaterialPassAdded": 1,
+  "answerVerifiedAdded": 0,
+  "questionVerifiedAdded": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "items": [
+    {
+      "questionId": "115-00-C-06",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 6,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 3,
+      "sourcePagePath": "sudu/data/original/115/00-C/p003-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "08ae32b6b9e6633aa60f2f60321045cd10c5402ee80562e4603d2477ab13eeba",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        157,
+        1310,
+        482
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-06.webp",
+      "reviewedWebpSha256": "f031f108b2805bffd737479bb019a682439db5ef31bf1e8082b8a65c4942691c",
+      "reviewedWebpSize": [
+        1220,
+        325
+      ],
+      "sharedMaterialIds": [],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p3 diagram compares Tang/Song poetry criticism and the full four original choices; top starts at Q6, lower edge ends after Q6 D before Q7.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "B",
+        "visuallyReadValue": "B",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-11",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 11,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 5,
+      "sourcePagePath": "sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        157,
+        1310,
+        360
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-11.webp",
+      "reviewedWebpSha256": "101bcdaf6b77f421fa0a20a2220a0e592e7fdd6a28595f0b58ec46eda4c767ce",
+      "reviewedWebpSize": [
+        1220,
+        203
+      ],
+      "sharedMaterialIds": [
+        "115-00-C-SHARED-11-15"
+      ],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p5 Q11 stem and A-D completely visible; no Q12 text included. Full question references separate p4 shared passage.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "D",
+        "visuallyReadValue": "D",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-12",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 12,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 5,
+      "sourcePagePath": "sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        362,
+        1310,
+        565
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-12.webp",
+      "reviewedWebpSha256": "ac9b20198dea3530262fa9c35b2ecd46e17d1ef8a05a705d2c4255a243dc7f5e",
+      "reviewedWebpSize": [
+        1220,
+        203
+      ],
+      "sharedMaterialIds": [
+        "115-00-C-SHARED-11-15"
+      ],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p5 Q12 stem and A-D completely visible; no Q11 or Q13 text included. Full question references separate p4 shared passage.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "C",
+        "visuallyReadValue": "C",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-13",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 13,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 5,
+      "sourcePagePath": "sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        567,
+        1310,
+        770
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-13.webp",
+      "reviewedWebpSha256": "575c1ecd856e31d4c861f675225ecc553c2c4d4060ba7534a8eaa24fa0eba82f",
+      "reviewedWebpSize": [
+        1220,
+        203
+      ],
+      "sharedMaterialIds": [
+        "115-00-C-SHARED-11-15"
+      ],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p5 Q13 circled passage markers and A-D completely visible; no neighboring stem included; markers 1-4 present in the separate shared article.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "D",
+        "visuallyReadValue": "D",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-14",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 14,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 5,
+      "sourcePagePath": "sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        772,
+        1310,
+        1421
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-14.webp",
+      "reviewedWebpSha256": "2d5d49607eb941df0f6ed272447a312723bfbf050555f53deb1e0cd675a1888e",
+      "reviewedWebpSize": [
+        1220,
+        649
+      ],
+      "sharedMaterialIds": [
+        "115-00-C-SHARED-11-15"
+      ],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p5 Q14 A-D and both gray viewpoint diagrams plus their captions and footnote paragraph fully visible; no Q15 fragment.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "B",
+        "visuallyReadValue": "B",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-15",
+      "paperCode": "00-C",
+      "originalQuestionNumber": 15,
+      "sourceOfficialPdfSha256": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "sourcePage": 5,
+      "sourcePagePath": "sudu/data/original/115/00-C/p005-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "bf0678abeeddb131a843fe0461182a3a15ffaf836461933539dc3db1602cd98b",
+      "sourcePageSize": [
+        1400,
+        1981
+      ],
+      "cropPixels": [
+        90,
+        1421,
+        1310,
+        1660
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-15.webp",
+      "reviewedWebpSha256": "74dc7bb966f1ee508456a962a6fbcff0f42a15b2ffdd8db747477a55b831405f",
+      "reviewedWebpSize": [
+        1220,
+        239
+      ],
+      "sharedMaterialIds": [
+        "115-00-C-SHARED-11-15"
+      ],
+      "result": "PASS",
+      "criteria": {
+        "official_original_question_number": true,
+        "complete_stem": true,
+        "all_A_to_D": true,
+        "formula_image_and_units": true,
+        "no_other_question": true,
+        "no_page_header_or_footer": true,
+        "readable": true,
+        "exact_source_and_webp_sha256": true,
+        "exact_pixel_crop_verified_in_ci": true
+      },
+      "visualNote": "Official p5 Q15 stem and A-D completely visible, lower crop edge after option D with white margin; p5 footer excluded.",
+      "reviewer": "ChatGPT assistant",
+      "reviewedAt": "2026-10-23",
+      "independentHumanReview": false,
+      "officialAnswerImage": {
+        "sourcePagePath": "sudu/data/original/115/00-C-answers/p001-ec9871b659-v2-w1400-q66.webp",
+        "sourcePageSha256": "5422c00920ef4f18fa32fffd51c7edb78acd80aac84974713a61e2a02987126f",
+        "candidateValue": "B",
+        "visuallyReadValue": "B",
+        "imageMatchesCandidate": true
+      },
+      "officialCorrectionContentReviewed": false,
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    }
+  ],
+  "sharedMaterials": [
+    {
+      "sharedMaterialId": "115-00-C-SHARED-11-15",
+      "questionIds": [
+        "115-00-C-11",
+        "115-00-C-12",
+        "115-00-C-13",
+        "115-00-C-14",
+        "115-00-C-15"
+      ],
+      "sourcePage": 4,
+      "sourcePagePath": "sudu/data/original/115/00-C/p004-6b454d6590-v2-w1400-q66.webp",
+      "sourcePageSha256": "b317ce491d6849193572adc6e96c255d0074bfe6c54246e8638a754432df7808",
+      "cropPixels": [
+        90,
+        160,
+        1310,
+        1530
+      ],
+      "reviewedWebpPath": "sudu/data/processed/115/webp-v3/shared/115-00-C-SHARED-11-15.webp",
+      "reviewedWebpSha256": "bd9a93ab7139d9d7edd38ae661baf4b0f77170a621b1a18b151d06b532db7f66",
+      "result": "PASS",
+      "criteria": {
+        "shared_passage_both_sections_complete": true,
+        "all_four_numbered_excerpt_markers_visible": true,
+        "top_instruction_and_source_attribution_visible": true,
+        "no_page_header_or_footer": true,
+        "no_adjacent_question": true,
+        "legible": true,
+        "source_sha_and_output_sha256_matched": true
+      },
+      "visualNote": "Official p4 complete shared passages 甲 and 乙, all underlined and circled markers ①-④, attribution text retained. Top contains only group instruction; bottom ends after attribution before page footer. No unrelated numbered questions.",
+      "independentHumanReview": false,
+      "reviewedAt": "2026-10-23"
+    }
+  ],
+  "pending": "Full official subject confirmation/correction PDF content and OCR correction not verified; preserve answerVerified=false and questionVerified=false."
+}

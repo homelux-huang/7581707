@@ -1,0 +1,84 @@
+name: 115 Math B05 original-text fraction correction and SQLite QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_115_math_b_q05_original_text.py
+      - .github/workflows/115-mb05-source-text-correction.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-115-MB05-source-text-correction
+  cancel-in-progress: false
+jobs:
+  correct:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assert original image SHA, official identity, OCR defect and old SQLite
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/apply_115_math_b_q05_original_text.py
+          python scripts/apply_115_math_b_q05_original_text.py --check
+      - name: Apply one text correction and prove SQLite roundtrip and idempotence
+        run: |
+          set -euo pipefail
+          python scripts/apply_115_math_b_q05_original_text.py --stage
+          python scripts/apply_115_math_b_q05_original_text.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/mb05-before.sha
+          python scripts/apply_115_math_b_q05_original_text.py --check
+          python scripts/apply_115_math_b_q05_original_text.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/mb05-after.sha
+          diff -u /tmp/mb05-before.sha /tmp/mb05-after.sha
+          python - <<'PY'
+          import json,sqlite3,hashlib
+          from pathlib import Path
+          b=Path("sudu/data/processed/115")
+          bank=json.loads((b/"questions.json").read_text())
+          q=next(x for x in bank["questions"] if x["questionId"]=="115-00-MB-05")
+          assert q["options"]==["(3/2, -5/2)","(3/2, -7/2)","(5/2, -5/2)","(5/2, -7/2)"]
+          assert q["questionVerified"] is True and q["answer"]=="B"
+          assert q["answerVerified"] is True and q["studentReleaseApproved"] is False
+          with sqlite3.connect(b/"question-bank.sqlite3") as db:
+              assert db.execute("PRAGMA integrity_check").fetchone()[0]=="ok"
+              cols={r[1] for r in db.execute("PRAGMA table_info(questions)")}
+              field="payload" if "payload" in cols else "payload_json"
+              assert {"question_id","payload_sha256",field}<=cols
+              rows=db.execute(f"SELECT question_id,{field},payload_sha256 FROM questions").fetchall()
+              assert len(rows)==205
+              byid={x["questionId"]:x for x in bank["questions"]}
+              for qid,payload,sha in rows:
+                  assert qid in byid and json.loads(payload)==byid[qid]
+                  assert hashlib.sha256(payload.encode()).hexdigest()==sha
+          print("PASS 115 MB05: source fraction text, all 205 JSON/SQLite rows agree; NO RELEASE FLAGS")
+          PY
+      - name: Commit only the one verified source correction and SQLite to QA branch
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 source-text QA"
+          git config user.email "7581707-source-qa@users.noreply.github.com"
+          git add -- sudu/data/processed/115/{questions.json,ocr-raw-candidates.json,inventory.json,VALIDATION.json,question-bank.sqlite3,review-evidence/115-00-MB-05-source-text-applied-20261024.json}
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(115-MB05): verified fractions and original text with all SQLite rows consistent; no release"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 115-MB05-verified-text-and-roundtrip
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/115/review-evidence/115-00-MB-05-source-text-applied-20261024.json
+            sudu/data/processed/115/VALIDATION.json

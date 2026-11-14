@@ -1,0 +1,109 @@
+{
+  "year": 112,
+  "expectedFromLegacy": 205,
+  "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
+  "totalCandidateQuestions": 205,
+  "webpGeneratedDrafts": 205,
+  "visualQaPass": 0,
+  "ocrGapCandidatesGenerated": 17,
+  "ocrTextIndependentlyVerified": 0,
+  "missingFourTextOptions": [
+    "112-00-E-21",
+    "112-00-E-22",
+    "112-00-E-23",
+    "112-00-E-24",
+    "112-00-E-25",
+    "112-00-E-26",
+    "112-00-E-27",
+    "112-00-E-28",
+    "112-00-E-29",
+    "112-00-E-30",
+    "112-00-MB-01",
+    "112-00-MB-02",
+    "112-00-MB-10",
+    "112-00-MB-14",
+    "112-00-MB-24",
+    "112-09-1-15",
+    "112-09-1-46"
+  ],
+  "answerPdfTextMatchedOnly": 204,
+  "answerOfficialFinalVerified": 0,
+  "sourcePaperStats": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 38,
+      "imageDrafts": 38,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 37,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 42,
+      "numberedAnchors": 42,
+      "imageDrafts": 42,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 42,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  },
+  "sharedMaterialsVerified": 0,
+  "sharedMaterialsReviewRequired": true,
+  "sqlite": {
+    "rows": 205,
+    "unique": 205,
+    "integrity": "ok",
+    "reimportCount": 2,
+    "shaMismatches": 0
+  },
+  "integrationReady": false
+}

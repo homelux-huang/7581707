@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-20",
+  "taskId": "A-115-MB20-CANONICAL-V5-PIXEL-G2G3-20261110-02",
+  "parentSourceSha": "24f8962b7fb51a8baa6f111abb1a7414a4b26420",
+  "beforeBankBlob": "4b1b167ca7bbc3d1a8fa7441a80318965450aa91",
+  "beforeSqliteBlob": "84ce71800b760664b3d2f8bd0bd69bfebc974783",
+  "beforeManifestBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+  "afterBankSha256": "b66c12558421399641d1ce483b0228684540c07ac3b39873e9876363573ec814",
+  "afterSqliteSha256": "67f23da3358d27a8a439dbcdbddceb33d21754d6d37adfe4a0fbcc892aad8bb3",
+  "afterWebpManifestSha256": "5b37bd1e8e4e31df8ea3f4e1f94c1bacf40c584cee7f2a3fa44510f394a64c4e",
+  "sqliteIntegrity": "ok",
+  "rows": 205,
+  "other204SqliteWholeTuplesUnchanged": true,
+  "other204CanonicalQuestionsUnchanged": true,
+  "other204ManifestItemsUnchanged": true,
+  "originalQ23Preserved": true,
+  "ready": false,
+  "live": false
+}

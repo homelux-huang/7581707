@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-02",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "e773c34c83007af4bac0e1567262acfd0a5369b1c7be21bfdc14b44ac13c4459",
+  "webpSha256": "c159f4f02a503c998f57213d73f6069acdeaf6ab521aca1cc9719a04a83e8a1d",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-23",
+  "solver": "GPT-6 independent calculation before retrieving answer key",
+  "blindReasoning": "不看標準答案，設兩根 r₁=α+β、r₂=α−β。根和 r₁+r₂=8，故 2α=8 得 α=4。根積 r₁r₂=5(α−β)，因 α≠β，得 α+β=5，β=1，故 αβ=4。",
+  "answer": "A",
+  "method": "由已 QA 原圖獨立推導後，才另行讀取既有官方候選答案並核對。"
+}

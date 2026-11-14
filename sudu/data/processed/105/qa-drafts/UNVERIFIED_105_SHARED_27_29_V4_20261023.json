@@ -1,0 +1,29 @@
+{
+  "year": 105,
+  "assetId": "105-00-C-SHARED-27-29",
+  "questionIds": [
+    "105-00-C-27",
+    "105-00-C-28",
+    "105-00-C-29"
+  ],
+  "previousVisualFailure": "FAIL_ADJACENT_QUESTION_GRAPHIC",
+  "sourcePage": 6,
+  "sourcePageWebp": "sudu/data/original/105/00-C/p006-0a170905cb-v2-w1400-q66.webp",
+  "sourcePageWebpSha256": "1f2ee292527089d4feeba24db0ce69996569d7df0db1f02078ac5771021a8694",
+  "oldV3Webp": "sudu/data/processed/105/qa-drafts/webp-v3/shared/105-00-C-SHARED-27-29.webp",
+  "oldV3WebpSha256": "7f5dfdd7d34b20136cc0943d92639575aeb24dc49cae78b6e64d1926e78a5566",
+  "v4CropPixels": [
+    90,
+    1050,
+    1310,
+    1608
+  ],
+  "v4CandidateWebp": "sudu/data/processed/105/qa-drafts/webp-v4/shared/105-00-C-SHARED-27-29.webp",
+  "v4CandidateSha256": "3f48561583f36d993358e436af4e028bd5b23e85c314b4f2db2dea1330246318",
+  "imageQaStatus": "DRAFT_PENDING_DIRECT_ORIGINAL_V4_VISUAL_QA",
+  "imageQaPassAdded": 0,
+  "answerVerified": false,
+  "questionVerified": false,
+  "integrationReady": false,
+  "note": "v4 candidate must be compared directly with original source image. No automated QA PASS."
+}

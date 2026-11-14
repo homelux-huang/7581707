@@ -1,0 +1,152 @@
+{
+  "year": 106,
+  "paperCode": "00-C",
+  "generatedDrafts": 6,
+  "sourcePage": 2,
+  "officialSourceWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+  "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+  "newImageQaPass": 0,
+  "newAnswerVerified": 0,
+  "integrationReady": false,
+  "note": "Original page and these exact pixels visually prechecked; GitHub outputs must be SHA verified and separately recorded as PASS. Q3 full four-option excerpt and Q5 illustrated menu preserve original images.",
+  "items": [
+    {
+      "questionId": "106-00-C-01",
+      "originalQuestionNumber": 1,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        241,
+        1310,
+        411
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-01.webp",
+      "outputSha256": "731809f11a6c3eb34d9679996e8708d5edd8fd5b82023f125b2d1647bd8208d4",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-C-02",
+      "originalQuestionNumber": 2,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        414,
+        1310,
+        590
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-02.webp",
+      "outputSha256": "e81d343e340b6231427a8ce66f613ee8b13b3eab156b45b73d5cbea84a270565",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-C-03",
+      "originalQuestionNumber": 3,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        594,
+        1310,
+        1046
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-03.webp",
+      "outputSha256": "9f437bea804d393fe604e2301f7997390cd7b275d3b51a243e117a4316d4090c",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-C-04",
+      "originalQuestionNumber": 4,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        1046,
+        1310,
+        1290
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-04.webp",
+      "outputSha256": "cdd9903d60297abb4b325482f26b7ca4cf348a34a3388269aaf896c9126d9fcb",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-C-05",
+      "originalQuestionNumber": 5,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        1293,
+        1310,
+        1611
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-05.webp",
+      "outputSha256": "d9d0a870f96ea09f919b27577d6c13a5311a99b0eaa63860727e7f5f21c7bc70",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "106-00-C-06",
+      "originalQuestionNumber": 6,
+      "sourcePage": 2,
+      "source": "sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageWebpSha256": "048b456cd43780af76d4deeed55809e13363312ff1dd2c425079b86a8ee55aa2",
+      "cropPixels": [
+        90,
+        1635,
+        1310,
+        1827
+      ],
+      "output": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-06.webp",
+      "outputSha256": "91f3dda70dcaa7ad75c96528c65f40925af69d69fb31353b9ac01918bb92c26c",
+      "sourceImageVisuallyInspected": true,
+      "githubVersionReviewPending": true,
+      "imageQaStatus": "DRAFT_PENDING_SHA_BOUND_FINAL_VISUAL_REVIEW",
+      "officialAnswerImagePath": "sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp",
+      "officialAnswerImageSha256": "de2dd7fa2c96ead2dd8b305b48f2d1d1af068c843c2648d39f2403f1f6c088f5",
+      "answerVerified": false,
+      "questionVerified": false,
+      "integrationReady": false
+    }
+  ]
+}

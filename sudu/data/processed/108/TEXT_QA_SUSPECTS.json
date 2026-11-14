@@ -1,0 +1,1382 @@
+{
+  "schemaVersion": 1,
+  "year": 108,
+  "generatedAt": "2026-10-22T13:36:48.013689+00:00",
+  "inspection": "DETERMINISTIC_TEXT_SCAN_ONLY_NOT_MANUAL_QA",
+  "suspectQuestionCount": 56,
+  "suspectIds": [
+    "108-00-C-07",
+    "108-00-C-13",
+    "108-00-C-18",
+    "108-00-C-23",
+    "108-00-C-28",
+    "108-00-C-34",
+    "108-00-C-38",
+    "108-00-E-12",
+    "108-00-E-18",
+    "108-00-E-22",
+    "108-00-E-23",
+    "108-00-E-24",
+    "108-00-E-25",
+    "108-00-E-26",
+    "108-00-E-27",
+    "108-00-E-28",
+    "108-00-E-29",
+    "108-00-E-30",
+    "108-00-E-31",
+    "108-00-E-36",
+    "108-00-E-41",
+    "108-00-MB-01",
+    "108-00-MB-08",
+    "108-00-MB-10",
+    "108-00-MB-11",
+    "108-00-MB-12",
+    "108-00-MB-13",
+    "108-00-MB-14",
+    "108-00-MB-15",
+    "108-00-MB-16",
+    "108-00-MB-17",
+    "108-00-MB-25",
+    "108-09-1-08",
+    "108-09-1-13",
+    "108-09-1-14",
+    "108-09-1-18",
+    "108-09-1-25",
+    "108-09-1-26",
+    "108-09-1-27",
+    "108-09-1-28",
+    "108-09-1-29",
+    "108-09-1-30",
+    "108-09-1-31",
+    "108-09-1-32",
+    "108-09-1-33",
+    "108-09-1-40",
+    "108-09-1-44",
+    "108-09-1-50",
+    "108-09-2-08",
+    "108-09-2-16",
+    "108-09-2-22",
+    "108-09-2-26",
+    "108-09-2-29",
+    "108-09-2-35",
+    "108-09-2-43",
+    "108-09-2-50"
+  ],
+  "findingCount": 164,
+  "findings": [
+    {
+      "questionId": "108-00-C-07",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第3 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-07",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "階科技\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-07",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第3 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-07",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-2-\n",
+      "excerpt": "AI 是尖端科技，IA 是初階科技\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-07",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "AI 是尖端科技，IA 是初階科技\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-13",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-13",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-13",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-13",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第5 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "此交流\n\n\n\n-4-\n\n108 年四技                                              第5 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第5 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-18",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-4-\n",
+      "excerpt": "各廠術業專攻，彼此交流\n\n\n\n-4-\n\n108 年四技                                              第5 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "各廠術業專攻，彼此交流\n\n\n\n-4-\n\n108 年四技                                              第5 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-23",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-23",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "\n\n                                                         - 5-\n\n第6 頁                                                                                108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-23",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-23",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 5-\n",
+      "excerpt": "直書，藏之名山，傳之其人，此其所以\n  可寶也。」余謂讀史當多讀野史，考證異同，辨析是非，方不為官書所囿。(連橫《連雅堂文集》)\n\n\n\n                                                         - 5-\n\n第6 頁                                                                                108 年四技\n共8 頁                                      國文 共同科目   公告試題僅",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-23",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-28",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第7 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-28",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "步之意\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-28",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第7 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-28",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-6-\n",
+      "excerpt": "甲文的「駑鈍」表示謙抑；信中的「執事」則有要對方讓步之意\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-28",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "甲文的「駑鈍」表示謙抑；信中的「執事」則有要對方讓步之意\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n國文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-34",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-34",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 7-\n",
+      "excerpt": "有少數文人遊記敘寫的是虛構景點\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                      國文 共同科目   公告試題僅",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-34",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                      國文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-C-38",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-8-",
+      "excerpt": "  你可以參採廣告金句或A、B、C 的觀點，也可以提出自己不同的看法。文章不用訂題目。\n\n\n\n\n          【以下空白】\n\n\n\n\n-8-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-12",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第3 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-12",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "pt?\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-12",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第3 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-12",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-2-\n",
+      "excerpt": "Do you have the receipt?\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-12",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "Do you have the receipt?\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-22",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-22",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-23",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-23",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-24",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-24",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-25",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-25",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-28",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-28",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-29",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-29",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-30",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-30",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-31",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-E-31",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-E-36",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第37 －41 題\n       With summer vacation right around the corner, many people are planning to travel abroad.\n   Some of them take an overseas ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-36",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "ly.\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第37 －41 題\n       With summer vacation right around the corner, many peop",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-36",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第37 －41 題\n       With summer vacation right around the corner, many people are planning to travel abroad.\n   Some of them take a",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-36",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-6-\n",
+      "excerpt": "Users can decide how much water they should drink daily.\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第37 －41 題\n    ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-36",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "Users can decide how much water they should drink daily.\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n英文 共同科目                                            共8 頁   公告試題僅供參考\n\n▲ 閱讀下文，回答第37 －41 題\n       With ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-41",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "     108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n說明：\n\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )，\n\n      分別作答於答案卷之作答欄 ①、② 之指定範圍內以完成句子。\n\n    ▲ 請勿抄題，每格限填一字，超過一",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-41",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-41",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n說明：\n\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )，\n\n  ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-41",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 7-\n",
+      "excerpt": "g trips offer young people some challenging tasks to accomplish.\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                      英文 共同科目   公告試題僅",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-E-41",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                      英文 共同科目   公告試題僅供參考\n\n二、 非選擇題 ( 第Ⅰ到第 Ⅲ 題，每題6 分，共18 分 )\n\nⅠ.填充\n\n說明：\n\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字( 含提示之字首 )",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-01",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-08",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-08",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-10",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "                                                    數學(B) 共同科目   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-10",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3頁",
+      "excerpt": "升\n\n\n-2-\n\n108 年四技                                                 第3頁\n數學(B) 共同科目            告試                               共4頁\n\n11\n\n14.\n\n17.\n\n-一顆雞蛋從生產到運送至超市販售,所需的成本為4元,在超市的售價為5元,其獲利由\n\n蛋農與超市平分;但運送過程中破裂或超過保存期限等因素,超市會將雞蛋",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-10",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-2-\n",
+      "excerpt": "先下降後上升\n\n\n-2-\n\n108 年四技                                                 第3頁\n數學(B) 共同科目            告試                               共4頁\n\n11\n\n14.\n\n17.\n\n-一顆雞蛋從生產到運送至超市販",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-10",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "先下降後上升\n\n\n-2-\n\n108 年四技                                                 第3頁\n數學(B) 共同科目            告試                               共4頁\n\n11\n\n14.\n\n17.\n\n-一顆雞蛋從生產到運送至超市販售,所需的成本為",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-10",
+      "field": "option_4",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "\n17.\n\n-一顆雞蛋從生產到運送至超市販售,所需的成本為4元,在超市的售價為5元,其獲利由",
+      "excerpt": "B) 共同科目            告試                               共4頁\n\n11\n\n14.\n\n17.\n\n-一顆雞蛋從生產到運送至超市販售,所需的成本為4元,在超市的售價為5元,其獲利由\n\n蛋農與超市平分;但運送過程中破裂或超過保存期限等因素,超市會將雞蛋銷毀,雞蛋\n即無法成功銷售,超市亦不付蛋農任何款項。若一顆雞蛋無法成功銷售的機率為 0.006,\n則蛋農一顆雞蛋之獲利的期值為多少元 ?\n\n(A) 0.473                    (B) 0.5         ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-00-MB-11",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-11",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-12",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-12",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-13",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-13",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-14",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-14",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-15",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-15",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-16",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-16",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-17",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-00-MB-17",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-00-MB-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-4-",
+      "excerpt": "2 b  4\n\n\n\n\n          【以下空白】\n\n\n\n-4-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-08",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-08",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "理念\n\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-08",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "           第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-08",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-2-\n",
+      "excerpt": "共同的經營理念\n\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-08",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "共同的經營理念\n\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-13",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-13",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-14",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4頁                                       2h 8                            人                         108 年四技\na    I Fe EK Raabe athe Bann setae",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-14",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "       2h 8                            人                         108 年四技\na    I Fe EK Raabe athe Bann setae",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-18",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-18",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "行鳥,可能屬於詐欺\n\n\n108 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-18",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "           第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-18",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "' 企業經營者鳥了獲取利益,以不正確或不完全的資訊造成他人誤解而交付財物」之\n行鳥,可能屬於詐欺\n\n\n108 年四技                                              第5 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "    第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "系列的檢查與測試\n\n\n\n108 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "           第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n                                                         - 5-\n",
+      "excerpt": "2018\n\n\n\n                                                         - 5-\n\ntN HE ER SB eon NTS,\n\n第二部份:計算機概論(第 26 28 5$0題,每題2分,共50分)\n\n26.\n\n27.\n\n28.\n\n29.\n\n30.\n\n31.\n\n32.\n\n33.\n\n小青要從有統計圖表的 PowerPoint 檔案中印一份沒有圖表的簡報資料給老闆,小青開啟\n該Powe",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "序的控制程式\n(©) 全名為Binary Input/Output System (D) 對電腦設備進行一系列的檢查與測試\n\n\n\n108 年四技                                              第7 頁\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-25",
+      "field": "option_4",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "\n33.\n\n小青要從有統計圖表的 PowerPoint 檔案中印一份沒有圖表的簡報資料給老闆,小青開啟",
+      "excerpt": "計算機概論(第 26 28 5$0題,每題2分,共50分)\n\n26.\n\n27.\n\n28.\n\n29.\n\n30.\n\n31.\n\n32.\n\n33.\n\n小青要從有統計圖表的 PowerPoint 檔案中印一份沒有圖表的簡報資料給老闆,小青開啟\n該PowerPoint 檔案後,按'檔案」、「列印」,再來請你幫小青選擇以下哪一個圖案來\n完成此任務。\n\n(A)        =                 (B)            =             (©)                @)        Li\n\n備忘稿  ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-28",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-28",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-29",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-29",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-30",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-30",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-31",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-31",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-32",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-32",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-33",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-1-33",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-1-40",
+      "field": "option_1",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "10.16.1.1",
+      "excerpt": "10.16.1.1",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-44",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   108 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-44",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-44",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-44",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n                                                         - 7-\n",
+      "excerpt": "72,000,000 Bytes\n\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-44",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                   商業與管理群、外語群英語類、外語群日語類 專業科目(一)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-1-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n\n-8-",
+      "excerpt": "={ 活頁簿 3. xlsx } 工作表 3 @ B3\n\n\n\n\n          【以下空白】\n\n\n\n\n\n-8-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-08",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第3 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-08",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "000\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-08",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第3 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-08",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-2-\n",
+      "excerpt": "$ 60,000\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-08",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "$ 60,000\n\n\n\n-2-\n\n108 年四技                                              第3 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-16",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-16",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "                                                         - 3- ◢\n\n第4 頁                                                                                108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-16",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-16",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-22",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5頁",
+      "excerpt": "                                                                 第5頁\n商業與管理群 專業科        告試題僅供         參考        共8頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-22",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8頁",
+      "excerpt": "                   第5頁\n商業與管理群 專業科        告試題僅供         參考        共8頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-22",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n-4-\n",
+      "excerpt": "借記：現金 $ 400,000，貸記：應收帳款 $ 392,000、顧客未享折扣 $ 8,000\n\n\n\n-4-\n\n108 年四技                                                                                                                     第5頁\n商業與管理群 專業科        告試題",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-22",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "借記：現金 $ 400,000，貸記：應收帳款 $ 392,000、顧客未享折扣 $ 8,000\n\n\n\n-4-\n\n108 年四技                                                                                                                     第5頁\n商業與管理群 專業科        告試題僅供      ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "108-09-2-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "108-09-2-29",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-29",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "若供給函數變動為P=20+Qs,但需求函數不變,則新均衡價格會上漲,消費者剩餘會減少\n\n\n第6 頁                                                                                108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-29",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-29",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-35",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "  第7 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-35",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "於零\n\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-35",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "         第7 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-35",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n\n\n-6-\n",
+      "excerpt": "面對負斜率需求線的獨占廠商之總收益為最大時，其邊際收益等於零\n\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-35",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "面對負斜率需求線的獨占廠商之總收益為最大時，其邊際收益等於零\n\n\n\n\n-6-\n\n108 年四技                                              第7 頁\n商業與管理群 專業科目(二)                                     共8 頁   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-43",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "   108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-43",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-43",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "                                                         108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-43",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n                                                         - 7-\n",
+      "excerpt": "若 B 國增加投資 10，B 國會達到充分就業所得\n\n\n                                                         - 7-\n\n第8 頁                                                                                108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-43",
+      "field": "option_4",
+      "indicator": "EXAM_YEAR_PAGE_HEADER",
+      "matched": "108 年四技",
+      "excerpt": "                                                                 108 年四技\n共8 頁                                 商業與管理群 專業科目(二)   公告試題僅供參考",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "108-09-2-50",
+      "field": "option_4",
+      "indicator": "FOOTER_PAGE_DASHES",
+      "matched": "\n\n-8-",
+      "excerpt": "解「世界」的知識 ( know - world ) 為 OECD 將知識分成四種類型之一\n\n\n\n          【以下空白】\n\n\n-8-",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    }
+  ],
+  "rules": "Do not auto-strip text: footer-like text could be quote/content. Inspect official source first.",
+  "readyForIntegration": false
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "year": 108,
+  "paperCode": "00-MB",
+  "reviewedAt": "2026-10-24T23:52:24+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "method": "Actual source page3/individual Q16/Q17 visual transcription; SHA/pixel proof; formal-matrix row/column preservation",
+  "sourceOriginalOfficialPdfDownloadedAgain": false,
+  "newG2Pass": 2,
+  "newG1Pass": 0,
+  "newOfficialFinalAnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "records": [
+    {
+      "questionId": "108-00-MB-16",
+      "sourcePage": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourceGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        1249,
+        1310,
+        1637
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v4/00-MB/108-00-MB-16.webp",
+      "singleQuestionWebpSha256": "d472b5e3f0c9383ea0585dc7201feec57a050eba8652fa5d108d479b407c90e7",
+      "sourcePixelDifferenceZero": true,
+      "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyOptions": [],
+      "correctedQuestion": "如圖（一）所示，使用8種不同顏色塗在圖中標號A、B、C、D、E的5個格子內，顏色不可重複使用，若規定同一格子僅塗同一顏色，則共可塗出幾種不同的著色樣式？",
+      "correctedOptions": [
+        "P⁸₅",
+        "C⁸₅",
+        "5⁶",
+        "6⁵"
+      ],
+      "unifiedDiff": "--- legacy-source-placeholder\n+++ image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+如圖（一）所示，使用8種不同顏色塗在圖中標號A、B、C、D、E的5個格子內，顏色不可重複使用，若規定同一格子僅塗同一顏色，則共可塗出幾種不同的著色樣式？\n+P⁸₅\n+C⁸₅\n+5⁶\n+6⁵\n",
+      "formulaNote": "P⁸₅ denotes ordered selection of 5 different colors from 8; original WebP is authoritative for superscript/subscript typesetting.",
+      "graphicNote": "All five regions A B C D E, their touching boundaries and legend 圖（一） are required.",
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "imageQaExistingPass": true,
+      "textQaResult": "PASS_DIRECT_SOURCE_IMAGE_REVIEW",
+      "officialAnswerStillUnverified": true
+    },
+    {
+      "questionId": "108-00-MB-17",
+      "sourcePage": 3,
+      "sourcePageWebp": "sudu/data/original/108/00-MB/p003-bcda540c72-v2-w1400-q66.webp",
+      "sourcePageSha256": "3599ba878ebce5fa685c590b1872ff74a1019d4c8f750e64978294969651f585",
+      "sourceGitBlob": "98769b8e7b656bde3abd55264667ef60c876ec7d",
+      "originalPdfSha256Claim": "bcda540c72f5d88f400aed994d58496e66761466aa5438e54d156c773b25722c",
+      "cropPixels": [
+        90,
+        1638,
+        1310,
+        1825
+      ],
+      "singleQuestionWebp": "sudu/data/processed/108/qa-drafts/webp-v4/00-MB/108-00-MB-17.webp",
+      "singleQuestionWebpSha256": "8db038429ad97927dbfa8e989e497c8948254f058f755a09546b31ac8144222e",
+      "sourcePixelDifferenceZero": true,
+      "legacyQuestion": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "legacyOptions": [],
+      "correctedQuestion": "若實數x滿足行列式|1−x, 2, 0; 4, 6−2x, 2; 0, 3, 1|＝4，則行列式|2, 3−x, 1; 0, 6, 2; 1−x, −1, −1|＝？",
+      "correctedOptions": [
+        "4",
+        "−4",
+        "8",
+        "−8"
+      ],
+      "unifiedDiff": "--- legacy-source-placeholder\n+++ image-reviewed-text\n@@ -1 +1,5 @@\n-本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。\n+若實數x滿足行列式|1−x, 2, 0; 4, 6−2x, 2; 0, 3, 1|＝4，則行列式|2, 3−x, 1; 0, 6, 2; 1−x, −1, −1|＝？\n+4\n+−4\n+8\n+−8\n",
+      "formulaNote": "Matrices are transcribed exactly as three semicolon-delimited rows, left-to-right in each row. Compare minus signs and 1−x against the official original WebP.",
+      "graphicNote": "Preserve both full three-by-three determinants and their outer vertical bars.",
+      "rawOcrText": null,
+      "rawOcrNeverFabricated": true,
+      "imageQaExistingPass": true,
+      "textQaResult": "PASS_DIRECT_SOURCE_IMAGE_REVIEW",
+      "officialAnswerStillUnverified": true
+    }
+  ]
+}

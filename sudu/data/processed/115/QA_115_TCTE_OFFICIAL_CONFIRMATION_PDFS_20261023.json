@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "reviewDate": "2026-10-23",
+  "reviewer": "ChatGPT assistant",
+  "reviewMethod": "official TCTE page visual renders plus PDF selectable-text full document review; SHA256 of exact official downloaded PDF",
+  "sourceIndexUrl": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+  "sourceIndexSha256": "ce4d0b1c73d393c34f7a8e9409fcde3bc012739cbd36f700e5d7fdcfe046588c",
+  "officialDownloadWorkflow": "https://github.com/homelux-huang/7581707/actions/runs/39897241562",
+  "allPagesInThreeDocumentsReviewed": true,
+  "docs": [
+    {
+      "paperCode": "00-C",
+      "file": "115-4y-00-C-confirm.pdf",
+      "pdfSha256": "231f21ac52bb1006717ec6a17b325454a37269317a1f49944dbfd0a31d28c4c0",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUMtY29uZmlybS5wZGY=",
+      "pageCount": 10,
+      "confirmed": [
+        {
+          "questionId": "115-00-C-12",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            1,
+            2
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-00-C-16",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            3
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-00-C-18",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            4,
+            5
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-00-C-23",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            6,
+            7
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-00-C-24",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            8,
+            9
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-00-C-34",
+          "officialConfirmedAnswer": "C",
+          "pdfPageNumbers": [
+            10
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        }
+      ],
+      "noticeScopeOnly": true
+    },
+    {
+      "paperCode": "00-E",
+      "file": "115-4y-00-E-confirm.pdf",
+      "pdfSha256": "bd6405814955e2c997ad5c7e69e34a10a5fcc22462b4227eabba0067760aa1a6",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTAwLUUtY29uZmlybS5wZGY=",
+      "pageCount": 2,
+      "confirmed": [
+        {
+          "questionId": "115-00-E-34",
+          "officialConfirmedAnswer": "B",
+          "pdfPageNumbers": [
+            1,
+            2
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        }
+      ],
+      "noticeScopeOnly": true
+    },
+    {
+      "paperCode": "09-2",
+      "file": "115-4y-09-2-confirm.pdf",
+      "pdfSha256": "b0a3f02ce083442ce67f48eb7355aa245d43199bc86677862c0861e0e8027133",
+      "url": "https://web1.tcte.edu.tw/EXAM/115_4y/downloader.php?obj=MTE1LTR5LTA5LTItY29uZmlybS5wZGY=",
+      "pageCount": 3,
+      "confirmed": [
+        {
+          "questionId": "115-09-2-06",
+          "officialConfirmedAnswer": "D",
+          "pdfPageNumbers": [
+            1
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-09-2-28",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            2
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        },
+        {
+          "questionId": "115-09-2-44",
+          "officialConfirmedAnswer": "A",
+          "pdfPageNumbers": [
+            3
+          ],
+          "comparedToOfficialPublishedTableCandidate": "MATCHED",
+          "changeFromPublishedAnswer": "NONE_OBSERVED"
+        }
+      ],
+      "noticeScopeOnly": true
+    }
+  ],
+  "officialNoticeQuestionsCompared": 10,
+  "officialNoticeAnswerConflicts": 0,
+  "notifiedAnswerVerificationFlagAddedByDocumentLedger": 0,
+  "noBroaderRelease": false,
+  "independentHumanReview": false,
+  "note": "These are 3 TCTE official confirmation/explanation PDFs; no changed final answer discovered among their 10 challenged questions. This ledger documents official corrections review only, not automatic answerVerified for all 205 or OCR/teaching QA. Six separate C-image-confirmed answer candidates may be individually verified with separate SHA-backed QA.",
+  "releaseAllowed": false,
+  "integrationReady": false
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "year": 107,
+  "paperCode": "09-1",
+  "reviewedAt": "2026-10-24T22:23:13+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "officialPdfSha256ClaimFromExistingRepository": "8e8d72b2016553f29184fd3795dab4a6f4ed0bc57e9cb861c9ce2ccf5b0bc2db",
+  "sourceOfficialPageImageGitBlob": "25d1ec2105a71286828f52d1d6af2dd6720f7424",
+  "sourcePageSha256": "bff3aa6563b77373e693556aeacba743afaf9a9565c0c303add88a2587f421a3",
+  "sourcePage": 8,
+  "newIndividualG1Pass": 2,
+  "newQ49TextG2Pass": 1,
+  "q50TextG2Status": "PENDING_IMAGE_DIAGRAM_OPTIONS",
+  "q49LegacyQuestion": "執行下列 Visual Basic 程式版段後,陣列元素 A(3)的值為何 ?\nDim X,Y As Integer\nDim A(6) As Integer\nFor X= 1To6\nA(1)=1\nA(X) =0\nFor Y = X - 1 To 2Step -1\nA(Y) = ACY - 1)+A(Y)\n\nNext Y\nNext X",
+  "q49LegacyOptions": [
+    "3",
+    "4",
+    "6",
+    "10"
+  ],
+  "q49CorrectedQuestion": "執行下列 Visual Basic 程式片段後，陣列元素 A(3)的值為何？\nDim X, Y As Integer\nDim A(6) As Integer\nFor X = 1 To 6\n    A(1) = 1\n    A(X) = 0\n    For Y = X - 1 To 2 Step -1\n        A(Y) = A(Y - 1) + A(Y)\n    Next Y\nNext X",
+  "q49CorrectedOptions": [
+    "3",
+    "4",
+    "6",
+    "10"
+  ],
+  "q49TextUnifiedDiff": "--- legacy-PDF-layer-preserved\n+++ original-source-corrected\n@@ -1,13 +1,12 @@\n-執行下列 Visual Basic 程式版段後,陣列元素 A(3)的值為何 ?\n-Dim X,Y As Integer\n+執行下列 Visual Basic 程式片段後，陣列元素 A(3)的值為何？\n+Dim X, Y As Integer\n Dim A(6) As Integer\n-For X= 1To6\n-A(1)=1\n-A(X) =0\n-For Y = X - 1 To 2Step -1\n-A(Y) = ACY - 1)+A(Y)\n-\n-Next Y\n+For X = 1 To 6\n+    A(1) = 1\n+    A(X) = 0\n+    For Y = X - 1 To 2 Step -1\n+        A(Y) = A(Y - 1) + A(Y)\n+    Next Y\n Next X\n 3\n 4\n",
+  "newAnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "records": [
+    {
+      "questionId": "107-09-1-49",
+      "sourcePage": 8,
+      "cropPixels": [
+        90,
+        169,
+        1310,
+        548
+      ],
+      "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "sourceWebpSha256": "bff3aa6563b77373e693556aeacba743afaf9a9565c0c303add88a2587f421a3",
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-49.webp",
+      "candidateSha256": "fafd23f04ab7c765beabfc9ea5aa1455ce279993741385b653df588a888356d4",
+      "reviewedResult": "PASS_DIRECT_SOURCE_PIXEL_AND_VISUAL",
+      "observed": "Q49 complete VB program and A-D numeric options, excludes Q50"
+    },
+    {
+      "questionId": "107-09-1-50",
+      "sourcePage": 8,
+      "cropPixels": [
+        90,
+        554,
+        1310,
+        944
+      ],
+      "sourceWebp": "sudu/data/original/107/09-1/p008-8e8d72b201-v2-w1400-q66.webp",
+      "sourceWebpSha256": "bff3aa6563b77373e693556aeacba743afaf9a9565c0c303add88a2587f421a3",
+      "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v3/09-1/107-09-1-50.webp",
+      "candidateSha256": "1a3c63369850a8d12f5c35e04ced08ff08bbf145af638197304984b7e57d89bd",
+      "reviewedResult": "PASS_DIRECT_SOURCE_PIXEL_AND_VISUAL",
+      "observed": "Q50 full HTML code plus all four large diagram choices, excludes Q49 and printed blank-page section"
+    }
+  ]
+}

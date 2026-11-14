@@ -1,0 +1,114 @@
+{
+  "year": 106,
+  "structuralStatus": "PASS_DRAFT_WITH_WARNINGS",
+  "imageVisualQaPass": 23,
+  "answerOfficialFinalVerified": 0,
+  "ocrTextVerified": 13,
+  "officialExpectedQuestionCountsConfirmed": false,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "sourceGaps": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 22,
+      "imageDrafts": 38,
+      "unresolvedAnchorNumbers": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        36,
+        37,
+        38
+      ],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 38,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": [],
+      "manualVisualAnchorRecoveredNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "manualCandidateRecoveredNumbers": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        36,
+        37,
+        38
+      ]
+    },
+    "00-E": {
+      "candidateRecords": 41,
+      "numberedAnchors": 35,
+      "imageDrafts": 35,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 41,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": [],
+      "manualVisualAnchorRecoveredNumbers": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2"
+      ],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 49,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  }
+}

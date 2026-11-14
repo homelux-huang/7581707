@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewer": "GPT-6 AI original source-image text comparison; no human review claimed",
+  "reviewedAt": "2026-10-24",
+  "originalQuestionSourcePdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "singleQuestionWebpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "qaOriginalEvidence": "sudu/data/processed/115/review-evidence/115-00-MB-05-ocr-correction-20261024.json",
+  "priorQuestion": "在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n\n  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n        3   5",
+  "priorOptions": [
+    "(     ,      )\n        2   2\n        3   7",
+    "(     ,      )\n        2   2\n        5   5",
+    "(     ,      )\n        2   2\n        5   7",
+    "(     ,      )\n        2   2"
+  ],
+  "correctedText": {
+    "question": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+    "options": [
+      "(3/2, -5/2)",
+      "(3/2, -7/2)",
+      "(5/2, -5/2)",
+      "(5/2, -7/2)"
+    ]
+  },
+  "diff": "--- uncorrected-PDF-text\n+++ source-WebP-verified\n@@ -1,15 +1,5 @@\n-在坐標平面上，若平行四邊形ABCD 的四個頂點其坐標分別為A ( – 1 , 0 )、B ( 0 , – 5 )\n-\n-  、C ( a , b )、D ( 2 , 3 )，則下列何者為BC 的中點坐標？\n-        3   5\n-(     ,      )\n-        2   2\n-        3   7\n-(     ,      )\n-        2   2\n-        5   5\n-(     ,      )\n-        2   2\n-        5   7\n-(     ,      )\n-        2   2+在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？\n+(3/2, -5/2)\n+(3/2, -7/2)\n+(5/2, -5/2)\n+(5/2, -7/2)",
+  "rawOCRRetained": true,
+  "questionVerified": true,
+  "answerVerifiedPreviously": true,
+  "newAnswerApprovalAdded": false,
+  "releaseApproved": false,
+  "studentReleaseApproved": false,
+  "database": "205_JSON_SQLITE_PAYLOADS_ROUNDTRIP_VERIFIED"
+}

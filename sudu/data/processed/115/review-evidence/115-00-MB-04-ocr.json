@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-04",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+  "webpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+  "question": "若一元二次不等式 2x²+7x+3≤0 的解為 a≤x≤b，則下列何者正確？",
+  "options": [
+    "a>−2",
+    "b<−1",
+    "a 為整數",
+    "b 為整數"
+  ],
+  "visualTextCompared": true,
+  "findings": "直接目視已 QA 單題 WebP，比對題號、完整題幹、四個選項、數學符號與負號；無鄰題混入；此處為人工式目視 QA，不重新執行 OCR。"
+}

@@ -1,0 +1,78 @@
+name: 107 English Q32-35 original printed weather and Chi Po-lin shared WebPs (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_107_e32_35_source_pixel_crops.py
+      - .github/workflows/107-e32-35-source-pixel-and-g5.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa-107-e32-35-pixel-qa-candidate
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-pixel image library
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: SHA-pin official source and existing input question IDs
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python scripts/stage_107_e32_35_source_pixel_crops.py --check
+      - name: Create 4 missing single-question images, 2 shared images, QA database G5
+        run: python scripts/stage_107_e32_35_source_pixel_crops.py --stage
+      - name: Verify candidate identities and release remains blocked
+        run: |
+          python - <<'PY_G5'
+          import json
+          from pathlib import Path
+          p=Path('sudu/data/processed/107')
+          bank=json.loads((p/'questions.json').read_text())
+          manifest=json.loads((p/'webp-manifest.json').read_text())
+          inv=json.loads((p/'inventory.json').read_text())
+          v=json.loads((p/'VISUAL_QA.json').read_text())
+          r=json.loads((p/'release-manifest.json').read_text())
+          assert len(bank['questions'])==len(manifest['items'])==204
+          assert inv['webpGeneratedDrafts']==189 and inv['visualQaPass']==0
+          assert len(bank['sharedMaterials'])==len(manifest['sharedMaterialCrops'])==2
+          assert v['passCount']==0 and not r['releaseAllowed'] and not r['integrationReady']
+          for n in range(32,36):
+              qid=f'107-00-E-{n:02d}'
+              a=next(x for x in manifest['items'] if x['questionId']==qid)
+              b=next(x for x in bank['questions'] if x['questionId']==qid)
+              assert a['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert not b['questionVerified'] and not b['answerVerified'] and not b['integrationReady']
+          print('107 Q32-35 candidate WebP and shared relation successful; no QA promotion')
+          PY_G5
+      - name: Commit QA branch only, compare exact fetched HEAD lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/qa-drafts/webp-v2
+          git add sudu/data/processed/107/qa-drafts/DRAFT_107_E32_35_SHARED_P006_20261024.json
+          git add sudu/data/processed/107/webp-manifest.json sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/ocr-raw-candidates.json sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Other session advanced QA HEAD; no stale push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa107): stage source-page English Q32-35 and two shared crops, G5 PASS only"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

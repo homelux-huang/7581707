@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-MB23-ORIGINAL-TABLE-G2-G3-EVIDENCE-20261103-04",
+  "role": "A",
+  "questionId": "115-00-MB-23",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6595531629",
+  "baseCommit": "e2cf6fe99d879d9b872e1b5b8137591e1f4f68b5",
+  "status": "ROLE_A_SOURCE_G2_ORIGINAL_TABLE_VISUAL_REVIEW_AND_G3_OFFICIAL_DOCUMENT_EVIDENCE_CANDIDATE_NO_RELEASE",
+  "reviewer": "GPT-6 ROLE A AI Assistant Source Visual Review (not Role E, not a human teacher)",
+  "source": {
+    "officialYear": 115,
+    "officialPaper": "00-MB",
+    "originalNumber": 23,
+    "sourcePage": 8,
+    "originalQuestionPdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+    "originalPageWebp": "sudu/data/original/115/00-MB/p008-e82e34d9cd-v2-w1400-q66.webp",
+    "originalPageWebpGitBlob": "4c98df22dd3096c5d59178f4f2b6b3e88415bbee",
+    "originalPageWebpSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+    "originalSingleWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
+    "originalSingleWebpGitBlob": "f8c1fa03e8e97b7d7dae789c8ecf9cd618058bbb",
+    "originalSingleWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+    "sourceCropPixels": [
+      90,
+      167,
+      1310,
+      603
+    ],
+    "sizePixels": [
+      1220,
+      436
+    ],
+    "originalSourceImageReusedUnmodified": true,
+    "imageVisualReviewMethod": "Opened official p8 source page and exact source-pixel single WebP side by side. It has complete question 23 stem, original 2x3 travel-price table and all A/B/C/D, no p8 Q24.",
+    "originalImageG1": "PASS_AI_ASSISTANT_ORIGINAL_SOURCE_VISUAL_CANDIDATE"
+  },
+  "originalTextAndTable": {
+    "correctedQuestion": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
+    "originalOptions": [
+      "32000",
+      "33000",
+      "34000",
+      "35000"
+    ],
+    "sourceTable": {
+      "title": "表（二）",
+      "columns": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    },
+    "tableSemanticDimensions": {
+      "headerColumns": 3,
+      "dataRows": 2,
+      "dataCells": 6
+    },
+    "sourceTableIsMandatory": true,
+    "correctedTextSourceSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088",
+    "correctedTextSha256Method": "SHA256(UTF8(JSON.stringify({question,options,table})))",
+    "sourceRevisionSeed": "ROLE_A_115_MB23_TABLE_G2_G3_SOURCE_EVIDENCE_V1\n3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088\n2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51\nd705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "sourceRevisionSha256": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+    "sourceRevisionMethod": "SHA256(UTF8(ROLE_A_115_MB23_TABLE_G2_G3_SOURCE_EVIDENCE_V1\\n+correctedTextSourceSha256\\n+singleOriginalWebpSha256\\n+officialAnswerPdfSha256))",
+    "historicalSourceProofPath": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
+    "historicalSourceProofGitBlob": "170cd2238bb7c1b942a7a5389797295cdfe26953",
+    "historicalSourceProofByteIdentical": true,
+    "historicalOriginalSourceOCRPreservedInProof": true,
+    "previousRoleCAuthorTableRevision": "c3df98d4c15185803c1b17294c514a19496395d0087364825d2bdce144a10b92",
+    "officialFigureTableG2": "ROLE_A_AI_ASSISTANT_DIRECT_VISUAL_CANDIDATE_NOT_MASTER_ADMITTED"
+  },
+  "publishedOfficialAnswer": {
+    "value": "B",
+    "numericalValueYuan": 33000,
+    "officialPublishedAnswerPdfSha256PreviouslyRecorded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "originalAnswerWebp": "sudu/data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+    "originalAnswerWebpGitBlob": "5ea4b86e929506d595f96fa162d1aae021f68440",
+    "historicalAnswerQAPath": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
+    "historicalAnswerQaGitBlob": "ab82d2f6f2d6743f0ba9e5ca2eabb2d15c4b9d4e",
+    "officialNoticeStatusPath": "sudu/data/processed/115/official-confirmation-status.json",
+    "officialNoticeStatusGitBlob": "6d21432395294d9ccbcfe1dea8be01f88597bbf3",
+    "officialNoticeForPaper": "NO_OBJECTION_SUBMITTED_4_00_MB",
+    "historicalExactOfficialAnswerQaRecordAlreadyTrue": true,
+    "canonicalFormalG3FlagNewlySet": false,
+    "officialPdfDownloadedOrRehashedInThisTask": false
+  },
+  "mathCheck": {
+    "tripIEquation": "2*x - 3000",
+    "tripIIEquation": "1.8*(x + 2000)",
+    "solutionYuan": 33000,
+    "tripIFinalYuan": 63000,
+    "tripIIFinalYuan": 63000,
+    "printedAnswerLetter": "B",
+    "printedAnswerValueYuan": 33000
+  },
+  "downstream": {
+    "canonicalQuestionsJsonEdited": false,
+    "canonical205SqliteEdited": false,
+    "manifestEdited": false,
+    "originalWebpRecreated": false,
+    "CExistingTeachingEdited": false,
+    "independentEContentRegistryApproved": false,
+    "roleDReal8x2ExactRevision": false,
+    "masterCanonicalSourceAdmitted": false,
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}

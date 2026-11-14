@@ -1,0 +1,96 @@
+name: 108 recovered 26 original-page single images and one shared direct G1 (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/apply_108_26_and_shared_direct_g1.py
+      - .github/workflows/108-26-source-direct-g1-and-shared-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa108-26-direct-g1-no-release
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow for source-page pixel equality proof
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin immutable QA base and record actual original-page QA evidence
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/apply_108_26_and_shared_direct_g1.py
+          python scripts/apply_108_26_and_shared_direct_g1.py
+      - name: Verify 26 G1 but keep every G2 G3 and release blocked
+        run: |
+          python - <<'PY_GUARD'
+          import json,sys,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          d=Path('sudu/data/processed/108')
+          def rd(x):return json.loads((d/x).read_text("utf8"))
+          m=rd('webp-manifest.json');b=rd('questions.json')
+          v=rd('VISUAL_QA.json');inv=rd('inventory.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          e=rd('qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json')
+          assert len(m['items'])==len(b['questions'])==len(v['items'])==204
+          assert inv['webpGeneratedDrafts']==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==26
+          assert inv['sharedMaterialsVerified']==len(m['sharedMaterialCrops'])==1
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==0
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert e['newIndividualG1Pass']==26 and e['newSharedMaterialG1Pass']==1
+          assert len(e['items'])==27 and e['reviewer']=='ChatGPT assistant'
+          assert e['independentHumanReview'] is False
+          mm={x['questionId']:x for x in m['items']}
+          qs={x['questionId']:x for x in b['questions']}
+          for item in e['items']:
+              id=item['questionIdOrSharedId']
+              if id=='108-09-2-SHARED-24-25':
+                  x=m['sharedMaterialCrops'][0]
+              else:
+                  x=mm[id]
+                  assert qs[id]['imageQaStatus']=='PASS'
+                  assert not qs[id]['questionVerified'] and not qs[id]['answerVerified'] and not qs[id]['integrationReady']
+              assert x['qaStatus']=='PASS'
+              assert x['visualReviewEvidence']['reviewedSha256']==item['candidateSha256']
+              assert hashlib.sha256(Path(x['output']).read_bytes()).hexdigest()==item['candidateSha256']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('108 source-pixel QA G1 26 individual +1 shared, G2=0 G3=0, G5 11/11, NO RELEASE')
+          PY_GUARD
+      - name: Commit individual G1 and shared evidence with nonforce SHA lease
+        run: |
+          set -eu
+          git add sudu/data/processed/108/webp-manifest.json
+          git add sudu/data/processed/108/questions.json
+          git add sudu/data/processed/108/VISUAL_QA.json
+          git add sudu/data/processed/108/inventory.json
+          git add sudu/data/processed/108/VALIDATION.json
+          git add sudu/data/processed/108/release-manifest.json
+          git add sudu/data/processed/108/question-bank.sqlite3
+          git add sudu/data/processed/108/qa-drafts/DIRECT_VISUAL_108_ALL_26_AND_ACCOUNTING_SHARED_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA change. No stale push, no force"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(108): direct source-page G1 for 26 WebP questions and shared, G5 NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

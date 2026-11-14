@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "stage": "ORIGINAL_IMAGE_SOLVED_BEFORE_OFFICIAL_ANSWER_READ",
+  "reviewer": "GPT-6 AI; image-based reasoning, not human instructor",
+  "reviewedAt": "2026-10-24",
+  "preKeySolution": true,
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "blindClaimScope": "This GPT-6 session displayed only the question WebP and SHA-only image manifest for MB-05 before writing this GitHub evidence; no official key or answer-bearing question JSON for MB-05 was accessed.",
+  "imagePath": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-05.webp",
+  "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "originalImageVisuallyInspected": true,
+  "sourceQuestionTranscriptionFromImage": "在坐標平面上，若平行四邊形 ABCD 的四個頂點其坐標分別為 A(-1,0)、B(0,-5)、C(a,b)、D(2,3)，則下列何者為 BC 的中點坐標？",
+  "sourceOptionsFromImage": [
+    "(3/2, -5/2)",
+    "(3/2, -7/2)",
+    "(5/2, -5/2)",
+    "(5/2, -7/2)"
+  ],
+  "questionRevisionsChecked": "PENDING_COMPARE_TO_SOURCE_QA_AFTER_BLIND_COMMIT",
+  "knownConditions": [
+    "ABCD is a parallelogram with vertices in consecutive order",
+    "A=(-1,0), B=(0,-5), D=(2,3)",
+    "C=(a,b) unknown"
+  ],
+  "method": "In parallelogram ABCD, diagonals AC and BD share their midpoint, equivalently A+C=B+D. Derive C=B+D-A then midpoint M_BC=(B+C)/2.",
+  "solvedAt": "2026-10-24",
+  "blindReasoning": "A+C=B+D ⇒ C=B+D−A=(0,-5)+(2,3)−(-1,0)=(3,-2). The midpoint of B(0,-5) and C(3,-2) is ((0+3)/2,(-5-2)/2)=(3/2,-7/2). Among visible answer options only option B has (3/2,-7/2).",
+  "derivedC": [
+    3,
+    -2
+  ],
+  "derivedBCMidpoint": [
+    "3/2",
+    "-7/2"
+  ],
+  "answer": "B",
+  "independentAlternativeCheck": "Using opposite sides, BC vector equals AD=D-A=(3,3), hence C=B+(3,3)=(3,-2), again midpoint=(3/2,-7/2).",
+  "optionChecks": {
+    "A": "x=3/2 right, y=-5/2 wrong: correct y=-7/2",
+    "B": "(3/2,-7/2) exact match",
+    "C": "x=5/2 and y=-5/2 both differ",
+    "D": "y=-7/2 right, x=5/2 differs from correct 3/2"
+  },
+  "notes": "This is a first-stage pre-key GitHub commit; attach a later source-revision and official PDF verification separately, without editing this original reasoning. QA release flags are not set."
+}

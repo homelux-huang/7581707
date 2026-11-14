@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-04",
+  "testedQuestionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+  "testedWebpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+  "testedAnswer": "C",
+  "browserSmokePassed": true,
+  "rwdPassed": true,
+  "verifiedYearQaMode": true,
+  "reviewer": "Playwright Chromium end-to-end verification on actual original 115 Math(B) student records",
+  "reviewedAt": "2026-10-23",
+  "ciRunUrl": "https://github.com/homelux-huang/7581707/actions/runs/39896725974",
+  "ciJobId": 120228885933,
+  "sourceBranchAtApproval": "ecb544931449d18312bf9ba4bfcfe3f68af6cb6d",
+  "codeCommitTested": "8d399174a8639a7ff10f00ccf06b31d61e4bd45b",
+  "testScript": "tests/sudu_real_reviewed_browser.cjs",
+  "testedViewports": [
+    "360x800",
+    "375x812",
+    "390x844",
+    "412x915",
+    "430x932",
+    "768x1024",
+    "1024x768",
+    "1440x900"
+  ],
+  "checked": [
+    "original_WEBP_decode_with_correct_QID",
+    "A_D_options_rendered",
+    "correct_answer_mapped",
+    "wrong_answer_red_status",
+    "high_school_and_elementary_explanations",
+    "all_four_option_reasoning",
+    "original_math_worked_steps",
+    "first_last_navigation",
+    "RWD_without_horizontal_overflow"
+  ],
+  "lightDarkThemeSmokeCovered": true,
+  "note": "Direct real-source CI browser test verified all 4 questions individually, not just a hand-authored fixture. The test data and UI certification were only simulated in CI; this record approves that tested UI with evidence. Unrelated questions are not approved."
+}
