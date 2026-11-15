@@ -1,0 +1,90 @@
+name: Authenticated private formal Chromium G8 (MANUAL PREREQUISITES)
+on:
+  workflow_dispatch:
+    inputs:
+      qid:
+        description: 'MASTER-assigned and frozen QID'
+        required: true
+      source_commit:
+        description: 'Exact committed source with pending G1-G7 audit'
+        required: true
+      audit_path:
+        description: 'Committed G1_G7_REVIEWED_PENDING_G8 audit path'
+        required: true
+      private_evidence_dir:
+        description: 'Existing access-controlled local provider-proof root; NO key input'
+        required: true
+permissions:
+  contents: read
+jobs:
+  formal_g8:
+    if: github.ref == 'refs/heads/main'
+    # No runner is provisioned by this workflow. Owner must provide an already
+    # authorized isolated private runner with first-turn raw proof in custody.
+    runs-on: [self-hosted, linux, g8-private]
+    timeout-minutes: 25
+    env:
+      QID_INPUT: ${{ inputs.qid }}
+      SOURCE_INPUT: ${{ inputs.source_commit }}
+      AUDIT_INPUT: ${{ inputs.audit_path }}
+      RAW_INPUT: ${{ inputs.private_evidence_dir }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify inputs without executing their text
+        run: |
+          python - <<'PY'
+          import os,re
+          assert re.fullmatch(r'(114|115)-(00-C|00-E|00-MB|09-1|09-2)-[0-9]{2}',os.environ['QID_INPUT'])
+          assert re.fullmatch(r'[0-9a-f]{40}',os.environ['SOURCE_INPUT'])
+          assert os.environ['AUDIT_INPUT'].startswith('sudu/data/processed/')
+          assert '..' not in os.environ['AUDIT_INPUT'].split('/')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Runtime prerequisites (no model calls or keys)
+        run: |
+          python -m pip install -q pillow
+          npm install --no-save playwright@1.51.1
+          npx playwright install --only-shell chromium
+      - name: Read exact frozen source and authorize native private staging
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$SOURCE_INPUT"
+          git worktree add --detach "$RUNNER_TEMP/g8-source" "$SOURCE_INPUT"
+          STAGE_ROOT="$(python -c 'import tempfile;print(tempfile.gettempdir())')/sudu-g8-${GITHUB_RUN_ID}"
+          python -m scripts.sudu_g8_release_bridge stage --source "$RUNNER_TEMP/g8-source" --qid "$QID_INPUT" --audit "$AUDIT_INPUT" --private-evidence "$RAW_INPUT" --dest "$STAGE_ROOT"
+          echo "SUDU_G8_STAGE=$STAGE_ROOT" >> "$GITHUB_ENV"
+          echo "SUDU_G8_SOURCE=$RUNNER_TEMP/g8-source" >> "$GITHUB_ENV"
+          echo "SUDU_G8_PRIVATE_EVIDENCE=$RAW_INPUT" >> "$GITHUB_ENV"
+          echo "SUDU_G8_OUTPUT=$RUNNER_TEMP/formal-g8-${GITHUB_RUN_ID}" >> "$GITHUB_ENV"
+      - name: Genuine same-byte native-renderer Chromium 16 contexts
+        run: node tests/sudu_g8_release_bridge_browser.cjs
+      - name: Retain formal report and screenshots only (never raw provider or site)
+        uses: actions/upload-artifact@v4
+        with:
+          name: formal-g8-${{ github.run_id }}
+          path: |
+            ${{ env.SUDU_G8_OUTPUT }}/report.json
+            ${{ env.SUDU_G8_OUTPUT }}/*.png
+          if-no-files-found: error
+          retention-days: 90
+      - name: Clear temporary source, staging and local screenshots; retain provider proof
+        if: always()
+        run: |
+          python - <<'PY'
+          import os,shutil,tempfile
+          from pathlib import Path
+          stage=Path(tempfile.gettempdir())/('sudu-g8-'+os.environ['GITHUB_RUN_ID'])
+          if stage.is_dir() and not stage.is_symlink():shutil.rmtree(stage)
+          out=Path(os.environ['RUNNER_TEMP'])/('formal-g8-'+os.environ['GITHUB_RUN_ID'])
+          if out.is_dir() and not out.is_symlink():shutil.rmtree(out)
+          PY

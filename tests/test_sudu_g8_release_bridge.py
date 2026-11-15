@@ -107,7 +107,7 @@ class BridgeTests(unittest.TestCase):
    with self.assertRaises(b.Hold):b.verify_report(m,mh,self.report)
   f.write_bytes(raw);self.assertEqual(b.verify_report(m,mh,self.report)[0]['status'],'FORMAL_G8')
  def test_actual_Actions_provenance_rejects_wrong_run_job_artifact(self):
-  self.stage_it();_,_,_,e=self.make_report();run={'head_sha':e['codeCommit'],'status':'completed','conclusion':'success'};job={'run_id':123,'head_sha':e['codeCommit'],'conclusion':'success'};art={'expired':False,'digest':'sha256:'+e['artifactSha256'],'workflow_run':{'id':123}}
+  self.stage_it();_,_,_,e=self.make_report();run={'head_sha':e['codeCommit'],'status':'completed','conclusion':'success','path':b.FORMAL_WORKFLOW,'event':'workflow_dispatch','head_branch':'main'};job={'name':'formal_g8','run_id':123,'head_sha':e['codeCommit'],'conclusion':'success'};art={'expired':False,'digest':'sha256:'+e['artifactSha256'],'workflow_run':{'id':123}}
   with patch.object(b,'github',side_effect=[run,job,art]):b.actions_provenance(e)
   for index,bad in [(0,{**run,'head_sha':'f'*40}),(1,{**job,'run_id':999}),(2,{**art,'expired':True})]:
    response=[run,job,art];response[index]=bad

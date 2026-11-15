@@ -11,6 +11,7 @@ on:
       - tests/test_sudu_g8_release_bridge.py
       - tests/sudu_g8_release_bridge_browser.cjs
       - .github/workflows/work-authenticated-g8-bridge-20261115.yml
+      - .github/workflows/work-authenticated-g8-formal-20261115.yml
 permissions:
   contents: read
 jobs:

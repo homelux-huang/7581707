@@ -13,7 +13,8 @@ from scripts import sudu_independent_review_gate as gate
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA='AUTHENTICATED_G8_BRIDGE_V1'
 MATRIX=tuple((w,h,t) for w,h in [(360,800),(375,812),(390,844),(412,915),(430,932),(768,1024),(1024,768),(1440,900)] for t in ('light','dark'))
-CODE=('scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
+FORMAL_WORKFLOW='.github/workflows/work-authenticated-g8-formal-20261115.yml'
+CODE=(FORMAL_WORKFLOW,'scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
 SHA=re.compile(r'^[0-9a-f]{64}$')
 class Hold(ValueError): pass
 
@@ -185,6 +186,8 @@ def github(path):
 
 def actions_provenance(entry):
  run=github('/actions/runs/'+str(entry['runId']));job=github('/actions/jobs/'+str(entry['jobId']));artifact=github('/actions/artifacts/'+str(entry['artifactId']))
+ require(str(run.get('path','')).split('@')[0]==FORMAL_WORKFLOW and run.get('event')=='workflow_dispatch' and run.get('head_branch')=='main','protected formal workflow required')
+ require(job.get('name')=='formal_g8','actual formal Chromium job required')
  require(run.get('head_sha')==entry['codeCommit'] and run.get('status')=='completed' and run.get('conclusion')=='success','successful exact-code Actions run required')
  require(job.get('run_id')==entry['runId'] and job.get('head_sha')==entry['codeCommit'] and job.get('conclusion')=='success','successful formal job required')
  require(artifact.get('expired') is False and artifact.get('digest')=='sha256:'+entry['artifactSha256'] and (artifact.get('workflow_run') or {}).get('id')==entry['runId'],'actual retained G8 artifact digest required')
