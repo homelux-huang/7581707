@@ -1,0 +1,67 @@
+name: ROLE A G6 Answer-Hidden Source Inputs (NO INFERENCE)
+on:
+  push:
+    branches:
+      - source/role-a-g6-clean-inputs-20261115
+  pull_request:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/role_a_g6_clean_input_pack_20261115.py
+      - .github/workflows/role-a-g6-clean-input-pack-20261115.yml
+      - docs/ROLE_A_G6_CLEAN_INPUTS_HANDOFF_20261115.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-only-g6-input-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Exact source and tamper-negative checks (NO PROVIDER)
+        run: python3 scripts/role_a_g6_clean_input_pack_20261115.py --selftest
+      - name: Build clean source-only solver files from original G2 plus WebP
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/role_a_g6_clean_input_pack_20261115.py --out "$RUNNER_TEMP/role-a-g6-pack"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          root = Path(os.environ["RUNNER_TEMP"]) / "role-a-g6-pack"
+          solver = root / "solver-input"
+          entries = list(solver.iterdir())
+          assert len(entries) == 9, f"expected 9 G2-confirmed QIDs, got {len(entries)}"
+          for entry in entries:
+              assert entry.is_dir()
+              assert {p.name for p in entry.iterdir()} == {"question.txt", "original.webp"}
+              text = (entry / "question.txt").read_text(encoding="utf-8")
+              for forbidden in ("officialAnswer", "finalAnswer", "teachingDigest",
+                                "studentReleaseApproved", "github.com/", "issuecomment-",
+                                "Official answer:", "Correct answer:"):
+                  assert forbidden not in text, f"{entry.name}: forbidden field {forbidden}"
+              assert (entry / "original.webp").stat().st_size > 0
+          assert len(list((root / "operator-only").iterdir())) == 1
+          assert (root / "operator-only" / "manifest.json").exists()
+          assert "115-00-MB-23" in [x.name for x in entries]
+          print("PASS nine isolated prompts + exact WebP; no answer or metadata in solver inputs")
+          PY
+      - name: Publish ONLY answer-hidden solver inputs (operator must select ONE QID)
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-a-g6-clean-solver-inputs
+          path: ${{ runner.temp }}/role-a-g6-pack/solver-input/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish separate operator-only source SHA manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: role-a-g6-operator-only-sha-evidence
+          path: ${{ runner.temp }}/role-a-g6-pack/operator-only/manifest.json
+          if-no-files-found: error
+          retention-days: 14
