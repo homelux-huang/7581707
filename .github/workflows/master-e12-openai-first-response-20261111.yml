@@ -1,0 +1,87 @@
+name: MASTER E12 external OpenAI first response HARNESS (HOLD until independent evidence)
+on:
+  push:
+    branches:
+      - security/master-e12-openai-first-response-harness-20261111
+      - fix/e12-exact-run-authorization-20261114
+    paths:
+      - scripts/master_e12_openai_first_solver_20261111.py
+      - tests/test_master_e12_openai_first_solver_20261111.py
+      - docs/evidence-inputs/114-00-E-12-G6-answer-free-G2-first-input-20261111.txt
+      - .github/workflows/master-e12-openai-first-response-20261111.yml
+      - docs/evidence-inputs/114-00-E-12-g6-operator-run-marker-*.md
+permissions:
+  contents: read
+concurrency:
+  group: master-e12-openai-first-evidence
+  cancel-in-progress: false
+
+jobs:
+  synthetics_only_contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify immutable source G2 and synthetic fail-closed contract tests
+        run: |
+          python scripts/master_e12_openai_first_solver_20261111.py preflight
+          python -m unittest discover -s tests -p test_master_e12_openai_first_solver_20261111.py -v
+      - name: Explicitly report CI contract is not a real blind solve
+        run: |
+          echo 'SYNTHETIC CONTRACT CHECK ONLY / NO EXTERNAL MODEL REQUEST'
+          echo 'G6=UNVERIFIED G7=UNVERIFIED TRUST_PASS=FALSE READY=FALSE LIVE=FALSE'
+
+  one_real_external_first_attempt:
+    # Only an independently reviewed operator's exact trigger commit may run paid inference.
+    if: >-
+      github.repository == 'homelux-huang/7581707' &&
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/security/master-e12-openai-first-response-harness-20261111' &&
+      github.event.head_commit.message == 'execute(e12-g6): approved independent provider first-turn'
+    needs: synthetics_only_contract
+    environment: e12-g6-independent-operator
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          sparse-checkout: |
+            docs/evidence-inputs/114-00-E-12-G6-answer-free-G2-first-input-20261111.txt
+            scripts/master_e12_openai_first_solver_20261111.py
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original G2 SHA and no prior model context
+        run: |
+          python scripts/master_e12_openai_first_solver_20261111.py preflight
+      - name: ONE real provider request (raw original bytes, NO prior chat / no official key)
+        env:
+          E12_G6_OWNER_OPERATOR_LOGIN: ${{ vars.E12_G6_OWNER_OPERATOR_LOGIN }}
+          E12_G6_OWNER_ARMED: ${{ vars.E12_G6_OWNER_ARMED }}
+          E12_G6_APPROVED_COMMIT_SHA: ${{ vars.E12_G6_APPROVED_COMMIT_SHA }}
+          E12_G6_APPROVED_RUN_ID: ${{ vars.E12_G6_APPROVED_RUN_ID }}
+          E12_G6_OPENAI_API_KEY: ${{ secrets.E12_G6_OPENAI_API_KEY }}
+          E12_EVIDENCE_DIR: ${{ runner.temp }}/e12_first_model_raw
+        run: |
+          python scripts/master_e12_openai_first_solver_20261111.py first
+      - name: Retrieve G3 only after immutable first-response artifact bytes exist
+        env:
+          E12_EVIDENCE_DIR: ${{ runner.temp }}/e12_first_model_raw
+        run: |
+          python scripts/master_e12_openai_first_solver_20261111.py reveal-after
+      - name: Save actual original bytes even when provider request fails (NOT TRUST)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: E12-FIRST-EXTERNAL-RAW-NOT-A-RECEIPT-${{ github.run_id }}
+          path: ${{ runner.temp }}/e12_first_model_raw
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,48 @@
+name: E12 active OpenAI API reachability without key (NOT SOLVER)
+on:
+  push:
+    branches:
+      - security/master-e12-openai-first-response-harness-20261111
+    paths:
+      - .github/workflows/master-e12-openai-reachability-20261111.yml
+permissions:
+  contents: read
+jobs:
+  check_live_api_no_model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check official active provider response schema WITHOUT credentials
+        run: |
+          python - <<'PY'
+          import hashlib,json,urllib.request,urllib.error,datetime
+          url='https://api.openai.com/v1/models'
+          request=urllib.request.Request(url,headers={'Accept':'application/json'},method='GET')
+          try:
+              with urllib.request.urlopen(request,timeout=20) as response:
+                  code=response.status
+                  headers=response.headers
+                  raw=response.read()
+          except urllib.error.HTTPError as error:
+              code=error.code
+              headers=error.headers
+              raw=error.read()
+          info={'url':url,'method':'GET','apiKeyProvided':False,
+              'modelGenerationRequested':False,
+              'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'httpStatus':code,
+              'contentType':headers.get('content-type'),
+              'providerRequestId':headers.get('x-request-id'),
+              'bodyBytes':len(raw),
+              'bodySha256':hashlib.sha256(raw).hexdigest(),
+              'bodyIsRetiredPlaceholderOK':raw==b'OK\r\n'}
+          print(json.dumps(info,sort_keys=True))
+          # A 401 JSON auth error is the expected LIVE API connectivity result:
+          # it cannot solve G6 until an independent operator supplies a protected key.
+          assert code in (401,403), 'NONSTANDARD_HTTP_STATUS_BLOCK_PROVIDER'
+          assert 'json' in (headers.get('content-type') or '').lower(), 'PROVIDER_MUST_RETURN_JSON_ERROR'
+          assert raw!=b'OK\r\n', 'RETIRED_ENDPOINT_PLACEHOLDER_NOT_A_PROVIDER'
+          obj=json.loads(raw)
+          assert isinstance(obj,dict) and 'error' in obj, 'MISSING_PROVIDER_ERROR'
+          print('REACHABILITY_PASS_ONLY__AUTH_KEY_MISSING__NO_INFERENCE__G6_UNVERIFIED_G7_UNVERIFIED')
+          PY
