@@ -30,7 +30,8 @@ def jsonfile(path):
 def run():
     issuer_path=G5/"sudu/data/processed/114/review-evidence/114-00-E-07-teaching-publisher-20261115.json"
     issuer_bytes=raw(issuer_path)
-    gitblob=hashlib.sha1(b"blob "+str(len(issuer_bytes)).encode()+b"\\0"+issuer_bytes).hexdigest()
+    import subprocess
+    gitblob=subprocess.check_output(['git','hash-object',str(issuer_path)],text=True).strip()
     check(gitblob==G5_BLOB,"G5 actual byte Git Blob mismatch")
     issuer=json.loads(issuer_bytes)
     teach=issuer["content"]
