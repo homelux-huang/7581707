@@ -81,10 +81,98 @@ def stable(q: dict, year: int) -> tuple[str, str] | None:
         return None
     return qid, subject
 
-def text_revision(q: dict, sha_webp: str) -> str:
-    """Hash excludes answer so independent solving cannot derive the official key."""
-    payload = {"question": q.get("question"), "options": q.get("options"), "singleQuestionWebpSha256": sha_webp}
-    return digest(json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode())
+def text_revision(q: dict, sha_webp: str, source: Path | None = None) -> str:
+    """Return the actually admitted source revision, never a tableless alias.
+
+    Plain 114/115 questions retain their original answer-hidden revision bytes.
+    The original 115 MB23 2x3 table has its OWN previously admitted A G2 source
+    revision, pinned to immutable original table evidence. A generic legacy
+    question/options/WebP digest would silently omit the table; that would
+    incorrectly reject genuine MB23, or risk accepting a forged table later.
+
+    This function NEVER reads an official answer LETTER or author teaching.
+    Its table-mode seed uses only source text, real table, original WebP digest
+    and published-answer PDF digest (a document identity, not the answer key).
+    """
+    payload = {"question": q.get("question"), "options": q.get("options"),
+               "singleQuestionWebpSha256": sha_webp}
+    legacy = digest(json.dumps(payload, ensure_ascii=False, sort_keys=True,
+                               separators=(",", ":")).encode())
+    extraction = q.get("extraction")
+    overlay = extraction.get("correctionOverlay") if isinstance(extraction, dict) else None
+    if not isinstance(overlay, dict) or not any(key in overlay for key in (
+            "sourceTables", "tableTextSha256", "tableEvidencePath")):
+        return legacy
+
+    # Explicit fail-closed dispatch: a future table source cannot claim a
+    # previously approved revision merely by adding unverified table metadata.
+    if q.get("questionId") != "115-00-MB-23" or source is None:
+        return ""
+    if not SHA.fullmatch(str(sha_webp)):
+        return ""
+    rel = "sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json"
+    if overlay.get("tableEvidencePath") != rel or q.get("year") != 115:
+        return ""
+    root = Path(source).resolve()
+    evidence_path = root / rel
+    if (not evidence_path.is_file() or evidence_path.is_symlink()
+            or not evidence_path.resolve().is_relative_to(root)):
+        return ""
+    try:
+        raw = evidence_path.read_bytes()
+        # Exact original A table source Git Blob is immutable for this gate.
+        original_oid = hashlib.sha1(
+            b"blob " + str(len(raw)).encode("ascii") + b"\0" + raw
+        ).hexdigest()
+        if original_oid != "0f63d6a5f91015dd2b146731c48dce08668c1fa2":
+            return ""
+        evidence = json.loads(raw)
+        if (evidence.get("schemaVersion") != 1
+                or evidence.get("questionId") != q["questionId"]):
+            return ""
+        original = evidence.get("originalTextAndTable")
+        if not isinstance(original, dict):
+            return ""
+        table = original.get("sourceTable")
+        if not isinstance(table, dict) or set(table) != {"title", "columns", "rows"}:
+            return ""
+        columns, rows = table["columns"], table["rows"]
+        if (not isinstance(columns, list) or len(columns) != 3
+                or not all(isinstance(c, str) and c.strip() for c in columns)
+                or not isinstance(rows, list) or len(rows) != 2
+                or any(not isinstance(row, list) or len(row) != 3
+                       or not all(isinstance(cell, str) and cell.strip() for cell in row)
+                       for row in rows)):
+            return ""
+        normalized_table = [{"heading": columns, "rows": rows}]
+        if (q.get("tables") != normalized_table
+                or overlay.get("sourceTables") != normalized_table
+                or original.get("correctedQuestion") != q.get("question")
+                or original.get("originalOptions") != q.get("options")
+                or original.get("sourceTableIsMandatory") is not True):
+            return ""
+        correct_text = digest(json.dumps(
+            {"question": q.get("question"), "options": q.get("options"),
+             "table": table}, ensure_ascii=False, separators=(",", ":")
+        ).encode("utf-8"))
+        if (correct_text != original.get("correctedTextSourceSha256")
+                or correct_text != overlay.get("tableTextSha256")
+                or correct_text != (q.get("textQaEvidence") or {}).get("originalTableSha256")):
+            return ""
+        pdf_digest = pdf_sha(q, "answer")
+        if not SHA.fullmatch(pdf_digest):
+            return ""
+        seed = ("ROLE_A_115_MB23_TABLE_G2_G3_SOURCE_EVIDENCE_V1\n"
+                + correct_text + "\n" + sha_webp + "\n" + pdf_digest)
+        real_revision = digest(seed.encode("utf-8"))
+        if (original.get("sourceRevisionSeed") != seed
+                or original.get("sourceRevisionSha256") != real_revision
+                or overlay.get("questionRevision") != real_revision
+                or (q.get("textQaEvidence") or {}).get("questionRevision") != real_revision):
+            return ""
+        return real_revision
+    except (OSError, ValueError, TypeError, KeyError, UnicodeError):
+        return ""
 
 def shared_material_ids(q: dict) -> tuple[str, ...] | None:
     """115 uses sharedMaterialId; 114 can use assets.sharedMaterialIds."""
@@ -566,7 +654,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         source,audit,q,manifest,teach,teaching_raw,policy=policy)
     if not independently_authorized:
         return q
-    revision=text_revision(q,manifest["sha256"])
+    revision=text_revision(q,manifest["sha256"],source)
     if not all((
         ocr.get("questionRevision") == revision,
         ocr.get("webpSha256") == manifest["sha256"],
@@ -732,7 +820,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
                 "reviewStage":"image_qa_pass_only",
             })
             qa_per_subject[subject]["imagePreviewReady"] += 1
-        revision = text_revision(q, item.get("sha256", "") if item else "")
+        revision = text_revision(q, item.get("sha256", "") if item else "", src)
         ocr_ok, official_ok = source_proof(q,image_ok,db_good,revision)
         qa_per_subject[subject]["ocrQaPass"] += int(ocr_ok)
         qa_per_subject[subject]["finalAnswerQaPass"] += int(official_ok)
