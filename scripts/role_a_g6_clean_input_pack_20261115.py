@@ -93,7 +93,7 @@ def load_sources(repo_root=ROOT):
         if qid == "115-00-MB-20":
             require("/webp-v5/" in image_path, "MB20: v5 required, v1/v2 forbidden")
         if qid == "115-00-MB-23":
-            tables = q.get("sourceTables", [])
+            tables = q.get("tables", [])
             tab = g2.get("originalSourceTable", {})
             require(len(tables) == 1
                     and tables[0].get("heading") == tab.get("columns")
