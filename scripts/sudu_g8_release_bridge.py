@@ -14,7 +14,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SCHEMA='AUTHENTICATED_G8_BRIDGE_V1'
 MATRIX=tuple((w,h,t) for w,h in [(360,800),(375,812),(390,844),(412,915),(430,932),(768,1024),(1024,768),(1440,900)] for t in ('light','dark'))
 FORMAL_WORKFLOW='.github/workflows/work-authenticated-g8-formal-20261115.yml'
-CODE=(FORMAL_WORKFLOW,'scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
+CODE=('scripts/sudu_g8_archive.py',FORMAL_WORKFLOW,'scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
 SHA=re.compile(r'^[0-9a-f]{64}$')
 class Hold(ValueError): pass
 
@@ -50,8 +50,8 @@ def put(root,rel,b):
  p.chmod(0o600)
 
 def trusted_policy():
- p=gate.policy_from_trusted_main()
- require(isinstance(p,dict) and p.get('reviewMode')=='DISTINCT_AI_CONTENT_RECEIPT_V1' and p.get('requireHumanTeacher') is False,'V1 protected policy required')
+ from scripts import sudu_g8_archive
+ _,p=sudu_g8_archive.current_policy()
  require(gate._ai_registry_exactly_matches_protected_main_policy(p),'policy must equal actual protected-main policy')
  return p
 
@@ -162,7 +162,7 @@ def non_ui(source,qid,audit_rel,private_evidence):
 def stage(source,qid,audit,private_evidence,dest):
  checked=non_ui(source,qid,audit,private_evidence);dest=private_new(dest,source)
  with tempfile.TemporaryDirectory(prefix='sudu-g8-build-') as temporary:
-  temp=Path(temporary);native=temp/'native';pub.stage(Path(source),native,checked['sourceCommit'])
+  temp=Path(temporary);native=temp/'native';pub.stage(Path(source),native,checked['sourceCommit'],review_policy=trusted_policy())
   year=checked['year'];rel=f'sudu/data/approved/{year}.json';baseline=safe(native,rel).read_bytes();payload=json.loads(baseline)
   require(qid not in {x['canonicalId'] for x in payload['questions']},'already published QID is not a new admission')
   payload['questions'].append(checked['row']);order={x['questionId']:i for i,x in enumerate(pub.read(Path(source)/f'sudu/data/processed/{year}/questions.json')['questions'])};payload['questions'].sort(key=lambda x:order[x['canonicalId']]);payload['approvedCount']=len(payload['questions']);output=serialized(payload)
@@ -201,6 +201,9 @@ def github(path):
  with urlopen(Request('https://api.github.com/repos/'+gate.REPO+path,headers=headers),timeout=15) as response:return json.loads(response.read(),object_pairs_hook=gate._no_duplicate_keys)
 
 def actions_provenance(entry):
+ if 'durableArchive' in entry:
+  from scripts import sudu_g8_archive
+  return sudu_g8_archive.verify_owned(entry)
  run=github('/actions/runs/'+str(entry['runId']));job=github('/actions/jobs/'+str(entry['jobId']));artifact=github('/actions/artifacts/'+str(entry['artifactId']))
  require(str(run.get('path','')).split('@')[0]==FORMAL_WORKFLOW and run.get('event')=='workflow_dispatch' and run.get('head_branch')=='main','protected formal workflow required')
  require(job.get('name')=='formal_g8','actual formal Chromium job required')
@@ -272,7 +275,7 @@ def promote(source,stage_root,private_evidence,report_root,dest):
   audit=copy.deepcopy(checked['audit']);audit.update(status='STUDENT_QA_APPROVED',questionBeforeReview=checked['question']['question'],optionsBeforeReview=checked['question']['options'],webpSha256=manifest['webpSha256'],officialPdfSha256=pub.pdf_sha(checked['question'],'answer'),questionPdfSha256=pub.pdf_sha(checked['question'],'question'),originalAnswerCandidate=checked['question']['answer']);audit['evidence']['ui']=ui_rel
   batches=pub.reviewed_student_batches(assembled,year);batches[qid]=audit
   batch_rel=f'sudu/data/processed/{year}/verified-student-batch.json';pub.dump(assembled/batch_rel,{'schemaVersion':1,'year':year,'items':list(batches.values())})
-  native=temp/'native';pub.stage(assembled,native,manifest['sourceCommit']);pub.site_check(native)
+  native=temp/'native';pub.stage(assembled,native,manifest['sourceCommit'],review_policy=trusted_policy());pub.site_check(native)
   require(safe(native,manifest['payloadPath']).read_bytes()==safe(Path(stage_root)/'site',manifest['payloadPath']).read_bytes(),'native final publisher differs from browser-tested bytes')
   dest.mkdir(mode=0o700);shutil.copytree(native/'sudu/data/approved',dest/'sudu/data/approved')
   put(dest,'qa-evidence/'+ui_rel,safe(assembled,ui_rel).read_bytes());put(dest,'qa-evidence/'+batch_rel,safe(assembled,batch_rel).read_bytes())

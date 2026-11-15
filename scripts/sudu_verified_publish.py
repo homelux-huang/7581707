@@ -615,7 +615,7 @@ def official_notice_scope_certified(source: Path, year: int, q: dict, proof: dic
 
 
 def apply_independently_certified_review(source: Path, year: int, q: dict, manifest: dict,
-                                        audit: dict | None) -> dict:
+                                        audit: dict | None, review_policy: dict | None = None) -> dict:
     """Fail closed: a source or answer change invalidates the entire certificate.
 
     Never changes original QID, answer candidate, OCR source, crop or SQLite.
@@ -650,7 +650,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
         from scripts import sudu_independent_review_gate as reviewer_gate
     except ModuleNotFoundError:
         import sudu_independent_review_gate as reviewer_gate
-    policy=reviewer_gate.policy_from_trusted_main()
+    policy=review_policy if review_policy is not None else reviewer_gate.policy_from_trusted_main()
     if (not isinstance(policy,dict)
             or policy.get("reviewMode")!="DISTINCT_AI_CONTENT_RECEIPT_V1"):
         return q  # Never fall back to old human-teacher signer admission.
@@ -734,14 +734,14 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
 
 
 def final_review_authorized(source: Path, q: dict, item: dict, audit: dict | None,
-                            revision: str) -> tuple[bool, str]:
+                            revision: str, review_policy: dict | None = None) -> tuple[bool, str]:
     """Final admission guard: source PASS flags and overlay pass-through are not authority."""
     try:
         try:
             from scripts import sudu_independent_review_gate as reviewer_gate
         except ModuleNotFoundError:
             import sudu_independent_review_gate as reviewer_gate
-        policy = reviewer_gate.policy_from_trusted_main()
+        policy = review_policy if review_policy is not None else reviewer_gate.policy_from_trusted_main()
         if not isinstance(policy, dict) or policy.get("reviewMode") != "DISTINCT_AI_CONTENT_RECEIPT_V1":
             return False, "trusted_ai_review_policy_missing"
         def evidence(proof):
@@ -787,7 +787,7 @@ def final_review_authorized(source: Path, q: dict, item: dict, audit: dict | Non
     except (OSError, ValueError, TypeError, KeyError, AttributeError, UnicodeError):
         return False, "independent_final_admission_evidence_invalid"
 
-def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
+def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy: dict | None = None) -> dict:
     d = src / f"sudu/data/processed/{year}"
     bank, manifest = read(d / "questions.json"), read(d / "webp-manifest.json")
     inventory = read(d / "inventory.json")
@@ -811,7 +811,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
             raise ValueError(f"Duplicate stable question ID: {qid}")
         seen.add(qid)
         item = entries.get(qid)
-        q = apply_independently_certified_review(src,year,q,item,certified_reviews.get(qid))
+        q = apply_independently_certified_review(src,year,q,item,certified_reviews.get(qid),review_policy)
         qa_per_subject[subject]["candidate"] += 1
         image_ok = image_proof(q, item, shared, src)
         if individual_image_proof(q,item,src):
@@ -851,7 +851,7 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str) -> dict:
             blocked.append({"id":qid,"reason":"sha_pinned_qa_certificate_missing"})
             continue
         authorized, authorization_reason = final_review_authorized(
-            src, q, item, certified_reviews.get(qid), revision)
+            src, q, item, certified_reviews.get(qid), revision, review_policy)
         if not authorized:
             blocked.append({"id":qid,"reason":"independent_review_"+authorization_reason})
             continue
@@ -921,13 +921,17 @@ def publication_provenance(source_sha: str, source_tree_signature: str = "") -> 
     }
 
 
-def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = ""):
+def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = "", *, review_policy: dict | None = None):
+    if review_policy is not None:
+        from scripts import sudu_independent_review_gate as reviewer_gate
+        if not reviewer_gate._ai_registry_exactly_matches_protected_main_policy(review_policy):
+            raise ValueError("explicit publisher policy must equal current protected main")
     report = { "schemaVersion":1, "dataStage":"qa_verified_only",
         "notYetLiveUntilPagesSuccess":True,
         "provenance": publication_provenance(source_sha, source_tree_signature),
         "years":{}}
     for year in YEARS:
-        report["years"][str(year)] = snapshot(source,dest,year,source_sha)
+        report["years"][str(year)] = snapshot(source,dest,year,source_sha,review_policy)
     dump(dest/"sudu/data/approved/progress.json",report)
     return report
 
