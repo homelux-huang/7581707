@@ -1,0 +1,21 @@
+name: ROLE E 115 MB20 MB23 MB24 MB25 content hold exact G1-G5 (NO RELEASE)
+on:
+  push:
+    branches:
+      - review/role-e-mb23-mb20-mb24-mb25-current-20261115
+  pull_request:
+    paths:
+      - 'sudu/data/processed/115/review-evidence/role-e-20261115/**'
+      - 'tests/test_role_e_115_mb23_mb20_mb24_mb25_content_hold_20261115.py'
+      - '.github/workflows/role-e-mb20-mb23-mb24-mb25-content-hold-20261115.yml'
+permissions:
+  contents: read
+jobs:
+  exact_source_and_negative_trust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check source original images, native issuer SHA, special table and math (HOLD)
+        run: python -m unittest discover -s tests -p 'test_role_e_115_mb23_mb20_mb24_mb25_content_hold_20261115.py' -v
