@@ -1,0 +1,75 @@
+name: Work authenticated G8 staging and promotion contract (NO RELEASE)
+on:
+  push:
+    branches: [fix/work-authenticated-g8-bridge-20261115]
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/sudu_g8_release_bridge.py
+      - scripts/sudu_verified_publish.py
+      - scripts/build.py
+      - tests/test_sudu_g8_release_bridge.py
+      - tests/sudu_g8_release_bridge_browser.cjs
+      - .github/workflows/work-authenticated-g8-bridge-20261115.yml
+      - .github/workflows/work-authenticated-g8-formal-20261115.yml
+permissions:
+  contents: read
+jobs:
+  bridge_security:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -q pillow requests beautifulsoup4 cryptography
+      - name: Synthetic authority unit tests and unchanged AI safety regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_sudu*.py' -v
+          node --check tests/sudu_g8_release_bridge_browser.cjs
+      - name: Actual source checkout and original five native outputs stay protected
+        env:
+          SOURCE_SHA: fec4ff58fbe63170fb42b4c47ad76c08848e8ece
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git worktree add --detach "$RUNNER_TEMP/source" "$SOURCE_SHA"
+          python -m scripts.sudu_verified_publish stage --source "$RUNNER_TEMP/source" --dest "$RUNNER_TEMP/native-historical" --sha "$SOURCE_SHA" > "$RUNNER_TEMP/native-report.json"
+          python -m scripts.sudu_verified_publish check --dest "$RUNNER_TEMP/native-historical"
+          SOURCE_ROOT="$RUNNER_TEMP/source" NATIVE_ROOT="$RUNNER_TEMP/native-historical" python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from scripts import sudu_verified_publish as pub
+          from scripts import sudu_independent_review_gate as gate
+          root=Path(os.environ['SOURCE_ROOT']);out=Path(os.environ['NATIVE_ROOT'])/'sudu/data/approved'
+          assert json.loads((out/'114.json').read_text())['approvedCount']==0
+          approved=json.loads((out/'115.json').read_text())
+          assert {q['canonicalId'] for q in approved['questions']}==gate.LEGACY_FIVE_IDS
+          policy=gate.policy_from_trusted_main()
+          for qid in ['114-00-E-11']+['115-00-MB-'+n for n in ['20','21','22','23','24','25']]:
+              year=int(qid[:3]);base=root/f'sudu/data/processed/{year}'
+              q=next(q for q in json.loads((base/'questions.json').read_text())['questions'] if q['questionId']==qid)
+              m=next(m for m in json.loads((base/'webp-manifest.json').read_text())['items'] if m['questionId']==qid)
+              paths=list((base/'review-evidence').glob(qid+'-teaching-publisher-*.json'));assert len(paths)==1
+              raw=paths[0].read_bytes();teaching=json.loads(raw)
+              ok,why=gate.certified(root,{},q,m,teaching,raw,policy=policy)
+              assert not ok and why=='distinct_ai_content_review_missing',(qid,why)
+          print('ACTUAL seven QIDs HOLD: protected E absent; native historical five preserved; no real G8/READY/LIVE')
+          PY
+      - name: No actual PRE_G8 artifact may be created without frozen audit and G1-G7
+        run: |
+          set -euo pipefail
+          mkdir -m 700 "$RUNNER_TEMP/raw-evidence"
+          if python -m scripts.sudu_g8_release_bridge stage --source "$RUNNER_TEMP/source" --qid 114-00-E-11 --audit sudu/data/processed/114/review-evidence/114-00-E-11-teaching-publisher-20261113.json --private-evidence "$RUNNER_TEMP/raw-evidence" --dest /tmp/sudu-g8-must-not-exist; then
+            echo 'SECURITY FAILURE: missing authoritative G1-G7 audit admitted'; exit 1
+          fi
+          test ! -e /tmp/sudu-g8-must-not-exist
+          git diff --exit-code

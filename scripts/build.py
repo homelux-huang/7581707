@@ -168,8 +168,13 @@ def generate_demo_question_crops(output):
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return manifest
 
-def build():
-    output = ROOT / "_site"
+def build(output_dir=None):
+    output = Path(output_dir) if output_dir is not None else ROOT / "_site"
+    if output_dir is not None:
+        if (not output.is_absolute() or output.exists() or output.is_symlink()
+                or output.resolve().is_relative_to(ROOT.resolve())
+                or ROOT.resolve().is_relative_to(output.resolve())):
+            raise ValueError("Private build needs a new absolute directory outside source")
     # _site is always generated; never remove any source file.
     if output.exists():
         shutil.rmtree(output)

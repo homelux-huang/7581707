@@ -303,11 +303,9 @@ def independently_solved(q: dict, revision: str) -> str:
         return "not_checked"
     return "matched" if s["answer"].upper() == q["officialFinalAnswer"].upper() else "mismatch"
 
-def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
-    t = q.get("teaching") or {}
-    if not (q.get("teachingQaStatus") == "PASS" and q.get("uiQaStatus") == "PASS"
-            and q.get("studentReleaseApproved") is True
-            and good(t.get("teacherSummary")) and good(t.get("elementarySummary"))
+def teaching_content_complete(t: dict, subject: str, official_answer: str) -> bool:
+    """Pure content validator; this function never grants UI or release approval."""
+    if not (isinstance(t, dict) and good(t.get("teacherSummary")) and good(t.get("elementarySummary"))
             and good(t.get("memory")) and good(t.get("concept")) and good(t.get("extension"))
             and good(t.get("source"))):
         return False
@@ -333,6 +331,14 @@ def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
             return False
     elif t.get("examCalculation"):
         # No irrelevant examples or "no amount" placeholders masquerading as a calculation.
+        return False
+    return True
+
+
+def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
+    if not (q.get("teachingQaStatus") == "PASS" and q.get("uiQaStatus") == "PASS"
+            and q.get("studentReleaseApproved") is True
+            and teaching_content_complete(q.get("teaching") or {}, subject, official_answer)):
         return False
     evidence = q.get("teachingQaEvidence") or {}
     return bool(good(evidence.get("reviewer")) and good(evidence.get("reviewedAt"))
@@ -769,6 +775,14 @@ def final_review_authorized(source: Path, q: dict, item: dict, audit: dict | Non
         if tested != digest_now and not (
                 reason == "exact_five_historical_students_preserved" and tested is None):
             return False, "ui_teaching_digest_mismatch"
+        if reason != "exact_five_historical_students_preserved":
+            if ui.get("g8BridgeSchema") != "AUTHENTICATED_G8_BRIDGE_V1":
+                return False, "authenticated_formal_g8_receipt_required"
+            try:
+                from scripts import sudu_g8_release_bridge as bridge
+            except ModuleNotFoundError:
+                import sudu_g8_release_bridge as bridge
+            bridge.verify_native_ui_receipt(source, q, item, audit, ui)
         return True, reason
     except (OSError, ValueError, TypeError, KeyError, AttributeError, UnicodeError):
         return False, "independent_final_admission_evidence_invalid"
