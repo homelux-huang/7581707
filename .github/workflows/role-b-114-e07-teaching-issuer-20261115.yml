@@ -1,0 +1,51 @@
+name: "ROLE B 114 E07 frozen native G5 issuer (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/role-b-e07-native-g5-20261115
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  author-only-source-bound-g5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Retrieve immutable historical publisher and original author blobs into runner temp
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 --no-tags origin ceda0a0248cb7dc99941758e9e16582e463516ca
+          git fetch --depth=1 --no-tags origin 9944759e339ef2d3c002042798f7fe696d861d96
+          git fetch --depth=1 --no-tags origin 32256dd286bd95ea78ae26938cf8184b4ec72949
+          git show ceda0a0248cb7dc99941758e9e16582e463516ca:scripts/sudu_verified_publish.py > "$RUNNER_TEMP/pinned_main_publisher.py"
+          git show 9944759e339ef2d3c002042798f7fe696d861d96:sudu/data/processed/114/review-evidence/114-00-E-07-teaching.json > "$RUNNER_TEMP/original_e07_teaching.json"
+          git show 32256dd286bd95ea78ae26938cf8184b4ec72949:sudu/teaching-candidates/114-role-b-20261025/114-00-E-07.json > "$RUNNER_TEMP/role_b_e07_addendum.json"
+          test -s "$RUNNER_TEMP/pinned_main_publisher.py"
+          test -s "$RUNNER_TEMP/original_e07_teaching.json"
+          test -s "$RUNNER_TEMP/role_b_e07_addendum.json"
+          test "$(git cat-file blob 03b1686ca549f72d1f999de5b99656273e0c1e05 | sha256sum | cut -d' ' -f1)" != ""
+          echo "PUBLISHER_CHECKER_PATH=$RUNNER_TEMP/pinned_main_publisher.py" >> "$GITHUB_ENV"
+          echo "ORIGINAL_TEACHING_FILE=$RUNNER_TEMP/original_e07_teaching.json" >> "$GITHUB_ENV"
+          echo "AUTHOR_ADDENDUM_FILE=$RUNNER_TEMP/role_b_e07_addendum.json" >> "$GITHUB_ENV"
+      - name: E07 original A-D G5, official source SHA and positive-negative regressions
+        run: python -m unittest discover -s tests -p 'test_role_b_114_e07_teaching_issuer_20261115.py' -v
+      - name: Fail closed, never approve authorship or student release
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("sudu/data/processed/114/review-evidence/114-00-E-07-teaching-publisher-20261115.json")
+          t=json.loads(p.read_text(encoding="utf-8"))
+          assert t["sourceAuthorSessionId"] is None
+          assert t["reviewerSessionId"] is None
+          assert t["independentAiContentReviewed"] is False
+          assert t["studentReleaseApproved"] is False
+          assert t["blindSolveClaimedThisTask"] is False
+          assert "NOT_READY" in t["status"]
+          assert t["content"]["hasExamCalculation"] is False
+          assert t["content"]["examCalculation"] is None
+          print("114 E07: NATIVE AUTHOR-ONLY G5 / NO ROLE E / NO READY / NO LIVE")
+          PY
