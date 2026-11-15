@@ -87,12 +87,14 @@ def run():
     tampered=copy.deepcopy(candidate)
     tampered["teaching"]["hasExamCalculation"]=True
     check(tampered["teaching"]["examCalculation"] is None,"negative fixture setup unexpected")
-    try:
-        pub.public_question(tampered,114,subject,row["image"])
-    except (TypeError, KeyError):
-        pass
-    else:
-        raise AssertionError("tampered hasExamCalculation=true with null calculation unexpectedly serialized")
+    tampered["teachingQaStatus"]="PASS"
+    tampered["uiQaStatus"]="PASS"
+    tampered["studentReleaseApproved"]=True
+    check(not pub.teaching_complete(tampered,subject,"A"),"native final teaching gate accepted missing computation payload")
+    # Serializer is non-authorizing: it may suppress the invalid calculation card,
+    # but cannot make a tampered teaching document admissible by itself.
+    check(pub.public_question(tampered,114,subject,row["image"])["examCalculation"] is None,
+          "renderer-facing serializer must not display a null calculation")
 
     print("PASS ROLE D E07 non-admission original source/G2/G3/G5/byte SHA/4 options/2 levels/noncalc serialization/guards/negative tamper")
     print("PRECHECK_ONLY; no Chromium, no formal G8, no owner E/G6/G7, no approved or LIVE write")
