@@ -192,6 +192,17 @@ def validate_stage(source,stage_root,private_evidence):
  payload=safe(Path(stage_root)/'site',manifest['payloadPath']).read_bytes();require(sha(payload)==manifest['payloadSha256'],'staged payload bytes changed')
  require(sha(canonical(next(x for x in json.loads(payload)['questions'] if x['canonicalId']==manifest['qid'])))==checked['rowSha256'],'native serialized row changed')
  require(safe(stage_root,'row.json').read_bytes()==serialized(checked['row']),'expected original row changed')
+ # Never use the stage's self-authored hashes as its only trust root. A stage
+ # owner could change served HTML/runtime and reseal siteFiles. Independently
+ # derive the native output again from the frozen source and committed code.
+ import contextlib,io
+ with tempfile.TemporaryDirectory(prefix='sudu-g8-derive-') as temporary:
+  expected_root=Path(temporary)/'sudu-g8-expected'
+  with contextlib.redirect_stdout(io.StringIO()):
+   stage(source,manifest['qid'],manifest['auditPath'],private_evidence,expected_root)
+  expected,_=read(expected_root,'stage.json')
+  require(manifest==expected,'stage differs from reproducible native source/code output')
+  require(payload==safe(expected_root/'site',expected['payloadPath']).read_bytes(),'payload differs from reproducible native output bytes')
  return manifest,checked,sha(b)
 
 def github(path):

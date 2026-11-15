@@ -1,0 +1,69 @@
+name: Work rederived G8 stage reseal rejection (NO RELEASE)
+on:
+  push:
+    branches: [fix/work-g8-rederived-stage-20261115]
+  pull_request:
+    branches: [fix/work-g8-durable-archive-20261115]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  rederived_stage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -q pillow requests beautifulsoup4 cryptography
+      - name: Synthetic resealed-stage attacks and full existing publisher regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_sudu*.py' -v
+          node --check tests/sudu_g8_release_bridge_browser.cjs
+      - name: Actual clean committed public build twice; compare every emitted file
+        run: |
+          python - <<'PY'
+          import hashlib,json,tempfile
+          from pathlib import Path
+          from scripts import build
+          def files(root):
+              return {p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file()}
+          with tempfile.TemporaryDirectory(prefix='sudu-g8-determinism-') as raw:
+              root=Path(raw);a=root/'first';b=root/'second'
+              build.build(output_dir=a);build.build(output_dir=b)
+              first,second=files(a),files(b)
+              assert first and first==second, 'Public build nondeterministic: formal staging must HOLD'
+              digest=hashlib.sha256(json.dumps(first,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+              print('ACTUAL committed baseline build byte-equal:',len(first),'files; file-map SHA256',digest)
+          PY
+      - name: Actual current protected policy and source still preserve only historical five
+        env:
+          SOURCE_SHA: 3d7645b9b8c83bd09348115118920501823b3c27
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git worktree add --detach "$RUNNER_TEMP/qa-source" "$SOURCE_SHA"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from scripts import sudu_g8_release_bridge as bridge
+          from scripts import sudu_independent_review_gate as gate
+          from scripts import sudu_verified_publish as pub
+          source=Path(os.environ['RUNNER_TEMP'])/'qa-source';out=Path(os.environ['RUNNER_TEMP'])/'native-only'
+          policy=bridge.trusted_policy()
+          assert policy['trustedAiReviewReceipts']=={}, 'Trust changed: refresh expected state without claiming admission'
+          pub.stage(source,out,os.environ['SOURCE_SHA'],review_policy=policy);pub.site_check(out)
+          assert json.loads((out/'sudu/data/approved/114.json').read_text())['approvedCount']==0
+          assert {q['canonicalId'] for q in json.loads((out/'sudu/data/approved/115.json').read_text())['questions']}==gate.LEGACY_FIVE_IDS
+          print('ACTUAL QA + current protected policy: no new admission, no model/G6/G7/formal G8')
+          PY
+          git diff --exit-code
