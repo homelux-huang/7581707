@@ -51,10 +51,16 @@ class BridgeTests(unittest.TestCase):
    p.dump(self.source/(pref+'inventory.json'),{'expected':205,'sqlite':{'rows':205,'roundtripPass':True,'dbSha256':b.sha(dbp.read_bytes()),'sourceQuestionsSha256':b.sha((self.source/(pref+'questions.json')).read_bytes())}})
    if year==115:p.dump(self.source/(pref+'VALIDATION.json'),{'sqlite':'SQLITE_ROUNDTRIP_PASS'})
   self.audit_rel=self.reviews+'audit.json';p.dump(self.source/self.audit_rel,self.audit)
+  # The frozen input commit precedes the separate answer issuer commit, to
+  # avoid an impossible self-referential Git sourceCommit inside that issuer.
+  for command in [('init','-q'),('config','user.name','Synthetic Test'),('config','user.email','synthetic@example.invalid'),('add','-A'),('commit','-qm','SYNTHETIC FROZEN INPUT ONLY')]:subprocess.run(['git','-C',str(self.source),*command],check=True,stdout=subprocess.DEVNULL)
+  frozen=b.git(self.source,'rev-parse','HEAD')
+  self.docs['blind']['sourceCommit']=frozen
+  p.dump(self.source/self.audit['evidence']['blind'],{'schemaVersion':1,'year':115,'questionId':self.qid,'reviewer':'SYNTHETIC','reviewedAt':'2020-01-01',**self.docs['blind']})
   blind=b.read(self.source,self.audit['evidence']['blind']);g=copy.deepcopy(blind[0]);g.update(evidenceGitBlobSha=gate.blob_oid(blind[1]),firstAnswer='B',reasoningSha256=b.sha(g['blindReasoning'].encode()))
   for flag in ('isolationVerified','firstAttemptVerified','requestContainsOnlyFrozenSource','noAutomaticRetry','g7ComparisonVerified'):g[flag]=True
   self.policy['trustedG6Receipts'][self.qid]=g
-  for command in [('init','-q'),('config','user.name','Synthetic Test'),('config','user.email','synthetic@example.invalid'),('add','-A'),('commit','-qm','SYNTHETIC UNIT SOURCE ONLY')]:subprocess.run(['git','-C',str(self.source),*command],check=True,stdout=subprocess.DEVNULL)
+  for command in [('add','-A'),('commit','-qm','SYNTHETIC FIRST SOLVE ISSUER')]:subprocess.run(['git','-C',str(self.source),*command],check=True,stdout=subprocess.DEVNULL)
   self.patches=[patch.object(b,'trusted_policy',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'policy_from_trusted_main',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'certified',return_value=(True,'SYNTHETIC_AUTHORITY_TEST_ONLY')),patch.object(b,'code_bindings',return_value={'SYNTHETIC_CODE':'d'*40})]
   for x in self.patches:x.start();self.addCleanup(x.stop)
   def fake_build(output_dir=None):
@@ -136,6 +142,38 @@ class BridgeTests(unittest.TestCase):
    d=json.loads(original);d.update(change);p.dump(self.source/rel,d);raw=(self.source/rel).read_bytes();e=copy.deepcopy(old);e.update({k:v for k,v in change.items() if k in e});e['evidenceGitBlobSha']=gate.blob_oid(raw);self.policy['trustedG6Receipts'][self.qid]=e
    with self.assertRaises((ValueError,TypeError)):b.g6_verified(self.policy,self.source,self.audit,self.q,self.revision,self.private)
   (self.source/rel).write_bytes(original);self.policy['trustedG6Receipts'][self.qid]=old
+
+ def test_frozen_g6_commit_must_be_ancestor_and_preserve_original_blobs(self):
+  rel=self.audit['evidence']['blind'];original=(self.source/rel).read_bytes()
+  owner=copy.deepcopy(self.policy['trustedG6Receipts'][self.qid])
+  try:
+   d=json.loads(original);d['sourceCommit']='f'*40;p.dump(self.source/rel,d)
+   attestation=copy.deepcopy(owner);attestation['sourceCommit']=d['sourceCommit'];attestation['evidenceGitBlobSha']=gate.blob_oid((self.source/rel).read_bytes())
+   self.policy['trustedG6Receipts'][self.qid]=attestation
+   with self.assertRaisesRegex(b.Hold,'G6 frozen source commit not an ancestor'):
+    b.g6_verified(self.policy,self.source,self.audit,self.q,self.revision,self.private)
+  finally:
+   (self.source/rel).write_bytes(original);self.policy['trustedG6Receipts'][self.qid]=owner
+  ocr=self.source/self.audit['evidence']['ocr'];doc=json.loads(ocr.read_bytes());doc['question']='SYNTHETIC post-freeze alteration';p.dump(ocr,doc)
+  for command in [('add','-A'),('commit','-qm','SYNTHETIC POST-FREEZE TAMPER')]:subprocess.run(['git','-C',str(self.source),*command],check=True,stdout=subprocess.DEVNULL)
+  with self.assertRaisesRegex(b.Hold,'G6 frozen G2/G3/G5/WebP blob mismatch'):
+   b.g6_verified(self.policy,self.source,self.audit,self.q,self.revision,self.private)
+
+ def test_same_code_blobs_but_changed_code_commit_invalidates_stage(self):
+  self.stage_it();original=b.git
+  def switched(root,*args):
+   if Path(root).resolve()==b.ROOT.resolve() and args==('rev-parse','HEAD'):return 'f'*40
+   return original(root,*args)
+  with patch.object(b,'git',side_effect=switched):
+   with self.assertRaisesRegex(b.Hold,'stale stage codeCommit'):
+    b.validate_stage(self.source,self.stage,self.private)
+
+ def test_extra_artifact_zip_member_rejected_even_if_digest_matches(self):
+  self.stage_it();_,_,report,entry=self.make_report()
+  with zipfile.ZipFile(self.report/'artifact.zip','a') as z:z.writestr('SYNTHETIC_UNEXPECTED_EXTRA.txt',b'not allowed')
+  entry['artifactSha256']=b.sha((self.report/'artifact.zip').read_bytes())
+  with self.assertRaisesRegex(b.Hold,'unexpected artifact ZIP members'):
+   b.verify_archive(self.report,entry,report)
 
  def test_noCLIflag_can_authorize_production_policy(self):
   self.patches[0].stop()

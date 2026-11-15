@@ -86,6 +86,22 @@ def g6_verified(p,source,audit,q,revision,private_evidence):
   require(isinstance(d.get(field),str) and d[field] not in ('UNVERIFIED','NOT_EXECUTED') and entry.get(field)==d[field],'G6 actual '+field+' not pinned')
  for field in ('modelInputSha256','rawRequestSha256','rawResponseSha256'):require(SHA.fullmatch(d[field]),'G6 hash format')
  require(gate.HEX40.fullmatch(d['sourceCommit']),'G6 source commit')
+ # A blind issuer is committed AFTER the frozen input. Verify ancestor lineage
+ # and identical G2, G3, G5 and original WebP Git blobs across both commits.
+ try:
+  ancestor=(git(source,'merge-base',d['sourceCommit'],'HEAD')==d['sourceCommit'])
+ except subprocess.SubprocessError:
+  ancestor=False
+ require(ancestor,'G6 frozen source commit not an ancestor')
+ frozen_paths=[audit['evidence'][name] for name in ('ocr','official','teaching')]
+ frozen_paths.append((q.get('assets') or {}).get('singleQuestionWebp'))
+ for rel in frozen_paths:
+  require(isinstance(rel,str) and rel and not Path(rel).is_absolute() and '..' not in Path(rel).parts,'G6 frozen source path invalid')
+  try:
+   same=(git(source,'rev-parse','--verify','HEAD:'+rel)==git(source,'rev-parse','--verify',d['sourceCommit']+':'+rel))
+  except subprocess.SubprocessError:
+   same=False
+  require(same,'G6 frozen G2/G3/G5/WebP blob mismatch')
  e=p['trustedAiReviewReceipts'][q['questionId']]
  require(d['operatorSessionId'] not in (d['reviewerSessionId'],e.get('sourceAuthorSessionId'),e.get('reviewerSessionId')),'independent G6 operator required')
  require(entry.get('firstAnswer')==d['answer'] and entry.get('reasoningSha256')==sha(d['blindReasoning'].encode()),'G7 first-answer binding')
@@ -170,7 +186,7 @@ def stage(source,qid,audit,private_evidence,dest):
 def validate_stage(source,stage_root,private_evidence):
  manifest,b=read(stage_root,'stage.json');require(manifest.get('schema')==SCHEMA and manifest.get('status')=='PRE_G8_ONLY' and manifest.get('pagesEligible') is False,'not authenticated staging type')
  checked=non_ui(source,manifest['qid'],manifest['auditPath'],private_evidence)
- for field in ('qid','year','sourceCommit','sourceRevision','webpSha256','teachingDigest','teachingEvidenceSha256','officialEvidenceSha256','authorizationSha256','rowSha256','codeBindings','g6ResponseSha256'):require(manifest.get(field)==checked[field],'stale stage '+field)
+ for field in ('qid','year','sourceCommit','sourceRevision','webpSha256','teachingDigest','teachingEvidenceSha256','officialEvidenceSha256','authorizationSha256','rowSha256','codeBindings','codeCommit','g6ResponseSha256'):require(manifest.get(field)==checked[field],'stale stage '+field)
  site=Path(stage_root)/'site';actual={f.relative_to(site).as_posix():sha(safe(site,f.relative_to(site).as_posix()).read_bytes()) for f in site.rglob('*') if f.is_file()}
  require(manifest.get('siteFiles')==actual,'staged HTML/runtime/assets changed')
  payload=safe(Path(stage_root)/'site',manifest['payloadPath']).read_bytes();require(sha(payload)==manifest['payloadSha256'],'staged payload bytes changed')
@@ -222,10 +238,13 @@ def verify_archive(report_root,entry,report):
  import zipfile
  archive=safe(report_root,'artifact.zip');require(sha(archive.read_bytes())==entry['artifactSha256'],'actual artifact archive bytes')
  with zipfile.ZipFile(archive) as z:
-  names=z.namelist();require(len(names)==len(set(names)),'duplicate artifact members')
-  for name in ['report.json']+[case['screenshot'] for case in report['cases']]:
-   require(name in names and z.getinfo(name).file_size<=20_000_000,'missing/oversize artifact member')
-   require(z.read(name)==safe(report_root,name).read_bytes(),'report/screenshot not from authentic artifact')
+  expected=['report.json']+[case['screenshot'] for case in report['cases']]
+  names=z.namelist()
+  require(len(expected)==17 and len(names)==17 and len(set(names))==17 and set(names)==set(expected),'unexpected artifact ZIP members')
+  for info in z.infolist():
+   mode=(info.external_attr>>16)&0o170000
+   require(info.filename==Path(info.filename).name and not info.is_dir() and mode!=0o120000 and info.file_size<=20_000_000,'invalid artifact member type/path/size')
+   require(z.read(info.filename)==safe(report_root,info.filename).read_bytes(),'report/screenshot not from authentic artifact')
 
 def verify_native_ui_receipt(source,q,item,audit,ui):
  require(ui.get('g8BridgeSchema')==SCHEMA,'typed bridge UI receipt')
