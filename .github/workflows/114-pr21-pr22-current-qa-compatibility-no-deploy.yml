@@ -1,0 +1,108 @@
+name: 114 PR21 evidence plus PR22 publisher against current QA (NO DEPLOY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/114-pr21-pr22-current-qa-compatibility-no-deploy.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: qa114-pr21-pr22-current-qa-readonly
+  cancel-in-progress: false
+jobs:
+  latest_source_convergence:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 28
+    steps:
+      - name: Current canonical QA branch only, never deploy
+        uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+          persist-credentials: false
+      - name: PR22 year-specific strict publisher code pinned to audited head
+        uses: actions/checkout@v4
+        with:
+          ref: cccea517f701f2f667cc450cd7a82446f487579e
+          path: _publisher_candidate
+          persist-credentials: false
+      - name: PR21 three per-question source certificates pinned to audited head
+        uses: actions/checkout@v4
+        with:
+          ref: 9944759e339ef2d3c002042798f7fe696d861d96
+          path: _source_candidate
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact image-decoder dependency
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Check PR21 does not silently modify current canonical 205-question source bank or all WebP inventory
+        run: |
+          set -euo pipefail
+          cmp sudu/data/processed/114/questions.json _source_candidate/sudu/data/processed/114/questions.json
+          cmp sudu/data/processed/114/webp-manifest.json _source_candidate/sudu/data/processed/114/webp-manifest.json
+          echo "Current QA 114 original 205 question/manifest blobs equal PR21 input; other years not promoted"
+      - name: Run PR22 publisher strict unit and negative correction-coverage tests
+        run: |
+          set -euo pipefail
+          (cd _publisher_candidate && python -m unittest discover -s tests -p test_sudu_verified_publish.py -v)
+      - name: Stage original/current QA and PR21 certified three through same PR22 publisher binary
+        run: |
+          set -euo pipefail
+          QA_SHA="$(git rev-parse HEAD)"
+          SOURCE_SHA="$(git -C _source_candidate rev-parse HEAD)"
+          PUBLISHER_SHA="$(git -C _publisher_candidate rev-parse HEAD)"
+          test "$SOURCE_SHA" = "9944759e339ef2d3c002042798f7fe696d861d96"
+          test "$PUBLISHER_SHA" = "cccea517f701f2f667cc450cd7a82446f487579e"
+          python _publisher_candidate/scripts/sudu_verified_publish.py stage --source . --dest /tmp/qa114-before --sha "$QA_SHA"
+          python _publisher_candidate/scripts/sudu_verified_publish.py check --dest /tmp/qa114-before
+          python _publisher_candidate/scripts/sudu_verified_publish.py stage --source _source_candidate --dest /tmp/qa114-after --sha "$SOURCE_SHA"
+          python _publisher_candidate/scripts/sudu_verified_publish.py check --dest /tmp/qa114-after
+          echo "QA_CURRENT_SHA=$QA_SHA" >> "$GITHUB_ENV"
+          echo "SOURCE_PR21_SHA=$SOURCE_SHA" >> "$GITHUB_ENV"
+          echo "PUBLISHER_PR22_SHA=$PUBLISHER_SHA" >> "$GITHUB_ENV"
+      - name: Require 114 0 to exactly 3 only; 115 existing five and full payload unchanged
+        run: |
+          python - <<'PY_REQUIRE'
+          import json,hashlib,os
+          from pathlib import Path
+          def rd(p):return json.loads(Path(p).read_text(encoding="utf8"))
+          before=Path("/tmp/qa114-before/sudu/data/approved")
+          after=Path("/tmp/qa114-after/sudu/data/approved")
+          b114=rd(before/"114.json");a114=rd(after/"114.json")
+          b115=rd(before/"115.json");a115=rd(after/"115.json")
+          candidate=rd("_source_candidate/sudu/data/processed/114/verified-student-batch.json")
+          assert b114["approvedCount"]==0 and a114["approvedCount"]==3
+          expected={"114-00-E-07":"A","114-00-E-08":"D","114-00-E-09":"D"}
+          assert {row["canonicalId"]:row["answer"] for row in a114["questions"]}==expected
+          assert set(row["questionId"] for row in candidate["items"])==set(expected)
+          assert all(row["status"]=="STUDENT_QA_APPROVED" for row in candidate["items"])
+          assert b115["approvedCount"]==a115["approvedCount"] and b115["questions"]==a115["questions"]
+          assert b115["approvedCount"]>=5
+          mandatory={"115-00-MB-02","115-00-MB-03","115-00-MB-04","115-00-MB-05","115-00-MB-09"}
+          assert mandatory<={row["canonicalId"] for row in a115["questions"]}
+          report={"status":"READONLY_PR21_PR22_SOURCE_COMPATIBLE_PENDING_INDEPENDENT_RELEASE",
+             "qaHead":os.environ["QA_CURRENT_SHA"],
+             "PR21Head":os.environ["SOURCE_PR21_SHA"],
+             "PR22Head":os.environ["PUBLISHER_PR22_SHA"],
+             "beforeApproved114":0,"candidateApproved114":3,
+             "candidateIds":expected,"currentApproved115":a115["approvedCount"],
+             "unchangedLive115":True,"noMerge":True,"noDeploy":True}
+          Path("/tmp/qa114-preflight-result.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,ensure_ascii=False))
+          PY_REQUIRE
+      - name: Save proof without any GitHub write or actual deployment
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa114-pr21-pr22-current-head-readonly-preflight
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            /tmp/qa114-preflight-result.json
+            /tmp/qa114-before/sudu/data/approved/114.json
+            /tmp/qa114-after/sudu/data/approved/114.json
+            /tmp/qa114-after/sudu/data/approved/115.json

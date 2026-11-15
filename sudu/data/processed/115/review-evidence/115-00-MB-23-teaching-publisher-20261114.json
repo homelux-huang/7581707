@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-23",
+  "questionRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+  "webpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "reviewer": "ROLE C archival lesson author-content self-QA; not independent ROLE E",
+  "reviewedAt": "2026-11-14",
+  "sourceAuthorRole": "C",
+  "sourceAuthorTaskId": "C-115-MB20-25-EXACT-VERIFY-POLICY-20261103-01",
+  "sourceRevisionReconcileTaskId": "C-115-MB23-PR129-AUTHOR-SOURCE-RECONCILE-20261104-01",
+  "sourceAuthorReturnIssueCommentId": 6876442306,
+  "sourceAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/143",
+  "sourceAuthorCommit": "afaba171eec77cc27c3171b8bc8282f68ade74b9",
+  "sourceAuthorGitBlobSha1": "eae542565062adf997ab8c8d37d2c3cd4dd71ca1",
+  "canonicalTeachingSha256": "13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6",
+  "sourceG2Sha256": "64fa11a8a40ff221a9b6cbc34a45ae8da14c9c5fa0a04d5b36f2a4012df7cde7",
+  "sourceG3Sha256": "a9c4b2f7e56f8ddb69aca1462af3e762029c5c2e78c6b92d473122b5ba943238",
+  "sourceRevisionMode": "WITH_ORIGINAL_2X3_TABLE",
+  "sourceTableTextSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088",
+  "sourceTables": [
+    {
+      "heading": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    }
+  ],
+  "status": "AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY",
+  "independentAiContentReviewed": false,
+  "sourceAuthorSessionId": null,
+  "reviewerSessionId": null,
+  "studentReleaseApproved": false,
+  "sourceHighlights": [
+    {
+      "text": "其中一人",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "八折",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "2x－3000",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "1.8(x＋2000)",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "33000元",
+      "bold": true,
+      "highlight": true
+    }
+  ],
+  "content": {
+    "teacherSummary": "優惠都只給 **其中一人**。行程Ⅰ兩人合計2x－3000；行程Ⅱ是一人原價、一人八折，因此是 **1.8(x＋2000)**。",
+    "elementarySummary": "兩個朋友一起去玩。第一種玩法只幫一個人省3000元；第二種只幫一個人打八折。把兩個人的錢各算清楚，再讓總價相等。",
+    "memory": "**2x－3000＝1.8(x＋2000) → x＝33000元。**",
+    "concept": "先按人數與折扣對象列出總價，再利用兩方案總價相等建立一元一次方程。",
+    "extension": "若誤把兩人都打八折，就會列成1.6(x＋2000)，與原表「其中一人」不同。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "八折＝原價×0.8；同行兩人且只有一人八折，總額＝原價×(1＋0.8)。",
+    "highlights": [
+      "其中一人",
+      "八折",
+      "2x－3000",
+      "1.8(x＋2000)",
+      "33000元"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "行程Ⅰ每人x元，其中一人減3000元",
+        "行程Ⅱ每人(x＋2000)元，其中一人八折",
+        "兩人參加兩方案的總額相同"
+      ],
+      "formulaUse": "八折＝原價×0.8；同行兩人且只有一人八折，總額＝原價×(1＋0.8)。",
+      "substitution": [
+        "x＋(x－3000)＝(x＋2000)＋0.8(x＋2000)"
+      ],
+      "steps": [
+        "行程Ⅰ總額＝x＋x－3000＝2x－3000。",
+        "行程Ⅱ總額＝(1＋0.8)(x＋2000)＝1.8x＋3600。",
+        "令總額相等：2x－3000＝1.8x＋3600。",
+        "兩邊減1.8x並加3000：0.2x＝6600。",
+        "兩邊除0.2：x＝33000。",
+        "驗算Ⅰ：33000＋30000＝63000元。",
+        "驗算Ⅱ：35000＋35000×0.8＝35000＋28000＝63000元，選 B。"
+      ],
+      "result": "33000元",
+      "unit": "元",
+      "option": "B"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "x＝32000：Ⅰ＝61000，Ⅱ＝61200，不相等。",
+        "elementary": "兩種行程差200元，不能選。",
+        "reason": "x＝32000：Ⅰ＝61000，Ⅱ＝61200，不相等。",
+        "isCorrect": false
+      },
+      "B": {
+        "teacher": "x＝33000：兩方案均63000元，符合。",
+        "elementary": "兩個朋友不管選哪方案都付一樣多。",
+        "reason": "x＝33000：兩方案均63000元，符合。",
+        "isCorrect": true
+      },
+      "C": {
+        "teacher": "x＝34000：Ⅰ＝65000，Ⅱ＝64800，不相等。",
+        "elementary": "兩種行程差200元，沒有相等。",
+        "reason": "x＝34000：Ⅰ＝65000，Ⅱ＝64800，不相等。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "x＝35000：Ⅰ＝67000，Ⅱ＝66600，不相等。",
+        "elementary": "兩種行程差400元，沒有相等。",
+        "reason": "x＝35000：Ⅰ＝67000，Ⅱ＝66600，不相等。",
+        "isCorrect": false
+      }
+    }
+  }
+}

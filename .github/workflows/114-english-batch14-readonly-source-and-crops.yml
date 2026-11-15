@@ -1,0 +1,58 @@
+name: 114 English Batch14 Q06-Q20 SHA evidence bundle (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/114-english-batch14-readonly-source-and-crops.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - name: Verify asset count without redoing previously SHA-reviewed images
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          d=Path('sudu/data/processed/114')
+          m=json.loads((d/'webp-manifest.json').read_text())
+          items=[x for x in m['items'] if x['questionId'] in {f'114-00-E-{n:02}' for n in range(6,21)}]
+          assert len(items)==15
+          assert len({x['questionId'] for x in items})==15
+          assert all(Path(x['source']).is_file() and Path(x['output']).is_file() for x in items)
+          assert len({x['source'] for x in items})==3
+          print('PASS: all 15 previously reviewed SHA-pinned images and 3 original pages exist')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 114-english-batch14-15-crops-three-official-pages
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            sudu/data/original/114/00-E/p002-1b1768452e-v2-w1400-q66.webp
+            sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp
+            sudu/data/original/114/00-E/p004-1b1768452e-v2-w1400-q66.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-06.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-07.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-09.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-10.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-12.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-13.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-14.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-15.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-16.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-17.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-18.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-19.webp
+            sudu/data/processed/114/webp-v1/00-E/114-00-E-20.webp

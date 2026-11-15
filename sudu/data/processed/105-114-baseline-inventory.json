@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-10-22",
+  "scope": "105-114",
+  "status": "INVENTORY_ONLY_NOT_QA_PASS",
+  "years": [
+    {
+      "year": 105,
+      "papers": 5,
+      "candidates": 204,
+      "matched": 180,
+      "answerCandidates": 203,
+      "missingOptions": 23
+    },
+    {
+      "year": 106,
+      "papers": 5,
+      "candidates": 204,
+      "matched": 168,
+      "answerCandidates": 203,
+      "missingOptions": 35
+    },
+    {
+      "year": 107,
+      "papers": 5,
+      "candidates": 204,
+      "matched": 178,
+      "answerCandidates": 204,
+      "missingOptions": 26
+    },
+    {
+      "year": 108,
+      "papers": 5,
+      "candidates": 204,
+      "matched": 165,
+      "answerCandidates": 196,
+      "missingOptions": 31
+    },
+    {
+      "year": 109,
+      "papers": 5,
+      "candidates": 204,
+      "matched": 181,
+      "answerCandidates": 195,
+      "missingOptions": 14
+    },
+    {
+      "year": 110,
+      "papers": 5,
+      "candidates": 205,
+      "matched": 180,
+      "answerCandidates": 198,
+      "missingOptions": 18
+    },
+    {
+      "year": 111,
+      "papers": 5,
+      "candidates": 205,
+      "matched": 191,
+      "answerCandidates": 204,
+      "missingOptions": 13
+    },
+    {
+      "year": 112,
+      "papers": 5,
+      "candidates": 205,
+      "matched": 187,
+      "answerCandidates": 204,
+      "missingOptions": 17
+    },
+    {
+      "year": 113,
+      "papers": 5,
+      "candidates": 205,
+      "matched": 190,
+      "answerCandidates": 203,
+      "missingOptions": 13
+    },
+    {
+      "year": 114,
+      "papers": 5,
+      "candidates": 205,
+      "matched": 189,
+      "answerCandidates": 205,
+      "missingOptions": 16
+    }
+  ],
+  "totalCandidates": 2045,
+  "releaseBlocked": true,
+  "notes": [
+    "Question counts are pre-existing JSON records, not independently validated against official paper counts.",
+    "Legacy answerMatched is not independent final official-answer verification.",
+    "Missing four text options may require image-only fallback; never fabricate.",
+    "All 105-113 single-question WebP visual QA remains PENDING until individually evidenced."
+  ]
+}

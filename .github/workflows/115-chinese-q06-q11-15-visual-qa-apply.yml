@@ -1,0 +1,79 @@
+name: 115 Chinese Q06 Q11-15 visual QA ledger (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_115_chinese_q06_q11_15_visual_qa.py
+      - .github/workflows/115-chinese-q06-q11-15-visual-qa-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-115-chinese-q06-q11-15-image-qa
+  cancel-in-progress: false
+jobs:
+  register:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Verify actual SHA source, original-to-crop exact pixels and direct visual evidence
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          python -m py_compile scripts/apply_115_chinese_q06_q11_15_visual_qa.py
+          python scripts/apply_115_chinese_q06_q11_15_visual_qa.py --check
+      - name: Apply exactly six direct visual PASS and one shared article, idempotently
+        run: |
+          set -euo pipefail
+          python scripts/apply_115_chinese_q06_q11_15_visual_qa.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/before115.sha
+          python scripts/apply_115_chinese_q06_q11_15_visual_qa.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,question-bank.sqlite3} > /tmp/after115.sha
+          diff -u /tmp/before115.sha /tmp/after115.sha
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          d=Path("sudu/data/processed/115")
+          inv=json.loads((d/"inventory.json").read_text())
+          m=json.loads((d/"webp-manifest.json").read_text())
+          val=json.loads((d/"VALIDATION.json").read_text())
+          q=json.loads((d/"questions.json").read_text())
+          assert inv["imageVisualQaPass"]==141
+          assert sum(x["qaStatus"]=="PASS" for x in m["items"])==141
+          assert inv["perSubject"]["國文"]["visualQaPass"]==15
+          assert val["stats"]["國文"]["visualQaPass"]==15
+          assert inv["officialAnswerIndependentVerified"]==0
+          assert all(not (x.get("answerVerified") or x.get("questionVerified") or x.get("integrationReady")) for x in q["questions"])
+          assert not val.get("integrationReady")
+          print("PASS: six 115 Chinese image-only QA records + one shared, answers and releases remain unverified")
+          PY
+      - name: Commit staging QA metadata and isolated DB only; never images or main
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 QA Evidence"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,question-bank.sqlite3}
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(115): 6 source-vs-crop Chinese PASS + shared passage; no answer approval"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 115-chinese-q06-q11-15-visual-qa-evidence
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            sudu/data/processed/115/QA_115_C_Q06_Q11_15_DIRECT_VISUAL_20261023.json
+            sudu/data/processed/115/inventory.json
+            sudu/data/processed/115/VALIDATION.json

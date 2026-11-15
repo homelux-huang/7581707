@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-22",
+  "subject": "數學 B",
+  "questionNumber": 22,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 7,
+  "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-22.webp",
+  "sourceWebpSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980740,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，\n\n  由左而右依序展現在螢幕上，且每一張卡片只會顯示「有ū」或「無bô」。為了讓玩家\n  都有獎勵，抽出的五張卡片中至少有一張會顯示「有ū」，圖 ( 六 ) 僅為其中一種可能。\n\n  試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+    "options": [
+      "32\n                         無 無 無 無 有",
+      "31\n                                               bô  bô  bô  bô  ū",
+      "16                        圖 ( 六 )",
+      "5\n\n\n\n\n\n                                                         - 7-\n\n第8 頁                                                                                115 年四技\n共8 頁                                                       數學(B) 共同科目   公告試題僅供參考"
+    ]
+  },
+  "correctedText": {
+    "question": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，由左而右依序展現在螢幕上，且每一張卡片只會顯示「有 ū」或「無 bô」。為了讓玩家都有獎勵，抽出的五張卡片中至少有一張會顯示「有 ū」，圖（六）僅為其中一種可能。試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+    "options": [
+      "32",
+      "31",
+      "16",
+      "5"
+    ],
+    "figureRequired": true,
+    "figureDescription": "圖（六）：五張由左至右排列的卡片示例：無 bô、無 bô、無 bô、無 bô、有 ū。其圖示非限制只能最後一張為「有」。"
+  },
+  "knownOfficialAnswer": "B",
+  "postAnswerMathCheck": "五個有序位置每個有／無兩態，2⁵－1＝31（扣除全無），B",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}

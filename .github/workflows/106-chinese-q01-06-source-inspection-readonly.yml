@@ -1,0 +1,50 @@
+name: 106 Chinese Q01-Q06 missing source images (READ ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - .github/workflows/106-chinese-q01-06-source-inspection-readonly.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: false
+      - name: Assert Q01-06 missing, maintain last source/source Sha boundaries
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          base=Path("sudu/data/processed/106")
+          m=json.loads((base/"webp-manifest.json").read_text())
+          rows={x["questionId"]:x for x in m["items"]}
+          for n in range(1,7):
+              qid=f"106-00-C-{n:02d}"
+              assert rows[qid]["qaStatus"]=="BLOCKED_NO_SINGLE_QUESTION_WEBP"
+              assert not rows[qid].get("output")
+          for n in (2,3):
+              p=Path(f"sudu/data/original/106/00-C/p{n:03}-93b8ec6eb3-v2-w1400-q66.webp")
+              assert p.is_file()
+              print("SOURCE",p,hashlib.sha256(p.read_bytes()).hexdigest())
+          inv=json.loads((base/"inventory.json").read_text())
+          assert inv["visualQaPass"]==6 and inv["answerOfficialFinalVerified"]==0
+          print("PASS: 106 C six missing Q01-06, source SHA pinned. NO QA promotion")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 106-chinese-q01-06-official-source-plus-neighbor
+          retention-days: 21
+          if-no-files-found: error
+          path: |
+            sudu/data/original/106/00-C/p002-93b8ec6eb3-v2-w1400-q66.webp
+            sudu/data/original/106/00-C/p003-93b8ec6eb3-v2-w1400-q66.webp
+            sudu/data/original/106/00-C-answers/p001-ca4adaa741-v2-w1400-q66.webp
+            sudu/data/processed/106/webp-v1/00-C/106-00-C-07.webp

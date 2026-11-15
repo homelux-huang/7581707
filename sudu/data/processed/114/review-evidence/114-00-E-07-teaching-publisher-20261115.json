@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-07",
+  "questionRevision": "8bfaec5c49073d81e6527011ac5bf0399b849ae66443410ed37b75ee689ccf3c",
+  "webpSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "reviewer": "ROLE B later handoff: preserved original content, NOT independent ROLE E",
+  "reviewedAt": "2026-11-15",
+  "sourceAuthorRole": "ROLE B/PR21 archived teaching (original session UNVERIFIED)",
+  "sourceAuthorTaskId": "UNVERIFIED",
+  "sourceAuthorReturnIssueCommentId": null,
+  "sourceAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/21",
+  "sourceAuthorCommit": "9944759e339ef2d3c002042798f7fe696d861d96",
+  "sourceAuthorGitBlobSha1": "03b1686ca549f72d1f999de5b99656273e0c1e05",
+  "sourceAuthorRawSha256": "UNVERIFIED",
+  "enrichmentAuthorRole": "B",
+  "enrichmentAuthorTaskId": "UNVERIFIED",
+  "enrichmentAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/31",
+  "enrichmentAuthorCommit": "32256dd286bd95ea78ae26938cf8184b4ec72949",
+  "enrichmentAuthorGitBlobSha1": "ac26c39ddea751ed9837edf1e6875539499fab6f",
+  "enrichmentAuthorRawSha256": "59f7bc3d4c100cad7a37a6f16e2b6a27e564a01d6e96d77af23ef9987f2731c4",
+  "canonicalTeachingSha256": "d40bb97b85de499b63a3eeea1aa4c808f295f8e4ae6515cf597fdf9d40152eaf",
+  "composedTeachingSha256": "f65c50e011f57025f2ffc9ff7df107f16f4bd6c6e3b1c64c75169bb77c35dd5b",
+  "sourceG2Sha256": "ecc2fd5e4dca51185a008d978a9dcdae9e5feeedaa0512f9841a35e764bfe2b0",
+  "sourceG3Sha256": "f5519fa817883f0d6cc97ee4bb9e3ba47c75a21f03e126d7330b266b50442303",
+  "status": "AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY",
+  "independentAiContentReviewed": false,
+  "sourceAuthorSessionId": null,
+  "reviewerSessionId": null,
+  "studentReleaseApproved": false,
+  "answerAlreadyKnown": true,
+  "blindSolveClaimedThisTask": false,
+  "sourceHighlights": [
+    {
+      "text": "sensor lights",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "by themselves",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "automatically",
+      "bold": true,
+      "highlight": true
+    }
+  ],
+  "content": {
+    "topic": "副詞與感應裝置｜automatically",
+    "teacherSummary": "題目說夜間公園感應燈會在有人經過時自己亮起，因此修飾 turn on 的副詞應是 automatically（自動地）。",
+    "elementarySummary": "有人走過去，燈自己亮了，不需要有人去按開關。這就叫「自動地」。",
+    "concept": "automatically = 自動地，通常修飾動作；turn on = 開啟（燈、設備）。",
+    "extension": "相反意思：manually（手動地）與 automatically（自動地）不同。",
+    "formula": "",
+    "source": "114 年四技二專統測英文第 7 題；官方原始試卷與公布答案 PDF；教科書頁碼待核對",
+    "memory": "感應燈自己亮 → automatically；by themselves 是關鍵線索。",
+    "optionExplanations": {
+      "A": {
+        "teacher": "正確。automatically 可修飾 turn on，描述感應燈自行啟動。",
+        "elementary": "燈不用手按就自己亮，正好符合。",
+        "reason": "by themselves、sensor lights 提供語意線索。"
+      },
+      "B": {
+        "teacher": "錯誤。organically 著重有機、自然生長或自然方式，不描述感應燈的自動開關。",
+        "elementary": "自然生長和燈自動亮不是同一件事。",
+        "reason": "搭配不自然。"
+      },
+      "C": {
+        "teacher": "錯誤。productively 是富有成效地，不能表達感應式自動啟動。",
+        "elementary": "有效率做事情不是燈自己亮。",
+        "reason": "不符合設備功能。"
+      },
+      "D": {
+        "teacher": "錯誤。selfishly 指自私地，多用於人的行為。",
+        "elementary": "燈不會自私。",
+        "reason": "語意及主語不搭配。"
+      }
+    },
+    "calculationReviewed": true,
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "highlights": [
+      "sensor lights",
+      "by themselves",
+      "automatically"
+    ],
+    "extra": {}
+  },
+  "enrichment": {
+    "highlights": [
+      {
+        "text": "sensor lights",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "by themselves",
+        "bold": true,
+        "highlight": true
+      },
+      {
+        "text": "automatically",
+        "bold": true,
+        "highlight": true
+      }
+    ],
+    "englishVocabulary": [
+      {
+        "headword": "automatically",
+        "ipa": "/ˌɔː.təˈmæt.ɪ.kəl.i/",
+        "level": "中級",
+        "meaningZh": "自動地；在沒有人工操作下自行運作",
+        "synonyms": [
+          "by itself",
+          "without manual control"
+        ],
+        "antonyms": [
+          "manually",
+          "by hand"
+        ],
+        "usageNote": "修飾 turn on；重點是感應燈自行啟動，不是 organically 的自然生長。",
+        "dictionaryUrl": "https://dictionary.cambridge.org/dictionary/english/automatically"
+      }
+    ],
+    "newsExample": {
+      "kind": "SELF_WRITTEN_NEWS_CONTEXT_EXAMPLE",
+      "english": "At some Taichung crossings, sensor lights automatically turn on when pedestrians cross during a green signal.",
+      "chinese": "臺中部分路口在行人綠燈通行時，感應照明會自動亮起。",
+      "highlightActualForm": "automatically",
+      "source": {
+        "publicationDate": "2024-09-28",
+        "title": "中市23處路口試辦行穿道照明 市府規劃擴大增設",
+        "url": "https://www.cna.com.tw/news/aloc/202409280174.aspx",
+        "factSupportedBySource": "臺中試辦23處行人感應照明，綠燈時偵測到行人即亮燈"
+      },
+      "notAnArticleQuote": true,
+      "note": "英文句子是教學自編；外部報導只支持新聞事實，不代表報導曾使用考題單字。"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+name: 111 English Q24 Q25 Split Repair (DRAFT ONLY)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/repair_111_english_q24_25.py
+      - .github/workflows/111-english-crop-split-repair.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  repair:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install --quiet Pillow pytesseract
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-eng
+      - run: |
+          python -m py_compile scripts/repair_111_english_q24_25.py
+          python scripts/repair_111_english_q24_25.py
+      - name: Commit source-pixel v2 crops and evidence only
+        run: |
+          git config user.name '7581707 QA crop repair'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/111
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix(111): split old English Q24 Q25 crop, re-OCR Q25, preserve older bytes'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin qa/114-115-official-visual-review
+              if git push origin HEAD:qa/114-115-official-visual-review; then exit 0; fi
+              sleep 3
+            done
+            exit 1
+          fi

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-12",
+  "qaBranchBase": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+  "verifiedSourceCommit": "621dd452b113a8fb5219d2784be6437a9095511c",
+  "sourceQuestionsSha256": "457d7885142f1403cc77f05e627b40bee9bf86c0ed18f1940fcd57a372c2c16b",
+  "databaseSha256": "0182438a8f30da9a0e3dd58a1f838382d478b6da7b71c77efe6ad5adef5fe767",
+  "sqliteIntegrityCheck": "ok",
+  "rows": 205,
+  "jsonSqlitePayloadMatches": 205,
+  "other204CanonicalValuesUnchanged": true,
+  "legacySqliteMigratedToSevenColumn": true,
+  "legacyDbBlob": "f841173ebc194ac24de4d49e2a056d769246e655",
+  "normalizedSourceDbBlob": "e51ccab99dfa1e3a87ce0f0b6616ae459f29de95",
+  "restoredNonE12QaQids": [
+    "114-00-E-11",
+    "114-00-E-13",
+    "114-00-E-14"
+  ],
+  "manifestOriginalUnchanged": true,
+  "studentReleaseApproved": false,
+  "separateRoleETrusted": false,
+  "emittedUi16of16": false,
+  "status": "CANONICAL_SOURCE_BRIDGED_NOT_STUDENT_READY"
+}

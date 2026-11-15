@@ -1,0 +1,97 @@
+name: 107 Chinese Q08-16 Q35-38 13 source-pixel draft gap recovery (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_107_c08_16_c35_38_original_page_crops.py
+      - .github/workflows/107-chinese-13-gap-source-drafts-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa107-chinese-13-source-gaps-no-release
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original-source-pixel verification library
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin current SHA and verify thirteen missing official-page locations
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/stage_107_c08_16_c35_38_original_page_crops.py
+          python scripts/stage_107_c08_16_c35_38_original_page_crops.py --check
+      - name: Build only missing original-page-pixel WebP drafts with shared material
+        run: python scripts/stage_107_c08_16_c35_38_original_page_crops.py --stage
+      - name: Validate G5 twice-import and strict no visual QA pass without independent review
+        run: |
+          python - <<'PY_GUARDS'
+          import hashlib,json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          base=Path('sudu/data/processed/107')
+          def load(name):return json.loads((base/name).read_text(encoding='utf8'))
+          inv=load('inventory.json');m=load('webp-manifest.json')
+          b=load('questions.json');v=load('VISUAL_QA.json')
+          val=load('VALIDATION.json');rel=load('release-manifest.json')
+          e=load('qa-drafts/DRAFT_107_CHINESE_13_MISSING_3_SHARED_20261024.json')
+          assert inv['webpGeneratedDrafts']==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==6
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert len(b['questions'])==len(m['items'])==len(v['items'])==204
+          assert len(m['sharedMaterialCrops'])==len(b['sharedMaterials'])==len(v['sharedMaterials'])==5
+          assert e['newCandidateSingleWebp']==13 and e['newSharedMaterialDrafts']==3 and e['newG1Pass']==0
+          image={x['questionId']:x for x in m['items']}
+          bank={x['questionId']:x for x in b['questions']}
+          for id in e['questionIds']:
+              img=image[id];row=bank[id]
+              assert img['qaStatus']==row['imageQaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert img['outputSha256']==row['assets']['sha256']
+              assert hashlib.sha256(Path(img['output']).read_bytes()).hexdigest()==img['outputSha256']
+              assert not row['questionVerified'] and not row['answerVerified'] and not row['integrationReady']
+          for sid in e['sharedMaterialIds']:
+              item=next(s for s in m['sharedMaterialCrops'] if s['sharedMaterialId']==sid)
+              assert item['qaStatus']=='DRAFT_NEEDS_DIRECT_VISUAL_QA'
+              assert hashlib.sha256(Path(item['output']).read_bytes()).hexdigest()==item['outputSha256']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('107 Chinese 13 single original-pixel draft + 3 shared drafts; G1 unchanged 6, G5 11/11, NO RELEASE')
+          PY_GUARDS
+      - name: Nonforce SHA-lease commit to QA branch without deploying
+        run: |
+          set -eu
+          git add sudu/data/processed/107/qa-drafts/webp-v3/00-C/
+          git add sudu/data/processed/107/qa-drafts/webp-v3/shared/
+          git add sudu/data/processed/107/qa-drafts/DRAFT_107_CHINESE_13_MISSING_3_SHARED_20261024.json
+          git add sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/webp-manifest.json
+          git add sudu/data/processed/107/ocr-raw-candidates.json
+          git add sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json
+          git add sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent modification: abort stale branch push; do not force"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(qa107): 13 Chinese question and 3 shared original-pixel DRAFT crops, G5 only"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

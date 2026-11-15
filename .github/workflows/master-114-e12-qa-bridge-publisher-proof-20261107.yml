@@ -1,0 +1,83 @@
+name: MASTER E12 source bridge exact-head real publisher fail-closed integration (NO RELEASE)
+on:
+  push:
+    branches: [qa/master-114-e12-source-bridge-20261107]
+    paths:
+      - .github/workflows/master-114-e12-qa-bridge-publisher-proof-20261107.yml
+permissions:
+  contents: read
+jobs:
+  source_205_importer_preview:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout source candidate with E12 exact 205 SQLite and manifest
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/processed/115
+            sudu/data/original/114
+            sudu/data/original/115
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - name: Checkout exact protected-main publisher and policy (do not modify main)
+        uses: actions/checkout@v4
+        with:
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            sudu
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run SAME code against new QA source and demand no untrusted E12 release
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q pillow
+          test "$(git -C _publisher rev-parse HEAD)" = 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          python _publisher/scripts/sudu_verified_publish.py stage --source . --dest _publisher --sha "$GITHUB_SHA"
+          python _publisher/scripts/sudu_verified_publish.py check --dest _publisher
+          python - <<'PY'
+          import json,sqlite3,hashlib
+          from pathlib import Path
+          original=Path('sudu/data/processed/114')
+          db=original/'question-bank.sqlite3'
+          q=json.loads((original/'questions.json').read_text())['questions']
+          assert len(q)==205 and len({x['questionId'] for x in q})==205
+          e=next(x for x in q if x['questionId']=='114-00-E-12')
+          assert e['questionVerified'] is True and e['answerVerified'] is True
+          assert e['officialFinalAnswer']=='C'
+          with sqlite3.connect(db) as conn:
+              assert conn.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+              records=conn.execute('SELECT question_id,payload_json,payload_sha256 FROM questions').fetchall()
+          assert len(records)==205
+          assert all(json.loads(payload)==next(x for x in q if x['questionId']==qid) for qid,payload,h in records)
+          assert all(hashlib.sha256(payload.encode()).hexdigest()==h for _,payload,h in records)
+          inv=json.loads((original/'inventory.json').read_text())['sqlite']
+          assert inv['dbSha256']==hashlib.sha256(db.read_bytes()).hexdigest()
+          out=Path('_publisher/sudu/data/approved')
+          a=json.loads((out/'114.json').read_text())
+          b=json.loads((out/'115.json').read_text())
+          assert a['approvedCount']==0,(a['approvedCount'],a)
+          assert b['approvedCount']==5,b['approvedCount']
+          assert '114-00-E-12' not in [x.get('canonicalId') for x in a['questions']]
+          print('PASS: source E12 205 normalized, importer real MAIN policy safely HOLDS untrusted new release')
+          PY
+      - name: Verify source checkout had no generated data writes or unauthorized admissions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "REAL PREVIEW ONLY: protected main, Pages and approved registry unchanged"

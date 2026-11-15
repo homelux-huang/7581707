@@ -1,0 +1,14 @@
+{
+  "year": 115,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "imageQA": "PARTIAL_143_OF_205",
+  "officialFinalAnswerQA": "PARTIAL_81_OF_205",
+  "questionTextQA": "PENDING",
+  "sharedMaterialQA": "PARTIAL_5_OF_20",
+  "database": {
+    "rows": 205,
+    "shaMismatches": 0
+  },
+  "note": "Draft-only release manifest. Image visual review, final corrections, text QA and shared materials remain incomplete. This file does not certify release readiness."
+}

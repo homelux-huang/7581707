@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI source image-only pre-official solve originally committed in cf6a4ef; wrapper only binds unchanged old evidence",
+  "solver": "GPT-6 AI; image-based reasoning, not human instructor",
+  "solvedAt": "2026-10-24",
+  "questionRevision": "3b0a4236f9298edd225b445592faee3b222c8ecfc1b62425278a0de576cc1df9",
+  "webpSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "answer": "B",
+  "blindReasoning": "A+C=B+D ⇒ C=B+D−A=(0,-5)+(2,3)−(-1,0)=(3,-2). The midpoint of B(0,-5) and C(3,-2) is ((0+3)/2,(-5-2)/2)=(3/2,-7/2). Among visible answer options only option B has (3/2,-7/2).",
+  "sourcePreKeyOriginalCommit": "cf6a4efede233b0e447d52498209adf1b721c13e",
+  "sourcePreKeyEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-05-blind-original-20261024.json",
+  "originalQuestionAndOptionsMatchCurrentRevision": true,
+  "claimScope": "No new blind solve. Read-only revision binding to original image-only solution that was already Git-committed before later official cross-check.",
+  "independentAlternativeCheck": "Using opposite sides, BC vector equals AD=D-A=(3,3), hence C=B+(3,3)=(3,-2), again midpoint=(3/2,-7/2).",
+  "humanReviewerClaimed": false
+}

@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24T23:49:28+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "year": 106,
+  "paperCode": "00-C",
+  "sourcePage": 4,
+  "originalPageImageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+  "originalPageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+  "officialPdfShaFromExistingRepoOnly": true,
+  "method": "Actual visual comparison of full official raster P4 with all seven v3/v4 individual crops and three distinct shared passages/artwork, plus zero-difference Pillow source pixel checks",
+  "items": [
+    {
+      "questionIdOrSharedId": "106-00-C-14",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-14.webp",
+      "oldSha256": "c69aa34ebd883d6ff852ecab3653480a92a784b649ae43b1e7f6f060be329bca",
+      "oldCropPixels": [
+        90,
+        155,
+        1310,
+        426
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-14.webp",
+      "reviewedSha256": "f7d4f9de756b6963883bca4b90e373bef615dde784ef2dfcb971e06cadacadd8",
+      "cropPixels": [
+        90,
+        155,
+        1310,
+        421
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Original poem and song bubbles, all A-D and full stem; v3 avoids shared 15-16 paragraph",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-15",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-15.webp",
+      "oldSha256": "0b95904bf76b4c793627edd283f3c0b0c4dc7adc43d01b0f85696124aaf0b1c9",
+      "oldCropPixels": [
+        90,
+        560,
+        1310,
+        705
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-15.webp",
+      "reviewedSha256": "fd47f3d964ff88100485c27e42b106e6760699247ffca2802286bad361a2908a",
+      "cropPixels": [
+        90,
+        560,
+        1310,
+        693
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Full conditional grammar Q15 plus A-D; v4 excludes next Q16 heading",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-16",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-16.webp",
+      "oldSha256": "0be20036898a3f9229e0add9888f780400d21e332752d4f83b2bedc5b2186500",
+      "oldCropPixels": [
+        90,
+        707,
+        1310,
+        821
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-16.webp",
+      "reviewedSha256": "33cece88067f29060d9359578960911eafcbe1c2aef7c93748d1d1b2fd4fa3c6",
+      "cropPixels": [
+        90,
+        695,
+        1310,
+        808
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Complete 馮諼 reading question and four alternatives; v4 excludes next reading prompt",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-17",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-17.webp",
+      "oldSha256": "3ecdfafacdf3f9bbad64063b37b449d74ce237774ba16cab71668d4778ef2965",
+      "oldCropPixels": [
+        90,
+        1032,
+        1310,
+        1145
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-17.webp",
+      "reviewedSha256": "5971bd1359b62fad2d03abdb34b8c866987e7508047e7104e2f039a5834f8cb7",
+      "cropPixels": [
+        90,
+        1006,
+        1310,
+        1107
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Complete Q17 heading, stem, A-D; v4 no Q18 head, shared 17-18 separated",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-18",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-18.webp",
+      "oldSha256": "94e2a4a105cac6ab5777903d0bd222ed880c64361d1d2357cb32b46f3a7b9d84",
+      "oldCropPixels": [
+        90,
+        1144,
+        1310,
+        1344
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-18.webp",
+      "reviewedSha256": "c9f8d477fe6b1168d95e938dbb8992ad65f2dae853ec64b843384a839ca4f69c",
+      "cropPixels": [
+        90,
+        1111,
+        1310,
+        1321
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Full Q18 omitted-subject grammar stem and all four underlined literary alternatives; no next 19-20 prompt",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-19",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-19.webp",
+      "oldSha256": "00acc4aedf7da4712429f53f350571e52121c0172094e25e21417660e371c1f6",
+      "oldCropPixels": [
+        90,
+        1382,
+        765,
+        1565
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-19.webp",
+      "reviewedSha256": "cd5cb1a6e90929bc058b289ce292cc45bd1f3cc76b5613057a17429d5e8db703",
+      "cropPixels": [
+        90,
+        1350,
+        744,
+        1512
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Full shark information Q19 number, stem and four choices in left-only v4; right-side diagram is shared",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-20",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-20.webp",
+      "oldSha256": "d790e4209fca706212b54759a85de5de56c0c4276cebb2f5b929aa58092a7180",
+      "oldCropPixels": [
+        90,
+        1563,
+        765,
+        1762
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-20.webp",
+      "reviewedSha256": "c0b0998ab809b6b701c0bea84644deddd72d63396e2a24e560f3c7eb49299b55",
+      "cropPixels": [
+        90,
+        1523,
+        744,
+        1762
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Full shark advocacy Q20 number, two stem lines and A-D in left-only v4; right-side shared diagram separately linked",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-SHARED-15-16",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-15-16.webp",
+      "oldSha256": "ae3dcac0a630c75ba0cc0006000d3ebf408b218df1c317937c083d5b2e2cc28d",
+      "oldCropPixels": [
+        90,
+        424,
+        1310,
+        558
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-15-16.webp",
+      "reviewedSha256": "ae3dcac0a630c75ba0cc0006000d3ebf408b218df1c317937c083d5b2e2cc28d",
+      "cropPixels": [
+        90,
+        424,
+        1310,
+        558
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Complete 孟嘗君 paragraph and 15-16 prompt; original v2 valid unchanged",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-SHARED-17-18",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-17-18.webp",
+      "oldSha256": "6f502c71627269b340a751f4f45aa6e7bcc4f616884c7a1aa00d516d029b6a87",
+      "oldCropPixels": [
+        90,
+        828,
+        1310,
+        1031
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v4/shared/106-00-C-SHARED-17-18.webp",
+      "reviewedSha256": "000c449c08a27d9b7f52a16ed624607240e17fb8cd71228e77360b17ad1b28d9",
+      "cropPixels": [
+        90,
+        817,
+        1310,
+        1004
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Complete 聚芳園記 text with heading and end citation + footnote; v4 stops before question 17",
+      "result": "PASS"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-SHARED-19-20",
+      "sourcePage": 4,
+      "originalPdfSha256FromRepository": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+      "sourceWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "oldVersion": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-19-20.webp",
+      "oldSha256": "34bfbe09b39e6583ea34c52935b581e2c714596b9b64ef87ba707685f30f36cc",
+      "oldCropPixels": [
+        765,
+        1370,
+        1310,
+        1854
+      ],
+      "reviewedVersion": "sudu/data/processed/106/qa-drafts/webp-v5/shared/106-00-C-SHARED-19-20.webp",
+      "reviewedSha256": "647c1af0bbc1d5d14b816ff63845a5bec80e8d6594801c951378ad1a1898a310",
+      "cropPixels": [
+        765,
+        1317,
+        1310,
+        1854
+      ],
+      "sourcePixelDifferenceZero": true,
+      "visualObservation": "Complete right-hand shark infographic, framed text, counts and both panels; top extended to original drawing",
+      "result": "PASS"
+    }
+  ],
+  "newIndividualG1Pass": 7,
+  "newSharedG1Pass": 3,
+  "newTextG2Pass": 0,
+  "newOfficialFinalAnswersVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

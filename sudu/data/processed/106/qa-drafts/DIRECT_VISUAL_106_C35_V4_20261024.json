@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "year": 106,
+  "paperCode": "00-C",
+  "questionId": "106-00-C-35",
+  "reviewedAt": "2026-10-24T22:16:53+08:00",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "method": "Assistant opened TCTE-source p7 and new v4 crop, directly visually verified full Q35 stem and four choices, no Q36 material; pixel difference zero.",
+  "oldV1Path": "sudu/data/processed/106/webp-v1/00-C/106-00-C-35.webp",
+  "oldV1Sha256": "55b57b4a090ecc693550cd585dd1339d36b215fc0e152989ed9458814796d413",
+  "oldV1Defect": "Q35 crop included full Q36-38 passage",
+  "sourceOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+  "sourcePage": 7,
+  "sourcePageWebp": "sudu/data/original/106/00-C/p007-93b8ec6eb3-v2-w1400-q66.webp",
+  "sourcePageWebpSha256": "c2094dd3dc2d2c7221be4abf109bb19e0af7d546d79ed1f4a4505d75586fefc7",
+  "cropPixels": [
+    90,
+    1057,
+    1310,
+    1248
+  ],
+  "newCandidateWebp": "sudu/data/processed/106/qa-drafts/webp-v4/00-C/106-00-C-35.webp",
+  "newCandidateWebpSha256": "df0c0b3be462379b0e2f4175156ad679addee726154139556ea95e9b2a74d29f",
+  "checks": {
+    "question35Number": true,
+    "fullStem": true,
+    "completeABCD": true,
+    "noAdjacentQuestion36": true,
+    "noMixedPassage": true,
+    "noHeaderOrFooter": true,
+    "sharpLegible": true,
+    "sourcePixelDifferenceZero": true,
+    "sha256Correct": true
+  },
+  "newIndividualG1Pass": 1,
+  "newG2Pass": 0,
+  "newAnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false
+}

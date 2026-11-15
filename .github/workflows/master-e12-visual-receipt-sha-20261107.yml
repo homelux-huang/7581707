@@ -1,0 +1,95 @@
+name: MASTER E12 pin exact archived visual QA record SHA (NO STUDENT RELEASE)
+on:
+  push:
+    branches: [qa/master-e12-visual-receipt-sha-20261107]
+    paths:
+      - scripts/master_114_e12_visual_evidence_sha_20261107.py
+      - tests/test_master_114_e12_visual_evidence_sha_20261107.py
+      - .github/workflows/master-e12-visual-receipt-sha-20261107.yml
+permissions:
+  contents: write
+concurrency:
+  group: master-e12-visual-sha-20261107
+  cancel-in-progress: false
+jobs:
+  source_visual_manifest_only:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/master-e12-visual-receipt-sha-20261107'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/processed/115
+            sudu/data/original/114
+            sudu/data/original/115
+            scripts
+            tests
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        with:
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            sudu
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bind exact original visual QA file SHA to only E12 manifest entry
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:sudu/data/processed/114/webp-manifest.json)" = 249a41d5a64558ccaa3084b21f915922a55c6a1b
+          python scripts/master_114_e12_visual_evidence_sha_20261107.py
+          python scripts/master_114_e12_visual_evidence_sha_20261107.py --apply
+          python -m unittest discover -s tests -p test_master_114_e12_visual_evidence_sha_20261107.py -v
+      - name: Confirm protected main publisher can preview exact E12 image but NOT release it
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q pillow
+          test "$(git -C _publisher rev-parse HEAD)" = 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          python _publisher/scripts/sudu_verified_publish.py stage --source . --dest _publisher --sha "$GITHUB_SHA"
+          python _publisher/scripts/sudu_verified_publish.py check --dest _publisher
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_publisher/sudu/data/approved')
+          preview=json.loads((root/'preview/114.json').read_text())
+          image=[r for r in preview['questions'] if r.get('canonicalId')=='114-00-E-12']
+          assert len(image)==1,image
+          assert image[0]['reviewStage']=='image_qa_pass_only'
+          approved=json.loads((root/'114.json').read_text())
+          assert approved['approvedCount']==0,approved['approvedCount']
+          assert not any(r.get('canonicalId')=='114-00-E-12' for r in approved['questions'])
+          old=json.loads((root/'115.json').read_text())
+          assert old['approvedCount']==5
+          print('PASS: real historical E12 image certificate now previews; untrusted lesson STILL NOT PUBLISHED')
+          PY
+      - name: Refuse any non-E12 source/lesson/student change
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/114/webp-manifest.json
+          test "$(git diff --cached --name-only)" = "sudu/data/processed/114/webp-manifest.json"
+          git diff --cached --check
+      - name: Commit isolated Q12 SHA-bound manifest change only
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = 'refs/heads/qa/master-e12-visual-receipt-sha-20261107'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "source(114 E12): bind historical visual QA document exact bytes SHA only"
+          git push origin HEAD:refs/heads/qa/master-e12-visual-receipt-sha-20261107

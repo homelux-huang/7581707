@@ -1,0 +1,208 @@
+# 108 年逐題來源比對待辦（非 QA 證據）
+
+未對照官方來源頁和單題圖之前，禁止標 PASS。答案亦需核對最終版與更正公告。
+
+- [ ] 108-00-C-01 | sudu/data/processed/108/webp-v1/00-C/108-00-C-01.webp | page 2 | needs comparison
+- [ ] 108-00-C-02 | sudu/data/processed/108/webp-v1/00-C/108-00-C-02.webp | page 2 | needs comparison
+- [ ] 108-00-C-03 | sudu/data/processed/108/webp-v1/00-C/108-00-C-03.webp | page 2 | needs comparison
+- [ ] 108-00-C-04 | sudu/data/processed/108/webp-v1/00-C/108-00-C-04.webp | page 2 | needs comparison
+- [ ] 108-00-C-05 | sudu/data/processed/108/webp-v1/00-C/108-00-C-05.webp | page 2 | needs comparison
+- [ ] 108-00-C-06 | sudu/data/processed/108/webp-v1/00-C/108-00-C-06.webp | page 2 | needs comparison
+- [ ] 108-00-C-07 | sudu/data/processed/108/webp-v1/00-C/108-00-C-07.webp | page 2 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-08 | sudu/data/processed/108/webp-v1/00-C/108-00-C-08.webp | page 3 | needs comparison
+- [ ] 108-00-C-09 | sudu/data/processed/108/webp-v1/00-C/108-00-C-09.webp | page 3 | needs comparison
+- [ ] 108-00-C-10 | sudu/data/processed/108/webp-v1/00-C/108-00-C-10.webp | page 3 | needs comparison
+- [ ] 108-00-C-11 | sudu/data/processed/108/webp-v1/00-C/108-00-C-11.webp | page 3 | needs comparison
+- [ ] 108-00-C-12 | sudu/data/processed/108/webp-v1/00-C/108-00-C-12.webp | page 3 | needs comparison
+- [ ] 108-00-C-13 | sudu/data/processed/108/webp-v1/00-C/108-00-C-13.webp | page 3 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-14 | sudu/data/processed/108/webp-v1/00-C/108-00-C-14.webp | page 4 | needs comparison
+- [ ] 108-00-C-15 | sudu/data/processed/108/webp-v1/00-C/108-00-C-15.webp | page 4 | needs comparison
+- [ ] 108-00-C-16 | sudu/data/processed/108/webp-v1/00-C/108-00-C-16.webp | page 4 | needs comparison
+- [ ] 108-00-C-17 | sudu/data/processed/108/webp-v1/00-C/108-00-C-17.webp | page 4 | needs comparison
+- [ ] 108-00-C-18 | sudu/data/processed/108/webp-v1/00-C/108-00-C-18.webp | page 4 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-19 | sudu/data/processed/108/webp-v1/00-C/108-00-C-19.webp | page 5 | needs comparison
+- [ ] 108-00-C-20 | sudu/data/processed/108/webp-v1/00-C/108-00-C-20.webp | page 5 | needs comparison
+- [ ] 108-00-C-21 | sudu/data/processed/108/webp-v1/00-C/108-00-C-21.webp | page 5 | needs comparison
+- [ ] 108-00-C-22 | sudu/data/processed/108/webp-v1/00-C/108-00-C-22.webp | page 5 | needs comparison
+- [ ] 108-00-C-23 | sudu/data/processed/108/webp-v1/00-C/108-00-C-23.webp | page 5 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-24 | sudu/data/processed/108/webp-v1/00-C/108-00-C-24.webp | page 6 | needs comparison
+- [ ] 108-00-C-25 | sudu/data/processed/108/webp-v1/00-C/108-00-C-25.webp | page 6 | needs comparison
+- [ ] 108-00-C-26 | sudu/data/processed/108/webp-v1/00-C/108-00-C-26.webp | page 6 | needs comparison
+- [ ] 108-00-C-27 | sudu/data/processed/108/webp-v1/00-C/108-00-C-27.webp | page 6 | needs comparison
+- [ ] 108-00-C-28 | sudu/data/processed/108/webp-v1/00-C/108-00-C-28.webp | page 6 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-29 | sudu/data/processed/108/webp-v1/00-C/108-00-C-29.webp | page 7 | needs comparison
+- [ ] 108-00-C-30 | sudu/data/processed/108/webp-v1/00-C/108-00-C-30.webp | page 7 | needs comparison
+- [ ] 108-00-C-31 | sudu/data/processed/108/webp-v1/00-C/108-00-C-31.webp | page 7 | needs comparison
+- [ ] 108-00-C-32 | sudu/data/processed/108/webp-v1/00-C/108-00-C-32.webp | page 7 | needs comparison
+- [ ] 108-00-C-33 | sudu/data/processed/108/webp-v1/00-C/108-00-C-33.webp | page 7 | needs comparison
+- [ ] 108-00-C-34 | sudu/data/processed/108/webp-v1/00-C/108-00-C-34.webp | page 7 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-C-35 | sudu/data/processed/108/webp-v1/00-C/108-00-C-35.webp | page 8 | needs comparison
+- [ ] 108-00-C-36 | sudu/data/processed/108/webp-v1/00-C/108-00-C-36.webp | page 8 | needs comparison
+- [ ] 108-00-C-37 | sudu/data/processed/108/webp-v1/00-C/108-00-C-37.webp | page 8 | needs comparison
+- [ ] 108-00-C-38 | sudu/data/processed/108/webp-v1/00-C/108-00-C-38.webp | page 8 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-E-01 | sudu/data/processed/108/webp-v1/00-E/108-00-E-01.webp | page 2 | needs comparison
+- [ ] 108-00-E-02 | sudu/data/processed/108/webp-v1/00-E/108-00-E-02.webp | page 2 | needs comparison
+- [ ] 108-00-E-03 | sudu/data/processed/108/webp-v1/00-E/108-00-E-03.webp | page 2 | needs comparison
+- [ ] 108-00-E-04 | sudu/data/processed/108/webp-v1/00-E/108-00-E-04.webp | page 2 | needs comparison
+- [ ] 108-00-E-05 | sudu/data/processed/108/webp-v1/00-E/108-00-E-05.webp | page 2 | needs comparison
+- [ ] 108-00-E-06 | sudu/data/processed/108/webp-v1/00-E/108-00-E-06.webp | page 2 | needs comparison
+- [ ] 108-00-E-07 | sudu/data/processed/108/webp-v1/00-E/108-00-E-07.webp | page 2 | needs comparison
+- [ ] 108-00-E-08 | sudu/data/processed/108/webp-v1/00-E/108-00-E-08.webp | page 2 | needs comparison
+- [ ] 108-00-E-09 | sudu/data/processed/108/webp-v1/00-E/108-00-E-09.webp | page 2 | needs comparison
+- [ ] 108-00-E-10 | sudu/data/processed/108/webp-v1/00-E/108-00-E-10.webp | page 2 | needs comparison
+- [ ] 108-00-E-11 | sudu/data/processed/108/webp-v1/00-E/108-00-E-11.webp | page 2 | needs comparison
+- [ ] 108-00-E-12 | sudu/data/processed/108/webp-v1/00-E/108-00-E-12.webp | page 2 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-E-13 | sudu/data/processed/108/webp-v1/00-E/108-00-E-13.webp | page 3 | needs comparison
+- [ ] 108-00-E-14 | sudu/data/processed/108/webp-v1/00-E/108-00-E-14.webp | page 3 | needs comparison
+- [ ] 108-00-E-15 | sudu/data/processed/108/webp-v1/00-E/108-00-E-15.webp | page 3 | needs comparison
+- [ ] 108-00-E-16 | sudu/data/processed/108/webp-v1/00-E/108-00-E-16.webp | page 3 | needs comparison
+- [ ] 108-00-E-17 | sudu/data/processed/108/webp-v1/00-E/108-00-E-17.webp | page 3 | needs comparison
+- [ ] 108-00-E-18 | sudu/data/processed/108/webp-v1/00-E/108-00-E-18.webp | page 3 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-E-19 | sudu/data/processed/108/webp-v1/00-E/108-00-E-19.webp | page 4 | needs comparison
+- [ ] 108-00-E-20 | sudu/data/processed/108/webp-v1/00-E/108-00-E-20.webp | page 4 | needs comparison
+- [ ] 108-00-E-21 | sudu/data/processed/108/webp-v1/00-E/108-00-E-21.webp | page 4 | needs comparison
+- [ ] 108-00-E-22 | sudu/data/processed/108/webp-v1/00-E/108-00-E-22.webp | page 4 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-23 | sudu/data/processed/108/webp-v1/00-E/108-00-E-23.webp | page 4 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-24 | sudu/data/processed/108/webp-v1/00-E/108-00-E-24.webp | page 4 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-25 | sudu/data/processed/108/webp-v1/00-E/108-00-E-25.webp | page 4 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-26 | sudu/data/processed/108/webp-v1/00-E/108-00-E-26.webp | page 4 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-27 | sudu/data/processed/108/webp-v1/00-E/108-00-E-27.webp | page 5 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-28 | sudu/data/processed/108/webp-v1/00-E/108-00-E-28.webp | page 5 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-29 | sudu/data/processed/108/webp-v1/00-E/108-00-E-29.webp | page 5 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-30 | sudu/data/processed/108/webp-v1/00-E/108-00-E-30.webp | page 5 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-31 | sudu/data/processed/108/webp-v1/00-E/108-00-E-31.webp | page 5 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-E-32 | sudu/data/processed/108/webp-v1/00-E/108-00-E-32.webp | page 6 | needs comparison
+- [ ] 108-00-E-33 | sudu/data/processed/108/webp-v1/00-E/108-00-E-33.webp | page 6 | needs comparison
+- [ ] 108-00-E-34 | sudu/data/processed/108/webp-v1/00-E/108-00-E-34.webp | page 6 | needs comparison
+- [ ] 108-00-E-35 | sudu/data/processed/108/webp-v1/00-E/108-00-E-35.webp | page 6 | needs comparison
+- [ ] 108-00-E-36 | sudu/data/processed/108/webp-v1/00-E/108-00-E-36.webp | page 6 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-E-37 | sudu/data/processed/108/webp-v1/00-E/108-00-E-37.webp | page 7 | needs comparison
+- [ ] 108-00-E-38 | sudu/data/processed/108/webp-v1/00-E/108-00-E-38.webp | page 7 | needs comparison
+- [ ] 108-00-E-39 | sudu/data/processed/108/webp-v1/00-E/108-00-E-39.webp | page 7 | needs comparison
+- [ ] 108-00-E-40 | sudu/data/processed/108/webp-v1/00-E/108-00-E-40.webp | page 7 | needs comparison
+- [ ] 108-00-E-41 | sudu/data/processed/108/webp-v1/00-E/108-00-E-41.webp | page 7 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-MB-01 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-01.webp | page 2 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-02 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-02.webp | page 2 | needs comparison
+- [ ] 108-00-MB-03 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-03.webp | page 2 | needs comparison
+- [ ] 108-00-MB-04 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-04.webp | page 2 | needs comparison
+- [ ] 108-00-MB-05 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-05.webp | page 2 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-06 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-06.webp | page 2 | needs comparison
+- [ ] 108-00-MB-07 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-07.webp | page 2 | needs comparison
+- [ ] 108-00-MB-08 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-08.webp | page 2 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-09 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-09.webp | page 2 | needs comparison
+- [ ] 108-00-MB-10 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-10.webp | page 2 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-00-MB-11 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-12 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-13 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-14 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-15 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-16 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-17 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-18 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-18.webp | page 4 | needs comparison
+- [ ] 108-00-MB-19 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-19.webp | page 4 | needs comparison
+- [ ] 108-00-MB-20 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-20.webp | page 4 | needs comparison
+- [ ] 108-00-MB-21 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-21.webp | page 4 | needs comparison
+- [ ] 108-00-MB-22 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-22.webp | page 4 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-00-MB-23 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-23.webp | page 4 | needs comparison
+- [ ] 108-00-MB-24 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-24.webp | page 4 | needs comparison
+- [ ] 108-00-MB-25 | sudu/data/processed/108/webp-v1/00-MB/108-00-MB-25.webp | page 4 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-1-01 | sudu/data/processed/108/webp-v1/09-1/108-09-1-01.webp | page 2 | needs comparison
+- [ ] 108-09-1-02 | sudu/data/processed/108/webp-v1/09-1/108-09-1-02.webp | page 2 | needs comparison
+- [ ] 108-09-1-03 | sudu/data/processed/108/webp-v1/09-1/108-09-1-03.webp | page 2 | needs comparison
+- [ ] 108-09-1-04 | sudu/data/processed/108/webp-v1/09-1/108-09-1-04.webp | page 2 | needs comparison
+- [ ] 108-09-1-05 | sudu/data/processed/108/webp-v1/09-1/108-09-1-05.webp | page 2 | needs comparison
+- [ ] 108-09-1-06 | sudu/data/processed/108/webp-v1/09-1/108-09-1-06.webp | page 2 | needs comparison
+- [ ] 108-09-1-07 | sudu/data/processed/108/webp-v1/09-1/108-09-1-07.webp | page 2 | needs comparison
+- [ ] 108-09-1-08 | sudu/data/processed/108/webp-v1/09-1/108-09-1-08.webp | page 2 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-1-09 | sudu/data/processed/108/webp-v1/09-1/108-09-1-09.webp | page 3 | needs comparison
+- [ ] 108-09-1-10 | sudu/data/processed/108/webp-v1/09-1/108-09-1-10.webp | page 3 | needs comparison
+- [ ] 108-09-1-11 | sudu/data/processed/108/webp-v1/09-1/108-09-1-11.webp | page 3 | needs comparison
+- [ ] 108-09-1-12 | sudu/data/processed/108/webp-v1/09-1/108-09-1-12.webp | page 3 | needs comparison
+- [ ] 108-09-1-13 | sudu/data/processed/108/webp-v1/09-1/108-09-1-13.webp | page 3 | NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-14 | sudu/data/processed/108/webp-v1/09-1/108-09-1-14.webp | page 3 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-1-15 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-1-16 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-1-17 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-1-18 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-1-19 | sudu/data/processed/108/webp-v1/09-1/108-09-1-19.webp | page 5 | needs comparison
+- [ ] 108-09-1-20 | sudu/data/processed/108/webp-v1/09-1/108-09-1-20.webp | page 5 | needs comparison
+- [ ] 108-09-1-21 | sudu/data/processed/108/webp-v1/09-1/108-09-1-21.webp | page 5 | needs comparison
+- [ ] 108-09-1-22 | sudu/data/processed/108/webp-v1/09-1/108-09-1-22.webp | page 5 | needs comparison
+- [ ] 108-09-1-23 | sudu/data/processed/108/webp-v1/09-1/108-09-1-23.webp | page 5 | needs comparison
+- [ ] 108-09-1-24 | sudu/data/processed/108/webp-v1/09-1/108-09-1-24.webp | page 5 | needs comparison
+- [ ] 108-09-1-25 | sudu/data/processed/108/webp-v1/09-1/108-09-1-25.webp | page 5 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-1-26 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-27 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-28 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-29 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-30 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-31 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-32 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-33 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-1-34 | sudu/data/processed/108/webp-v1/09-1/108-09-1-34.webp | page 7 | needs comparison
+- [ ] 108-09-1-35 | sudu/data/processed/108/webp-v1/09-1/108-09-1-35.webp | page 7 | needs comparison
+- [ ] 108-09-1-36 | sudu/data/processed/108/webp-v1/09-1/108-09-1-36.webp | page 7 | needs comparison
+- [ ] 108-09-1-37 | sudu/data/processed/108/webp-v1/09-1/108-09-1-37.webp | page 7 | needs comparison
+- [ ] 108-09-1-38 | sudu/data/processed/108/webp-v1/09-1/108-09-1-38.webp | page 7 | needs comparison
+- [ ] 108-09-1-39 | sudu/data/processed/108/webp-v1/09-1/108-09-1-39.webp | page 7 | needs comparison
+- [ ] 108-09-1-40 | sudu/data/processed/108/webp-v1/09-1/108-09-1-40.webp | page 7 | needs comparison
+- [ ] 108-09-1-41 | sudu/data/processed/108/webp-v1/09-1/108-09-1-41.webp | page 7 | needs comparison
+- [ ] 108-09-1-42 | sudu/data/processed/108/webp-v1/09-1/108-09-1-42.webp | page 7 | needs comparison
+- [ ] 108-09-1-43 | sudu/data/processed/108/webp-v1/09-1/108-09-1-43.webp | page 7 | needs comparison
+- [ ] 108-09-1-44 | sudu/data/processed/108/webp-v1/09-1/108-09-1-44.webp | page 7 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-1-45 | sudu/data/processed/108/webp-v1/09-1/108-09-1-45.webp | page 8 | needs comparison
+- [ ] 108-09-1-46 | sudu/data/processed/108/webp-v1/09-1/108-09-1-46.webp | page 8 | needs comparison
+- [ ] 108-09-1-47 | sudu/data/processed/108/webp-v1/09-1/108-09-1-47.webp | page 8 | needs comparison
+- [ ] 108-09-1-48 | sudu/data/processed/108/webp-v1/09-1/108-09-1-48.webp | page 8 | needs comparison
+- [ ] 108-09-1-49 | sudu/data/processed/108/webp-v1/09-1/108-09-1-49.webp | page 8 | needs comparison
+- [ ] 108-09-1-50 | sudu/data/processed/108/webp-v1/09-1/108-09-1-50.webp | page 8 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-01 | sudu/data/processed/108/webp-v1/09-2/108-09-2-01.webp | page 2 | needs comparison
+- [ ] 108-09-2-02 | sudu/data/processed/108/webp-v1/09-2/108-09-2-02.webp | page 2 | needs comparison
+- [ ] 108-09-2-03 | sudu/data/processed/108/webp-v1/09-2/108-09-2-03.webp | page 2 | needs comparison
+- [ ] 108-09-2-04 | sudu/data/processed/108/webp-v1/09-2/108-09-2-04.webp | page 2 | needs comparison
+- [ ] 108-09-2-05 | sudu/data/processed/108/webp-v1/09-2/108-09-2-05.webp | page 2 | needs comparison
+- [ ] 108-09-2-06 | sudu/data/processed/108/webp-v1/09-2/108-09-2-06.webp | page 2 | needs comparison
+- [ ] 108-09-2-07 | sudu/data/processed/108/webp-v1/09-2/108-09-2-07.webp | page 2 | needs comparison
+- [ ] 108-09-2-08 | sudu/data/processed/108/webp-v1/09-2/108-09-2-08.webp | page 2 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-09 | sudu/data/processed/108/webp-v1/09-2/108-09-2-09.webp | page 3 | needs comparison
+- [ ] 108-09-2-10 | sudu/data/processed/108/webp-v1/09-2/108-09-2-10.webp | page 3 | needs comparison
+- [ ] 108-09-2-11 | sudu/data/processed/108/webp-v1/09-2/108-09-2-11.webp | page 3 | needs comparison
+- [ ] 108-09-2-12 | sudu/data/processed/108/webp-v1/09-2/108-09-2-12.webp | page 3 | needs comparison
+- [ ] 108-09-2-13 | sudu/data/processed/108/webp-v1/09-2/108-09-2-13.webp | page 3 | needs comparison
+- [ ] 108-09-2-14 | sudu/data/processed/108/webp-v1/09-2/108-09-2-14.webp | page 3 | needs comparison
+- [ ] 108-09-2-15 | sudu/data/processed/108/webp-v1/09-2/108-09-2-15.webp | page 3 | needs comparison
+- [ ] 108-09-2-16 | sudu/data/processed/108/webp-v1/09-2/108-09-2-16.webp | page 3 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-17 | sudu/data/processed/108/webp-v1/09-2/108-09-2-17.webp | page 4 | needs comparison
+- [ ] 108-09-2-18 | sudu/data/processed/108/webp-v1/09-2/108-09-2-18.webp | page 4 | needs comparison
+- [ ] 108-09-2-19 | sudu/data/processed/108/webp-v1/09-2/108-09-2-19.webp | page 4 | needs comparison
+- [ ] 108-09-2-20 | sudu/data/processed/108/webp-v1/09-2/108-09-2-20.webp | page 4 | needs comparison
+- [ ] 108-09-2-21 | sudu/data/processed/108/webp-v1/09-2/108-09-2-21.webp | page 4 | needs comparison
+- [ ] 108-09-2-22 | sudu/data/processed/108/webp-v1/09-2/108-09-2-22.webp | page 4 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-23 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-24 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-25 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-26 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR, NEEDS_VERIFIED_FOUR_TEXT_OPTIONS_OR_IMAGE_ONLY_FALLBACK
+- [ ] 108-09-2-27 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-28 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-29 | NO WEBP | page None | UNVERIFIED_PDF_QUESTION_NUMBER_ANCHOR
+- [ ] 108-09-2-30 | sudu/data/processed/108/webp-v1/09-2/108-09-2-30.webp | page 6 | needs comparison
+- [ ] 108-09-2-31 | sudu/data/processed/108/webp-v1/09-2/108-09-2-31.webp | page 6 | needs comparison
+- [ ] 108-09-2-32 | sudu/data/processed/108/webp-v1/09-2/108-09-2-32.webp | page 6 | needs comparison
+- [ ] 108-09-2-33 | sudu/data/processed/108/webp-v1/09-2/108-09-2-33.webp | page 6 | needs comparison
+- [ ] 108-09-2-34 | sudu/data/processed/108/webp-v1/09-2/108-09-2-34.webp | page 6 | needs comparison
+- [ ] 108-09-2-35 | sudu/data/processed/108/webp-v1/09-2/108-09-2-35.webp | page 6 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-36 | sudu/data/processed/108/webp-v1/09-2/108-09-2-36.webp | page 7 | needs comparison
+- [ ] 108-09-2-37 | sudu/data/processed/108/webp-v1/09-2/108-09-2-37.webp | page 7 | needs comparison
+- [ ] 108-09-2-38 | sudu/data/processed/108/webp-v1/09-2/108-09-2-38.webp | page 7 | needs comparison
+- [ ] 108-09-2-39 | sudu/data/processed/108/webp-v1/09-2/108-09-2-39.webp | page 7 | needs comparison
+- [ ] 108-09-2-40 | sudu/data/processed/108/webp-v1/09-2/108-09-2-40.webp | page 7 | needs comparison
+- [ ] 108-09-2-41 | sudu/data/processed/108/webp-v1/09-2/108-09-2-41.webp | page 7 | needs comparison
+- [ ] 108-09-2-42 | sudu/data/processed/108/webp-v1/09-2/108-09-2-42.webp | page 7 | needs comparison
+- [ ] 108-09-2-43 | sudu/data/processed/108/webp-v1/09-2/108-09-2-43.webp | page 7 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA
+- [ ] 108-09-2-44 | sudu/data/processed/108/webp-v1/09-2/108-09-2-44.webp | page 8 | needs comparison
+- [ ] 108-09-2-45 | sudu/data/processed/108/webp-v1/09-2/108-09-2-45.webp | page 8 | needs comparison
+- [ ] 108-09-2-46 | sudu/data/processed/108/webp-v1/09-2/108-09-2-46.webp | page 8 | needs comparison
+- [ ] 108-09-2-47 | sudu/data/processed/108/webp-v1/09-2/108-09-2-47.webp | page 8 | needs comparison
+- [ ] 108-09-2-48 | sudu/data/processed/108/webp-v1/09-2/108-09-2-48.webp | page 8 | needs comparison
+- [ ] 108-09-2-49 | sudu/data/processed/108/webp-v1/09-2/108-09-2-49.webp | page 8 | needs comparison
+- [ ] 108-09-2-50 | sudu/data/processed/108/webp-v1/09-2/108-09-2-50.webp | page 8 | LAST_ON_PAGE_REQUIRES_FOOTER_AND_CONTINUATION_QA

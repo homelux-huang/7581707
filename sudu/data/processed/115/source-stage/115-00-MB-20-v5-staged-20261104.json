@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-115-MB20-V5-FIGURE-FINAL-SOURCE-STAGE-20261104-04",
+  "role": "A",
+  "questionId": "115-00-MB-20",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6623891929",
+  "mainBase": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "sourceImmutableHead": "9ade29d9eabae54a92b82cc036f448ace06f1186",
+  "status": "ROLE_A_ORIGINAL_V5_CORRECTED_FIGURE_SOURCE_STAGED__INDEPENDENT_G1_CANONICAL_ADMISSION_PENDING_NO_RELEASE",
+  "reviewMethod": "AI Assistant Source Visual Review of existing original v5 and defective v2 WebPs in this session, not human teacher or independent E teaching reviewer",
+  "originalSource": {
+    "year": 115,
+    "paperCode": "00-MB",
+    "number": 20,
+    "paperPage": 7,
+    "originalPdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+    "officialOriginalPageWebp": "sudu/data/original/115/00-MB/p007-e82e34d9cd-v2-w1400-q66.webp",
+    "officialOriginalPageWebpGitBlob": "c8e3e806d812a01d417abe83dac7f46adcf84ff7",
+    "officialOriginalPageWebpSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d",
+    "originalCorrectedSingleWebp": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-20.webp",
+    "originalCorrectedSingleWebpGitBlob": "bd77281f8ee755074cf3b7ebcada5c06f3720c12",
+    "originalCorrectedSingleWebpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+    "originalCrop": [
+      90,
+      469,
+      1310,
+      902
+    ],
+    "originalPixelSize": [
+      1220,
+      433
+    ],
+    "oldDefectiveV2Webp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-20.webp",
+    "oldDefectiveV2GitBlob": "fb055f43e0d186343015a6f6542cdc302e9ef5d5",
+    "oldDefect": "previous_candidate_missing_figure_IV_lower_edge_and_caption",
+    "oldManifestStatus": "PASS",
+    "historicalRepairStatus": "generated_pending_independent_visual_recheck",
+    "newAssistantObservation": "Reopened existing original-v5 WebP versus old v2: v5 displays full lower edge of triangle, complete B point and figure（四） caption, original Q20 and all four A-D; v2 cuts bottom at point B and loses caption.",
+    "formalIndependentVisualReviewRecheckRecorded": false,
+    "formalCanonicalImageG1FlagNewlySet": false,
+    "imageRecroppedOrRedrawnThisTask": false
+  },
+  "g2Source": {
+    "historicalUnmodifiedRoleAProofPath": "sudu/data/processed/115/review-evidence/115-00-MB-20-image-transcription-correction-20261024.json",
+    "historicalRoleAProofGitBlob": "c5278848e46d07dba45734413bc0b79a9b9afcb4",
+    "oldRawOCRPreservedInProof": true,
+    "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
+    "options": [
+      "50(√3＋1)",
+      "50(√3－1)",
+      "20(√3＋1)",
+      "20(√3－1)"
+    ],
+    "figureDescription": "圖（四）：工寮 A、基準點 B 與稻草人 C 構成三角形；AB＝100 公尺，∠CAB＝60°、∠CBA＝75°。保留既有原始 WebP 示意圖。",
+    "currentCPr118SourceRevisionForComparisonOnly": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+    "newAFormalCanonicalSourceRevisionSet": false,
+    "hasCompleteFourOptionsAndTriangleImage": true
+  },
+  "official": {
+    "printedOfficialAnswer": "A",
+    "oldPublishedAnswerFullImage": "sudu/data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+    "oldPublishedAnswerWebpGitBlob": "5ea4b86e929506d595f96fa162d1aae021f68440",
+    "oldPublishedAnswerWebpSha256": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+    "publishedAnswerPdfSha256PreviouslyRecorded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "oldHistoricalOfficialMath25AnswersQaPath": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
+    "oldHistoricalOfficialMath25AnswersQaGitBlob": "ab82d2f6f2d6743f0ba9e5ca2eabb2d15c4b9d4e",
+    "noticePaperCode": "00-MB",
+    "noticeStatus": "no_objection_submitted",
+    "formula": "AC=100*sin(75 deg)/sin(45 deg)=50*(sqrt(3)+1) metres",
+    "approxMetres": 136.6025403784,
+    "reverseCheck": "AC*sin45/sin75 = 100 metres",
+    "originalQuestionAndAnswerPdfReDownloadedOrRehashedThisTask": false,
+    "canonicalFinalAnswerVerifiedFlagNewlySet": false
+  },
+  "frozenCanonical": {
+    "questionsJsonGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+    "webpManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+    "sqliteGitBlob": "9f0154e79fe90e92fa46b4d9bcbe4009cbfb3788",
+    "expectedQuestionCount": 205,
+    "existingDefectHistoryNotOverwritten": true,
+    "canonicalJsonTouched": false,
+    "canonicalSqliteTouched": false,
+    "canonicalManifestTouched": false,
+    "historical81DenormalizedDivergenceNotBatchModified": true
+  },
+  "downstream": {
+    "CNewestDigest": "2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d",
+    "newEContentReviewComment": 6623654829,
+    "newEResult": "SUBSTANTIVE_MATH_PASS_NOT_AUTHENTICATED_TRUSTED_REGISTRY",
+    "DNewSameDigestQAComment": 6623798144,
+    "nonInterceptedApprovedEmitter8x2": "NOT_YET",
+    "masterSourceAdmit": "PENDING_REVIEW_FORMAL_G1_G2_G3_AND_205_SQL",
+    "approved": false,
+    "ready": false,
+    "live": false
+  }
+}

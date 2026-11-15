@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-23",
+  "role": "A_SOURCE_ONLY_NOT_DISTINCT_E",
+  "taskId": "A-115-MB23-CANONICAL-G2G3-TABLE-20261110-01",
+  "questionRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+  "webpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+  "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
+  "options": [
+    "32000",
+    "33000",
+    "34000",
+    "35000"
+  ],
+  "visualTextCompared": true,
+  "reviewer": "ROLE A original MathB Q23 p8 2x3 source table visual/candidate; not independent E",
+  "reviewedAt": "2026-11-10",
+  "reviewType": "SOURCE_TABLE_2X3_G2_ORIGINAL",
+  "sourceYear": 115,
+  "originalPage": 8,
+  "sourcePdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "originalPageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+  "originalSingleWebpSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+  "originalSingleWebpGitBlob": "f8c1fa03e8e97b7d7dae789c8ecf9cd618058bbb",
+  "sourcePageWebpGitBlob": "4c98df22dd3096c5d59178f4f2b6b3e88415bbee",
+  "originalSourceTable": {
+    "title": "表（二）",
+    "columns": [
+      "行程",
+      "原價",
+      "優惠"
+    ],
+    "rows": [
+      [
+        "行程Ⅰ",
+        "每位收費 x 元",
+        "兩人同行，其中一人減免 3000 元"
+      ],
+      [
+        "行程Ⅱ",
+        "每位收費 (x＋2000) 元",
+        "兩人同行，其中一人打八折"
+      ]
+    ]
+  },
+  "sourceTables": [
+    {
+      "heading": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    }
+  ],
+  "tableTextSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088",
+  "sourceTableRequired": true,
+  "tableHeaderColumns": 3,
+  "tableDataRows": 2,
+  "tableDataCells": 6,
+  "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-23-staged-20261104.json",
+  "sourceStageGitBlob": "a96c73b60e5617b79166ae076a854341bae934c4",
+  "sourceTableEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json",
+  "sourceTableEvidenceGitBlob": "0f63d6a5f91015dd2b146731c48dce08668c1fa2",
+  "originalRawOcrPreserved": true,
+  "noRecrop": true,
+  "noAdjacentQID": true,
+  "answerHiddenFromIssuer": true,
+  "independentE": false,
+  "studentReady": false,
+  "studentLive": false
+}

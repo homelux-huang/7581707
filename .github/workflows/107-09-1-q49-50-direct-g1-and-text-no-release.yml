@@ -1,0 +1,98 @@
+name: 107 commerce Q49 Q50 original-page direct G1 and Q49 text G2 (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/apply_107_09_1_q49_50_direct_g1_and_q49_text.py
+      - .github/workflows/107-09-1-q49-50-direct-g1-and-text-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa107-09-1-q49-50-direct-g1-g2
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow for exact source-pixel comparisons
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin current QA HEAD, compile and verify source
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/apply_107_09_1_q49_50_direct_g1_and_q49_text.py
+      - name: Direct visual reviewed Q49 Q50 G1 and Q49 original VB text G2
+        run: python scripts/apply_107_09_1_q49_50_direct_g1_and_q49_text.py
+      - name: Verify strict G1 and G2 separation and preserve G3 G6 block
+        run: |
+          python - <<'PY_GUARDS'
+          import hashlib,json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          d=Path('sudu/data/processed/107')
+          def load(p):return json.loads((d/p).read_text(encoding='utf8'))
+          inv=load('inventory.json'); m=load('webp-manifest.json')
+          q=load('questions.json'); v=load('VISUAL_QA.json')
+          o=load('ocr-raw-candidates.json')
+          val=load('VALIDATION.json'); rel=load('release-manifest.json')
+          ev=load('qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json')
+          assert len(m['items'])==len(q['questions'])==len(v['items'])==len(o['items'])==204
+          assert inv['webpGeneratedDrafts']==191
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==6
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert ev['newIndividualG1Pass']==2 and ev['newQ49TextG2Pass']==1
+          assert ev['q50TextG2Status']=='PENDING_IMAGE_DIAGRAM_OPTIONS'
+          assert ev['independentHumanReview'] is False and ev['reviewer']=='ChatGPT assistant'
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          for n in (49,50):
+              id=f'107-09-1-{n:02d}'
+              row=next(r for r in q['questions'] if r['questionId']==id)
+              img=next(r for r in m['items'] if r['questionId']==id)
+              assert row['imageQaStatus']==img['qaStatus']=='PASS'
+              assert img['visualReviewEvidence']['reviewedSha256']==img['outputSha256']
+              assert hashlib.sha256(Path(img['output']).read_bytes()).hexdigest()==img['outputSha256']
+              assert not row['answerVerified'] and not row['integrationReady']
+              if n==49:
+                  assert row['questionVerified'] is True and len(row['options'])==4
+              else:
+                  assert row['questionVerified'] is False
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('107 09-1 Q49/50 G1=2, Q49 text G2=1, 107 G1=6, G2=5, G5=11/11, G3 unchanged, NO RELEASE')
+          PY_GUARDS
+      - name: Commit G1 G2 and isolated DB only with nonforce HEAD lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/webp-manifest.json
+          git add sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/ocr-raw-candidates.json
+          git add sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json
+          git add sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/release-manifest.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_09_1_Q49_50_AND_Q49_TEXT_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "All verified data already committed"; exit 0; fi
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA update; stop and reconcile, do not force push"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(107): direct source Q49-50 G1 and Q49 G2, Q50 text blocked, G5 NO RELEASE"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

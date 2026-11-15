@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-25",
+  "role": "A_SOURCE_ONLY_NOT_DISTINCT_E",
+  "taskId": "A-115-MB25-NATIVE-SOURCE-ADMISSION-20261114-01",
+  "questionRevision": "8b29dffa0c37abd1b37989878a9f8d34392ba71a04017ca1591d6fa45ec9cb6f",
+  "webpSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+  "question": "小晏想在坐標平面中創作一個卡通人物，如圖（七）所示。已知 A、B、P 為圖（七）中的三點，直線 L 通過 A、B 兩點，點 P 的坐標為 (h,7)，點 P 到直線 L 的距離為 √2。若小晏要畫出以點 P 為圓心，並與直線 L 相切的圓，且此圓的方程式為 x²－8x＋(y－7)²＝a，則 h＋a＝？",
+  "options": [
+    "－59",
+    "－16",
+    "－10",
+    "10"
+  ],
+  "visualTextCompared": true,
+  "reviewer": "ROLE A Work original source inspection; not authenticated E content review",
+  "reviewedAt": "2026-11-14",
+  "originalPage": 8,
+  "originalPageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+  "originalSingleWebpGitBlob": "10adb24ab36c35bd86b63c0d3ab4cb83b757393f",
+  "sourcePageWebpGitBlob": "4c98df22dd3096c5d59178f4f2b6b3e88415bbee",
+  "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-25-stage-20261104.json",
+  "sourceStageGitBlob": "cf1ef0d369e3aced81886a518b47cdeddd4ad175",
+  "sourceCorrectionsPath": "sudu/data/processed/115/review-evidence/115-00-MB-25-image-transcription-correction-20261024.json",
+  "historicalCorrectionGitBlob": "6228cca369d369c183cb578519c383257f579f8b",
+  "sourcePdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourceCrop": [
+    90,
+    1102,
+    1310,
+    1557
+  ],
+  "figureDescription": "圖（七）：坐標平面、直線 L 通過 A 與 B，點 P=(h,7) 與和直線 L 相切的圓。半徑 r＝√2（不是 2），原圖保留。",
+  "sourcePixelDifference": "ZERO_RGB_ALL_CHANNELS",
+  "noNewOCR": true,
+  "noRecrop": true,
+  "originalRawOcrPreserved": true,
+  "independentE": false,
+  "studentReady": false,
+  "studentLive": false
+}

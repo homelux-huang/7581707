@@ -1,0 +1,39 @@
+name: 105-114 Legacy OCR Text Contamination Audit (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/audit_105_114_text_contamination.py
+      - .github/workflows/105-114-text-contamination-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Produce evidence lists without changing source questions
+        run: |
+          python -m py_compile scripts/audit_105_114_text_contamination.py
+          python scripts/audit_105_114_text_contamination.py
+      - name: Commit only text QA suspect reports
+        run: |
+          git config user.name '7581707 text QA audit'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/*/TEXT_QA_SUSPECTS.json sudu/data/processed/*/TEXT_QA_SUSPECTS.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'qa(105-114): flag suspicious legacy option text without altering questions'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin qa/114-115-official-visual-review
+              if git push origin HEAD:qa/114-115-official-visual-review; then exit 0; fi
+              sleep 3
+            done
+            exit 1
+          fi

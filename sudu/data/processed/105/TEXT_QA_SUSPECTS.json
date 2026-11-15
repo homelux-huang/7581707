@@ -1,0 +1,753 @@
+{
+  "schemaVersion": 1,
+  "year": 105,
+  "generatedAt": "2026-10-22T13:36:48.001154+00:00",
+  "inspection": "DETERMINISTIC_TEXT_SCAN_ONLY_NOT_MANUAL_QA",
+  "suspectQuestionCount": 43,
+  "suspectIds": [
+    "105-00-C-06",
+    "105-00-C-11",
+    "105-00-C-12",
+    "105-00-C-17",
+    "105-00-C-23",
+    "105-00-C-25",
+    "105-00-C-26",
+    "105-00-C-27",
+    "105-00-C-35",
+    "105-00-C-38",
+    "105-00-E-12",
+    "105-00-E-19",
+    "105-00-E-22",
+    "105-00-E-23",
+    "105-00-E-24",
+    "105-00-E-25",
+    "105-00-E-26",
+    "105-00-E-27",
+    "105-00-E-28",
+    "105-00-E-29",
+    "105-00-E-30",
+    "105-00-E-31",
+    "105-00-E-34",
+    "105-00-E-41",
+    "105-00-MB-08",
+    "105-00-MB-11",
+    "105-00-MB-21",
+    "105-00-MB-25",
+    "105-09-1-11",
+    "105-09-1-20",
+    "105-09-1-30",
+    "105-09-1-40",
+    "105-09-1-47",
+    "105-09-1-50",
+    "105-09-2-08",
+    "105-09-2-15",
+    "105-09-2-21",
+    "105-09-2-27",
+    "105-09-2-38",
+    "105-09-2-47",
+    "105-09-2-48",
+    "105-09-2-49",
+    "105-09-2-50"
+  ],
+  "findingCount": 87,
+  "findings": [
+    {
+      "questionId": "105-00-C-06",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第2 頁",
+      "excerpt": "趨利避害\n\n\n\n共8 頁                      第2 頁\n\n                                         共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-06",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "趨利避害\n\n\n\n共8 頁                      第2 頁\n\n                                         共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-11",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "里仁為美\n\n\n\n\n                         第3 頁                       共8 頁\n\n共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-11",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "里仁為美\n\n\n\n\n                         第3 頁                       共8 頁\n\n共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-12",
+      "field": "option_1",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "1、2、3、6",
+      "excerpt": "1、2、3、6",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-12",
+      "field": "option_2",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "1、3、4、6",
+      "excerpt": "1、3、4、6",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-12",
+      "field": "option_3",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "2、3、4、5",
+      "excerpt": "2、3、4、5",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-12",
+      "field": "option_4",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "3、4、5、6",
+      "excerpt": "3、4、5、6\n\n▲ 閱讀下文，回答第13 – 14 題\n  甲、顏淵、季路侍。子曰：「盍各言爾志？」子路曰：「願車馬、衣輕裘，與朋友共。敝之而無\n    憾。」顏淵曰：「願無伐善，無施勞。」子路曰：「願聞子之志。」子曰：「老者安之，朋\n    友信之，少者懷之。」(《論語‧公冶長》)\n  乙、子謂顏淵曰：「用之",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-17",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "公死於外戚之手；「未央，法場，險似壇臺上」意謂假\n   王死於項羽之手\n\n\n\n共8 頁                      第4 頁\n\n                                         共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-17",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "「後宮，外宗，險把炎劉并」意謂沛公死於外戚之手；「未央，法場，險似壇臺上」意謂假\n   王死於項羽之手\n\n\n\n共8 頁                      第4 頁\n\n                                         共同科目 國文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-23",
+      "field": "option_4",
+      "indicator": "OFFICIAL_PAGE_WATERMARK",
+      "matched": "公告試題僅供參考",
+      "excerpt": "\n\n                         第5 頁                       共8 頁\n\nww * 公告試題僅供參考\n\n閱讀下文,回答第 24-26題\n\n白羊和黑羊都想走過獨木橋,相遇於橋中的牠們,該怎麼辦?兩個被隔離偵訊的小偷,如果\n都堅稱沒犯案,可能同時獲釋; 如果一方為求減刑而認罪,不認罪的一方可能刑期加長 ;他們該\n如何扶擇?\n\n當對方的做法可能影響自己的利益,我們必然會把對方的做法納入決策考量,這就是「",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-23",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "老鷹吃了被農藥毒殺的動物\n\n\n\n                         第5 頁                       共8 頁\n\nww * 公告試題僅供參考\n\n閱讀下文,回答第 24-26題\n\n白羊和黑羊都想走過獨木橋,相遇於橋中的牠們,該怎麼辦?兩個被隔離偵訊的小偷,如果\n都堅稱沒犯案,可能同時獲釋; 如果一方為求減刑而認罪,不認罪的一方可能刑期加長 ;他們該\n如何扶",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-23",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "了被農藥毒殺的動物\n\n\n\n                         第5 頁                       共8 頁\n\nww * 公告試題僅供參考\n\n閱讀下文,回答第 24-26題\n\n白羊和黑羊都想走過獨木橋,相遇於橋中的牠們,該怎麼辦?兩個被隔離偵訊的小偷,如果\n都堅稱沒犯案,可能同時獲釋; 如果一方為求減刑而認罪,不認罪的一方可能刑期加長 ;他們該\n如何扶擇?\n\n當對方的做法可能影響自己的利益,我們必然會把對",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-25",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-C-25",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-C-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-C-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-C-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-C-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-C-35",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "潔己奉公者\n\n\n\n\n                         第7 頁                       共8 頁\n\n共同科目 國文\n\n▲ 閱讀下文，回答第36 – 38 題\n甲   愛其子，擇師而教之，於其身也則恥師焉，惑矣！彼童子之師，授之書而習其句讀者也，\n  非吾所謂傳其道、解其惑者也。句讀之不知，惑之不解，或師焉，或不焉，小學而大遺，吾未\n  見其",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-35",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "潔己奉公者\n\n\n\n\n                         第7 頁                       共8 頁\n\n共同科目 國文\n\n▲ 閱讀下文，回答第36 – 38 題\n甲   愛其子，擇師而教之，於其身也則恥師焉，惑矣！彼童子之師，授之書而習其句讀者也，\n  非吾所謂傳其道、解其惑者也。句讀之不知，惑之不解，或師焉，或不焉，小學而大遺，吾未\n  見其明也。巫、醫、樂師、百工之人，不恥相師；士大夫之族，曰",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-38",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第8 頁",
+      "excerpt": "寫與答案無關之文字符號。\n\n\n\n\n          【以下空白】\n\n\n\n\n\n共8 頁                      第8 頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-C-38",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "體會或看法。\n\n\n  ※ 不可在文中顯示自己身分或書寫與答案無關之文字符號。\n\n\n\n\n          【以下空白】\n\n\n\n\n\n共8 頁                      第8 頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-12",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第2 頁",
+      "excerpt": "Do you have any experience?\n\n\n\n共8 頁                      第2 頁\n\n                                         共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-12",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "Do you have any experience?\n\n\n\n共8 頁                      第2 頁\n\n                                         共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-19",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "I would like a refund, please.\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-19",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "please.\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-22",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-22",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-23",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-23",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-24",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-24",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-25",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-25",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-26",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-26",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-27",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-27",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-28",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-28",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-29",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-29",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-30",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-30",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-31",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-E-31",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-E-34",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "nough sunlight to make solar energy.\n\n\n\n                         第5 頁                       共8 頁\n\n共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-34",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "r energy.\n\n\n\n                         第5 頁                       共8 頁\n\n共同科目 英文",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-41",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "Sodium Loss through Excess Water\n\n\n\n\n\n共8 頁                      第6 頁\n\n                                         共同科目 英文\n\n二、 非選擇題(第Ⅰ到第Ⅲ題，每題6 分，共18 分)\nⅠ.填充\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含提示之字\n      首)，分別作答於答案卷之作答欄",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-E-41",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "Sodium Loss through Excess Water\n\n\n\n\n\n共8 頁                      第6 頁\n\n                                         共同科目 英文\n\n二、 非選擇題(第Ⅰ到第Ⅲ題，每題6 分，共18 分)\nⅠ.填充\n\n說明：\n    ▲ 請依據中文提示，將試題內空格 ①、② 答案之完整單字(含",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-MB-08",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-00-MB-08",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-00-MB-11",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第2 頁",
+      "excerpt": "144\n\n\n\n\n\n共4 頁                      第2 頁\n\n                                        共同科目  數學(B)\n\n         2  3             2                 x   y",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-MB-21",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "0.7\n\n\n\n\n                         第3 頁                       共4 頁\n\n共同科目  數學(B)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-00-MB-25",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": "24\n\n\n\n\n          【以下空白】\n\n\n\n\n\n共4 頁                      第4 頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-11",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第2 頁",
+      "excerpt": "結盟的雙方一定會共同出資成立子公司\n\n\n\n共8 頁                      第2 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-11",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "結盟的雙方一定會共同出資成立子公司\n\n\n\n共8 頁                      第2 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-20",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "租賃融資為中期融資方式\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-20",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "為中期融資方式\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-30",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": ". odg\n\n\n\n\n\n共8 頁                      第4 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-30",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": ". odg\n\n\n\n\n\n共8 頁                      第4 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-40",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "– 4\n\n\n\n\n\n                         第5 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-40",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "– 4\n\n\n\n\n\n                         第5 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-47",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "( 3 , ( 2 , ( 1 , 0 ) ) )\n\n\n\n\n\n共8 頁                      第6 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-47",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "( 3 , ( 2 , ( 1 , 0 ) ) )\n\n\n\n\n\n共8 頁                      第6 頁\n\n                      商業與管理群、外語群英語類、外語群日語類 專業科目(一)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-50",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "4\n\n\n\n\n          【以下空白】\n\n\n\n\n\n                         第7 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)\n\n共8 頁                      第8 頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-1-50",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": " 【以下空白】\n\n\n\n\n\n                         第7 頁                       共8 頁\n\n商業與管理群、外語群英語類、外語群日語類 專業科目(一)\n\n共8 頁                      第8 頁",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-08",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第2 頁",
+      "excerpt": "可完全避免會計項目重複紀錄、漏記或其他錯誤發生\n\n\n\n共8 頁                      第2 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-08",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "可完全避免會計項目重複紀錄、漏記或其他錯誤發生\n\n\n\n共8 頁                      第2 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-15",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第3 頁",
+      "excerpt": "推銷費用 $ 180,000\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-15",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "180,000\n\n\n\n\n\n                         第3 頁                       共8 頁\n\n商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-21",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第4 頁",
+      "excerpt": " 情況二入帳成本為 $ 600,000，認列減損損失 $ 40,000\n\n\n\n共8 頁                      第4 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-21",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "帳成本為 $ 800,000，不認列自建利益；\n   情況二入帳成本為 $ 600,000，認列減損損失 $ 40,000\n\n\n\n共8 頁                      第4 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-27",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第5 頁",
+      "excerpt": "菲律賓之國內生產毛額 ( GDP )\n\n\n\n\n                         第5 頁                       共8 頁\n\n商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-27",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": " ( GDP )\n\n\n\n\n                         第5 頁                       共8 頁\n\n商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-38",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第6 頁",
+      "excerpt": "2.5\n\n\n\n\n共8 頁                      第6 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-38",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "2.5\n\n\n\n\n共8 頁                      第6 頁\n\n                                    商業與管理群 專業科目(二)",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-47",
+      "field": "option_4",
+      "indicator": "PAGE_HEADER_NUMBER",
+      "matched": "第7 頁",
+      "excerpt": "巴拿馬\n\n\n\n\n\n                         第7 頁                       共8 頁\n\n商業與管理群 *34公告試題僅供參 a\n\n48.\n\n49.\n\n50.\n\n小陳年滿21 歲,因學業表現佳,提前半年從大學畢業,已遞出履歷求職,也獲得若干個\n面談機會。然而小陳要求起薪六萬元,而雁主最多只願意付三萬元,與小陳的預期落差\n甚遠。小陳",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-47",
+      "field": "option_4",
+      "indicator": "TOTAL_PAGES_FOOTER",
+      "matched": "共8 頁",
+      "excerpt": "巴拿馬\n\n\n\n\n\n                         第7 頁                       共8 頁\n\n商業與管理群 *34公告試題僅供參 a\n\n48.\n\n49.\n\n50.\n\n小陳年滿21 歲,因學業表現佳,提前半年從大學畢業,已遞出履歷求職,也獲得若干個\n面談機會。然而小陳要求起薪六萬元,而雁主最多只願意付三萬元,與小陳的預期落差\n甚遠。小陳認為工資過低,不願前往工作,只好再找尋其他工作。小陳的",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-47",
+      "field": "option_4",
+      "indicator": "NEXT_QUESTION_NUMBER_IN_OPTIONS",
+      "matched": "\n50.\n\n小陳年滿21 歲,因學業表現佳,提前半年從大學畢業,已遞出履歷求職,也獲得若干個",
+      "excerpt": "  第7 頁                       共8 頁\n\n商業與管理群 *34公告試題僅供參 a\n\n48.\n\n49.\n\n50.\n\n小陳年滿21 歲,因學業表現佳,提前半年從大學畢業,已遞出履歷求職,也獲得若干個\n面談機會。然而小陳要求起薪六萬元,而雁主最多只願意付三萬元,與小陳的預期落差\n甚遠。小陳認為工資過低,不願前往工作,只好再找尋其他工作。小陳的情形符合下列\n哪一種類型的失業 ?\n\n(A) 結構性失業           (B) 循環性失業           (C) 摩擦性失業          ",
+      "status": "SUSPECT_REQUIRES_OFFICIAL_SOURCE_VISUAL_QA"
+    },
+    {
+      "questionId": "105-09-2-48",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-09-2-48",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-09-2-49",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-09-2-49",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    },
+    {
+      "questionId": "105-09-2-50",
+      "field": "question",
+      "indicator": "LEGACY_OCR_PLACEHOLDER",
+      "matched": "source-not-reliably-extracted",
+      "excerpt": "本題原卷文字、圖表或公式尚未成功擷取，請點選原始 PDF 對照，不能把此提示當作正式題幹。",
+      "status": "PENDING_SOURCE_IMAGE_AND_OCR_QA"
+    },
+    {
+      "questionId": "105-09-2-50",
+      "field": "options",
+      "indicator": "FOUR_TEXT_OPTIONS_MISSING",
+      "matched": "0",
+      "excerpt": "",
+      "status": "PENDING_IMAGE_ONLY_FALLBACK_OR_OCR_CORRECTION"
+    }
+  ],
+  "rules": "Do not auto-strip text: footer-like text could be quote/content. Inspect official source first.",
+  "readyForIntegration": false
+}

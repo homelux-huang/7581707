@@ -1,0 +1,35 @@
+name: "ROLE B 114 E11 frozen original teaching issuer QA (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/role-b-e11-native-issuer-20261113
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  author-evidence-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read original protected main publisher only into runner temp (no repo writes)
+        run: |
+          git fetch --depth=1 --no-tags origin 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          git show 5546a603abfe0af2e62c0e5f63f775be0bfb24cf:scripts/sudu_verified_publish.py > "$RUNNER_TEMP/sudu_verified_publish.py"
+          test -s "$RUNNER_TEMP/sudu_verified_publish.py"
+          echo "PUBLISHER_CHECKER_PATH=$RUNNER_TEMP/sudu_verified_publish.py" >> "$GITHUB_ENV"
+      - name: Original E11 teaching + official source SHA + negative publisher gates
+        run: python -m unittest discover -s tests -p 'test_role_b_114_e11_teaching_issuer_20261113.py' -v
+      - name: Explicit no release from author-only proof
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("sudu/data/processed/114/review-evidence/114-00-E-11-teaching-publisher-20261113.json")
+          x=json.loads(p.read_text(encoding="utf-8"))
+          assert x["independentAiContentReviewed"] is False
+          assert x["studentReleaseApproved"] is False
+          assert x["sourceAuthorSessionId"] is None
+          assert x["reviewerSessionId"] is None
+          assert "NOT_READY" in x["status"]
+          print("AUTHOR ONLY / E11 NOT STUDENT READY OR LIVE")
+          PY

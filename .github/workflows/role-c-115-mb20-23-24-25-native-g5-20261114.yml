@@ -1,0 +1,69 @@
+name: "ROLE C 115 MB23 MB20 MB24 MB25 native author G5 (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/role-c-mb23-mb20-mb24-mb25-native-g5-20261114
+  pull_request:
+    paths:
+      - 'sudu/data/processed/115/review-evidence/115-00-MB-*-teaching-publisher-20261114.json'
+      - 'tests/test_role_c_115_mb20_23_24_25_native_g5_20261114.py'
+      - '.github/workflows/role-c-115-mb20-23-24-25-native-g5-20261114.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  actual-original-g5-author-only:
+    runs-on: ubuntu-latest
+    env:
+      ROLE_C_REQUIRED_G5_IDS: "23,20,24,25"
+    steps:
+      - name: Checkout exact issuer commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Fetch pinned protected-main publisher and immutable original author Git objects (runner TEMP only)
+        shell: bash
+        run: |
+          set -eu
+          git fetch --depth=1 --no-tags origin 0bc2b05ada43ef02983d56fc45ec3448189a318b
+          git show 0bc2b05ada43ef02983d56fc45ec3448189a318b:scripts/sudu_verified_publish.py > "$RUNNER_TEMP/sudu_verified_publish.py"
+          test -s "$RUNNER_TEMP/sudu_verified_publish.py"
+          echo "PUBLISHER_CHECKER_PATH=$RUNNER_TEMP/sudu_verified_publish.py" >> "$GITHUB_ENV"
+          git fetch --depth=1 --no-tags origin afaba171eec77cc27c3171b8bc8282f68ade74b9
+          mkdir -p "$RUNNER_TEMP/role-c-original"
+          for n in 23 20 24 25; do
+            git show afaba171eec77cc27c3171b8bc8282f68ade74b9:sudu/teaching-candidates/114-115-20261025/115-00-MB-$n.json > "$RUNNER_TEMP/role-c-original/MB$n.json"
+            test -s "$RUNNER_TEMP/role-c-original/MB$n.json"
+            git hash-object "$RUNNER_TEMP/role-c-original/MB$n.json"
+          done
+          echo "ORIGINAL_ROLE_C_DIR=$RUNNER_TEMP/role-c-original" >> "$GITHUB_ENV"
+      - name: Real native publisher issuer + source bank 205 + SHA + A-D + math + adversarial gates
+        run: python -m unittest discover -s tests -p 'test_role_c_115_mb20_23_24_25_native_g5_20261114.py' -v
+      - name: Global-discovery simulation with no dedicated fixtures (safe explicit skip)
+        shell: bash
+        run: |
+          env -u PUBLISHER_CHECKER_PATH -u ORIGINAL_ROLE_C_DIR -u ROLE_C_REQUIRED_G5_IDS python -m unittest discover -s tests -p 'test_role_c_115_mb20_23_24_25_native_g5_20261114.py' -v
+      - name: Print original raw issuer SHA and assert author only, no E trust, no release
+        shell: bash
+        run: |
+          set -eu
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os
+          root=Path('sudu/data/processed/115/review-evidence')
+          expected={int(x) for x in os.environ['ROLE_C_REQUIRED_G5_IDS'].split(',')}
+          got=set()
+          for n in (23,20,24,25):
+            p=root/f'115-00-MB-{n}-teaching-publisher-20261114.json'
+            if not p.exists(): continue
+            doc=json.loads(p.read_text(encoding='utf-8'))
+            got.add(n)
+            assert doc['independentAiContentReviewed'] is False
+            assert doc['studentReleaseApproved'] is False
+            assert doc['sourceAuthorSessionId'] is None
+            assert doc['reviewerSessionId'] is None
+            assert doc['status']=='AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY'
+            print(f'NATIVE_G5_AUTHOR_ONLY MB{n} SHA256={hashlib.sha256(p.read_bytes()).hexdigest()}')
+          assert got==expected, f'Expected {expected} actual {got}: fail closed'
+          print('AUTHOR-ONLY, E-TRUST=FALSE, STUDENT-READY=FALSE, NO LIVE')
+          PY

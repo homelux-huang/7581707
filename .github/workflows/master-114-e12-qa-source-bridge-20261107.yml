@@ -1,0 +1,171 @@
+name: MASTER bridge single E12 canonical source into official QA importer (NO STUDENT RELEASE)
+on:
+  push:
+    branches: [qa/master-114-e12-source-bridge-20261107]
+    paths:
+      - scripts/master_114_e12_qa_source_bridge_20261107.py
+      - tests/test_master_114_e12_qa_source_bridge_20261107.py
+      - .github/workflows/master-114-e12-qa-source-bridge-20261107.yml
+permissions:
+  contents: write
+concurrency:
+  group: master-e12-qa-bridge-20261107
+  cancel-in-progress: false
+jobs:
+  e12_single_source_qa_bridge:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/master-114-e12-source-bridge-20261107'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact QA source candidate without overwriting other 204
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+            sudu/data/original/114/00-E
+            sudu/data/original/114/00-E-answers
+            scripts
+            tests
+            .github/workflows
+          sparse-checkout-cone-mode: true
+          persist-credentials: true
+      - name: Checkout independently staged Role A original evidence
+        uses: actions/checkout@v4
+        with:
+          ref: 621dd452b113a8fb5219d2784be6437a9095511c
+          path: _source_admission
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - name: Checkout original immutable Role A PR145
+        uses: actions/checkout@v4
+        with:
+          ref: bc625d5eba9bf67f29b236258754941f0c9d999e
+          path: _role_a_e12_stage
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            sudu/data/processed/114/source-stage
+            sudu/data/processed/114/review-evidence
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prove exact immutable pinned source A, raw QA source and 114 notice record
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C _source_admission rev-parse HEAD)" = 621dd452b113a8fb5219d2784be6437a9095511c
+          test "$(git -C _role_a_e12_stage rev-parse HEAD)" = bc625d5eba9bf67f29b236258754941f0c9d999e
+          test "$(git rev-parse HEAD:sudu/data/processed/114/questions.json)" = 074bff8cbb9ca7bbc0aefd8580454892d21f7d6b
+          test "$(git rev-parse HEAD:sudu/data/processed/114/question-bank.sqlite3)" = f841173ebc194ac24de4d49e2a056d769246e655
+          test "$(git rev-parse HEAD:sudu/data/processed/114/webp-manifest.json)" = 249a41d5a64558ccaa3084b21f915922a55c6a1b
+          mkdir -p sudu/data/processed/114/review-evidence sudu/data/processed/114/source-stage
+          cp _source_admission/sudu/data/processed/114/official-confirmation-status.json sudu/data/processed/114/
+          cp _source_admission/sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json sudu/data/processed/114/
+          cp _role_a_e12_stage/sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json sudu/data/processed/114/review-evidence/
+          cp _role_a_e12_stage/sudu/data/processed/114/source-stage/114-00-E-12-staged-20261104.json sudu/data/processed/114/source-stage/
+          test "$(git hash-object sudu/data/processed/114/official-confirmation-status.json)" = ecfb5663d5af6008fb71f721ec5f23c69d557f5f
+          test "$(git hash-object sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json)" = 6b9a919f224bec8dc3659052a404b4173b6ef366
+          test "$(git hash-object sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json)" = e166524f2e3f6921c1ba55fb23862e739307b518
+          test "$(git hash-object sudu/data/processed/114/source-stage/114-00-E-12-staged-20261104.json)" = 3f0dc39251debf5f336edbcfa1b31c5e784e0dd3
+      - name: Execute source QA E12 G1 G2 G3 and 205 SQLite row-only admission
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/master_114_e12_qa_source_bridge_20261107.py --stage-root _role_a_e12_stage
+          python scripts/master_114_e12_qa_source_bridge_20261107.py --stage-root _role_a_e12_stage --apply
+      - name: Recompute truthful inventory hashes and strict 205-roundtrip source proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,sqlite3
+          from pathlib import Path
+          d=Path('sudu/data/processed/114')
+          questions=d/'questions.json'
+          database=d/'question-bank.sqlite3'
+          bank=json.loads(questions.read_text(encoding='utf-8'))
+          assert len(bank['questions'])==205
+          with sqlite3.connect(database) as db:
+              assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+              rows=db.execute('SELECT question_id,payload_json,payload_sha256 FROM questions').fetchall()
+          assert len(rows)==205
+          source={r['questionId']:r for r in bank['questions']}
+          assert len(source)==205 and set(source)==set(qid for qid,_,_ in rows)
+          for qid,payload,hashval in rows:
+              assert json.loads(payload)==source[qid],qid
+              assert hashlib.sha256(payload.encode()).hexdigest()==hashval,qid
+          hash256=lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+          sha_bank=hash256(questions)
+          sha_db=hash256(database)
+          receipt='sudu/data/processed/114/SQLITE_QA_E12_SOURCE_BRIDGE_20261107.json'
+          proof={
+            'schemaVersion':1,'year':114,'questionId':'114-00-E-12',
+            'qaBranchBase':'16d04a0d642fb433de289417a22c3050aa3e52b6',
+            'verifiedSourceCommit':'621dd452b113a8fb5219d2784be6437a9095511c',
+            'sourceQuestionsSha256':sha_bank,'databaseSha256':sha_db,
+            'sqliteIntegrityCheck':'ok','rows':205,'jsonSqlitePayloadMatches':205,
+            'other204CanonicalValuesUnchanged':True,'legacySqliteMigratedToSevenColumn':True,
+            'legacyDbBlob':'f841173ebc194ac24de4d49e2a056d769246e655',
+            'normalizedSourceDbBlob':'e51ccab99dfa1e3a87ce0f0b6616ae459f29de95',
+            'restoredNonE12QaQids':['114-00-E-11','114-00-E-13','114-00-E-14'],
+            'manifestOriginalUnchanged':True,
+            'studentReleaseApproved':False,'separateRoleETrusted':False,
+            'emittedUi16of16':False,
+            'status':'CANONICAL_SOURCE_BRIDGED_NOT_STUDENT_READY'
+          }
+          Path(receipt).write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          invfile=d/'inventory.json'
+          inv=json.loads(invfile.read_text(encoding='utf-8'))
+          inv['sqlite']={'roundtripPass':True,'rows':205,'isolatedImportPasses':1,
+                         'dbSha256':sha_db,'sourceQuestionsSha256':sha_bank,
+                         'evidencePath':receipt,'releaseApproved':False}
+          invfile.write_text(json.dumps(inv,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('BRIDGED SOURCE E12 ONLY, matched 205 SQLite, other 204 unchanged, no student release')
+          PY
+      - name: Post-edit QA 205 exact-source tests including negative A receipts and inventory SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p test_master_114_e12_qa_source_bridge_20261107.py -v
+      - name: Forbid unauthorized paths before committing source-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- sudu/data/processed/114
+          python - <<'PY'
+          import subprocess
+          rows=set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())
+          expected={
+           'sudu/data/processed/114/questions.json',
+           'sudu/data/processed/114/question-bank.sqlite3',
+           'sudu/data/processed/114/inventory.json',
+           'sudu/data/processed/114/SQLITE_QA_E12_SOURCE_BRIDGE_20261107.json',
+           'sudu/data/processed/114/official-confirmation-status.json',
+           'sudu/data/processed/114/QA_114_TCTE_OFFICIAL_CONFIRMATION_PDFS_20261024.json',
+           'sudu/data/processed/114/review-evidence/114-00-E-12-MASTER-QA-BRIDGE-20261107.json',
+           'sudu/data/processed/114/review-evidence/114-00-E-12-official-20261102.json',
+           'sudu/data/processed/114/source-stage/114-00-E-12-staged-20261104.json',
+          }
+          assert rows==expected,(sorted(rows),sorted(expected))
+          assert not any('approved' in s or '115/' in s for s in rows)
+          print('QA BRIDGE EXACT 9 authorized paths; manifest, 115, student approved and trust unchanged')
+          PY
+      - name: Commit isolated source branch only (source QA merge requires separate PR)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = 'refs/heads/qa/master-114-e12-source-bridge-20261107'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'bridge(source QA): exact E12 QID into 205 source SQLite, no E D READY'
+          git push origin HEAD:refs/heads/qa/master-114-e12-source-bridge-20261107
+          echo "QA SOURCE BRIDGE COMMITTED, not student published"

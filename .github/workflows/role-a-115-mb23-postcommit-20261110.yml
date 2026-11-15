@@ -1,0 +1,97 @@
+name: ROLE A 115 MB23 exact final 205 JSON SQLite G1 G2 G3 original 2x3 QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb23-canonical-table-20261110]
+    paths:
+      - .github/workflows/role-a-115-mb23-postcommit-20261110.yml
+      - sudu/data/processed/115/questions.json
+      - sudu/data/processed/115/question-bank.sqlite3
+      - sudu/data/processed/115/inventory.json
+permissions:
+  contents: read
+jobs:
+  original_mb23_exact_head_205:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115
+            sudu/data/original/115/00-MB
+            sudu/data/original/115/00-MB-answers
+            scripts
+            docs
+            tests
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            sudu/release-governance
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q pillow
+      - name: Actual protected publisher source G1 G2 G3 and negatives on exact final SHA
+        run: |
+          set -euo pipefail
+          python scripts/role_a_115_mb23_source_table_admission_20261110.py --verify
+      - name: Compare all 204 other canonical JSON objects and whole 14-column SQLite tuples to exact QA SHA
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess,hashlib,json,sqlite3,pathlib,tempfile
+          base='15108e8e657d070724889f1df3d3a6ae6da96d97'
+          prefix='sudu/data/processed/115/'
+          def historic(path): return subprocess.check_output(['git','show',base+':'+prefix+path])
+          a=json.loads(historic('questions.json'))['questions']
+          b=json.loads(pathlib.Path(prefix+'questions.json').read_bytes())['questions']
+          assert len(a)==len(b)==205
+          old={q['questionId']:q for q in a};new={q['questionId']:q for q in b}
+          target='115-00-MB-23'
+          assert set(old)==set(new)
+          assert [key for key in old if old[key]!=new[key]]==[target]
+          assert new[target]['tables']==[{'heading':['行程','原價','優惠'],'rows':[['行程Ⅰ','每位收費 x 元','兩人同行，其中一人減免 3000 元'],['行程Ⅱ','每位收費 (x＋2000) 元','兩人同行，其中一人打八折']]}]
+          assert new[target]['questionVerified'] and new[target]['answerVerified'] and new[target]['officialFinalAnswer']=='B'
+          assert old['115-00-MB-21']==new['115-00-MB-21'] and old['115-00-MB-22']==new['115-00-MB-22']
+          assert pathlib.Path(prefix+'webp-manifest.json').read_bytes()==historic('webp-manifest.json')
+          with tempfile.TemporaryDirectory() as td:
+              p=pathlib.Path(td)/'old.sqlite3';p.write_bytes(historic('question-bank.sqlite3'))
+              with sqlite3.connect(p) as c:
+                  assert c.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+                  left={row[0]:row[1:] for row in c.execute('SELECT * FROM questions').fetchall()}
+              with sqlite3.connect(prefix+'question-bank.sqlite3') as c:
+                  assert c.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+                  cols=c.execute('PRAGMA table_info(questions)').fetchall()
+                  right={row[0]:row[1:] for row in c.execute('SELECT * FROM questions').fetchall()}
+                  data=c.execute('SELECT question_id,payload_json,payload_sha256 FROM questions').fetchall()
+              assert len(cols)==14 and len(left)==len(right)==len(data)==205
+              assert [qid for qid in left if left[qid]!=right[qid]]==[target]
+              assert all(json.loads(payload)==new[qid] and hashlib.sha256(payload.encode()).hexdigest()==value for qid,payload,value in data)
+          inv=json.loads(pathlib.Path(prefix+'inventory.json').read_bytes())['sqlite']
+          assert all(hashlib.sha256(pathlib.Path(prefix+p).read_bytes()).hexdigest()==inv[k] for k,p in [('sourceQuestionsSha256','questions.json'),('dbSha256','question-bank.sqlite3')])
+          rec=json.loads(pathlib.Path(prefix+'review-evidence/115-00-MB-23-source-admission-20261110.json').read_bytes())
+          assert rec['formalETrust'] is False and rec['formalDRealEmitter16'] is False and rec['studentReady'] is False and rec['newLive'] is False
+          print('MB23 ORIGINAL COMPLETE 2x3 TABLE: 205 DB JSON PASS, other 204 entire DB tuples & canonical objects preserved, original MB21/22 untouched, student release HOLD')
+          PY
+      - name: Source-only changed file guard and read-only checkout
+        run: |
+          set -euo pipefail
+          git diff --name-only 15108e8e657d070724889f1df3d3a6ae6da96d97 HEAD > /tmp/paths
+          if grep -E '^sudu/(data/approved|release-governance)|^sudu/data/processed/114|^sudu/v4' /tmp/paths; then exit 1; fi
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo 'MB23 source QA only, no formal E TRUST, D Chromium 16/16, READY or LIVE'
+
+# Recheck exact HEAD with ROLE A cross-role Markdown handoff; source bank remains unchanged.

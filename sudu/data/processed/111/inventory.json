@@ -1,0 +1,107 @@
+{
+  "year": 111,
+  "expectedFromLegacy": 205,
+  "note": "Expected count from EXISTING JSON, not independently final-verified official paper counts",
+  "totalCandidateQuestions": 205,
+  "webpGeneratedDrafts": 205,
+  "visualQaPass": 10,
+  "ocrGapCandidatesGenerated": 12,
+  "ocrTextIndependentlyVerified": 0,
+  "missingFourTextOptions": [
+    "111-00-C-08",
+    "111-00-E-21",
+    "111-00-E-22",
+    "111-00-E-23",
+    "111-00-E-24",
+    "111-00-E-25",
+    "111-00-E-26",
+    "111-00-E-27",
+    "111-00-E-28",
+    "111-00-E-29",
+    "111-00-E-30",
+    "111-00-MB-02",
+    "111-00-MB-05"
+  ],
+  "answerPdfTextMatchedOnly": 204,
+  "answerOfficialFinalVerified": 0,
+  "sourcePaperStats": {
+    "00-C": {
+      "candidateRecords": 38,
+      "numberedAnchors": 38,
+      "imageDrafts": 38,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 38,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "00-E": {
+      "candidateRecords": 42,
+      "numberedAnchors": 41,
+      "imageDrafts": 42,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 42,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": [],
+      "manualAnchorRepair": "Q25 was visually located directly below Q24 on original page 4"
+    },
+    "00-MB": {
+      "candidateRecords": 25,
+      "numberedAnchors": 25,
+      "imageDrafts": 25,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "officialAnswerTextKeys": 25,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-1": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 49,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    },
+    "09-2": {
+      "candidateRecords": 50,
+      "numberedAnchors": 50,
+      "imageDrafts": 50,
+      "unresolvedAnchorNumbers": [],
+      "suspectedPageConflicts": [],
+      "ambiguousAnchorNumbers": [],
+      "officialAnswerTextKeys": 50,
+      "answerTextConflicts": [],
+      "issues": [],
+      "legacyIdNumberGap": []
+    }
+  },
+  "sharedMaterialsVerified": 2,
+  "sharedMaterialsReviewRequired": true,
+  "sqlite": {
+    "rows": 205,
+    "unique": 205,
+    "integrity": "ok",
+    "reimportCount": 2,
+    "shaMismatches": 0
+  },
+  "integrationReady": false,
+  "sharedMaterialsDrafts": 2
+}

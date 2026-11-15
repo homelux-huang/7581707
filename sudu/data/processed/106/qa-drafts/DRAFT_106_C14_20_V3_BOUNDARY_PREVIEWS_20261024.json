@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "year": 106,
+  "paperCode": "00-C",
+  "sourcePage": 4,
+  "sourceOriginalWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+  "sourceSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+  "sourceGitBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+  "reviewer": "ChatGPT assistant",
+  "independentHumanReview": false,
+  "method": "SHA-pinned original pixel crops only, await actual individual visual review",
+  "candidateCount": 7,
+  "changedSharedCount": 1,
+  "untouchedSharedIds": [
+    "106-00-C-SHARED-15-16",
+    "106-00-C-SHARED-19-20"
+  ],
+  "newG1Pass": 0,
+  "newG2Pass": 0,
+  "newFinalAnswerVerified": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "items": [
+    {
+      "questionIdOrSharedId": "106-00-C-14",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-14.webp",
+      "oldSha256": "c69aa34ebd883d6ff852ecab3653480a92a784b649ae43b1e7f6f060be329bca",
+      "oldPixels": [
+        90,
+        155,
+        1310,
+        426
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-14.webp",
+      "newSha256": "f7d4f9de756b6963883bca4b90e373bef615dde784ef2dfcb971e06cadacadd8",
+      "newPixels": [
+        90,
+        155,
+        1310,
+        421
+      ],
+      "size": [
+        1220,
+        266
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old Q14 and 15-16 shared material overlapped by 2 pixels",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-15",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-15.webp",
+      "oldSha256": "0b95904bf76b4c793627edd283f3c0b0c4dc7adc43d01b0f85696124aaf0b1c9",
+      "oldPixels": [
+        90,
+        560,
+        1310,
+        705
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-15.webp",
+      "newSha256": "ada73486fd74008da618ac6cf43b21b51cd1dd44df0bce230bf5e1b6675a7203",
+      "newPixels": [
+        90,
+        560,
+        1310,
+        701
+      ],
+      "size": [
+        1220,
+        141
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old Q15 crop included Q16 leading pixels",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-16",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-16.webp",
+      "oldSha256": "0be20036898a3f9229e0add9888f780400d21e332752d4f83b2bedc5b2186500",
+      "oldPixels": [
+        90,
+        707,
+        1310,
+        821
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-16.webp",
+      "newSha256": "defe7dbdcf931c3618c5640a181f627959ce0ce6b0af67b58b375018e4f0b503",
+      "newPixels": [
+        90,
+        703,
+        1310,
+        816
+      ],
+      "size": [
+        1220,
+        113
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old Q16 crop included following Q17-18 reading prompt",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-17",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-17.webp",
+      "oldSha256": "3ecdfafacdf3f9bbad64063b37b449d74ce237774ba16cab71668d4778ef2965",
+      "oldPixels": [
+        90,
+        1032,
+        1310,
+        1145
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-17.webp",
+      "newSha256": "2e45ba7641ebadd83534544bb68486ee43e11af36ec6215ba199087600e8a9eb",
+      "newPixels": [
+        90,
+        1006,
+        1310,
+        1115
+      ],
+      "size": [
+        1220,
+        109
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old crop lost Q17 number/stem and included Q18 heading",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-18",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-18.webp",
+      "oldSha256": "94e2a4a105cac6ab5777903d0bd222ed880c64361d1d2357cb32b46f3a7b9d84",
+      "oldPixels": [
+        90,
+        1144,
+        1310,
+        1344
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-18.webp",
+      "newSha256": "577bb4eaf1ce8564332be181d9d0599d89f61da709cc28e41fe78115f5d9f666",
+      "newPixels": [
+        90,
+        1117,
+        1310,
+        1321
+      ],
+      "size": [
+        1220,
+        204
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old crop lost Q18 leading stem and included Q19-20 shared prompt",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-19",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-19.webp",
+      "oldSha256": "00acc4aedf7da4712429f53f350571e52121c0172094e25e21417660e371c1f6",
+      "oldPixels": [
+        90,
+        1382,
+        765,
+        1565
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-19.webp",
+      "newSha256": "11ff1eec549e32ccb068df838dbd0db378ee909f9350b8955b9eb51eed70a23e",
+      "newPixels": [
+        90,
+        1345,
+        765,
+        1524
+      ],
+      "size": [
+        675,
+        179
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old crop lost Q19 number/leading stem and included Q20 leading text",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-20",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/00-C/106-00-C-20.webp",
+      "oldSha256": "d790e4209fca706212b54759a85de5de56c0c4276cebb2f5b929aa58092a7180",
+      "oldPixels": [
+        90,
+        1563,
+        765,
+        1762
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/00-C/106-00-C-20.webp",
+      "newSha256": "783ed329d1984b77f955102f84429e334dc252f3f09b0a9e22666b64f0d1c285",
+      "newPixels": [
+        90,
+        1526,
+        765,
+        1762
+      ],
+      "size": [
+        675,
+        236
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old crop lost Q20 number/leading stem; left-half text separately linked to shark shared panel",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    },
+    {
+      "questionIdOrSharedId": "106-00-C-SHARED-17-18",
+      "oldPath": "sudu/data/processed/106/qa-drafts/webp-v2/shared/106-00-C-SHARED-17-18.webp",
+      "oldSha256": "6f502c71627269b340a751f4f45aa6e7bcc4f616884c7a1aa00d516d029b6a87",
+      "oldPixels": [
+        90,
+        828,
+        1310,
+        1031
+      ],
+      "newPath": "sudu/data/processed/106/qa-drafts/webp-v3/shared/106-00-C-SHARED-17-18.webp",
+      "newSha256": "f979eaaf36217bbceb8df446afb79e5290a7bc983d4a1c2610efde4a0eb2190b",
+      "newPixels": [
+        90,
+        827,
+        1310,
+        1004
+      ],
+      "size": [
+        1220,
+        177
+      ],
+      "sourcePageWebp": "sudu/data/original/106/00-C/p004-93b8ec6eb3-v2-w1400-q66.webp",
+      "sourcePageSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+      "sourcePageBlob": "b325a5fa1ec5073151077503de87929f3681130e",
+      "sourcePage": 4,
+      "defectFound": "Old shared reading passage included Q17 question stem",
+      "qaStatus": "DRAFT_PENDING_DIRECT_VISUAL_QA"
+    }
+  ]
+}

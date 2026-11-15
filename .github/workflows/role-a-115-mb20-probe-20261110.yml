@@ -1,0 +1,39 @@
+name: ROLE A 115 MB20 exact 205 canonical/SQLite visual status probe (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb20-canonical-v5-20261110]
+    paths:
+      - .github/workflows/role-a-115-mb20-probe-20261110.yml
+permissions:
+  contents: read
+jobs:
+  original_q20_diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115
+          sparse-checkout-cone-mode: true
+      - name: Read-only actual repaired-v5 205 bank and DB row without changes
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import sqlite3,json,hashlib
+          d=Path('sudu/data/processed/115')
+          b=json.loads((d/'questions.json').read_bytes())
+          m=json.loads((d/'webp-manifest.json').read_bytes())
+          q=next(x for x in b['questions'] if x['questionId']=='115-00-MB-20')
+          item=next(x for x in m['items'] if x['questionId']=='115-00-MB-20')
+          print('SOURCE_Q20_START')
+          print(json.dumps({k:q.get(k) for k in ['question','options','answer','questionVerified','answerVerified','officialFinalAnswer','textQaEvidence','officialFinalQaEvidence','reviewStatus','extraction','issues']},ensure_ascii=False,indent=2))
+          print('SOURCE_Q20_END')
+          print('IMAGE_Q20',json.dumps(item,ensure_ascii=False))
+          with sqlite3.connect(d/'question-bank.sqlite3') as c:
+              print('SQLITE_ROW_Q20',c.execute('SELECT question_id,answer_verified,question_verified,review_status FROM questions WHERE question_id=?',('115-00-MB-20',)).fetchone())
+              print('SQLITE_OK',c.execute('PRAGMA integrity_check').fetchone()[0],c.execute('SELECT COUNT(*) FROM questions').fetchone()[0])
+          PY

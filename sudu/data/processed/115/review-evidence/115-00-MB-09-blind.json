@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-09",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "354a437dac1b26c8eb290262948c72eee72b649a685e8bf448ee59b3df58b9e7",
+  "webpSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-23",
+  "solver": "GPT-6 independent calculation before retrieving answer key",
+  "blindReasoning": "不看標準答案，L₁ 通過 (a,1)：4a+(a+5)-10=0，得到 5a=5，a=1。L₂ 斜率 -1/2，垂直線 L₃ 斜率 2。L₃ 過 (1,1)：y−1=2(x−1)，整理為 2x−y−1=0。",
+  "answer": "A",
+  "method": "由已 QA 原圖獨立推導後，才另行讀取既有官方候選答案並核對。"
+}

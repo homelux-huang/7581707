@@ -1,0 +1,44 @@
+{
+  "year": 115,
+  "reviewer": "ChatGPT assistant",
+  "method": "direct_visual_official_page_webp_against_each_question_webp",
+  "reviewedOn": "2026-10-22",
+  "independentHumanReview": false,
+  "scope": "Image only; final official answer and OCR independent QA still pending.",
+  "records": [
+    {
+      "questionId": "115-00-C-04",
+      "sourcePage": 2,
+      "sourcePagePath": "sudu/data/original/115/00-C/p002-6b454d6590-v2-w1400-q66.webp",
+      "sourceSha256": "be4c5c00e949cdd696f6629127a2f1d23ff4f4aa5dbe92d7b0e8b92cef013335",
+      "webpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-04.webp",
+      "webpSha256": "f8517932c1ffa93cb3ef52f0e17ec8c93b895c5ca7092156a7591a289db47aa8",
+      "cropPixels": [
+        90,
+        879,
+        1310,
+        1119
+      ],
+      "result": "PASS",
+      "criteria": "number_stem_ABCD_figures_no_adjacent_no_header_legible",
+      "note": "Directly compared page 2 of official-question-page-derived WebP to current image; images and four choices complete."
+    },
+    {
+      "questionId": "115-00-C-05",
+      "sourcePage": 2,
+      "sourcePagePath": "sudu/data/original/115/00-C/p002-6b454d6590-v2-w1400-q66.webp",
+      "sourceSha256": "be4c5c00e949cdd696f6629127a2f1d23ff4f4aa5dbe92d7b0e8b92cef013335",
+      "webpPath": "sudu/data/processed/115/webp-v2/00-C/115-00-C-05.webp",
+      "webpSha256": "c8b96c85679e3a865ae98325108a2d4a31e9317cfeffa8d3554a6b3f3df66abf",
+      "cropPixels": [
+        90,
+        1118,
+        1310,
+        1818
+      ],
+      "result": "PASS",
+      "criteria": "number_stem_ABCD_figures_no_adjacent_no_header_legible",
+      "note": "Directly compared page 2 of official-question-page-derived WebP to current image; images and four choices complete."
+    }
+  ]
+}

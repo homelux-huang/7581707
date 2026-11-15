@@ -1,0 +1,47 @@
+# ROLE E — 2026-11-15 current V1 three-QID independent-content audit (HOLD)
+
+- Task: `E-114E11-MB21-MB22-V1-CURRENT-G1-G5-20261115-01`; actual CLAIM Issue #36 [#6888746430](https://github.com/homelux-huang/7581707/issues/36#issuecomment-6888746430)
+- Independent E *role*, but no externally verified ChatGPT Session principal. This same conversation previously created ROLE E PR200 review notes, NOT B PR44 or C PR118 lessons. **Do not present this as a new independent E Session separate from PR200.** Historical original ROLE E sessions #6429526998/#6556067705/#6556079283 are separately reported but their immutable conversation/provider identifiers remain UNVERIFIED.
+- Current source QA commit: `fec4ff58fbe63170fb42b4c47ad76c08848e8ece`; protected main `ceda0a0248cb7dc99941758e9e16582e463516ca`. Current protected V1 gate blob `3ade3389910dba3f0ee795539cab9367d3bb215a`; publisher blob `d410b10ff75ff7bfbb465098b0c2e5dd5b104978`; trusted policy blob `c77ee2ec8ca1381388fbbbe6bd36e679750678eb` with `trustedAiReviewReceipts={}`.
+- GitHub binary `fetch_file encoding=base64` 3 original WebPs decoded to bytes, SHA256 recalculated (SHA256 algorithm checked on standard `abc` vector), and all three original single-question images **directly opened and visually read**: complete numbering, full stem, A–D and figures (port triangles MB21 and five ordered Taiwanese-diacritic cards MB22), no neighboring question pollution. Also directly opened two actual archived official printed-answer-page WebPs and visually verified 114 Q11=A and 115 MathB Q21=A/Q22=B. **Original PDF bytes/whole notice PDF were not redownloaded or newly hashed this task.** Current A G3 checked correction notice status; 114 E11 not in E26-only correction scope; 115 MathB no objection notice.
+- This review is NOT G6 first blinded answer: official answer and author lesson were already inspected. SourceAuthorSessionId and reviewerSessionId must stay null/UNVERIFIED. The same GitHub actor `homelux-huang` (numeric user ID `268841848`) establishes GitHub comment attribution, not separate model sessions.
+- SHA-256 for raw G2/G3/G5 refers to exact UTF8 retrieved bytes; GitBlob is the separately returned original Git object SHA1. SourceRevision independently recalculated via protected publisher's sorted-key, UTF8 compact JSON of `question/options/singleQuestionWebpSha256`. TeachingDigest independently calculated from sorted-key compact UTF8 JSON `nativeG5.content`. All **three exact revision and teaching digest comparisons MATCH**.
+
+| Field | 114-00-E-11 | 115-00-MB-21 | 115-00-MB-22 |
+|---|---|---|---|
+| year | 114 | 115 | 115 |
+| Original WebP raw SHA256, actually recomputed | `ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0` | `b8414cce472ac1ce9d6b6b7ab6939b4eef933422cf5b13cc64d07731dab90693` | `3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55` |
+| Original WebP GitBlob | `50f8fde174f4f0e66dc0f2315c11c5a73cec6b7a` | `75d9bcf6d0d921a6f7a40fd6383d0cd4680398bf` | `491e02cabe4110d62b510075914e083b51e58ebf` |
+| sourceRevision, rederived MATCH | `646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036` | `817517b0441c94e000db44c02e3054564d3c556842ec11203fbfae774e2bf3f9` | `7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17` |
+| G2 raw SHA256 / GitBlob | `f8d316fcf6c44dbce476f394e5537692ea7b45bf957dd2187c547e74bae5c034` / `b9afe6661d89558310b930acf94afeec58464a05` | `fd8e0b2f60f60c69d40250a13449bef8fbfd28a9fd686239854f126c6fa6c6be` / `d738f2eec5b9337721b7a959b0418cce38b6baa6` | `7b08398714a4c459cca4824db600ef00370c143365af09a89eb3fed86f6540fd` / `234f2f77007785f8dcc06ec4f485576a1e4e81e4` |
+| G3 raw SHA256 / GitBlob | `e767d4c5eb60dced6b2a86b73b29167b8d7b47430925da60f13a1bb6c7c8cbbf` / `9c2bb26760a83b69ad5bd81fd38542016ec7e89d` | `227f14b683dcdb165bc1526bca5fdbef081b7af15ea80546e67aeaf68f08bb14` / `364b47aa32df1acaed558bb3edee80531fbf251f` | `9505ef9f63389cf517b8ffdc6c66c337756c56e9af08c3bd70ee4a249f5f12f7` / `fc6c054212580bb3ecdf665219f30df733ba9a20` |
+| G5 raw teachingEvidenceSha256 / GitBlob | `67f15c7afd096d379b96b42cd30f7032ae3e6a2a58bf9e94f7aff0fbf879001b` / `e0adc349303a9cf3163b60d49f78671e2bb1be2e` | `1f4c4aa7ff14bb3be0065a87f5c6f7e6b81990a7310db8c72295641012d93587` / `eeb47800dc679e7c783af9e2f7412d38fb11e4ba` | `415a715d211a87b44c8042586abf1d0f8fc3b6269943e88d16ddbc42de73a003` / `ef8fda5920e85889705dff0d85f738b7f870b770` |
+| canonical teachingDigest, rederived MATCH | `ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb` | `4a6b65c172fabe1ed87a713ac2e5506c20afe02b56d82ed6943aa10dd54190d4` | `5c68a96c6aa210d21e5a559e9d048875de2d36e481e2e78eb03b87401b98f600` |
+| Published official answer, directly read image | A | A | B |
+| Original author task | `B-114-NEXT5-E11-E14-C04-20261025-02` (PR44) | `C-115-MB20-25-EXACT-VERIFY-POLICY-20261103-01` (PR118) | same C (PR118) |
+| Original author Session ID | UNVERIFIED | UNVERIFIED | UNVERIFIED |
+
+## Four specific option judgments and double-layer teaching check
+
+### 114-00-E-11
+Original Dad: excessive phone use may harm eyes; son's answer must reduce use, Dad agrees with jogging. **A correct** `Then I should use it less.` because `it` denotes the phone and reduction responds to Dad's warning. **B wrong** `Should I use a new phone?` because replacement does not cut duration. **C wrong** `Do you like to watch videos, too?` because questioning preferences does not respond to the admonition or encourage exercise. **D wrong** `So you should play online games.` because it encourages Dad's screen activity and lacks coherent cause. Both B teacher and elementary explanations/4 distinct option reasons verified against actual G5. Noncomputation correctly `hasExamCalculation=false`, `examCalculation=null`; official A from actual printed table. Historical independent E #6429526998/#6623607849 at identical version.
+
+### 115-00-MB-21
+Original drawing confirms AB=7, AC=8, angle C=60, BC>4. Cosine rule `49=64+x²-8x`, so `(x-3)(x-5)=0`, only x=5 allowed, **A correct** and reverse `64+25-40=49`. **B=4.75 wrong** polynomial residual `-0.4375`. **C=4.50 wrong** residual `-0.75`. **D=4.25 wrong** residual `-0.9375`. Both teacher and elementary rationale, units, six calculation steps, highlight and reverse substitution inspected in current G5. Official A from directly opened answer table. Historical E #6556067705/#6623622064 same digest.
+
+### 115-00-MB-22
+Original image confirms **five ordered slots**, each `有 ū` or `無 bô`, at least one yes. `2^5=32`, subtract all-no 1 => `31`; **B correct**. Reverse count exactly 1–5 yes: `5+10+10+5+1=31`. **A=32 wrong** because includes all-no; **C=16 wrong** because counts only four independent binary positions; **D=5 wrong** because only exactly one yes and misses others. Full teacher and elementary reasoning, calculation and unit `種` match current G5. Official B from actual printed table. Historical E #6556079283/#6623631004 same digest.
+
+## Existing SHA-bound original E Markdown notes (from QA-merged PR200)
+- E11: `sudu/data/processed/114/review-evidence/role-e-20261114/114-00-E-11-substantive-review.md`, GitBlob `ba63cddd51a532167c95e51070189076ef6cb5e1`, SHA256 `42717e7c638ca6ddb6e8d7d6449fe6d746df94862a3a23cf3b4d2c33503f32ba`.
+- MB21: `sudu/data/processed/115/review-evidence/role-e-20261114/115-00-MB-21-substantive-review.md`, GitBlob `d87bf3cc4196a2c88dbd9e1cce69c520e501658d`, SHA256 `67510fc21699ed6b6286f9345f6b12ab176f2e71441e6107b3be29ebb938ddb8`.
+- MB22: `sudu/data/processed/115/review-evidence/role-e-20261114/115-00-MB-22-substantive-review.md`, GitBlob `a562eeb7572a0224fb1800c903b621c1b762798d`, SHA256 `b201f390b57e80dcbb5fc3c7420316fd2f063ebc103e20bde5466808aacc2d55`.
+
+## Formal V1 and G6/G7 admission (fail-closed)
+
+Formal V1 requires question audit `independentAiContentEvidence` referencing E JSON, a matching immutable E evidence Git Blob in protected main registry, the exact raw material hashes, real Issue #36 RETURN comment with reviewer identity and valid timestamps, different actual `sourceAuthorSessionId` and `reviewerSessionId`, and notes SHA. Current author native G5 `sourceAuthorSessionId=null` and ChatGPT reviewer Session identifier is not exposed/authenticated. As a result **no truthful positive V1 receipt is presently admissible**. If an evidence JSON candidate with null IDs is created, its `status` is explicitly `UNVERIFIED_NOT_TRUSTED`; it must never be registered in main. G6 true first answer must be separately obtained by an answer-free isolated environment; this conversation already knew answer. G7 operator/identity provenance not authenticated. D formal publisher-emitted 16/16 still missing. `CONTENT_REVIEW=PASS`, `TRUST_PASS=false`, `READY=false`, `LIVE=false`.
+
+## Next owners
+- ROLE B original E11 author and ROLE C original MB21/MB22 author: produce authentic original ChatGPT provider conversation/execution reference or explicitly `UNVERIFIED`, without fabricating UUID; historical PR/commit/CLAIM/RETURN alone do not provide Session identity.
+- MASTER/Work: verify distinct E principal via actual platform provenance, arrange fresh answer-hidden G6 execution with raw first prompt/response, real provider/model/response ID and UTC/hash, and independently vet any protected V1 registry candidate. Without provenance, maintain HOLD; do not weaken gate.
+- ROLE D: real publisher-emitted 8 viewport × 2 themes after authorized release candidate; current QA-only matrices cannot substitute.

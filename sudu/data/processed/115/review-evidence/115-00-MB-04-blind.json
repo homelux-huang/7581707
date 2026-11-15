@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-04",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "a669b3ab535793fbd25d894d12960ed245a2b78ccb1e40748b63cdc09003354b",
+  "webpSha256": "0fa2c98cf699f4d4dab11680416d812efcad34eaf9faf6ed5f7de8030ec17562",
+  "officialAnswerHiddenDuringSolve": true,
+  "solvedWithoutOfficialAnswer": true,
+  "solvedAt": "2026-10-23",
+  "solver": "GPT-6 independent calculation before retrieving answer key",
+  "blindReasoning": "不看標準答案，2x²+7x+3=(2x+1)(x+3)。開口向上且 ≤0，解為 -3≤x≤-1/2，a=-3 是整數，b=-1/2 不是。只有 C 正確。",
+  "answer": "C",
+  "method": "由已 QA 原圖獨立推導後，才另行讀取既有官方候選答案並核對。"
+}

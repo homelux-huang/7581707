@@ -1,0 +1,33 @@
+name: Current QA 114-115 JSON SQLite integrity (NO RELEASE)
+on:
+  pull_request:
+    branches: [qa/114-115-official-visual-review]
+  push:
+    branches: [qa/114-115-official-visual-review, fix/master-source-ci-routing-20261114]
+permissions:
+  contents: read
+jobs:
+  current_source_integrity:
+    if: github.repository == 'homelux-huang/7581707'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            tests
+            .github/workflows
+            sudu/data/processed/114
+            sudu/data/processed/115
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check both current banks and actual databases without historical one-QID assumptions
+        run: python scripts/qa_current_source_integrity_20261114.py
+      - name: Regression tests for corruption rejection and workflow scope
+        run: python -m unittest discover -s tests -p 'test_qa_current_source_integrity_20261114.py' -v
+      - name: Confirm read-only source check
+        run: git diff --exit-code

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "year": 113,
+  "batch": "113-C-page2-1to5-visual-2026-10-22",
+  "reviewedOn": "2026-10-22",
+  "reviewer": "ChatGPT assistant",
+  "method": "direct_displayed_official_page_p002_vs_all_five_exact_single_question_webp_crops",
+  "independentHumanReview": false,
+  "sourcePage": "sudu/data/original/113/00-C/p002-67c0d477e9-v2-w1400-q66.webp",
+  "sourceSha256": "2fee23a8e46c17fda589989a3d32eafc032460831e83453a016aaa67b8ef6134",
+  "records": [
+    {
+      "questionId": "113-00-C-01",
+      "sourcePage": 2,
+      "cropPixels": [
+        90,
+        203,
+        1310,
+        329
+      ],
+      "webpPath": "sudu/data/processed/113/webp-v1/00-C/113-00-C-01.webp",
+      "reviewedSha256": "a77adc362d482edc9e26aca943b4dd00f6cd97940a9ebf035a55db31b07a2f57",
+      "result": "PASS_ASSISTANT_DIRECT_VISUAL_COMPARISON",
+      "criteria": {
+        "officialQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "necessaryTextSymbols": true,
+        "noAdjacentQuestion": true,
+        "noNonessentialPageHeaderFooter": true,
+        "readable": true,
+        "sourceAndOutputShaReferenced": true
+      },
+      "note": "題1：錯別字，A–D 選項完整，無題2文字"
+    },
+    {
+      "questionId": "113-00-C-02",
+      "sourcePage": 2,
+      "cropPixels": [
+        90,
+        329,
+        1310,
+        528
+      ],
+      "webpPath": "sudu/data/processed/113/webp-v1/00-C/113-00-C-02.webp",
+      "reviewedSha256": "769248837ce6c6dedc522c3509ecff27c28c88c6cd9359625c4a8593efa4b5a3",
+      "result": "PASS_ASSISTANT_DIRECT_VISUAL_COMPARISON",
+      "criteria": {
+        "officialQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "necessaryTextSymbols": true,
+        "noAdjacentQuestion": true,
+        "noNonessentialPageHeaderFooter": true,
+        "readable": true,
+        "sourceAndOutputShaReferenced": true
+      },
+      "note": "題2：「如」用法，題幹與四項完整，不含題1/3"
+    },
+    {
+      "questionId": "113-00-C-03",
+      "sourcePage": 2,
+      "cropPixels": [
+        90,
+        528,
+        1310,
+        763
+      ],
+      "webpPath": "sudu/data/processed/113/webp-v1/00-C/113-00-C-03.webp",
+      "reviewedSha256": "c2164eeb97e760e557a7d40ddb94c45ef0aec9a30e5a3a81f4bc0dbd37a1db12",
+      "result": "PASS_ASSISTANT_DIRECT_VISUAL_COMPARISON",
+      "criteria": {
+        "officialQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "necessaryTextSymbols": true,
+        "noAdjacentQuestion": true,
+        "noNonessentialPageHeaderFooter": true,
+        "readable": true,
+        "sourceAndOutputShaReferenced": true
+      },
+      "note": "題3：修辭詞語，題幹分行及四項保留"
+    },
+    {
+      "questionId": "113-00-C-04",
+      "sourcePage": 2,
+      "cropPixels": [
+        90,
+        763,
+        1310,
+        1072
+      ],
+      "webpPath": "sudu/data/processed/113/webp-v1/00-C/113-00-C-04.webp",
+      "reviewedSha256": "29bc1934a2fb5dff71c578355be203fa5529472584a60a3fc488c09e24f96cbb",
+      "result": "PASS_ASSISTANT_DIRECT_VISUAL_COMPARISON",
+      "criteria": {
+        "officialQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "necessaryTextSymbols": true,
+        "noAdjacentQuestion": true,
+        "noNonessentialPageHeaderFooter": true,
+        "readable": true,
+        "sourceAndOutputShaReferenced": true
+      },
+      "note": "題4：富都青年段落、方格與四組選項完整，無題5"
+    },
+    {
+      "questionId": "113-00-C-05",
+      "sourcePage": 2,
+      "cropPixels": [
+        90,
+        1072,
+        1310,
+        1455
+      ],
+      "webpPath": "sudu/data/processed/113/webp-v1/00-C/113-00-C-05.webp",
+      "reviewedSha256": "e32c1019905333492705c04e3f37b66d1b0ca8e1ce6fc28e75532bd02caf675d",
+      "result": "PASS_ASSISTANT_DIRECT_VISUAL_COMPARISON",
+      "criteria": {
+        "officialQuestionNumber": true,
+        "completeStem": true,
+        "allFourOptions": true,
+        "necessaryTextSymbols": true,
+        "noAdjacentQuestion": true,
+        "noNonessentialPageHeaderFooter": true,
+        "readable": true,
+        "sourceAndOutputShaReferenced": true
+      },
+      "note": "題5：母親梳頭的文字引文與四個選項完整，無題6"
+    }
+  ],
+  "constraints": {
+    "officialAnswerFinalRevisionReviewed": false,
+    "ocrTextIndependentlyVerified": false,
+    "fullYearQaComplete": false,
+    "integrationReady": false
+  }
+}

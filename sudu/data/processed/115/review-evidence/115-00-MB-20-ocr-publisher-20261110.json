@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-20",
+  "role": "A_SOURCE_ONLY_NOT_DISTINCT_E",
+  "taskId": "A-115-MB20-CANONICAL-V5-PIXEL-G2G3-20261110-02",
+  "questionRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+  "webpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "question": "阿雄想測量農地裡一個稻草人 C 到工寮 A 的距離，如圖（四）所示。他先在 A 點和田埂上另一處 B 點拉出基準線，測得 A、B 兩點的距離為 100 公尺，接著測得角度 ∠CAB＝60°，以及 ∠CBA＝75°。試求 A、C 兩點的距離為多少公尺？",
+  "options": [
+    "50(√3＋1)",
+    "50(√3－1)",
+    "20(√3＋1)",
+    "20(√3－1)"
+  ],
+  "visualTextCompared": true,
+  "reviewer": "ROLE A original v5 p7 crop + existing ROLE E PR156 source-pixel QA; not trusted E content reviewer",
+  "reviewedAt": "2026-11-10",
+  "reviewType": "ORIGINAL_V5_SINGLE_QUESTION_G2_SOURCE_ONLY",
+  "sourceYear": 115,
+  "originalPage": 7,
+  "sourcePdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "originalPageSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d",
+  "originalSingleWebpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "originalSingleWebpGitBlob": "bd77281f8ee755074cf3b7ebcada5c06f3720c12",
+  "sourcePageWebpGitBlob": "c8e3e806d812a01d417abe83dac7f46adcf84ff7",
+  "sourceStagePath": "sudu/data/processed/115/source-stage/115-00-MB-20-v5-staged-20261104.json",
+  "sourceStageGitBlob": "1fbcf2bba4a46335f54f05d60e3a179db5f99244",
+  "historicTextCorrectionPath": "sudu/data/processed/115/review-evidence/115-00-MB-20-image-transcription-correction-20261024.json",
+  "historicTextCorrectionGitBlob": "c5278848e46d07dba45734413bc0b79a9b9afcb4",
+  "independentSourcePixelEvidenceUrl": "https://github.com/homelux-huang/7581707/pull/156",
+  "independentSourcePixelEvidenceGitBlob": "51035f72487f24bb19ebcbd1a507f8d1b0dead22",
+  "sourcePixelEvidence": {
+    "officialPageSize": [
+      1400,
+      1980
+    ],
+    "crop": [
+      90,
+      469,
+      1310,
+      902
+    ],
+    "v5Size": [
+      1220,
+      433
+    ],
+    "historicV2Size": [
+      1220,
+      386
+    ],
+    "oldMissingBottomPixels": 47,
+    "v5PixelDifference": "zero_each_RGB_channel"
+  },
+  "sourceCrop": [
+    90,
+    469,
+    1310,
+    902
+  ],
+  "oldV2Forbidden": true,
+  "originalRawOcrPreserved": true,
+  "noRecropOrRedraw": true,
+  "answerHiddenFromIssuer": true,
+  "independentEContentTrust": false,
+  "studentReady": false,
+  "studentLive": false
+}

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-20",
+  "questionRevision": "2016fe36733d5e1ad18958ecb8a705c809e5e682744ea8a552f5c85245e9465c",
+  "webpSha256": "f9e68d9c5777f25464c9df59329659e94c58dd33d2eb9ba9aa418a30055cdedf",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "reviewer": "ROLE C archival lesson author-content self-QA; not independent ROLE E",
+  "reviewedAt": "2026-11-14",
+  "sourceAuthorRole": "C",
+  "sourceAuthorTaskId": "C-115-MB20-25-EXACT-VERIFY-POLICY-20261103-01",
+  "sourceAuthorReturnIssueCommentId": 6876442923,
+  "sourceAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/143",
+  "sourceAuthorCommit": "afaba171eec77cc27c3171b8bc8282f68ade74b9",
+  "sourceAuthorGitBlobSha1": "c226ee59e24d2136c5882ede894f9f0bb93d16d0",
+  "canonicalTeachingSha256": "2b68e16c90d83e31c71cd6ca0a9d9b2cf279579fca4dc0ba3785ddec65a9362d",
+  "sourceImagePath": "sudu/data/processed/115/webp-v5/00-MB/115-00-MB-20.webp",
+  "sourceG2Sha256": "c6f33db05c38e9fdb3abc682d27cf8f21550dbd638c84adafd396a2bf3f491e2",
+  "sourceG3Sha256": "67b554b4b1f5543d40ca0e455a209554a94792816916415002ee46d4fe59202c",
+  "status": "AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY",
+  "independentAiContentReviewed": false,
+  "sourceAuthorSessionId": null,
+  "reviewerSessionId": null,
+  "studentReleaseApproved": false,
+  "sourceHighlights": [
+    {
+      "text": "正弦定理",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "45°",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "75°",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "50(√3＋1)",
+      "bold": true,
+      "highlight": true
+    }
+  ],
+  "content": {
+    "teacherSummary": "這題已知一條邊和兩個角，先算第三角，再用正弦定理。**AC 對應 75°，AB 對應 45°**，邊與對角一定要配對。",
+    "elementarySummary": "把三角形想成三條邊圍成的田地。兩個角知道了，就能找第三個角，再用邊和角的比例算出工寮到稻草人的距離。",
+    "memory": "**先算45°，再用 AC／sin75°＝100／sin45°**。",
+    "concept": "正弦定理：每一條邊除以它正對面角度的正弦，得到的比值相同。",
+    "extension": "若已知兩邊與夾角，可考慮餘弦定理；本題已知兩角一邊，正弦定理較直接。",
+    "source": "115年統測數學B原始單題圖；官方來源與PDF SHA沿用source record。國立彰化高商教材版本、章節、頁數：待核對。",
+    "formula": "a／sinA＝b／sinB，用於已知一邊及可配對角度時求另一邊。",
+    "highlights": [
+      "正弦定理",
+      "45°",
+      "75°",
+      "50(√3＋1)"
+    ],
+    "hasExamCalculation": true,
+    "calculationReviewed": true,
+    "examCalculation": {
+      "given": [
+        "AB＝100公尺",
+        "∠A＝60°，∠B＝75°"
+      ],
+      "formulaUse": "a／sinA＝b／sinB，用於已知一邊及可配對角度時求另一邊。",
+      "substitution": [
+        "∠C＝180°－60°－75°",
+        "AC／sin75°＝100／sin45°"
+      ],
+      "steps": [
+        "∠C＝180°－60°－75°＝45°。",
+        "sin75°＝sin(45°＋30°)＝sin45°cos30°＋cos45°sin30°＝(√6＋√2)／4。",
+        "AC＝100×sin75°／sin45°。",
+        "AC＝100×[(√6＋√2)／4]／(√2／2)＝50(√3＋1)。",
+        "AC 約為136.60公尺，選 A。",
+        "**逆向驗算**：由 AC＝50(√3＋1)公尺代回正弦定理，AC×sin45°÷sin75°＝100公尺，與已知 AB＝100公尺相同。",
+        "**大小合理性檢查**：∠B＝75°＞∠C＝45°，所以其對邊 AC 應大於 AB；136.60公尺＞100公尺，方向符合。"
+      ],
+      "result": "50(√3＋1)公尺",
+      "unit": "公尺",
+      "option": "A",
+      "verification": "**驗算**：AC＝50(√3＋1)≈136.60254公尺，AC×sin45°÷sin75°≈136.60254×0.70710678÷0.96592583≈100.00000公尺＝AB。因75°＞45°，故AC＞AB亦符合。"
+    },
+    "optionExplanations": {
+      "A": {
+        "teacher": "正弦定理得50(√3＋1)，精確符合。",
+        "elementary": "算出的距離就是這個答案。",
+        "reason": "正弦定理得50(√3＋1)，精確符合。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "50(√3－1)約36.60，不符合sin75°的和角展開。",
+        "elementary": "這個距離太短，不能把相加改成相減。",
+        "reason": "50(√3－1)約36.60，不符合sin75°的和角展開。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "20(√3＋1)約54.64，倍率不符合已知AB＝100。",
+        "elementary": "角度比例用對也要保留100公尺，不能把50變20。",
+        "reason": "20(√3＋1)約54.64，倍率不符合已知AB＝100。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "20(√3－1)約14.64，同時不符倍率與正弦和角式。",
+        "elementary": "數字和加減號都沒有對上題目。",
+        "reason": "20(√3－1)約14.64，同時不符倍率與正弦和角式。",
+        "isCorrect": false
+      }
+    }
+  }
+}

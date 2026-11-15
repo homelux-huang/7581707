@@ -1,0 +1,109 @@
+name: ROLE A 115 MB20 real original v5 image and 205 SQLite single Q source G2 G3 (NO RELEASE)
+on:
+  push:
+    branches: [qa/role-a-115-mb20-canonical-v5-20261110]
+    paths:
+      - scripts/role_a_115_mb20_source_v5_admission_20261110.py
+      - .github/workflows/role-a-115-mb20-source-admission-20261110.yml
+permissions:
+  contents: write
+concurrency:
+  group: role-a-115-mb20-source-admission-20261110
+  cancel-in-progress: false
+jobs:
+  original_v5_one_q20_205_source_sqlite:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-115-mb20-canonical-v5-20261110'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: true
+          sparse-checkout: |
+            sudu/data/processed/115
+            sudu/data/original/115/00-MB
+            sudu/data/original/115/00-MB-answers
+            scripts
+            tests
+            docs
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - name: Read original A MB20 staged v5 and correct text readonly
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 80f87ddcbc1de06202a59d45e12557a20cc1394c
+          path: _role_a_stage
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/115/source-stage
+          sparse-checkout-cone-mode: true
+      - name: Read immutable Role C original MB20 lesson readonly
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: e50198cad6821a5252008bd474d8240510832f85
+          path: _role_c_author
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/teaching-candidates/114-115-20261025
+          sparse-checkout-cone-mode: true
+      - name: Read independent Role E real source pixel QA original PR156 readonly
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 4f70fe9fccbd2b783524d0f8a74290a39373c413
+          path: _role_e_source
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            docs
+          sparse-checkout-cone-mode: true
+      - name: Read actual protected native publisher without modifying main
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 5546a603abfe0af2e62c0e5f63f775be0bfb24cf
+          path: _publisher_main
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            sudu/release-governance
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Decode actual original WebP and check pixel-perfect crop
+        run: python -m pip install -q pillow
+      - name: Prove original MB23 stacked 205 bank and exact source SHA not overwritten
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor 24f8962b7fb51a8baa6f111abb1a7414a4b26420 HEAD
+          test "$(git rev-parse HEAD:sudu/data/processed/115/questions.json)" = '4b1b167ca7bbc3d1a8fa7441a80318965450aa91'
+          test "$(git rev-parse HEAD:sudu/data/processed/115/question-bank.sqlite3)" = '84ce71800b760664b3d2f8bd0bd69bfebc974783'
+          test "$(git rev-parse HEAD:sudu/data/processed/115/webp-manifest.json)" = '2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b'
+      - name: Repair one Q20 original G1 v5 source, G2 four options, G3 official A, 14-column SQLite
+        run: |
+          set -euo pipefail
+          python scripts/role_a_115_mb20_source_v5_admission_20261110.py --apply
+          python scripts/role_a_115_mb20_source_v5_admission_20261110.py --verify
+      - name: Commit ONLY 9 Q20 source paths; student E/D/TRUST and main untouched
+        run: |
+          set -euo pipefail
+          git add -- sudu/data/processed/115/questions.json sudu/data/processed/115/question-bank.sqlite3 sudu/data/processed/115/inventory.json sudu/data/processed/115/webp-manifest.json sudu/data/processed/115/source-stage/115-00-MB-20-v5-staged-20261104.json sudu/data/processed/115/review-evidence/115-00-MB-20-ocr-publisher-20261110.json sudu/data/processed/115/review-evidence/115-00-MB-20-official-publisher-20261110.json sudu/data/processed/115/review-evidence/115-00-MB-20-v5-source-admission-20261110.json sudu/data/processed/115/SQLITE_QA_MB20_V5_BRIDGE_20261110.json
+          test "$(git diff --cached --name-only | wc -l)" -eq 9
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'source(A): MB20 original full v5 pixel, one QID 205 SQLite, no student release'
+          python scripts/role_a_115_mb20_source_v5_admission_20261110.py --verify
+          git push origin HEAD:refs/heads/qa/role-a-115-mb20-canonical-v5-20261110

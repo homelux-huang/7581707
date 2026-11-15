@@ -1,0 +1,72 @@
+name: 114 QA SQLite v2 immutable staging (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/stage_114_sqlite_v2.py
+      - .github/workflows/114-sqlite-v2-staging.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-114-sqlite-v2-draft
+  cancel-in-progress: false
+jobs:
+  isolated-staging:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build immutable SQLite staging copy and two-pass readback
+        run: |
+          python -m py_compile scripts/stage_114_sqlite_v2.py
+          python scripts/stage_114_sqlite_v2.py
+      - name: Assert original DB unchanged and release forbidden
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          report=Path('sudu/data/processed/114/qa-drafts/SQLITE_114_V2_STAGING_20261023.json')
+          x=json.loads(report.read_text(encoding='utf-8'))
+          old=Path(x['originalDatabasePath']);new=Path(x['qaDraftDbPath'])
+          assert hashlib.sha256(old.read_bytes()).hexdigest()==x['originalDatabaseSha256Unchanged']
+          assert hashlib.sha256(new.read_bytes()).hexdigest()==x['qaDraftDbSha256']
+          assert x['isolatedImportPasses']==2 and x['rows']==205
+          assert x['originalDatabaseModified'] is False
+          assert x['answerVerifiedChanged'] is False and x['questionVerifiedChanged'] is False
+          assert x['integrationReady'] is False and x['releaseAllowed'] is False
+          print('PASS 114 v2 staging DB; no main/student/write/release changes')
+          PY
+      - name: Commit only versioned 114 QA DB candidate and its evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "qa/114-115-official-visual-review"
+          git config user.name "Sudu isolated DB bot"
+          git config user.email "7581707-data-bot@users.noreply.github.com"
+          git add -- \
+            sudu/data/processed/114/qa-drafts/sqlite-v2/question-bank.sqlite3 \
+            sudu/data/processed/114/qa-drafts/SQLITE_114_V2_STAGING_20261023.json
+          if git diff --cached --quiet; then
+            echo 'Unchanged SHA; no duplicate staging'
+            exit 0
+          fi
+          git commit -m "data(114): versioned SQLite v2, two-pass JSON/SHA roundtrip (NOT RELEASE)"
+          for attempt in 1 2 3; do
+            git fetch origin qa/114-115-official-visual-review
+            git rebase origin/qa/114-115-official-visual-review
+            if git push origin HEAD:qa/114-115-official-visual-review; then
+              exit 0
+            fi
+          done
+          echo 'Safe non-forced push failed' >&2
+          exit 1

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-11",
+  "questionRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+  "webpSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+  "allFourOptionsReviewed": true,
+  "calculationReviewed": true,
+  "reviewer": "ROLE B archival lesson author-content QA (NOT independent ROLE E)",
+  "reviewedAt": "2026-11-13",
+  "sourceAuthorRole": "B",
+  "sourceAuthorTaskId": "B-114-NEXT5-E11-E14-C04-20261025-02",
+  "sourceAuthorReturnIssueCommentId": 6712547567,
+  "sourceAuthorPrUrl": "https://github.com/homelux-huang/7581707/pull/44",
+  "sourceAuthorCommit": "e0d4532c751127204e73af9cd9d3a95c52449131",
+  "sourceAuthorGitBlobSha1": "a4aa8df70cf3f3fa8c4f62a568d73fe90511154b",
+  "sourceAuthorRawSha256": "6b365291eb43fd37377891149470f3bff9d8a6db5997eaff13295fb36fc402e8",
+  "canonicalTeachingSha256": "ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb",
+  "composedTeachingSha256": "3d250e8ecd621eda0f14f1839e6cf89b70b3649a1af0298611fedd9bbf57ceee",
+  "sourceG2Sha256": "f8d316fcf6c44dbce476f394e5537692ea7b45bf957dd2187c547e74bae5c034",
+  "sourceG3Sha256": "e767d4c5eb60dced6b2a86b73b29167b8d7b47430925da60f13a1bb6c7c8cbbf",
+  "status": "AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY",
+  "independentAiContentReviewed": false,
+  "sourceAuthorSessionId": null,
+  "reviewerSessionId": null,
+  "studentReleaseApproved": false,
+  "sourceHighlights": [
+    {
+      "text": "use the phone too much",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "hurt your eyes",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "use it less",
+      "bold": true,
+      "highlight": true
+    },
+    {
+      "text": "jogging",
+      "bold": true,
+      "highlight": true
+    }
+  ],
+  "content": {
+    "topic": "英文｜對話題找上下句因果：use the phone too much（太久）→ use it less（減少）→ Yeah（同意）。it 指 phone。",
+    "teacherSummary": "爸爸擔憂手機使用過久可能傷眼；空格後的 Yeah, let's go jogging 表示他同意兒子減少手機使用並提出戶外活動。A Then I should use it less 承上啟下。",
+    "elementarySummary": "爸爸說：手機玩太久眼睛會累。孩子說：那我少玩一點。爸爸才會說：對，一起去慢跑。",
+    "concept": "對話題找上下句因果：use the phone too much（太久）→ use it less（減少）→ Yeah（同意）。it 指 phone。",
+    "extension": "might hurt 表可能發生的結果，不能誤解成必然傷害；Then 表承接前句提出行動。",
+    "memory": "too much → less；Dad 的 Yeah 與 jogging 證明空格是減少手機使用。",
+    "solvingSteps": [
+      "先讀父親的警告：手機使用過久。",
+      "兒子應接受建議、降低手機使用量。",
+      "父親同意後改邀慢跑，故選 A。"
+    ],
+    "optionExplanations": {
+      "A": {
+        "teacher": "Then I should use it less 直接回應手機用太久，it 指前面的 phone，也符合爸爸接下來表示同意。",
+        "elementary": "孩子說我該少玩手機，爸爸才會點頭。",
+        "reason": "use it less 與 use the phone too much 是相反方向的改善行動，代名詞 it 對應 phone。",
+        "isCorrect": true
+      },
+      "B": {
+        "teacher": "Should I use a new phone? 是問需不需要換手機，不能解決原句說的長時間使用。",
+        "elementary": "換新手機還是可能看太久。",
+        "reason": "new phone 是設備新舊，爸爸關心的是使用時間和眼睛疲勞。",
+        "isCorrect": false
+      },
+      "C": {
+        "teacher": "Do you like to watch videos, too? 只是詢問爸爸是否也愛看影片，沒有改善手機使用的決定。",
+        "elementary": "問爸爸也愛看影片，沒有回答爸爸的提醒。",
+        "reason": "詢問觀影喜好不能解釋爸爸下一句為何提議去慢跑。",
+        "isCorrect": false
+      },
+      "D": {
+        "teacher": "So you should play online games 反而叫爸爸多打網路遊戲，與傷眼警告方向不符。",
+        "elementary": "叫爸爸去打遊戲不是少看螢幕。",
+        "reason": "選項主語 you 指爸爸，並鼓勵遊戲，沒有承接兒子應改變的行為。",
+        "isCorrect": false
+      }
+    },
+    "hasExamCalculation": false,
+    "examCalculation": null,
+    "source": "114年統測官方原題／候選答案；官方最終答案影像及教材版本、章節、頁碼待核。"
+  }
+}

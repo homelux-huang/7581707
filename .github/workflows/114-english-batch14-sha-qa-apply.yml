@@ -1,0 +1,75 @@
+name: Apply 114 English Q06-Q20 direct image QA SHA ledger (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_114_en_batch14_15_direct_visual_sha.py
+      - .github/workflows/114-english-batch14-sha-qa-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-114-english-batch14-visual-qa
+  cancel-in-progress: false
+jobs:
+  verify-and-apply:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Verify prior direct visuals and SHA-bound original pixels
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'qa/114-115-official-visual-review'
+          python -m py_compile scripts/apply_114_en_batch14_15_direct_visual_sha.py
+          python scripts/apply_114_en_batch14_15_direct_visual_sha.py --check
+      - name: Apply exactly 15 image-only QA marks, twice to prove idempotence
+        run: |
+          set -euo pipefail
+          python scripts/apply_114_en_batch14_15_direct_visual_sha.py --stage
+          sha256sum sudu/data/processed/114/{questions.json,webp-manifest.json,VISUAL_QA.json,inventory.json,VALIDATION.json,release-manifest.json} > /tmp/114-before.sha
+          python scripts/apply_114_en_batch14_15_direct_visual_sha.py --stage
+          sha256sum sudu/data/processed/114/{questions.json,webp-manifest.json,VISUAL_QA.json,inventory.json,VALIDATION.json,release-manifest.json} > /tmp/114-after.sha
+          diff -u /tmp/114-before.sha /tmp/114-after.sha
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path('sudu/data/processed/114')
+          inv=json.loads((base/'inventory.json').read_text())
+          val=json.loads((base/'VALIDATION.json').read_text())
+          vis=json.loads((base/'VISUAL_QA.json').read_text())
+          bank=json.loads((base/'questions.json').read_text())
+          assert inv['webpVisualQaPassed']==24 and val['imageVisualQaPass']==24 and vis['passCount']==24
+          assert sum(q.get('imageQaStatus')=='PASS' for q in bank['questions'])==24
+          assert not any(q.get('answerVerified') or q.get('questionVerified') or q.get('integrationReady') for q in bank['questions'])
+          assert not inv.get('integrationReady') and not val.get('integrationReady')
+          print('PASS: 114 English Q06-20 exact SHA reviews recorded without redoing existing WebP or answer release')
+          PY
+      - name: Commit only updated metadata, never original WebP
+        run: |
+          set -euo pipefail
+          git config user.name '7581707 QA Review Ledger'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/114/questions.json sudu/data/processed/114/webp-manifest.json sudu/data/processed/114/VISUAL_QA.json sudu/data/processed/114/inventory.json sudu/data/processed/114/VALIDATION.json sudu/data/processed/114/release-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'qa(114): register 15 prior directly reviewed English SHA-crop PASS (no release)'
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 114-english-batch14-direct-visual-qa-report
+          retention-days: 21
+          path: |
+            sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json
+            sudu/data/processed/114/inventory.json
+            sudu/data/processed/114/VALIDATION.json

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-11",
+  "taskId": "A-114-E11-CANONICAL-G2G3-20261107-MASTER-DISPATCH",
+  "sourceQaBaseline": "3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2",
+  "sourceBankBlobBefore": "804a8b046e97b5fb4fc55f33af25c7a8c08e8a7d",
+  "sourceManifestBlobBefore": "f507470ac6ef36c653ed669d5a9c1a313f456e28",
+  "sqliteBlobBefore": "6c3efd8c3d20507e09f76178fc6927951235a754",
+  "sourceBankSha256After": "3818a0e8b9e12c73e62e4e2ed967e7802ca13b2ad151286eec41555ab6f50c44",
+  "manifestSha256After": "ac55a8479da58ff81a6acda771cc6df0df2691c33a6275b7ee95c6a78bbc709a",
+  "sqliteSha256After": "4a2e62ff2dc32f8da66e7f0e3dc8e89885b294bfaa142af446f78c11f16f61b7",
+  "sqliteRows": 205,
+  "sqliteIntegrity": "ok",
+  "singleQidUpdated": "114-00-E-11",
+  "other204CanonicalJsonUnchanged": true,
+  "other204SqlitePayloadsUnchanged": true,
+  "other204ManifestItemsUnchanged": true,
+  "status": "SOURCE_ONLY_SQLITE_205_PARITY_NOT_STUDENT_RELEASE",
+  "ready": false,
+  "live": false
+}

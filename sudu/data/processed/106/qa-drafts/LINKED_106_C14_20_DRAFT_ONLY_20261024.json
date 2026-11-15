@@ -1,0 +1,38 @@
+{
+  "year": 106,
+  "paperCode": "00-C",
+  "candidateCount": 7,
+  "sharedCandidateCount": 3,
+  "questionIds": [
+    "106-00-C-14",
+    "106-00-C-15",
+    "106-00-C-16",
+    "106-00-C-17",
+    "106-00-C-18",
+    "106-00-C-19",
+    "106-00-C-20"
+  ],
+  "sourceOfficialPdfSha256": "93b8ec6eb319c8c7f5350ffa6267a2b4aed2f7acb1d1a2a7ca89e38f69ec5476",
+  "sourceWebpSha256": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+  "immutableStageEvidence": "sudu/data/processed/106/qa-drafts/DRAFT_106_CHINESE_Q14_20_SHARED_SOURCE_P004_20261023.json",
+  "reviewRequired": true,
+  "newVisualQaPass": 0,
+  "newOfficialAnswerVerified": 0,
+  "newOcrTextQaPass": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "sqliteRows": 204,
+  "sqliteImportPasses": 2,
+  "shaBeforeAfter": {
+    "sourcePage": "b7e6a32272b74c7788caa1f413919b46359589162096f72afe1050c56a4e8bc4",
+    "singleCandidates": {
+      "106-00-C-14": "c69aa34ebd883d6ff852ecab3653480a92a784b649ae43b1e7f6f060be329bca",
+      "106-00-C-15": "0b95904bf76b4c793627edd283f3c0b0c4dc7adc43d01b0f85696124aaf0b1c9",
+      "106-00-C-16": "0be20036898a3f9229e0add9888f780400d21e332752d4f83b2bedc5b2186500",
+      "106-00-C-17": "3ecdfafacdf3f9bbad64063b37b449d74ce237774ba16cab71668d4778ef2965",
+      "106-00-C-18": "94e2a4a105cac6ab5777903d0bd222ed880c64361d1d2357cb32b46f3a7b9d84",
+      "106-00-C-19": "00acc4aedf7da4712429f53f350571e52121c0172094e25e21417660e371c1f6",
+      "106-00-C-20": "d790e4209fca706212b54759a85de5de56c0c4276cebb2f5b929aa58092a7180"
+    }
+  }
+}

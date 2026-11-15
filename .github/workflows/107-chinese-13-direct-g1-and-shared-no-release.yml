@@ -1,0 +1,94 @@
+name: 107 Chinese 13 question plus three shared direct source G1 (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/114-115-official-visual-review
+    paths:
+      - scripts/apply_107_chinese_13_and_3_shared_direct_g1.py
+      - .github/workflows/107-chinese-13-direct-g1-and-shared-no-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: qa107-chinese-13-plus-shared-g1
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow original-pixel checking dependency
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Pin HEAD and apply directly inspected G1 with version+SHA checks
+        run: |
+          echo "QA_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          python -m py_compile scripts/apply_107_chinese_13_and_3_shared_direct_g1.py
+          python scripts/apply_107_chinese_13_and_3_shared_direct_g1.py
+      - name: Verify 13 single G1, 3 shared G1, G2 G3 and release still blocked
+        run: |
+          python - <<'PY_GUARD'
+          import json,sys,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_105_115_sqlite_readonly import audit_year
+          d=Path('sudu/data/processed/107')
+          def rd(x):return json.loads((d/x).read_text("utf8"))
+          m=rd('webp-manifest.json');q=rd('questions.json')
+          v=rd('VISUAL_QA.json');inv=rd('inventory.json')
+          val=rd('VALIDATION.json');rel=rd('release-manifest.json')
+          e=rd('qa-drafts/DIRECT_VISUAL_107_CHINESE_13_3_SHARED_20261024.json')
+          assert inv['webpGeneratedDrafts']==204
+          assert len(m['items'])==len(q['questions'])==len(v['items'])==204
+          assert inv['visualQaPass']==v['passCount']==val['imageVisualQaPass']==19
+          assert inv['sharedMaterialsVerified']==5 and len(m['sharedMaterialCrops'])==5
+          assert inv['ocrTextIndependentlyVerified']==val['ocrTextVerified']==5
+          assert inv['answerOfficialFinalVerified']==val['answerOfficialFinalVerified']==0
+          assert e['newIndividualG1Pass']==13 and e['newSharedG1Pass']==3
+          assert len(e['items'])==16
+          assert e['reviewer']=='ChatGPT assistant' and e['independentHumanReview'] is False
+          image={x['questionId']:x for x in m['items']}
+          bank={x['questionId']:x for x in q['questions']}
+          for row in e['items']:
+              id=row['questionIdOrSharedId']
+              img=next((s for s in m['sharedMaterialCrops'] if s['sharedMaterialId']==id),None) if 'SHARED' in id else image[id]
+              assert img['qaStatus']=='PASS'
+              assert img['visualReviewEvidence']['reviewedSha256']==row['reviewedSha256']
+              assert hashlib.sha256(Path(img['output']).read_bytes()).hexdigest()==row['reviewedSha256']
+              if 'SHARED' not in id:
+                  assert bank[id]['imageQaStatus']=='PASS'
+                  assert not bank[id]['questionVerified'] and not bank[id]['answerVerified'] and not bank[id]['integrationReady']
+          assert not rel['releaseAllowed'] and not rel['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          assert all(audit_year(y)['g5Pass'] and audit_year(y)['sandboxImportPasses']==2 for y in range(105,116))
+          print('107 G1 Chinese 13 plus 3 shared direct assistant visual, G1 total19/204, G2=5, G3=0, G5 11/11 NO RELEASE')
+          PY_GUARD
+      - name: Commit direct G1 evidence with nonforce HEAD lease
+        run: |
+          set -eu
+          git add sudu/data/processed/107/webp-manifest.json
+          git add sudu/data/processed/107/questions.json
+          git add sudu/data/processed/107/VISUAL_QA.json
+          git add sudu/data/processed/107/inventory.json
+          git add sudu/data/processed/107/VALIDATION.json
+          git add sudu/data/processed/107/release-manifest.json
+          git add sudu/data/processed/107/question-bank.sqlite3
+          git add sudu/data/processed/107/qa-drafts/DIRECT_VISUAL_107_CHINESE_13_3_SHARED_20261024.json
+          git add sudu/data/processed/105-115-SQLITE_G5_READONLY_AUDIT.json
+          git diff --cached --check
+          git fetch origin qa/114-115-official-visual-review
+          if [ "$(git rev-parse FETCH_HEAD)" != "$QA_BASE" ]; then
+            echo "Concurrent QA head: refuse stale push, no force"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "qa(107): 13 source-original Chinese Qs and 3 shared G1 SHA evidence, no G2/G3 release"
+          git push origin HEAD:refs/heads/qa/114-115-official-visual-review

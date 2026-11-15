@@ -1,0 +1,73 @@
+name: 106 Chinese Q01-Q06 direct WebP visual QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_106_chinese_q01_06_webp_visual_qa.py
+      - .github/workflows/106-chinese-q01-06-webp-qa-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-106-c-6-sha-visual
+  cancel-in-progress: false
+jobs:
+  approve:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet Pillow
+      - name: Confirm six direct source-to-crop visual reviews and SHA identical to originals
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'qa/114-115-official-visual-review'
+          python -m py_compile scripts/apply_106_chinese_q01_06_webp_visual_qa.py
+          python scripts/apply_106_chinese_q01_06_webp_visual_qa.py --check
+      - name: Register six image-only QA flags while preserving OCR and answer validation, twice
+        run: |
+          set -euo pipefail
+          python scripts/apply_106_chinese_q01_06_webp_visual_qa.py --stage
+          sha256sum sudu/data/processed/106/{questions.json,webp-manifest.json,VISUAL_QA.json,inventory.json,VALIDATION.json,release-manifest.json,question-bank.sqlite3} > /tmp/106-c-1.sha
+          python scripts/apply_106_chinese_q01_06_webp_visual_qa.py --stage
+          sha256sum sudu/data/processed/106/{questions.json,webp-manifest.json,VISUAL_QA.json,inventory.json,VALIDATION.json,release-manifest.json,question-bank.sqlite3} > /tmp/106-c-2.sha
+          diff -u /tmp/106-c-1.sha /tmp/106-c-2.sha
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          base=Path('sudu/data/processed/106')
+          inv=json.loads((base/'inventory.json').read_text())
+          val=json.loads((base/'VALIDATION.json').read_text())
+          assert inv['webpGeneratedDrafts']==194 and inv['visualQaPass']==12
+          assert val['imageVisualQaPass']==12 and inv['ocrTextIndependentlyVerified']==6
+          assert inv['answerOfficialFinalVerified']==0 and not inv['integrationReady']
+          assert not val['releaseAllowed'] and not val['integrationReady']
+          print('PASS: +6 images, now 12 visually QA approved for 106, OCR and official answers not falsely promoted')
+          PY
+      - name: Commit updated isolated 106 question image manifest, staging database and QA
+        run: |
+          set -euo pipefail
+          git config user.name '7581707 QA Image Ledger'
+          git config user.email '7581707-qa-bot@users.noreply.github.com'
+          git add sudu/data/processed/106/{questions.json,webp-manifest.json,VISUAL_QA.json,inventory.json,VALIDATION.json,release-manifest.json,question-bank.sqlite3}
+          if ! git diff --cached --quiet; then
+            git commit -m 'qa(106): original page visual PASS Chinese Q01-Q06, preserve other G2 G3 gates'
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 106-Chinese-Q01-06-source-visual-QA-report
+          retention-days: 21
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/106/qa-drafts/QA_106_CHINESE_Q01_06_DIRECT_VISUAL_20261023.json
+            sudu/data/processed/106/inventory.json

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "year": 114,
+  "questionId": "114-00-E-12",
+  "taskId": "MASTER-P0-E12-QA-SOURCE-BRIDGE-20261107-02",
+  "gate": "SOURCE_G1_G2_G3_ONLY_NOT_STUDENT_ADMISSION",
+  "sourceBranchBaseline": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+  "roleAStageCommit": "bc625d5eba9bf67f29b236258754941f0c9d999e",
+  "questionRevision": "0c7e5de97cd151539927df8c7fc778a1b853aa0367df650ad1fe081240fd40ec",
+  "originalSingleWebpSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+  "originalSourcePageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+  "officialPublishedAnswer": "C",
+  "originalPublishedAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+  "officialEnglishCorrectionPdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+  "correctionNamedOnly": [
+    "114-00-E-26"
+  ],
+  "sourceQuestionTextAndFourOptionsMatched": true,
+  "sourceOriginalImagesSha256AndGitBlobMatched": true,
+  "officialAnswerImageOriginalBytesMatched": true,
+  "sourceQuestionVerified": true,
+  "officialAnswerVerified": true,
+  "sqliteIntegrityCheck": "ok",
+  "canonicalRows": 205,
+  "other204JsonRecordsUnchanged": true,
+  "other204CanonicalValuesUnchanged": true,
+  "legacySqliteMigratedToSevenColumn": true,
+  "legacySqliteColumns": [
+    "question_id",
+    "year",
+    "paper_code",
+    "original_number",
+    "subject",
+    "payload",
+    "payload_sha256"
+  ],
+  "restoredPriorQaQids": [
+    "114-00-E-11",
+    "114-00-E-13",
+    "114-00-E-14"
+  ],
+  "sourceNormalizedSqliteGitBlob": "e51ccab99dfa1e3a87ce0f0b6616ae459f29de95",
+  "manifestUnchanged": true,
+  "studentReady": false,
+  "independentRoleETrustedReceipt": false,
+  "roleDFormalEmitter16of16": false,
+  "mainApprovedOrLive": false,
+  "comment": "Historic ROLE A direct visual evidence reconciled against actual Git bytes; no new PDF download or fresh human/AI visual inspection claimed. Full distinct-Session E receipt, actual D and protected release remain mandatory."
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-25",
+  "subject": "數學 B",
+  "questionNumber": 25,
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 assistant — directly compared byte-identical source WebP; not a human reviewer",
+  "sourceCommitBeforeEdit": "ed832065d1eaebbb836d4264c9b32f944a2e082e",
+  "originalQuestionPdfSha256": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+  "sourcePage": 8,
+  "sourceWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-25.webp",
+  "sourceWebpSha256": "92f1b7b313c109b8e0a5a22bbb7396306e3c9e2ad1dcd4b4195d973645733896",
+  "proof": {
+    "runId": 40084307251,
+    "jobId": 120843980827,
+    "method": "original binary WebP base64 readback on GitHub Actions with matching SHA-256; direct visual review, no OCR/crop",
+    "visualComparisonPerformed": true,
+    "noWholePaperOrOtherQuestion": true
+  },
+  "legacyUncorrectedSource": {
+    "path": "sudu/data/years/115.json",
+    "question": "小晏想在坐標平面中創作一個卡通人物，如圖 ( 七 ) 所示。已知A、B、P 為圖 ( 七 ) 中的\n\n  三點，直線L 通過A、B 兩點，點P 的坐標為 ( h , 7 )，點P 到直線L 的距離為  2 。若小晏\n  要畫出以點P 為圓心，並與直線L 相切的圓，且此圓的方程式為 x 2  8 x  ( y  7) 2  a ，則\n   h + a？",
+    "options": [
+      "– 59",
+      "– 16",
+      "– 10",
+      "10\n\n                        圖 ( 七 )\n\n\n\n\n          【以下空白】\n\n\n\n\n-8-"
+    ]
+  },
+  "correctedText": {
+    "question": "小晏想在坐標平面中創作一個卡通人物，如圖（七）所示。已知 A、B、P 為圖（七）中的三點，直線 L 通過 A、B 兩點，點 P 的坐標為 (h,7)，點 P 到直線 L 的距離為 √2。若小晏要畫出以點 P 為圓心，並與直線 L 相切的圓，且此圓的方程式為 x²－8x＋(y－7)²＝a，則 h＋a＝？",
+    "options": [
+      "－59",
+      "－16",
+      "－10",
+      "10"
+    ],
+    "figureRequired": true,
+    "figureDescription": "圖（七）：坐標平面、直線 L 通過 A 與 B，點 P=(h,7) 與和直線 L 相切的圓。半徑 r＝√2（不是 2），原圖保留。"
+  },
+  "knownOfficialAnswer": "C",
+  "postAnswerMathCheck": "配方 (x－4)²＋(y－7)²＝a＋16；h＝4，r²＝2 ⇒ a＝－14，h＋a＝－10。C",
+  "status": {
+    "aiVisualTranscriptionChecked": true,
+    "originalSourceUnmodified": true,
+    "formalIndependentHumanTextQaPass": false,
+    "independentBlindSolveCertificate": false,
+    "completeTeachingAndUIQaPass": false,
+    "studentReleaseApproved": false,
+    "deploy": false
+  },
+  "noNewOCR": true,
+  "noNewWebpCropping": true
+}

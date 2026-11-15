@@ -1,0 +1,75 @@
+name: 115 Chinese Q16-18 shared v4 original-image visual QA (NO RELEASE)
+on:
+  push:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/apply_115_shared_16_18_direct_v4_review.py
+      - .github/workflows/115-c-shared-16-18-v4-visual-qa-apply.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sudu-115-chinese-shared-16-18-v4-qa-apply
+  cancel-in-progress: false
+jobs:
+  shared-qa:
+    if: github.ref == 'refs/heads/qa/114-115-official-visual-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/114-115-official-visual-review
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --quiet 'Pillow>=10,<12'
+      - name: Check immutable reviewed source and exact shared v4 image, no answers touched
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/apply_115_shared_16_18_direct_v4_review.py
+          python scripts/apply_115_shared_16_18_direct_v4_review.py --check
+      - name: Promote one shared article QA; twice to validate SQLite idempotence
+        run: |
+          set -euo pipefail
+          python scripts/apply_115_shared_16_18_direct_v4_review.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,release-manifest.json,VISUAL_QA.json,question-bank.sqlite3} > /tmp/shared-before
+          python scripts/apply_115_shared_16_18_direct_v4_review.py --stage
+          sha256sum sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,release-manifest.json,VISUAL_QA.json,question-bank.sqlite3} > /tmp/shared-after
+          diff -u /tmp/shared-before /tmp/shared-after
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("sudu/data/processed/115")
+          ma=json.loads((p/"webp-manifest.json").read_text())
+          inv=json.loads((p/"inventory.json").read_text())
+          release=json.loads((p/"release-manifest.json").read_text())
+          assert sum(x.get("qaStatus")=="PASS" for x in ma["sharedMaterialCrops"])==5
+          assert inv["sharedMaterialVisualQaPassed"]==5
+          assert inv["imageVisualQaPass"]==143
+          assert inv["officialAnswerIndependentVerified"]==56
+          assert release["integrationReady"] is False and release["releaseAllowed"] is False
+          print("PASS: shared item 5/20, question images unchanged 143, answers unchanged 56, no release")
+          PY
+      - name: Commit only shared QA and three linked staging records on QA branch
+        run: |
+          set -euo pipefail
+          git config user.name "7581707 Shared Material QA"
+          git config user.email "7581707-qa-bot@users.noreply.github.com"
+          git add -- sudu/data/processed/115/{questions.json,webp-manifest.json,inventory.json,VALIDATION.json,release-manifest.json,VISUAL_QA.json,question-bank.sqlite3}
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(115): preserve and visually pass source-only C16-18 shared v4, no release"
+            git pull --rebase origin qa/114-115-official-visual-review
+            git push origin HEAD:qa/114-115-official-visual-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 115-C16-C18-shared-material-v4-visual-review
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            sudu/data/processed/115/qa-drafts/DIRECT_VISUAL_SHARED_115_C_16_18_V4_20261023.json
+            sudu/data/processed/115/VISUAL_QA.json
+            sudu/data/processed/115/VALIDATION.json

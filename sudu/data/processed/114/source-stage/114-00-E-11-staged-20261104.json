@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "taskId": "A-114-E12-E11-SOURCE-STAGE-20261104-01",
+  "role": "A",
+  "questionId": "114-00-E-11",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6623624130",
+  "mainBaseSHA": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "frozenReadOnlySourceCommit": "5be8fb19b104e2983ea58ba5e59baea7cad7b815",
+  "status": "SOURCE_ORIGINAL_WEBP_STAGED__SHARED_CANONICAL_DB_C27_LEASE_HOLD_NO_RELEASE",
+  "reviewer": "ChatGPT ROLE A source assistant visual review, NOT Role E independent teaching audit",
+  "source": {
+    "year": 114,
+    "paperCode": "00-E",
+    "number": 11,
+    "page": 3,
+    "question": "Dad:  Hey, you’re always on your phone!\n    Son:   I know. I just like playing games and watching videos.\n   Dad:  But if you use the phone too much, you might hurt your eyes.\n    Son:  ____________\n   Dad:  Yeah, let’s go jogging. It’s more fun.",
+    "options": [
+      "Then I should use it less.",
+      "Should I use a new phone?",
+      "Do you like to watch videos, too?",
+      "So you should play online games."
+    ],
+    "revision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "originalQuestionPdfSha256": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "originalPageWebp": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "originalPageGitBlob": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "originalPageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "originalSingleWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-11.webp",
+    "originalSingleGitBlob": "50f8fde174f4f0e66dc0f2315c11c5a73cec6b7a",
+    "originalSingleSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+    "crop": [
+      90,
+      275,
+      1310,
+      591
+    ],
+    "originalImageQAStatus": "PASS",
+    "originalSourceG1QaGitBlob": "c1154562fa30cb4b2720a6000a970cf09ef460ff",
+    "originalPixelsRecropped": false
+  },
+  "official": {
+    "publishedAnswer": "A",
+    "originalPublishedAnswerWebp": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+    "originalPublishedAnswerWebpSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "originalPublishedAnswerGitBlob": "5f2920313607af4e756095cd3d6098c8a3ab7440",
+    "originalAnswerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "originalRoleAReceiptPath": "sudu/data/processed/114/review-evidence/114-00-E-11-official.json",
+    "originalRoleAReceiptGitBlob": "bc3d19885e2ebc3d27092b673636bd84c89f65c6",
+    "englishNoticePdfSha256": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53cbc",
+    "englishNoticeGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "noticeQuestionIds": [
+      "114-00-E-26"
+    ],
+    "thisQuestionChangedByNotice": false,
+    "originalAnswerVerified": true,
+    "newPdfDownloadedOrRehashed": false,
+    "formalNewG3Approval": false
+  },
+  "frozenBank": {
+    "canonicalJsonSha1": "1535754345a08d25636e00b4ba3270a1f764bf66",
+    "manifestSha1": "249a41d5a64558ccaa3084b21f915922a55c6a1b",
+    "sqliteSha1": "27314572b3d18fd0bd20003297bccadbc6c59737",
+    "count": 205,
+    "originalQuestionVerified": false,
+    "originalAnswerVerified": true,
+    "originalRevision": "646ad13eb26e078e761a7e0e21aadcfec6fb5576f81c124f301ba55fe4c24036",
+    "sharedFilesImported": false,
+    "sharedFilesModified": false,
+    "sharedLease": "A-114-C27-CROSSPAGE-ANSWER-SOURCE-20261026-17",
+    "collisionIssue": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6412289875"
+  },
+  "downstream": {
+    "newReady": false,
+    "newLive": false,
+    "approved": false,
+    "roleBFreeze": "PENDING",
+    "roleETrust": "PENDING",
+    "roleDFormal8x2": "PENDING",
+    "masterSourceBankRelease": "BLOCKED_ACTIVE_SHARED_C27_WRITE_LEASE",
+    "publisherPR141": "OPEN_NOT_MERGED_REVIEW_REQUIRED"
+  }
+}

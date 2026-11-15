@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-05",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "GPT-6 AI teacher-style self-review; no human teacher claimed",
+  "reviewStage": "COMPLETE_AI_DRAFT_NEEDS_UI_AND_SOURCE_ADMISSION",
+  "correctAnswer": "B",
+  "sourceImageSha256": "be5bb1f0e23eddff9e8a0f17e6e116ce2ce4219205f4527d50a710fb76e20dd2",
+  "teacherSummary": "平行四邊形 ABCD 的對角線互相平分，故 A+C=B+D。代入三點可求出 C=(3,-2)，再用兩點中點公式計算 B、C 中點，得到 (3/2,-7/2)，即 B。",
+  "elementarySummary": "像把四邊形兩條對角線交叉折半，先找出還沒寫出的 C 點，再取 B 和 C 的正中間，就得到題目要的座標。",
+  "memory": "**平行四邊形對角線互相平分**：A+C=B+D；**中點座標**＝兩端 x 相加除2、y相加除2。",
+  "concept": "A、B、C、D 按平行四邊形順序排列時，對角線 AC 與 BD 有共同中點，所以 C=B+D-A。座標都必須成對做向量加減。",
+  "extension": "相反意思：若是任意四邊形，就不能直接假設 A+C=B+D；一定要先確認平行四邊形性質。",
+  "source": "115年四技二專統測數學B第5題原圖；官方試題與標準答案PDF SHA資料詳來源欄；特定學校課本版本及頁碼待核對。",
+  "optionExplanations": {
+    "A": {
+      "isCorrect": false,
+      "teacher": "x座標 3/2 正確，但 y應為(-5-2)/2=-7/2，而不是 -5/2。",
+      "elementary": "左右位置對了，但上下位置少往下算了一格。"
+    },
+    "B": {
+      "isCorrect": true,
+      "teacher": "C=(3,-2)，所以 BC 中點=((0+3)/2,(-5-2)/2)=(3/2,-7/2)，符合兩個座標。",
+      "elementary": "左右取一半得一又二分之一，上下取平均得負三又二分之一。"
+    },
+    "C": {
+      "isCorrect": false,
+      "teacher": "此選項 (5/2,-5/2) 的 x 與 y 都不等於由 B、C 算出的 (3/2,-7/2)。",
+      "elementary": "左右和上下都沒對到兩個點的正中間。"
+    },
+    "D": {
+      "isCorrect": false,
+      "teacher": "y=-7/2 正確，但 x應為(0+3)/2=3/2，不能用 5/2。",
+      "elementary": "高度算對了，左右位置卻多算了一格。"
+    }
+  },
+  "hasExamCalculation": true,
+  "examCalculation": {
+    "given": [
+      "A=(-1,0)",
+      "B=(0,-5)",
+      "D=(2,3)",
+      "ABCD 是平行四邊形，求 BC 中點"
+    ],
+    "formulaUse": "對角線中點相同⇒ A+C=B+D，接著中點 M_BC=(B+C)/2",
+    "steps": [
+      "A+C=B+D",
+      "C=B+D-A=(0,-5)+(2,3)-(-1,0)=(3,-2)",
+      "M_BC=((0+3)/2,(-5+(-2))/2)",
+      "M_BC=(3/2,-7/2)",
+      "答案 B"
+    ],
+    "result": "(3/2,-7/2)",
+    "option": "B",
+    "unit": "坐標值，無長度單位"
+  },
+  "independentAlternativeCheck": "BC 向量=AD=(3,3)；C=B+AD=(3,-2)；再次得中點 (3/2,-7/2)。",
+  "highlights": [
+    "平行四邊形",
+    "互相平分",
+    "中點",
+    "3/2",
+    "-7/2"
+  ],
+  "teachingQaStatus": "SELF_REVIEW_NOT_FORMAL_PASS",
+  "uiQaStatus": "PENDING",
+  "studentReleaseApproved": false
+}

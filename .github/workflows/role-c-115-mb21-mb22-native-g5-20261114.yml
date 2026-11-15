@@ -1,0 +1,65 @@
+name: "ROLE C 115 MB21 MB22 native author G5 issuer (NO RELEASE)"
+on:
+  push:
+    branches:
+      - teaching/role-c-mb21-mb22-native-g5-issuer-20261114
+  pull_request:
+    paths:
+      - 'sudu/data/processed/115/review-evidence/115-00-MB-2[12]-teaching-publisher-20261114.json'
+      - 'tests/test_role_c_115_mb*_native_g5_20261114.py'
+      - '.github/workflows/role-c-115-mb21-mb22-native-g5-20261114.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  author-g5-evidence-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Pin original protected main publisher and immutable author source
+        shell: bash
+        run: |
+          git fetch --depth=1 --no-tags origin 0bc2b05ada43ef02983d56fc45ec3448189a318b
+          git show 0bc2b05ada43ef02983d56fc45ec3448189a318b:scripts/sudu_verified_publish.py > "$RUNNER_TEMP/sudu_verified_publish.py"
+          test -s "$RUNNER_TEMP/sudu_verified_publish.py"
+          echo "PUBLISHER_CHECKER_PATH=$RUNNER_TEMP/sudu_verified_publish.py" >> "$GITHUB_ENV"
+          git fetch --depth=1 --no-tags origin afaba171eec77cc27c3171b8bc8282f68ade74b9
+          mkdir -p "$RUNNER_TEMP/original-role-c"
+          git show afaba171eec77cc27c3171b8bc8282f68ade74b9:sudu/teaching-candidates/114-115-20261025/115-00-MB-21.json > "$RUNNER_TEMP/original-role-c/MB21.json"
+          git show afaba171eec77cc27c3171b8bc8282f68ade74b9:sudu/teaching-candidates/114-115-20261025/115-00-MB-22.json > "$RUNNER_TEMP/original-role-c/MB22.json"
+          test -s "$RUNNER_TEMP/original-role-c/MB21.json"
+          test -s "$RUNNER_TEMP/original-role-c/MB22.json"
+          echo "ORIGINAL_AUTHOR_MB21_FILE=$RUNNER_TEMP/original-role-c/MB21.json" >> "$GITHUB_ENV"
+          echo "ORIGINAL_AUTHOR_MB22_FILE=$RUNNER_TEMP/original-role-c/MB22.json" >> "$GITHUB_ENV"
+      - name: MB21 actual issuer, source, teaching, negative cases
+        run: python -m unittest discover -s tests -p 'test_role_c_115_mb21_native_g5_20261114.py' -v
+      - name: MB22 actual issuer, source, teaching, negative cases (when second task committed)
+        shell: bash
+        run: |
+          if test -f tests/test_role_c_115_mb22_native_g5_20261114.py; then
+            python -m unittest discover -s tests -p 'test_role_c_115_mb22_native_g5_20261114.py' -v
+          else
+            echo "MB22 not yet committed; MB21 single-QID gate only"
+          fi
+      - name: Explicit author-only; never trusted, approved, or released
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path('sudu/data/processed/115/review-evidence')
+          for n in (21,22):
+              p=base/f'115-00-MB-{n}-teaching-publisher-20261114.json'
+              if not p.exists():
+                  assert n==22, 'MB21 must exist'
+                  continue
+              d=json.loads(p.read_text(encoding='utf-8'))
+              assert d['sourceAuthorRole']=='C'
+              assert d['sourceAuthorSessionId'] is None
+              assert d['reviewerSessionId'] is None
+              assert d['independentAiContentReviewed'] is False
+              assert d['studentReleaseApproved'] is False
+              assert d['status']=='AUTHOR_CONTENT_ISSUED_IN_QA_NOT_E_TRUST_NOT_UI_NOT_READY'
+              print(f'Q{n}: author G5 ONLY / NOT READY / NO LIVE')
+          PY

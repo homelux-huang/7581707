@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "createdAtDate": "2026-10-23",
+  "source": "archived original official PDF page render with recorded PDF and page SHA",
+  "method": "lossless deterministic pixel-only crop/composite; non-question fragments removed",
+  "directVisualReviewStatus": "PENDING",
+  "newImageQaPass": 0,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "items": [
+    {
+      "questionId": "114-00-C-01",
+      "year": 114,
+      "source": "sudu/data/original/114/00-C/p002-f7c8a4b732-v2-w1400-q66.webp",
+      "sourcePage": 2,
+      "sourcePageSha256": "a025b08d693c5ddcf71e53007da12008c31f15fe295ff65b16165de384a01f35",
+      "officialPdfSha256Recorded": "f7c8a4b732136f5f2750fe840bd58cef09c142701e25f80686073bcecba0df74",
+      "oldCrop": [
+        90,
+        199,
+        1310,
+        329
+      ],
+      "oldWebp": "sudu/data/processed/114/webp-v1/00-C/114-00-C-01.webp",
+      "oldWebpSha256": "60653e0190fa55af6d1fdb3f2a942ee128e673744b711c0b70b58f2c92651c6e",
+      "candidatePath": "sudu/data/processed/114/qa-drafts/webp-v2/00-C/114-00-C-01.webp",
+      "candidateSha256": "6d00f426d60a7b3a61130c756d0542e48753c51d92752aa6e93061a1be6a7d69",
+      "candidateSizePixels": [
+        1220,
+        119
+      ],
+      "cropBoundsSourcePixels": [
+        90,
+        210,
+        1310,
+        329
+      ],
+      "cropMethod": "crop",
+      "reason": "Old crop contains preceding question-section text fragment.",
+      "imageQaStatus": "PENDING_DIRECT_VISUAL_REVIEW",
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-16",
+      "year": 115,
+      "source": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+      "sourcePage": 6,
+      "sourcePageSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+      "officialPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "oldCrop": [
+        90,
+        1060,
+        1310,
+        1303
+      ],
+      "oldWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-16.webp",
+      "oldWebpSha256": "a09e042e11b0c1927bf8d0ff63ccc617230c0bf9d3011407c31fa0940f033400",
+      "candidatePath": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-16.webp",
+      "candidateSha256": "cc874e5f44e18ff05e7bb121e346eb4d1430a42dd8b061ad97b27f8339d5bff8",
+      "candidateSizePixels": [
+        1220,
+        270
+      ],
+      "cropBoundsSourcePixels": [
+        90,
+        1060,
+        1310,
+        1330
+      ],
+      "cropMethod": "composite_wheel_only_extension",
+      "reason": "Bottom of Q16 social-emotional wheel clipped in v2; neighbor Q17 starts before wheel ends.",
+      "imageQaStatus": "PENDING_DIRECT_VISUAL_REVIEW",
+      "answerVerified": false,
+      "integrationReady": false
+    },
+    {
+      "questionId": "115-00-C-17",
+      "year": 115,
+      "source": "sudu/data/original/115/00-C/p006-6b454d6590-v2-w1400-q66.webp",
+      "sourcePage": 6,
+      "sourcePageSha256": "8b6c781a75a864b7220f686532225171b2f53346c68f5131470371f82731e6c6",
+      "officialPdfSha256Recorded": "6b454d65902f2fb326b1ac1ae28aa44749532e30369ba2c599db97d20a542135",
+      "oldCrop": [
+        90,
+        1302,
+        1310,
+        1432
+      ],
+      "oldWebp": "sudu/data/processed/115/webp-v2/00-C/115-00-C-17.webp",
+      "oldWebpSha256": "c195e20b574658c0e9ee0c4e10622c15f04f16f3376d8df09146b363eaef8350",
+      "candidatePath": "sudu/data/processed/115/qa-drafts/webp-v3/00-C/115-00-C-17.webp",
+      "candidateSha256": "074a9f792c7b011f59606394ea2c521c2190143bce9d013fdf79b8703dbdad8a",
+      "candidateSizePixels": [
+        1220,
+        130
+      ],
+      "cropBoundsSourcePixels": [
+        90,
+        1302,
+        1310,
+        1432
+      ],
+      "cropMethod": "crop_and_mask_previous_wheel_only",
+      "reason": "Previous Q16 wheel arc contaminates top-right of Q17 image.",
+      "imageQaStatus": "PENDING_DIRECT_VISUAL_REVIEW",
+      "answerVerified": false,
+      "integrationReady": false
+    }
+  ],
+  "note": "Only immutable draft candidates. Verify each candidate against official original page; do not auto-promote."
+}

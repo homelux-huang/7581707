@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "questionId": "107-00-E-37",
+  "year": 107,
+  "paperCode": "00-E",
+  "officialQuestionPdfSha256FromRepository": "6fa77b536c5a991af6ad12f33427d362614109fad4f7d701ec25bc453dec7440",
+  "officialSourcePdfFreshlyRedownloaded": false,
+  "sourceOriginalPageWebp": "sudu/data/original/107/00-E/p007-6fa77b536c-v2-w1400-q66.webp",
+  "sourceOriginalPageSha256": "89997a38a422f25589afd9632ad558f76f44684c2c0aa75c3f15429020ac8fac",
+  "sourceGitBlob": "dacba885baae37a8290476026df3a2cf0eda2be3",
+  "historicalLegacyCrop": "sudu/data/processed/107/webp-v1/00-E/107-00-E-37.webp",
+  "historicalLegacySha256": "f56de328933f3387afbe87c2d6f0f53731d52726c486a7d559a4812089f5a16b",
+  "legacyCropPixels": [
+    90,
+    372,
+    1310,
+    1160
+  ],
+  "legacyObservedProblem": "Original Q37 WebP v1 included the next Q38-41 social-robots reading heading and article; Q37 D option was contaminated in historical legacy PDF extraction.",
+  "candidateWebp": "sudu/data/processed/107/qa-drafts/webp-v2/00-E/107-00-E-37.webp",
+  "candidateCropPixels": [
+    90,
+    372,
+    1310,
+    568
+  ],
+  "candidateSha256": "7d6e7f7203012b161b7e2598a6f56e6a4c271fe91cc1fedaff28d669b63557a6",
+  "candidatePixelDifferenceZero": true,
+  "candidateReviewStatus": "DRAFT_AWAITING_NEW_INDIVIDUAL_VISUAL_G1",
+  "independentHumanReview": false,
+  "questionTextG2StillPending": true,
+  "officialFinalAnswerG3StillPending": true,
+  "released": false,
+  "releaseAllowed": false,
+  "integrationReady": false,
+  "nextAction": "Directly open new candidate against source page: verify Q37 title/A-D, no Q38 heading/passage, SHA; only then apply G1 and correct OCR D."
+}

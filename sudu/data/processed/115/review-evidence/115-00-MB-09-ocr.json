@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "year": 115,
+  "questionId": "115-00-MB-09",
+  "reviewer": "GPT-6 (AI image and teaching QA; human review not claimed)",
+  "reviewedAt": "2026-10-23",
+  "questionRevision": "354a437dac1b26c8eb290262948c72eee72b649a685e8bf448ee59b3df58b9e7",
+  "webpSha256": "f2c0430dfea667e165f7961b7318e0cde0d28f3f2007fccc4aed4e4ac6ca2b10",
+  "question": "已知直線 L₁：4x+(a+5)y−10=0 通過點(a,1)，直線 L₂ 的斜率為 −1/2。若直線 L₃ 也通過點(a,1)，且與直線 L₂ 垂直，則 L₃ 的直線方程式為何？",
+  "options": [
+    "2x−y−1=0",
+    "2x+y+3=0",
+    "x−2y+1=0",
+    "x+2y−3=0"
+  ],
+  "visualTextCompared": true,
+  "findings": "直接目視已 QA 單題 WebP，比對題號、完整題幹、四個選項、數學符號與負號；無鄰題混入；此處為人工式目視 QA，不重新執行 OCR。"
+}
