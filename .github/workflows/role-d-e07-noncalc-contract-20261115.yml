@@ -1,0 +1,41 @@
+name: ROLE D E07 native noncalculation contract PRECHECK ONLY
+on:
+  push:
+    branches:
+      - qa/role-d-e07-noncalc-contract-20261115
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  e07_real_source_g5_native_contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 97a68061c863c5b609586915deb0cb04f8f56af0
+          path: _e07_source
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/questions.json
+            sudu/data/processed/114/webp-manifest.json
+            sudu/data/processed/114/webp/00-E/
+            sudu/data/processed/114/review-evidence/114-00-E-07-ocr-publisher-20261115.json
+            sudu/data/processed/114/review-evidence/114-00-E-07-official-publisher-20261115.json
+      - uses: actions/checkout@v4
+        with:
+          ref: 16c1dc1a22cfe62e3132d38a97c9614f19e5e521
+          path: _e07_g5
+          persist-credentials: false
+          sparse-checkout: |
+            sudu/data/processed/114/review-evidence/114-00-E-07-teaching-publisher-20261115.json
+      - name: Run real E07 source + original G5 native serializer contract and negatives
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python -m tests.test_role_d_e07_noncalc_contract_20261115
+          git diff --exit-code
