@@ -61,7 +61,7 @@ class BridgeTests(unittest.TestCase):
   for flag in ('isolationVerified','firstAttemptVerified','requestContainsOnlyFrozenSource','noAutomaticRetry','g7ComparisonVerified'):g[flag]=True
   self.policy['trustedG6Receipts'][self.qid]=g
   for command in [('add','-A'),('commit','-qm','SYNTHETIC FIRST SOLVE ISSUER')]:subprocess.run(['git','-C',str(self.source),*command],check=True,stdout=subprocess.DEVNULL)
-  self.patches=[patch.object(b,'trusted_policy',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'policy_from_trusted_main',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'certified',return_value=(True,'SYNTHETIC_AUTHORITY_TEST_ONLY')),patch.object(b,'code_bindings',return_value={'SYNTHETIC_CODE':'d'*40})]
+  self.patches=[patch.object(gate,'_ai_registry_exactly_matches_protected_main_policy',return_value=True),patch.object(b,'trusted_policy',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'policy_from_trusted_main',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'certified',return_value=(True,'SYNTHETIC_AUTHORITY_TEST_ONLY')),patch.object(b,'code_bindings',return_value={'SYNTHETIC_CODE':'d'*40})]
   for x in self.patches:x.start();self.addCleanup(x.stop)
   def fake_build(output_dir=None):
    out=Path(output_dir);out.mkdir();b.put(out,'sudu/v4-115-multisubject-review-demo.html',b'SYNTHETIC UNIT UI NOT G8');b.put(out,'sudu/verified-questions-runtime.js',b'SYNTHETIC UNIT RUNTIME')
@@ -176,10 +176,11 @@ class BridgeTests(unittest.TestCase):
    b.verify_archive(self.report,entry,report)
 
  def test_noCLIflag_can_authorize_production_policy(self):
-  self.patches[0].stop()
+  self.patches[1].stop()
   try:
-   with patch.object(gate,'_ai_registry_exactly_matches_protected_main_policy',return_value=False):
+   from scripts import sudu_g8_archive
+   with patch.object(sudu_g8_archive,'current_policy',return_value=('f'*40,self.policy)), patch.object(gate,'_ai_registry_exactly_matches_protected_main_policy',return_value=False):
     with self.assertRaises(b.Hold):b.trusted_policy()
-  finally:self.patches[0].start()
+  finally:self.patches[1].start()
 
 if __name__=='__main__':unittest.main()
