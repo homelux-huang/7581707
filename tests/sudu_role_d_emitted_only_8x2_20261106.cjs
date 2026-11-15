@@ -194,6 +194,29 @@ async function formal(){
  // itself MUST bind testedTeachingDigest to canonical teach.content instead.
  // Validate every emitted teaching-facing field against the original
  // SHA-pinned authored object; public publisher intentionally omits QA metadata.
+ // Formal provenance is exact-byte bound, never derived from a UI screenshot.
+ // All hashes below are recomputed from the checked-out production code and
+ // native emitted JSON. An old UI result cannot survive a code/data change.
+ const sourceCommit=process.env.SUDU_D_SOURCE_COMMIT||'';
+ check(HEX40.test(sourceCommit)&&proof.sourceCommit===sourceCommit,
+  'formal evidence missing exact sourceCommit');
+ const codeBlobs={
+  publisherGitBlob:GIT('hash-object','scripts/sudu_verified_publish.py'),
+  htmlGitBlob:GIT('hash-object','sudu/v4-115-multisubject-review-demo.html'),
+  runtimeGitBlob:GIT('hash-object','sudu/verified-questions-runtime.js')
+ };
+ for(const [field,value] of Object.entries(codeBlobs))
+  check(HEX40.test(value)&&proof[field]===value,'formal '+field+' code bytes changed');
+ const emittedRelative='sudu/data/approved/'+year+'.json';
+ const emittedBytes=fs.readFileSync(path.join(ROOT,emittedRelative));
+ const emittedSha256=hash(emittedBytes);
+ check(proof.emittedApprovedSha256===emittedSha256&&
+       process.env.SUDU_D_EMITTED_SHA256===emittedSha256,
+  'formal approved JSON bytes differ from publisher-staging evidence');
+ report.provenance={sourceCommit,sourceRevision:expected.revision,
+  publisherGitBlob:codeBlobs.publisherGitBlob,htmlGitBlob:codeBlobs.htmlGitBlob,
+  runtimeGitBlob:codeBlobs.runtimeGitBlob,emittedApprovedSha256:emittedSha256,
+  testedTeachingDigest:expected.teaching,originalWebpSHA256:expected.image};
  const t=proof.teaching;
  for(const k of ['concept','extension','teacherSummary','elementarySummary','optionExplanations'])
   check(JSON.stringify(q[k])===JSON.stringify(t[k]),'emitted teaching content mismatch: '+k);
@@ -232,7 +255,9 @@ async function formal(){
     await page.waitForFunction(y=>document.body.dataset.verifiedReadyYear===String(y),year,{timeout:25000});
     const website=await page.request.get(SITE+'data/approved/'+year+'.json');
     assert(website.ok(),'emitted JSON HTTP failure');
-    const raw=await website.json();
+    const httpBytes=await website.body();
+    assert.equal(hash(httpBytes),emittedSha256,'HTTP response bytes changed from native publisher staging');
+    const raw=JSON.parse(httpBytes.toString('utf8'));
     assert.deepEqual(raw,load('sudu/data/approved/'+year+'.json'),'HTTP emitted approved JSON not exact local publisher artifact');
     const homeSubject=q.subject;
     await page.locator('#homeSubjectSel').selectOption(homeSubject);
@@ -286,7 +311,10 @@ async function formal(){
     await page.screenshot({path:path.join(OUT,screenshot),animations:'disabled'});
     const screenshotSha256=hash(fs.readFileSync(path.join(OUT,screenshot)));
     report.cases.push({qid:id,width,height,theme,screenshot,screenshotSha256,sourceRevision:expected.revision,
-     testedTeachingDigest:expected.teaching,imageSha256:expected.image,result:'PASS'});
+     testedTeachingDigest:expected.teaching,imageSha256:expected.image,
+     publisherGitBlob:codeBlobs.publisherGitBlob,htmlGitBlob:codeBlobs.htmlGitBlob,
+     runtimeGitBlob:codeBlobs.runtimeGitBlob,emittedApprovedSha256:emittedSha256,
+     sourceCommit,result:'PASS'});
    }catch(err){
     report.errors.push({qid:id,width,height,theme,error:String(err.stack||err),browserErrors:errs});
     try{await page.screenshot({path:path.join(OUT,label+'-FAIL.png')});}catch{}
