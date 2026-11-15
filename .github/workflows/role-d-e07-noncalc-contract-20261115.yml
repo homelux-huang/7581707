@@ -37,5 +37,5 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          python tests/test_role_d_e07_noncalc_contract_20261115.py
+          PYTHONPATH=. python tests/test_role_d_e07_noncalc_contract_20261115.py
           git diff --exit-code
