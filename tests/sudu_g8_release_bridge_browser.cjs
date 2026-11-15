@@ -49,7 +49,13 @@ async function main(){
     const wb=await page.request.get(SITE+q.image);assert(wb.ok());assert.equal(hash(await wb.body()),m.webpSha256);
     assert.equal(norm(await page.locator('#questionCard h1').innerText()),norm(q.question));assert.equal(await page.locator('#answerCard .opt').count(),4);
     for(let i=0;i<4;i++){const el=page.locator('#answerCard .opt').nth(i);assert.equal(await el.getAttribute('data-a'),'ABCD'[i]);assert.equal(norm(await el.locator('.opt-text').innerText()),norm(q.options[i]));}
-    await page.locator('#answerCard .opt[data-a="'+(q.answer==='A'?'B':'A')+'"]').click();await page.locator('#guideCard.show').waitFor();
+    const choose=async L=>{const button=page.locator('#answerCard .opt[data-a="'+L+'"]');if(width<=430)await button.tap();else await button.click();};
+    await choose(q.answer==='A'?'B':'A');await page.locator('#guideCard.show').waitFor();
+    assert.equal(await page.evaluate(()=>record(qnow()).status),'bad','wrong-answer interaction did not register');
+    assert.equal(await page.locator('#answerCard .opt.wrong').count(),1);
+    await choose(q.answer);
+    assert.equal(await page.evaluate(()=>record(qnow()).status),'ok','positive answer interaction did not register');
+    assert.equal(await page.locator('#answerCard .opt.wrong').count(),0);
     assert.equal(await page.locator('#answerCard .opt.correct').count(),1);assert.equal(await page.locator('#answerCard .opt.correct').getAttribute('data-a'),q.answer);assert.equal(await page.locator('#answerCard .option-detail').count(),4);
     if(q.highlights?.length)assert(await page.locator('#studyView .exam-highlight, #studyView mark, #studyView strong, #studyView b').count()>0,'highlight/strong missing');
     const details=norm(await page.locator('#answerCard').innerText());for(const L of 'ABCD')for(const field of ['teacher','elementary'])assert(details.includes(norm(q.optionExplanations[L][field])),'missing '+L+' '+field+' explanation');
@@ -57,7 +63,7 @@ async function main(){
     else{assert.equal(await page.locator('#guideCard .calculation-step').count(),0);assert.equal(await page.locator('#guideCard .calculation-first').count(),0);}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'horizontal overflow');assert.deepEqual(errors,[]);
     const screenshot=`${m.qid}-${width}x${height}-${theme}.png`;await page.screenshot({path:path.join(out,screenshot),animations:'disabled'});
-    report.cases.push({width,height,theme,result:'PASS',screenshot,screenshotSha256:hash(fs.readFileSync(path.join(out,screenshot))),stageManifestSha256:verified.stageManifestSha256,payloadSha256:m.payloadSha256});
+    report.cases.push({width,height,theme,result:'PASS',interaction:width<=430?'real-touch-tap':'mouse-click',wrongAndCorrectAnswerVerified:true,screenshot,screenshotSha256:hash(fs.readFileSync(path.join(out,screenshot))),stageManifestSha256:verified.stageManifestSha256,payloadSha256:m.payloadSha256});
    }catch(e){report.errors.push({width,height,theme,message:String(e.stack||e),browserErrors:errors});}
    finally{await ctx.close();save();}
   }
