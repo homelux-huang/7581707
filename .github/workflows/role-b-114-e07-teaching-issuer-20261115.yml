@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - teaching/role-b-e07-native-g5-20261115
+  pull_request:
+    branches:
+      - qa/114-115-official-visual-review
   workflow_dispatch:
 permissions:
   contents: read
