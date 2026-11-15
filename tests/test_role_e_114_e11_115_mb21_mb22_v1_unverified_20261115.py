@@ -46,7 +46,17 @@ class IndependentReceiptPreflight(unittest.TestCase):
 
     def test_real_material_bytes_and_fail_closed_v1(self):
         self.assertEqual(digest(NOTES.read_bytes()), NOTES_SHA)
-        policy = read_json(ROOT / "sudu/release-governance/independent-review-policy.json")
+        policy_path = ROOT / "sudu/release-governance/independent-review-policy.json"
+        if policy_path.exists():
+            policy = read_json(policy_path)
+        else:
+            # QA branch does not own trusted policy: fetch GitHub protected main
+            # read-only in CI, NEVER substitute an E-authored registry.
+            import subprocess
+            raw = subprocess.check_output([
+                "git", "show", "refs/remotes/origin/main:sudu/release-governance/independent-review-policy.json"
+            ], cwd=ROOT)
+            policy = json.loads(raw)
         self.assertEqual(policy["reviewMode"], "DISTINCT_AI_CONTENT_RECEIPT_V1")
         self.assertEqual(policy["trustedAiReviewReceipts"], {})
         for (qid,year,paper,webpdir,g2date,g5date,webpsha,revision,tdigest,g2sha,g3sha,g5sha,answer) in CASES:
