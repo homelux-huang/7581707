@@ -74,16 +74,15 @@ jobs:
             --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
             --qid 115-00-MB-25 \
             --teaching-sha a860b08a6f5b76fe1331dc4204a46a3135e511449d9b6004cc4f99be020e4d32
-          # PR203 is in protected main: MB23 original 2x3 table revision must
-          # now succeed in this PRIVATE technical-only serializer precheck.
-          python -m scripts.sudu_g8_private_precheck_20261114 \\
-            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \\
-            --qid 115-00-MB-23 \\
+          # MB23 requires the original table-aware source revision after PR203.
+          python -m scripts.sudu_g8_private_precheck_20261114 \
+            --source "$SRC" --dest "$PRIVATE" --source-sha "$SOURCE_QA_SHA" \
+            --qid 115-00-MB-23 \
             --teaching-sha 13fa628423177e2cf0ee5976d9dc19fc43e6112a0017f62f216fd12e305cc7c6
           PREVIEW_ROOT="$PRIVATE" python - <<'PY'
           import hashlib, json, os, pathlib
           root=pathlib.Path(os.environ["PREVIEW_ROOT"])
-          expected={"114-00-E-11", "115-00-MB-20", "115-00-MB-21", "115-00-MB-22", "115-00-MB-24", "115-00-MB-25"}
+          expected={"114-00-E-11", "115-00-MB-20", "115-00-MB-21", "115-00-MB-22", "115-00-MB-23", "115-00-MB-24", "115-00-MB-25"}
           files=list(root.glob("*.technical-precheck.json"))
           assert {p.name.replace(".technical-precheck.json", "") for p in files}==expected
           for path in files:
