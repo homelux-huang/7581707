@@ -227,6 +227,13 @@ def verify_owned(entry):
             and proof.get('receipt') == clean, 'owner-pinned capture binding')
     captured = gate._time(proof.get('capturedAt'))
     metadata_valid(clean, proof['actionsAtCapture'])
+    # Custody does not replace genuine execution provenance. GitHub must still
+    # confirm the original successful run/job; only expiring artifact storage
+    # is substituted by the independently owner-pinned original Git blobs.
+    for kind, route, field in [('run', 'runs', 'runId'), ('job', 'jobs', 'jobId')]:
+        actual = bridge().github('/actions/' + route + '/' + str(clean[field]))
+        require(all(actual.get(key) == value for key, value in proof['actionsAtCapture'][kind].items()),
+                'actual original ' + kind + ' differs from owner-pinned capture')
     artifact = proof['actionsAtCapture']['artifact']
     require(gate._time(artifact.get('created_at')) <= captured < gate._time(artifact.get('expires_at'))
             and captured <= datetime.now(timezone.utc), 'capture chronology/expiry')

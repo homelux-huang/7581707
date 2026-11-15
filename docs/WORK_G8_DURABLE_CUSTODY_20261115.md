@@ -20,8 +20,8 @@
    - 同路徑 `original.zip`
    - 對應 owner 審查後的 protected `trustedG8Receipts[QID].durableArchive`。
 6. `capture.json` 保留必要的、capture 時從 GitHub 查得的 run/job/artifact metadata，以及完整原 G8 receipt 綁定。排除 GitHub 個人資料、URL/token、模型 request/response、API Key、原始私有 G6 及整個 staging 網站。
-7. 後續 native/promotion 核驗時，必須重新證明目前受保護政策仍保有完全相同的 receipt，並沿 protected main commit 的 Git tree 逐層確認 capture/ZIP 的 regular-file GitBlob。重新核對原 ZIP SHA256、capture 時序、原 run/job/未到期 artifact metadata，以及 report、所有PNG／16矩陣／codeCommit／HTML/runtime/serializer bindings。
-8. 因為原始 bytes 已在 owner 核准的 protected Git 歷史中保存，Actions artifact 後來到期不撤銷原始測試；owner 移除或改變 receipt、GitBlob 變動、來源／教學／程式不符、GitHub protected-main 讀取失敗，仍會 HOLD。
+7. 後續 native/promotion 核驗時，**仍向 GitHub 即時核對原成功 run/job 與 capture 完全一致**，不能僅憑 snapshot 捏造執行；只有會到期的 artifact 儲存由受保護原始 GitBlob 替代。必須重新證明目前受保護政策仍保有完全相同的 receipt，並沿 protected main commit 的 Git tree 逐層確認 capture/ZIP 的 regular-file GitBlob。重新核對原 ZIP SHA256、capture 時序、原 run/job/未到期 artifact metadata，以及 report、所有PNG／16矩陣／codeCommit／HTML/runtime/serializer bindings。
+8. 因為原始 bytes 已在 owner 核准的 protected Git 歷史中保存，且原成功 run/job 仍可即時核驗，Actions artifact 後來到期不撤銷原始測試；owner 移除或改變 receipt、GitBlob 變動、來源／教學／程式不符、GitHub protected-main 讀取失敗，仍會 HOLD。
 
 **不以任何本機 snapshot 自動授權。** Capture 候選可能被修改，owner 與獨立審查必須在 artifact 仍可核對時，對實際 API、ZIP、manifest、PR exact head 作審查。受保護 main 中的精確 owner pin 是長期可信根，不是操作者自行寫的 PASS。若未完成及時 capture／獨立核驗，artifact 已到期，不能事後偽造 metadata；必須重新執行合格的正式 G8。
 

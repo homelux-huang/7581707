@@ -53,7 +53,7 @@ class ArchiveTests(unittest.TestCase):
             return raw
         with patch.object(a, 'current_policy', return_value=('a' * 40, owner_policy)), \
              patch.object(a, 'blob_at', side_effect=blob), \
-             patch.object(b, 'github', side_effect=AssertionError('expired Actions must not be queried')):
+             patch.object(b, 'github', side_effect=lambda url: copy.deepcopy(self.records['run' if '/runs/' in url else 'job']) if '/artifacts/' not in url else (_ for _ in ()).throw(AssertionError('expired artifact must not be queried'))):
             return a.verify_owned(self.owner_entry)
 
     def test_capture_is_only_candidate_and_never_grants_trust(self):
@@ -91,6 +91,9 @@ class ArchiveTests(unittest.TestCase):
         result = self.validate_owner()
         self.assertEqual(result['archiveSha256'], self.entry['artifactSha256'])
         self.assertEqual(result['runId'], 123)
+        self.records['run']['head_sha'] = 'f' * 40
+        with self.assertRaisesRegex(b.Hold, 'actual original run'):
+            self.validate_owner()
 
     def test_durable_original_drives_real_native_promotion_without_expired_actions(self):
         self.owner()
@@ -107,7 +110,7 @@ class ArchiveTests(unittest.TestCase):
             return raw
         with patch.object(a, 'current_policy', return_value=('a' * 40, f.policy)), \
              patch.object(a, 'blob_at', side_effect=blob), \
-             patch.object(b, 'github', side_effect=AssertionError('expired Actions must not be queried')):
+             patch.object(b, 'github', side_effect=lambda url: copy.deepcopy(self.records['run' if '/runs/' in url else 'job']) if '/artifacts/' not in url else (_ for _ in ()).throw(AssertionError('expired artifact must not be queried'))):
             out = f.root / 'sudu-g8-durable-promotion'
             result = b.promote(f.source, f.stage, f.private, f.report, out)
         self.assertEqual(result['status'], 'PROMOTION_CANDIDATE_NOT_DEPLOYED')
