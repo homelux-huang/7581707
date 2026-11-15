@@ -1,0 +1,55 @@
+name: MASTER E12 one authentic external provider first-turn attempt (NOT TRUST OR RELEASE)
+on:
+  push:
+    branches:
+      - coord/master-e12-external-github-models-first-solve-20261110
+    paths:
+      - .github/workflows/master-e12-github-models-first-solve-20261110.yml
+
+permissions:
+  contents: read
+  models: read
+
+concurrency:
+  group: master-e12-github-models-one-first-attempt-20261110
+  cancel-in-progress: false
+
+jobs:
+  first_provider_attempt:
+    if: >-
+      github.event_name == 'push' &&
+      github.event.head_commit.message == 'ci(master): trigger one-shot E12 provider model capture'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch only G2 answer-free question and provider caller
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            docs/evidence-inputs/114-00-E-12-G6-answer-free-G2-first-input-20261110.txt
+            scripts/master_e12_github_models_first_solve_20261110.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: One stateless provider inference with source-frozen answer-free G2
+        env:
+          GITHUB_MODELS_TOKEN: ${{ github.token }}
+          E12_EVIDENCE_DIR: _e12_first_solver_evidence
+        run: |
+          python scripts/master_e12_github_models_first_solve_20261110.py first
+      - name: Retrieve published official answer only after raw first response saved
+        env:
+          E12_EVIDENCE_DIR: _e12_first_solver_evidence
+        run: |
+          python scripts/master_e12_github_models_first_solve_20261110.py reveal-after
+      - name: Archive original raw exchange and timestamp observations, including errors
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: E12-G6-first-provider-raw-NOT-TRUST-${{ github.run_id }}
+          path: _e12_first_solver_evidence/
+          if-no-files-found: error
+          retention-days: 30
