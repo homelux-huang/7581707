@@ -97,6 +97,25 @@ class BridgeTests(unittest.TestCase):
     try:
      with self.assertRaises(b.Hold):b.validate_stage(self.source,self.stage,self.private)
     finally:f.write_bytes(raw)
+ def test_served_renderer_or_payload_with_resealed_manifest_is_rejected(self):
+  self.stage_it();manifest_path=self.stage/'stage.json';original_manifest=manifest_path.read_bytes()
+  for rel in ['sudu/verified-questions-runtime.js','sudu/v4-115-multisubject-review-demo.html','sudu/data/approved/115.json']:
+   with self.subTest(rel=rel):
+    f=self.stage/'site'/rel;original=f.read_bytes();m=json.loads(original_manifest)
+    if rel.endswith('.json'):
+     payload=json.loads(original);payload['SYNTHETIC_UNTRUSTED_EXTRA']='resealed';f.write_bytes(b.serialized(payload));m['payloadSha256']=b.sha(f.read_bytes())
+    else:f.write_bytes(b'SYNTHETIC SUBSTITUTED RENDERER, NOT THE COMMITTED BUILD')
+    m['siteFiles'][rel]=b.sha(f.read_bytes());manifest_path.write_bytes(b.serialized(m))
+    try:
+     with self.assertRaisesRegex(b.Hold,'reproducible native'):b.validate_stage(self.source,self.stage,self.private)
+    finally:f.write_bytes(original);manifest_path.write_bytes(original_manifest)
+  # A copied payload and a resealed path/map must not change the serializer contract.
+  m=json.loads(original_manifest);rel='sudu/data/approved/UNTRUSTED_COPY.json';target=self.stage/'site'/rel
+  target.write_bytes((self.stage/'site'/m['payloadPath']).read_bytes());m['payloadPath']=rel;m['siteFiles'][rel]=b.sha(target.read_bytes());manifest_path.write_bytes(b.serialized(m))
+  try:
+   with self.assertRaisesRegex(b.Hold,'reproducible native'):b.validate_stage(self.source,self.stage,self.private)
+  finally:target.unlink();manifest_path.write_bytes(original_manifest)
+
  def test_source_code_and_authorization_changes_invalidate_stage(self):
   self.stage_it()
   with patch.object(b,'code_bindings',return_value={'SYNTHETIC_CODE':'e'*40}):
