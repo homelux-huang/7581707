@@ -92,6 +92,29 @@ class ArchiveTests(unittest.TestCase):
         self.assertEqual(result['archiveSha256'], self.entry['artifactSha256'])
         self.assertEqual(result['runId'], 123)
 
+    def test_durable_original_drives_real_native_promotion_without_expired_actions(self):
+        self.owner()
+        proof = json.loads(self.captured.read_bytes())
+        proof['capturedAt'] = '2020-01-02T00:00:00Z'
+        proof['actionsAtCapture']['artifact']['expires_at'] = '2020-01-03T00:00:00Z'
+        self.captured.write_bytes(b.serialized(proof))
+        self.spec['captureGitBlobSha'] = gate.blob_oid(self.captured.read_bytes())
+        f = self.fixture
+        f.policy['trustedG8Receipts'][f.qid] = self.owner_entry
+        def blob(head, rel, expected):
+            raw = (self.dest / rel).read_bytes()
+            b.require(gate.blob_oid(raw) == expected, 'SYNTHETIC pinned blob changed')
+            return raw
+        with patch.object(a, 'current_policy', return_value=('a' * 40, f.policy)), \
+             patch.object(a, 'blob_at', side_effect=blob), \
+             patch.object(b, 'github', side_effect=AssertionError('expired Actions must not be queried')):
+            out = f.root / 'sudu-g8-durable-promotion'
+            result = b.promote(f.source, f.stage, f.private, f.report, out)
+        self.assertEqual(result['status'], 'PROMOTION_CANDIDATE_NOT_DEPLOYED')
+        self.assertEqual((out / 'sudu/data/approved/115.json').read_bytes(),
+                         (f.stage / 'site/sudu/data/approved/115.json').read_bytes())
+        self.assertFalse((f.source / 'sudu/data/approved').exists())
+
     def test_owner_absence_revocation_or_changed_receipt_is_rejected(self):
         self.owner()
         for entries in [{}, {self.fixture.qid: {**self.owner_entry, 'reportSha256': '0' * 64}}]:
