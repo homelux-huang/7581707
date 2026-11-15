@@ -4,6 +4,7 @@ on:
     branches:
       - qa/role-d-emitted-only-preflight-20261106
       - qa/role-d-mb20-emitter-coverage-20261114
+      - qa/role-d-formal-bytes-proof-20261115
   workflow_dispatch:
 permissions:
   contents: read
