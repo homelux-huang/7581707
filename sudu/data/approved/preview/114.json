@@ -1,6 +1,6 @@
 {
   "expected": 205,
-  "imagePreviewCount": 9,
+  "imagePreviewCount": 12,
   "questions": [
     {
       "canonicalId": "114-00-C-02",
@@ -91,9 +91,39 @@
       "sharedImages": [],
       "subject": "國文",
       "year": 114
+    },
+    {
+      "canonicalId": "114-00-E-07",
+      "image": "data/approved/webp/114/114-00-E-07.webp",
+      "imageSha256": "0d1a3281ddbd71d4f2f4778711306861b73410132d8eb5f792a077c75af0fffc",
+      "questionNumber": 7,
+      "reviewStage": "image_qa_pass_only",
+      "sharedImages": [],
+      "subject": "英文",
+      "year": 114
+    },
+    {
+      "canonicalId": "114-00-E-11",
+      "image": "data/approved/webp/114/114-00-E-11.webp",
+      "imageSha256": "ae29a18258d0939179abb3acd16aad183d21e1b1dbbfa6f2a5c0f6fd188a1da0",
+      "questionNumber": 11,
+      "reviewStage": "image_qa_pass_only",
+      "sharedImages": [],
+      "subject": "英文",
+      "year": 114
+    },
+    {
+      "canonicalId": "114-00-E-12",
+      "image": "data/approved/webp/114/114-00-E-12.webp",
+      "imageSha256": "99363268828d9efa01c24952dccbd392f15ba180e8a6bfc332268b9d4c705f60",
+      "questionNumber": 12,
+      "reviewStage": "image_qa_pass_only",
+      "sharedImages": [],
+      "subject": "英文",
+      "year": 114
     }
   ],
   "schemaVersion": 1,
-  "sourceSha": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+  "sourceSha": "3d7645b9b8c83bd09348115118920501823b3c27",
   "year": 114
 }
