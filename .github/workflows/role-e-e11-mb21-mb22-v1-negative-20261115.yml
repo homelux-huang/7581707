@@ -1,0 +1,23 @@
+name: ROLE E E11 MB21 MB22 V1 negative evidence preflight (NO RELEASE)
+on:
+  push:
+    branches:
+      - review/role-e-e11-mb21-mb22-v1-current-20261115
+  pull_request:
+    paths:
+      - 'sudu/data/processed/**/review-evidence/role-e-20261115/**'
+      - 'tests/test_role_e_114_e11_115_mb21_mb22_v1_unverified_20261115.py'
+      - '.github/workflows/role-e-e11-mb21-mb22-v1-negative-20261115.yml'
+permissions:
+  contents: read
+jobs:
+  exact_bytes_and_negative_trust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Fetch protected main policy only as read-only trust input
+        run: git fetch --no-tags --depth=1 origin main:refs/remotes/origin/main
+      - name: Verify current source and teaching exact hashes, keep formal V1 untrusted
+        run: python -m unittest discover -s tests -p 'test_role_e_114_e11_115_mb21_mb22_v1_unverified_20261115.py' -v
