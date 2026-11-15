@@ -192,7 +192,7 @@ def selftest(sources):
         expect_failure(lambda: validate_output(out, sources))
         img.write_bytes(image)
         invalid = dict(sources["115-00-MB-23"])
-        require(b"行程" in invalid["question_bytes"], "MB23 2x3 table missing")
+        require("行程".encode("utf-8") in invalid["question_bytes"], "MB23 2x3 table missing")
         require(b"\\u" not in invalid["question_bytes"], "MB23 escaped Unicode in prompt")
         validate_output(out, sources)
     print("PASS source banks 205x2; nine exact G2/image pins; MB20 v5; MB23 2x3; "
