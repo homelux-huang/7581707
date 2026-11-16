@@ -2076,9 +2076,9 @@
       ],
       "answer": "D",
       "answerMatched": true,
-      "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "answerVerified": true,
+      "questionVerified": true,
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-08.webp",
@@ -2098,9 +2098,28 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "textQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "textQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-08-ocr-publisher-20261116.json",
+        "evidenceSha256": "79a3aa5be9598d249f3b11610e08bd89c9cafe5bb98ff2d1fb7424016c6eb4ff",
+        "questionRevision": "09a56002bd224815a9d413ad9a5db3565af0837e16c58ec031bd851f17d69b6c",
+        "sourceImageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-08-official-publisher-20261116.json",
+        "evidenceSha256": "25c95ab683757374e3b60ee6c221b084742e43b1e1ed3028c4a924f16b1cba9e",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
@@ -2118,9 +2137,9 @@
       ],
       "answer": "D",
       "answerMatched": true,
-      "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "answerVerified": true,
+      "questionVerified": true,
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-09.webp",
@@ -2140,9 +2159,28 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "textQaStatus": "PASS",
+      "officialFinalAnswer": "D",
+      "officialCorrectionChecked": true,
+      "textQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-09-ocr-publisher-20261116.json",
+        "evidenceSha256": "02398a74d539b71319c0123dce17dfeca818538a121504cbee0e9c36ce434d59",
+        "questionRevision": "0346c84990c84812b9705adcfab7bb6d51877dce1e07c7ba4cc3e74797583cdd",
+        "sourceImageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-09-official-publisher-20261116.json",
+        "evidenceSha256": "5db491204f46b998d6b1a63be6b12a487a561b9939a96566ca51daa02d35b545",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
@@ -2156,22 +2194,20 @@
         "bring about",
         "carry on",
         "give up",
-        "run into\n\n\n\n\n\n\n-2-\n\n114 年四技                                              第3 頁\n英文 共同科目                                      共 12 頁   公告試題僅供參考\n\nⅡ. 對話題：第11 至20 題，請依對話內容選出一個最適合的答案，使其成為有意義\n     的對話。"
+        "run into"
       ],
       "answer": "C",
       "answerMatched": true,
-      "answerVerified": false,
-      "questionVerified": false,
-      "reviewStatus": "needs_review",
+      "answerVerified": true,
+      "questionVerified": true,
+      "reviewStatus": "SOURCE_VERIFIED_PENDING_INDEPENDENT_AI_AND_EMITTED_UI",
       "sharedMaterialIds": [],
       "assets": {
         "singleQuestionWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-10.webp",
         "sharedMaterialIds": [],
         "imageQaEvidence": "sudu/data/processed/114/QA_114_EN_Q06_Q20_SHA_BOUND_DIRECT_VISUAL_20261023.json"
       },
-      "issues": [
-        "last_on_page_check_possible_continuation_or_footer"
-      ],
+      "issues": [],
       "sourcePage": 2,
       "questionProvenance": {
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUucGRm",
@@ -2184,9 +2220,28 @@
         "officialPdf": "https://web1.tcte.edu.tw/EXAM/114_4y/downloader.php?obj=MTE0LTR5LTAwLWUtc3RhbmRhcmQucGRm",
         "officialPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
         "extractMethod": "pymupdf_official_pdf_text",
-        "independentVisualVerification": false
+        "independentVisualVerification": true
       },
-      "imageQaStatus": "PASS"
+      "imageQaStatus": "PASS",
+      "textQaStatus": "PASS",
+      "officialFinalAnswer": "C",
+      "officialCorrectionChecked": true,
+      "textQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-10-ocr-publisher-20261116.json",
+        "evidenceSha256": "aff492acb9b6d1a48a0384911769966cc166573549ed32d3479c40d0e3d2640c",
+        "questionRevision": "820bb1292dbab9ea2113316dec2ab67d795520742f140dea9936b5e47915025f",
+        "sourceImageSha256": "fd05e4a3f87f69bbd0d0f2a963400342da9752ec8bbef0ef3b26b59e621ae002"
+      },
+      "officialFinalQaEvidence": {
+        "reviewer": "ROLE A Work source inspector; not independent ROLE E",
+        "reviewedAt": "2026-11-16",
+        "evidencePath": "sudu/data/processed/114/review-evidence/114-00-E-10-official-publisher-20261116.json",
+        "evidenceSha256": "486353f47a57f4529baeb97391927bfb2f22051e29b32b2bc8ac9ed264f93a6b",
+        "answerPdfSha256": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+        "finalCorrectionsReviewed": true
+      }
     },
     {
       "schemaVersion": 1,
