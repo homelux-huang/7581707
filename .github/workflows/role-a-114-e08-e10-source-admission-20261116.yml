@@ -1,0 +1,66 @@
+name: ROLE A 114 E08-E10 original PDFs native source and SQLite (NO RELEASE)
+on:
+  push:
+    branches: [source/work-114-e08-e10-admission-20261116]
+  pull_request:
+    branches: [qa/114-115-official-visual-review]
+    paths:
+      - scripts/role_a_114_e08_e10_source_admission_20261116.py
+      - tests/test_role_a_114_e08_e10_source_admission_20261116.py
+      - .github/workflows/role-a-114-e08-e10-source-admission-20261116.yml
+permissions:
+  contents: read
+jobs:
+  native_e08-e10_source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            tests
+            sudu/data/processed/114
+            sudu/data/processed/115
+            sudu/data/original/114/00-E
+            sudu/data/original/114/00-E-answers
+      - uses: actions/checkout@v4
+        with:
+          ref: ceda0a0248cb7dc99941758e9e16582e463516ca
+          path: _publisher_main
+          persist-credentials: false
+          sparse-checkout: scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -q pillow pymupdf
+      - name: Download and SHA verify original three official PDFs
+        env:
+          E0810_PDF_DIR: ${{ runner.temp }}/e08-e10-official-pdfs
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request,hashlib
+          from pathlib import Path
+          from scripts.role_a_114_e08_e10_source_admission_20261116 import PDFS
+          r=Path(os.environ['E0810_PDF_DIR']);r.mkdir()
+          b=Path('sudu/data/processed/114')
+          q=next(q for q in json.loads((b/'questions.json').read_text())['questions'] if q['questionId']=='114-00-E-08')
+          status=json.loads((b/'official-confirmation-status.json').read_text())['confirmations']['00-E']
+          urls={'question':q['questionProvenance']['officialPdf'],'answer':q['answerProvenance']['officialPdf'],'notice':status['pdfSourceUrl']}
+          for name,url in urls.items():
+              raw=urllib.request.urlopen(url,timeout=60).read()
+              assert hashlib.sha256(raw).hexdigest()==PDFS[name],name
+              (r/(name+'.pdf')).write_bytes(raw)
+          PY
+      - name: Native source and ten meaningful positive negative tests
+        env:
+          PUBLISHER_CHECKER_PATH: ${{ github.workspace }}/_publisher_main/scripts/sudu_verified_publish.py
+          E0810_FROZEN_SOURCE_ADMISSION: '1'
+          E0810_PDF_DIR: ${{ runner.temp }}/e08-e10-official-pdfs
+        run: python -m unittest discover -s tests -p 'test_role_a_114_e08_e10_source_admission_20261116.py' -v
+      - name: Source evidence only and no working tree changes
+        run: git diff --exit-code
