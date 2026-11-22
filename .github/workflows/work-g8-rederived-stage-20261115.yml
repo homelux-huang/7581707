@@ -1,9 +1,9 @@
 name: Work rederived G8 stage reseal rejection (NO RELEASE)
 on:
   push:
-    branches: [fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115]
+    branches: [fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115, fix/work-g8-immutable-build-inputs-20261122]
   pull_request:
-    branches: [fix/work-g8-durable-archive-20261115, fix/work-g8-rederived-stage-20261115]
+    branches: [fix/work-g8-durable-archive-20261115, fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115]
 permissions:
   contents: read
   actions: read
@@ -29,21 +29,23 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_sudu*.py' -v
           node --check tests/sudu_g8_release_bridge_browser.cjs
-      - name: Actual clean committed public build twice; compare every emitted file
+      - name: Actual committed snapshot equals clean public build and repeats exactly
         run: |
           python - <<'PY'
           import hashlib,json,tempfile
           from pathlib import Path
-          from scripts import build
+          from scripts import build, sudu_g8_release_bridge as bridge
           def files(root):
               return {p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file()}
           with tempfile.TemporaryDirectory(prefix='sudu-g8-determinism-') as raw:
-              root=Path(raw);a=root/'first';b=root/'second'
-              build.build(output_dir=a);build.build(output_dir=b)
-              first,second=files(a),files(b)
-              assert first and first==second, 'Public build nondeterministic: formal staging must HOLD'
+              root=Path(raw);a=root/'clean';b=root/'committed-first';c=root/'committed-second'
+              commit=bridge.git(bridge.ROOT,'rev-parse','HEAD')
+              build.build(output_dir=a,build_revision=commit)
+              bridge.build_committed_site(commit,b);bridge.build_committed_site(commit,c)
+              first,second,third=files(a),files(b),files(c)
+              assert first and first==second==third, 'Committed build differs or is nondeterministic: formal staging must HOLD'
               digest=hashlib.sha256(json.dumps(first,sort_keys=True,separators=(',',':')).encode()).hexdigest()
-              print('ACTUAL committed baseline build byte-equal:',len(first),'files; file-map SHA256',digest)
+              print('ACTUAL clean and two committed builds byte-equal:',len(first),'files; file-map SHA256',digest)
           PY
       - name: Actual current protected policy and source still preserve only historical five
         env:
