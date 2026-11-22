@@ -4,7 +4,7 @@ No CLI option can grant E/G6/G8 trust. Trust entries must already be vetted
 and pinned at protected main. Raw G6 transport evidence stays outside git.
 """
 from __future__ import annotations
-import argparse, copy, hashlib, json, os, re, shutil, sqlite3, subprocess, tempfile
+import argparse, copy, hashlib, io, json, os, re, shutil, sqlite3, subprocess, tarfile, tempfile
 from pathlib import Path
 from urllib.request import Request, urlopen
 from scripts import sudu_verified_publish as pub
@@ -66,6 +66,56 @@ def code_bindings():
   require(git(ROOT,'rev-parse','HEAD:'+p)==oid,'code must match exact committed Blob')
   result[p]=oid
  return result
+
+def build_committed_site(commit,output):
+ """Build only public inputs exported from the pinned Git object tree.
+
+ The worktree is not an authority for asset lists, public data or crop sources.
+ Copy only allowlisted public files and explicit crop dependencies; never
+ export private application data. Validate archive bytes against Git Blobs
+ because export attributes can otherwise transform or omit committed files.
+ """
+ from scripts import build
+ require(gate.HEX40.fullmatch(str(commit)) and git(ROOT,'rev-parse','HEAD')==commit,'build code commit changed')
+ raw=subprocess.check_output(['git','-C',str(ROOT),'ls-tree','-rz','--full-tree',commit],stderr=subprocess.DEVNULL)
+ entries={}
+ for record in raw.split(b'\0'):
+  if not record:continue
+  meta,path=record.split(b'\t',1);mode,kind,oid=meta.decode('ascii').split();rel=path.decode('utf-8')
+  entries[rel]=(mode,kind,oid)
+ selected={rel for rel in entries if build.included(Path(rel))}
+ crop='sudu/demo-question-crops.json'
+ def regular(rel):
+  require(isinstance(rel,str) and rel and not Path(rel).is_absolute() and '..' not in Path(rel).parts and '\\' not in rel,'unsafe committed build input')
+  require(rel in entries and entries[rel][0] in ('100644','100755') and entries[rel][1]=='blob','committed build input must be a regular file')
+ if crop in entries:
+  regular(crop);selected.add(crop)
+  config_raw=subprocess.check_output(['git','-C',str(ROOT),'cat-file','blob',entries[crop][2]],stderr=subprocess.DEVNULL)
+  require(gate.blob_oid(config_raw)==entries[crop][2],'committed crop configuration bytes')
+  config=json.loads(config_raw,object_pairs_hook=gate._no_duplicate_keys)
+  require(isinstance(config,dict) and isinstance(config.get('crops'),list),'committed crop configuration')
+  for item in config['crops']:
+   require(isinstance(item,dict),'committed crop entry')
+   source=item.get('source');target=item.get('output');regular(source)
+   require(Path(source).suffix.lower()=='.webp' and source.startswith('sudu/data/original/'),'official committed crop source required')
+   require(isinstance(target,str) and target.startswith('sudu/questions/115/') and '..' not in Path(target).parts and '\\' not in target and Path(target).suffix.lower()=='.webp','unsafe committed crop output')
+   selected.add(source)
+ require('index.html' in selected,'committed index template required')
+ for rel in selected:regular(rel)
+ archive=subprocess.check_output(['git','--literal-pathspecs','-C',str(ROOT),'archive','--format=tar',commit,'--',*sorted(selected)],stderr=subprocess.DEVNULL)
+ with tempfile.TemporaryDirectory(prefix='sudu-g8-committed-build-') as temporary:
+  snapshot=Path(temporary);seen=set()
+  with tarfile.open(fileobj=io.BytesIO(archive),mode='r:') as exported:
+   for member in exported:
+    if member.isdir():continue
+    rel=member.name
+    require(member.isfile() and rel in selected and rel not in seen,'unexpected committed archive member')
+    content=exported.extractfile(member).read()
+    require(gate.blob_oid(content)==entries[rel][2],'archive differs from committed build Blob')
+    put(snapshot,rel,content);seen.add(rel)
+  require(seen==selected,'committed build input omitted from archive')
+  build.build(output_dir=output,source_root=snapshot,build_revision=commit)
+
 def authorization(p,qid):
  e=(p.get('trustedAiReviewReceipts') or {}).get(qid);g=(p.get('trustedG6Receipts') or {}).get(qid)
  require(isinstance(e,dict) and isinstance(g,dict),'protected E and G6 receipts required')
@@ -166,8 +216,7 @@ def stage(source,qid,audit,private_evidence,dest):
   year=checked['year'];rel=f'sudu/data/approved/{year}.json';baseline=safe(native,rel).read_bytes();payload=json.loads(baseline)
   require(qid not in {x['canonicalId'] for x in payload['questions']},'already published QID is not a new admission')
   payload['questions'].append(checked['row']);order={x['questionId']:i for i,x in enumerate(pub.read(Path(source)/f'sudu/data/processed/{year}/questions.json')['questions'])};payload['questions'].sort(key=lambda x:order[x['canonicalId']]);payload['approvedCount']=len(payload['questions']);output=serialized(payload)
-  from scripts import build
-  build.build(output_dir=temp/'site');shutil.copytree(native/'sudu/data/approved',temp/'site/sudu/data/approved',dirs_exist_ok=True)
+  build_committed_site(checked['codeCommit'],temp/'site');shutil.copytree(native/'sudu/data/approved',temp/'site/sudu/data/approved',dirs_exist_ok=True)
   (temp/'site'/rel).write_bytes(output)
   progress=pub.read(temp/'site/sudu/data/approved/progress.json');progress['years'][str(year)]['approvedCount']=payload['approvedCount'];pub.dump(temp/'site/sudu/data/approved/progress.json',progress)
   for image_rel,name,h in checked['imageAssets']:

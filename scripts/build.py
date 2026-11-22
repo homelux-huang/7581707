@@ -93,13 +93,14 @@ def embed(template, entries):
 
 
 
-def generate_demo_question_crops(output):
+def generate_demo_question_crops(output, source_root=None):
     """Generate single-question WebP assets from existing official page WebPs.
 
     This is a pixel crop only: no OCR, redraw, interpolation, or content rewrite.
     The crop map is reviewable in sudu/demo-question-crops.json.
     """
-    config_path = ROOT / "sudu" / "demo-question-crops.json"
+    root = Path(source_root) if source_root is not None else ROOT
+    config_path = root / "sudu" / "demo-question-crops.json"
     if not config_path.exists():
         return []
     try:
@@ -121,7 +122,7 @@ def generate_demo_question_crops(output):
         if not output_rel.as_posix().startswith("sudu/questions/115/"):
             raise ValueError(f"Unexpected crop output path: {output_rel}")
 
-        source = ROOT / source_rel
+        source = root / source_rel
         if not source.is_file() or source.is_symlink():
             raise ValueError(f"Missing official source WebP: {source_rel}")
         box = tuple(int(v) for v in item["box"])
@@ -168,12 +169,13 @@ def generate_demo_question_crops(output):
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return manifest
 
-def build(output_dir=None):
-    output = Path(output_dir) if output_dir is not None else ROOT / "_site"
+def build(output_dir=None, *, source_root=None, build_revision=None):
+    root = Path(source_root) if source_root is not None else ROOT
+    output = Path(output_dir) if output_dir is not None else root / "_site"
     if output_dir is not None:
         if (not output.is_absolute() or output.exists() or output.is_symlink()
-                or output.resolve().is_relative_to(ROOT.resolve())
-                or ROOT.resolve().is_relative_to(output.resolve())):
+                or output.resolve().is_relative_to(root.resolve())
+                or root.resolve().is_relative_to(output.resolve())):
             raise ValueError("Private build needs a new absolute directory outside source")
     # _site is always generated; never remove any source file.
     if output.exists():
@@ -181,12 +183,12 @@ def build(output_dir=None):
 
     output.mkdir(parents=True)
     copied = 0
-    for source in sorted(ROOT.rglob("*")):
-        relative = source.relative_to(ROOT)
+    for source in sorted(root.rglob("*")):
+        relative = source.relative_to(root)
         if not source.is_file() or not included(relative):
             continue
         # Reject symlinked files AND parent directories before reading any bytes.
-        if source.is_symlink() or any(parent.is_symlink() for parent in source.parents if parent != ROOT.parent):
+        if source.is_symlink() or any(parent.is_symlink() for parent in source.parents if parent != root.parent):
             raise ValueError(f"Refusing public symlink: {relative}")
         target = output / relative
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -209,12 +211,12 @@ def build(output_dir=None):
             needle,
             f'<script src="./verified-questions-runtime.js?v={adapter_revision}"></script>\n</body>'
         ), encoding="utf-8")
-    crop_manifest = generate_demo_question_crops(output)
-    entries = catalog(ROOT)
-    template = (ROOT / "index.html").read_text(encoding="utf-8")
+    crop_manifest = generate_demo_question_crops(output, root)
+    entries = catalog(root)
+    template = (root / "index.html").read_text(encoding="utf-8")
     (output / "index.html").write_text(embed(template, entries), encoding="utf-8")
     (output / ".nojekyll").touch()
-    revision = os.environ.get("SUDU_BUILD_SHA", "")
+    revision = os.environ.get("SUDU_BUILD_SHA", "") if build_revision is None else build_revision
     if revision and re.fullmatch(r"[0-9a-f]{40}", revision):
         (output / "sudu" / "release.json").write_text(json.dumps({"commit": revision, "testsRequired": True}) + "\n", encoding="utf-8")
     print(f"PASS: public allowlist copied {copied} files; generated {len(crop_manifest)} single-question WebPs; catalog generated for {len(entries)} HTML files")

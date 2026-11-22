@@ -65,7 +65,7 @@ class BridgeTests(unittest.TestCase):
   for x in self.patches:x.start();self.addCleanup(x.stop)
   def fake_build(output_dir=None):
    out=Path(output_dir);out.mkdir();b.put(out,'sudu/v4-115-multisubject-review-demo.html',b'SYNTHETIC UNIT UI NOT G8');b.put(out,'sudu/verified-questions-runtime.js',b'SYNTHETIC UNIT RUNTIME')
-  x=patch('scripts.build.build',side_effect=fake_build);x.start();self.addCleanup(x.stop)
+  x=patch.object(b,'build_committed_site',side_effect=lambda commit,output:fake_build(output));x.start();self.build_patch=x;self.addCleanup(x.stop)
  def stage_it(self):return b.stage(self.source,self.qid,self.audit_rel,self.private,self.stage)
  def make_report(self):
   m,_,mh=b.validate_stage(self.source,self.stage,self.private);cases=[]
