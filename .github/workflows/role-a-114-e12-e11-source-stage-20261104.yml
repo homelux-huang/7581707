@@ -1,0 +1,44 @@
+name: Role A 114 E12 E11 exact original source stage and shared lease hold (NO RELEASE)
+on:
+  push:
+    branches:
+      - qa/role-a-114-e12-e11-source-stage-20261104
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: role-a-114-e12-e11-source-stage-20261104
+  cancel-in-progress: false
+jobs:
+  source_staging_exact:
+    if: github.repository == 'homelux-huang/7581707' && github.ref == 'refs/heads/qa/role-a-114-e12-e11-source-stage-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout current protected-main-based source stage without write credentials
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout exact frozen PR135 canonical 205 bank and SQLite in separate read-only folder
+        uses: actions/checkout@v4
+        with:
+          ref: 5be8fb19b104e2983ea58ba5e59baea7cad7b815
+          path: frozen-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify original image Git blobs, answer notice, two 205 SQLite row SHA and negative gates
+        run: |
+          set -euo pipefail
+          python -m py_compile tests/test_role_a_114_e12_e11_source_stage_20261104.py
+          python -m unittest discover -s tests -p test_role_a_114_e12_e11_source_stage_20261104.py -v
+      - name: Runner-only source snapshot cleanup and no release
+        run: |
+          set -euo pipefail
+          rm -rf frozen-source
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+          echo "Original E12/E11 staged: shared canonical JSON/SQLite/manifest HOLD until C27 lease released."
