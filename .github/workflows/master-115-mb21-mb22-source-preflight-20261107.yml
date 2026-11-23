@@ -1,0 +1,54 @@
+name: MASTER 115 MB21 MB22 source admission preflight (HOLD only)
+on:
+  push:
+    branches:
+      - coord/master-mb21-source-preflight-20261107
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_real_source_author_vs_canonical_holds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pin authoritative official QA source
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 3408bd78b0d40cbe00fbe2a4fb4c41626f183ec2
+          path: _source_qa
+          sparse-checkout: |
+            sudu/data/processed/115
+          sparse-checkout-cone-mode: true
+      - name: Pin A original MB21/22 source-stage proof
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: 38ab6b53f75f0da5a6e83087464e962e31430e64
+          path: _source_a
+          sparse-checkout: |
+            sudu/data/processed/115/source-stage
+          sparse-checkout-cone-mode: true
+      - name: Pin C original author lesson SHA
+        uses: actions/checkout@v4
+        with:
+          repository: homelux-huang/7581707
+          ref: e50198cad6821a5252008bd474d8240510832f85
+          path: _source_c
+          sparse-checkout: |
+            sudu/teaching-candidates/114-115-20261025
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Strict original A/C/205 source, teacher SHA and release HOLD checks
+        run: python tests/master_115_mb21_mb22_source_admission_preflight_20261107.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mb21-mb22-preflight-HOLD-NOT-STUDENT-RELEASE
+          path: ${{ runner.temp }}/115-mb21-mb22-gate-preflight.json
+          if-no-files-found: error
+      - name: Assert no published bank, trusted registry or QA source mutation
+        run: |
+          git diff --exit-code -- sudu/data/approved sudu/release-governance
+          echo 'REPORT ONLY. NO SOURCE ADMISSION, TRUST OR DEPLOY.'
