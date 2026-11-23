@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-115-MB23-EXACT-TABLE-SOURCE-STAGE-20261104-03",
+  "questionId": "115-00-MB-23",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6623833499",
+  "status": "ROLE_A_OFFICIAL_ORIGINAL_2X3_TABLE_SOURCE_STAGED__CANONICAL_205_DB_NOT_IMPORTED_NO_RELEASE",
+  "mainProtectedBase": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "immutableOriginalSourceHead": "cd6fea6682554e4b0f25d41dca79a1532de92482",
+  "source": {
+    "year": 115,
+    "paperCode": "00-MB",
+    "questionNumber": 23,
+    "questionPage": 8,
+    "originalQuestionPdfSha256PreviouslyRecorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+    "originalPage": "sudu/data/original/115/00-MB/p008-e82e34d9cd-v2-w1400-q66.webp",
+    "pageGitBlob": "4c98df22dd3096c5d59178f4f2b6b3e88415bbee",
+    "pageSha256": "3272c1a1df85614af3e65ae56aac3d819c9d25a7e44366d3a514de4fa8cd0555",
+    "single": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-23.webp",
+    "singleGitBlob": "f8c1fa03e8e97b7d7dae789c8ecf9cd618058bbb",
+    "singleSha256": "2639fb90152b9bcd5b6540e33317046d833fb4be106dbb9551baf75627589d51",
+    "crop": [
+      90,
+      167,
+      1310,
+      603
+    ],
+    "imageRecropped": false,
+    "originalG1Status": "ASSISTANT_VISUAL_QA_ORIGINAL_PIXEL_PASS_CANDIDATE",
+    "rawG2SourceEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-image-transcription-correction-20261024.json",
+    "rawG2EvidenceGitBlob": "170cd2238bb7c1b942a7a5389797295cdfe26953",
+    "newAOriginalTableRevisionEvidencePath": "sudu/data/processed/115/review-evidence/115-00-MB-23-table-source-20261103.json",
+    "newAOriginalTableRevisionEvidenceGitBlob": "0f63d6a5f91015dd2b146731c48dce08668c1fa2",
+    "question": "某旅行社推出兩種旅遊行程，其費用與優惠如表（二）。已知有兩名旅客預計結伴報名同一個行程，且兩人發現參加行程Ⅰ的總費用等於參加行程Ⅱ的總費用，試求 x＝？",
+    "options": [
+      "32000",
+      "33000",
+      "34000",
+      "35000"
+    ],
+    "table": {
+      "title": "表（二）",
+      "columns": [
+        "行程",
+        "原價",
+        "優惠"
+      ],
+      "rows": [
+        [
+          "行程Ⅰ",
+          "每位收費 x 元",
+          "兩人同行，其中一人減免 3000 元"
+        ],
+        [
+          "行程Ⅱ",
+          "每位收費 (x＋2000) 元",
+          "兩人同行，其中一人打八折"
+        ]
+      ]
+    },
+    "tableDimensions": {
+      "headerColumns": 3,
+      "dataRows": 2,
+      "dataCells": 6
+    },
+    "tableTextSha256": "3ae20c9b53eb5ba38ffa354cbda868806bb7716700548bbe88618e0104a89088",
+    "sourceRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+    "sourceRevisionAsAcceptedByAuthorC": "PR143_SOURCE_RECONCILED_C_AUTHOR_AND_SEPARATE_E_CONTENT_NOTE_NOT_REGISTRY",
+    "noNewRawOcrOrPixels": true
+  },
+  "official": {
+    "letter": "B",
+    "valueYuan": 33000,
+    "equalTripCostYuan": 63000,
+    "publishedOriginalAnswerWebp": "sudu/data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+    "answerGitBlob": "5ea4b86e929506d595f96fa162d1aae021f68440",
+    "answerSha256": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+    "answerPdfSha256PreviouslyRecorded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "historicalG3EvidencePath": "sudu/data/processed/115/QA_115_MATH_B_Q01_25_OFFICIAL_FINAL_ANSWERS_20261023.json",
+    "historicalG3EvidenceGitBlob": "ab82d2f6f2d6743f0ba9e5ca2eabb2d15c4b9d4e",
+    "correctionStatus": "115_00_MB_NO_OBJECTION_SUBMITTED",
+    "noNewOfficialPdfDownloadedOrRehashed": true,
+    "formalQuestionG3FlagNewlySet": false
+  },
+  "frozenCanonical": {
+    "year": 115,
+    "expectedCount": 205,
+    "jsonExpectedGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+    "manifestExpectedGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+    "sqliteExpectedGitBlob": "9f0154e79fe90e92fa46b4d9bcbe4009cbfb3788",
+    "canonicalQuestionBankCopiedIntoMain": false,
+    "manifestCopiedIntoMain": false,
+    "sqliteCopiedIntoMain": false,
+    "historical81SqliteDenormIssuesRemainUnresolved": true
+  },
+  "downstream": {
+    "authorCActualSourceRevision": "9454574017bc425f8c9a1c9854ca81547ff4b210b0c3ddc786d9e00ce1cc9fd4",
+    "authorCCorrespondingPR": 143,
+    "independentENewContentReviewIssue": 6623807531,
+    "independentEContentReviewNotEquivalentTrustedRegistry": true,
+    "roleDFormalEmitted8x2": "PENDING_ROLE_D_TRUE_APPROVED_EMITTER",
+    "masterCanonicalDbAdmission": "PENDING",
+    "formalG3Admission": "PENDING",
+    "approved": false,
+    "ready": false,
+    "live": false
+  },
+  "reviewMethod": "AI Assistant Role A direct review/reuse original WebP and exact prior SHA-bound evidence; NOT Role E or real human teacher"
+}
