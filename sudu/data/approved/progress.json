@@ -3,10 +3,10 @@
   "notYetLiveUntilPagesSuccess": true,
   "provenance": {
     "certificationSchemaVersion": "student-reviewed-batch-v1",
-    "commit": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+    "commit": "1f27ddcd8edf746da49cbecc52e04779e44f016b",
     "publisherCodeSha256": "aa7a774e8f0dde288210a5c584b874a7ded3d45d008d023abf7494dc133232d8",
     "ref": "qa/114-115-official-visual-review",
-    "sourceTreeSignature": "30e368b6c4679f7f087b4f6c4908c0669963c1ec6c9c3f21d658aedab7021573"
+    "sourceTreeSignature": "72d566763b3ec082521d7601138905dbed531772fa7c1a613b2e42c28e33e42d"
   },
   "schemaVersion": 1,
   "years": {
@@ -22,18 +22,19 @@
       "imagePreviewPercent": 4.4,
       "imageQaPercent": 16.1,
       "ocrCandidate": 205,
-      "ocrQaPass": 0,
+      "ocrQaPass": 1,
       "officialCandidateMatches": 205,
-      "officialFinalQaPass": 0,
+      "officialFinalQaPass": 1,
       "pending": 205,
       "pendingReasonCounts": {
+        "ai_not_checked": 1,
         "image_pending": 172,
-        "ocr_or_db_pending": 33
+        "ocr_or_db_pending": 32
       },
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 1,
       "sharedWebpTotal": 2,
-      "sourceSha": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+      "sourceSha": "1f27ddcd8edf746da49cbecc52e04779e44f016b",
       "subjects": {
         "商業概論": {
           "candidate": 25,
@@ -92,9 +93,9 @@
         "英文": {
           "candidate": 42,
           "expected": 0,
-          "finalAnswerQaPass": 0,
+          "finalAnswerQaPass": 1,
           "imagePreviewReady": 0,
-          "ocrQaPass": 0,
+          "ocrQaPass": 1,
           "studentReady": 0,
           "webpQaPass": 15
         }
@@ -126,7 +127,7 @@
       "reviewStatus": "not_all_gates_passed",
       "sharedWebpQaPass": 5,
       "sharedWebpTotal": 20,
-      "sourceSha": "16d04a0d642fb433de289417a22c3050aa3e52b6",
+      "sourceSha": "1f27ddcd8edf746da49cbecc52e04779e44f016b",
       "subjects": {
         "商業概論": {
           "candidate": 25,
