@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-114-E15-CROSSPAGE-OPTION-D-G2-SOURCE-20261104-06",
+  "questionId": "114-00-E-15",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6624143183",
+  "mainBaseCommit": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "status": "ROLE_A_DIRECT_VISUAL_ORIGINAL_IMAGE_AND_G2_CLEAN_D_SOURCE_CANDIDATE_WITH_ORIGINAL_OFFICIAL_A_NOTICE_SCOPE_NO_RELEASE",
+  "original": {
+    "year": 114,
+    "paperCode": "00-E",
+    "questionNumber": 15,
+    "page": 3,
+    "questionPdfSha256PreviouslyRecorded": "1b1768452e5870d1a746f09e4d5583c7b166a2888ef632532ad4466364ff1dcf",
+    "sourcePageWebp": "sudu/data/original/114/00-E/p003-1b1768452e-v2-w1400-q66.webp",
+    "sourcePageWebpGitBlob": "5ff21a726938e64e0b7efe3bb8abda65e55e1d4f",
+    "sourcePageSha256": "51b265b41dde351f307310a16247b390fc97e9102c026082324cb22d07e965cb",
+    "originalSingleWebp": "sudu/data/processed/114/webp-v1/00-E/114-00-E-15.webp",
+    "originalSingleWebpGitBlob": "3351b9f4101bff452baf1f0cc7cc600adb254e4f",
+    "originalSingleWebpSha256": "16b4efd7b6aea92cd8b2c734e109989f0844a111273100753f030ba2f0032b04",
+    "originalPixelCrop": [
+      90,
+      1367,
+      1310,
+      1653
+    ],
+    "originalG1QaGitBlob": "c1154562fa30cb4b2720a6000a970cf09ef460ff",
+    "priorImageQaResult": "PASS",
+    "imageDirectVisualReview": "AI Assistant Source Visual Review: genuine original p3 and unchanged single WebP show only Q15 Dave/Nancy interview, A–D complete, no footer; source OCR D separately polluted.",
+    "noRecropOrOCRRegenerate": true
+  },
+  "raw": {
+    "originalSourceBankRevision": "9944759e339ef2d3c002042798f7fe696d861d96",
+    "originalSourceBankGitBlob": "074bff8cbb9ca7bbc0aefd8580454892d21f7d6b",
+    "legacyYearOriginalGitBlob": "1e2e82854e7041011733eb2d3ab21c3d5c6e0a04",
+    "question": "Dave:   I’m going to a job interview this Thursday. What should I prepare?\n    Nancy: A good first impression is important. ____________\n    Dave:   For example?\n    Nancy: A suit or something formal that looks professional.",
+    "options": [
+      "You have to dress properly.",
+      "You need to speak carefully.",
+      "You ought to show interest in the pay.",
+      "You should ask questions about the job.\n\n\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考"
+    ],
+    "rawDOption": "You should ask questions about the job.\n\n\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+    "legacyAnswerCandidate": "A",
+    "rawQuestionVerified": false,
+    "rawAnswerVerified": false,
+    "originalPriorBSourceRevision": "e2b876604812c4771353451148c7df393d4ec2b0c4d1cf5de09df82bdcb1cf43",
+    "originalBTeachingDigest": "8b0b14d695b6627ec69aa75bf52f98a7e84733c5a0feb640194a40180fd99d92",
+    "oldBImageTranscriptRevision": null
+  },
+  "G2": {
+    "originalStemPreservedVerbatim": true,
+    "correctedQuestion": "Dave:   I’m going to a job interview this Thursday. What should I prepare?\n    Nancy: A good first impression is important. ____________\n    Dave:   For example?\n    Nancy: A suit or something formal that looks professional.",
+    "correctedOptions": [
+      "You have to dress properly.",
+      "You need to speak carefully.",
+      "You ought to show interest in the pay.",
+      "You should ask questions about the job."
+    ],
+    "optionDOnlyOriginal": "You should ask questions about the job.\n\n\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考",
+    "optionDOnlyCorrected": "You should ask questions about the job.",
+    "optionDBeforeAfterDiff": "--- 原始來源 OCR Q15 (D)\n+++ Role A 目視原圖校正 Q15 (D)\n-You should ask questions about the job.\n\n\n\n\n\n\n                                                        - 3-\n\n第4 頁                                                                                114 年四技\n共12 頁                                      英文 共同科目   公告試題僅供參考\n+You should ask questions about the job.\n",
+    "crossPageContaminationRemoved": true,
+    "reviewMethod": "ROLE A AI Assistant Direct Original Pixel Review + existing B imageTranscribedOptions as independent cross-check ONLY",
+    "status": "G2_SOURCE_TEXT_REPAIR_CANDIDATE_PENDING_MASTER_205_JSON_SQLITE_TEXT_REVISION"
+  },
+  "G3": {
+    "originalOfficialPublishedAnswer": "A",
+    "officialAnswerTableImage": "sudu/data/original/114/00-E-answers/p001-ebd3940a54-v2-w1400-q66.webp",
+    "originalAnswerImageGitBlob": "5f2920313607af4e756095cd3d6098c8a3ab7440",
+    "originalAnswerImageSha256": "a1725a12c39ad748ebc38a0dab878836f59be4352da3fffa10d3cecb6a07d863",
+    "publishedAnswerPdfSha256PreviouslyRecorded": "ebd3940a54b7059173e1fc7add3df75b59620f7efad93cf822b3ffa72d95b325",
+    "originalExistingAnswerQaGitBlob": "0ae35ec3baac7ee4709ea652103db5666fee45a9",
+    "originalHistoricalAnswerVerified": false,
+    "originalHistoricalOfficialCorrectionsChecked": false,
+    "confirmationNoticeGitBlob": "6b9a919f224bec8dc3659052a404b4173b6ef366",
+    "confirmationPdfSha256PreviouslyRecorded": "79040d0ebfca3d4800fe63898f0b09e38151cd47c90401197af53d6cefa53cbc",
+    "englishNoticeNamedQuestionIds": [
+      "114-00-E-26"
+    ],
+    "q15InNamedCorrection": false,
+    "originalAnswerAUnchangedByNotice": true,
+    "noNewPdfDownloadedOrRehashed": true,
+    "canonicalNewAnswerVerifiedSet": false
+  },
+  "downstream": {
+    "masterCanonicalTextRevisionAndSqliteRow": "PENDING_EXCLUSIVE_SHARED_FILE_LEASE_114_C27",
+    "BAuthorPR63SourceRevisionAndDigestUpdate": "PENDING_REBIND_TO_CORRECTED_G2_SOURCE",
+    "oldEContentNote": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6429767351",
+    "oldEContentG2Block": "CANONICAL_OPTION_D_POLLUTED",
+    "oldELessonIPAReview": "TWO_VOCABULARY_IPA_MISSING_IN_PRIOR_B_CANDIDATE",
+    "newIndependentEReview": "PENDING_UPDATED_SOURCE_AND_LESSON_DIGEST",
+    "newDRealEmittedV4EightSizesTwoThemes": "PENDING",
+    "mainAndPagesModified": false,
+    "READY": false,
+    "APPROVED": false,
+    "LIVE": false
+  }
+}
