@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "role": "A",
+  "taskId": "A-115-MB21-MB22-SOURCE-STAGE-20261104-02",
+  "questionId": "115-00-MB-22",
+  "claim": "https://github.com/homelux-huang/7581707/issues/36#issuecomment-6623756343",
+  "stageStatus": "ORIGINAL_SINGLE_WEBP_AND_EXISTING_G2_OFFICIAL_G3_SOURCE_PROOF_STAGED__CANONICAL_SQLITE_UNMODIFIED_NO_RELEASE",
+  "reviewType": "ROLE_A_AI_ASSISTANT_DIRECT_ORIGINAL_PIXEL_VISUAL_AND_EXISTING_SOURCE_RECEIPT; NOT INDEPENDENT E",
+  "mainProtectedBaseSha": "ba2f3f0757dbf81eaaf125bd610b0f38de52fea9",
+  "exactFrozenSourceHead": "9ade29d9eabae54a92b82cc036f448ace06f1186",
+  "originalSource": {
+    "year": 115,
+    "paperCode": "00-MB",
+    "page": 7,
+    "originalNumber": 22,
+    "questionPdfSha256Recorded": "e82e34d9cda67c8d28f556d7eb0cd1cd8486b66ccfbe4423d7a40857d7289082",
+    "originalPageWebp": "sudu/data/original/115/00-MB/p007-e82e34d9cd-v2-w1400-q66.webp",
+    "originalPageWebpGitBlob": "c8e3e806d812a01d417abe83dac7f46adcf84ff7",
+    "originalPageWebpSha256": "7a1732ce33ee6b9f1cc4fcc6f705b2aa1f29a117e0562a62b50428d94845464d",
+    "singleWebp": "sudu/data/processed/115/webp-v2/00-MB/115-00-MB-22.webp",
+    "singleGitBlob": "491e02cabe4110d62b510075914e083b51e58ebf",
+    "singleSha256": "3bc277802613d00f5525a3de74c7591898ac5b6c70abbb1a8cfda04e577ccb55",
+    "crop": [
+      90,
+      1331,
+      1310,
+      1715
+    ],
+    "originalG1HistoricalStatus": "PASS_SOURCE_IMAGE_ONLY",
+    "sourcePixelRecreated": false,
+    "previousG2Evidence": "sudu/data/processed/115/review-evidence/115-00-MB-22-image-transcription-correction-20261024.json",
+    "previousG2EvidenceGitBlob": "5ad5b4fef7570b71eb534a510baec9da27ca47ce",
+    "originalRawOcrPreservedInUnchangedEvidence": true,
+    "originalCleanQuestion": "程式設計師設計了一個「台語文字與拼音」抽卡片換獎品的遊戲，每次都抽五張卡片，由左而右依序展現在螢幕上，且每一張卡片只會顯示「有 ū」或「無 bô」。為了讓玩家都有獎勵，抽出的五張卡片中至少有一張會顯示「有 ū」，圖（六）僅為其中一種可能。試問螢幕上由左而右的五張卡片，總共有幾種顯示的可能？",
+    "originalCleanOptions": [
+      "32",
+      "31",
+      "16",
+      "5"
+    ],
+    "originalFigureDescription": "圖（六）：五張由左至右排列的卡片示例：無 bô、無 bô、無 bô、無 bô、有 ū。其圖示非限制只能最後一張為「有」。",
+    "G2Stage": "EXISTING_ROLE_A_DIRECT_SOURCE_IMAGE_TEXT_CORRECTION__FORMAL_CANONICAL_QA_PENDING",
+    "roleCSourceRevisionForComparisonOnly": "7d35b087cad2db1f01df356dd154292e60a51babc56028db7f0022b40992dd17",
+    "roleCSourceRevisionNewlyCertifiedByA": false
+  },
+  "officialAnswer": {
+    "officialPublishedLetter": "B",
+    "mathCheck": "Five ordered positions each two states, at least one 有: 2^5 - 1 = 31, B",
+    "originalAnswerWebp": "sudu/data/original/115/00-MB-answers/p001-d705f2c3b4-v2-w1400-q66.webp",
+    "originalAnswerWebpGitBlob": "5ea4b86e929506d595f96fa162d1aae021f68440",
+    "originalAnswerWebpSha256": "1b31bb35bf8b49c19d0845d95fe032ae67cfa86b4b7ecb7be657d66f26dc617d",
+    "officialOriginalAnswerPdfSha256Recorded": "d705f2c3b4360962ed57b1d923a5d9168eae9eb140584ce98cb7cb1f6e27ad95",
+    "officialAnswerEvidenceGitBlob": "ed02ef9cde66720af2142330d79afb5349d0f999",
+    "officialNoticeStatusGitBlob": "6d21432395294d9ccbcfe1dea8be01f88597bbf3",
+    "officialNoObjectionForPaper": true,
+    "officialNoticeValue": "no_objection_submitted",
+    "originalPdfAndAnswerPdfNewlyDownloadedOrRehashed": false,
+    "formalNewAnswerVerifiedFlagSet": false
+  },
+  "frozenCanonicalReadOnly": {
+    "year": 115,
+    "expectedQuestions": 205,
+    "questionsJsonGitBlob": "216bc43d57501bc1c3e5842b48413a8967456cda",
+    "webpManifestGitBlob": "2e204b1cca4caf8dea494bd0d8ecfccf5b93f84b",
+    "sqliteGitBlob": "9f0154e79fe90e92fa46b4d9bcbe4009cbfb3788",
+    "originalSourceAssetProvenanceUnchanged": true,
+    "canonicalBankNotImportedIntoMain": true,
+    "canonicalBankModified": false,
+    "manifestModified": false,
+    "sqliteModified": false,
+    "historical115SqliteDenormalizedDifferencesStillRequirePerRowReview": true
+  },
+  "downstream": {
+    "CAuthoredLessonRevisionRequiredToMatchAcceptedSource": true,
+    "independentEFormalTrust": "PENDING_TRUSTED_PROTECTED_MAIN_RECEIPT",
+    "DFormalApprovedEmitter8x2": "PENDING",
+    "MasterAdmission": "PENDING_CANONICAL_115_SOURCE_IMPORT",
+    "ready": false,
+    "approved": false,
+    "live": false
+  }
+}
