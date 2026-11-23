@@ -1,0 +1,20 @@
+name: V4 no-calculation guide exact-source regression
+on:
+  pull_request:
+    paths:
+      - 'sudu/v4-115-multisubject-review-demo.html'
+      - 'tests/sudu_master_noncalc_guide_20261025.cjs'
+      - '.github/workflows/114-115-v4-noncalc-guide.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  guide-regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test production guide for calculation and non-calculation
+        run: node tests/sudu_master_noncalc_guide_20261025.cjs
