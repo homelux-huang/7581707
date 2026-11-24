@@ -16,7 +16,8 @@ class BridgeTests(unittest.TestCase):
   self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name);self.source=self.root/'source';self.source.mkdir();self.private=self.root/'private';self.private.mkdir(mode=0o700)
   self.qid='115-00-MB-20';self.prefix='sudu/data/processed/115/';self.reviews=self.prefix+'review-evidence/';self.stage=self.root/'sudu-g8-stage';self.report=self.root/'report';self.report.mkdir()
   self.policy={'schemaVersion':1,'githubRepository':gate.REPO,'reviewMode':'DISTINCT_AI_CONTENT_RECEIPT_V1','requireHumanTeacher':False,'trustedAiReviewReceipts':{self.qid:{'sourceAuthorSessionId':'SYNTHETIC_AUTHOR','reviewerSessionId':'SYNTHETIC_E'}},'trustedG6Receipts':{},'trustedG8Receipts':{}}
-  self.teaching={'teacherSummary':'SYNTHETIC teacher','elementarySummary':'SYNTHETIC elementary','memory':'SYNTHETIC memory','concept':'SYNTHETIC concept','extension':'SYNTHETIC reverse check','source':'SYNTHETIC source','optionExplanations':{L:{'teacher':'SYNTHETIC teacher '+L,'elementary':'SYNTHETIC elementary '+L,'reason':'SYNTHETIC reason '+L} for L in 'ABCD'},'hasExamCalculation':False,'calculationReviewed':True,'examCalculation':None}
+  # Use the original E11 shape with synthetic content and authority only.
+  self.teaching={'teacherSummary':'SYNTHETIC teacher','elementarySummary':'SYNTHETIC elementary','memory':'SYNTHETIC memory','concept':'SYNTHETIC concept','extension':'SYNTHETIC reverse check','source':'SYNTHETIC source','optionExplanations':{L:{'teacher':'SYNTHETIC teacher '+L,'elementary':'SYNTHETIC elementary '+L,'reason':'SYNTHETIC reason '+L} for L in 'ABCD'},'hasExamCalculation':False,'examCalculation':None}
   image=io.BytesIO();Image.new('RGB',(40,20),'white').save(image,format='WEBP',lossless=True);im=image.getvalue();self.image_sha=b.sha(im)
   for year in (114,115):
    pref=f'sudu/data/processed/{year}/';questions=[];items=[]
@@ -139,10 +140,18 @@ class BridgeTests(unittest.TestCase):
    with patch.object(b,'github',side_effect=response):
     with self.assertRaises(b.Hold):b.actions_provenance(e)
  def test_synthetic_only_promotion_uses_real_final_publisher_same_bytes(self):
+  issuer_path=self.source/self.audit['evidence']['teaching']
+  frozen=issuer_path.read_bytes()
   self.stage_it();self.make_report();out=self.root/'sudu-g8-promotion'
+  manifest=p.read(self.stage/'stage.json')
+  self.assertEqual(manifest['teachingDigest'],b.sha(b.canonical(self.teaching)))
+  self.assertEqual(manifest['teachingEvidenceSha256'],b.sha(frozen))
+  self.assertIsNone(p.read(self.stage/'row.json')['examCalculation'])
   with patch.object(b,'actions_provenance'):
    result=b.promote(self.source,self.stage,self.private,self.report,out)
   self.assertEqual(result['status'],'PROMOTION_CANDIDATE_NOT_DEPLOYED');self.assertEqual((out/'sudu/data/approved/115.json').read_bytes(),(self.stage/'site/sudu/data/approved/115.json').read_bytes());self.assertTrue((out/'qa-evidence'/self.prefix/'verified-student-batch.json').exists());self.assertFalse((self.source/'sudu/data/approved').exists())
+  self.assertEqual(issuer_path.read_bytes(),frozen)
+  self.assertNotIn('calculationReviewed',self.teaching)
  def test_untrusted_artifact_and_paths_rejected(self):
   self.stage_it();_,_,report,e=self.make_report();(self.report/'artifact.zip').write_bytes(b'changed')
   with self.assertRaises(b.Hold):b.verify_archive(self.report,e,report)

@@ -303,8 +303,9 @@ def independently_solved(q: dict, revision: str) -> str:
         return "not_checked"
     return "matched" if s["answer"].upper() == q["officialFinalAnswer"].upper() else "mismatch"
 
-def teaching_content_complete(t: dict, subject: str, official_answer: str) -> bool:
-    """Pure content validator; this function never grants UI or release approval."""
+def teaching_content_complete(t: dict, subject: str, official_answer: str, *,
+                              envelope_calculation_reviewed: object = None) -> bool:
+    """Validate content without modifying bytes used for the teaching digest."""
     if not (isinstance(t, dict) and good(t.get("teacherSummary")) and good(t.get("elementarySummary"))
             and good(t.get("memory")) and good(t.get("concept")) and good(t.get("extension"))
             and good(t.get("source"))):
@@ -315,7 +316,17 @@ def teaching_content_complete(t: dict, subject: str, official_answer: str) -> bo
     if not all(isinstance(opts[L], dict) and good(opts[L].get("teacher")) and good(opts[L].get("elementary"))
                and good(opts[L].get("reason")) for L in LETTERS):
         return False
-    if t.get("calculationReviewed") is not True or type(t.get("hasExamCalculation")) is not bool:
+    if type(t.get("hasExamCalculation")) is not bool:
+        return False
+    # Older native G5 pre-dates duplication of this attestation into lesson
+    # content. Accept it only from the actual issuer, for an explicitly absent
+    # calculation. Never override a present nested value or relax math lessons.
+    reviewed_non_calculation = (
+        envelope_calculation_reviewed is True and t["hasExamCalculation"] is False
+        and "examCalculation" in t and t["examCalculation"] is None
+        and "calculationReviewed" not in t
+    )
+    if t.get("calculationReviewed") is not True and not reviewed_non_calculation:
         return False
     if t["hasExamCalculation"]:
         c = t.get("examCalculation") or {}
@@ -335,12 +346,16 @@ def teaching_content_complete(t: dict, subject: str, official_answer: str) -> bo
     return True
 
 
-def teaching_complete(q: dict, subject: str, official_answer: str) -> bool:
+def teaching_complete(q: dict, subject: str, official_answer: str, *,
+                      native_g5_applied: bool = False) -> bool:
+    evidence = q.get("teachingQaEvidence") or {}
     if not (q.get("teachingQaStatus") == "PASS" and q.get("uiQaStatus") == "PASS"
             and q.get("studentReleaseApproved") is True
-            and teaching_content_complete(q.get("teaching") or {}, subject, official_answer)):
+            and teaching_content_complete(
+                q.get("teaching") or {}, subject, official_answer,
+                envelope_calculation_reviewed=(
+                    evidence.get("calculationReviewed") if native_g5_applied else None))):
         return False
-    evidence = q.get("teachingQaEvidence") or {}
     return bool(good(evidence.get("reviewer")) and good(evidence.get("reviewedAt"))
                 and good(evidence.get("evidencePath")) and evidence.get("allFourOptionsReviewed") is True
                 and evidence.get("calculationReviewed") is True)
@@ -725,7 +740,7 @@ def apply_independently_certified_review(source: Path, year: int, q: dict, manif
             "auditEvidenceSha256":docs["blind"][1]},
         "teaching":teach["content"],"teachingQaStatus":"PASS",
         "teachingQaEvidence":{**ev("teaching"),"allFourOptionsReviewed":True,
-                              "calculationReviewed":True},
+                              "calculationReviewed":teach["calculationReviewed"]},
         "uiQaStatus":"PASS",
         "uiQaEvidence":ev("ui"),"studentReleaseApproved":True
     })
@@ -811,7 +826,11 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy:
             raise ValueError(f"Duplicate stable question ID: {qid}")
         seen.add(qid)
         item = entries.get(qid)
-        q = apply_independently_certified_review(src,year,q,item,certified_reviews.get(qid),review_policy)
+        reviewed = apply_independently_certified_review(src,year,q,item,certified_reviews.get(qid),review_policy)
+        # The overlay returns a fresh dict only after native issuer and
+        # review authorization checks. Source-only QA flags cannot opt in.
+        native_g5_applied = reviewed is not q
+        q = reviewed
         qa_per_subject[subject]["candidate"] += 1
         image_ok = image_proof(q, item, shared, src)
         if individual_image_proof(q,item,src):
@@ -844,7 +863,8 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy:
                   else "official_final_pending" if not official_ok else "ai_"+solve if solve != "matched"
                   else "teaching_pending")
         if not (ocr_ok and official_ok and solve == "matched"
-                and teaching_complete(q,subject,str(q.get("officialFinalAnswer","")).upper())):
+                and teaching_complete(q,subject,str(q.get("officialFinalAnswer","")).upper(),
+                                      native_g5_applied=native_g5_applied)):
             blocked.append({"id":qid,"reason":reason})
             continue
         if not certificates_complete(src,q,item,shared):

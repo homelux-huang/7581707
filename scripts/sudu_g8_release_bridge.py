@@ -200,7 +200,10 @@ def non_ui(source,qid,audit_rel,private_evidence):
  o,off,t=docs['ocr'],docs['official'],docs['teaching']
  require(o.get('questionRevision')==revision and o.get('webpSha256')==m['sha256'] and o.get('question')==q['question'] and o.get('options')==q['options'] and o.get('visualTextCompared') is True,'G2 exact text/image')
  require(off.get('officialPdfSha256')==pub.pdf_sha(q,'answer') and off.get('finalAnswer')==q['answer'] and off.get('officialPage')==pub.official_source_index(year) and off.get('correctionNoticeReviewed') is True and pub.official_notice_scope_certified(source,year,q,off),'G3 official final/correction scope')
- require(t.get('questionRevision')==revision and t.get('allFourOptionsReviewed') is True and t.get('calculationReviewed') is True and pub.teaching_content_complete(t.get('content'),identity[1],q['answer']),'complete native G5 content')
+ require(t.get('questionRevision')==revision and t.get('allFourOptionsReviewed') is True
+         and t.get('calculationReviewed') is True and pub.teaching_content_complete(
+             t.get('content'),identity[1],q['answer'],
+             envelope_calculation_reviewed=t['calculationReviewed']),'complete native G5 content')
  p=trusted_policy();require(qid in p.get('trustedAiReviewReceipts',{}),'protected E receipt absent')
  approved,reason=gate.certified(source,audit,q,m,t,raws['teaching'],policy=p)
  require(approved and reason!='exact_five_historical_students_preserved','genuine distinct E: '+reason)
