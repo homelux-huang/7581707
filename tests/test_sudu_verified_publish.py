@@ -1,9 +1,35 @@
 """Automated final-release admission tests: empty QA is not a green light."""
+import copy
+import hashlib
+import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
 
 from scripts import sudu_verified_publish as v
+
+class FrozenE11TeachingTests(unittest.TestCase):
+    @unittest.skipUnless(os.environ.get("WORK_G8_FROZEN_SOURCE"), "frozen QA checkout required")
+    def test_original_e11_g5_bytes_and_teaching_digest_unchanged(self):
+        path=Path(os.environ["WORK_G8_FROZEN_SOURCE"])/(
+            "sudu/data/processed/114/review-evidence/114-00-E-11-teaching-publisher-20261113.json")
+        raw=path.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         "67f15c7afd096d379b96b42cd30f7032ae3e6a2a58bf9e94f7aff0fbf879001b")
+        issuer=json.loads(raw)
+        content=issuer["content"]
+        from scripts import sudu_independent_review_gate as gate
+        canonical=gate.canonical(content)
+        self.assertEqual(gate.digest(canonical),
+                         "ade6afe6e6791c632f566fc3612dca7d66d06f16d33e0cfdc37fc58c8b75ebdb")
+        self.assertIs(issuer["calculationReviewed"],True)
+        self.assertNotIn("calculationReviewed",content)
+        self.assertFalse(v.teaching_content_complete(content,"英文","A"))
+        self.assertTrue(v.teaching_content_complete(content,"英文","A",
+                            envelope_calculation_reviewed=issuer["calculationReviewed"]))
+        self.assertEqual(gate.canonical(content),canonical)
+        self.assertEqual(path.read_bytes(),raw)
 
 
 class VerifiedPublicationTests(unittest.TestCase):
@@ -67,6 +93,32 @@ class VerifiedPublicationTests(unittest.TestCase):
         self.q["teaching"]["examCalculation"]=None
         self.assertTrue(v.teaching_complete(self.q,"經濟學","B"))
         self.assertIsNone(v.public_question(self.q,115,"經濟學","x.webp")["examCalculation"])
+
+    def test_envelope_attestation_is_narrow_and_not_inline_authority(self):
+        lesson=copy.deepcopy(self.q["teaching"])
+        lesson.pop("calculationReviewed")
+        # Math lessons still require their nested attestation and full payload.
+        self.assertFalse(v.teaching_content_complete(lesson,"經濟學","B",
+                                    envelope_calculation_reviewed=True))
+        lesson.update(hasExamCalculation=False,examCalculation=None)
+        self.q["teaching"]=lesson
+        self.assertFalse(v.teaching_complete(self.q,"經濟學","B"))
+        self.assertTrue(v.teaching_complete(self.q,"經濟學","B",native_g5_applied=True))
+        for invalid in (False,None,1,"true"):
+            with self.subTest(invalid=invalid):
+                self.assertFalse(v.teaching_content_complete(lesson,"經濟學","B",
+                                            envelope_calculation_reviewed=invalid))
+                self.assertFalse(v.teaching_content_complete({**lesson,"calculationReviewed":invalid},
+                                            "經濟學","B",envelope_calculation_reviewed=True))
+        for conflicting in (False,0,{},[],{"result":"30"}):
+            with self.subTest(conflicting=conflicting):
+                self.assertFalse(v.teaching_content_complete({**lesson,"examCalculation":conflicting},
+                                            "經濟學","B",envelope_calculation_reviewed=True))
+        for absent in ("hasExamCalculation","examCalculation"):
+            with self.subTest(absent=absent):
+                self.assertFalse(v.teaching_content_complete(
+                    {k:x for k,x in lesson.items() if k!=absent},"經濟學","B",
+                    envelope_calculation_reviewed=True))
 
     def test_answer_and_ocr_require_independent_evidence(self):
         self.assertEqual(v.source_proof(self.q,True,True,self.revision),(True,True))
