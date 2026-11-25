@@ -146,6 +146,8 @@ def archive_valid(raw, entry):
                 and report.get('runId') == entry['runId'] and report.get('errors') == [], 'successful original report required')
         for field in ('codeCommit', 'codeBindings', 'stageManifestSha256', 'payloadSha256'):
             require(report.get(field) == entry[field], 'report binding ' + field)
+        from scripts.sudu_pages_evidence import original_stage
+        original_stage(report, entry)
         completed = gate._time(report.get('completedAt'))
         require(completed <= datetime.now(timezone.utc), 'future report completion')
         cases = report.get('cases')
@@ -209,7 +211,7 @@ def capture(entry, qid, archive_path, dest):
             'archiveGitBlobSha': spec['archiveGitBlobSha'], 'trusted': False, 'deployed': False}
 
 
-def verify_owned(entry):
+def _owned_evidence(entry):
     """Protected main is the revocable trust root, not artifact retention TTL."""
     spec = entry.get('durableArchive')
     require(isinstance(spec, dict) and spec.get('schema') == SCHEMA, 'owner-pinned durable custody required')
@@ -240,7 +242,16 @@ def verify_owned(entry):
     raw = blob_at(head, spec['archivePath'], spec.get('archiveGitBlobSha'))
     report = archive_valid(raw, clean)
     require(gate._time(report['completedAt']) <= gate._time(artifact['created_at']), 'report chronology')
-    return {'protectedCommit': head, 'archiveSha256': clean['artifactSha256'], 'runId': clean['runId']}
+    return head, report
+
+
+def owned_report(entry):
+    return _owned_evidence(entry)[1]
+
+
+def verify_owned(entry):
+    head, _ = _owned_evidence(entry)
+    return {'protectedCommit': head, 'archiveSha256': entry['artifactSha256'], 'runId': entry['runId']}
 
 
 def main():

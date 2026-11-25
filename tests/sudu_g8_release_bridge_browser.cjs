@@ -24,7 +24,7 @@ async function main(){
  }
  assert.equal(process.env.GITHUB_SHA,m.codeCommit,'actual formal job must run the staging code commit');
  assert(!fs.existsSync(out),'never overwrite formal evidence');fs.mkdirSync(out,{recursive:true,mode:0o700});
- const report={schema:m.schema,status:'FORMAL_G8_FAILED',stageManifestSha256:verified.stageManifestSha256,payloadSha256:m.payloadSha256,codeCommit:m.codeCommit,codeBindings:m.codeBindings,runId,cases:[],errors:[]};
+ const report={schema:m.schema,status:'FORMAL_G8_FAILED',stageManifest:fs.readFileSync(path.join(stage,'stage.json'),'utf8'),stageManifestSha256:verified.stageManifestSha256,payloadSha256:m.payloadSha256,codeCommit:m.codeCommit,codeBindings:m.codeBindings,runId,cases:[],errors:[]};
  const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n',{mode:0o600});save();
  // New server binds ONLY loopback and serves the immutable private staging tree.
  const server=spawn('python',['-u','-c',`import http.server,sys,functools\nh=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(http.server.SimpleHTTPRequestHandler,directory=sys.argv[1]))\nprint(h.server_address[1],flush=True)\nh.serve_forever()`,path.join(stage,'site')],{stdio:['ignore','pipe','pipe']});

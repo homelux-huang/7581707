@@ -65,14 +65,15 @@ class BridgeTests(unittest.TestCase):
   self.patches=[patch.object(gate,'_ai_registry_exactly_matches_protected_main_policy',return_value=True),patch.object(b,'trusted_policy',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'policy_from_trusted_main',side_effect=lambda:copy.deepcopy(self.policy)),patch.object(gate,'certified',return_value=(True,'SYNTHETIC_AUTHORITY_TEST_ONLY')),patch.object(b,'code_bindings',return_value={'SYNTHETIC_CODE':'d'*40})]
   for x in self.patches:x.start();self.addCleanup(x.stop)
   def fake_build(output_dir=None):
-   out=Path(output_dir);out.mkdir();b.put(out,'sudu/v4-115-multisubject-review-demo.html',b'SYNTHETIC UNIT UI NOT G8');b.put(out,'sudu/verified-questions-runtime.js',b'SYNTHETIC UNIT RUNTIME')
+   out=Path(output_dir);out.mkdir();b.put(out,'sudu/v4-115-multisubject-review-demo.html',b'SYNTHETIC UNIT UI NOT G8');b.put(out,'sudu/verified-questions-runtime.js',b'SYNTHETIC UNIT RUNTIME');p.dump(out/'sudu/release.json',{'commit':b.git(b.ROOT,'rev-parse','HEAD'),'testsRequired':True})
+   marker=out/'sudu/release.json';marker.write_text(json.dumps(json.loads(marker.read_text()))+'\n')
   x=patch.object(b,'build_committed_site',side_effect=lambda commit,output:fake_build(output));x.start();self.build_patch=x;self.addCleanup(x.stop)
  def stage_it(self):return b.stage(self.source,self.qid,self.audit_rel,self.private,self.stage)
  def make_report(self):
   m,_,mh=b.validate_stage(self.source,self.stage,self.private);cases=[]
   for w,h,t in b.MATRIX:
    rel=f'{w}-{h}-{t}.png';Image.new('RGB',(w,h),'white').save(self.report/rel);cases.append({'width':w,'height':h,'theme':t,'result':'PASS','screenshot':rel,'screenshotSha256':b.sha((self.report/rel).read_bytes()),'stageManifestSha256':mh,'payloadSha256':m['payloadSha256']})
-  report={'schema':b.SCHEMA,'status':'FORMAL_G8','stageManifestSha256':mh,'payloadSha256':m['payloadSha256'],'codeCommit':m['codeCommit'],'codeBindings':m['codeBindings'],'runId':123,'completedAt':'2020-01-01T00:00:02Z','cases':cases,'errors':[]};p.dump(self.report/'report.json',report)
+  report={'schema':b.SCHEMA,'status':'FORMAL_G8','stageManifest':(self.stage/'stage.json').read_text(),'stageManifestSha256':mh,'payloadSha256':m['payloadSha256'],'codeCommit':m['codeCommit'],'codeBindings':m['codeBindings'],'runId':123,'completedAt':'2020-01-01T00:00:02Z','cases':cases,'errors':[]};p.dump(self.report/'report.json',report)
   with zipfile.ZipFile(self.report/'artifact.zip','w') as z:
    for name in ['report.json']+[c['screenshot'] for c in cases]:z.write(self.report/name,name)
   entry={k:m[k] for k in ('payloadSha256','rowSha256','authorizationSha256','codeBindings','codeCommit')};entry.update(stageManifestSha256=mh,reportSha256=b.sha((self.report/'report.json').read_bytes()),runId=123,jobId=456,artifactId=789,artifactSha256=b.sha((self.report/'artifact.zip').read_bytes()))
@@ -150,6 +151,11 @@ class BridgeTests(unittest.TestCase):
   with patch.object(b,'actions_provenance'):
    result=b.promote(self.source,self.stage,self.private,self.report,out)
   self.assertEqual(result['status'],'PROMOTION_CANDIDATE_NOT_DEPLOYED');self.assertEqual((out/'sudu/data/approved/115.json').read_bytes(),(self.stage/'site/sudu/data/approved/115.json').read_bytes());self.assertTrue((out/'qa-evidence'/self.prefix/'verified-student-batch.json').exists());self.assertFalse((self.source/'sudu/data/approved').exists())
+  self.assertEqual(p.read(out/'sudu/data/approved/progress.json'),p.read(self.stage/'site/sudu/data/approved/progress.json'))
+  self.assertEqual((out/'qa-evidence/stage.json').read_bytes(),(self.stage/'stage.json').read_bytes())
+  commit='a'*40
+  (self.stage/'site'/b.pages.MARKER).write_text(json.dumps({'commit':commit,'testsRequired':True})+'\n')
+  b.pages.verify_deployment(self.stage/'site',commit,self.policy,lambda entry:p.read(out/'qa-evidence/formal-report.json'))
   self.assertEqual(issuer_path.read_bytes(),frozen)
   self.assertNotIn('calculationReviewed',self.teaching)
  def test_untrusted_artifact_and_paths_rejected(self):
