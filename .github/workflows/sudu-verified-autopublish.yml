@@ -139,7 +139,7 @@ jobs:
             > /tmp/sudu_pages_runs.json
           LIVE_SHA="$(curl -fsS --max-time 15 "https://homelux-huang.github.io/7581707/sudu/release.json?check=$GITHUB_RUN_ID" \
             | python -c 'import json,sys; print(json.load(sys.stdin)["commit"])' || true)"
-          DECISION="$(python scripts/sudu_pages_recovery.py --main-sha "$MAIN_SHA" --runs /tmp/sudu_pages_runs.json --live-sha "$LIVE_SHA")
+          DECISION="$(python scripts/sudu_pages_recovery.py --main-sha "$MAIN_SHA" --runs /tmp/sudu_pages_runs.json --live-sha "$LIVE_SHA")"
           case "$DECISION" in
             active)
               echo "Pages same-SHA run is already active; no duplicate deployment."
