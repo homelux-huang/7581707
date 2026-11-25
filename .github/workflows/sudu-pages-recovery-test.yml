@@ -3,7 +3,10 @@ on:
   push:
     paths:
       - scripts/sudu_pages_recovery.py
+      - scripts/sudu_pages_target.py
       - tests/test_sudu_pages_recovery.py
+      - tests/test_sudu_pages_target.py
+      - .github/workflows/pages.yml
       - .github/workflows/sudu-verified-autopublish.yml
       - .github/workflows/sudu-pages-recovery-test.yml
   workflow_dispatch:
@@ -20,5 +23,7 @@ jobs:
           python-version: '3.11'
       - name: Enforce no duplicate active releases and automatic recovery
         run: python -m unittest discover -s tests -p 'test_sudu_pages_recovery.py' -v
+      - name: Check protected-main Pages targets without running Pages
+        run: python -m unittest discover -s tests -p 'test_sudu_pages_target.py' -v
       - name: Reject syntax errors in release-decision script
         run: python -m py_compile scripts/sudu_pages_recovery.py

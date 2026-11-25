@@ -7,7 +7,8 @@ OLD = "b" * 40
 
 
 def run(sha=SHA, status="completed", conclusion="cancelled"):
-    return {"event": "push", "head_sha": sha, "status": status, "conclusion": conclusion}
+    return {"event": "push", "head_branch": "main", "head_sha": sha,
+            "status": status, "conclusion": conclusion}
 
 
 class PagesRecoveryTests(unittest.TestCase):
@@ -37,7 +38,7 @@ class PagesRecoveryTests(unittest.TestCase):
         self.assertEqual(decision(SHA, results), "active")
 
     def test_dispatch_uses_target_and_recovery_requires_live_marker(self):
-        dispatch = {"event": "workflow_dispatch", "head_sha": OLD,
+        dispatch = {"event": "workflow_dispatch", "head_branch": "main", "head_sha": SHA,
                     "display_title": f"Pages release {SHA}",
                     "status": "completed", "conclusion": "success"}
         runs = {"workflow_runs": [dispatch]}
@@ -46,6 +47,16 @@ class PagesRecoveryTests(unittest.TestCase):
         self.assertEqual(decision(OLD, runs, OLD), "retry")
         dispatch["status"] = "in_progress"
         self.assertEqual(decision(SHA, runs), "active")
+
+    def test_dispatch_from_another_ref_or_mismatched_head_cannot_suppress_retry(self):
+        dispatch = {"event": "workflow_dispatch", "head_branch": "main", "head_sha": SHA,
+                    "display_title": f"Pages release {SHA}",
+                    "status": "in_progress", "conclusion": None}
+        for change in ({"head_branch": "feature"}, {"head_sha": OLD},
+                       {"display_title": f"Pages release {OLD}"}):
+            with self.subTest(change=change):
+                self.assertEqual(decision(SHA, {"workflow_runs": [{**dispatch, **change}]}),
+                                 "retry")
 
     def test_malformed_api_response_fails_closed(self):
         for value in ({}, {"workflow_runs":None}, {"workflow_runs":[None]}):
