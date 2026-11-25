@@ -26,6 +26,8 @@ def decision(commit: str, data: dict, live_commit: str = "") -> str:
     for item in runs:
         if not isinstance(item, dict):
             raise ValueError("Malformed workflow run")
+        if item.get("head_branch") != "main" or item.get("head_sha") != commit:
+            continue  # Only the executing protected-main target can pass preflight.
         if item.get("event") == "push":
             target = item.get("head_sha")
         else:

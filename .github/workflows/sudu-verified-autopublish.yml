@@ -157,6 +157,11 @@ jobs:
               echo "Pages same-SHA release completed verify_live; no retry necessary."
               ;;
             retry)
+              CURRENT_MAIN="$(gh api "repos/$GITHUB_REPOSITORY/branches/main" --jq 'select(.name == "main" and .protected == true) | .commit.sha')"
+              if [ "$MAIN_SHA" != "$CURRENT_MAIN" ]; then
+                echo "Protected main moved or is unavailable; the next schedule will re-evaluate it."
+                exit 0
+              fi
               gh workflow run pages.yml --ref main -f target_sha="$MAIN_SHA"
               echo "Re-dispatched existing, mandatory Pages release gate for $MAIN_SHA"
               ;;

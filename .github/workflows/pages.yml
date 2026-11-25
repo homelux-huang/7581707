@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       target_sha:
-        description: 'Exact commit to test and publish (defaults to this dispatch commit)'
+        description: 'Current protected main commit (defaults to this dispatch commit)'
         required: false
         type: string
 permissions:
@@ -17,12 +17,46 @@ concurrency:
   # GitHub keeps only the newest queued request for this group.
   cancel-in-progress: false
 jobs:
+  target:
+    # Do not use a dispatch input to load any code. This job runs the guard
+    # from the executing protected-main workflow revision only.
+    if: >-
+      github.repository == 'homelux-huang/7581707' &&
+      github.ref == 'refs/heads/main' &&
+      github.ref_protected &&
+      github.workflow_ref == 'homelux-huang/7581707/.github/workflows/pages.yml@refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      sha: ${{ steps.target.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Qualify current protected main target
+        id: target
+        env:
+          REQUESTED_SHA: ${{ inputs.target_sha || github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          gh api repos/homelux-huang/7581707/branches/main > "$RUNNER_TEMP/pages-main.json"
+          SHA="$(python -m scripts.sudu_pages_target --target "$REQUESTED_SHA" --branch-response "$RUNNER_TEMP/pages-main.json")"
+          printf 'sha=%s\n' "$SHA" >> "$GITHUB_OUTPUT"
   verify:
+    needs: target
     uses: ./.github/workflows/sudu-release-checks.yml
     with:
-      target_sha: ${{ inputs.target_sha || github.sha }}
+      target_sha: ${{ needs.target.outputs.sha }}
   build:
-    needs: verify
+    needs: [target, verify]
     permissions:
       contents: read
       actions: read
@@ -30,7 +64,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.target_sha || github.sha }}
+          ref: ${{ needs.target.outputs.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -38,18 +72,18 @@ jobs:
         run: python -m pip install -q pillow
       - name: Build only approved public files after every release gate passed
         env:
-          SUDU_BUILD_SHA: ${{ inputs.target_sha || github.sha }}
+          SUDU_BUILD_SHA: ${{ needs.target.outputs.sha }}
         run: python scripts/build.py
       - name: Verify complete Pages output against formal G8
         env:
-          TARGET_SHA: ${{ inputs.target_sha || github.sha }}
+          TARGET_SHA: ${{ needs.target.outputs.sha }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python -m scripts.sudu_pages_evidence --site _site --target "$TARGET_SHA"
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
   deploy:
-    needs: [verify, build]
+    needs: [target, verify, build]
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -64,7 +98,7 @@ jobs:
 
   verify_live:
     name: Verify LIVE Pages SHA and 114/115 student-safe datasets
-    needs: [verify, build, deploy]
+    needs: [target, verify, build, deploy]
     runs-on: ubuntu-24.04
     timeout-minutes: 9
     permissions:
@@ -72,10 +106,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.target_sha || github.sha }}
+          ref: ${{ needs.target.outputs.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Verify production LIVE URL matches exact deployed artifact and QA progress
+        env:
+          TARGET_SHA: ${{ needs.target.outputs.sha }}
         run: |
-          python scripts/check_live_release.py --url https://homelux-huang.github.io/7581707/ --expected-sha ${{ inputs.target_sha || github.sha }}
+          python scripts/check_live_release.py --url https://homelux-huang.github.io/7581707/ --expected-sha "$TARGET_SHA"
