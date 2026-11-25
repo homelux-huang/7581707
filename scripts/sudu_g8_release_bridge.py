@@ -218,25 +218,31 @@ def replace_approved(native, site):
  if target.exists():shutil.rmtree(target)
  shutil.copytree(native/'sudu/data/approved',target)
 
-def advance_progress(stats,subject,approved_count):
- # G1–G7 have already passed. A pre-G8 question contributes to the projected
- # counts exactly once, in the native publisher's pending blind-solve bucket.
+def advance_progress(stats,subject,approved_count,baseline):
+ # Use this QID's original native classification, even when other rows
+ # occupy a different pending bucket.
  reasons=stats['pendingReasonCounts']
- require(reasons.get('ai_not_checked',0)>0,'missing native pending blind-solve count')
- reasons['ai_not_checked']-=1
- if not reasons['ai_not_checked']:del reasons['ai_not_checked']
- stats['aiNotChecked']-=1
- stats['aiSolvedMatched']+=1
+ reason=baseline['reason']
+ require(reasons[reason]>0 and baseline['ocr'] and baseline['official'],
+         'native source proof and pending classification required')
+ reasons[reason]-=1
+ if not reasons[reason]:del reasons[reason]
+ if baseline['solve']!='matched':
+  counter={'mismatch':'aiMismatch','not_checked':'aiNotChecked'}[baseline['solve']]
+  stats[counter]-=1
+  stats['aiSolvedMatched']+=1
  stats['pending']-=1
  stats['approvedCount']=approved_count
  stats['approvedPercent']=round(100*approved_count/stats['expected'],1)
  stats['subjects'][subject]['studentReady']+=1
  if not stats['pending']:stats['reviewStatus']='all_question_gates_passed'
 
+
 def stage(source,qid,audit,private_evidence,dest):
  checked=non_ui(source,qid,audit,private_evidence);dest=private_new(dest,source)
  with tempfile.TemporaryDirectory(prefix='sudu-g8-build-') as temporary:
-  temp=Path(temporary);native=temp/'native';pub.stage(Path(source),native,checked['sourceCommit'],review_policy=trusted_policy())
+  temp=Path(temporary);native=temp/'native';diagnostics={}
+  pub.stage(Path(source),native,checked['sourceCommit'],review_policy=trusted_policy(),diagnostics=diagnostics)
   year=checked['year'];rel=f'sudu/data/approved/{year}.json';baseline=safe(native,rel).read_bytes();payload=json.loads(baseline)
   require(qid not in {x['canonicalId'] for x in payload['questions']},'already published QID is not a new admission')
   payload['questions'].append(checked['row']);order={x['questionId']:i for i,x in enumerate(pub.read(Path(source)/f'sudu/data/processed/{year}/questions.json')['questions'])};payload['questions'].sort(key=lambda x:order[x['canonicalId']]);payload['approvedCount']=len(payload['questions']);output=serialized(payload)
@@ -244,7 +250,7 @@ def stage(source,qid,audit,private_evidence,dest):
   replace_approved(native,temp/'site')
   (temp/'site'/rel).write_bytes(output)
   progress=pub.read(temp/'site/sudu/data/approved/progress.json')
-  advance_progress(progress['years'][str(year)],checked['row']['subject'],payload['approvedCount'])
+  advance_progress(progress['years'][str(year)],checked['row']['subject'],payload['approvedCount'],diagnostics[qid])
   pub.dump(temp/'site/sudu/data/approved/progress.json',progress)
   for image_rel,name,h in checked['imageAssets']:
    f=temp/'site'/f'sudu/data/approved/webp/{year}/{name}.webp';f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(safe(source,image_rel).read_bytes());require(sha(f.read_bytes())==h,'staged image race')

@@ -5,6 +5,7 @@ on:
     paths:
       - scripts/sudu_verified_publish.py
       - scripts/sudu_pages_recovery.py
+      - scripts/sudu_pages_evidence.py
       - .github/workflows/sudu-verified-autopublish.yml
   workflow_run:
     workflows:
@@ -96,17 +97,25 @@ jobs:
             echo "updated=true" >> "$GITHUB_OUTPUT"
           fi
       - name: Release only SHA-pinned and independently verified question records
+        id: candidate
         if: steps.snapshot.outputs.updated == 'true'
         env:
           SRC_COMMIT: ${{ steps.snapshot.outputs.commit }}
           SRC_SIGNATURE: ${{ steps.snapshot.outputs.signature }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           python -m unittest discover -s tests -p 'test_sudu_verified_publish.py' -v
           python scripts/sudu_verified_publish.py stage --source _source_qa --dest . --sha "$SRC_COMMIT" --signature "$SRC_SIGNATURE"
           python scripts/sudu_verified_publish.py check
+          python -m scripts.sudu_pages_evidence --site . --target "$(git rev-parse HEAD)" --align-source _source_qa
+          if git diff --quiet -- sudu/data/approved && [ -z "$(git ls-files --others --exclude-standard -- sudu/data/approved)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Pin candidate and emit authorized Draft PR handoff (NO RELEASE)
-        if: steps.snapshot.outputs.updated == 'true'
+        if: steps.candidate.outputs.changed == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -118,7 +127,7 @@ jobs:
           python scripts/sudu_sync_candidate.py --artifact-dir _sync_candidate --pr-mode manual
 
       - name: Retain pinned candidate even if token cannot create a PR
-        if: always() && steps.snapshot.outputs.updated == 'true'
+        if: always() && steps.candidate.outputs.changed == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: approved-sync-candidate-${{ github.run_id }}-${{ github.run_attempt }}
@@ -128,7 +137,7 @@ jobs:
       - name: Automatically recover failed, cancelled or missing same-SHA Pages release
         # No QA data change is required to recover a previously cancelled deploy.
         # Never duplicate or cancel a release that's currently in progress.
-        if: steps.snapshot.outputs.updated == 'false'
+        if: steps.snapshot.outputs.updated == 'false' || steps.candidate.outputs.changed == 'false'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}

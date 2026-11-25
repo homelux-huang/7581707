@@ -4,6 +4,8 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import shutil
+import tempfile
 import subprocess
 
 from scripts import sudu_independent_review_gate as gate
@@ -67,8 +69,7 @@ def verify_output(site, stage, target):
         raise ValueError("Public output differs from formal G8: " + ", ".join(diff[:12]))
 
 
-def verify_deployment(site, target, policy, load_report):
-    verify_marker(site, target)
+def public_rows(site):
     ids = set()
     rows = {}
     for year in (114, 115):
@@ -82,8 +83,14 @@ def verify_deployment(site, target, policy, load_report):
                 raise ValueError("Duplicate or cross-year public question")
             ids.add(qid)
             rows[qid] = row
+    return rows
+
+
+def verify_deployment(site, target, policy, load_report):
+    verify_marker(site, target)
+    rows = public_rows(site)
     # The original five retain the repository's existing historical exception.
-    new = ids - gate.LEGACY_FIVE_IDS
+    new = rows.keys() - gate.LEGACY_FIVE_IDS
     if not new:
         return
     matches = []
@@ -109,10 +116,51 @@ def verify_deployment(site, target, policy, load_report):
         raise ValueError("No protected G8 inventory matches the whole release: " + matches[-1])
 
 
+def align_sync_candidate(candidate, source, target, policy, load_report):
+    """Re-emit the normal sync candidate with the authenticated provenance."""
+    from scripts import sudu_g8_release_bridge as bridge
+    from scripts import sudu_verified_publish as publisher
+
+    ids = public_rows(candidate).keys()
+    new = ids - gate.LEGACY_FIVE_IDS
+    if not new:
+        return
+    reports = {}
+    source_commits = set()
+    for qid in sorted(new):
+        entry = policy["trustedG8Receipts"][qid]
+        report = load_report(entry)
+        reports[entry["reportSha256"]] = report
+        stage = original_stage(report, entry)
+        commit = stage["sourceCommit"]
+        if not HEX.fullmatch(commit):
+            raise ValueError("Invalid G8 source commit")
+        source_commits.add(commit)
+    for commit in sorted(source_commits):
+        with tempfile.TemporaryDirectory(prefix="sudu-sync-g8-") as scratch:
+            root = Path(scratch)
+            native, site = root / "native", root / "site"
+            publisher.stage(source, native, commit, review_policy=policy)
+            publisher.site_check(native)
+            if public_rows(native).keys() != ids:
+                continue
+            bridge.build_committed_site(target, site)
+            bridge.replace_approved(native, site)
+            try:
+                verify_deployment(site, target, policy, lambda entry: reports[entry["reportSha256"]])
+            except ValueError:
+                continue
+            bridge.replace_approved(native, candidate)
+            return
+    raise ValueError("No sync candidate reproduces the formal G8 output")
+
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", type=Path, required=True)
     parser.add_argument("--target", required=True)
+    parser.add_argument("--align-source", type=Path)
     args = parser.parse_args()
     if subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip() != args.target:
         raise ValueError("Wrong Pages checkout")
@@ -120,7 +168,10 @@ def main():
     from scripts import sudu_verified_publish
     sudu_verified_publish.site_check(args.site)
     _, policy = archive.current_policy()
-    verify_deployment(args.site, args.target, policy, archive.owned_report)
+    if args.align_source is None:
+        verify_deployment(args.site, args.target, policy, archive.owned_report)
+    else:
+        align_sync_candidate(args.site, args.align_source, args.target, policy, archive.owned_report)
     print("Pages output verified for", args.target)
 
 
