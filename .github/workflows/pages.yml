@@ -1,4 +1,5 @@
 name: Update HTML catalog and publish website
+run-name: Pages release ${{ inputs.target_sha || github.sha }}
 on:
   push:
     branches: [main]
@@ -22,6 +23,9 @@ jobs:
       target_sha: ${{ inputs.target_sha || github.sha }}
   build:
     needs: verify
+    permissions:
+      contents: read
+      actions: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,6 +40,11 @@ jobs:
         env:
           SUDU_BUILD_SHA: ${{ inputs.target_sha || github.sha }}
         run: python scripts/build.py
+      - name: Verify complete Pages output against formal G8
+        env:
+          TARGET_SHA: ${{ inputs.target_sha || github.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m scripts.sudu_pages_evidence --site _site --target "$TARGET_SHA"
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

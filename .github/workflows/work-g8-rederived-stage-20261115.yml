@@ -1,9 +1,9 @@
 name: Work rederived G8 stage reseal rejection (NO RELEASE)
 on:
   push:
-    branches: [fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115, fix/work-g8-immutable-build-inputs-20261122, fix/work-g8-e11-native-g5-20261125]
+    branches: [fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115, fix/work-g8-immutable-build-inputs-20261122, fix/work-g8-e11-native-g5-20261125, fix/work-g8-pages-output-20261125]
   pull_request:
-    branches: [fix/work-g8-durable-archive-20261115, fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115, fix/work-g8-immutable-build-inputs-20261122]
+    branches: [fix/work-g8-durable-archive-20261115, fix/work-g8-rederived-stage-20261115, fix/work-g8-actual-webp-testc-20261115, fix/work-g8-immutable-build-inputs-20261122, fix/work-g8-e11-native-g5-20261125]
 permissions:
   contents: read
   actions: read
@@ -24,11 +24,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: python -m pip install -q pillow requests beautifulsoup4 cryptography
+      - run: python -m pip install -q pillow requests beautifulsoup4 cryptography pyyaml
       - name: Synthetic resealed-stage attacks and full existing publisher regressions
         run: |
           python -m unittest discover -s tests -p 'test_sudu*.py' -v
           node --check tests/sudu_g8_release_bridge_browser.cjs
+          python - <<'PY'
+          import pathlib, subprocess, yaml
+          workflow = yaml.safe_load(pathlib.Path('.github/workflows/sudu-verified-autopublish.yml').read_text())
+          for step in workflow['jobs']['sync']['steps']:
+              if 'run' in step:
+                  subprocess.run(['bash', '-n'], input=step['run'], text=True, check=True)
+          PY
       - name: Actual committed snapshot equals clean public build and repeats exactly
         run: |
           python - <<'PY'
@@ -42,6 +49,10 @@ jobs:
               commit=bridge.git(bridge.ROOT,'rev-parse','HEAD')
               build.build(output_dir=a,build_revision=commit)
               bridge.build_committed_site(commit,b);bridge.build_committed_site(commit,c)
+              from scripts import sudu_pages_evidence as pages
+              from scripts import sudu_verified_publish as publisher
+              publisher.site_check(a)
+              pages.verify_deployment(a,commit,{},lambda _: (_ for _ in ()).throw(AssertionError('legacy must not need new receipts')))
               first,second,third=files(a),files(b),files(c)
               assert first and first==second==third, 'Committed build differs or is nondeterministic: formal staging must HOLD'
               digest=hashlib.sha256(json.dumps(first,sort_keys=True,separators=(',',':')).encode()).hexdigest()

@@ -802,7 +802,7 @@ def final_review_authorized(source: Path, q: dict, item: dict, audit: dict | Non
     except (OSError, ValueError, TypeError, KeyError, AttributeError, UnicodeError):
         return False, "independent_final_admission_evidence_invalid"
 
-def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy: dict | None = None) -> dict:
+def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy: dict | None = None, *, diagnostics: dict | None = None) -> dict:
     d = src / f"sudu/data/processed/{year}"
     bank, manifest = read(d / "questions.json"), read(d / "webp-manifest.json")
     inventory = read(d / "inventory.json")
@@ -859,6 +859,8 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy:
         qa_per_subject[subject]["finalAnswerQaPass"] += int(official_ok)
         solve = independently_solved(q,revision)
         ai[solve] += 1
+        if diagnostics is not None:
+            diagnostics[qid] = {"solve": solve, "ocr": ocr_ok, "official": official_ok}
         reason = ("image_pending" if not image_ok else "ocr_or_db_pending" if not ocr_ok
                   else "official_final_pending" if not official_ok else "ai_"+solve if solve != "matched"
                   else "teaching_pending")
@@ -890,6 +892,10 @@ def snapshot(src: Path, output: Path, year: int, source_sha: str, review_policy:
         approved_files.add(target.resolve())
         released.append(public_question(q,year,subject,location))
         qa_per_subject[subject]["studentReady"] += 1
+    if diagnostics is not None:
+        for issue in blocked:
+            if issue["id"] in diagnostics:
+                diagnostics[issue["id"]]["reason"] = issue["reason"]
     expected = int(inventory.get("expected",manifest.get("expected",COUNT[year])))
     if expected != COUNT[year] or len(questions) != expected or len(entries) != expected or len(seen) != expected:
         raise ValueError(f"{year} mismatch expected/candidates/manifest/IDs: {expected}/{len(questions)}/{len(entries)}/{len(seen)}")
@@ -941,7 +947,7 @@ def publication_provenance(source_sha: str, source_tree_signature: str = "") -> 
     }
 
 
-def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = "", *, review_policy: dict | None = None):
+def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str = "", *, review_policy: dict | None = None, diagnostics: dict | None = None):
     if review_policy is not None:
         from scripts import sudu_independent_review_gate as reviewer_gate
         if not reviewer_gate._ai_registry_exactly_matches_protected_main_policy(review_policy):
@@ -951,7 +957,7 @@ def stage(source: Path, dest: Path, source_sha: str, source_tree_signature: str 
         "provenance": publication_provenance(source_sha, source_tree_signature),
         "years":{}}
     for year in YEARS:
-        report["years"][str(year)] = snapshot(source,dest,year,source_sha,review_policy)
+        report["years"][str(year)] = snapshot(source,dest,year,source_sha,review_policy,diagnostics=diagnostics)
     dump(dest/"sudu/data/approved/progress.json",report)
     return report
 

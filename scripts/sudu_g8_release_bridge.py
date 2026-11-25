@@ -8,13 +8,14 @@ import argparse, copy, hashlib, io, json, os, re, shutil, sqlite3, subprocess, t
 from pathlib import Path
 from urllib.request import Request, urlopen
 from scripts import sudu_verified_publish as pub
+from scripts import sudu_pages_evidence as pages
 from scripts import sudu_independent_review_gate as gate
 
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA='AUTHENTICATED_G8_BRIDGE_V1'
 MATRIX=tuple((w,h,t) for w,h in [(360,800),(375,812),(390,844),(412,915),(430,932),(768,1024),(1024,768),(1440,900)] for t in ('light','dark'))
 FORMAL_WORKFLOW='.github/workflows/work-authenticated-g8-formal-20261115.yml'
-CODE=('scripts/sudu_g8_archive.py',FORMAL_WORKFLOW,'scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
+CODE=('scripts/sudu_pages_evidence.py','.github/workflows/pages.yml','scripts/sudu_g8_archive.py',FORMAL_WORKFLOW,'scripts/sudu_verified_publish.py','scripts/sudu_independent_review_gate.py','scripts/sudu_g8_release_bridge.py','scripts/build.py','tests/sudu_g8_release_bridge_browser.cjs','sudu/v4-115-multisubject-review-demo.html','sudu/verified-questions-runtime.js')
 SHA=re.compile(r'^[0-9a-f]{64}$')
 class Hold(ValueError): pass
 
@@ -212,20 +213,49 @@ def non_ui(source,qid,audit_rel,private_evidence):
  row=pub.public_question(q,year,identity[1],f'data/approved/webp/{year}/{qid}.webp')
  return {'qid':qid,'year':year,'sourceCommit':commit,'sourceRevision':revision,'webpSha256':m['sha256'],'teachingDigest':sha(canonical(t['content'])),'teachingEvidenceSha256':sha(raws['teaching']),'officialEvidenceSha256':sha(raws['official']),'authorizationSha256':authorization(p,qid),'auditPath':audit_rel,'audit':audit,'question':q,'row':row,'rowSha256':sha(canonical(row)),'imageAssets':certified,'codeBindings':code_bindings(),'codeCommit':git(ROOT,'rev-parse','HEAD'),'g6ResponseSha256':g6['rawResponseSha256']}
 
+def replace_approved(native, site):
+ target=site/'sudu/data/approved'
+ if target.exists():shutil.rmtree(target)
+ shutil.copytree(native/'sudu/data/approved',target)
+
+def advance_progress(stats,subject,approved_count,baseline):
+ # Use this QID's original native classification, even when other rows
+ # occupy a different pending bucket.
+ reasons=stats['pendingReasonCounts']
+ reason=baseline['reason']
+ require(reasons[reason]>0 and baseline['ocr'] and baseline['official'],
+         'native source proof and pending classification required')
+ reasons[reason]-=1
+ if not reasons[reason]:del reasons[reason]
+ if baseline['solve']!='matched':
+  counter={'mismatch':'aiMismatch','not_checked':'aiNotChecked'}[baseline['solve']]
+  stats[counter]-=1
+  stats['aiSolvedMatched']+=1
+ stats['pending']-=1
+ stats['approvedCount']=approved_count
+ stats['approvedPercent']=round(100*approved_count/stats['expected'],1)
+ stats['subjects'][subject]['studentReady']+=1
+ if not stats['pending']:stats['reviewStatus']='all_question_gates_passed'
+
+
 def stage(source,qid,audit,private_evidence,dest):
  checked=non_ui(source,qid,audit,private_evidence);dest=private_new(dest,source)
  with tempfile.TemporaryDirectory(prefix='sudu-g8-build-') as temporary:
-  temp=Path(temporary);native=temp/'native';pub.stage(Path(source),native,checked['sourceCommit'],review_policy=trusted_policy())
+  temp=Path(temporary);native=temp/'native';diagnostics={}
+  pub.stage(Path(source),native,checked['sourceCommit'],review_policy=trusted_policy(),diagnostics=diagnostics)
   year=checked['year'];rel=f'sudu/data/approved/{year}.json';baseline=safe(native,rel).read_bytes();payload=json.loads(baseline)
   require(qid not in {x['canonicalId'] for x in payload['questions']},'already published QID is not a new admission')
   payload['questions'].append(checked['row']);order={x['questionId']:i for i,x in enumerate(pub.read(Path(source)/f'sudu/data/processed/{year}/questions.json')['questions'])};payload['questions'].sort(key=lambda x:order[x['canonicalId']]);payload['approvedCount']=len(payload['questions']);output=serialized(payload)
-  build_committed_site(checked['codeCommit'],temp/'site');shutil.copytree(native/'sudu/data/approved',temp/'site/sudu/data/approved',dirs_exist_ok=True)
+  build_committed_site(checked['codeCommit'],temp/'site')
+  replace_approved(native,temp/'site')
   (temp/'site'/rel).write_bytes(output)
-  progress=pub.read(temp/'site/sudu/data/approved/progress.json');progress['years'][str(year)]['approvedCount']=payload['approvedCount'];pub.dump(temp/'site/sudu/data/approved/progress.json',progress)
+  progress=pub.read(temp/'site/sudu/data/approved/progress.json')
+  advance_progress(progress['years'][str(year)],checked['row']['subject'],payload['approvedCount'],diagnostics[qid])
+  pub.dump(temp/'site/sudu/data/approved/progress.json',progress)
   for image_rel,name,h in checked['imageAssets']:
    f=temp/'site'/f'sudu/data/approved/webp/{year}/{name}.webp';f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(safe(source,image_rel).read_bytes());require(sha(f.read_bytes())==h,'staged image race')
   manifest={k:checked[k] for k in ('qid','year','sourceCommit','sourceRevision','webpSha256','teachingDigest','teachingEvidenceSha256','officialEvidenceSha256','authorizationSha256','auditPath','rowSha256','codeBindings','codeCommit','g6ResponseSha256')}
-  manifest['siteFiles']={f.relative_to(temp/'site').as_posix():sha(f.read_bytes()) for f in (temp/'site').rglob('*') if f.is_file()}
+  manifest['siteFiles']=pages.inventory(temp/'site')
   manifest.update(schema=SCHEMA,status='PRE_G8_ONLY',pagesEligible=False,baselineSha256=sha(baseline),payloadPath=rel,payloadSha256=sha(output))
   # Manifest excludes any self-asserted UI PASS, private raw G6 or credential.
   (temp/'stage.json').write_bytes(serialized(manifest));(temp/'row.json').write_bytes(serialized(checked['row']))
@@ -286,6 +316,7 @@ def g8_authorized(manifest,manifest_sha,report_raw):
 def verify_report(manifest,manifest_sha,report_root):
  report,b=read(report_root,'report.json')
  require(report.get('schema')==SCHEMA and report.get('status')=='FORMAL_G8' and report.get('stageManifestSha256')==manifest_sha and report.get('payloadSha256')==manifest['payloadSha256'] and report.get('codeCommit')==manifest['codeCommit'] and report.get('codeBindings')==manifest['codeBindings'],'formal report version/bytes')
+ require(pages.original_stage(report,manifest | {'stageManifestSha256':manifest_sha})==manifest,'original formal stage differs')
  from datetime import datetime,timezone
  require(gate._time(report.get('completedAt'))<=datetime.now(timezone.utc),'formal UTC completion')
  require(report.get('errors')==[] and len(report.get('cases',[]))==16,'all16 browser cases required')
@@ -339,8 +370,11 @@ def promote(source,stage_root,private_evidence,report_root,dest):
   batches=pub.reviewed_student_batches(assembled,year);batches[qid]=audit
   batch_rel=f'sudu/data/processed/{year}/verified-student-batch.json';pub.dump(assembled/batch_rel,{'schemaVersion':1,'year':year,'items':list(batches.values())})
   native=temp/'native';pub.stage(assembled,native,manifest['sourceCommit'],review_policy=trusted_policy());pub.site_check(native)
-  require(safe(native,manifest['payloadPath']).read_bytes()==safe(Path(stage_root)/'site',manifest['payloadPath']).read_bytes(),'native final publisher differs from browser-tested bytes')
+  site=temp/'site';build_committed_site(manifest['codeCommit'],site);replace_approved(native,site)
+  require(pages.inventory(site)==manifest['siteFiles'],'native final public output differs from browser-tested bytes')
   dest.mkdir(mode=0o700);shutil.copytree(native/'sudu/data/approved',dest/'sudu/data/approved')
+  put(dest,'qa-evidence/stage.json',report['stageManifest'].encode('utf-8'))
+  put(dest,'qa-evidence/formal-report.json',report_raw)
   put(dest,'qa-evidence/'+ui_rel,safe(assembled,ui_rel).read_bytes());put(dest,'qa-evidence/'+batch_rel,safe(assembled,batch_rel).read_bytes())
  return {'status':'PROMOTION_CANDIDATE_NOT_DEPLOYED','qid':qid,'payloadSha256':manifest['payloadSha256'],'requiresProtectedPRAndPagesVerifyLive':True}
 
